@@ -1,0 +1,390 @@
+{
+  "schemaVersion": "1.0",
+  "documentRole": "development_plan_not_execution_record",
+  "studentSuffix": 17,
+  "status": "planned",
+  "stageId": "mudlogging",
+  "mandatorySceneIds": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "selectionPolicy": {
+    "baseCount": 5,
+    "firstOptionalSceneIds": [
+      "w4",
+      "w5",
+      "pr1"
+    ],
+    "secondOptionalSceneIds": [
+      "t1",
+      "pr2",
+      "d1"
+    ],
+    "targetCounts": [
+      5,
+      8,
+      11
+    ],
+    "extrasOnlyAfterMandatoryAccepted": true
+  },
+  "ownership": {
+    "integrationOwner": [
+      "portal",
+      "shared",
+      "schemas",
+      "tools"
+    ],
+    "caseOwners": {
+      "m1": "case-src/m1",
+      "m2": "case-src/m2",
+      "m3": "case-src/m3",
+      "m4": "case-src/m4",
+      "m5": "case-src/m5"
+    },
+    "rule": "并行任务只写分配目录；公共接口由集成人统一修改和回归。"
+  },
+  "tasks": [
+    {
+      "id": "T00",
+      "gate": "G0",
+      "name": "原项目范围与契约复核",
+      "dependsOn": [],
+      "outputs": [
+        "只读原门户副本",
+        "13阶段61场景覆盖表",
+        "实际导入契约"
+      ],
+      "doneWhen": [
+        "锁定m1–m5",
+        "确认实际运行资源与字段映射",
+        "参考仓库标注仅参考"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T01",
+      "gate": "G0",
+      "name": "最小包与离线运行探针",
+      "dependsOn": [
+        "T00"
+      ],
+      "outputs": [
+        "工程测试包",
+        "原站导入记录"
+      ],
+      "doneWhen": [
+        "原站添加入口能执行普通JS和SVG",
+        "明确沙箱与直接打开差异"
+      ],
+      "countsAsCase": false,
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T02",
+      "gate": "G0",
+      "name": "共同井与证据v1草案",
+      "dependsOn": [
+        "T00"
+      ],
+      "outputs": [
+        "scenario-core规格",
+        "父样品与配对分组",
+        "有版本的来源与claim协议"
+      ],
+      "doneWhen": [
+        "单位一致",
+        "观察/推断/复核分开",
+        "五例独立fixture方案明确"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T03",
+      "gate": "G0",
+      "name": "四项核心风险原型",
+      "dependsOn": [
+        "T01",
+        "T02"
+      ],
+      "outputs": [
+        "m1像素连通域",
+        "m2停泵运输",
+        "m4工况阶跃",
+        "m5否定与来源失效"
+      ],
+      "doneWhen": [
+        "算法读可见输入",
+        "关键专业混淆已验证或限缩范围"
+      ],
+      "countsAsCase": false,
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T10",
+      "gate": "G1",
+      "name": "m2完整旗舰",
+      "dependsOn": [
+        "T03"
+      ],
+      "sceneId": "m2",
+      "outputs": [
+        "s17-mudgas-context成品目录",
+        "逐步骤图解",
+        "实际指标与复核"
+      ],
+      "doneWhen": [
+        "三部分齐全",
+        "事件分母和迟到正确",
+        "独立导入原站并刷新运行"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T11",
+      "gate": "G2",
+      "name": "m1图像型完整案例",
+      "dependsOn": [
+        "T10"
+      ],
+      "sceneId": "m1",
+      "outputs": [
+        "s17-cuttings-lithology成品目录",
+        "像素/近邻解释",
+        "共享样品几何"
+      ],
+      "doneWhen": [
+        "实际像素计算",
+        "分割与分类评价透明",
+        "原站独立导入"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T12",
+      "gate": "G2",
+      "name": "提取已重复公共能力",
+      "dependsOn": [
+        "T10",
+        "T11"
+      ],
+      "outputs": [
+        "小型图例/状态/指标/打包工具",
+        "兼容manifest生成器"
+      ],
+      "doneWhen": [
+        "不抽象全部领域算法",
+        "m1和m2仍自包含",
+        "干净dist无开发脚本"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T20",
+      "gate": "G3",
+      "name": "m3配对荧光案例",
+      "dependsOn": [
+        "T12"
+      ],
+      "sceneId": "m3",
+      "outputs": [
+        "s17-fluorescence-review成品"
+      ],
+      "doneWhen": [
+        "真实逻辑回归分割",
+        "校正与模型分开比较",
+        "来源不明不写油层",
+        "独立导入"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T21",
+      "gate": "G3",
+      "name": "m4工况与响应分段",
+      "dependsOn": [
+        "T12"
+      ],
+      "sceneId": "m4",
+      "outputs": [
+        "s17-drilltime-boundaries成品"
+      ],
+      "doneWhen": [
+        "独立标定工况",
+        "候选边界与真值分开",
+        "一对一边界评价",
+        "独立导入"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T22A",
+      "gate": "G3",
+      "name": "m5早期NLP与证据工作台",
+      "dependsOn": [
+        "T02",
+        "T03"
+      ],
+      "sceneId": "m5",
+      "mayOverlap": [
+        "T10",
+        "T11",
+        "T12"
+      ],
+      "outputs": [
+        "NB分类/抽取原型",
+        "证据fixture",
+        "句子来源UI"
+      ],
+      "doneWhen": [
+        "保留否定单位范围",
+        "自由输入无假指标",
+        "修改后确认失效"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T22B",
+      "gate": "G3",
+      "name": "m5完整案例与独立导入",
+      "dependsOn": [
+        "T12",
+        "T22A"
+      ],
+      "sceneId": "m5",
+      "outputs": [
+        "s17-evidence-report成品"
+      ],
+      "doneWhen": [
+        "三部分完整",
+        "关键词基线与NLP对比",
+        "JSON/HTML沙箱导出",
+        "独立运行和导入"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T30",
+      "gate": "G4",
+      "name": "五例全覆盖与累计保存",
+      "dependsOn": [
+        "T20",
+        "T21",
+        "T22B"
+      ],
+      "outputs": [
+        "五例覆盖记录",
+        "整批原站验收记录"
+      ],
+      "doneWhen": [
+        "全部同副本导入刷新重开",
+        "数据/模型/版本对应",
+        "无关键运行错误"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T31",
+      "gate": "G4",
+      "name": "主页增强与旧包兼容",
+      "dependsOn": [
+        "T30"
+      ],
+      "outputs": [
+        "增强门户",
+        "原样firstbreak回归记录"
+      ],
+      "doneWhen": [
+        "13阶段与旧导入语义保留",
+        "场景数与案例数分开",
+        "未验收不冒称已验收"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T32",
+      "gate": "G4",
+      "name": "证据串联与最终交付",
+      "dependsOn": [
+        "T30",
+        "T31"
+      ],
+      "outputs": [
+        "五例实际证据交换",
+        "传输ZIP",
+        "README/来源/答辩路线/验收"
+      ],
+      "doneWhen": [
+        "共同井身份和单位一致",
+        "来源版本变化正确失效",
+        "离线/直接打开/导出检查"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T40",
+      "gate": "G5",
+      "name": "第一批扩展到8",
+      "dependsOn": [
+        "T32"
+      ],
+      "optional": true,
+      "sceneIds": [
+        "w4",
+        "w5",
+        "pr1"
+      ],
+      "outputs": [
+        "三个额外完整案例"
+      ],
+      "doneWhen": [
+        "每例独立领域审查",
+        "不是换皮",
+        "8例累计持久化"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T41",
+      "gate": "G5",
+      "name": "第二批扩展到11",
+      "dependsOn": [
+        "T40"
+      ],
+      "optional": true,
+      "sceneIds": [
+        "t1",
+        "pr2",
+        "d1"
+      ],
+      "outputs": [
+        "三个可选完整案例"
+      ],
+      "doneWhen": [
+        "时间与质量允许",
+        "未来信息/模拟约束正确",
+        "11例累计持久化"
+      ],
+      "status": "planned",
+      "runtimeVerified": false
+    }
+  ],
+  "noDeadlineClaim": "未知投入时间，不承诺固定工期；按门槛推进，优先削减外部数据、大模型与额外数量。"
+}

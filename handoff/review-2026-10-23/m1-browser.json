@@ -1,0 +1,397 @@
+{
+  "reviewDate": "2026-10-23",
+  "before": {
+    "snapshot": {
+      "id": "s17-cuttings-lithology",
+      "status": "ready",
+      "revision": 3,
+      "selected": 1,
+      "run": {
+        "runId": "s17-cuttings-lithology-r3-v3",
+        "config": {
+          "k": 3,
+          "support": 0.55,
+          "distance": 1.15,
+          "rules": {
+            "red": 0.095,
+            "light": 0.52
+          },
+          "mode": "full",
+          "calibrate": true
+        },
+        "metrics": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 2,
+              "IoU": 1
+            },
+            {
+              "pred": 1,
+              "truth": 0,
+              "IoU": 1
+            },
+            {
+              "pred": 2,
+              "truth": 1,
+              "IoU": 1
+            },
+            {
+              "pred": 3,
+              "truth": 3,
+              "IoU": 1
+            },
+            {
+              "pred": 4,
+              "truth": 4,
+              "IoU": 1
+            },
+            {
+              "pred": 5,
+              "truth": 7,
+              "IoU": 1
+            },
+            {
+              "pred": 6,
+              "truth": 6,
+              "IoU": 1
+            },
+            {
+              "pred": 7,
+              "truth": 5,
+              "IoU": 1
+            },
+            {
+              "pred": 8,
+              "truth": 10,
+              "IoU": 1
+            },
+            {
+              "pred": 9,
+              "truth": 8,
+              "IoU": 1
+            },
+            {
+              "pred": 10,
+              "truth": 11,
+              "IoU": 1
+            },
+            {
+              "pred": 11,
+              "truth": 9,
+              "IoU": 1
+            }
+          ],
+          "misses": [],
+          "extras": [],
+          "merged": [],
+          "model": {
+            "matrix": [
+              [
+                3,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                7,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              }
+            ],
+            "macroF1": 1,
+            "total": 12,
+            "accepted": 12,
+            "wrong": 0,
+            "coverage": 1,
+            "acceptedError": 0
+          },
+          "baseline": {
+            "matrix": [
+              [
+                3,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                2,
+                5,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 0,
+                "f1": 0
+              },
+              {
+                "recall": 0.7142857142857143,
+                "f1": 0.7142857142857143
+              }
+            ],
+            "macroF1": 0.5714285714285715,
+            "total": 12,
+            "accepted": 12,
+            "wrong": 4,
+            "coverage": 1,
+            "acceptedError": 0.3333333333333333
+          },
+          "segmentation": {
+            "tp": 14582,
+            "fp": 0,
+            "fn": 0,
+            "tn": 62218,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1
+          },
+          "trueVisiblePixels": 14582,
+          "areaError_pp": [
+            0,
+            0,
+            0
+          ]
+        },
+        "method": "visible_pixel_components + standardized_weighted_kNN",
+        "stepCount": 6
+      },
+      "reviews": []
+    },
+    "image": "jYHGwDIDTQCX+WipxkBj4Bgx0ATwGA1262pj4GQMHLfj/z8AAAD//+XnZ6gAAAAGSURBVAMAztMaVQQTJpIAAAAASUVORK5CYII=",
+    "proportions": "颗粒计数：分母 12 particles25.0%16.7%58.3%砂岩教学外观 25.0% · 泥岩教学外观 16.7% · 灰岩教学外观 58.3% · 待复核 0.0%待复核保留在分母内。模型原始占比保持不变；人工意见单独列在复核历史中。"
+  },
+  "stale": {
+    "status": "stale",
+    "exportDisabled": true
+  },
+  "coating": {
+    "snapshot": {
+      "id": "s17-cuttings-lithology",
+      "status": "ready",
+      "revision": 4,
+      "selected": 1,
+      "run": {
+        "runId": "s17-cuttings-lithology-r4-v4",
+        "config": {
+          "k": 3,
+          "support": 0.55,
+          "distance": 1.15,
+          "rules": {
+            "red": 0.095,
+            "light": 0.52
+          },
+          "mode": "full",
+          "calibrate": true
+        },
+        "metrics": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 2,
+              "IoU": 1
+            },
+            {
+              "pred": 1,
+              "truth": 0,
+              "IoU": 1
+            },
+            {
+              "pred": 2,
+              "truth": 1,
+              "IoU": 1
+            },
+            {
+              "pred": 3,
+              "truth": 3,
+              "IoU": 1
+            },
+            {
+              "pred": 4,
+              "truth": 7,
+              "IoU": 1
+            },
+            {
+              "pred": 6,
+              "truth": 4,
+              "IoU": 1
+            },
+            {
+              "pred": 7,
+              "truth": 8,
+              "IoU": 1
+            },
+            {
+              "pred": 8,
+              "truth": 10,
+              "IoU": 1
+            },
+            {
+              "pred": 9,
+              "truth": 9,
+              "IoU": 1
+            },
+            {
+              "pred": 10,
+              "truth": 11,
+              "IoU": 1
+            },
+            {
+              "pred": 5,
+              "truth": 6,
+              "IoU": 0.6779755283648499
+            }
+          ],
+          "misses": [
+            6
+          ],
+          "extras": [],
+          "merged": [
+            5
+          ],
+          "model": {
+            "matrix": [
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                1,
+                0,
+                6,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "recall": 1,
+                "f1": 0.6666666666666666
+              },
+              {
+                "recall": 0,
+                "f1": 0
+              },
+              {
+                "recall": 0.8571428571428571,
+                "f1": 0.9230769230769231
+              }
+            ],
+            "macroF1": 0.5299145299145299,
+            "total": 11,
+            "accepted": 10,
+            "wrong": 2,
+            "coverage": 0.9090909090909091,
+            "acceptedError": 0.2
+          },
+          "baseline": {
+            "matrix": [
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                7,
+                0,
+                0,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "recall": 1,
+                "f1": 0.3076923076923077
+              },
+              {
+                "recall": 0,
+                "f1": 0
+              },
+              {
+                "recall": 0,
+                "f1": 0
+              }
+            ],
+            "macroF1": 0.10256410256410257,
+            "total": 11,
+            "accepted": 11,
+            "wrong": 9,
+            "coverage": 1,
+            "acceptedError": 0.8181818181818182
+          },
+          "segmentation": {
+            "tp": 14565,
+            "fp": 0,
+            "fn": 0,
+            "tn": 62235,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1
+          },
+          "trueVisiblePixels": 14565,
+          "areaError_pp": [
+            16.374871266735322,
+            20.17164435290079,
+            8.547888774459311
+          ]
+        },
+        "method": "visible_pixel_components + standardized_weighted_kNN",
+        "stepCount": 6
+      },
+      "reviews": []
+    },
+    "image": "zoGJHMgBcCI/8lDOgZwDc4gDOQDOoc7Om5pz4N04MNfS/38AAAD//5BUj7AAAAAGSURBVAMAUPbiv/uwVN0AAAAASUVORK5CYII=",
+    "proportions": "颗粒计数：分母 11 particles36.4%54.5%9.1%砂岩教学外观 36.4% · 泥岩教学外观 0.0% · 灰岩教学外观 54.5% · 待复核 9.1%待复核保留在分母内。模型原始占比保持不变；人工意见单独列在复核历史中。"
+  },
+  "selected": "颗粒 2：灰岩教学外观",
+  "count": "颗粒计数：分母 11 particles\n36.4%\n54.5%\n9.1%\n\n砂岩教学外观 36.4% · 泥岩教学外观 0.0% · 灰岩教学外观 54.5% · 待复核 9.1%\n\n待复核保留在分母内。模型原始占比保持不变；人工意见单独列在复核历史中。",
+  "step": "图 S5｜近邻识别与拒判\n完整特征空间的实际距离决定近邻，距离过远或分歧则拒判。\n输入\n训练库和测试特征\n动作\n标准化距离、加权投票，验证选阈值\n输出\n真实训练邻居与候选标签\n\n陷阱：支持度不是现场概率\n\n这一步的实际产物\n\ns17-cuttings-lithology-r4-v4 · ready\n\n邻居\t类\t距离\nIMG-TRAIN-P5\t灰岩教学外观\t0.720\nIMG-TRAIN-P12\t灰岩教学外观\t0.734\nIMG-TRAIN-P11\t灰岩教学外观\t0.755"
+}

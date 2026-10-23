@@ -1,0 +1,1 @@
+(function(){document.getElementById('compute').onclick=function(){document.getElementById('result').textContent=String(17*17);};})();

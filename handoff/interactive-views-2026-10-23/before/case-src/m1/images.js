@@ -1,0 +1,17 @@
+(function(g){'use strict';const M=g.S17Math,clamp=x=>Math.max(0,Math.min(255,Math.round(x)));
+function sample(seed=17,options={},sampleIndex=1,wellId='DEMO-017'){
+const r=M.rng(seed),w=320,h=240,n=12,white=new Uint8ClampedArray(w*h*4),uv=new Uint8ClampedArray(w*h*4),instances=new Int16Array(w*h),fluor=new Uint8Array(w*h),particles=[];for(let p=0;p<w*h;p++){white.set([239,243,235,255],p*4);uv.set([5,6,8,255],p*4);}
+for(let i=0;i<n;i++){let cx=53+(i%4)*73+(r()-.5)*7,cy=56+Math.floor(i/4)*66+(r()-.5)*5;if(options.merge&&i===6)cx-=43;const rx=17+r()*9,ry=14+r()*8,phase=r()*6.28,label=Math.floor(r()*3),tone=(r()-.5)*25,angle=r()*6.28;const textureSeed=r()*1000;
+particles.push({label,cx,cy,rx,ry,phase,angle,textureSeed,visibleArea:0});
+for(let y=Math.floor(cy-ry*1.25);y<=cy+ry*1.25;y++)for(let x=Math.floor(cx-rx*1.25);x<=cx+rx*1.25;x++){const dx=(x-cx)/rx,dy=(y-cy)/ry,a=Math.atan2(dy,dx),rad=Math.hypot(dx,dy),boundary=1+.12*Math.sin(5*a+phase)+.07*Math.sin(9*a+phase);if(rad>boundary||x<0||y<0||x>=w||y>=h)continue;const p=y*w+x;instances[p]=i+1;let tex=label===0?(r()-.5)*45:label===1?15*Math.sin(y*1.2+x*.08+phase):15*Math.sin(x*.14+phase)*Math.cos(y*.13+phase);if(options.unfamiliar&&i<3)tex=42*Math.sign(Math.sin(x*1.7)*Math.cos(y*1.9));const base=[139+tone+(label===0?7:0),133+tone,120+tone+(label===1?8:0)],shade=8*(1-rad);let rgb=base.map((b,j)=>b+tex+shade+(j===0?3:0));if(r()<(options.coating??0))rgb=rgb.map((v,j)=>.25*v+.75*[131,113,86][j]);white.set([...rgb.map(clamp),255],p*4);
+const f= Math.sin(x*.15+phase)+Math.cos(y*.13+phase)>.7&&(i%4!==3),mineral=options.mineral&&i%3===1;fluor[p]=f?1:0;const strength=(options.weak?.28:1)*(30+100*Math.max(0,Math.sin(x*.12+phase)));
+let u=f?(mineral?[strength*.55,strength*.75,strength*1.25]:[strength*.78,strength*1.2,strength*.35]):[9+(r()-.5)*9,13+(r()-.5)*9,11+(r()-.5)*8];uv.set(u.map((v,j)=>j<3?clamp(5+(v-5)*(options.exposure??1)):255).concat([255]),p*4);
+}}
+// Occlusion changes visible pixels and the evaluation domain; hidden material is not counted as visible area.
+if(options.occlude)for(let y=84;y<112;y++)for(let x=22;x<150;x++){const p=y*w+x;white.set([239,243,235,255],p*4);uv.set([5,6,8,255],p*4);instances[p]=0;fluor[p]=0;}
+for(let p=0;p<w*h;p++){if(instances[p])particles[instances[p]-1].visibleArea++;const gain=options.light??1,cast=options.yellow??0;for(let c=0;c<3;c++)white[p*4+c]=clamp(white[p*4+c]*gain*(c===0?1+cast:c===2?1-cast:1));}
+// Visible calibration patches outside all predicted/evaluation particle domains.
+for(let y=5;y<17;y++)for(let x=6;x<19;x++){const p=y*w+x;for(let c=0;c<3;c++){white[p*4+c]=clamp(210*(options.light??1)*(c===0?1+(options.yellow??0):c===2?1-(options.yellow??0):1));uv[p*4+c]=clamp(5+80*(options.exposure??1));}}
+const parent=`${wellId}-P${sampleIndex}`;return {observations:{white:{pixels:white,width:w,height:h},uv:{pixels:uv,width:w,height:h},calibration:{referenceRGB:[210,210,210],uvReference:80,referenceBox:[6,5,19,17],excitation:'fixed teaching UV excitation'},identity:{wellId,parentSampleId:parent,sampleId:`${wellId}-S${sampleIndex}`,capturePairId:`${wellId}-WLUV${sampleIndex}`,splitGroupId:parent},capture:{dataNature:'synthetic_teaching',visibleCoating:options.coating??0,excitation:'fixed',sourceVersion:1}},evaluationTruth:{instances,fluorescence:fluor,particles:particles.map((p,i)=>({id:i+1,label:p.label,area:p.visibleArea})),foreground:Uint8Array.from(instances,v=>v>0?1:0)},metadata:{seed,options,sampleIndex,dataVersion:'s17-paired-images-v1'}};
+}
+g.S17Images={sample};})(globalThis);

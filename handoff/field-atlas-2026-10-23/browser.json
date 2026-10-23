@@ -1,0 +1,319 @@
+{
+  "scope": "1.4.1-preview field atlas: real browser UI, current five links, calculated lag, teacher import and refresh, firstbreak, offline homepage",
+  "checks": [
+    {
+      "name": "five delivered cases still precede the new field atlas",
+      "passed": true
+    },
+    {
+      "name": "new profile actual registrations remain zero",
+      "passed": true
+    },
+    {
+      "name": "original 13 stages and 61 scenes remain",
+      "passed": true
+    },
+    {
+      "name": "m1 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m1 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m2 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m2 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m3 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m3 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m4 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m4 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m5 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m5 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "20 L/s and 20 min produce actual 50 min lag and 40 percent transport",
+      "passed": true
+    },
+    {
+      "name": "keyboard changes rate to 40 and recomputes 25 min / 80 percent",
+      "passed": true
+    },
+    {
+      "name": "arrival caps marker at surface and retains actual cumulative volume",
+      "passed": true
+    },
+    {
+      "name": "zero elapsed time returns to bit with zero volume",
+      "passed": true
+    },
+    {
+      "name": "sources show three actual research posts and primary technical references",
+      "passed": true
+    },
+    {
+      "name": "390px native add button remains visible",
+      "passed": true
+    },
+    {
+      "name": "mobile completion counts remain in first viewport",
+      "passed": true
+    },
+    {
+      "name": "phone uses local diagram scrolling without page overflow",
+      "passed": true
+    },
+    {
+      "name": "phone evidence selection is interactive",
+      "passed": true
+    },
+    {
+      "name": "mobile selection brings matching instrument into diagram viewport",
+      "passed": true
+    },
+    {
+      "name": "original native folder import runs current m2 calculation",
+      "passed": true
+    },
+    {
+      "name": "original portal refresh actually reruns imported m2",
+      "passed": true
+    },
+    {
+      "name": "field atlas links imported m2 into native background tab",
+      "passed": true
+    },
+    {
+      "name": "registered navigation actually opens native background",
+      "passed": true
+    },
+    {
+      "name": "enhanced home still accepts unmodified teacher firstbreak with actual redraw",
+      "passed": true
+    },
+    {
+      "name": "teacher firstbreak still renders after refresh",
+      "passed": true
+    },
+    {
+      "name": "route remount creates exactly one functional atlas",
+      "passed": true
+    },
+    {
+      "name": "file offline selection and formula are live",
+      "passed": true
+    },
+    {
+      "name": "file offline refresh restores functional initial atlas",
+      "passed": true
+    },
+    {
+      "name": "offline homepage makes zero HTTP requests",
+      "passed": true
+    },
+    {
+      "name": "no cloud model requests",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "resetOwnAutomationProfileOnly": true,
+  "rerunMetrics": {
+    "pairs": [
+      {
+        "pred": 0,
+        "truth": 0,
+        "error_s": 10
+      },
+      {
+        "pred": 1,
+        "truth": 1,
+        "error_s": 0
+      },
+      {
+        "pred": 2,
+        "truth": 2,
+        "error_s": 0
+      },
+      {
+        "pred": 3,
+        "truth": 3,
+        "error_s": 0
+      },
+      {
+        "pred": 4,
+        "truth": 4,
+        "error_s": 0
+      },
+      {
+        "pred": 5,
+        "truth": 5,
+        "error_s": 0
+      },
+      {
+        "pred": 6,
+        "truth": 6,
+        "error_s": 0
+      },
+      {
+        "pred": 7,
+        "truth": 7,
+        "error_s": 0
+      }
+    ],
+    "misses": [],
+    "extras": [],
+    "detectionRecall": 1,
+    "truthCount": 8,
+    "candidateCount": 8,
+    "model": {
+      "matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 1,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 0,
+      "coverage": 1,
+      "acceptedError": 0
+    },
+    "baseline": {
+      "matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 0.8
+        },
+        {
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      ],
+      "macroF1": 0.8666666666666666,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 1,
+      "coverage": 1,
+      "acceptedError": 0.125
+    },
+    "depthMAE_m": 0,
+    "depthN": 2,
+    "falsePersistent": {
+      "count": 0,
+      "denominator": 6
+    },
+    "allCandidateCoverage": 1
+  },
+  "checkedAt": "2026-10-23T13:22:27.158Z",
+  "passed": 35,
+  "failed": 0
+}

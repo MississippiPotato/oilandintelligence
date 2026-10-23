@@ -1,0 +1,17 @@
+(function(g){
+'use strict';
+// G0 risk probes only. These are not complete m1/m4/m5 cases.
+function components(pixels,width,height){const seen=new Uint8Array(width*height),out=[];for(let p=0;p<seen.length;p++){const j=p*4;if(seen[p]||pixels[j]+pixels[j+1]+pixels[j+2]>650)continue;const queue=[p],region=[];seen[p]=1;for(let h=0;h<queue.length;h++){const n=queue[h];region.push(n);for(const k of [n%width>0?n-1:-1,n%width<width-1?n+1:-1,n-width,n+width])if(k>=0&&k<seen.length&&!seen[k]){const q=k*4;if(pixels[q]+pixels[q+1]+pixels[q+2]<=650){seen[k]=1;queue.push(k);}}}out.push(region);}return out;}
+function pixelFixture(){const width=24,height=16,pixels=new Uint8ClampedArray(width*height*4).fill(255);for(let y=3;y<8;y++)for(let x=3;x<8;x++){const j=(y*width+x)*4;pixels[j]=125;pixels[j+1]=96;pixels[j+2]=58;}for(let y=7;y<13;y++)for(let x=15;x<20;x++){const j=(y*width+x)*4;pixels[j]=76;pixels[j+1]=100;pixels[j+2]=94;}return{pixels,width,height};}
+function linearFit(x,y){const xm=x.reduce((a,b)=>a+b,0)/x.length,ym=y.reduce((a,b)=>a+b,0)/y.length;const slope=x.reduce((s,v,i)=>s+(v-xm)*(y[i]-ym),0)/x.reduce((s,v)=>s+(v-xm)**2,0);return{intercept:ym-slope*xm,slope};}
+function m4(){// Independent single-lithology calibration. No test boundary participates in fitting.
+const x=Array.from({length:21},(_,i)=>10+i),y=x.map(v=>.8*v+4);const model=linearFit(x,y);
+const measure=(thinLayer)=>Array.from({length:80},(_,i)=>{const wob=i<40?15:25,rop=.8*wob+4+(thinLayer&&i>=55&&i<60?-6:0);return{depthMD_m:1200+i,wob,rop,drillTime_min_m:60/rop};});
+const boundaries=(rows,key)=>rows.flatMap((r,i)=>i&&Math.abs(r[key]-rows[i-1][key])>3?[r.depthMD_m]:[]);
+const fixed=measure(false).map(r=>({...r,residual:r.rop-(model.intercept+model.slope*r.wob)})),thin=measure(true).map(r=>({...r,residual:r.rop-(model.intercept+model.slope*r.wob)}));
+return{model,calibrationSource:'independent homogeneous synthetic calibration, WOB 10..30; no test depth labels',rawOperationStep:boundaries(fixed,'rop'),correctedOperationStep:boundaries(fixed,'residual'),thinLayerCandidates:boundaries(thin,'residual'),limitation:'one-factor calibration and threshold probe only; no full clustering case or real lithology identification'};}
+function extract(rawText){let depth=null;const output=[];for(const clause of rawText.split(/[，。；;！\n]/)){const d=clause.match(/(\d+(?:\.\d+)?)\s*[—–\-~至]\s*(\d+(?:\.\d+)?)\s*(m|米)(?:\s*MD)?/i);if(d)depth={value:[Number(d[1]),Number(d[2])],unit:'m MD'};if(/荧光/.test(clause))output.push({kind:'fluorescence',negation:/(?:未见|无|未发现)(?:明显)?荧光/.test(clause),depthRangeMD_m:depth?.value??null,sourceText:clause});if(/气测.*升高/.test(clause))output.push({kind:'gas_increase',negation:false,depthRangeMD_m:depth?.value??null,sourceText:clause});}return output;}
+function createStore(){const records=new Map();return{add(source){const key=source.sourceRecordId+'@'+source.sourceVersion,old=records.get(key);if(old&&JSON.stringify(old.content)!==JSON.stringify(source.content))throw Error('同一来源 ID/版本内容冲突');records.set(key,JSON.parse(JSON.stringify(source)));},get(id,version){return records.get(id+'@'+version);}};}
+function invalidate(claim,trigger){return{...claim,revision:claim.revision+1,reviewHistory:[...(claim.reviewHistory||[]),{revision:claim.revision,reviewStatus:claim.reviewStatus,trigger}],reviewStatus:'needs_review',traceabilityStatus:'stale',supportStatus:'unchecked'};}
+g.G0Risks={components,pixelFixture,linearFit,m4,extract,createStore,invalidate};
+})(globalThis);

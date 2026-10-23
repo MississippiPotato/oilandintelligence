@@ -1,0 +1,65 @@
+{
+  "generatedBy": "tools/build-evidence-fixtures.mjs",
+  "seed": 17,
+  "actualAlgorithmExecution": true,
+  "notRunByM5Browser": true,
+  "snapshots": [
+    {
+      "caseId": "s17-cuttings-lithology",
+      "runId": "built-default-snapshot-v1",
+      "sources": 1,
+      "claims": 1,
+      "summary": {
+        "weights": [
+          3759,
+          2107,
+          8716,
+          0
+        ],
+        "denominator": 14582,
+        "fractions": [
+          0.2577835687834316,
+          0.1444932108078453,
+          0.597723220408723,
+          0
+        ],
+        "unit": "visible_pixels"
+      }
+    },
+    {
+      "caseId": "s17-mudgas-context",
+      "runId": "built-default-snapshot-v1",
+      "sources": 1,
+      "claims": 1,
+      "summary": {
+        "sourceTime_s": 1050,
+        "sourceDepthMD_m": 1205.8802919085292
+      }
+    },
+    {
+      "caseId": "s17-fluorescence-review",
+      "runId": "built-default-snapshot-v1",
+      "sources": 1,
+      "claims": 1,
+      "summary": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212,
+        "intensity": 52.75201894500772,
+        "grade": 1
+      }
+    },
+    {
+      "caseId": "s17-drilltime-boundaries",
+      "runId": "built-default-snapshot-v1",
+      "sources": 1,
+      "claims": 2,
+      "summary": {
+        "boundaries": [
+          1226.875,
+          1252.375
+        ]
+      }
+    }
+  ]
+}

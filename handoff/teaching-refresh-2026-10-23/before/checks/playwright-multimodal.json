@@ -1,0 +1,12 @@
+{
+  "allowUnrestrictedFileAccess": true,
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "channel": "chrome",
+      "headless": true,
+      "args": ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"]
+    },
+    "contextOptions": {"viewport": {"width": 1440, "height": 1000}}
+  }
+}

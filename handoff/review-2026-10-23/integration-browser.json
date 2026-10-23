@@ -1,0 +1,69 @@
+{
+  "scope": "new integration review of current m5; inputs are prior actual browser-downloaded evidence fixtures, not newly exported in this review",
+  "checks": [
+    {
+      "name": "m1 retained actual export is accepted",
+      "passed": true
+    },
+    {
+      "name": "m2 retained actual export is accepted",
+      "passed": true
+    },
+    {
+      "name": "m3 retained actual export is accepted",
+      "passed": true
+    },
+    {
+      "name": "m4 retained actual export is accepted",
+      "passed": true
+    },
+    {
+      "name": "all four upstream case IDs linked",
+      "passed": true
+    },
+    {
+      "name": "every report source ref resolves",
+      "passed": true
+    },
+    {
+      "name": "m1 image is visible after clicking report sentence",
+      "passed": true
+    },
+    {
+      "name": "editing correctly revokes underlying confirmation",
+      "passed": true
+    }
+  ],
+  "observations": [
+    {
+      "finding": "stale review success message after edit",
+      "before": "已保存针对当前修订与来源版本的人工核验。",
+      "after": "已保存针对当前修订与来源版本的人工核验。",
+      "messageStillClaimsCurrentConfirmation": true,
+      "actualState": {
+        "reviewStatus": "needs_review",
+        "traceabilityStatus": "stale",
+        "supportStatus": "unchecked"
+      },
+      "file": "case-src/m5/ui.js",
+      "lines": [
+        22,
+        24
+      ]
+    }
+  ],
+  "errors": [],
+  "report": {
+    "claims": 29,
+    "sources": 21,
+    "upstreamCaseIds": [
+      "s17-cuttings-lithology",
+      "s17-mudgas-context",
+      "s17-fluorescence-review",
+      "s17-drilltime-boundaries"
+    ]
+  },
+  "checkedAt": "2026-10-23T11:52:09.133Z",
+  "passed": 8,
+  "failed": 0
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Actual file-offline evidence exchange. Inputs are four current JSON files actually downloaded through the original HTTP portal earlier this revision; this does not claim four offline downloads.",
+  "checks": [
+    {
+      "name": "four current actually downloaded upstream packages linked offline",
+      "passed": true,
+      "detail": {
+        "claims": 29,
+        "sources": 22
+      }
+    },
+    {
+      "name": "upstream original image and current source graph render",
+      "passed": true
+    },
+    {
+      "name": "native keyboard checks current verification boxes",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "exception": "locator.evaluate: TypeError: Cannot read properties of undefined (reading 'reviewStatus')\n    at eval (eval at evaluate (:301:30), <anonymous>:1:35)\n    at UtilityScript.evaluate (<anonymous>:303:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+  "checkedAt": "2026-10-23T12:47:39.234Z",
+  "passed": 3,
+  "failed": 1
+}

@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1.0",
+  "datasetId": "s17-synthetic-v1",
+  "dataNature": "synthetic_teaching",
+  "wellId": "DEMO-017",
+  "timeOrigin": "relative 0 s",
+  "depthRangeMD_m": [
+    1200,
+    1280
+  ],
+  "units": {
+    "time": "s",
+    "depth": "m MD",
+    "flow": "m3/s",
+    "effectiveVolume": "m3",
+    "ROP": "m/h",
+    "drillTime": "min/m",
+    "gas": "normalized instrument unit (not volume fraction)"
+  },
+  "samples": [
+    {
+      "parentSampleId": "DEMO-017-P1",
+      "sampleId": "DEMO-017-S1",
+      "capturePairId": "DEMO-017-WLUV1",
+      "splitGroupId": "DEMO-017-P1",
+      "depthRangeMD_m": [
+        1200,
+        1210
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    },
+    {
+      "parentSampleId": "DEMO-017-P2",
+      "sampleId": "DEMO-017-S2",
+      "capturePairId": "DEMO-017-WLUV2",
+      "splitGroupId": "DEMO-017-P2",
+      "depthRangeMD_m": [
+        1210,
+        1220
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    },
+    {
+      "parentSampleId": "DEMO-017-P3",
+      "sampleId": "DEMO-017-S3",
+      "capturePairId": "DEMO-017-WLUV3",
+      "splitGroupId": "DEMO-017-P3",
+      "depthRangeMD_m": [
+        1220,
+        1230
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    },
+    {
+      "parentSampleId": "DEMO-017-P4",
+      "sampleId": "DEMO-017-S4",
+      "capturePairId": "DEMO-017-WLUV4",
+      "splitGroupId": "DEMO-017-P4",
+      "depthRangeMD_m": [
+        1230,
+        1240
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    },
+    {
+      "parentSampleId": "DEMO-017-P5",
+      "sampleId": "DEMO-017-S5",
+      "capturePairId": "DEMO-017-WLUV5",
+      "splitGroupId": "DEMO-017-P5",
+      "depthRangeMD_m": [
+        1240,
+        1250
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    },
+    {
+      "parentSampleId": "DEMO-017-P6",
+      "sampleId": "DEMO-017-S6",
+      "capturePairId": "DEMO-017-WLUV6",
+      "splitGroupId": "DEMO-017-P6",
+      "depthRangeMD_m": [
+        1250,
+        1260
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    },
+    {
+      "parentSampleId": "DEMO-017-P7",
+      "sampleId": "DEMO-017-S7",
+      "capturePairId": "DEMO-017-WLUV7",
+      "splitGroupId": "DEMO-017-P7",
+      "depthRangeMD_m": [
+        1260,
+        1270
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    },
+    {
+      "parentSampleId": "DEMO-017-P8",
+      "sampleId": "DEMO-017-S8",
+      "capturePairId": "DEMO-017-WLUV8",
+      "splitGroupId": "DEMO-017-P8",
+      "depthRangeMD_m": [
+        1270,
+        1280
+      ],
+      "modalities": [
+        "white_light",
+        "UV"
+      ],
+      "status": "implemented_shared_WL_UV_pixel_fixture_m1_m3"
+    }
+  ],
+  "split": {
+    "m1": "24 training trays (288 grains), 8 validation trays (96 grains), DEMO-017 test",
+    "m2": {
+      "train": "TRAIN-001..028",
+      "validation": "VALID-001..008",
+      "test": "DEMO-017",
+      "rule": "whole wells; every event/paired image variant stays in its parent group"
+    },
+    "m3": "12 train paired samples, 4 validation paired samples, DEMO-017 test",
+    "m4": "160 independent calibration rows; 6 training wells, 3 validation wells, DEMO-017 controlled test",
+    "m5": "36 training expression families / 12 validation / 12 test; numeric variants stay within family",
+    "rule": "whole parent samples/wells/expression families; all WL/UV/exposure variants stay grouped"
+  },
+  "independence": {
+    "m1": "embedded actual RGBA fixture + pixel kNN training",
+    "m2": "embedded generator + independent training/validation wells",
+    "m3": "embedded WL/UV fixture sharing geometry and parent identity with m1; actual logistic training",
+    "m4": "embedded controlled curves + independent single-response calibration and clustering",
+    "m5": "embedded text and four real computed snapshots; explicit actual evidence JSON import"
+  },
+  "limits": [
+    "shared synthetic well name and MD units are teaching identity, not one reconstructed field history",
+    "public headspace, core patches and drilling well retain separate identities and depth datums",
+    "sourceVersion is page input revision; explicit workspace file can carry history/version floor across sessions, no central version service"
+  ],
+  "protocolRevision": "1.1-public-appendices",
+  "publicAppendices": [
+    {
+      "datasetId": "USROP-A3-F15-depth-subset-v1",
+      "wellId": "15/9-F-15",
+      "dataNature": "public_measured",
+      "source": "https://github.com/AndrzejTunkiel/USROP",
+      "license": "CC BY-NC-SA 4.0",
+      "units": {
+        "depthMD_m": "m MD",
+        "WOB_kN": "kN",
+        "ROP_m_h": "m/h",
+        "RPM": "rev/min",
+        "flow_m3_s": "m3/s",
+        "torque_kNm": "kN m"
+      },
+      "alignedToDEMO017": false
+    },
+    {
+      "datasetId": "PANGAEA-975497-v1",
+      "wellId": "386-M0091D",
+      "dataNature": "public_measured",
+      "source": "https://doi.org/10.1594/PANGAEA.975497",
+      "license": "CC BY 4.0",
+      "units": {
+        "depth": "m (sediment/rock)",
+        "CH4": "ppmv",
+        "C2H6": "ppmv",
+        "ratio": "dimensionless"
+      },
+      "alignedToDEMO017": false
+    },
+    {
+      "datasetId": "mendeley-b6rj29mrss-v1-six-core-patches",
+      "wellId": "PUBLIC-CORE-COLLECTION",
+      "dataNature": "public_measured",
+      "source": "https://data.mendeley.com/datasets/b6rj29mrss/1",
+      "license": "CC BY 4.0",
+      "units": {
+        "image": "original pixels / whole core patch"
+      },
+      "alignedToDEMO017": false
+    }
+  ]
+}

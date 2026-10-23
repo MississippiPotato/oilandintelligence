@@ -1,0 +1,156 @@
+{
+  "createdAt": "2026-10-23T08:16:46.307Z",
+  "scope": "current final build vs actual persisted packages, browser reports and downloaded evidence",
+  "cases": [
+    {
+      "id": "s17-cuttings-lithology",
+      "scene": "m1",
+      "version": "1.0.0",
+      "bytes": 63129,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-mudgas-context",
+      "scene": "m2",
+      "version": "1.0.0",
+      "bytes": 83801,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-fluorescence-review",
+      "scene": "m3",
+      "version": "1.0.0",
+      "bytes": 66697,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-drilltime-boundaries",
+      "scene": "m4",
+      "version": "1.0.0",
+      "bytes": 59395,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-evidence-report",
+      "scene": "m5",
+      "version": "1.0.0",
+      "bytes": 251262,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    }
+  ],
+  "caseCount": 5,
+  "fileCount": 25,
+  "totalPackageBytes": 524284,
+  "originalAndReadOnlyCopyFiles": 23,
+  "originalHashesUnchanged": true,
+  "storedUTF8Bytes": 533295,
+  "checks": [
+    {
+      "report": "calculation-checks.json",
+      "passed": 14,
+      "failed": 0,
+      "scope": "G0/G1 computational checks; not browser acceptance"
+    },
+    {
+      "report": "mandatory-calculation-checks.json",
+      "passed": 14,
+      "failed": 0,
+      "scope": "G2/G3/G4 calculations and source/build checks; not browser proof"
+    },
+    {
+      "report": "browser-mandatory.json",
+      "passed": 43,
+      "failed": 0,
+      "scope": "real standalone Chromium interactions, HTTP"
+    },
+    {
+      "report": "browser-five-offline.json",
+      "passed": 45,
+      "failed": 0,
+      "scope": "five cumulative packages imported using unchanged teacher portal 添加案例, offline file protocol"
+    },
+    {
+      "report": "browser-reopen-five.json",
+      "passed": 7,
+      "failed": 0,
+      "scope": "closed and reopened same persistent Chromium profile, five original-portal file packages"
+    },
+    {
+      "report": "browser-work-suite.json",
+      "passed": 25,
+      "failed": 0,
+      "scope": "enhanced working portal, original firstbreak folder unchanged, five through native importer"
+    },
+    {
+      "report": "browser-evidence-exchange.json",
+      "passed": 16,
+      "failed": 0,
+      "scope": "actual m1–m4 sandbox downloads explicitly imported to m5 inside unchanged teacher sandbox"
+    },
+    {
+      "report": "browser-evidence-html.json",
+      "passed": 16,
+      "failed": 0,
+      "scope": "actual m1–m4 sandbox downloads explicitly imported to m5 inside unchanged teacher sandbox"
+    }
+  ],
+  "calculationPassed": 28,
+  "browserPassed": 152,
+  "downloadedEvidence": [
+    {
+      "file": "output/exports/portal-m1.json",
+      "claims": 12,
+      "sources": 1,
+      "bytes": 50726,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m2.json",
+      "claims": 8,
+      "sources": 16,
+      "bytes": 160809,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m3.json",
+      "claims": 1,
+      "sources": 1,
+      "bytes": 80214,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m4.json",
+      "claims": 2,
+      "sources": 1,
+      "bytes": 132431,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m5.json",
+      "claims": 6,
+      "sources": 1,
+      "bytes": 23699,
+      "allSourceReferencesResolve": true
+    }
+  ],
+  "linkedReport": {
+    "claims": 29,
+    "sources": 23,
+    "upstreamCases": 4,
+    "bothSourceVersionsPreserved": true,
+    "oldConfirmationOnlyInHistory": true,
+    "jsonAndHtmlContainSameStatements": true
+  },
+  "notVerified": [
+    "other browsers/operating systems/real mobile devices",
+    "field-data performance",
+    "cross-session persistent source-version registry",
+    "arbitrary external curve import or unconstrained semantic judging"
+  ],
+  "scopeBoundary": "teaching synthetic offline MVP; no other 56 cases; no chat system"
+}

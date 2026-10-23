@@ -1,0 +1,160 @@
+{
+  "reviewDate": "2026-10-23",
+  "reviewer": "petroleum_ml_review",
+  "scope": "五例专业场景与智能方法的源码审阅；m1/m2 另做独立 Chrome 实际教学动作检查。只读产品与案例产物，新增审阅证据。",
+  "basis": [
+    "用户本轮转述的老师要求 4、5、6、7、8、9、10 及课堂说明",
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/02_core_cases.json",
+    "s17_development_kit/06_兼容与验收清单.txt",
+    "石油勘探开发的智能化可能性地图-全网站设计.txt",
+    "石油AI案例集_开发任务书 (1).txt"
+  ],
+  "verdict": "m1/m2 具备专业问题、分步教学和真实交互计算的完整闭环；两者都实际展示了智能方法在录井小场景中的作用。m3/m4/m5 的源码也有明确的业务任务与学习方法分工。本专项未发现必须推翻当前教学方案或补建科研再训练系统的理由。影响展示质量的主要问题是旧完成状态文案、错误复核理由、图例语义和初学者专业概念说明不足；没有据此宣称五例所有端到端验收均通过。",
+  "strengths": [
+    {
+      "case": "m1",
+      "teacherRequirement": [4, 7, 8, 9],
+      "title": "从岩屑可见像素到岩性建议，学习方法的介入点清楚且确实执行",
+      "evidence": "实际浏览器默认计算得到 12 个预测实例、288 个训练颗粒/96 个验证颗粒；原图、校正图、轮廓、近邻缩略图、距离和分步产物均存在。泥浆/黏连预设重新生成像素后，实例变为 11，出现 1 漏检、1 合并及 1 待复核，结果不是只换文案。",
+      "file": "case-src/m1/ui.js",
+      "line": 14,
+      "browserEvidence": "handoff/review-2026-10-23/m1-browser.json"
+    },
+    {
+      "case": "m1",
+      "teacherRequirement": [6, 8],
+      "title": "计数、二维面积和现场地层组成没有混为一谈",
+      "evidence": "背景有一大颗与多小颗的分母图，实验中可切换统计口径；待复核保留在总分母，分割漏检/合并另报，未把二维图像占比写成体积、质量或地层组成。",
+      "file": "case-src/m1/lesson.js",
+      "line": 4,
+      "browserEvidence": "handoff/review-2026-10-23/m1-browser.json"
+    },
+    {
+      "case": "m2",
+      "teacherRequirement": [4, 6, 7, 8, 9],
+      "title": "同峰异因能实际证明专业上下文为何有价值",
+      "evidence": "Chrome 中固定首峰气体数值，工况从原始接单根改为起下钻后，kNN 输出从接单根关联变为起下钻关联；首峰时间与气体原值不变。反事实改写后 metrics=null，页面没有继续拿旧金标评分。",
+      "file": "case-src/m2/ui.js",
+      "line": 16,
+      "browserEvidence": "handoff/review-2026-10-23/m2-browser.json"
+    },
+    {
+      "case": "m2",
+      "teacherRequirement": [6, 7, 8],
+      "title": "迟到、时间与深度的关系是真实计算对象",
+      "evidence": "不是当前 ROP×延迟；代码用累计有效泵量反查来源时刻再查 MD(t)。界面有来源/地面双时钟、工况带、时间曲线、实际近邻气峰和六步中间产物。实测默认首峰到达 1620 s、来源 1050 s，来源深度 1205.880 m；缺失工况情景转证据不足。",
+      "file": "case-src/m2/engine.js",
+      "line": 15,
+      "browserEvidence": "handoff/review-2026-10-23/m2-browser.json"
+    },
+    {
+      "case": "m1–m5",
+      "teacherRequirement": [4, 5, 9],
+      "title": "五例不是同一种算法换标题，专业任务与方法分工不同",
+      "evidence": "m1：像素连通域与特征 kNN；m2：循环迟到、工况事件与 kNN；m3：同样品白光/UV、校正及像素逻辑回归；m4：独立工况岭回归、聚类与连续分段；m5：字符 NB 归类、规则抽取、约束引述模板和证据定位。m5 明示不是 LLM，m3 教学等级明示是透明规则。后三例此项来自源码审阅，不记为本专项浏览器通过。",
+      "files": ["case-src/m1/engine.js", "case-src/m2/engine.js", "case-src/m3/lesson.js", "case-src/m4/lesson.js", "case-src/m5/ui.js"]
+    },
+    {
+      "case": "m1/m2",
+      "teacherRequirement": [4, 8],
+      "title": "真实数据附加区保留了专业对象的差异",
+      "evidence": "m1 的公开图片标为岩芯图块，不冒称岩屑实例盘；m2 的 IODP 顶空记录标为取芯后离散测量，不套用泥浆气测迟到分类。附加区不把无金标数据算作分类 F1。此轮已源码核对，未独立重复下载与许可鉴定。",
+      "files": ["case-src/m1/enhance.js:5", "case-src/m2/enhance.js:7"]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P2",
+      "case": "m2",
+      "teacherRequirement": "1、2、5；以及本轮要求展示已完成成果",
+      "evidence": "实际成品页脚仍显示“其余 m1 / m3 / m4 / m5 本轮未实现”，与现有五例成品和首页完成状态冲突；源码与 dist 同样存在。",
+      "file": "case-src/m2/index.html",
+      "line": 17,
+      "relatedFile": "dist/cases/s17-mudgas-context/demo/index.html:17",
+      "observedVsInferred": "文案及浏览器呈现为直接观察；老师可能误以为只有一例完成是影响推断。",
+      "impact": "不影响算法运行，但会主动削弱最关键的五例完成度展示，答辩时尤其显眼。",
+      "fixOrPresentation": "去除旧阶段限定，改为本例角色及五例已交付的准确导航说明；同时更新源模板与重新构建成品，不能只改 README。",
+      "browserEvidence": "handoff/review-2026-10-23/m2-browser.json"
+    },
+    {
+      "severity": "P2",
+      "case": "m1",
+      "teacherRequirement": "4、7、8：解释应与当前数据相符",
+      "evidence": "主动复核表中多个支持度 100.0% 的颗粒仍写“支持度较低，建议放大核对”；代码把这句话作为无拒判理由时的统一兜底。截图 review-m1-features.png 可见。",
+      "file": "case-src/m1/enhance.js",
+      "line": 3,
+      "observedVsInferred": "100.0% 与低支持文案同时出现为浏览器直接观察；对学习者造成混淆为教学影响推断。",
+      "impact": "最值得展示的人工复核机制给出了与实际支持度矛盾的理由，削弱“依据数据解释”的说服力。",
+      "fixOrPresentation": "按真实触发原因分别显示“邻居分歧”“分布外”“面积较小，优先放大”或“常规抽查”；无低支持证据时不称低支持。",
+      "browserEvidence": "output/playwright/review-m1-features.png"
+    },
+    {
+      "severity": "P2",
+      "case": "m1",
+      "teacherRequirement": "7、8、10：图形要让读者看出方法价值",
+      "evidence": "训练散点用三种颜色区分类别，但图中没有岩性图例，悬浮 title 只有 IMG-TRAIN-Pn；其 palette 与同页占比条的岩性配色不同。读者能看到三团点，却不能由图本身知道哪团是砂岩、泥岩或灰岩。",
+      "file": "shared/teaching.js",
+      "line": 5,
+      "relatedFiles": ["shared/teaching.js:2", "shared/lab.js:9", "case-src/m1/enhance.js:4"],
+      "observedVsInferred": "无类别图例、点 title 及颜色不一致为源码与浏览器直接观察；辨识成本为影响推断。",
+      "impact": "新增特征轴散点具备真实信息量，但当前没有把分类结构翻译成初学者可读的视觉证据。",
+      "fixOrPresentation": "加入三类中文图例，统一岩性颜色，点提示增加类别和特征值；当前测试颗粒继续使用十字形。无需改模型或重做科研评估。",
+      "browserEvidence": "output/playwright/review-m1-features.png"
+    },
+    {
+      "severity": "P2",
+      "case": "m2",
+      "teacherRequirement": "6：让非石油读者迅速理解专业概念",
+      "evidence": "背景 B2 是四条相似峰配“接单根记录/起下钻记录/持续钻进/组分不同步”标签，正文说明这些工况会造成不同解释，但没有先说明接单根、起下钻是什么动作，以及停泵/抽吸如何导致气体进入。当前更充分解释了分类需要什么信息，较少解释领域机制。",
+      "file": "case-src/m2/lesson.js",
+      "line": 9,
+      "observedVsInferred": "图和文字未解释动作及成因是直接观察；不足以让完全无石油背景读者自行理解，是基于老师目标的审阅判断，不是事实错误或运行失败。",
+      "impact": "“同峰异因”交互本来最适合展示专业与 AI 的结合，但非专业读者可能只理解成换标签后模型换答案。",
+      "fixOrPresentation": "补一组可点击的井筒小图：增加一根钻杆/提拉钻柱 → 暂停循环或抽吸效应 → 气体进入泥浆 → 一段迟到后形成地面峰；配一句定义与时间线。只做教学概念，不建设井控工程模拟。",
+      "primarySources": ["https://glossary.slb.com/terms/c/connection_gas", "https://glossary.slb.com/terms/t/trip_gas"],
+      "browserEvidence": "output/playwright/review-m2-background.png"
+    },
+    {
+      "severity": "P3",
+      "case": "m1",
+      "teacherRequirement": "6：优先把专业概念画出来",
+      "evidence": "样品旅程图目前是“钻头破岩—环空上返—地面采样”三个文字框；迟到滑块只在数据站更新相对偏移文字，未把样品标记在井筒/时间深度图上移动。页面已明示概念归位，不构成计算造假。",
+      "file": "case-src/m1/ui.js",
+      "line": 7,
+      "relatedFile": "case-src/m1/lesson.js:2",
+      "observedVsInferred": "源码与可见背景确认；未单独用浏览器拖动迟到滑块。",
+      "impact": "已有明确专业概念，但视觉形式仍接近流程标签，术语“环空”和迟到归位不够具象。属于可选教学加强项。",
+      "fixOrPresentation": "增加小井筒剖面，标清钻杆内下行/外侧环空上返/筛分采样；拖动迟到假设时移动采样的来源井段标记。保留概念模型标签，不要求流体力学求解。"
+    }
+  ],
+  "bestPresentationActions": [
+    {"case": "m1", "action": "先运行默认托盘，点击同一颗粒看实际近邻；再用泥浆/黏连预设重算，展示 12→11 实例及漏检/合并/待复核；切计数与面积分母。", "verification": "本专项 Chrome 实际执行", "teachingValue": "把拍摄与样品处理问题、图像模型限制和人工复核联系起来。"},
+    {"case": "m2", "action": "固定首峰曲线，将工况从接单根改为起下钻，再查看来源双时钟和真实邻居；最后切缺失工况，看到证据不足。", "verification": "本专项 Chrome 实际执行", "teachingValue": "直接解释为什么油气场景不能只看峰高。"},
+    {"case": "m3", "action": "固定同一配对样品改变曝光，比较原始阈值、校正阈值、学习掩膜；再观察饱和和矿物发光为何需要复核。", "verification": "本专项只审阅 lesson/UI 源码，交由其他专项做浏览器确认", "teachingValue": "分开呈现成像校正的收益、学习分割的增量和油气来源解释的边界。"},
+    {"case": "m4", "action": "固定地层只改钻压/转速，比较原始曲线与工况校正；切薄层并加大最小段长，观察层段被吞掉。", "verification": "本专项只审阅 lesson/UI 源码，交由其他专项做浏览器确认", "teachingValue": "揭示钻速变化不总是地层变化，平滑也有代价。"},
+    {"case": "m5", "action": "点报告句子定位原文；加入一个“未”字或改写已确认句子，再查看否定字段与需重核状态。", "verification": "本专项只审阅 lesson/UI 源码，交由其他专项做浏览器确认", "teachingValue": "把 NLP 整理记录的价值与数值、否定、来源保真的专业需求连接起来。"}
+  ],
+  "actualBrowserChecks": [
+    {"case": "m1", "action": "独立成品页运行默认计算", "observed": "ready，12 实例，288 训练/96 验证颗粒；可见像素、轮廓、占比和近邻。", "evidence": "handoff/review-2026-10-23/m1-browser.json"},
+    {"case": "m1", "action": "切泥浆/遮挡/黏连预设并重算", "observed": "输入先 stale 且禁导出；重算像素尾部校验变化，11 实例、1 漏检、1 合并、1 拒判，模型结果变化。", "evidence": "handoff/review-2026-10-23/m1-browser.json"},
+    {"case": "m1", "action": "点击颗粒 2、切计数分母、点击流程第 5 步", "observed": "当前颗粒标题改变，计数分母 11；流程显示当前运行三条真实训练邻居、类别和距离。", "evidence": "output/playwright/review-m1-flow.png"},
+    {"case": "m1", "action": "查看背景和特征增强面板的真实渲染", "observed": "三部分入口可用；背景为大字号 SVG 图卡，散点缺类别图例，复核表存在 100.0% 配低支持理由。", "evidence": "output/playwright/review-m1-background.png; output/playwright/review-m1-features.png"},
+    {"case": "m2", "action": "独立成品页运行默认计算", "observed": "ready，8 候选，224 训练/64 验证事件；联动曲线、双时钟与候选表实际出现。", "evidence": "output/playwright/review-m2-default.png"},
+    {"case": "m2", "action": "只将首峰工况改为起下钻并重算", "observed": "同一气曲线/同一首峰数值，候选 0→1（接单根→起下钻）；metrics=null；修改先 stale 禁导出。", "evidence": "handoff/review-2026-10-23/m2-browser.json"},
+    {"case": "m2", "action": "切缺失/噪声/重叠预设，并计算 15 格敏感性", "observed": "61 候选全部拒判，漏检 1，多余 54；空接受集错误率 null；网格实际生成 15 格，阈值不同导致候选数 85/61/24。", "evidence": "handoff/review-2026-10-23/m2-browser.json; output/playwright/review-m2-sensitivity.png"},
+    {"case": "m2", "action": "打开背景与流程第 2 步", "observed": "停泵累计量平台的概念图、公式、输入/动作/输出/陷阱和当前实际来源结果可见。", "evidence": "output/playwright/review-m2-background.png; output/playwright/review-m2-flow.png"}
+  ],
+  "professionalFactChecks": [
+    {"source": "https://glossary.slb.com/terms/c/connection_gas", "checked": "2026-10-23", "fact": "接单根前停泵、短距离钻柱运动的抽吸效应可使气体进入井筒；地面峰通常在一次迟到后出现。", "use": "支持补领域机制概念图；当前关联候选的方向没有明显相悖。"},
+    {"source": "https://glossary.slb.com/terms/t/trip_gas", "checked": "2026-10-23", "fact": "起下钻期间的停循环与提拉钻柱抽吸作用能导致气体随后被循环至地面。", "use": "支持解释起下钻关联气；不据此自动诊断某次真实事件。"}
+  ],
+  "unverified": [
+    "本专项没有重新逐个通过老师添加案例入口、刷新、浏览器重启或 file:// 断网；由兼容专项及既有记录覆盖，不能把这里的源码检查称浏览器通过。",
+    "m3/m4/m5 的五例方法价值梳理来自源码和任务卡，未在本专项浏览器会话里执行。",
+    "没有重新下载真实资料或完成新的独立真实数据泛化评估；没有这种评估不作为纯前端教学作业的硬性失败。",
+    "没有进行付费 API 调用，也没有读取、输入、保存用户 API Key。",
+    "没有检查每个随机种子、每个参数组合；所报实测结果只属于这次默认、泥浆黏连、工况改写和缺失噪声交互。",
+    "浏览器出现一次 favicon.ico 404，未发现其影响案例执行；命令历史含定位选择器/返回上下文修正，这些为审阅脚本问题，未计为产品故障。"
+  ]
+}

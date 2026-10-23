@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-23",
+  "authority": "latest direct user instruction in this chat",
+  "productGoal": "纯前端静态教学演示，强调专业讲解、可视化与可操作性",
+  "fiveCaseCount": 5,
+  "caseVersion": "1.1.0",
+  "portalVersion": "1.2.0-preview",
+  "requiredNext": [
+    "首页接入许可明确的真实Live2D角色",
+    "支持站内页面导航与案例导览",
+    "准备便宜的火山方舟模型API接入，接通状态以真实调用为准",
+    "查找可用于m3教学讲解的真实白光/UV配对资料"
+  ],
+  "removedFromRequiredBacklog": [
+    "m1/m2人工改标签后重建模型并做独立泛化评价",
+    "新增跨井、跨设备或研究性质性能测试",
+    "m3新建学习型等级模型",
+    "m4更复杂工况、监督序列模型、动态规划内部全过程工程展示",
+    "m5复杂NER、多语言、批量审核或中心化长期版本服务",
+    "G5及其他56例"
+  ],
+  "existingComputations": "保留已有真实浏览器计算作为教学交互，不因此升级成算法研发任务，也不改成预存成绩冒充计算",
+  "evidenceExportMeaning": "下载当前观察/结果/来源的JSON，可选让m5读入生成可追溯报告；不是模型权重或后端训练作业",
+  "offlineBoundary": "五个案例与Live2D/本地导览离线可用；用户启用真实大模型后该问答部分需要网络",
+  "verificationBoundary": "仅做新页面/按钮/导航/接口格式的必要检查，不新增科学性能实验",
+  "modelKeyPolicy": "用户在自己的页面填写，只驻留页面内存；不写入源码、ZIP或浏览器持久存储",
+  "modelLiveCallVerified": false
+}

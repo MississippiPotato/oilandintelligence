@@ -1,0 +1,78 @@
+{
+  "scope": "1.5.0-preview fresh homepage, current visual entry links, mobile, offline reload",
+  "checks": [
+    {
+      "name": "five cards expose five named visualization entry links",
+      "passed": true
+    },
+    {
+      "name": "homepage completion remains separate from actual empty imports",
+      "passed": true
+    },
+    {
+      "name": "local petroleum theme image decoded on the live homepage",
+      "passed": true
+    },
+    {
+      "name": "existing interactive wellsite atlas is retained",
+      "passed": true
+    },
+    {
+      "name": "m1 visual entry actually opens correct live experiment",
+      "passed": true
+    },
+    {
+      "name": "m2 visual entry actually opens correct live experiment",
+      "passed": true
+    },
+    {
+      "name": "m3 visual entry actually opens correct live experiment",
+      "passed": true
+    },
+    {
+      "name": "m4 visual entry actually opens correct live experiment",
+      "passed": true
+    },
+    {
+      "name": "m5 visual entry actually opens correct live experiment",
+      "passed": true
+    },
+    {
+      "name": "390px completion counts remain in first viewport",
+      "passed": true
+    },
+    {
+      "name": "390px page has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile native add button is visible",
+      "passed": true
+    },
+    {
+      "name": "offline file homepage retains active wellsite selection",
+      "passed": true
+    },
+    {
+      "name": "offline file homepage reload restores five current visual links",
+      "passed": true
+    },
+    {
+      "name": "theme image also decodes after file offline refresh",
+      "passed": true
+    },
+    {
+      "name": "no offline HTTP requests",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "checkedAt": "2026-10-23T14:06:52.742Z",
+  "passed": 17,
+  "failed": 0
+}

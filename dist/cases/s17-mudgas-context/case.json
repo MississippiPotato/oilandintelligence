@@ -1,0 +1,141 @@
+{
+  "id": "s17-mudgas-context",
+  "sceneId": "m2",
+  "methods": [
+    "ts"
+  ],
+  "title": "气测异常智能解释：气峰背后的工况与迟到",
+  "version": "1.3.0",
+  "updated": "2026-10-23",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "同样一个地面气峰，能否结合循环迟到与工况给出有依据的解释候选？本例使用教学合成多通道曲线，以真实 kNN 与规则基线比较，不输出油气发现或井控动作。",
+      "judge": [
+        {
+          "label": "数据形态",
+          "value": "多通道时序",
+          "desc": "总气/C1–C3、泵量、MD、工况"
+        },
+        {
+          "label": "实际方法",
+          "value": "加权 kNN",
+          "desc": "训练井标准化 + 近邻事件库"
+        },
+        {
+          "label": "数据性质",
+          "value": "教学合成",
+          "desc": "固定 seed；整井分组；默认离线"
+        },
+        {
+          "label": "判断边界",
+          "value": "候选 + 复核",
+          "desc": "支持度不是现场风险概率"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CIRCULATION",
+          "title": "图 B1｜地面峰对应更早的井下时刻",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"钻杆下行与环空上返，地面时钟晚于来源时钟\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"25\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"52.5\">地面：气体提取与观测</text><rect x=\"285\" y=\"25\" width=\"180\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"297\" y=\"52.5\">地面峰：到达时刻 tₐ</text><rect x=\"25\" y=\"140\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"167.5\">钻头：来源时刻 tₛ</text><path d=\"M70 75v53m-6 -8l6 8 6 -8M166 133V78m-6 8l6 -8 6 8\" fill=\"none\" stroke=\"#197969\" stroke-width=\"4\"/><text x=\"230\" y=\"120\">Q：有效流量 m³/s</text><text x=\"230\" y=\"153\">恒流连续循环：τ = V_eff / Q</text><text x=\"475\" y=\"48\">观测 ≠ 此刻钻头深度</text><text x=\"475\" y=\"91\">变流量/停泵：累计 Q·Δt</text><text x=\"475\" y=\"128\">达到 V_eff 才到达</text><text x=\"475\" y=\"165\">来源深度 = MD(tₛ)</text></g></svg></div></div><figcaption>钻杆内下行、环空上返是概念路径。V_eff=12 m³、Q=0.025 m³/s 时迟到 480 s；停泵期间累计量保持不变。此模型没有模拟气体混合、溶解或全部仪器延迟。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "CONTEXT",
+          "title": "图 B2｜峰形相近，解释仍需工况",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 310\" role=\"img\" aria-label=\"接单根停泵、起钻抽吸与迟到气峰的概念机制\"><rect width=\"720\" height=\"310\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"14\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/><rect x=\"251\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/><rect x=\"488\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/>\n<text x=\"28\" y=\"43\" font-weight=\"700\">接单根：接长钻柱</text><text x=\"267\" y=\"43\" font-weight=\"700\">起下钻：提出/下入钻柱</text><text x=\"504\" y=\"43\" font-weight=\"700\">重新循环：气体迟到地面</text>\n<path d=\"M70 75v114h65V75M102 76v40m0 17v48\" fill=\"none\" stroke=\"#819b81\" stroke-width=\"8\"/><path d=\"M93 121h18\" stroke=\"#ac7445\" stroke-width=\"4\"/>\n<text x=\"145\" y=\"105\" >停泵</text><text x=\"145\" y=\"131\" >短时移动</text><path d=\"M47 169l23 0\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"70\" cy=\"169\" r=\"4\" fill=\"#ac7445\"/><circle cx=\"59\" cy=\"169\" r=\"5\" fill=\"#b69b47\"/>\n<text x=\"28\" y=\"215\" >停泵时，井下气体</text><text x=\"28\" y=\"239\" >可能进入井内泥浆。</text><text x=\"28\" y=\"269\" >短时移动也可能产生抽吸。</text>\n<path d=\"M306 75v114h65V75M338 76v90\" fill=\"none\" stroke=\"#819b81\" stroke-width=\"8\"/><path d=\"M339 128l0 -52\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"339\" cy=\"76\" r=\"4\" fill=\"#ac7445\"/><path d=\"M283 164l25 0\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"308\" cy=\"164\" r=\"4\" fill=\"#ac7445\"/><circle cx=\"295\" cy=\"164\" r=\"5\" fill=\"#b69b47\"/>\n<text x=\"267\" y=\"221\" >起钻抽吸 + 停止循环，</text><text x=\"267\" y=\"250\" >可能让气体进入井内泥浆。</text>\n<path d=\"M507 177H700M507 174H540C550 174 552 115 566 115S587 174 610 174H700\" fill=\"none\" stroke=\"#27755e\" stroke-width=\"3\"/><text x=\"511\" y=\"90\" >工况发生在更早的来源时段</text><text x=\"510\" y=\"221\" >上返才见峰，回查更早工况。</text><text x=\"510\" y=\"250\" >峰高不足以确认油气层。</text></g></svg></div></div><figcaption>接单根和起钻均可能伴随停泵及抽吸影响；气体随后随循环返出。图示只解释关联机制，不给出井控决策。专业依据为SLB connection gas / trip gas；固定气峰改工况的反事实没有评价金标。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "EVIDENCE",
+          "title": "图 B3｜从观测到复核，需要逐级证据",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"观测、映射、推断、人工复核分层\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"18\" y=\"35\" width=\"135\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"30\" y=\"67.5\">① 气曲线</text><path d=\"M155 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"194\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"206\" y=\"67.5\">② 累计泵量</text><path d=\"M342 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"394\" y=\"67.5\">③ 工况/近邻</text><path d=\"M530 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"570\" y=\"35\" width=\"132\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"582\" y=\"67.5\">④ 人工复核</text><text x=\"28\" y=\"130\">直接观测</text><text x=\"205\" y=\"130\">简化运输假设</text><text x=\"395\" y=\"130\">候选解释</text><text x=\"580\" y=\"130\">补充证据</text><text x=\"28\" y=\"177\">缺失、冲突、分布外 → 证据不足；来源可定位不等于语义已核实。</text></g></svg></div></div><figcaption>这里回答“气峰与什么相关”，不据此宣布油气层、储量、产能，也不提供井控动作建议。结合岩屑、荧光等其他观察继续复核。</figcaption></figure>"
+        },
+        {
+          "no": 4,
+          "en": "DATA & LIMITS",
+          "title": "数据、方法与专业依据",
+          "html": "<p>训练 28 口独立模拟井、验证 8 口，测试 DEMO-017。标准化只在训练拟合；验证集选 k 与支持度阈值。事件检测器由两种方法共享。气体单位为归一化仪器单位，不能冒称体积分数。</p><p>简化累计 Q·Δt 运输模型不模拟混合、溶解和完整仪器/管线迟到。迟到后的源时刻查 MD(t)，不使用当前 ROP×延迟代替。工况气无唯一地层来源真值；只在适用的持续增气事件上评价源深度。</p><p><a href=\"https://glossary.slb.com/terms/g/gas_show\" target=\"_blank\" rel=\"noopener\">SLB：gas show</a> · <a href=\"https://glossary.slb.com/terms/c/connection_gas\" target=\"_blank\" rel=\"noopener\">SLB：connection gas</a> · <a href=\"https://glossary.slb.com/terms/t/trip_gas\" target=\"_blank\" rel=\"noopener\">SLB：trip gas</a> · <a href=\"https://scikit-learn.org/stable/modules/neighbors.html\" target=\"_blank\" rel=\"noopener\">scikit-learn：近邻方法原理</a></p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "从地面气峰到可追溯解释：六个实际计算步骤",
+      "lead": [
+        "先对齐观测，再做累计泵量映射。共享候选窗口后，固定规则与近邻学习比较同一批事件。逐步图册位于下方，每一步都可在演示中查看实际中间结果。"
+      ],
+      "steps": [
+        {
+          "name": "数据站：统一记录",
+          "role": "图 S1",
+          "do": "输入：总气、C1–C3、泵量、MD 与工况日志。动作：统一为秒、m³/s、m MD；缺失工况显式标记。详见图 S1。",
+          "effect": "同一时基的可见记录",
+          "trap": "归一化仪器单位不是气体体积分数。缺测不能填作正常工况。"
+        },
+        {
+          "name": "反查来源时刻与井深",
+          "role": "图 S2",
+          "do": "输入：累计泵量 C(t)、有效体积 V_eff。动作：求 C(tₐ)−C(tₛ)=V_eff，再查询 MD(tₛ)。详见图 S2。",
+          "effect": "来源时间与候选来源深度",
+          "trap": "泵停则 C(t)不变；起点前体积不足时无解。禁止用当前 ROP×迟到替代。"
+        },
+        {
+          "name": "共享检测器提取候选",
+          "role": "图 S3",
+          "do": "输入：气曲线与低分位背景。动作：三点平滑，超过背景+阈值的连续片段成候选。详见图 S3。",
+          "effect": "起止、峰高、宽度、面积、斜率",
+          "trap": "同一检测器供两方法共用；弱峰可能漏检，重叠峰可能合并。"
+        },
+        {
+          "name": "训练库与特征标准化",
+          "role": "图 S4",
+          "do": "输入：按整井隔离的带标注事件。动作：仅训练井拟合均值/标准差；验证井选择 k 与拒判阈值。详见图 S4。",
+          "effect": "标准化向量与带标签近邻库",
+          "trap": "同一峰相邻点不得跨集合。测试交互属于教学探索，不是研究级盲测。"
+        },
+        {
+          "name": "加权近邻与证据不足",
+          "role": "图 S5",
+          "do": "输入：当前事件的可见特征、训练均值/标准差与样本库。动作：全维标准化欧氏距离；按 1/max(0.05,d) 投票。详见图 S5。",
+          "effect": "解释候选、真实邻居、支持度、拒判理由",
+          "trap": "二维图只作阅读；支持度没有现场概率校准。缺工况、冲突或距离太远时转复核。"
+        },
+        {
+          "name": "复核与独立评价",
+          "role": "图 S6",
+          "do": "输入：预测结果；独立评价模块中的完整事件金标。动作：170 s 容差下一对一最小总时间误差匹配，分开统计漏检/多余。详见图 S6。",
+          "effect": "拒判列混淆、覆盖、接受集错误率和证据 JSON",
+          "trap": "解释 F1 的分母是匹配事件；漏检另列。无接受样本显示不适用，人工修订不改模型成绩。"
+        }
+      ],
+      "metrics": {
+        "title": "逐步图解与验收指标",
+        "html": "<figure><h3>图 S1｜数据站：统一记录</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"多源时间带对齐\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><text x=\"25\" y=\"40\">输入：不同记录</text><text x=\"370\" y=\"40\">输出：相同的 time_s</text><rect x=\"25\" y=\"60\" width=\"210\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"82.5\">气体 → 仪器归一化单位</text><rect x=\"25\" y=\"110\" width=\"210\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"132.5\">泵量 → m³/s</text><rect x=\"25\" y=\"160\" width=\"210\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"182.5\">井深 → m MD</text><path d=\"M250 120h75m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><path d=\"M355 75h330M355 125h330M355 175h330\" stroke=\"#7eaaa0\" stroke-width=\"10\"/><text x=\"365\" y=\"101\">0 s</text><text x=\"610\" y=\"101\">14400 s</text></g></svg></div></div><figcaption>输入：总气、C1–C3、泵量、MD 与工况日志；动作：统一为秒、m³/s、m MD；缺失工况显式标记；输出：同一时基的可见记录。陷阱：归一化仪器单位不是气体体积分数。缺测不能填作正常工况。</figcaption></figure><figure><h3>图 S2｜反查来源时刻与井深</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"停泵累计量平台与来源查询\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><path d=\"M50 170V30M50 170h610\" fill=\"none\" stroke=\"#6c827c\"/><path d=\"M55 165L200 100H330L600 35\" fill=\"none\" stroke=\"#197969\" stroke-width=\"4\"/><text x=\"205\" y=\"85\">停泵：不推进</text><text x=\"75\" y=\"35\">C(t) / m³</text><text x=\"510\" y=\"197\">time_s →</text><text x=\"365\" y=\"145\">在累计量上回退 V_eff</text><text x=\"365\" y=\"175\">回查 tₛ → MD(tₛ)</text></g></svg></div></div><figcaption>输入：累计泵量 C(t)、有效体积 V_eff；动作：求 C(tₐ)−C(tₛ)=V_eff，再查询 MD(tₛ)；输出：来源时间与候选来源深度。陷阱：泵停则 C(t)不变；起点前体积不足时无解。禁止用当前 ROP×迟到替代。</figcaption></figure><figure><h3>图 S3｜共享检测器提取候选</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"候选窗口峰高峰宽面积\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"200\" y=\"35\" width=\"260\" height=\"140\" fill=\"#d9ebe1\"/><path d=\"M45 174Q170 174 220 100T320 40T420 105T660 174\" fill=\"none\" stroke=\"#197969\" stroke-width=\"3\"/><path d=\"M45 170H660\" stroke=\"#ac784c\" stroke-dasharray=\"6 4\"/><path d=\"M330 170V45M200 185H460\" stroke=\"#614b33\"/><text x=\"348\" y=\"85\">峰高</text><text x=\"270\" y=\"205\">持续时间 / s</text><text x=\"490\" y=\"160\">背景+检测阈值</text></g></svg></div></div><figcaption>输入：气曲线与低分位背景；动作：三点平滑，超过背景+阈值的连续片段成候选；输出：起止、峰高、宽度、面积、斜率。陷阱：同一检测器供两方法共用；弱峰可能漏检，重叠峰可能合并。</figcaption></figure><figure><h3>图 S4｜训练库与特征标准化</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"整井训练验证测试划分\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"45\" width=\"210\" height=\"65\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"82.5\">训练：28 口井</text><rect x=\"255\" y=\"45\" width=\"210\" height=\"65\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"267\" y=\"82.5\">验证：8 口井</text><rect x=\"485\" y=\"45\" width=\"210\" height=\"65\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"497\" y=\"82.5\">测试：DEMO-017</text><text x=\"40\" y=\"145\">拟合标准化/存事件</text><text x=\"265\" y=\"145\">选 k / 支持度 / 距离</text><text x=\"500\" y=\"145\">只预测；隔离标签</text><text x=\"40\" y=\"185\">同源峰、图像变体和样品保持在各自完整组内。</text></g></svg></div></div><figcaption>输入：按整井隔离的带标注事件；动作：仅训练井拟合均值/标准差；验证井选择 k 与拒判阈值；输出：标准化向量与带标签近邻库。陷阱：同一峰相邻点不得跨集合。测试交互属于教学探索，不是研究级盲测。</figcaption></figure><figure><h3>图 S5｜加权近邻与证据不足</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"近邻投票与阈值分支\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><circle cx=\"125\" cy=\"105\" r=\"12\" fill=\"#ac784c\"/><path d=\"M125 105l-45 -50\" stroke=\"#86a99e\"/><circle cx=\"80\" cy=\"55\" r=\"9\" fill=\"#197969\"/><path d=\"M125 105l65 -60\" stroke=\"#86a99e\"/><circle cx=\"190\" cy=\"45\" r=\"9\" fill=\"#197969\"/><path d=\"M125 105l100 25\" stroke=\"#86a99e\"/><circle cx=\"225\" cy=\"130\" r=\"9\" fill=\"#197969\"/><path d=\"M125 105l-60 60\" stroke=\"#86a99e\"/><circle cx=\"65\" cy=\"165\" r=\"9\" fill=\"#ac784c\"/><text x=\"25\" y=\"195\">实际全维距离与近邻票</text><path d=\"M245 105h80m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"350\" y=\"45\" width=\"315\" height=\"50\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"362\" y=\"75\">一致且近 → 候选解释</text><rect x=\"350\" y=\"125\" width=\"315\" height=\"50\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"362\" y=\"155\">分歧/冲突 → 证据不足</text></g></svg></div></div><figcaption>输入：当前事件的可见特征、训练均值/标准差与样本库；动作：全维标准化欧氏距离；按 1/max(0.05,d) 投票；输出：解释候选、真实邻居、支持度、拒判理由。陷阱：二维图只作阅读；支持度没有现场概率校准。缺工况、冲突或距离太远时转复核。</figcaption></figure><figure><h3>图 S6｜复核与独立评价</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"检测匹配解释混淆和证据导出\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"35\" width=\"200\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"67.5\">预测事件 ↔ 真值事件</text><path d=\"M230 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"270\" y=\"35\" width=\"190\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"282\" y=\"67.5\">解释：4 类 + 拒判</text><path d=\"M467 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"510\" y=\"35\" width=\"185\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"522\" y=\"67.5\">来源版本 + 复核</text><text x=\"30\" y=\"135\">漏检 / 多余候选单独报告</text><text x=\"30\" y=\"175\">来源深度 MAE 只统计有适用真值的持续增气事件，单位 m。</text></g></svg></div></div><figcaption>输入：预测结果；独立评价模块中的完整事件金标；动作：170 s 容差下一对一最小总时间误差匹配，分开统计漏检/多余；输出：拒判列混淆、覆盖、接受集错误率和证据 JSON。陷阱：解释 F1 的分母是匹配事件；漏检另列。无接受样本显示不适用，人工修订不改模型成绩。</figcaption></figure><p>候选检测按 170 s 容差做一对一匹配，分别报告漏检/多余候选。解释混淆为4行×5列，保留拒判。宏F1在匹配事件上计算，漏检不静默消失。覆盖率=接受/匹配事件；接受集错误率=错误接受/全部接受，无接受样本时不适用。源深度 MAE 只在有定义的事件上评价。所有数字在演示中重新计算，不能由本图册推断性能。</p>"
+      },
+      "fails": [
+        {
+          "name": "迟到假设错误",
+          "why": "来源时段与工况错配；可以改变体积或关闭校正，定位错误事件。"
+        },
+        {
+          "name": "缺失工况/事件重叠",
+          "why": "证据不足会拒判或合并成候选；漏检和多余候选独立统计。"
+        },
+        {
+          "name": "人工改写工况",
+          "why": "只改可见操作日志，气曲线不变。此反事实没有金标，隐藏性能指标。"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "height": 950,
+      "label": "可运行示范",
+      "intro": "先运行真实计算；点击事件、查看来源与近邻，尝试停泵和工况缺失，复核并导出证据。也可独立双击 demo/index.html。"
+    }
+  }
+}

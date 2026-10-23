@@ -1,0 +1,70 @@
+{
+  "scope": "actual m1–m4 sandbox downloads explicitly imported to m5 inside unchanged teacher sandbox",
+  "checks": [
+    {
+      "name": "m1 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "m2 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "m3 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "m4 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "all four real cases linked",
+      "status": "passed"
+    },
+    {
+      "name": "all source refs resolve",
+      "status": "passed"
+    },
+    {
+      "name": "actual m1 image source shown",
+      "status": "passed"
+    },
+    {
+      "name": "upstream current claim manually confirmed",
+      "status": "passed"
+    },
+    {
+      "name": "actual changed image source update accepted",
+      "status": "passed"
+    },
+    {
+      "name": "upstream update immediately invalidates current confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "new upstream sourceVersion2 has no inherited confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "upstream prior confirmation history retained",
+      "status": "passed"
+    },
+    {
+      "name": "prior sourceVersion1 retained for historical audit",
+      "status": "passed"
+    },
+    {
+      "name": "same ID/version with changed content rejected",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "initial": {
+    "sources": 24,
+    "claims": 29,
+    "upstream": 23
+  },
+  "exception": "page.waitForEvent: Timeout 5000ms exceeded while waiting for event \"download\"\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================",
+  "passed": 14,
+  "failed": 1
+}

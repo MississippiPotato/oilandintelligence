@@ -1,0 +1,37 @@
+{
+  "scope": "Actual native import of preserved v1.1 m2, visible upgrade guidance, and new 1.2 standalone route in an isolated automation profile",
+  "checks": [
+    {
+      "name": "preserved old package still imports unchanged",
+      "passed": true
+    },
+    {
+      "name": "old case scene identifies old version and new product route",
+      "passed": true
+    },
+    {
+      "name": "registration count remains honest",
+      "passed": true
+    },
+    {
+      "name": "home clearly explains old package update",
+      "passed": true
+    },
+    {
+      "name": "flagship selects new standalone instead of silently running old imported case",
+      "passed": true
+    },
+    {
+      "name": "latest m2 actually opens with corrected footer",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "checkedAt": "2026-10-23T12:35:18.941Z",
+  "passed": 7,
+  "failed": 0
+}

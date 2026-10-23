@@ -1,0 +1,106 @@
+{
+  "scope": "actual m1–m4 sandbox downloads explicitly imported to m5 inside unchanged teacher sandbox",
+  "checks": [
+    {
+      "name": "m1 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "m2 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "m3 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "m4 explicit JSON validated",
+      "status": "passed"
+    },
+    {
+      "name": "all four real cases linked",
+      "status": "passed"
+    },
+    {
+      "name": "all source refs resolve",
+      "status": "passed"
+    },
+    {
+      "name": "actual m1 image source shown",
+      "status": "passed"
+    },
+    {
+      "name": "upstream current claim manually confirmed",
+      "status": "passed"
+    },
+    {
+      "name": "actual changed image source update accepted",
+      "status": "passed"
+    },
+    {
+      "name": "upstream update immediately invalidates current confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "new upstream sourceVersion2 has no inherited confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "upstream prior confirmation history retained",
+      "status": "passed"
+    },
+    {
+      "name": "prior sourceVersion1 retained for historical audit",
+      "status": "passed"
+    },
+    {
+      "name": "same ID/version with changed content rejected",
+      "status": "passed"
+    },
+    {
+      "name": "linked HTML downloaded within original sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "no JavaScript errors",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "initial": {
+    "sources": 21,
+    "claims": 29,
+    "upstream": 23
+  },
+  "final": {
+    "sources": 23,
+    "claims": 29,
+    "versions": [
+      "s17-user-record@1",
+      "s17-user-record@5",
+      "DEMO-017-P1-white@1",
+      "DEMO-017-gas-1@1",
+      "DEMO-017-context-1@1",
+      "DEMO-017-gas-2@1",
+      "DEMO-017-context-2@1",
+      "DEMO-017-gas-3@1",
+      "DEMO-017-context-3@1",
+      "DEMO-017-gas-4@1",
+      "DEMO-017-context-4@1",
+      "DEMO-017-gas-5@1",
+      "DEMO-017-context-5@1",
+      "DEMO-017-gas-6@1",
+      "DEMO-017-context-6@1",
+      "DEMO-017-gas-7@1",
+      "DEMO-017-context-7@1",
+      "DEMO-017-gas-8@1",
+      "DEMO-017-context-8@1",
+      "DEMO-017-P1-WLUV@1",
+      "DEMO-017-drilling-response@1",
+      "s17-user-record@6",
+      "DEMO-017-P1-white@2"
+    ]
+  },
+  "passed": 16,
+  "failed": 0
+}

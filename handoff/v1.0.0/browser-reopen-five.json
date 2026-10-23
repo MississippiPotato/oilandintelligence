@@ -1,0 +1,919 @@
+{
+  "scope": "closed and reopened same persistent Chromium profile, five original-portal file packages",
+  "checks": [
+    {
+      "name": "m1 reopened and computed",
+      "status": "passed"
+    },
+    {
+      "name": "m2 reopened and computed",
+      "status": "passed"
+    },
+    {
+      "name": "m3 reopened and computed",
+      "status": "passed"
+    },
+    {
+      "name": "m4 reopened and computed",
+      "status": "passed"
+    },
+    {
+      "name": "m5 reopened and computed",
+      "status": "passed"
+    },
+    {
+      "name": "all five records persisted",
+      "status": "passed"
+    },
+    {
+      "name": "no errors or HTTP",
+      "status": "passed"
+    }
+  ],
+  "cases": [
+    {
+      "id": "s17-cuttings-lithology",
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 2,
+            "IoU": 1
+          },
+          {
+            "pred": 1,
+            "truth": 0,
+            "IoU": 1
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "IoU": 1
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "IoU": 1
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "IoU": 1
+          },
+          {
+            "pred": 5,
+            "truth": 7,
+            "IoU": 1
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "IoU": 1
+          },
+          {
+            "pred": 7,
+            "truth": 5,
+            "IoU": 1
+          },
+          {
+            "pred": 8,
+            "truth": 10,
+            "IoU": 1
+          },
+          {
+            "pred": 9,
+            "truth": 8,
+            "IoU": 1
+          },
+          {
+            "pred": 10,
+            "truth": 11,
+            "IoU": 1
+          },
+          {
+            "pred": 11,
+            "truth": 9,
+            "IoU": 1
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "merged": [],
+        "model": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              7,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              5,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 0,
+              "f1": 0
+            },
+            {
+              "recall": 0.7142857142857143,
+              "f1": 0.7142857142857143
+            }
+          ],
+          "macroF1": 0.5714285714285715,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 4,
+          "coverage": 1,
+          "acceptedError": 0.3333333333333333
+        },
+        "segmentation": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "trueVisiblePixels": 14582,
+        "areaError_pp": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "s17-mudgas-context",
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_s": 10
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_s": 0
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "error_s": 0
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "error_s": 0
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "error_s": 0
+          },
+          {
+            "pred": 5,
+            "truth": 5,
+            "error_s": 0
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "error_s": 0
+          },
+          {
+            "pred": 7,
+            "truth": 7,
+            "error_s": 0
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "detectionRecall": 1,
+        "truthCount": 8,
+        "candidateCount": 8,
+        "model": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 0.8
+            },
+            {
+              "recall": 0.5,
+              "f1": 0.6666666666666666
+            }
+          ],
+          "macroF1": 0.8666666666666666,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 1,
+          "coverage": 1,
+          "acceptedError": 0.125
+        },
+        "depthMAE_m": 0,
+        "depthN": 2,
+        "falsePersistent": {
+          "count": 0,
+          "denominator": 6
+        },
+        "allCandidateCoverage": 1
+      }
+    },
+    {
+      "id": "s17-fluorescence-review",
+      "metrics": {
+        "methods": {
+          "B0": {
+            "tp": 2027,
+            "fp": 0,
+            "fn": 1445,
+            "tn": 61628,
+            "IoU": 0.5838133640552995,
+            "Dice": 0.7372249499909075,
+            "recall": 0.5838133640552995,
+            "precision": 1,
+            "areaError_pp": 9.90947743793718,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "B1": {
+            "tp": 1914,
+            "fp": 0,
+            "fn": 1558,
+            "tn": 61628,
+            "IoU": 0.5512672811059908,
+            "Dice": 0.7107315261789825,
+            "recall": 0.5512672811059908,
+            "precision": 1,
+            "areaError_pp": 10.684405431353722,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "M0": {
+            "tp": 3472,
+            "fp": 0,
+            "fn": 0,
+            "tn": 61628,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1,
+            "areaError_pp": 0,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          }
+        },
+        "foreground": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "fixedEvaluationPixels": 65100,
+        "truthSummary": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212,
+          "intensity": 52.75201894500772,
+          "grade": 1
+        }
+      }
+    },
+    {
+      "id": "s17-drilltime-boundaries",
+      "metrics": {
+        "model": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.125
+            },
+            {
+              "pred": 1,
+              "truth": 1,
+              "error_m": 0.125
+            }
+          ],
+          "precision": 1,
+          "recall": 1,
+          "F1": 1,
+          "misses": [],
+          "extras": [],
+          "MAE_m": 0.125,
+          "predCount": 2,
+          "truthCount": 2
+        },
+        "baseline": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.5
+            },
+            {
+              "pred": 2,
+              "truth": 1,
+              "error_m": 0.5
+            }
+          ],
+          "precision": 0.6666666666666666,
+          "recall": 1,
+          "F1": 0.8,
+          "misses": [],
+          "extras": [
+            1
+          ],
+          "MAE_m": 0.5,
+          "predCount": 3,
+          "truthCount": 2
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      }
+    },
+    {
+      "id": "s17-evidence-report",
+      "metrics": {
+        "model": {
+          "matrix": [
+            [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 36,
+          "accepted": 36,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 36,
+          "accepted": 36,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "fields": {
+          "fieldPrecision": 1,
+          "fieldRecall": 1,
+          "fieldF1": 1,
+          "exactRecords": 6,
+          "totalRecords": 6,
+          "byField": {
+            "depthRangeMD_m": {
+              "correct": 6,
+              "total": 6
+            },
+            "timeRange_s": {
+              "correct": 6,
+              "total": 6
+            },
+            "gasValue": {
+              "correct": 6,
+              "total": 6
+            },
+            "gasUnit": {
+              "correct": 6,
+              "total": 6
+            },
+            "fluorescence": {
+              "correct": 6,
+              "total": 6
+            },
+            "rock": {
+              "correct": 6,
+              "total": 6
+            },
+            "operation": {
+              "correct": 6,
+              "total": 6
+            },
+            "negation": {
+              "correct": 6,
+              "total": 6
+            }
+          },
+          "chapterCoverage": 1,
+          "factCoverage": 1,
+          "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+        },
+        "grounding": {
+          "supported": 6,
+          "total": 6,
+          "unsupported": 0,
+          "unsupportedRate": 0,
+          "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+        },
+        "expectedConflicts": 0,
+        "detectedConflicts": 0
+      }
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "persisted": [
+    {
+      "id": "s17-cuttings-lithology",
+      "meta": {
+        "id": "s17-cuttings-lithology",
+        "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+        "sceneId": "m1",
+        "methods": [
+          "cv"
+        ],
+        "version": "1.0.0",
+        "updated": "2026-10-23"
+      },
+      "files": [
+        {
+          "enc": "text",
+          "bytes": 773,
+          "sha256": "88528d46a09a9662a06eb04c2b08d65e1844a95e9fdb45e37ca7637e563a0768"
+        },
+        {
+          "enc": "text",
+          "bytes": 6697,
+          "sha256": "84ca6694bca585f80f4a8ff0a34c2c3eb1e01432fe2ca1a594a9c945336486a0"
+        },
+        {
+          "enc": "text",
+          "bytes": 34692,
+          "sha256": "5fe924e212d474f15b72d33b9e7bc689f5bad8cf870fcf0621326ae4bef93c3c"
+        },
+        {
+          "enc": "text",
+          "bytes": 5149,
+          "sha256": "6ceacec04bb17b69c587554f17cb62d1e2b109956a36b568e0ad715d133be5a0"
+        }
+      ]
+    },
+    {
+      "id": "s17-mudgas-context",
+      "meta": {
+        "id": "s17-mudgas-context",
+        "title": "气测异常智能解释：气峰背后的工况与迟到",
+        "sceneId": "m2",
+        "methods": [
+          "ts"
+        ],
+        "version": "1.0.0",
+        "updated": "2026-10-23"
+      },
+      "files": [
+        {
+          "enc": "text",
+          "bytes": 1246,
+          "sha256": "5771ba6a4c9a33b8979e1368da92327c08ec82f1d61d271466866754404c1239"
+        },
+        {
+          "enc": "text",
+          "bytes": 6040,
+          "sha256": "748e464d1bd9d027df1de3cf276716cd0452e274d2f7e2bf094182a1847e919b"
+        },
+        {
+          "enc": "text",
+          "bytes": 48147,
+          "sha256": "7bac47eebad8c3095ecfd59d149dad32bbf854d38900e49c1c40ea331a269167"
+        },
+        {
+          "enc": "text",
+          "bytes": 7930,
+          "sha256": "daf8250df14aceb15f3ac4ae02555c632a4ef32b878315d58b7d44deda973677"
+        }
+      ]
+    },
+    {
+      "id": "s17-fluorescence-review",
+      "meta": {
+        "id": "s17-fluorescence-review",
+        "title": "荧光图像智能判读：显示与来源分开核查",
+        "sceneId": "m3",
+        "methods": [
+          "cv"
+        ],
+        "version": "1.0.0",
+        "updated": "2026-10-23"
+      },
+      "files": [
+        {
+          "enc": "text",
+          "bytes": 738,
+          "sha256": "c3278859b9892d258da37e04f25d5ebc244ade2ab5a37b91ca82913db95f1e49"
+        },
+        {
+          "enc": "text",
+          "bytes": 6697,
+          "sha256": "84ca6694bca585f80f4a8ff0a34c2c3eb1e01432fe2ca1a594a9c945336486a0"
+        },
+        {
+          "enc": "text",
+          "bytes": 38658,
+          "sha256": "3e83ab8351b9338a2020a62156a70c3c8350eb53e5c6d915ece1752b32b776b7"
+        },
+        {
+          "enc": "text",
+          "bytes": 4876,
+          "sha256": "c8df5642182f4bcba3d6451eba1e8cb65e9169b56b669124390d87e10a1ec73d"
+        }
+      ]
+    },
+    {
+      "id": "s17-drilltime-boundaries",
+      "meta": {
+        "id": "s17-drilltime-boundaries",
+        "title": "钻时曲线地层划分：工况校正与候选响应段",
+        "sceneId": "m4",
+        "methods": [
+          "ts"
+        ],
+        "version": "1.0.0",
+        "updated": "2026-10-23"
+      },
+      "files": [
+        {
+          "enc": "text",
+          "bytes": 745,
+          "sha256": "8379e1b60a4d761cd22cd2b6cf8bcdae1d560b9266530b980456d61adb439a14"
+        },
+        {
+          "enc": "text",
+          "bytes": 6697,
+          "sha256": "84ca6694bca585f80f4a8ff0a34c2c3eb1e01432fe2ca1a594a9c945336486a0"
+        },
+        {
+          "enc": "text",
+          "bytes": 32635,
+          "sha256": "6c51b6551b5a75ab9a9846eb772218c54650c7377de7a04b39a77a43aa6cd17d"
+        },
+        {
+          "enc": "text",
+          "bytes": 4695,
+          "sha256": "92c90de90740a90d4ef9cac746aa3d189f27261a08ababc3c839b74d15f53eff"
+        }
+      ]
+    },
+    {
+      "id": "s17-evidence-report",
+      "meta": {
+        "id": "s17-evidence-report",
+        "title": "录井报告自动生成：每句话都有当前证据",
+        "sceneId": "m5",
+        "methods": [
+          "nlp"
+        ],
+        "version": "1.0.0",
+        "updated": "2026-10-23"
+      },
+      "files": [
+        {
+          "enc": "text",
+          "bytes": 757,
+          "sha256": "9f05c5fff71d26db6be839f5bd5e3613467a96f126d5ac96bded78b53019c385"
+        },
+        {
+          "enc": "text",
+          "bytes": 6697,
+          "sha256": "84ca6694bca585f80f4a8ff0a34c2c3eb1e01432fe2ca1a594a9c945336486a0"
+        },
+        {
+          "enc": "text",
+          "bytes": 222719,
+          "sha256": "e055ad2169e523c6a22e795374119e5f5c49caed5efd07ade725c2ff182c1b01"
+        },
+        {
+          "enc": "text",
+          "bytes": 5458,
+          "sha256": "92e283bf10281fe7bdfc09e503690b8a743964f2dd950b860e991d442e7e178a"
+        }
+      ]
+    }
+  ],
+  "passed": 7,
+  "failed": 0
+}

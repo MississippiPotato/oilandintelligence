@@ -1,0 +1,5 @@
+async(page)=>{
+const doc=await page.locator('iframe').getAttribute('srcdoc');
+const i=doc.indexOf('id="guess"'),j=doc.indexOf('id="review-label"');
+return {guessSource:doc.slice(i,i+500),reviewSource:doc.slice(j,j+600),ifrm:await page.locator('iframe').getAttribute('title')};
+}

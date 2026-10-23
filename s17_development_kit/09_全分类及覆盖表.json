@@ -1,0 +1,592 @@
+{
+  "source": "老师原项目assets/data.js",
+  "stageCount": 13,
+  "sceneCount": 61,
+  "studentSuffix": 17,
+  "formula": "((17-1)%13)+1=4",
+  "assignedStageId": "mudlogging",
+  "mandatoryCoverage": [
+    {
+      "sceneId": "m1",
+      "sceneName": "岩屑岩性自动识别",
+      "proposedCaseId": "s17-cuttings-lithology",
+      "status": "planned",
+      "accepted": false
+    },
+    {
+      "sceneId": "m2",
+      "sceneName": "气测异常智能解释",
+      "proposedCaseId": "s17-mudgas-context",
+      "status": "planned",
+      "accepted": false
+    },
+    {
+      "sceneId": "m3",
+      "sceneName": "荧光图像智能判读",
+      "proposedCaseId": "s17-fluorescence-review",
+      "status": "planned",
+      "accepted": false
+    },
+    {
+      "sceneId": "m4",
+      "sceneName": "钻时曲线地层划分",
+      "proposedCaseId": "s17-drilltime-boundaries",
+      "status": "planned",
+      "accepted": false
+    },
+    {
+      "sceneId": "m5",
+      "sceneName": "录井报告自动生成",
+      "proposedCaseId": "s17-evidence-report",
+      "status": "planned",
+      "accepted": false
+    }
+  ],
+  "taxonomy": [
+    {
+      "number": 1,
+      "id": "geology",
+      "name": "地质勘察",
+      "count": 4,
+      "scenes": [
+        {
+          "id": "g1",
+          "name": "地质剖面遥感解译",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "油气地球化学异常识别",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "地质图件要素智能提取",
+          "methods": [
+            "cv",
+            "nlp"
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "露头裂缝自动统计",
+          "methods": [
+            "cv"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "id": "seismic",
+      "name": "物探",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "s1",
+          "name": "地震断层自动解释",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "s2",
+          "name": "地震相智能分类",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "s3",
+          "name": "初至波自动拾取",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "s4",
+          "name": "储层参数反演",
+          "methods": [
+            "cv",
+            "opt"
+          ]
+        },
+        {
+          "id": "s5",
+          "name": "地震资料噪声压制",
+          "methods": [
+            "cv"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "drilling",
+      "name": "钻井",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "d1",
+          "name": "钻速预测与参数优化",
+          "methods": [
+            "ts",
+            "opt"
+          ]
+        },
+        {
+          "id": "d2",
+          "name": "井下复杂事故前兆预警",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "d3",
+          "name": "井眼轨迹智能控制",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "d4",
+          "name": "钻具失效预测",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "d5",
+          "name": "钻井液性能智能调控",
+          "methods": [
+            "ts",
+            "opt"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "mudlogging",
+      "name": "录井",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "m1",
+          "name": "岩屑岩性自动识别",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "m2",
+          "name": "气测异常智能解释",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "m3",
+          "name": "荧光图像智能判读",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "m4",
+          "name": "钻时曲线地层划分",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "m5",
+          "name": "录井报告自动生成",
+          "methods": [
+            "nlp"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "id": "welllog",
+      "name": "测井",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "w1",
+          "name": "测井曲线智能分层",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "w2",
+          "name": "储层参数智能解释",
+          "methods": [
+            "ts",
+            "opt"
+          ]
+        },
+        {
+          "id": "w3",
+          "name": "成像测井裂缝识别",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "w4",
+          "name": "岩性识别",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "w5",
+          "name": "测井数据修复",
+          "methods": [
+            "ts"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "id": "cementing",
+      "name": "固井",
+      "count": 4,
+      "scenes": [
+        {
+          "id": "c1",
+          "name": "固井质量智能评价",
+          "methods": [
+            "cv",
+            "ts"
+          ]
+        },
+        {
+          "id": "c2",
+          "name": "注水泥参数优化",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "c3",
+          "name": "固井漏失风险预测",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "c4",
+          "name": "套管居中度智能评估",
+          "methods": [
+            "opt"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "id": "completion",
+      "name": "完井",
+      "count": 4,
+      "scenes": [
+        {
+          "id": "co1",
+          "name": "完井方式智能优选",
+          "methods": [
+            "kg",
+            "opt"
+          ]
+        },
+        {
+          "id": "co2",
+          "name": "射孔参数智能设计",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "co3",
+          "name": "完井管柱受力智能分析",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "co4",
+          "name": "智能完井滑套控制策略",
+          "methods": [
+            "opt"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "id": "perforation",
+      "name": "射孔",
+      "count": 4,
+      "scenes": [
+        {
+          "id": "p1",
+          "name": "射孔参数优化",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "p2",
+          "name": "射孔孔道形态预测",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "p3",
+          "name": "射孔弹型智能选型",
+          "methods": [
+            "kg"
+          ]
+        },
+        {
+          "id": "p4",
+          "name": "射孔效果智能评估",
+          "methods": [
+            "ts",
+            "opt"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "id": "production",
+      "name": "采油",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "pr1",
+          "name": "抽油机井工况诊断",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "pr2",
+          "name": "产量智能预测",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "pr3",
+          "name": "智能注水调配",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "pr4",
+          "name": "电潜泵故障预警",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "pr5",
+          "name": "结蜡 / 结垢预测",
+          "methods": [
+            "ts"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "workover",
+      "name": "修井",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "wo1",
+          "name": "修井作业方案智能推荐",
+          "methods": [
+            "kg",
+            "nlp"
+          ]
+        },
+        {
+          "id": "wo2",
+          "name": "落物打捞工具智能选型",
+          "methods": [
+            "kg"
+          ]
+        },
+        {
+          "id": "wo3",
+          "name": "套管损伤智能识别",
+          "methods": [
+            "cv"
+          ]
+        },
+        {
+          "id": "wo4",
+          "name": "修井作业风险预警",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "wo5",
+          "name": "修井周期预测",
+          "methods": [
+            "ts"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "id": "eor",
+      "name": "增采",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "e1",
+          "name": "压裂参数智能优化",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "e2",
+          "name": "压裂裂缝形态预测",
+          "methods": [
+            "cv",
+            "opt"
+          ]
+        },
+        {
+          "id": "e3",
+          "name": "化学驱配方智能筛选",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "e4",
+          "name": "蒸汽吞吐注采参数优化",
+          "methods": [
+            "ts",
+            "opt"
+          ]
+        },
+        {
+          "id": "e5",
+          "name": "微生物采油菌群活性预测",
+          "methods": [
+            "ts"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "id": "transport",
+      "name": "运输",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "t1",
+          "name": "管道泄漏智能检测",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "t2",
+          "name": "管道腐蚀智能评估",
+          "methods": [
+            "cv",
+            "ts"
+          ]
+        },
+        {
+          "id": "t3",
+          "name": "集输系统工况优化",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "t4",
+          "name": "油气计量智能校正",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "t5",
+          "name": "储罐液位与泄漏智能监控",
+          "methods": [
+            "cv"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "id": "refining",
+      "name": "加工",
+      "count": 5,
+      "scenes": [
+        {
+          "id": "r1",
+          "name": "常减压装置操作优化",
+          "methods": [
+            "opt"
+          ]
+        },
+        {
+          "id": "r2",
+          "name": "催化裂化产物预测",
+          "methods": [
+            "opt",
+            "ts"
+          ]
+        },
+        {
+          "id": "r3",
+          "name": "炼化设备预测性维护",
+          "methods": [
+            "ts"
+          ]
+        },
+        {
+          "id": "r4",
+          "name": "化验数据智能审核",
+          "methods": [
+            "nlp",
+            "opt"
+          ]
+        },
+        {
+          "id": "r5",
+          "name": "产品质量在线软测量",
+          "methods": [
+            "ts"
+          ]
+        }
+      ]
+    }
+  ]
+}

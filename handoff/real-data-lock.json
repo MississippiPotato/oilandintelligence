@@ -1,0 +1,134 @@
+{
+  "retrievedAt": "2026-10-23T09:29:32.473Z",
+  "datasets": [
+    {
+      "id": "USROP-A3-F15-depth-subset-v1",
+      "dataNature": "public_measured",
+      "wellId": "15/9-F-15",
+      "title": "USROP A3，15/9-F-15实测钻进参数摘录",
+      "authors": "Andrzej Tunkiel and USROP dataset contributors; source Volve / Equinor",
+      "source": "https://github.com/AndrzejTunkiel/USROP",
+      "commit": "627cddb27f0250de2ac5222db4cc13ae0798efe0",
+      "originalFile": "USROP_A 3 N-SH-F-15d.csv",
+      "license": "CC BY-NC-SA 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "originalSHA256": "811c8c08f28f7ccbbb7ceb90c623811bc02f6c7497184ba54b1c3ecf9ea9d014",
+      "originalRows": 53041,
+      "units": {
+        "depthMD_m": "m MD",
+        "WOB_kN": "kN",
+        "ROP_m_h": "m/h",
+        "RPM": "rev/min",
+        "flow_m3_s": "m3/s",
+        "torque_kNm": "kN m"
+      },
+      "transform": "Select original MD 2200–2500m (736 rows); retain 480 evenly spaced row positions, no interpolation. WOB kkgf × 9.80665 → kN; flow L/min ÷ 60000 → m3/s. Original source row retained. No timestamps or geological labels invented.",
+      "limitations": [
+        "Depth-indexed data, no reliable time/operation log or independent homogeneous lithology calibration in this subset.",
+        "No geological boundary gold; unsupervised response candidates only, no F1/accuracy.",
+        "Adjacent rows are correlated; depth-block split is exploratory, not independent-well generalization."
+      ]
+    },
+    {
+      "id": "PANGAEA-975497-v1",
+      "dataNature": "public_measured",
+      "wellId": "386-M0091D",
+      "title": "IODP 386-M0091D顶空甲烷/乙烷",
+      "authors": "Strasser, Michael et al. (2025)",
+      "source": "https://doi.org/10.1594/PANGAEA.975497",
+      "license": "CC BY 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "originalSHA256": "410bbc9869bf0f592e5d218b8d2f3ede0bffd39226aaae780642ba86fd0a2f2e",
+      "units": {
+        "depth": "m (sediment/rock)",
+        "CH4": "ppmv",
+        "C2H6": "ppmv",
+        "ratio": "dimensionless"
+      },
+      "transform": "All original 62 records, including paired samples retained with sample label and IGSN; numeric values unchanged. Ratios recomputed only when measured C2H6 > 0, separately from publisher ratio.",
+      "limitations": [
+        "Headspace gas from recovered sediment samples, not surface mud-gas time series.",
+        "Sediment/rock depth is not DEMO-017 MD; no pump transport, operation labels or event classification gold.",
+        "Parallel sample pairs are not independent observations for performance estimation."
+      ]
+    },
+    {
+      "id": "mendeley-b6rj29mrss-v1-six-core-patches",
+      "title": "真实岩芯外观对照：6张2×2cm图像块",
+      "authors": "Fatimah Alzubaidi (2021); Geological Survey of South Australia core tray source",
+      "source": "https://data.mendeley.com/datasets/b6rj29mrss/1",
+      "doi": "10.17632/b6rj29mrss.1",
+      "license": "CC BY 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "dataNature": "public_measured",
+      "selection": "Two deterministic distinct filename prefixes per sandstone/shale/limestone folder in publisher test partition. Original JPEG bytes unchanged. No training/evaluation split built from six images.",
+      "limitations": [
+        "Core image patches are not drill-cuttings particle trays; no particle-mask gold or UV paired images.",
+        "Folder labels are source references; this small gallery is not a field classification benchmark.",
+        "No generated UV image or invented depth/scale calibration."
+      ],
+      "images": [
+        {
+          "label": "limestone",
+          "sourceFilename": "08PD04c_11_row_3_2_32.jpg.jpeg",
+          "upstreamFileId": "5d74caf1-10d4-4af0-be76-58522f44696c",
+          "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/5d74caf1-10d4-4af0-be76-58522f44696c/file_downloaded",
+          "sha256": "ca575faf9aafcda9b0b854e456e05976f41d972a7895e6116dce963f0a8c338d",
+          "bytes": 9927,
+          "path": "data/real/images/limestone-1.jpeg"
+        },
+        {
+          "label": "limestone",
+          "sourceFilename": "08PD04c_12_row_1_1_16.jpg.jpeg",
+          "upstreamFileId": "301ddbf6-c6de-4d16-99ec-0f0fd55cf1b2",
+          "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/301ddbf6-c6de-4d16-99ec-0f0fd55cf1b2/file_downloaded",
+          "sha256": "89893b224c27686b8ad963e362f9e10a575ada4b4f6c6182134797e161a7ba45",
+          "bytes": 7932,
+          "path": "data/real/images/limestone-2.jpeg"
+        },
+        {
+          "label": "sandstone",
+          "sourceFilename": "07PD01_20_row_2_13.jpeg",
+          "upstreamFileId": "237577ca-c7b9-4324-9aa0-170a57287aaf",
+          "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/237577ca-c7b9-4324-9aa0-170a57287aaf/file_downloaded",
+          "sha256": "6841ccd14dbcaccca68a1d1504a271184a08ce543b227d41e5f253c78f402d22",
+          "bytes": 9760,
+          "path": "data/real/images/sandstone-1.jpeg"
+        },
+        {
+          "label": "sandstone",
+          "sourceFilename": "07PD01_23_row_0_12.jpeg",
+          "upstreamFileId": "d1645a0a-5c79-4edf-a000-0c57420c994e",
+          "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/d1645a0a-5c79-4edf-a000-0c57420c994e/file_downloaded",
+          "sha256": "35732ca860a43d862959fec48976051d4eefa09c313912d24d6ca47f9443d1d1",
+          "bytes": 12844,
+          "path": "data/real/images/sandstone-2.jpeg"
+        },
+        {
+          "label": "shale",
+          "sourceFilename": "07PD01_32_row_3_10.jpeg",
+          "upstreamFileId": "b2460b7f-0765-48f3-a5a7-dce91d09e948",
+          "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/b2460b7f-0765-48f3-a5a7-dce91d09e948/file_downloaded",
+          "sha256": "bde998211fb35abd25195d93e4ab3b43020231baeaac97f1f39e81b6302f3021",
+          "bytes": 8408,
+          "path": "data/real/images/shale-1.jpeg"
+        },
+        {
+          "label": "shale",
+          "sourceFilename": "07PD01_33b_row_3_7.jpeg",
+          "upstreamFileId": "cc9e3ece-34c1-4da6-882d-b3067187c4e9",
+          "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/cc9e3ece-34c1-4da6-882d-b3067187c4e9/file_downloaded",
+          "sha256": "eb63144b005c70bf3f779da28183c35f18802b42e21e92a6636440d5dacd945f",
+          "bytes": 8723,
+          "path": "data/real/images/shale-2.jpeg"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "drilling": 480,
+    "gas": 62,
+    "images": 6
+  },
+  "runtimeNetworkRequired": false
+}

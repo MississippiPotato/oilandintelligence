@@ -1,0 +1,23 @@
+async(page)=>{
+const report={scope:'five cumulative packages imported using unchanged teacher portal 添加案例, offline file protocol',checks:[],errors:[],httpRequests:[],cases:[]},root='G:/可视化导论/5/',base='file:///'+root,ids=['s17-cuttings-lithology','s17-mudgas-context','s17-fluorescence-review','s17-drilltime-boundaries','s17-evidence-report'];
+const ok=(name,yes,evidence)=>{report.checks.push({name,status:yes?'passed':'failed',evidence});if(!yes)throw Error(name);};
+page.on('pageerror',e=>report.errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url()))report.httpRequests.push(r.url());});await page.context().setOffline(true);
+try{
+for(let i=0;i<ids.length;i++){await page.goto(base+'dist/cases/'+ids[i]+'/demo/index.html');await page.locator('#run').click();await page.locator('#status').filter({hasText:'计算完成'}).waitFor();const s=await page.evaluate(()=>globalThis.S17Inspect?.snapshot()??M2Inspect.snapshot());ok('m'+(i+1)+' standalone file offline run',s.status==='ready');}
+await page.goto(base+'portal-original/index.html');ok('unchanged teacher portal opens offline',await page.getByRole('banner').getByRole('button',{name:'＋ 添加案例'}).isVisible());
+for(let i=0;i<ids.length;i++){
+const id=ids[i],scene='m'+(i+1);await page.getByRole('banner').getByRole('button',{name:'＋ 添加案例'}).click();await page.locator('#imp-dir').setInputFiles(root+'dist/cases/'+id);await page.waitForFunction(id=>document.getElementById('imp-id').value===id,id);ok(scene+' actual manifest populated',await page.locator('#imp-id').inputValue()===id);await page.getByRole('button',{name:'校验并添加',exact:true}).click();await page.waitForFunction(scene=>location.hash.startsWith('#/scene/'+scene),scene);
+await page.getByRole('button',{name:'01 专业背景',exact:true}).click();ok(scene+' teacher background renders professional diagrams',await page.locator('main svg').count()>=3);
+await page.getByRole('button',{name:'02 案例流程',exact:true}).click();ok(scene+' teacher workflow renders at least six SVGs',await page.locator('main svg').count()>=6);
+await page.getByRole('button',{name:'03 可运行示范',exact:true}).click();let f=page.frameLocator('iframe');await f.locator('#run').click();await f.locator('#status').filter({hasText:'计算完成'}).waitFor();const before=await f.locator('body').evaluate(()=>globalThis.S17Inspect?.snapshot()??M2Inspect.snapshot()),m=before.run?.metrics??before.metrics;ok(scene+' real imported sandbox execution',before.status==='ready');
+await f.locator('#show-truth').check();ok(scene+' independent gold panel toggles',await f.locator('#metrics-panel').isVisible());
+const pending=page.waitForEvent('download');await f.locator('#export').click();const dl=await pending;await dl.saveAs(root+'output/exports/portal-'+scene+'.json');ok(scene+' sandbox JSON download',(await dl.failure())===null);
+await page.reload();f=page.frameLocator('iframe');await f.locator('#run').click();await f.locator('#status').filter({hasText:'计算完成'}).waitFor();const after=await f.locator('body').evaluate(()=>globalThis.S17Inspect?.snapshot()??M2Inspect.snapshot());ok(scene+' refresh runs persisted package with identical metrics',JSON.stringify(m)===JSON.stringify(after.run?.metrics??after.metrics));
+report.cases.push({scene,id,metrics:m,refreshMetricsIdentical:true,iframeSandbox:await page.locator('iframe').getAttribute('sandbox')});
+}
+report.storage=await page.evaluate(async()=>{const raw=localStorage.getItem('atlas.casepack.v2'),records=JSON.parse(raw);return{ids:records.map(r=>r.meta.id),utf8Bytes:new TextEncoder().encode(raw).length,codeUnits:raw.length,records:records.map(r=>({id:r.meta.id,meta:r.meta,files:Object.keys(r.files)}))};});
+ok('all five persist in same original copy',ids.every(id=>report.storage.ids.includes(id))&&report.storage.ids.length===5,report.storage.utf8Bytes);ok('five cumulative storage remains below 1.6MiB warning',report.storage.utf8Bytes<1.6*1024*1024);
+ok('no HTTP requested during offline standalone/import/refresh',report.httpRequests.length===0);ok('no JavaScript runtime errors',report.errors.length===0,report.errors);
+await page.screenshot({path:root+'output/playwright/30-original-five-offline.png'});
+}catch(e){report.exception=e.message;}report.passed=report.checks.filter(c=>c.status==='passed').length;report.failed=report.checks.filter(c=>c.status==='failed').length+(report.exception?1:0);return report;
+}

@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-23",
+  "caseId": "s17-mudgas-context",
+  "caseVersion": "1.0.0",
+  "buildFiles": [
+    {
+      "path": "case.json",
+      "bytes": 20438,
+      "sha256": "b89ab5c4cbf1912e96fe9b31a16c8dee12a840556fe7798c54830730eb934e03"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 1246,
+      "sha256": "5771ba6a4c9a33b8979e1368da92327c08ec82f1d61d271466866754404c1239"
+    },
+    {
+      "path": "demo/index.html",
+      "bytes": 7930,
+      "sha256": "daf8250df14aceb15f3ac4ae02555c632a4ef32b878315d58b7d44deda973677"
+    },
+    {
+      "path": "demo/demo.css",
+      "bytes": 6040,
+      "sha256": "748e464d1bd9d027df1de3cf276716cd0452e274d2f7e2bf094182a1847e919b"
+    },
+    {
+      "path": "demo/demo.js",
+      "bytes": 48147,
+      "sha256": "7bac47eebad8c3095ecfd59d149dad32bbf854d38900e49c1c40ea331a269167"
+    }
+  ],
+  "buildBytes": 83801,
+  "persistedMatchesBuild": true,
+  "downloadValidation": [
+    {
+      "file": "output/playwright/sandbox-evidence.json",
+      "claims": 9,
+      "sources": 16,
+      "allReferencesResolve": true,
+      "bytes": 162428
+    },
+    {
+      "file": "output/playwright/offline-sandbox-evidence.json",
+      "claims": 8,
+      "sources": 16,
+      "allReferencesResolve": true,
+      "bytes": 160809
+    }
+  ],
+  "httpChecks": 28,
+  "offlineChecks": 11,
+  "workingPortalChecks": 13,
+  "closedBrowserReopened": {
+    "browserWasClosedAndReopened": true,
+    "offline": true,
+    "status": "ready",
+    "eventCount": 8,
+    "macroF1": 1,
+    "storage": [
+      "s17-mudgas-context"
+    ]
+  },
+  "notPerformed": [
+    "other four full mandatory cases",
+    "five-case cumulative storage",
+    "Edge/Firefox/Safari",
+    "real field-data performance",
+    "enhanced home-page implementation"
+  ]
+}

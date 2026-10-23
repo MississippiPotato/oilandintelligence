@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "1.0-design",
+  "documentRole": "draft_project_protocol_not_portal_manifest",
+  "implemented": false,
+  "authority": "主方案第十一章与本协议是任务卡字段的一致性规范；若实现调整，版本化并同步修改。",
+  "scenario": {
+    "wellId": "DEMO-017",
+    "dataNature": "synthetic_teaching",
+    "suggestedDepthMDRange_m": [
+      1200,
+      1280
+    ],
+    "rangeIsDesignChoice": true,
+    "sharedIdentities": [
+      "datasetId",
+      "wellId",
+      "parentSampleId",
+      "sampleId",
+      "capturePairId",
+      "observationId",
+      "splitGroupId"
+    ],
+    "groupRule": "同一基础样品的白光/UV/曝光/旋转/裁剪全部继承同一parentSampleId与splitGroupId。"
+  },
+  "units": {
+    "time_s": "相对共同起点的秒；显示分钟时显式换算",
+    "depthMD_m": "沿井眼的测量深度，非TVD",
+    "flow_m3_s": "迟到计算前统一流量体积/秒",
+    "effectiveVolume_m3": "教学有效运输体积",
+    "ROP_m_h": "同一有效钻进段的机械钻速",
+    "drillTime_min_m": "同一有效钻进段每米所需分钟",
+    "gasRelativeUnit": "首版可用明确声明的归一化仪器单位，不能冒称真实体积分数",
+    "imageAreaFraction": "可见二维区域占比，单位fraction或%必须明确"
+  },
+  "observationFields": [
+    "datasetId",
+    "wellId",
+    "observationId",
+    "sourceRecordId",
+    "sourceVersion",
+    "dataNature",
+    "time_s或timeRange_s",
+    "depthMD_m或depthRangeMD_m",
+    "value",
+    "unit",
+    "qualityFlags"
+  ],
+  "imageAdditionalFields": [
+    "parentSampleId",
+    "sampleId",
+    "capturePairId",
+    "splitGroupId",
+    "modality",
+    "visibleCaptureConditions"
+  ],
+  "predictionBoundary": {
+    "allowed": [
+      "真实可见像素/曲线/文本",
+      "可用工况和校准",
+      "训练拟合参数"
+    ],
+    "forbidden": [
+      "evaluationTruth",
+      "测试标签",
+      "生成器隐藏边界/掩膜/来源",
+      "从ID/文件名/随机种子读取答案"
+    ],
+    "trainingTruth": "训练模块可用训练标签；推理模块不接收评价真值。"
+  },
+  "resultStates": [
+    "not_run",
+    "running",
+    "ready",
+    "stale",
+    "error"
+  ],
+  "evidenceEnvelope": {
+    "required": [
+      "schemaVersion",
+      "caseId",
+      "caseVersion",
+      "runId",
+      "datasetId",
+      "wellId",
+      "dataNature",
+      "runConfig",
+      "sources",
+      "claims",
+      "limitations"
+    ],
+    "runConfigFields": [
+      "seed",
+      "dataVersion",
+      "splitDescription",
+      "method",
+      "parameters",
+      "inputRevision"
+    ],
+    "defaultRunExportPolicy": "只有ready结果可作为当前运行导出；stale可保存为历史草稿但显著标记，不能伪装当前结果。"
+  },
+  "source": {
+    "required": [
+      "sourceRecordId",
+      "sourceVersion",
+      "sourceType",
+      "content"
+    ],
+    "sourceTypes": [
+      "text_record",
+      "series_segment",
+      "image_region",
+      "review_note"
+    ],
+    "rules": [
+      "sourceVersion不可变，改变内容增加版本",
+      "同ID/版本内容不同报冲突",
+      "保留原内容或足够复核的自包含片段",
+      "可用contentHash辅助，但不能只留hash而没有证据",
+      "来源可包含原始观察或上游模型结果，必须标明kind与方法"
+    ]
+  },
+  "claim": {
+    "required": [
+      "claimId",
+      "revision",
+      "kind",
+      "statement",
+      "sourceRefs",
+      "reviewStatus",
+      "traceabilityStatus",
+      "supportStatus"
+    ],
+    "optional": [
+      "value",
+      "unit",
+      "timeScope",
+      "depthScope",
+      "negation",
+      "uncertainty",
+      "method",
+      "reviewHistory"
+    ],
+    "kind": [
+      "observation",
+      "model_inference",
+      "reviewer_note"
+    ],
+    "reviewStatus": [
+      "unreviewed",
+      "needs_review",
+      "confirmed",
+      "rejected"
+    ],
+    "traceabilityStatus": [
+      "linked",
+      "missing_source",
+      "stale"
+    ],
+    "supportStatus": [
+      "unchecked",
+      "rule_checked",
+      "human_verified",
+      "conflict",
+      "unsupported"
+    ],
+    "sourceRef": {
+      "required": [
+        "sourceRecordId",
+        "sourceVersion",
+        "selector"
+      ],
+      "selectorTypes": [
+        "text_span",
+        "time_range",
+        "depth_range",
+        "image_region",
+        "whole_record_for_single_fact"
+      ]
+    },
+    "semantics": {
+      "linked": "具体版本来源存在且可定位，不代表语义正确",
+      "rule_checked": "已通过所声明规则，不能自动当作人工或领域确认",
+      "human_verified": "有人核对当前句子与当前证据的支持关系，保留记录",
+      "confirmed": "当前修订的复核结论，不能继承过期版本"
+    }
+  },
+  "invalidation": {
+    "triggers": [
+      "报告句子语义修改",
+      "来源内容/版本变化",
+      "相关模型结果更新",
+      "单位/范围/否定变更"
+    ],
+    "newStates": {
+      "reviewStatus": "needs_review",
+      "traceabilityStatus": "stale",
+      "supportStatus": "unchecked"
+    },
+    "history": "保留过去确认与对应revision/sourceVersion，但不能算作当前确认；重新挂同ID不会恢复。"
+  },
+  "metricPolicy": {
+    "withGold": [
+      "分类F1/混淆",
+      "字段精确匹配",
+      "关键事实覆盖",
+      "无依据断言及冲突检测"
+    ],
+    "withoutGold": [
+      "来源映射完整性",
+      "必填缺项",
+      "待复核数量",
+      "冲突记录",
+      "核验过期数量"
+    ],
+    "abstention": "真值类别分母保留拒判；接受集错误率与覆盖率同时报告；空接受集显示不适用。",
+    "manualCorrection": "原模型指标与人工后结果分开。"
+  },
+  "illustrativeEvidence": {
+    "schemaVersion": "1.0",
+    "caseId": "s17-evidence-report",
+    "caseVersion": "0.0.0-example",
+    "runId": "illustrative-not-computed",
+    "datasetId": "teaching-fixture-example",
+    "wellId": "DEMO-017",
+    "dataNature": "synthetic_teaching",
+    "runConfig": {
+      "seed": 17,
+      "dataVersion": "example",
+      "splitDescription": "该结构示例不构成性能评价",
+      "method": "illustrative",
+      "parameters": {},
+      "inputRevision": 1
+    },
+    "sources": [
+      {
+        "sourceRecordId": "demo-record-001",
+        "sourceVersion": 1,
+        "sourceType": "text_record",
+        "content": {
+          "rawText": "1200.0—1201.0 m MD：未见明显荧光。",
+          "depthRangeMD_m": [
+            1200,
+            1201
+          ]
+        }
+      }
+    ],
+    "claims": [
+      {
+        "claimId": "example-claim-001",
+        "revision": 1,
+        "kind": "observation",
+        "statement": "教学记录记载该井段未见明显荧光。",
+        "negation": true,
+        "sourceRefs": [
+          {
+            "sourceRecordId": "demo-record-001",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "whole_record_for_single_fact"
+            }
+          }
+        ],
+        "reviewStatus": "unreviewed",
+        "traceabilityStatus": "linked",
+        "supportStatus": "unchecked",
+        "reviewHistory": []
+      }
+    ],
+    "limitations": [
+      "字段结构示例，未执行抽取，不是现场数据或已验证结果"
+    ]
+  }
+}

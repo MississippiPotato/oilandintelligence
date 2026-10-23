@@ -1,0 +1,77 @@
+{
+  "scope": "Current 1.4.0-preview homepage, accurate completion/registration, empty scene, mobile, local guide and original add dialog; actual browser",
+  "checks": [
+    {
+      "name": "own five cases are the first main section",
+      "passed": true
+    },
+    {
+      "name": "completed 5/5 is separate from actual empty 0/5 registrations",
+      "passed": true
+    },
+    {
+      "name": "original map scope remains 13 stages and 61 scenes",
+      "passed": true
+    },
+    {
+      "name": "flagship points to own m2 background",
+      "passed": true,
+      "detail": "../dist/cases/s17-mudgas-context/demo/index.html#background"
+    },
+    {
+      "name": "flagship actually opens own case background",
+      "passed": true
+    },
+    {
+      "name": "unregistered m2 says delivered but not imported",
+      "passed": true
+    },
+    {
+      "name": "scene explains actual case scope",
+      "passed": true
+    },
+    {
+      "name": "retained local Diana model renders",
+      "passed": true
+    },
+    {
+      "name": "local assistant opens requested experiment tab in real standalone",
+      "passed": true
+    },
+    {
+      "name": "mobile native add action is fully visible",
+      "passed": true,
+      "detail": {
+        "x": 286.6875,
+        "y": 0,
+        "width": 87.3125,
+        "height": 34
+      }
+    },
+    {
+      "name": "mobile completion counts appear in first viewport",
+      "passed": true
+    },
+    {
+      "name": "mobile page does not overflow horizontally",
+      "passed": true
+    },
+    {
+      "name": "native import dialog still opens and hides avatar",
+      "passed": true
+    },
+    {
+      "name": "no model requests made by local navigation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "modelRequests": [],
+  "passed": 15,
+  "failed": 0
+}

@@ -1,0 +1,382 @@
+{
+  "checkedAt": "2026-10-23T12:57:57.365Z",
+  "scope": "Current 1.2.0 standalone Chrome rendering and real interactions; not field performance",
+  "checks": [
+    {
+      "name": "m1 first visit presents background and teaching guide",
+      "passed": true
+    },
+    {
+      "name": "m1 three background figures have zoom affordances",
+      "passed": true
+    },
+    {
+      "name": "m1 diagram zoom opens",
+      "passed": true
+    },
+    {
+      "name": "m1 narrow figure preserves readable logical width without page overflow",
+      "passed": true,
+      "detail": {
+        "box": 325,
+        "scroll": 620,
+        "svg": 620,
+        "whole": 390,
+        "view": 390
+      }
+    },
+    {
+      "name": "m1 narrow figure actually scrolls",
+      "passed": true
+    },
+    {
+      "name": "m1 step 1 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 2 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 3 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 4 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 5 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 6 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 review reasons no longer contradict 100% support",
+      "passed": true
+    },
+    {
+      "name": "m1 scatter has rock class legend",
+      "passed": true
+    },
+    {
+      "name": "m1 axis change recomputes actual scatter",
+      "passed": true
+    },
+    {
+      "name": "m1 featured tour exposes retained segmentation failures",
+      "passed": true,
+      "detail": 0.5299145299145299
+    },
+    {
+      "name": "m2 first visit presents background and teaching guide",
+      "passed": true
+    },
+    {
+      "name": "m2 three background figures have zoom affordances",
+      "passed": true
+    },
+    {
+      "name": "m2 diagram zoom opens",
+      "passed": true
+    },
+    {
+      "name": "m2 narrow figure preserves readable logical width without page overflow",
+      "passed": true,
+      "detail": {
+        "box": 325,
+        "scroll": 620,
+        "svg": 620,
+        "whole": 390,
+        "view": 390
+      }
+    },
+    {
+      "name": "m2 narrow figure actually scrolls",
+      "passed": true
+    },
+    {
+      "name": "m2 step 1 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 2 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 3 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 4 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 5 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 6 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 old incomplete footer removed",
+      "passed": true
+    },
+    {
+      "name": "m2 same event shape different operation changes explanation",
+      "passed": true,
+      "detail": {
+        "from": 0,
+        "to": 1
+      }
+    },
+    {
+      "name": "m2 counterfactual has no invented gold score",
+      "passed": true
+    },
+    {
+      "name": "m3 first visit presents background and teaching guide",
+      "passed": true
+    },
+    {
+      "name": "m3 three background figures have zoom affordances",
+      "passed": true
+    },
+    {
+      "name": "m3 diagram zoom opens",
+      "passed": true
+    },
+    {
+      "name": "m3 narrow figure preserves readable logical width without page overflow",
+      "passed": true,
+      "detail": {
+        "box": 325,
+        "scroll": 620,
+        "svg": 620,
+        "whole": 390,
+        "view": 390
+      }
+    },
+    {
+      "name": "m3 narrow figure actually scrolls",
+      "passed": true
+    },
+    {
+      "name": "m3 step 1 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m3 step 2 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m3 step 3 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m3 step 4 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m3 step 5 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m3 step 6 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m3 step 7 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m3 background actual paired pixels respond to exposure",
+      "passed": true
+    },
+    {
+      "name": "m3 observed exposure transfers to real calculation",
+      "passed": true
+    },
+    {
+      "name": "m4 first visit presents background and teaching guide",
+      "passed": true
+    },
+    {
+      "name": "m4 three background figures have zoom affordances",
+      "passed": true
+    },
+    {
+      "name": "m4 diagram zoom opens",
+      "passed": true
+    },
+    {
+      "name": "m4 narrow figure preserves readable logical width without page overflow",
+      "passed": true,
+      "detail": {
+        "box": 325,
+        "scroll": 620,
+        "svg": 620,
+        "whole": 390,
+        "view": 390
+      }
+    },
+    {
+      "name": "m4 narrow figure actually scrolls",
+      "passed": true
+    },
+    {
+      "name": "m4 step 1 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m4 step 2 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m4 step 3 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m4 step 4 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m4 step 5 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m4 step 6 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m4 step 7 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m4 featured operation case retains genuine baseline/model difference",
+      "passed": true,
+      "detail": {
+        "model": {
+          "pairs": [],
+          "precision": null,
+          "recall": null,
+          "F1": null,
+          "misses": [],
+          "extras": [],
+          "MAE_m": null,
+          "predCount": 0,
+          "truthCount": 0
+        },
+        "baseline": {
+          "pairs": [],
+          "precision": 0,
+          "recall": null,
+          "F1": 0,
+          "misses": [],
+          "extras": [
+            0
+          ],
+          "MAE_m": null,
+          "predCount": 1,
+          "truthCount": 0
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      }
+    },
+    {
+      "name": "m4 smoothing tradeoff retains thin-layer misses",
+      "passed": true
+    },
+    {
+      "name": "m5 first visit presents background and teaching guide",
+      "passed": true
+    },
+    {
+      "name": "m5 three background figures have zoom affordances",
+      "passed": true
+    },
+    {
+      "name": "m5 diagram zoom opens",
+      "passed": true
+    },
+    {
+      "name": "m5 narrow figure preserves readable logical width without page overflow",
+      "passed": true,
+      "detail": {
+        "box": 325,
+        "scroll": 620,
+        "svg": 620,
+        "whole": 390,
+        "view": 390
+      }
+    },
+    {
+      "name": "m5 narrow figure actually scrolls",
+      "passed": true
+    },
+    {
+      "name": "m5 step 1 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m5 step 2 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m5 step 3 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m5 step 4 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m5 step 5 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m5 step 6 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m5 current sentence facts and source relationship rendered",
+      "passed": true
+    },
+    {
+      "name": "m5 computed scores and signed contributions shown",
+      "passed": true
+    },
+    {
+      "name": "m5 success message corresponds to actual confirmation",
+      "passed": true
+    },
+    {
+      "name": "m5 edit revokes confirmation and replaces old success message",
+      "passed": true
+    },
+    {
+      "name": "m5 switching sentence updates review message",
+      "passed": true
+    },
+    {
+      "name": "m5 actual BM25 results and term contributions charted",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "passed": 75,
+  "failed": 0
+}

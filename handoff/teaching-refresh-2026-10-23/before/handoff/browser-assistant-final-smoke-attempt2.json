@@ -1,0 +1,19 @@
+{
+  "portalVersion": "1.3.0-preview",
+  "scope": "final layout checks plus actual m2 calculation through unchanged teacher original import entry before and after reload",
+  "checks": [
+    {
+      "name": "phone layout exposes key input through scrollable model settings",
+      "status": "passed"
+    },
+    {
+      "name": "short viewport assistant scrolls and send button is reachable",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "exception": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: '可运行示范' })\u001b[22m\n",
+  "passed": 2,
+  "failed": 1,
+  "createdAt": "2026-10-23T11:07:10.367Z"
+}

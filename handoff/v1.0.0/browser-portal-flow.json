@@ -1,0 +1,780 @@
+{
+  "url": "http://127.0.0.1:8755/portal-original/index.html#/scene/m2",
+  "checks": [
+    "Original portal background renders >=3 inline SVGs",
+    "Original portal workflow renders six step figures through metrics.html",
+    "All exercise and review choices survive real browser HTML parsing",
+    "Browser range input preserves declared default noise 0.12",
+    "Sandbox executes actual training/inference and detects 8 events",
+    "Gold reveal displays actual metrics",
+    "Confusion cell click locates a real matching event",
+    "Manual review stores a separate opinion",
+    "Contradicting manual review rejects model claim instead of silently confirming it",
+    "Manual text is escaped and does not create HTML",
+    "Evidence JSON downloads inside original sandbox",
+    "Input edit invalidates results and prior review, disabling export",
+    "Wrong lag volume actually changes source depth error",
+    "Out-of-range input reports a real error",
+    "Same gas with changed operation changes prediction and suppresses gold metrics",
+    "Counterfactual state never shows gold performance",
+    "Missing context and overlap cause real abstentions and missed events",
+    "All-abstain scenario reports undefined accepted error, not 0%",
+    "Interactive workflow step 1 renders computed intermediate output",
+    "Interactive workflow step 2 renders computed intermediate output",
+    "Interactive workflow step 3 renders computed intermediate output",
+    "Interactive workflow step 4 renders computed intermediate output",
+    "Interactive workflow step 5 renders computed intermediate output",
+    "Interactive workflow step 6 renders computed intermediate output",
+    "Transport animation advances actual accumulated-volume marker",
+    "Teaching exercise reveals explanatory feedback",
+    "Original portal persisted complete case record",
+    "Refresh restores the imported case and a fresh run reproduces metrics"
+  ],
+  "default": {
+    "train": 224,
+    "validation": 64,
+    "candidates": 8,
+    "metrics": {
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "error_s": 10
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "error_s": 0
+        },
+        {
+          "pred": 2,
+          "truth": 2,
+          "error_s": 0
+        },
+        {
+          "pred": 3,
+          "truth": 3,
+          "error_s": 0
+        },
+        {
+          "pred": 4,
+          "truth": 4,
+          "error_s": 0
+        },
+        {
+          "pred": 5,
+          "truth": 5,
+          "error_s": 0
+        },
+        {
+          "pred": 6,
+          "truth": 6,
+          "error_s": 0
+        },
+        {
+          "pred": 7,
+          "truth": 7,
+          "error_s": 0
+        }
+      ],
+      "misses": [],
+      "extras": [],
+      "detectionRecall": 1,
+      "truthCount": 8,
+      "candidateCount": 8,
+      "model": {
+        "matrix": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          }
+        ],
+        "macroF1": 1,
+        "total": 8,
+        "accepted": 8,
+        "wrong": 0,
+        "coverage": 1,
+        "acceptedError": 0
+      },
+      "baseline": {
+        "matrix": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 0.8
+          },
+          {
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        ],
+        "macroF1": 0.8666666666666666,
+        "total": 8,
+        "accepted": 8,
+        "wrong": 1,
+        "coverage": 1,
+        "acceptedError": 0.125
+      },
+      "depthMAE_m": 0,
+      "depthN": 2,
+      "falsePersistent": {
+        "count": 0,
+        "denominator": 6
+      },
+      "allCandidateCoverage": 1
+    }
+  },
+  "download": {
+    "name": "s17-m2-s17-r1-input1.json",
+    "failure": null
+  },
+  "wrongVolume": {
+    "pairs": [
+      {
+        "pred": 0,
+        "truth": 0,
+        "error_s": 10
+      },
+      {
+        "pred": 1,
+        "truth": 1,
+        "error_s": 0
+      },
+      {
+        "pred": 2,
+        "truth": 2,
+        "error_s": 0
+      },
+      {
+        "pred": 3,
+        "truth": 3,
+        "error_s": 0
+      },
+      {
+        "pred": 4,
+        "truth": 4,
+        "error_s": 0
+      },
+      {
+        "pred": 5,
+        "truth": 5,
+        "error_s": 0
+      },
+      {
+        "pred": 6,
+        "truth": 6,
+        "error_s": 0
+      },
+      {
+        "pred": 7,
+        "truth": 7,
+        "error_s": 0
+      }
+    ],
+    "misses": [],
+    "extras": [],
+    "detectionRecall": 1,
+    "truthCount": 8,
+    "candidateCount": 8,
+    "model": {
+      "matrix": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 0.8
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 0.8666666666666667,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 1,
+      "coverage": 1,
+      "acceptedError": 0.125
+    },
+    "baseline": {
+      "matrix": [
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 1,
+          "f1": 0.4444444444444444
+        },
+        {
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      ],
+      "macroF1": 0.2777777777777778,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 5,
+      "coverage": 1,
+      "acceptedError": 0.625
+    },
+    "depthMAE_m": 1.7528528716599112,
+    "depthN": 2,
+    "falsePersistent": {
+      "count": 1,
+      "denominator": 6
+    },
+    "allCandidateCoverage": 1
+  },
+  "pause": {
+    "pairs": [
+      {
+        "pred": 0,
+        "truth": 0,
+        "error_s": 10
+      },
+      {
+        "pred": 1,
+        "truth": 1,
+        "error_s": 0
+      },
+      {
+        "pred": 2,
+        "truth": 2,
+        "error_s": 0
+      },
+      {
+        "pred": 3,
+        "truth": 3,
+        "error_s": 0
+      },
+      {
+        "pred": 4,
+        "truth": 4,
+        "error_s": 0
+      },
+      {
+        "pred": 5,
+        "truth": 5,
+        "error_s": 0
+      },
+      {
+        "pred": 6,
+        "truth": 6,
+        "error_s": 0
+      },
+      {
+        "pred": 7,
+        "truth": 7,
+        "error_s": 0
+      }
+    ],
+    "misses": [],
+    "extras": [],
+    "detectionRecall": 1,
+    "truthCount": 8,
+    "candidateCount": 8,
+    "model": {
+      "matrix": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 0.8
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 0.8666666666666667,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 1,
+      "coverage": 1,
+      "acceptedError": 0.125
+    },
+    "baseline": {
+      "matrix": [
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 1,
+          "f1": 0.4444444444444444
+        },
+        {
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      ],
+      "macroF1": 0.2777777777777778,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 5,
+      "coverage": 1,
+      "acceptedError": 0.625
+    },
+    "depthMAE_m": 1.7528528716599112,
+    "depthN": 2,
+    "falsePersistent": {
+      "count": 1,
+      "denominator": 6
+    },
+    "allCandidateCoverage": 1
+  },
+  "ambiguous": {
+    "pairs": [
+      {
+        "pred": 3,
+        "truth": 0,
+        "error_s": 20
+      },
+      {
+        "pred": 10,
+        "truth": 1,
+        "error_s": 10
+      },
+      {
+        "pred": 15,
+        "truth": 2,
+        "error_s": 40
+      },
+      {
+        "pred": 29,
+        "truth": 4,
+        "error_s": 10
+      },
+      {
+        "pred": 32,
+        "truth": 5,
+        "error_s": 20
+      },
+      {
+        "pred": 44,
+        "truth": 6,
+        "error_s": 0
+      },
+      {
+        "pred": 50,
+        "truth": 7,
+        "error_s": 40
+      }
+    ],
+    "misses": [
+      3
+    ],
+    "extras": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      31,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      45,
+      46,
+      47,
+      48,
+      49,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "detectionRecall": 0.875,
+    "truthCount": 8,
+    "candidateCount": 61,
+    "model": {
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        }
+      ],
+      "macroF1": 0,
+      "total": 7,
+      "accepted": 0,
+      "wrong": 0,
+      "coverage": 0,
+      "acceptedError": null
+    },
+    "baseline": {
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        }
+      ],
+      "macroF1": 0,
+      "total": 7,
+      "accepted": 0,
+      "wrong": 0,
+      "coverage": 0,
+      "acceptedError": null
+    },
+    "depthMAE_m": 0.11798772353927234,
+    "depthN": 2,
+    "falsePersistent": {
+      "count": 0,
+      "denominator": 5
+    },
+    "allCandidateCoverage": 0
+  },
+  "storage": {
+    "records": [
+      {
+        "id": "s17-mudgas-context",
+        "files": 4
+      }
+    ],
+    "serializedCodeUnits": 70372,
+    "utf8Bytes": 83953
+  },
+  "final": {
+    "status": "ready",
+    "runId": "s17-r1-input1"
+  }
+}

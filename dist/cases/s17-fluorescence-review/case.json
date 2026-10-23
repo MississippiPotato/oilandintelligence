@@ -1,0 +1,118 @@
+{
+  "id": "s17-fluorescence-review",
+  "sceneId": "m3",
+  "methods": [
+    "cv"
+  ],
+  "title": "荧光图像智能判读：显示与来源分开核查",
+  "version": "1.3.0",
+  "updated": "2026-10-23",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "同样品白光/UV配对，参考校正后真实训练逻辑回归；三方法同图比较、固定评价域，显示量化与来源解释分开。",
+      "judge": [
+        {
+          "label": "默认数据",
+          "value": "教学合成",
+          "desc": "公开实测附加区单独标识"
+        },
+        {
+          "label": "业务问题",
+          "value": "哪些像素有荧光显示，哪些解释仍缺证据？",
+          "desc": "输出边界见说明"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "图 B1｜白光与UV必须是同一个样品",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 300\" role=\"img\" aria-label=\"同一位置的白光与紫外观察，轮廓与发光提供不同信息\"><rect width=\"720\" height=\"300\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"22\" y=\"40\" width=\"280\" height=\"170\" rx=\"12\" fill=\"#e7e9da\"/><rect x=\"418\" y=\"40\" width=\"280\" height=\"170\" rx=\"12\" fill=\"#263b35\"/>\n<ellipse cx=\"82\" cy=\"110\" rx=\"29\" ry=\"20\" fill=\"#b69a71\" stroke=\"#7a8770\"/><ellipse cx=\"478\" cy=\"110\" rx=\"29\" ry=\"20\" fill=\"#435248\" stroke=\"#687666\"/><ellipse cx=\"478\" cy=\"110\" rx=\"17\" ry=\"12\" fill=\"#bed16e\"/><ellipse cx=\"160\" cy=\"140\" rx=\"29\" ry=\"20\" fill=\"#879483\" stroke=\"#7a8770\"/><ellipse cx=\"556\" cy=\"140\" rx=\"29\" ry=\"20\" fill=\"#435248\" stroke=\"#687666\"/><ellipse cx=\"556\" cy=\"140\" rx=\"7\" ry=\"5\" fill=\"#6f805b\"/><ellipse cx=\"238\" cy=\"110\" rx=\"29\" ry=\"20\" fill=\"#babba3\" stroke=\"#7a8770\"/><ellipse cx=\"634\" cy=\"110\" rx=\"29\" ry=\"20\" fill=\"#435248\" stroke=\"#687666\"/><ellipse cx=\"634\" cy=\"110\" rx=\"17\" ry=\"12\" fill=\"#bed16e\"/>\n<text x=\"35\" y=\"27\" >白光：看轮廓、纹理与可见岩屑</text><text x=\"430\" y=\"27\" >UV：看同一位置的荧光显示</text><text x=\"317\" y=\"117\" >同一身份</text><text x=\"317\" y=\"147\" >同一位置</text><text x=\"36\" y=\"249\" >白光决定可见分母；UV提供发光观察。图中是概念示意，下面可看实际合成像素。</text><text x=\"36\" y=\"279\" >固定激发条件；发光也可能来自矿物或添加物，不能仅靠亮度确认油气。</text></g></svg></div></div><figcaption>两种观察包含不同信息。前景由可见白光像素计算，不能读取评价真值补齐漏掉的岩屑。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "CONCEPT",
+          "title": "图 B2｜曝光改变亮度，饱和会丢失信息",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"曝光参考校正与饱和上限\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M45 170V25M45 170H680\" stroke=\"#819d8d\" fill=\"none\"/><path d=\"M50 165L440 40H660\" stroke=\"#a87542\" fill=\"none\" stroke-width=\"4\"/><text x=\"55\" y=\"30\">像素值</text><text x=\"485\" y=\"65\">255：饱和平台</text><text x=\"120\" y=\"115\">参考片/暗场 → 相对校正</text><text x=\"485\" y=\"195\">曝光 →</text><text x=\"55\" y=\"200\">饱和后多个强度映到同一个像素值，不能反推出原细节。</text></g></svg></div></div><figcaption>校正只针对固定激发条件下的相对曝光，不是跨波长校正。原始阈值、校正阈值和校正后学习要分开比较。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "CONCEPT",
+          "title": "图 B3｜检出荧光，不等于确认油气来源",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"发光可来自油类矿物或污染\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"65\">油类候选</text><circle cx=\"125\" cy=\"115\" r=\"21\" fill=\"#a8bd61\"/><rect x=\"260\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"272\" y=\"65\">矿物候选</text><circle cx=\"360\" cy=\"115\" r=\"21\" fill=\"#a8bd61\"/><rect x=\"495\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"507\" y=\"65\">添加物/污染候选</text><circle cx=\"595\" cy=\"115\" r=\"21\" fill=\"#a8bd61\"/><text x=\"35\" y=\"178\">分割任务：这些发光都是真阳性；来源解释：仍需独立证据与复核。</text></g></svg></div></div><figcaption>面积是可见图像上的占比，不是含油饱和度、储量或产能。亮度和颜色不足以自动给出来源结论。</figcaption></figure>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "哪些像素有荧光显示，哪些解释仍缺证据？",
+      "lead": [
+        "同样品白光/UV配对，参考校正后真实训练逻辑回归；三方法同图比较、固定评价域，显示量化与来源解释分开。"
+      ],
+      "steps": [
+        {
+          "name": "配对与可见分母",
+          "role": "图S1",
+          "do": "输入：白光/UV像素、配对身份；动作：从白光分割岩屑ROI。见图S1。",
+          "effect": "同位置配对与可见面积分母",
+          "trap": "固定完整评价域，不用预测ROI缩小误差分母"
+        },
+        {
+          "name": "质控与曝光校正",
+          "role": "图S2",
+          "do": "输入：暗场、可见参考片、UV像素；动作：扣暗场并以参考片归一化。见图S2。",
+          "effect": "校正RGB、饱和标记",
+          "trap": "饱和细节不可恢复；灯源条件固定"
+        },
+        {
+          "name": "训练像素特征",
+          "role": "图S3",
+          "do": "输入：独立训练样品的局部像素；动作：提取校正RGB、色差、局部对比并标准化。见图S3。",
+          "effect": "5维训练特征与标签",
+          "trap": "同一基础样品的曝光变体不跨集合"
+        },
+        {
+          "name": "逻辑回归学习",
+          "role": "图S4",
+          "do": "输入：训练特征与训练掩膜；动作：实际梯度优化100轮，验证选阈值。见图S4。",
+          "effect": "权重、真实损失曲线与阈值",
+          "trap": "逐轮显示当前训练样本的损失与权重变化"
+        },
+        {
+          "name": "三种方法同图比较",
+          "role": "图S5",
+          "do": "输入：当前可见像素与冻结模型；动作：B0原亮度、B1校正亮度、M0学习得分。见图S5。",
+          "effect": "三张显示掩膜与同域指标",
+          "trap": "校正收益与学习增量分别归因"
+        },
+        {
+          "name": "面积与教学等级",
+          "role": "图S6",
+          "do": "输入：预测掩膜、预测白光ROI、校正强度；动作：按透明规则汇总面积和等级。见图S6。",
+          "effect": "分子/分母、强度、0/1/2级",
+          "trap": "等级是规则，不是学习分类器或行业标准"
+        },
+        {
+          "name": "来源复核与导出",
+          "role": "图S7",
+          "do": "输入：显示区域、来源/质控、人工笔刷；动作：保留原模型与人工修订，导出证据。见图S7。",
+          "effect": "带配对身份的显示线索",
+          "trap": "检出荧光不能升级为已发现油层"
+        }
+      ],
+      "metrics": {
+        "title": "逐步图册与评价口径",
+        "html": "<figure><h3>图 S1｜配对与可见分母</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"配对与可见分母\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"60\">白光 → 预测可见ROI</text><rect x=\"265\" y=\"30\" width=\"180\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"60\">UV保持同坐标</text><rect x=\"480\" y=\"30\" width=\"220\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"492\" y=\"60\">分母 = 可见像素数</text><text x=\"30\" y=\"145\">配对键 / 父样品键 / 分组键一致；真实掩膜只在独立评价模块。</text></g></svg></div></div><figcaption>输入：白光/UV像素、配对身份；动作：从白光分割岩屑ROI；输出：同位置配对与可见面积分母。固定完整评价域，不用预测ROI缩小误差分母</figcaption></figure><figure><h3>图 S2｜质控与曝光校正</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"质控与曝光校正\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"60\">暗场 D</text><rect x=\"260\" y=\"30\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"272\" y=\"60\">参考 R</text><rect x=\"500\" y=\"30\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"512\" y=\"60\">UV像素 I</text><text x=\"30\" y=\"130\">校正值 = max(0, I−D) / max(1, R−D) × 80</text><text x=\"30\" y=\"175\">参考片或岩屑饱和 → 不可恢复细节，保留质控标记。</text></g></svg></div></div><figcaption>输入：暗场、可见参考片、UV像素；动作：扣暗场并以参考片归一化；输出：校正RGB、饱和标记。饱和细节不可恢复；灯源条件固定</figcaption></figure><figure><h3>图 S3｜训练像素特征</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"训练像素特征\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><text x=\"25\" y=\"60\">R /100</text><rect x=\"25\" y=\"90\" width=\"80\" height=\"30\" fill=\"#6a9c85\"/><text x=\"165\" y=\"60\">G /100</text><rect x=\"165\" y=\"90\" width=\"80\" height=\"42\" fill=\"#6a9c85\"/><text x=\"305\" y=\"60\">B /100</text><rect x=\"305\" y=\"90\" width=\"80\" height=\"54\" fill=\"#6a9c85\"/><text x=\"445\" y=\"60\">色差</text><rect x=\"445\" y=\"90\" width=\"80\" height=\"66\" fill=\"#6a9c85\"/><text x=\"585\" y=\"60\">局部对比</text><rect x=\"585\" y=\"90\" width=\"80\" height=\"78\" fill=\"#6a9c85\"/><text x=\"30\" y=\"192\">标准化只拟合训练组；验证样品单独选阈值，测试不反向参与。</text></g></svg></div></div><figcaption>输入：独立训练样品的局部像素；动作：提取校正RGB、色差、局部对比并标准化；输出：5维训练特征与标签。同一基础样品的曝光变体不跨集合</figcaption></figure><figure><h3>图 S4｜逻辑回归学习</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"逻辑回归学习\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M50 170V25M50 170H650M55 40Q110 150 260 155T650 165\" fill=\"none\" stroke=\"#4a8972\" stroke-width=\"3\"/><text x=\"75\" y=\"35\">真实平均交叉熵</text><text x=\"500\" y=\"195\">梯度迭代 →</text><text x=\"310\" y=\"90\">损失来自当前训练样本</text></g></svg></div></div><figcaption>输入：训练特征与训练掩膜；动作：实际梯度优化100轮，验证选阈值；输出：权重、真实损失曲线与阈值。逐轮显示当前训练样本的损失与权重变化</figcaption></figure><figure><h3>图 S5｜三种方法同图比较</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"三种方法同图比较\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"65\">B0：原始亮度阈值</text><rect x=\"255\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"267\" y=\"65\">B1：校正后阈值</text><rect x=\"490\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"502\" y=\"65\">M0：逻辑回归</text><text x=\"30\" y=\"135\">相同像素、相同固定评价域、相同荧光真值。</text><text x=\"30\" y=\"178\">评价对象为荧光显示，矿物发光也计为正类。</text></g></svg></div></div><figcaption>输入：当前可见像素与冻结模型；动作：B0原亮度、B1校正亮度、M0学习得分；输出：三张显示掩膜与同域指标。校正收益与学习增量分别归因</figcaption></figure><figure><h3>图 S6｜面积与教学等级</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"面积与教学等级\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"30\" width=\"205\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"60\">分子：显示像素数</text><rect x=\"270\" y=\"30\" width=\"205\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"282\" y=\"60\">分母：可见岩屑</text><rect x=\"510\" y=\"30\" width=\"185\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"60\">面积 + 强度</text><text x=\"30\" y=\"130\">规则：面积&lt;5% → 0级；否则面积&lt;25%或强度&lt;40 → 1级；其余2级。</text><text x=\"30\" y=\"175\">参考等级使用独立真值掩膜，按同一规则分别汇总。</text></g></svg></div></div><figcaption>输入：预测掩膜、预测白光ROI、校正强度；动作：按透明规则汇总面积和等级；输出：分子/分母、强度、0/1/2级。等级是规则，不是学习分类器或行业标准</figcaption></figure><figure><h3>图 S7｜来源复核与导出</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"来源复核与导出\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"35\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"65\">原模型显示掩膜</text><rect x=\"265\" y=\"35\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"65\">人工笔刷修订</text><rect x=\"510\" y=\"35\" width=\"190\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"65\">来源版本/限制</text><text x=\"30\" y=\"140\">修改观察条件会使当前人工确认失效；历史修订保留。</text><text x=\"30\" y=\"180\">输出“显示已检出、来源待核查”，不输出含油饱和度或储量。</text></g></svg></div></div><figcaption>输入：显示区域、来源/质控、人工笔刷；动作：保留原模型与人工修订，导出证据；输出：带配对身份的显示线索。检出荧光不能升级为已发现油层</figcaption></figure><p>所有模型、基线与指标在演示中实际计算。拒判与缺失保留分母，无适用分母显示不适用。改变输入后重算，人工结果与原模型分开。</p>"
+      }
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "height": 1000,
+      "intro": "同样品白光/UV配对，参考校正后真实训练逻辑回归；三方法同图比较、固定评价域，显示量化与来源解释分开。"
+    }
+  }
+}

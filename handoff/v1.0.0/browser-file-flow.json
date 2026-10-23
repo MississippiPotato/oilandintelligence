@@ -1,0 +1,197 @@
+{
+  "checks": [
+    "Offline standalone file executes and matches Node/default portal baseline",
+    "Keyboard arrow changes linked time cursor",
+    "390px standalone has no whole-page horizontal overflow",
+    "Keyboard Enter runs experiment on narrow screen",
+    "Offline original portal opens directly from file protocol",
+    "Original file importer actually reads complete manifest",
+    "Offline file-protocol import runs inside original sandbox",
+    "Offline file-protocol refresh preserves imported case and reruns",
+    "Offline original file sandbox permits JSON download",
+    "No HTTP requests during standalone and original file offline run",
+    "No page JavaScript errors in offline file run"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "mobile": {
+    "inner": 390,
+    "scroll": 390
+  },
+  "metrics": {
+    "pairs": [
+      {
+        "pred": 0,
+        "truth": 0,
+        "error_s": 10
+      },
+      {
+        "pred": 1,
+        "truth": 1,
+        "error_s": 0
+      },
+      {
+        "pred": 2,
+        "truth": 2,
+        "error_s": 0
+      },
+      {
+        "pred": 3,
+        "truth": 3,
+        "error_s": 0
+      },
+      {
+        "pred": 4,
+        "truth": 4,
+        "error_s": 0
+      },
+      {
+        "pred": 5,
+        "truth": 5,
+        "error_s": 0
+      },
+      {
+        "pred": 6,
+        "truth": 6,
+        "error_s": 0
+      },
+      {
+        "pred": 7,
+        "truth": 7,
+        "error_s": 0
+      }
+    ],
+    "misses": [],
+    "extras": [],
+    "detectionRecall": 1,
+    "truthCount": 8,
+    "candidateCount": 8,
+    "model": {
+      "matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 1,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 0,
+      "coverage": 1,
+      "acceptedError": 0
+    },
+    "baseline": {
+      "matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 0.8
+        },
+        {
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      ],
+      "macroF1": 0.8666666666666666,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 1,
+      "coverage": 1,
+      "acceptedError": 0.125
+    },
+    "depthMAE_m": 0,
+    "depthN": 2,
+    "falsePersistent": {
+      "count": 0,
+      "denominator": 6
+    },
+    "allCandidateCoverage": 1
+  },
+  "storage": {
+    "ids": [
+      "s17-mudgas-context"
+    ],
+    "utf8Bytes": 83953,
+    "codeUnits": 70372
+  },
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+}

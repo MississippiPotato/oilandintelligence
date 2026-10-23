@@ -1,0 +1,51 @@
+{
+  "portalVersion": "1.3.1-preview",
+  "scope": "actual Diana model rendering, actions, guide/navigation, retained media controls, native import overlay, mobile viewport, offline file",
+  "checks": [
+    {
+      "name": "actual MoodDairy Diana model and half-body layout load",
+      "status": "passed"
+    },
+    {
+      "name": "rendered model animation changes canvas pixels",
+      "status": "passed"
+    },
+    {
+      "name": "opening guide plays original smile greeting",
+      "status": "passed"
+    },
+    {
+      "name": "greeting button plays original hug action",
+      "status": "passed"
+    },
+    {
+      "name": "image/audio/microphone/model connection controls remain available",
+      "status": "passed"
+    },
+    {
+      "name": "local m2 navigation opens actual standalone case",
+      "status": "passed"
+    },
+    {
+      "name": "390px role and panel stay inside viewport",
+      "status": "passed"
+    },
+    {
+      "name": "original import modal hides assistant overlay",
+      "status": "passed"
+    },
+    {
+      "name": "offline file renders Diana and guide with zero HTTP",
+      "status": "passed"
+    },
+    {
+      "name": "no page JavaScript exceptions",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "offlineHTTP": [],
+  "passed": 10,
+  "failed": 0,
+  "createdAt": "2026-10-23T11:22:56.621Z"
+}

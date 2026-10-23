@@ -1,0 +1,1728 @@
+{
+  "createdAt": "2026-10-23T07:55:18.431Z",
+  "scope": "G2/G3/G4 calculations and source/build checks; not browser proof",
+  "passed": 13,
+  "failed": 1,
+  "checks": [
+    {
+      "name": "m1真实像素特征/训练标准化/整盘分组",
+      "status": "passed",
+      "evidence": {
+        "training": 288,
+        "validation": 96,
+        "groups": {
+          "train": [
+            "IMG-TRAIN-P1",
+            "IMG-TRAIN-P2",
+            "IMG-TRAIN-P3",
+            "IMG-TRAIN-P4",
+            "IMG-TRAIN-P5",
+            "IMG-TRAIN-P6",
+            "IMG-TRAIN-P7",
+            "IMG-TRAIN-P8",
+            "IMG-TRAIN-P9",
+            "IMG-TRAIN-P10",
+            "IMG-TRAIN-P11",
+            "IMG-TRAIN-P12",
+            "IMG-TRAIN-P13",
+            "IMG-TRAIN-P14",
+            "IMG-TRAIN-P15",
+            "IMG-TRAIN-P16",
+            "IMG-TRAIN-P17",
+            "IMG-TRAIN-P18",
+            "IMG-TRAIN-P19",
+            "IMG-TRAIN-P20",
+            "IMG-TRAIN-P21",
+            "IMG-TRAIN-P22",
+            "IMG-TRAIN-P23",
+            "IMG-TRAIN-P24"
+          ],
+          "validation": [
+            "IMG-VALID-P1",
+            "IMG-VALID-P2",
+            "IMG-VALID-P3",
+            "IMG-VALID-P4",
+            "IMG-VALID-P5",
+            "IMG-VALID-P6",
+            "IMG-VALID-P7",
+            "IMG-VALID-P8"
+          ],
+          "test": [
+            "DEMO-017"
+          ]
+        },
+        "chosen": {
+          "k": 3,
+          "support": 0.55,
+          "distance": 1.15
+        }
+      }
+    },
+    {
+      "name": "m1输入不含金标，改变真值与ID不改变推断；照明真改像素",
+      "status": "passed",
+      "evidence": {
+        "goldMutationIndependent": true
+      }
+    },
+    {
+      "name": "m1黏连、漏检、拒判以及统计分母",
+      "status": "passed",
+      "evidence": {
+        "components": 11,
+        "merged": 1,
+        "misses": 1,
+        "coverage": 0.9090909090909091,
+        "F1": 0.5299145299145299
+      }
+    },
+    {
+      "name": "m3配对共享几何与真实逻辑回归训练",
+      "status": "passed",
+      "evidence": {
+        "trainPixels": 4970,
+        "lossFirst": {
+          "iteration": 1,
+          "loss": 0.693147180559991
+        },
+        "lossLast": {
+          "iteration": 100,
+          "loss": 0.18522682997350814
+        },
+        "threshold": 0.35,
+        "groups": {
+          "train": [
+            "IMG-TRAIN-P1",
+            "IMG-TRAIN-P2",
+            "IMG-TRAIN-P3",
+            "IMG-TRAIN-P4",
+            "IMG-TRAIN-P5",
+            "IMG-TRAIN-P6",
+            "IMG-TRAIN-P7",
+            "IMG-TRAIN-P8",
+            "IMG-TRAIN-P9",
+            "IMG-TRAIN-P10",
+            "IMG-TRAIN-P11",
+            "IMG-TRAIN-P12"
+          ],
+          "validation": [
+            "IMG-VALID-P1",
+            "IMG-VALID-P2",
+            "IMG-VALID-P3",
+            "IMG-VALID-P4"
+          ],
+          "test": [
+            "DEMO-017"
+          ]
+        }
+      }
+    },
+    {
+      "name": "m3固定评价域不由预测ROI缩小，模型不读金标",
+      "status": "passed",
+      "evidence": {
+        "fixedEvaluationPixels": 65100,
+        "emptyIoU": 0
+      }
+    },
+    {
+      "name": "m3弱显示失败、曝光饱和警示与透明教学等级",
+      "status": "passed",
+      "evidence": {
+        "weakIoU": 0.4642857142857143,
+        "saturation": [
+          "参考片过曝：不可恢复细节",
+          "可见岩屑2080个像素发生通道饱和"
+        ]
+      }
+    },
+    {
+      "name": "m4独立标定、有效钻进单位与真实SSE迭代",
+      "status": "passed",
+      "evidence": {
+        "beta": [
+          3.0999507192029667,
+          0.451724711171008,
+          0.5482508976465075,
+          0.09824143296280916
+        ],
+        "calibration": 160,
+        "groups": {
+          "calibration": [
+            "CALIBRATION-HOMOGENEOUS"
+          ],
+          "train": [
+            "RESP-TRAIN-0",
+            "RESP-TRAIN-1",
+            "RESP-TRAIN-2",
+            "RESP-TRAIN-3",
+            "RESP-TRAIN-4",
+            "RESP-TRAIN-5"
+          ],
+          "validation": [
+            "RESP-VALID-0",
+            "RESP-VALID-1",
+            "RESP-VALID-2"
+          ],
+          "test": [
+            "DEMO-017"
+          ]
+        },
+        "chosen": {
+          "k": 3,
+          "penalty": 0.2,
+          "minLength": 2
+        }
+      }
+    },
+    {
+      "name": "m4固定地层工况阶跃、薄层吞并与域外限制",
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(experiments.m4_unnormalized.boundaries.length>0)\n\n    at file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/checks/verify-mandatory.mjs:17:660\n    at check (file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/checks/verify-mandatory.mjs:5:71)\n    at file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/checks/verify-mandatory.mjs:17:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)"
+    },
+    {
+      "name": "m4一对一最优边界匹配、空集与金标隔离",
+      "status": "passed",
+      "evidence": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_m": 0
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_m": 10
+          }
+        ],
+        "precision": 1,
+        "recall": 1,
+        "F1": 1,
+        "misses": [],
+        "extras": [],
+        "MAE_m": 5,
+        "predCount": 2,
+        "truthCount": 2
+      }
+    },
+    {
+      "name": "m5真实NB计数、表达族独立分组与真实重训",
+      "status": "passed",
+      "evidence": {
+        "counts": [
+          42,
+          42,
+          42,
+          42,
+          42,
+          42
+        ],
+        "chosen": {
+          "alpha": 0.5,
+          "margin": 0
+        },
+        "metrics": {
+          "model": {
+            "matrix": [
+              [
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                6,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                6,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              }
+            ],
+            "macroF1": 1,
+            "total": 36,
+            "accepted": 36,
+            "wrong": 0,
+            "coverage": 1,
+            "acceptedError": 0
+          },
+          "baseline": {
+            "matrix": [
+              [
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                6,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                6,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              },
+              {
+                "recall": 1,
+                "f1": 1
+              }
+            ],
+            "macroF1": 1,
+            "total": 36,
+            "accepted": 36,
+            "wrong": 0,
+            "coverage": 1,
+            "acceptedError": 0
+          }
+        },
+        "groups": {
+          "train": [
+            "category0-family0",
+            "category0-family1",
+            "category0-family2",
+            "category0-family3",
+            "category0-family4",
+            "category0-family5",
+            "category1-family0",
+            "category1-family1",
+            "category1-family2",
+            "category1-family3",
+            "category1-family4",
+            "category1-family5",
+            "category2-family0",
+            "category2-family1",
+            "category2-family2",
+            "category2-family3",
+            "category2-family4",
+            "category2-family5",
+            "category3-family0",
+            "category3-family1",
+            "category3-family2",
+            "category3-family3",
+            "category3-family4",
+            "category3-family5",
+            "category4-family0",
+            "category4-family1",
+            "category4-family2",
+            "category4-family3",
+            "category4-family4",
+            "category4-family5",
+            "category5-family0",
+            "category5-family1",
+            "category5-family2",
+            "category5-family3",
+            "category5-family4",
+            "category5-family5"
+          ],
+          "validation": [
+            "category0-family6",
+            "category0-family7",
+            "category1-family6",
+            "category1-family7",
+            "category2-family6",
+            "category2-family7",
+            "category3-family6",
+            "category3-family7",
+            "category4-family6",
+            "category4-family7",
+            "category5-family6",
+            "category5-family7"
+          ],
+          "test": [
+            "category0-family8",
+            "category0-family9",
+            "category1-family8",
+            "category1-family9",
+            "category2-family8",
+            "category2-family9",
+            "category3-family8",
+            "category3-family9",
+            "category4-family8",
+            "category4-family9",
+            "category5-family8",
+            "category5-family9"
+          ]
+        }
+      }
+    },
+    {
+      "name": "m5原文偏移、否定作用域、缺单位、多范围与金标评价",
+      "status": "passed",
+      "evidence": {
+        "fields": {
+          "fieldPrecision": 1,
+          "fieldRecall": 1,
+          "fieldF1": 1,
+          "exactRecords": 7,
+          "totalRecords": 7,
+          "byField": {
+            "depthRangeMD_m": {
+              "correct": 7,
+              "total": 7
+            },
+            "timeRange_s": {
+              "correct": 7,
+              "total": 7
+            },
+            "gasValue": {
+              "correct": 7,
+              "total": 7
+            },
+            "gasUnit": {
+              "correct": 7,
+              "total": 7
+            },
+            "fluorescence": {
+              "correct": 7,
+              "total": 7
+            },
+            "rock": {
+              "correct": 7,
+              "total": 7
+            },
+            "operation": {
+              "correct": 7,
+              "total": 7
+            },
+            "negation": {
+              "correct": 7,
+              "total": 7
+            }
+          },
+          "chapterCoverage": 1,
+          "factCoverage": 1,
+          "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+        },
+        "grounding": {
+          "supported": 7,
+          "total": 7,
+          "unsupported": 0,
+          "unsupportedRate": 0,
+          "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+        },
+        "conflicts": []
+      }
+    },
+    {
+      "name": "m5来源不可变、三状态失效、保留历史确认",
+      "status": "passed",
+      "evidence": {
+        "versions": 2,
+        "claim": {
+          "revision": 4,
+          "kind": "observation",
+          "statement": "未见荧光",
+          "reviewStatus": "needs_review",
+          "traceabilityStatus": "stale",
+          "supportStatus": "unchecked",
+          "reviewHistory": [
+            {
+              "revision": 3,
+              "kind": "observation",
+              "statement": "未见荧光",
+              "reviewStatus": "confirmed",
+              "traceabilityStatus": "linked",
+              "supportStatus": "human_verified",
+              "trigger": "否定改变"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "m1–m4自包含真实快照验证，错误版本/范围/状态拒绝",
+      "status": "passed",
+      "evidence": {
+        "validated": [
+          {
+            "id": "s17-cuttings-lithology",
+            "sourceRecords": 1,
+            "claims": 1,
+            "bytes": 22513
+          },
+          {
+            "id": "s17-mudgas-context",
+            "sourceRecords": 1,
+            "claims": 1,
+            "bytes": 16853
+          },
+          {
+            "id": "s17-fluorescence-review",
+            "sourceRecords": 1,
+            "claims": 1,
+            "bytes": 56286
+          },
+          {
+            "id": "s17-drilltime-boundaries",
+            "sourceRecords": 1,
+            "claims": 2,
+            "bytes": 76784
+          }
+        ]
+      }
+    },
+    {
+      "name": "工作门户修改范围、原站两份锁定与5个干净成品",
+      "status": "passed",
+      "evidence": {
+        "changedWorkingFiles": [
+          "assets/core/shell.js",
+          "index.html"
+        ],
+        "newWorkingFiles": [
+          "assets/s17.css",
+          "assets/s17-home.js"
+        ],
+        "cumulativePackageBytes": 524109
+      }
+    }
+  ],
+  "defaults": {
+    "m1": {
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 2,
+          "IoU": 1
+        },
+        {
+          "pred": 1,
+          "truth": 0,
+          "IoU": 1
+        },
+        {
+          "pred": 2,
+          "truth": 1,
+          "IoU": 1
+        },
+        {
+          "pred": 3,
+          "truth": 3,
+          "IoU": 1
+        },
+        {
+          "pred": 4,
+          "truth": 4,
+          "IoU": 1
+        },
+        {
+          "pred": 5,
+          "truth": 7,
+          "IoU": 1
+        },
+        {
+          "pred": 6,
+          "truth": 6,
+          "IoU": 1
+        },
+        {
+          "pred": 7,
+          "truth": 5,
+          "IoU": 1
+        },
+        {
+          "pred": 8,
+          "truth": 10,
+          "IoU": 1
+        },
+        {
+          "pred": 9,
+          "truth": 8,
+          "IoU": 1
+        },
+        {
+          "pred": 10,
+          "truth": 11,
+          "IoU": 1
+        },
+        {
+          "pred": 11,
+          "truth": 9,
+          "IoU": 1
+        }
+      ],
+      "misses": [],
+      "extras": [],
+      "merged": [],
+      "model": {
+        "matrix": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            7,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          }
+        ],
+        "macroF1": 1,
+        "total": 12,
+        "accepted": 12,
+        "wrong": 0,
+        "coverage": 1,
+        "acceptedError": 0
+      },
+      "baseline": {
+        "matrix": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            5,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 0,
+            "f1": 0
+          },
+          {
+            "recall": 0.7142857142857143,
+            "f1": 0.7142857142857143
+          }
+        ],
+        "macroF1": 0.5714285714285715,
+        "total": 12,
+        "accepted": 12,
+        "wrong": 4,
+        "coverage": 1,
+        "acceptedError": 0.3333333333333333
+      },
+      "segmentation": {
+        "tp": 14582,
+        "fp": 0,
+        "fn": 0,
+        "tn": 62218,
+        "IoU": 1,
+        "Dice": 1,
+        "recall": 1,
+        "precision": 1
+      },
+      "trueVisiblePixels": 14582,
+      "areaError_pp": [
+        0,
+        0,
+        0
+      ]
+    },
+    "m3": {
+      "methods": {
+        "B0": {
+          "tp": 2027,
+          "fp": 0,
+          "fn": 1445,
+          "tn": 61628,
+          "IoU": 0.5838133640552995,
+          "Dice": 0.7372249499909075,
+          "recall": 0.5838133640552995,
+          "precision": 1,
+          "areaError_pp": 9.90947743793718,
+          "predictedGrade": 1,
+          "referenceGrade": 1,
+          "gradeError": 0
+        },
+        "B1": {
+          "tp": 1914,
+          "fp": 0,
+          "fn": 1558,
+          "tn": 61628,
+          "IoU": 0.5512672811059908,
+          "Dice": 0.7107315261789825,
+          "recall": 0.5512672811059908,
+          "precision": 1,
+          "areaError_pp": 10.684405431353722,
+          "predictedGrade": 1,
+          "referenceGrade": 1,
+          "gradeError": 0
+        },
+        "M0": {
+          "tp": 3472,
+          "fp": 0,
+          "fn": 0,
+          "tn": 61628,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1,
+          "areaError_pp": 0,
+          "predictedGrade": 1,
+          "referenceGrade": 1,
+          "gradeError": 0
+        }
+      },
+      "foreground": {
+        "tp": 14582,
+        "fp": 0,
+        "fn": 0,
+        "tn": 62218,
+        "IoU": 1,
+        "Dice": 1,
+        "recall": 1,
+        "precision": 1
+      },
+      "fixedEvaluationPixels": 65100,
+      "truthSummary": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212,
+        "intensity": 52.75201894500772,
+        "grade": 1
+      }
+    },
+    "m4": {
+      "model": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_m": 0.125
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_m": 0.125
+          }
+        ],
+        "precision": 1,
+        "recall": 1,
+        "F1": 1,
+        "misses": [],
+        "extras": [],
+        "MAE_m": 0.125,
+        "predCount": 2,
+        "truthCount": 2
+      },
+      "baseline": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_m": 0.5
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "error_m": 0.5
+          }
+        ],
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "F1": 0.8,
+        "misses": [],
+        "extras": [
+          1
+        ],
+        "MAE_m": 0.5,
+        "predCount": 3,
+        "truthCount": 2
+      },
+      "falseOperationBoundaries": {
+        "model": 0,
+        "baseline": 1
+      },
+      "thinMisses": null,
+      "tolerance_m": 1
+    },
+    "m5": {
+      "model": {
+        "matrix": [
+          [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          }
+        ],
+        "macroF1": 1,
+        "total": 36,
+        "accepted": 36,
+        "wrong": 0,
+        "coverage": 1,
+        "acceptedError": 0
+      },
+      "baseline": {
+        "matrix": [
+          [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          }
+        ],
+        "macroF1": 1,
+        "total": 36,
+        "accepted": 36,
+        "wrong": 0,
+        "coverage": 1,
+        "acceptedError": 0
+      }
+    }
+  },
+  "experiments": {
+    "m1_coating": {
+      "components": 11,
+      "merged": 1,
+      "misses": 1,
+      "coverage": 0.9090909090909091,
+      "F1": 0.5299145299145299
+    },
+    "m1_unfamiliar": {
+      "components": 12,
+      "merged": 0,
+      "misses": 0,
+      "coverage": 0.75,
+      "F1": 0.9090909090909092
+    },
+    "m3_weak": {
+      "metrics": {
+        "methods": {
+          "B0": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3472,
+            "tn": 61628,
+            "IoU": 0,
+            "Dice": 0,
+            "recall": 0,
+            "precision": null,
+            "areaError_pp": 23.810176930462212,
+            "predictedGrade": 0,
+            "referenceGrade": 1,
+            "gradeError": 1
+          },
+          "B1": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3472,
+            "tn": 61628,
+            "IoU": 0,
+            "Dice": 0,
+            "recall": 0,
+            "precision": null,
+            "areaError_pp": 23.810176930462212,
+            "predictedGrade": 0,
+            "referenceGrade": 1,
+            "gradeError": 1
+          },
+          "M0": {
+            "tp": 1612,
+            "fp": 0,
+            "fn": 1860,
+            "tn": 61628,
+            "IoU": 0.4642857142857143,
+            "Dice": 0.6341463414634146,
+            "recall": 0.4642857142857143,
+            "precision": 1,
+            "areaError_pp": 12.755451927033329,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          }
+        },
+        "foreground": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "fixedEvaluationPixels": 65100,
+        "truthSummary": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212,
+          "intensity": 10.880287205557195,
+          "grade": 1
+        }
+      },
+      "quality": [],
+      "summary": {
+        "count": 1612,
+        "denominator": 14582,
+        "area": 0.11054725003428885,
+        "intensity": 18.65381644319855,
+        "grade": 1
+      }
+    },
+    "m3_saturation": {
+      "metrics": {
+        "methods": {
+          "B0": {
+            "tp": 3472,
+            "fp": 3,
+            "fn": 0,
+            "tn": 61625,
+            "IoU": 0.999136690647482,
+            "Dice": 0.9995681589175184,
+            "recall": 1,
+            "precision": 0.999136690647482,
+            "areaError_pp": 0.020573309559732134,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "B1": {
+            "tp": 2084,
+            "fp": 0,
+            "fn": 1388,
+            "tn": 61628,
+            "IoU": 0.6002304147465438,
+            "Dice": 0.750179985601152,
+            "recall": 0.6002304147465438,
+            "precision": 1,
+            "areaError_pp": 9.51858455630229,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "M0": {
+            "tp": 3472,
+            "fp": 0,
+            "fn": 0,
+            "tn": 61628,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1,
+            "areaError_pp": 0,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          }
+        },
+        "foreground": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "fixedEvaluationPixels": 65100,
+        "truthSummary": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212,
+          "intensity": 49.350146642843974,
+          "grade": 1
+        }
+      },
+      "quality": [
+        "参考片过曝：不可恢复细节",
+        "可见岩屑2080个像素发生通道饱和"
+      ],
+      "summary": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212,
+        "intensity": 49.350146642843974,
+        "grade": 1
+      }
+    },
+    "m3_mineral": {
+      "metrics": {
+        "methods": {
+          "B0": {
+            "tp": 2027,
+            "fp": 0,
+            "fn": 1445,
+            "tn": 61628,
+            "IoU": 0.5838133640552995,
+            "Dice": 0.7372249499909075,
+            "recall": 0.5838133640552995,
+            "precision": 1,
+            "areaError_pp": 9.90947743793718,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "B1": {
+            "tp": 1947,
+            "fp": 0,
+            "fn": 1525,
+            "tn": 61628,
+            "IoU": 0.5607718894009217,
+            "Dice": 0.7185827643476657,
+            "recall": 0.5607718894009217,
+            "precision": 1,
+            "areaError_pp": 10.45809902619668,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "M0": {
+            "tp": 3472,
+            "fp": 0,
+            "fn": 0,
+            "tn": 61628,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1,
+            "areaError_pp": 0,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          }
+        },
+        "foreground": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "fixedEvaluationPixels": 65100,
+        "truthSummary": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212,
+          "intensity": 55.27245546215833,
+          "grade": 1
+        }
+      },
+      "quality": [],
+      "summary": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212,
+        "intensity": 55.27245546215833,
+        "grade": 1
+      }
+    },
+    "m4_operation": {
+      "metrics": {
+        "model": {
+          "pairs": [],
+          "precision": null,
+          "recall": null,
+          "F1": null,
+          "misses": [],
+          "extras": [],
+          "MAE_m": null,
+          "predCount": 0,
+          "truthCount": 0
+        },
+        "baseline": {
+          "pairs": [],
+          "precision": 0,
+          "recall": null,
+          "F1": 0,
+          "misses": [],
+          "extras": [
+            0
+          ],
+          "MAE_m": null,
+          "predCount": 1,
+          "truthCount": 0
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      },
+      "boundaries": [],
+      "outOfDomain": 0
+    },
+    "m4_unnormalized": {
+      "metrics": {
+        "model": {
+          "pairs": [],
+          "precision": null,
+          "recall": null,
+          "F1": null,
+          "misses": [],
+          "extras": [],
+          "MAE_m": null,
+          "predCount": 0,
+          "truthCount": 0
+        },
+        "baseline": {
+          "pairs": [],
+          "precision": 0,
+          "recall": null,
+          "F1": 0,
+          "misses": [],
+          "extras": [
+            0
+          ],
+          "MAE_m": null,
+          "predCount": 1,
+          "truthCount": 0
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      },
+      "boundaries": [],
+      "outOfDomain": 0
+    },
+    "m4_thin": {
+      "metrics": {
+        "model": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.125
+            },
+            {
+              "pred": 1,
+              "truth": 1,
+              "error_m": 0.125
+            }
+          ],
+          "precision": 1,
+          "recall": 1,
+          "F1": 1,
+          "misses": [],
+          "extras": [],
+          "MAE_m": 0.125,
+          "predCount": 2,
+          "truthCount": 2
+        },
+        "baseline": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.5
+            },
+            {
+              "pred": 1,
+              "truth": 1,
+              "error_m": 0.25
+            }
+          ],
+          "precision": 1,
+          "recall": 1,
+          "F1": 1,
+          "misses": [],
+          "extras": [],
+          "MAE_m": 0.375,
+          "predCount": 2,
+          "truthCount": 2
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 0
+        },
+        "thinMisses": 0,
+        "tolerance_m": 1
+      },
+      "boundaries": [
+        1254.625,
+        1255.375
+      ],
+      "outOfDomain": 0
+    },
+    "m4_thin_merged": {
+      "metrics": {
+        "model": {
+          "pairs": [],
+          "precision": null,
+          "recall": 0,
+          "F1": 0,
+          "misses": [
+            0,
+            1
+          ],
+          "extras": [],
+          "MAE_m": null,
+          "predCount": 0,
+          "truthCount": 2
+        },
+        "baseline": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.5
+            },
+            {
+              "pred": 1,
+              "truth": 1,
+              "error_m": 0.25
+            }
+          ],
+          "precision": 1,
+          "recall": 1,
+          "F1": 1,
+          "misses": [],
+          "extras": [],
+          "MAE_m": 0.375,
+          "predCount": 2,
+          "truthCount": 2
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 0
+        },
+        "thinMisses": 2,
+        "tolerance_m": 1
+      },
+      "boundaries": [],
+      "outOfDomain": 0
+    },
+    "m4_domain": {
+      "metrics": {
+        "model": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.125
+            },
+            {
+              "pred": 1,
+              "truth": 1,
+              "error_m": 0.125
+            }
+          ],
+          "precision": 1,
+          "recall": 1,
+          "F1": 1,
+          "misses": [],
+          "extras": [],
+          "MAE_m": 0.125,
+          "predCount": 2,
+          "truthCount": 2
+        },
+        "baseline": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.5
+            },
+            {
+              "pred": 3,
+              "truth": 1,
+              "error_m": 0.5
+            }
+          ],
+          "precision": 0.5,
+          "recall": 1,
+          "F1": 0.6666666666666666,
+          "misses": [],
+          "extras": [
+            1,
+            2
+          ],
+          "MAE_m": 0.5,
+          "predCount": 4,
+          "truthCount": 2
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      },
+      "boundaries": [
+        1226.875,
+        1252.375
+      ],
+      "outOfDomain": 120
+    },
+    "m5_default": {
+      "fields": {
+        "fieldPrecision": 1,
+        "fieldRecall": 1,
+        "fieldF1": 1,
+        "exactRecords": 6,
+        "totalRecords": 6,
+        "byField": {
+          "depthRangeMD_m": {
+            "correct": 6,
+            "total": 6
+          },
+          "timeRange_s": {
+            "correct": 6,
+            "total": 6
+          },
+          "gasValue": {
+            "correct": 6,
+            "total": 6
+          },
+          "gasUnit": {
+            "correct": 6,
+            "total": 6
+          },
+          "fluorescence": {
+            "correct": 6,
+            "total": 6
+          },
+          "rock": {
+            "correct": 6,
+            "total": 6
+          },
+          "operation": {
+            "correct": 6,
+            "total": 6
+          },
+          "negation": {
+            "correct": 6,
+            "total": 6
+          }
+        },
+        "chapterCoverage": 1,
+        "factCoverage": 1,
+        "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+      },
+      "grounding": {
+        "supported": 6,
+        "total": 6,
+        "unsupported": 0,
+        "unsupportedRate": 0,
+        "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+      },
+      "conflicts": []
+    },
+    "m5_negation": {
+      "fields": {
+        "fieldPrecision": 1,
+        "fieldRecall": 1,
+        "fieldF1": 1,
+        "exactRecords": 7,
+        "totalRecords": 7,
+        "byField": {
+          "depthRangeMD_m": {
+            "correct": 7,
+            "total": 7
+          },
+          "timeRange_s": {
+            "correct": 7,
+            "total": 7
+          },
+          "gasValue": {
+            "correct": 7,
+            "total": 7
+          },
+          "gasUnit": {
+            "correct": 7,
+            "total": 7
+          },
+          "fluorescence": {
+            "correct": 7,
+            "total": 7
+          },
+          "rock": {
+            "correct": 7,
+            "total": 7
+          },
+          "operation": {
+            "correct": 7,
+            "total": 7
+          },
+          "negation": {
+            "correct": 7,
+            "total": 7
+          }
+        },
+        "chapterCoverage": 1,
+        "factCoverage": 1,
+        "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+      },
+      "grounding": {
+        "supported": 7,
+        "total": 7,
+        "unsupported": 0,
+        "unsupportedRate": 0,
+        "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+      },
+      "conflicts": []
+    },
+    "m5_conflict": {
+      "fields": {
+        "fieldPrecision": 1,
+        "fieldRecall": 1,
+        "fieldF1": 1,
+        "exactRecords": 7,
+        "totalRecords": 7,
+        "byField": {
+          "depthRangeMD_m": {
+            "correct": 7,
+            "total": 7
+          },
+          "timeRange_s": {
+            "correct": 7,
+            "total": 7
+          },
+          "gasValue": {
+            "correct": 7,
+            "total": 7
+          },
+          "gasUnit": {
+            "correct": 7,
+            "total": 7
+          },
+          "fluorescence": {
+            "correct": 7,
+            "total": 7
+          },
+          "rock": {
+            "correct": 7,
+            "total": 7
+          },
+          "operation": {
+            "correct": 7,
+            "total": 7
+          },
+          "negation": {
+            "correct": 7,
+            "total": 7
+          }
+        },
+        "chapterCoverage": 1,
+        "factCoverage": 1,
+        "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+      },
+      "grounding": {
+        "supported": 7,
+        "total": 7,
+        "unsupported": 0,
+        "unsupportedRate": 0,
+        "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+      },
+      "conflicts": [
+        {
+          "left": 1,
+          "right": 2,
+          "kind": "gas_value_conflict"
+        }
+      ]
+    }
+  }
+}

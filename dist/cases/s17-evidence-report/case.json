@@ -1,0 +1,111 @@
+{
+  "id": "s17-evidence-report",
+  "sceneId": "m5",
+  "methods": [
+    "nlp"
+  ],
+  "title": "录井报告自动生成：每句话都有当前证据",
+  "version": "1.3.0",
+  "updated": "2026-10-23",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。",
+      "judge": [
+        {
+          "label": "默认数据",
+          "value": "教学合成",
+          "desc": "公开实测附加区单独标识"
+        },
+        {
+          "label": "业务问题",
+          "value": "怎样整理录井报告，让每句话都能回到证据？",
+          "desc": "输出边界见说明"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "图 B1｜五种证据进入一份报告",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"原始观察上游推断到报告章节\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">岩屑证据</text><rect x=\"197\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"209\" y=\"53\">气测证据</text><rect x=\"374\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"386\" y=\"53\">荧光证据</text><rect x=\"551\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"563\" y=\"53\">钻时证据</text><path d=\"M100 75L350 125M280 75L350 125M460 75L350 125M640 75L350 125\" stroke=\"#70a18b\"/><rect x=\"220\" y=\"125\" width=\"280\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"232\" y=\"153\">报告句子 → 字段 → 具体来源</text><text x=\"30\" y=\"198\">内置上游计算快照；选择JSON可导入本次运行的新证据。</text></g></svg></div></div><figcaption>内置m1–m4计算快照；也可导入你刚导出的JSON，更新当前来源。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "CONCEPT",
+          "title": "图 B2｜观察、模型推断与人工意见分开",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 300\" role=\"img\" aria-label=\"否定词改写会撤销当前核验，保留来源与历史\"><rect width=\"720\" height=\"300\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"25\" y=\"45\" width=\"238\" height=\"95\" rx=\"10\" fill=\"#fffdf5\" stroke=\"#8fa888\"/><text x=\"40\" y=\"74\" >来源记录 @ v1</text><text x=\"40\" y=\"108\" font-size=\"19\" font-weight=\"650\">1200–1210 m：未见荧光</text>\n<path d=\"M270 92h66m-9-6l9 6-9 6\" fill=\"none\" stroke=\"#698d71\" stroke-width=\"3\"/>\n<rect x=\"355\" y=\"45\" width=\"330\" height=\"95\" rx=\"10\" fill=\"#fff2df\" stroke=\"#ba8c52\"/><text x=\"373\" y=\"74\" >人工改写的报告句子</text><text x=\"373\" y=\"108\" font-size=\"19\" font-weight=\"650\">1200–1210 m：见荧光</text>\n<text x=\"40\" y=\"187\" >来源仍在、字符范围仍能定位，含义却因一个“未”字发生变化。</text><text x=\"40\" y=\"226\" >当前确认撤销 → 重新核对否定 / 单位 / 范围 → 保存新的人工意见</text><text x=\"40\" y=\"267\" >观察、模型候选与人工意见分别保留；可追溯不等于语义已获支持。</text></g></svg></div></div><figcaption>sourceRefs 需要具体ID、版本和文字/图段定位。只有一个泛链接不算完整追溯。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "CONCEPT",
+          "title": "图 B3｜一个“未”字改变事实，不能丢掉",
+          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"否定作用域与同句多分句\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">未见荧光，但气测升高</text><rect x=\"390\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"402\" y=\"53\">荧光：否定；气测：非否定</text><text x=\"30\" y=\"125\">深度、时间、数值和单位与事实一起保留。</text><text x=\"30\" y=\"166\">缺深度写“未提供”，多范围无法唯一绑定则送复核。</text><text x=\"30\" y=\"199\">自由输入没有金标，不显示准确率、F1或事实覆盖性能。</text></g></svg></div></div><figcaption>本例用规则抽取限定格式，不把规则或模板称为大模型理解；复杂语义仍需人工。</figcaption></figure>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "怎样整理录井报告，让每句话都能回到证据？",
+      "lead": [
+        "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。"
+      ],
+      "steps": [
+        {
+          "name": "收集与版本化来源",
+          "role": "图S1",
+          "do": "输入：原始文本、上游证据JSON；动作：校验v1必填、ID/版本与引用；保留原内容。见图S1。",
+          "effect": "不可变来源版本与证据卡",
+          "trap": "同ID/版本不同内容必须报冲突"
+        },
+        {
+          "name": "保留偏移与字符特征",
+          "role": "图S2",
+          "do": "输入：原始文本；动作：分句保留start/end，字符1–2gram计数。见图S2。",
+          "effect": "原句片段与训练词表",
+          "trap": "数值只在分类特征归一化，原文不动"
+        },
+        {
+          "name": "六类朴素贝叶斯",
+          "role": "图S3",
+          "do": "输入：252训练句，独立表达族切分；动作：真实统计先验/词频，Laplace平滑与验证选参。见图S3。",
+          "effect": "类对数分数、分差、字符贡献",
+          "trap": "对数分数用于类别比较；产物为词频、先验与词表"
+        },
+        {
+          "name": "字段与冲突检查",
+          "role": "图S4",
+          "do": "输入：原句、类别建议、范围；动作：规则抽取否定/数值/单位/范围，检查同域冲突。见图S4。",
+          "effect": "事实字段、缺项与冲突队列",
+          "trap": "同一句无法唯一绑定多范围，不强行选一个"
+        },
+        {
+          "name": "有依据地组装报告",
+          "role": "图S5",
+          "do": "输入：事实、上游推断与原文引用；动作：共用约束模板，逐句绑定版本和选择范围。见图S5。",
+          "effect": "报告草稿及证据定位",
+          "trap": "关键词基线与学习使用相同抽取器/模板"
+        },
+        {
+          "name": "人工复核与安全导出",
+          "role": "图S6",
+          "do": "输入：报告句子、当前来源与历史；动作：手改撤销核验；人工重核后确认；导出HTML/JSON。见图S6。",
+          "effect": "带限制、状态、修订的可追溯草稿",
+          "trap": "链接存在不等于支持；用户文本不作为HTML执行"
+        }
+      ],
+      "metrics": {
+        "title": "逐步图册与评价口径",
+        "html": "<figure><h3>图 S1｜收集与版本化来源</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"收集与版本化来源\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"210\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">sourceRecordId @ version</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">内容不可变 / 冲突检查</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">保存原始内容</text><text x=\"30\" y=\"135\">text_record / series_segment / image_region / review_note</text><text x=\"30\" y=\"180\">其他案例必须显式选择文件导入；未知版本或缺失引用进入导入问题列表。</text></g></svg></div></div><figcaption>输入：原始文本、上游证据JSON；动作：校验v1必填、ID/版本与引用；保留原内容；输出：不可变来源版本与证据卡。同ID/版本不同内容必须报冲突</figcaption></figure><figure><h3>图 S2｜保留偏移与字符特征</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"保留偏移与字符特征\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"210\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">未见荧光，但气测升高</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">两条子句 + 原文offset</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">字符一元/二元计数</text><text x=\"30\" y=\"138\">“未见”“荧光”“气测”等贡献来自实际词频；原文数字与单位原样保留。</text></g></svg></div></div><figcaption>输入：原始文本；动作：分句保留start/end，字符1–2gram计数；输出：原句片段与训练词表。数值只在分类特征归一化，原文不动</figcaption></figure><figure><h3>图 S3｜六类朴素贝叶斯</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"六类朴素贝叶斯\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><text x=\"30\" y=\"40\">log P(类别) + Σ 片段计数 × log P(片段 | 类别)</text><text x=\"30\" y=\"95\">岩性</text><rect x=\"30\" y=\"120\" width=\"80\" height=\"15\" fill=\"#5c9981\"/><text x=\"145\" y=\"95\">气测</text><rect x=\"145\" y=\"120\" width=\"80\" height=\"30\" fill=\"#5c9981\"/><text x=\"260\" y=\"95\">荧光</text><rect x=\"260\" y=\"120\" width=\"80\" height=\"45\" fill=\"#5c9981\"/><text x=\"375\" y=\"95\">工况</text><rect x=\"375\" y=\"120\" width=\"80\" height=\"15\" fill=\"#5c9981\"/><text x=\"490\" y=\"95\">复核建议</text><rect x=\"490\" y=\"120\" width=\"80\" height=\"30\" fill=\"#5c9981\"/><text x=\"605\" y=\"95\">其他</text><rect x=\"605\" y=\"120\" width=\"80\" height=\"45\" fill=\"#5c9981\"/><text x=\"30\" y=\"195\">真实得分与类别分差在演示中计算；词表只来自训练族。</text></g></svg></div></div><figcaption>输入：252训练句，独立表达族切分；动作：真实统计先验/词频，Laplace平滑与验证选参；输出：类对数分数、分差、字符贡献。对数分数用于类别比较；产物为词频、先验与词表</figcaption></figure><figure><h3>图 S4｜字段与冲突检查</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"字段与冲突检查\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">1210–1220m：总气3.2</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">同范围：总气5.1</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">冲突：保留两条</text><text x=\"30\" y=\"135\">否定绑定分句；单位缺失不补造；冲突不静默取平均。</text><text x=\"30\" y=\"180\">有金标才计算字段EM、事实覆盖和冲突检出；自由输入只报工作流量。</text></g></svg></div></div><figcaption>输入：原句、类别建议、范围；动作：规则抽取否定/数值/单位/范围，检查同域冲突；输出：事实字段、缺项与冲突队列。同一句无法唯一绑定多范围，不强行选一个</figcaption></figure><figure><h3>图 S5｜有依据地组装报告</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"有依据地组装报告\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">句子ID / revision</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">事实ID / 抽取字段</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">来源ID@版本+范围</text><text x=\"30\" y=\"135\">点击句子 → 高亮原句或打开图像/曲线片段。</text><text x=\"30\" y=\"180\">缺证据显示待核查，不把“候选”改成已确认的地质事实。</text></g></svg></div></div><figcaption>输入：事实、上游推断与原文引用；动作：共用约束模板，逐句绑定版本和选择范围；输出：报告草稿及证据定位。关键词基线与学习使用相同抽取器/模板</figcaption></figure><figure><h3>图 S6｜人工复核与安全导出</h3><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"人工复核与安全导出\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">已核对句子</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">改写 / 来源版本变化</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">需重核 / stale</text><text x=\"30\" y=\"135\">人工确认针对当前句子与当前来源，历史确认不自动恢复。</text><text x=\"30\" y=\"180\">导出HTML转义用户文本；JSON带来源快照、版本、限制与修订。</text></g></svg></div></div><figcaption>输入：报告句子、当前来源与历史；动作：手改撤销核验；人工重核后确认；导出HTML/JSON；输出：带限制、状态、修订的可追溯草稿。链接存在不等于支持；用户文本不作为HTML执行</figcaption></figure><p>所有模型、基线与指标在演示中实际计算。拒判与缺失保留分母，无适用分母显示不适用。改变输入后重算，人工结果与原模型分开。</p>"
+      }
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "height": 1000,
+      "intro": "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。"
+    }
+  }
+}

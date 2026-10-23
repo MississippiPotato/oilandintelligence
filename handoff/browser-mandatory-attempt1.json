@@ -1,0 +1,420 @@
+{
+  "scope": "real standalone Chromium interactions, HTTP",
+  "checks": [
+    {
+      "name": "m1 canvas and real training neighbors",
+      "status": "passed"
+    },
+    {
+      "name": "m1 selecting a grain updates inspection",
+      "status": "passed"
+    },
+    {
+      "name": "m1 count denominator retained",
+      "status": "passed"
+    },
+    {
+      "name": "m1 real review stored",
+      "status": "passed"
+    },
+    {
+      "name": "m1 stale disables export and review invalidated",
+      "status": "passed"
+    },
+    {
+      "name": "m1 touching grains expose segmentation losses",
+      "status": "passed",
+      "evidence": 0.5299145299145299
+    },
+    {
+      "name": "m1 all reject has null accepted error",
+      "status": "passed"
+    },
+    {
+      "name": "m1 JSON sandbox-independent download",
+      "status": "passed"
+    },
+    {
+      "name": "m3 explicit gold reveal",
+      "status": "passed"
+    },
+    {
+      "name": "m3 brush is separate and original metrics unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "m3 weak fluorescence failure remains visible",
+      "status": "passed",
+      "evidence": 0.4642857142857143
+    },
+    {
+      "name": "m3 saturation flagged without claiming recovery",
+      "status": "passed"
+    },
+    {
+      "name": "m3 mineral-source ambiguity retained",
+      "status": "passed"
+    },
+    {
+      "name": "m3 JSON sandbox-independent download",
+      "status": "passed"
+    },
+    {
+      "name": "m4 default genuine boundary comparison",
+      "status": "passed",
+      "evidence": {
+        "model": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.125
+            },
+            {
+              "pred": 1,
+              "truth": 1,
+              "error_m": 0.125
+            }
+          ],
+          "precision": 1,
+          "recall": 1,
+          "F1": 1,
+          "misses": [],
+          "extras": [],
+          "MAE_m": 0.125,
+          "predCount": 2,
+          "truthCount": 2
+        },
+        "baseline": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.5
+            },
+            {
+              "pred": 2,
+              "truth": 1,
+              "error_m": 0.5
+            }
+          ],
+          "precision": 0.6666666666666666,
+          "recall": 1,
+          "F1": 0.8,
+          "misses": [],
+          "extras": [
+            1
+          ],
+          "MAE_m": 0.5,
+          "predCount": 3,
+          "truthCount": 2
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      }
+    },
+    {
+      "name": "m4 fixed geology removes false operation boundary",
+      "status": "passed"
+    },
+    {
+      "name": "m4 raw-response ablation makes false boundary",
+      "status": "failed"
+    }
+  ],
+  "defaults": {
+    "m1": {
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 2,
+          "IoU": 1
+        },
+        {
+          "pred": 1,
+          "truth": 0,
+          "IoU": 1
+        },
+        {
+          "pred": 2,
+          "truth": 1,
+          "IoU": 1
+        },
+        {
+          "pred": 3,
+          "truth": 3,
+          "IoU": 1
+        },
+        {
+          "pred": 4,
+          "truth": 4,
+          "IoU": 1
+        },
+        {
+          "pred": 5,
+          "truth": 7,
+          "IoU": 1
+        },
+        {
+          "pred": 6,
+          "truth": 6,
+          "IoU": 1
+        },
+        {
+          "pred": 7,
+          "truth": 5,
+          "IoU": 1
+        },
+        {
+          "pred": 8,
+          "truth": 10,
+          "IoU": 1
+        },
+        {
+          "pred": 9,
+          "truth": 8,
+          "IoU": 1
+        },
+        {
+          "pred": 10,
+          "truth": 11,
+          "IoU": 1
+        },
+        {
+          "pred": 11,
+          "truth": 9,
+          "IoU": 1
+        }
+      ],
+      "misses": [],
+      "extras": [],
+      "merged": [],
+      "model": {
+        "matrix": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            7,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          }
+        ],
+        "macroF1": 1,
+        "total": 12,
+        "accepted": 12,
+        "wrong": 0,
+        "coverage": 1,
+        "acceptedError": 0
+      },
+      "baseline": {
+        "matrix": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            5,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 0,
+            "f1": 0
+          },
+          {
+            "recall": 0.7142857142857143,
+            "f1": 0.7142857142857143
+          }
+        ],
+        "macroF1": 0.5714285714285715,
+        "total": 12,
+        "accepted": 12,
+        "wrong": 4,
+        "coverage": 1,
+        "acceptedError": 0.3333333333333333
+      },
+      "segmentation": {
+        "tp": 14582,
+        "fp": 0,
+        "fn": 0,
+        "tn": 62218,
+        "IoU": 1,
+        "Dice": 1,
+        "recall": 1,
+        "precision": 1
+      },
+      "trueVisiblePixels": 14582,
+      "areaError_pp": [
+        0,
+        0,
+        0
+      ]
+    },
+    "m3": {
+      "methods": {
+        "B0": {
+          "tp": 2027,
+          "fp": 0,
+          "fn": 1445,
+          "tn": 61628,
+          "IoU": 0.5838133640552995,
+          "Dice": 0.7372249499909075,
+          "recall": 0.5838133640552995,
+          "precision": 1,
+          "areaError_pp": 9.90947743793718,
+          "predictedGrade": 1,
+          "referenceGrade": 1,
+          "gradeError": 0
+        },
+        "B1": {
+          "tp": 1914,
+          "fp": 0,
+          "fn": 1558,
+          "tn": 61628,
+          "IoU": 0.5512672811059908,
+          "Dice": 0.7107315261789825,
+          "recall": 0.5512672811059908,
+          "precision": 1,
+          "areaError_pp": 10.684405431353722,
+          "predictedGrade": 1,
+          "referenceGrade": 1,
+          "gradeError": 0
+        },
+        "M0": {
+          "tp": 3472,
+          "fp": 0,
+          "fn": 0,
+          "tn": 61628,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1,
+          "areaError_pp": 0,
+          "predictedGrade": 1,
+          "referenceGrade": 1,
+          "gradeError": 0
+        }
+      },
+      "foreground": {
+        "tp": 14582,
+        "fp": 0,
+        "fn": 0,
+        "tn": 62218,
+        "IoU": 1,
+        "Dice": 1,
+        "recall": 1,
+        "precision": 1
+      },
+      "fixedEvaluationPixels": 65100,
+      "truthSummary": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212,
+        "intensity": 52.75201894500772,
+        "grade": 1
+      }
+    },
+    "m4": {
+      "model": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_m": 0.125
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_m": 0.125
+          }
+        ],
+        "precision": 1,
+        "recall": 1,
+        "F1": 1,
+        "misses": [],
+        "extras": [],
+        "MAE_m": 0.125,
+        "predCount": 2,
+        "truthCount": 2
+      },
+      "baseline": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_m": 0.5
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "error_m": 0.5
+          }
+        ],
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "F1": 0.8,
+        "misses": [],
+        "extras": [
+          1
+        ],
+        "MAE_m": 0.5,
+        "predCount": 3,
+        "truthCount": 2
+      },
+      "falseOperationBoundaries": {
+        "model": 0,
+        "baseline": 1
+      },
+      "thinMisses": null,
+      "tolerance_m": 1
+    }
+  },
+  "errors": [],
+  "exception": "m4 raw-response ablation makes false boundary",
+  "passed": 16,
+  "failed": 2
+}

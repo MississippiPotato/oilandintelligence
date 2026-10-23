@@ -1,0 +1,29 @@
+async(page)=>{
+const report={checks:[],errors:[]},ensure=(ok,m)=>{if(!ok)throw Error(m);report.checks.push(m);};page.on('pageerror',e=>report.errors.push(e.message));
+await page.goto('http://127.0.0.1:8755/portal/index.html#/scene/s3?case=firstbreak-stalta&tab=demo');
+let f=page.frameLocator('iframe'),before=await f.locator('#trace').innerHTML(),noise=await f.locator('#noise').inputValue();
+await f.locator('#noise').focus();await page.keyboard.press('ArrowRight');
+ensure(await f.locator('#noise').inputValue()!==noise&&await f.locator('#trace').innerHTML()!==before,'Unmodified firstbreak noise slider redraws actual trace');
+const th=await f.locator('#th').inputValue();await f.locator('#th').focus();await page.keyboard.press('ArrowRight');ensure(await f.locator('#th').inputValue()!==th,'Unmodified firstbreak threshold slider remains interactive');
+await page.screenshot({path:'G:/可视化导论/5/output/playwright/11-firstbreak-working.png',fullPage:true});
+for(const tab of ['01 专业背景','02 案例流程','03 可运行示范']){await page.getByRole('button',{name:tab,exact:true}).click();ensure((await page.locator('main').textContent()).length>200,'Working portal firstbreak tab '+tab+' renders');}
+const alreadyImported=await page.evaluate(()=>JSON.parse(localStorage.getItem('atlas.casepack.v2')||'[]').some(r=>r.meta.id==='s17-mudgas-context'));
+if(!alreadyImported){await page.getByRole('banner').getByRole('button',{name:'＋ 添加案例'}).click();
+await page.locator('#imp-dir').setInputFiles('G:/可视化导论/5/dist/cases/s17-mudgas-context');await page.waitForFunction(()=>document.getElementById('imp-id').value==='s17-mudgas-context');
+await page.getByRole('button',{name:'校验并添加',exact:true}).click();await page.waitForFunction(()=>location.hash.startsWith('#/scene/m2'));}
+else await page.goto('http://127.0.0.1:8755/portal/index.html#/scene/m2');
+await page.getByRole('button',{name:'03 可运行示范',exact:true}).click();
+f=page.frameLocator('iframe');await f.locator('#run').click();await f.locator('#status').filter({hasText:'计算完成'}).waitFor();
+report.storage=await page.evaluate(()=>{const text=localStorage.getItem('atlas.casepack.v2');return {ids:JSON.parse(text).map(r=>r.meta.id),utf8Bytes:new TextEncoder().encode(text).length,codeUnits:text.length};});
+ensure(report.storage.ids.includes('firstbreak-stalta')&&report.storage.ids.includes('s17-mudgas-context'),'Original firstbreak and final m2 coexist in one working portal store');
+await page.reload();f=page.frameLocator('iframe');await f.locator('#run').click();await f.locator('#status').filter({hasText:'计算完成'}).waitFor();ensure((await f.locator('body').evaluate(()=>M2Inspect.snapshot())).results.length===8,'Cumulative working portal refresh restores m2');
+await page.goto('http://127.0.0.1:8755/portal/index.html#/scene/s3?case=firstbreak-stalta&tab=demo');f=page.frameLocator('iframe');ensure(await f.locator('#trace path').count()>0,'Cumulative refresh retains firstbreak trace and avoids CSS/global pollution');
+await page.goto('http://127.0.0.1:8755/prototypes/index.html');await page.locator('#run').click();
+const a=JSON.parse(await page.locator('#m1').textContent()),b=JSON.parse(await page.locator('#m2').textContent()),c=JSON.parse(await page.locator('#m4').textContent());
+ensure(a.components[0].pixelArea===25&&a.components[1].pixelArea===30,'Risk page reads real canvas pixels and computes components');
+ensure(b.arrival_s===90&&b.backQuery_s===0,'Risk page executes stopped-pump cumulative transport');
+ensure(c.correctedOperationStep.length===0&&c.thinLayerCandidates.length===2,'Risk page computes operation-step correction and thin-layer candidates');
+await page.locator('#invalidate').click();ensure(JSON.parse(await page.locator('#claim').textContent()).traceabilityStatus==='stale','Risk page source edit revokes current traceability confirmation');
+await page.screenshot({path:'G:/可视化导论/5/output/playwright/12-g0-risks.png',fullPage:true});
+ensure(report.errors.length===0,'No JavaScript page errors in working portal and risk prototypes');return report;
+}

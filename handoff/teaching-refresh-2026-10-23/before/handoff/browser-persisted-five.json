@@ -1,0 +1,800 @@
+{
+  "scope": "v1.1 read back actual persisted original-portal packages after browser close and reopen",
+  "utf8Bytes": 798158,
+  "records": [
+    {
+      "id": "s17-cuttings-lithology",
+      "meta": {
+        "id": "s17-cuttings-lithology",
+        "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+        "sceneId": "m1",
+        "methods": [
+          "cv"
+        ],
+        "version": "1.1.0",
+        "updated": "2026-10-23"
+      },
+      "pkg": {
+        "id": "s17-cuttings-lithology",
+        "sceneId": "m1",
+        "methods": [
+          "cv"
+        ],
+        "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+        "version": "1.1.0",
+        "updated": "2026-10-23",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "实际像素 → 预测轮廓 → 训练特征库 → 候选岩性；计数与可见二维面积分开汇总。数据为教学合成，不能替代矿物分析或现场岩性解释。",
+            "judge": [
+              {
+                "label": "默认数据",
+                "value": "教学合成",
+                "desc": "公开实测附加区单独标识"
+              },
+              {
+                "label": "业务问题",
+                "value": "这一盘岩屑更接近哪种教学外观？哪些颗粒需要复核？",
+                "desc": "输出边界见说明"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CONCEPT",
+                "title": "图 B1｜岩屑从哪里来，何时到达？",
+                "html": "<figure><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"破岩上返筛分与采样，两时刻区分\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><rect x=\"20\" y=\"25\" width=\"180\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"30\" y=\"53\">① 钻头破岩 tₛ</text><rect x=\"265\" y=\"25\" width=\"180\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"275\" y=\"53\">② 环空上返</text><rect x=\"510\" y=\"25\" width=\"185\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"520\" y=\"53\">③ 地面采样 tₐ</text><path d=\"M205 48h55M450 48h55\" stroke=\"#297c69\" stroke-width=\"3\"/><text x=\"30\" y=\"117\">采样盘不是当前钻头深度的即时照片。</text><text x=\"30\" y=\"155\">迟到估计 → 来源时段 → MD(tₛ)；掉块与混样仍需复核。</text><text x=\"30\" y=\"193\">DEMO-017-P1 … P8：与白光/UV配对观察保持共同身份。</text></g></svg><figcaption>这是概念性样品运输示意，不求解颗粒沉降或井眼清洁。岩屑的形态与取样条件都会影响解释。</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONCEPT",
+                "title": "图 B2｜相近颜色，不同纹理；同一颗粒，不同照明",
+                "html": "<figure><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"颗粒像素纹理与光照影响\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><ellipse cx=\"105\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#a99a7c\"/><circle cx=\"65\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"65\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"65\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><text x=\"40\" y=\"162\">砂岩教学外观：细颗粒</text><ellipse cx=\"345\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#a3a698\"/><path d=\"M280 55h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 59h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 63h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 67h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 71h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 75h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 79h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 83h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 87h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 91h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 95h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 99h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 103h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 107h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 111h130\" stroke=\"#747c70\" stroke-width=\"1\"/><text x=\"280\" y=\"162\">泥岩教学外观：层状</text><ellipse cx=\"585\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#b4b4a2\"/><text x=\"520\" y=\"162\">灰岩教学外观：云斑</text><text x=\"30\" y=\"200\">演示修改真实RGB像素，再重新分割、提特征和预测；图像不等于矿物测量。</text></g></svg><figcaption>三类只是合成外观教学标签，色域允许重叠；参考片校正的收益与纹理特征的收益要分开理解。</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "CONCEPT",
+                "title": "图 B3｜颗粒数与二维面积是两个分母",
+                "html": "<figure><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"一大颗和多小颗占比不同\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><circle cx=\"100\" cy=\"90\" r=\"50\" fill=\"#b09161\"/><circle cx=\"250\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"298\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"346\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"394\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><text x=\"30\" y=\"170\">计数：大颗粒 1/5；面积：按可见像素重新计算。</text><text x=\"30\" y=\"202\">待复核仍占总分母；二维可见面积不是质量、体积或地层组成。</text></g></svg><figcaption>演示显示真实分子与分母，并保留待复核部分，不能删除难例后把已识别类别凑成100%。</figcaption></figure>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "这一盘岩屑更接近哪种教学外观？哪些颗粒需要复核？",
+            "lead": [
+              "实际像素 → 预测轮廓 → 训练特征库 → 候选岩性；计数与可见二维面积分开汇总。数据为教学合成，不能替代矿物分析或现场岩性解释。"
+            ],
+            "steps": [
+              {
+                "name": "样品登记",
+                "role": "图S1",
+                "do": "输入：采样ID、共同MD记录；动作：关联来源时段，保留迟到假设。见图S1。",
+                "effect": "P1–P8与白光/UV配对身份",
+                "trap": "迟到只改归位，不能改图像分类"
+              },
+              {
+                "name": "参考片与质控",
+                "role": "图S2",
+                "do": "输入：原始RGB像素、可见参考片；动作：由参考片估计通道增益，检查饱和。见图S2。",
+                "effect": "原图、校正图与质控标记",
+                "trap": "饱和/遮挡信息不能数学恢复"
+              },
+              {
+                "name": "像素分割与连通域",
+                "role": "图S3",
+                "do": "输入：校正图像；动作：和可见背景比较，四邻域连接。见图S3。",
+                "effect": "预测轮廓、颗粒面积和漏检诊断",
+                "trap": "轮廓必须由像素计算"
+              },
+              {
+                "name": "颜色、纹理与形状",
+                "role": "图S4",
+                "do": "输入：预测颗粒像素；动作：计算均值、方差、方向梯度、紧致度。见图S4。",
+                "effect": "16维特征与训练标准化参数",
+                "trap": "测试样本不得参与均值/阈值拟合"
+              },
+              {
+                "name": "近邻识别与拒判",
+                "role": "图S5",
+                "do": "输入：训练库和测试特征；动作：标准化距离、加权投票，验证选阈值。见图S5。",
+                "effect": "真实训练邻居与候选标签",
+                "trap": "支持度不是现场概率"
+              },
+              {
+                "name": "双口径汇总与复核",
+                "role": "图S6",
+                "do": "输入：原模型输出、独立金标；动作：分开计数/面积；匹配实例评价。见图S6。",
+                "effect": "含拒判混淆、漏检/合并与证据",
+                "trap": "人工意见不回写原模型成绩"
+              }
+            ],
+            "metrics": {
+              "title": "逐步图册与评价口径",
+              "html": "<figure><h3>图 S1｜样品登记</h3><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"样品登记\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"30\" y=\"58\">P1 / S1 / WLUV1</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"275\" y=\"58\">采样 → 来源时间</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"520\" y=\"58\">1200–1210 m MD</text><text x=\"35\" y=\"130\">同一父样品的裁剪、旋转、照明变体都在同组。</text><text x=\"35\" y=\"178\">图像判断与深度归位是两条独立的证据路径。</text></g></svg><figcaption>输入：采样ID、共同MD记录；动作：关联来源时段，保留迟到假设；输出：P1–P8与白光/UV配对身份。迟到只改归位，不能改图像分类</figcaption></figure><figure><h3>图 S2｜参考片与质控</h3><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"参考片与质控\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><rect x=\"20\" y=\"30\" width=\"190\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"30\" y=\"58\">原图参考片 RGB</text><rect x=\"265\" y=\"30\" width=\"190\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"275\" y=\"58\">测得均值 → 增益</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"45\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6a9d89\"/><text x=\"520\" y=\"58\">校正图 / 质控</text><text x=\"35\" y=\"130\">校正通道 = 原始通道 × 参考目标值 / 测得参考值</text><text x=\"35\" y=\"178\">过暗、过曝和遮挡单独提示；不是增强后就必然更准确。</text></g></svg><figcaption>输入：原始RGB像素、可见参考片；动作：由参考片估计通道增益，检查饱和；输出：原图、校正图与质控标记。饱和/遮挡信息不能数学恢复</figcaption></figure><figure><h3>图 S3｜像素分割与连通域</h3><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"像素分割与连通域\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><rect x=\"25\" y=\"30\" width=\"250\" height=\"140\" fill=\"#d9e3d4\"/><ellipse cx=\"72\" cy=\"95\" rx=\"22\" ry=\"35\" fill=\"#a89c7c\" stroke=\"#197665\" stroke-width=\"3\"/><ellipse cx=\"147\" cy=\"95\" rx=\"22\" ry=\"35\" fill=\"#a89c7c\" stroke=\"#197665\" stroke-width=\"3\"/><ellipse cx=\"222\" cy=\"95\" rx=\"22\" ry=\"35\" fill=\"#a89c7c\" stroke=\"#197665\" stroke-width=\"3\"/><text x=\"325\" y=\"70\">背景距离阈值 → 前景</text><text x=\"325\" y=\"110\">四邻域 → 每个候选实例</text><text x=\"325\" y=\"150\">面积来自实际像素数量</text></g></svg><figcaption>输入：校正图像；动作：和可见背景比较，四邻域连接；输出：预测轮廓、颗粒面积和漏检诊断。轮廓必须由像素计算</figcaption></figure><figure><h3>图 S4｜颜色、纹理与形状</h3><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"颜色、纹理与形状\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><text x=\"30\" y=\"40\">颜色均值</text><rect x=\"180\" y=\"25\" width=\"80\" height=\"20\" fill=\"#4b8e79\"/><text x=\"30\" y=\"83\">方向梯度</text><rect x=\"180\" y=\"68\" width=\"145\" height=\"20\" fill=\"#4b8e79\"/><text x=\"30\" y=\"126\">边缘密度</text><rect x=\"180\" y=\"111\" width=\"210\" height=\"20\" fill=\"#4b8e79\"/><text x=\"30\" y=\"169\">紧致度</text><rect x=\"180\" y=\"154\" width=\"275\" height=\"20\" fill=\"#4b8e79\"/><text x=\"470\" y=\"70\">仅训练组拟合 μ / σ</text><text x=\"470\" y=\"115\">测试向量逐维变换</text><text x=\"470\" y=\"160\">颜色消融保持同一划分</text></g></svg><figcaption>输入：预测颗粒像素；动作：计算均值、方差、方向梯度、紧致度；输出：16维特征与训练标准化参数。测试样本不得参与均值/阈值拟合</figcaption></figure><figure><h3>图 S5｜近邻识别与拒判</h3><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"近邻识别与拒判\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><circle cx=\"100\" cy=\"105\" r=\"17\" fill=\"#b18448\"/><path d=\"M120 105L300 55\" stroke=\"#6e9d86\"/><circle cx=\"300\" cy=\"55\" r=\"13\" fill=\"#477f6b\"/><path d=\"M120 105L425 95\" stroke=\"#6e9d86\"/><circle cx=\"425\" cy=\"95\" r=\"13\" fill=\"#477f6b\"/><path d=\"M120 105L550 135\" stroke=\"#6e9d86\"/><circle cx=\"550\" cy=\"135\" r=\"13\" fill=\"#477f6b\"/><text x=\"30\" y=\"190\">完整特征空间的实际距离决定近邻，距离过远或分歧则拒判。</text></g></svg><figcaption>输入：训练库和测试特征；动作：标准化距离、加权投票，验证选阈值；输出：真实训练邻居与候选标签。支持度不是现场概率</figcaption></figure><figure><h3>图 S6｜双口径汇总与复核</h3><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"双口径汇总与复核\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><rect x=\"30\" y=\"45\" width=\"390\" height=\"40\" fill=\"#b19060\"/><rect x=\"210\" y=\"45\" width=\"120\" height=\"40\" fill=\"#738e7b\"/><rect x=\"330\" y=\"45\" width=\"90\" height=\"40\" fill=\"#d3ae76\"/><text x=\"450\" y=\"74\">总分母含待复核</text><text x=\"30\" y=\"135\">计数 = 颗粒数 / 全部预测颗粒</text><text x=\"30\" y=\"175\">面积 = 该组像素 / 全部可见预测颗粒像素</text></g></svg><figcaption>输入：原模型输出、独立金标；动作：分开计数/面积；匹配实例评价；输出：含拒判混淆、漏检/合并与证据。人工意见不回写原模型成绩</figcaption></figure><p>所有模型、基线与指标在演示中实际计算。拒判与缺失保留分母，无适用分母显示不适用。改变输入后重算，人工结果与原模型分开。</p>"
+            }
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "label": "可运行示范",
+            "height": 1000,
+            "intro": "实际像素 → 预测轮廓 → 训练特征库 → 候选岩性；计数与可见二维面积分开汇总。数据为教学合成，不能替代矿物分析或现场岩性解释。"
+          }
+        }
+      },
+      "files": [
+        {
+          "name": "README.txt",
+          "enc": "text",
+          "bytes": 773,
+          "sha256": "9e484e5d0647f8b84767d3cec8c8841b99a96d64459b8971c94a4163855f27ed"
+        },
+        {
+          "name": "demo/demo.css",
+          "enc": "text",
+          "bytes": 7246,
+          "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc"
+        },
+        {
+          "name": "demo/demo.js",
+          "enc": "text",
+          "bytes": 127440,
+          "sha256": "815053a8af6c71a341a1b23c54d6a5dd07727b38d00ad32418ad9d703e8fbb8f"
+        },
+        {
+          "name": "demo/index.html",
+          "enc": "text",
+          "bytes": 5170,
+          "sha256": "2d618a05e4e431ac2e3e6a53ac996e49bcbc6a87a9adb21046a246519d325ddb"
+        }
+      ]
+    },
+    {
+      "id": "s17-mudgas-context",
+      "meta": {
+        "id": "s17-mudgas-context",
+        "title": "气测异常智能解释：气峰背后的工况与迟到",
+        "sceneId": "m2",
+        "methods": [
+          "ts"
+        ],
+        "version": "1.1.0",
+        "updated": "2026-10-23"
+      },
+      "pkg": {
+        "id": "s17-mudgas-context",
+        "sceneId": "m2",
+        "methods": [
+          "ts"
+        ],
+        "title": "气测异常智能解释：气峰背后的工况与迟到",
+        "version": "1.1.0",
+        "updated": "2026-10-23",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "同样一个地面气峰，能否结合循环迟到与工况给出有依据的解释候选？本例使用教学合成多通道曲线，以真实 kNN 与规则基线比较，不输出油气发现或井控动作。",
+            "judge": [
+              {
+                "label": "数据形态",
+                "value": "多通道时序",
+                "desc": "总气/C1–C3、泵量、MD、工况"
+              },
+              {
+                "label": "实际方法",
+                "value": "加权 kNN",
+                "desc": "训练井标准化 + 近邻事件库"
+              },
+              {
+                "label": "数据性质",
+                "value": "教学合成",
+                "desc": "固定 seed；整井分组；默认离线"
+              },
+              {
+                "label": "判断边界",
+                "value": "候选 + 复核",
+                "desc": "支持度不是现场风险概率"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CIRCULATION",
+                "title": "图 B1｜地面峰对应更早的井下时刻",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"钻杆下行与环空上返，地面时钟晚于来源时钟\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"25\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"52.5\">地面：气体提取与观测</text><rect x=\"285\" y=\"25\" width=\"180\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"297\" y=\"52.5\">地面峰：到达时刻 tₐ</text><rect x=\"25\" y=\"140\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"167.5\">钻头：来源时刻 tₛ</text><path d=\"M70 75v53m-6 -8l6 8 6 -8M166 133V78m-6 8l6 -8 6 8\" fill=\"none\" stroke=\"#197969\" stroke-width=\"4\"/><text x=\"230\" y=\"120\">Q：有效流量 m³/s</text><text x=\"230\" y=\"153\">恒流连续循环：τ = V_eff / Q</text><text x=\"475\" y=\"48\">观测 ≠ 此刻钻头深度</text><text x=\"475\" y=\"91\">变流量/停泵：累计 Q·Δt</text><text x=\"475\" y=\"128\">达到 V_eff 才到达</text><text x=\"475\" y=\"165\">来源深度 = MD(tₛ)</text></g></svg><figcaption>钻杆内下行、环空上返是概念路径。V_eff=12 m³、Q=0.025 m³/s 时迟到 480 s；停泵期间累计量保持不变。此模型没有模拟气体混合、溶解或全部仪器延迟。</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONTEXT",
+                "title": "图 B2｜峰形相近，解释仍需工况",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"四条相同峰形下方的工况不同\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><path d=\"M20 112q30 0 44 -50t44 0 60 50\" fill=\"none\" stroke=\"#197969\" stroke-width=\"3\"/><rect x=\"15\" y=\"135\" width=\"166\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"27\" y=\"157.5\">接单根记录</text><text x=\"25\" y=\"196\">峰高相近 ≠ 原因相同</text><path d=\"M198 112q30 0 44 -50t44 0 60 50\" fill=\"none\" stroke=\"#197969\" stroke-width=\"3\"/><rect x=\"193\" y=\"135\" width=\"166\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"205\" y=\"157.5\">起下钻记录</text><text x=\"203\" y=\"196\">峰高相近 ≠ 原因相同</text><path d=\"M376 112q30 0 44 -50t44 0 60 50\" fill=\"none\" stroke=\"#197969\" stroke-width=\"3\"/><rect x=\"371\" y=\"135\" width=\"166\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"383\" y=\"157.5\">持续钻进</text><text x=\"381\" y=\"196\">峰高相近 ≠ 原因相同</text><path d=\"M554 112q30 0 44 -50t44 0 60 50\" fill=\"none\" stroke=\"#197969\" stroke-width=\"3\"/><rect x=\"549\" y=\"135\" width=\"166\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"561\" y=\"157.5\">组分不同步</text><text x=\"559\" y=\"196\">峰高相近 ≠ 原因相同</text></g></svg><figcaption>接单根与起下钻相关气可能在迟到后形成地面气峰。组分不同步只是测量问题的线索，仍需其他证据。演示可固定气曲线，只改变首峰工况；此反事实操作没有金标，不显示准确率。</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "EVIDENCE",
+                "title": "图 B3｜从观测到复核，需要逐级证据",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"观测、映射、推断、人工复核分层\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"18\" y=\"35\" width=\"135\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"30\" y=\"67.5\">① 气曲线</text><path d=\"M155 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"194\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"206\" y=\"67.5\">② 累计泵量</text><path d=\"M342 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"394\" y=\"67.5\">③ 工况/近邻</text><path d=\"M530 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"570\" y=\"35\" width=\"132\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"582\" y=\"67.5\">④ 人工复核</text><text x=\"28\" y=\"130\">直接观测</text><text x=\"205\" y=\"130\">简化运输假设</text><text x=\"395\" y=\"130\">候选解释</text><text x=\"580\" y=\"130\">补充证据</text><text x=\"28\" y=\"177\">缺失、冲突、分布外 → 证据不足；来源可定位不等于语义已核实。</text></g></svg><figcaption>这里回答“气峰与什么相关”，不据此宣布油气层、储量、产能，也不提供井控动作建议。岩屑、荧光等可作为后续复核证据，本轮不伪造其结论。</figcaption></figure>"
+              },
+              {
+                "no": 4,
+                "en": "DATA & LIMITS",
+                "title": "数据、方法与专业依据",
+                "html": "<p>训练 28 口独立模拟井、验证 8 口，测试 DEMO-017。标准化只在训练拟合；验证集选 k 与支持度阈值。事件检测器由两种方法共享。气体单位为归一化仪器单位，不能冒称体积分数。</p><p>简化累计 Q·Δt 运输模型不模拟混合、溶解和完整仪器/管线迟到。迟到后的源时刻查 MD(t)，不使用当前 ROP×延迟代替。工况气无唯一地层来源真值；只在适用的持续增气事件上评价源深度。</p><p><a href=\"https://glossary.slb.com/terms/g/gas_show\" target=\"_blank\" rel=\"noopener\">SLB：gas show</a> · <a href=\"https://glossary.slb.com/terms/c/connection_gas\" target=\"_blank\" rel=\"noopener\">SLB：connection gas</a> · <a href=\"https://glossary.slb.com/terms/t/trip_gas\" target=\"_blank\" rel=\"noopener\">SLB：trip gas</a> · <a href=\"https://scikit-learn.org/stable/modules/neighbors.html\" target=\"_blank\" rel=\"noopener\">scikit-learn：近邻方法原理</a></p>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "从地面气峰到可追溯解释：六个实际计算步骤",
+            "lead": [
+              "先对齐观测，再做累计泵量映射。共享候选窗口后，固定规则与近邻学习比较同一批事件。逐步图册位于下方，每一步都可在演示中查看实际中间结果。"
+            ],
+            "steps": [
+              {
+                "name": "数据站：统一记录",
+                "role": "图 S1",
+                "do": "输入：总气、C1–C3、泵量、MD 与工况日志。动作：统一为秒、m³/s、m MD；缺失工况显式标记。详见图 S1。",
+                "effect": "同一时基的可见记录",
+                "trap": "归一化仪器单位不是气体体积分数。缺测不能填作正常工况。"
+              },
+              {
+                "name": "反查来源时刻与井深",
+                "role": "图 S2",
+                "do": "输入：累计泵量 C(t)、有效体积 V_eff。动作：求 C(tₐ)−C(tₛ)=V_eff，再查询 MD(tₛ)。详见图 S2。",
+                "effect": "来源时间与候选来源深度",
+                "trap": "泵停则 C(t)不变；起点前体积不足时无解。禁止用当前 ROP×迟到替代。"
+              },
+              {
+                "name": "共享检测器提取候选",
+                "role": "图 S3",
+                "do": "输入：气曲线与低分位背景。动作：三点平滑，超过背景+阈值的连续片段成候选。详见图 S3。",
+                "effect": "起止、峰高、宽度、面积、斜率",
+                "trap": "同一检测器供两方法共用；弱峰可能漏检，重叠峰可能合并。"
+              },
+              {
+                "name": "训练库与特征标准化",
+                "role": "图 S4",
+                "do": "输入：按整井隔离的带标注事件。动作：仅训练井拟合均值/标准差；验证井选择 k 与拒判阈值。详见图 S4。",
+                "effect": "标准化向量与带标签近邻库",
+                "trap": "同一峰相邻点不得跨集合。测试交互属于教学探索，不是研究级盲测。"
+              },
+              {
+                "name": "加权近邻与证据不足",
+                "role": "图 S5",
+                "do": "输入：当前事件的可见特征、训练均值/标准差与样本库。动作：全维标准化欧氏距离；按 1/max(0.05,d) 投票。详见图 S5。",
+                "effect": "解释候选、真实邻居、支持度、拒判理由",
+                "trap": "二维图只作阅读；支持度没有现场概率校准。缺工况、冲突或距离太远时转复核。"
+              },
+              {
+                "name": "复核与独立评价",
+                "role": "图 S6",
+                "do": "输入：预测结果；独立评价模块中的完整事件金标。动作：170 s 容差下一对一最小总时间误差匹配，分开统计漏检/多余。详见图 S6。",
+                "effect": "拒判列混淆、覆盖、接受集错误率和证据 JSON",
+                "trap": "解释 F1 的分母是匹配事件；漏检另列。无接受样本显示不适用，人工修订不改模型成绩。"
+              }
+            ],
+            "metrics": {
+              "title": "逐步图解与验收指标",
+              "html": "<figure><h3>图 S1｜数据站：统一记录</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"多源时间带对齐\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><text x=\"25\" y=\"40\">输入：不同记录</text><text x=\"370\" y=\"40\">输出：相同的 time_s</text><rect x=\"25\" y=\"60\" width=\"210\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"82.5\">气体 → 仪器归一化单位</text><rect x=\"25\" y=\"110\" width=\"210\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"132.5\">泵量 → m³/s</text><rect x=\"25\" y=\"160\" width=\"210\" height=\"35\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"182.5\">井深 → m MD</text><path d=\"M250 120h75m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><path d=\"M355 75h330M355 125h330M355 175h330\" stroke=\"#7eaaa0\" stroke-width=\"10\"/><text x=\"365\" y=\"101\">0 s</text><text x=\"610\" y=\"101\">14400 s</text></g></svg><figcaption>输入：总气、C1–C3、泵量、MD 与工况日志；动作：统一为秒、m³/s、m MD；缺失工况显式标记；输出：同一时基的可见记录。陷阱：归一化仪器单位不是气体体积分数。缺测不能填作正常工况。</figcaption></figure><figure><h3>图 S2｜反查来源时刻与井深</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"停泵累计量平台与来源查询\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><path d=\"M50 170V30M50 170h610\" fill=\"none\" stroke=\"#6c827c\"/><path d=\"M55 165L200 100H330L600 35\" fill=\"none\" stroke=\"#197969\" stroke-width=\"4\"/><text x=\"205\" y=\"85\">停泵：不推进</text><text x=\"75\" y=\"35\">C(t) / m³</text><text x=\"510\" y=\"197\">time_s →</text><text x=\"365\" y=\"145\">在累计量上回退 V_eff</text><text x=\"365\" y=\"175\">回查 tₛ → MD(tₛ)</text></g></svg><figcaption>输入：累计泵量 C(t)、有效体积 V_eff；动作：求 C(tₐ)−C(tₛ)=V_eff，再查询 MD(tₛ)；输出：来源时间与候选来源深度。陷阱：泵停则 C(t)不变；起点前体积不足时无解。禁止用当前 ROP×迟到替代。</figcaption></figure><figure><h3>图 S3｜共享检测器提取候选</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"候选窗口峰高峰宽面积\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"200\" y=\"35\" width=\"260\" height=\"140\" fill=\"#d9ebe1\"/><path d=\"M45 174Q170 174 220 100T320 40T420 105T660 174\" fill=\"none\" stroke=\"#197969\" stroke-width=\"3\"/><path d=\"M45 170H660\" stroke=\"#ac784c\" stroke-dasharray=\"6 4\"/><path d=\"M330 170V45M200 185H460\" stroke=\"#614b33\"/><text x=\"348\" y=\"85\">峰高</text><text x=\"270\" y=\"205\">持续时间 / s</text><text x=\"490\" y=\"160\">背景+检测阈值</text></g></svg><figcaption>输入：气曲线与低分位背景；动作：三点平滑，超过背景+阈值的连续片段成候选；输出：起止、峰高、宽度、面积、斜率。陷阱：同一检测器供两方法共用；弱峰可能漏检，重叠峰可能合并。</figcaption></figure><figure><h3>图 S4｜训练库与特征标准化</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"整井训练验证测试划分\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"45\" width=\"210\" height=\"65\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"82.5\">训练：28 口井</text><rect x=\"255\" y=\"45\" width=\"210\" height=\"65\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"267\" y=\"82.5\">验证：8 口井</text><rect x=\"485\" y=\"45\" width=\"210\" height=\"65\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"497\" y=\"82.5\">测试：DEMO-017</text><text x=\"40\" y=\"145\">拟合标准化/存事件</text><text x=\"265\" y=\"145\">选 k / 支持度 / 距离</text><text x=\"500\" y=\"145\">只预测；隔离标签</text><text x=\"40\" y=\"185\">同源峰、图像变体和样品保持在各自完整组内。</text></g></svg><figcaption>输入：按整井隔离的带标注事件；动作：仅训练井拟合均值/标准差；验证井选择 k 与拒判阈值；输出：标准化向量与带标签近邻库。陷阱：同一峰相邻点不得跨集合。测试交互属于教学探索，不是研究级盲测。</figcaption></figure><figure><h3>图 S5｜加权近邻与证据不足</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"近邻投票与阈值分支\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><circle cx=\"125\" cy=\"105\" r=\"12\" fill=\"#ac784c\"/><path d=\"M125 105l-45 -50\" stroke=\"#86a99e\"/><circle cx=\"80\" cy=\"55\" r=\"9\" fill=\"#197969\"/><path d=\"M125 105l65 -60\" stroke=\"#86a99e\"/><circle cx=\"190\" cy=\"45\" r=\"9\" fill=\"#197969\"/><path d=\"M125 105l100 25\" stroke=\"#86a99e\"/><circle cx=\"225\" cy=\"130\" r=\"9\" fill=\"#197969\"/><path d=\"M125 105l-60 60\" stroke=\"#86a99e\"/><circle cx=\"65\" cy=\"165\" r=\"9\" fill=\"#ac784c\"/><text x=\"25\" y=\"195\">实际全维距离与近邻票</text><path d=\"M245 105h80m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"350\" y=\"45\" width=\"315\" height=\"50\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"362\" y=\"75\">一致且近 → 候选解释</text><rect x=\"350\" y=\"125\" width=\"315\" height=\"50\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"362\" y=\"155\">分歧/冲突 → 证据不足</text></g></svg><figcaption>输入：当前事件的可见特征、训练均值/标准差与样本库；动作：全维标准化欧氏距离；按 1/max(0.05,d) 投票；输出：解释候选、真实邻居、支持度、拒判理由。陷阱：二维图只作阅读；支持度没有现场概率校准。缺工况、冲突或距离太远时转复核。</figcaption></figure><figure><h3>图 S6｜复核与独立评价</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"检测匹配解释混淆和证据导出\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"35\" width=\"200\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"67.5\">预测事件 ↔ 真值事件</text><path d=\"M230 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"270\" y=\"35\" width=\"190\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"282\" y=\"67.5\">解释：4 类 + 拒判</text><path d=\"M467 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"510\" y=\"35\" width=\"185\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"522\" y=\"67.5\">来源版本 + 复核</text><text x=\"30\" y=\"135\">漏检 / 多余候选单独报告</text><text x=\"30\" y=\"175\">来源深度 MAE 只统计有适用真值的持续增气事件，单位 m。</text></g></svg><figcaption>输入：预测结果；独立评价模块中的完整事件金标；动作：170 s 容差下一对一最小总时间误差匹配，分开统计漏检/多余；输出：拒判列混淆、覆盖、接受集错误率和证据 JSON。陷阱：解释 F1 的分母是匹配事件；漏检另列。无接受样本显示不适用，人工修订不改模型成绩。</figcaption></figure><p>候选检测按 170 s 容差做一对一匹配，分别报告漏检/多余候选。解释混淆为4行×5列，保留拒判。宏F1在匹配事件上计算，漏检不静默消失。覆盖率=接受/匹配事件；接受集错误率=错误接受/全部接受，无接受样本时不适用。源深度 MAE 只在有定义的事件上评价。所有数字在演示中重新计算，不能由本图册推断性能。</p>"
+            },
+            "fails": [
+              {
+                "name": "迟到假设错误",
+                "why": "来源时段与工况错配；可以改变体积或关闭校正，定位错误事件。"
+              },
+              {
+                "name": "缺失工况/事件重叠",
+                "why": "证据不足会拒判或合并成候选；漏检和多余候选独立统计。"
+              },
+              {
+                "name": "人工改写工况",
+                "why": "只改可见操作日志，气曲线不变。此反事实没有金标，隐藏性能指标。"
+              }
+            ]
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "height": 950,
+            "label": "可运行示范",
+            "intro": "先运行真实计算；点击事件、查看来源与近邻，尝试停泵和工况缺失，复核并导出证据。也可独立双击 demo/index.html。"
+          }
+        }
+      },
+      "files": [
+        {
+          "name": "README.txt",
+          "enc": "text",
+          "bytes": 1246,
+          "sha256": "9ac5e5d5a1eb16ca15264f1bd9bb649fa527edd4d69f4e71077d50327cec0b95"
+        },
+        {
+          "name": "demo/demo.css",
+          "enc": "text",
+          "bytes": 6371,
+          "sha256": "712073247bf4aebeb9ff935596f96513c025946c986ee1c31b8c6ce247b81735"
+        },
+        {
+          "name": "demo/demo.js",
+          "enc": "text",
+          "bytes": 73343,
+          "sha256": "93e748e75c32f7ffd460d3c77acaba9d474271b87482dae1a9577bbdbdd06ecf"
+        },
+        {
+          "name": "demo/index.html",
+          "enc": "text",
+          "bytes": 7930,
+          "sha256": "043ed955e6d29d3c7dd01f5325161dcbb58d3cfbaf75996370caeb5d12297124"
+        }
+      ]
+    },
+    {
+      "id": "s17-fluorescence-review",
+      "meta": {
+        "id": "s17-fluorescence-review",
+        "title": "荧光图像智能判读：显示与来源分开核查",
+        "sceneId": "m3",
+        "methods": [
+          "cv"
+        ],
+        "version": "1.1.0",
+        "updated": "2026-10-23"
+      },
+      "pkg": {
+        "id": "s17-fluorescence-review",
+        "sceneId": "m3",
+        "methods": [
+          "cv"
+        ],
+        "title": "荧光图像智能判读：显示与来源分开核查",
+        "version": "1.1.0",
+        "updated": "2026-10-23",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "同样品白光/UV配对，参考校正后真实训练逻辑回归；三方法同图比较、固定评价域，显示量化与来源解释分开。",
+            "judge": [
+              {
+                "label": "默认数据",
+                "value": "教学合成",
+                "desc": "公开实测附加区单独标识"
+              },
+              {
+                "label": "业务问题",
+                "value": "哪些像素有荧光显示，哪些解释仍缺证据？",
+                "desc": "输出边界见说明"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CONCEPT",
+                "title": "图 B1｜白光与UV必须是同一个样品",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"配对身份与固定激发条件\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"35\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"65\">白光：可见岩屑轮廓</text><rect x=\"270\" y=\"35\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"282\" y=\"65\">同一WLUV身份</text><rect x=\"520\" y=\"35\" width=\"180\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"532\" y=\"65\">UV：荧光显示</text><text x=\"35\" y=\"135\">白光确定可见岩屑分母；UV提供发光像素，不把两张无关图片配成一对。</text><text x=\"35\" y=\"182\">DEMO-017-P1 … P8 与m1同几何、同父样品；光谱条件固定。</text></g></svg><figcaption>两种观察包含不同信息。前景由可见白光像素计算，不能读取评价真值补齐漏掉的岩屑。</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONCEPT",
+                "title": "图 B2｜曝光改变亮度，饱和会丢失信息",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"曝光参考校正与饱和上限\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M45 170V25M45 170H680\" stroke=\"#819d8d\" fill=\"none\"/><path d=\"M50 165L440 40H660\" stroke=\"#a87542\" fill=\"none\" stroke-width=\"4\"/><text x=\"55\" y=\"30\">像素值</text><text x=\"485\" y=\"65\">255：饱和平台</text><text x=\"120\" y=\"115\">参考片/暗场 → 相对校正</text><text x=\"485\" y=\"195\">曝光 →</text><text x=\"55\" y=\"200\">饱和后多个强度映到同一个像素值，不能反推出原细节。</text></g></svg><figcaption>校正只针对固定激发条件下的相对曝光，不是跨波长校正。原始阈值、校正阈值和校正后学习要分开比较。</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "CONCEPT",
+                "title": "图 B3｜检出荧光，不等于确认油气来源",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"发光可来自油类矿物或污染\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"65\">油类候选</text><circle cx=\"125\" cy=\"115\" r=\"21\" fill=\"#a8bd61\"/><rect x=\"260\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"272\" y=\"65\">矿物候选</text><circle cx=\"360\" cy=\"115\" r=\"21\" fill=\"#a8bd61\"/><rect x=\"495\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"507\" y=\"65\">添加物/污染候选</text><circle cx=\"595\" cy=\"115\" r=\"21\" fill=\"#a8bd61\"/><text x=\"35\" y=\"178\">分割任务：这些发光都是真阳性；来源解释：仍需独立证据与复核。</text></g></svg><figcaption>面积是可见图像上的占比，不是含油饱和度、储量或产能。亮度和颜色不足以自动给出来源结论。</figcaption></figure>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "哪些像素有荧光显示，哪些解释仍缺证据？",
+            "lead": [
+              "同样品白光/UV配对，参考校正后真实训练逻辑回归；三方法同图比较、固定评价域，显示量化与来源解释分开。"
+            ],
+            "steps": [
+              {
+                "name": "配对与可见分母",
+                "role": "图S1",
+                "do": "输入：白光/UV像素、配对身份；动作：从白光分割岩屑ROI。见图S1。",
+                "effect": "同位置配对与可见面积分母",
+                "trap": "固定完整评价域，不用预测ROI缩小误差分母"
+              },
+              {
+                "name": "质控与曝光校正",
+                "role": "图S2",
+                "do": "输入：暗场、可见参考片、UV像素；动作：扣暗场并以参考片归一化。见图S2。",
+                "effect": "校正RGB、饱和标记",
+                "trap": "饱和细节不可恢复；灯源条件固定"
+              },
+              {
+                "name": "训练像素特征",
+                "role": "图S3",
+                "do": "输入：独立训练样品的局部像素；动作：提取校正RGB、色差、局部对比并标准化。见图S3。",
+                "effect": "5维训练特征与标签",
+                "trap": "同一基础样品的曝光变体不跨集合"
+              },
+              {
+                "name": "逻辑回归学习",
+                "role": "图S4",
+                "do": "输入：训练特征与训练掩膜；动作：实际梯度优化100轮，验证选阈值。见图S4。",
+                "effect": "权重、真实损失曲线与阈值",
+                "trap": "显示训练过程，不使用预存结果冒充运行"
+              },
+              {
+                "name": "三种方法同图比较",
+                "role": "图S5",
+                "do": "输入：当前可见像素与冻结模型；动作：B0原亮度、B1校正亮度、M0学习得分。见图S5。",
+                "effect": "三张显示掩膜与同域指标",
+                "trap": "校正收益与学习增量分别归因"
+              },
+              {
+                "name": "面积与教学等级",
+                "role": "图S6",
+                "do": "输入：预测掩膜、预测白光ROI、校正强度；动作：按透明规则汇总面积和等级。见图S6。",
+                "effect": "分子/分母、强度、0/1/2级",
+                "trap": "等级是规则，不是学习分类器或行业标准"
+              },
+              {
+                "name": "来源复核与导出",
+                "role": "图S7",
+                "do": "输入：显示区域、来源/质控、人工笔刷；动作：保留原模型与人工修订，导出证据。见图S7。",
+                "effect": "带配对身份的显示线索",
+                "trap": "检出荧光不能升级为已发现油层"
+              }
+            ],
+            "metrics": {
+              "title": "逐步图册与评价口径",
+              "html": "<figure><h3>图 S1｜配对与可见分母</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"配对与可见分母\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"60\">白光 → 预测可见ROI</text><rect x=\"265\" y=\"30\" width=\"180\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"60\">UV保持同坐标</text><rect x=\"480\" y=\"30\" width=\"220\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"492\" y=\"60\">分母 = 可见像素数</text><text x=\"30\" y=\"145\">配对键 / 父样品键 / 分组键一致；真实掩膜只在独立评价模块。</text></g></svg><figcaption>输入：白光/UV像素、配对身份；动作：从白光分割岩屑ROI；输出：同位置配对与可见面积分母。固定完整评价域，不用预测ROI缩小误差分母</figcaption></figure><figure><h3>图 S2｜质控与曝光校正</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"质控与曝光校正\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"60\">暗场 D</text><rect x=\"260\" y=\"30\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"272\" y=\"60\">参考 R</text><rect x=\"500\" y=\"30\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"512\" y=\"60\">UV像素 I</text><text x=\"30\" y=\"130\">校正值 = max(0, I−D) / max(1, R−D) × 80</text><text x=\"30\" y=\"175\">参考片或岩屑饱和 → 不可恢复细节，保留质控标记。</text></g></svg><figcaption>输入：暗场、可见参考片、UV像素；动作：扣暗场并以参考片归一化；输出：校正RGB、饱和标记。饱和细节不可恢复；灯源条件固定</figcaption></figure><figure><h3>图 S3｜训练像素特征</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"训练像素特征\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><text x=\"25\" y=\"60\">R /100</text><rect x=\"25\" y=\"90\" width=\"80\" height=\"30\" fill=\"#6a9c85\"/><text x=\"165\" y=\"60\">G /100</text><rect x=\"165\" y=\"90\" width=\"80\" height=\"42\" fill=\"#6a9c85\"/><text x=\"305\" y=\"60\">B /100</text><rect x=\"305\" y=\"90\" width=\"80\" height=\"54\" fill=\"#6a9c85\"/><text x=\"445\" y=\"60\">色差</text><rect x=\"445\" y=\"90\" width=\"80\" height=\"66\" fill=\"#6a9c85\"/><text x=\"585\" y=\"60\">局部对比</text><rect x=\"585\" y=\"90\" width=\"80\" height=\"78\" fill=\"#6a9c85\"/><text x=\"30\" y=\"192\">标准化只拟合训练组；验证样品单独选阈值，测试不反向参与。</text></g></svg><figcaption>输入：独立训练样品的局部像素；动作：提取校正RGB、色差、局部对比并标准化；输出：5维训练特征与标签。同一基础样品的曝光变体不跨集合</figcaption></figure><figure><h3>图 S4｜逻辑回归学习</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"逻辑回归学习\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M50 170V25M50 170H650M55 40Q110 150 260 155T650 165\" fill=\"none\" stroke=\"#4a8972\" stroke-width=\"3\"/><text x=\"75\" y=\"35\">真实平均交叉熵</text><text x=\"500\" y=\"195\">梯度迭代 →</text><text x=\"310\" y=\"90\">损失来自当前训练样本</text></g></svg><figcaption>输入：训练特征与训练掩膜；动作：实际梯度优化100轮，验证选阈值；输出：权重、真实损失曲线与阈值。显示训练过程，不使用预存结果冒充运行</figcaption></figure><figure><h3>图 S5｜三种方法同图比较</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"三种方法同图比较\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"65\">B0：原始亮度阈值</text><rect x=\"255\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"267\" y=\"65\">B1：校正后阈值</text><rect x=\"490\" y=\"35\" width=\"210\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"502\" y=\"65\">M0：逻辑回归</text><text x=\"30\" y=\"135\">相同像素、相同固定评价域、相同荧光真值。</text><text x=\"30\" y=\"178\">矿物发光仍算显示正类；不能为提高成绩改成负类。</text></g></svg><figcaption>输入：当前可见像素与冻结模型；动作：B0原亮度、B1校正亮度、M0学习得分；输出：三张显示掩膜与同域指标。校正收益与学习增量分别归因</figcaption></figure><figure><h3>图 S6｜面积与教学等级</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"面积与教学等级\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"30\" width=\"205\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"60\">分子：显示像素数</text><rect x=\"270\" y=\"30\" width=\"205\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"282\" y=\"60\">分母：可见岩屑</text><rect x=\"510\" y=\"30\" width=\"185\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"60\">面积 + 强度</text><text x=\"30\" y=\"130\">规则：面积&lt;5% → 0级；否则面积&lt;25%或强度&lt;40 → 1级；其余2级。</text><text x=\"30\" y=\"175\">参考等级使用独立真值掩膜，按同一规则分别汇总。</text></g></svg><figcaption>输入：预测掩膜、预测白光ROI、校正强度；动作：按透明规则汇总面积和等级；输出：分子/分母、强度、0/1/2级。等级是规则，不是学习分类器或行业标准</figcaption></figure><figure><h3>图 S7｜来源复核与导出</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"来源复核与导出\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"35\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"65\">原模型显示掩膜</text><rect x=\"265\" y=\"35\" width=\"200\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"65\">人工笔刷修订</text><rect x=\"510\" y=\"35\" width=\"190\" height=\"50\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"65\">来源版本/限制</text><text x=\"30\" y=\"140\">修改观察条件会使当前人工确认失效；历史修订保留。</text><text x=\"30\" y=\"180\">输出“显示已检出、来源待核查”，不输出含油饱和度或储量。</text></g></svg><figcaption>输入：显示区域、来源/质控、人工笔刷；动作：保留原模型与人工修订，导出证据；输出：带配对身份的显示线索。检出荧光不能升级为已发现油层</figcaption></figure><p>所有模型、基线与指标在演示中实际计算。拒判与缺失保留分母，无适用分母显示不适用。改变输入后重算，人工结果与原模型分开。</p>"
+            }
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "label": "可运行示范",
+            "height": 1000,
+            "intro": "同样品白光/UV配对，参考校正后真实训练逻辑回归；三方法同图比较、固定评价域，显示量化与来源解释分开。"
+          }
+        }
+      },
+      "files": [
+        {
+          "name": "README.txt",
+          "enc": "text",
+          "bytes": 738,
+          "sha256": "50cf299238475223a1e73d48685a919cb5c220ebe0b07f674d291e51579e3b5f"
+        },
+        {
+          "name": "demo/demo.css",
+          "enc": "text",
+          "bytes": 7246,
+          "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc"
+        },
+        {
+          "name": "demo/demo.js",
+          "enc": "text",
+          "bytes": 50684,
+          "sha256": "79790c0bcfa494c1c2ab113e5e55d3d01a373836c411948298a76ab8432f2d1a"
+        },
+        {
+          "name": "demo/index.html",
+          "enc": "text",
+          "bytes": 4897,
+          "sha256": "3fb5e59c535c1783e96b19e7827adc8c5d90e70ece77f0152b7b0b7603fbae90"
+        }
+      ]
+    },
+    {
+      "id": "s17-drilltime-boundaries",
+      "meta": {
+        "id": "s17-drilltime-boundaries",
+        "title": "钻时曲线地层划分：工况校正与候选响应段",
+        "sceneId": "m4",
+        "methods": [
+          "ts"
+        ],
+        "version": "1.1.0",
+        "updated": "2026-10-23"
+      },
+      "pkg": {
+        "id": "s17-drilltime-boundaries",
+        "sceneId": "m4",
+        "methods": [
+          "ts"
+        ],
+        "title": "钻时曲线地层划分：工况校正与候选响应段",
+        "version": "1.1.0",
+        "updated": "2026-10-23",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "独立同响应标定学习工况影响，训练井聚类，测试井离线分段；输出可复核候选响应段，不把簇编号写成真实岩性。",
+            "judge": [
+              {
+                "label": "默认数据",
+                "value": "教学合成",
+                "desc": "公开实测附加区单独标识"
+              },
+              {
+                "label": "业务问题",
+                "value": "钻速变了，是工况变化，还是候选地层响应？",
+                "desc": "输出边界见说明"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CONCEPT",
+                "title": "图 B1｜一米钻多久，与一小时钻多深",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"ROP与有效钻时的单位倒数\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"30\" width=\"230\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"59\">ROP：m/h，越大越快</text><rect x=\"440\" y=\"30\" width=\"250\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"452\" y=\"59\">钻时：min/m，越小越快</text><text x=\"285\" y=\"60\">ROP = 60 / 钻时</text><text x=\"35\" y=\"135\">只对同一个有效钻进区间成立。停钻、接单根不能用0作分母。</text><text x=\"35\" y=\"180\">本例0.25 m采样；单位与无效区间一起显示，MD向下增加。</text></g></svg><figcaption>这里的钻时是有效钻进每米耗时，不是把全部作业耗时相除。</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONCEPT",
+                "title": "图 B2｜地层没变，工况也会改变钻速",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"固定地层而钻压转速阶跃\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"59\">同一响应地层</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"59\">钻压/转速增加</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"59\">ROP仍会阶跃</text><path d=\"M40 170H250V115H660\" stroke=\"#ab7947\" fill=\"none\" stroke-width=\"4\"/><text x=\"35\" y=\"200\">独立同岩性标定学习工况响应，测试井不参与拟合。</text></g></svg><figcaption>模型只做教学工况归一化，不是完整钻井物理方程；标定域外必须标记外推。</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "CONCEPT",
+                "title": "图 B3｜平滑能减少碎片，也可能吞掉薄层",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"真实薄响应段与平滑漏检\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M35 80H300V35H355V80H680\" stroke=\"#a4784a\" fill=\"none\" stroke-width=\"4\"/><path d=\"M35 140H680\" stroke=\"#197765\" fill=\"none\" stroke-width=\"4\"/><text x=\"35\" y=\"40\">原始相对响应</text><text x=\"390\" y=\"125\">强连续性 / 最小段长 → 薄层可能漏检</text><text x=\"35\" y=\"190\">输出“候选响应段”；聚类编号没有岩性名称。</text></g></svg><figcaption>相同工况加入薄响应层，再改变最小段长，直接观察检出与漏检的取舍。</figcaption></figure>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "钻速变了，是工况变化，还是候选地层响应？",
+            "lead": [
+              "独立同响应标定学习工况影响，训练井聚类，测试井离线分段；输出可复核候选响应段，不把簇编号写成真实岩性。"
+            ],
+            "steps": [
+              {
+                "name": "有效区间与单位",
+                "role": "图S1",
+                "do": "输入：ROP、钻时、WOB、RPM、流量；动作：排除非钻进/非正值；同区间换算。见图S1。",
+                "effect": "有明确无效标记的深度序列",
+                "trap": "停钻不能算作ROP=0再倒数"
+              },
+              {
+                "name": "独立工况标定",
+                "role": "图S2",
+                "do": "输入：独立同响应标定样本；动作：拟合logROP对相对WOB/RPM/Q的岭回归。见图S2。",
+                "effect": "β系数、标定范围与散点",
+                "trap": "不得在测试地层变化上拟合去工况"
+              },
+              {
+                "name": "构造相对响应",
+                "role": "图S3",
+                "do": "输入：实际ROP和冻结工况模型；动作：logROP减去工况预测，保留相对变化。见图S3。",
+                "effect": "原始与校正响应曲线",
+                "trap": "校正不意味着已确认地层"
+              },
+              {
+                "name": "训练井K-means",
+                "role": "图S4",
+                "do": "输入：完整训练井的相对响应/扭矩；动作：训练标准化，学习2–4个中心。见图S4。",
+                "effect": "中心、实际SSE迭代曲线",
+                "trap": "测试样本不移动中心"
+              },
+              {
+                "name": "连续分段与薄层代价",
+                "role": "图S5",
+                "do": "输入：逐点到中心的距离；动作：动态规划切换惩罚，再施加最小段长。见图S5。",
+                "effect": "候选响应段与边界",
+                "trap": "平滑可能增加薄层漏检"
+              },
+              {
+                "name": "边界复核",
+                "role": "图S6",
+                "do": "输入：模型/基线候选、域外标记；动作：同一深度对齐，人工增删候选另存。见图S6。",
+                "effect": "来源可追踪的复核记录",
+                "trap": "人工候选不覆盖模型成绩"
+              },
+              {
+                "name": "一对一评价与输出",
+                "role": "图S7",
+                "do": "输入：候选边界、独立教学真值；动作：容差内最大匹配，计漏检与多余。见图S7。",
+                "effect": "P/R/F1、匹配误差、工况假界面",
+                "trap": "空真值不制造100%召回率"
+              }
+            ],
+            "metrics": {
+              "title": "逐步图册与评价口径",
+              "html": "<figure><h3>图 S1｜有效区间与单位</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"有效区间与单位\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"30\" width=\"210\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"59\">有效：正ROP/WOB/RPM/Q</text><rect x=\"270\" y=\"30\" width=\"200\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"282\" y=\"59\">ROP ↔ 60/钻时</text><rect x=\"510\" y=\"30\" width=\"185\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"59\">无效：单独标记</text><text x=\"35\" y=\"140\">用activeDrillingTime描述同一0.25m区间，不混入非钻进耗时。</text></g></svg><figcaption>输入：ROP、钻时、WOB、RPM、流量；动作：排除非钻进/非正值；同区间换算；输出：有明确无效标记的深度序列。停钻不能算作ROP=0再倒数</figcaption></figure><figure><h3>图 S2｜独立工况标定</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"独立工况标定\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"30\" width=\"220\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"59\">独立CALIBRATION组</text><rect x=\"280\" y=\"30\" width=\"200\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"292\" y=\"59\">log相对工况特征</text><rect x=\"515\" y=\"30\" width=\"175\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"527\" y=\"59\">岭回归β</text><text x=\"35\" y=\"130\">logROP = β₀ + β₁log(WOB/20) + β₂log(RPM/120) + β₃log(Q/.025)</text><text x=\"35\" y=\"177\">标定样本只改变工况，保持响应相同；测试井不参与。</text></g></svg><figcaption>输入：独立同响应标定样本；动作：拟合logROP对相对WOB/RPM/Q的岭回归；输出：β系数、标定范围与散点。不得在测试地层变化上拟合去工况</figcaption></figure><figure><h3>图 S3｜构造相对响应</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"构造相对响应\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M50 40H280V80H650M50 145H650\" stroke=\"#6e9782\" fill=\"none\" stroke-width=\"4\"/><text x=\"55\" y=\"28\">原始：工况与地层共同作用</text><text x=\"55\" y=\"175\">校正：减去独立工况项，保留相对响应</text></g></svg><figcaption>输入：实际ROP和冻结工况模型；动作：logROP减去工况预测，保留相对变化；输出：原始与校正响应曲线。校正不意味着已确认地层</figcaption></figure><figure><h3>图 S4｜训练井K-means</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"训练井K-means\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><circle cx=\"150\" cy=\"90\" r=\"24\" fill=\"#728b75\"/><text x=\"100\" y=\"155\">响应中心 A</text><circle cx=\"360\" cy=\"90\" r=\"24\" fill=\"#ac9b71\"/><text x=\"310\" y=\"155\">响应中心 B</text><circle cx=\"570\" cy=\"90\" r=\"24\" fill=\"#b77f50\"/><text x=\"520\" y=\"155\">响应中心 C</text><text x=\"35\" y=\"197\">中心从训练井学习；中心号不能直接命名为砂岩、泥岩或灰岩。</text></g></svg><figcaption>输入：完整训练井的相对响应/扭矩；动作：训练标准化，学习2–4个中心；输出：中心、实际SSE迭代曲线。测试样本不移动中心</figcaption></figure><figure><h3>图 S5｜连续分段与薄层代价</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"连续分段与薄层代价\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"35\" width=\"200\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"64\">点到中心距离代价</text><rect x=\"265\" y=\"35\" width=\"200\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"64\">+ 标签切换惩罚</text><rect x=\"505\" y=\"35\" width=\"190\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"517\" y=\"64\">+ 最小段长</text><text x=\"35\" y=\"140\">观察薄层：段长要求越大，并不保证评价越好。</text></g></svg><figcaption>输入：逐点到中心的距离；动作：动态规划切换惩罚，再施加最小段长；输出：候选响应段与边界。平滑可能增加薄层漏检</figcaption></figure><figure><h3>图 S6｜边界复核</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"边界复核\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M140 25V180M400 25V180\" stroke=\"#8ba58b\" stroke-width=\"3\"/><path d=\"M100 65H180\" stroke=\"#197765\" stroke-width=\"3\"/><path d=\"M100 120H180\" stroke=\"#197765\" stroke-width=\"3\"/><path d=\"M100 160H180\" stroke=\"#197765\" stroke-width=\"3\"/><text x=\"230\" y=\"70\">模型原边界</text><text x=\"450\" y=\"125\">人工候选：独立历史</text><text x=\"35\" y=\"202\">深度向下；点击曲线选位置，人工追加/移除单独保存。</text></g></svg><figcaption>输入：模型/基线候选、域外标记；动作：同一深度对齐，人工增删候选另存；输出：来源可追踪的复核记录。人工候选不覆盖模型成绩</figcaption></figure><figure><h3>图 S7｜一对一评价与输出</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"一对一评价与输出\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"210\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"59\">预测 ↔ 真值 一对一</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"59\">漏检 / 多余 / 假界面</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"59\">误差m + 证据版本</text><text x=\"35\" y=\"140\">容差1m是教学设置；改变容差属于探索，必须记录。</text><text x=\"35\" y=\"180\">无适用分母显示不适用，成功匹配误差与漏检同时报告。</text></g></svg><figcaption>输入：候选边界、独立教学真值；动作：容差内最大匹配，计漏检与多余；输出：P/R/F1、匹配误差、工况假界面。空真值不制造100%召回率</figcaption></figure><p>所有模型、基线与指标在演示中实际计算。拒判与缺失保留分母，无适用分母显示不适用。改变输入后重算，人工结果与原模型分开。</p>"
+            }
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "label": "可运行示范",
+            "height": 1000,
+            "intro": "独立同响应标定学习工况影响，训练井聚类，测试井离线分段；输出可复核候选响应段，不把簇编号写成真实岩性。"
+          }
+        }
+      },
+      "files": [
+        {
+          "name": "README.txt",
+          "enc": "text",
+          "bytes": 745,
+          "sha256": "dbc7a9733e003f4849bdc3b8398f60842f9ff8bc1d3edd3004c83e3db17078e9"
+        },
+        {
+          "name": "demo/demo.css",
+          "enc": "text",
+          "bytes": 7246,
+          "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc"
+        },
+        {
+          "name": "demo/demo.js",
+          "enc": "text",
+          "bytes": 136694,
+          "sha256": "c53899431bd7adf9143b1109b30a177a1789a77d4798806cc0acddcc4c3170ea"
+        },
+        {
+          "name": "demo/index.html",
+          "enc": "text",
+          "bytes": 4716,
+          "sha256": "2d241a8ec0e3857dad255f1f9136c1999b841e867b1e81f5dba320e5803081ca"
+        }
+      ]
+    },
+    {
+      "id": "s17-evidence-report",
+      "meta": {
+        "id": "s17-evidence-report",
+        "title": "录井报告自动生成：每句话都有当前证据",
+        "sceneId": "m5",
+        "methods": [
+          "nlp"
+        ],
+        "version": "1.1.0",
+        "updated": "2026-10-23"
+      },
+      "pkg": {
+        "id": "s17-evidence-report",
+        "sceneId": "m5",
+        "methods": [
+          "nlp"
+        ],
+        "title": "录井报告自动生成：每句话都有当前证据",
+        "version": "1.1.0",
+        "updated": "2026-10-23",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。",
+            "judge": [
+              {
+                "label": "默认数据",
+                "value": "教学合成",
+                "desc": "公开实测附加区单独标识"
+              },
+              {
+                "label": "业务问题",
+                "value": "怎样整理录井报告，让每句话都能回到证据？",
+                "desc": "输出边界见说明"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CONCEPT",
+                "title": "图 B1｜五种证据进入一份报告",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"原始观察上游推断到报告章节\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">岩屑证据</text><rect x=\"197\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"209\" y=\"53\">气测证据</text><rect x=\"374\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"386\" y=\"53\">荧光证据</text><rect x=\"551\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"563\" y=\"53\">钻时证据</text><path d=\"M100 75L350 125M280 75L350 125M460 75L350 125M640 75L350 125\" stroke=\"#70a18b\"/><rect x=\"220\" y=\"125\" width=\"280\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"232\" y=\"153\">报告句子 → 字段 → 具体来源</text><text x=\"30\" y=\"198\">每例自带默认证据快照；导入JSON是显式交换，不依赖父站状态。</text></g></svg><figcaption>内置上游快照由实际算法构建时生成，页面明确标记为快照，不冒称本页重新运行了上游模型。</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONCEPT",
+                "title": "图 B2｜观察、模型推断与人工意见分开",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"三类事实与三类核验状态\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"210\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">观察：原始记录/像素</text><rect x=\"255\" y=\"25\" width=\"210\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"267\" y=\"53\">推断：模型候选</text><rect x=\"490\" y=\"25\" width=\"210\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"502\" y=\"53\">意见：人工复核</text><text x=\"30\" y=\"118\">可追溯 linked ≠ 语义已核对 human_verified</text><text x=\"30\" y=\"158\">来源版本变、句子改写 → 需重核 / 追溯过期 / 支持未检查</text><text x=\"30\" y=\"198\">过去的确认留在历史里，不能自动继承到新修订。</text></g></svg><figcaption>sourceRefs 需要具体ID、版本和文字/图段定位。只有一个泛链接不算完整追溯。</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "CONCEPT",
+                "title": "图 B3｜一个“未”字改变事实，不能丢掉",
+                "html": "<figure><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"否定作用域与同句多分句\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">未见荧光，但气测升高</text><rect x=\"390\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"402\" y=\"53\">荧光：否定；气测：非否定</text><text x=\"30\" y=\"125\">深度、时间、数值和单位与事实一起保留。</text><text x=\"30\" y=\"166\">缺深度写“未提供”，多范围无法唯一绑定则送复核。</text><text x=\"30\" y=\"199\">自由输入没有金标，不显示准确率、F1或事实覆盖性能。</text></g></svg><figcaption>本例用规则抽取限定格式，不把规则或模板称为大模型理解；复杂语义仍需人工。</figcaption></figure>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "怎样整理录井报告，让每句话都能回到证据？",
+            "lead": [
+              "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。"
+            ],
+            "steps": [
+              {
+                "name": "收集与版本化来源",
+                "role": "图S1",
+                "do": "输入：原始文本、上游证据JSON；动作：校验v1必填、ID/版本与引用；保留原内容。见图S1。",
+                "effect": "不可变来源版本与证据卡",
+                "trap": "同ID/版本不同内容必须报冲突"
+              },
+              {
+                "name": "保留偏移与字符特征",
+                "role": "图S2",
+                "do": "输入：原始文本；动作：分句保留start/end，字符1–2gram计数。见图S2。",
+                "effect": "原句片段与训练词表",
+                "trap": "数值只在分类特征归一化，原文不动"
+              },
+              {
+                "name": "六类朴素贝叶斯",
+                "role": "图S3",
+                "do": "输入：252训练句，独立表达族切分；动作：真实统计先验/词频，Laplace平滑与验证选参。见图S3。",
+                "effect": "类对数分数、分差、字符贡献",
+                "trap": "分数不是校准概率；不伪造训练损失"
+              },
+              {
+                "name": "字段与冲突检查",
+                "role": "图S4",
+                "do": "输入：原句、类别建议、范围；动作：规则抽取否定/数值/单位/范围，检查同域冲突。见图S4。",
+                "effect": "事实字段、缺项与冲突队列",
+                "trap": "同一句无法唯一绑定多范围，不强行选一个"
+              },
+              {
+                "name": "有依据地组装报告",
+                "role": "图S5",
+                "do": "输入：事实、上游推断与原文引用；动作：共用约束模板，逐句绑定版本和选择范围。见图S5。",
+                "effect": "报告草稿及证据定位",
+                "trap": "关键词基线与学习使用相同抽取器/模板"
+              },
+              {
+                "name": "人工复核与安全导出",
+                "role": "图S6",
+                "do": "输入：报告句子、当前来源与历史；动作：手改撤销核验；人工重核后确认；导出HTML/JSON。见图S6。",
+                "effect": "带限制、状态、修订的可追溯草稿",
+                "trap": "链接存在不等于支持；用户文本不作为HTML执行"
+              }
+            ],
+            "metrics": {
+              "title": "逐步图册与评价口径",
+              "html": "<figure><h3>图 S1｜收集与版本化来源</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"收集与版本化来源\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"210\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">sourceRecordId @ version</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">内容不可变 / 冲突检查</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">保存原始内容</text><text x=\"30\" y=\"135\">text_record / series_segment / image_region / review_note</text><text x=\"30\" y=\"180\">其他案例必须显式选择文件导入；未知版本/缺引用不能假装成功。</text></g></svg><figcaption>输入：原始文本、上游证据JSON；动作：校验v1必填、ID/版本与引用；保留原内容；输出：不可变来源版本与证据卡。同ID/版本不同内容必须报冲突</figcaption></figure><figure><h3>图 S2｜保留偏移与字符特征</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"保留偏移与字符特征\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"210\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">未见荧光，但气测升高</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">两条子句 + 原文offset</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">字符一元/二元计数</text><text x=\"30\" y=\"138\">“未见”“荧光”“气测”等贡献来自实际词频；原文数字与单位原样保留。</text></g></svg><figcaption>输入：原始文本；动作：分句保留start/end，字符1–2gram计数；输出：原句片段与训练词表。数值只在分类特征归一化，原文不动</figcaption></figure><figure><h3>图 S3｜六类朴素贝叶斯</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"六类朴素贝叶斯\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><text x=\"30\" y=\"40\">log P(类别) + Σ 片段计数 × log P(片段 | 类别)</text><text x=\"30\" y=\"95\">岩性</text><rect x=\"30\" y=\"120\" width=\"80\" height=\"15\" fill=\"#5c9981\"/><text x=\"145\" y=\"95\">气测</text><rect x=\"145\" y=\"120\" width=\"80\" height=\"30\" fill=\"#5c9981\"/><text x=\"260\" y=\"95\">荧光</text><rect x=\"260\" y=\"120\" width=\"80\" height=\"45\" fill=\"#5c9981\"/><text x=\"375\" y=\"95\">工况</text><rect x=\"375\" y=\"120\" width=\"80\" height=\"15\" fill=\"#5c9981\"/><text x=\"490\" y=\"95\">复核建议</text><rect x=\"490\" y=\"120\" width=\"80\" height=\"30\" fill=\"#5c9981\"/><text x=\"605\" y=\"95\">其他</text><rect x=\"605\" y=\"120\" width=\"80\" height=\"45\" fill=\"#5c9981\"/><text x=\"30\" y=\"195\">真实得分与类别分差在演示中计算；词表只来自训练族。</text></g></svg><figcaption>输入：252训练句，独立表达族切分；动作：真实统计先验/词频，Laplace平滑与验证选参；输出：类对数分数、分差、字符贡献。分数不是校准概率；不伪造训练损失</figcaption></figure><figure><h3>图 S4｜字段与冲突检查</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"字段与冲突检查\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">1210–1220m：总气3.2</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">同范围：总气5.1</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">冲突：保留两条</text><text x=\"30\" y=\"135\">否定绑定分句；单位缺失不补造；冲突不静默取平均。</text><text x=\"30\" y=\"180\">有金标才计算字段EM、事实覆盖和冲突检出；自由输入只报工作流量。</text></g></svg><figcaption>输入：原句、类别建议、范围；动作：规则抽取否定/数值/单位/范围，检查同域冲突；输出：事实字段、缺项与冲突队列。同一句无法唯一绑定多范围，不强行选一个</figcaption></figure><figure><h3>图 S5｜有依据地组装报告</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"有依据地组装报告\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">句子ID / revision</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">事实ID / 抽取字段</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">来源ID@版本+范围</text><text x=\"30\" y=\"135\">点击句子 → 高亮原句或打开图像/曲线片段。</text><text x=\"30\" y=\"180\">缺证据显示待核查，不把“候选”改成已确认的地质事实。</text></g></svg><figcaption>输入：事实、上游推断与原文引用；动作：共用约束模板，逐句绑定版本和选择范围；输出：报告草稿及证据定位。关键词基线与学习使用相同抽取器/模板</figcaption></figure><figure><h3>图 S6｜人工复核与安全导出</h3><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"人工复核与安全导出\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"58\">已核对句子</text><rect x=\"265\" y=\"30\" width=\"200\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"277\" y=\"58\">改写 / 来源版本变化</text><rect x=\"510\" y=\"30\" width=\"190\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"522\" y=\"58\">需重核 / stale</text><text x=\"30\" y=\"135\">人工确认针对当前句子与当前来源，历史确认不自动恢复。</text><text x=\"30\" y=\"180\">导出HTML转义用户文本；JSON带来源快照、版本、限制与修订。</text></g></svg><figcaption>输入：报告句子、当前来源与历史；动作：手改撤销核验；人工重核后确认；导出HTML/JSON；输出：带限制、状态、修订的可追溯草稿。链接存在不等于支持；用户文本不作为HTML执行</figcaption></figure><p>所有模型、基线与指标在演示中实际计算。拒判与缺失保留分母，无适用分母显示不适用。改变输入后重算，人工结果与原模型分开。</p>"
+            }
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "label": "可运行示范",
+            "height": 1000,
+            "intro": "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。"
+          }
+        }
+      },
+      "files": [
+        {
+          "name": "README.txt",
+          "enc": "text",
+          "bytes": 757,
+          "sha256": "f849aba2897e7a5b08ee868eb3e654c2eb0b1efeda071fd167375dc377dc4367"
+        },
+        {
+          "name": "demo/demo.css",
+          "enc": "text",
+          "bytes": 7246,
+          "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc"
+        },
+        {
+          "name": "demo/demo.js",
+          "enc": "text",
+          "bytes": 240026,
+          "sha256": "6d74658f1d316e29252f4b9da557d43b5a8c2e124bb88b0f6775a70392e5117c"
+        },
+        {
+          "name": "demo/index.html",
+          "enc": "text",
+          "bytes": 5479,
+          "sha256": "f55b1d9c82056b521b992311f39a4dc8874c1fe2843df4d6f97ff26e26427a63"
+        }
+      ]
+    }
+  ]
+}

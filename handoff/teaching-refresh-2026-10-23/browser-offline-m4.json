@@ -1,0 +1,110 @@
+{
+  "scope": "Actual offline native teacher import / compute / export readiness / refresh for m4",
+  "checks": [
+    {
+      "name": "m4 original native file import registers 1.2.0",
+      "passed": true
+    },
+    {
+      "name": "m4 original background visible offline",
+      "passed": true
+    },
+    {
+      "name": "m4 original workflow visible offline",
+      "passed": true
+    },
+    {
+      "name": "m4 original opaque sandbox computes offline",
+      "passed": true
+    },
+    {
+      "name": "m4 ready export control enabled (download checked separately)",
+      "passed": true
+    },
+    {
+      "name": "m4 refresh reruns with same metrics",
+      "passed": true
+    },
+    {
+      "name": "cumulative imports retained",
+      "passed": true
+    },
+    {
+      "name": "zero HTTP requests",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "case": {
+    "id": "s17-drilltime-boundaries",
+    "scene": "m4",
+    "metrics": {
+      "model": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_m": 0.125
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_m": 0.125
+          }
+        ],
+        "precision": 1,
+        "recall": 1,
+        "F1": 1,
+        "misses": [],
+        "extras": [],
+        "MAE_m": 0.125,
+        "predCount": 2,
+        "truthCount": 2
+      },
+      "baseline": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_m": 0.5
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "error_m": 0.5
+          }
+        ],
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "F1": 0.8,
+        "misses": [],
+        "extras": [
+          1
+        ],
+        "MAE_m": 0.5,
+        "predCount": 3,
+        "truthCount": 2
+      },
+      "falseOperationBoundaries": {
+        "model": 0,
+        "baseline": 1
+      },
+      "thinMisses": null,
+      "tolerance_m": 1
+    }
+  },
+  "storedIds": [
+    "s17-cuttings-lithology",
+    "s17-mudgas-context",
+    "s17-fluorescence-review",
+    "s17-drilltime-boundaries"
+  ],
+  "checkedAt": "2026-10-23T12:58:08.892Z",
+  "passed": 9,
+  "failed": 0
+}

@@ -1,0 +1,433 @@
+{
+  "scope": "1.3.0 actual current five-case visual interactions; synthetic teaching results, not field evaluation",
+  "checks": [
+    {
+      "name": "m1 actual calculation enables one local visualization",
+      "passed": true
+    },
+    {
+      "name": "m1 keyboard slider reveals full left image and updates clipping",
+      "passed": true
+    },
+    {
+      "name": "m1 actual pointer drag changes divider and pixel location",
+      "passed": true
+    },
+    {
+      "name": "m1 magnifier pixel readout matches actual source canvas",
+      "passed": true
+    },
+    {
+      "name": "m1 browsing leaves calculation and metrics unchanged",
+      "passed": true
+    },
+    {
+      "name": "m1 mobile confines wide graphics to local scroll",
+      "passed": true
+    },
+    {
+      "name": "m1 mobile comparison still responds",
+      "passed": true
+    },
+    {
+      "name": "m1 input changes label old visualization stale and disable exploration",
+      "passed": true
+    },
+    {
+      "name": "m1 recalculation reenables current visual and export",
+      "passed": true
+    },
+    {
+      "name": "m2 actual calculation enables one local visualization",
+      "passed": true
+    },
+    {
+      "name": "m2 actual brush narrows all three plots",
+      "passed": true,
+      "detail": [
+        48,
+        132
+      ]
+    },
+    {
+      "name": "m2 shared cursor actually updates original case control",
+      "passed": true,
+      "detail": 102
+    },
+    {
+      "name": "m2 full-interval button restores overview domain",
+      "passed": true
+    },
+    {
+      "name": "m2 candidate chip narrows window and selects original event or depth",
+      "passed": true
+    },
+    {
+      "name": "m2 browsing leaves calculation and metrics unchanged",
+      "passed": true
+    },
+    {
+      "name": "m2 mobile confines wide graphics to local scroll",
+      "passed": true
+    },
+    {
+      "name": "m2 mobile interval control remains enabled",
+      "passed": true
+    },
+    {
+      "name": "m2 input changes label old visualization stale and disable exploration",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "cases": [
+    {
+      "id": "s17-cuttings-lithology",
+      "scene": "m1",
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 2,
+            "IoU": 1
+          },
+          {
+            "pred": 1,
+            "truth": 0,
+            "IoU": 1
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "IoU": 1
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "IoU": 1
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "IoU": 1
+          },
+          {
+            "pred": 5,
+            "truth": 7,
+            "IoU": 1
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "IoU": 1
+          },
+          {
+            "pred": 7,
+            "truth": 5,
+            "IoU": 1
+          },
+          {
+            "pred": 8,
+            "truth": 10,
+            "IoU": 1
+          },
+          {
+            "pred": 9,
+            "truth": 8,
+            "IoU": 1
+          },
+          {
+            "pred": 10,
+            "truth": 11,
+            "IoU": 1
+          },
+          {
+            "pred": 11,
+            "truth": 9,
+            "IoU": 1
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "merged": [],
+        "model": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              7,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              5,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 0,
+              "f1": 0
+            },
+            {
+              "recall": 0.7142857142857143,
+              "f1": 0.7142857142857143
+            }
+          ],
+          "macroF1": 0.5714285714285715,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 4,
+          "coverage": 1,
+          "acceptedError": 0.3333333333333333
+        },
+        "segmentation": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "trueVisiblePixels": 14582,
+        "areaError_pp": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "s17-mudgas-context",
+      "scene": "m2",
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_s": 10
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_s": 0
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "error_s": 0
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "error_s": 0
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "error_s": 0
+          },
+          {
+            "pred": 5,
+            "truth": 5,
+            "error_s": 0
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "error_s": 0
+          },
+          {
+            "pred": 7,
+            "truth": 7,
+            "error_s": 0
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "detectionRecall": 1,
+        "truthCount": 8,
+        "candidateCount": 8,
+        "model": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 0.8
+            },
+            {
+              "recall": 0.5,
+              "f1": 0.6666666666666666
+            }
+          ],
+          "macroF1": 0.8666666666666666,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 1,
+          "coverage": 1,
+          "acceptedError": 0.125
+        },
+        "depthMAE_m": 0,
+        "depthN": 2,
+        "falsePersistent": {
+          "count": 0,
+          "denominator": 6
+        },
+        "allCandidateCoverage": 1
+      }
+    }
+  ],
+  "exception": "m2 input changes label old visualization stale and disable exploration",
+  "checkedAt": "2026-10-23T13:43:53.741Z",
+  "passed": 17,
+  "failed": 1
+}

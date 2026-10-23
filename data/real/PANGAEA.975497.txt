@@ -1,0 +1,87 @@
+/* DATA DESCRIPTION:
+Citation:	Strasser, Michael; Ikehara, Ken; Everest, Jeremy D; Maeda, Lena; Hochmuth, Katharina; Grant, Hannah; Stewart, Margaret S; Sakurai, Noriaki; Yokoyama, Takahiro; Bao, Rui; Bellanova, Piero; Brunet, Morgane; Cai, Zhirong; Cattaneo, Antonio; Hsiung, Kan-Hsi; Huang, Jyh-Jaan Steven; Ishizawa, Tahashi; Itaki, Takuya; Jitsuno, Kana; Johnson, Joel E; Kanamatsu, Toshiya; Keep, Myra; Kioka, Arata; Kölling, Martin; Luo, Min; März, Christian; McHugh, Cecilia M G; Micallef, Aaron; Nagahashi, Yoshitaka; Pandey, Dhananjai K; Proust, Jean-Noël; Rasbury, Troy; Riedinger, Natascha; Satoguchi, Yasufumi; Sawyer, Derek E; Seibert, Chloé; Silver, Maxwell; Straub, Susanne M; Virtasalo, Joonas J; Wang, Yong Hong; Wu, Ting-Wei; Zellers, Sarah D (2025): Headspace gas concentrations of IODP Hole 386-M0091D [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.975497
+Abstract:	Headspace (HS) gas concentrations of the above given hole of International Ocean Discovery Program (IODP) Expedition 386 (Japan Trench Paleoseismology). The offshore phase of this expedition took place between 2021-04-13 and 2021-06-01 onboard Japanese R/V Kaimei from and to Yokosuka, Japan, followed by an onshore phase onboard D/V Chikyu between 2022-02-14 – 2022-03-15. Following standard protocols for headspace sampling, all headspace samples were collected onboard (offshore) from the base of each section immediately after section cutting following core recovery on deck. Two parallel headspace samples (IODP standard and requested samples) were collected from the bottom of every GPC core section, the longest core from each site, and the respective shorter trigger core. For each headspace double sample, ~5 cm³ of sediment was collected (using two 2.5 cm³ tip-cut syringes). Each 2.5 cm³ headspace sample was then added to a 20 mL crimp vial with 5 mL of 1 M NaOH. After sealing, the samples were preserved at 4°C until analysis.
+	For further methodological information see methods chapter in Strasser, M. et al., 2023 https://doi.org/10.14379/iodp.proc.386.102.2023
+Keyword(s):	Ethane; Headspace Gas; International Ocean Discovery Program (IODP); IODP; Japan Trench; Methane concentration
+Related to:	Strasser, Michael; Ikehara, Ken; Everest, Jeremy D; IODP Expedition 386 Scientists (2023): Japan Trench Paleoseismology. Proceedings of the International Ocean Discovery Program, International Ocean Discovery Program, 386, https://doi.org/10.14379/iodp.proc.386.2023
+Further details:	QAQC386_Web_F_GC_3_HS-GCFID (URI: https://download.pangaea.de/reference/140405/attachments/QAQC386_Web_F_GC_3_HS-GCFID.zip)
+Project(s):	Integrated Ocean Drilling Program / International Ocean Discovery Program (IODP) (URI: https://www.iodp.org/)
+Coverage:	LATITUDE: 37.412350 * LONGITUDE: 143.729017
+	DATE/TIME START: 2021-05-20T00:00:00 * DATE/TIME END: 2021-05-20T00:00:00
+	MINIMUM DEPTH, sediment/rock: 0.210 m * MAXIMUM DEPTH, sediment/rock: 30.820 m
+Event(s):	386-M0091D (JTPS-07A) * LATITUDE: 37.412350 * LONGITUDE: 143.729017 * DATE/TIME START: 2021-05-20T00:00:00 * DATE/TIME END: 2021-05-20T00:00:00 * ELEVATION: -7812.0 m * LOCATION: Japan Trench * CAMPAIGN: Exp386 (URI: https://doi.org/10.14379/iodp.proc.386.2023) * BASIS: Kaimei (URI: https://www.jamstec.go.jp/e/about/equipment/ships/kaimei.html) * METHOD/DEVICE: Giant piston corer (GPC) * COMMENT: IGSN: IBCR0386EH46001. Comment: 40 m. Location: applied ship's position due to malfunctioning GPC transponder.
+Comment:	Data was submitted and proofread by Vera Barbara Bender, MARUM - Center for Marine Environmental Sciences (University Bremen) on behalf of ECORD Science Operator Data Management (https://www.ecord.org).
+Parameter(s):	Event label (Event)
+	Sample code/label (Sample label) * METHOD/DEVICE: DSDP/ODP/IODP sample designation (URI: hdl:10013/epic.27914.d001)
+	Proposed International Geo Sample Number (Prop IGSN)
+	DEPTH, sediment/rock [m] (Depth sed) * GEOCODE
+	Methane [ppmv] (CH4) * METHOD/DEVICE: Gas chromatography, Agilent Technologies, 7890A; injected (split mode) into an Agilent 7890B gas chromatograph equipped with HP PLOT-Q column
+	Ethane [ppmv] (C2H6) * METHOD/DEVICE: Gas chromatography, Agilent Technologies, 7890A; injected (split mode) into an Agilent 7890B gas chromatograph equipped with HP PLOT-Q column
+	C1/C2 hydrocarbon ratio (C1/C2) * METHOD/DEVICE: Gas chromatography, Agilent Technologies, 7890A; injected (split mode) into an Agilent 7890B gas chromatograph equipped with HP PLOT-Q column
+License:	Creative Commons Attribution 4.0 International (CC-BY-4.0) (URI: https://creativecommons.org/licenses/by/4.0/)
+Status:	Curation Level: Enhanced curation (URI: https://wiki.pangaea.de/wiki/Curation_levels)
+Size:	310 data points
+*/
+Event	Sample label	Prop IGSN	Depth sed [m]	CH4 [ppmv]	C2H6 [ppmv]	C1/C2
+386-M0091D	386-M0091D-1H-1,21-25	IBCR0386EXDQD01	0.210	121.0	0.42	285.0
+386-M0091D	386-M0091D-1H-1,21-25	IBCR0386EXEQD01	0.210	121.0	0.42	285.0
+386-M0091D	386-M0091D-1H-2,97.5-101.5	IBCR0386EXFQD01	1.225	153.0	0.52	293.0
+386-M0091D	386-M0091D-1H-2,97.5-101.5	IBCR0386EXGQD01	1.225	153.0	0.52	293.0
+386-M0091D	386-M0091D-1H-3,97-101	IBCR0386EXHQD01	2.235	87.0	0.35	250.0
+386-M0091D	386-M0091D-1H-3,97-101	IBCR0386EXIQD01	2.235	87.0	0.35	250.0
+386-M0091D	386-M0091D-1H-4,96.5-100.5	IBCR0386EXJQD01	3.240	276.0	0.74	372.0
+386-M0091D	386-M0091D-1H-4,96.5-100.5	IBCR0386EXKQD01	3.240	276.0	0.74	372.0
+386-M0091D	386-M0091D-1H-5,97-101	IBCR0386EXLQD01	4.250	237.0	0.49	484.0
+386-M0091D	386-M0091D-1H-5,97-101	IBCR0386EXMQD01	4.250	237.0	0.49	484.0
+386-M0091D	386-M0091D-1H-6,96.5-100.5	IBCR0386EXNQD01	5.255	385.0	0.73	525.0
+386-M0091D	386-M0091D-1H-6,96.5-100.5	IBCR0386EXOQD01	5.255	385.0	0.73	525.0
+386-M0091D	386-M0091D-1H-7,96.5-100.5	IBCR0386EXPQD01	6.260	152.0	0.44	347.0
+386-M0091D	386-M0091D-1H-7,96.5-100.5	IBCR0386EXQQD01	6.260	152.0	0.44	347.0
+386-M0091D	386-M0091D-1H-8,97-101	IBCR0386EXRQD01	7.270	153.0	0.55	277.0
+386-M0091D	386-M0091D-1H-8,97-101	IBCR0386EXSQD01	7.270	153.0	0.55	277.0
+386-M0091D	386-M0091D-1H-9,96.5-100.5	IBCR0386EXTQD01	8.275	129.0	0.45	286.0
+386-M0091D	386-M0091D-1H-9,96.5-100.5	IBCR0386EXUQD01	8.275	129.0	0.45	286.0
+386-M0091D	386-M0091D-1H-10,97.5-101.5	IBCR0386EXVQD01	9.290	119.0	0.38	318.0
+386-M0091D	386-M0091D-1H-10,97.5-101.5	IBCR0386EXWQD01	9.290	119.0	0.38	318.0
+386-M0091D	386-M0091D-1H-11,96.5-100.5	IBCR0386EXXQD01	10.295	165.0	0.39	424.0
+386-M0091D	386-M0091D-1H-11,96.5-100.5	IBCR0386EXYQD01	10.295	165.0	0.39	424.0
+386-M0091D	386-M0091D-1H-12,96.5-100.5	IBCR0386EXZQD01	11.300	202.0	0.39	516.0
+386-M0091D	386-M0091D-1H-12,96.5-100.5	IBCR0386EX0RD01	11.300	202.0	0.39	516.0
+386-M0091D	386-M0091D-1H-13,97-101	IBCR0386EX1RD01	12.310	392.0	0.44	894.0
+386-M0091D	386-M0091D-1H-13,97-101	IBCR0386EX2RD01	12.310	392.0	0.44	894.0
+386-M0091D	386-M0091D-1H-14,97-101	IBCR0386EX3RD01	13.320	632.0	0.38	1654.0
+386-M0091D	386-M0091D-1H-14,97-101	IBCR0386EX4RD01	13.320	632.0	0.38	1654.0
+386-M0091D	386-M0091D-1H-15,97.5-101.5	IBCR0386EX5RD01	14.335	1280.0	0.60	2122.0
+386-M0091D	386-M0091D-1H-15,97.5-101.5	IBCR0386EX6RD01	14.335	1280.0	0.60	2122.0
+386-M0091D	386-M0091D-1H-16,97-101	IBCR0386EX7RD01	15.345	1416.0	0.72	1965.0
+386-M0091D	386-M0091D-1H-16,97-101	IBCR0386EX8RD01	15.345	1416.0	0.72	1965.0
+386-M0091D	386-M0091D-1H-17,97.5-101.5	IBCR0386EX9RD01	16.360	2141.0	0.64	3370.0
+386-M0091D	386-M0091D-1H-17,97.5-101.5	IBCR0386EXARD01	16.360	2141.0	0.64	3370.0
+386-M0091D	386-M0091D-1H-18,97-101	IBCR0386EXBRD01	17.370	2372.0	0.46	5105.0
+386-M0091D	386-M0091D-1H-18,97-101	IBCR0386EXCRD01	17.370	2372.0	0.46	5105.0
+386-M0091D	386-M0091D-1H-19,97-101	IBCR0386EXDRD01	18.380	3772.0	0.65	5791.0
+386-M0091D	386-M0091D-1H-19,97-101	IBCR0386EXERD01	18.380	3772.0	0.65	5791.0
+386-M0091D	386-M0091D-1H-20,97-101	IBCR0386EXFRD01	19.390	3531.0	0.47	7535.0
+386-M0091D	386-M0091D-1H-20,97-101	IBCR0386EXGRD01	19.390	3531.0	0.47	7535.0
+386-M0091D	386-M0091D-1H-21,97-101	IBCR0386EXHRD01	20.400	6713.0	0.56	12058.0
+386-M0091D	386-M0091D-1H-21,97-101	IBCR0386EXIRD01	20.400	6713.0	0.56	12058.0
+386-M0091D	386-M0091D-1H-22,97-101	IBCR0386EXJRD01	21.410	7352.0	0.71	10418.0
+386-M0091D	386-M0091D-1H-22,97-101	IBCR0386EXKRD01	21.410	7352.0	0.71	10418.0
+386-M0091D	386-M0091D-1H-23,97-101	IBCR0386EXLRD01	22.420	9752.0	0.52	18721.0
+386-M0091D	386-M0091D-1H-23,97-101	IBCR0386EXMRD01	22.420	9752.0	0.52	18721.0
+386-M0091D	386-M0091D-1H-24,98-102	IBCR0386EXNRD01	23.440	9116.0	0.78	11733.0
+386-M0091D	386-M0091D-1H-24,98-102	IBCR0386EXORD01	23.440	9116.0	0.78	11733.0
+386-M0091D	386-M0091D-1H-25,98.5-102.5	IBCR0386EXPRD01	24.465	10900.0	0.71	15370.0
+386-M0091D	386-M0091D-1H-25,98.5-102.5	IBCR0386EXQRD01	24.465	10900.0	0.71	15370.0
+386-M0091D	386-M0091D-1H-26,100.5-104.5	IBCR0386EXRRD01	25.510	9890.0	0.47	21022.0
+386-M0091D	386-M0091D-1H-26,100.5-104.5	IBCR0386EXSRD01	25.510	9890.0	0.47	21022.0
+386-M0091D	386-M0091D-1H-27,101.5-105.5	IBCR0386EXTRD01	26.565	15150.0	0.49	30926.0
+386-M0091D	386-M0091D-1H-27,101.5-105.5	IBCR0386EXURD01	26.565	15150.0	0.49	30926.0
+386-M0091D	386-M0091D-1H-28,100.5-104.5	IBCR0386EXVRD01	27.610	13657.0	0.76	17869.0
+386-M0091D	386-M0091D-1H-28,100.5-104.5	IBCR0386EXWRD01	27.610	13657.0	0.76	17869.0
+386-M0091D	386-M0091D-1H-29,105-109	IBCR0386EXXRD01	28.700	17242.0	0.79	21812.0
+386-M0091D	386-M0091D-1H-29,105-109	IBCR0386EXYRD01	28.700	17242.0	0.79	21812.0
+386-M0091D	386-M0091D-1H-30,102-106	IBCR0386EXZRD01	29.760	17219.0	0.68	25503.0
+386-M0091D	386-M0091D-1H-30,102-106	IBCR0386EX0SD01	29.760	17219.0	0.68	25503.0
+386-M0091D	386-M0091D-1H-31,102-106	IBCR0386EX1SD01	30.820	14799.0	0.75	19695.0
+386-M0091D	386-M0091D-1H-31,102-106	IBCR0386EX2SD01	30.820	14799.0	0.75	19695.0

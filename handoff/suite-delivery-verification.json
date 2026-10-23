@@ -1,0 +1,208 @@
+{
+  "createdAt": "2026-10-23T10:05:53.877Z",
+  "scope": "current final build vs actual persisted packages, browser reports and downloaded evidence",
+  "cases": [
+    {
+      "id": "s17-cuttings-lithology",
+      "scene": "m1",
+      "version": "1.1.0",
+      "bytes": 156459,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-mudgas-context",
+      "scene": "m2",
+      "version": "1.1.0",
+      "bytes": 109328,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-fluorescence-review",
+      "scene": "m3",
+      "version": "1.1.0",
+      "bytes": 79305,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-drilltime-boundaries",
+      "scene": "m4",
+      "version": "1.1.0",
+      "bytes": 164036,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    },
+    {
+      "id": "s17-evidence-report",
+      "scene": "m5",
+      "version": "1.1.0",
+      "bytes": 269151,
+      "manifestPersistedEqual": true,
+      "allFourSavedFilesMatchCurrentBuild": true
+    }
+  ],
+  "version": "1.1.0",
+  "caseCount": 5,
+  "fileCount": 25,
+  "totalPackageBytes": 778279,
+  "originalAndReadOnlyCopyFiles": 23,
+  "originalHashesUnchanged": true,
+  "storedUTF8Bytes": 798158,
+  "checks": [
+    {
+      "report": "calculation-checks.json",
+      "passed": 14,
+      "failed": 0,
+      "scope": "G0/G1 computational checks; not browser acceptance"
+    },
+    {
+      "report": "mandatory-calculation-checks.json",
+      "passed": 14,
+      "failed": 0,
+      "scope": "G2/G3/G4 calculations and source/build checks; not browser proof"
+    },
+    {
+      "report": "enhancement-calculation-checks.json",
+      "passed": 9,
+      "failed": 0,
+      "scope": "v1.1 public data provenance, numeric conversions and actual enhancement algorithms; not browser proof"
+    },
+    {
+      "report": "browser-mandatory.json",
+      "passed": 43,
+      "failed": 0,
+      "scope": "real standalone Chromium interactions, HTTP"
+    },
+    {
+      "report": "browser-five-offline.json",
+      "passed": 45,
+      "failed": 0,
+      "scope": "five cumulative packages imported using unchanged teacher portal 添加案例, offline file protocol"
+    },
+    {
+      "report": "browser-reopen-five.json",
+      "passed": 7,
+      "failed": 0,
+      "scope": "closed and reopened same persistent Chromium profile, five original-portal file packages"
+    },
+    {
+      "report": "browser-work-suite.json",
+      "passed": 25,
+      "failed": 0,
+      "scope": "enhanced working portal, original firstbreak folder unchanged, five through native importer"
+    },
+    {
+      "report": "browser-evidence-exchange.json",
+      "passed": 16,
+      "failed": 0,
+      "scope": "actual m1–m4 sandbox downloads explicitly imported to m5 inside unchanged teacher sandbox"
+    },
+    {
+      "report": "browser-evidence-html.json",
+      "passed": 16,
+      "failed": 0,
+      "scope": "actual m1–m4 sandbox downloads explicitly imported to m5 inside unchanged teacher sandbox"
+    },
+    {
+      "report": "browser-enhancements.json",
+      "passed": 39,
+      "failed": 0,
+      "scope": "v1.1 real-data and teaching enhancements, actual Chromium interactions"
+    },
+    {
+      "report": "browser-enhanced-original.json",
+      "passed": 23,
+      "failed": 0,
+      "scope": "v1.1 enhancements and real sources inside unchanged teacher sandbox, file protocol offline"
+    }
+  ],
+  "calculationPassed": 37,
+  "browserPassed": 214,
+  "downloadedEvidence": [
+    {
+      "file": "output/exports/portal-m1.json",
+      "claims": 12,
+      "sources": 1,
+      "bytes": 50726,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m2.json",
+      "claims": 8,
+      "sources": 16,
+      "bytes": 160809,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m3.json",
+      "claims": 1,
+      "sources": 1,
+      "bytes": 80214,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m4.json",
+      "claims": 2,
+      "sources": 1,
+      "bytes": 132431,
+      "allSourceReferencesResolve": true
+    },
+    {
+      "file": "output/exports/portal-m5.json",
+      "claims": 6,
+      "sources": 1,
+      "bytes": 23803,
+      "allSourceReferencesResolve": true
+    }
+  ],
+  "linkedReport": {
+    "claims": 29,
+    "sources": 23,
+    "upstreamCases": 4,
+    "bothSourceVersionsPreserved": true,
+    "oldConfirmationOnlyInHistory": true,
+    "jsonAndHtmlContainSameStatements": true
+  },
+  "publicEvidence": [
+    {
+      "file": "original-m1-public-core.json",
+      "wellId": "PUBLIC-CORE-COLLECTION",
+      "datasetId": "mendeley-b6rj29mrss-v1-six-core-patches",
+      "license": "CC BY 4.0",
+      "metrics": null
+    },
+    {
+      "file": "original-m2-public-headspace.json",
+      "wellId": "386-M0091D",
+      "datasetId": "PANGAEA-975497-v1",
+      "license": "CC BY 4.0",
+      "metrics": null
+    },
+    {
+      "file": "original-m4-public-usrop.json",
+      "wellId": "15/9-F-15",
+      "datasetId": "USROP-A3-F15-depth-subset-v1",
+      "license": "CC BY-NC-SA 4.0",
+      "metrics": null
+    }
+  ],
+  "combinedPublicReport": {
+    "claims": 9,
+    "sources": 6,
+    "separateWells": 3,
+    "restoredDraftRetained": true,
+    "currentConfirmationsRevoked": true,
+    "embeddedJSONEqualsActuallyDownloadedJSON": true,
+    "embeddedOriginalJPEG": true
+  },
+  "notVerified": [
+    "other browsers/operating systems/real mobile devices",
+    "field predictive performance or field geological gold",
+    "central persistent source-version service",
+    "arbitrary external curve import or unconstrained semantic judging",
+    "real paired white-light and UV fluorescence benchmark"
+  ],
+  "scopeBoundary": "five offline teaching cases with separate attributed public observations; no other 56 cases; no G5; no chat system"
+}

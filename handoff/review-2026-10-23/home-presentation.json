@@ -1,0 +1,192 @@
+{
+  "reviewDate": "2026-10-23",
+  "reviewer": "homepage_presentation_review",
+  "scope": "只读审阅当前工作门户首页、录井导航、Live2D与Agent的展示定位；不改产品、不调用模型API、不重新验收五例算法。",
+  "basis": [
+    "用户本轮重述的老师11条要求及课堂说明，优先于内部开发清单",
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/06_兼容与验收清单.txt（内部质量门槛，不冒充老师逐条要求）",
+    "s17_development_kit/08_参考仓库审阅.txt（saphirv3为组织参考，不增加业务义务）",
+    "portal实际HTTP页面、真实Chrome点击与本次截图"
+  ],
+  "browser": {
+    "session": "s17-review-home",
+    "engine": "Chrome headless via Playwright CLI",
+    "baseUrl": "http://127.0.0.1:8755/portal/index.html",
+    "freshContext": true,
+    "viewports": ["1440x1000", "390x844"],
+    "modelRequestsDuringReview": 0,
+    "keyEntered": false,
+    "console": "1条favicon.ico 404；本次所见控制台没有其他报错。不能将此表述为整站所有流程零错误。"
+  },
+  "conclusion": "首页已形成自己的五例导览和统一教学故事，添加入口实际可打开且不会被角色挡住；最主要问题是原首页的‘1个已接入’与老师示范占据首屏/主按钮，在新浏览器里会把已完成五例藏起来。另有m2旧阶段页脚和原候选场景的较强目标描述，需要在最终展示前统一口径。没有证据支持给出分数预测。",
+  "strengths": [
+    {
+      "teacherRequirement": "1、2、4、11",
+      "claim": "自己的区域明确写学号17/第4阶段录井，五张不同场景卡片，并用‘一口教学井，五种证据’组织业务问题。",
+      "evidence": "实际首页可见岩屑、气测、荧光、钻时、报告五卡，问题先于方法名；不是把5个参数预设当5例。",
+      "file": "portal/assets/s17-home.js",
+      "line": 2
+    },
+    {
+      "teacherRequirement": "3、11",
+      "claim": "原添加入口仍直接进入原生目录导入弹窗，角色在弹窗期间隐藏。",
+      "evidence": "实际点击页头‘＋添加案例’，出现目录选择/校验/场景/技术等原表单；html.mdl-open=true且助手visibility=hidden。此次只证明入口可用与未遮挡，不替代同学样例的完整导入验收。",
+      "file": "portal/assets/s17-assistant.css",
+      "line": 3
+    },
+    {
+      "teacherRequirement": "4、6、9",
+      "claim": "本地向导用短句解释案例价值与专业边界，可以导航；未连接模型时如实标本地导览。",
+      "evidence": "真实点击‘从哪里开始’给出五例顺序；‘看气测’说明累计泵量/工况，明确‘气峰不直接代表油气层’，随后点击打开了本地m2独立成品。模型请求计数保持0。",
+      "file": "portal/assets/s17-assistant.js",
+      "line": 17
+    },
+    {
+      "teacherRequirement": "6、10、11",
+      "claim": "青绿教材风格、五证据顺序、统一卡片问题有利于课堂开场；角色默认收起，不会自动占据对话。",
+      "evidence": "实际桌面截图及390px截图均无整页横向溢出；实际Live2D状态ready，模型Diana。手机展开对话的边界为x18..380/y91.6..719，输入框和发送按钮均在844px视口内。",
+      "file": "portal/assets/s17.css",
+      "line": 1
+    },
+    {
+      "teacherRequirement": "4、6",
+      "claim": "真实荧光对照作为补充入口，有助于先看现象再谈解释。",
+      "evidence": "首页真实对照入口可见，导览说明方解石照片不是含油岩屑训练数据；本审阅未重新运行其图片切换，图片来源/许可另见已有实测数据报告。",
+      "file": "portal/assets/s17-assistant.js",
+      "line": 17
+    }
+  ],
+  "findings": [
+    {
+      "id": "HOME-01",
+      "severity": "medium",
+      "teacherRequirement": "1、2、11；用户要求注意包装、展示当前做得好",
+      "evidence": "新上下文首页仍先显示‘v1.0、1个已接入、1个可运行、1/61·2%’；自己的五例区桌面y=557，390x844时y=944.3，第一卡y=1387.3，手机首屏完全看不到自己的五例。桌面主CTA实际点击进入#/scene/w1?tab=demo，是老师原测井示范。",
+      "file": "portal/assets/core/shell.js",
+      "line": 170,
+      "observedVsInferred": "数值、位置与主按钮目的地均为实际浏览器观察；评委可能误认只完成1例是展示风险推断。1个注册数本身并非伪造。",
+      "impact": "开场最显眼的数据和演示展示的是原站注册状态及老师样例，会遮蔽本人的5个成品和录井5/5覆盖。",
+      "fixOrPresentation": "工作门户首屏并列‘本次完成：录井5/5个独立案例’与‘本浏览器已导入：0/5’，保留‘原地图：13阶段61候选’。主CTA改为‘从气测旗舰开始’，教师示范另标‘老师原样例’。首屏先见自己的五证据故事与五卡，原全地图继续保留。导入状态不得改写成性能通过，原只读副本不改。"
+    },
+    {
+      "id": "HOME-02",
+      "severity": "medium",
+      "teacherRequirement": "1、2、5、11；用户要求注意包装",
+      "evidence": "实际从录井阶段卡点击m2，未导入的新浏览器显示‘未接入案例’和‘这个场景还没有配套案例…还没有写成可讲解、可运行的具体案例’。已有本地m2成品并未在该页提示。",
+      "file": "portal/assets/core/shell.js",
+      "line": 595,
+      "observedVsInferred": "pending文案与路由为实际浏览器观察；认为缺作品属于可能的读者理解，不是案例实现缺失。",
+      "impact": "从原13阶段导航进入自己必做场景时，会把‘此浏览器尚未导入’表达成‘没有写成案例’，与首页5个本机成品矛盾。",
+      "fixOrPresentation": "仅在工作门户对已知五例补充明确提示‘本次交付已有成品；此浏览器尚未导入’，提供打开本地演示与通过原入口添加两个动作。保留原Cases.register、sceneId与文件夹导入协议；不伪造注册。答辩前可手动导入五例，但仍应展示一个真实原入口导入。"
+    },
+    {
+      "id": "HOME-03",
+      "severity": "medium",
+      "teacherRequirement": "1、2、11；当前完成范围应一致",
+      "evidence": "实际打开m2独立成品并读取可见页脚，仍为‘G0风险原型不计为完整案例；其余m1/m3/m4/m5本轮未实现。’ 当前首页与README已称五例完成。",
+      "file": "case-src/m2/index.html",
+      "line": 17,
+      "observedVsInferred": "页脚同时经本次浏览器和源码定位；不是只凭历史报告推断。",
+      "impact": "旗舰案例直接否认其他四例完成，会明显损害答辩可信度。",
+      "fixOrPresentation": "具体替换建议：‘本例属于学号17第4阶段录井五例之一。岩屑、气测、荧光、钻时与报告均提供独立教学演示；G0风险原型不计入五例数量。’ 后续实际修改须更新源与成品、版本与锁，重新检查该可见页脚，不能只改README或手改冻结ZIP。当前审阅未修改任何产品文件。"
+    },
+    {
+      "id": "HOME-04",
+      "severity": "medium",
+      "teacherRequirement": "4、6、8",
+      "evidence": "实际录井阶段页m2写‘判别流体性质（油/气/水层），替代人工’，m3写‘输出含油级别建议’，m4写‘自动识别岩性界面’。自己的教学演示/向导实际口径分别是关联解释、显示区域与来源分开、候选响应界面。",
+      "file": "portal/assets/data.js",
+      "line": 291,
+      "relatedLines": [305, 319],
+      "observedVsInferred": "原阶段文案为本次浏览器实际所见，当前助手边界为实际导学/源码；不据此宣判模型未实现老师要求，属于原候选目标与本次实现边界混用。",
+      "impact": "非石油读者可能把候选业务设想当作已测得的油气判定能力，继而觉得独立演示功能少于承诺。",
+      "fixOrPresentation": "保留老师原场景名称与ID，在工作门户明确标‘原场景目标’及‘本案例实现范围’：m2为异常候选+工况/迟到关联解释，m3为荧光显示分割+来源待复核，m4为钻进响应候选分段。开场说智能方法帮助筛查和定位证据，不把候选分段或显示面积包装为地层真值、含油饱和度。"
+    },
+    {
+      "id": "HOME-05",
+      "severity": "low",
+      "teacherRequirement": "3、11；窄屏可用性属于内部质量增强",
+      "evidence": "390px截图中页头‘＋添加案例’右侧文字被导航水平区域裁切；页面无整页溢出，导航样式允许横向滚动，但首屏没有明显滚动提示。",
+      "file": "portal/assets/s17.css",
+      "line": 1,
+      "observedVsInferred": "裁切与overflow-x:auto为实际截图/样式观察；未证明手机触摸不能滚动。",
+      "impact": "最关键的作业兼容入口在窄屏上不够显眼，降低首次使用的发现性。",
+      "fixOrPresentation": "把添加按钮保留为始终完整可见的页头独立操作，其他导航可横向滚动。答辩优先桌面浏览器；不能把模拟手机视口说成真机验收。"
+    },
+    {
+      "id": "HOME-06",
+      "severity": "low",
+      "teacherRequirement": "4、6、10、11；Agent是可选展示增强",
+      "evidence": "角色打开后面板占390px视口362px宽/627px高，正文大部分被覆盖；助手实际上下文只含页面元数据，系统提示也明确不读取iframe实时结果。桌面收起角色仍覆盖五卡区域右下部分。",
+      "file": "portal/assets/s17-assistant.js",
+      "line": 13,
+      "relatedFile": "portal/assets/s17-volcengine.js",
+      "relatedLine": 4,
+      "observedVsInferred": "面板边界和上下文为浏览器/源码观察；是否喧宾夺主属于展示安排判断，当前默认收起已经较克制。",
+      "impact": "若用较长时间展示动作或通用闲聊，会挤占老师最看重的三部分可视化与实际交互时间；‘解释当前页’不能等同读取刚算的指标。",
+      "fixOrPresentation": "将角色称为导学与导航增强，展示一次本地带路即可，控制20–30秒；进入案例后收起。若展示模型分析结果，显式上传截图/数据再提问，不声称其自动监控/复核了全部案例。可增可隐藏角色的开关作为演示便利，非老师硬性要求。"
+    },
+    {
+      "id": "HOME-07",
+      "severity": "unverified",
+      "teacherRequirement": "用户先前要求许可明确；非老师11条新增评分门槛",
+      "evidence": "ATTRIBUTION已写明Diana源仓库没有模型再分发许可，原作者确认不等于网页公开再分发授权；当前角色在浏览器实际加载。",
+      "file": "portal/assets/live2d/ATTRIBUTION.txt",
+      "line": 9,
+      "observedVsInferred": "当前声明属于文件事实，本轮没有独立向作者取证，也没有通过网络重新核验许可。",
+      "impact": "本地课程预览可以如实展示当前选择，但不能宣传成已核清的MIT/GPL角色或无条件公开分发资源。",
+      "fixOrPresentation": "保留明确署名与未核验状态；对外发布前补齐作者授权，或换成许可明确且经用户认可的角色。该项在审阅结论保持未完成，不用‘角色浏览器通过’覆盖许可问题。"
+    }
+  ],
+  "actualBrowserChecks": [
+    {"id":"H01","action":"新上下文打开当前门户，1440x1000查看首页与Live2D","result":"五卡区存在、Diana ready、文档宽1440无整页横溢；首屏注册统计为1，自己的导览区从y557开始","evidence":"output/playwright/review-2026-10-23/home-desktop-initial.png"},
+    {"id":"H02","action":"实际点击首页‘和井见向导一起看’及‘从哪里开始’","result":"打开对话并显示本地五例导航；未发模型请求","evidence":"output/playwright/review-2026-10-23/home-agent-desktop.png"},
+    {"id":"H03","action":"点击‘看气测’，再点击生成的m2导航链接","result":"新标签真实打开/dist/cases/s17-mudgas-context/demo/index.html","evidence":".playwright-cli/page-2026-10-23T11-47-56-292Z.yml"},
+    {"id":"H04","action":"收起助手、点击原页头添加案例","result":"原生目录导入弹窗打开；mdl-open=true且助手visibility=hidden","evidence":"output/playwright/review-2026-10-23/home-import-modal.png"},
+    {"id":"H05","action":"点击取消","result":"弹窗关闭，首页和助手保留；未添加或删除案例","evidence":".playwright-cli/page-2026-10-23T11-47-09-959Z.yml"},
+    {"id":"H06","action":"resize390x844，查看首屏并测量关键区","result":"文档宽390，个人区y944.3/第一卡y1387.3；添加按钮文字右侧裁切","evidence":"output/playwright/review-2026-10-23/home-mobile-initial.png"},
+    {"id":"H07","action":"手机视口点击向导","result":"面板边界在视口内，输入和发送可见，模型requestCount=0","evidence":"output/playwright/review-2026-10-23/home-agent-mobile.png"},
+    {"id":"H08","action":"关闭助手，实际点击原录井阶段导航","result":"保留第4/13阶段及m1–m5五场景，原候选描述仍显示","evidence":"output/playwright/review-2026-10-23/stage-mobile.png"},
+    {"id":"H09","action":"在录井页实际点击m2卡片，恢复桌面视口","result":"#/scene/m2显示未接入与尚无配套案例提示，没有自动识别交付目录里的m2","evidence":"output/playwright/review-2026-10-23/scene-m2-before-import.png"},
+    {"id":"H10","action":"切换实际打开的m2独立标签，读取页面footer可见文字","result":"页脚仍声称其余四例本轮未实现","evidence":".playwright-cli/page-2026-10-23T11-47-56-292Z.yml；读取footer的CLI输出；case-src/m2/index.html:17"},
+    {"id":"H11","action":"回首页，实际点击hero‘看一个可运行示范’","result":"进入#/scene/w1?tab=demo，标题测井曲线智能分层，未进入自己的m2","evidence":".playwright-cli/page-2026-10-23T11-49-42-153Z.yml"}
+  ],
+  "unverified": [
+    "本次只打开添加弹窗，没有重新导入firstbreak样例或五例；兼容结论须与其他审阅者的独立实际导入证据汇合。",
+    "没有付费API调用，没有Key，也没有重新验收音频理解、实体麦克风或语音音质。",
+    "没有把浏览器缩到390px当作手机真机、多浏览器或触摸手势通过。",
+    "没有重新验证五例算法指标或默认离线能力；当前报告不覆盖模型精度/数据泄漏。",
+    "Diana公开再分发许可尚未独立核验，不能包装为已通过。",
+    "saphirv3借鉴基于已提供的源码审阅说明和当前组织方式比较；不新增迁移义务。"
+  ],
+  "presentation": {
+    "opening": "我的学号末两位是17，对应第4阶段录井。这次做了岩屑、气测、荧光、钻时和报告五个独立案例。它们围绕一口教学井，展示不同证据怎样帮助判断。下面先通过老师原来的添加入口接入一例，再让大家亲手改变条件，看可视化怎样解释一次误判。首页61个是原地图的候选场景，5个是本次完成的案例；默认实验使用明示的教学数据，公开实测对照另行标注。",
+    "duration": "约7分钟，按现场操作节奏可压到5分钟或展开到8分钟",
+    "route": [
+      {"time":"0:00–0:40","focus":"明确归属与五例覆盖","action":"指录井5例和五证据顺序；把完成数量与本浏览器导入数量、61候选区分；不先解释工程架构。"},
+      {"time":"0:40–1:30","focus":"真实兼容","action":"从老师原添加入口选择一个完整m2文件夹，展示三部分可见；刷新后再运行。答辩前准备好目录，避免现场解释ZIP。"},
+      {"time":"1:30–3:10","focus":"m2旗舰：专业概念与控制变量","action":"用井下/地面双时钟解释迟到；停泵时累计泵量不前进；固定气峰改变工况，观察候选解释如何收缩；对照图和误差定位先于kNN名称。"},
+      {"time":"3:10–3:50","focus":"m1：看得到的图像证据","action":"点击颗粒看像素与近邻，切换计数/二维面积；一次照明或黏连交互说明为什么要复核。"},
+      {"time":"3:50–4:30","focus":"m3：现象与解释分开","action":"对白光/UV配对图改曝光，显示过曝边界；真实矿物对照只作理解荧光不等于油。"},
+      {"time":"4:30–5:10","focus":"m4：工况与层段分开","action":"固定地层改变工况或增加薄层，展示候选边界变化；不给聚类编号直接贴岩性真值。"},
+      {"time":"5:10–6:30","focus":"m5：五种证据回到一句话","action":"点击报告句定位来源，改一个否定词/数值，展示当前确认撤销和版本历史；下载一份真实HTML/JSON。避免长篇算法公式。"},
+      {"time":"6:30–7:00","focus":"导学增强与边界","action":"角色用一句‘带我看气测’完成导航后收起；说明本地导览离线、云问答可选联网。把未验收原生实时语音和角色许可核验如实列出。"}
+    ],
+    "currentHighlights": [
+      "五个不同业务场景形成同井证据故事，数量是五个可独立运行/导入的成品。",
+      "专业概念能变成可操作变量：迟到、曝光、计数与面积、工况、否定和来源版本。",
+      "把误判和复核变成可见过程，模型不一定每个情景都赢。",
+      "m5句子能追到具体证据，适合作为五例的收束。",
+      "原门户添加契约保留，自己的首页与导学能力作为增强。"
+    ],
+    "avoid": [
+      "不把61候选讲成61个已完成案例；不把本浏览器1个注册讲成总提交数量。",
+      "不把内部开发启动包的额外研究门槛或saphir六标签说成老师硬性要求。",
+      "不让角色动作、通用闲聊或模型型号占据主要展示时间。",
+      "不把模型返回或来源链接等同事实已复核；不把合成高分讲成现场能力。",
+      "不隐藏角色许可未核验，也不把源码一致性检查讲成浏览器通过。"
+    ]
+  },
+  "mutations": "只新增本审阅JSON与专用目录截图；未改产品源码、案例成品、原门户、历史验收报告；浏览器状态仅本独立内存会话。"
+}

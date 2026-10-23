@@ -1,0 +1,39 @@
+{
+  "scope": "Actual offline native teacher import / compute / export readiness / refresh for m1",
+  "checks": [
+    {
+      "name": "m1 original native file import registers 1.3.0",
+      "passed": true
+    },
+    {
+      "name": "m1 original background visible offline",
+      "passed": true
+    },
+    {
+      "name": "m1 original workflow visible offline",
+      "passed": true
+    },
+    {
+      "name": "m1 original opaque sandbox computes offline",
+      "passed": true
+    },
+    {
+      "name": "figure zoom opens in unchanged teacher sandbox",
+      "passed": true
+    },
+    {
+      "name": "m1 new interaction ready in offline opaque sandbox",
+      "passed": true
+    },
+    {
+      "name": "m1 offline compare responds to keyboard",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "exception": "m1 offline compare responds to keyboard",
+  "checkedAt": "2026-10-23T13:48:35.652Z",
+  "passed": 6,
+  "failed": 1
+}

@@ -1,0 +1,230 @@
+{
+  "scope": "Actual offline native teacher import / compute / export readiness / refresh for m2",
+  "checks": [
+    {
+      "name": "m2 original native file import registers 1.3.0",
+      "passed": true
+    },
+    {
+      "name": "m2 original background visible offline",
+      "passed": true
+    },
+    {
+      "name": "m2 original workflow visible offline",
+      "passed": true
+    },
+    {
+      "name": "m2 original opaque sandbox computes offline",
+      "passed": true
+    },
+    {
+      "name": "m2 new interaction ready in offline opaque sandbox",
+      "passed": true
+    },
+    {
+      "name": "m2 offline timeline window actually changes",
+      "passed": true
+    },
+    {
+      "name": "m2 ready export control enabled (download checked separately)",
+      "passed": true
+    },
+    {
+      "name": "m2 refresh reruns with same metrics",
+      "passed": true
+    },
+    {
+      "name": "cumulative imports retained",
+      "passed": true
+    },
+    {
+      "name": "zero HTTP requests",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "case": {
+    "id": "s17-mudgas-context",
+    "scene": "m2",
+    "metrics": {
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "error_s": 10
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "error_s": 0
+        },
+        {
+          "pred": 2,
+          "truth": 2,
+          "error_s": 0
+        },
+        {
+          "pred": 3,
+          "truth": 3,
+          "error_s": 0
+        },
+        {
+          "pred": 4,
+          "truth": 4,
+          "error_s": 0
+        },
+        {
+          "pred": 5,
+          "truth": 5,
+          "error_s": 0
+        },
+        {
+          "pred": 6,
+          "truth": 6,
+          "error_s": 0
+        },
+        {
+          "pred": 7,
+          "truth": 7,
+          "error_s": 0
+        }
+      ],
+      "misses": [],
+      "extras": [],
+      "detectionRecall": 1,
+      "truthCount": 8,
+      "candidateCount": 8,
+      "model": {
+        "matrix": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          }
+        ],
+        "macroF1": 1,
+        "total": 8,
+        "accepted": 8,
+        "wrong": 0,
+        "coverage": 1,
+        "acceptedError": 0
+      },
+      "baseline": {
+        "matrix": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 0.8
+          },
+          {
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          }
+        ],
+        "macroF1": 0.8666666666666666,
+        "total": 8,
+        "accepted": 8,
+        "wrong": 1,
+        "coverage": 1,
+        "acceptedError": 0.125
+      },
+      "depthMAE_m": 0,
+      "depthN": 2,
+      "falsePersistent": {
+        "count": 0,
+        "denominator": 6
+      },
+      "allCandidateCoverage": 1
+    }
+  },
+  "storedIds": [
+    "s17-cuttings-lithology",
+    "s17-mudgas-context"
+  ],
+  "checkedAt": "2026-10-23T13:55:46.536Z",
+  "passed": 11,
+  "failed": 0
+}

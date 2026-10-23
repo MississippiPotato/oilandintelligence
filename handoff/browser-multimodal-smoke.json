@@ -1,0 +1,84 @@
+{
+  "portalVersion": "1.3.0-preview",
+  "scope": "actual Chrome UI, local synthetic microphone device, mocked API errors/history; live paid API recorded separately in ark-browser-live.json",
+  "checks": [
+    {
+      "name": "replacement official Natori model rendered",
+      "status": "passed"
+    },
+    {
+      "name": "Natori idle animation changes actual canvas",
+      "status": "passed"
+    },
+    {
+      "name": "image and audio can be locally previewed without model request",
+      "status": "passed"
+    },
+    {
+      "name": "no configured model means no upload and attachments retained",
+      "status": "passed"
+    },
+    {
+      "name": "390px attachment panel stays within viewport",
+      "status": "passed"
+    },
+    {
+      "name": "mobile model controls fit and are reachable",
+      "status": "passed"
+    },
+    {
+      "name": "API failure is shown and attachments remain for retry",
+      "status": "passed"
+    },
+    {
+      "name": "multimodal API request has text/image/audio and no server storage",
+      "status": "passed"
+    },
+    {
+      "name": "success clears pending files and escapes model content",
+      "status": "passed"
+    },
+    {
+      "name": "following turn does not retransmit attachment binary",
+      "status": "passed"
+    },
+    {
+      "name": "actual MediaRecorder output converts to WAV and releases tracks",
+      "status": "passed"
+    },
+    {
+      "name": "remove recording discards local attachment",
+      "status": "passed"
+    },
+    {
+      "name": "closing assistant stops and discards active microphone recording",
+      "status": "passed"
+    },
+    {
+      "name": "teacher import modal remains above assistant",
+      "status": "passed"
+    },
+    {
+      "name": "working portal native add-case import survives refresh and m2 demo page renders",
+      "status": "passed"
+    },
+    {
+      "name": "refresh resets model credentials and attachments",
+      "status": "passed"
+    },
+    {
+      "name": "offline file loads Natori, guide and media UI with zero HTTP",
+      "status": "passed"
+    },
+    {
+      "name": "no JavaScript page errors",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "offlineHTTP": [],
+  "microphone": "Chromium fake audio device; no physical microphone or human recording used",
+  "passed": 18,
+  "failed": 0,
+  "createdAt": "2026-10-23T11:04:46.491Z"
+}

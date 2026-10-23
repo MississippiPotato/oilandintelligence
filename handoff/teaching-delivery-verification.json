@@ -1,0 +1,265 @@
+{
+  "checkedAt": "2026-10-23T13:02:23.786Z",
+  "scope": "Final files, native persisted packages and actual browser records reconciled. File checks are not browser execution.",
+  "portalVersion": "1.4.0-preview",
+  "caseVersion": "1.2.0",
+  "caseCount": 5,
+  "otherScenesImplemented": 0,
+  "caseFiles": 25,
+  "totalCaseBytes": 894340,
+  "persistedCaseBytes": 916674,
+  "originalFilesUnchanged": 46,
+  "originalContractModulesUnchanged": 4,
+  "algorithmAndFrozenDataFilesUnchanged": 13,
+  "defaultMetricsEqualToBeforeReview": true,
+  "calculationChecks": 37,
+  "reports": [
+    {
+      "file": "handoff/teaching-refresh-2026-10-23/browser-teaching-views-final.json",
+      "passed": 75,
+      "scope": "Current 1.2.0 standalone Chrome rendering and real interactions; not field performance",
+      "checkedAt": "2026-10-23T12:57:57.365Z"
+    },
+    {
+      "file": "handoff/teaching-refresh-2026-10-23/browser-home.json",
+      "passed": 15,
+      "scope": "Current 1.4.0-preview homepage, accurate completion/registration, empty scene, mobile, local guide and original add dialog; actual browser",
+      "checkedAt": null
+    },
+    {
+      "file": "handoff/teaching-refresh-2026-10-23/browser-contract-http.json",
+      "passed": 44,
+      "scope": "Current five cases through unchanged teacher 添加案例, real sandbox compute/download/refresh, then unchanged firstbreak through enhanced portal",
+      "checkedAt": "2026-10-23T12:56:20.718Z"
+    },
+    {
+      "file": "handoff/teaching-refresh-2026-10-23/browser-offline.json",
+      "passed": 62,
+      "scope": "Current file-offline original five-case native import / compute / refresh; actual HTML + extracted JSON and standalone runs. Four upstream inputs were downloaded via original HTTP earlier this revision, not re-exported offline.",
+      "checkedAt": "2026-10-23T12:59:02.249Z"
+    },
+    {
+      "file": "handoff/teaching-refresh-2026-10-23/browser-guide-compact.json",
+      "passed": 4,
+      "scope": "actual final compact guide control",
+      "checkedAt": "2026-10-23T12:31:27.424Z"
+    },
+    {
+      "file": "handoff/teaching-refresh-2026-10-23/browser-upgrade.json",
+      "passed": 7,
+      "scope": "Actual native import of preserved v1.1 m2, visible upgrade guidance, and new 1.2 standalone route in an isolated automation profile",
+      "checkedAt": "2026-10-23T12:35:18.941Z"
+    }
+  ],
+  "browserChecksAreOverlapping": true,
+  "actualExports": [
+    {
+      "file": "output/exports/v1.2/original-http-m1.json",
+      "sha256": "12a74222c831d92d257ec235d74817d69877e2d2560ca69d0cf118c47d694ee8",
+      "claims": 12,
+      "sources": 1
+    },
+    {
+      "file": "output/exports/v1.2/original-http-m2.json",
+      "sha256": "84b788d900d399250c54ad8285b4ebfe0a33c84824cbdb191c7656a8e3ad1c44",
+      "claims": 8,
+      "sources": 16
+    },
+    {
+      "file": "output/exports/v1.2/original-http-m3.json",
+      "sha256": "89405a1ceb7f8c851a43578d17a854f355fb3357a592b157e738d76b908a3cb6",
+      "claims": 1,
+      "sources": 1
+    },
+    {
+      "file": "output/exports/v1.2/original-http-m4.json",
+      "sha256": "4d41c24edb360a2f188e791fdf4fc3319a5f908af339cd99c2a126649180d760",
+      "claims": 2,
+      "sources": 1
+    },
+    {
+      "file": "output/exports/v1.2/original-http-m5.json",
+      "sha256": "a4b0e2464a1ca9dfd5ac35302983342cbd7ef555dfbcf05b1d9ec645a004ab00",
+      "claims": 6,
+      "sources": 1
+    }
+  ],
+  "linkedReport": {
+    "upstreamCases": 4,
+    "claims": 29,
+    "sources": 21,
+    "jsonEqualsEmbeddedHTML": true,
+    "currentConfirmationRevoked": true
+  },
+  "newPaidModelRequests": 0,
+  "apiVerification": "Historical actual API records retained; media and provider adapter hashes unchanged; no new live API validation this revision.",
+  "files": [
+    {
+      "path": "portal/index.html",
+      "bytes": 3344,
+      "sha256": "01f5f20fa9ed51220f6106251b5a4499a6dcd9a972a3323512abf14c94c21946"
+    },
+    {
+      "path": "portal/assets/core/shell.js",
+      "bytes": 63772,
+      "sha256": "2b19b8533a2bff1aaf939eb2bafbe55c394bbafc5b3337f8fe9030214031204c"
+    },
+    {
+      "path": "portal/assets/s17-course.js",
+      "bytes": 1965,
+      "sha256": "001cbdbaf9ee8b405c0f4252936bc9220a2658ebd072887a6935a2da83550e76"
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "bytes": 7790,
+      "sha256": "f42858e11fc6bb1fa294a03f72836c8181c61dbf142d9b5ffa4faa32a7745bda"
+    },
+    {
+      "path": "portal/assets/s17.css",
+      "bytes": 5433,
+      "sha256": "5a5b1b9c60e447c8420b98ba4d297f1f75542e4da94016b5666cb372541980a6"
+    },
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "bytes": 16830,
+      "sha256": "560880a5f6065a18bf7b65afb1be09fee6e757730f5665d0e525d7a86d80b423"
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "bytes": 9706,
+      "sha256": "a61126f58415112de703eb5971635479a39fa16ffbc126fa8cc7f1c9e301af7e"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/case.json",
+      "bytes": 18554,
+      "sha256": "92b345a5583ef4160166e86ddbb88c42e536b1dbd7f5856785b4d8607b753bdc"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/README.txt",
+      "bytes": 773,
+      "sha256": "8672cac7b61193265c77646eff5a8258847b0dfff3d5afd00c6685661e07fa24"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+      "bytes": 5170,
+      "sha256": "81d6b5a17e8a7a5b53a102a4691be62b7fa9734952b264a3d78535d65132cc31"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+      "bytes": 11432,
+      "sha256": "262cf63ae009ad2aa91e8cdaef2194e3d36515f3768b7b7ed1d56ab0ac051301"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "bytes": 143815,
+      "sha256": "b356955c883e6e2bdd97cfcee220ea99182b4ea86e570d14988058f41d107470"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "bytes": 22572,
+      "sha256": "c4cbcc24cd5462113e2df75fcd72f6e2bb25915d2c92b32bba196ee2fdfd21b5"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "bytes": 1246,
+      "sha256": "7d8aebc595fb685cef24efda9457726e8d0bf74d2d0547347b975034debe3d63"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "bytes": 7968,
+      "sha256": "f9921af5e6d85f0c4f5e469a7adf8d291ed5518bf1b879cab0fb1ca3a15d7f2c"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "bytes": 10557,
+      "sha256": "4678f336caec7217346abe251792fc4e642016d23cf33019045ed4d7117901d7"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "bytes": 89438,
+      "sha256": "8b5616352900942809f28256529d395efa7f783c20829b976fb421e071475593"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/case.json",
+      "bytes": 17922,
+      "sha256": "493ae039ab394ac693627a09732eaf70e3919b0adcfd3985e0ac802843c65e42"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/README.txt",
+      "bytes": 738,
+      "sha256": "3114e5bbf0cdf002d0278f0a526ea72c829a6df7da1e24e7c882879ef767297d"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/index.html",
+      "bytes": 4897,
+      "sha256": "5c274bd2b013ba617053c81f62650a8e04aa79ed895a0dce495988afaa5361ff"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.css",
+      "bytes": 11432,
+      "sha256": "262cf63ae009ad2aa91e8cdaef2194e3d36515f3768b7b7ed1d56ab0ac051301"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.js",
+      "bytes": 66879,
+      "sha256": "4778eba7ee64f1f07b8ac534fbeaee4756aa2449f46fad6f296da67e272cf82f"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/case.json",
+      "bytes": 16879,
+      "sha256": "db40f92adfaa846b0004690280429e35283f1c0a1586db6602c6cd22c2368f21"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/README.txt",
+      "bytes": 745,
+      "sha256": "a39f9be6b50a4e0a594ddca262da1a917c6ce282a5989ea0596117dc312131c4"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/index.html",
+      "bytes": 4716,
+      "sha256": "d6316eed16c13f04b36ca519c3e084e15b27b4ece747d9fae30b009f8c52ab75"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+      "bytes": 11432,
+      "sha256": "262cf63ae009ad2aa91e8cdaef2194e3d36515f3768b7b7ed1d56ab0ac051301"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+      "bytes": 152889,
+      "sha256": "b12618172d711fa7620d5cdd477d36c4368601988df520b64c16c5cec5d6eb9d"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/case.json",
+      "bytes": 17160,
+      "sha256": "ec7cfd3ead0f39d829a65c212a2263a97b20443098f7d5a2837aae837013297d"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/README.txt",
+      "bytes": 757,
+      "sha256": "2a9000b3f441b692ec13de24789f418f94f466b29b97415e29cca9b5afb634ec"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/index.html",
+      "bytes": 5479,
+      "sha256": "5222e9eb032c97a361c09336d4267c6ed837c50f1093302b966b5d287ec39c53"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.css",
+      "bytes": 11432,
+      "sha256": "262cf63ae009ad2aa91e8cdaef2194e3d36515f3768b7b7ed1d56ab0ac051301"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.js",
+      "bytes": 259458,
+      "sha256": "abf91607b3647ec49b7e5814ed9c0b716b4031252cf193bd6baf3cd1bb4fea64"
+    }
+  ],
+  "notVerified": [
+    "Diana public redistribution permission",
+    "Other browsers, real mobile devices and physical microphone/listening quality",
+    "Whole browser-process close/reopen persistence in this revision (refresh was actually rerun)",
+    "Field predictive accuracy; genuine paired field white-light/UV evaluation",
+    "Native real-time speech, video UI, other 56 scenes and G5 are outside this revision"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "real-photo teaching page and its assistant navigation; UI checks only, no model benchmark",
+  "checks": [
+    {
+      "name": "original visible and UV images decode offline",
+      "status": "passed"
+    },
+    {
+      "name": "light switch changes the original photograph",
+      "status": "passed"
+    },
+    {
+      "name": "teaching interaction reveals mineral versus oil interpretation",
+      "status": "passed"
+    },
+    {
+      "name": "reference page 390px layout has no horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "assistant routes to the real-photo reference page",
+      "status": "passed"
+    },
+    {
+      "name": "real model stays explicitly unconnected",
+      "status": "passed"
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "passed": 7,
+  "failed": 0
+}

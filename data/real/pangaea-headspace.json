@@ -1,0 +1,645 @@
+{
+  "id": "PANGAEA-975497-v1",
+  "dataNature": "public_measured",
+  "wellId": "386-M0091D",
+  "title": "IODP 386-M0091D顶空甲烷/乙烷",
+  "authors": "Strasser, Michael et al. (2025)",
+  "source": "https://doi.org/10.1594/PANGAEA.975497",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "originalSHA256": "410bbc9869bf0f592e5d218b8d2f3ede0bffd39226aaae780642ba86fd0a2f2e",
+  "units": {
+    "depth": "m (sediment/rock)",
+    "CH4": "ppmv",
+    "C2H6": "ppmv",
+    "ratio": "dimensionless"
+  },
+  "transform": "All original 62 records, including paired samples retained with sample label and IGSN; numeric values unchanged. Ratios recomputed only when measured C2H6 > 0, separately from publisher ratio.",
+  "limitations": [
+    "Headspace gas from recovered sediment samples, not surface mud-gas time series.",
+    "Sediment/rock depth is not DEMO-017 MD; no pump transport, operation labels or event classification gold.",
+    "Parallel sample pairs are not independent observations for performance estimation."
+  ],
+  "rows": [
+    {
+      "sourceRow": 1,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-1,21-25",
+      "IGSN": "IBCR0386EXDQD01",
+      "depth_m": 0.21,
+      "CH4_ppmv": 121,
+      "C2H6_ppmv": 0.42,
+      "publisherRatio": 285
+    },
+    {
+      "sourceRow": 2,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-1,21-25",
+      "IGSN": "IBCR0386EXEQD01",
+      "depth_m": 0.21,
+      "CH4_ppmv": 121,
+      "C2H6_ppmv": 0.42,
+      "publisherRatio": 285
+    },
+    {
+      "sourceRow": 3,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-2,97.5-101.5",
+      "IGSN": "IBCR0386EXFQD01",
+      "depth_m": 1.225,
+      "CH4_ppmv": 153,
+      "C2H6_ppmv": 0.52,
+      "publisherRatio": 293
+    },
+    {
+      "sourceRow": 4,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-2,97.5-101.5",
+      "IGSN": "IBCR0386EXGQD01",
+      "depth_m": 1.225,
+      "CH4_ppmv": 153,
+      "C2H6_ppmv": 0.52,
+      "publisherRatio": 293
+    },
+    {
+      "sourceRow": 5,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-3,97-101",
+      "IGSN": "IBCR0386EXHQD01",
+      "depth_m": 2.235,
+      "CH4_ppmv": 87,
+      "C2H6_ppmv": 0.35,
+      "publisherRatio": 250
+    },
+    {
+      "sourceRow": 6,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-3,97-101",
+      "IGSN": "IBCR0386EXIQD01",
+      "depth_m": 2.235,
+      "CH4_ppmv": 87,
+      "C2H6_ppmv": 0.35,
+      "publisherRatio": 250
+    },
+    {
+      "sourceRow": 7,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-4,96.5-100.5",
+      "IGSN": "IBCR0386EXJQD01",
+      "depth_m": 3.24,
+      "CH4_ppmv": 276,
+      "C2H6_ppmv": 0.74,
+      "publisherRatio": 372
+    },
+    {
+      "sourceRow": 8,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-4,96.5-100.5",
+      "IGSN": "IBCR0386EXKQD01",
+      "depth_m": 3.24,
+      "CH4_ppmv": 276,
+      "C2H6_ppmv": 0.74,
+      "publisherRatio": 372
+    },
+    {
+      "sourceRow": 9,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-5,97-101",
+      "IGSN": "IBCR0386EXLQD01",
+      "depth_m": 4.25,
+      "CH4_ppmv": 237,
+      "C2H6_ppmv": 0.49,
+      "publisherRatio": 484
+    },
+    {
+      "sourceRow": 10,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-5,97-101",
+      "IGSN": "IBCR0386EXMQD01",
+      "depth_m": 4.25,
+      "CH4_ppmv": 237,
+      "C2H6_ppmv": 0.49,
+      "publisherRatio": 484
+    },
+    {
+      "sourceRow": 11,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-6,96.5-100.5",
+      "IGSN": "IBCR0386EXNQD01",
+      "depth_m": 5.255,
+      "CH4_ppmv": 385,
+      "C2H6_ppmv": 0.73,
+      "publisherRatio": 525
+    },
+    {
+      "sourceRow": 12,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-6,96.5-100.5",
+      "IGSN": "IBCR0386EXOQD01",
+      "depth_m": 5.255,
+      "CH4_ppmv": 385,
+      "C2H6_ppmv": 0.73,
+      "publisherRatio": 525
+    },
+    {
+      "sourceRow": 13,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-7,96.5-100.5",
+      "IGSN": "IBCR0386EXPQD01",
+      "depth_m": 6.26,
+      "CH4_ppmv": 152,
+      "C2H6_ppmv": 0.44,
+      "publisherRatio": 347
+    },
+    {
+      "sourceRow": 14,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-7,96.5-100.5",
+      "IGSN": "IBCR0386EXQQD01",
+      "depth_m": 6.26,
+      "CH4_ppmv": 152,
+      "C2H6_ppmv": 0.44,
+      "publisherRatio": 347
+    },
+    {
+      "sourceRow": 15,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-8,97-101",
+      "IGSN": "IBCR0386EXRQD01",
+      "depth_m": 7.27,
+      "CH4_ppmv": 153,
+      "C2H6_ppmv": 0.55,
+      "publisherRatio": 277
+    },
+    {
+      "sourceRow": 16,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-8,97-101",
+      "IGSN": "IBCR0386EXSQD01",
+      "depth_m": 7.27,
+      "CH4_ppmv": 153,
+      "C2H6_ppmv": 0.55,
+      "publisherRatio": 277
+    },
+    {
+      "sourceRow": 17,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-9,96.5-100.5",
+      "IGSN": "IBCR0386EXTQD01",
+      "depth_m": 8.275,
+      "CH4_ppmv": 129,
+      "C2H6_ppmv": 0.45,
+      "publisherRatio": 286
+    },
+    {
+      "sourceRow": 18,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-9,96.5-100.5",
+      "IGSN": "IBCR0386EXUQD01",
+      "depth_m": 8.275,
+      "CH4_ppmv": 129,
+      "C2H6_ppmv": 0.45,
+      "publisherRatio": 286
+    },
+    {
+      "sourceRow": 19,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-10,97.5-101.5",
+      "IGSN": "IBCR0386EXVQD01",
+      "depth_m": 9.29,
+      "CH4_ppmv": 119,
+      "C2H6_ppmv": 0.38,
+      "publisherRatio": 318
+    },
+    {
+      "sourceRow": 20,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-10,97.5-101.5",
+      "IGSN": "IBCR0386EXWQD01",
+      "depth_m": 9.29,
+      "CH4_ppmv": 119,
+      "C2H6_ppmv": 0.38,
+      "publisherRatio": 318
+    },
+    {
+      "sourceRow": 21,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-11,96.5-100.5",
+      "IGSN": "IBCR0386EXXQD01",
+      "depth_m": 10.295,
+      "CH4_ppmv": 165,
+      "C2H6_ppmv": 0.39,
+      "publisherRatio": 424
+    },
+    {
+      "sourceRow": 22,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-11,96.5-100.5",
+      "IGSN": "IBCR0386EXYQD01",
+      "depth_m": 10.295,
+      "CH4_ppmv": 165,
+      "C2H6_ppmv": 0.39,
+      "publisherRatio": 424
+    },
+    {
+      "sourceRow": 23,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-12,96.5-100.5",
+      "IGSN": "IBCR0386EXZQD01",
+      "depth_m": 11.3,
+      "CH4_ppmv": 202,
+      "C2H6_ppmv": 0.39,
+      "publisherRatio": 516
+    },
+    {
+      "sourceRow": 24,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-12,96.5-100.5",
+      "IGSN": "IBCR0386EX0RD01",
+      "depth_m": 11.3,
+      "CH4_ppmv": 202,
+      "C2H6_ppmv": 0.39,
+      "publisherRatio": 516
+    },
+    {
+      "sourceRow": 25,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-13,97-101",
+      "IGSN": "IBCR0386EX1RD01",
+      "depth_m": 12.31,
+      "CH4_ppmv": 392,
+      "C2H6_ppmv": 0.44,
+      "publisherRatio": 894
+    },
+    {
+      "sourceRow": 26,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-13,97-101",
+      "IGSN": "IBCR0386EX2RD01",
+      "depth_m": 12.31,
+      "CH4_ppmv": 392,
+      "C2H6_ppmv": 0.44,
+      "publisherRatio": 894
+    },
+    {
+      "sourceRow": 27,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-14,97-101",
+      "IGSN": "IBCR0386EX3RD01",
+      "depth_m": 13.32,
+      "CH4_ppmv": 632,
+      "C2H6_ppmv": 0.38,
+      "publisherRatio": 1654
+    },
+    {
+      "sourceRow": 28,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-14,97-101",
+      "IGSN": "IBCR0386EX4RD01",
+      "depth_m": 13.32,
+      "CH4_ppmv": 632,
+      "C2H6_ppmv": 0.38,
+      "publisherRatio": 1654
+    },
+    {
+      "sourceRow": 29,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-15,97.5-101.5",
+      "IGSN": "IBCR0386EX5RD01",
+      "depth_m": 14.335,
+      "CH4_ppmv": 1280,
+      "C2H6_ppmv": 0.6,
+      "publisherRatio": 2122
+    },
+    {
+      "sourceRow": 30,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-15,97.5-101.5",
+      "IGSN": "IBCR0386EX6RD01",
+      "depth_m": 14.335,
+      "CH4_ppmv": 1280,
+      "C2H6_ppmv": 0.6,
+      "publisherRatio": 2122
+    },
+    {
+      "sourceRow": 31,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-16,97-101",
+      "IGSN": "IBCR0386EX7RD01",
+      "depth_m": 15.345,
+      "CH4_ppmv": 1416,
+      "C2H6_ppmv": 0.72,
+      "publisherRatio": 1965
+    },
+    {
+      "sourceRow": 32,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-16,97-101",
+      "IGSN": "IBCR0386EX8RD01",
+      "depth_m": 15.345,
+      "CH4_ppmv": 1416,
+      "C2H6_ppmv": 0.72,
+      "publisherRatio": 1965
+    },
+    {
+      "sourceRow": 33,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-17,97.5-101.5",
+      "IGSN": "IBCR0386EX9RD01",
+      "depth_m": 16.36,
+      "CH4_ppmv": 2141,
+      "C2H6_ppmv": 0.64,
+      "publisherRatio": 3370
+    },
+    {
+      "sourceRow": 34,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-17,97.5-101.5",
+      "IGSN": "IBCR0386EXARD01",
+      "depth_m": 16.36,
+      "CH4_ppmv": 2141,
+      "C2H6_ppmv": 0.64,
+      "publisherRatio": 3370
+    },
+    {
+      "sourceRow": 35,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-18,97-101",
+      "IGSN": "IBCR0386EXBRD01",
+      "depth_m": 17.37,
+      "CH4_ppmv": 2372,
+      "C2H6_ppmv": 0.46,
+      "publisherRatio": 5105
+    },
+    {
+      "sourceRow": 36,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-18,97-101",
+      "IGSN": "IBCR0386EXCRD01",
+      "depth_m": 17.37,
+      "CH4_ppmv": 2372,
+      "C2H6_ppmv": 0.46,
+      "publisherRatio": 5105
+    },
+    {
+      "sourceRow": 37,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-19,97-101",
+      "IGSN": "IBCR0386EXDRD01",
+      "depth_m": 18.38,
+      "CH4_ppmv": 3772,
+      "C2H6_ppmv": 0.65,
+      "publisherRatio": 5791
+    },
+    {
+      "sourceRow": 38,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-19,97-101",
+      "IGSN": "IBCR0386EXERD01",
+      "depth_m": 18.38,
+      "CH4_ppmv": 3772,
+      "C2H6_ppmv": 0.65,
+      "publisherRatio": 5791
+    },
+    {
+      "sourceRow": 39,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-20,97-101",
+      "IGSN": "IBCR0386EXFRD01",
+      "depth_m": 19.39,
+      "CH4_ppmv": 3531,
+      "C2H6_ppmv": 0.47,
+      "publisherRatio": 7535
+    },
+    {
+      "sourceRow": 40,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-20,97-101",
+      "IGSN": "IBCR0386EXGRD01",
+      "depth_m": 19.39,
+      "CH4_ppmv": 3531,
+      "C2H6_ppmv": 0.47,
+      "publisherRatio": 7535
+    },
+    {
+      "sourceRow": 41,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-21,97-101",
+      "IGSN": "IBCR0386EXHRD01",
+      "depth_m": 20.4,
+      "CH4_ppmv": 6713,
+      "C2H6_ppmv": 0.56,
+      "publisherRatio": 12058
+    },
+    {
+      "sourceRow": 42,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-21,97-101",
+      "IGSN": "IBCR0386EXIRD01",
+      "depth_m": 20.4,
+      "CH4_ppmv": 6713,
+      "C2H6_ppmv": 0.56,
+      "publisherRatio": 12058
+    },
+    {
+      "sourceRow": 43,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-22,97-101",
+      "IGSN": "IBCR0386EXJRD01",
+      "depth_m": 21.41,
+      "CH4_ppmv": 7352,
+      "C2H6_ppmv": 0.71,
+      "publisherRatio": 10418
+    },
+    {
+      "sourceRow": 44,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-22,97-101",
+      "IGSN": "IBCR0386EXKRD01",
+      "depth_m": 21.41,
+      "CH4_ppmv": 7352,
+      "C2H6_ppmv": 0.71,
+      "publisherRatio": 10418
+    },
+    {
+      "sourceRow": 45,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-23,97-101",
+      "IGSN": "IBCR0386EXLRD01",
+      "depth_m": 22.42,
+      "CH4_ppmv": 9752,
+      "C2H6_ppmv": 0.52,
+      "publisherRatio": 18721
+    },
+    {
+      "sourceRow": 46,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-23,97-101",
+      "IGSN": "IBCR0386EXMRD01",
+      "depth_m": 22.42,
+      "CH4_ppmv": 9752,
+      "C2H6_ppmv": 0.52,
+      "publisherRatio": 18721
+    },
+    {
+      "sourceRow": 47,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-24,98-102",
+      "IGSN": "IBCR0386EXNRD01",
+      "depth_m": 23.44,
+      "CH4_ppmv": 9116,
+      "C2H6_ppmv": 0.78,
+      "publisherRatio": 11733
+    },
+    {
+      "sourceRow": 48,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-24,98-102",
+      "IGSN": "IBCR0386EXORD01",
+      "depth_m": 23.44,
+      "CH4_ppmv": 9116,
+      "C2H6_ppmv": 0.78,
+      "publisherRatio": 11733
+    },
+    {
+      "sourceRow": 49,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-25,98.5-102.5",
+      "IGSN": "IBCR0386EXPRD01",
+      "depth_m": 24.465,
+      "CH4_ppmv": 10900,
+      "C2H6_ppmv": 0.71,
+      "publisherRatio": 15370
+    },
+    {
+      "sourceRow": 50,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-25,98.5-102.5",
+      "IGSN": "IBCR0386EXQRD01",
+      "depth_m": 24.465,
+      "CH4_ppmv": 10900,
+      "C2H6_ppmv": 0.71,
+      "publisherRatio": 15370
+    },
+    {
+      "sourceRow": 51,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-26,100.5-104.5",
+      "IGSN": "IBCR0386EXRRD01",
+      "depth_m": 25.51,
+      "CH4_ppmv": 9890,
+      "C2H6_ppmv": 0.47,
+      "publisherRatio": 21022
+    },
+    {
+      "sourceRow": 52,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-26,100.5-104.5",
+      "IGSN": "IBCR0386EXSRD01",
+      "depth_m": 25.51,
+      "CH4_ppmv": 9890,
+      "C2H6_ppmv": 0.47,
+      "publisherRatio": 21022
+    },
+    {
+      "sourceRow": 53,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-27,101.5-105.5",
+      "IGSN": "IBCR0386EXTRD01",
+      "depth_m": 26.565,
+      "CH4_ppmv": 15150,
+      "C2H6_ppmv": 0.49,
+      "publisherRatio": 30926
+    },
+    {
+      "sourceRow": 54,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-27,101.5-105.5",
+      "IGSN": "IBCR0386EXURD01",
+      "depth_m": 26.565,
+      "CH4_ppmv": 15150,
+      "C2H6_ppmv": 0.49,
+      "publisherRatio": 30926
+    },
+    {
+      "sourceRow": 55,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-28,100.5-104.5",
+      "IGSN": "IBCR0386EXVRD01",
+      "depth_m": 27.61,
+      "CH4_ppmv": 13657,
+      "C2H6_ppmv": 0.76,
+      "publisherRatio": 17869
+    },
+    {
+      "sourceRow": 56,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-28,100.5-104.5",
+      "IGSN": "IBCR0386EXWRD01",
+      "depth_m": 27.61,
+      "CH4_ppmv": 13657,
+      "C2H6_ppmv": 0.76,
+      "publisherRatio": 17869
+    },
+    {
+      "sourceRow": 57,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-29,105-109",
+      "IGSN": "IBCR0386EXXRD01",
+      "depth_m": 28.7,
+      "CH4_ppmv": 17242,
+      "C2H6_ppmv": 0.79,
+      "publisherRatio": 21812
+    },
+    {
+      "sourceRow": 58,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-29,105-109",
+      "IGSN": "IBCR0386EXYRD01",
+      "depth_m": 28.7,
+      "CH4_ppmv": 17242,
+      "C2H6_ppmv": 0.79,
+      "publisherRatio": 21812
+    },
+    {
+      "sourceRow": 59,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-30,102-106",
+      "IGSN": "IBCR0386EXZRD01",
+      "depth_m": 29.76,
+      "CH4_ppmv": 17219,
+      "C2H6_ppmv": 0.68,
+      "publisherRatio": 25503
+    },
+    {
+      "sourceRow": 60,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-30,102-106",
+      "IGSN": "IBCR0386EX0SD01",
+      "depth_m": 29.76,
+      "CH4_ppmv": 17219,
+      "C2H6_ppmv": 0.68,
+      "publisherRatio": 25503
+    },
+    {
+      "sourceRow": 61,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-31,102-106",
+      "IGSN": "IBCR0386EX1SD01",
+      "depth_m": 30.82,
+      "CH4_ppmv": 14799,
+      "C2H6_ppmv": 0.75,
+      "publisherRatio": 19695
+    },
+    {
+      "sourceRow": 62,
+      "event": "386-M0091D",
+      "sample": "386-M0091D-1H-31,102-106",
+      "IGSN": "IBCR0386EX2SD01",
+      "depth_m": 30.82,
+      "CH4_ppmv": 14799,
+      "C2H6_ppmv": 0.75,
+      "publisherRatio": 19695
+    }
+  ]
+}

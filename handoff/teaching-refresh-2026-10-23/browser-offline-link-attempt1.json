@@ -1,0 +1,23 @@
+{
+  "scope": "Actual file-offline evidence exchange. Inputs are four current JSON files actually downloaded through the original HTTP portal earlier this revision; this does not claim four offline downloads.",
+  "checks": [
+    {
+      "name": "four current actually downloaded upstream packages linked offline",
+      "passed": true,
+      "detail": {
+        "claims": 29,
+        "sources": 21
+      }
+    },
+    {
+      "name": "upstream original image and current source graph render",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "exception": "locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('#verify-meaning')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" id=\"verify-meaning\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n",
+  "checkedAt": "2026-10-23T12:46:32.533Z",
+  "passed": 2,
+  "failed": 1
+}

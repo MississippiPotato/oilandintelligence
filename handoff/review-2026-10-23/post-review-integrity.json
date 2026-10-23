@@ -1,0 +1,716 @@
+{
+  "checkedAt": "2026-10-23T12:03:52.818Z",
+  "scope": "Source and build SHA256 reconciliation against locks written before this review; not browser acceptance",
+  "productEditsThisReview": 0,
+  "checkedFiles": 101,
+  "mismatches": [],
+  "records": [
+    {
+      "path": "dist/cases/s17-cuttings-lithology/case.json",
+      "group": "five case build",
+      "bytes": 15830,
+      "sha256": "5b8ed97dd296b81b10408de38838815e888fc0607166d290619233a5709e9e5c",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/README.txt",
+      "group": "five case build",
+      "bytes": 773,
+      "sha256": "9e484e5d0647f8b84767d3cec8c8841b99a96d64459b8971c94a4163855f27ed",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+      "group": "five case build",
+      "bytes": 5170,
+      "sha256": "2d618a05e4e431ac2e3e6a53ac996e49bcbc6a87a9adb21046a246519d325ddb",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+      "group": "five case build",
+      "bytes": 7246,
+      "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "group": "five case build",
+      "bytes": 127440,
+      "sha256": "815053a8af6c71a341a1b23c54d6a5dd07727b38d00ad32418ad9d703e8fbb8f",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "group": "five case build",
+      "bytes": 20438,
+      "sha256": "abbbf58e2f8c08e2290093ecc89895a76960d55db255a846425bc67c1bc3ee83",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "group": "five case build",
+      "bytes": 1246,
+      "sha256": "9ac5e5d5a1eb16ca15264f1bd9bb649fa527edd4d69f4e71077d50327cec0b95",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "group": "five case build",
+      "bytes": 7930,
+      "sha256": "043ed955e6d29d3c7dd01f5325161dcbb58d3cfbaf75996370caeb5d12297124",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "group": "five case build",
+      "bytes": 6371,
+      "sha256": "712073247bf4aebeb9ff935596f96513c025946c986ee1c31b8c6ce247b81735",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "group": "five case build",
+      "bytes": 73343,
+      "sha256": "93e748e75c32f7ffd460d3c77acaba9d474271b87482dae1a9577bbdbdd06ecf",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/case.json",
+      "group": "five case build",
+      "bytes": 15740,
+      "sha256": "ba9248dbe61e3f7cff72fdf55f226dce9f9266c4103303fb0eb4ef7cd7b7aab2",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/README.txt",
+      "group": "five case build",
+      "bytes": 738,
+      "sha256": "50cf299238475223a1e73d48685a919cb5c220ebe0b07f674d291e51579e3b5f",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/index.html",
+      "group": "five case build",
+      "bytes": 4897,
+      "sha256": "3fb5e59c535c1783e96b19e7827adc8c5d90e70ece77f0152b7b0b7603fbae90",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.css",
+      "group": "five case build",
+      "bytes": 7246,
+      "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.js",
+      "group": "five case build",
+      "bytes": 50684,
+      "sha256": "79790c0bcfa494c1c2ab113e5e55d3d01a373836c411948298a76ab8432f2d1a",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/case.json",
+      "group": "five case build",
+      "bytes": 14635,
+      "sha256": "47dc10e66277ebf88d4302b02472dc4a93f06ba9e684c7f944da2a1dd1bd87fe",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/README.txt",
+      "group": "five case build",
+      "bytes": 745,
+      "sha256": "dbc7a9733e003f4849bdc3b8398f60842f9ff8bc1d3edd3004c83e3db17078e9",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/index.html",
+      "group": "five case build",
+      "bytes": 4716,
+      "sha256": "2d241a8ec0e3857dad255f1f9136c1999b841e867b1e81f5dba320e5803081ca",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+      "group": "five case build",
+      "bytes": 7246,
+      "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+      "group": "five case build",
+      "bytes": 136694,
+      "sha256": "c53899431bd7adf9143b1109b30a177a1789a77d4798806cc0acddcc4c3170ea",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/case.json",
+      "group": "five case build",
+      "bytes": 15643,
+      "sha256": "7dd572d2a21d3380ae2de33d02199510773590933999366d706c230297b3b859",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/README.txt",
+      "group": "five case build",
+      "bytes": 757,
+      "sha256": "f849aba2897e7a5b08ee868eb3e654c2eb0b1efeda071fd167375dc377dc4367",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/index.html",
+      "group": "five case build",
+      "bytes": 5479,
+      "sha256": "f55b1d9c82056b521b992311f39a4dc8874c1fe2843df4d6f97ff26e26427a63",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.css",
+      "group": "five case build",
+      "bytes": 7246,
+      "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.js",
+      "group": "five case build",
+      "bytes": 240026,
+      "sha256": "6d74658f1d316e29252f4b9da557d43b5a8c2e124bb88b0f6775a70392e5117c",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/.workbuddy/memory/2026-10-22.md",
+      "group": "teacher originals",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/.workbuddy/memory/MEMORY.md",
+      "group": "teacher originals",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/cases/welllog-layer.case.js",
+      "group": "teacher originals",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/cases/welllog-layer.demo.js",
+      "group": "teacher originals",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/cases/_template.case.js",
+      "group": "teacher originals",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/cases/_template.case.json",
+      "group": "teacher originals",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/admin.js",
+      "group": "teacher originals",
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/case-demo-host.js",
+      "group": "teacher originals",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/case-upload.js",
+      "group": "teacher originals",
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/kit.js",
+      "group": "teacher originals",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/layout.css",
+      "group": "teacher originals",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/registry.js",
+      "group": "teacher originals",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/shell.js",
+      "group": "teacher originals",
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/tokens.css",
+      "group": "teacher originals",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/core/ui.css",
+      "group": "teacher originals",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/assets/data.js",
+      "group": "teacher originals",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/docs/如何添加新案例.md",
+      "group": "teacher originals",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/case.json",
+      "group": "teacher originals",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.css",
+      "group": "teacher originals",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.js",
+      "group": "teacher originals",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/index.html",
+      "group": "teacher originals",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/README.txt",
+      "group": "teacher originals",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal-original/index.html",
+      "group": "teacher originals",
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/.workbuddy/memory/2026-10-22.md",
+      "group": "teacher originals",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/.workbuddy/memory/MEMORY.md",
+      "group": "teacher originals",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js",
+      "group": "teacher originals",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/welllog-layer.demo.js",
+      "group": "teacher originals",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/_template.case.js",
+      "group": "teacher originals",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/_template.case.json",
+      "group": "teacher originals",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/admin.js",
+      "group": "teacher originals",
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/case-demo-host.js",
+      "group": "teacher originals",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/case-upload.js",
+      "group": "teacher originals",
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/kit.js",
+      "group": "teacher originals",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/layout.css",
+      "group": "teacher originals",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/registry.js",
+      "group": "teacher originals",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/shell.js",
+      "group": "teacher originals",
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/tokens.css",
+      "group": "teacher originals",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/ui.css",
+      "group": "teacher originals",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/data.js",
+      "group": "teacher originals",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/docs/如何添加新案例.md",
+      "group": "teacher originals",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/case.json",
+      "group": "teacher originals",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.css",
+      "group": "teacher originals",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.js",
+      "group": "teacher originals",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/index.html",
+      "group": "teacher originals",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/README.txt",
+      "group": "teacher originals",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发智能化案例集/index.html",
+      "group": "teacher originals",
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/index.html",
+      "group": "portal recorded files",
+      "bytes": 2969,
+      "sha256": "17c9620bf57f7613cd523df03c606d835219374fa58a1376e89ae935dbe0e922",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "group": "portal recorded files",
+      "bytes": 3267,
+      "sha256": "9c50cc37d9f889d5418da939639a6da44779f475139a98a0b58c54a84cfc7a63",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "group": "portal recorded files",
+      "bytes": 16201,
+      "sha256": "930a348cbe24fcef84a99deea790a70be82b268da71473cf624a3419f63b490b",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "group": "portal recorded files",
+      "bytes": 9181,
+      "sha256": "0d762dfaaafc8391dcec2b26602ac1c7cf73aa9645aeac46ac9e555fa57572c6",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/s17-media.js",
+      "group": "portal recorded files",
+      "bytes": 8355,
+      "sha256": "d6598b35ba7e7e8fc959730a485dd547c890bc3f0c63e6685cb806a599469ce6",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "group": "portal recorded files",
+      "bytes": 5538,
+      "sha256": "0672a4d1c75b4d73b9213f7c7bd624c4e878c37e14d6152002d9580accb773c5",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/s17-live2d.js",
+      "group": "portal recorded files",
+      "bytes": 2806,
+      "sha256": "fd969ed0e952bfe1f188de57a07288dedf5442c27d00bbfbfc0fcc7ff1c8aaf6",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/s17-live2d-data.js",
+      "group": "portal recorded files",
+      "bytes": 1681022,
+      "sha256": "9caef4af1ab325f3a72a14032ba61c0bdf2501a0ac0bf4f396ea6ea89d9ae596",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/reference/fluorescence.html",
+      "group": "portal recorded files",
+      "bytes": 3700,
+      "sha256": "f3a549fe87b9d9edb75b2528be8a7f691c4a89ed82063e69c08b78079c778b93",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/reference/fluorescence.js",
+      "group": "portal recorded files",
+      "bytes": 783,
+      "sha256": "5554cbe7a7e5772f81d3b0812430aa29b48cfb01ca590aced33fb23f0745c6dd",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/reference/fluorescence-data.js",
+      "group": "portal recorded files",
+      "bytes": 3455,
+      "sha256": "b52674d3e40ca3f74b8d62e98678ba7f5d5f36dcd681dc8f506a7f35ae675952",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/vendor/pixi-6.5.10.min.js",
+      "group": "local avatar dependencies",
+      "bytes": 460333,
+      "sha256": "403f2f2ee8145fa17f60c5c89403056efe2680e5096ec2762036486914ed19c5",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/vendor/PIXI-LICENSE.txt",
+      "group": "local avatar dependencies",
+      "bytes": 1092,
+      "sha256": "536a16e090f0b6c1454a7c0b47ee8414a39a2f1724a154f10ca1edc750a2dcfd",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/vendor/pixi-live2d-0.4.0.min.js",
+      "group": "local avatar dependencies",
+      "bytes": 119922,
+      "sha256": "af1267e6d52759b245766c578d905bfa025b532d5c3cc727c370957c4409e21b",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/vendor/PIXI-LIVE2D-LICENSE.txt",
+      "group": "local avatar dependencies",
+      "bytes": 1061,
+      "sha256": "8ccace668a041e78ed525d091b0b5daf8b623ff447f912616de535415e4f302f",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/vendor/live2dcubismcore.min.js",
+      "group": "local avatar dependencies",
+      "bytes": 207155,
+      "sha256": "25ae938cb4fe282ce189b357bcc97e603d1e1f7ec78bf04150d401c23cdc792f",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/vendor/Live2D-Core-LICENSE.txt",
+      "group": "local avatar dependencies",
+      "bytes": 520,
+      "sha256": "b81e37048010ef1d336106151201a0323c3309cae44aecdedf57831fe88fa991",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/vendor/Live2D-Core-RedistributableFiles.txt",
+      "group": "local avatar dependencies",
+      "bytes": 205,
+      "sha256": "d16c123688299e1e69a7f5ebc01b3bd75a8d408c024002a7d35b2aae94003f8c",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.model3.json",
+      "group": "local avatar dependencies",
+      "bytes": 4372,
+      "sha256": "963acfcd664a792f4a3a22bbb9352ad4e2e40b4bb075e2ec8e6c1571784ac7d6",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.moc3",
+      "group": "local avatar dependencies",
+      "bytes": 350016,
+      "sha256": "9b8017464a582c41dfb231ed750577efd16f93368a13699dd0b80457d8c87711",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.4096/texture_00.png",
+      "group": "local avatar dependencies",
+      "bytes": 791443,
+      "sha256": "6f2ffda5f3efaaa4507bd9c5bf93b1a6582be1733598d0e14d5a269592ee1d10",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.physics3.json",
+      "group": "local avatar dependencies",
+      "bytes": 12705,
+      "sha256": "0e05640f203252bedc0ac077e11cf175ed5a2cccf0a0d1194d63dc424d9c32e5",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_idle.motion3.json",
+      "group": "local avatar dependencies",
+      "bytes": 5993,
+      "sha256": "40b455a122ab312d0dfa467ce244eca220c072e2256bea2f5bc6d7d8848d3aff",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_tap03.motion3.json",
+      "group": "local avatar dependencies",
+      "bytes": 45497,
+      "sha256": "502152ee20663175ff2fca6e1eeacfc8c794ffb4ba559d8b94f2ba5073894450",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_tap07.motion3.json",
+      "group": "local avatar dependencies",
+      "bytes": 54088,
+      "sha256": "b38c864bba26c9dcd42c7e520a0723a95735859cdcdb4d97d827ff84e3b1e1a7",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/core/case-upload.js",
+      "group": "working portal original contract",
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/core/case-demo-host.js",
+      "group": "working portal original contract",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/core/registry.js",
+      "group": "working portal original contract",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "portal/assets/core/admin.js",
+      "group": "working portal original contract",
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13",
+      "matchesPreReviewLock": true
+    },
+    {
+      "path": "石油勘探开发的智能化可能性地图-全网站设计.txt",
+      "group": "teacher requirement",
+      "bytes": 12916,
+      "sha256": "303ed0b244cff8202affba0a4a372dd57c73bab747bf89edd1167fb70d73e4d2",
+      "matchesPreReviewLock": true
+    }
+  ]
+}

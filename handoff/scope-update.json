@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-23",
+  "authority": "latest direct user instruction in this chat",
+  "productGoal": "纯前端静态教学演示，强调专业讲解、可视化与可操作性",
+  "fiveCaseCount": 5,
+  "caseVersion": "1.1.0",
+  "portalVersion": "1.3.1-preview",
+  "requiredNext": [
+    "保留五例静态教学范围与原门户兼容",
+    "按用户指定的MoodDairy默认Q版嘉然替换首页角色",
+    "接通豆包Mini文字、图片、音频理解与导航",
+    "可上传/录制音频，可选系统朗读，区分原生语音模型"
+  ],
+  "removedFromRequiredBacklog": [
+    "m1/m2人工改标签后重建模型并做独立泛化评价",
+    "新增跨井、跨设备或研究性质性能测试",
+    "m3新建学习型等级模型",
+    "m4更复杂工况、监督序列模型、动态规划内部全过程工程展示",
+    "m5复杂NER、多语言、批量审核或中心化长期版本服务",
+    "G5及其他56例"
+  ],
+  "existingComputations": "保留已有真实浏览器计算作为教学交互，不因此升级成算法研发任务，也不改成预存成绩冒充计算",
+  "evidenceExportMeaning": "下载当前观察/结果/来源的JSON，可选让m5读入生成可追溯报告；不是模型权重或后端训练作业",
+  "offlineBoundary": "五个案例与Live2D/本地导览离线可用；用户启用真实大模型后该问答部分需要网络",
+  "verificationBoundary": "仅做新页面/按钮/导航/接口格式的必要检查，不新增科学性能实验",
+  "modelKeyPolicy": "用户在自己的页面填写，仅驻留页面内存；本次获准用提供的Key在内存验证，未写源码、日志、ZIP或持久存储",
+  "modelLiveCallVerified": true,
+  "voiceBoundary": "Mini音频输入、文字输出；浏览器/系统朗读，火山原生TTS/端到端语音未接",
+  "videoBoundary": "官方模型接口支持视频，本页未提供视频入口",
+  "avatarChoice": {
+    "model": "Diana",
+    "source": "https://github.com/MississippiPotato/MoodDairy",
+    "sourceCommit": "872a11c256375b517e9341b6c12e490c8257470e",
+    "userDirected": true,
+    "localPreviewImplemented": true,
+    "publicRedistributionLicenseVerified": false
+  }
+}

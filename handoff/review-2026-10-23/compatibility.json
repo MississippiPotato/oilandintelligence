@@ -1,0 +1,116 @@
+{
+  "reviewDate": "2026-10-23",
+  "reviewer": "compatibility_review subagent",
+  "reviewType": "read-only source audit plus new independent real browser checks",
+  "portalVersion": "1.3.1-preview",
+  "caseVersion": "1.1.0",
+  "conclusion": "No blocking issue found for the teacher's quantity, assigned-category, package structure, pure-front-end default operation or two-way Add Case compatibility requirements.",
+  "scopeAuthority": {
+    "currentTeacherRequirements": "User supplied 11 requirements and classroom notes in the current turn; these take precedence over the development kit.",
+    "originalTeacherRequirementFile": "石油勘探开发的智能化可能性地图-全网站设计.txt",
+    "originalTeacherEvidence": [
+      {"file":"石油勘探开发的智能化可能性地图-全网站设计.txt","line":105,"meaning":"Three parts, visual explanation and simple front-end runnable demonstration."},
+      {"file":"石油勘探开发的智能化可能性地图-全网站设计.txt","line":89,"meaning":"Original one-example map scope is an initial portal specification; newer assignment requires the student's five complete cases."}
+    ],
+    "notOriginalTeacherRequirement": "石油AI案例集_开发任务书 (1).txt is the later student-17 development plan, not an independent teacher mandate.",
+    "developmentDocumentsRead": [
+      "s17_development_kit/00_READ_FIRST.txt",
+      "s17_development_kit/01_学号17_详细开发方案.txt",
+      "s17_development_kit/02_core_cases.json",
+      "s17_development_kit/04_milestones_and_tasks.json",
+      "s17_development_kit/06_兼容与验收清单.txt",
+      "s17_development_kit/07_证据交换与数据协议.json"
+    ],
+    "notTeacherMandatory": ["Extra 56 cases or G5", "Research-grade retraining and evaluation", "Large generic framework", "Learned fluorescence grading model", "Cloud model or digital character"]
+  },
+  "findings": [
+    {
+      "severity": "P2 conditional public-release limitation, not a teacher functional blocker",
+      "teacherRequirement": "11: enhanced homepage may earn credit; optional character asset is independent of the five case packages",
+      "evidence": "Current attribution explicitly states that MoodDairy did not provide a model redistribution license and that public redistribution permission has not been independently verified. This was read from the current delivered files, not inferred from the model's appearance.",
+      "file": "portal/assets/live2d/ATTRIBUTION.txt",
+      "line": 9,
+      "observedVsInferred": "Observed documentation; public-use permission itself remains unverified.",
+      "impact": "Local coursework preview and case import checks work. A future public release must not describe the current model as having a verified open redistribution license.",
+      "fixOrPresentation": "For this review, retain honest local-preview attribution and show the five visual teaching cases as the core assignment. If publicly publishing the character later, verify permission or use an asset with explicit redistribution terms. No product change made during this review."
+    }
+  ],
+  "coverage": {
+    "teacherRequirement1AtLeastFive": {"status":"passed","evidence":"Five distinct self-authored folders, not five presets; 25 files and 778279 bytes in total."},
+    "teacherRequirement2AssignedStage": {"status":"passed","formula":"((17-1)%13)+1=4","stageId":"mudlogging","sourceFile":"portal-original/assets/data.js","sourceLine":270},
+    "teacherRequirement3NativeImport": {"status":"passed","evidence":"All five added through native Add Case -> directory selection -> Validate and Add; current real browser runs in HTTP and offline file modes."},
+    "teacherRequirements5To8ThreeParts": {"status":"structure and rendered figures passed; pedagogical quality belongs to the other review agents","backgroundVisibleSVGs":[3,3,3,3,3],"workflowVisibleSVGs":[6,6,7,7,6]},
+    "teacherRequirement9PureFrontend": {"status":"passed for default five cases","evidence":"Every standalone case and every original-portal sandbox calculated successfully under browser offline mode with zero HTTP attempts. The optional homepage model service is not a dependency of any case."},
+    "teacherRequirement11OldPackageCompatibility": {"status":"passed","evidence":"Original firstbreak folder imported unchanged into the current enhanced portal. Noise changed the actual trace, threshold slider worked, and refresh preserved the example."},
+    "cases": [
+      {"sceneId":"m1","id":"s17-cuttings-lithology","methods":["cv"],"manifest":"dist/cases/s17-cuttings-lithology/case.json","sceneLine":3,"files":5,"bytes":156459,"backgroundFigures":3,"workflowSteps":6,"workflowFigures":6},
+      {"sceneId":"m2","id":"s17-mudgas-context","methods":["ts"],"manifest":"dist/cases/s17-mudgas-context/case.json","sceneLine":3,"files":5,"bytes":109328,"backgroundFigures":3,"workflowSteps":6,"workflowFigures":6},
+      {"sceneId":"m3","id":"s17-fluorescence-review","methods":["cv"],"manifest":"dist/cases/s17-fluorescence-review/case.json","sceneLine":3,"files":5,"bytes":79305,"backgroundFigures":3,"workflowSteps":7,"workflowFigures":7},
+      {"sceneId":"m4","id":"s17-drilltime-boundaries","methods":["ts"],"manifest":"dist/cases/s17-drilltime-boundaries/case.json","sceneLine":3,"files":5,"bytes":164036,"backgroundFigures":3,"workflowSteps":7,"workflowFigures":7},
+      {"sceneId":"m5","id":"s17-evidence-report","methods":["nlp"],"manifest":"dist/cases/s17-evidence-report/case.json","sceneLine":3,"files":5,"bytes":269151,"backgroundFigures":3,"workflowSteps":6,"workflowFigures":6}
+    ],
+    "structure": ["case.json", "README.txt", "demo/index.html", "demo/demo.css", "demo/demo.js"],
+    "originalPreservation": {"fileCount":23,"readOnlyFiles":23,"currentByteDifferencesFromOriginalInput":[],"comparisonType":"current byte-by-byte source comparison; not browser evidence"},
+    "enhancedCoreChanges": {"unchanged":["case-upload.js","case-demo-host.js","registry.js","admin.js","kit.js"],"changed":"shell.js preserves selected case id when switching tabs; observed current native import regression passed"},
+    "importContractSource": [
+      {"file":"portal-original/assets/core/case-upload.js","line":185,"purpose":"toCase field mapping"},
+      {"file":"portal-original/assets/core/case-upload.js","line":854,"purpose":"native webkitdirectory selection"},
+      {"file":"portal-original/assets/core/case-upload.js","line":915,"purpose":"Validate and Add button"},
+      {"file":"portal-original/assets/core/case-demo-host.js","line":205,"purpose":"sandbox without allow-same-origin"}
+    ]
+  },
+  "actualBrowserChecks": {
+    "performedThisReview": true,
+    "session": "s17-review-contract",
+    "browser": "HeadlessChrome/155.0.0.0 Windows",
+    "viewport": {"width":1440,"height":1000},
+    "userBrowserTouched": false,
+    "modelCalls": 0,
+    "apiKeyUsed": false,
+    "productSourceModified": false,
+    "assertionTotals": {"passed":60,"failed":0,"meaning":"Assertions of the three live review procedures below, not a pedagogical grade or model-quality benchmark."},
+    "procedures": [
+      {
+        "name":"Original portal HTTP native import and refresh",
+        "baseURL":"http://127.0.0.1:8755/portal-original/index.html",
+        "assertionsPassed":28,
+        "actions":["Read current 13 stages, 61 scenarios, mudlogging m1-m5.","Use Add Case and native directory input once for each of five folders.","Open the three portal tabs for each case.","Click each sandbox run button and wait for actual calculation complete/ready.","Reload each case URL after all five have been added and run again."],
+        "outcome":"All five cases ready before and after refresh; no JavaScript page errors.",
+        "persistedIds":["s17-cuttings-lithology","s17-mudgas-context","s17-fluorescence-review","s17-drilltime-boundaries","s17-evidence-report"],
+        "persistedUTF8Bytes":798158
+      },
+      {
+        "name":"Current enhanced portal and original firstbreak reverse compatibility",
+        "baseURL":"http://127.0.0.1:8755/portal/index.html",
+        "assertionsPassed":14,
+        "actions":["Observe current five-card homepage and actual 5/5 registration.","Import original firstbreak directory unchanged through native Add Case.","Open its background, workflow and demo.","Use keyboard to change noise and observe changed actual SVG trace.","Change threshold and refresh, then confirm demo paths remain.","Return to each original-portal case and count visible figures in the active background and workflow tabs, excluding hidden panels."],
+        "visibleFiguresByScene":{"m1":{"background":3,"workflow":6},"m2":{"background":3,"workflow":6},"m3":{"background":3,"workflow":7},"m4":{"background":3,"workflow":7},"m5":{"background":3,"workflow":6}},
+        "outcome":"Old sample stays interactive and persists alongside the five new cases; no JavaScript page errors.",
+        "persistedUTF8BytesWithFirstbreak":818665
+      },
+      {
+        "name":"Offline file URLs, standalone and original native import",
+        "baseURL":"file:///G:/可视化导论/5/portal-original/index.html",
+        "assertionsPassed":18,
+        "actions":["Set the real browser context offline.","Open each of the five standalone demo/index.html file URLs and click run.","Open the untouched original portal file URL and import all five through its native Add Case directory input.","Click run in each original-portal sandbox.","Refresh after cumulative import, read the saved five ids, revisit all five demos and click run again."],
+        "outcome":"All standalone and sandbox runs ready; all five survive refresh; zero HTTP attempts and zero JavaScript page errors.",
+        "httpAttempts":0,
+        "javascriptPageErrors":0
+      }
+    ],
+    "incidentalConsoleMessage":"HTTP page requested favicon.ico and the static server returned 404. This is an original-portal icon request and did not affect case import or calculation; not counted as a JavaScript page error."
+  },
+  "presentationAdvice": [
+    "Lead with assigned stage m1-m5, five distinct complete case folders and one teaching well, then show native Add Case and a real parameter-driven visual change.",
+    "Show background concept -> step figure -> runnable effect. The homepage character and optional cloud conversation support explanation and should follow the visual case evidence.",
+    "Use README.md lines 28-38 for the exact import route. Each folder is selected separately after extracting a transmission ZIP.",
+    "Keep 61 candidate scenarios distinct from the five cases authored for this assignment; the current homepage already does this explicitly."
+  ],
+  "unverified": [
+    "Complete browser process shutdown and restart was not repeated in this review. Refresh persistence was actually repeated in both HTTP and offline file modes.",
+    "Other browsers, mobile import dialogs and private browsing storage quotas were not tested by this compatibility reviewer.",
+    "The algorithmic truth-isolation details and pedagogical depth of every individual visual are delegated to the other review agents; ready status alone is not treated as proof of those qualities.",
+    "Cloud model, microphone hardware and speech playback were outside this review; no paid service or supplied API key was used.",
+    "Diana character public redistribution permission remains unverified as explicitly recorded in the current attribution."
+  ]
+}

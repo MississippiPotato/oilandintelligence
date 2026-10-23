@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-10-23T12:21:38.136Z",
+  "scope": "Current 1.2.0 standalone Chrome rendering and real interactions; not field performance",
+  "checks": [
+    {
+      "name": "m1 first visit presents background and teaching guide",
+      "passed": true
+    },
+    {
+      "name": "m1 three background figures have zoom affordances",
+      "passed": true
+    },
+    {
+      "name": "m1 diagram zoom opens",
+      "passed": true
+    },
+    {
+      "name": "m1 narrow figure preserves readable logical width without page overflow",
+      "passed": true,
+      "detail": {
+        "box": 325,
+        "scroll": 620,
+        "svg": 620,
+        "whole": 390,
+        "view": 390
+      }
+    },
+    {
+      "name": "m1 narrow figure actually scrolls",
+      "passed": true
+    },
+    {
+      "name": "m1 step 1 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 2 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 3 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 4 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 5 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 step 6 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m1 review reasons no longer contradict 100% support",
+      "passed": true
+    },
+    {
+      "name": "m1 scatter has rock class legend",
+      "passed": true
+    },
+    {
+      "name": "m1 axis change recomputes actual scatter",
+      "passed": true
+    },
+    {
+      "name": "m1 featured tour exposes retained segmentation failures",
+      "passed": true,
+      "detail": 0.5299145299145299
+    },
+    {
+      "name": "m2 first visit presents background and teaching guide",
+      "passed": true
+    },
+    {
+      "name": "m2 three background figures have zoom affordances",
+      "passed": true
+    },
+    {
+      "name": "m2 diagram zoom opens",
+      "passed": true
+    },
+    {
+      "name": "m2 narrow figure preserves readable logical width without page overflow",
+      "passed": true,
+      "detail": {
+        "box": 325,
+        "scroll": 620,
+        "svg": 620,
+        "whole": 390,
+        "view": 390
+      }
+    },
+    {
+      "name": "m2 narrow figure actually scrolls",
+      "passed": true
+    },
+    {
+      "name": "m2 step 1 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 2 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 3 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 4 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 5 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 step 6 shows diagram and input/action/output",
+      "passed": true
+    },
+    {
+      "name": "m2 old incomplete footer removed",
+      "passed": true
+    },
+    {
+      "name": "m2 same event shape different operation changes explanation",
+      "passed": true,
+      "detail": {
+        "from": 0,
+        "to": 1
+      }
+    },
+    {
+      "name": "m2 counterfactual has no invented gold score",
+      "passed": true
+    },
+    {
+      "name": "m3 first visit presents background and teaching guide",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "exception": "m3 first visit presents background and teaching guide",
+  "passed": 29,
+  "failed": 2
+}

@@ -1,0 +1,182 @@
+{
+  "scope": "real standalone Chromium interactions, HTTP",
+  "checks": [
+    {
+      "name": "m1 canvas and real training neighbors",
+      "status": "passed"
+    }
+  ],
+  "defaults": {
+    "m1": {
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 2,
+          "IoU": 1
+        },
+        {
+          "pred": 1,
+          "truth": 0,
+          "IoU": 1
+        },
+        {
+          "pred": 2,
+          "truth": 1,
+          "IoU": 1
+        },
+        {
+          "pred": 3,
+          "truth": 3,
+          "IoU": 1
+        },
+        {
+          "pred": 4,
+          "truth": 4,
+          "IoU": 1
+        },
+        {
+          "pred": 5,
+          "truth": 7,
+          "IoU": 1
+        },
+        {
+          "pred": 6,
+          "truth": 6,
+          "IoU": 1
+        },
+        {
+          "pred": 7,
+          "truth": 5,
+          "IoU": 1
+        },
+        {
+          "pred": 8,
+          "truth": 10,
+          "IoU": 1
+        },
+        {
+          "pred": 9,
+          "truth": 8,
+          "IoU": 1
+        },
+        {
+          "pred": 10,
+          "truth": 11,
+          "IoU": 1
+        },
+        {
+          "pred": 11,
+          "truth": 9,
+          "IoU": 1
+        }
+      ],
+      "misses": [],
+      "extras": [],
+      "merged": [],
+      "model": {
+        "matrix": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            7,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 1,
+            "f1": 1
+          }
+        ],
+        "macroF1": 1,
+        "total": 12,
+        "accepted": 12,
+        "wrong": 0,
+        "coverage": 1,
+        "acceptedError": 0
+      },
+      "baseline": {
+        "matrix": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            5,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "recall": 1,
+            "f1": 1
+          },
+          {
+            "recall": 0,
+            "f1": 0
+          },
+          {
+            "recall": 0.7142857142857143,
+            "f1": 0.7142857142857143
+          }
+        ],
+        "macroF1": 0.5714285714285715,
+        "total": 12,
+        "accepted": 12,
+        "wrong": 4,
+        "coverage": 1,
+        "acceptedError": 0.3333333333333333
+      },
+      "segmentation": {
+        "tp": 14582,
+        "fp": 0,
+        "fn": 0,
+        "tn": 62218,
+        "IoU": 1,
+        "Dice": 1,
+        "recall": 1,
+        "precision": 1
+      },
+      "trueVisiblePixels": 14582,
+      "areaError_pp": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "errors": [],
+  "exception": "locator.click: Error: strict mode violation: locator('[data-grain=\"1\"]') resolved to 2 elements:\n    1) <button data-grain=\"1\">颗粒 2</button> aka getByRole('button', { name: '颗粒 2' })\n    2) <button data-grain=\"1\">颗粒2</button> aka getByRole('button', { name: '颗粒2' })\n\nCall log:\n\u001b[2m  - waiting for locator('[data-grain=\"1\"]')\u001b[22m\n",
+  "passed": 1,
+  "failed": 1
+}

@@ -1,0 +1,66 @@
+{
+  "createdAt": "2026-10-23T10:56:55.363Z",
+  "model": "doubao-seed-2-0-mini-260428",
+  "endpoint": "https://ark.cn-beijing.volces.com/api/v3/responses",
+  "credentials": "runtime memory only; not included",
+  "probes": [
+    {
+      "name": "text",
+      "httpStatus": 200,
+      "elapsedMs": 1411,
+      "model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 48,
+        "output_tokens": 39,
+        "total_tokens": 87,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output": "我可以帮学生讲解录井专业知识、解析录井仪器操作要点、指导录井资料分析方法，还能解答录井相关的学习疑问、梳理学习重点难点。",
+      "error": null
+    },
+    {
+      "name": "audio-wav",
+      "httpStatus": 200,
+      "elapsedMs": 1224,
+      "model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 65,
+        "output_tokens": 23,
+        "total_tokens": 88,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 20
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output": "请带我去气测异常案例。\n请求是希望被带领前往气测异常相关的案例处。",
+      "error": null
+    },
+    {
+      "name": "image-jpeg",
+      "httpStatus": 200,
+      "elapsedMs": 1250,
+      "model": "doubao-seed-2-0-mini-260428",
+      "usage": {
+        "input_tokens": 1327,
+        "output_tokens": 31,
+        "total_tokens": 1358,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "output": "图中共有五块不规则的浅粉、白调原石，它们表面呈晶质半透明状，被放置在黑色的背景上。",
+      "error": null
+    }
+  ]
+}

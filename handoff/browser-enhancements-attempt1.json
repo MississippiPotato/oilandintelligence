@@ -1,0 +1,26 @@
+{
+  "scope": "v1.1 real-data and teaching enhancements, actual Chromium interactions",
+  "checks": [
+    {
+      "name": "m1 actual foreground histogram has nonzero denominator",
+      "status": "passed"
+    },
+    {
+      "name": "m1 feature-axis selection changes actual plotted data",
+      "status": "passed"
+    },
+    {
+      "name": "real core actual decoded pixels and 16 features",
+      "status": "failed",
+      "evidence": [
+        0.8942402961181738,
+        0.8504312725087271,
+        0.8234627350937844
+      ]
+    }
+  ],
+  "errors": [],
+  "exception": "real core actual decoded pixels and 16 features",
+  "passed": 2,
+  "failed": 2
+}

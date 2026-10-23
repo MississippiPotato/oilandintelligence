@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-23",
+  "scope": "Human model visual inspection of actual Chromium screenshots, separate from interaction assertions",
+  "viewed": [
+    "output/playwright/50-real-core.png",
+    "output/playwright/51-real-headspace.png",
+    "output/playwright/52-fluorescence-learning.png",
+    "output/playwright/53-real-usrop.png",
+    "output/playwright/54-evidence-search-diff.png",
+    "output/playwright/55-calibration-cluster-history.png",
+    "output/playwright/56-combined-offline-report.png"
+  ],
+  "findings": [
+    "Real pixels, measured units, attribution and data boundaries visible",
+    "Training and clustering views show computed states; report diff distinguishes actual edits",
+    "Mixed offline HTML displays draft states; actual embedded JPEG decoded at 280x280 with naturalWidth>0 and no script"
+  ],
+  "limits": [
+    "Screenshots establish appearance only",
+    "390px viewport checks are not real mobile-device certification"
+  ]
+}

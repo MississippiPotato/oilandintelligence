@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "documentRole": "new_case_development_spec_template_not_upload_manifest",
+  "status": "concept_proposal",
+  "implemented": false,
+  "verifiedRuntime": false,
+  "sceneId": null,
+  "id": null,
+  "stageId": null,
+  "title": null,
+  "methods": [],
+  "businessQuestion": null,
+  "domainBoundaries": [],
+  "backgroundFigures": [
+    {
+      "id": "bg1",
+      "question": null,
+      "concept": null,
+      "visual": null,
+      "units": [],
+      "sourceReferences": []
+    }
+  ],
+  "workflowSteps": [
+    {
+      "id": "step1",
+      "title": null,
+      "input": [],
+      "action": [],
+      "output": [],
+      "visual": null,
+      "trap": null
+    }
+  ],
+  "baseline": {
+    "name": null,
+    "inputs": [],
+    "limitations": []
+  },
+  "learnedModel": {
+    "name": null,
+    "learningType": null,
+    "fit": null,
+    "predict": null,
+    "learnedParameters": [],
+    "explanation": null
+  },
+  "dataProtocol": {
+    "dataNature": "synthetic_teaching",
+    "availableInputs": [],
+    "trainingLabels": [],
+    "evaluationTruth": [],
+    "units": {},
+    "sourceNotes": []
+  },
+  "splitProtocol": {
+    "groupUnit": null,
+    "train": null,
+    "validation": null,
+    "test": null,
+    "leakageChecks": []
+  },
+  "controls": [],
+  "defaultScenario": null,
+  "presets": [],
+  "metrics": [
+    {
+      "name": null,
+      "requiresGold": true,
+      "denominator": null,
+      "emptyBehavior": null
+    }
+  ],
+  "mvp": [],
+  "p1": [],
+  "p2": [],
+  "acceptance": [],
+  "sources": [],
+  "compatibility": {
+    "oneCasePerFolder": true,
+    "sceneIdMustExist": true,
+    "ordinaryIIFEBundle": true,
+    "offlineDefault": true,
+    "noParentPrivateAPI": true
+  },
+  "completionRule": "所有null必须落实为具体可执行内容；模板存在不算完成案例。实际原站导入、专业复核和真实计算验证通过后才记为成品。"
+}

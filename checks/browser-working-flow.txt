@@ -1,0 +1,9 @@
+async(page)=>{
+const report={checks:[],errors:[]},ensure=(ok,m)=>{if(!ok)throw Error(m);report.checks.push(m);};page.on('pageerror',e=>report.errors.push(e.message));
+await page.getByRole('banner').getByRole('button',{name:'＋ 添加案例'}).click();
+await page.locator('#imp-dir').setInputFiles('G:/可视化导论/5/石油勘探开发智能化案例集/firstbreak-pick-case');
+await page.getByRole('button',{name:'校验并添加',exact:true}).click();
+await page.getByRole('button',{name:'03 可运行示范',exact:true}).click();
+let f=page.frameLocator('iframe');ensure(await f.locator('canvas,svg').count()>0,'Unmodified firstbreak package renders in working portal');
+report.firstbreakControls=await f.locator('input,button,select').evaluateAll(els=>els.map(e=>({tag:e.tagName,id:e.id,type:e.type,text:e.textContent})));return report;
+}

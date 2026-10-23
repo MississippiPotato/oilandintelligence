@@ -1,0 +1,67 @@
+{
+  "id": "b6rj29mrss",
+  "version": 1,
+  "name": "Lithology dataset",
+  "description": "\nThe dataset includes core images used in the paper “Automated lithology classification from drill core images using convolutional neural networks” https://doi.org/10.1016/j.petrol.2020.107933. \nIt includes 2 x 2 cm core images created from core tray images provided by the Geological Survey of South Australia, available on http://www.energymining.sa.gov.au/minerals/geoscience/geoscientific_data/hylogger.\nIt includes images used for training, validating, and testing the CNN models for four categories: sandstone, limestone, shale, and a  ‘garbage’ category that contains empty tray areas and non-core objects such as and wooden/metallic objects in the tray images. \n",
+  "doi": "10.17632/b6rj29mrss.1",
+  "publish_date": "2021-11-24T10:24:27.890Z",
+  "last_modification_date": "2021-11-24T08:28:31.053Z",
+  "is_confidential": false,
+  "customer": {
+    "id": "7377952c-6404-4428-bbfc-77242cfc301e",
+    "name": "Mendeley Guests",
+    "chief_id": 810289,
+    "config": {
+      "repository_id": "MENDELEY_DATA",
+      "dataset_size_limit": 10737418240,
+      "doi_prefix": "10.17632"
+    },
+    "is_user_mendeley_admin": false,
+    "customer_roles": [],
+    "is_guest": true,
+    "is_user_customer_moderator": false
+  },
+  "owner": {
+    "id": "d09f4e7b-e76f-30f3-87fa-74e5322b5d09",
+    "first_name": "f",
+    "last_name": "alzubaid",
+    "display_name": "f alzubaid",
+    "$ref": "/profiles/d09f4e7b-e76f-30f3-87fa-74e5322b5d09"
+  },
+  "categories": [
+    {
+      "id": "data.elsevier.com/vocabulary/OmniScience/Concept-253046992",
+      "label": "Image Classification"
+    },
+    {
+      "id": "data.elsevier.com/vocabulary/OmniScience/Concept-422018658",
+      "label": "Lithology"
+    },
+    {
+      "id": "data.elsevier.com/vocabulary/OmniScience/Concept-442094195",
+      "label": "Convolutional Neural Network"
+    }
+  ],
+  "licence": {
+    "id": "01d9c749-3c4d-4431-9df3-620b2dcfe144",
+    "short_name": "CC BY 4.0",
+    "full_name": "Creative Commons Attribution 4.0 International",
+    "description": "You can share, copy and modify this dataset so long as you give appropriate credit, provide a link to the CC BY license, and indicate if changes were made, but you may not do so in a way that suggests the rights holder has endorsed you or your use of the dataset. Note that further permission may be required for any content within the dataset that is identified as belonging to a third party.",
+    "url": "http://creativecommons.org/licenses/by/4.0",
+    "category": "Creative",
+    "customer_id": null
+  },
+  "institutions": [],
+  "organisational_unit_names": [],
+  "contributors": [
+    {
+      "id": "d09f4e7b-e76f-30f3-87fa-74e5322b5d09",
+      "first_name": "Fatimah",
+      "last_name": "Alzubaidi",
+      "$ref": "/profiles/d09f4e7b-e76f-30f3-87fa-74e5322b5d09"
+    }
+  ],
+  "related_links": [],
+  "custom_metadata": {},
+  "is_metadata_only": false
+}

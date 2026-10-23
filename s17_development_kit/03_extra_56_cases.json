@@ -1,0 +1,1656 @@
+{
+  "schemaVersion": "1.0",
+  "documentRole": "optional_concept_catalog_not_completed_cases",
+  "mandatoryExcluded": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "priorityMeaning": {
+    "P1": "未来首选6项，非必做",
+    "P2": "其他可考虑项",
+    "P3": "需更强专业/数据准备"
+  },
+  "effortMeaning": "S/M/L为相对复杂度，不是精确工期",
+  "cases": [
+    {
+      "sceneId": "g1",
+      "stageId": "geology",
+      "stageName": "地质勘察",
+      "title": "地质剖面遥感解译",
+      "businessQuestion": "哪些遥感区域可能属于不同岩性单元，哪里应人工复核？",
+      "mvpScope": "未来纯前端教学MVP；合成二维小影像的少量地表类型分区；不推断地下储量。",
+      "baseline": "单波段颜色阈值",
+      "learnedMethod": "基于多通道与局部纹理特征训练kNN像素分类器",
+      "backgroundVisual": "露头地层—遥感像素—波段响应对应图",
+      "workflowVisual": "影像→标注块→分块留出→特征→分类图→错误图",
+      "demoInteraction": "切换波段、阴影和噪声，点击误分像素看近邻",
+      "metric": "各类IoU、宏F1、按区域错误率",
+      "splitUnit": "独立地理区块或独立合成影像",
+      "effort": "M",
+      "reuseFamilies": [
+        "图像分割",
+        "图像分类",
+        "空间视图"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "g2",
+      "stageId": "geology",
+      "stageName": "地质勘察",
+      "title": "油气地球化学异常识别",
+      "businessQuestion": "多项化探指标共同变化时，哪些采样区值得进一步调查？",
+      "mvpScope": "未来纯前端教学MVP；合成采样点和多指标背景；异常只表示教学偏离，不认定发现油气。",
+      "baseline": "单指标标准分数阈值",
+      "learnedMethod": "从背景样本拟合PCA或多变量回归，以重建残差识别异常",
+      "backgroundVisual": "采样剖面、点位图和多指标背景关系",
+      "workflowVisual": "采样→背景拟合→多变量残差→空间标注→复核",
+      "demoInteraction": "增加单一污染干扰，比较单指标与联合异常图",
+      "metric": "合成异常点PR、召回、误报率",
+      "splitUnit": "空间区块留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "空间异常",
+        "多变量异常",
+        "散点矩阵"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "g3",
+      "stageId": "geology",
+      "stageName": "地质勘察",
+      "title": "地质图件要素智能提取",
+      "businessQuestion": "历史地质图中哪些线条和符号能转为带出处的结构化要素？",
+      "mvpScope": "未来纯前端教学MVP；小幅合成图、固定图例词表和少量线状要素；不做通用地图OCR。",
+      "baseline": "颜色分割与固定形状模板匹配",
+      "learnedMethod": "训练小图块kNN识别符号，结合显式图例关系推理",
+      "backgroundVisual": "纸图图例—线条—矢量对象对应图",
+      "workflowVisual": "裁块→符号特征→识别→线条关联→输出及出处",
+      "demoInteraction": "改变扫描旋转、污点和图例，检查误连与漏提",
+      "metric": "符号宏F1、线段匹配F1、出处覆盖率",
+      "splitUnit": "独立整幅图件，不能把同图patch混入测试",
+      "effort": "L",
+      "reuseFamilies": [
+        "图像分类",
+        "知识推理",
+        "证据溯源"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv",
+        "nlp"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "g4",
+      "stageId": "geology",
+      "stageName": "地质勘察",
+      "title": "露头裂缝自动统计",
+      "businessQuestion": "露头照片中的可见裂缝数量和方向分布如何辅助描述？",
+      "mvpScope": "未来纯前端教学MVP；合成或获授权二维小照片中的迹线检测与方向统计；不恢复三维产状。",
+      "baseline": "边缘阈值与简单连通域",
+      "learnedMethod": "局部纹理特征训练像素分类器，再显式做连通与方向统计",
+      "backgroundVisual": "露头照片—裂缝迹线—玫瑰图对应",
+      "workflowVisual": "图像→图块特征→裂缝得分→迹线→统计",
+      "demoInteraction": "调节纹理干扰和阈值，人工删除一条误检并重算",
+      "metric": "Dice、事件级检出、可匹配迹线角度误差",
+      "splitUnit": "独立照片或露头来源",
+      "effort": "M",
+      "reuseFamilies": [
+        "图像分割",
+        "几何示意",
+        "人工复核"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "s1",
+      "stageId": "seismic",
+      "stageName": "物探",
+      "title": "地震断层自动解释",
+      "businessQuestion": "二维地震剖面上的层位错断能否被自动标出？",
+      "mvpScope": "未来纯前端教学MVP；合成二维小剖面的断层迹线检测；不承诺三维工业解释。",
+      "baseline": "局部不连续性阈值",
+      "learnedMethod": "训练小patch分类器，利用多方向纹理预测断层得分",
+      "backgroundVisual": "地层错断—反射同相轴—剖面图",
+      "workflowVisual": "剖面→局部窗口→特征→得分图→迹线复核",
+      "demoInteraction": "改变断距、噪声和局部缺失，比较预测与真值",
+      "metric": "断层带IoU、容差内迹线F1",
+      "splitUnit": "独立合成剖面或独立地质模型",
+      "effort": "L",
+      "reuseFamilies": [
+        "图像分割",
+        "空间视图",
+        "人工复核"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "s2",
+      "stageId": "seismic",
+      "stageName": "物探",
+      "title": "地震相智能分类",
+      "businessQuestion": "不同反射纹理是否能辅助划分地震相？",
+      "mvpScope": "未来纯前端教学MVP；少量教学纹理类别的小图块分类；类别不直接等同含油结论。",
+      "baseline": "单振幅统计规则",
+      "learnedMethod": "纹理与频率特征上的kNN或小MLP分类",
+      "backgroundVisual": "沉积概念示意与反射纹理卡片",
+      "workflowVisual": "图块→来源切分→纹理特征→分类→混淆",
+      "demoInteraction": "调整纹理相似度、噪声，查看近邻与混淆类",
+      "metric": "宏F1、各类召回、混淆矩阵",
+      "splitUnit": "独立切片或来源区块",
+      "effort": "M",
+      "reuseFamilies": [
+        "图像分类",
+        "特征解释"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "s3",
+      "stageId": "seismic",
+      "stageName": "物探",
+      "title": "初至波自动拾取",
+      "businessQuestion": "带噪道集中最早有效到达应落在哪个采样点？",
+      "mvpScope": "未来纯前端教学MVP；合成小道集拾取与复核；与老师STA/LTA样例形成实质区别。",
+      "baseline": "STA/LTA首个触发",
+      "learnedMethod": "用滑窗能量、变化率和邻道特征训练边界分类器；空间约束单独标注",
+      "backgroundVisual": "震源—检波器—走时及单道初至图",
+      "workflowVisual": "道集→滑窗→分类得分→候选初至→邻道约束→误差",
+      "demoInteraction": "调噪声、弱信号和窗口，手动修正一条低支持度道",
+      "metric": "初至MAE、容差命中率、漏拾与假拾比例",
+      "splitUnit": "按独立炮集或生成场景切分",
+      "effort": "M",
+      "reuseFamilies": [
+        "序列定位",
+        "曲线视图",
+        "人工复核"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "s4",
+      "stageId": "seismic",
+      "stageName": "物探",
+      "title": "储层参数反演",
+      "businessQuestion": "地震属性能否在限定教学关系下预测一个储层参数？",
+      "mvpScope": "未来纯前端教学MVP；合成属性到孔隙度的单目标回归；不做完整地震反演或储量评价。",
+      "baseline": "单属性线性回归",
+      "learnedMethod": "多属性岭回归或小MLP，从训练区标定样本学习",
+      "backgroundVisual": "反射属性—标定井—参数剖面示意",
+      "workflowVisual": "属性→标定对齐→区块切分→拟合→预测→残差",
+      "demoInteraction": "减少标定井、关闭属性、切换测试区",
+      "metric": "孔隙度MAE/RMSE、分区残差",
+      "splitUnit": "独立区块或独立合成地质模型",
+      "effort": "M",
+      "reuseFamilies": [
+        "回归",
+        "空间视图",
+        "标定"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "s5",
+      "stageId": "seismic",
+      "stageName": "物探",
+      "title": "地震资料噪声压制",
+      "businessQuestion": "压制噪声时能否同时保留有用反射与初至位置？",
+      "mvpScope": "未来纯前端教学MVP；合成小道集的局部去噪；干净真值只用于训练标签及独立评价。",
+      "baseline": "滑动平均或约定带通滤波",
+      "learnedMethod": "用带噪邻域到中心干净采样的岭回归或小MLP学习去噪",
+      "backgroundVisual": "信号与噪声来源示意、波形和频谱",
+      "workflowVisual": "带噪道集→邻域特征→预测→残差图→信号保真检查",
+      "demoInteraction": "调噪声强度和类型，对照原始/去噪/差值",
+      "metric": "RMSE、教学SNR改善、初至偏移",
+      "splitUnit": "独立炮集；相邻窗口不跨组泄漏",
+      "effort": "M",
+      "reuseFamilies": [
+        "回归",
+        "信号处理",
+        "曲线对照"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "d1",
+      "stageId": "drilling",
+      "stageName": "钻井",
+      "title": "钻速预测与参数优化",
+      "businessQuestion": "在给定教学约束下，哪些参数组合兼顾钻速与约束？",
+      "mvpScope": "未来纯前端教学MVP；合成钻速响应面与限定参数域内搜索；仅教学仿真，显式边界与风险约束，非现场建议。",
+      "baseline": "固定参数方案或单变量经验趋势",
+      "learnedMethod": "从独立模拟样本训练钻速代理回归，再做有约束网格搜索",
+      "backgroundVisual": "钻头—地层—作业参数及响应面",
+      "workflowVisual": "样本→工况切分→代理拟合→可行域→候选比较",
+      "demoInteraction": "移动归一化参数、启闭约束、观察推荐点和边界",
+      "metric": "留出工况MAE、可行率、相对基线教学目标值",
+      "splitUnit": "按井段/地层工况留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "代理模型优化",
+        "回归",
+        "约束可视化"
+      ],
+      "priority": "P1",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "d2",
+      "stageId": "drilling",
+      "stageName": "钻井",
+      "title": "井下复杂事故前兆预警",
+      "businessQuestion": "多通道变化能否提前标出需要检查的异常片段？",
+      "mvpScope": "未来纯前端教学MVP；合成钻井传感器中的一种前兆模式；只做教学预警，非井控或现场处置建议。",
+      "baseline": "单通道固定阈值",
+      "learnedMethod": "从正常工况拟合多变量预测模型，以残差或训练分类器识别事件",
+      "backgroundVisual": "井下状态—地面传感器—事件时间线",
+      "workflowVisual": "序列→时间切分→正常拟合→风险分数→事件合并",
+      "demoInteraction": "注入漂移、缺失和突变，比较告警与误报",
+      "metric": "事件召回、每段误报、教学设定下提前量",
+      "splitUnit": "按井与时间向前切分",
+      "effort": "M",
+      "reuseFamilies": [
+        "时序异常",
+        "事件评价",
+        "人工复核"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "d3",
+      "stageId": "drilling",
+      "stageName": "钻井",
+      "title": "井眼轨迹智能控制",
+      "businessQuestion": "简化轨迹如何在目标区与几何约束间权衡？",
+      "mvpScope": "未来纯前端教学MVP；二维虚拟井眼仿真，转向响应有限；显式曲率/禁入区/步长约束，非现场控制建议。",
+      "baseline": "固定转向或几何逐点追踪",
+      "learnedMethod": "从模拟转向样本训练响应代理，再进行短视窗受约束候选搜索",
+      "backgroundVisual": "井眼路径、目标区、曲率与禁入区",
+      "workflowVisual": "动作样本→响应学习→候选轨迹→约束筛除→下一步",
+      "demoInteraction": "移动目标与禁区、改变模型偏差，比较路径",
+      "metric": "目标偏差、约束违反次数、路径代价",
+      "splitUnit": "按独立路径与地层响应场景留出",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "几何示意",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "d4",
+      "stageId": "drilling",
+      "stageName": "钻井",
+      "title": "钻具失效预测",
+      "businessQuestion": "振动与扭矩变化是否提示钻具需要复核？",
+      "mvpScope": "未来纯前端教学MVP；合成设备运行段的下一窗口故障风险分类；不直接输出真实剩余寿命。",
+      "baseline": "振动能量阈值",
+      "learnedMethod": "频域与滑窗统计特征训练逻辑回归或浅树",
+      "backgroundVisual": "钻具载荷—振动波形—退化阶段图",
+      "workflowVisual": "运行段→特征→设备分组→分类→事件复核",
+      "demoInteraction": "改变背景负荷、噪声和训练故障比例",
+      "metric": "事件PR、召回、误报及分设备混淆",
+      "splitUnit": "按设备与时间切分",
+      "effort": "M",
+      "reuseFamilies": [
+        "时序分类",
+        "频谱视图",
+        "事件评价"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "d5",
+      "stageId": "drilling",
+      "stageName": "钻井",
+      "title": "钻井液性能智能调控",
+      "businessQuestion": "观测变化时如何比较虚拟钻井液调整候选的预期性能？",
+      "mvpScope": "未来纯前端教学MVP；仅预测一种教学流变指标并比较虚拟候选；配比/温度/压力域显式约束，非现场配方或控制建议。",
+      "baseline": "保持现有方案或单变量线性关系",
+      "learnedMethod": "多变量回归预测性能，再做受约束候选排序",
+      "backgroundVisual": "钻井液作用、观测变量与性能关系",
+      "workflowVisual": "实验样本→条件切分→回归→约束候选→对照",
+      "demoInteraction": "调整环境条件或缺失通道，比较候选与外推提示",
+      "metric": "留出条件MAE、可行率、目标偏差",
+      "splitUnit": "独立配方批次和环境条件",
+      "effort": "L",
+      "reuseFamilies": [
+        "回归",
+        "代理模型优化",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "w1",
+      "stageId": "welllog",
+      "stageName": "测井",
+      "title": "测井曲线智能分层",
+      "businessQuestion": "曲线变化是地层边界还是层内噪声？",
+      "mvpScope": "未来纯前端教学MVP；多井合成曲线的边界学习与复核；必须明显超出已有内置示例。",
+      "baseline": "单曲线梯度阈值",
+      "learnedMethod": "两侧滑窗差异与多曲线特征训练逻辑回归，厚度约束单列",
+      "backgroundVisual": "井筒层界—测量响应—薄层示意",
+      "workflowVisual": "曲线→按井切分→特征→边界分数→约束→复核",
+      "demoInteraction": "调整噪声、窗口和最小层厚，人工增删边界",
+      "metric": "容差内一对一边界F1、匹配边界MAE",
+      "splitUnit": "整口井留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "序列分段",
+        "深度联动",
+        "人工复核"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "w2",
+      "stageId": "welllog",
+      "stageName": "测井",
+      "title": "储层参数智能解释",
+      "businessQuestion": "少量标定如何支持孔隙度教学预测？",
+      "mvpScope": "未来纯前端教学MVP；只做孔隙度单目标回归；教学假设与标定真值明确，不同时声称预测全部储层参数。",
+      "baseline": "声明骨架/流体条件的密度孔隙度公式",
+      "learnedMethod": "训练井上的岭回归或小MLP",
+      "backgroundVisual": "颗粒/孔隙示意、测井响应与标定点",
+      "workflowVisual": "观测→标定对齐→按井切分→拟合→残差回井段",
+      "demoInteraction": "减少标定、加噪、关闭输入、换测试井",
+      "metric": "MAE/RMSE及分层残差；单位用孔隙度百分点",
+      "splitUnit": "整口井留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "回归",
+        "深度联动",
+        "标定"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "w3",
+      "stageId": "welllog",
+      "stageName": "测井",
+      "title": "成像测井裂缝识别",
+      "businessQuestion": "井壁展开图中的裂缝迹线在哪里？",
+      "mvpScope": "未来纯前端教学MVP；合成二维井壁图的裂缝检测与统计；不承诺真实开度、三维方位或完整工业解释。",
+      "baseline": "强度/边缘阈值",
+      "learnedMethod": "局部图块特征训练小分类器，后接连通分析",
+      "backgroundVisual": "圆柱井壁—倾斜平面—展开迹线示意",
+      "workflowVisual": "图像→图块→分类得分→掩膜→迹线复核",
+      "demoInteraction": "改纹理噪声和对比度，切原图/热图/误差",
+      "metric": "Dice/IoU、事件级检出",
+      "splitUnit": "独立成像井段或合成图来源",
+      "effort": "L",
+      "reuseFamilies": [
+        "图像分割",
+        "几何示意",
+        "人工复核"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "w4",
+      "stageId": "welllog",
+      "stageName": "测井",
+      "title": "岩性识别",
+      "businessQuestion": "多条测井曲线怎样支持岩性判断并定位疑点？",
+      "mvpScope": "未来纯前端教学MVP；多口合成教学井的少量岩性分类；明确与录井岩屑图像分类的数据差异。",
+      "baseline": "声明适用条件的单GR阈值",
+      "learnedMethod": "训练井标准化的kNN或softmax分类器",
+      "backgroundVisual": "地层—曲线—多变量交会图",
+      "workflowVisual": "按井切分→标准化→近邻/分类→混淆→误差定位",
+      "demoInteraction": "深度游标、k、关闭通道、切换陌生井",
+      "metric": "宏F1、各类召回、混淆矩阵",
+      "splitUnit": "整口井留出，标准化只拟合训练井",
+      "effort": "S",
+      "reuseFamilies": [
+        "多变量分类",
+        "深度联动",
+        "特征解释"
+      ],
+      "priority": "P1",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "w5",
+      "stageId": "welllog",
+      "stageName": "测井",
+      "title": "测井数据修复",
+      "businessQuestion": "连续缺失的测井曲线能否利用其他可见观测重建？",
+      "mvpScope": "未来纯前端教学MVP；遮蔽合成目标曲线的一段；真值不进入输入或预处理，其他曲线保持可见。",
+      "baseline": "线性插值",
+      "learnedMethod": "跨曲线kNN或岭回归",
+      "backgroundVisual": "缺失区、层界与跨曲线相关示意",
+      "workflowVisual": "完整样本→遮蔽→可见信息→两种修复→揭示真值",
+      "demoInteraction": "拖选缺失段、改变长度、跨层界、关闭通道",
+      "metric": "仅遮蔽区MAE/RMSE、分缺失长度误差",
+      "splitUnit": "整口井留出；遮蔽值隔离",
+      "effort": "S",
+      "reuseFamilies": [
+        "缺失修复",
+        "回归",
+        "深度联动"
+      ],
+      "priority": "P1",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "c1",
+      "stageId": "cementing",
+      "stageName": "固井",
+      "title": "固井质量智能评价",
+      "businessQuestion": "声波观测能否辅助识别需要复核的胶结质量段？",
+      "mvpScope": "未来纯前端教学MVP；合成CBL/VDL式示意观测的少量教学等级分类；不作井筒完整性结论。",
+      "baseline": "单振幅分档阈值",
+      "learnedMethod": "振幅与局部图像纹理特征训练kNN",
+      "backgroundVisual": "套管—水泥环—地层结构及声波传播示意",
+      "workflowVisual": "曲线/图像→对齐→特征→分类→分段复核",
+      "demoInteraction": "改变噪声、偏心模拟因素和阈值，联动井段",
+      "metric": "宏F1、各级召回、分段错误图",
+      "splitUnit": "按井或独立模拟工况切分",
+      "effort": "M",
+      "reuseFamilies": [
+        "多变量分类",
+        "图像特征",
+        "深度联动"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv",
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "c2",
+      "stageId": "cementing",
+      "stageName": "固井",
+      "title": "注水泥参数优化",
+      "businessQuestion": "虚拟注水泥候选如何在效率与压力约束间比较？",
+      "mvpScope": "未来纯前端教学MVP；简化合成置换性能代理；密度/排量/压力域显式约束，仅教学仿真，非现场方案。",
+      "baseline": "固定候选方案",
+      "learnedMethod": "训练置换效率/压力代理回归，进行约束搜索",
+      "backgroundVisual": "环空、流体置换与约束区示意",
+      "workflowVisual": "模拟样本→拟合→可行域→候选→性能对照",
+      "demoInteraction": "收紧压力上限、改变井况，观察可行方案减少",
+      "metric": "代理MAE、可行率、教学目标差值",
+      "splitUnit": "独立井况场景留出",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "约束可视化",
+        "流动示意"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "c3",
+      "stageId": "cementing",
+      "stageName": "固井",
+      "title": "固井漏失风险预测",
+      "businessQuestion": "哪些合成井况更容易出现漏失风险标记？",
+      "mvpScope": "未来纯前端教学MVP；教学数据中的单一漏失风险分类；只演示风险筛查，非现场控制或处置建议。",
+      "baseline": "单压力裕度阈值",
+      "learnedMethod": "多特征逻辑回归或浅树",
+      "backgroundVisual": "环空压力与地层承受区间的概念图",
+      "workflowVisual": "井况→分井切分→特征→分类→阈值权衡",
+      "demoInteraction": "变化类别比例、缺失信息和判定阈值",
+      "metric": "PR、事件召回、误报与漏报计数",
+      "splitUnit": "按井与独立井况留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "多变量分类",
+        "风险权衡",
+        "人工复核"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "c4",
+      "stageId": "cementing",
+      "stageName": "固井",
+      "title": "套管居中度智能评估",
+      "businessQuestion": "受井眼形状和载荷影响时，最低间隙可能出在哪里？",
+      "mvpScope": "未来纯前端教学MVP；合成截面/载荷下最小间隙预测及虚拟扶正布置比较；几何与载荷约束显式，非现场设计建议。",
+      "baseline": "无载荷几何居中度计算",
+      "learnedMethod": "从合成变形样本学习最小间隙回归，再比较有限布置",
+      "backgroundVisual": "井眼/套管截面、偏心与间隙热图",
+      "workflowVisual": "几何→载荷样本→代理预测→布置约束→间隙对照",
+      "demoInteraction": "拖动截面偏心、改变教学载荷、比较候选",
+      "metric": "间隙MAE、最差区定位误差、约束违反数",
+      "splitUnit": "独立井眼几何与载荷组合",
+      "effort": "L",
+      "reuseFamilies": [
+        "回归",
+        "几何示意",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "co1",
+      "stageId": "completion",
+      "stageName": "完井",
+      "title": "完井方式智能优选",
+      "businessQuestion": "已知储层条件下哪些完井方式仍满足教学条件？",
+      "mvpScope": "未来纯前端教学MVP；虚拟案例库的有限方式筛选；全部条件与理由可追溯，只作教学，非现场方案建议。",
+      "baseline": "按单一主条件选择固定方式",
+      "learnedMethod": "显式知识规则链进行条件传播与冲突排除，再按教学偏好排序",
+      "backgroundVisual": "储层条件—方式结构—适配关系图",
+      "workflowVisual": "条件→知识匹配→冲突排除→候选→证据链",
+      "demoInteraction": "改变出砂/出水等教学属性，追踪候选被排除原因",
+      "metric": "规则覆盖、已标注案例一致性、禁用候选漏出数",
+      "splitUnit": "按独立规则组合与案例留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "知识推理",
+        "方案比较",
+        "证据溯源"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "kg",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "co2",
+      "stageId": "completion",
+      "stageName": "完井",
+      "title": "射孔参数智能设计",
+      "businessQuestion": "多层完井条件下如何组成相容的射孔设计候选？",
+      "mvpScope": "未来纯前端教学MVP；多井段方案组合与隔层约束推理；显式禁选层/兼容性/资源限制，仅教学仿真，非现场建议。",
+      "baseline": "各层套用同一固定方案",
+      "learnedMethod": "知识约束传播和有限组合搜索，明确属知识型智能而非训练网络",
+      "backgroundVisual": "分层井筒、目标层和需隔离层示意",
+      "workflowVisual": "条件→可行方案→跨层约束→组合搜索→理由",
+      "demoInteraction": "切换目标层、禁选层和资源约束，查看组合变化",
+      "metric": "已知可行组合召回、约束违反数、搜索候选数",
+      "splitUnit": "独立分层结构与条件组合",
+      "effort": "M",
+      "reuseFamilies": [
+        "知识推理",
+        "约束可视化",
+        "方案比较"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "co3",
+      "stageId": "completion",
+      "stageName": "完井",
+      "title": "完井管柱受力智能分析",
+      "businessQuestion": "哪段虚拟管柱在不同载荷下更接近教学限制？",
+      "mvpScope": "未来纯前端教学MVP；简化载荷状态的应力/位移代理预测；明确边界条件与示意阈值，非现场强度设计。",
+      "baseline": "声明条件的简单线弹性估算",
+      "learnedMethod": "从模拟样本训练多变量应力回归",
+      "backgroundVisual": "管柱结构、受力箭头、应力分布",
+      "workflowVisual": "载荷→边界条件→代理预测→限制对照→误差",
+      "demoInteraction": "改变教学载荷和约束方式，显示外推提示",
+      "metric": "应力MAE、极值区定位、限制误判率",
+      "splitUnit": "独立管柱结构与载荷场景",
+      "effort": "L",
+      "reuseFamilies": [
+        "回归",
+        "几何示意",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "co4",
+      "stageId": "completion",
+      "stageName": "完井",
+      "title": "智能完井滑套控制策略",
+      "businessQuestion": "虚拟多段井中如何比较滑套动作的短期效果？",
+      "mvpScope": "未来纯前端教学MVP；两至三个分段的离散动作教学仿真；动作频次/压力/含水约束显式，非现场控制。",
+      "baseline": "固定开度策略",
+      "learnedMethod": "学习合成动作响应代理，再做有限时域受约束选择",
+      "backgroundVisual": "分段井筒、流量贡献和滑套状态",
+      "workflowVisual": "状态→候选动作→响应预测→约束筛除→下一时刻",
+      "demoInteraction": "切换分段性质和动作约束，比较策略轨迹",
+      "metric": "教学累计目标、约束违反、代理误差",
+      "splitUnit": "独立分段参数与完整仿真回合",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "时序仿真",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "p1",
+      "stageId": "perforation",
+      "stageName": "射孔",
+      "title": "射孔参数优化",
+      "businessQuestion": "单个教学储层内哪些射孔参数候选更符合目标？",
+      "mvpScope": "未来纯前端教学MVP；局部参数的学习代理与候选搜索，与co2跨层兼容设计区分；明确可行域，仅教学仿真，非现场建议。",
+      "baseline": "预设固定方案",
+      "learnedMethod": "学习合成性能响应的回归代理，进行受约束网格搜索",
+      "backgroundVisual": "射孔几何—局部流动—性能面",
+      "workflowVisual": "候选样本→代理拟合→可行域→比较→限制",
+      "demoInteraction": "调归一化参数与约束，查看性能面与候选点",
+      "metric": "代理RMSE、可行率、教学目标差",
+      "splitUnit": "独立岩性条件与参数区块留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "代理模型优化",
+        "几何示意",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "p2",
+      "stageId": "perforation",
+      "stageName": "射孔",
+      "title": "射孔孔道形态预测",
+      "businessQuestion": "岩性等条件变化时，合成孔道几何的相对趋势怎样变化？",
+      "mvpScope": "未来纯前端教学MVP；只预测虚拟孔道长度和清洁度等级；不涉及真实弹药设计、装药或现场操作。",
+      "baseline": "按岩性分组均值",
+      "learnedMethod": "从虚拟试验样本训练岭回归或小MLP",
+      "backgroundVisual": "套管—水泥—岩石及孔道示意",
+      "workflowVisual": "虚拟试验→独立条件切分→回归→形态绘制→误差",
+      "demoInteraction": "改变教学材料属性，比较真值与预测轮廓",
+      "metric": "长度MAE、等级宏F1、分材料残差",
+      "splitUnit": "独立材料批次与试验工况",
+      "effort": "M",
+      "reuseFamilies": [
+        "回归",
+        "几何示意",
+        "多变量分类"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "p3",
+      "stageId": "perforation",
+      "stageName": "射孔",
+      "title": "射孔弹型智能选型",
+      "businessQuestion": "哪些虚拟弹型目录项满足给定教学匹配条件？",
+      "mvpScope": "未来纯前端教学MVP；虚构产品目录的条件匹配与解释；不列真实产品、装药、使用方法或现场推荐。",
+      "baseline": "只按单一尺寸匹配",
+      "learnedMethod": "显式知识图谱约束推理与证据路径，不冒称深度学习",
+      "backgroundVisual": "井筒条件—虚拟目录属性—排除关系",
+      "workflowVisual": "需求→属性匹配→硬约束→候选排序→依据",
+      "demoInteraction": "修改条件、引入缺失属性，查看拒选理由",
+      "metric": "约束违反数、候选覆盖、理由完整率",
+      "splitUnit": "独立需求组合与保留的目录项",
+      "effort": "M",
+      "reuseFamilies": [
+        "知识推理",
+        "证据溯源",
+        "方案比较"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "kg"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "p4",
+      "stageId": "perforation",
+      "stageName": "射孔",
+      "title": "射孔效果智能评估",
+      "businessQuestion": "生产响应偏离教学预期时，哪些井段值得检查射孔效果？",
+      "mvpScope": "未来纯前端教学MVP；合成前后观测的效果筛查；显式区分工况变化与处理效果，不声称真实因果识别。",
+      "baseline": "直接比较前后均值",
+      "learnedMethod": "学习给定工况下的预期响应，以残差训练或规则复核低效段",
+      "backgroundVisual": "作业前后时间线、工况与响应并列",
+      "workflowVisual": "数据对齐→工况特征→预期预测→残差→复核",
+      "demoInteraction": "改变工况而保持处理效果，比较朴素与校正结果",
+      "metric": "合成标签宏F1、预期响应MAE、误判计数",
+      "splitUnit": "独立井及完整前后事件留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "回归",
+        "事件评价",
+        "控制实验"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "pr1",
+      "stageId": "production",
+      "stageName": "采油",
+      "title": "抽油机井工况诊断",
+      "businessQuestion": "示功图形状如何辅助识别抽油机井工况？",
+      "mvpScope": "未来纯前端教学MVP；少量合成示功图工况的分类；几何与工况关系须复核，不作现场诊断。",
+      "baseline": "面积/宽高比的简单阈值规则",
+      "learnedMethod": "轮廓重采样与形状特征上的kNN或小MLP",
+      "backgroundVisual": "泵循环—载荷位移—示功图对应动画",
+      "workflowVisual": "图形→归一化→特征→分类→近邻与误差",
+      "demoInteraction": "拖动周期位置、加入噪声/偏移，切换工况",
+      "metric": "宏F1、各类召回、混淆矩阵",
+      "splitUnit": "独立井或独立泵循环来源",
+      "effort": "M",
+      "reuseFamilies": [
+        "曲线分类",
+        "几何示意",
+        "特征解释"
+      ],
+      "priority": "P1",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "pr2",
+      "stageId": "production",
+      "stageName": "采油",
+      "title": "产量智能预测",
+      "businessQuestion": "利用过去观测预测下一段产量时，何时会失效？",
+      "mvpScope": "未来纯前端教学MVP；合成单井短期预测，限制预测窗口；教学结果不用于产能承诺。",
+      "baseline": "持续值、移动均值或明确假设的递减趋势",
+      "learnedMethod": "滞后特征岭回归或小MLP",
+      "backgroundVisual": "井生产过程、递减趋势、干预时间线",
+      "workflowVisual": "按时间切分→滞后特征→拟合→滚动预测→残差",
+      "demoInteraction": "移动训练截止日、改变预测跨度、加入干预",
+      "metric": "MAE/RMSE、按预测步长误差",
+      "splitUnit": "按时间向前，必要时整井留出",
+      "effort": "S",
+      "reuseFamilies": [
+        "时序预测",
+        "回归",
+        "时间联动"
+      ],
+      "priority": "P1",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "pr3",
+      "stageId": "production",
+      "stageName": "采油",
+      "title": "智能注水调配",
+      "businessQuestion": "有限教学注水总量如何分配给多层更合理？",
+      "mvpScope": "未来纯前端教学MVP；两至三个虚拟层的分配仿真；总量/分层上下界/压力约束显式，非现场注水建议。",
+      "baseline": "均分或固定比例分配",
+      "learnedMethod": "学习分层响应代理，再做有约束组合搜索",
+      "backgroundVisual": "注采井/分层联系、响应与配额图",
+      "workflowVisual": "历史仿真→响应学习→预算约束→分配→对照",
+      "demoInteraction": "修改总量、分层响应和约束，比较方案",
+      "metric": "教学收益、可行率、代理误差",
+      "splitUnit": "独立层间联系与完整工况场景",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "分配可视化",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "pr4",
+      "stageId": "production",
+      "stageName": "采油",
+      "title": "电潜泵故障预警",
+      "businessQuestion": "电潜泵多通道信号是否出现需要检查的异常组合？",
+      "mvpScope": "未来纯前端教学MVP；合成电流/温度等观测的一类异常预警；非现场保护逻辑或处置指令。",
+      "baseline": "单电流阈值",
+      "learnedMethod": "正常关系回归或PCA重建残差检测",
+      "backgroundVisual": "电机/泵结构—信号—异常阶段",
+      "workflowVisual": "时间窗口→正常拟合→多通道残差→事件→复核",
+      "demoInteraction": "改负荷、噪声、通道缺失，观察误报漏报",
+      "metric": "事件PR、每周期误报、教学提前量",
+      "splitUnit": "按设备与时间切分",
+      "effort": "M",
+      "reuseFamilies": [
+        "时序异常",
+        "多变量异常",
+        "事件评价"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "pr5",
+      "stageId": "production",
+      "stageName": "采油",
+      "title": "结蜡 / 结垢预测",
+      "businessQuestion": "哪些生产条件组合提示教学数据中的结蜡趋势？",
+      "mvpScope": "未来纯前端教学MVP；首版只做结蜡风险，结垢作为不同机理的后续任务；不输出现场清防方案。",
+      "baseline": "单温度阈值",
+      "learnedMethod": "从合成多变量样本训练逻辑回归或风险排序器",
+      "backgroundVisual": "井筒沉积示意、环境变化与观测关系",
+      "workflowVisual": "观测→条件特征→训练→风险→证据复核",
+      "demoInteraction": "改变流动条件和输入缺失，比较单变量与联合判断",
+      "metric": "PR、召回、误报及分条件误差",
+      "splitUnit": "按井与季节/工况区段留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "多变量分类",
+        "风险权衡",
+        "特征解释"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "wo1",
+      "stageId": "workover",
+      "stageName": "修井",
+      "title": "修井作业方案智能推荐",
+      "businessQuestion": "面对井史和故障描述，哪些历史方案类别可供复核？",
+      "mvpScope": "未来纯前端教学MVP；虚构工单的方案类别检索与条件筛选；不生成具体修井操作步骤或现场方案。",
+      "baseline": "关键词匹配",
+      "learnedMethod": "TF-IDF表示与近邻检索，加显式知识约束过滤并展示匹配证据",
+      "backgroundVisual": "井史事件—故障描述—方案类别图",
+      "workflowVisual": "文本→词项表示→相似案例→条件筛除→出处",
+      "demoInteraction": "改写描述、移除关键信息，比较候选与拒选",
+      "metric": "检索Recall@k、约束违反数、出处覆盖",
+      "splitUnit": "按井史/文档来源，重复改写放同组",
+      "effort": "M",
+      "reuseFamilies": [
+        "文本检索",
+        "知识推理",
+        "证据溯源"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "kg",
+        "nlp"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "wo2",
+      "stageId": "workover",
+      "stageName": "修井",
+      "title": "落物打捞工具智能选型",
+      "businessQuestion": "虚拟落物特征与工具属性之间有哪些匹配和冲突？",
+      "mvpScope": "未来纯前端教学MVP；合成落物与虚拟工具目录的知识匹配；显示尺寸/几何约束，非现场打捞或操作建议。",
+      "baseline": "只按直径匹配",
+      "learnedMethod": "显式规则链与图关系推理，保留每条排除/推荐证据",
+      "backgroundVisual": "落物/井筒截面和工具接触方式示意",
+      "workflowVisual": "属性→候选→约束传播→排序→理由",
+      "demoInteraction": "改变落物几何和缺失属性，查看候选变化",
+      "metric": "合法候选覆盖、违约候选数、理由完整率",
+      "splitUnit": "独立几何与条件组合",
+      "effort": "M",
+      "reuseFamilies": [
+        "知识推理",
+        "几何示意",
+        "证据溯源"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "kg"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "wo3",
+      "stageId": "workover",
+      "stageName": "修井",
+      "title": "套管损伤智能识别",
+      "businessQuestion": "井径或成像观测中哪里出现疑似套管损伤？",
+      "mvpScope": "未来纯前端教学MVP；合成二维井壁/多臂井径展开图的一种缺陷定位；不作真实完整性评价。",
+      "baseline": "井径偏差阈值",
+      "learnedMethod": "局部形状特征训练像素/窗口分类器",
+      "backgroundVisual": "套管截面—传感器读数—展开缺陷图",
+      "workflowVisual": "观测→去偏移→特征→得分→缺陷区域",
+      "demoInteraction": "改变偏心、噪声、缺陷幅度，人工修正区域",
+      "metric": "IoU、事件召回、误检区域数",
+      "splitUnit": "独立套管段或模拟几何",
+      "effort": "M",
+      "reuseFamilies": [
+        "图像分割",
+        "几何示意",
+        "人工复核"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "wo4",
+      "stageId": "workover",
+      "stageName": "修井",
+      "title": "修井作业风险预警",
+      "businessQuestion": "合成修井作业序列的异常组合能否及时进入复核？",
+      "mvpScope": "未来纯前端教学MVP；仅识别一种教学异常事件；不提供现场控制、井控或处置操作。",
+      "baseline": "单变量超限提示",
+      "learnedMethod": "正常时序预测残差或监督窗口分类器",
+      "backgroundVisual": "作业阶段—载荷/压力曲线—事件时间线",
+      "workflowVisual": "分段→历史窗口→模型分数→事件合并→复核",
+      "demoInteraction": "切换作业阶段和传感器漂移，观察误报",
+      "metric": "事件召回、误报、教学设定提前量",
+      "splitUnit": "按独立作业回合与时间切分",
+      "effort": "M",
+      "reuseFamilies": [
+        "时序异常",
+        "事件评价",
+        "人工复核"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "wo5",
+      "stageId": "workover",
+      "stageName": "修井",
+      "title": "修井周期预测",
+      "businessQuestion": "在完整随访的教学数据中，下一检修间隔如何估计？",
+      "mvpScope": "未来纯前端教学MVP；合成且完整随访的间隔回归；真实删失、检修政策和非随机维修另列边界，不当现场计划。",
+      "baseline": "历史中位间隔",
+      "learnedMethod": "设备历史统计特征上的岭回归或浅树回归",
+      "backgroundVisual": "寿命时间轴、使用强度与检修事件",
+      "workflowVisual": "历史→可用特征→分设备切分→回归→误差",
+      "demoInteraction": "改变负荷或缺失历史，对比估计与真值",
+      "metric": "间隔MAE、分设备/负荷误差",
+      "splitUnit": "按设备及时间前推",
+      "effort": "M",
+      "reuseFamilies": [
+        "时序预测",
+        "回归",
+        "事件时间线"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "e1",
+      "stageId": "eor",
+      "stageName": "增采",
+      "title": "压裂参数智能优化",
+      "businessQuestion": "虚拟压裂方案如何在教学效果与资源约束间比较？",
+      "mvpScope": "未来纯前端教学MVP；合成少量设计变量的代理优化；资源/压力/范围约束显式，非现场压裂设计建议。",
+      "baseline": "固定方案或单变量扫描",
+      "learnedMethod": "学习合成性能代理，受约束网格或随机搜索",
+      "backgroundVisual": "井段/裂缝概念、资源分配与响应面",
+      "workflowVisual": "模拟试验→代理→可行域→候选→对照",
+      "demoInteraction": "收紧资源约束、改变储层条件，观察候选",
+      "metric": "代理误差、可行率、教学目标改进",
+      "splitUnit": "独立储层模型与设计区域",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "约束可视化",
+        "空间视图"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "e2",
+      "stageId": "eor",
+      "stageName": "增采",
+      "title": "压裂裂缝形态预测",
+      "businessQuestion": "教学条件变化时二维裂缝轮廓的相对形态如何变化？",
+      "mvpScope": "未来纯前端教学MVP；合成二维裂缝几何的长度/宽度代理预测；不做真实三维裂缝扩展计算或现场设计。",
+      "baseline": "按条件分组平均轮廓",
+      "learnedMethod": "训练多输出回归预测几何参数，再用显式几何绘图",
+      "backgroundVisual": "地层/应力概念与二维轮廓",
+      "workflowVisual": "模拟输入→特征→回归→几何重建→误差",
+      "demoInteraction": "改教学材料差异和噪声，对比预测轮廓",
+      "metric": "几何参数MAE、轮廓IoU",
+      "splitUnit": "独立地层几何与模拟工况",
+      "effort": "L",
+      "reuseFamilies": [
+        "回归",
+        "几何示意",
+        "空间视图"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "e3",
+      "stageId": "eor",
+      "stageName": "增采",
+      "title": "化学驱配方智能筛选",
+      "businessQuestion": "虚拟化学驱配方怎样兼顾教学性能和成本？",
+      "mvpScope": "未来纯前端教学MVP；虚构组分和合成实验数据的候选筛选；比例和为1、浓度/成本/适配约束显式，非现场配方。",
+      "baseline": "固定配方或实验均值排序",
+      "learnedMethod": "学习性能回归代理，在有限配方单纯形内搜索",
+      "backgroundVisual": "配方三角图、性能/成本权衡",
+      "workflowVisual": "样本→批次切分→回归→约束筛选→帕累托比较",
+      "demoInteraction": "拖动配比和预算、改变环境，查看不可行点",
+      "metric": "留出批次MAE、可行率、教学权衡曲线",
+      "splitUnit": "独立配方批次和环境条件",
+      "effort": "M",
+      "reuseFamilies": [
+        "代理模型优化",
+        "配方空间",
+        "约束可视化"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "e4",
+      "stageId": "eor",
+      "stageName": "增采",
+      "title": "蒸汽吞吐注采参数优化",
+      "businessQuestion": "虚拟吞吐周期怎样在产量与热耗之间取舍？",
+      "mvpScope": "未来纯前端教学MVP；简化注入—停留—生产循环；能量/压力/时长边界显式，仅教学仿真，非现场注采建议。",
+      "baseline": "固定周期策略",
+      "learnedMethod": "学习周期响应的回归代理，再做受约束候选比较",
+      "backgroundVisual": "周期时间线、热量与产量收支图",
+      "workflowVisual": "仿真历史→周期特征→响应预测→候选→收支",
+      "demoInteraction": "改变周期预算和环境，比较轨迹与限制",
+      "metric": "教学能耗/产出目标、可行率、预测误差",
+      "splitUnit": "独立井与完整周期组合",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "时序仿真",
+        "收支可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "e5",
+      "stageId": "eor",
+      "stageName": "增采",
+      "title": "微生物采油菌群活性预测",
+      "businessQuestion": "环境条件怎样影响虚拟菌群的教学活性指标？",
+      "mvpScope": "未来纯前端教学MVP；合成实验中的单一活性回归；不涉及真实菌种改造、培养配方或现场投放。",
+      "baseline": "单温度关系或批次均值",
+      "learnedMethod": "多变量kNN/岭回归学习条件与活性关系",
+      "backgroundVisual": "环境条件—活性响应—实验批次示意",
+      "workflowVisual": "实验表→批次切分→回归→响应面→误差",
+      "demoInteraction": "改变归一化环境变量与训练覆盖，观察外推",
+      "metric": "活性MAE、分环境误差、外推区标记",
+      "splitUnit": "独立实验批次与环境区域",
+      "effort": "M",
+      "reuseFamilies": [
+        "回归",
+        "响应面",
+        "实验设计"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "t1",
+      "stageId": "transport",
+      "stageName": "运输",
+      "title": "管道泄漏智能检测",
+      "businessQuestion": "压力与流量异常组合是否提示需要检查的疑似泄漏时段？",
+      "mvpScope": "未来纯前端教学MVP；小型虚拟管线的事件检测，首版不承诺精确定位；仅教学，不作为现场泄漏或安全控制系统。",
+      "baseline": "单压力阈值",
+      "learnedMethod": "学习正常压力—流量关系或时序预测，以残差触发事件",
+      "backgroundVisual": "管线/传感器—波形—告警区间联动",
+      "workflowVisual": "正常段→拟合→残差→阈值→事件评价",
+      "demoInteraction": "加入负荷变化、传感器漂移和泄漏事件，比较误报",
+      "metric": "事件召回、误报率、检测延迟",
+      "splitUnit": "独立管线工况与时间段",
+      "effort": "M",
+      "reuseFamilies": [
+        "时序异常",
+        "多变量异常",
+        "事件评价"
+      ],
+      "priority": "P1",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "t2",
+      "stageId": "transport",
+      "stageName": "运输",
+      "title": "管道腐蚀智能评估",
+      "businessQuestion": "哪些管壁观测区域需要进一步检查腐蚀或减薄？",
+      "mvpScope": "未来纯前端教学MVP；合成厚度网格的缺陷分级；不推断真实安全寿命或可运行压力。",
+      "baseline": "最小厚度阈值",
+      "learnedMethod": "局部厚度纹理特征训练区域分类器，和阈值对照",
+      "backgroundVisual": "管壁截面—测厚网格—减薄区域图",
+      "workflowVisual": "网格→去偏差→局部特征→分类→区域复核",
+      "demoInteraction": "增加测量噪声、局部缺失，查看误检区域",
+      "metric": "区域IoU、等级宏F1、严重区漏检",
+      "splitUnit": "独立管段和缺陷几何",
+      "effort": "M",
+      "reuseFamilies": [
+        "图像分割",
+        "几何示意",
+        "人工复核"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv",
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "t3",
+      "stageId": "transport",
+      "stageName": "运输",
+      "title": "集输系统工况优化",
+      "businessQuestion": "虚拟集输网络中哪些设置能在限制内降低教学能耗？",
+      "mvpScope": "未来纯前端教学MVP；少节点网络的代理优化；流量/压力/设备范围约束显式，仅教学仿真，非现场运行建议。",
+      "baseline": "固定设备设置或平均分配",
+      "learnedMethod": "学习网络响应代理，进行有约束候选搜索",
+      "backgroundVisual": "节点管线图、压降和能耗流向",
+      "workflowVisual": "仿真样本→代理→可行域→设置比较→收支",
+      "demoInteraction": "改变虚拟需求和约束，观察瓶颈与方案变化",
+      "metric": "教学能耗、约束违反、代理误差",
+      "splitUnit": "独立网络工况与需求区间",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "网络可视化",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "t4",
+      "stageId": "transport",
+      "stageName": "运输",
+      "title": "油气计量智能校正",
+      "businessQuestion": "多变量观测能否校正教学计量仪表的条件性偏差？",
+      "mvpScope": "未来纯前端教学MVP；合成参考仪表与待校仪表的小型标定任务；不用于贸易结算。",
+      "baseline": "固定偏移/比例校正",
+      "learnedMethod": "从训练标定数据学习多变量岭回归校正",
+      "backgroundVisual": "真实量—仪表响应—条件偏差示意",
+      "workflowVisual": "配对标定→按批次切分→拟合→校正→残差",
+      "demoInteraction": "改变漂移和环境，比较原始/常数校正/学习校正",
+      "metric": "参考量MAE、偏差、分条件残差",
+      "splitUnit": "独立仪表与标定批次",
+      "effort": "S",
+      "reuseFamilies": [
+        "回归",
+        "标定",
+        "误差分解"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "t5",
+      "stageId": "transport",
+      "stageName": "运输",
+      "title": "储罐液位与泄漏智能监控",
+      "businessQuestion": "图像液位与流量记录结合时，哪些变化值得检查？",
+      "mvpScope": "未来纯前端教学MVP；合成罐体图像的液位检测与简化收支异常；不作为现场储罐报警或控制系统。",
+      "baseline": "固定图像强度阈值及单液位变化阈值",
+      "learnedMethod": "训练行/像素分类器识别液位线；收支规则明确标传统校验",
+      "backgroundVisual": "储罐剖面—图像液位—进出量时间线",
+      "workflowVisual": "图像→液位得分→高度换算→收支校验→事件",
+      "demoInteraction": "改变遮挡、反光和合成异常，分别看识别与收支错误",
+      "metric": "液位MAE、异常事件召回、误报",
+      "splitUnit": "独立图像场景与完整时间段",
+      "effort": "M",
+      "reuseFamilies": [
+        "图像分割",
+        "时序异常",
+        "收支可视化"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "cv"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "r1",
+      "stageId": "refining",
+      "stageName": "加工",
+      "title": "常减压装置操作优化",
+      "businessQuestion": "虚拟分离装置如何在能耗与质量约束间比较操作候选？",
+      "mvpScope": "未来纯前端教学MVP；极简合成装置代理；温压/能耗/质量可行域显式，仅教学仿真，非现场炼化操作建议。",
+      "baseline": "固定操作点",
+      "learnedMethod": "学习质量与能耗代理回归，进行受约束候选搜索",
+      "backgroundVisual": "装置流程、输入输出与能量示意",
+      "workflowVisual": "模拟数据→工况切分→代理→约束→候选比较",
+      "demoInteraction": "调归一化进料与约束，查看可行域和目标变化",
+      "metric": "代理MAE、可行率、教学能耗目标",
+      "splitUnit": "独立进料批次与操作区域",
+      "effort": "L",
+      "reuseFamilies": [
+        "代理模型优化",
+        "工艺示意",
+        "约束可视化"
+      ],
+      "priority": "P3",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "r2",
+      "stageId": "refining",
+      "stageName": "加工",
+      "title": "催化裂化产物预测",
+      "businessQuestion": "有限输入条件能否预测教学产物组成的相对变化？",
+      "mvpScope": "未来纯前端教学MVP；合成多组分产物比例预测；非现场工艺优化建议，输出满足非负与总和约束。",
+      "baseline": "按进料类别平均组成",
+      "learnedMethod": "多输出回归学习产物比例，并明确标注组成约束后处理",
+      "backgroundVisual": "进料—反应概念—产物堆叠组成图",
+      "workflowVisual": "批次→特征→多输出回归→组成约束→残差",
+      "demoInteraction": "改变教学进料条件、关闭输入，比较组成",
+      "metric": "各组分MAE、和为1检查、分批次误差",
+      "splitUnit": "独立进料批次和工况",
+      "effort": "M",
+      "reuseFamilies": [
+        "多输出回归",
+        "组成可视化",
+        "约束可视化"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "opt",
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "r3",
+      "stageId": "refining",
+      "stageName": "加工",
+      "title": "炼化设备预测性维护",
+      "businessQuestion": "设备多源信号何时偏离正常关系并需要复核？",
+      "mvpScope": "未来纯前端教学MVP；合成单类设备的一种退化事件；不替代现场维护判断或保护系统。",
+      "baseline": "温度/振动固定阈值",
+      "learnedMethod": "正常关系预测残差或特征分类器",
+      "backgroundVisual": "设备部件—频谱/温度—退化阶段",
+      "workflowVisual": "设备切分→滑窗→正常学习→风险→事件",
+      "demoInteraction": "改变正常负荷、渐进退化与传感器噪声",
+      "metric": "事件召回、误报、教学提前量",
+      "splitUnit": "按设备及时间留出",
+      "effort": "M",
+      "reuseFamilies": [
+        "时序异常",
+        "频谱视图",
+        "事件评价"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "r4",
+      "stageId": "refining",
+      "stageName": "加工",
+      "title": "化验数据智能审核",
+      "businessQuestion": "化验表中哪些数值或单位异常值得复核？",
+      "mvpScope": "未来纯前端教学MVP；虚构化验表的单位/缺失规则校验与多指标异常；不自动否定真实检验结论。",
+      "baseline": "逐列范围与格式规则",
+      "learnedMethod": "训练多变量背景回归/PCA识别关系异常；单位换算明确标规则",
+      "backgroundVisual": "样品—化验字段—单位/关系示意",
+      "workflowVisual": "读表→单位规范→规则校验→关系残差→证据",
+      "demoInteraction": "注入单位错、录入错、关系冲突，查看不同检出机制",
+      "metric": "注入异常PR、错误类型召回、误报",
+      "splitUnit": "独立样品与实验批次",
+      "effort": "M",
+      "reuseFamilies": [
+        "多变量异常",
+        "数据质量",
+        "证据溯源"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "nlp",
+        "opt"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    },
+    {
+      "sceneId": "r5",
+      "stageId": "refining",
+      "stageName": "加工",
+      "title": "产品质量在线软测量",
+      "businessQuestion": "化验结果尚未返回时，过程观测能否给出教学质量估计？",
+      "mvpScope": "未来纯前端教学MVP；合成过程变量到单一质量指标的软测量；明确化验延迟，只用预测时已知特征。",
+      "baseline": "最近一次已到达的化验值",
+      "learnedMethod": "滞后过程特征的岭回归或小MLP",
+      "backgroundVisual": "传感器时间线—取样—化验延迟—估计值",
+      "workflowVisual": "时间对齐→可用性约束→前推切分→回归→延迟对照",
+      "demoInteraction": "改变化验延迟、输入漂移和预测窗口",
+      "metric": "MAE/RMSE、分工况误差、可用信息检查",
+      "splitUnit": "按时间前推，必要时按生产批次留出",
+      "effort": "S",
+      "reuseFamilies": [
+        "时序预测",
+        "回归",
+        "时间对齐"
+      ],
+      "priority": "P2",
+      "domainReviewNeeded": true,
+      "status": "concept_proposal",
+      "methods": [
+        "ts"
+      ],
+      "implemented": false,
+      "verifiedRuntime": false
+    }
+  ]
+}

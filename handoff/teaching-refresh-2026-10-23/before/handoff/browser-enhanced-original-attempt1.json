@@ -1,0 +1,30 @@
+{
+  "scope": "v1.1 enhancements and real sources inside unchanged teacher sandbox, file protocol offline",
+  "checks": [
+    {
+      "name": "real JPEG decoded inside opaque sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "original-m1-public-core.json original sandbox download",
+      "status": "passed"
+    },
+    {
+      "name": "15 actual sensitivity cells in teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "public headspace62 rows in teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "original-m2-public-headspace.json original sandbox download",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "exception": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('#status').filter({ hasText: '计算完成' }) to be visible\u001b[22m\n",
+  "passed": 5,
+  "failed": 1
+}

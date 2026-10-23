@@ -1,0 +1,82 @@
+{
+  "scope": "homepage Live2D and navigation UI; mocked API contract only, no live model call or model-performance test",
+  "checks": [
+    {
+      "name": "actual Live2D model loaded",
+      "status": "passed"
+    },
+    {
+      "name": "Live2D animation changes rendered canvas",
+      "status": "passed"
+    },
+    {
+      "name": "home opens assistant with honest unconnected state",
+      "status": "passed"
+    },
+    {
+      "name": "unimported case has local standalone navigation",
+      "status": "passed"
+    },
+    {
+      "name": "navigation really opens m2 page",
+      "status": "passed"
+    },
+    {
+      "name": "internal navigation changes route and keeps assistant",
+      "status": "passed"
+    },
+    {
+      "name": "imported case navigation uses actual registered case",
+      "status": "passed"
+    },
+    {
+      "name": "registered workflow renders after navigation",
+      "status": "passed"
+    },
+    {
+      "name": "page context tracks scene",
+      "status": "passed"
+    },
+    {
+      "name": "configuration clears password field and makes no request",
+      "status": "passed"
+    },
+    {
+      "name": "mock request follows documented Responses shape",
+      "status": "passed"
+    },
+    {
+      "name": "model text is escaped and unknown tool target rejected",
+      "status": "passed"
+    },
+    {
+      "name": "key absent from persistent storage",
+      "status": "passed"
+    },
+    {
+      "name": "disconnect clears model credentials",
+      "status": "passed"
+    },
+    {
+      "name": "390px assistant has no document overflow",
+      "status": "passed"
+    },
+    {
+      "name": "file protocol offline loads real Live2D",
+      "status": "passed"
+    },
+    {
+      "name": "offline default uses zero HTTP and no configured model",
+      "status": "passed"
+    },
+    {
+      "name": "no JavaScript page exceptions",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "offlineHTTP": [],
+  "liveModelCallVerified": false,
+  "passed": 18,
+  "failed": 0
+}

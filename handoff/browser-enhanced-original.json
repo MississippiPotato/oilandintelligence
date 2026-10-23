@@ -1,0 +1,102 @@
+{
+  "scope": "v1.1 enhancements and real sources inside unchanged teacher sandbox, file protocol offline",
+  "checks": [
+    {
+      "name": "real JPEG decoded inside opaque sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "original-m1-public-core.json original sandbox download",
+      "status": "passed"
+    },
+    {
+      "name": "15 actual sensitivity cells in teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "public headspace62 rows in teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "original-m2-public-headspace.json original sandbox download",
+      "status": "passed"
+    },
+    {
+      "name": "actual initial gradient weights in teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "six exposure calculations in teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "public USROP computation has no invented F1",
+      "status": "passed"
+    },
+    {
+      "name": "original-m4-public-usrop.json original sandbox download",
+      "status": "passed"
+    },
+    {
+      "name": "original-m1-public-core.json imported within teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "original-m2-public-headspace.json imported within teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "original-m4-public-usrop.json imported within teacher sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "mixed public source wells remain separate",
+      "status": "passed"
+    },
+    {
+      "name": "actual BM25 source-version navigation in sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "report revision diff in sandbox",
+      "status": "passed"
+    },
+    {
+      "name": "original-m5-workspace.json original sandbox download",
+      "status": "passed"
+    },
+    {
+      "name": "workspace restores actual draft across refresh",
+      "status": "passed"
+    },
+    {
+      "name": "restored current claims need review",
+      "status": "passed"
+    },
+    {
+      "name": "original-m5-combined-report.html original sandbox download",
+      "status": "passed"
+    },
+    {
+      "name": "mixed-source HTML renders offline image references",
+      "status": "passed"
+    },
+    {
+      "name": "combined HTML yields same evidence JSON",
+      "status": "passed"
+    },
+    {
+      "name": "entire real-source sandbox flow has zero HTTP",
+      "status": "passed"
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "status": "passed",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "passed": 23,
+  "failed": 0
+}

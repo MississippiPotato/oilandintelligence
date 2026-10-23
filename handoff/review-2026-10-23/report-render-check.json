@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-10-23T12:02:50.743Z",
+  "scope": "Actual rendering and interaction of the review artifact, not additional product acceptance",
+  "checks": [
+    {
+      "name": "eleven findings and eleven teacher criteria",
+      "passed": true,
+      "detail": {
+        "findings": 11,
+        "teacherRows": 11
+      }
+    },
+    {
+      "name": "priority filter shows four actionable findings",
+      "passed": true,
+      "detail": "当前显示4条建议"
+    },
+    {
+      "name": "teaching filter shows five improvements",
+      "passed": true,
+      "detail": "当前显示5条建议"
+    },
+    {
+      "name": "screenshot zoom opens",
+      "passed": true,
+      "detail": "m3：配对图像与真实分割"
+    },
+    {
+      "name": "screenshot zoom closes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "desktop page fits viewport",
+      "passed": true,
+      "detail": {
+        "viewport": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "mobile page fits viewport",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "offline file page embeds three loaded screenshots",
+      "passed": true,
+      "detail": [
+        {
+          "inline": true,
+          "loaded": true
+        },
+        {
+          "inline": true,
+          "loaded": true
+        },
+        {
+          "inline": true,
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "name": "offline interaction works",
+      "passed": true,
+      "detail": "当前显示2条建议"
+    },
+    {
+      "name": "offline report makes no HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "report has no browser JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "errors": []
+}

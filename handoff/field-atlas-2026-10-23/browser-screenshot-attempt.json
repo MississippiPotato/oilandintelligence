@@ -1,0 +1,79 @@
+{
+  "scope": "1.4.1-preview field atlas: real browser UI, current five links, calculated lag, teacher import and refresh, firstbreak, offline homepage",
+  "checks": [
+    {
+      "name": "five delivered cases still precede the new field atlas",
+      "passed": true
+    },
+    {
+      "name": "new profile actual registrations remain zero",
+      "passed": true
+    },
+    {
+      "name": "original 13 stages and 61 scenes remain",
+      "passed": true
+    },
+    {
+      "name": "m1 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m1 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m2 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m2 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m3 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m3 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m4 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m4 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "m5 UI selection updates explanation and correct highlight",
+      "passed": true
+    },
+    {
+      "name": "m5 actual case navigation opens professional background",
+      "passed": true
+    },
+    {
+      "name": "20 L/s and 20 min produce actual 50 min lag and 40 percent transport",
+      "passed": true
+    },
+    {
+      "name": "keyboard changes rate to 40 and recomputes 25 min / 80 percent",
+      "passed": true
+    },
+    {
+      "name": "arrival caps marker at surface and retains actual cumulative volume",
+      "passed": true
+    },
+    {
+      "name": "zero elapsed time returns to bit with zero volume",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "resetOwnAutomationProfileOnly": true,
+  "exception": "page.screenshot: Clipped area is either empty or outside the resulting image\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+  "checkedAt": "2026-10-23T13:21:06.685Z",
+  "passed": 17,
+  "failed": 1
+}

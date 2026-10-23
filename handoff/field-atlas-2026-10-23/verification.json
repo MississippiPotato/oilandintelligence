@@ -1,0 +1,263 @@
+{
+  "createdAt": "2026-10-23T13:22:40.972Z",
+  "portalVersion": "1.4.1-preview",
+  "caseVersion": "1.2.0",
+  "checks": [
+    {
+      "name": "both teacher trees match the locked original",
+      "passed": true,
+      "detail": {
+        "files": 46,
+        "readOnlyCopyFilesConfirmedByPowerShell": 23
+      }
+    },
+    {
+      "name": "enhanced portal retains all four teacher compatibility modules byte for byte",
+      "passed": true,
+      "detail": [
+        "case-upload.js",
+        "case-demo-host.js",
+        "registry.js",
+        "admin.js"
+      ]
+    },
+    {
+      "name": "all five case build files retain version 1.2.0 and locked hashes",
+      "passed": true,
+      "detail": {
+        "files": 25
+      }
+    },
+    {
+      "name": "previous complete and five-case archives are preserved",
+      "passed": true,
+      "detail": [
+        {
+          "path": "dist/s17-mudlogging-cases-only-1.2.0.zip",
+          "sha256": "06215aa08ee608fc64bab09e88fc2aecc3570187a8edae1169fc9e5d096a342a"
+        },
+        {
+          "path": "dist/s17-mudlogging-with-assistant-1.4.0-preview.zip",
+          "sha256": "4f4443dcafcce65857fc8db3b90ec0a2cc372b7e5180fa948177ee2fe70bfabb"
+        }
+      ]
+    },
+    {
+      "name": "new homepage JavaScript syntax parses",
+      "passed": true
+    },
+    {
+      "name": "actual browser report completed without failed checks",
+      "passed": true,
+      "detail": {
+        "passed": 35,
+        "failed": 0,
+        "checkedAt": "2026-10-23T13:22:27.158Z",
+        "report": "handoff/field-atlas-2026-10-23/browser.json"
+      }
+    },
+    {
+      "name": "m2 actual refreshed calculation contains metrics and model scores",
+      "passed": true,
+      "detail": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_s": 10
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_s": 0
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "error_s": 0
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "error_s": 0
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "error_s": 0
+          },
+          {
+            "pred": 5,
+            "truth": 5,
+            "error_s": 0
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "error_s": 0
+          },
+          {
+            "pred": 7,
+            "truth": 7,
+            "error_s": 0
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "detectionRecall": 1,
+        "truthCount": 8,
+        "candidateCount": 8,
+        "model": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 0.8
+            },
+            {
+              "recall": 0.5,
+              "f1": 0.6666666666666666
+            }
+          ],
+          "macroF1": 0.8666666666666666,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 1,
+          "coverage": 1,
+          "acceptedError": 0.125
+        },
+        "depthMAE_m": 0,
+        "depthN": 2,
+        "falsePersistent": {
+          "count": 0,
+          "denominator": 6
+        },
+        "allCandidateCoverage": 1
+      }
+    }
+  ],
+  "scope": "File checks are separate from actual browser UI checks; no model result or industrial accuracy claim.",
+  "files": [
+    {
+      "path": "portal/index.html",
+      "bytes": 3483,
+      "sha256": "88f3a7653af3a96258ec930b869a354d6aa40834d5214c82ef72a352cbc176a0"
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "bytes": 7870,
+      "sha256": "97e5805d83a770676ea5a36cb6f848c560e0fa115a7c42509fb1929f78c6df16"
+    },
+    {
+      "path": "portal/assets/s17-field-atlas.js",
+      "bytes": 13181,
+      "sha256": "c78a04afe9d3a6e1032d0e872e2c2f9b364b85023e1cb9e4f8423acdba50d563"
+    },
+    {
+      "path": "portal/assets/s17-field-atlas.css",
+      "bytes": 4900,
+      "sha256": "e837896bd7f2911e142aefc0c1689b7bce8a3d9a3c91cf4ab24bbfec4c842ed2"
+    }
+  ],
+  "unverified": [
+    "No field validation of the ideal fluid transport illustration",
+    "No physical mobile device or additional browser engine tested",
+    "No new cloud model or speech call performed",
+    "Existing Live2D public redistribution permission remains unverified"
+  ],
+  "passed": 7,
+  "failed": 0
+}

@@ -1,0 +1,38 @@
+{
+  "createdAt": "2026-10-23T11:02:21.425Z",
+  "browser": "Chrome headless on Windows",
+  "origin": "http://127.0.0.1:8755",
+  "httpStatus": 200,
+  "modalities": [
+    "input_text",
+    "input_image",
+    "input_audio"
+  ],
+  "transport": "direct browser fetch to actual Ark API, no interception",
+  "state": {
+    "successfulCalls": 1,
+    "usage": {
+      "input_tokens": 2510,
+      "output_tokens": 34,
+      "total_tokens": 2544,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 20
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "attachmentsAfterSend": 0,
+    "persistentCredential": false,
+    "passwordFieldEmpty": true,
+    "disconnectedCredential": true
+  },
+  "reply": "火山方舟 · doubao-seed-2-0-mini-260428 · 模型回复\n\n我找到对应页面，点击下面进入。\n\n打开独立演示 · 气测异常",
+  "errors": [],
+  "navigation": {
+    "target": "m2",
+    "openedURL": "http://127.0.0.1:8755/dist/cases/s17-mudgas-context/demo/index.html",
+    "pageHeading": "同样的气峰，为什么解释不同？"
+  }
+}

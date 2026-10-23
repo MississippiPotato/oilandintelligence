@@ -1,0 +1,97 @@
+{
+  "createdAt": "2026-10-23T10:45:28.876Z",
+  "portalVersion": "1.2.0-preview",
+  "fiveCaseVersion": "1.1.0",
+  "newFullCases": 0,
+  "fiveCaseFilesUnchanged": 25,
+  "originalFilesUnchanged": 46,
+  "uiAssertionsPassed": 25,
+  "liveModelCallVerified": false,
+  "apiValidation": "documented Responses client + intercepted mock only; actual account generation not performed",
+  "corsPreflight": {
+    "measuredAt": "2026-10-23T10:37:22.599Z",
+    "kind": "unauthenticated CORS preflight only, no model generation or credentials",
+    "status": 200,
+    "allowOrigin": "http://127.0.0.1:8755",
+    "allowMethods": "GET,POST,PUT,DELETE,HEAD,OPTIONS",
+    "allowHeaders": "authorization,content-type"
+  },
+  "modelRecommendation": {
+    "id": "doubao-seed-2-0-mini-260428",
+    "source": "https://docs.volcengine.com/docs/ark/model-list?lang=zh",
+    "priceSource": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh",
+    "regularOnlineNonAudioInputUpTo32K_CNYperMillion": 0.2,
+    "regularOnlineOutput_CNYperMillion": 2,
+    "checkedOn": "2026-10-23"
+  },
+  "avatar": {
+    "name": "Hiyori Momose",
+    "runtime": "actual Live2D Cubism Core + pixi-live2d-display",
+    "assetFiles": 19,
+    "localAssets": true,
+    "licenseFile": "portal/assets/live2d/ATTRIBUTION.txt"
+  },
+  "publicPhotos": {
+    "count": 3,
+    "scope": "same-specimen teaching photographs, not a drill-cuttings oil-show benchmark",
+    "license": "CC BY-SA 3.0",
+    "modelPerformanceMetrics": false
+  },
+  "notVerified": [
+    "actual paid model generation with a real account/API key",
+    "voice-model ASR/TTS or image upload",
+    "other browsers and real mobile devices"
+  ],
+  "files": [
+    {
+      "path": "portal/index.html",
+      "sha256": "e731360f6fe789dda35558c4f794a95d66724dcf4cc8385f5481dde4bb7bc4f9",
+      "bytes": 2925
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "sha256": "9c50cc37d9f889d5418da939639a6da44779f475139a98a0b58c54a84cfc7a63",
+      "bytes": 3267
+    },
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "sha256": "64e1310115234c9e7b94478031e2b4b47123efb4f3315c521c8b7d8815183893",
+      "bytes": 15047
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "sha256": "cdd88f8d17014553a668b0593eac68de67980e5a7f19f02504f5b9fe7167a9ef",
+      "bytes": 6212
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "sha256": "2d478b6c56d268d10074a4dbcd48fe66a7d0b22baf05685dc98fb4cc54b80604",
+      "bytes": 5008
+    },
+    {
+      "path": "portal/assets/s17-live2d.js",
+      "sha256": "3244e58e36802ea34823b3e84de3dc268c07d9812fb093bebe89f22d49d80a42",
+      "bytes": 2249
+    },
+    {
+      "path": "portal/assets/s17-live2d-data.js",
+      "sha256": "5cfeb32954ffe6460c1605df5bf3fdcbc45346943c0bc5e7d1334f58b66a74c7",
+      "bytes": 6449608
+    },
+    {
+      "path": "portal/reference/fluorescence.html",
+      "sha256": "f3a549fe87b9d9edb75b2528be8a7f691c4a89ed82063e69c08b78079c778b93",
+      "bytes": 3700
+    },
+    {
+      "path": "portal/reference/fluorescence.js",
+      "sha256": "5554cbe7a7e5772f81d3b0812430aa29b48cfb01ca590aced33fb23f0745c6dd",
+      "bytes": 783
+    },
+    {
+      "path": "portal/reference/fluorescence-data.js",
+      "sha256": "b52674d3e40ca3f74b8d62e98678ba7f5d5f36dcd681dc8f506a7f35ae675952",
+      "bytes": 3455
+    }
+  ]
+}

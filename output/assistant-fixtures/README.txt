@@ -1,0 +1,1 @@
+Synthetic smoke fixture only. navigation.wav was generated locally with Windows System.Speech.Synthesis.SpeechSynthesizer, default installed voice, saying: 请带我去气测异常案例。 No human microphone recording. Used to verify input transport/transcription, not an ASR benchmark.

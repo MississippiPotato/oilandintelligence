@@ -1,0 +1,17 @@
+(async function(g){'use strict';
+const root=document.getElementById('s17-assistant'),host=root?.querySelector('.s17-agent-avatar'),info=g.S17AvatarInfo??{name:'Diana',displayName:'嘉然 Diana',creator:'木果阿木果',source:'MoodDairy'};if(!host)return;
+g.S17Live2D={state:'loading',model:info.name,error:null};
+try{
+ if(!g.PIXI?.live2d?.Live2DModel||!g.Live2DCubismCore||!g.S17AvatarData)throw Error('本地Live2D运行资源未就绪');
+ const canvas=document.createElement('canvas');canvas.setAttribute('aria-label','Live2D Q版角色 '+info.displayName);
+ const app=new PIXI.Application({view:canvas,width:220,height:230,resolution:Math.min(g.devicePixelRatio||1,1.5),autoDensity:true,backgroundAlpha:0,antialias:true,preserveDrawingBuffer:true});
+ const model=await PIXI.live2d.Live2DModel.from(g.S17AvatarData,{autoInteract:false});app.stage.addChild(model);const bounds=model.getLocalBounds();model.scale.set(Math.min(214/bounds.width,225/bounds.height));model.anchor.set(.5,1);model.position.set(110,230);
+ host.replaceChildren(canvas);root.dataset.avatar='live2d';root.dataset.avatarStyle='chibi';let speakingSince=0;
+ app.ticker.add(()=>{if(root.dataset.speaking==='true'){if(!speakingSince)speakingSince=performance.now();model.internalModel.coreModel.setParameterValueById('ParamMouthOpenY',.25+.25*Math.sin((performance.now()-speakingSince)/90));}else speakingSince=0;});
+ const credit=document.createElement('p');credit.className='s17-agent-credit';credit.innerHTML='角色：嘉然 Diana · 原画/模型：木果阿木果 · <a href="assets/live2d/ATTRIBUTION.txt" target="_blank" rel="noopener">来源与使用说明</a>';root.querySelector('.s17-agent-options').append(credit);
+ document.getElementById('s17-agent-model-status').textContent='已加载MoodDairy同款Q版嘉然，支持待机、微笑和抱抱动作。大模型连接状态单独显示；朗读时为简单嘴型动画。';
+ const play=async group=>{try{const played=await model.motion(group,0,3);if(played){g.S17Live2D.lastMotion=group;g.S17Live2D.playedMotions++;}return !!played;}catch{return false;}};
+ g.S17Live2D={state:'ready',model:info.name,displayName:info.displayName,source:info.source,creator:info.creator,canvas:()=>({width:canvas.width,height:canvas.height}),motionCount:3,lastMotion:'Idle',playedMotions:0,greet:()=>play('Greeting'),hug:()=>play('Hug')};
+ const hug=document.createElement('button');hug.type='button';hug.id='s17-agent-hug';hug.textContent='角色打招呼';hug.onclick=()=>play('Hug');credit.before(hug);play('Hug');
+}catch(e){root.dataset.avatar='fallback';g.S17Live2D={state:'error',model:info.name,error:e.message};document.getElementById('s17-agent-model-status').textContent='Live2D本次未加载：'+e.message+'。当前显示二维备用图，导航仍可用。';}
+})(window);

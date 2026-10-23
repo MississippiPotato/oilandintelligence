@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-23T13:03:15.571Z",
+  "scope": "Actual extracted five-case ZIP smoke for m2 only; other entries checked by byte comparison and original native imports",
+  "checks": [
+    {
+      "name": "actually extracted case computes offline",
+      "passed": true
+    },
+    {
+      "name": "extracted current version",
+      "passed": true
+    },
+    {
+      "name": "mechanism text fits SVG width",
+      "passed": true
+    },
+    {
+      "name": "zero HTTP and JS exceptions",
+      "passed": true
+    }
+  ],
+  "passed": 4,
+  "failed": 0,
+  "errors": [],
+  "http": [],
+  "bounds": [
+    {
+      "text": "接单根：接长钻柱",
+      "x": 26.838680267333984,
+      "right": 149.2069435119629
+    },
+    {
+      "text": "起下钻：提出/下入钻柱",
+      "x": 265.83868408203125,
+      "right": 425.2785949707031
+    },
+    {
+      "text": "重新循环：气体迟到地面",
+      "x": 502.83868408203125,
+      "right": 669.0235595703125
+    },
+    {
+      "text": "停泵",
+      "x": 143.8386688232422,
+      "right": 176.2511215209961
+    },
+    {
+      "text": "短时移动",
+      "x": 143.8386688232422,
+      "right": 205.07506942749023
+    },
+    {
+      "text": "停泵时，井下气体",
+      "x": 26.838680267333984,
+      "right": 149.2069435119629
+    },
+    {
+      "text": "可能进入井内泥浆。",
+      "x": 26.838680267333984,
+      "right": 162.94909286499023
+    },
+    {
+      "text": "短时移动也可能产生抽吸。",
+      "x": 26.838680267333984,
+      "right": 207.91396713256836
+    },
+    {
+      "text": "起钻抽吸 + 停止循环，",
+      "x": 265.83868408203125,
+      "right": 421.92742919921875
+    },
+    {
+      "text": "可能让气体进入井内泥浆。",
+      "x": 265.83868408203125,
+      "right": 446.9139709472656
+    },
+    {
+      "text": "工况发生在更早的来源时段",
+      "x": 511,
+      "right": 692.1774597167969
+    },
+    {
+      "text": "上返才见峰，回查更早工况。",
+      "x": 510.0000305175781,
+      "right": 704.9204711914062
+    },
+    {
+      "text": "峰高不足以确认油气层。",
+      "x": 510.0000305175781,
+      "right": 674.9257354736328
+    }
+  ]
+}

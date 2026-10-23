@@ -1,0 +1,36 @@
+# Local browser state and temporary build outputs
+node_modules/
+.playwright-cli/
+**/profile*/
+*.log
+*.pid
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+
+# Research-only reference application and replaced avatars
+saphirv3-main/
+research/assistant-history/
+
+# Retain evidence and screenshots, exclude expanded ZIP copies and browser caches
+output/*
+!output/assistant-fixtures/
+!output/exports/
+!output/playwright/
+output/playwright/*
+!output/playwright/*.png
+!output/playwright/interactive-views/
+output/playwright/interactive-views/*
+!output/playwright/interactive-views/*.png
+!output/playwright/interactive-views/*.json
+
+# Current deliverables and the immediately preceding locked regression release
+dist/*.zip
+!dist/*-1.3.0.zip
+!dist/*-1.2.0.zip
+!dist/s17-mudlogging-with-assistant-1.4.1-preview.zip
+!dist/s17-mudlogging-with-assistant-1.5.0-preview.zip

@@ -1,0 +1,17 @@
+{
+  "scope": "final audio lifecycle: Chromium fake input, no physical microphone",
+  "checks": [
+    {
+      "name": "final recording creates WAV and all tracks end",
+      "status": "passed"
+    },
+    {
+      "name": "late microphone grant after close releases only its own stream",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "passed": 2,
+  "failed": 0,
+  "createdAt": "2026-10-23T11:11:04.074Z"
+}

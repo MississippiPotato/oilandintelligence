@@ -1,0 +1,32 @@
+{
+  "id": "s17-engineering-probe",
+  "sceneId": "m2",
+  "methods": [
+    "ts"
+  ],
+  "title": "G0 运行探针（不计案例）",
+  "version": "0.0.1",
+  "tabs": {
+    "background": {
+      "sections": [
+        {
+          "title": "工程探针",
+          "html": "<p>只验证导入与执行，不计为案例。</p><svg viewBox=\"0 0 200 50\"><circle cx=\"25\" cy=\"25\" r=\"15\" fill=\"#167563\"/><text x=\"50\" y=\"30\">SVG 探针</text></svg>"
+        }
+      ]
+    },
+    "workflow": {
+      "steps": [
+        {
+          "name": "点击计算按钮",
+          "do": "运行 17×17",
+          "effect": "显示289"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html"
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "createdAt": "2026-10-23T09:58:27.274Z",
+  "scope": "v1.1 public data provenance, numeric conversions and actual enhancement algorithms; not browser proof",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "真实钻进子集逐行追溯与单位换算",
+      "status": "passed",
+      "evidence": {
+        "rows": 480,
+        "originalRows": 53041,
+        "range": [
+          2221.745,
+          2490.813
+        ],
+        "timeOrGeologicalLabelsInvented": false
+      }
+    },
+    {
+      "name": "真实顶空气测保留平行样和原始数值/深度基准",
+      "status": "passed",
+      "evidence": {
+        "rows": 62,
+        "samplePositions": 31,
+        "originalDepthUnit": "m (sediment/rock)",
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "name": "六张真实岩芯JPEG与发布者SHA一致，未造UV或评测分组",
+      "status": "passed",
+      "evidence": {
+        "images": 6,
+        "unchangedBytes": 57594,
+        "license": "CC BY 4.0"
+      }
+    },
+    {
+      "name": "实际逻辑回归快照与各自损失一致",
+      "status": "passed",
+      "evidence": {
+        "snapshots": 5,
+        "first": 0.6931471805599453,
+        "last": 0.1706809062959531
+      }
+    },
+    {
+      "name": "k-means快照中心和SSE确实来自全训练点",
+      "status": "passed",
+      "evidence": {
+        "iterations": 2,
+        "states": 3,
+        "final": [
+          [
+            -1,
+            -0.9
+          ],
+          [
+            1,
+            0.9333333333333332
+          ]
+        ]
+      }
+    },
+    {
+      "name": "直方图分母、边界和无效值",
+      "status": "passed",
+      "evidence": {
+        "counts": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "n": 5,
+        "lo": 0,
+        "hi": 255
+      }
+    },
+    {
+      "name": "BM25小型手算、空查询及中文/数值词项",
+      "status": "passed",
+      "evidence": {
+        "score": 0.8355746834147286,
+        "handComputed": 0.8355746834147286,
+        "contributions": [
+          {
+            "term": "gas",
+            "tf": 2,
+            "df": 1,
+            "idf": 0.6931471805599453,
+            "score": 0.8355746834147286
+          }
+        ]
+      }
+    },
+    {
+      "name": "报告差异按逻辑claim对应，不被运行ID变化误导",
+      "status": "passed",
+      "evidence": [
+        {
+          "key": "m1|A|D|item",
+          "change": "changed",
+          "changed": [
+            "statement",
+            "reviewStatus",
+            "sourceRefs"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "证据协议支持公开来源，但拒绝偷换类型和深度单位",
+      "status": "passed",
+      "evidence": {
+        "publicDataAccepted": true,
+        "depthDatumSubstitutionRejected": true,
+        "sourceTypeImmutable": true
+      }
+    }
+  ]
+}

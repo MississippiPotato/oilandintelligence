@@ -1,0 +1,176 @@
+{
+  "scope": "v1.1 real-data and teaching enhancements, actual Chromium interactions",
+  "checks": [
+    {
+      "name": "m1 actual foreground histogram has nonzero denominator",
+      "status": "passed"
+    },
+    {
+      "name": "m1 feature-axis selection changes actual plotted data",
+      "status": "passed"
+    },
+    {
+      "name": "real core actual decoded pixels and 16 features",
+      "status": "passed",
+      "evidence": [
+        0.8942402961181738,
+        0.8504312725087271,
+        0.8234627350937844
+      ]
+    },
+    {
+      "name": "m1-public-core.json downloaded",
+      "status": "passed"
+    },
+    {
+      "name": "different real image changes observed features",
+      "status": "passed"
+    },
+    {
+      "name": "m2 computes all15 frozen-model sensitivity cells",
+      "status": "passed"
+    },
+    {
+      "name": "m2 volume sensitivity includes actual performance change",
+      "status": "passed"
+    },
+    {
+      "name": "public gas retains62 measurements",
+      "status": "passed",
+      "evidence": {
+        "records": 62,
+        "median": 1416,
+        "highCount": 26,
+        "undefinedRatios": 0
+      }
+    },
+    {
+      "name": "public gas cursor points to distinct original IGSN",
+      "status": "passed"
+    },
+    {
+      "name": "m2-public-headspace.json downloaded",
+      "status": "passed"
+    },
+    {
+      "name": "m3 slider replays real gradient weights and masks",
+      "status": "passed"
+    },
+    {
+      "name": "m3 exposure sweep flags real saturation",
+      "status": "passed"
+    },
+    {
+      "name": "virtual extra observation explicitly labelled reviewer note",
+      "status": "passed"
+    },
+    {
+      "name": "virtual extra observation never becomes oil discovery",
+      "status": "passed"
+    },
+    {
+      "name": "m4 real center history redraws scatter",
+      "status": "passed"
+    },
+    {
+      "name": "m4 independent calibration scatter and line render",
+      "status": "passed"
+    },
+    {
+      "name": "USROP actual480 rows and held-out-block distortion",
+      "status": "passed"
+    },
+    {
+      "name": "USROP attribution and real well ID preserved",
+      "status": "passed"
+    },
+    {
+      "name": "m4-public-usrop.json downloaded",
+      "status": "passed"
+    },
+    {
+      "name": "m1-public-core.json explicitly validated",
+      "status": "passed"
+    },
+    {
+      "name": "m2-public-headspace.json explicitly validated",
+      "status": "passed"
+    },
+    {
+      "name": "m4-public-usrop.json explicitly validated",
+      "status": "passed"
+    },
+    {
+      "name": "mixed sources retain separate well identities",
+      "status": "passed"
+    },
+    {
+      "name": "BM25 returns actual positive scores and term contributions",
+      "status": "passed"
+    },
+    {
+      "name": "retrieval result locates specific source version",
+      "status": "passed"
+    },
+    {
+      "name": "report diff identifies actual semantic edit",
+      "status": "passed"
+    },
+    {
+      "name": "m5-workspace.json downloaded",
+      "status": "passed"
+    },
+    {
+      "name": "workspace restores manual draft text",
+      "status": "passed"
+    },
+    {
+      "name": "workspace restore never inherits current confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "workspace carries original sources and real metadata",
+      "status": "passed"
+    },
+    {
+      "name": "m5-combined-report.html downloaded",
+      "status": "passed"
+    },
+    {
+      "name": "combined HTML offline rendered with source images",
+      "status": "passed"
+    },
+    {
+      "name": "JSON extracted from one downloaded HTML",
+      "status": "passed"
+    },
+    {
+      "name": "s17-cuttings-lithology enhanced mobile no document overflow",
+      "status": "passed"
+    },
+    {
+      "name": "s17-mudgas-context enhanced mobile no document overflow",
+      "status": "passed"
+    },
+    {
+      "name": "s17-fluorescence-review enhanced mobile no document overflow",
+      "status": "passed"
+    },
+    {
+      "name": "s17-drilltime-boundaries enhanced mobile no document overflow",
+      "status": "passed"
+    },
+    {
+      "name": "s17-evidence-report enhanced mobile no document overflow",
+      "status": "passed"
+    },
+    {
+      "name": "no page JavaScript exceptions",
+      "status": "passed",
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "passed": 39,
+  "failed": 0
+}

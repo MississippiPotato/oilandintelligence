@@ -1,0 +1,72 @@
+{
+  "id": "mendeley-b6rj29mrss-v1-six-core-patches",
+  "title": "真实岩芯外观对照：6张2×2cm图像块",
+  "authors": "Fatimah Alzubaidi (2021); Geological Survey of South Australia core tray source",
+  "source": "https://data.mendeley.com/datasets/b6rj29mrss/1",
+  "doi": "10.17632/b6rj29mrss.1",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "dataNature": "public_measured",
+  "selection": "Two deterministic distinct filename prefixes per sandstone/shale/limestone folder in publisher test partition. Original JPEG bytes unchanged. No training/evaluation split built from six images.",
+  "limitations": [
+    "Core image patches are not drill-cuttings particle trays; no particle-mask gold or UV paired images.",
+    "Folder labels are source references; this small gallery is not a field classification benchmark.",
+    "No generated UV image or invented depth/scale calibration."
+  ],
+  "images": [
+    {
+      "label": "limestone",
+      "sourceFilename": "08PD04c_11_row_3_2_32.jpg.jpeg",
+      "upstreamFileId": "5d74caf1-10d4-4af0-be76-58522f44696c",
+      "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/5d74caf1-10d4-4af0-be76-58522f44696c/file_downloaded",
+      "sha256": "ca575faf9aafcda9b0b854e456e05976f41d972a7895e6116dce963f0a8c338d",
+      "bytes": 9927,
+      "path": "data/real/images/limestone-1.jpeg"
+    },
+    {
+      "label": "limestone",
+      "sourceFilename": "08PD04c_12_row_1_1_16.jpg.jpeg",
+      "upstreamFileId": "301ddbf6-c6de-4d16-99ec-0f0fd55cf1b2",
+      "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/301ddbf6-c6de-4d16-99ec-0f0fd55cf1b2/file_downloaded",
+      "sha256": "89893b224c27686b8ad963e362f9e10a575ada4b4f6c6182134797e161a7ba45",
+      "bytes": 7932,
+      "path": "data/real/images/limestone-2.jpeg"
+    },
+    {
+      "label": "sandstone",
+      "sourceFilename": "07PD01_20_row_2_13.jpeg",
+      "upstreamFileId": "237577ca-c7b9-4324-9aa0-170a57287aaf",
+      "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/237577ca-c7b9-4324-9aa0-170a57287aaf/file_downloaded",
+      "sha256": "6841ccd14dbcaccca68a1d1504a271184a08ce543b227d41e5f253c78f402d22",
+      "bytes": 9760,
+      "path": "data/real/images/sandstone-1.jpeg"
+    },
+    {
+      "label": "sandstone",
+      "sourceFilename": "07PD01_23_row_0_12.jpeg",
+      "upstreamFileId": "d1645a0a-5c79-4edf-a000-0c57420c994e",
+      "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/d1645a0a-5c79-4edf-a000-0c57420c994e/file_downloaded",
+      "sha256": "35732ca860a43d862959fec48976051d4eefa09c313912d24d6ca47f9443d1d1",
+      "bytes": 12844,
+      "path": "data/real/images/sandstone-2.jpeg"
+    },
+    {
+      "label": "shale",
+      "sourceFilename": "07PD01_32_row_3_10.jpeg",
+      "upstreamFileId": "b2460b7f-0765-48f3-a5a7-dce91d09e948",
+      "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/b2460b7f-0765-48f3-a5a7-dce91d09e948/file_downloaded",
+      "sha256": "bde998211fb35abd25195d93e4ab3b43020231baeaac97f1f39e81b6302f3021",
+      "bytes": 8408,
+      "path": "data/real/images/shale-1.jpeg"
+    },
+    {
+      "label": "shale",
+      "sourceFilename": "07PD01_33b_row_3_7.jpeg",
+      "upstreamFileId": "cc9e3ece-34c1-4da6-882d-b3067187c4e9",
+      "originalURL": "https://data.mendeley.com/public-files/datasets/b6rj29mrss/files/cc9e3ece-34c1-4da6-882d-b3067187c4e9/file_downloaded",
+      "sha256": "eb63144b005c70bf3f779da28183c35f18802b42e21e92a6636440d5dacd945f",
+      "bytes": 8723,
+      "path": "data/real/images/shale-2.jpeg"
+    }
+  ]
+}

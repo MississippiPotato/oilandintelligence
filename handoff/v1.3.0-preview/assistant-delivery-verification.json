@@ -1,0 +1,115 @@
+{
+  "createdAt": "2026-10-23T11:12:46.361Z",
+  "portalVersion": "1.3.0-preview",
+  "fiveCaseVersion": "1.1.0",
+  "newFullCases": 0,
+  "fiveCaseFilesUnchanged": 25,
+  "originalFilesUnchanged": 46,
+  "uiAssertionsPassed": 25,
+  "uiReports": [
+    "browser-multimodal-smoke.json",
+    "browser-assistant-final-smoke.json",
+    "browser-media-lifecycle.json"
+  ],
+  "carriedForwardReferenceAssertions": 7,
+  "liveModelCallVerified": true,
+  "liveModelRequests": 4,
+  "apiValidation": "3 actual isolated API requests + 1 actual Chrome direct fetch with image/audio and navigation, no interception; mocked error/history checks separately labelled",
+  "modelRecommendation": {
+    "id": "doubao-seed-2-0-mini-260428",
+    "source": "https://docs.volcengine.com/docs/ark/model-list?lang=zh",
+    "priceSource": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh",
+    "regularOnlineNonAudioInputUpTo32K_CNYperMillion": 0.2,
+    "regularOnlineAudioInputUpTo32K_CNYperMillion": 3,
+    "regularOnlineTextOutput_CNYperMillion": 2,
+    "checkedOn": "2026-10-23"
+  },
+  "avatar": {
+    "name": "Jin Natori",
+    "runtime": "actual Live2D Cubism Core + pixi-live2d-display",
+    "assetFiles": 28,
+    "localAssets": true,
+    "licenseFile": "portal/assets/live2d/ATTRIBUTION.txt"
+  },
+  "modalities": {
+    "implementedInput": [
+      "text",
+      "image",
+      "audio-upload",
+      "microphone-recording"
+    ],
+    "output": "text + optional browser/system TTS",
+    "videoUI": false,
+    "nativeSpeechModel": false,
+    "microphoneVerification": "Chromium fake audio input only"
+  },
+  "publicPhotos": {
+    "count": 3,
+    "scope": "same-specimen teaching photographs, not a drill-cuttings oil-show benchmark",
+    "license": "CC BY-SA 3.0",
+    "modelPerformanceMetrics": false
+  },
+  "notVerified": [
+    "Volcengine native speech generation / end-to-end voice",
+    "video upload in website UI",
+    "physical microphone and audible playback quality",
+    "other browsers and real mobile devices"
+  ],
+  "files": [
+    {
+      "path": "portal/index.html",
+      "sha256": "17c9620bf57f7613cd523df03c606d835219374fa58a1376e89ae935dbe0e922",
+      "bytes": 2969
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "sha256": "9c50cc37d9f889d5418da939639a6da44779f475139a98a0b58c54a84cfc7a63",
+      "bytes": 3267
+    },
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "sha256": "b8867b037e1e37feea6c7941ec31643a8ca76da97d6d2eacc8af05cabb3d73f6",
+      "bytes": 16178
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "sha256": "fb2480abae50fdba99acf38bffadb6ba46e4993b8192785facfb2b2e8942fbb4",
+      "bytes": 8219
+    },
+    {
+      "path": "portal/assets/s17-media.js",
+      "sha256": "d6598b35ba7e7e8fc959730a485dd547c890bc3f0c63e6685cb806a599469ce6",
+      "bytes": 8355
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "sha256": "0672a4d1c75b4d73b9213f7c7bd624c4e878c37e14d6152002d9580accb773c5",
+      "bytes": 5538
+    },
+    {
+      "path": "portal/assets/s17-live2d.js",
+      "sha256": "f412a6af300fd2237e8b2ac9f35617a69ba84d7d72d86193e4758a3243113c2c",
+      "bytes": 2234
+    },
+    {
+      "path": "portal/assets/s17-live2d-data.js",
+      "sha256": "3da19ea834fa2ac48edcdbbf62aa7f3c333cd0fb516c3d185ac817dc6b9b1574",
+      "bytes": 4494465
+    },
+    {
+      "path": "portal/reference/fluorescence.html",
+      "sha256": "f3a549fe87b9d9edb75b2528be8a7f691c4a89ed82063e69c08b78079c778b93",
+      "bytes": 3700
+    },
+    {
+      "path": "portal/reference/fluorescence.js",
+      "sha256": "5554cbe7a7e5772f81d3b0812430aa29b48cfb01ca590aced33fb23f0745c6dd",
+      "bytes": 783
+    },
+    {
+      "path": "portal/reference/fluorescence-data.js",
+      "sha256": "b52674d3e40ca3f74b8d62e98678ba7f5d5f36dcd681dc8f506a7f35ae675952",
+      "bytes": 3455
+    }
+  ]
+}

@@ -1,0 +1,710 @@
+{
+  "studentSuffix": 17,
+  "stageCount": 13,
+  "sceneCount": 61,
+  "scope": "G0/G1; m2 only; prototypes are not cases",
+  "stages": [
+    {
+      "stageId": "geology",
+      "stageName": "地质勘察",
+      "scenes": [
+        {
+          "sceneId": "g1",
+          "title": "地质剖面遥感解译",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "g2",
+          "title": "油气地球化学异常识别",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "g3",
+          "title": "地质图件要素智能提取",
+          "methods": [
+            "cv",
+            "nlp"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "g4",
+          "title": "露头裂缝自动统计",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "seismic",
+      "stageName": "物探",
+      "scenes": [
+        {
+          "sceneId": "s1",
+          "title": "地震断层自动解释",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "s2",
+          "title": "地震相智能分类",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "s3",
+          "title": "初至波自动拾取",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "s4",
+          "title": "储层参数反演",
+          "methods": [
+            "cv",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "s5",
+          "title": "地震资料噪声压制",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "drilling",
+      "stageName": "钻井",
+      "scenes": [
+        {
+          "sceneId": "d1",
+          "title": "钻速预测与参数优化",
+          "methods": [
+            "ts",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "d2",
+          "title": "井下复杂事故前兆预警",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "d3",
+          "title": "井眼轨迹智能控制",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "d4",
+          "title": "钻具失效预测",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "d5",
+          "title": "钻井液性能智能调控",
+          "methods": [
+            "ts",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "mudlogging",
+      "stageName": "录井",
+      "scenes": [
+        {
+          "sceneId": "m1",
+          "title": "岩屑岩性自动识别",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": true,
+          "caseId": "s17-cuttings-lithology",
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "m2",
+          "title": "气测异常智能解释",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": true,
+          "caseId": "s17-mudgas-context",
+          "implementation": "see acceptance record"
+        },
+        {
+          "sceneId": "m3",
+          "title": "荧光图像智能判读",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": true,
+          "caseId": "s17-fluorescence-review",
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "m4",
+          "title": "钻时曲线地层划分",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": true,
+          "caseId": "s17-drilltime-boundaries",
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "m5",
+          "title": "录井报告自动生成",
+          "methods": [
+            "nlp"
+          ],
+          "mandatory": true,
+          "caseId": "s17-evidence-report",
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "welllog",
+      "stageName": "测井",
+      "scenes": [
+        {
+          "sceneId": "w1",
+          "title": "测井曲线智能分层",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "w2",
+          "title": "储层参数智能解释",
+          "methods": [
+            "ts",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "w3",
+          "title": "成像测井裂缝识别",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "w4",
+          "title": "岩性识别",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "w5",
+          "title": "测井数据修复",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "cementing",
+      "stageName": "固井",
+      "scenes": [
+        {
+          "sceneId": "c1",
+          "title": "固井质量智能评价",
+          "methods": [
+            "cv",
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "c2",
+          "title": "注水泥参数优化",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "c3",
+          "title": "固井漏失风险预测",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "c4",
+          "title": "套管居中度智能评估",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "completion",
+      "stageName": "完井",
+      "scenes": [
+        {
+          "sceneId": "co1",
+          "title": "完井方式智能优选",
+          "methods": [
+            "kg",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "co2",
+          "title": "射孔参数智能设计",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "co3",
+          "title": "完井管柱受力智能分析",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "co4",
+          "title": "智能完井滑套控制策略",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "perforation",
+      "stageName": "射孔",
+      "scenes": [
+        {
+          "sceneId": "p1",
+          "title": "射孔参数优化",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "p2",
+          "title": "射孔孔道形态预测",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "p3",
+          "title": "射孔弹型智能选型",
+          "methods": [
+            "kg"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "p4",
+          "title": "射孔效果智能评估",
+          "methods": [
+            "ts",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "production",
+      "stageName": "采油",
+      "scenes": [
+        {
+          "sceneId": "pr1",
+          "title": "抽油机井工况诊断",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "pr2",
+          "title": "产量智能预测",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "pr3",
+          "title": "智能注水调配",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "pr4",
+          "title": "电潜泵故障预警",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "pr5",
+          "title": "结蜡 / 结垢预测",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "workover",
+      "stageName": "修井",
+      "scenes": [
+        {
+          "sceneId": "wo1",
+          "title": "修井作业方案智能推荐",
+          "methods": [
+            "kg",
+            "nlp"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "wo2",
+          "title": "落物打捞工具智能选型",
+          "methods": [
+            "kg"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "wo3",
+          "title": "套管损伤智能识别",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "wo4",
+          "title": "修井作业风险预警",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "wo5",
+          "title": "修井周期预测",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "eor",
+      "stageName": "增采",
+      "scenes": [
+        {
+          "sceneId": "e1",
+          "title": "压裂参数智能优化",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "e2",
+          "title": "压裂裂缝形态预测",
+          "methods": [
+            "cv",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "e3",
+          "title": "化学驱配方智能筛选",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "e4",
+          "title": "蒸汽吞吐注采参数优化",
+          "methods": [
+            "ts",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "e5",
+          "title": "微生物采油菌群活性预测",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "transport",
+      "stageName": "运输",
+      "scenes": [
+        {
+          "sceneId": "t1",
+          "title": "管道泄漏智能检测",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "t2",
+          "title": "管道腐蚀智能评估",
+          "methods": [
+            "cv",
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "t3",
+          "title": "集输系统工况优化",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "t4",
+          "title": "油气计量智能校正",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "t5",
+          "title": "储罐液位与泄漏智能监控",
+          "methods": [
+            "cv"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    },
+    {
+      "stageId": "refining",
+      "stageName": "加工",
+      "scenes": [
+        {
+          "sceneId": "r1",
+          "title": "常减压装置操作优化",
+          "methods": [
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "r2",
+          "title": "催化裂化产物预测",
+          "methods": [
+            "opt",
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "r3",
+          "title": "炼化设备预测性维护",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "r4",
+          "title": "化验数据智能审核",
+          "methods": [
+            "nlp",
+            "opt"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        },
+        {
+          "sceneId": "r5",
+          "title": "产品质量在线软测量",
+          "methods": [
+            "ts"
+          ],
+          "mandatory": false,
+          "caseId": null,
+          "implementation": "not_implemented_this_round"
+        }
+      ]
+    }
+  ]
+}

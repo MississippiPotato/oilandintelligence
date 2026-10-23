@@ -1,0 +1,9 @@
+async(page)=>{
+const row=page.getByRole('row').filter({hasText:'s17-mudgas-context'});
+page.once('dialog',d=>d.accept());
+await row.getByRole('link',{name:'移除',exact:true}).click();
+await page.getByRole('banner').getByRole('button',{name:'＋ 添加案例',exact:true}).click();
+await page.locator('#imp-dir').setInputFiles('G:/可视化导论/5/dist/cases/s17-mudgas-context');
+await page.getByRole('button',{name:'校验并添加',exact:true}).click();
+return {reimported:'s17-mudgas-context',method:'original import UI; removed only own prior test record'};
+}

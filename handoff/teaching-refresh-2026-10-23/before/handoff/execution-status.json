@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-23",
+  "studentSuffix": 17,
+  "stageId": "mudlogging",
+  "requestedGates": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4"
+  ],
+  "gates": {
+    "G0": "complete_with_prototype_limits_documented",
+    "G1": "complete_m2",
+    "G2": "complete_teaching_MVP",
+    "G3": "complete_teaching_MVP",
+    "G4": "complete_local_acceptance_with_explicit_limits"
+  },
+  "completedTasks": [
+    {
+      "id": "T00",
+      "gate": "G0",
+      "name": "原项目范围与契约复核",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T01",
+      "gate": "G0",
+      "name": "最小包与离线运行探针",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T02",
+      "gate": "G0",
+      "name": "共同井与证据v1草案",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T03",
+      "gate": "G0",
+      "name": "四项核心风险原型",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T10",
+      "gate": "G1",
+      "name": "m2完整旗舰",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T11",
+      "gate": "G2",
+      "name": "m1图像型完整案例",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T12",
+      "gate": "G2",
+      "name": "提取已重复公共能力",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": false
+    },
+    {
+      "id": "T20",
+      "gate": "G3",
+      "name": "m3配对荧光案例",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T21",
+      "gate": "G3",
+      "name": "m4工况与响应分段",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T22A",
+      "gate": "G3",
+      "name": "m5早期NLP与证据工作台",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T22B",
+      "gate": "G3",
+      "name": "m5完整案例与独立导入",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T30",
+      "gate": "G4",
+      "name": "五例全覆盖与累计保存",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T31",
+      "gate": "G4",
+      "name": "主页增强与旧包兼容",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    },
+    {
+      "id": "T32",
+      "gate": "G4",
+      "name": "证据串联与最终交付",
+      "status": "complete_in_local_scope",
+      "runtimeVerified": true
+    }
+  ],
+  "acceptedSceneIds": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "fullCasesCompleted": 5,
+  "mandatoryCount": 5,
+  "remainingFullCases": [],
+  "extrasImplemented": 0,
+  "notStarted": [
+    "G5 optional extra cases; no additional scenes implemented"
+  ],
+  "unverified": [
+    "Volcengine native speech output / end-to-end speech service",
+    "physical microphone on user device and actual audio playback quality",
+    "video input in website UI",
+    "other browsers and real mobile devices",
+    "Diana model public redistribution permission"
+  ],
+  "evidence": [
+    "acceptance-g2-g4.md",
+    "mandatory-calculation-checks.json",
+    "browser-five-offline.json",
+    "browser-reopen-five.json",
+    "browser-persisted-five.json",
+    "browser-work-suite.json",
+    "browser-evidence-exchange.json",
+    "browser-evidence-html.json",
+    "suite-delivery-verification.json",
+    "acceptance-v1.1.md",
+    "enhancement-calculation-checks.json",
+    "browser-enhancements.json",
+    "browser-enhanced-original.json",
+    "real-data-source-audit.md",
+    "real-data-lock.json",
+    "scope-update.json",
+    "assistant-delivery-verification.json",
+    "browser-assistant-smoke.json",
+    "browser-reference-smoke.json",
+    "assistant-assets-lock.json",
+    "ark-preflight.json",
+    "ark-live-api.json",
+    "ark-browser-live.json",
+    "browser-multimodal-smoke.json",
+    "browser-assistant-final-smoke.json",
+    "assistant-1.3.md",
+    "browser-diana-avatar.json",
+    "mood-avatar-source-audit.json",
+    "assistant-1.3.1.md"
+  ],
+  "version": "1.1.0",
+  "enhancements": {
+    "status": "complete_with_explicit_limits",
+    "publicMeasured": {
+      "drilling": 480,
+      "gas": 62,
+      "images": 6
+    },
+    "features": [
+      "m1 histograms / feature axes / review order / actual core JPEG features",
+      "m2 frozen-model 15-cell sensitivity / measured headspace exploration",
+      "m3 actual gradient replay / six-exposure experiment / virtual follow-up observations",
+      "m4 independent calibration view / real center replay / measured drilling block exploration",
+      "m5 actual BM25 / logical report diff / portable workspace restore / combined offline HTML and JSON"
+    ],
+    "centralVersionService": false,
+    "realFieldPredictiveBenchmark": false
+  },
+  "currentPhase": "mooddairy_avatar_local_preview",
+  "scopeAuthority": "scope-update.json (latest user instruction)",
+  "homepageAssistant": {
+    "portalVersion": "1.3.1-preview",
+    "Live2D": "implemented_and_browser_verified",
+    "character": "Diana / 嘉然, MoodDairy default Q-style half-body model",
+    "navigation": "implemented_for_home_stage_and_five_cases",
+    "modelClient": "Volcengine Responses multimodal direct browser client",
+    "recommendedModel": "doubao-seed-2-0-mini-260428",
+    "liveModelCallVerified": true,
+    "credentials": "page memory only; refresh clears, not included in deliverable",
+    "voice": "audio upload + user-triggered microphone -> local WAV -> Mini text; optional browser/system reading; no native voice model",
+    "realPhotoReference": "3 same-specimen visible/UV calcite photographs; no new full case",
+    "multimodal": [
+      "text",
+      "image",
+      "audio"
+    ],
+    "videoInputUI": false,
+    "avatarLicense": "source and original creator verified; public redistribution permission not independently verified",
+    "modelLiveCallEvidence": "v1.3 actual paid API records; adapter/media source hashes unchanged, no new paid request this revision"
+  },
+  "outsideCurrentRequiredScope": [
+    "m1/m2人工改标签后重建模型并做独立泛化评价",
+    "新增跨井、跨设备或研究性质性能测试",
+    "m3新建学习型等级模型",
+    "m4更复杂工况、监督序列模型、动态规划内部全过程工程展示",
+    "m5复杂NER、多语言、批量审核或中心化长期版本服务",
+    "G5及其他56例"
+  ]
+}

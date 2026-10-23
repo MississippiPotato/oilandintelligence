@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-23T12:44:28.863Z",
+  "scope": "Automation failures, not successful product acceptance",
+  "failures": [
+    {
+      "artifact": "browser-teaching-views-attempt1.json",
+      "cause": "New teaching-view bundle missing in m3/m4/m5; source fixed, complete current view suite rerun."
+    },
+    {
+      "artifact": "browser-contract-http-attempt1.json",
+      "cause": "Clicked iframe tab before app initialization; harness now waits for initialized aria state. Full native HTTP sequence rerun."
+    },
+    {
+      "artifact": "browser-offline-attempt1.json",
+      "cause": "Harness variable id typo before native import; fixed."
+    },
+    {
+      "session": "s17-teaching-file / s17-file-diagnose",
+      "cause": "Daemon stderr shows unhandled 5s download event timeout, which closed the automation daemon. Short native file import/compute/zoom/download/refresh operations were separately observed. Final offline acceptance separates compute/refresh from downloads; current original HTTP JSON downloads provide the four explicit input files."
+    }
+  ],
+  "noBrowserPassClaimedForFailedAttempts": true
+}

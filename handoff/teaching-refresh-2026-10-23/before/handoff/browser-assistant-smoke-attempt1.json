@@ -1,0 +1,35 @@
+{
+  "scope": "homepage Live2D and navigation UI; mocked API contract only, no live model call or model-performance test",
+  "checks": [
+    {
+      "name": "actual Live2D model loaded",
+      "status": "passed"
+    },
+    {
+      "name": "Live2D animation changes rendered canvas",
+      "status": "passed"
+    },
+    {
+      "name": "home opens assistant with honest unconnected state",
+      "status": "passed"
+    },
+    {
+      "name": "unimported case has local standalone navigation",
+      "status": "passed"
+    },
+    {
+      "name": "navigation really opens m2 page",
+      "status": "passed"
+    },
+    {
+      "name": "internal navigation changes route and keeps assistant",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "offlineHTTP": [],
+  "liveModelCallVerified": false,
+  "exception": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '校验并添加', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"imp-ok\" class=\"btn primary\">校验并添加</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"180\" height=\"250\" aria-label=\"Live2D官方示例角色桃濑日和\"></canvas> from <aside id=\"s17-assistant\" data-avatar=\"live2d\" data-speaking=\"false\">…</aside> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    9 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"180\" height=\"250\" aria-label=\"Live2D官方示例角色桃濑日和\"></canvas> from <aside id=\"s17-assistant\" data-avatar=\"live2d\" data-speaking=\"false\">…</aside> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+  "passed": 6,
+  "failed": 1
+}
