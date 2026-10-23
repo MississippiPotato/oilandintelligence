@@ -1,0 +1,184 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "c1",
+  "caseId": "s17x-c1-cement-quality",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:12:50.288Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "71d4c91a6292b6d4716a73b95a725939910c52818efc49ec3984c4c7de5fa061",
+      "bytes": 26395
+    },
+    {
+      "path": "README.txt",
+      "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043",
+      "bytes": 1226
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c",
+      "bytes": 25863
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625",
+      "bytes": 87432
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf",
+      "bytes": 7135
+    }
+  ],
+  "metrics": {
+    "model": {
+      "total": 192,
+      "correct": 180,
+      "accepted": 187,
+      "rejected": 5,
+      "macroF1": 0.9498812648418947,
+      "coverage": 0.9739583333333334,
+      "acceptedError": 0.03743315508021394,
+      "recalls": [
+        0.9375,
+        0.90625,
+        0.96875
+      ],
+      "confusion": [
+        [
+          60,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          58,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          62,
+          2
+        ]
+      ]
+    },
+    "baseline": {
+      "total": 192,
+      "correct": 130,
+      "accepted": 192,
+      "rejected": 0,
+      "macroF1": 0.6746594064700964,
+      "coverage": 1,
+      "acceptedError": 0.32291666666666663,
+      "recalls": [
+        0.859375,
+        0.71875,
+        0.453125
+      ],
+      "confusion": [
+        [
+          55,
+          9,
+          0,
+          0
+        ],
+        [
+          18,
+          46,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          29,
+          0
+        ]
+      ]
+    }
+  },
+  "metricsSha256": "c2ec52999b9a109d344ccc8412ffecad0d9dc10bb95c59720eda42d43cfcdcb6",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:12:51.540Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-c1-cement-quality",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 27349,
+        "sha256": "f5799d2160b8db3984795f82580af67e3104e8ddf532568bc635989afad45258"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25863,
+        "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 87432,
+        "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 7135,
+        "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1226,
+        "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+      }
+    ],
+    "manifestCanonicalSha256": "71d4c91a6292b6d4716a73b95a725939910c52818efc49ec3984c4c7de5fa061",
+    "storedPackageMatchesDisk": true
+  }
+}

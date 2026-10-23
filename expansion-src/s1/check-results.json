@@ -1,0 +1,177 @@
+{
+  "sceneId": "s1",
+  "caseId": "s17x-s1-seismic-fault",
+  "checkType": "Node calculation and source contract checks; not browser acceptance",
+  "checkedAt": "2026-10-23T16:46:18.876Z",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "局部波形相关系数手算",
+      "passed": true
+    },
+    {
+      "name": "断层带F1/IoU与逐行一对一迹线F1",
+      "passed": true
+    },
+    {
+      "name": "无参考且无预测时空分母为不适用",
+      "passed": true
+    },
+    {
+      "name": "重复候选不能重复匹配同一参考点",
+      "passed": true
+    },
+    {
+      "name": "真实梯度下降及独立剖面分组",
+      "passed": true
+    },
+    {
+      "name": "评价参考变化不改变模型推理",
+      "passed": true
+    },
+    {
+      "name": "缺失观测拒判，评价分母不缩小",
+      "passed": true
+    },
+    {
+      "name": "同种子复现，噪声与断距真正改变观测和输出",
+      "passed": true
+    },
+    {
+      "name": "无断层场景真实删除评价迹线",
+      "passed": true
+    },
+    {
+      "name": "三概念图、五步图解和教师manifest字段",
+      "passed": true
+    }
+  ],
+  "defaultMetrics": {
+    "model": {
+      "tp": 167,
+      "fp": 44,
+      "fn": 1,
+      "tn": 4156,
+      "abstained": 0,
+      "total": 4368,
+      "coverage": 1,
+      "iou": 0.7877358490566038,
+      "f1": 0.8812664907651715,
+      "lineF1": 1,
+      "lineMatched": 56,
+      "predictedRows": 56,
+      "truthRows": 56,
+      "traceTolerance": 2,
+      "tolerance_m": 50
+    },
+    "baseline": {
+      "tp": 168,
+      "fp": 76,
+      "fn": 0,
+      "tn": 4124,
+      "abstained": 0,
+      "total": 4368,
+      "coverage": 1,
+      "iou": 0.6885245901639344,
+      "f1": 0.8155339805825242,
+      "lineF1": 0.9285714285714286,
+      "lineMatched": 52,
+      "predictedRows": 56,
+      "truthRows": 56,
+      "traceTolerance": 2,
+      "tolerance_m": 50
+    }
+  },
+  "failureMetrics": {
+    "model": {
+      "tp": 64,
+      "fp": 28,
+      "fn": 104,
+      "tn": 3764,
+      "abstained": 510,
+      "total": 4368,
+      "coverage": 0.8832417582417582,
+      "iou": 0.32653061224489793,
+      "f1": 0.49230769230769234,
+      "lineF1": 0.5569620253164557,
+      "lineMatched": 22,
+      "predictedRows": 23,
+      "truthRows": 56,
+      "traceTolerance": 2,
+      "tolerance_m": 50
+    },
+    "baseline": {
+      "tp": 66,
+      "fp": 210,
+      "fn": 102,
+      "tn": 3582,
+      "abstained": 510,
+      "total": 4368,
+      "coverage": 0.8832417582417582,
+      "iou": 0.1746031746031746,
+      "f1": 0.2972972972972973,
+      "lineF1": 0.39285714285714285,
+      "lineMatched": 22,
+      "predictedRows": 56,
+      "truthRows": 56,
+      "traceTolerance": 2,
+      "tolerance_m": 50
+    }
+  },
+  "trainingLoss": [
+    {
+      "epoch": 0,
+      "loss": 0.6931471805599224
+    },
+    {
+      "epoch": 20,
+      "loss": 0.16241784300657455
+    },
+    {
+      "epoch": 40,
+      "loss": 0.1246164678941307
+    },
+    {
+      "epoch": 60,
+      "loss": 0.1107447516496149
+    },
+    {
+      "epoch": 80,
+      "loss": 0.10344057260364141
+    },
+    {
+      "epoch": 100,
+      "loss": 0.09886360140363247
+    },
+    {
+      "epoch": 120,
+      "loss": 0.09567908885235064
+    },
+    {
+      "epoch": 140,
+      "loss": 0.09330316689925457
+    },
+    {
+      "epoch": 160,
+      "loss": 0.09144095010080866
+    },
+    {
+      "epoch": 180,
+      "loss": 0.08992776118302684
+    },
+    {
+      "epoch": 200,
+      "loss": 0.0886644224636671
+    },
+    {
+      "epoch": 220,
+      "loss": 0.08758753408758649
+    },
+    {
+      "epoch": 239,
+      "loss": 0.0866982761452941
+    }
+  ],
+  "browser": "not_executed_by_case_author"
+}

@@ -5,12 +5,12 @@
     "ts"
   ],
   "title": "钻时曲线地层划分：工况校正与候选响应段",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "updated": "2026-10-23",
   "tabs": {
     "background": {
       "label": "专业背景",
-      "lede": "独立同响应标定学习工况影响，训练井聚类，测试井离线分段；输出可复核候选响应段，不把簇编号写成真实岩性。",
+      "lede": "钻时记录钻进单位进尺所需的时间，机械钻速记录单位时间钻进多少。它们能提示地层变化，但也受钻压、转速和钻头状态影响。本例先解释怎样读这些量，再学习工况影响并寻找需要复核的响应分段。",
       "judge": [
         {
           "label": "默认数据",
@@ -19,84 +19,94 @@
         },
         {
           "label": "业务问题",
-          "value": "钻速变了，是工况变化，还是候选地层响应？",
+          "value": "钻进突然变快，是岩石变了，还是操作变了？",
           "desc": "输出边界见说明"
         }
       ],
       "sections": [
         {
           "no": 1,
-          "en": "CONCEPT",
-          "title": "图 B1｜一米钻多久，与一小时钻多深",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"ROP与有效钻时的单位倒数\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"30\" width=\"230\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"59\">ROP：m/h，越大越快</text><rect x=\"440\" y=\"30\" width=\"250\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"452\" y=\"59\">钻时：min/m，越小越快</text><text x=\"285\" y=\"60\">ROP = 60 / 钻时</text><text x=\"35\" y=\"135\">只对同一个有效钻进区间成立。停钻、接单根不能用0作分母。</text><text x=\"35\" y=\"180\">本例0.25 m采样；单位与无效区间一起显示，MD向下增加。</text></g></svg></div></div><figcaption>这里的钻时是有效钻进每米耗时，不是把全部作业耗时相除。</figcaption></figure>"
+          "title": "先认识钻时与钻速：同一件事的两种记录方式",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p><b>钻时</b>表示钻进单位长度花了多少时间，本例用min/m；<b>机械钻速 ROP</b>表示每小时钻进多少米，用m/h。只比较有效钻进时段时，二者满足ROP=60÷钻时。数值方向相反：钻时越小，钻速越大。<a href=\"https://glossary.slb.com/en/terms/r/rate_of_penetration\" target=\"_blank\" rel=\"noopener\">ROP定义</a></p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">一个教学井段的进尺</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">有效钻进时间</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">钻时</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">机械钻速</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">10 m</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">20 min</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">2 min/m</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">30 m/h</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">10 m</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">10 min</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">1 min/m</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">60 m/h</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">未进尺，正在接单根</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">10 min</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">单独记为停钻工况</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">不混入岩石钻进响应</td></tr></tbody></table></div><p>录井人员按深度观察这些记录。当相邻井段的钻进响应明显变化时，会结合岩屑、气测等资料检查地层是否变化。<b>分段</b>就是把连续记录整理成若干响应相近的区间，区间的分界称为候选界面。</p></div>",
+          "en": "FOUNDATION",
+          "navTitle": "先认识这项工作"
         },
         {
           "no": 2,
-          "en": "CONCEPT",
-          "title": "图 B2｜地层没变，工况也会改变钻速",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 320\" role=\"img\" aria-label=\"钻压作用于钻头，转速控制旋转，泵量参与循环，工况可改变钻速\"><rect width=\"720\" height=\"320\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"28\" y=\"181\" width=\"247\" height=\"92\" fill=\"#d9c9a6\"/><path d=\"M28 210h247m-247 31h247\" stroke=\"#b7a17b\" stroke-width=\"3\"/><path d=\"M118 52v132\" stroke=\"#6c8c78\" stroke-width=\"19\"/><path d=\"M93 184h50l-7 26h-36z\" fill=\"#486b58\"/>\n<path d=\"M118 55l0 62\" stroke=\"#a96f43\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"118\" cy=\"117\" r=\"4\" fill=\"#a96f43\"/><path d=\"M151 103a36 36 0 1 1-55-23m0 0l15 0m-15 0l3 14\" fill=\"none\" stroke=\"#26765f\" stroke-width=\"3\"/><path d=\"M168 168l0 -62\" stroke=\"#588ca0\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"168\" cy=\"106\" r=\"4\" fill=\"#588ca0\"/>\n<text x=\"29\" y=\"30\" >WOB 钻压：压向岩石</text><text x=\"183\" y=\"99\" >RPM 转速</text><text x=\"181\" y=\"130\" >带动钻头旋转</text><text x=\"181\" y=\"168\" >Q 泵量</text><text x=\"30\" y=\"294\" >相同地层，工况不同，ROP也会改变。</text>\n<path d=\"M360 163H477V106H675\" fill=\"none\" stroke=\"#ad7944\" stroke-width=\"4\"/><path d=\"M360 230H675\" fill=\"none\" stroke=\"#27755e\" stroke-width=\"4\"/><text x=\"353\" y=\"55\" >原始钻速 = 地层响应 + 工况等共同影响</text><text x=\"360\" y=\"87\" >原曲线：工况改变时出现阶跃</text><text x=\"360\" y=\"204\" >独立标定后：观察剩余相对响应</text><text x=\"360\" y=\"270\" >曲线变了 ≠ 已确认地层界面。</text></g></svg></div></div><figcaption>模型只做教学工况归一化，不是完整钻井物理方程；标定域外必须标记外推。</figcaption></figure>"
+          "title": "当前做法与问题：为什么曲线有台阶，地层却可能没变？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>人们容易把“钻得更快”理解成岩石更容易破碎。但同一种岩石，加大钻压、改变转速或换了钻头，也可能让钻速改变。钻时因此同时包含地层与施工条件的影响。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">影响因素</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">是什么意思</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">读曲线时的关联</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">钻压 WOB / kN</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">压在钻头上的轴向载荷</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">改变破岩作用</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">转速 RPM / r·min⁻¹</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">每分钟转动次数</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">改变切削过程</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">泵量 Q / L·s⁻¹</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">钻井液的循环流量</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">影响循环与井底清洁条件</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">岩石与钻头状态</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">岩石性质、钻头类型和磨损等</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">同样操作下也可能产生不同钻速</td></tr></tbody></table></div><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>先检查这一个反例</b><p>如果在同一段岩石中调高钻压，原始钻速出现阶跃，直接按数值突变切层就可能多出一个界面。应先问工况有没有改变，再看校正后的响应是否仍发生变化。</p></aside><p>另一个难点是薄层：平滑或最小段长能减少杂乱边界，但过强时也会把真实的短区间合并。</p></div>",
+          "en": "PROBLEM",
+          "navTitle": "当前做法与问题"
         },
         {
           "no": 3,
-          "en": "CONCEPT",
-          "title": "图 B3｜平滑能减少碎片，也可能吞掉薄层",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"真实薄响应段与平滑漏检\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M35 80H300V35H355V80H680\" stroke=\"#a4784a\" fill=\"none\" stroke-width=\"4\"/><path d=\"M35 140H680\" stroke=\"#197765\" fill=\"none\" stroke-width=\"4\"/><text x=\"35\" y=\"40\">原始相对响应</text><text x=\"390\" y=\"125\">强连续性 / 最小段长 → 薄层可能漏检</text><text x=\"35\" y=\"190\">输出“候选响应段”；聚类编号没有岩性名称。</text></g></svg></div></div><figcaption>相同工况加入薄响应层，再改变最小段长，直接观察检出与漏检的取舍。</figcaption></figure>"
+          "title": "智能方法辅助哪一步？把工况影响与响应变化分开看",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>本例先用独立标定数据学习工况与钻速的关系，得到可解释的工况项。对演示井做校正后，再把剩余响应与训练井学到的响应中心比较。中心代表数值模式，岩性名称还需要其他地质证据。</p><p>随后做<b>有约束的序列分段</b>：连续区间尽量保持响应相近，同时对频繁切换施加惩罚，并设置最小段长。它把大量采样点整理成少量候选段，供解释员核对。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">先看什么</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">再比较什么</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">最后核对什么</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">原始钻速与WOB/RPM</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">工况校正前后曲线</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">台阶是否随工况校正消失</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">训练响应中心</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">每个深度的响应候选</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">分段是否连贯、是否域外</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">最小段长与惩罚</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">边界数量和薄层变化</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">漏检与多报是否增加</td></tr></tbody></table></div><p>与简单突变阈值比较时，要同时看漏掉的界面、多出来的界面和匹配误差。只看已经命中的平均误差，会遗漏没找到薄层的问题。</p></div>",
+          "en": "INTERVENTION",
+          "navTitle": "AI能做什么"
+        },
+        {
+          "no": 4,
+          "title": "准备什么资料，本例从哪里开始？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>准备按深度对应的有效钻进时间、ROP、WOB、RPM、泵量与工况标记；停钻、缺测和异常传感器记录单独保留。用于评价的参考界面还要有明确的标注口径。</p><p>先运行“工况阶跃”：看原始阈值为什么出现多余候选，再对照工况校正。随后运行薄层情景，逐渐增大最小段长，亲眼看短区间何时被合并。公开钻进参数用于观测对照，其深度和单位单独标明。</p><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>读完这一例，应能解释</b><p>钻时与ROP为什么方向相反；工况变化怎样制造假界面；分段方法怎样减少人工扫描量；为什么平滑和最小层厚都需要取舍。</p></aside><p>专业参考：<a href=\"https://glossary.slb.com/en/terms/r/rate_of_penetration\" target=\"_blank\" rel=\"noopener\">ROP</a> · <a href=\"https://glossary.slb.com/en/terms/d/drilling_break\" target=\"_blank\" rel=\"noopener\">钻进突变</a></p></div><details class=\"knowledge-supplement\"><summary>补充图解：展开原有场景示意与概念图</summary><p>读完上面的知识后，可用这些图回看采集过程和概念关系。</p><figure><h4>一米钻多久，与一小时钻多深</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"ROP与有效钻时的单位倒数\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"25\" y=\"30\" width=\"230\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"37\" y=\"59\">ROP：m/h，越大越快</text><rect x=\"440\" y=\"30\" width=\"250\" height=\"48\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"452\" y=\"59\">钻时：min/m，越小越快</text><text x=\"285\" y=\"60\">ROP = 60 / 钻时</text><text x=\"35\" y=\"135\">只对同一个有效钻进区间成立。停钻、接单根不能用0作分母。</text><text x=\"35\" y=\"180\">本例0.25 m采样；单位与无效区间一起显示，MD向下增加。</text></g></svg></div></div><figcaption>这里的钻时是有效钻进每米耗时，不是把全部作业耗时相除。</figcaption></figure><figure><h4>地层没变，工况也会改变钻速</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 320\" role=\"img\" aria-label=\"钻压作用于钻头，转速控制旋转，泵量参与循环，工况可改变钻速\"><rect width=\"720\" height=\"320\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"28\" y=\"181\" width=\"247\" height=\"92\" fill=\"#d9c9a6\"/><path d=\"M28 210h247m-247 31h247\" stroke=\"#b7a17b\" stroke-width=\"3\"/><path d=\"M118 52v132\" stroke=\"#6c8c78\" stroke-width=\"19\"/><path d=\"M93 184h50l-7 26h-36z\" fill=\"#486b58\"/>\n<path d=\"M118 55l0 62\" stroke=\"#a96f43\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"118\" cy=\"117\" r=\"4\" fill=\"#a96f43\"/><path d=\"M151 103a36 36 0 1 1-55-23m0 0l15 0m-15 0l3 14\" fill=\"none\" stroke=\"#26765f\" stroke-width=\"3\"/><path d=\"M168 168l0 -62\" stroke=\"#588ca0\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"168\" cy=\"106\" r=\"4\" fill=\"#588ca0\"/>\n<text x=\"29\" y=\"30\" >WOB 钻压：压向岩石</text><text x=\"183\" y=\"99\" >RPM 转速</text><text x=\"181\" y=\"130\" >带动钻头旋转</text><text x=\"181\" y=\"168\" >Q 泵量</text><text x=\"30\" y=\"294\" >相同地层，工况不同，ROP也会改变。</text>\n<path d=\"M360 163H477V106H675\" fill=\"none\" stroke=\"#ad7944\" stroke-width=\"4\"/><path d=\"M360 230H675\" fill=\"none\" stroke=\"#27755e\" stroke-width=\"4\"/><text x=\"353\" y=\"55\" >原始钻速 = 地层响应 + 工况等共同影响</text><text x=\"360\" y=\"87\" >原曲线：工况改变时出现阶跃</text><text x=\"360\" y=\"204\" >独立标定后：观察剩余相对响应</text><text x=\"360\" y=\"270\" >曲线变了 ≠ 已确认地层界面。</text></g></svg></div></div><figcaption>模型只做教学工况归一化，不是完整钻井物理方程；标定域外必须标记外推。</figcaption></figure><figure><h4>平滑能减少碎片，也可能吞掉薄层</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"真实薄响应段与平滑漏检\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><path d=\"M35 80H300V35H355V80H680\" stroke=\"#a4784a\" fill=\"none\" stroke-width=\"4\"/><path d=\"M35 140H680\" stroke=\"#197765\" fill=\"none\" stroke-width=\"4\"/><text x=\"35\" y=\"40\">原始相对响应</text><text x=\"390\" y=\"125\">强连续性 / 最小段长 → 薄层可能漏检</text><text x=\"35\" y=\"190\">输出“候选响应段”；聚类编号没有岩性名称。</text></g></svg></div></div><figcaption>相同工况加入薄响应层，再改变最小段长，直接观察检出与漏检的取舍。</figcaption></figure></details>",
+          "en": "DATA",
+          "navTitle": "资料与学习任务"
         }
       ]
     },
     "workflow": {
       "label": "案例流程",
-      "title": "钻速变了，是工况变化，还是候选地层响应？",
+      "title": "钻进突然变快，是岩石变了，还是操作变了？",
       "lead": [
-        "独立同响应标定学习工况影响，训练井聚类，测试井离线分段；输出可复核候选响应段，不把簇编号写成真实岩性。"
+        "钻时记录钻进单位进尺所需的时间，机械钻速记录单位时间钻进多少。它们能提示地层变化，但也受钻压、转速和钻头状态影响。本例先解释怎样读这些量，再学习工况影响并寻找需要复核的响应分段。"
       ],
       "steps": [
         {
           "name": "有效区间与单位",
           "role": "图S1",
-          "do": "输入：ROP、钻时、WOB、RPM、流量；动作：排除非钻进/非正值；同区间换算。见图S1。",
+          "do": "停钻记录和缺测不应作为普通岩石响应送入模型。先统一深度、单位和有效标记，并核对有效点的ROP与钻时换算关系。 本步操作：排除非钻进/非正值；同区间换算。输入：ROP、钻时、WOB、RPM、流量。",
           "effect": "有明确无效标记的深度序列",
           "trap": "停钻不能算作ROP=0再倒数"
         },
         {
           "name": "独立工况标定",
           "role": "图S2",
-          "do": "输入：独立同响应标定样本；动作：拟合logROP对相对WOB/RPM/Q的岭回归。见图S2。",
+          "do": "用独立标定记录估计工况作用，随后同时显示原始与校正响应。这样才能判断一个台阶更像操作变化，还是仍需进一步地质解释的候选变化。 本步操作：拟合logROP对相对WOB/RPM/Q的岭回归。输入：独立同响应标定样本。",
           "effect": "β系数、标定范围与散点",
           "trap": "不得在测试地层变化上拟合去工况"
         },
         {
           "name": "构造相对响应",
           "role": "图S3",
-          "do": "输入：实际ROP和冻结工况模型；动作：logROP减去工况预测，保留相对变化。见图S3。",
+          "do": "用标定学到的工况项对有效点做变换，再把原始和校正曲线并列。检查同地层工况阶跃是否减小，剩余变化才进入后续模式比较。 本步操作：logROP减去工况预测，保留相对变化。输入：实际ROP和冻结工况模型。",
           "effect": "原始与校正响应曲线",
           "trap": "校正不意味着已确认地层"
         },
         {
           "name": "训练井K-means",
           "role": "图S4",
-          "do": "输入：完整训练井的相对响应/扭矩；动作：训练标准化，学习2–4个中心。见图S4。",
+          "do": "聚类把相近的响应归在一起，每个中心是实际训练点学到的数值概括。它帮助比较模式，不直接提供砂岩或泥岩的鉴定结论。 本步操作：训练标准化，学习2–4个中心。输入：完整训练井的相对响应/扭矩。",
           "effect": "中心、实际SSE迭代曲线",
           "trap": "测试样本不移动中心"
         },
         {
           "name": "连续分段与薄层代价",
           "role": "图S5",
-          "do": "输入：逐点到中心的距离；动作：动态规划切换惩罚，再施加最小段长。见图S5。",
+          "do": "分段在“每点接近哪个中心”和“不要频繁换标签”之间取舍。调高惩罚或最小段长，区间会更少；同时要检查短层是否也被并掉。 本步操作：动态规划切换惩罚，再施加最小段长。输入：逐点到中心的距离。",
           "effect": "候选响应段与边界",
           "trap": "平滑可能增加薄层漏检"
         },
         {
           "name": "边界复核",
           "role": "图S6",
-          "do": "输入：模型/基线候选、域外标记；动作：同一深度对齐，人工增删候选另存。见图S6。",
+          "do": "候选边界可以回到同一深度的原始曲线和工况。人工增加或删除候选单独记录，保留模型最初结果，便于比较两者依据。 本步操作：同一深度对齐，人工增删候选另存。输入：模型/基线候选、域外标记。",
           "effect": "来源可追踪的复核记录",
           "trap": "人工候选不覆盖模型成绩"
         },
         {
           "name": "一对一评价与输出",
           "role": "图S7",
-          "do": "输入：候选边界、独立教学真值；动作：容差内最大匹配，计漏检与多余。见图S7。",
+          "do": "预测边界与参考界面在容差内一对一匹配。匹配误差回答“找得准不准”，漏检与多报回答“有没有找全、有没有多切”，三者一起看。 本步操作：容差内最大匹配，计漏检与多余。输入：候选边界、独立教学真值。",
           "effect": "P/R/F1、匹配误差、工况假界面",
           "trap": "空真值不制造100%召回率"
         }
@@ -112,7 +122,7 @@
       "js": "demo/demo.js",
       "label": "可运行示范",
       "height": 1000,
-      "intro": "独立同响应标定学习工况影响，训练井聚类，测试井离线分段；输出可复核候选响应段，不把簇编号写成真实岩性。"
+      "intro": "钻时记录钻进单位进尺所需的时间，机械钻速记录单位时间钻进多少。它们能提示地层变化，但也受钻压、转速和钻头状态影响。本例先解释怎样读这些量，再学习工况影响并寻找需要复核的响应分段。"
     }
   }
 }

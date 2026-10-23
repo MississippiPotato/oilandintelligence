@@ -1,0 +1,60 @@
+/* Local petroleum theme art and cross-stage case gallery. All case links come from registered packages. */
+.s17-home .s17-hero{min-height:470px;background:#f5f7f6}
+.s17-home .s17-theme img{object-position:67% top}
+.s17-home .s17-theme:after{background:linear-gradient(90deg,#f8faf9fa 0%,#f8faf9f5 32%,#f8faf9d6 47%,#f8faf955 63%,#f8faf900 80%)}
+.s17-home .s17-hero-copy{max-width:68%}
+.s17-home .s17-hero h1 span{font-size:clamp(35px,3.8vw,48px);line-height:1.36}
+.s17-home .s17-lead{max-width:630px;font-size:17px}
+.s17-home .s17-completion{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.s17-home .s17-completion>div{padding-left:20px}
+.s17-home .s17-completion>div:first-child{padding-left:0}
+.s17-home .s17-completion strong{font-size:33px}
+.s17-home .s17-completion span{font-size:14px;line-height:1.7}
+.s17-home .s17-card p,.s17-home .s17-path p,.s17-home .s17-reference-row p,.s17-home .s17-bottom p{font-size:17px}
+.s17-home .s17-section-head p,.s17-home .sc-heading p{font-size:16px}
+.s17-home .sc-result p{font-size:17px;line-height:1.85}
+.s17-home .sc-result h4{font-size:21px}
+.s17-home .s17-card .s17-method{font-size:15px}
+.sx-gallery{margin:48px 0 45px;padding-top:34px;border-top:1px solid #dce5e7;scroll-margin-top:95px}
+.sx-gallery .s17-section-head p{max-width:360px;margin-bottom:6px}
+.sx-gallery .s17-section-head p b{font-weight:600;color:#3c6467}
+.sx-jumps{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 28px}
+.sx-jumps a{font-size:14px;padding:8px 13px;border:1px solid #d1dfe1;background:#fff;border-radius:7px;color:#4f6a70}
+.sx-jumps a:hover{border-color:#82aaa5;background:#eef6f2;text-decoration:none}
+.sx-group{margin-top:28px;scroll-margin-top:90px;min-width:0}
+.sx-group-head{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,1fr);border:1px solid #dbe5e7;border-radius:17px;overflow:hidden;background:#fff}
+.sx-group-head figure{position:relative;margin:0;min-height:225px;max-height:250px;overflow:hidden;background:#e7eef0}
+.sx-group-head figure img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.sx-group-head figcaption{position:absolute;bottom:9px;left:11px;font-size:11px;line-height:1.5;padding:3px 8px;background:#ffffffe6;border-radius:4px;color:#46666b}
+.sx-group-copy{align-self:center;padding:25px 31px}
+.sx-group-no{font-size:13px;color:#687f87;line-height:1.8;letter-spacing:.04em}
+.sx-group-copy h3{font-size:27px;line-height:1.55;color:#27434b;margin:9px 0}
+.sx-group-copy p{font-size:17px;line-height:1.85;color:#5e747b;margin:9px 0 12px}
+.sx-group-count{font-size:13px;color:#507977}
+.sx-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:17px 0 35px}
+.sx-cards-three{grid-template-columns:repeat(6,minmax(0,1fr))}
+.sx-cards-three>.sx-card{grid-column:span 2}
+#sx-well .sx-cards-three>.sx-card:nth-child(n+4){grid-column:span 3}
+.sx-card{display:flex;flex-direction:column;min-width:0;padding:23px;border:1px solid #dce6e7;border-radius:14px;background:#fff;box-shadow:0 3px 13px #273c4b04;transition:border-color .18s,box-shadow .18s}
+.sx-card:hover{border-color:#a8c4c2;box-shadow:0 8px 22px #273c4b09}
+.sx-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:40px}
+.sx-card-top>span{font-size:13px;color:#6b8387}
+.sx-card-top svg{display:block;width:75px;height:44px;flex:none}
+.sx-card h4{font-size:21px;line-height:1.6;color:#243f47;font-weight:650;margin:11px 0 6px}
+.sx-question{font-size:17px;color:#556e77;line-height:1.85;margin:0 0 15px}
+.sx-visual{background:#eef4f3;border-radius:7px;padding:10px 12px;color:#386763;font-size:15px;line-height:1.8}
+.sx-visual>span{display:block;font-size:11px;letter-spacing:.1em;color:#7b928e;margin-bottom:2px}
+.sx-method{font-size:14px;line-height:1.8;color:#7a8c91;margin:12px 0 4px}
+.sx-action{font-size:17px;line-height:1.85;color:#5e747c;margin:7px 0 19px}
+.sx-action>b{display:block;font-size:13px;font-weight:600;color:#597c7a;margin-bottom:4px}
+.sx-card-links{display:flex;align-items:center;justify-content:space-between;gap:13px;flex-wrap:wrap;margin-top:auto;padding-top:17px;border-top:1px solid #e7edee}
+.sx-card-links a{font-size:15px;font-weight:600;color:#296d68}
+.sx-card-links a+a{font-weight:400;color:#677f85}
+.sx-gallery-note{font-size:14px;line-height:1.95;color:#74878e;margin:3px 0 0}
+.sx-gallery-note code{font-size:13px;background:#eaf0f1;padding:2px 5px;border-radius:4px}
+.sx-gallery-note a{display:inline-block;margin-left:7px}
+.sx-gallery a:focus-visible{outline:3px solid #b88f55;outline-offset:4px}
+@media(max-width:1000px){.s17-home .s17-hero-copy{max-width:75%}.sx-cards-three{grid-template-columns:repeat(2,minmax(0,1fr))}.sx-cards-three>.sx-card,#sx-well .sx-cards-three>.sx-card:nth-child(n+4){grid-column:auto}.sx-group-copy{padding:23px}.sx-group-copy h3{font-size:25px}.s17-home .s17-completion>div{padding-left:13px}.s17-home .s17-completion strong{font-size:29px}}
+@media(max-width:700px){.s17-home .s17-hero{min-height:0}.s17-home .s17-hero-copy{max-width:none}.s17-home .s17-theme:after{background:linear-gradient(90deg,#f8faf9f5,#f8faf9ed 55%,#f8faf9ac)}.s17-home .s17-hero h1 span{font-size:34px}.s17-home .s17-completion{grid-template-columns:repeat(2,minmax(0,1fr));gap:19px 12px}.s17-home .s17-completion>div:nth-child(3){border-left:0;padding-left:0}.s17-home .s17-completion strong{font-size:30px}.s17-home .s17-completion span{font-size:13px}.sx-gallery{margin-top:34px;padding-top:25px}.sx-group-head{grid-template-columns:minmax(0,1fr)}.sx-group-head figure{height:180px;min-height:0}.sx-group-copy{padding:22px}.sx-group-copy h3{font-size:25px}.sx-group-copy p{margin-bottom:9px}.sx-jumps{gap:7px;margin-top:18px}.sx-jumps a{font-size:13px;padding:7px 10px}.sx-card{padding:20px}.sx-cards{gap:12px}}
+@media(max-width:540px){.sx-cards,.sx-cards-three{grid-template-columns:minmax(0,1fr)}.sx-group-head figure{height:165px}.sx-card h4{font-size:22px}.sx-group-copy h3{font-size:25px}.sx-group-copy{padding:21px}.sx-card-links a{font-size:15px}.s17-home .s17-hero h1 span{font-size:32px}.s17-home .s17-lead{font-size:17px}}
+@media(prefers-reduced-motion:reduce){.sx-card{transition:none}}

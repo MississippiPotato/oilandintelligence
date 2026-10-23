@@ -1,0 +1,46 @@
+{
+  "sceneId": "s1",
+  "checked": "2026-10-24",
+  "data": {
+    "nature": "procedural teaching synthetic",
+    "shape": [
+      72,
+      84
+    ],
+    "traceSpacing_m": 25,
+    "sampleInterval_ms": 4,
+    "forwardModel": "Ricker-like wavelet responses at wavy reflectors with a two-block time displacement, independent noise and missing observations.",
+    "reference": "Fault band within 1.5 traces of generated fault; one centerline point for each of 56 evaluation rows.",
+    "split": {
+      "train": [
+        131,
+        173,
+        211,
+        257,
+        293,
+        337,
+        379,
+        419
+      ],
+      "validation": [
+        701,
+        751
+      ],
+      "defaultTest": 2029
+    }
+  },
+  "sources": [
+    {
+      "url": "https://wiki.seg.org/wiki/Semblance,_coherence,_and_other_discontinuity_attributes",
+      "organization": "Society of Exploration Geophysicists",
+      "supports": "Local trace waveform discontinuity attributes highlight faults and stratigraphic differences; similarity alone does not identify cause."
+    },
+    {
+      "url": "https://www.aapg.org/news-and-media/explorer/is-it-a-subtle-fault-or-just-noise/",
+      "organization": "AAPG",
+      "supports": "Faults break seismic horizon continuity; coherence and original amplitude should be interpreted together."
+    }
+  ],
+  "method": "9-feature regularized logistic regression, genuinely optimized for 240 iterations; not a pretrained deep model.",
+  "artwork": "Original SVG and generated amplitude arrays; no copied reference screenshots."
+}

@@ -1,0 +1,196 @@
+{
+  "scope": "Actual unmodified teacher folder import; no injected package storage",
+  "scene": "wo1",
+  "caseId": "s17x-wo1-workover-retrieval",
+  "checks": [
+    {
+      "name": "folder manifest loaded with correct scene",
+      "passed": true
+    },
+    {
+      "name": "actual teacher importer registers expected version",
+      "passed": true
+    },
+    {
+      "name": "teacher reports persistent storage rather than session-only import",
+      "passed": true,
+      "detail": "✓\n已添加「修井作业方案智能推荐：从井史找到有出处的候选」\n正在打开场景页…"
+    },
+    {
+      "name": "genuine imported ID appears in saved package list",
+      "passed": true
+    },
+    {
+      "name": "package survives page refresh",
+      "passed": true
+    },
+    {
+      "name": "no browser JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:10:14.769Z",
+  "toast": "✓\n已添加「修井作业方案智能推荐：从井史找到有出处的候选」\n正在打开场景页…",
+  "saved": {
+    "items": [
+      {
+        "id": "s17x-g1-remote-lithology",
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "sceneId": "g1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:55.220Z"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "title": "地震断层自动解释：沿波形不连续性寻找错断",
+        "sceneId": "s1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:57.729Z"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "sceneId": "d1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:00.183Z"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "title": "测井岩性识别：多道曲线与可解释近邻",
+        "sceneId": "w4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:02.625Z"
+      },
+      {
+        "id": "s17x-c1-cement-quality",
+        "title": "固井质量智能评价",
+        "sceneId": "c1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:05.097Z"
+      },
+      {
+        "id": "s17x-co1-completion-choice",
+        "title": "完井方式智能优选",
+        "sceneId": "co1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:07.541Z"
+      },
+      {
+        "id": "s17x-p1-perforation-design",
+        "title": "射孔参数优化：从试验响应到受约束候选",
+        "sceneId": "p1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:10.055Z"
+      },
+      {
+        "id": "s17x-pr1-pump-card",
+        "title": "抽油机井工况诊断：从井下泵功图读形状",
+        "sceneId": "pr1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:12.538Z"
+      },
+      {
+        "id": "s17x-wo1-workover-retrieval",
+        "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+        "sceneId": "wo1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:15.035Z"
+      }
+    ],
+    "storedCharacters": 1150848
+  },
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "e0ab6f50d0d661fa0f416a700cc2b89f39f7721f578f46530422975f11d5bd03",
+      "bytes": 17806
+    },
+    {
+      "path": "README.txt",
+      "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684",
+      "bytes": 1085
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2",
+      "bytes": 25377
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc",
+      "bytes": 63674
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065",
+      "bytes": 19480
+    }
+  ],
+  "checkedAt": "2026-10-23T17:10:15.831Z",
+  "passed": 6,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-wo1-workover-retrieval",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 18843,
+        "sha256": "649d0329d083eb994cc58a7cddd131110b0d550d317133e9448a306ac6901dc2"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25377,
+        "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 63674,
+        "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 19480,
+        "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1085,
+        "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+      }
+    ],
+    "manifestCanonicalSha256": "e0ab6f50d0d661fa0f416a700cc2b89f39f7721f578f46530422975f11d5bd03",
+    "storedPackageMatchesDisk": true
+  }
+}

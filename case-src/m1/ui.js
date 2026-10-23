@@ -1,4 +1,4 @@
-(function(){'use strict';const U=S17UI,C=M1Core,$=U.$,s=U.session('s17-cuttings-lithology','1.3.0',M1Lesson),cache=new Map();const name=i=>i===3?'待复核':C.labels[i];
+(function(){'use strict';const U=S17UI,C=M1Core,$=U.$,s=U.session('s17-cuttings-lithology',(globalThis.S17Page?.caseVersion??'1.3.0'),M1Lesson),cache=new Map();const name=i=>i===3?'待复核':C.labels[i];
 const options=()=>({light:Number($('light').value),yellow:Number($('yellow').value),coating:Number($('coating').value),occlude:$('preset').value==='coating',merge:$('preset').value==='coating',unfamiliar:$('preset').value==='unfamiliar'});
 function gM1Enhance(){if(globalThis.M1Enhance&&s.run)M1Enhance.update(s.run,s.selected);}
 function selected(){return s.run?.inference.results[s.selected];}

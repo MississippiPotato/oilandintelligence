@@ -1,0 +1,161 @@
+{
+  "scope": "Actual unmodified teacher folder import; no injected package storage",
+  "scene": "w4",
+  "caseId": "s17x-w4-log-lithology",
+  "checks": [
+    {
+      "name": "folder manifest loaded with correct scene",
+      "passed": true
+    },
+    {
+      "name": "actual teacher importer registers expected version",
+      "passed": true
+    },
+    {
+      "name": "teacher reports persistent storage rather than session-only import",
+      "passed": true,
+      "detail": "✓\n已添加「测井岩性识别：多道曲线与可解释近邻」\n正在打开场景页…"
+    },
+    {
+      "name": "genuine imported ID appears in saved package list",
+      "passed": true
+    },
+    {
+      "name": "package survives page refresh",
+      "passed": true
+    },
+    {
+      "name": "no browser JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:10:02.373Z",
+  "toast": "✓\n已添加「测井岩性识别：多道曲线与可解释近邻」\n正在打开场景页…",
+  "saved": {
+    "items": [
+      {
+        "id": "s17x-g1-remote-lithology",
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "sceneId": "g1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:55.220Z"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "title": "地震断层自动解释：沿波形不连续性寻找错断",
+        "sceneId": "s1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:57.729Z"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "sceneId": "d1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:00.183Z"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "title": "测井岩性识别：多道曲线与可解释近邻",
+        "sceneId": "w4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:02.625Z"
+      }
+    ],
+    "storedCharacters": 502790
+  },
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "d0497dcb43866996d60cffc9cc40576a7b5382bd2f962beeb27c7879a3091fb5",
+      "bytes": 19007
+    },
+    {
+      "path": "README.txt",
+      "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0",
+      "bytes": 2298
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68",
+      "bytes": 26522
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "bd3b25daa52e8fa5cb6686c9ca2bf1568f9b8270037ba73a5bc975d4b38a1d9e",
+      "bytes": 63887
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780",
+      "bytes": 22155
+    }
+  ],
+  "checkedAt": "2026-10-23T17:10:03.387Z",
+  "passed": 6,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-w4-log-lithology",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 20150,
+        "sha256": "c5291c63b84c07e633f9a57f992a0797c1052a4cadf039fbb0078b00ce5224e5"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26522,
+        "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 63887,
+        "sha256": "bd3b25daa52e8fa5cb6686c9ca2bf1568f9b8270037ba73a5bc975d4b38a1d9e"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 22155,
+        "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 2298,
+        "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0"
+      }
+    ],
+    "manifestCanonicalSha256": "d0497dcb43866996d60cffc9cc40576a7b5382bd2f962beeb27c7879a3091fb5",
+    "storedPackageMatchesDisk": true
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "scope": "Actual unmodified teacher folder import; no injected package storage",
+  "scene": "m4",
+  "caseId": "s17-drilltime-boundaries",
+  "checks": [
+    {
+      "name": "folder manifest loaded with correct scene",
+      "passed": true
+    },
+    {
+      "name": "actual teacher importer registers expected version",
+      "passed": true
+    },
+    {
+      "name": "teacher reports persistent storage rather than session-only import",
+      "passed": true,
+      "detail": "✓\n已添加「钻时曲线地层划分：工况校正与候选响应段」\n正在打开场景页…"
+    },
+    {
+      "name": "genuine imported ID appears in saved package list",
+      "passed": true
+    },
+    {
+      "name": "package survives page refresh",
+      "passed": true
+    },
+    {
+      "name": "no browser JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:10:32.599Z",
+  "toast": "✓\n已添加「钻时曲线地层划分：工况校正与候选响应段」\n正在打开场景页…",
+  "saved": {
+    "items": [
+      {
+        "id": "s17x-g1-remote-lithology",
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "sceneId": "g1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:55.220Z"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "title": "地震断层自动解释：沿波形不连续性寻找错断",
+        "sceneId": "s1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:57.729Z"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "sceneId": "d1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:00.183Z"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "title": "测井岩性识别：多道曲线与可解释近邻",
+        "sceneId": "w4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:02.625Z"
+      },
+      {
+        "id": "s17x-c1-cement-quality",
+        "title": "固井质量智能评价",
+        "sceneId": "c1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:05.097Z"
+      },
+      {
+        "id": "s17x-co1-completion-choice",
+        "title": "完井方式智能优选",
+        "sceneId": "co1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:07.541Z"
+      },
+      {
+        "id": "s17x-p1-perforation-design",
+        "title": "射孔参数优化：从试验响应到受约束候选",
+        "sceneId": "p1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:10.055Z"
+      },
+      {
+        "id": "s17x-pr1-pump-card",
+        "title": "抽油机井工况诊断：从井下泵功图读形状",
+        "sceneId": "pr1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:12.538Z"
+      },
+      {
+        "id": "s17x-wo1-workover-retrieval",
+        "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+        "sceneId": "wo1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:15.035Z"
+      },
+      {
+        "id": "s17x-e1-fracture-optimization",
+        "title": "压裂参数智能优化：在资源边界里比较候选",
+        "sceneId": "e1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:17.480Z"
+      },
+      {
+        "id": "s17x-t1-pipeline-leak",
+        "title": "管道泄漏智能检测：从正常关系到事件核查",
+        "sceneId": "t1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:20.010Z"
+      },
+      {
+        "id": "s17x-r5-quality-softsensor",
+        "title": "产品质量在线软测量：化验到来之前",
+        "sceneId": "r5",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:22.613Z"
+      },
+      {
+        "id": "s17-cuttings-lithology",
+        "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+        "sceneId": "m1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:25.216Z"
+      },
+      {
+        "id": "s17-mudgas-context",
+        "title": "气测异常智能解释：气峰背后的工况与迟到",
+        "sceneId": "m2",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:27.748Z"
+      },
+      {
+        "id": "s17-fluorescence-review",
+        "title": "荧光图像智能判读：显示与来源分开核查",
+        "sceneId": "m3",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:30.334Z"
+      },
+      {
+        "id": "s17-drilltime-boundaries",
+        "title": "钻时曲线地层划分：工况校正与候选响应段",
+        "sceneId": "m4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:32.904Z"
+      }
+    ],
+    "storedCharacters": 2466374
+  },
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "6f2e791ab418b538aa1606562f720122c9d2aeab15e61676852a13da375a9bb4",
+      "bytes": 26640
+    },
+    {
+      "path": "README.txt",
+      "sha256": "80d07ab5cb5a373bb1d41aad221561caca6aa021a80be9cb0b3e11e893b82bda",
+      "bytes": 859
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+      "bytes": 37117
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "0f905bca2f060ef4d2ab3fe9b56b91e7272ab41db7c76bef65e8488552ccc793",
+      "bytes": 224712
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "739cf9352707564e39379e0ceb329362c6e4e388579d0b56e2b09768bb65e8fd",
+      "bytes": 4759
+    }
+  ],
+  "checkedAt": "2026-10-23T17:10:33.749Z",
+  "passed": 6,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/cases/s17-drilltime-boundaries",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 27863,
+        "sha256": "54ed77af4b26a7b10cfbca95bfc644e8a2ec71e12d57701e654cf5da1da22da9"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 37117,
+        "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 224712,
+        "sha256": "0f905bca2f060ef4d2ab3fe9b56b91e7272ab41db7c76bef65e8488552ccc793"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4759,
+        "sha256": "739cf9352707564e39379e0ceb329362c6e4e388579d0b56e2b09768bb65e8fd"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 859,
+        "sha256": "80d07ab5cb5a373bb1d41aad221561caca6aa021a80be9cb0b3e11e893b82bda"
+      }
+    ],
+    "manifestCanonicalSha256": "6f2e791ab418b538aa1606562f720122c9d2aeab15e61676852a13da375a9bb4",
+    "storedPackageMatchesDisk": true
+  }
+}

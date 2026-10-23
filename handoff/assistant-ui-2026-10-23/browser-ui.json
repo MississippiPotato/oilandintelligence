@@ -1,0 +1,153 @@
+{
+  "scope": "Actual Chromium UI: new chat, fonts, navigation, settings, attachments, local API fixture, responsive and offline portal",
+  "checks": [
+    {
+      "name": "homepage body is 16px and lead is 17px",
+      "passed": true
+    },
+    {
+      "name": "petroleum multi-track cursor updates depth and actual observations",
+      "passed": true
+    },
+    {
+      "name": "non-drilling ROP remains missing",
+      "passed": true
+    },
+    {
+      "name": "chart has keyboard depth navigation",
+      "passed": true
+    },
+    {
+      "name": "minimal welcome and two composer shortcuts replace prompt cards",
+      "passed": true
+    },
+    {
+      "name": "assistant textarea is 18px and panel is 410px",
+      "passed": true
+    },
+    {
+      "name": "attachment menu opens from the paperclip and microphone stays reachable",
+      "passed": true
+    },
+    {
+      "name": "local guide returns five case destinations and homepage",
+      "passed": true
+    },
+    {
+      "name": "assistant answer is 18px with readable line spacing",
+      "passed": true
+    },
+    {
+      "name": "assistant stays open with conversation on #/chain",
+      "passed": true
+    },
+    {
+      "name": "assistant stays open with conversation on #/cases",
+      "passed": true
+    },
+    {
+      "name": "assistant stays open with conversation on #/guide",
+      "passed": true
+    },
+    {
+      "name": "assistant stays open with conversation on #/admin",
+      "passed": true
+    },
+    {
+      "name": "teacher sample shows assistant and current page context",
+      "passed": true
+    },
+    {
+      "name": "expand uses a optional 720px reading area",
+      "passed": true
+    },
+    {
+      "name": "settings are a separate scrollable view",
+      "passed": true
+    },
+    {
+      "name": "configuration clears visible credential without writing storage",
+      "passed": true
+    },
+    {
+      "name": "model client response is rendered with safe bold and bullets",
+      "passed": true
+    },
+    {
+      "name": "image is previewed locally before sending",
+      "passed": true
+    },
+    {
+      "name": "image attachment passes through the existing model payload and clears after reply",
+      "passed": true
+    },
+    {
+      "name": "audio file is prepared with local playback before sending",
+      "passed": true
+    },
+    {
+      "name": "audio reaches the existing Responses payload and clears after reply",
+      "passed": true
+    },
+    {
+      "name": "new conversation clears only in-page messages and shows welcome",
+      "passed": true
+    },
+    {
+      "name": "chat remains inside 390x844",
+      "passed": true
+    },
+    {
+      "name": "send button is reachable at 390x844",
+      "passed": true
+    },
+    {
+      "name": "settings key remains reachable at 390x844",
+      "passed": true
+    },
+    {
+      "name": "chat remains inside 844x390",
+      "passed": true
+    },
+    {
+      "name": "send button is reachable at 844x390",
+      "passed": true
+    },
+    {
+      "name": "settings key remains reachable at 844x390",
+      "passed": true
+    },
+    {
+      "name": "mobile home avoids page-wide horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "file offline portal has real Live2D and local navigation",
+      "passed": true
+    },
+    {
+      "name": "offline portal initiates no HTTP requests",
+      "passed": true
+    },
+    {
+      "name": "default portal has no external network dependency",
+      "passed": true
+    },
+    {
+      "name": "no page JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "offlineHTTP": [],
+  "api": {
+    "fixtureOnly": true,
+    "newPaidCalls": 0,
+    "fixtureResponses": 3
+  },
+  "checkedAt": "2026-10-23T17:11:17.187Z",
+  "passed": 34,
+  "failed": 0
+}

@@ -1,0 +1,251 @@
+{
+  "createdAt": "2026-10-23T16:43:46.064526+00:00",
+  "purpose": "网站主题艺术图，供首页与跨阶段案例页引用；不放入独立导入包。",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "generationCalls": 4,
+  "targetedEditCalls": 1,
+  "sourceType": "AI-generated original theme art",
+  "userAuthorization": "用户要求可多调用 imagegen 绘制主题图。",
+  "constraints": [
+    "无文字、品牌、水印",
+    "不作为数据或设备操作示意",
+    "不改变原有主题图",
+    "原始生成文件保留"
+  ],
+  "assets": [
+    {
+      "id": "geology",
+      "label": "地质与物探",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: stylized-concept. Asset type: premium petroleum education website theme banner, landscape roughly 2:1. Primary request: an elegant editorial landscape painting of geological exploration. Scene: broad arid sandstone terrain with beautiful stratified and gently folded outcrops in the foreground and midground, an open plain, a small unbranded exploration truck far in the distance, blue-gray mountains fading into a spacious pale sky. Style: refined industrial editorial illustration, finely painted natural textures and subtle atmospheric depth, confident and restrained, high visual quality. Composition: panoramic, clear focal sandstone formation toward the right, generous quiet pale sky and open land on the left for later webpage copy. Lighting: soft early morning light, calm and airy, no harsh glare. Color palette: deep ink teal, warm sand gold, muted slate blue and warm off-white, delicate tonal transitions. Constraints: no people, no text, no numbers, no labels, no charts, no logos, no watermark; no neon, no cyberpunk, no fantasy machines, no disaster, no black smoke. This is website theme art, not a technical operating diagram.",
+      "generationSource": {
+        "path": "C:\\Users\\123\\.codex\\generated_images\\01a1699e-d092-7cd0-883a-20d2fe92d928\\exec-38ca4982-f70b-4f41-864d-64386f1378ab.png",
+        "bytes": 2814106,
+        "sha256": "482a2c4697908cfcb85cc696699318ddff4278aac47f26c5722945ce36024e18",
+        "dimensions": [
+          1947,
+          808
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "original": {
+        "path": "G:\\可视化导论\\5\\output\\imagegen\\petroleum-themes\\theme-geology-v1-original.png",
+        "bytes": 2814106,
+        "sha256": "482a2c4697908cfcb85cc696699318ddff4278aac47f26c5722945ce36024e18",
+        "dimensions": [
+          1947,
+          808
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "webp": {
+        "path": "G:\\可视化导论\\5\\portal\\assets\\themes\\theme-geology-v1.webp",
+        "bytes": 147572,
+        "sha256": "74c0bf3f2d15aa98ef89190863ba1b9847bf0853118f1daf96b058698bf2771a",
+        "dimensions": [
+          1280,
+          531
+        ],
+        "mode": "RGB",
+        "format": "WEBP"
+      },
+      "processing": {
+        "resize": "proportional, no crop",
+        "width": 1280,
+        "resample": "Lanczos",
+        "format": "WebP",
+        "quality": 86,
+        "contentEditsAfterGeneration": false
+      },
+      "visualReview": {
+        "reviewed": true,
+        "textOrWatermarkSeen": false,
+        "palette": "ink teal, sand gold, slate blue",
+        "composition": "wide scene with a calm left area and a right-side industrial or geological focal point"
+      }
+    },
+    {
+      "id": "well",
+      "label": "建井",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: stylized-concept. Asset type: premium petroleum education website theme banner, landscape roughly 2:1. Primary request: a calm, elegant industrial editorial landscape painting of an onshore drilling site. Scene: a well-organized small land drilling pad in a broad arid sandy plain, one realistically recognizable steel lattice drilling derrick with tidy low equipment and neat access track, soft distant blue-gray hills. Style: refined editorial digital painting, fine natural textures, realistic equipment silhouettes rather than a schematic, subtle atmospheric depth, premium visual quality. Composition: the derrick and primary equipment occupy the right third; broad uncluttered pale sky and quiet sand terrain on the left provide generous negative space for webpage copy. The main rig must be fully within frame with clean strong silhouette. Lighting: clear soft late-morning sun, airy and crisp, natural shadows. Color palette: ink teal equipment, sand gold ground, muted slate blue mountains and pale warm off-white sky. Constraints: no people, no text, no numbers, no labels, no charts, no logos, no watermark; no neon, no cyberpunk, no fantasy, no flames, no disasters, no black smoke. This is website theme art, not a technical operating diagram.",
+      "generationSource": {
+        "path": "C:\\Users\\123\\.codex\\generated_images\\01a1699e-d092-7cd0-883a-20d2fe92d928\\exec-15ae1234-beaf-449b-ad9f-a6d12dfeb840.png",
+        "bytes": 2357960,
+        "sha256": "57d706da2d503f077a1ae35fc6bf868021f95337730f59f16f5c9fea53dd4064",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "original": {
+        "path": "G:\\可视化导论\\5\\output\\imagegen\\petroleum-themes\\theme-well-v1-original.png",
+        "bytes": 2357960,
+        "sha256": "57d706da2d503f077a1ae35fc6bf868021f95337730f59f16f5c9fea53dd4064",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "webp": {
+        "path": "G:\\可视化导论\\5\\portal\\assets\\themes\\theme-well-v1.webp",
+        "bytes": 125870,
+        "sha256": "c1ed035fa0a58fc0da0f0f21ac8bb555ef99eb505ee7348577f5a8ce0a858961",
+        "dimensions": [
+          1280,
+          640
+        ],
+        "mode": "RGB",
+        "format": "WEBP"
+      },
+      "processing": {
+        "resize": "proportional, no crop",
+        "width": 1280,
+        "resample": "Lanczos",
+        "format": "WebP",
+        "quality": 86,
+        "contentEditsAfterGeneration": false
+      },
+      "visualReview": {
+        "reviewed": true,
+        "textOrWatermarkSeen": false,
+        "palette": "ink teal, sand gold, slate blue",
+        "composition": "wide scene with a calm left area and a right-side industrial or geological focal point"
+      }
+    },
+    {
+      "id": "production",
+      "label": "采油、增采与修井",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: stylized-concept. Asset type: premium petroleum education website theme banner, landscape roughly 2:1. Primary request: an elegant industrial editorial landscape painting of oil production in a quiet open oilfield at golden hour. Scene: two to three clearly separated traditional horsehead pumpjacks on tidy well pads across a broad sandy plain, clean narrow access roads curving softly through the scene, soft distant blue-gray mountains. Style: refined editorial digital painting, precise recognizable pumpjack silhouettes, fine subtle natural textures and atmospheric depth, premium calm visual quality. Composition: wide panorama, the nearest pumpjack positioned in the right third as the visual anchor and two smaller pumpjacks receding in the midground; generous calm open sky and quiet ground on the left for later webpage copy. Lighting: gentle warm golden sunset, amber edge light on deep ink-teal equipment, natural shadows, airy rather than dramatic. Color palette: ink teal machinery, sand gold plain, muted slate blue mountains, pale peach and warm cream sky. Constraints: no people, no text, no numbers, no labels, no charts, no logos, no watermark; no neon, no cyberpunk, no fantasy, no flames, no disaster, no black smoke. This is website theme art, not an operating diagram.",
+      "generationSource": {
+        "path": "C:\\Users\\123\\.codex\\generated_images\\01a1699e-d092-7cd0-883a-20d2fe92d928\\exec-9cd89870-269d-41b5-90d9-fb3153a7abdc.png",
+        "bytes": 2189793,
+        "sha256": "cfc067fedd7e56ba3185942701db248d7037496e6de5178f7fccbcc7489c538b",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "original": {
+        "path": "G:\\可视化导论\\5\\output\\imagegen\\petroleum-themes\\theme-production-v1-original.png",
+        "bytes": 2189793,
+        "sha256": "cfc067fedd7e56ba3185942701db248d7037496e6de5178f7fccbcc7489c538b",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "webp": {
+        "path": "G:\\可视化导论\\5\\portal\\assets\\themes\\theme-production-v1.webp",
+        "bytes": 129494,
+        "sha256": "81bad966e16561280b9b84db030094cd0fbd511d390f6674679cb446f86540ab",
+        "dimensions": [
+          1280,
+          640
+        ],
+        "mode": "RGB",
+        "format": "WEBP"
+      },
+      "processing": {
+        "resize": "proportional, no crop",
+        "width": 1280,
+        "resample": "Lanczos",
+        "format": "WebP",
+        "quality": 86,
+        "contentEditsAfterGeneration": false
+      },
+      "visualReview": {
+        "reviewed": true,
+        "textOrWatermarkSeen": false,
+        "palette": "ink teal, sand gold, slate blue",
+        "composition": "wide scene with a calm left area and a right-side industrial or geological focal point"
+      },
+      "generationEdit": {
+        "tool": "image_gen.imagegen",
+        "prompt": "Use case: precise-object-edit. Edit target: the supplied oilfield sunset illustration. Make one small localized correction only: remove the pale rectangular label/plaque and all letter-like markings from the nearest large pumpjack's upper horizontal beam. Fill that spot seamlessly with the same plain dark teal painted steel, including its existing light, texture and perspective. Preserve the entire composition, three pumpjacks, all equipment geometry, sunset, mountains, colors, lighting, ground, shadows, detail, framing and aspect ratio. Do not add any text, labels, logos or watermark anywhere.",
+        "reason": "首稿最近抽油机梁上带浅色标签，使用同一内置 imagegen 局部去除；保留首稿与最终版。",
+        "firstDraft": {
+          "path": "G:\\可视化导论\\5\\output\\imagegen\\petroleum-themes\\theme-production-v1-first-draft.png",
+          "bytes": 2400843,
+          "sha256": "4b1de365681a0c8fa1a5189f7fbd8fd9cbbb766132bd6e2b318d97f6bf466bd3",
+          "dimensions": [
+            1774,
+            887
+          ],
+          "mode": "RGB",
+          "format": "PNG"
+        }
+      }
+    },
+    {
+      "id": "refining",
+      "label": "运输与加工",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "prompt": "Use case: stylized-concept. Asset type: premium petroleum education website theme banner, landscape roughly 2:1. Primary request: an elegant industrial editorial landscape painting of coastal petroleum transport and refining. Scene: a clean well-organized refinery beside a quiet coastal bay, silver-gray cylindrical storage tanks, fine pipe racks and a restrained cluster of refining towers on the right, a gently curving shoreline and distant blue-gray hills. Style: refined editorial digital painting, recognizable realistic industrial silhouettes, delicate material textures and atmospheric perspective, high-end publication quality. Composition: panoramic with the main industrial cluster in the right half, calmer open water and pale sky on the left to allow later webpage copy; clear focal hierarchy and generous negative space. Lighting: soft early evening, pale blue sky with subtle warm peach clouds, natural silver highlights on the tanks, calm and airy. Color palette: silver gray structures, deep ink teal accents, muted slate blue water, sand gold shore and delicate cream-peach sky. Constraints: no people, no ships with markings, no text, no numbers, no labels, no charts, no logos, no watermark; no neon, no cyberpunk, no fantasy, no flames, no disaster, no black smoke. This is website theme art, not an operating diagram.",
+      "generationSource": {
+        "path": "C:\\Users\\123\\.codex\\generated_images\\01a1699e-d092-7cd0-883a-20d2fe92d928\\exec-b7d75bb2-7611-4e46-9df1-bc7a7910771f.png",
+        "bytes": 2405929,
+        "sha256": "066d742e0041b38215571c7175867312bcc87ca55c8d32a93c052d1ead1d533b",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "original": {
+        "path": "G:\\可视化导论\\5\\output\\imagegen\\petroleum-themes\\theme-refining-v1-original.png",
+        "bytes": 2405929,
+        "sha256": "066d742e0041b38215571c7175867312bcc87ca55c8d32a93c052d1ead1d533b",
+        "dimensions": [
+          1774,
+          887
+        ],
+        "mode": "RGB",
+        "format": "PNG"
+      },
+      "webp": {
+        "path": "G:\\可视化导论\\5\\portal\\assets\\themes\\theme-refining-v1.webp",
+        "bytes": 145644,
+        "sha256": "f9e37de012db6a7f420e295746a52c3d6c584563ddea3aab063680f6907e5a8d",
+        "dimensions": [
+          1280,
+          640
+        ],
+        "mode": "RGB",
+        "format": "WEBP"
+      },
+      "processing": {
+        "resize": "proportional, no crop",
+        "width": 1280,
+        "resample": "Lanczos",
+        "format": "WebP",
+        "quality": 86,
+        "contentEditsAfterGeneration": false
+      },
+      "visualReview": {
+        "reviewed": true,
+        "textOrWatermarkSeen": false,
+        "palette": "ink teal, sand gold, slate blue",
+        "composition": "wide scene with a calm left area and a right-side industrial or geological focal point"
+      }
+    }
+  ],
+  "totalWebpBytes": 548580
+}

@@ -1,0 +1,333 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "p1",
+  "caseId": "s17x-p1-perforation-design",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 5
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow step 1 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 2 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 3 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 4 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 5 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "done"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "p1",
+          "caseId": "s17x-p1-perforation-design",
+          "status": "done",
+          "runId": "p1-3",
+          "params": {
+            "permeability": 60,
+            "damage": 18,
+            "anisotropy": 1.8,
+            "budget": 60,
+            "clearance": 5,
+            "maxCrowding": 2.5,
+            "costWeight": 0.35
+          },
+          "metrics": {
+            "regression": {
+              "count": 240,
+              "RMSE": 0.7756006846026144,
+              "MAE": 0.6390126340461805
+            },
+            "regressionBaseline": {
+              "count": 240,
+              "RMSE": 6.580739481917284,
+              "MAE": 5.403172688552595
+            },
+            "feasibleCount": 274,
+            "candidateCount": 440,
+            "feasibleRate": 0.6227272727272727,
+            "gainVsFeasibleFixed": 2.7071388647417507,
+            "objectiveGap": 0.08819231751745349
+          }
+        },
+        "review": {
+          "present": true,
+          "keys": [
+            "schemaVersion",
+            "sceneId",
+            "caseId",
+            "caseVersion",
+            "version",
+            "datasetId",
+            "wellId",
+            "runId",
+            "status",
+            "resultState",
+            "dataNature",
+            "datasetVersion",
+            "params",
+            "groups",
+            "runConfig",
+            "sources",
+            "claims",
+            "model",
+            "metrics",
+            "selected",
+            "fixedDesign",
+            "currentEvaluation",
+            "heldOut",
+            "review",
+            "references",
+            "limitations"
+          ]
+        },
+        "text": [
+          "已记录：保留为后续评价候选 · p1-3；模型和评价保持原值。"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:03:48.811Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1",
+      "bytes": 3117
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787",
+      "bytes": 24834
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d",
+      "bytes": 93983
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72",
+      "bytes": 4501
+    }
+  ],
+  "workflow": {
+    "stepControls": 5
+  },
+  "default": {
+    "status": "done",
+    "metrics": {
+      "regression": {
+        "count": 240,
+        "RMSE": 0.7756006846026144,
+        "MAE": 0.6390126340461805
+      },
+      "regressionBaseline": {
+        "count": 240,
+        "RMSE": 6.580739481917284,
+        "MAE": 5.403172688552595
+      },
+      "feasibleCount": 274,
+      "candidateCount": 440,
+      "feasibleRate": 0.6227272727272727,
+      "gainVsFeasibleFixed": 2.7071388647417507,
+      "objectiveGap": 0.08819231751745349
+    },
+    "params": {
+      "permeability": 60,
+      "damage": 18,
+      "anisotropy": 1.8,
+      "budget": 60,
+      "clearance": 5,
+      "maxCrowding": 2.5,
+      "costWeight": 0.35
+    },
+    "runId": "p1-1"
+  },
+  "reviewSnapshot": {
+    "sceneId": "p1",
+    "caseId": "s17x-p1-perforation-design",
+    "status": "done",
+    "runId": "p1-3",
+    "params": {
+      "permeability": 60,
+      "damage": 18,
+      "anisotropy": 1.8,
+      "budget": 60,
+      "clearance": 5,
+      "maxCrowding": 2.5,
+      "costWeight": 0.35
+    },
+    "metrics": {
+      "regression": {
+        "count": 240,
+        "RMSE": 0.7756006846026144,
+        "MAE": 0.6390126340461805
+      },
+      "regressionBaseline": {
+        "count": 240,
+        "RMSE": 6.580739481917284,
+        "MAE": 5.403172688552595
+      },
+      "feasibleCount": 274,
+      "candidateCount": 440,
+      "feasibleRate": 0.6227272727272727,
+      "gainVsFeasibleFixed": 2.7071388647417507,
+      "objectiveGap": 0.08819231751745349
+    }
+  },
+  "review": {
+    "present": true,
+    "keys": [
+      "schemaVersion",
+      "sceneId",
+      "caseId",
+      "caseVersion",
+      "version",
+      "datasetId",
+      "wellId",
+      "runId",
+      "status",
+      "resultState",
+      "dataNature",
+      "datasetVersion",
+      "params",
+      "groups",
+      "runConfig",
+      "sources",
+      "claims",
+      "model",
+      "metrics",
+      "selected",
+      "fixedDesign",
+      "currentEvaluation",
+      "heldOut",
+      "review",
+      "references",
+      "limitations"
+    ]
+  },
+  "reviewVisibleText": [
+    "已记录：保留为后续评价候选 · p1-3；模型和评价保持原值。"
+  ],
+  "download": {
+    "suggestedFilename": "s17x-p1-perforation-design-p1-3.json",
+    "relativePath": "output/exports/v1.7/p1-original.json"
+  },
+  "checkedAt": "2026-10-23T17:03:52.553Z",
+  "passed": 17,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-p1-perforation-design",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 24838,
+        "sha256": "b927bda71b55694520b21fa727914b249200cdc6fe31037b3fad988b864ef033"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 24834,
+        "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 93983,
+        "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4501,
+        "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3117,
+        "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>井见 · 录井可视实验室</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23276e52%27/%3E%3Cpath d=%27M6 23l7-9 5 5 8-12%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%273%27/%3E%3C/svg%3E">
+<meta name="description" content="按石油作业链条逐环节展示可被深度学习改造的候选场景，标注 AI 介入点、数据条件与难度等级；带可运行的案例示范。">
+
+<link rel="stylesheet" href="assets/core/tokens.css?v=20261022i">
+<link rel="stylesheet" href="assets/core/layout.css?v=20261022i">
+<link rel="stylesheet" href="assets/core/ui.css?v=20261022i">
+<link rel="stylesheet" href="assets/s17.css?v=20261023-teaching">
+<link rel="stylesheet" href="assets/s17-field-atlas.css?v=20261023-interactive">
+<link rel="stylesheet" href="assets/s17-reader.css?v=20261023-reading">
+<link rel="stylesheet" href="assets/s17-catalog.css?v=20261023-reading">
+<link rel="stylesheet" href="assets/s17-assistant.css"></head>
+<body>
+
+<div id="view">
+  <main class="wrap" style="padding:120px 0">
+    <div class="empty"><b>正在加载</b>如果这行字一直不消失，说明脚本没有正确执行，
+    请检查浏览器控制台。</div>
+  </main>
+</div>
+
+<noscript>
+  <div class="wrap" style="padding:80px 0">
+    <div class="empty"><b>需要启用 JavaScript</b>本站是纯前端渲染的，所有页面由本地脚本生成。</div>
+  </div>
+</noscript>
+
+<!-- =========================================================
+     脚本加载顺序（改这里之前先读 docs/如何添加新案例.md）
+     1. data.js         场景元数据
+     2. registry.js     案例注册表
+     3. kit.js          渲染工具箱
+     4. cases/*         案例插件 —— 新增案例加在这一段
+     5. case-demo-host  示范宿主（整页 iframe / 模块 Shadow DOM）
+     6. case-upload     案例包导入（读 localStorage，必须在 shell 前）
+     7. shell.js        外壳，必须最后
+     ========================================================= -->
+<script src="assets/data.js?v=20261022i"></script>
+<script src="assets/core/registry.js?v=20261022i"></script>
+<script src="assets/core/kit.js?v=20261022i"></script>
+
+<script src="assets/cases/welllog-layer.case.js?v=20261022i"></script>
+<script src="assets/cases/welllog-layer.demo.js?v=20261022i"></script>
+<!-- ↑ 新案例加在这里：<script src="assets/cases/你的案例.case.js"></script> -->
+
+<!-- 上传的案例包（localStorage）在这里恢复注册，必须在 shell.js 之前 -->
+<script src="assets/core/case-demo-host.js?v=20261022i"></script>
+<script src="assets/core/case-upload.js?v=20261022i"></script>
+
+<script src="assets/core/admin.js?v=20261022i"></script>
+
+<script src="assets/s17-course.js"></script>
+<script src="assets/s17-reader.js?v=20261023-reading"></script>
+<script src="assets/core/shell.js?v=20261023-reading"></script>
+
+<script src="assets/s17-field-atlas.js?v=20261023-interactive"></script>
+<script src="assets/s17-catalog.js?v=20261023-reading"></script>
+<script src="assets/s17-home.js?v=20261023-reading"></script>
+<script src="assets/s17-assistant.js"></script>
+<script src="assets/s17-media.js"></script>
+<script src="assets/s17-volcengine.js"></script>
+<script src="assets/vendor/pixi-6.5.10.min.js"></script>
+<script src="assets/vendor/live2dcubismcore.min.js"></script>
+<script src="assets/vendor/pixi-live2d-0.4.0.min.js"></script>
+<script src="assets/s17-live2d-data.js"></script>
+<script src="assets/s17-live2d.js"></script></body>
+</html>

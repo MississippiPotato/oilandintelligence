@@ -1,4 +1,4 @@
-(function(){'use strict';const U=S17UI,C=M5Core,$=U.$,s=U.session('s17-evidence-report','1.3.0',M5Lesson),store=C.sourceStore(),corrections={},imports=[];let fixture=M5Data.fixture(),previousClaims=[];const label=i=>i===6?'证据不足，待分类':C.labels[i];
+(function(){'use strict';const U=S17UI,C=M5Core,$=U.$,s=U.session('s17-evidence-report',(globalThis.S17Page?.caseVersion??'1.3.0'),M5Lesson),store=C.sourceStore(),corrections={},imports=[];let fixture=M5Data.fixture(),previousClaims=[];const label=i=>i===6?'证据不足，待分类':C.labels[i];
 function reviewMessage(message){$('review-message').textContent=message;}
 function invalidateAll(trigger){reviewMessage('输入或来源已变化，重算后需重新核验当前句子。');if(s.run?.claims){s.run.claims.forEach(c=>C.invalidateClaim(c,trigger));previousClaims=JSON.parse(JSON.stringify(s.run.claims));}s.invalidate();$('verify-meaning').checked=false;$('verify-range').checked=false;if(s.run)renderReport();renderStats();}
 function current(){return s.run?.claims[s.selected];}

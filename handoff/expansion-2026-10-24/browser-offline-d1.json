@@ -1,0 +1,239 @@
+{
+  "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+  "scene": "d1",
+  "caseId": "s17x-d1-rop-optimization",
+  "checks": [
+    {
+      "name": "offline background graphics render",
+      "passed": true
+    },
+    {
+      "name": "offline workflow graphics render in selected step or static gallery",
+      "passed": true,
+      "detail": {
+        "stepControls": 5,
+        "visibleSvg": 1
+      }
+    },
+    {
+      "name": "offline local model produces metrics",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant defaults to the requested compact phone panel",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700
+      }
+    },
+    {
+      "name": "offline assistant navigates to real workflow",
+      "passed": true
+    },
+    {
+      "name": "390px viewport has no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 18,
+        "paragraphs": [
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          18,
+          18,
+          18,
+          18
+        ]
+      }
+    },
+    {
+      "name": "body and main explanatory paragraphs are at least 17px",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 18,
+        "paragraphs": [
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          18,
+          18,
+          18,
+          18
+        ]
+      }
+    },
+    {
+      "name": "mobile run and reset controls are reachable",
+      "passed": true
+    },
+    {
+      "name": "mobile assistant composer and send control fit viewport with 18px input",
+      "passed": true,
+      "detail": {
+        "left": 6,
+        "right": 384,
+        "top": 6,
+        "bottom": 838,
+        "inputFont": 18,
+        "send": {
+          "left": 324,
+          "right": 357,
+          "top": 740.40625,
+          "bottom": 785.40625
+        }
+      }
+    },
+    {
+      "name": "file offline path makes zero HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no JavaScript exceptions offline",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:05:00.125Z",
+  "workflow": {
+    "stepControls": 5,
+    "visibleSvg": 1
+  },
+  "metrics": {
+    "model": {
+      "n": 128,
+      "mae": 1.9624040748572056,
+      "rmse": 2.4272191421216918,
+      "bias": 0.9465490001269504
+    },
+    "baseline": {
+      "n": 128,
+      "mae": 5.405732935300523,
+      "rmse": 6.634852065423579,
+      "bias": 0.7670855040351896
+    },
+    "outsideCount": 2
+  },
+  "assistant": {
+    "width": 410,
+    "height": 700
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390,
+    "body": 390,
+    "font": 18,
+    "paragraphs": [
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      }
+    ],
+    "mainParagraphs": [
+      18,
+      18,
+      18,
+      18
+    ]
+  },
+  "mobileAssistant": {
+    "left": 6,
+    "right": 384,
+    "top": 6,
+    "bottom": 838,
+    "inputFont": 18,
+    "send": {
+      "left": 324,
+      "right": 357,
+      "top": 740.40625,
+      "bottom": 785.40625
+    }
+  },
+  "checkedAt": "2026-10-23T17:05:01.473Z",
+  "passed": 11,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-d1-rop-optimization",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 25698,
+        "sha256": "f3d406824ced9b7b53fa2b219b7ce17a80568a89456e4ab368e8b7a0cabf07c7"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26522,
+        "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 65613,
+        "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 26889,
+        "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 2279,
+        "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7"
+      }
+    ],
+    "storedPackageMatchesDisk": null
+  }
+}

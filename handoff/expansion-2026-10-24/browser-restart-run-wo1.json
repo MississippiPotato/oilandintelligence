@@ -1,0 +1,169 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "wo1",
+  "caseId": "s17x-wo1-workover-retrieval",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:22:28.127Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "e0ab6f50d0d661fa0f416a700cc2b89f39f7721f578f46530422975f11d5bd03",
+      "bytes": 17806
+    },
+    {
+      "path": "README.txt",
+      "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684",
+      "bytes": 1085
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2",
+      "bytes": 25377
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc",
+      "bytes": 63674
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065",
+      "bytes": 19480
+    }
+  ],
+  "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation.",
+  "metrics": {
+    "denominator": 20,
+    "model": {
+      "correct": 20,
+      "accuracy": 1,
+      "accepted": 20,
+      "coverage": 1,
+      "selectiveAccuracy": 1,
+      "recallAt3": 1,
+      "recallAt3Count": 20,
+      "evidenceCoverage": 1,
+      "constraintViolations": 0
+    },
+    "baseline": {
+      "correct": 17,
+      "accuracy": 0.85,
+      "accepted": 20,
+      "coverage": 1,
+      "selectiveAccuracy": 0.85,
+      "constraintViolations": 0
+    },
+    "confusion": [
+      [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ]
+    ],
+    "referenceApplicable": true,
+    "referenceDenominator": 20
+  },
+  "metricsSha256": "0d2396f9b14d548042f1f021fe330a9d5dba78c8b002e7a6058589bb77608bd5",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:22:28.845Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-wo1-workover-retrieval",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 18843,
+        "sha256": "649d0329d083eb994cc58a7cddd131110b0d550d317133e9448a306ac6901dc2"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25377,
+        "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 63674,
+        "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 19480,
+        "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1085,
+        "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+      }
+    ],
+    "manifestCanonicalSha256": "e0ab6f50d0d661fa0f416a700cc2b89f39f7721f578f46530422975f11d5bd03",
+    "storedPackageMatchesDisk": true
+  }
+}

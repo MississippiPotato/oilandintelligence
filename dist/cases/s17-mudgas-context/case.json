@@ -5,12 +5,12 @@
     "ts"
   ],
   "title": "气测异常智能解释：气峰背后的工况与迟到",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "updated": "2026-10-23",
   "tabs": {
     "background": {
       "label": "专业背景",
-      "lede": "同样一个地面气峰，能否结合循环迟到与工况给出有依据的解释候选？本例使用教学合成多通道曲线，以真实 kNN 与规则基线比较，不输出油气发现或井控动作。",
+      "lede": "气测录井连续记录从返出钻井液中提取的气体信号。气峰说明地面检测值发生了变化；解释员还要确认它对应更早的哪个井段、当时在做什么。本例把迟到、接单根和起下钻讲清，再比较固定规则与近邻学习。",
       "judge": [
         {
           "label": "数据形态",
@@ -36,76 +36,80 @@
       "sections": [
         {
           "no": 1,
-          "en": "CIRCULATION",
-          "title": "图 B1｜地面峰对应更早的井下时刻",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"钻杆下行与环空上返，地面时钟晚于来源时钟\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"25\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"52.5\">地面：气体提取与观测</text><rect x=\"285\" y=\"25\" width=\"180\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"297\" y=\"52.5\">地面峰：到达时刻 tₐ</text><rect x=\"25\" y=\"140\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"167.5\">钻头：来源时刻 tₛ</text><path d=\"M70 75v53m-6 -8l6 8 6 -8M166 133V78m-6 8l6 -8 6 8\" fill=\"none\" stroke=\"#197969\" stroke-width=\"4\"/><text x=\"230\" y=\"120\">Q：有效流量 m³/s</text><text x=\"230\" y=\"153\">恒流连续循环：τ = V_eff / Q</text><text x=\"475\" y=\"48\">观测 ≠ 此刻钻头深度</text><text x=\"475\" y=\"91\">变流量/停泵：累计 Q·Δt</text><text x=\"475\" y=\"128\">达到 V_eff 才到达</text><text x=\"475\" y=\"165\">来源深度 = MD(tₛ)</text></g></svg></div></div><figcaption>钻杆内下行、环空上返是概念路径。V_eff=12 m³、Q=0.025 m³/s 时迟到 480 s；停泵期间累计量保持不变。此模型没有模拟气体混合、溶解或全部仪器延迟。</figcaption></figure>"
+          "title": "先认识气测录井：曲线上的“气”是怎样测到的？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>钻井液从钻杆内下行，在钻头附近流出，再沿钻杆与井壁之间的<b>环空</b>上返。返出液中携带的气体在地面被提取，经气路送到检测仪器，形成随时间变化的气测记录。</p><p><b>总气</b>用于观察整体气体响应；组分记录进一步区分甲烷C1、乙烷C2、丙烷C3等。本例图中的总气和C1–C3使用仪器归一化单位；先比较曲线形态与相对变化，再结合操作记录解释。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">页面中的词</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">先这样理解</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">读图时看哪里</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">背景气</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">一段相对稳定的基础响应</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">气峰之前和之后的水平</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">气峰 / 异常窗口</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">相对背景明显升高的一段记录</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">开始、峰值、结束和持续时间</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">迟到</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">井下信息被循环带到地面需要时间</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">地面检测时刻与更早来源时段</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">工况</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">钻井正在进行的操作状态</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">泵量、接单根、起下钻记录</td></tr></tbody></table></div><p>这些记录共同组成解释依据。气峰的高低有用，但单看峰高，无法区分所有来源。</p></div>",
+          "en": "FOUNDATION",
+          "navTitle": "先认识这项工作"
         },
         {
           "no": 2,
-          "en": "CONTEXT",
-          "title": "图 B2｜峰形相近，解释仍需工况",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 310\" role=\"img\" aria-label=\"接单根停泵、起钻抽吸与迟到气峰的概念机制\"><rect width=\"720\" height=\"310\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"14\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/><rect x=\"251\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/><rect x=\"488\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/>\n<text x=\"28\" y=\"43\" font-weight=\"700\">接单根：接长钻柱</text><text x=\"267\" y=\"43\" font-weight=\"700\">起下钻：提出/下入钻柱</text><text x=\"504\" y=\"43\" font-weight=\"700\">重新循环：气体迟到地面</text>\n<path d=\"M70 75v114h65V75M102 76v40m0 17v48\" fill=\"none\" stroke=\"#819b81\" stroke-width=\"8\"/><path d=\"M93 121h18\" stroke=\"#ac7445\" stroke-width=\"4\"/>\n<text x=\"145\" y=\"105\" >停泵</text><text x=\"145\" y=\"131\" >短时移动</text><path d=\"M47 169l23 0\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"70\" cy=\"169\" r=\"4\" fill=\"#ac7445\"/><circle cx=\"59\" cy=\"169\" r=\"5\" fill=\"#b69b47\"/>\n<text x=\"28\" y=\"215\" >停泵时，井下气体</text><text x=\"28\" y=\"239\" >可能进入井内泥浆。</text><text x=\"28\" y=\"269\" >短时移动也可能产生抽吸。</text>\n<path d=\"M306 75v114h65V75M338 76v90\" fill=\"none\" stroke=\"#819b81\" stroke-width=\"8\"/><path d=\"M339 128l0 -52\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"339\" cy=\"76\" r=\"4\" fill=\"#ac7445\"/><path d=\"M283 164l25 0\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"308\" cy=\"164\" r=\"4\" fill=\"#ac7445\"/><circle cx=\"295\" cy=\"164\" r=\"5\" fill=\"#b69b47\"/>\n<text x=\"267\" y=\"221\" >起钻抽吸 + 停止循环，</text><text x=\"267\" y=\"250\" >可能让气体进入井内泥浆。</text>\n<path d=\"M507 177H700M507 174H540C550 174 552 115 566 115S587 174 610 174H700\" fill=\"none\" stroke=\"#27755e\" stroke-width=\"3\"/><text x=\"511\" y=\"90\" >工况发生在更早的来源时段</text><text x=\"510\" y=\"221\" >上返才见峰，回查更早工况。</text><text x=\"510\" y=\"250\" >峰高不足以确认油气层。</text></g></svg></div></div><figcaption>接单根和起钻均可能伴随停泵及抽吸影响；气体随后随循环返出。图示只解释关联机制，不给出井控决策。专业依据为SLB connection gas / trip gas；固定气峰改工况的反事实没有评价金标。</figcaption></figure>"
+          "title": "当前做法与问题：为什么同一个气峰可以有不同解释？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>解释员通常把气测曲线、泵量、井深和操作日志放在一起看。关键是先做<b>迟到对应</b>：地面13:10出现的峰，可能关联13:02前后的井下活动，而不是13:10此刻的操作。这里的时间只用于说明读图关系。</p><p><b>接单根</b>是在继续加深前接长钻柱，过程常伴随停泵和短时移动；<b>起下钻</b>是把钻具提出或送入井内。停循环和抽吸作用可能让气体进入钻井液，恢复循环后才在地面看到响应。因此，工况气与持续钻进时的增气要分开分析。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">迟到对应后的来源记录</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">优先核对的候选</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">还要继续看什么</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">较早有接单根，随后出现短峰</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">接单根关联</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">停泵时段、循环恢复和重复性</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">较早有起下钻，循环后出现增气</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">起下钻关联</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">钻柱移动和循环记录</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">持续钻进时增气，缺少对应操作事件</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">持续增气待核验</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">岩屑、其他曲线及仪器状态</td></tr></tbody></table></div><p>表中给的是核查顺序。缺工况、事件重叠或仪器波动时，解释员需要保留不确定性。<a href=\"https://glossary.slb.com/en/terms/c/connection_gas\" target=\"_blank\" rel=\"noopener\">接单根气</a> · <a href=\"https://glossary.slb.com/en/terms/t/trip_gas\" target=\"_blank\" rel=\"noopener\">起下钻气</a></p></div>",
+          "en": "PROBLEM",
+          "navTitle": "当前做法与问题"
         },
         {
           "no": 3,
-          "en": "EVIDENCE",
-          "title": "图 B3｜从观测到复核，需要逐级证据",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"观测、映射、推断、人工复核分层\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"18\" y=\"35\" width=\"135\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"30\" y=\"67.5\">① 气曲线</text><path d=\"M155 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"194\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"206\" y=\"67.5\">② 累计泵量</text><path d=\"M342 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"394\" y=\"67.5\">③ 工况/近邻</text><path d=\"M530 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"570\" y=\"35\" width=\"132\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"582\" y=\"67.5\">④ 人工复核</text><text x=\"28\" y=\"130\">直接观测</text><text x=\"205\" y=\"130\">简化运输假设</text><text x=\"395\" y=\"130\">候选解释</text><text x=\"580\" y=\"130\">补充证据</text><text x=\"28\" y=\"177\">缺失、冲突、分布外 → 证据不足；来源可定位不等于语义已核实。</text></g></svg></div></div><figcaption>这里回答“气峰与什么相关”，不据此宣布油气层、储量、产能，也不提供井控动作建议。结合岩屑、荧光等其他观察继续复核。</figcaption></figure>"
+          "title": "智能方法辅助哪一步？先对齐，再比较相似事件",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>第一步把各条记录放在同一个时间轴上。第二步根据累计泵送体积回查来源时段：停泵时没有新增泵送量，迟到就不适合直接用一个固定分钟数平移。</p><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>一个可以手算的教学例子</b><p>本例有效体积设为12 m³，泵量为0.025 m³/s。若持续泵送，12÷0.025=480 s，即8分钟；中途停泵2分钟，按此简化体积模型完成同样运输就需要10分钟。页面用累计泵量逐点回查，不用当前钻速去倒推整个来源井段。</p></aside><p>找到气峰窗口后，模型把峰高、峰宽、气体组分和来源工况整理成特征，查找训练事件库中的近邻。<b>规则基线</b>按固定条件给候选；<b>学习方法</b>通过已标注事件的相似性给候选。两者共用同一批检测窗口，便于判断改进发生在哪一步。</p><p>你可以固定气测曲线，只改变可见工况，观察候选解释和近邻如何变化。这样能看到“上下文信息有什么用”，而不只是看曲线动起来。</p></div>",
+          "en": "INTERVENTION",
+          "navTitle": "AI能做什么"
         },
         {
           "no": 4,
-          "en": "DATA & LIMITS",
-          "title": "数据、方法与专业依据",
-          "html": "<p>训练 28 口独立模拟井、验证 8 口，测试 DEMO-017。标准化只在训练拟合；验证集选 k 与支持度阈值。事件检测器由两种方法共享。气体单位为归一化仪器单位，不能冒称体积分数。</p><p>简化累计 Q·Δt 运输模型不模拟混合、溶解和完整仪器/管线迟到。迟到后的源时刻查 MD(t)，不使用当前 ROP×延迟代替。工况气无唯一地层来源真值；只在适用的持续增气事件上评价源深度。</p><p><a href=\"https://glossary.slb.com/terms/g/gas_show\" target=\"_blank\" rel=\"noopener\">SLB：gas show</a> · <a href=\"https://glossary.slb.com/terms/c/connection_gas\" target=\"_blank\" rel=\"noopener\">SLB：connection gas</a> · <a href=\"https://glossary.slb.com/terms/t/trip_gas\" target=\"_blank\" rel=\"noopener\">SLB：trip gas</a> · <a href=\"https://scikit-learn.org/stable/modules/neighbors.html\" target=\"_blank\" rel=\"noopener\">scikit-learn：近邻方法原理</a></p>"
+          "title": "准备什么资料，本例要验证什么？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>所需资料包括带时刻的气测记录、泵量与井深记录、接单根和起下钻日志，以及已经复核过的历史异常。时间与单位要统一，操作缺失也要明确标记；每一条来源对应关系都应能够回查。</p><p>本例自带28口教学训练井、8口验证井和一口演示井。先运行“同峰异因”，保持气曲线不变，切换首峰工况；再看“停泵再开”，比较迟到校正前后的来源时段。实际曲线、近邻、候选结果和评价均在浏览器计算。</p><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>读完这一例，应能解释</b><p>地面检测时间为什么晚于来源时间；接单根气与起下钻气是什么意思；为什么一个峰要结合操作记录判断；智能方法怎样把大量曲线窗口整理成少量可复核候选。</p></aside><p>继续阅读：<a href=\"https://glossary.slb.com/en/terms/l/lag_time\" target=\"_blank\" rel=\"noopener\">迟到时间</a> · <a href=\"https://glossary.slb.com/en/terms/c/connection_gas\" target=\"_blank\" rel=\"noopener\">接单根气</a> · <a href=\"https://glossary.slb.com/en/terms/t/trip_gas\" target=\"_blank\" rel=\"noopener\">起下钻气</a></p></div><details class=\"knowledge-supplement\"><summary>补充图解：展开原有场景示意与概念图</summary><p>读完上面的知识后，可用这些图回看采集过程和概念关系。</p><figure><h4>图 B1｜地面峰对应更早的井下时刻</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"钻杆下行与环空上返，地面时钟晚于来源时钟\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"25\" y=\"25\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"52.5\">地面：气体提取与观测</text><rect x=\"285\" y=\"25\" width=\"180\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"297\" y=\"52.5\">地面峰：到达时刻 tₐ</text><rect x=\"25\" y=\"140\" width=\"185\" height=\"45\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"37\" y=\"167.5\">钻头：来源时刻 tₛ</text><path d=\"M70 75v53m-6 -8l6 8 6 -8M166 133V78m-6 8l6 -8 6 8\" fill=\"none\" stroke=\"#197969\" stroke-width=\"4\"/><text x=\"230\" y=\"120\">Q：有效流量 m³/s</text><text x=\"230\" y=\"153\">恒流连续循环：τ = V_eff / Q</text><text x=\"475\" y=\"48\">观测 ≠ 此刻钻头深度</text><text x=\"475\" y=\"91\">变流量/停泵：累计 Q·Δt</text><text x=\"475\" y=\"128\">达到 V_eff 才到达</text><text x=\"475\" y=\"165\">来源深度 = MD(tₛ)</text></g></svg></div></div><figcaption>钻杆内下行、环空上返是概念路径。V_eff=12 m³、Q=0.025 m³/s 时迟到 480 s；停泵期间累计量保持不变。此模型没有模拟气体混合、溶解或全部仪器延迟。</figcaption></figure><figure><h4>图 B2｜峰形相近，解释仍需工况</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 310\" role=\"img\" aria-label=\"接单根停泵、起钻抽吸与迟到气峰的概念机制\"><rect width=\"720\" height=\"310\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"14\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/><rect x=\"251\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/><rect x=\"488\" y=\"14\" width=\"218\" height=\"272\" rx=\"10\" fill=\"#fffdf4\" stroke=\"#d4dfca\"/>\n<text x=\"28\" y=\"43\" font-weight=\"700\">接单根：接长钻柱</text><text x=\"267\" y=\"43\" font-weight=\"700\">起下钻：提出/下入钻柱</text><text x=\"504\" y=\"43\" font-weight=\"700\">重新循环：气体迟到地面</text>\n<path d=\"M70 75v114h65V75M102 76v40m0 17v48\" fill=\"none\" stroke=\"#819b81\" stroke-width=\"8\"/><path d=\"M93 121h18\" stroke=\"#ac7445\" stroke-width=\"4\"/>\n<text x=\"145\" y=\"105\" >停泵</text><text x=\"145\" y=\"131\" >短时移动</text><path d=\"M47 169l23 0\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"70\" cy=\"169\" r=\"4\" fill=\"#ac7445\"/><circle cx=\"59\" cy=\"169\" r=\"5\" fill=\"#b69b47\"/>\n<text x=\"28\" y=\"215\" >停泵时，井下气体</text><text x=\"28\" y=\"239\" >可能进入井内泥浆。</text><text x=\"28\" y=\"269\" >短时移动也可能产生抽吸。</text>\n<path d=\"M306 75v114h65V75M338 76v90\" fill=\"none\" stroke=\"#819b81\" stroke-width=\"8\"/><path d=\"M339 128l0 -52\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"339\" cy=\"76\" r=\"4\" fill=\"#ac7445\"/><path d=\"M283 164l25 0\" stroke=\"#ac7445\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"308\" cy=\"164\" r=\"4\" fill=\"#ac7445\"/><circle cx=\"295\" cy=\"164\" r=\"5\" fill=\"#b69b47\"/>\n<text x=\"267\" y=\"221\" >起钻抽吸 + 停止循环，</text><text x=\"267\" y=\"250\" >可能让气体进入井内泥浆。</text>\n<path d=\"M507 177H700M507 174H540C550 174 552 115 566 115S587 174 610 174H700\" fill=\"none\" stroke=\"#27755e\" stroke-width=\"3\"/><text x=\"511\" y=\"90\" >工况发生在更早的来源时段</text><text x=\"510\" y=\"221\" >上返才见峰，回查更早工况。</text><text x=\"510\" y=\"250\" >峰高不足以确认油气层。</text></g></svg></div></div><figcaption>接单根和起钻均可能伴随停泵及抽吸影响；气体随后随循环返出。图示只解释关联机制，不给出井控决策。专业依据为SLB connection gas / trip gas；固定气峰改工况的反事实没有评价金标。</figcaption></figure><figure><h4>图 B3｜从观测到复核，需要逐级证据</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"观测、映射、推断、人工复核分层\" xmlns=\"http://www.w3.org/2000/svg\" style=\"width:100%;height:auto;background:#f6f8f4;border-radius:12px\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#263f3b\"><rect x=\"18\" y=\"35\" width=\"135\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"30\" y=\"67.5\">① 气曲线</text><path d=\"M155 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"194\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"206\" y=\"67.5\">② 累计泵量</text><path d=\"M342 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"145\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"394\" y=\"67.5\">③ 工况/近邻</text><path d=\"M530 62h35m-8 -5l8 5 -8 5\" fill=\"none\" stroke=\"#478277\" stroke-width=\"2\"/><rect x=\"570\" y=\"35\" width=\"132\" height=\"55\" rx=\"8\" fill=\"#e2efea\" stroke=\"#478277\"/><text x=\"582\" y=\"67.5\">④ 人工复核</text><text x=\"28\" y=\"130\">直接观测</text><text x=\"205\" y=\"130\">简化运输假设</text><text x=\"395\" y=\"130\">候选解释</text><text x=\"580\" y=\"130\">补充证据</text><text x=\"28\" y=\"177\">缺失、冲突、分布外 → 证据不足；来源可定位不等于语义已核实。</text></g></svg></div></div><figcaption>这里回答“气峰与什么相关”，不据此宣布油气层、储量、产能，也不提供井控动作建议。结合岩屑、荧光等其他观察继续复核。</figcaption></figure></details>",
+          "en": "DATA",
+          "navTitle": "资料与学习任务"
         }
       ]
     },
     "workflow": {
       "label": "案例流程",
-      "title": "从地面气峰到可追溯解释：六个实际计算步骤",
+      "title": "从气测曲线到可复核候选：六个步骤",
       "lead": [
-        "先对齐观测，再做累计泵量映射。共享候选窗口后，固定规则与近邻学习比较同一批事件。逐步图册位于下方，每一步都可在演示中查看实际中间结果。"
+        "这一例要完成的工作是：从连续气测曲线里找出异常，把它对应到更早的井下与工况记录，再给出有依据的候选解释。每一步先说明为什么做、怎样做，再看图解和实际计算产物。"
       ],
       "steps": [
         {
           "name": "数据站：统一记录",
           "role": "图 S1",
-          "do": "输入：总气、C1–C3、泵量、MD 与工况日志。动作：统一为秒、m³/s、m MD；缺失工况显式标记。详见图 S1。",
+          "do": "气体、泵量、井深和工况来自不同记录。按时间对齐，才能回答“出现这个峰时泵是否在运行”；缺测保留为空，避免把没有记录误读为数值零。 本步操作：统一为秒、m³/s、m MD；缺失工况显式标记。输入：总气、C1–C3、泵量、MD 与工况日志。",
           "effect": "同一时基的可见记录",
           "trap": "归一化仪器单位不是气体体积分数。缺测不能填作正常工况。"
         },
         {
           "name": "反查来源时刻与井深",
           "role": "图 S2",
-          "do": "输入：累计泵量 C(t)、有效体积 V_eff。动作：求 C(tₐ)−C(tₛ)=V_eff，再查询 MD(tₛ)。详见图 S2。",
+          "do": "累计泵量回退的是一段体积。停泵时累计量停止增长，恢复后继续；找到来源时刻后，再查当时井深和操作，而不是直接套用当前钻速。 本步操作：求 C(tₐ)−C(tₛ)=V_eff，再查询 MD(tₛ)。输入：累计泵量 C(t)、有效体积 V_eff。",
           "effect": "来源时间与候选来源深度",
           "trap": "泵停则 C(t)不变；起点前体积不足时无解。禁止用当前 ROP×迟到替代。"
         },
         {
           "name": "共享检测器提取候选",
           "role": "图 S3",
-          "do": "输入：气曲线与低分位背景。动作：三点平滑，超过背景+阈值的连续片段成候选。详见图 S3。",
+          "do": "检测器相对背景寻找连续升高窗口，提取开始、峰值和结束。模型与规则使用相同窗口，漏掉的弱峰、合并的重叠峰另行统计。 本步操作：三点平滑，超过背景+阈值的连续片段成候选。输入：气曲线与低分位背景。",
           "effect": "起止、峰高、宽度、面积、斜率",
           "trap": "同一检测器供两方法共用；弱峰可能漏检，重叠峰可能合并。"
         },
         {
           "name": "训练库与特征标准化",
           "role": "图 S4",
-          "do": "输入：按整井隔离的带标注事件。动作：仅训练井拟合均值/标准差；验证井选择 k 与拒判阈值。详见图 S4。",
+          "do": "把历史事件整理为峰形、组分与工况特征。仅用训练井估计标准化参数，验证井选近邻数量和拒判门槛；演示井用于观察预测，不参与这些选择。 本步操作：仅训练井拟合均值/标准差；验证井选择 k 与拒判阈值。输入：按整井隔离的带标注事件。",
           "effect": "标准化向量与带标签近邻库",
           "trap": "同一峰相邻点不得跨集合。测试交互属于教学探索，不是研究级盲测。"
         },
         {
           "name": "加权近邻与证据不足",
           "role": "图 S5",
-          "do": "输入：当前事件的可见特征、训练均值/标准差与样本库。动作：全维标准化欧氏距离；按 1/max(0.05,d) 投票。详见图 S5。",
+          "do": "把当前事件与真实训练事件逐项比较，再按距离投票。点选事件可以查看近邻和支持度；缺工况或相似事件相互矛盾时，候选转为证据不足。 本步操作：全维标准化欧氏距离；按 1/max(0.05,d) 投票。输入：当前事件的可见特征、训练均值/标准差与样本库。",
           "effect": "解释候选、真实邻居、支持度、拒判理由",
           "trap": "二维图只作阅读；支持度没有现场概率校准。缺工况、冲突或距离太远时转复核。"
         },
         {
           "name": "复核与独立评价",
           "role": "图 S6",
-          "do": "输入：预测结果；独立评价模块中的完整事件金标。动作：170 s 容差下一对一最小总时间误差匹配，分开统计漏检/多余。详见图 S6。",
+          "do": "先匹配检测事件，检查漏检和多报；再比较匹配事件的解释类别。人工意见独立保存，并把来源片段和参数一起导出，方便别人重看这次判断。 本步操作：170 s 容差下一对一最小总时间误差匹配，分开统计漏检/多余。输入：预测结果；独立评价模块中的完整事件金标。",
           "effect": "拒判列混淆、覆盖、接受集错误率和证据 JSON",
           "trap": "解释 F1 的分母是匹配事件；漏检另列。无接受样本显示不适用，人工修订不改模型成绩。"
         }

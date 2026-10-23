@@ -1,0 +1,131 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "p1",
+  "caseId": "s17x-p1-perforation-design",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:12:55.293Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "33dab68ae5893e5670a3734f09c94f113587fc2644b4544b1c2f7babf1bd1961",
+      "bytes": 23476
+    },
+    {
+      "path": "README.txt",
+      "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1",
+      "bytes": 3117
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787",
+      "bytes": 24834
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d",
+      "bytes": 93983
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72",
+      "bytes": 4501
+    }
+  ],
+  "metrics": {
+    "regression": {
+      "count": 240,
+      "RMSE": 0.7756006846026144,
+      "MAE": 0.6390126340461805
+    },
+    "regressionBaseline": {
+      "count": 240,
+      "RMSE": 6.580739481917284,
+      "MAE": 5.403172688552595
+    },
+    "feasibleCount": 274,
+    "candidateCount": 440,
+    "feasibleRate": 0.6227272727272727,
+    "gainVsFeasibleFixed": 2.7071388647417507,
+    "objectiveGap": 0.08819231751745349
+  },
+  "metricsSha256": "6f152315b61a3afb0b41cb141a8afecdf5b44a824a91a982ccb3b72b2b42e187",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:12:56.250Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-p1-perforation-design",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 24838,
+        "sha256": "b927bda71b55694520b21fa727914b249200cdc6fe31037b3fad988b864ef033"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 24834,
+        "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 93983,
+        "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4501,
+        "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3117,
+        "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1"
+      }
+    ],
+    "manifestCanonicalSha256": "33dab68ae5893e5670a3734f09c94f113587fc2644b4544b1c2f7babf1bd1961",
+    "storedPackageMatchesDisk": true
+  }
+}

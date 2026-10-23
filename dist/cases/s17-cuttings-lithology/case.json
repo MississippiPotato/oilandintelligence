@@ -5,12 +5,12 @@
     "cv"
   ],
   "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "updated": "2026-10-23",
   "tabs": {
     "background": {
       "label": "专业背景",
-      "lede": "实际像素 → 预测轮廓 → 训练特征库 → 候选岩性；计数与可见二维面积分开汇总。以教学合成样品观察轮廓、纹理和候选外观。",
+      "lede": "岩屑是钻头破碎岩石后带回地面的碎片。录井人员观察这些碎片，记录钻过了什么岩石、它在哪个井段发生变化。本例先讲清岩屑和岩性的关系，再用图像分类辅助整理一盘混合样品。",
       "judge": [
         {
           "label": "默认数据",
@@ -19,77 +19,87 @@
         },
         {
           "label": "业务问题",
-          "value": "这一盘岩屑更接近哪种教学外观？哪些颗粒需要复核？",
+          "value": "从一盘岩屑，怎样认识井下的岩石？",
           "desc": "输出边界见说明"
         }
       ],
       "sections": [
         {
           "no": 1,
-          "en": "CONCEPT",
-          "title": "图 B1｜岩屑从哪里来，何时到达？",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 300\" role=\"img\" aria-label=\"钻头破岩，泥浆携岩屑沿环空上返，再在地面筛分取样\"><rect width=\"720\" height=\"300\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<path d=\"M72 58v167h110V58\" fill=\"#e4e8d6\" stroke=\"#8fa087\" stroke-width=\"3\"/><path d=\"M119 35v167\" stroke=\"#6e8e7a\" stroke-width=\"16\"/><path d=\"M100 201h38l-7 20h-24z\" fill=\"#506a5a\"/><path d=\"M72 237h110m-110 20h110\" stroke=\"#bdab83\" stroke-width=\"12\"/>\n<path d=\"M119 75l0 86\" stroke=\"#26765f\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"119\" cy=\"161\" r=\"4\" fill=\"#26765f\"/><path d=\"M86 195l0 -109\" stroke=\"#ad7849\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"86\" cy=\"86\" r=\"4\" fill=\"#ad7849\"/><path d=\"M85 80V45h150\" stroke=\"#ad7849\" stroke-width=\"4\" fill=\"none\"/>\n<ellipse cx=\"86\" cy=\"100\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(0 86 100)\"/><ellipse cx=\"86\" cy=\"125\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(30 86 125)\"/><ellipse cx=\"86\" cy=\"150\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(60 86 150)\"/><ellipse cx=\"86\" cy=\"180\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(90 86 180)\"/>\n<path d=\"M228 45h90l-12 22h-66z\" fill=\"#b5c1a6\" stroke=\"#7b9579\"/><path d=\"M242 44l12 22m5-22l12 22m5-22l12 22\" stroke=\"#718e72\"/><ellipse cx=\"275\" cy=\"106\" rx=\"39\" ry=\"20\" fill=\"#ded4bb\" stroke=\"#a19475\"/>\n<ellipse cx=\"253\" cy=\"99\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/><ellipse cx=\"270\" cy=\"103\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/><ellipse cx=\"287\" cy=\"107\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/><ellipse cx=\"279\" cy=\"111\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/>\n<text x=\"12\" y=\"25\" >钻杆内下行</text><text x=\"10\" y=\"278\" >① 井下破岩 tₛ</text><text x=\"206\" y=\"25\" >② 返出 → 振动筛</text><text x=\"229\" y=\"147\" >③ 地面样品 tₐ</text>\n<text x=\"366\" y=\"54\" font-size=\"22\" font-weight=\"650\">样品到地面，需要时间。</text><text x=\"366\" y=\"98\" >下行流体从钻杆内进入；</text><text x=\"366\" y=\"129\" >破碎岩屑随环空泥浆返出。</text><text x=\"366\" y=\"177\" >采样时刻 tₐ ≠ 岩屑形成时刻 tₛ</text><text x=\"366\" y=\"212\" >归位：迟到假设 → 来源时段 → MD(tₛ)</text><text x=\"366\" y=\"257\" >示意未按比例；掉块与混样仍须复核。</text></g></svg></div></div><figcaption>这是概念性样品运输示意，不求解颗粒沉降或井眼清洁。岩屑的形态与取样条件都会影响解释。</figcaption></figure>"
+          "title": "先认识岩屑：地面的一盘碎片，为什么能说明井下岩石？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>钻井是在地下不断破岩、加深井眼。钻头切下的小碎片称为<b>岩屑</b>，钻井液把它们带到地面，振动筛再把固体从液体中分开。采样、清洗后，录井人员用肉眼或显微镜观察岩屑，形成一段井深的岩性记录。</p><p><b>岩性</b>是对岩石物质组成和外观结构等特征的描述，例如砂岩、泥岩、灰岩。它帮助我们认识地层变化；储层判断还要继续看孔隙、渗流能力和流体信息。因此，先认清岩石，是后续解释的基础。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">认识的对象</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">初步理解</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">观察时看什么</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">砂岩</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">以砂级颗粒为主、颗粒被胶结成岩石</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">颗粒感、粒度、分选和胶结情况</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">泥岩 / 页岩</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">以细粒物质为主；页岩还具有易沿薄层分裂的特点</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">细腻程度、层理、片状结构</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">灰岩</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">以方解石为主的碳酸盐岩</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">晶粒或生物碎屑等结构；实际鉴定还会结合其他检验</td></tr></tbody></table></div><p>上表是认识岩类的起点。实际样品的颜色会变化，一种岩类也会有多种外观，观察时要把多个特征放在一起。<a href=\"https://glossary.slb.com/en/terms/c/cuttings\" target=\"_blank\" rel=\"noopener\">岩屑定义</a> · <a href=\"https://glossary.slb.com/en/terms/s/sandstone\" target=\"_blank\" rel=\"noopener\">砂岩</a> · <a href=\"https://glossary.slb.com/en/terms/s/shale\" target=\"_blank\" rel=\"noopener\">页岩</a> · <a href=\"https://glossary.slb.com/en/terms/l/limestone\" target=\"_blank\" rel=\"noopener\">灰岩</a></p></div>",
+          "en": "FOUNDATION",
+          "navTitle": "先认识这项工作"
         },
         {
           "no": 2,
-          "en": "CONCEPT",
-          "title": "图 B2｜相近颜色，不同纹理；同一颗粒，不同照明",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"颗粒像素纹理与光照影响\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><ellipse cx=\"105\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#a99a7c\"/><circle cx=\"65\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"65\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"65\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><text x=\"40\" y=\"162\">砂岩教学外观：细颗粒</text><ellipse cx=\"345\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#a3a698\"/><path d=\"M280 55h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 59h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 63h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 67h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 71h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 75h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 79h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 83h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 87h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 91h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 95h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 99h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 103h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 107h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 111h130\" stroke=\"#747c70\" stroke-width=\"1\"/><text x=\"280\" y=\"162\">泥岩教学外观：层状</text><ellipse cx=\"585\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#b4b4a2\"/><text x=\"520\" y=\"162\">灰岩教学外观：云斑</text><text x=\"30\" y=\"200\">演示修改真实RGB像素，再重新分割、提特征和预测；图像不等于矿物测量。</text></g></svg></div></div><figcaption>三类只是合成外观教学标签，色域允许重叠；参考片校正的收益与纹理特征的收益要分开理解。</figcaption></figure>"
+          "title": "当前怎样判读，为什么一盘样品不容易分清？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>传统判读会把一盘岩屑逐粒查看，记录颜色、粒度、形状和纹理，再估计各种岩性的相对比例。难点在于样品往往混在一起：泥浆遮住表面，两粒岩屑黏成一团，相似颜色的岩石也容易看混。</p><p>样品还存在<b>迟到</b>：在地面收到岩屑时，钻头可能已经继续钻进。采样时刻与岩石被钻碎的时刻不同，需要把样品归到相应井段。另一些较大碎块可能来自井壁掉块，不能仅凭“在筛上看到了”就认定它刚从井底产生。</p><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>读懂“比例”：先问分母是什么</b><p>若一盘样品有10粒，其中6粒被判为砂岩，按颗粒数统计是60%。若这6粒都很小，它们在照片中的可见面积却可能只占30%。两种结果回答的问题不同；页面会让你切换口径，并把待复核颗粒留在分母里。</p></aside><p>所以，本例既要看分类结果，也要回查颗粒是否被正确分开，以及统计口径是否一致。</p></div>",
+          "en": "PROBLEM",
+          "navTitle": "当前做法与问题"
         },
         {
           "no": 3,
-          "en": "CONCEPT",
-          "title": "图 B3｜颗粒数与二维面积是两个分母",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"一大颗和多小颗占比不同\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><circle cx=\"100\" cy=\"90\" r=\"50\" fill=\"#b09161\"/><circle cx=\"250\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"298\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"346\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"394\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><text x=\"30\" y=\"170\">计数：大颗粒 1/5；面积：按可见像素重新计算。</text><text x=\"30\" y=\"202\">待复核仍占总分母；二维可见面积不是质量、体积或地层组成。</text></g></svg></div></div><figcaption>演示显示真实分子与分母，并保留待复核部分，不能删除难例后把已识别类别凑成100%。</figcaption></figure>"
+          "title": "智能方法辅助哪一步？从看图到逐粒给出依据",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>图像方法可以先把岩屑从背景中分出来，给每粒建立轮廓；再把颜色、纹理和形状转成一组数值。这样，“看起来相像”就能变成可比较的特征距离。</p><p>本例使用<b>近邻分类 kNN</b>：对当前颗粒寻找特征最相近的已标注训练颗粒，再按距离汇总它们的类别。点选一粒岩屑时，你能看到具体近邻图片和距离，而不只得到一个岩性名称。近邻差异大或距离过远时，结果进入待复核。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">人工工作中的问题</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">页面采用的处理</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">你能回查的依据</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">哪些像素属于同一粒？</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">前景分割与连通域</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">原图、轮廓、黏连或漏检</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">更接近哪种已知外观？</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">颜色、纹理、形状的近邻比较</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">训练颗粒及其实际距离</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">这一盘怎样汇总？</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">按颗粒数或可见面积分别统计</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">分类清单、分母和待复核比例</td></tr></tbody></table></div><p>学习方法与只按颜色的规则在同一批颗粒上比较。增加泥浆附着或改变照明，就能观察多种特征是否仍然有帮助。</p></div>",
+          "en": "INTERVENTION",
+          "navTitle": "AI能做什么"
+        },
+        {
+          "no": 4,
+          "title": "准备什么资料，本例从哪里开始？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>实际整理岩屑图像，至少要保存样品编号、采样井段、拍摄条件、比例尺和人工鉴定记录；同一盘样品的重复照片应放在同一数据组。照明稳定、样品身份清楚，才便于比较前后结果。</p><p>本例的默认托盘是自带的教学合成图像；附加的公开岩芯照片另有来源。先用“泥浆、遮挡与颗粒黏连”情景运行，再点选一粒岩屑查看原图、轮廓和近邻，最后切换颗粒数与面积统计。</p><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>读完这一例，应能解释</b><p>岩屑怎样来到地面；为什么不能只凭颜色认岩石；一盘样品的颗粒比例和面积比例有什么区别；图像分类在哪一步节省整理工作、哪些颗粒仍要人工复核。</p></aside></div><details class=\"knowledge-supplement\"><summary>补充图解：展开原有场景示意与概念图</summary><p>读完上面的知识后，可用这些图回看采集过程和概念关系。</p><figure><h4>岩屑从哪里来，何时到达？</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 300\" role=\"img\" aria-label=\"钻头破岩，泥浆携岩屑沿环空上返，再在地面筛分取样\"><rect width=\"720\" height=\"300\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<path d=\"M72 58v167h110V58\" fill=\"#e4e8d6\" stroke=\"#8fa087\" stroke-width=\"3\"/><path d=\"M119 35v167\" stroke=\"#6e8e7a\" stroke-width=\"16\"/><path d=\"M100 201h38l-7 20h-24z\" fill=\"#506a5a\"/><path d=\"M72 237h110m-110 20h110\" stroke=\"#bdab83\" stroke-width=\"12\"/>\n<path d=\"M119 75l0 86\" stroke=\"#26765f\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"119\" cy=\"161\" r=\"4\" fill=\"#26765f\"/><path d=\"M86 195l0 -109\" stroke=\"#ad7849\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"86\" cy=\"86\" r=\"4\" fill=\"#ad7849\"/><path d=\"M85 80V45h150\" stroke=\"#ad7849\" stroke-width=\"4\" fill=\"none\"/>\n<ellipse cx=\"86\" cy=\"100\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(0 86 100)\"/><ellipse cx=\"86\" cy=\"125\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(30 86 125)\"/><ellipse cx=\"86\" cy=\"150\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(60 86 150)\"/><ellipse cx=\"86\" cy=\"180\" rx=\"4\" ry=\"3\" fill=\"#aa7c48\" transform=\"rotate(90 86 180)\"/>\n<path d=\"M228 45h90l-12 22h-66z\" fill=\"#b5c1a6\" stroke=\"#7b9579\"/><path d=\"M242 44l12 22m5-22l12 22m5-22l12 22\" stroke=\"#718e72\"/><ellipse cx=\"275\" cy=\"106\" rx=\"39\" ry=\"20\" fill=\"#ded4bb\" stroke=\"#a19475\"/>\n<ellipse cx=\"253\" cy=\"99\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/><ellipse cx=\"270\" cy=\"103\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/><ellipse cx=\"287\" cy=\"107\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/><ellipse cx=\"279\" cy=\"111\" rx=\"5\" ry=\"4\" fill=\"#a88b60\"/>\n<text x=\"12\" y=\"25\" >钻杆内下行</text><text x=\"10\" y=\"278\" >① 井下破岩 tₛ</text><text x=\"206\" y=\"25\" >② 返出 → 振动筛</text><text x=\"229\" y=\"147\" >③ 地面样品 tₐ</text>\n<text x=\"366\" y=\"54\" font-size=\"22\" font-weight=\"650\">样品到地面，需要时间。</text><text x=\"366\" y=\"98\" >下行流体从钻杆内进入；</text><text x=\"366\" y=\"129\" >破碎岩屑随环空泥浆返出。</text><text x=\"366\" y=\"177\" >采样时刻 tₐ ≠ 岩屑形成时刻 tₛ</text><text x=\"366\" y=\"212\" >归位：迟到假设 → 来源时段 → MD(tₛ)</text><text x=\"366\" y=\"257\" >示意未按比例；掉块与混样仍须复核。</text></g></svg></div></div><figcaption>这是概念性样品运输示意，不求解颗粒沉降或井眼清洁。岩屑的形态与取样条件都会影响解释。</figcaption></figure><figure><h4>相近颜色，不同纹理；同一颗粒，不同照明</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"颗粒像素纹理与光照影响\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><ellipse cx=\"105\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#a99a7c\"/><circle cx=\"65\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"65\" r=\"2\" fill=\"#635f52\"/><circle cx=\"65\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"86\" r=\"2\" fill=\"#635f52\"/><circle cx=\"65\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"84\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"103\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"122\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><circle cx=\"141\" cy=\"107\" r=\"2\" fill=\"#635f52\"/><text x=\"40\" y=\"162\">砂岩教学外观：细颗粒</text><ellipse cx=\"345\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#a3a698\"/><path d=\"M280 55h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 59h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 63h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 67h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 71h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 75h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 79h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 83h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 87h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 91h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 95h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 99h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 103h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 107h130\" stroke=\"#747c70\" stroke-width=\"1\"/><path d=\"M280 111h130\" stroke=\"#747c70\" stroke-width=\"1\"/><text x=\"280\" y=\"162\">泥岩教学外观：层状</text><ellipse cx=\"585\" cy=\"88\" rx=\"65\" ry=\"40\" fill=\"#b4b4a2\"/><text x=\"520\" y=\"162\">灰岩教学外观：云斑</text><text x=\"30\" y=\"200\">演示修改真实RGB像素，再重新分割、提特征和预测；图像不等于矿物测量。</text></g></svg></div></div><figcaption>三类只是合成外观教学标签，色域允许重叠；参考片校正的收益与纹理特征的收益要分开理解。</figcaption></figure><figure><h4>颗粒数与二维面积是两个分母</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 215\" role=\"img\" aria-label=\"一大颗和多小颗占比不同\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"215\" rx=\"12\" fill=\"#eff3eb\"/><g fill=\"#29473e\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\"><circle cx=\"100\" cy=\"90\" r=\"50\" fill=\"#b09161\"/><circle cx=\"250\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"298\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"346\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><circle cx=\"394\" cy=\"90\" r=\"14\" fill=\"#718b7c\"/><text x=\"30\" y=\"170\">计数：大颗粒 1/5；面积：按可见像素重新计算。</text><text x=\"30\" y=\"202\">待复核仍占总分母；二维可见面积不是质量、体积或地层组成。</text></g></svg></div></div><figcaption>演示显示真实分子与分母，并保留待复核部分，不能删除难例后把已识别类别凑成100%。</figcaption></figure></details>",
+          "en": "DATA",
+          "navTitle": "资料与学习任务"
         }
       ]
     },
     "workflow": {
       "label": "案例流程",
-      "title": "这一盘岩屑更接近哪种教学外观？哪些颗粒需要复核？",
+      "title": "从一盘岩屑，怎样认识井下的岩石？",
       "lead": [
-        "实际像素 → 预测轮廓 → 训练特征库 → 候选岩性；计数与可见二维面积分开汇总。以教学合成样品观察轮廓、纹理和候选外观。"
+        "岩屑是钻头破碎岩石后带回地面的碎片。录井人员观察这些碎片，记录钻过了什么岩石、它在哪个井段发生变化。本例先讲清岩屑和岩性的关系，再用图像分类辅助整理一盘混合样品。"
       ],
       "steps": [
         {
           "name": "样品登记",
           "role": "图S1",
-          "do": "输入：采样ID、共同MD记录；动作：关联来源时段，保留迟到假设。见图S1。",
+          "do": "分类之前，先确认正在看哪一盘样品。样品编号连接采样记录和照片；迟到归位回答它可能来自哪个井段。归位假设会影响井段关联，照片中颗粒的外观保持原样。 本步操作：关联来源时段，保留迟到假设。输入：采样ID、共同MD记录。",
           "effect": "P1–P8与白光/UV配对身份",
           "trap": "迟到只改归位，不能改图像分类"
         },
         {
           "name": "参考片与质控",
           "role": "图S2",
-          "do": "输入：原始RGB像素、可见参考片；动作：由参考片估计通道增益，检查饱和。见图S2。",
+          "do": "同一种岩屑在偏黄光和白光下会呈现不同RGB。用画面中可见的参考片做通道校正，目的是减小拍摄条件的差异；过曝像素已经丢失的细节仍会在质控中标出。 本步操作：由参考片估计通道增益，检查饱和。输入：原始RGB像素、可见参考片。",
           "effect": "原图、校正图与质控标记",
           "trap": "饱和/遮挡信息不能数学恢复"
         },
         {
           "name": "像素分割与连通域",
           "role": "图S3",
-          "do": "输入：校正图像；动作：和可见背景比较，四邻域连接。见图S3。",
+          "do": "把前景像素连成颗粒轮廓，是后面逐粒分类的基础。两粒黏连会被当成一粒，一粒被切碎会变成多个对象，因此需要同时看轮廓与漏检、合并情况。 本步操作：和可见背景比较，四邻域连接。输入：校正图像。",
           "effect": "预测轮廓、颗粒面积和漏检诊断",
           "trap": "轮廓必须由像素计算"
         },
         {
           "name": "颜色、纹理与形状",
           "role": "图S4",
-          "do": "输入：预测颗粒像素；动作：计算均值、方差、方向梯度、紧致度。见图S4。",
+          "do": "颜色、局部纹理和轮廓紧致度构成特征向量。标准化让不同量纲的特征一起参与距离计算，避免某一维只因数值较大就支配近邻。 本步操作：计算均值、方差、方向梯度、紧致度。输入：预测颗粒像素。",
           "effect": "16维特征与训练标准化参数",
           "trap": "测试样本不得参与均值/阈值拟合"
         },
         {
           "name": "近邻识别与拒判",
           "role": "图S5",
-          "do": "输入：训练库和测试特征；动作：标准化距离、加权投票，验证选阈值。见图S5。",
+          "do": "kNN先找训练库里的相似颗粒，再按实际距离投票。这里最值得看的不是支持度有多高，而是近邻是否确实相似、类别是否一致，以及陌生样品是否被送去复核。 本步操作：标准化距离、加权投票，验证选阈值。输入：训练库和测试特征。",
           "effect": "真实训练邻居与候选标签",
           "trap": "支持度不是现场概率"
         },
         {
           "name": "双口径汇总与复核",
           "role": "图S6",
-          "do": "输入：原模型输出、独立金标；动作：分开计数/面积；匹配实例评价。见图S6。",
+          "do": "先选计数还是面积，再汇总每类比例。模型结果、人工意见和待复核对象分别保留；评价同时查看分类与分割损失，才能知道差错来自“没找对颗粒”还是“认错外观”。 本步操作：分开计数/面积；匹配实例评价。输入：原模型输出、独立金标。",
           "effect": "含拒判混淆、漏检/合并与证据",
           "trap": "人工意见不回写原模型成绩"
         }
@@ -105,7 +115,7 @@
       "js": "demo/demo.js",
       "label": "可运行示范",
       "height": 1000,
-      "intro": "实际像素 → 预测轮廓 → 训练特征库 → 候选岩性；计数与可见二维面积分开汇总。以教学合成样品观察轮廓、纹理和候选外观。"
+      "intro": "岩屑是钻头破碎岩石后带回地面的碎片。录井人员观察这些碎片，记录钻过了什么岩石、它在哪个井段发生变化。本例先讲清岩屑和岩性的关系，再用图像分类辅助整理一盘混合样品。"
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-10-23T16:56:58.671Z",
+  "kind": "browser_feedback_from_original_teacher_import",
+  "reportedBy": "root and expansion_browser_acceptance",
+  "finding": "teacher host inlines a head defer script and optional assistant tried document.body.append before body existed in wo1/e1",
+  "fixOwner": "root",
+  "resolution": "shared assistantJS starts all three optional assistant scripts after DOMContentLoaded while document is loading; rebuild all12",
+  "sourceVMStartupCheck": "loading document with inaccessible body must only register DOMContentLoaded listener",
+  "oldRuntimeCopiesPreserved": false
+}

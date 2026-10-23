@@ -1,0 +1,762 @@
+{
+  "scope": "Persistence audit after real CLI close/open of the dedicated browser profile",
+  "checks": [
+    {
+      "name": "g1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "s1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "d1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "w4 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "c1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "co1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "p1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "pr1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "wo1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "e1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "t1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "r5 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "m1 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "m2 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "m3 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "m4 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "m5 package remains registered after browser restart",
+      "passed": true
+    },
+    {
+      "name": "all 17 self-made packages survived browser restart",
+      "passed": true,
+      "detail": {
+        "count": 18,
+        "storedCharacters": 2859158
+      }
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:11:52.633Z",
+  "saved": {
+    "items": [
+      {
+        "id": "s17x-g1-remote-lithology",
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "sceneId": "g1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:55.220Z"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "title": "地震断层自动解释：沿波形不连续性寻找错断",
+        "sceneId": "s1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:57.729Z"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "sceneId": "d1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:00.183Z"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "title": "测井岩性识别：多道曲线与可解释近邻",
+        "sceneId": "w4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:02.625Z"
+      },
+      {
+        "id": "s17x-c1-cement-quality",
+        "title": "固井质量智能评价",
+        "sceneId": "c1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:05.097Z"
+      },
+      {
+        "id": "s17x-co1-completion-choice",
+        "title": "完井方式智能优选",
+        "sceneId": "co1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:07.541Z"
+      },
+      {
+        "id": "s17x-p1-perforation-design",
+        "title": "射孔参数优化：从试验响应到受约束候选",
+        "sceneId": "p1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:10.055Z"
+      },
+      {
+        "id": "s17x-pr1-pump-card",
+        "title": "抽油机井工况诊断：从井下泵功图读形状",
+        "sceneId": "pr1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:12.538Z"
+      },
+      {
+        "id": "s17x-wo1-workover-retrieval",
+        "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+        "sceneId": "wo1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:15.035Z"
+      },
+      {
+        "id": "s17x-e1-fracture-optimization",
+        "title": "压裂参数智能优化：在资源边界里比较候选",
+        "sceneId": "e1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:17.480Z"
+      },
+      {
+        "id": "s17x-t1-pipeline-leak",
+        "title": "管道泄漏智能检测：从正常关系到事件核查",
+        "sceneId": "t1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:20.010Z"
+      },
+      {
+        "id": "s17x-r5-quality-softsensor",
+        "title": "产品质量在线软测量：化验到来之前",
+        "sceneId": "r5",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:22.613Z"
+      },
+      {
+        "id": "s17-cuttings-lithology",
+        "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+        "sceneId": "m1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:25.216Z"
+      },
+      {
+        "id": "s17-mudgas-context",
+        "title": "气测异常智能解释：气峰背后的工况与迟到",
+        "sceneId": "m2",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:27.748Z"
+      },
+      {
+        "id": "s17-fluorescence-review",
+        "title": "荧光图像智能判读：显示与来源分开核查",
+        "sceneId": "m3",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:30.334Z"
+      },
+      {
+        "id": "s17-drilltime-boundaries",
+        "title": "钻时曲线地层划分：工况校正与候选响应段",
+        "sceneId": "m4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:32.904Z"
+      },
+      {
+        "id": "s17-evidence-report",
+        "title": "录井报告自动生成：每句话都有当前证据",
+        "sceneId": "m5",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:35.619Z"
+      },
+      {
+        "id": "firstbreak-stalta",
+        "title": "初至波自动拾取：STA/LTA 能量比法",
+        "sceneId": "s3",
+        "files": 4,
+        "savedAt": "2026-10-23T17:11:44.423Z"
+      }
+    ],
+    "storedCharacters": 2859158
+  },
+  "savedPackageHashes": [
+    {
+      "scene": "g1",
+      "id": "s17x-g1-remote-lithology",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "9a6edad7d076b34bacce9819536116db37315ddde36f4151b4d90beb3943c3bd",
+          "bytes": 15779
+        },
+        {
+          "path": "README.txt",
+          "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7",
+          "bytes": 3221
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d",
+          "bytes": 26033
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "a2f689137a9f2b0093a9fa6c983a5a6d09fe5676c7276e43b2b47b51a37eeebc",
+          "bytes": 65423
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "b1f362e80e5e265bbfcb128ad47de6c5cdb81abda329b78474b10595616d430c",
+          "bytes": 22196
+        }
+      ]
+    },
+    {
+      "scene": "s1",
+      "id": "s17x-s1-seismic-fault",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "548380219f421defde799b6034d3c2670565fefe057f702678f743cdfb5c1ed7",
+          "bytes": 16265
+        },
+        {
+          "path": "README.txt",
+          "sha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e",
+          "bytes": 3744
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d",
+          "bytes": 26033
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "ba3eec81573d8be7d0f0dd7b74d5f760a2c0dfb958cef57bbc6478a51fc6c5ac",
+          "bytes": 71322
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "cf47c0b2b9bf1122bf6ba797c3f1e23f1ad8378b294f23bb2887beec259e5b79",
+          "bytes": 23146
+        }
+      ]
+    },
+    {
+      "scene": "d1",
+      "id": "s17x-d1-rop-optimization",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "e2adec1f21bc228209e7d626ba1e54c5689cdebf67a1c53ed8add02b03781de5",
+          "bytes": 24550
+        },
+        {
+          "path": "README.txt",
+          "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7",
+          "bytes": 2279
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68",
+          "bytes": 26522
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf",
+          "bytes": 65613
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b",
+          "bytes": 26889
+        }
+      ]
+    },
+    {
+      "scene": "w4",
+      "id": "s17x-w4-log-lithology",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "d0497dcb43866996d60cffc9cc40576a7b5382bd2f962beeb27c7879a3091fb5",
+          "bytes": 19007
+        },
+        {
+          "path": "README.txt",
+          "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0",
+          "bytes": 2298
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68",
+          "bytes": 26522
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "bd3b25daa52e8fa5cb6686c9ca2bf1568f9b8270037ba73a5bc975d4b38a1d9e",
+          "bytes": 63887
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780",
+          "bytes": 22155
+        }
+      ]
+    },
+    {
+      "scene": "c1",
+      "id": "s17x-c1-cement-quality",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "71d4c91a6292b6d4716a73b95a725939910c52818efc49ec3984c4c7de5fa061",
+          "bytes": 26395
+        },
+        {
+          "path": "README.txt",
+          "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043",
+          "bytes": 1226
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c",
+          "bytes": 25863
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625",
+          "bytes": 87432
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf",
+          "bytes": 7135
+        }
+      ]
+    },
+    {
+      "scene": "co1",
+      "id": "s17x-co1-completion-choice",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "e6eaac709811fe54c4da28f895e567d2ff21e509006069e6f833511a569029a9",
+          "bytes": 20971
+        },
+        {
+          "path": "README.txt",
+          "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12",
+          "bytes": 1233
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c",
+          "bytes": 25863
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90",
+          "bytes": 83477
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d",
+          "bytes": 7323
+        }
+      ]
+    },
+    {
+      "scene": "p1",
+      "id": "s17x-p1-perforation-design",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "33dab68ae5893e5670a3734f09c94f113587fc2644b4544b1c2f7babf1bd1961",
+          "bytes": 23476
+        },
+        {
+          "path": "README.txt",
+          "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1",
+          "bytes": 3117
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787",
+          "bytes": 24834
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d",
+          "bytes": 93983
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72",
+          "bytes": 4501
+        }
+      ]
+    },
+    {
+      "scene": "pr1",
+      "id": "s17x-pr1-pump-card",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "1c3a7b476f66c9bc15d3a91c5d11bd6245936a1a26ee2d53572d22390468f177",
+          "bytes": 21369
+        },
+        {
+          "path": "README.txt",
+          "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41",
+          "bytes": 3458
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787",
+          "bytes": 24834
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "88ca0562e088df63bb215c7a7b2b20f1e674f0d95e98da7b91dc5342f6917ec7",
+          "bytes": 92379
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2",
+          "bytes": 4305
+        }
+      ]
+    },
+    {
+      "scene": "wo1",
+      "id": "s17x-wo1-workover-retrieval",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "e0ab6f50d0d661fa0f416a700cc2b89f39f7721f578f46530422975f11d5bd03",
+          "bytes": 17806
+        },
+        {
+          "path": "README.txt",
+          "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684",
+          "bytes": 1085
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2",
+          "bytes": 25377
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc",
+          "bytes": 63674
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065",
+          "bytes": 19480
+        }
+      ]
+    },
+    {
+      "scene": "e1",
+      "id": "s17x-e1-fracture-optimization",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "6ab76c59f9b75c97b82512e9b2613b7c006870844c57de3f3232161fe5957e02",
+          "bytes": 24777
+        },
+        {
+          "path": "README.txt",
+          "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa",
+          "bytes": 1077
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2",
+          "bytes": 25377
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "7c346c3e07ba0d668e58411397d47a363d941f2310af00cfbe3fb3f868b6ebb6",
+          "bytes": 62898
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3",
+          "bytes": 26026
+        }
+      ]
+    },
+    {
+      "scene": "t1",
+      "id": "s17x-t1-pipeline-leak",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "689349093d50d324abcff155a1eafbbc521ca58a0cef341c53a0d85cf00ac037",
+          "bytes": 19535
+        },
+        {
+          "path": "README.txt",
+          "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a",
+          "bytes": 3506
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214",
+          "bytes": 22806
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44",
+          "bytes": 88203
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0",
+          "bytes": 4630
+        }
+      ]
+    },
+    {
+      "scene": "r5",
+      "id": "s17x-r5-quality-softsensor",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "b4e4d737e0368c91c6b36142a622574232e92e49098d295e8905be584cfa4ac6",
+          "bytes": 20184
+        },
+        {
+          "path": "README.txt",
+          "sha256": "60aefd3c3e5536ee81e38598d815e0df9dc357ee291eeca504cd2c5b9a1b7f53",
+          "bytes": 3929
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214",
+          "bytes": 22806
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "66251aa0eb7fbe9c375d0f04c9d876eeab75258ec10d1725c0749f2689f9357f",
+          "bytes": 88530
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "68115d8da6a6f525711fcbef739d5c2d10a3ff5703c3806c3d20a4dfe6dd1c85",
+          "bytes": 4854
+        }
+      ]
+    },
+    {
+      "scene": "m1",
+      "id": "s17-cuttings-lithology",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "bd852f8929df84703578f0ce1c6980c43dd72a07ba2161afe7cc17c127de43b2",
+          "bytes": 26889
+        },
+        {
+          "path": "README.txt",
+          "sha256": "acfdae75a10aeb3e40321360fc1f3c4d0882867e211468b0d8b5ebb5e74d639e",
+          "bytes": 833
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+          "bytes": 37117
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "e00473c1e7d3cfdea7b4a6976ee0f3589c8c6733819ca24765aea3e3c6924006",
+          "bytes": 213809
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "dbac59fa2bfcb71901e3a937112490b37b524d94397abb1c8c21fbc3bbc9cdfe",
+          "bytes": 5135
+        }
+      ]
+    },
+    {
+      "scene": "m2",
+      "id": "s17-mudgas-context",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "e93b628928676c3b9863704c17226e753018fd86275d58ed0c43b09f6e1a14b4",
+          "bytes": 29786
+        },
+        {
+          "path": "README.txt",
+          "sha256": "25777eae8e1c8e7061e2cb1c1a4e06b895ad7be282a80e5e5f6b69938a003d1d",
+          "bytes": 1246
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "9f80c9abf281e1d6ff5e5431862f4c1fd2d9f692daa2b3b4218924b37ef6e6cd",
+          "bytes": 36242
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "03d8bb302e83858696cc0f791b3f8574e6caba0088456006718ff89e0687d6ee",
+          "bytes": 159771
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "e2b4d2c20b7be8eed435f7b57ab4e447fdbc8600d52dc38f375a627871d957c2",
+          "bytes": 8088
+        }
+      ]
+    },
+    {
+      "scene": "m3",
+      "id": "s17-fluorescence-review",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "3f7ed22ffc9c518abf20d92030ae08c0d8e79a633e62c9381b4cb7c872f92c36",
+          "bytes": 25612
+        },
+        {
+          "path": "README.txt",
+          "sha256": "9fc3ef05453e133d7574795bbd0f9261d1f290610673e691390cf16ccb65d015",
+          "bytes": 846
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+          "bytes": 37117
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "2590127812c959f526fa03697bae09eeed8469c6142c3ad4450d86e971f78c5f",
+          "bytes": 136378
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "779b83299f9a763c9ea4c06a5beb699a4fc77fb95cb4eac73d51bb87753e6830",
+          "bytes": 4940
+        }
+      ]
+    },
+    {
+      "scene": "m4",
+      "id": "s17-drilltime-boundaries",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "6f2e791ab418b538aa1606562f720122c9d2aeab15e61676852a13da375a9bb4",
+          "bytes": 26640
+        },
+        {
+          "path": "README.txt",
+          "sha256": "80d07ab5cb5a373bb1d41aad221561caca6aa021a80be9cb0b3e11e893b82bda",
+          "bytes": 859
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+          "bytes": 37117
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "0f905bca2f060ef4d2ab3fe9b56b91e7272ab41db7c76bef65e8488552ccc793",
+          "bytes": 224712
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "739cf9352707564e39379e0ceb329362c6e4e388579d0b56e2b09768bb65e8fd",
+          "bytes": 4759
+        }
+      ]
+    },
+    {
+      "scene": "m5",
+      "id": "s17-evidence-report",
+      "files": [
+        {
+          "path": "case.json#canonical",
+          "sha256": "23fcb975202bb1f281c0e18db22fcd232f6c53f633ba01058194a31806df40e5",
+          "bytes": 24985
+        },
+        {
+          "path": "README.txt",
+          "sha256": "abcfc75472a740b27b720feac57abd53537769788791baddeb35a3c208441ee3",
+          "bytes": 860
+        },
+        {
+          "path": "demo/demo.css",
+          "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+          "bytes": 37117
+        },
+        {
+          "path": "demo/demo.js",
+          "sha256": "9fe0fcfe42fa7188babfd24924df4bd5851cb07f8e835e78060944869f9e5d0f",
+          "bytes": 329292
+        },
+        {
+          "path": "demo/index.html",
+          "sha256": "f95453d5051d5d5aa15ee237df48bb29ed80d899e61df1b3501fc623761b7446",
+          "bytes": 5508
+        }
+      ]
+    }
+  ],
+  "checkedAt": "2026-10-23T17:11:53.031Z",
+  "passed": 18,
+  "failed": 0
+}

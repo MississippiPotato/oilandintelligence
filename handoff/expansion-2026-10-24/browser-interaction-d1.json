@@ -1,0 +1,374 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "d1",
+  "caseId": "s17x-d1-rop-optimization",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 5
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow step 1 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 2 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 3 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 4 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 5 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "ready"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "d1",
+          "caseId": "s17x-d1-rop-optimization",
+          "status": "ready",
+          "metrics": {
+            "model": {
+              "n": 128,
+              "mae": 1.9624040748572056,
+              "rmse": 2.4272191421216918,
+              "bias": 0.9465490001269504
+            },
+            "baseline": {
+              "n": 128,
+              "mae": 5.405732935300523,
+              "rmse": 6.634852065423579,
+              "bias": 0.7670855040351896
+            },
+            "outsideCount": 2
+          },
+          "runId": "d1-mvl7y6g9-0004",
+          "params": {
+            "preset": "default",
+            "constrain": true,
+            "wob": 90,
+            "rpm": 120,
+            "flow": 26,
+            "ucs": 60,
+            "noise": 2,
+            "maxWob": 125,
+            "maxRpm": 170,
+            "maxFlow": 32,
+            "maxPressure": 19.5,
+            "maxTorque": 9
+          },
+          "optimization": {
+            "total": 2145,
+            "feasible": 803,
+            "recommended": {
+              "wob": 120,
+              "rpm": 170,
+              "flow": 30,
+              "ucs": 60,
+              "estimate": 55.30166171910244,
+              "reasons": [],
+              "feasible": true,
+              "admitted": true,
+              "outside": [],
+              "pressure": 17.706,
+              "torque": 7.872,
+              "simulatedROP": 54.87166337935566
+            }
+          },
+          "reviews": 1
+        },
+        "review": {
+          "present": true,
+          "keys": [
+            "schemaVersion",
+            "caseVersion",
+            "sceneId",
+            "caseId",
+            "runId",
+            "status",
+            "datasetId",
+            "wellId",
+            "wellIds",
+            "dataNature",
+            "runConfig",
+            "params",
+            "metrics",
+            "groups",
+            "training",
+            "optimization",
+            "observations",
+            "predictions",
+            "evaluationTruth",
+            "sources",
+            "claims",
+            "reviews",
+            "limitations"
+          ]
+        },
+        "text": [
+          "参数越界，需要收紧约束浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。d1-mvl7y6g9-0004 · 当前计算"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:03:23.747Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7",
+      "bytes": 2279
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68",
+      "bytes": 26522
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf",
+      "bytes": 65613
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b",
+      "bytes": 26889
+    }
+  ],
+  "workflow": {
+    "stepControls": 5
+  },
+  "default": {
+    "status": "ready",
+    "metrics": {
+      "model": {
+        "n": 128,
+        "mae": 1.9624040748572056,
+        "rmse": 2.4272191421216918,
+        "bias": 0.9465490001269504
+      },
+      "baseline": {
+        "n": 128,
+        "mae": 5.405732935300523,
+        "rmse": 6.634852065423579,
+        "bias": 0.7670855040351896
+      },
+      "outsideCount": 2
+    },
+    "params": {
+      "preset": "default",
+      "constrain": true,
+      "wob": 90,
+      "rpm": 120,
+      "flow": 26,
+      "ucs": 60,
+      "noise": 2,
+      "maxWob": 125,
+      "maxRpm": 170,
+      "maxFlow": 32,
+      "maxPressure": 19.5,
+      "maxTorque": 9
+    },
+    "runId": "d1-mvl7y6g9-0002"
+  },
+  "reviewSnapshot": {
+    "sceneId": "d1",
+    "caseId": "s17x-d1-rop-optimization",
+    "status": "ready",
+    "metrics": {
+      "model": {
+        "n": 128,
+        "mae": 1.9624040748572056,
+        "rmse": 2.4272191421216918,
+        "bias": 0.9465490001269504
+      },
+      "baseline": {
+        "n": 128,
+        "mae": 5.405732935300523,
+        "rmse": 6.634852065423579,
+        "bias": 0.7670855040351896
+      },
+      "outsideCount": 2
+    },
+    "runId": "d1-mvl7y6g9-0004",
+    "params": {
+      "preset": "default",
+      "constrain": true,
+      "wob": 90,
+      "rpm": 120,
+      "flow": 26,
+      "ucs": 60,
+      "noise": 2,
+      "maxWob": 125,
+      "maxRpm": 170,
+      "maxFlow": 32,
+      "maxPressure": 19.5,
+      "maxTorque": 9
+    },
+    "optimization": {
+      "total": 2145,
+      "feasible": 803,
+      "recommended": {
+        "wob": 120,
+        "rpm": 170,
+        "flow": 30,
+        "ucs": 60,
+        "estimate": 55.30166171910244,
+        "reasons": [],
+        "feasible": true,
+        "admitted": true,
+        "outside": [],
+        "pressure": 17.706,
+        "torque": 7.872,
+        "simulatedROP": 54.87166337935566
+      }
+    },
+    "reviews": 1
+  },
+  "review": {
+    "present": true,
+    "keys": [
+      "schemaVersion",
+      "caseVersion",
+      "sceneId",
+      "caseId",
+      "runId",
+      "status",
+      "datasetId",
+      "wellId",
+      "wellIds",
+      "dataNature",
+      "runConfig",
+      "params",
+      "metrics",
+      "groups",
+      "training",
+      "optimization",
+      "observations",
+      "predictions",
+      "evaluationTruth",
+      "sources",
+      "claims",
+      "reviews",
+      "limitations"
+    ]
+  },
+  "reviewVisibleText": [
+    "参数越界，需要收紧约束浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。d1-mvl7y6g9-0004 · 当前计算"
+  ],
+  "download": {
+    "suggestedFilename": "s17x-d1-rop-optimization-d1-mvl7y6g9-0004.json",
+    "relativePath": "output/exports/v1.7/d1-original.json"
+  },
+  "checkedAt": "2026-10-23T17:03:27.804Z",
+  "passed": 17,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-d1-rop-optimization",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 25698,
+        "sha256": "f3d406824ced9b7b53fa2b219b7ce17a80568a89456e4ab368e8b7a0cabf07c7"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26522,
+        "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 65613,
+        "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 26889,
+        "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 2279,
+        "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

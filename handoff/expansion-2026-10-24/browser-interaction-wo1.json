@@ -1,0 +1,455 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "wo1",
+  "caseId": "s17x-wo1-workover-retrieval",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 6
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 1 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 2 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 3 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 4 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 5 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 6 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "completed"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "wo1",
+          "caseId": "s17x-wo1-workover-retrieval",
+          "status": "completed",
+          "metrics": {
+            "denominator": 20,
+            "model": {
+              "correct": 20,
+              "accuracy": 1,
+              "accepted": 20,
+              "coverage": 1,
+              "selectiveAccuracy": 1,
+              "recallAt3": 1,
+              "recallAt3Count": 20,
+              "evidenceCoverage": 1,
+              "constraintViolations": 0
+            },
+            "baseline": {
+              "correct": 17,
+              "accuracy": 0.85,
+              "accepted": 20,
+              "coverage": 1,
+              "selectiveAccuracy": 0.85,
+              "constraintViolations": 0
+            },
+            "confusion": [
+              [
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                5,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                5,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                5,
+                0
+              ]
+            ],
+            "referenceApplicable": true,
+            "referenceDenominator": 20
+          },
+          "runId": "wo1-mvl7x7q8-k5887-003",
+          "params": {
+            "preset": "standard",
+            "query": {
+              "wellId": "WO-TEST-001-QUERY",
+              "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+              "integrityStatus": "verified",
+              "pressureLoss_MPa": 1.73,
+              "sand_g_L": 0,
+              "currentVariation_pct": 9.705,
+              "depositIndex": 0.934,
+              "annulusPressure_MPa": 0.159
+            }
+          },
+          "review": {
+            "runId": "wo1-mvl7x7q8-k5887-003",
+            "wellId": "WO-TEST-001-QUERY",
+            "note": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+            "modelCategory": 0,
+            "time": "2026-10-23T17:02:41.251Z"
+          }
+        },
+        "review": {
+          "present": true,
+          "keys": [
+            "schemaVersion",
+            "caseId",
+            "caseVersion",
+            "runId",
+            "datasetId",
+            "wellId",
+            "dataNature",
+            "runConfig",
+            "sources",
+            "claims",
+            "limitations",
+            "metrics",
+            "result",
+            "manualReview",
+            "reviewHistory",
+            "exportedAt"
+          ]
+        },
+        "text": [
+          "复核意见已记录，模型原结果保留"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:02:38.653Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684",
+      "bytes": 1085
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2",
+      "bytes": 25377
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc",
+      "bytes": 63674
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065",
+      "bytes": 19480
+    }
+  ],
+  "workflow": {
+    "stepControls": 0,
+    "figures": 6
+  },
+  "default": {
+    "status": "completed",
+    "metrics": {
+      "denominator": 20,
+      "model": {
+        "correct": 20,
+        "accuracy": 1,
+        "accepted": 20,
+        "coverage": 1,
+        "selectiveAccuracy": 1,
+        "recallAt3": 1,
+        "recallAt3Count": 20,
+        "evidenceCoverage": 1,
+        "constraintViolations": 0
+      },
+      "baseline": {
+        "correct": 17,
+        "accuracy": 0.85,
+        "accepted": 20,
+        "coverage": 1,
+        "selectiveAccuracy": 0.85,
+        "constraintViolations": 0
+      },
+      "confusion": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0
+        ]
+      ],
+      "referenceApplicable": true,
+      "referenceDenominator": 20
+    },
+    "params": {
+      "preset": "standard",
+      "query": {
+        "wellId": "WO-TEST-001-QUERY",
+        "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+        "integrityStatus": "verified",
+        "pressureLoss_MPa": 1.73,
+        "sand_g_L": 0,
+        "currentVariation_pct": 9.705,
+        "depositIndex": 0.934,
+        "annulusPressure_MPa": 0.159
+      }
+    },
+    "runId": "wo1-mvl7x7q8-k5887-001"
+  },
+  "reviewSnapshot": {
+    "sceneId": "wo1",
+    "caseId": "s17x-wo1-workover-retrieval",
+    "status": "completed",
+    "metrics": {
+      "denominator": 20,
+      "model": {
+        "correct": 20,
+        "accuracy": 1,
+        "accepted": 20,
+        "coverage": 1,
+        "selectiveAccuracy": 1,
+        "recallAt3": 1,
+        "recallAt3Count": 20,
+        "evidenceCoverage": 1,
+        "constraintViolations": 0
+      },
+      "baseline": {
+        "correct": 17,
+        "accuracy": 0.85,
+        "accepted": 20,
+        "coverage": 1,
+        "selectiveAccuracy": 0.85,
+        "constraintViolations": 0
+      },
+      "confusion": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0
+        ]
+      ],
+      "referenceApplicable": true,
+      "referenceDenominator": 20
+    },
+    "runId": "wo1-mvl7x7q8-k5887-003",
+    "params": {
+      "preset": "standard",
+      "query": {
+        "wellId": "WO-TEST-001-QUERY",
+        "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+        "integrityStatus": "verified",
+        "pressureLoss_MPa": 1.73,
+        "sand_g_L": 0,
+        "currentVariation_pct": 9.705,
+        "depositIndex": 0.934,
+        "annulusPressure_MPa": 0.159
+      }
+    },
+    "review": {
+      "runId": "wo1-mvl7x7q8-k5887-003",
+      "wellId": "WO-TEST-001-QUERY",
+      "note": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+      "modelCategory": 0,
+      "time": "2026-10-23T17:02:41.251Z"
+    }
+  },
+  "review": {
+    "present": true,
+    "keys": [
+      "schemaVersion",
+      "caseId",
+      "caseVersion",
+      "runId",
+      "datasetId",
+      "wellId",
+      "dataNature",
+      "runConfig",
+      "sources",
+      "claims",
+      "limitations",
+      "metrics",
+      "result",
+      "manualReview",
+      "reviewHistory",
+      "exportedAt"
+    ]
+  },
+  "reviewVisibleText": [
+    "复核意见已记录，模型原结果保留"
+  ],
+  "download": {
+    "suggestedFilename": "wo1-wo1-mvl7x7q8-k5887-003.json",
+    "relativePath": "output/exports/v1.7/wo1-original.json"
+  },
+  "checkedAt": "2026-10-23T17:02:42.824Z",
+  "passed": 18,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-wo1-workover-retrieval",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 18843,
+        "sha256": "649d0329d083eb994cc58a7cddd131110b0d550d317133e9448a306ac6901dc2"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25377,
+        "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 63674,
+        "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 19480,
+        "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1085,
+        "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "Actual enhanced reader updates petroleum explanation even with preserved old 1.3.0 casepack; storage package is not silently overwritten",
+  "checks": [
+    {
+      "name": "old saved manifest remains explicitly 1.3.0",
+      "passed": true
+    },
+    {
+      "name": "old package receives four updated knowledge chapters in enhanced reader",
+      "passed": true
+    },
+    {
+      "name": "old scene drawings remain folded as supplementary material",
+      "passed": true
+    },
+    {
+      "name": "old workflow also has updated step explanations",
+      "passed": true
+    },
+    {
+      "name": "retained old engine still computes with outer compact assistant",
+      "passed": true
+    },
+    {
+      "name": "refreshed old package keeps updated lesson and original version",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "checkedAt": "2026-10-23T17:14:28.304Z",
+  "passed": 7,
+  "failed": 0
+}

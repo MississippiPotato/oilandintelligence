@@ -1,0 +1,629 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "w4",
+  "caseId": "s17x-w4-log-lithology",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 5
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow step 1 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 2 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 3 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 4 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 5 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "ready"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "w4",
+          "caseId": "s17x-w4-log-lithology",
+          "status": "ready",
+          "metrics": {
+            "model": {
+              "n": 320,
+              "accuracy": 0.965625,
+              "macroF1": 0.9616014607556188,
+              "coverage": 1,
+              "accepted": 320,
+              "acceptedError": 0.034375,
+              "confusion": [
+                [
+                  78,
+                  0,
+                  11,
+                  0
+                ],
+                [
+                  0,
+                  125,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  106,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "砂岩",
+                  "tp": 78,
+                  "fn": 11,
+                  "fp": 0,
+                  "recall": 0.8764044943820225,
+                  "precision": 1,
+                  "f1": 0.9341317365269461
+                },
+                {
+                  "name": "泥岩",
+                  "tp": 125,
+                  "fn": 0,
+                  "fp": 0,
+                  "recall": 1,
+                  "precision": 1,
+                  "f1": 1
+                },
+                {
+                  "name": "灰岩",
+                  "tp": 106,
+                  "fn": 0,
+                  "fp": 11,
+                  "recall": 1,
+                  "precision": 0.905982905982906,
+                  "f1": 0.9506726457399103
+                }
+              ]
+            },
+            "baseline": {
+              "n": 320,
+              "accuracy": 0.8125,
+              "macroF1": 0.7939560439560439,
+              "coverage": 1,
+              "accepted": 320,
+              "acceptedError": 0.1875,
+              "confusion": [
+                [
+                  61,
+                  0,
+                  28,
+                  0
+                ],
+                [
+                  0,
+                  125,
+                  0,
+                  0
+                ],
+                [
+                  32,
+                  0,
+                  74,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "砂岩",
+                  "tp": 61,
+                  "fn": 28,
+                  "fp": 32,
+                  "recall": 0.6853932584269663,
+                  "precision": 0.6559139784946236,
+                  "f1": 0.6703296703296703
+                },
+                {
+                  "name": "泥岩",
+                  "tp": 125,
+                  "fn": 0,
+                  "fp": 0,
+                  "recall": 1,
+                  "precision": 1,
+                  "f1": 1
+                },
+                {
+                  "name": "灰岩",
+                  "tp": 74,
+                  "fn": 32,
+                  "fp": 28,
+                  "recall": 0.6981132075471698,
+                  "precision": 0.7254901960784313,
+                  "f1": 0.7115384615384616
+                }
+              ]
+            }
+          },
+          "runId": "w4-mvl7yase-0004",
+          "params": {
+            "preset": "default",
+            "noise": 1,
+            "support": 0.6,
+            "mode": "all",
+            "k": "auto",
+            "reject": true
+          },
+          "selected": {
+            "wellId": "LOG-TEST-1",
+            "depth": 1540
+          },
+          "reviews": 1
+        },
+        "review": {
+          "present": true,
+          "keys": [
+            "schemaVersion",
+            "caseVersion",
+            "sceneId",
+            "caseId",
+            "runId",
+            "status",
+            "datasetId",
+            "wellId",
+            "wellIds",
+            "dataNature",
+            "runConfig",
+            "params",
+            "metrics",
+            "groups",
+            "training",
+            "observations",
+            "predictions",
+            "evaluationTruth",
+            "sources",
+            "claims",
+            "reviews",
+            "limitations"
+          ]
+        },
+        "text": [
+          "LOG-TEST-1 · 1540.0 m · 泥岩浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。w4-mvl7yase-0004 · 当前参数下的复核"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:03:29.399Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0",
+      "bytes": 2298
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68",
+      "bytes": 26522
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "bd3b25daa52e8fa5cb6686c9ca2bf1568f9b8270037ba73a5bc975d4b38a1d9e",
+      "bytes": 63887
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780",
+      "bytes": 22155
+    }
+  ],
+  "workflow": {
+    "stepControls": 5
+  },
+  "default": {
+    "status": "ready",
+    "metrics": {
+      "model": {
+        "n": 320,
+        "accuracy": 0.965625,
+        "macroF1": 0.9616014607556188,
+        "coverage": 1,
+        "accepted": 320,
+        "acceptedError": 0.034375,
+        "confusion": [
+          [
+            78,
+            0,
+            11,
+            0
+          ],
+          [
+            0,
+            125,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            106,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "砂岩",
+            "tp": 78,
+            "fn": 11,
+            "fp": 0,
+            "recall": 0.8764044943820225,
+            "precision": 1,
+            "f1": 0.9341317365269461
+          },
+          {
+            "name": "泥岩",
+            "tp": 125,
+            "fn": 0,
+            "fp": 0,
+            "recall": 1,
+            "precision": 1,
+            "f1": 1
+          },
+          {
+            "name": "灰岩",
+            "tp": 106,
+            "fn": 0,
+            "fp": 11,
+            "recall": 1,
+            "precision": 0.905982905982906,
+            "f1": 0.9506726457399103
+          }
+        ]
+      },
+      "baseline": {
+        "n": 320,
+        "accuracy": 0.8125,
+        "macroF1": 0.7939560439560439,
+        "coverage": 1,
+        "accepted": 320,
+        "acceptedError": 0.1875,
+        "confusion": [
+          [
+            61,
+            0,
+            28,
+            0
+          ],
+          [
+            0,
+            125,
+            0,
+            0
+          ],
+          [
+            32,
+            0,
+            74,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "砂岩",
+            "tp": 61,
+            "fn": 28,
+            "fp": 32,
+            "recall": 0.6853932584269663,
+            "precision": 0.6559139784946236,
+            "f1": 0.6703296703296703
+          },
+          {
+            "name": "泥岩",
+            "tp": 125,
+            "fn": 0,
+            "fp": 0,
+            "recall": 1,
+            "precision": 1,
+            "f1": 1
+          },
+          {
+            "name": "灰岩",
+            "tp": 74,
+            "fn": 32,
+            "fp": 28,
+            "recall": 0.6981132075471698,
+            "precision": 0.7254901960784313,
+            "f1": 0.7115384615384616
+          }
+        ]
+      }
+    },
+    "params": {
+      "preset": "default",
+      "noise": 1,
+      "support": 0.6,
+      "mode": "all",
+      "k": "auto",
+      "reject": true
+    },
+    "runId": "w4-mvl7yase-0002"
+  },
+  "reviewSnapshot": {
+    "sceneId": "w4",
+    "caseId": "s17x-w4-log-lithology",
+    "status": "ready",
+    "metrics": {
+      "model": {
+        "n": 320,
+        "accuracy": 0.965625,
+        "macroF1": 0.9616014607556188,
+        "coverage": 1,
+        "accepted": 320,
+        "acceptedError": 0.034375,
+        "confusion": [
+          [
+            78,
+            0,
+            11,
+            0
+          ],
+          [
+            0,
+            125,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            106,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "砂岩",
+            "tp": 78,
+            "fn": 11,
+            "fp": 0,
+            "recall": 0.8764044943820225,
+            "precision": 1,
+            "f1": 0.9341317365269461
+          },
+          {
+            "name": "泥岩",
+            "tp": 125,
+            "fn": 0,
+            "fp": 0,
+            "recall": 1,
+            "precision": 1,
+            "f1": 1
+          },
+          {
+            "name": "灰岩",
+            "tp": 106,
+            "fn": 0,
+            "fp": 11,
+            "recall": 1,
+            "precision": 0.905982905982906,
+            "f1": 0.9506726457399103
+          }
+        ]
+      },
+      "baseline": {
+        "n": 320,
+        "accuracy": 0.8125,
+        "macroF1": 0.7939560439560439,
+        "coverage": 1,
+        "accepted": 320,
+        "acceptedError": 0.1875,
+        "confusion": [
+          [
+            61,
+            0,
+            28,
+            0
+          ],
+          [
+            0,
+            125,
+            0,
+            0
+          ],
+          [
+            32,
+            0,
+            74,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "砂岩",
+            "tp": 61,
+            "fn": 28,
+            "fp": 32,
+            "recall": 0.6853932584269663,
+            "precision": 0.6559139784946236,
+            "f1": 0.6703296703296703
+          },
+          {
+            "name": "泥岩",
+            "tp": 125,
+            "fn": 0,
+            "fp": 0,
+            "recall": 1,
+            "precision": 1,
+            "f1": 1
+          },
+          {
+            "name": "灰岩",
+            "tp": 74,
+            "fn": 32,
+            "fp": 28,
+            "recall": 0.6981132075471698,
+            "precision": 0.7254901960784313,
+            "f1": 0.7115384615384616
+          }
+        ]
+      }
+    },
+    "runId": "w4-mvl7yase-0004",
+    "params": {
+      "preset": "default",
+      "noise": 1,
+      "support": 0.6,
+      "mode": "all",
+      "k": "auto",
+      "reject": true
+    },
+    "selected": {
+      "wellId": "LOG-TEST-1",
+      "depth": 1540
+    },
+    "reviews": 1
+  },
+  "review": {
+    "present": true,
+    "keys": [
+      "schemaVersion",
+      "caseVersion",
+      "sceneId",
+      "caseId",
+      "runId",
+      "status",
+      "datasetId",
+      "wellId",
+      "wellIds",
+      "dataNature",
+      "runConfig",
+      "params",
+      "metrics",
+      "groups",
+      "training",
+      "observations",
+      "predictions",
+      "evaluationTruth",
+      "sources",
+      "claims",
+      "reviews",
+      "limitations"
+    ]
+  },
+  "reviewVisibleText": [
+    "LOG-TEST-1 · 1540.0 m · 泥岩浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。w4-mvl7yase-0004 · 当前参数下的复核"
+  ],
+  "download": {
+    "suggestedFilename": "s17x-w4-log-lithology-w4-mvl7yase-0004.json",
+    "relativePath": "output/exports/v1.7/w4-original.json"
+  },
+  "checkedAt": "2026-10-23T17:03:35.560Z",
+  "passed": 17,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-w4-log-lithology",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 20150,
+        "sha256": "c5291c63b84c07e633f9a57f992a0797c1052a4cadf039fbb0078b00ce5224e5"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26522,
+        "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 63887,
+        "sha256": "bd3b25daa52e8fa5cb6686c9ca2bf1568f9b8270037ba73a5bc975d4b38a1d9e"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 22155,
+        "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 2298,
+        "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

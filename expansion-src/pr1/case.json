@@ -1,0 +1,144 @@
+{
+  "id": "s17x-pr1-pump-card",
+  "sceneId": "pr1",
+  "title": "抽油机井工况诊断：从井下泵功图读形状",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "cv"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "抽油机井把一个泵循环压缩成载荷—位移闭合图。理解理想循环与不同卸载形状后，再用可解释特征和训练近邻辅助复核。",
+      "judge": [
+        {
+          "label": "业务对象",
+          "value": "抽油机井",
+          "desc": "井下泵循环的形状判断"
+        },
+        {
+          "label": "数据形态",
+          "value": "井下泵功图",
+          "desc": "载荷 kN × 位移 m"
+        },
+        {
+          "label": "智能方法",
+          "value": "形状 kNN",
+          "desc": "实际特征与真实近邻"
+        },
+        {
+          "label": "观察重点",
+          "value": "卸载形状",
+          "desc": "全分母评价与待复核"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "PUMP CYCLE",
+          "title": "图 B1｜地面抽动杆柱，井下柱塞完成泵循环",
+          "html": "<p>抽油机通过杆柱带动井下柱塞往复。理想上冲程时游动阀关闭、固定阀打开，泵筒吸入流体；下冲程时固定阀关闭、游动阀打开，流体转移到柱塞上方。把位移与载荷同步记录，便得到一圈示功图。</p><figure><h3>理想柱塞泵循环与阀门</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 350\" role=\"img\" aria-label=\"理想柱塞泵循环与阀门\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"350\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"31\" y=\"38\" font-size=\"22\" font-weight=\"600\">上冲程：吸入泵筒；下冲程：流体通过游动阀</text><rect x=\"90\" y=\"68\" width=\"96\" height=\"208\" rx=\"7\" fill=\"#dfeae4\" stroke=\"#5b7e7b\" stroke-width=\"3\"/><rect x=\"103\" y=\"94\" width=\"70\" height=\"25\" rx=\"4\" fill=\"#2e8075\"/><path d=\"M138 54V94\" stroke=\"#8ca7a1\" stroke-width=\"8\"/><circle cx=\"138\" cy=\"106\" r=\"8\" fill=\"#6f8e93\"/><path d=\"M103 260h70l-35 23z\" fill=\"#d2a654\"/><text x=\"85\" y=\"316\" >上冲程：固定阀打开</text><rect x=\"390\" y=\"68\" width=\"96\" height=\"208\" rx=\"7\" fill=\"#dfeae4\" stroke=\"#5b7e7b\" stroke-width=\"3\"/><rect x=\"403\" y=\"176\" width=\"70\" height=\"25\" rx=\"4\" fill=\"#2e8075\"/><path d=\"M438 54V176\" stroke=\"#8ca7a1\" stroke-width=\"8\"/><circle cx=\"438\" cy=\"188\" r=\"8\" fill=\"#d2a654\"/><path d=\"M403 260h70l-35 23z\" fill=\"#6f8e93\"/><text x=\"385\" y=\"316\" >下冲程：游动阀打开</text><text x=\"596\" y=\"88\" >固定阀：泵筒底部</text><text x=\"596\" y=\"131\" >游动阀：随柱塞移动</text><text x=\"596\" y=\"183\" >金色：理想开启状态</text><text x=\"596\" y=\"227\" >位移单位 m，载荷单位 kN</text><text x=\"596\" y=\"279\" >这里讨论井下泵功图。</text></g></svg></div><figcaption>金色表示理想开启阀。循环概念依据 SLB Rod Pump Systems；图形为项目原创。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "DOWNHOLE CARD",
+          "title": "图 B2｜理想井下泵图近矩形，异常常改变卸载过程",
+          "html": "<p>充满泵的理想井下图接近矩形。供液不足时，柱塞可能先穿过低压气体，再突然接触液体，形成快速卸载特征；气影响常呈现较缓的气体压缩与阀门开启过程。演示把这些差别转为可观察的曲线形状，而非用类别名称直接决定预测结果。</p><figure><h3>充满、供液不足、气影响三种井下教学形状</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 365\" role=\"img\" aria-label=\"充满、供液不足、气影响三种井下教学形状\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"365\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"30\" y=\"36\" font-size=\"22\" font-weight=\"600\">三种教学形状：看“如何卸载”，也看围成面积</text><path d=\"M50 253L262 253\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><path d=\"M50 253L50 83\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><path d=\"M60 248V98H255V248Z\" fill=\"#247f73\" fill-opacity=\".1\" stroke=\"#247f73\" stroke-width=\"4\"/><text x=\"55\" y=\"70\" >充满泵：近矩形</text><text x=\"120\" y=\"281\" >位移 / m →</text><path d=\"M340 253L552 253\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><path d=\"M340 253L340 83\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><path d=\"M350 248V98H545L463.1 98Q451.4 106 451.4 240Q447.5 248 433.85 248Z\" fill=\"#bf833b\" fill-opacity=\".1\" stroke=\"#bf833b\" stroke-width=\"4\"/><text x=\"345\" y=\"70\" >供液不足形：突然卸载</text><text x=\"410\" y=\"281\" >位移 / m →</text><path d=\"M630 253L842 253\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><path d=\"M630 253L630 83\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><path d=\"M640 248Q652 98 671.2 98H835Q753.1 243 640 248Z\" fill=\"#5a74ab\" fill-opacity=\".1\" stroke=\"#5a74ab\" stroke-width=\"4\"/><text x=\"635\" y=\"70\" >气影响形：渐进卸载</text><text x=\"700\" y=\"281\" >位移 / m →</text><text x=\"30\" y=\"329\" >载荷 / kN ↑；供液不足与气影响都可能降低充满程度，过渡形状有助于区分。</text></g></svg></div><figcaption>三幅图统一单位，仅为形状概念图。供液不足及气影响的过程依据 SLB 官方说明和 gas interference 词条。</figcaption></figure><p><b>地面图与井下图要区分：</b>地面测得的载荷还受杆柱弹性、摩擦及惯性影响。现场需要结合杆柱、泵速、流体等参数进行井下图换算。本演示直接生成井下泵功图，不实施地面到井下的波动方程换算。</p>"
+        },
+        {
+          "no": 3,
+          "en": "VISIBLE FEATURES",
+          "title": "图 B3｜面积很相似，形状仍可能不同",
+          "html": "<p>只看面积会把不同的卸载方式混在一起。模型读取实际测点，计算闭合面积比、四个冲程位置的载荷间距、下支均值、最大平滑斜率和过渡宽度。所有特征先用训练集均值与标准差缩放，再查找训练图中的近邻。</p><figure><h3>从实际曲线提取八项可见形状特征</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 330\" role=\"img\" aria-label=\"从实际曲线提取八项可见形状特征\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"330\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"30\" y=\"38\" font-size=\"22\" font-weight=\"600\">先归一化，再计算可解释的形状特征</text><path d=\"M58 244V97H378Q330 210 58 244Z\" fill=\"#d5e9df\" stroke=\"#227e74\" stroke-width=\"4\"/><path d=\"M126 97L126 236\" fill=\"none\" stroke=\"#c18e43\" stroke-width=\"3\" stroke-dasharray=\"5 4\"/><path d=\"M194 97L194 214\" fill=\"none\" stroke=\"#c18e43\" stroke-width=\"3\" stroke-dasharray=\"5 4\"/><path d=\"M262 97L262 180\" fill=\"none\" stroke=\"#c18e43\" stroke-width=\"3\" stroke-dasharray=\"5 4\"/><path d=\"M330 97L330 128\" fill=\"none\" stroke=\"#c18e43\" stroke-width=\"3\" stroke-dasharray=\"5 4\"/><text x=\"58\" y=\"285\" >不同冲程位置，上 / 下冲程的载荷间距</text><text x=\"470\" y=\"96\" >面积比 = 闭合面积 / (冲程 × 载荷跨度)</text><text x=\"470\" y=\"142\" >循环功 W = |∮ F dx|；kN·m = kJ</text><text x=\"470\" y=\"188\" >还读取卸载宽度、斜率和下支均值。</text><text x=\"470\" y=\"234\" >平移载荷零点，不应改变归一化形状。</text><text x=\"470\" y=\"280\" >循环功不能直接等同产液量。</text></g></svg></div><figcaption>面积由闭合多边形真实计算；原图面积以 kJ/循环显示，归一化面积比没有单位。</figcaption></figure>"
+        },
+        {
+          "no": 4,
+          "en": "MODEL & EVIDENCE",
+          "title": "让相似案例帮助解释，让独立井组检验结果",
+          "html": "<p>训练 18 口合成井、162 张图，验证 6 井、54 图，测试 8 井、72 图。每口井共享冲程、载荷尺度与基本形状参数，其循环变体全部留在同一集合。k 由验证集选择；模型与面积阈值基线共用 72 张测试图。拒判留在混淆矩阵的“待复核”列中，同时报告覆盖率和接受集错误率。</p><div class=\"sources\"><p>专业概念核对于 2026-10-24：</p><ul><li><a href=\"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-rod-pumps\" target=\"_blank\" rel=\"noopener\">SLB · Rod Pump Systems</a></li><li><a href=\"https://glossary.slb.com/en/terms/g/gas_interference\" target=\"_blank\" rel=\"noopener\">SLB · Gas interference</a></li><li><a href=\"https://glossary.slb.com/Terms/d/dynamometer_card.aspx\" target=\"_blank\" rel=\"noopener\">SLB · Dynamometer card</a></li><li><a href=\"https://hs.weatherford.com/knowledge/what-is-the-sucker-rod-pump-downhole-card-calculation-in-petrovisor\" target=\"_blank\" rel=\"noopener\">Weatherford · Downhole card calculation</a></li></ul><p>曲线是本例生成的三类教学形状。图形、模型、指标和导出均在浏览器本地完成。</p></div>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "从原始循环到可检查的形状判断",
+      "lead": [
+        "按井留出，先提取可见形状，再比较近邻与面积基线；模型原始结果和人工复核分开保存。"
+      ],
+      "stats": [
+        [
+          "训练",
+          "18 井 / 162 图"
+        ],
+        [
+          "验证",
+          "6 井 / 54 图"
+        ],
+        [
+          "测试",
+          "8 井 / 72 图"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "按井组织完整循环",
+          "role": "图 S1",
+          "do": "输入：一圈有序的位移与载荷点；动作：按独立井组划分训练、验证与测试，每井的全部循环变体放在同一集合。",
+          "effect": "18 / 6 / 8 个独立井组，194 点一圈，单位为 m 与 kN。",
+          "trap": "先明确井下泵功图类型；地面图不能直接套用这里的形状说明。"
+        },
+        {
+          "name": "归一化与提取形状",
+          "role": "图 S2",
+          "do": "输入：实际曲线点；动作：按自身位移和载荷跨度归一化，计算面积、支间距、卸载斜率等八项特征，再用训练统计量标准化。",
+          "effect": "可见的归一化曲线、面积比、循环功和八项特征。",
+          "trap": "零点平移不该变成工况特征；面积小也可能由多种机制引起。"
+        },
+        {
+          "name": "学习近邻与面积基线",
+          "role": "图 S3",
+          "do": "输入：162 张训练图的特征与类别；动作：学习特征尺度，验证选择 k=3/5/7/9，同时验证选择两个面积阈值。",
+          "effect": "冻结近邻库、k、域范围和阈值；每次展示真实最近邻。",
+          "trap": "按源井整体留出，测试图不改变训练尺度；支持度是投票占比。"
+        },
+        {
+          "name": "分类、拒判与同分母评价",
+          "role": "图 S4",
+          "do": "输入：72 张测试图可见点；动作：分别运行 kNN 与面积规则；近邻分散、形状距离过大或噪声过强时转复核。",
+          "effect": "带待复核列的混淆矩阵、宏 F1、各类召回、覆盖率和接受集错误率。",
+          "trap": "拒判仍保留在真值类别分母；全拒判时接受集错误率显示不适用。"
+        },
+        {
+          "name": "沿循环复核与导出",
+          "role": "图 S5",
+          "do": "输入：当前曲线、同步泵循环、近邻形状和模型结果；动作：拖动循环点，记录人工意见，导出当前 JSON。",
+          "effect": "观测、模型、评价与人工记录分开保存，带数据版本和来源。",
+          "trap": "改变输入撤销当前确认并使结果过期；人工意见不覆盖模型分数。"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤图解与指标口径",
+        "html": "<figure><h3>图 S1｜按井组织完整循环</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 330\" role=\"img\" aria-label=\"图 S1｜按井组织完整循环\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"330\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"30\" y=\"38\" font-size=\"22\" font-weight=\"600\">按井留出，保留每口井内部的循环相似性</text><rect x=\"36\" y=\"81\" width=\"240\" height=\"130\" rx=\"9\" fill=\"#d5e8df\"/><text x=\"52\" y=\"152.0\" >训练：18 井 / 162 图</text><text x=\"52\" y=\"190\" >每井三类 × 三圈</text><rect x=\"330\" y=\"81\" width=\"240\" height=\"130\" rx=\"9\" fill=\"#dce5ed\"/><text x=\"346\" y=\"152.0\" >验证：6 井 / 54 图</text><text x=\"346\" y=\"190\" >每井三类 × 三圈</text><rect x=\"624\" y=\"81\" width=\"240\" height=\"130\" rx=\"9\" fill=\"#f0e3cb\"/><text x=\"640\" y=\"152.0\" >测试：8 井 / 72 图</text><text x=\"640\" y=\"190\" >每井三类 × 三圈</text><text x=\"35\" y=\"263\" >同井共享冲程、载荷尺度、形状参数；整井分组，变体不跨集合。</text><text x=\"35\" y=\"304\" >一圈 194 个实际采样点：上冲程 97 点 + 下冲程 97 点。</text></g></svg></div><figcaption>输入与动作：输入：一圈有序的位移与载荷点；动作：按独立井组划分训练、验证与测试，每井的全部循环变体放在同一集合。 输出：18 / 6 / 8 个独立井组，194 点一圈，单位为 m 与 kN。</figcaption></figure><figure><h3>图 S2｜归一化与提取形状</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 330\" role=\"img\" aria-label=\"图 S2｜归一化与提取形状\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"330\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"30\" y=\"38\" font-size=\"22\" font-weight=\"600\">从可见载荷—位移曲线计算，不读取类别</text><path d=\"M48 248V90H286Q242 224 48 248Z\" fill=\"#cfe5da\" stroke=\"#267e73\" stroke-width=\"4\"/><text x=\"47\" y=\"285\" >原始单位：m、kN</text><rect x=\"355\" y=\"103\" width=\"220\" height=\"82\" rx=\"9\" fill=\"#e2eee9\"/><text x=\"371\" y=\"150.0\" >面积比 + 7 项形状</text><rect x=\"635\" y=\"103\" width=\"226\" height=\"82\" rx=\"9\" fill=\"#e2eee9\"/><text x=\"651\" y=\"150.0\" >训练均值 / 标准差</text><path d=\"M295 144L343 144\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><path d=\"M583 144L621 144\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><text x=\"354\" y=\"236\" >zⱼ = (xⱼ − μ训练,ⱼ) / σ训练,ⱼ</text><text x=\"354\" y=\"282\" >当前图仅变换，不重新拟合 μ 与 σ。</text></g></svg></div><figcaption>输入与动作：输入：实际曲线点；动作：按自身位移和载荷跨度归一化，计算面积、支间距、卸载斜率等八项特征，再用训练统计量标准化。 输出：可见的归一化曲线、面积比、循环功和八项特征。</figcaption></figure><figure><h3>图 S3｜学习近邻与面积基线</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 330\" role=\"img\" aria-label=\"图 S3｜学习近邻与面积基线\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"330\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"30\" y=\"38\" font-size=\"22\" font-weight=\"600\">最近的训练图，给出可检查的相似依据</text><circle cx=\"118\" cy=\"100\" r=\"10\" fill=\"#238577\"/><circle cx=\"194\" cy=\"130\" r=\"10\" fill=\"#238577\"/><circle cx=\"125\" cy=\"187\" r=\"10\" fill=\"#238577\"/><circle cx=\"315\" cy=\"190\" r=\"10\" fill=\"#c18a3d\"/><circle cx=\"355\" cy=\"230\" r=\"10\" fill=\"#c18a3d\"/><circle cx=\"260\" cy=\"90\" r=\"10\" fill=\"#5b76ac\"/><circle cx=\"177\" cy=\"163\" r=\"8\" fill=\"#e9b758\" stroke=\"#3d5356\" stroke-width=\"2\"/><circle cx=\"177\" cy=\"163\" r=\"68\" stroke=\"#668c85\" fill=\"none\" stroke-dasharray=\"5 5\"/><text x=\"40\" y=\"299\" >二维特征空间投影（概念图）</text><text x=\"453\" y=\"100\" >实际距离使用全部 8 个训练标准化特征。</text><text x=\"453\" y=\"149\" >近邻权重 w = 1 / (距离 + 0.08)</text><text x=\"453\" y=\"198\" >支持度 = 获胜类权重 / 全部近邻权重</text><text x=\"453\" y=\"254\" >用验证宏 F1 选 k；面积基线独立选阈值。</text></g></svg></div><figcaption>输入与动作：输入：162 张训练图的特征与类别；动作：学习特征尺度，验证选择 k=3/5/7/9，同时验证选择两个面积阈值。 输出：冻结近邻库、k、域范围和阈值；每次展示真实最近邻。</figcaption></figure><figure><h3>图 S4｜分类、拒判与同分母评价</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 330\" role=\"img\" aria-label=\"图 S4｜分类、拒判与同分母评价\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"330\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"30\" y=\"38\" font-size=\"22\" font-weight=\"600\">推理先完成，评价真值之后才进入指标</text><text x=\"93\" y=\"95\" font-size=\"16\">充满</text><rect x=\"80\" y=\"110\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#d0e4d9\"/><rect x=\"80\" y=\"159\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#e2ebe4\"/><rect x=\"80\" y=\"208\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#e2ebe4\"/><text x=\"177\" y=\"95\" font-size=\"16\">供液不足</text><rect x=\"164\" y=\"110\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#e2ebe4\"/><rect x=\"164\" y=\"159\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#d0e4d9\"/><rect x=\"164\" y=\"208\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#e2ebe4\"/><text x=\"261\" y=\"95\" font-size=\"16\">气影响</text><rect x=\"248\" y=\"110\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#e2ebe4\"/><rect x=\"248\" y=\"159\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#e2ebe4\"/><rect x=\"248\" y=\"208\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#d0e4d9\"/><text x=\"345\" y=\"95\" font-size=\"16\">待复核</text><rect x=\"332\" y=\"110\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#d2b77c\"/><rect x=\"332\" y=\"159\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#d2b77c\"/><rect x=\"332\" y=\"208\" width=\"78\" height=\"43\" rx=\"4\" fill=\"#d2b77c\"/><text x=\"48\" y=\"304\" >混淆矩阵保留待复核列（无预填成绩）</text><text x=\"466\" y=\"105\" >72 张测试图，两种方法用相同分母。</text><text x=\"466\" y=\"155\" >覆盖率 = 自动接受 / 72</text><text x=\"466\" y=\"205\" >接受集错误率 = 错误接受 / 自动接受</text><text x=\"466\" y=\"267\" >无接受样本 → 错误率不适用</text></g></svg></div><figcaption>输入与动作：输入：72 张测试图可见点；动作：分别运行 kNN 与面积规则；近邻分散、形状距离过大或噪声过强时转复核。 输出：带待复核列的混淆矩阵、宏 F1、各类召回、覆盖率和接受集错误率。</figcaption></figure><figure><h3>图 S5｜沿循环复核与导出</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 330\" role=\"img\" aria-label=\"图 S5｜沿循环复核与导出\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"330\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"30\" y=\"38\" font-size=\"22\" font-weight=\"600\">曲线上的点，对应泵循环中的位置</text><path d=\"M55 240V87H325Q280 221 55 240Z\" fill=\"#d4e8dd\" stroke=\"#237f73\" stroke-width=\"4\"/><circle cx=\"222\" cy=\"180\" r=\"9\" fill=\"#e5b25a\" stroke=\"#3d5356\" stroke-width=\"2\"/><path d=\"M336 164L402 164\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><rect x=\"418\" y=\"120\" width=\"210\" height=\"82\" rx=\"9\" fill=\"#e1e6d7\"/><text x=\"434\" y=\"167.0\" >人工意见 · 独立记录</text><path d=\"M639 164L682 164\" fill=\"none\" stroke=\"#7d9b94\" stroke-width=\"3\" /><rect x=\"694\" y=\"120\" width=\"168\" height=\"82\" rx=\"9\" fill=\"#e2eee9\"/><text x=\"710\" y=\"167.0\" >当前 JSON</text><text x=\"46\" y=\"293\" >位置滑块只移动观察点；噪声、零点、阈值变化则使结果过期。</text></g></svg></div><figcaption>输入与动作：输入：当前曲线、同步泵循环、近邻形状和模型结果；动作：拖动循环点，记录人工意见，导出当前 JSON。 输出：观测、模型、评价与人工记录分开保存，带数据版本和来源。</figcaption></figure>"
+      },
+      "fails": [
+        {
+          "name": "噪声淹没卸载特征",
+          "why": "高噪声改变面积与斜率，质量门槛将图转人工复核。"
+        },
+        {
+          "name": "面积近似、机制不同",
+          "why": "供液不足与气影响形可能面积重叠，需要卸载宽度及实际曲线。"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "intro": "切换教学工况，拖动泵循环、增加噪声或零点偏移，查看真实特征、训练近邻和 72 张独立测试图的评价。",
+      "height": 1200
+    }
+  }
+}

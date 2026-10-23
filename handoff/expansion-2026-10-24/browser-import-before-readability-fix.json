@@ -1,0 +1,2302 @@
+{
+  "scope": "Superseded import-only attempt before expansion readability fix. Not final browser acceptance.",
+  "reports": [
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "c1",
+      "caseId": "s17x-c1-cement-quality",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「固井质量智能评价」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:10.993Z",
+      "toast": "✓\n已添加「固井质量智能评价」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          }
+        ],
+        "storedCharacters": 648613
+      },
+      "checkedAt": "2026-10-23T16:48:12.175Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "co1",
+      "caseId": "s17x-co1-completion-choice",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「完井方式智能优选」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:13.699Z",
+      "toast": "✓\n已添加「完井方式智能优选」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          }
+        ],
+        "storedCharacters": 777785
+      },
+      "checkedAt": "2026-10-23T16:48:14.746Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "d1",
+      "caseId": "s17x-d1-rop-optimization",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「钻速预测与参数优化：从响应面到可行候选」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:47:56.490Z",
+      "toast": "✓\n已添加「钻速预测与参数优化：从响应面到可行候选」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          }
+        ],
+        "storedCharacters": 383403
+      },
+      "checkedAt": "2026-10-23T16:47:57.637Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "e1",
+      "caseId": "s17x-e1-fracture-optimization",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「压裂参数智能优化：在资源边界里比较候选」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:23.657Z",
+      "toast": "✓\n已添加「压裂参数智能优化：在资源边界里比较候选」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          }
+        ],
+        "storedCharacters": 1291431
+      },
+      "checkedAt": "2026-10-23T16:48:24.637Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "g1",
+      "caseId": "s17x-g1-remote-lithology",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「地质剖面遥感解译：从多波段像素读懂地表单元」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:47:50.811Z",
+      "toast": "✓\n已添加「地质剖面遥感解译：从多波段像素读懂地表单元」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          }
+        ],
+        "storedCharacters": 120064
+      },
+      "checkedAt": "2026-10-23T16:47:52.390Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "m1",
+      "caseId": "s17-cuttings-lithology",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「岩屑岩性自动识别：一盘岩屑的像素与证据」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:31.591Z",
+      "toast": "✓\n已添加「岩屑岩性自动识别：一盘岩屑的像素与证据」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "title": "管道泄漏智能检测：从正常关系到事件核查",
+            "sceneId": "t1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:26.375Z"
+          },
+          {
+            "id": "s17x-r5-quality-softsensor",
+            "title": "产品质量在线软测量：化验到来之前",
+            "sceneId": "r5",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:28.937Z"
+          },
+          {
+            "id": "s17-cuttings-lithology",
+            "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+            "sceneId": "m1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:31.976Z"
+          }
+        ],
+        "storedCharacters": 1793704
+      },
+      "checkedAt": "2026-10-23T16:48:32.853Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "m2",
+      "caseId": "s17-mudgas-context",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「气测异常智能解释：气峰背后的工况与迟到」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:34.324Z",
+      "toast": "✓\n已添加「气测异常智能解释：气峰背后的工况与迟到」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "title": "管道泄漏智能检测：从正常关系到事件核查",
+            "sceneId": "t1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:26.375Z"
+          },
+          {
+            "id": "s17x-r5-quality-softsensor",
+            "title": "产品质量在线软测量：化验到来之前",
+            "sceneId": "r5",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:28.937Z"
+          },
+          {
+            "id": "s17-cuttings-lithology",
+            "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+            "sceneId": "m1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:31.976Z"
+          },
+          {
+            "id": "s17-mudgas-context",
+            "title": "气测异常智能解释：气峰背后的工况与迟到",
+            "sceneId": "m2",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:34.624Z"
+          }
+        ],
+        "storedCharacters": 1986268
+      },
+      "checkedAt": "2026-10-23T16:48:35.437Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "m3",
+      "caseId": "s17-fluorescence-review",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「荧光图像智能判读：显示与来源分开核查」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:36.936Z",
+      "toast": "✓\n已添加「荧光图像智能判读：显示与来源分开核查」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "title": "管道泄漏智能检测：从正常关系到事件核查",
+            "sceneId": "t1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:26.375Z"
+          },
+          {
+            "id": "s17x-r5-quality-softsensor",
+            "title": "产品质量在线软测量：化验到来之前",
+            "sceneId": "r5",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:28.937Z"
+          },
+          {
+            "id": "s17-cuttings-lithology",
+            "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+            "sceneId": "m1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:31.976Z"
+          },
+          {
+            "id": "s17-mudgas-context",
+            "title": "气测异常智能解释：气峰背后的工况与迟到",
+            "sceneId": "m2",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:34.624Z"
+          },
+          {
+            "id": "s17-fluorescence-review",
+            "title": "荧光图像智能判读：显示与来源分开核查",
+            "sceneId": "m3",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:37.196Z"
+          }
+        ],
+        "storedCharacters": 2151299
+      },
+      "checkedAt": "2026-10-23T16:48:37.980Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "m4",
+      "caseId": "s17-drilltime-boundaries",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「钻时曲线地层划分：工况校正与候选响应段」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:39.427Z",
+      "toast": "✓\n已添加「钻时曲线地层划分：工况校正与候选响应段」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "title": "管道泄漏智能检测：从正常关系到事件核查",
+            "sceneId": "t1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:26.375Z"
+          },
+          {
+            "id": "s17x-r5-quality-softsensor",
+            "title": "产品质量在线软测量：化验到来之前",
+            "sceneId": "r5",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:28.937Z"
+          },
+          {
+            "id": "s17-cuttings-lithology",
+            "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+            "sceneId": "m1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:31.976Z"
+          },
+          {
+            "id": "s17-mudgas-context",
+            "title": "气测异常智能解释：气峰背后的工况与迟到",
+            "sceneId": "m2",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:34.624Z"
+          },
+          {
+            "id": "s17-fluorescence-review",
+            "title": "荧光图像智能判读：显示与来源分开核查",
+            "sceneId": "m3",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:37.196Z"
+          },
+          {
+            "id": "s17-drilltime-boundaries",
+            "title": "钻时曲线地层划分：工况校正与候选响应段",
+            "sceneId": "m4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:39.668Z"
+          }
+        ],
+        "storedCharacters": 2410063
+      },
+      "checkedAt": "2026-10-23T16:48:40.479Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "m5",
+      "caseId": "s17-evidence-report",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「录井报告自动生成：每句话都有当前证据」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:41.946Z",
+      "toast": "✓\n已添加「录井报告自动生成：每句话都有当前证据」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "title": "管道泄漏智能检测：从正常关系到事件核查",
+            "sceneId": "t1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:26.375Z"
+          },
+          {
+            "id": "s17x-r5-quality-softsensor",
+            "title": "产品质量在线软测量：化验到来之前",
+            "sceneId": "r5",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:28.937Z"
+          },
+          {
+            "id": "s17-cuttings-lithology",
+            "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+            "sceneId": "m1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:31.976Z"
+          },
+          {
+            "id": "s17-mudgas-context",
+            "title": "气测异常智能解释：气峰背后的工况与迟到",
+            "sceneId": "m2",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:34.624Z"
+          },
+          {
+            "id": "s17-fluorescence-review",
+            "title": "荧光图像智能判读：显示与来源分开核查",
+            "sceneId": "m3",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:37.196Z"
+          },
+          {
+            "id": "s17-drilltime-boundaries",
+            "title": "钻时曲线地层划分：工况校正与候选响应段",
+            "sceneId": "m4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:39.668Z"
+          },
+          {
+            "id": "s17-evidence-report",
+            "title": "录井报告自动生成：每句话都有当前证据",
+            "sceneId": "m5",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:42.222Z"
+          }
+        ],
+        "storedCharacters": 2771132
+      },
+      "checkedAt": "2026-10-23T16:48:43.025Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "p1",
+      "caseId": "s17x-p1-perforation-design",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「射孔参数优化：从试验响应到受约束候选」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:16.174Z",
+      "toast": "✓\n已添加「射孔参数优化：从试验响应到受约束候选」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          }
+        ],
+        "storedCharacters": 914038
+      },
+      "checkedAt": "2026-10-23T16:48:17.194Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "pr1",
+      "caseId": "s17x-pr1-pump-card",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「抽油机井工况诊断：从井下泵功图读形状」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:18.648Z",
+      "toast": "✓\n已添加「抽油机井工况诊断：从井下泵功图读形状」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          }
+        ],
+        "storedCharacters": 1045174
+      },
+      "checkedAt": "2026-10-23T16:48:19.707Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "r5",
+      "caseId": "s17x-r5-quality-softsensor",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「产品质量在线软测量：化验到来之前」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:28.634Z",
+      "toast": "✓\n已添加「产品质量在线软测量：化验到来之前」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "title": "管道泄漏智能检测：从正常关系到事件核查",
+            "sceneId": "t1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:26.375Z"
+          },
+          {
+            "id": "s17x-r5-quality-softsensor",
+            "title": "产品质量在线软测量：化验到来之前",
+            "sceneId": "r5",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:28.937Z"
+          }
+        ],
+        "storedCharacters": 1549517
+      },
+      "checkedAt": "2026-10-23T16:48:29.755Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "s1",
+      "caseId": "s17x-s1-seismic-fault",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「地震断层自动解释：沿波形不连续性寻找错断」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:47:53.825Z",
+      "toast": "✓\n已添加「地震断层自动解释：沿波形不连续性寻找错断」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          }
+        ],
+        "storedCharacters": 246616
+      },
+      "checkedAt": "2026-10-23T16:47:55.021Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "t1",
+      "caseId": "s17x-t1-pipeline-leak",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「管道泄漏智能检测：从正常关系到事件核查」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:26.104Z",
+      "toast": "✓\n已添加「管道泄漏智能检测：从正常关系到事件核查」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "title": "压裂参数智能优化：在资源边界里比较候选",
+            "sceneId": "e1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:23.890Z"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "title": "管道泄漏智能检测：从正常关系到事件核查",
+            "sceneId": "t1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:26.375Z"
+          }
+        ],
+        "storedCharacters": 1420115
+      },
+      "checkedAt": "2026-10-23T16:48:27.150Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "w4",
+      "caseId": "s17x-w4-log-lithology",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「测井岩性识别：多道曲线与可解释近邻」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:47:59.108Z",
+      "toast": "✓\n已添加「测井岩性识别：多道曲线与可解释近邻」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          }
+        ],
+        "storedCharacters": 507278
+      },
+      "checkedAt": "2026-10-23T16:48:00.196Z",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "scope": "Actual unmodified teacher folder import; no injected package storage",
+      "scene": "wo1",
+      "caseId": "s17x-wo1-workover-retrieval",
+      "checks": [
+        {
+          "name": "folder manifest loaded with correct scene",
+          "passed": true
+        },
+        {
+          "name": "actual teacher importer registers expected version",
+          "passed": true
+        },
+        {
+          "name": "teacher reports persistent storage rather than session-only import",
+          "passed": true,
+          "detail": "✓\n已添加「修井作业方案智能推荐：从井史找到有出处的候选」\n正在打开场景页…"
+        },
+        {
+          "name": "genuine imported ID appears in saved package list",
+          "passed": true
+        },
+        {
+          "name": "package survives page refresh",
+          "passed": true
+        },
+        {
+          "name": "no browser JavaScript exceptions",
+          "passed": true,
+          "detail": []
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:48:21.163Z",
+      "toast": "✓\n已添加「修井作业方案智能推荐：从井史找到有出处的候选」\n正在打开场景页…",
+      "saved": {
+        "items": [
+          {
+            "id": "s17x-g1-remote-lithology",
+            "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+            "sceneId": "g1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:51.497Z"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "title": "地震断层自动解释：沿波形不连续性寻找错断",
+            "sceneId": "s1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:54.171Z"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "title": "钻速预测与参数优化：从响应面到可行候选",
+            "sceneId": "d1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:56.829Z"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "title": "测井岩性识别：多道曲线与可解释近邻",
+            "sceneId": "w4",
+            "files": 4,
+            "savedAt": "2026-10-23T16:47:59.403Z"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "title": "固井质量智能评价",
+            "sceneId": "c1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:11.336Z"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "title": "完井方式智能优选",
+            "sceneId": "co1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:13.967Z"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "title": "射孔参数优化：从试验响应到受约束候选",
+            "sceneId": "p1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:16.414Z"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "title": "抽油机井工况诊断：从井下泵功图读形状",
+            "sceneId": "pr1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:18.900Z"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+            "sceneId": "wo1",
+            "files": 4,
+            "savedAt": "2026-10-23T16:48:21.444Z"
+          }
+        ],
+        "storedCharacters": 1160903
+      },
+      "checkedAt": "2026-10-23T16:48:22.229Z",
+      "passed": 6,
+      "failed": 0
+    }
+  ],
+  "count": 17,
+  "maxStoredCharacters": 2771132
+}

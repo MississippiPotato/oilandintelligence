@@ -1,0 +1,182 @@
+{
+  "scope": "Actual unmodified teacher folder import; no injected package storage",
+  "scene": "p1",
+  "caseId": "s17x-p1-perforation-design",
+  "checks": [
+    {
+      "name": "folder manifest loaded with correct scene",
+      "passed": true
+    },
+    {
+      "name": "actual teacher importer registers expected version",
+      "passed": true
+    },
+    {
+      "name": "teacher reports persistent storage rather than session-only import",
+      "passed": true,
+      "detail": "✓\n已添加「射孔参数优化：从试验响应到受约束候选」\n正在打开场景页…"
+    },
+    {
+      "name": "genuine imported ID appears in saved package list",
+      "passed": true
+    },
+    {
+      "name": "package survives page refresh",
+      "passed": true
+    },
+    {
+      "name": "no browser JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:10:09.774Z",
+  "toast": "✓\n已添加「射孔参数优化：从试验响应到受约束候选」\n正在打开场景页…",
+  "saved": {
+    "items": [
+      {
+        "id": "s17x-g1-remote-lithology",
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "sceneId": "g1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:55.220Z"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "title": "地震断层自动解释：沿波形不连续性寻找错断",
+        "sceneId": "s1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:57.729Z"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "sceneId": "d1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:00.183Z"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "title": "测井岩性识别：多道曲线与可解释近邻",
+        "sceneId": "w4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:02.625Z"
+      },
+      {
+        "id": "s17x-c1-cement-quality",
+        "title": "固井质量智能评价",
+        "sceneId": "c1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:05.097Z"
+      },
+      {
+        "id": "s17x-co1-completion-choice",
+        "title": "完井方式智能优选",
+        "sceneId": "co1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:07.541Z"
+      },
+      {
+        "id": "s17x-p1-perforation-design",
+        "title": "射孔参数优化：从试验响应到受约束候选",
+        "sceneId": "p1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:10.055Z"
+      }
+    ],
+    "storedCharacters": 906231
+  },
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "33dab68ae5893e5670a3734f09c94f113587fc2644b4544b1c2f7babf1bd1961",
+      "bytes": 23476
+    },
+    {
+      "path": "README.txt",
+      "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1",
+      "bytes": 3117
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787",
+      "bytes": 24834
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d",
+      "bytes": 93983
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72",
+      "bytes": 4501
+    }
+  ],
+  "checkedAt": "2026-10-23T17:10:10.861Z",
+  "passed": 6,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-p1-perforation-design",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 24838,
+        "sha256": "b927bda71b55694520b21fa727914b249200cdc6fe31037b3fad988b864ef033"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 24834,
+        "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 93983,
+        "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4501,
+        "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3117,
+        "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1"
+      }
+    ],
+    "manifestCanonicalSha256": "33dab68ae5893e5670a3734f09c94f113587fc2644b4544b1c2f7babf1bd1961",
+    "storedPackageMatchesDisk": true
+  }
+}

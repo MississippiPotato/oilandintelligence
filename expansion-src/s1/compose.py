@@ -1,0 +1,100 @@
+"""Author the self-contained seismic-fault lesson and native teacher manifest."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+
+
+def svg(label, content, height=310):
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 {height}" role="img" aria-label="{label}"><rect width="760" height="{height}" fill="#f9fbfb" rx="18"/><g font-family="system-ui,Microsoft YaHei,sans-serif" font-size="19" fill="#183a45">{content}</g></svg>'
+
+
+def figure(label, content, caption, height=310):
+    return '<figure>' + svg(label, content, height) + f'<figcaption>{caption}</figcaption></figure>'
+
+
+B1 = figure('断层两侧地层错动在地震同相轴上的表达', '''
+<text x="35" y="37" font-weight="700">地质体：同一地层发生错动</text><path d="M35 75h150l-30 180H35z" fill="#d5b784"/><path d="M185 75h150v180H155z" fill="#e6d7b5"/>
+<path d="M35 119h142m-142 46h135m-135 44h128" stroke="#7f8d8f" stroke-width="15"/><path d="M182 151h153m-160 45h160m-168 44h168" stroke="#7f8d8f" stroke-width="15"/>
+<path d="M185 66l-31 200" stroke="#c3614e" stroke-width="5"/><path d="M257 96v32m-6-10l6 10 6-10" fill="none" stroke="#a15c44" stroke-width="3"/>
+<text x="37" y="289">断层迹线与层位错断相互印证</text>
+<text x="405" y="37" font-weight="700">地震剖面：反射波形改变位置</text><path d="M407 74v185h310" fill="none" stroke="#8aa2ad"/>
+<g fill="none" stroke="#537c90" stroke-width="4"><path d="M420 105q50-15 102 0m22 30q70-10 158 2"/><path d="M420 151q50-15 95 0m21 28q75-8 166 3"/><path d="M420 196q50-14 88 0m22 28q75-8 172 2"/></g>
+<path d="M530 73l-23 175" stroke="#c3614e" stroke-width="3" stroke-dasharray="7 5"/><text x="445" y="287">横轴：地表距离；纵轴：双程时间 ↓</text>''', '反射地震记录声阻抗变化产生的波形。断层使同相轴连续性发生变化，解释时需要连同层位和其他证据一起核查。图示为概念图，不按比例。')
+
+B2 = figure('用相邻地震道的局部波形相似度度量连续性', '''
+<text x="35" y="38" font-weight="700">连续区：左右波形相近</text><text x="416" y="38" font-weight="700">错断区：峰谷位置不再对齐</text>
+<rect x="37" y="65" width="280" height="143" rx="12" fill="#e7f1f0"/><rect x="418" y="65" width="280" height="143" rx="12" fill="#f5e8dd"/>
+<path d="M48 138q20 0 30-35t25 0 25 35 25-35 25 0 25 35 25-35 25 0 25 35" fill="none" stroke="#2c63ae" stroke-width="4"/>
+<path d="M48 149q20 0 30-35t25 0 25 35 25-35 25 0 25 35 25-35 25 0 25 35" fill="none" stroke="#087f83" stroke-width="3" stroke-dasharray="7 4"/>
+<path d="M429 138q20 0 30-35t25 0 25 35 25-35 25 0 25 35 25-35 25 0 25 35" fill="none" stroke="#2c63ae" stroke-width="4"/>
+<path d="M429 149q35 0 43 35t25 0 25-35 25 35 25 0 25-35 25 35 25 0 25-35" fill="none" stroke="#087f83" stroke-width="3" stroke-dasharray="7 4"/>
+<text x="43" y="247">D = (1 − 局部相关系数) / 2</text><text x="420" y="247">D越大，左右道差异越大</text><text x="43" y="283">不连续性只是特征：噪声、缺道和地层变化也会产生响应。</text>''', '本案例用9采样点局部相关计算D，并增加水平差异、移位匹配与纵向持续性等观测特征。图上波形用于说明关系，真实特征由剖面数组计算。')
+
+B3 = figure('小断距高噪声和缺道对断层解释的三种影响', '''
+<text x="34" y="39" font-weight="700">三个不同原因，会让“断层线”变难看清</text>
+<rect x="35" y="65" width="210" height="137" rx="11" fill="#e4edf1"/><rect x="275" y="65" width="210" height="137" rx="11" fill="#e4edf1"/><rect x="515" y="65" width="210" height="137" rx="11" fill="#e4edf1"/>
+<g stroke="#678494" fill="none" stroke-width="3"><path d="M45 96h85m10 7h93M45 129h80m10 7h98M45 163h75m10 7h103"/><path d="M284 98l12-10 12 16 12-8 12 6 12-12 12 9 12-4 12 8 12-11 12 8 12-6 12 8 12-6 12 4M284 133l12-8 12 14 12-12 12 11 12-11 12 8 12-5 12 7 12-8 12 5 12-3 12 7 12-5 12 3M284 168l12-9 12 16 12-10 12 7 12-12 12 8 12-4 12 8 12-8 12 6 12-7 12 9 12-6 12 4"/><path d="M525 98h190M525 132h190M525 167h190"/></g>
+<rect x="594" y="65" width="45" height="137" fill="#d7dddf"/><path d="M602 74l29 118m-29-75l29 75m-29-113l29 113" stroke="#a3afb4"/>
+<text x="40" y="241">小断距：位移接近采样尺度</text><text x="282" y="273">高噪声：假不连续</text><text x="526" y="241">缺道：没有可用观测</text>''', '时间采样间隔为4 ms；断距控制在本合成剖面中表示反射轴的双程时间位移。缺道单独标灰并拒判，仍保留在预先固定的评价区域分母中。')
+
+steps = [
+    dict(name='按独立剖面建立数据集', role='数据', do='输入：二维振幅剖面、采样间隔和人工解释带。动作：8条独立剖面训练、2条验证，另生成独立测试剖面，见图 S1。', effect='产物：84×72测试观测、缺失掩码与独立评价参考；双程时间由上至下增加。', trap='同一剖面切出的相邻patch必须同组；断距以时间采样点表达，不能直接换算成米。'),
+    dict(name='计算局部波形与方向特征', role='特征', do='输入：振幅和可见缺失掩码。动作：计算局部不连续性、移位相关改善、水平/垂向差异、能量与纵向持续性，共9维，见图 S2。', effect='产物：每个像素的观测特征与缺失比例；不读取合成器的断层坐标。', trap='缺道不能当零振幅的正常地层；波形不连续也不唯一指向断层。'),
+    dict(name='真实拟合小型逻辑回归', role='学习', do='输入：训练剖面的标注像素。动作：仅训练组标准化，用240轮梯度下降拟合正则逻辑回归，见图 S3。', effect='产物：可查看的真实损失曲线、9个特征系数与测试得分图。', trap='类别采样经过平衡，得分是模型支持度；不是校准的现场断层概率。'),
+    dict(name='独立验证选择检测阈值', role='验证', do='输入：两条验证剖面的独立标注。动作：实算候选阈值的断层带F1；不连续性阈值基线也在相同验证组选择，见图 S4。', effect='产物：两个冻结的默认阈值；演示中的阈值偏移只用于测试探索。', trap='不能根据测试参考自动挑最佳阈值，也不能用参考迹线连通模型结果。'),
+    dict(name='提取迹线，点选证据复核', role='解释', do='输入：测试得分图。动作：逐时间行取高于阈值的最大得分位置；同区域计算像素IoU与±2道迹线F1，再记录独立人工意见，见图 S5。', effect='产物：原始迹线、参考对照、错误定位、复核点与JSON结果。', trap='缺失区拒判会影响召回；人工点位不改写模型原成绩，空分母显示不适用。')
+]
+
+S = [
+    figure('地震剖面组训练验证测试留出', '''<text x="35" y="42" font-weight="700">以整条独立合成剖面为分组单位</text><rect x="36" y="76" width="319" height="95" rx="12" fill="#dcece7"/><text x="58" y="113">训练 8条</text><text x="58" y="148">不同构造、波形与噪声</text><rect x="373" y="76" width="157" height="95" rx="12" fill="#e5edf7"/><text x="390" y="113">验证 2条</text><text x="390" y="148">固定阈值</text><rect x="548" y="76" width="174" height="95" rx="12" fill="#f6e9d4"/><text x="565" y="113">测试 1条</text><text x="565" y="148">独立生成</text><text x="35" y="223">观测：振幅 + 缺失掩码　　评价：参考断层带 + 参考迹线</text>''', '输入：剖面来源ID；动作：按组划分；产物：互不重叠的训练、验证与测试。', 265),
+    figure('局部窗口与多方向特征提取', '''<g fill="#e4edf1" stroke="#a1b5be"><rect x="35" y="42" width="220" height="190" rx="11"/><path d="M45 80h200M45 113h200M45 147h200M45 181h200"/></g><rect x="112" y="97" width="67" height="70" fill="#087f83" fill-opacity=".15" stroke="#087f83" stroke-width="3"/><path d="M146 107v49m-23-24h46" stroke="#087f83" stroke-width="3"/><text x="290" y="63">9点左右道相关 → 不连续性 D</text><text x="290" y="104">带移位相关 → 位移线索</text><text x="290" y="145">水平 / 垂向差异 → 方向线索</text><text x="290" y="186">纵向持续性 + 能量 + 缺失比例</text><text x="35" y="276">所有特征由振幅观测算出，评价参考不进入特征函数。</text>''', '输入：局部振幅窗口；动作：提取9维描述；产物：可点选解释的特征向量。'),
+    figure('训练组标准化与逻辑回归梯度下降', '''<rect x="32" y="48" width="193" height="143" rx="12" fill="#e4edf1"/><text x="53" y="87">训练特征 x</text><text x="53" y="126">训练标注 y</text><text x="53" y="165">均值 μ / 标准差 σ</text><path d="M244 116h52" stroke="#648b96" stroke-width="3"/><rect x="315" y="48" width="183" height="143" rx="12" fill="#dcece7"/><text x="336" y="88">240轮梯度更新</text><text x="336" y="130">二元交叉熵</text><text x="336" y="168">L2 正则项</text><path d="M516 116h46" stroke="#648b96" stroke-width="3"/><rect x="581" y="48" width="145" height="143" rx="12" fill="#f6e9d4"/><text x="600" y="91">权重 w</text><text x="600" y="137">得分图 s</text><text x="34" y="247">s = sigmoid(w₀ + Σ wⱼ zⱼ)；运行后查看真实训练损失。</text>''', '输入：仅训练组的带标签像素；动作：优化损失；产物：学习系数和真实下降曲线。', 280),
+    figure('模型和基线使用同一验证剖面选择阈值', '''<text x="35" y="42" font-weight="700">在验证集选阈值，在测试集比较结果</text><rect x="36" y="76" width="230" height="99" rx="11" fill="#e5edf7"/><text x="56" y="114">两条验证剖面</text><text x="56" y="152">参考断层带</text><path d="M282 124h52" stroke="#648b96" stroke-width="3"/><rect x="350" y="76" width="179" height="99" rx="11" fill="#dcece7"/><text x="370" y="114">逻辑回归阈值</text><text x="370" y="152">不连续性阈值</text><path d="M545 124h39" stroke="#648b96" stroke-width="3"/><rect x="599" y="76" width="126" height="99" rx="11" fill="#f6e9d4"/><text x="617" y="114">锁定</text><text x="617" y="152">测试</text><text x="35" y="230">F1 = 2TP / (2TP + FP + FN)；候选曲线由真实验证结果绘制。</text>''', '输入：验证得分和参考；动作：扫描阈值；产物：冻结的默认配置。', 270),
+    figure('断层带IoU与迹线容差F1的不同分母', '''<rect x="35" y="47" width="264" height="145" rx="9" fill="#e7edf0"/><path d="M172 50l-22 139" stroke="#c3614e" stroke-width="29" opacity=".45"/><path d="M177 51l-22 139" stroke="#087f83" stroke-width="11"/><text x="43" y="227">断层带：逐像素 TP / FP / FN</text><rect x="398" y="47" width="323" height="145" rx="9" fill="#e7edf0"/><path d="M563 49l-21 141" stroke="#c99655" stroke-width="3" stroke-dasharray="7 5"/><path d="M571 49l-17 141" stroke="#087f83" stroke-width="4"/><path d="M529 127h52" stroke="#637c8c" stroke-width="2"/><text x="412" y="227">迹线：同一时间行，允许 ±2道</text><text x="35" y="279">每行最多一个模型点；人工复核点单独导出，不改写原迹线。</text>''', '输入：模型输出与独立参考；动作：按固定区域与行容差评价；产物：带IoU和迹线F1。')
+]
+
+manifest = {
+    'id': 's17x-s1-seismic-fault', 'sceneId': 's1', 'methods': ['cv'], 'title': '地震断层自动解释：沿波形不连续性寻找错断', 'version': '1.0.0', 'updated': '2026-10-24',
+    'tabs': {
+        'background': {'label': '专业背景', 'lede': '地震剖面上的层位为什么会错开？把地质错动、反射波形和局部不连续性连起来，再理解模型如何为解释提供候选。', 'judge': [
+            {'label': '专业任务', 'value': '二维断层带与迹线', 'desc': '层位错断候选解释'},
+            {'label': '实际方法', 'value': '9维逻辑回归', 'desc': '对照局部不连续性阈值'},
+            {'label': '默认数据', 'value': '独立合成剖面', 'desc': '84道×72采样点，4 ms/点'},
+            {'label': '人工工作', 'value': '点选证据复核', 'desc': '看波形、缺道与候选迹线'}
+        ], 'sections': [
+            {'no': 1, 'en': 'FAULT', 'title': '图 B1｜地层错动，怎样出现在地震剖面？', 'html': '<p>断层让地层两侧产生相对位移。反射同相轴的错断、终止与连续性变化，是解释人员识别断层的线索。</p>' + B1},
+            {'no': 2, 'en': 'CONTINUITY', 'title': '图 B2｜让“看起来不连续”变成可计算特征', 'html': '<p>比较相邻地震道的局部波形，可以量化相似程度。模型再组合方向和持续性特征，帮助减少单阈值的部分误报。</p>' + B2},
+            {'no': 3, 'en': 'RESOLUTION', 'title': '图 B3｜断距、噪声与缺道，各自改变了什么？', 'html': '<p>一个得分高的像素只是一条解释线索。小位移可能难以分辨，高噪声可能制造假不连续，缺道则意味着没有可用观测。</p>' + B3}
+        ]},
+        'workflow': {'label': '案例流程', 'title': '从局部波形，到带证据的断层候选', 'lead': ['整条剖面留出，真实拟合小型分类器，验证选择阈值，再逐行提取候选迹线。'], 'stats': [['训练剖面', '8'], ['验证剖面', '2'], ['评价像素', '4368']], 'steps': steps, 'metrics': {'title': '逐步图册与评价口径', 'html': ''.join(f'<h3>图 S{i+1}｜{steps[i]["name"]}</h3>{fig}' for i, fig in enumerate(S)) + '<p>固定评价区为第8–63行、第3–80道，共4368像素；缺道仍留在总分母，缺道处真实断层像素计漏检。迹线逐行最多一个候选，与该行参考距离≤2道算匹配；无参考且无候选时F1不适用。</p>'}, 'fails': [{'name': '小断距叠加缺道', 'why': '可见错断变弱且观测中断，缺失区域不能补成高支持度迹线。'}, {'name': '无断层高噪声', 'why': '检验假不连续是否被误解释为断层；无阳性且无预测时评价分母为空。'}]},
+        'demo': {'mode': 'page', 'html': 'demo/index.html', 'js': 'demo/demo.js', 'label': '可运行示范', 'height': 1150, 'intro': '改变时间断距、噪声和缺道，真实训练并对照解释。点选波形、保存人工复核点并导出。'}
+    }
+}
+ROOT.joinpath('case.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+background = ''.join(f'<article class="lesson"><div><div class="no">B0{i+1} / CONCEPT</div><h2>{s["title"].split("｜",1)[1]}</h2>{s["html"].split("<figure>")[0]}</div><div>{s["html"][s["html"].index("<figure>"):]}</div></article>' for i, s in enumerate(manifest['tabs']['background']['sections']))
+workflow = '<div class="workflow-layout"><nav class="step-nav" aria-label="流程步骤">' + ''.join(f'<button type="button" data-step="{i}" aria-selected="{str(i == 0).lower()}">{i+1:02d}　{s["name"]}</button>' for i, s in enumerate(steps)) + '</nav><div>'
+for i, s in enumerate(steps):
+    workflow += f'<article class="step-body" data-step-panel="{i}"{(" hidden" if i else "")}><div class="eyebrow" style="color:#087f83">STEP {i+1:02d} / {s["role"]}</div><h2>{s["name"]}</h2><dl class="io-list"><dt>输入·动作</dt><dd>{s["do"]}</dd><dt>产物</dt><dd>{s["effect"]}</dd><dt>关键点</dt><dd>{s["trap"]}</dd></dl><div class="step-figure">{S[i]}</div><div class="step-controls"><button data-prev="{i}" type="button"{(" disabled" if i == 0 else "")}>← 上一步</button><button data-next="{i}" type="button">{("去运行示范 →" if i == 4 else "下一步 →")}</button></div></article>'
+workflow += '</div></div>'
+lab = '''
+<div class="intro"><h2>断层在哪里？让波形给出证据</h2><p>改变反射轴位移、噪声和缺道，让同一条测试剖面对照两种检测方法。点选任意位置，检查局部波形与模型依据。</p></div>
+<p class="data-note">教学合成剖面 · 84道 × 72采样点 · 道间距25 m · 时间采样4 ms · 双程时间800–1084 ms</p>
+<div class="controls"><label class="control" for="throw">反射轴时间位移 <output id="throw-value">24 ms</output><input id="throw" type="range" min="0" max="10" step="1" value="6"></label><label class="control" for="noise">噪声幅度 <output id="noise-value">0.10</output><input id="noise" type="range" min="0" max="0.4" step="0.01" value="0.1"></label><label class="control" for="gap">缺道宽度控制 <output id="gap-value">0%</output><input id="gap" type="range" min="0" max="0.24" step="0.01" value="0"></label><label class="control" for="threshold">检测阈值探索偏移 <output id="threshold-value">+0.00</output><input id="threshold" type="range" min="-0.4" max="0.08" step="0.02" value="0"></label></div>
+<div class="action-row"><button id="run" class="primary" type="button">运行断层识别与比较</button><button id="reset" type="button">恢复默认</button><button id="preset-fail" type="button">小断距 + 噪声 + 缺道</button><button id="preset-none" type="button">查看无断层情景</button><button id="new-scene" type="button">换一条独立剖面</button><button id="export" type="button" disabled>导出本次JSON</button></div>
+<p id="status" class="status" role="status" aria-live="polite" data-state="idle">点击运行，提取特征、拟合模型并解释当前剖面。</p>
+<div class="view-tools"><label><input id="show-truth" type="checkbox" checked>叠加参考迹线（虚线）</label><label>第三幅图 <select id="comparison-view"><option value="baseline">不连续性阈值基线</option><option value="error">模型错误与缺失图</option><option value="reference">参考断层带</option></select></label></div>
+<div class="maps" id="maps"><figure class="map"><h3>01　反射振幅剖面</h3><canvas id="seismic-map" width="672" height="576" tabindex="0" role="img" aria-label="可点选的地震振幅剖面与候选断层迹线"></canvas><figcaption>横轴距离：0–2075 m →；纵轴双程时间：800–1084 ms ↓</figcaption></figure><figure class="map"><h3>02　学习模型得分</h3><canvas id="score-map" width="672" height="576" tabindex="0" role="img" aria-label="逻辑回归断层支持度热图"></canvas><figcaption>深蓝低得分 → 青绿 → 金黄高得分；灰色为缺失观测</figcaption></figure><figure class="map"><h3 id="third-title">03　不连续性阈值基线</h3><canvas id="comparison-map" width="672" height="576" tabindex="0" role="img" aria-label="基线检测或错误对照图"></canvas><figcaption id="third-caption">同一剖面与固定评价区域；实线候选，金色虚线参考</figcaption></figure></div>
+<div class="legend"><span><i class="swatch" style="--sw:#087f83"></i>模型候选实线</span><span><i class="swatch" style="--sw:#c99655"></i>参考虚线</span><span><i class="swatch" style="--sw:#d6dddf"></i>缺失 / 拒判</span><span><i class="swatch" style="--sw:#c1644d"></i>误报 / 漏检</span></div>
+<div id="metrics" class="metrics"><p class="empty">运行后显示真实比较指标。</p></div>
+<div class="analysis"><div><h3>点选位置，看左右波形</h3><div class="coord"><label>道 x <input id="px" type="number" min="3" max="80" value="44"></label><label>采样 y <input id="py" type="number" min="8" max="63" value="36"></label></div><div id="pixel-info"><p class="empty">选中位置的得分、不连续性和缺失状态。</p></div><div id="waveform"></div></div><div><h3>为什么这个位置得分高？</h3><div id="feature-chart"></div><p id="review-info" class="explain">可保存当前点为“待核查断层点”，或标记该时间行的模型点需要删除。意见独立于模型输出。</p><div class="review-row"><select id="review-kind" aria-label="人工复核动作"><option value="add-point">记录当前点为候选</option><option value="remove-row">标记该行候选应删除</option><option value="needs-review">标记该位置待核查</option></select><button id="review" type="button" disabled>保存复核意见</button></div><p id="review-log" class="review-log">本次尚无人工复核点。</p></div></div>
+<h3 class="section-heading">同一评价区域，两种解释</h3><div id="comparison-table" class="table-wrap"><p class="empty">运行后显示TP、FP、FN和迹线匹配数。</p></div>
+<p class="explain">评价区固定为第8–63行、第3–80道，共4368像素。IoU = TP/(TP+FP+FN)；F1 = 2TP/(2TP+FP+FN)。迹线在同一时间行内与参考相差≤2道（50 m）算一次匹配，每行最多一个候选。缺道保留在分母；没有参考和候选时F1显示“不适用”。</p>
+<details><summary>真实训练曲线、验证选参和来源划分</summary><div id="provenance"></div><div class="analysis"><div><h3>训练损失</h3><div id="loss-chart"></div></div><div><h3>验证阈值比较</h3><div id="validation-chart"></div></div></div><div id="weights" class="table-wrap"></div></details>
+'''
+html = f'''<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{manifest['title']}</title><link rel="stylesheet" href="demo.css"></head><body>
+<header><div class="eyebrow">SEISMIC / S1 / 物探</div><h1>沿波形不连续性，寻找地层错断</h1><p>从地质构造到反射剖面，再到可点选、可比较、可复核的断层候选。</p></header><nav class="case-nav" aria-label="案例内容"><button type="button" data-tab="background" aria-selected="true">专业背景</button><button type="button" data-tab="workflow" aria-selected="false">案例流程</button><button type="button" data-tab="lab" aria-selected="false">可运行示范</button></nav>
+<main><section id="background" class="pane"><div class="intro"><h2>先看懂剖面：一条断层，改变了哪些波形？</h2><p>地质错动、波形连续性与解释分辨率，分别用一张图说明。</p></div>{background}<div class="sources"><b>专业依据</b>：<a href="https://wiki.seg.org/wiki/Semblance,_coherence,_and_other_discontinuity_attributes" target="_blank" rel="noopener">SEG：不连续性属性教程</a>；<a href="https://www.aapg.org/news-and-media/explorer/is-it-a-subtle-fault-or-just-noise/" target="_blank" rel="noopener">AAPG：细小断层与噪声的辨别</a>。本案例使用自绘图和自行生成的合成剖面，不含真实测区数据。</div></section><section id="workflow" class="pane" hidden><div class="intro"><h2>五步，形成有证据的解释候选</h2><p>学习模型多用了哪些观测，在哪一步仍需要人工判断？</p></div>{workflow}</section><section id="lab" class="pane" hidden>{lab}</section><footer>井见 · 物探案例　|　纯前端本地计算　|　固定评价区域，原模型与人工意见分开留存</footer></main><script src="demo.js"></script></body></html>'''
+ROOT.joinpath('demo.html').write_text(html, encoding='utf-8')
+sources = {'sceneId': 's1', 'checked': '2026-10-24', 'data': {'nature': 'procedural teaching synthetic', 'shape': [72, 84], 'traceSpacing_m': 25, 'sampleInterval_ms': 4, 'forwardModel': 'Ricker-like wavelet responses at wavy reflectors with a two-block time displacement, independent noise and missing observations.', 'reference': 'Fault band within 1.5 traces of generated fault; one centerline point for each of 56 evaluation rows.', 'split': {'train': [131,173,211,257,293,337,379,419], 'validation': [701,751], 'defaultTest': 2029}}, 'sources': [{'url': 'https://wiki.seg.org/wiki/Semblance,_coherence,_and_other_discontinuity_attributes', 'organization': 'Society of Exploration Geophysicists', 'supports': 'Local trace waveform discontinuity attributes highlight faults and stratigraphic differences; similarity alone does not identify cause.'}, {'url': 'https://www.aapg.org/news-and-media/explorer/is-it-a-subtle-fault-or-just-noise/', 'organization': 'AAPG', 'supports': 'Faults break seismic horizon continuity; coherence and original amplitude should be interpreted together.'}], 'method': '9-feature regularized logistic regression, genuinely optimized for 240 iterations; not a pretrained deep model.', 'artwork': 'Original SVG and generated amplitude arrays; no copied reference screenshots.'}
+ROOT.joinpath('sources.json').write_text(json.dumps(sources, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

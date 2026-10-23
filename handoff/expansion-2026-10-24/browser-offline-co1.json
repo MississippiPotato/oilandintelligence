@@ -1,0 +1,198 @@
+{
+  "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+  "scene": "co1",
+  "caseId": "s17x-co1-completion-choice",
+  "checks": [
+    {
+      "name": "offline background graphics render",
+      "passed": true
+    },
+    {
+      "name": "offline workflow graphics render in selected step or static gallery",
+      "passed": true,
+      "detail": {
+        "stepControls": 5,
+        "visibleSvg": 1
+      }
+    },
+    {
+      "name": "offline local model produces metrics",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant defaults to the requested compact phone panel",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700
+      }
+    },
+    {
+      "name": "offline assistant navigates to real workflow",
+      "passed": true
+    },
+    {
+      "name": "390px viewport has no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 17,
+        "paragraphs": [
+          {
+            "font": 16,
+            "class": "small"
+          }
+        ],
+        "mainParagraphs": []
+      }
+    },
+    {
+      "name": "body and main explanatory paragraphs are at least 17px",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 17,
+        "paragraphs": [
+          {
+            "font": 16,
+            "class": "small"
+          }
+        ],
+        "mainParagraphs": []
+      }
+    },
+    {
+      "name": "mobile run and reset controls are reachable",
+      "passed": true
+    },
+    {
+      "name": "mobile assistant composer and send control fit viewport with 18px input",
+      "passed": true,
+      "detail": {
+        "left": 6,
+        "right": 384,
+        "top": 6,
+        "bottom": 838,
+        "inputFont": 18,
+        "send": {
+          "left": 324,
+          "right": 357,
+          "top": 739.40625,
+          "bottom": 785.40625
+        }
+      }
+    },
+    {
+      "name": "file offline path makes zero HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no JavaScript exceptions offline",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:05:09.372Z",
+  "workflow": {
+    "stepControls": 5,
+    "visibleSvg": 1
+  },
+  "metrics": {
+    "total": 32,
+    "feasibleWellCount": 32,
+    "model": {
+      "recommended": 32,
+      "matched": 31,
+      "violations": 0,
+      "coverage": 1,
+      "top1Agreement": 0.96875,
+      "regret": 0.0294595160361395,
+      "regretTotal": 0.942704513156464
+    },
+    "baseline": {
+      "recommended": 21,
+      "matched": 18,
+      "violations": 0,
+      "excludedRaw": 11,
+      "coverage": 0.65625,
+      "top1Agreement": 0.8571428571428571,
+      "regret": 0.15760121616378747,
+      "regretTotal": 3.309625539439537
+    },
+    "surrogateMAE": 2.8058105435190632,
+    "surrogateDenominator": 128
+  },
+  "assistant": {
+    "width": 410,
+    "height": 700
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390,
+    "body": 390,
+    "font": 17,
+    "paragraphs": [
+      {
+        "font": 16,
+        "class": "small"
+      }
+    ],
+    "mainParagraphs": []
+  },
+  "mobileAssistant": {
+    "left": 6,
+    "right": 384,
+    "top": 6,
+    "bottom": 838,
+    "inputFont": 18,
+    "send": {
+      "left": 324,
+      "right": 357,
+      "top": 739.40625,
+      "bottom": 785.40625
+    }
+  },
+  "checkedAt": "2026-10-23T17:05:10.407Z",
+  "passed": 11,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-co1-completion-choice",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 21930,
+        "sha256": "3526554dd5fee424602f98eafcfeaa7bdb7e07d83c09663c7f388668bd133d04"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25863,
+        "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 83477,
+        "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 7323,
+        "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1233,
+        "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+      }
+    ],
+    "storedPackageMatchesDisk": null
+  }
+}

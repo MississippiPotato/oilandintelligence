@@ -1,0 +1,301 @@
+{
+  "kind": "Targeted real-browser verification of final BUILD_READY_3 display and assistant-bundle changes",
+  "checkedAt": "2026-10-23T17:02:52.959Z",
+  "checks": [
+    {
+      "name": "c1 concept diagrams preserve 880px original size with local scrolling",
+      "status": "passed"
+    },
+    {
+      "name": "c1 workflow preserves original text size without page overflow",
+      "status": "passed"
+    },
+    {
+      "name": "c1 full-size 760px Canvas stays inside its own scroll area",
+      "status": "passed"
+    },
+    {
+      "name": "c1 latest assistant actually opens and fits the narrow viewport",
+      "status": "passed"
+    },
+    {
+      "name": "c1 closing assistant preserves current calculation",
+      "status": "passed"
+    },
+    {
+      "name": "c1 final desktop body stays 18px",
+      "status": "passed"
+    },
+    {
+      "name": "c1 latest assistant bundle preserves offline file computation",
+      "status": "passed"
+    },
+    {
+      "name": "co1 concept diagrams preserve 880px original size with local scrolling",
+      "status": "passed"
+    },
+    {
+      "name": "co1 workflow preserves original text size without page overflow",
+      "status": "passed"
+    },
+    {
+      "name": "co1 full-size 760px Canvas stays inside its own scroll area",
+      "status": "passed"
+    },
+    {
+      "name": "co1 latest assistant actually opens and fits the narrow viewport",
+      "status": "passed"
+    },
+    {
+      "name": "co1 closing assistant preserves current calculation",
+      "status": "passed"
+    },
+    {
+      "name": "co1 final desktop body stays 18px",
+      "status": "passed"
+    },
+    {
+      "name": "co1 latest assistant bundle preserves offline file computation",
+      "status": "passed"
+    },
+    {
+      "name": "Latest build has no JavaScript page exceptions",
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "passed": 15,
+    "failed": 0
+  },
+  "measurements": [
+    {
+      "sceneId": "c1",
+      "background": {
+        "width": 356,
+        "scroll": 880,
+        "svg": 880
+      },
+      "flow": {
+        "width": 316,
+        "scroll": 880,
+        "svg": 880
+      },
+      "canvas": {
+        "width": 760,
+        "parentWidth": 316,
+        "parentScroll": 760
+      },
+      "desktopFontSize": 18,
+      "httpMetrics": {
+        "model": {
+          "total": 192,
+          "correct": 180,
+          "accepted": 187,
+          "rejected": 5,
+          "macroF1": 0.9498812648418947,
+          "coverage": 0.9739583333333334,
+          "acceptedError": 0.03743315508021394,
+          "recalls": [
+            0.9375,
+            0.90625,
+            0.96875
+          ],
+          "confusion": [
+            [
+              60,
+              4,
+              0,
+              0
+            ],
+            [
+              3,
+              58,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              62,
+              2
+            ]
+          ]
+        },
+        "baseline": {
+          "total": 192,
+          "correct": 130,
+          "accepted": 192,
+          "rejected": 0,
+          "macroF1": 0.6746594064700964,
+          "coverage": 1,
+          "acceptedError": 0.32291666666666663,
+          "recalls": [
+            0.859375,
+            0.71875,
+            0.453125
+          ],
+          "confusion": [
+            [
+              55,
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              46,
+              0,
+              0
+            ],
+            [
+              0,
+              35,
+              29,
+              0
+            ]
+          ]
+        }
+      },
+      "offlineMetrics": {
+        "model": {
+          "total": 192,
+          "correct": 180,
+          "accepted": 187,
+          "rejected": 5,
+          "macroF1": 0.9498812648418947,
+          "coverage": 0.9739583333333334,
+          "acceptedError": 0.03743315508021394,
+          "recalls": [
+            0.9375,
+            0.90625,
+            0.96875
+          ],
+          "confusion": [
+            [
+              60,
+              4,
+              0,
+              0
+            ],
+            [
+              3,
+              58,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              62,
+              2
+            ]
+          ]
+        },
+        "baseline": {
+          "total": 192,
+          "correct": 130,
+          "accepted": 192,
+          "rejected": 0,
+          "macroF1": 0.6746594064700964,
+          "coverage": 1,
+          "acceptedError": 0.32291666666666663,
+          "recalls": [
+            0.859375,
+            0.71875,
+            0.453125
+          ],
+          "confusion": [
+            [
+              55,
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              46,
+              0,
+              0
+            ],
+            [
+              0,
+              35,
+              29,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "sceneId": "co1",
+      "background": {
+        "width": 356,
+        "scroll": 880,
+        "svg": 880
+      },
+      "flow": {
+        "width": 316,
+        "scroll": 880,
+        "svg": 880
+      },
+      "canvas": {
+        "width": 760,
+        "parentWidth": 316,
+        "parentScroll": 760
+      },
+      "desktopFontSize": 18,
+      "httpMetrics": {
+        "total": 32,
+        "feasibleWellCount": 32,
+        "model": {
+          "recommended": 32,
+          "matched": 31,
+          "violations": 0,
+          "coverage": 1,
+          "top1Agreement": 0.96875,
+          "regret": 0.0294595160361395,
+          "regretTotal": 0.942704513156464
+        },
+        "baseline": {
+          "recommended": 21,
+          "matched": 18,
+          "violations": 0,
+          "excludedRaw": 11,
+          "coverage": 0.65625,
+          "top1Agreement": 0.8571428571428571,
+          "regret": 0.15760121616378747,
+          "regretTotal": 3.309625539439537
+        },
+        "surrogateMAE": 2.8058105435190632,
+        "surrogateDenominator": 128
+      },
+      "offlineMetrics": {
+        "total": 32,
+        "feasibleWellCount": 32,
+        "model": {
+          "recommended": 32,
+          "matched": 31,
+          "violations": 0,
+          "coverage": 1,
+          "top1Agreement": 0.96875,
+          "regret": 0.0294595160361395,
+          "regretTotal": 0.942704513156464
+        },
+        "baseline": {
+          "recommended": 21,
+          "matched": 18,
+          "violations": 0,
+          "excludedRaw": 11,
+          "coverage": 0.65625,
+          "top1Agreement": 0.8571428571428571,
+          "regret": 0.15760121616378747,
+          "regretTotal": 3.309625539439537
+        },
+        "surrogateMAE": 2.8058105435190632,
+        "surrogateDenominator": 128
+      }
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "Checks of bytes actually downloaded through the browser",
+  "checkedAt": "2026-10-23T16:53:30.168Z",
+  "checks": [
+    {
+      "sceneId": "c1",
+      "name": "Actual downloaded JSON carries required envelope and matching case version",
+      "status": "passed"
+    },
+    {
+      "sceneId": "c1",
+      "name": "Every downloaded claim source reference resolves to exact included ID/version",
+      "status": "passed"
+    },
+    {
+      "sceneId": "c1",
+      "name": "History retains original observation and is not silently inherited as current review",
+      "status": "passed"
+    },
+    {
+      "sceneId": "c1",
+      "name": "Downloaded wave source reproduces all four selected model features",
+      "status": "passed"
+    },
+    {
+      "sceneId": "c1",
+      "name": "Waveform version and run parameters correspond to actual downloaded input",
+      "status": "passed"
+    },
+    {
+      "sceneId": "co1",
+      "name": "Actual downloaded JSON carries required envelope and matching case version",
+      "status": "passed"
+    },
+    {
+      "sceneId": "co1",
+      "name": "Every downloaded claim source reference resolves to exact included ID/version",
+      "status": "passed"
+    },
+    {
+      "sceneId": "co1",
+      "name": "History retains original observation and is not silently inherited as current review",
+      "status": "passed"
+    },
+    {
+      "sceneId": "co1",
+      "name": "Downloaded condition source reproduces query and has budget in version",
+      "status": "passed"
+    },
+    {
+      "sceneId": "co1",
+      "name": "Downloaded final ranking respects the exported constraints and preference",
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "passed": 10,
+    "failed": 0
+  }
+}

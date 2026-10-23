@@ -1,0 +1,129 @@
+{
+  "sceneId": "c1",
+  "caseId": "s17x-c1-cement-quality",
+  "kind": "Node calculation and source checks; not browser acceptance",
+  "checkedAt": "2026-10-23T16:37:23.848Z",
+  "checks": [
+    {
+      "name": "Hand-computed confusion, macro F1 and rejection denominator",
+      "status": "passed"
+    },
+    {
+      "name": "Empty and all-rejected sets retain explicit null denominators",
+      "status": "passed"
+    },
+    {
+      "name": "Training, validation and test well IDs never overlap",
+      "status": "passed"
+    },
+    {
+      "name": "Feature extraction reads only observed waveform values",
+      "status": "passed"
+    },
+    {
+      "name": "Truth permutation changes evaluation while leaving predictions unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "Fixed seed reproduces observed waveforms exactly",
+      "status": "passed"
+    },
+    {
+      "name": "Noise and microannulus presets change measured features",
+      "status": "passed"
+    },
+    {
+      "name": "Zero rejection threshold remains zero rather than falling through to default",
+      "status": "passed"
+    },
+    {
+      "name": "Manifest has 3 illustrated concepts and 5 independently illustrated steps",
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "passed": 9,
+    "failed": 0
+  },
+  "metrics": {
+    "model": {
+      "total": 192,
+      "correct": 180,
+      "accepted": 187,
+      "rejected": 5,
+      "macroF1": 0.9498812648418947,
+      "coverage": 0.9739583333333334,
+      "acceptedError": 0.03743315508021394,
+      "recalls": [
+        0.9375,
+        0.90625,
+        0.96875
+      ],
+      "confusion": [
+        [
+          60,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          58,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          62,
+          2
+        ]
+      ]
+    },
+    "baseline": {
+      "total": 192,
+      "correct": 130,
+      "accepted": 192,
+      "rejected": 0,
+      "macroF1": 0.6746594064700964,
+      "coverage": 1,
+      "acceptedError": 0.32291666666666663,
+      "recalls": [
+        0.859375,
+        0.71875,
+        0.453125
+      ],
+      "confusion": [
+        [
+          55,
+          9,
+          0,
+          0
+        ],
+        [
+          18,
+          46,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          29,
+          0
+        ]
+      ]
+    }
+  },
+  "selectedK": 9,
+  "baseline": {
+    "a": 0.16,
+    "b": 0.37,
+    "score": 0.8130776378116007
+  },
+  "notExecuted": [
+    "Teacher portal native import and refresh",
+    "Actual browser download",
+    "Offline browser render and narrow-screen interaction"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "scope": "Representative screenshot of actual computed visualization in teacher original iframe",
+  "scene": "g1",
+  "caseId": "s17x-g1-remote-lithology",
+  "checks": [
+    {
+      "name": "actual chart is visible after completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:06:04.610Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "9a6edad7d076b34bacce9819536116db37315ddde36f4151b4d90beb3943c3bd",
+      "bytes": 15779
+    },
+    {
+      "path": "README.txt",
+      "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7",
+      "bytes": 3221
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d",
+      "bytes": 26033
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "a2f689137a9f2b0093a9fa6c983a5a6d09fe5676c7276e43b2b47b51a37eeebc",
+      "bytes": 65423
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "b1f362e80e5e265bbfcb128ad47de6c5cdb81abda329b78474b10595616d430c",
+      "bytes": 22196
+    }
+  ],
+  "screenshot": "output/playwright/expansion-2026-10-24/g1-visualization.png",
+  "checkedAt": "2026-10-23T17:06:06.237Z",
+  "passed": 2,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-g1-remote-lithology",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 17075,
+        "sha256": "c5e07d33aae63b8ba722dad9ed85dbad35767dda0dbf7fe6dcec4fa64189c62c"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26033,
+        "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 65423,
+        "sha256": "a2f689137a9f2b0093a9fa6c983a5a6d09fe5676c7276e43b2b47b51a37eeebc"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 22196,
+        "sha256": "b1f362e80e5e265bbfcb128ad47de6c5cdb81abda329b78474b10595616d430c"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3221,
+        "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7"
+      }
+    ],
+    "manifestCanonicalSha256": "9a6edad7d076b34bacce9819536116db37315ddde36f4151b4d90beb3943c3bd",
+    "storedPackageMatchesDisk": true
+  }
+}

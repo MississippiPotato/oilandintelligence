@@ -1,0 +1,84 @@
+{
+  "scope": "Representative screenshot of actual computed visualization in teacher original iframe",
+  "scene": "t1",
+  "caseId": "s17x-t1-pipeline-leak",
+  "checks": [
+    {
+      "name": "actual chart is visible after completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:06:12.877Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "689349093d50d324abcff155a1eafbbc521ca58a0cef341c53a0d85cf00ac037",
+      "bytes": 19535
+    },
+    {
+      "path": "README.txt",
+      "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a",
+      "bytes": 3506
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214",
+      "bytes": 22806
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44",
+      "bytes": 88203
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0",
+      "bytes": 4630
+    }
+  ],
+  "screenshot": "output/playwright/expansion-2026-10-24/t1-visualization.png",
+  "checkedAt": "2026-10-23T17:06:13.617Z",
+  "passed": 2,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-t1-pipeline-leak",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 20723,
+        "sha256": "3cdf278d27461b163a8b845b252038c6b0e9b3a58ad40b5a0f9779030679cb4b"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 22806,
+        "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 88203,
+        "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4630,
+        "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3506,
+        "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a"
+      }
+    ],
+    "manifestCanonicalSha256": "689349093d50d324abcff155a1eafbbc521ca58a0cef341c53a0d85cf00ac037",
+    "storedPackageMatchesDisk": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "Actual browser check stopped at a readable-font requirement",
+  "checkedAt": "2026-10-23T16:47:52Z",
+  "sceneId": "c1",
+  "observed": { "viewportWidth": 1440, "bodyFontSize": "16px", "wholePageHorizontalOverflow": false },
+  "expected": { "bodyFontSizeAtLeast": "18px" },
+  "cause": "Expansion builder appended shared/readability.css through assistantCSS(); its global body and main rules overrode the case's own 18px body and larger control/table/caption typography.",
+  "action": "Reported to expansion_contract_build and the parent. Final browser checks must run after a clean rebuild without the legacy global readability override."
+}

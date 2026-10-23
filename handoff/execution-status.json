@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "studentSuffix": 17,
   "stageId": "mudlogging",
   "requestedGates": [
@@ -14,7 +14,8 @@
     "G1": "complete_m2",
     "G2": "complete_teaching_MVP",
     "G3": "complete_teaching_MVP",
-    "G4": "complete_local_acceptance_with_explicit_limits"
+    "G4": "complete_local_acceptance_with_explicit_limits",
+    "G5": "user_selected_12_stage_extension_complete; original_T40_T41_selection_partially_covered"
   },
   "completedTasks": [
     {
@@ -121,7 +122,19 @@
     "m2",
     "m3",
     "m4",
-    "m5"
+    "m5",
+    "g1",
+    "s1",
+    "d1",
+    "w4",
+    "c1",
+    "co1",
+    "p1",
+    "pr1",
+    "wo1",
+    "e1",
+    "t1",
+    "r5"
   ],
   "fullCasesCompleted": 5,
   "mandatoryCount": 5,
@@ -216,7 +229,7 @@
     "m5复杂NER、多语言、批量审核或中心化长期版本服务",
     "G5及其他56例"
   ],
-  "portalVersion": "1.6.0-preview",
+  "portalVersion": "1.7.0-preview",
   "currentDelivery": "portal-reading-2026-10-23/acceptance.html",
   "currentVerification": "portal-reading-2026-10-23/verification.json",
   "teachingRefresh": {
@@ -265,10 +278,9 @@
     "G5": false
   },
   "notVerified": [
-    "Diana public redistribution permission",
-    "Other browsers, real mobile devices and physical microphone/listening quality",
-    "Field predictive accuracy; genuine paired field white-light/UV evaluation",
-    "Native real-time speech, video UI, other 56 scenes and G5 are outside this revision"
+    "Other browser engines and physical mobile devices",
+    "Physical microphone and listening quality; native realtime voice/video",
+    "Independent public redistribution permission for the Diana Live2D asset"
   ],
   "fieldAtlas": {
     "scope": "homepage_only; five-case files unchanged",
@@ -283,7 +295,7 @@
     "previousTeachingAcceptance": "teaching-refresh-2026-10-23/acceptance.html",
     "newCloudCalls": false
   },
-  "caseVersion": "1.3.0",
+  "caseVersion": "1.4.0",
   "interactiveViews": {
     "portalVersion": "1.5.0-preview",
     "caseVersion": "1.3.0",
@@ -377,5 +389,41 @@
     "newCloudRequests": 0,
     "other56Cases": false,
     "G5": false
+  },
+  "mandatorySceneIds": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "currentRevision": {
+    "version": "1.7.0-preview",
+    "mandatoryCases": 5,
+    "extraCases": 12,
+    "totalAuthored": 17,
+    "teacherOriginalSampleCountedAsAuthored": false,
+    "background": "four knowledge chapters per mandatory case, comparison tables, worked examples; original scene drawings in supplementary details",
+    "assistantDefaultSize": [
+      410,
+      700
+    ],
+    "assistantExpandedWidth": 720,
+    "assistantTextPx": 18,
+    "themes": 4,
+    "caseRuntimeFiles": 85,
+    "nativeTeacherImportAndRestartRun": 17,
+    "rawBrowserChecksInSeparateExpansionSession": 601,
+    "remainingScenesNotRequested": 44,
+    "g5OriginalSelectionNotCompleted": [
+      "w5",
+      "pr2"
+    ],
+    "evidence": [
+      "expansion-2026-10-24/verification.json",
+      "expansion-2026-10-24/browser-summary.json",
+      "assistant-ui-2026-10-23/browser-reading.json"
+    ],
+    "newPaidModelCalls": 0
   }
 }

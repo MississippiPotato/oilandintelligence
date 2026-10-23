@@ -1,0 +1,129 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "d1",
+  "caseId": "s17x-d1-rop-optimization",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:12:44.387Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "e2adec1f21bc228209e7d626ba1e54c5689cdebf67a1c53ed8add02b03781de5",
+      "bytes": 24550
+    },
+    {
+      "path": "README.txt",
+      "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7",
+      "bytes": 2279
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68",
+      "bytes": 26522
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf",
+      "bytes": 65613
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b",
+      "bytes": 26889
+    }
+  ],
+  "metrics": {
+    "model": {
+      "n": 128,
+      "mae": 1.9624040748572056,
+      "rmse": 2.4272191421216918,
+      "bias": 0.9465490001269504
+    },
+    "baseline": {
+      "n": 128,
+      "mae": 5.405732935300523,
+      "rmse": 6.634852065423579,
+      "bias": 0.7670855040351896
+    },
+    "outsideCount": 2
+  },
+  "metricsSha256": "f765ca3518aa177fa49cf7987f07f0147dacadb9b0c775da105d883d5ec55f52",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:12:45.473Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-d1-rop-optimization",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 25698,
+        "sha256": "f3d406824ced9b7b53fa2b219b7ce17a80568a89456e4ab368e8b7a0cabf07c7"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26522,
+        "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 65613,
+        "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 26889,
+        "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 2279,
+        "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7"
+      }
+    ],
+    "manifestCanonicalSha256": "e2adec1f21bc228209e7d626ba1e54c5689cdebf67a1c53ed8add02b03781de5",
+    "storedPackageMatchesDisk": true
+  }
+}

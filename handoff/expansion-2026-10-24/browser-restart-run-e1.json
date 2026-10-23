@@ -1,0 +1,147 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "e1",
+  "caseId": "s17x-e1-fracture-optimization",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:13:07.894Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "6ab76c59f9b75c97b82512e9b2613b7c006870844c57de3f3232161fe5957e02",
+      "bytes": 24777
+    },
+    {
+      "path": "README.txt",
+      "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa",
+      "bytes": 1077
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2",
+      "bytes": 25377
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "7c346c3e07ba0d668e58411397d47a363d941f2310af00cfbe3fb3f868b6ebb6",
+      "bytes": 62898
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3",
+      "bytes": 26026
+    }
+  ],
+  "metrics": {
+    "surrogate": {
+      "denominator": 96,
+      "oil90_t": {
+        "MAE": 2.6075275159406908,
+        "RMSE": 2.9698819150043594,
+        "bias": 0.4621513994321906
+      },
+      "pressure_MPa": {
+        "MAE": 0.47644100643047765,
+        "RMSE": 0.5415402618490917,
+        "bias": 0.25062023902484903
+      }
+    },
+    "meanBaseline": {
+      "denominator": 96,
+      "oil90_t": {
+        "MAE": 24.084239159676827,
+        "RMSE": 28.329793999490757,
+        "bias": -13.965674186239204
+      },
+      "pressure_MPa": {
+        "MAE": 2.1507188006335203,
+        "RMSE": 2.597393459006992,
+        "bias": 0.6753578546147736
+      }
+    },
+    "gridCount": 441,
+    "feasibleCount": 284,
+    "feasibleRate": 0.6439909297052154,
+    "objectiveGain": 3.2307837711261413,
+    "oilGain_t": 7.910783771126148
+  },
+  "metricsSha256": "774365c08a5a6de90352cc31175d455e4724d9bb32d9f2a12ac86cbd3ba48aa1",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:13:08.844Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-e1-fracture-optimization",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 25809,
+        "sha256": "51490a009115eb6534de46b01b843de04e773a5f860187a8a0d5ef6d2469fdf9"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25377,
+        "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 62898,
+        "sha256": "7c346c3e07ba0d668e58411397d47a363d941f2310af00cfbe3fb3f868b6ebb6"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 26026,
+        "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1077,
+        "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+      }
+    ],
+    "manifestCanonicalSha256": "6ab76c59f9b75c97b82512e9b2613b7c006870844c57de3f3232161fe5957e02",
+    "storedPackageMatchesDisk": true
+  }
+}

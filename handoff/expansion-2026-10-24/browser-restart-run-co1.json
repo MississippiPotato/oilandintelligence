@@ -1,0 +1,139 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "co1",
+  "caseId": "s17x-co1-completion-choice",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:12:52.998Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "e6eaac709811fe54c4da28f895e567d2ff21e509006069e6f833511a569029a9",
+      "bytes": 20971
+    },
+    {
+      "path": "README.txt",
+      "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12",
+      "bytes": 1233
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c",
+      "bytes": 25863
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90",
+      "bytes": 83477
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d",
+      "bytes": 7323
+    }
+  ],
+  "metrics": {
+    "total": 32,
+    "feasibleWellCount": 32,
+    "model": {
+      "recommended": 32,
+      "matched": 31,
+      "violations": 0,
+      "coverage": 1,
+      "top1Agreement": 0.96875,
+      "regret": 0.0294595160361395,
+      "regretTotal": 0.942704513156464
+    },
+    "baseline": {
+      "recommended": 21,
+      "matched": 18,
+      "violations": 0,
+      "excludedRaw": 11,
+      "coverage": 0.65625,
+      "top1Agreement": 0.8571428571428571,
+      "regret": 0.15760121616378747,
+      "regretTotal": 3.309625539439537
+    },
+    "surrogateMAE": 2.8058105435190632,
+    "surrogateDenominator": 128
+  },
+  "metricsSha256": "e3532a20321be63374e1b10ac771fed2e8d4a03b9964e2b850042fdfbf675908",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:12:53.826Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-co1-completion-choice",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 21930,
+        "sha256": "3526554dd5fee424602f98eafcfeaa7bdb7e07d83c09663c7f388668bd133d04"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25863,
+        "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 83477,
+        "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 7323,
+        "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1233,
+        "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+      }
+    ],
+    "manifestCanonicalSha256": "e6eaac709811fe54c4da28f895e567d2ff21e509006069e6f833511a569029a9",
+    "storedPackageMatchesDisk": true
+  }
+}

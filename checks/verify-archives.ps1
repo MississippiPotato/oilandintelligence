@@ -12,8 +12,7 @@ foreach ($item in $lock.archives) {
   $readOnly = 0
   try {
     foreach ($entry in $zip.Entries) {
-      $isComplete = $item.path -like '*with-assistant*' -or $item.path -like '*five-cases*'
-      $relative = if ($isComplete) { $entry.FullName } else { 'dist/cases/' + $entry.FullName }
+      $relative = $item.sourcePrefix + $entry.FullName
       $sourcePath = [IO.Path]::GetFullPath((Join-Path $taskRoot $relative))
       if (-not $sourcePath.StartsWith($taskRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { throw 'Path outside workspace' }
       $sourceHash = (Get-FileHash -LiteralPath $sourcePath -Algorithm SHA256).Hash.ToLowerInvariant()

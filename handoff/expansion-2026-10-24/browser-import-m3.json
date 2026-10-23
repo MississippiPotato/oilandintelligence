@@ -1,0 +1,238 @@
+{
+  "scope": "Actual unmodified teacher folder import; no injected package storage",
+  "scene": "m3",
+  "caseId": "s17-fluorescence-review",
+  "checks": [
+    {
+      "name": "folder manifest loaded with correct scene",
+      "passed": true
+    },
+    {
+      "name": "actual teacher importer registers expected version",
+      "passed": true
+    },
+    {
+      "name": "teacher reports persistent storage rather than session-only import",
+      "passed": true,
+      "detail": "✓\n已添加「荧光图像智能判读：显示与来源分开核查」\n正在打开场景页…"
+    },
+    {
+      "name": "genuine imported ID appears in saved package list",
+      "passed": true
+    },
+    {
+      "name": "package survives page refresh",
+      "passed": true
+    },
+    {
+      "name": "no browser JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:10:30.010Z",
+  "toast": "✓\n已添加「荧光图像智能判读：显示与来源分开核查」\n正在打开场景页…",
+  "saved": {
+    "items": [
+      {
+        "id": "s17x-g1-remote-lithology",
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "sceneId": "g1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:55.220Z"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "title": "地震断层自动解释：沿波形不连续性寻找错断",
+        "sceneId": "s1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:57.729Z"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "sceneId": "d1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:00.183Z"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "title": "测井岩性识别：多道曲线与可解释近邻",
+        "sceneId": "w4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:02.625Z"
+      },
+      {
+        "id": "s17x-c1-cement-quality",
+        "title": "固井质量智能评价",
+        "sceneId": "c1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:05.097Z"
+      },
+      {
+        "id": "s17x-co1-completion-choice",
+        "title": "完井方式智能优选",
+        "sceneId": "co1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:07.541Z"
+      },
+      {
+        "id": "s17x-p1-perforation-design",
+        "title": "射孔参数优化：从试验响应到受约束候选",
+        "sceneId": "p1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:10.055Z"
+      },
+      {
+        "id": "s17x-pr1-pump-card",
+        "title": "抽油机井工况诊断：从井下泵功图读形状",
+        "sceneId": "pr1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:12.538Z"
+      },
+      {
+        "id": "s17x-wo1-workover-retrieval",
+        "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+        "sceneId": "wo1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:15.035Z"
+      },
+      {
+        "id": "s17x-e1-fracture-optimization",
+        "title": "压裂参数智能优化：在资源边界里比较候选",
+        "sceneId": "e1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:17.480Z"
+      },
+      {
+        "id": "s17x-t1-pipeline-leak",
+        "title": "管道泄漏智能检测：从正常关系到事件核查",
+        "sceneId": "t1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:20.010Z"
+      },
+      {
+        "id": "s17x-r5-quality-softsensor",
+        "title": "产品质量在线软测量：化验到来之前",
+        "sceneId": "r5",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:22.613Z"
+      },
+      {
+        "id": "s17-cuttings-lithology",
+        "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+        "sceneId": "m1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:25.216Z"
+      },
+      {
+        "id": "s17-mudgas-context",
+        "title": "气测异常智能解释：气峰背后的工况与迟到",
+        "sceneId": "m2",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:27.748Z"
+      },
+      {
+        "id": "s17-fluorescence-review",
+        "title": "荧光图像智能判读：显示与来源分开核查",
+        "sceneId": "m3",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:30.334Z"
+      }
+    ],
+    "storedCharacters": 2187207
+  },
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "3f7ed22ffc9c518abf20d92030ae08c0d8e79a633e62c9381b4cb7c872f92c36",
+      "bytes": 25612
+    },
+    {
+      "path": "README.txt",
+      "sha256": "9fc3ef05453e133d7574795bbd0f9261d1f290610673e691390cf16ccb65d015",
+      "bytes": 846
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+      "bytes": 37117
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "2590127812c959f526fa03697bae09eeed8469c6142c3ad4450d86e971f78c5f",
+      "bytes": 136378
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "779b83299f9a763c9ea4c06a5beb699a4fc77fb95cb4eac73d51bb87753e6830",
+      "bytes": 4940
+    }
+  ],
+  "checkedAt": "2026-10-23T17:10:31.161Z",
+  "passed": 6,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/cases/s17-fluorescence-review",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 26835,
+        "sha256": "e541ad4f5076d347b1a145ff2f74df9d7f7290eab0f0a8faaf598ad5e43bc8d1"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 37117,
+        "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 136378,
+        "sha256": "2590127812c959f526fa03697bae09eeed8469c6142c3ad4450d86e971f78c5f"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4940,
+        "sha256": "779b83299f9a763c9ea4c06a5beb699a4fc77fb95cb4eac73d51bb87753e6830"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 846,
+        "sha256": "9fc3ef05453e133d7574795bbd0f9261d1f290610673e691390cf16ccb65d015"
+      }
+    ],
+    "manifestCanonicalSha256": "3f7ed22ffc9c518abf20d92030ae08c0d8e79a633e62c9381b4cb7c872f92c36",
+    "storedPackageMatchesDisk": true
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "kind": "calculation_checks_not_browser_acceptance",
+  "sceneId": "pr1",
+  "caseId": "s17x-pr1-pump-card",
+  "passed": 12,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "hand confusion, reject column and full denominator",
+      "passed": true
+    },
+    {
+      "name": "empty and all-rejected results have correct non-denominators",
+      "passed": true
+    },
+    {
+      "name": "shoelace area measures actual load displacement polygon",
+      "passed": true
+    },
+    {
+      "name": "whole wells and all variants stay within a single split",
+      "passed": true
+    },
+    {
+      "name": "fixed seed reproduces curves, fitted scaler and predictions",
+      "passed": true
+    },
+    {
+      "name": "metadata and source IDs cannot determine predicted class",
+      "passed": true
+    },
+    {
+      "name": "evaluation truth changes metrics without changing inference",
+      "passed": true
+    },
+    {
+      "name": "load zero offset leaves normalized shape and labels invariant",
+      "passed": true
+    },
+    {
+      "name": "strong-noise failure preset truly changes observations and rejection",
+      "passed": true
+    },
+    {
+      "name": "nearest neighbor distance is actually computed in learned feature space",
+      "passed": true
+    },
+    {
+      "name": "both methods evaluated on identical 72-card test cohort",
+      "passed": true
+    },
+    {
+      "name": "training labels affect neighbors instead of hidden generator classes",
+      "passed": true
+    }
+  ],
+  "actualDefault": {
+    "k": 3,
+    "domainDistance": 0.35160441028603806,
+    "roughnessLimit": 0.01908975300197969,
+    "model": {
+      "matrix": [
+        [
+          24,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          24,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          24,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "name": "充满泵",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        },
+        {
+          "name": "供液不足形",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        },
+        {
+          "name": "气影响形",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        }
+      ],
+      "recalls": [
+        1,
+        1,
+        1
+      ],
+      "macroF1": 1,
+      "count": 72,
+      "accepted": 72,
+      "correct": 72,
+      "rejected": 0,
+      "coverage": 1,
+      "acceptedError": 0,
+      "accuracy": 1
+    },
+    "baseline": {
+      "matrix": [
+        [
+          24,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          10,
+          0
+        ],
+        [
+          0,
+          2,
+          22,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "name": "充满泵",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        },
+        {
+          "name": "供液不足形",
+          "actual": 24,
+          "predicted": 16,
+          "TP": 14,
+          "recall": 0.5833333333333334,
+          "F1": 0.7
+        },
+        {
+          "name": "气影响形",
+          "actual": 24,
+          "predicted": 32,
+          "TP": 22,
+          "recall": 0.9166666666666666,
+          "F1": 0.7857142857142857
+        }
+      ],
+      "recalls": [
+        1,
+        0.5833333333333334,
+        0.9166666666666666
+      ],
+      "macroF1": 0.8285714285714286,
+      "count": 72,
+      "accepted": 72,
+      "correct": 60,
+      "rejected": 0,
+      "coverage": 1,
+      "acceptedError": 0.16666666666666666,
+      "accuracy": 0.8333333333333334
+    }
+  },
+  "unverified": [
+    "original portal folder import",
+    "browser refresh persistence",
+    "sandbox JSON download",
+    "mobile interaction"
+  ]
+}

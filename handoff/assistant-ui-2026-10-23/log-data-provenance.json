@@ -1,0 +1,19 @@
+{
+  "createdAt": "2026-10-23T17:08:13.031Z",
+  "source": "M4Core.generate(17).observations; only observed drilling fields",
+  "wellId": "DEMO-017",
+  "datasetId": "s17-response-v1",
+  "dataNature": "synthetic_teaching",
+  "rows": 321,
+  "onlyObservations": true,
+  "sourceFiles": [
+    {
+      "path": "shared/math.js",
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    },
+    {
+      "path": "case-src/m4/engine.js",
+      "sha256": "678b5f19103888f580997e3fc34ab34b67f03d8acb264894b73cff439d0eecbc"
+    }
+  ]
+}

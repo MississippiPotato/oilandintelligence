@@ -1,0 +1,128 @@
+{
+  "sceneId": "wo1",
+  "caseId": "s17x-wo1-workover-retrieval",
+  "kind": "node_calculation_checks_not_browser_acceptance",
+  "checkedAt": "2026-10-23T16:42:31.680Z",
+  "passed": 11,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "48/16/20 independent well groups and wording-family holdout",
+      "passed": true
+    },
+    {
+      "name": "test-only word does not enter training vocabulary or predictions",
+      "passed": true
+    },
+    {
+      "name": "changing evaluation truth changes evaluation, never predictions",
+      "passed": true
+    },
+    {
+      "name": "hand-counted top1, rejection denominator, and recall@3",
+      "passed": true
+    },
+    {
+      "name": "no denominator produces null rather than manufactured 100 percent",
+      "passed": true
+    },
+    {
+      "name": "missing-data preset rejects all queries while retaining 20 wells",
+      "passed": true
+    },
+    {
+      "name": "conflict is unlabelled counterfactual; only coverage and constraints retained",
+      "passed": true
+    },
+    {
+      "name": "nearest-neighbour sources are actual frozen training wells",
+      "passed": true
+    },
+    {
+      "name": "default reported metrics agree with fresh counted predictions",
+      "passed": true
+    },
+    {
+      "name": "unsafe or unknown integrity cannot admit non-integrity categories",
+      "passed": true
+    },
+    {
+      "name": "evidence envelope contains actual query, training-neighbour sources, selectors, and review versions",
+      "passed": true
+    }
+  ],
+  "defaultMetrics": {
+    "denominator": 20,
+    "model": {
+      "correct": 20,
+      "accuracy": 1,
+      "accepted": 20,
+      "coverage": 1,
+      "selectiveAccuracy": 1,
+      "recallAt3": 1,
+      "recallAt3Count": 20,
+      "evidenceCoverage": 1,
+      "constraintViolations": 0
+    },
+    "baseline": {
+      "correct": 17,
+      "accuracy": 0.85,
+      "accepted": 20,
+      "coverage": 1,
+      "selectiveAccuracy": 0.85,
+      "constraintViolations": 0
+    },
+    "confusion": [
+      [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ]
+    ],
+    "referenceApplicable": true,
+    "referenceDenominator": 20
+  },
+  "config": {
+    "k": 3,
+    "featureWeight": 0.25,
+    "threshold": 0.35
+  },
+  "sources": [
+    {
+      "title": "SLB Energy Glossary — workover",
+      "url": "https://glossary.slb.com/en/terms/w/workover",
+      "checked": "2026-10-24",
+      "use": "professional concept only; no dataset copied"
+    }
+  ],
+  "notExecuted": [
+    "original portal folder import",
+    "refresh and browser reopen",
+    "offline standalone UI",
+    "mobile and keyboard",
+    "sandbox JSON download"
+  ]
+}

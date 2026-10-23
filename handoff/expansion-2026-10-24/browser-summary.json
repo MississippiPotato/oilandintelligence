@@ -1,0 +1,905 @@
+{
+  "scope": "Actual isolated Chrome CLI execution on teacher original and standalone file pages",
+  "browserExecuted": true,
+  "checkedAt": "2026-10-23T17:23:42.633Z",
+  "groups": {
+    "imports": {
+      "expected": 17,
+      "executed": 17,
+      "complete": 17,
+      "reports": [
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-g1.json",
+          "scene": "g1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:09:56.059Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-s1.json",
+          "scene": "s1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:09:58.513Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-d1.json",
+          "scene": "d1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:00.970Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-w4.json",
+          "scene": "w4",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:03.387Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-c1.json",
+          "scene": "c1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:05.883Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-co1.json",
+          "scene": "co1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:08.333Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-p1.json",
+          "scene": "p1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:10.861Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-pr1.json",
+          "scene": "pr1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:13.346Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-wo1.json",
+          "scene": "wo1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:15.831Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-e1.json",
+          "scene": "e1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:18.298Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-t1.json",
+          "scene": "t1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:20.829Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-r5.json",
+          "scene": "r5",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:23.495Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-m1.json",
+          "scene": "m1",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:26.073Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-m2.json",
+          "scene": "m2",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:28.577Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-m3.json",
+          "scene": "m3",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:31.161Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-m4.json",
+          "scene": "m4",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:33.749Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-import-m5.json",
+          "scene": "m5",
+          "passed": 6,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:10:36.481Z",
+          "requests": 26,
+          "errors": []
+        }
+      ]
+    },
+    "interactions": {
+      "expected": 12,
+      "executed": 12,
+      "complete": 12,
+      "reports": [
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-g1.json",
+          "scene": "g1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:14.738Z",
+          "requests": 26,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-s1.json",
+          "scene": "s1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:22.257Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-d1.json",
+          "scene": "d1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:27.804Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-w4.json",
+          "scene": "w4",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:35.560Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-c1.json",
+          "scene": "c1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:42.038Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-co1.json",
+          "scene": "co1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:47.297Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-p1.json",
+          "scene": "p1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:52.553Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-pr1.json",
+          "scene": "pr1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:03:58.927Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-wo1.json",
+          "scene": "wo1",
+          "passed": 18,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:02:42.824Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-e1.json",
+          "scene": "e1",
+          "passed": 18,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:02:47.453Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-t1.json",
+          "scene": "t1",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:04:03.781Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-interaction-r5.json",
+          "scene": "r5",
+          "passed": 17,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:04:08.522Z",
+          "requests": 13,
+          "errors": []
+        }
+      ]
+    },
+    "offline": {
+      "expected": 12,
+      "executed": 12,
+      "complete": 12,
+      "reports": [
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-g1.json",
+          "scene": "g1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:04:55.425Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-s1.json",
+          "scene": "s1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:04:58.700Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-d1.json",
+          "scene": "d1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:01.473Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-w4.json",
+          "scene": "w4",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:04.925Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-c1.json",
+          "scene": "c1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:07.980Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-co1.json",
+          "scene": "co1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:10.407Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-p1.json",
+          "scene": "p1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:13.093Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-pr1.json",
+          "scene": "pr1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:16.108Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-wo1.json",
+          "scene": "wo1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:18.987Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-e1.json",
+          "scene": "e1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:21.497Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-t1.json",
+          "scene": "t1",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:24.021Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-offline-r5.json",
+          "scene": "r5",
+          "passed": 11,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:05:26.586Z",
+          "requests": 0,
+          "errors": []
+        }
+      ]
+    },
+    "mandatory": {
+      "expected": 5,
+      "executed": 5,
+      "complete": 5,
+      "reports": [
+        {
+          "path": "handoff/expansion-2026-10-24/browser-mandatory-m1.json",
+          "scene": "m1",
+          "passed": 4,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:11:25.333Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-mandatory-m2.json",
+          "scene": "m2",
+          "passed": 4,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:11:29.150Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-mandatory-m3.json",
+          "scene": "m3",
+          "passed": 4,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:11:36.183Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-mandatory-m4.json",
+          "scene": "m4",
+          "passed": 4,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:11:39.237Z",
+          "requests": 13,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-mandatory-m5.json",
+          "scene": "m5",
+          "passed": 4,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:11:42.414Z",
+          "requests": 13,
+          "errors": []
+        }
+      ]
+    },
+    "persistence": {
+      "expected": 1,
+      "executed": 1,
+      "complete": 1,
+      "reports": [
+        {
+          "path": "handoff/expansion-2026-10-24/browser-persistence.json",
+          "passed": 18,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:11:53.031Z",
+          "requests": 13,
+          "errors": []
+        }
+      ]
+    },
+    "restartRuns": {
+      "expected": 17,
+      "executed": 17,
+      "complete": 17,
+      "reports": [
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-g1.json",
+          "scene": "g1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:39.702Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-s1.json",
+          "scene": "s1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:42.928Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-d1.json",
+          "scene": "d1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:45.473Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-w4.json",
+          "scene": "w4",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:48.758Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-c1.json",
+          "scene": "c1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:51.540Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-co1.json",
+          "scene": "co1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:53.826Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-p1.json",
+          "scene": "p1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:56.250Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-pr1.json",
+          "scene": "pr1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:12:58.901Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-wo1.json",
+          "scene": "wo1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:22:28.845Z",
+          "requests": 0,
+          "errors": [],
+          "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation."
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-e1.json",
+          "scene": "e1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:13:08.844Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-t1.json",
+          "scene": "t1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:13:11.300Z",
+          "requests": 0,
+          "errors": []
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-r5.json",
+          "scene": "r5",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:22:31.206Z",
+          "requests": 0,
+          "errors": [],
+          "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation."
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-m1.json",
+          "scene": "m1",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:21:46.432Z",
+          "requests": 0,
+          "errors": [],
+          "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation."
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-m2.json",
+          "scene": "m2",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:21:49.311Z",
+          "requests": 0,
+          "errors": [],
+          "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation."
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-m3.json",
+          "scene": "m3",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:21:53.821Z",
+          "requests": 0,
+          "errors": [],
+          "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation."
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-m4.json",
+          "scene": "m4",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:21:56.446Z",
+          "requests": 0,
+          "errors": [],
+          "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation."
+        },
+        {
+          "path": "handoff/expansion-2026-10-24/browser-restart-run-m5.json",
+          "scene": "m5",
+          "passed": 7,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:21:59.063Z",
+          "requests": 0,
+          "errors": [],
+          "interactionMode": "Native keyboard Enter for iframe tabs/run; Escape and released input state before activation. No evaluate-click and no direct run invocation."
+        }
+      ]
+    },
+    "firstbreak": {
+      "expected": 1,
+      "executed": 1,
+      "complete": 1,
+      "reports": [
+        {
+          "path": "handoff/expansion-2026-10-24/browser-firstbreak.json",
+          "scene": "s3",
+          "passed": 4,
+          "failed": 0,
+          "checkedAt": "2026-10-23T17:11:45.517Z",
+          "requests": 13,
+          "errors": []
+        }
+      ]
+    }
+  },
+  "browserPassed": 601,
+  "browserFailed": 0,
+  "missingReports": 0,
+  "storage": {
+    "items": [
+      {
+        "id": "s17x-g1-remote-lithology",
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "sceneId": "g1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:55.220Z"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "title": "地震断层自动解释：沿波形不连续性寻找错断",
+        "sceneId": "s1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:09:57.729Z"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "sceneId": "d1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:00.183Z"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "title": "测井岩性识别：多道曲线与可解释近邻",
+        "sceneId": "w4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:02.625Z"
+      },
+      {
+        "id": "s17x-c1-cement-quality",
+        "title": "固井质量智能评价",
+        "sceneId": "c1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:05.097Z"
+      },
+      {
+        "id": "s17x-co1-completion-choice",
+        "title": "完井方式智能优选",
+        "sceneId": "co1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:07.541Z"
+      },
+      {
+        "id": "s17x-p1-perforation-design",
+        "title": "射孔参数优化：从试验响应到受约束候选",
+        "sceneId": "p1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:10.055Z"
+      },
+      {
+        "id": "s17x-pr1-pump-card",
+        "title": "抽油机井工况诊断：从井下泵功图读形状",
+        "sceneId": "pr1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:12.538Z"
+      },
+      {
+        "id": "s17x-wo1-workover-retrieval",
+        "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+        "sceneId": "wo1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:15.035Z"
+      },
+      {
+        "id": "s17x-e1-fracture-optimization",
+        "title": "压裂参数智能优化：在资源边界里比较候选",
+        "sceneId": "e1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:17.480Z"
+      },
+      {
+        "id": "s17x-t1-pipeline-leak",
+        "title": "管道泄漏智能检测：从正常关系到事件核查",
+        "sceneId": "t1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:20.010Z"
+      },
+      {
+        "id": "s17x-r5-quality-softsensor",
+        "title": "产品质量在线软测量：化验到来之前",
+        "sceneId": "r5",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:22.613Z"
+      },
+      {
+        "id": "s17-cuttings-lithology",
+        "title": "岩屑岩性自动识别：一盘岩屑的像素与证据",
+        "sceneId": "m1",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:25.216Z"
+      },
+      {
+        "id": "s17-mudgas-context",
+        "title": "气测异常智能解释：气峰背后的工况与迟到",
+        "sceneId": "m2",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:27.748Z"
+      },
+      {
+        "id": "s17-fluorescence-review",
+        "title": "荧光图像智能判读：显示与来源分开核查",
+        "sceneId": "m3",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:30.334Z"
+      },
+      {
+        "id": "s17-drilltime-boundaries",
+        "title": "钻时曲线地层划分：工况校正与候选响应段",
+        "sceneId": "m4",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:32.904Z"
+      },
+      {
+        "id": "s17-evidence-report",
+        "title": "录井报告自动生成：每句话都有当前证据",
+        "sceneId": "m5",
+        "files": 4,
+        "savedAt": "2026-10-23T17:10:35.619Z"
+      },
+      {
+        "id": "firstbreak-stalta",
+        "title": "初至波自动拾取：STA/LTA 能量比法",
+        "sceneId": "s3",
+        "files": 4,
+        "savedAt": "2026-10-23T17:11:44.423Z"
+      }
+    ],
+    "storedCharacters": 2859158
+  },
+  "nodeCurrentPackageVerification": {
+    "scope": "Node compares browser-read actual stored package hashes with current disk files, not additional browser assertions",
+    "cases": [
+      {
+        "scene": "g1",
+        "caseId": "s17x-g1-remote-lithology",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "s1",
+        "caseId": "s17x-s1-seismic-fault",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "d1",
+        "caseId": "s17x-d1-rop-optimization",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "w4",
+        "caseId": "s17x-w4-log-lithology",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "c1",
+        "caseId": "s17x-c1-cement-quality",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "co1",
+        "caseId": "s17x-co1-completion-choice",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "p1",
+        "caseId": "s17x-p1-perforation-design",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "pr1",
+        "caseId": "s17x-pr1-pump-card",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "wo1",
+        "caseId": "s17x-wo1-workover-retrieval",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "e1",
+        "caseId": "s17x-e1-fracture-optimization",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "t1",
+        "caseId": "s17x-t1-pipeline-leak",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "r5",
+        "caseId": "s17x-r5-quality-softsensor",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "m1",
+        "caseId": "s17-cuttings-lithology",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "m2",
+        "caseId": "s17-mudgas-context",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "m3",
+        "caseId": "s17-fluorescence-review",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "m4",
+        "caseId": "s17-drilltime-boundaries",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      },
+      {
+        "scene": "m5",
+        "caseId": "s17-evidence-report",
+        "importedPackageMatchesCurrentDisk": true,
+        "restartedStoredPackageMatchesCurrentDisk": true
+      }
+    ],
+    "passed": 17,
+    "failed": 0
+  },
+  "nodeDownloadedFileVerification": {
+    "path": "handoff/expansion-2026-10-24/browser-download-file-verification.json",
+    "passed": 58,
+    "failed": 0,
+    "actualDownloads": 17
+  },
+  "buildLock": "2026-10-23T17:00:19.222Z",
+  "historicalAttemptsExcluded": [
+    "browser-import-before-readability-fix.json",
+    "browser-harness-selector-attempt.json",
+    "browser-offline-harness-criteria-attempt.json",
+    "browser-runtime-before-startup-and-input-fixes.json",
+    "browser-restart-harness-attempt.json",
+    "browser-restart-input-delivery-attempt.json"
+  ]
+}

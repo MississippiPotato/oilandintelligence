@@ -1,0 +1,1100 @@
+{
+  "kind": "independent_final_source_review_not_browser_acceptance",
+  "checkedAt": "2026-10-23T16:47:35.640Z",
+  "cases": [
+    {
+      "sceneId": "g1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-g1-remote-lithology",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜从地质露头，到一个遥感像素",
+        "图 B2｜换一个波段，看到另一种差异",
+        "图 B3｜把颜色，变成带证据的候选判断"
+      ],
+      "stepNames": [
+        "按图幅划分，先看数据",
+        "从观测波段提取6维特征",
+        "建立有来源的近邻库",
+        "用验证图选择k与阈值",
+        "比较地图、定位错误并复核"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/g1/case.json",
+          "bytes": 17213,
+          "sha256": "2fdd08e14c128efb8259a7202b1c2400c41d6842dc3b7ee0e6a38adcc86086d4"
+        },
+        {
+          "path": "expansion-src/g1/engine.js",
+          "bytes": 8850,
+          "sha256": "2871b43ce69c5117d9020aa0321640dc25f168bbd4995690942e5412d3cf645a"
+        },
+        {
+          "path": "expansion-src/g1/app.js",
+          "bytes": 17424,
+          "sha256": "0ed3d6a449eba6053f364a68eaba97884e846513efc5a5ac06b194b4a74ce98d"
+        },
+        {
+          "path": "expansion-src/g1/demo.html",
+          "bytes": 22196,
+          "sha256": "b1f362e80e5e265bbfcb128ad47de6c5cdb81abda329b78474b10595616d430c"
+        },
+        {
+          "path": "expansion-src/g1/demo.css",
+          "bytes": 9024,
+          "sha256": "881f829377977e784de24fc714613ff0e1710e534b9e320bebbba03a2682939f"
+        },
+        {
+          "path": "expansion-src/g1/README.txt",
+          "bytes": 3221,
+          "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "cv"
+      ]
+    },
+    {
+      "sceneId": "s1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-s1-seismic-fault",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜地层错动，怎样出现在地震剖面？",
+        "图 B2｜让“看起来不连续”变成可计算特征",
+        "图 B3｜断距、噪声与缺道，各自改变了什么？"
+      ],
+      "stepNames": [
+        "按独立剖面建立数据集",
+        "计算局部波形与方向特征",
+        "真实拟合小型逻辑回归",
+        "独立验证选择检测阈值",
+        "提取迹线，点选证据复核"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/s1/case.json",
+          "bytes": 17699,
+          "sha256": "49b4924307b1b3ec5b0e06149432f164cd9f4ce0afdd0d00cc53c6feffb927be"
+        },
+        {
+          "path": "expansion-src/s1/engine.js",
+          "bytes": 10997,
+          "sha256": "327661a57fbdeeecf63779c9114f20bd3224a7b3ce7e52b714838a7794548d34"
+        },
+        {
+          "path": "expansion-src/s1/app.js",
+          "bytes": 21164,
+          "sha256": "21181b95f94b99773fb288bf7fec016c6608abd9f1d641226ec183f981de582a"
+        },
+        {
+          "path": "expansion-src/s1/demo.html",
+          "bytes": 23146,
+          "sha256": "cf47c0b2b9bf1122bf6ba797c3f1e23f1ad8378b294f23bb2887beec259e5b79"
+        },
+        {
+          "path": "expansion-src/s1/demo.css",
+          "bytes": 9024,
+          "sha256": "881f829377977e784de24fc714613ff0e1710e534b9e320bebbba03a2682939f"
+        },
+        {
+          "path": "expansion-src/s1/README.txt",
+          "bytes": 3744,
+          "sha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "cv"
+      ]
+    },
+    {
+      "sceneId": "d1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-d1-rop-optimization",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜先看钻头：三种可调参数共同作用",
+        "图 B2｜钻速用什么单位？从深度—时间图理解",
+        "图 B3｜寻找快的区域，同时看到边界"
+      ],
+      "stepNames": [
+        "按整井分开数据",
+        "拟合一个可解释的钻速代理",
+        "用验证井选择正则强度",
+        "在可行域内搜索参数",
+        "比较留出误差，留下复核依据"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/d1/case.json",
+          "bytes": 25820,
+          "sha256": "b55f4155530e23767f372e1c1eae4b3e6732bc68eb6438ec8d870bc77f42bc2a"
+        },
+        {
+          "path": "expansion-src/d1/engine.js",
+          "bytes": 7869,
+          "sha256": "f07d0a75657b38e883bcaf18ad6919c0292ed4a97a56658aa7544b667f3ff140"
+        },
+        {
+          "path": "expansion-src/d1/app.js",
+          "bytes": 18514,
+          "sha256": "12a6a2657bd7977fc2143ef21777e815007b3f405233b67d8a720274ff98958c"
+        },
+        {
+          "path": "expansion-src/d1/demo.html",
+          "bytes": 26889,
+          "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b"
+        },
+        {
+          "path": "expansion-src/d1/demo.css",
+          "bytes": 9513,
+          "sha256": "68a46787a592d1ba25651c579098b3a9b6bd49b3106a2e0d43437268e4220e9c"
+        },
+        {
+          "path": "expansion-src/d1/README.txt",
+          "bytes": 2279,
+          "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "ts",
+        "opt"
+      ]
+    },
+    {
+      "sceneId": "w4",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-w4-log-lithology",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜测井是沿井深连续测量，不是一盘岩屑照片",
+        "图 B2｜一条 GR 曲线为何不够？",
+        "图 B3｜曲线也受流体、井眼和仪器条件影响"
+      ],
+      "stepNames": [
+        "按整口井留出",
+        "统一通道和量纲",
+        "在验证井选择 k 和 GR 规则",
+        "逐点分类并显示依据",
+        "沿深度复核并计算评价"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/w4/case.json",
+          "bytes": 20271,
+          "sha256": "6b29f244afe3938db05bbf5c16bb12a0bf7d2cce7cb76b6be9ffa7c84bd38890"
+        },
+        {
+          "path": "expansion-src/w4/engine.js",
+          "bytes": 6983,
+          "sha256": "253cb90fbd3fe69ce4e12274671ad63c08bb096a6e5c239f170e167cc7b7a00c"
+        },
+        {
+          "path": "expansion-src/w4/app.js",
+          "bytes": 17689,
+          "sha256": "692be94dfe43cc742b3621b37438b747e6d968467e7cc92d911b176d7c2e2e0a"
+        },
+        {
+          "path": "expansion-src/w4/demo.html",
+          "bytes": 22155,
+          "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780"
+        },
+        {
+          "path": "expansion-src/w4/demo.css",
+          "bytes": 9513,
+          "sha256": "68a46787a592d1ba25651c579098b3a9b6bd49b3106a2e0d43437268e4220e9c"
+        },
+        {
+          "path": "expansion-src/w4/README.txt",
+          "bytes": 2298,
+          "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "ts"
+      ]
+    },
+    {
+      "sceneId": "c1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-c1-cement-quality",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜水泥环连接套管与地层：声音沿哪条路径传播？",
+        "图 B2｜一条 CBL 曲线和一幅 VDL，各自保留了什么？",
+        "图 B3｜幅度相同，原因可能不同：加入后到波证据"
+      ],
+      "stepNames": [
+        "看清观测与采样窗口",
+        "先按整井分组，再学习",
+        "从波形计算四维特征",
+        "真实近邻投票与拒判",
+        "同井对照、误差定位与复核"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/c1/case.json",
+          "bytes": 27451,
+          "sha256": "bb979172e5efbe5c1bfdb8bd6adde21851b01a425fe76d9fb8e410fd39c58d6c"
+        },
+        {
+          "path": "expansion-src/c1/engine.js",
+          "bytes": 6760,
+          "sha256": "99ca73bfc6b95097b843c655cec44aebb0eaae14b3469ce2b65d2bb03dffd7ee"
+        },
+        {
+          "path": "expansion-src/c1/app.js",
+          "bytes": 41540,
+          "sha256": "8788404edfd5433af8fd36d1ec240f51ddc59ed3d231b2eeef31e374d48a0daf"
+        },
+        {
+          "path": "expansion-src/c1/demo.html",
+          "bytes": 7135,
+          "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf"
+        },
+        {
+          "path": "expansion-src/c1/demo.css",
+          "bytes": 8854,
+          "sha256": "bc95b03c70697ec7873a9b32e235473bf3a8270a5fd8d00441fa7cd5bf636c42"
+        },
+        {
+          "path": "expansion-src/c1/README.txt",
+          "bytes": 1226,
+          "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "ts"
+      ]
+    },
+    {
+      "sceneId": "co1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-co1-completion-choice",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜四种完井构型，分别解决哪一种井下问题？",
+        "图 B2｜“出砂”与“出水”是两个不同的约束轴",
+        "图 B3｜学习“可能得到什么”，规则检查“能不能选”"
+      ],
+      "stepNames": [
+        "把井况与结果分开整理",
+        "学习条件距离，不用测试数据拟合",
+        "用历史近邻估计四种响应",
+        "先筛除条件不满足的候选",
+        "比较效用、核对真值并人工复核"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/co1/case.json",
+          "bytes": 22033,
+          "sha256": "626af726d8a9c458c76b851d73d6ed2050f849f895e8c6ad75d4adefa0b08b0a"
+        },
+        {
+          "path": "expansion-src/co1/engine.js",
+          "bytes": 7722,
+          "sha256": "79186b1d27e92a238d5eeab15b35a5d42e3f1d85144a587938ba70eb41b0eb5f"
+        },
+        {
+          "path": "expansion-src/co1/app.js",
+          "bytes": 36615,
+          "sha256": "9f9d8209c270cdf3e7095a4e148d958b75ff4624c271ca9f5834a87dba03b586"
+        },
+        {
+          "path": "expansion-src/co1/demo.html",
+          "bytes": 7323,
+          "sha256": "aa0af0ee64a9beaec35fd0df78d10474b6fd80324228d7a09c9503b87fcf83a3"
+        },
+        {
+          "path": "expansion-src/co1/demo.css",
+          "bytes": 8825,
+          "sha256": "f001ddb90746c45f8102c2e608837eef07fb688eb3efb74b08a8fd2178452aee"
+        },
+        {
+          "path": "expansion-src/co1/README.txt",
+          "bytes": 1233,
+          "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "kg",
+        "opt"
+      ]
+    },
+    {
+      "sceneId": "p1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-p1-perforation-design",
+      "version": "1.0.0",
+      "backgroundSections": 4,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜先把储层与井筒连起来",
+        "图 B2｜孔密、相位和穿深各控制什么？",
+        "图 B3｜智能化的价值，是把试验变成可搜索的性能面",
+        "从哪学，和谁比？"
+      ],
+      "stepNames": [
+        "组织试验与分组留出",
+        "学习可解释代理",
+        "画出受约束的候选域",
+        "在代理面上比较方案",
+        "独立评价并人工复核"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/p1/case.json",
+          "bytes": 24982,
+          "sha256": "a0763b5992e1c428712484439fd616a54e34e7eaebd7eddead70486d290c1b86"
+        },
+        {
+          "path": "expansion-src/p1/engine.js",
+          "bytes": 9176,
+          "sha256": "ab52b30e40416b5740c1a9b0fb1f4fec436be32451eabfcc5b3693b06bac3165"
+        },
+        {
+          "path": "expansion-src/p1/app.js",
+          "bytes": 45644,
+          "sha256": "df0a7739e88cf4accc65b80619a5eb11a64b0329371184b759079d5fb4d60e27"
+        },
+        {
+          "path": "expansion-src/p1/demo.html",
+          "bytes": 4501,
+          "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72"
+        },
+        {
+          "path": "expansion-src/p1/demo.css",
+          "bytes": 7825,
+          "sha256": "82cf8824941f7fc1337cca135f0508129c540d03b07b93411af1709880369d29"
+        },
+        {
+          "path": "expansion-src/p1/README.txt",
+          "bytes": 3117,
+          "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "opt"
+      ]
+    },
+    {
+      "sceneId": "pr1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-pr1-pump-card",
+      "version": "1.0.0",
+      "backgroundSections": 4,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "图 B1｜地面抽动杆柱，井下柱塞完成泵循环",
+        "图 B2｜理想井下泵图近矩形，异常常改变卸载过程",
+        "图 B3｜面积很相似，形状仍可能不同",
+        "让相似案例帮助解释，让独立井组检验结果"
+      ],
+      "stepNames": [
+        "按井组织完整循环",
+        "归一化与提取形状",
+        "学习近邻与面积基线",
+        "分类、拒判与同分母评价",
+        "沿循环复核与导出"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/pr1/case.json",
+          "bytes": 22875,
+          "sha256": "b05227062ea0364dc0f3a9b5d83572de6051bed30798457b9f5400bde16d01c1"
+        },
+        {
+          "path": "expansion-src/pr1/engine.js",
+          "bytes": 10161,
+          "sha256": "c4dd054259663e0956e6aa8d63e62a3d3d4475c702842f6fe6d5da8c20ae30af"
+        },
+        {
+          "path": "expansion-src/pr1/app.js",
+          "bytes": 43056,
+          "sha256": "c163e12a74853e83ef1301b7289e343751a2365bbbb19f38b65f73fe4db92bd1"
+        },
+        {
+          "path": "expansion-src/pr1/demo.html",
+          "bytes": 4305,
+          "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2"
+        },
+        {
+          "path": "expansion-src/pr1/demo.css",
+          "bytes": 7825,
+          "sha256": "82cf8824941f7fc1337cca135f0508129c540d03b07b93411af1709880369d29"
+        },
+        {
+          "path": "expansion-src/pr1/README.txt",
+          "bytes": 3458,
+          "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "cv"
+      ]
+    },
+    {
+      "sceneId": "wo1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-wo1-workover-retrieval",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 6,
+      "workflowSVGs": 6,
+      "backgroundConcepts": [
+        "图 B1｜井筒里，线索来自哪里",
+        "图 B2｜“曾经怀疑”与“本次观测”有区别",
+        "图 B3｜检索提供来源，条件决定能否进入候选"
+      ],
+      "stepNames": [
+        "整理井史与本次观测",
+        "按井分组与拟合词项",
+        "构造联合相似度",
+        "检索候选与来源",
+        "显式条件筛选",
+        "独立评价与人工复核"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/wo1/case.json",
+          "bytes": 18953,
+          "sha256": "48ecc72d2ecf02574e891f5344a59c1e275c707686f4ae566e730e61e84cd974"
+        },
+        {
+          "path": "expansion-src/wo1/engine.js",
+          "bytes": 15086,
+          "sha256": "7f1affb847df0a372bdba3595bb590ddf247e8a5f72954653b656948d67bc66f"
+        },
+        {
+          "path": "expansion-src/wo1/app.js",
+          "bytes": 9399,
+          "sha256": "0a367d62eb37650651a9863024c1bd75eebf511a76a66de195d2a65f65677b54"
+        },
+        {
+          "path": "expansion-src/wo1/demo.html",
+          "bytes": 19484,
+          "sha256": "357dda402d608cdf599532b2128ae96d7aad510832f1ffa6f84dd5a7ef9d41b5"
+        },
+        {
+          "path": "expansion-src/wo1/demo.css",
+          "bytes": 8368,
+          "sha256": "1d27c9bc61b54466f04f09c979cefe3d2cbcff5783f19d8d31c3e0c4e03fcf86"
+        },
+        {
+          "path": "expansion-src/wo1/README.txt",
+          "bytes": 1085,
+          "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "kg",
+        "nlp"
+      ]
+    },
+    {
+      "sceneId": "e1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-e1-fracture-optimization",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 6,
+      "workflowSVGs": 6,
+      "backgroundConcepts": [
+        "图 B1｜液体造缝，支撑剂维持通道",
+        "图 B2｜响应会弯曲，地层会改变收益",
+        "图 B3｜把增油、成本和约束放在一张图"
+      ],
+      "stepNames": [
+        "独立储层试验分组",
+        "构造二次响应特征",
+        "学习增油与压力代理",
+        "搜索441个约束候选",
+        "对照固定方案与Pareto候选",
+        "复核外推与当前导出"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/e1/case.json",
+          "bytes": 25918,
+          "sha256": "4eb860876fd74980d8c5a761007785f78a985f15351d4eb6abf914d2d3eaa6a7"
+        },
+        {
+          "path": "expansion-src/e1/engine.js",
+          "bytes": 11094,
+          "sha256": "ce61287fc1ffe7cb7d26fb4389695b632cdbb559ffd9a3500b38b637cac00cb7"
+        },
+        {
+          "path": "expansion-src/e1/app.js",
+          "bytes": 12626,
+          "sha256": "a7aa346feefd8cc1a0f31670a3ebfce82134ae413f9093dcf8aca23a9beaf308"
+        },
+        {
+          "path": "expansion-src/e1/demo.html",
+          "bytes": 26026,
+          "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3"
+        },
+        {
+          "path": "expansion-src/e1/demo.css",
+          "bytes": 8368,
+          "sha256": "1d27c9bc61b54466f04f09c979cefe3d2cbcff5783f19d8d31c3e0c4e03fcf86"
+        },
+        {
+          "path": "expansion-src/e1/README.txt",
+          "bytes": 1077,
+          "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "opt"
+      ]
+    },
+    {
+      "sceneId": "t1",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-t1-pipeline-leak",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "管线怎样被看见",
+        "负荷变化与泄漏响应有什么不同",
+        "模型到底多学了什么"
+      ],
+      "stepNames": [
+        "先把传感器放在同一个时刻",
+        "整条运行分组，不拆成随机点",
+        "学会正常出口会怎样变化",
+        "从偏差点合成待核查时段",
+        "对齐事件，带着证据复核"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/t1/case.json",
+          "bytes": 20849,
+          "sha256": "7cb367971c9df982448049e919f827dfd26d1cd79f7c7e0342741b6d7da35642"
+        },
+        {
+          "path": "expansion-src/t1/engine.js",
+          "bytes": 7064,
+          "sha256": "560c14bf56a1d7cdc9b00965765a321bcaea1895a0a056f019f542d376ff5441"
+        },
+        {
+          "path": "expansion-src/t1/app.js",
+          "bytes": 41912,
+          "sha256": "90b5fb9757587c6582fbb78200f922bba522d41e8df46a1856b78168b869d312"
+        },
+        {
+          "path": "expansion-src/t1/demo.html",
+          "bytes": 4630,
+          "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0"
+        },
+        {
+          "path": "expansion-src/t1/demo.css",
+          "bytes": 5797,
+          "sha256": "8061d866ea8350b3a1f19b92c59399594781be6c428f2948600317668ad56155"
+        },
+        {
+          "path": "expansion-src/t1/README.txt",
+          "bytes": 3506,
+          "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "ts"
+      ]
+    },
+    {
+      "sceneId": "r5",
+      "status": "source_valid",
+      "errors": [],
+      "warnings": [],
+      "caseId": "s17x-r5-quality-softsensor",
+      "version": "1.0.0",
+      "backgroundSections": 3,
+      "backgroundSVGs": 3,
+      "workflowSteps": 5,
+      "workflowSVGs": 5,
+      "backgroundConcepts": [
+        "软测量在哪里服务炼厂",
+        "化验滞后为什么是关键",
+        "模型怎样从过程量估计质量"
+      ],
+      "stepNames": [
+        "让过程量对得上样品",
+        "沿时间切批次，锁定标定截止",
+        "拟合一个能看懂的多变量模型",
+        "按当时可见信息运行三种估计",
+        "把漂移和误差送进核查队列"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/r5/case.json",
+          "bytes": 21498,
+          "sha256": "f2334272c9901f4a8ab5187381b31124d7407955a418053a57babb9a65355392"
+        },
+        {
+          "path": "expansion-src/r5/engine.js",
+          "bytes": 6866,
+          "sha256": "43a3fdc3b9672a6ca537a9f8a2da87b0f3820b88d0c6700b5ac61c9a3aa9f717"
+        },
+        {
+          "path": "expansion-src/r5/app.js",
+          "bytes": 42432,
+          "sha256": "c53fec8020eb9a3fff4a68b40b6678905b198fa5777ee4aac05a79d2f94b4d84"
+        },
+        {
+          "path": "expansion-src/r5/demo.html",
+          "bytes": 4854,
+          "sha256": "68115d8da6a6f525711fcbef739d5c2d10a3ff5703c3806c3d20a4dfe6dd1c85"
+        },
+        {
+          "path": "expansion-src/r5/demo.css",
+          "bytes": 5797,
+          "sha256": "8061d866ea8350b3a1f19b92c59399594781be6c428f2948600317668ad56155"
+        },
+        {
+          "path": "expansion-src/r5/README.txt",
+          "bytes": 3929,
+          "sha256": "60aefd3c3e5536ee81e38598d815e0df9dc357ee291eeca504cd2c5b9a1b7f53"
+        }
+      ],
+      "appProtocolKeys": [
+        {
+          "key": "schemaVersion",
+          "present": true
+        },
+        {
+          "key": "caseVersion",
+          "present": true
+        },
+        {
+          "key": "datasetId",
+          "present": true
+        },
+        {
+          "key": "runConfig",
+          "present": true
+        },
+        {
+          "key": "sourceRecordId",
+          "present": true
+        },
+        {
+          "key": "sourceVersion",
+          "present": true
+        },
+        {
+          "key": "claims",
+          "present": true
+        }
+      ],
+      "actualBrowserChecksByThisReview": 0,
+      "methods": [
+        "ts"
+      ]
+    }
+  ],
+  "valid": 12,
+  "errors": 0,
+  "finalizedAt": "2026-10-23T16:50:49.941Z",
+  "sharedReadability": {
+    "builderUsesAssistantReadabilityFalse": true,
+    "browserFontAcceptanceByThisReview": false
+  }
+}

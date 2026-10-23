@@ -1,0 +1,516 @@
+{
+  "scope": "Genuine browser failures retained before assistant DOM-ready startup and wo1 number step repairs.",
+  "reports": [
+    {
+      "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+      "scene": "wo1",
+      "caseId": "s17x-wo1-workover-retrieval",
+      "checks": [
+        {
+          "name": "original background contains at least three concept SVGs",
+          "passed": true,
+          "detail": {
+            "svg": 3
+          }
+        },
+        {
+          "name": "original workflow renders at least four named steps and graphics",
+          "passed": true,
+          "detail": {
+            "svg": 6
+          }
+        },
+        {
+          "name": "standalone background has at least three actual SVGs",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 1 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 2 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 3 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 4 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 5 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 6 is actually displayable",
+          "passed": true
+        }
+      ],
+      "errors": [
+        "Cannot read properties of null (reading 'append')"
+      ],
+      "errorDetails": [
+        "TypeError: Cannot read properties of null (reading 'append')\n    at about:srcdoc:239:15\n    at about:srcdoc:281:3"
+      ],
+      "requests": [],
+      "startedAt": "2026-10-23T16:55:12.774Z",
+      "workflow": {
+        "stepControls": 0,
+        "figures": 6
+      },
+      "exception": "frame.waitForFunction: Timeout 5000ms exceeded.",
+      "finalFrameStates": [
+        {
+          "url": "http://127.0.0.1:8755/portal-original/index.html#/scene/wo1?tab=demo"
+        },
+        {
+          "url": "about:srcdoc",
+          "statusText": "请检查观测字段的有效范围。",
+          "state": {
+            "sceneId": "wo1",
+            "caseId": "s17x-wo1-workover-retrieval",
+            "status": "error",
+            "metrics": null,
+            "runId": null,
+            "params": {
+              "preset": "standard",
+              "query": null
+            },
+            "review": null
+          }
+        }
+      ],
+      "checkedAt": "2026-10-23T16:55:19.266Z",
+      "passed": 9,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-wo1-workover-retrieval",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 18843,
+            "sha256": "649d0329d083eb994cc58a7cddd131110b0d550d317133e9448a306ac6901dc2"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 25200,
+            "sha256": "1c223e2df1fd921cfa5af5dd24e75e840dd935ebb220c72ae40cdc8c3a031166"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 63497,
+            "sha256": "a1674e4dd00954c0c265952c14145446b2a66f586d07ef0f21e8722abf1929d0"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 19484,
+            "sha256": "357dda402d608cdf599532b2128ae96d7aad510832f1ffa6f84dd5a7ef9d41b5"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 1085,
+            "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+      "scene": "e1",
+      "caseId": "s17x-e1-fracture-optimization",
+      "checks": [
+        {
+          "name": "original background contains at least three concept SVGs",
+          "passed": true,
+          "detail": {
+            "svg": 3
+          }
+        },
+        {
+          "name": "original workflow renders at least four named steps and graphics",
+          "passed": true,
+          "detail": {
+            "svg": 6
+          }
+        },
+        {
+          "name": "standalone background has at least three actual SVGs",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 1 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 2 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 3 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 4 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 5 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "workflow graphic 6 is actually displayable",
+          "passed": true
+        },
+        {
+          "name": "calculation reaches completed status with real metrics",
+          "passed": true,
+          "detail": "completed"
+        },
+        {
+          "name": "changing a calculation input invalidates export and marks stale",
+          "passed": true,
+          "detail": {
+            "status": "stale",
+            "exportDisabled": true
+          }
+        },
+        {
+          "name": "changed input recomputes a new run",
+          "passed": true
+        },
+        {
+          "name": "reset restores default model metrics",
+          "passed": true
+        },
+        {
+          "name": "human opinion is recorded without altering model metrics",
+          "passed": true,
+          "detail": {
+            "snapshot": {
+              "sceneId": "e1",
+              "caseId": "s17x-e1-fracture-optimization",
+              "status": "completed",
+              "metrics": {
+                "surrogate": {
+                  "denominator": 96,
+                  "oil90_t": {
+                    "MAE": 2.6075275159406908,
+                    "RMSE": 2.9698819150043594,
+                    "bias": 0.4621513994321906
+                  },
+                  "pressure_MPa": {
+                    "MAE": 0.47644100643047765,
+                    "RMSE": 0.5415402618490917,
+                    "bias": 0.25062023902484903
+                  }
+                },
+                "meanBaseline": {
+                  "denominator": 96,
+                  "oil90_t": {
+                    "MAE": 24.084239159676827,
+                    "RMSE": 28.329793999490757,
+                    "bias": -13.965674186239204
+                  },
+                  "pressure_MPa": {
+                    "MAE": 2.1507188006335203,
+                    "RMSE": 2.597393459006992,
+                    "bias": 0.6753578546147736
+                  }
+                },
+                "gridCount": 441,
+                "feasibleCount": 284,
+                "feasibleRate": 0.6439909297052154,
+                "objectiveGain": 3.2307837711261413,
+                "oilGain_t": 7.910783771126148
+              },
+              "runId": "e1-mvl7mbzx-x2ion-003",
+              "params": {
+                "preset": "standard",
+                "permeability_mD": 2.5,
+                "brittleness": 0.62,
+                "budget_10k": 54,
+                "pressureMax_MPa": 33,
+                "waterMax_m3": 1100,
+                "sandMax_t": 140,
+                "costWeight_t_per_10k": 1.3
+              },
+              "selectedCandidate": {
+                "fluid_m3": 1000,
+                "proppant_t": 100,
+                "rate_m3_min": 7,
+                "permeability_mD": 2.5,
+                "brittleness": 0.62
+              },
+              "review": {
+                "runId": "e1-mvl7mbzx-x2ion-003",
+                "candidate": {
+                  "fluid_m3": 1000,
+                  "proppant_t": 100,
+                  "rate_m3_min": 7,
+                  "permeability_mD": 2.5,
+                  "brittleness": 0.62
+                },
+                "note": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+                "outOfDomain": false,
+                "time": "2026-10-23T16:54:13.193Z"
+              }
+            },
+            "review": {
+              "present": true,
+              "keys": [
+                "schemaVersion",
+                "caseId",
+                "caseVersion",
+                "runId",
+                "datasetId",
+                "wellId",
+                "dataNature",
+                "runConfig",
+                "sources",
+                "claims",
+                "limitations",
+                "metrics",
+                "result",
+                "selectedCandidate",
+                "manualReview",
+                "reviewHistory",
+                "exportedAt"
+              ]
+            },
+            "text": [
+              "当前候选复核意见已记录"
+            ]
+          }
+        },
+        {
+          "name": "actual browser creates JSON evidence download",
+          "passed": true
+        },
+        {
+          "name": "page refresh and repeat calculation preserve default metrics",
+          "passed": true
+        },
+        {
+          "name": "browser calculations use no external HTTP services",
+          "passed": true
+        },
+        {
+          "name": "no JavaScript exceptions during interaction",
+          "passed": false,
+          "detail": [
+            "Cannot read properties of null (reading 'append')",
+            "Cannot read properties of null (reading 'append')"
+          ]
+        }
+      ],
+      "errors": [
+        "Cannot read properties of null (reading 'append')",
+        "Cannot read properties of null (reading 'append')"
+      ],
+      "requests": [
+        "http://127.0.0.1:8755/portal-original/index.html",
+        "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+        "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+      ],
+      "startedAt": "2026-10-23T16:54:10.974Z",
+      "workflow": {
+        "stepControls": 0,
+        "figures": 6
+      },
+      "default": {
+        "status": "completed",
+        "metrics": {
+          "surrogate": {
+            "denominator": 96,
+            "oil90_t": {
+              "MAE": 2.6075275159406908,
+              "RMSE": 2.9698819150043594,
+              "bias": 0.4621513994321906
+            },
+            "pressure_MPa": {
+              "MAE": 0.47644100643047765,
+              "RMSE": 0.5415402618490917,
+              "bias": 0.25062023902484903
+            }
+          },
+          "meanBaseline": {
+            "denominator": 96,
+            "oil90_t": {
+              "MAE": 24.084239159676827,
+              "RMSE": 28.329793999490757,
+              "bias": -13.965674186239204
+            },
+            "pressure_MPa": {
+              "MAE": 2.1507188006335203,
+              "RMSE": 2.597393459006992,
+              "bias": 0.6753578546147736
+            }
+          },
+          "gridCount": 441,
+          "feasibleCount": 284,
+          "feasibleRate": 0.6439909297052154,
+          "objectiveGain": 3.2307837711261413,
+          "oilGain_t": 7.910783771126148
+        },
+        "params": {
+          "preset": "standard",
+          "permeability_mD": 2.5,
+          "brittleness": 0.62,
+          "budget_10k": 54,
+          "pressureMax_MPa": 33,
+          "waterMax_m3": 1100,
+          "sandMax_t": 140,
+          "costWeight_t_per_10k": 1.3
+        },
+        "runId": "e1-mvl7mbzx-x2ion-001"
+      },
+      "reviewSnapshot": {
+        "sceneId": "e1",
+        "caseId": "s17x-e1-fracture-optimization",
+        "status": "completed",
+        "metrics": {
+          "surrogate": {
+            "denominator": 96,
+            "oil90_t": {
+              "MAE": 2.6075275159406908,
+              "RMSE": 2.9698819150043594,
+              "bias": 0.4621513994321906
+            },
+            "pressure_MPa": {
+              "MAE": 0.47644100643047765,
+              "RMSE": 0.5415402618490917,
+              "bias": 0.25062023902484903
+            }
+          },
+          "meanBaseline": {
+            "denominator": 96,
+            "oil90_t": {
+              "MAE": 24.084239159676827,
+              "RMSE": 28.329793999490757,
+              "bias": -13.965674186239204
+            },
+            "pressure_MPa": {
+              "MAE": 2.1507188006335203,
+              "RMSE": 2.597393459006992,
+              "bias": 0.6753578546147736
+            }
+          },
+          "gridCount": 441,
+          "feasibleCount": 284,
+          "feasibleRate": 0.6439909297052154,
+          "objectiveGain": 3.2307837711261413,
+          "oilGain_t": 7.910783771126148
+        },
+        "runId": "e1-mvl7mbzx-x2ion-003",
+        "params": {
+          "preset": "standard",
+          "permeability_mD": 2.5,
+          "brittleness": 0.62,
+          "budget_10k": 54,
+          "pressureMax_MPa": 33,
+          "waterMax_m3": 1100,
+          "sandMax_t": 140,
+          "costWeight_t_per_10k": 1.3
+        },
+        "selectedCandidate": {
+          "fluid_m3": 1000,
+          "proppant_t": 100,
+          "rate_m3_min": 7,
+          "permeability_mD": 2.5,
+          "brittleness": 0.62
+        },
+        "review": {
+          "runId": "e1-mvl7mbzx-x2ion-003",
+          "candidate": {
+            "fluid_m3": 1000,
+            "proppant_t": 100,
+            "rate_m3_min": 7,
+            "permeability_mD": 2.5,
+            "brittleness": 0.62
+          },
+          "note": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+          "outOfDomain": false,
+          "time": "2026-10-23T16:54:13.193Z"
+        }
+      },
+      "review": {
+        "present": true,
+        "keys": [
+          "schemaVersion",
+          "caseId",
+          "caseVersion",
+          "runId",
+          "datasetId",
+          "wellId",
+          "dataNature",
+          "runConfig",
+          "sources",
+          "claims",
+          "limitations",
+          "metrics",
+          "result",
+          "selectedCandidate",
+          "manualReview",
+          "reviewHistory",
+          "exportedAt"
+        ]
+      },
+      "reviewVisibleText": [
+        "当前候选复核意见已记录"
+      ],
+      "download": {
+        "suggestedFilename": "e1-e1-mvl7mbzx-x2ion-003.json",
+        "relativePath": "output/exports/v1.7/e1-original.json"
+      },
+      "exception": "no JavaScript exceptions during interaction",
+      "checkedAt": "2026-10-23T16:54:14.623Z",
+      "passed": 17,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-e1-fracture-optimization",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 25809,
+            "sha256": "51490a009115eb6534de46b01b843de04e773a5f860187a8a0d5ef6d2469fdf9"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 25200,
+            "sha256": "1c223e2df1fd921cfa5af5dd24e75e840dd935ebb220c72ae40cdc8c3a031166"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 62721,
+            "sha256": "44e89f3a3387f5778617cdb92d7722e1e6033f84b732d4553677c5ba09bc7663"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 26026,
+            "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 1077,
+            "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+/* Reading sizes shared by the five standalone teaching cases. */
+body{font-size:16px;line-height:1.85;background:#f4f6f7;color:#26333b}
+body>header{background:#fff;border-color:#dfe5e8;padding-top:24px;padding-bottom:24px}
+main{padding-top:40px;padding-bottom:65px}
+main .intro{font-size:17px;line-height:1.95;max-width:980px;color:#53646e}
+main .panel{background:#fff;border-color:#dfe6e8;border-radius:16px;box-shadow:0 3px 15px #263b4905;padding:25px}
+main :is(label,button,select,textarea,input),main nav button{font-size:15px;line-height:1.7}
+main :is(h2,.lesson-guide h2){font-size:23px;line-height:1.5}
+main h3{font-size:19px}
+main :is(p,figcaption,.flowfacts,.teaching-note){line-height:1.9}
+main :is(.fine,figcaption,.legend,.chip,.sectionline span,.neighbor p,.rawfeatures,#review-history){font-size:14px}
+main :is(table,.matrix th,.matrix td,pre){font-size:14px}
+main .metric span{font-size:14px}
+main .eyebrow,body>.badge,body>footer{font-size:14px}
+main .flowfacts>div{padding:19px;background:#f1f5f6}
+main .primary{background:#16766c;border-color:#16766c}
+main .lesson-guide{border-radius:17px;background:linear-gradient(120deg,#eaf3f0,#f7f9f9)}
+@media(max-width:850px){main{padding:25px 4% 55px}main .panel{padding:18px}main nav{gap:6px}main nav button{font-size:14px;padding:10px 7px;white-space:normal}main .controlgrid{gap:18px}main .intro{font-size:16px}main h2{font-size:21px}main .stepnav button{font-size:14px}.brand small{font-size:13px}}
+
+/* Read the petroleum knowledge before opening optional scene illustrations. */
+main .knowledge-chapter{padding:28px 32px}main .knowledge-chapter-no{font-size:12px;letter-spacing:.1em;color:#6e8b8c;margin-bottom:10px}
+main .knowledge-chapter h2{font-size:25px;margin:0 0 20px}main .knowledge-text{font-size:18px!important;line-height:1.95}main .knowledge-text p{font-size:18px;line-height:1.95;margin:0 0 18px}main .knowledge-text h4{font-size:20px;line-height:1.6;margin:26px 0 12px}
+main .knowledge-text table{font-size:16px}main .knowledge-example p{margin:8px 0 0}main .knowledge-supplement{font-size:16px;color:#627782}main .knowledge-supplement summary{cursor:pointer;font-size:16px;font-weight:500;padding:5px 0}main .knowledge-supplement[open]>summary{margin-bottom:22px}main .knowledge-supplement .knowledge-old-figure{padding-top:20px}
+main .knowledge-step-copy{font-size:18px;line-height:1.95;margin:20px 0 27px;max-width:940px}main .knowledge-step-copy h3{font-size:21px;color:#346d69;margin:0 0 12px}main .knowledge-step-copy p{font-size:18px;line-height:1.95}
+.lesson-guide[hidden]{display:none!important}
+@media(max-width:700px){main .knowledge-chapter{padding:23px 20px}main .knowledge-chapter h2{font-size:23px}main .knowledge-text,main .knowledge-text p{font-size:17px!important}main .knowledge-text table{min-width:560px;font-size:16px}main .knowledge-step-copy p{font-size:17px}}

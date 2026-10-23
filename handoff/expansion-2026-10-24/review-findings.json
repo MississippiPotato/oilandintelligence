@@ -1,0 +1,170 @@
+{
+  "kind": "independent_source_review_findings_not_browser_acceptance",
+  "date": "2026-10-24",
+  "scope": [
+    "g1",
+    "s1",
+    "d1",
+    "w4",
+    "c1",
+    "co1",
+    "p1",
+    "pr1",
+    "wo1",
+    "e1",
+    "t1",
+    "r5"
+  ],
+  "finalized": true,
+  "findings": [
+    {
+      "id": "R5-01",
+      "priority": "P1",
+      "file": "expansion-src/r5/engine.js",
+      "lineAtDiscovery": 17,
+      "finding": "延长化验延迟时，验证批末的化验会晚于首个测试预测时刻到达，但初版选模已使用全部验证化验。",
+      "fix": "以首个测试预测时刻 modelAsOf 为标定截止，训练与验证化验均按 releaseMinute <= modelAsOf 筛选。",
+      "status": "fixed_and_calculation_rechecked",
+      "evidence": "review-engine-additional.json 中 delay=15/30/40 的 6 项检查；delay30 排除 1 份未到达验证化验。"
+    },
+    {
+      "id": "C1-01",
+      "priority": "P2",
+      "file": "expansion-src/c1/engine.js",
+      "lineAtDiscovery": 84,
+      "finding": "params.reject || 0.6 会把合法的 0 拒判阈值改回 0.6。",
+      "fix": "使用 params.reject ?? 0.6 保留合法零值。",
+      "status": "fixed_and_calculation_rechecked",
+      "finalEvidence": "review-engine-final.json"
+    },
+    {
+      "id": "PR1-01",
+      "priority": "P2",
+      "file": "expansion-src/pr1/engine.js",
+      "finding": "metrics([],[]) 的宏 F1 返回 0，其余空分母指标为空；无样本应显示不适用。",
+      "fix": "有效类别数组为空时 macroF1 返回 null。",
+      "status": "fixed_and_calculation_rechecked",
+      "initialEvidence": "review-engine-additional.json 保留这项失败。",
+      "finalEvidence": "review-engine-final.json"
+    },
+    {
+      "id": "PR1-02",
+      "priority": "P3",
+      "file": "expansion-src/pr1/demo.html",
+      "lineAtDiscovery": 3,
+      "finding": "采油页眉写 10/13，老师 ATLAS 中采油实际是第 9 阶段。",
+      "fix": "改为 PRODUCTION · 09 / 13。",
+      "status": "fixed_source_reviewed",
+      "finalEvidence": "demo.html 当前 PRODUCTION · 09 / 13"
+    },
+    {
+      "id": "WO1-01",
+      "priority": "P2",
+      "file": "expansion-src/wo1/engine.js",
+      "finding": "初版基线约束违例数固定写 0，应由实际输出和约束理由计算。",
+      "fix": "按 baseline 返回类别与 rank.reasons 统计。",
+      "status": "fixed_and_calculation_rechecked",
+      "finalEvidence": "review-engine-final.json"
+    },
+    {
+      "id": "WO1-02",
+      "priority": "P2",
+      "file": "expansion-src/wo1/engine.js",
+      "lineAtDiscovery": 16,
+      "finding": "初版同类仅三套措辞，并在训练、验证、测试循环复用；不应描述为未见文档族评价。",
+      "fix": "明确文本族分组，作者已改族0/1训练、族2验证、族3测试，并导出 templateFamilies。",
+      "status": "fixed_and_calculation_rechecked",
+      "finalEvidence": "review-engine-final.json"
+    },
+    {
+      "id": "WO1-03",
+      "priority": "P2",
+      "file": "expansion-src/wo1/engine.js",
+      "lineAtDiscovery": 90,
+      "finding": "冲突预设人为新增关键故障证据后仍沿用原单类标签评价，参考适用性不清楚。",
+      "fix": "将冲突预设标为无适用参考的反事实；保留实际覆盖、来源、约束，准确率、Recall@3、混淆置空。",
+      "status": "fixed_and_calculation_rechecked",
+      "finalEvidence": "review-engine-final.json"
+    },
+    {
+      "id": "TR-01",
+      "priority": "P2",
+      "files": [
+        "expansion-src/t1/app.js",
+        "expansion-src/r5/app.js"
+      ],
+      "finding": "初版导出仅为 result 加 review 文本，缺少07协议的来源/结论版本结构；输入过期不撤销旧复核提示，新运行直接清空旧历史。",
+      "fix": "补最小证据 envelope、可定位当前观测来源与独立人工记录；输入变更使当前确认过期，历史保留。",
+      "status": "fixed_source_reviewed_browser_download_pending",
+      "finalEvidence": "最终app含07字段、实际series_segment来源、time_range选择器、model_inference和历史人工记录；主智能体做浏览器下载。"
+    },
+    {
+      "id": "E1-01",
+      "priority": "P2",
+      "file": "expansion-src/e1/engine.js",
+      "finding": "初版空集RMSE由sqrt(null)得到0。",
+      "fix": "空分母RMSE返回null。",
+      "status": "fixed_and_calculation_rechecked",
+      "finalEvidence": "review-engine-final.json"
+    },
+    {
+      "id": "E1-02",
+      "priority": "P2",
+      "file": "expansion-src/e1/engine.js",
+      "finding": "同run点选另一候选后，结论内容改变但claimId/revision未变。",
+      "fix": "claimId使用包含候选设计值的predictionId。",
+      "status": "fixed_and_calculation_rechecked",
+      "finalEvidence": "review-engine-final.json"
+    },
+    {
+      "id": "GS-01",
+      "priority": "P2",
+      "files": [
+        "expansion-src/g1/app.js",
+        "expansion-src/s1/app.js"
+      ],
+      "finding": "初版导出使用自定义字段，且同run选不同像素时结论ID未区分。",
+      "fix": "使用07精确字段和image_region选择器，claimId包含runId和pixelIndex；实际观测写入content。",
+      "status": "fixed_source_reviewed_browser_download_pending"
+    },
+    {
+      "id": "VIS-01",
+      "priority": "P2",
+      "files": [
+        "expansion-src/g1/demo.css",
+        "expansion-src/s1/demo.css",
+        "expansion-src/c1/demo.css",
+        "expansion-src/co1/demo.css",
+        "tools/build-expansion.mjs"
+      ],
+      "finding": "窄屏专业图可能被整体缩小；作者浏览器还发现组合包旧readability覆盖18px字号。",
+      "fix": "专业图/Canvas保留最小宽并局部滚动；扩展构建使用assistantCSS({readability:false})。",
+      "status": "fixed_source_reviewed_browser_font_pending"
+    },
+    {
+      "id": "C1-02",
+      "priority": "P3",
+      "file": "expansion-src/c1/case.json",
+      "finding": "cv/ts标签强于实际声波时序特征模型；VDL展示不等于图像特征学习。",
+      "fix": "methods改为ts并准确说明声波窗口RMS与kNN。",
+      "status": "fixed_source_reviewed"
+    },
+    {
+      "id": "TR-02",
+      "priority": "P2",
+      "files": [
+        "expansion-src/t1/app.js",
+        "expansion-src/r5/app.js"
+      ],
+      "finding": "旧人工确认成功提示在输入过期后仍可保留，协议kind/selector初版键值不精确。",
+      "fix": "输入/新run清除旧成功提示；kind=model_inference，selector=time_range。",
+      "status": "fixed_source_reviewed_browser_interaction_pending"
+    }
+  ],
+  "notYetReviewed": [
+    "本专项未执行真实浏览器；原站导入、刷新/关闭重开、离线、窄屏与实际下载由主智能体记录。",
+    "组合CSS已在源码排除旧覆盖，最终实际字号仍需浏览器确认。",
+    "未验证其他浏览器引擎、真实手机触屏或现场工业有效性。"
+  ],
+  "finalizedAt": "2026-10-23T16:50:49.944Z"
+}

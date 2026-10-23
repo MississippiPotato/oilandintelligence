@@ -5,12 +5,12 @@
     "nlp"
   ],
   "title": "录井报告自动生成：每句话都有当前证据",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "updated": "2026-10-23",
   "tabs": {
     "background": {
       "label": "专业背景",
-      "lede": "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。",
+      "lede": "一份录井报告要把井段、岩屑、气测、荧光和操作情况联系起来，让接班或解释人员知道观察到了什么、判断依据是什么。本例先讲报告中的信息关系，再让文本方法辅助分类、抽取与组装，最后逐句复核。",
       "judge": [
         {
           "label": "默认数据",
@@ -19,77 +19,87 @@
         },
         {
           "label": "业务问题",
-          "value": "怎样整理录井报告，让每句话都能回到证据？",
+          "value": "怎样把零散录井记录整理成能回查的报告？",
           "desc": "输出边界见说明"
         }
       ],
       "sections": [
         {
           "no": 1,
-          "en": "CONCEPT",
-          "title": "图 B1｜五种证据进入一份报告",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"原始观察上游推断到报告章节\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">岩屑证据</text><rect x=\"197\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"209\" y=\"53\">气测证据</text><rect x=\"374\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"386\" y=\"53\">荧光证据</text><rect x=\"551\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"563\" y=\"53\">钻时证据</text><path d=\"M100 75L350 125M280 75L350 125M460 75L350 125M640 75L350 125\" stroke=\"#70a18b\"/><rect x=\"220\" y=\"125\" width=\"280\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"232\" y=\"153\">报告句子 → 字段 → 具体来源</text><text x=\"30\" y=\"198\">内置上游计算快照；选择JSON可导入本次运行的新证据。</text></g></svg></div></div><figcaption>内置m1–m4计算快照；也可导入你刚导出的JSON，更新当前来源。</figcaption></figure>"
+          "title": "先认识录井报告：它在替下一位读者回答什么？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>录井资料有图像、连续曲线，也有采样描述和操作日志。报告把这些材料按井段与时间整理，使读者能知道：钻到了哪里、看到了什么变化、相关操作是什么，以及哪些现象需要继续检查。</p><p>例如“1200—1210 m，灰色砂岩为主；未见荧光；总气较前升高”包含三类观察。它们谈的是同一井段，但各自来自不同记录。整理时需要保留深度范围、数值单位和否定词，再解释它们之间的关系。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">信息层次</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">例句</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">读者接着要问</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">直接观察</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">1200—1210 m：未见荧光</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">哪份样品、哪次观察？</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">方法给出的候选</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">该气峰与较早接单根时段相对应</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">用了什么迟到假设和日志？</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">人工意见</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">建议核对该时段的操作记录</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">谁在什么依据下提出？</td></tr></tbody></table></div><p>这三层在报告中应能分辨；一句话写得流畅，还需要能定位到它的依据。</p></div>",
+          "en": "FOUNDATION",
+          "navTitle": "先认识这项工作"
         },
         {
           "no": 2,
-          "en": "CONCEPT",
-          "title": "图 B2｜观察、模型推断与人工意见分开",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 300\" role=\"img\" aria-label=\"否定词改写会撤销当前核验，保留来源与历史\"><rect width=\"720\" height=\"300\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"25\" y=\"45\" width=\"238\" height=\"95\" rx=\"10\" fill=\"#fffdf5\" stroke=\"#8fa888\"/><text x=\"40\" y=\"74\" >来源记录 @ v1</text><text x=\"40\" y=\"108\" font-size=\"19\" font-weight=\"650\">1200–1210 m：未见荧光</text>\n<path d=\"M270 92h66m-9-6l9 6-9 6\" fill=\"none\" stroke=\"#698d71\" stroke-width=\"3\"/>\n<rect x=\"355\" y=\"45\" width=\"330\" height=\"95\" rx=\"10\" fill=\"#fff2df\" stroke=\"#ba8c52\"/><text x=\"373\" y=\"74\" >人工改写的报告句子</text><text x=\"373\" y=\"108\" font-size=\"19\" font-weight=\"650\">1200–1210 m：见荧光</text>\n<text x=\"40\" y=\"187\" >来源仍在、字符范围仍能定位，含义却因一个“未”字发生变化。</text><text x=\"40\" y=\"226\" >当前确认撤销 → 重新核对否定 / 单位 / 范围 → 保存新的人工意见</text><text x=\"40\" y=\"267\" >观察、模型候选与人工意见分别保留；可追溯不等于语义已获支持。</text></g></svg></div></div><figcaption>sourceRefs 需要具体ID、版本和文字/图段定位。只有一个泛链接不算完整追溯。</figcaption></figure>"
+          "title": "当前做法与问题：整理文字，为什么会改变地质含义？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>人工汇总要在多份记录间核对井深和术语。最容易丢掉的是很短的信息：一个“未”字、一个单位、一个井段范围。它们篇幅很小，却会决定一句话到底说了什么。</p><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>同一句话，只差一个字</b><p>原记录：1200—1210 m，<mark>未见荧光</mark>。<br>误写后：1200—1210 m，<mark>见荧光</mark>。<br>两句都能找到“荧光”这个关键词，但观察结论相反。因此，只用关键词抽句子还不够。</p></aside><p>还要处理范围与冲突：“未见荧光，但总气升高”中的否定只属于前半句；两个来源对同一井段给出不同数值时，应把差异列出来，供人核对，不能悄悄只保留一条。</p></div>",
+          "en": "PROBLEM",
+          "navTitle": "当前做法与问题"
         },
         {
           "no": 3,
-          "en": "CONCEPT",
-          "title": "图 B3｜一个“未”字改变事实，不能丢掉",
-          "html": "<figure><div tabindex=\"0\" aria-label=\"图示可横向滚动\" style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"否定作用域与同句多分句\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">未见荧光，但气测升高</text><rect x=\"390\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"402\" y=\"53\">荧光：否定；气测：非否定</text><text x=\"30\" y=\"125\">深度、时间、数值和单位与事实一起保留。</text><text x=\"30\" y=\"166\">缺深度写“未提供”，多范围无法唯一绑定则送复核。</text><text x=\"30\" y=\"199\">自由输入没有金标，不显示准确率、F1或事实覆盖性能。</text></g></svg></div></div><figcaption>本例用规则抽取限定格式，不把规则或模板称为大模型理解；复杂语义仍需人工。</figcaption></figure>"
+          "title": "智能方法辅助哪一步？分类、抽字段，再按证据组装",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>本例先把文本分成适合处理的子句，用<b>字符朴素贝叶斯</b>归为岩性、气测、荧光、工况等类别。它从训练句子中学习哪些文字片段更常出现在某类，页面能展开实际分数和片段贡献。</p><p>然后用明确的抽取规则保留深度、时间、数值单位、否定和不确定表达。最后按这些字段组装报告草稿，每句话都带回原文的定位范围。分类辅助分流，字段抽取负责保留关键细节，人工复核负责核对含义。</p><div class=\"knowledge-table-scroll\" style=\"max-width:100%;overflow-x:auto;margin:20px 0\"><table class=\"dtable knowledge-table\" style=\"width:100%;border-collapse:collapse;font-size:16px;line-height:1.8\"><thead><tr><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">处理阶段</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">产物</th><th style=\"padding:12px;text-align:left;background:#edf2f3;border-bottom:1px solid #dbe4e5\">可视化怎样帮助检查</th></tr></thead><tbody><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">文本分类</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">每条子句的类别与得分</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">类别分数和片段贡献</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">字段抽取</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">深度、单位、否定、时间</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">原文逐处高亮</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">草稿组装</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">句子与对应来源</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">句子—字段—来源关系</td></tr><tr><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">人工复核</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">当前修订及核验意见</td><td style=\"padding:12px;vertical-align:top;border-bottom:1px solid #e3e9ea\">修改前后差异与历史状态</td></tr></tbody></table></div><p>本例采用本地可解释文本模型，默认离线运行。网页右下角的大模型助手用于问答和导航；报告草稿的字段与来源仍可以直接回查。</p></div>",
+          "en": "INTERVENTION",
+          "navTitle": "AI能做什么"
+        },
+        {
+          "no": 4,
+          "title": "准备什么资料，本例从哪里开始？",
+          "html": "<div class=\"knowledge-text\" style=\"font-size:17px;line-height:1.95\"><p>整理报告需要带身份和版本的原始记录，统一井深与时间表达，并保存分类或字段标注。自由输入若没有对应参考答案，页面只展示抽取与工作流结果；带标注的教学文本另行计算评价。</p><p>先运行默认记录，点选一句草稿，看它对应的原文和字段。然后核对并保存人工意见，再把“未见荧光”改成“见荧光”，观察该句为什么需要重新确认。也可以显式导入前四例的证据，查看图像与曲线来源如何出现在报告中。</p><aside class=\"knowledge-example\" style=\"padding:16px 19px;margin:20px 0;background:#edf4f1;border-left:3px solid #38877c;border-radius:0 8px 8px 0\"><b>读完这一例，应能解释</b><p>一份录井报告如何联系井段与多类观察；为什么否定、单位、范围必须保留；文本模型辅助的是哪几个步骤；为什么一句话改写后要重新核对依据。</p></aside></div><details class=\"knowledge-supplement\"><summary>补充图解：展开原有场景示意与概念图</summary><p>读完上面的知识后，可用这些图回看采集过程和概念关系。</p><figure><h4>五种证据进入一份报告</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"原始观察上游推断到报告章节\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">岩屑证据</text><rect x=\"197\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"209\" y=\"53\">气测证据</text><rect x=\"374\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"386\" y=\"53\">荧光证据</text><rect x=\"551\" y=\"25\" width=\"160\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"563\" y=\"53\">钻时证据</text><path d=\"M100 75L350 125M280 75L350 125M460 75L350 125M640 75L350 125\" stroke=\"#70a18b\"/><rect x=\"220\" y=\"125\" width=\"280\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"232\" y=\"153\">报告句子 → 字段 → 具体来源</text><text x=\"30\" y=\"198\">内置上游计算快照；选择JSON可导入本次运行的新证据。</text></g></svg></div></div><figcaption>内置m1–m4计算快照；也可导入你刚导出的JSON，更新当前来源。</figcaption></figure><figure><h4>观察、模型推断与人工意见分开</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 300\" role=\"img\" aria-label=\"否定词改写会撤销当前核验，保留来源与历史\"><rect width=\"720\" height=\"300\" rx=\"12\" fill=\"#f0f4e9\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#294a3a\">\n<rect x=\"25\" y=\"45\" width=\"238\" height=\"95\" rx=\"10\" fill=\"#fffdf5\" stroke=\"#8fa888\"/><text x=\"40\" y=\"74\" >来源记录 @ v1</text><text x=\"40\" y=\"108\" font-size=\"19\" font-weight=\"650\">1200–1210 m：未见荧光</text>\n<path d=\"M270 92h66m-9-6l9 6-9 6\" fill=\"none\" stroke=\"#698d71\" stroke-width=\"3\"/>\n<rect x=\"355\" y=\"45\" width=\"330\" height=\"95\" rx=\"10\" fill=\"#fff2df\" stroke=\"#ba8c52\"/><text x=\"373\" y=\"74\" >人工改写的报告句子</text><text x=\"373\" y=\"108\" font-size=\"19\" font-weight=\"650\">1200–1210 m：见荧光</text>\n<text x=\"40\" y=\"187\" >来源仍在、字符范围仍能定位，含义却因一个“未”字发生变化。</text><text x=\"40\" y=\"226\" >当前确认撤销 → 重新核对否定 / 单位 / 范围 → 保存新的人工意见</text><text x=\"40\" y=\"267\" >观察、模型候选与人工意见分别保留；可追溯不等于语义已获支持。</text></g></svg></div></div><figcaption>sourceRefs 需要具体ID、版本和文字/图段定位。只有一个泛链接不算完整追溯。</figcaption></figure><figure><h4>一个“未”字改变事实，不能丢掉</h4><div style=\"max-width:100%;overflow-x:auto\"><div style=\"min-width:640px\"><svg viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"否定作用域与同句多分句\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#eff3eb\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"15\" fill=\"#29473e\"><rect x=\"20\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"32\" y=\"53\">未见荧光，但气测升高</text><rect x=\"390\" y=\"25\" width=\"300\" height=\"47\" rx=\"7\" fill=\"#dcebe1\" stroke=\"#6b9b89\"/><text x=\"402\" y=\"53\">荧光：否定；气测：非否定</text><text x=\"30\" y=\"125\">深度、时间、数值和单位与事实一起保留。</text><text x=\"30\" y=\"166\">缺深度写“未提供”，多范围无法唯一绑定则送复核。</text><text x=\"30\" y=\"199\">自由输入没有金标，不显示准确率、F1或事实覆盖性能。</text></g></svg></div></div><figcaption>本例用规则抽取限定格式，不把规则或模板称为大模型理解；复杂语义仍需人工。</figcaption></figure></details>",
+          "en": "DATA",
+          "navTitle": "资料与学习任务"
         }
       ]
     },
     "workflow": {
       "label": "案例流程",
-      "title": "怎样整理录井报告，让每句话都能回到证据？",
+      "title": "怎样把零散录井记录整理成能回查的报告？",
       "lead": [
-        "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。"
+        "一份录井报告要把井段、岩屑、气测、荧光和操作情况联系起来，让接班或解释人员知道观察到了什么、判断依据是什么。本例先讲报告中的信息关系，再让文本方法辅助分类、抽取与组装，最后逐句复核。"
       ],
       "steps": [
         {
           "name": "收集与版本化来源",
           "role": "图S1",
-          "do": "输入：原始文本、上游证据JSON；动作：校验v1必填、ID/版本与引用；保留原内容。见图S1。",
+          "do": "保存原文、井号、版本与记录身份。后面每一个字段和句子都从这里出发；外部证据包按其原井和原单位保留，不能只因为导入了就自动当成同一井。 本步操作：校验v1必填、ID/版本与引用；保留原内容。输入：原始文本、上游证据JSON。",
           "effect": "不可变来源版本与证据卡",
           "trap": "同ID/版本不同内容必须报冲突"
         },
         {
           "name": "保留偏移与字符特征",
           "role": "图S2",
-          "do": "输入：原始文本；动作：分句保留start/end，字符1–2gram计数。见图S2。",
+          "do": "“未见荧光，但气测升高”要分开处理，并保留每段在原文中的字符位置。这样否定能跟对观察对象，也能在点击草稿时准确返回原句。 本步操作：分句保留start/end，字符1–2gram计数。输入：原始文本。",
           "effect": "原句片段与训练词表",
           "trap": "数值只在分类特征归一化，原文不动"
         },
         {
           "name": "六类朴素贝叶斯",
           "role": "图S3",
-          "do": "输入：252训练句，独立表达族切分；动作：真实统计先验/词频，Laplace平滑与验证选参。见图S3。",
+          "do": "字符朴素贝叶斯计算各类别得分，用于把岩性、气测等子句送到对应处理步骤。实际词频与贡献可以查看，低分差和陌生表述进入复核。 本步操作：真实统计先验/词频，Laplace平滑与验证选参。输入：252训练句，独立表达族切分。",
           "effect": "类对数分数、分差、字符贡献",
           "trap": "对数分数用于类别比较；产物为词频、先验与词表"
         },
         {
           "name": "字段与冲突检查",
           "role": "图S4",
-          "do": "输入：原句、类别建议、范围；动作：规则抽取否定/数值/单位/范围，检查同域冲突。见图S4。",
+          "do": "从子句中抽深度、时间、数值单位和否定。遇到同范围的不同数值时并列保留；没有给出的单位不补造，范围不清的句子先标记。 本步操作：规则抽取否定/数值/单位/范围，检查同域冲突。输入：原句、类别建议、范围。",
           "effect": "事实字段、缺项与冲突队列",
           "trap": "同一句无法唯一绑定多范围，不强行选一个"
         },
         {
           "name": "有依据地组装报告",
           "role": "图S5",
-          "do": "输入：事实、上游推断与原文引用；动作：共用约束模板，逐句绑定版本和选择范围。见图S5。",
+          "do": "草稿句子连接事实字段，再连接原文或导入来源。点击句子能回看具体片段；“能找到原文”和“原文支持这句话”要分别核对。 本步操作：共用约束模板，逐句绑定版本和选择范围。输入：事实、上游推断与原文引用。",
           "effect": "报告草稿及证据定位",
           "trap": "关键词基线与学习使用相同抽取器/模板"
         },
         {
           "name": "人工复核与安全导出",
           "role": "图S6",
-          "do": "输入：报告句子、当前来源与历史；动作：手改撤销核验；人工重核后确认；导出HTML/JSON。见图S6。",
+          "do": "人工核对否定、单位、范围和含义后保存意见。改写句子或变更来源会撤销当前确认，历史记录仍保留；导出的JSON与HTML包含这次修订和来源。 本步操作：手改撤销核验；人工重核后确认；导出HTML/JSON。输入：报告句子、当前来源与历史。",
           "effect": "带限制、状态、修订的可追溯草稿",
           "trap": "链接存在不等于支持；用户文本不作为HTML执行"
         }
@@ -105,7 +115,7 @@
       "js": "demo/demo.js",
       "label": "可运行示范",
       "height": 1000,
-      "intro": "真实六类字符朴素贝叶斯负责归类，规则保留否定/单位/范围，约束模板组装草稿；关联、支持与人工确认分开，默认离线运行。"
+      "intro": "一份录井报告要把井段、岩屑、气测、荧光和操作情况联系起来，让接班或解释人员知道观察到了什么、判断依据是什么。本例先讲报告中的信息关系，再让文本方法辅助分类、抽取与组装，最后逐句复核。"
     }
   }
 }

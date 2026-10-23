@@ -1,0 +1,160 @@
+{
+  "scope": "Original five required cases remain runnable among all imported packages",
+  "scene": "m4",
+  "caseId": "s17-drilltime-boundaries",
+  "checks": [
+    {
+      "name": "required case runs with evaluation metrics",
+      "passed": true
+    },
+    {
+      "name": "required case downloads actual JSON",
+      "passed": true
+    },
+    {
+      "name": "required case reruns after refresh with same metrics",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:11:37.652Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "6f2e791ab418b538aa1606562f720122c9d2aeab15e61676852a13da375a9bb4",
+      "bytes": 26640
+    },
+    {
+      "path": "README.txt",
+      "sha256": "80d07ab5cb5a373bb1d41aad221561caca6aa021a80be9cb0b3e11e893b82bda",
+      "bytes": 859
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+      "bytes": 37117
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "0f905bca2f060ef4d2ab3fe9b56b91e7272ab41db7c76bef65e8488552ccc793",
+      "bytes": 224712
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "739cf9352707564e39379e0ceb329362c6e4e388579d0b56e2b09768bb65e8fd",
+      "bytes": 4759
+    }
+  ],
+  "metrics": {
+    "model": {
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "error_m": 0.125
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "error_m": 0.125
+        }
+      ],
+      "precision": 1,
+      "recall": 1,
+      "F1": 1,
+      "misses": [],
+      "extras": [],
+      "MAE_m": 0.125,
+      "predCount": 2,
+      "truthCount": 2
+    },
+    "baseline": {
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "error_m": 0.5
+        },
+        {
+          "pred": 2,
+          "truth": 1,
+          "error_m": 0.5
+        }
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 1,
+      "F1": 0.8,
+      "misses": [],
+      "extras": [
+        1
+      ],
+      "MAE_m": 0.5,
+      "predCount": 3,
+      "truthCount": 2
+    },
+    "falseOperationBoundaries": {
+      "model": 0,
+      "baseline": 1
+    },
+    "thinMisses": null,
+    "tolerance_m": 1
+  },
+  "download": "output/exports/v1.7/m4-original.json",
+  "checkedAt": "2026-10-23T17:11:39.237Z",
+  "passed": 4,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/cases/s17-drilltime-boundaries",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 27863,
+        "sha256": "54ed77af4b26a7b10cfbca95bfc644e8a2ec71e12d57701e654cf5da1da22da9"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 37117,
+        "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 224712,
+        "sha256": "0f905bca2f060ef4d2ab3fe9b56b91e7272ab41db7c76bef65e8488552ccc793"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4759,
+        "sha256": "739cf9352707564e39379e0ceb329362c6e4e388579d0b56e2b09768bb65e8fd"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 859,
+        "sha256": "80d07ab5cb5a373bb1d41aad221561caca6aa021a80be9cb0b3e11e893b82bda"
+      }
+    ],
+    "manifestCanonicalSha256": "6f2e791ab418b538aa1606562f720122c9d2aeab15e61676852a13da375a9bb4",
+    "storedPackageMatchesDisk": true
+  }
+}

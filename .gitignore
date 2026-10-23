@@ -43,3 +43,18 @@ output/playwright/portal-reading-2026-10-23/*
 
 # Rebuild new complete transport archives locally; keep them out of Git history.
 dist/s17-mudlogging-with-assistant-1.6.0-preview.zip
+
+# Current self-contained case packages and visual QA evidence
+!dist/*-1.4.0.zip
+!output/playwright/assistant-ui-2026-10-24/
+output/playwright/assistant-ui-2026-10-24/*
+!output/playwright/assistant-ui-2026-10-24/*.png
+!output/playwright/assistant-ui-2026-10-24/*.json
+
+# Twelve additional self-contained case archives and their actual browser evidence
+!dist/s17x-*-1.0.0.zip
+!dist/s17-expansion-12-cases-1.0.0.zip
+!output/playwright/expansion-2026-10-24/
+output/playwright/expansion-2026-10-24/*
+!output/playwright/expansion-2026-10-24/*.png
+!output/playwright/expansion-2026-10-24/*.json

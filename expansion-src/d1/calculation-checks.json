@@ -1,0 +1,71 @@
+{
+  "sceneId": "d1",
+  "kind": "calculation_checks_not_browser_acceptance",
+  "checks": [
+    {
+      "name": "手算回归指标与空分母",
+      "status": "passed"
+    },
+    {
+      "name": "整井训练、验证、测试不重叠",
+      "status": "passed"
+    },
+    {
+      "name": "标准化由训练样本独立拟合",
+      "status": "passed"
+    },
+    {
+      "name": "预测与寻优不接收评价真值",
+      "status": "passed"
+    },
+    {
+      "name": "推荐点满足全部启用约束",
+      "status": "passed"
+    },
+    {
+      "name": "无可行候选显式保留空结果",
+      "status": "passed"
+    },
+    {
+      "name": "固定种子复现且域外预设真实改变误差",
+      "status": "passed"
+    }
+  ],
+  "metrics": {
+    "model": {
+      "n": 128,
+      "mae": 1.9624040748572056,
+      "rmse": 2.427219142121692,
+      "bias": 0.9465490001269504
+    },
+    "baseline": {
+      "n": 128,
+      "mae": 5.405732935300523,
+      "rmse": 6.634852065423579,
+      "bias": 0.7670855040351894
+    },
+    "outsideCount": 2
+  },
+  "grid": {
+    "total": 2145,
+    "feasible": 803
+  },
+  "validation": [
+    {
+      "lambda": 0.01,
+      "rmse": 1.986709532227172
+    },
+    {
+      "lambda": 0.1,
+      "rmse": 1.9880368171039553
+    },
+    {
+      "lambda": 1,
+      "rmse": 2.0077900774383206
+    },
+    {
+      "lambda": 10,
+      "rmse": 2.149549536608875
+    }
+  ]
+}

@@ -1,0 +1,524 @@
+{
+  "sceneId": "t1",
+  "kind": "node-computation-checks-not-browser",
+  "checkedAt": "2026-10-23T16:40:54.384Z",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "默认固定种子、真实拟合与评价可复现",
+      "status": "passed"
+    },
+    {
+      "name": "运行组不跨训练验证测试",
+      "status": "passed"
+    },
+    {
+      "name": "流量变化特征只由相邻可见流量计算",
+      "status": "passed"
+    },
+    {
+      "name": "连续三点确认的起点和不足三点拒绝",
+      "status": "passed"
+    },
+    {
+      "name": "一对一匹配、多报漏检与F1分母手算",
+      "status": "passed"
+    },
+    {
+      "name": "开始远早于参考的既有长告警不算命中",
+      "status": "passed"
+    },
+    {
+      "name": "空事件分母不伪造召回和F1",
+      "status": "passed"
+    },
+    {
+      "name": "改变评价真值不改变预测，改变评价",
+      "status": "passed"
+    },
+    {
+      "name": "验证选阈值不随本轮测试损失和仪表噪声变化",
+      "status": "passed"
+    },
+    {
+      "name": "失败情景确实改变结果，无必胜约束",
+      "status": "passed"
+    }
+  ],
+  "defaultMetrics": {
+    "model": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "truthCount": 3,
+      "candidateCount": 3,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "delay_min": 2,
+      "falseEventsPerHour": 0,
+      "normalMinutes": 510,
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "delay_min": 2
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "delay_min": 2
+        },
+        {
+          "pred": 2,
+          "truth": 2,
+          "delay_min": 2
+        }
+      ]
+    },
+    "baseline": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "truthCount": 3,
+      "candidateCount": 3,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "delay_min": 2,
+      "falseEventsPerHour": 0,
+      "normalMinutes": 510,
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "delay_min": 2
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "delay_min": 2
+        },
+        {
+          "pred": 2,
+          "truth": 2,
+          "delay_min": 2
+        }
+      ]
+    },
+    "pressure": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 0,
+      "truthCount": 3,
+      "candidateCount": 4,
+      "precision": 0.75,
+      "recall": 1,
+      "f1": 0.8571428571428571,
+      "delay_min": 3,
+      "falseEventsPerHour": 0.11764705882352941,
+      "normalMinutes": 510,
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "delay_min": 5
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "delay_min": 2
+        },
+        {
+          "pred": 3,
+          "truth": 2,
+          "delay_min": 2
+        }
+      ]
+    }
+  },
+  "scenarios": {
+    "normal": {
+      "model": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "baseline": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "pressure": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 4,
+        "precision": 0.75,
+        "recall": 1,
+        "f1": 0.8571428571428571,
+        "delay_min": 3,
+        "falseEventsPerHour": 0.11764705882352941,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 5
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 3,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      }
+    },
+    "tiny": {
+      "model": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "truthCount": 3,
+        "candidateCount": 0,
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "delay_min": null,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": []
+      },
+      "pressure": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "truthCount": 3,
+        "candidateCount": 2,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "delay_min": 8,
+        "falseEventsPerHour": 0.11764705882352941,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 1,
+            "delay_min": 8
+          }
+        ]
+      }
+    },
+    "drift": {
+      "model": {
+        "tp": 3,
+        "fp": 3,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 6,
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666,
+        "delay_min": 2,
+        "falseEventsPerHour": 0.35294117647058826,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 4,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "baseline": {
+        "tp": 3,
+        "fp": 4,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 7,
+        "precision": 0.42857142857142855,
+        "recall": 1,
+        "f1": 0.6,
+        "delay_min": 2,
+        "falseEventsPerHour": 0.47058823529411764,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 4,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "pressure": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 4,
+        "precision": 0.75,
+        "recall": 1,
+        "f1": 0.8571428571428571,
+        "delay_min": 3,
+        "falseEventsPerHour": 0.11764705882352941,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 5
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 3,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      }
+    },
+    "outside": {
+      "model": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 4,
+        "precision": 0.75,
+        "recall": 1,
+        "f1": 0.8571428571428571,
+        "delay_min": 2,
+        "falseEventsPerHour": 0.11764705882352941,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 3,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "baseline": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "pressure": {
+        "tp": 2,
+        "fp": 7,
+        "fn": 1,
+        "truthCount": 3,
+        "candidateCount": 9,
+        "precision": 0.2222222222222222,
+        "recall": 0.6666666666666666,
+        "f1": 0.3333333333333333,
+        "delay_min": 1.5,
+        "falseEventsPerHour": 0.8235294117647058,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 3,
+            "truth": 1,
+            "delay_min": 1
+          }
+        ]
+      }
+    },
+    "no-event": {
+      "model": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 0,
+        "candidateCount": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "delay_min": null,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 576,
+        "pairs": []
+      },
+      "baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 0,
+        "candidateCount": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "delay_min": null,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 576,
+        "pairs": []
+      },
+      "pressure": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "truthCount": 0,
+        "candidateCount": 1,
+        "precision": 0,
+        "recall": null,
+        "f1": 0,
+        "delay_min": null,
+        "falseEventsPerHour": 0.10416666666666667,
+        "normalMinutes": 576,
+        "pairs": []
+      }
+    }
+  }
+}

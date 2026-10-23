@@ -1,0 +1,101 @@
+{
+  "sceneId": "co1",
+  "caseId": "s17x-co1-completion-choice",
+  "kind": "Node calculation and source checks; not browser acceptance",
+  "checkedAt": "2026-10-23T16:37:24.152Z",
+  "checks": [
+    {
+      "name": "Hand-computed proxy MAE, policy agreement and opportunity loss",
+      "status": "passed"
+    },
+    {
+      "name": "Same well and its 4 outcomes stay in one split",
+      "status": "passed"
+    },
+    {
+      "name": "Inference does not read reference outcomes on query rows",
+      "status": "passed"
+    },
+    {
+      "name": "Both sanding and selective-isolation requirements are applied",
+      "status": "passed"
+    },
+    {
+      "name": "Budget below all fixed costs gives no recommendation and explicit null metrics",
+      "status": "passed"
+    },
+    {
+      "name": "Temperature exclusions and missing-condition refusal are explicit",
+      "status": "passed"
+    },
+    {
+      "name": "Reference outcome permutation affects evaluation, not predictions",
+      "status": "passed"
+    },
+    {
+      "name": "Fixed seed reproduces historical library exactly",
+      "status": "passed"
+    },
+    {
+      "name": "Empty evaluation has no invented accuracy or error",
+      "status": "passed"
+    },
+    {
+      "name": "Manifest has 3 concepts and 5 individually illustrated workflow steps",
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "passed": 10,
+    "failed": 0
+  },
+  "metrics": {
+    "total": 32,
+    "feasibleWellCount": 32,
+    "model": {
+      "recommended": 32,
+      "matched": 31,
+      "violations": 0,
+      "coverage": 1,
+      "top1Agreement": 0.96875,
+      "regret": 0.0294595160361395,
+      "regretTotal": 0.942704513156464
+    },
+    "baseline": {
+      "recommended": 21,
+      "matched": 18,
+      "violations": 0,
+      "excludedRaw": 11,
+      "coverage": 0.65625,
+      "top1Agreement": 0.8571428571428571,
+      "regret": 0.15760121616378747,
+      "regretTotal": 3.309625539439537
+    },
+    "surrogateMAE": 2.8058105435190632,
+    "surrogateDenominator": 128
+  },
+  "selectedK": 15,
+  "validationScores": [
+    {
+      "k": 3,
+      "mae": 3.0480370551277267
+    },
+    {
+      "k": 5,
+      "mae": 2.934358784138301
+    },
+    {
+      "k": 9,
+      "mae": 2.8564318535121527
+    },
+    {
+      "k": 15,
+      "mae": 2.8191033582710068
+    }
+  ],
+  "notExecuted": [
+    "Teacher portal native import and refresh",
+    "Actual browser download",
+    "Offline browser render and narrow-screen interaction"
+  ]
+}

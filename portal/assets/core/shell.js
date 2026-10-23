@@ -54,7 +54,7 @@
       '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round">' +
       '<path d="M3 17l5-6 4 3 4-6 5 4"/><circle cx="8" cy="11" r="1.6" fill="#fff" stroke="none"/>' +
       '</svg></span>' +
-      '<span class="brand-txt"><b>井见 · 录井可视实验室</b><span>Petroleum × Intelligence</span></span></a>' +
+      '<span class="brand-txt"><b>井见 · 石油智能化可视实验室</b><span>Petroleum × Intelligence</span></span></a>' +
       '<nav class="nav">' +
       '<a class="nav-keep' + on('home') + '" href="#/">总览</a>' +
       '<a class="nav-keep' + on('chain') + '" href="#/chain">作业链</a>' +
@@ -66,7 +66,7 @@
 
   function footer() {
     var s = Cases.stats();
-    return '<footer class="s17-footer"><div class="wrap"><div><strong>井见</strong><p>跟着一口教学井，把观察变成可以回查的判断。</p><small>学号17 · 第4阶段录井 · 5个独立案例 · 门户1.6.0-preview</small></div><div><nav aria-label="页脚导航"><a href="#/">返回首页</a><a href="#/chain">完整作业链</a><a href="#/cases">案例库 · 本浏览器'+s.registered+'个已接入</a><a href="#/guide">添加案例指南</a><a href="../portal-original/index.html">老师原站</a></nav><small>原地图 '+A.stages.length+'阶段 / '+A.allScenes.length+'候选场景 · 纯前端 · 离线可运行</small></div></div></footer>';
+    return '<footer class="s17-footer"><div class="wrap"><div><strong>井见</strong><p>跟着一口教学井，把观察变成可以回查的判断。</p><small>学号17 · 录井必做5例 + 跨阶段12例 · 门户1.7.0-preview</small></div><div><nav aria-label="页脚导航"><a href="#/">返回首页</a><a href="#/chain">完整作业链</a><a href="#/cases">案例库 · 本浏览器'+s.registered+'个已接入</a><a href="#/guide">添加案例指南</a><a href="../portal-original/index.html">老师原站</a></nav><small>原地图 '+A.stages.length+'阶段 / '+A.allScenes.length+'候选场景 · 纯前端 · 离线可运行</small></div></div></footer>';
   }
 
   function crumb(items) {

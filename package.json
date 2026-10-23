@@ -1,14 +1,14 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.6.0-preview",
+  "version": "1.7.0-preview",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build.mjs",
-    "test": "node checks/verify.mjs && node checks/verify-mandatory.mjs && node checks/verify-enhancements.mjs",
-    "verify-delivery": "node checks/verify-portal-reading.mjs",
-    "verify-guide": "node checks/verify-portal-reading.mjs --guide",
+    "build": "node tools/build.mjs && node tools/build-expansion.mjs --require-all",
+    "test": "node checks/verify.mjs && node checks/verify-mandatory.mjs && node checks/verify-enhancements.mjs && node checks/verify-expansion-source.mjs --require-all",
+    "verify-delivery": "node checks/verify-current-delivery.mjs",
+    "verify-guide": "node checks/verify-current-delivery.mjs",
     "package": "node tools/package.mjs --guide-preview",
     "serve": "node tools/serve.mjs"
   }

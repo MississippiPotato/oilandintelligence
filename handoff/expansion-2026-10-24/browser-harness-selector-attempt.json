@@ -1,0 +1,213 @@
+{
+  "scope": "Harness selector error: teacher uses #view, flow. Not an application failure; corrected before final rerun.",
+  "reports": [
+    {
+      "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+      "scene": "g1",
+      "caseId": "s17x-g1-remote-lithology",
+      "checks": [
+        {
+          "name": "original background contains at least three concept SVGs",
+          "passed": false,
+          "detail": {
+            "svg": 0
+          }
+        }
+      ],
+      "errors": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:50:57.797Z",
+      "exception": "original background contains at least three concept SVGs",
+      "checkedAt": "2026-10-23T16:50:57.848Z",
+      "passed": 0,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-g1-remote-lithology",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 17075,
+            "sha256": "c5e07d33aae63b8ba722dad9ed85dbad35767dda0dbf7fe6dcec4fa64189c62c"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 25856,
+            "sha256": "3871e9bf78c93a550674e8e41dd9e9e5045f3d9707d1a468dad873e9c8845707"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 65246,
+            "sha256": "97d251535b334fefe80f168d6a6d99b1566c8632d0015a104d517118917b231f"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 22196,
+            "sha256": "b1f362e80e5e265bbfcb128ad47de6c5cdb81abda329b78474b10595616d430c"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 3221,
+            "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+      "scene": "s1",
+      "caseId": "s17x-s1-seismic-fault",
+      "checks": [
+        {
+          "name": "original background contains at least three concept SVGs",
+          "passed": false,
+          "detail": {
+            "svg": 0
+          }
+        }
+      ],
+      "errors": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:50:59.305Z",
+      "exception": "original background contains at least three concept SVGs",
+      "checkedAt": "2026-10-23T16:50:59.336Z",
+      "passed": 0,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-s1-seismic-fault",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 17561,
+            "sha256": "e8194117f53b663d67d614521d7c0d36a34023c7478f484455829f08cc68a9d7"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 25856,
+            "sha256": "3871e9bf78c93a550674e8e41dd9e9e5045f3d9707d1a468dad873e9c8845707"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 71145,
+            "sha256": "a731b7f00d473035e46798831a230f2ca5d07283fd99d3e0631350577c5f89ef"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 23146,
+            "sha256": "cf47c0b2b9bf1122bf6ba797c3f1e23f1ad8378b294f23bb2887beec259e5b79"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 3744,
+            "sha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+      "scene": "d1",
+      "caseId": "s17x-d1-rop-optimization",
+      "checks": [
+        {
+          "name": "original background contains at least three concept SVGs",
+          "passed": false,
+          "detail": {
+            "svg": 0
+          }
+        }
+      ],
+      "errors": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:51:00.766Z",
+      "exception": "original background contains at least three concept SVGs",
+      "checkedAt": "2026-10-23T16:51:00.802Z",
+      "passed": 0,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-d1-rop-optimization",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 25698,
+            "sha256": "f3d406824ced9b7b53fa2b219b7ce17a80568a89456e4ab368e8b7a0cabf07c7"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 26345,
+            "sha256": "fefc8d8290150b38768f249e90cec7ca7965aa98d28eff82d8e1d5a4ac2449be"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 65436,
+            "sha256": "837d82874ea61f77eb86431fb0aeb63d3171c475ac14b485c01189099830399e"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 26889,
+            "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 2279,
+            "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+      "scene": "w4",
+      "caseId": "s17x-w4-log-lithology",
+      "checks": [
+        {
+          "name": "original background contains at least three concept SVGs",
+          "passed": false,
+          "detail": {
+            "svg": 0
+          }
+        }
+      ],
+      "errors": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:51:02.302Z",
+      "exception": "original background contains at least three concept SVGs",
+      "checkedAt": "2026-10-23T16:51:02.331Z",
+      "passed": 0,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-w4-log-lithology",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 20150,
+            "sha256": "c5291c63b84c07e633f9a57f992a0797c1052a4cadf039fbb0078b00ce5224e5"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 26345,
+            "sha256": "fefc8d8290150b38768f249e90cec7ca7965aa98d28eff82d8e1d5a4ac2449be"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 63710,
+            "sha256": "25f5f38d39c7069c63bedc6ff1d6f2be31e39b8f22f7115d8bb9229b1acce343"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 22155,
+            "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 2298,
+            "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0"
+          }
+        ]
+      }
+    }
+  ]
+}

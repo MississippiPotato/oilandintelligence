@@ -1,0 +1,20 @@
+{
+  "scope": "Actual teacher original folder importer, five 1.4.0 cases, in-frame assistant and actual download/reload computation",
+  "checks": [
+    {
+      "name": "m1 original importer registers 1.4.0",
+      "passed": true
+    },
+    {
+      "name": "m1 original sandbox includes standalone assistant",
+      "passed": true
+    }
+  ],
+  "cases": [],
+  "errors": [],
+  "external": [],
+  "exception": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('[data-ag-tab=workflow]')\u001b[22m\n",
+  "checkedAt": "2026-10-23T16:11:12.163Z",
+  "passed": 2,
+  "failed": 1
+}

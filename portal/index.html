@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>井见 · 录井可视实验室</title>
+<title>井见 · 石油智能化可视实验室</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23276e52%27/%3E%3Cpath d=%27M6 23l7-9 5 5 8-12%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%273%27/%3E%3C/svg%3E">
 <meta name="description" content="按石油作业链条逐环节展示可被深度学习改造的候选场景，标注 AI 介入点、数据条件与难度等级；带可运行的案例示范。">
 
@@ -14,7 +14,10 @@
 <link rel="stylesheet" href="assets/s17-field-atlas.css?v=20261023-interactive">
 <link rel="stylesheet" href="assets/s17-reader.css?v=20261023-reading">
 <link rel="stylesheet" href="assets/s17-catalog.css?v=20261023-reading">
-<link rel="stylesheet" href="assets/s17-assistant.css"></head>
+<link rel="stylesheet" href="assets/s17-log-preview.css?v=20261024-ui">
+<link rel="stylesheet" href="assets/s17-visual-polish.css?v=20261024-ui">
+<link rel="stylesheet" href="assets/s17-expansion-gallery.css?v=20261024">
+<link rel="stylesheet" href="assets/s17-assistant.css?v=20261024-ui"></head>
 <body>
 
 <div id="view">
@@ -46,6 +49,7 @@
 
 <script src="assets/cases/welllog-layer.case.js?v=20261022i"></script>
 <script src="assets/cases/welllog-layer.demo.js?v=20261022i"></script>
+<script src="assets/s17-expansion-cases.js?v=20261024"></script>
 <!-- ↑ 新案例加在这里：<script src="assets/cases/你的案例.case.js"></script> -->
 
 <!-- 上传的案例包（localStorage）在这里恢复注册，必须在 shell.js 之前 -->
@@ -55,15 +59,19 @@
 <script src="assets/core/admin.js?v=20261022i"></script>
 
 <script src="assets/s17-course.js"></script>
+<script src="assets/s17-mudlogging-knowledge.js?v=20261024"></script>
 <script src="assets/s17-reader.js?v=20261023-reading"></script>
 <script src="assets/core/shell.js?v=20261023-reading"></script>
 
 <script src="assets/s17-field-atlas.js?v=20261023-interactive"></script>
 <script src="assets/s17-catalog.js?v=20261023-reading"></script>
+<script src="assets/s17-log-data.js"></script>
+<script src="assets/s17-log-preview.js?v=20261024-ui"></script>
+<script src="assets/s17-expansion-gallery.js?v=20261024"></script>
 <script src="assets/s17-home.js?v=20261023-reading"></script>
-<script src="assets/s17-assistant.js"></script>
-<script src="assets/s17-media.js"></script>
-<script src="assets/s17-volcengine.js"></script>
+<script src="assets/s17-assistant.js?v=20261024-ui"></script>
+<script src="assets/s17-media.js?v=20261024-ui"></script>
+<script src="assets/s17-volcengine.js?v=20261024-ui"></script>
 <script src="assets/vendor/pixi-6.5.10.min.js"></script>
 <script src="assets/vendor/live2dcubismcore.min.js"></script>
 <script src="assets/vendor/pixi-live2d-0.4.0.min.js"></script>

@@ -1,0 +1,377 @@
+{
+  "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+  "scene": "g1",
+  "caseId": "s17x-g1-remote-lithology",
+  "checks": [
+    {
+      "name": "offline background graphics render",
+      "passed": true
+    },
+    {
+      "name": "offline workflow graphics render in selected step or static gallery",
+      "passed": true,
+      "detail": {
+        "stepControls": 5,
+        "visibleSvg": 1
+      }
+    },
+    {
+      "name": "offline local model produces metrics",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant defaults to the requested compact phone panel",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700
+      }
+    },
+    {
+      "name": "offline assistant navigates to real workflow",
+      "passed": true
+    },
+    {
+      "name": "390px viewport has no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 18,
+        "paragraphs": [
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          18,
+          18,
+          18
+        ]
+      }
+    },
+    {
+      "name": "body and main explanatory paragraphs are at least 17px",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 18,
+        "paragraphs": [
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          18,
+          18,
+          18
+        ]
+      }
+    },
+    {
+      "name": "mobile run and reset controls are reachable",
+      "passed": true
+    },
+    {
+      "name": "mobile assistant composer and send control fit viewport with 18px input",
+      "passed": true,
+      "detail": {
+        "left": 6,
+        "right": 384,
+        "top": 6,
+        "bottom": 838,
+        "inputFont": 18,
+        "send": {
+          "left": 324,
+          "right": 357,
+          "top": 741.40625,
+          "bottom": 785.40625
+        }
+      }
+    },
+    {
+      "name": "file offline path makes zero HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no JavaScript exceptions offline",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:04:53.483Z",
+  "workflow": {
+    "stepControls": 5,
+    "visibleSvg": 1
+  },
+  "metrics": {
+    "model": {
+      "matrix": [
+        [
+          1020,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1074,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          922,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          438,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "label": "砂岩露头",
+          "tp": 1020,
+          "fp": 1,
+          "fn": 1,
+          "support": 1021,
+          "f1": 0.9990205680705191,
+          "iou": 0.9980430528375733
+        },
+        {
+          "label": "泥岩露头",
+          "tp": 1074,
+          "fp": 1,
+          "fn": 1,
+          "support": 1075,
+          "f1": 0.9990697674418605,
+          "iou": 0.9981412639405205
+        },
+        {
+          "label": "灰岩露头",
+          "tp": 922,
+          "fp": 0,
+          "fn": 0,
+          "support": 922,
+          "f1": 1,
+          "iou": 1
+        },
+        {
+          "label": "植被覆盖",
+          "tp": 438,
+          "fp": 0,
+          "fn": 0,
+          "support": 438,
+          "f1": 1,
+          "iou": 1
+        }
+      ],
+      "macroF1": 0.9995225838780949,
+      "meanIoU": 0.9990460791945235,
+      "total": 3456,
+      "accepted": 3456,
+      "coverage": 1,
+      "correct": 3454,
+      "acceptedError": 0.0005787037037037037
+    },
+    "baseline": {
+      "matrix": [
+        [
+          893,
+          12,
+          116,
+          0,
+          0
+        ],
+        [
+          35,
+          949,
+          0,
+          91,
+          0
+        ],
+        [
+          49,
+          0,
+          873,
+          0,
+          0
+        ],
+        [
+          0,
+          125,
+          0,
+          313,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "label": "砂岩露头",
+          "tp": 893,
+          "fp": 84,
+          "fn": 128,
+          "support": 1021,
+          "f1": 0.8938938938938938,
+          "iou": 0.8081447963800905
+        },
+        {
+          "label": "泥岩露头",
+          "tp": 949,
+          "fp": 137,
+          "fn": 126,
+          "support": 1075,
+          "f1": 0.8782970846830171,
+          "iou": 0.783003300330033
+        },
+        {
+          "label": "灰岩露头",
+          "tp": 873,
+          "fp": 116,
+          "fn": 49,
+          "support": 922,
+          "f1": 0.9136577708006279,
+          "iou": 0.8410404624277457
+        },
+        {
+          "label": "植被覆盖",
+          "tp": 313,
+          "fp": 91,
+          "fn": 125,
+          "support": 438,
+          "f1": 0.7434679334916865,
+          "iou": 0.5916824196597353
+        }
+      ],
+      "macroF1": 0.8573291707173063,
+      "meanIoU": 0.7559677446994012,
+      "total": 3456,
+      "accepted": 3456,
+      "coverage": 1,
+      "correct": 3028,
+      "acceptedError": 0.12384259259259259
+    }
+  },
+  "assistant": {
+    "width": 410,
+    "height": 700
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390,
+    "body": 390,
+    "font": 18,
+    "paragraphs": [
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      }
+    ],
+    "mainParagraphs": [
+      18,
+      18,
+      18
+    ]
+  },
+  "mobileAssistant": {
+    "left": 6,
+    "right": 384,
+    "top": 6,
+    "bottom": 838,
+    "inputFont": 18,
+    "send": {
+      "left": 324,
+      "right": 357,
+      "top": 741.40625,
+      "bottom": 785.40625
+    }
+  },
+  "checkedAt": "2026-10-23T17:04:55.425Z",
+  "passed": 11,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-g1-remote-lithology",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 17075,
+        "sha256": "c5e07d33aae63b8ba722dad9ed85dbad35767dda0dbf7fe6dcec4fa64189c62c"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26033,
+        "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 65423,
+        "sha256": "a2f689137a9f2b0093a9fa6c983a5a6d09fe5676c7276e43b2b47b51a37eeebc"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 22196,
+        "sha256": "b1f362e80e5e265bbfcb128ad47de6c5cdb81abda329b78474b10595616d430c"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3221,
+        "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7"
+      }
+    ],
+    "storedPackageMatchesDisk": null
+  }
+}

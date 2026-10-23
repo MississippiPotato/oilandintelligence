@@ -1,0 +1,341 @@
+{
+  "scope": "Original five required cases remain runnable among all imported packages",
+  "scene": "m5",
+  "caseId": "s17-evidence-report",
+  "checks": [
+    {
+      "name": "required case runs with evaluation metrics",
+      "passed": true
+    },
+    {
+      "name": "required case downloads actual JSON",
+      "passed": true
+    },
+    {
+      "name": "required case reruns after refresh with same metrics",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:11:40.857Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "23fcb975202bb1f281c0e18db22fcd232f6c53f633ba01058194a31806df40e5",
+      "bytes": 24985
+    },
+    {
+      "path": "README.txt",
+      "sha256": "abcfc75472a740b27b720feac57abd53537769788791baddeb35a3c208441ee3",
+      "bytes": 860
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+      "bytes": 37117
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "9fe0fcfe42fa7188babfd24924df4bd5851cb07f8e835e78060944869f9e5d0f",
+      "bytes": 329292
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "f95453d5051d5d5aa15ee237df48bb29ed80d899e61df1b3501fc623761b7446",
+      "bytes": 5508
+    }
+  ],
+  "metrics": {
+    "model": {
+      "matrix": [
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 1,
+      "total": 36,
+      "accepted": 36,
+      "wrong": 0,
+      "coverage": 1,
+      "acceptedError": 0
+    },
+    "baseline": {
+      "matrix": [
+        [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 1,
+      "total": 36,
+      "accepted": 36,
+      "wrong": 0,
+      "coverage": 1,
+      "acceptedError": 0
+    },
+    "fields": {
+      "fieldPrecision": 1,
+      "fieldRecall": 1,
+      "fieldF1": 1,
+      "exactRecords": 6,
+      "totalRecords": 6,
+      "byField": {
+        "depthRangeMD_m": {
+          "correct": 6,
+          "total": 6
+        },
+        "timeRange_s": {
+          "correct": 6,
+          "total": 6
+        },
+        "gasValue": {
+          "correct": 6,
+          "total": 6
+        },
+        "gasUnit": {
+          "correct": 6,
+          "total": 6
+        },
+        "fluorescence": {
+          "correct": 6,
+          "total": 6
+        },
+        "rock": {
+          "correct": 6,
+          "total": 6
+        },
+        "operation": {
+          "correct": 6,
+          "total": 6
+        },
+        "negation": {
+          "correct": 6,
+          "total": 6
+        }
+      },
+      "chapterCoverage": 1,
+      "factCoverage": 1,
+      "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+    },
+    "grounding": {
+      "supported": 6,
+      "total": 6,
+      "unsupported": 0,
+      "unsupportedRate": 0,
+      "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+    },
+    "expectedConflicts": 0,
+    "detectedConflicts": 0
+  },
+  "download": "output/exports/v1.7/m5-original.json",
+  "checkedAt": "2026-10-23T17:11:42.414Z",
+  "passed": 4,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/cases/s17-evidence-report",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 26130,
+        "sha256": "fd4c5f99baaa8251a5d2197cd3e6683cb4ead64f7d40781c78d261de8206ebcc"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 37117,
+        "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 329292,
+        "sha256": "9fe0fcfe42fa7188babfd24924df4bd5851cb07f8e835e78060944869f9e5d0f"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 5508,
+        "sha256": "f95453d5051d5d5aa15ee237df48bb29ed80d899e61df1b3501fc623761b7446"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 860,
+        "sha256": "abcfc75472a740b27b720feac57abd53537769788791baddeb35a3c208441ee3"
+      }
+    ],
+    "manifestCanonicalSha256": "23fcb975202bb1f281c0e18db22fcd232f6c53f633ba01058194a31806df40e5",
+    "storedPackageMatchesDisk": true
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "co1",
+  "caseId": "s17x-co1-completion-choice",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 5
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow step 1 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 2 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 3 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 4 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 5 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "ready"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "co1",
+          "caseId": "s17x-co1-completion-choice",
+          "status": "ready",
+          "runId": 3,
+          "params": {
+            "budget": 90,
+            "costWeight": 0.22,
+            "queryId": "TE-001",
+            "queryX": [
+              0.6951370144588872,
+              0.7710069122025743,
+              0.4929951655678451,
+              0.48021528166718785,
+              2.4348035863600668,
+              125.03530151792802
+            ]
+          },
+          "metrics": {
+            "total": 32,
+            "feasibleWellCount": 32,
+            "model": {
+              "recommended": 32,
+              "matched": 31,
+              "violations": 0,
+              "coverage": 1,
+              "top1Agreement": 0.96875,
+              "regret": 0.0294595160361395,
+              "regretTotal": 0.942704513156464
+            },
+            "baseline": {
+              "recommended": 21,
+              "matched": 18,
+              "violations": 0,
+              "excludedRaw": 11,
+              "coverage": 0.65625,
+              "top1Agreement": 0.8571428571428571,
+              "regret": 0.15760121616378747,
+              "regretTotal": 3.309625539439537
+            },
+            "surrogateMAE": 2.8058105435190632,
+            "surrogateDenominator": 128
+          },
+          "reviewCount": 1,
+          "currentReviewCount": 1
+        },
+        "review": null,
+        "text": [
+          "TE-001 · run 3 · 本次人工意见保留模型排序：浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。当时模型：裸眼筛管防砂"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:03:43.554Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12",
+      "bytes": 1233
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c",
+      "bytes": 25863
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90",
+      "bytes": 83477
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d",
+      "bytes": 7323
+    }
+  ],
+  "workflow": {
+    "stepControls": 5
+  },
+  "default": {
+    "status": "ready",
+    "metrics": {
+      "total": 32,
+      "feasibleWellCount": 32,
+      "model": {
+        "recommended": 32,
+        "matched": 31,
+        "violations": 0,
+        "coverage": 1,
+        "top1Agreement": 0.96875,
+        "regret": 0.0294595160361395,
+        "regretTotal": 0.942704513156464
+      },
+      "baseline": {
+        "recommended": 21,
+        "matched": 18,
+        "violations": 0,
+        "excludedRaw": 11,
+        "coverage": 0.65625,
+        "top1Agreement": 0.8571428571428571,
+        "regret": 0.15760121616378747,
+        "regretTotal": 3.309625539439537
+      },
+      "surrogateMAE": 2.8058105435190632,
+      "surrogateDenominator": 128
+    },
+    "params": {
+      "budget": 90,
+      "costWeight": 0.22,
+      "queryId": "TE-001",
+      "queryX": [
+        0.6951370144588872,
+        0.7710069122025743,
+        0.4929951655678451,
+        0.48021528166718785,
+        2.4348035863600668,
+        125.03530151792802
+      ]
+    },
+    "runId": 1
+  },
+  "reviewSnapshot": {
+    "sceneId": "co1",
+    "caseId": "s17x-co1-completion-choice",
+    "status": "ready",
+    "runId": 3,
+    "params": {
+      "budget": 90,
+      "costWeight": 0.22,
+      "queryId": "TE-001",
+      "queryX": [
+        0.6951370144588872,
+        0.7710069122025743,
+        0.4929951655678451,
+        0.48021528166718785,
+        2.4348035863600668,
+        125.03530151792802
+      ]
+    },
+    "metrics": {
+      "total": 32,
+      "feasibleWellCount": 32,
+      "model": {
+        "recommended": 32,
+        "matched": 31,
+        "violations": 0,
+        "coverage": 1,
+        "top1Agreement": 0.96875,
+        "regret": 0.0294595160361395,
+        "regretTotal": 0.942704513156464
+      },
+      "baseline": {
+        "recommended": 21,
+        "matched": 18,
+        "violations": 0,
+        "excludedRaw": 11,
+        "coverage": 0.65625,
+        "top1Agreement": 0.8571428571428571,
+        "regret": 0.15760121616378747,
+        "regretTotal": 3.309625539439537
+      },
+      "surrogateMAE": 2.8058105435190632,
+      "surrogateDenominator": 128
+    },
+    "reviewCount": 1,
+    "currentReviewCount": 1
+  },
+  "review": null,
+  "reviewVisibleText": [
+    "TE-001 · run 3 · 本次人工意见保留模型排序：浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。当时模型：裸眼筛管防砂"
+  ],
+  "download": {
+    "suggestedFilename": "s17x-co1-completion-choice-run-3.json",
+    "relativePath": "output/exports/v1.7/co1-original.json"
+  },
+  "checkedAt": "2026-10-23T17:03:47.297Z",
+  "passed": 17,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-co1-completion-choice",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 21930,
+        "sha256": "3526554dd5fee424602f98eafcfeaa7bdb7e07d83c09663c7f388668bd133d04"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25863,
+        "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 83477,
+        "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 7323,
+        "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1233,
+        "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

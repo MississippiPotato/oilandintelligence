@@ -1,0 +1,168 @@
+{
+  "sceneId": "w4",
+  "kind": "calculation_checks_not_browser_acceptance",
+  "checks": [
+    {
+      "name": "手算混淆、拒判分母与全拒判",
+      "status": "passed"
+    },
+    {
+      "name": "整井切分且测试分母保留全部深度点",
+      "status": "passed"
+    },
+    {
+      "name": "标准化仅由训练井拟合",
+      "status": "passed"
+    },
+    {
+      "name": "改变测试真值不会改变预测",
+      "status": "passed"
+    },
+    {
+      "name": "固定种子复现与实际通道消融",
+      "status": "passed"
+    },
+    {
+      "name": "域外与气层预设真实改变观测",
+      "status": "passed"
+    }
+  ],
+  "metrics": {
+    "model": {
+      "n": 320,
+      "accuracy": 0.965625,
+      "macroF1": 0.9616014607556188,
+      "coverage": 1,
+      "accepted": 320,
+      "acceptedError": 0.034375,
+      "confusion": [
+        [
+          78,
+          0,
+          11,
+          0
+        ],
+        [
+          0,
+          125,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          106,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "name": "砂岩",
+          "tp": 78,
+          "fn": 11,
+          "fp": 0,
+          "recall": 0.8764044943820225,
+          "precision": 1,
+          "f1": 0.9341317365269461
+        },
+        {
+          "name": "泥岩",
+          "tp": 125,
+          "fn": 0,
+          "fp": 0,
+          "recall": 1,
+          "precision": 1,
+          "f1": 1
+        },
+        {
+          "name": "灰岩",
+          "tp": 106,
+          "fn": 0,
+          "fp": 11,
+          "recall": 1,
+          "precision": 0.905982905982906,
+          "f1": 0.9506726457399103
+        }
+      ]
+    },
+    "baseline": {
+      "n": 320,
+      "accuracy": 0.8125,
+      "macroF1": 0.7939560439560439,
+      "coverage": 1,
+      "accepted": 320,
+      "acceptedError": 0.1875,
+      "confusion": [
+        [
+          61,
+          0,
+          28,
+          0
+        ],
+        [
+          0,
+          125,
+          0,
+          0
+        ],
+        [
+          32,
+          0,
+          74,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "name": "砂岩",
+          "tp": 61,
+          "fn": 28,
+          "fp": 32,
+          "recall": 0.6853932584269663,
+          "precision": 0.6559139784946236,
+          "f1": 0.6703296703296703
+        },
+        {
+          "name": "泥岩",
+          "tp": 125,
+          "fn": 0,
+          "fp": 0,
+          "recall": 1,
+          "precision": 1,
+          "f1": 1
+        },
+        {
+          "name": "灰岩",
+          "tp": 74,
+          "fn": 32,
+          "fp": 28,
+          "recall": 0.6981132075471698,
+          "precision": 0.7254901960784313,
+          "f1": 0.7115384615384616
+        }
+      ]
+    }
+  },
+  "validation": [
+    {
+      "k": 3,
+      "macroF1": 1
+    },
+    {
+      "k": 5,
+      "macroF1": 1
+    },
+    {
+      "k": 9,
+      "macroF1": 1
+    },
+    {
+      "k": 15,
+      "macroF1": 1
+    }
+  ],
+  "baselineRules": {
+    "sand": 30,
+    "shale": 65
+  }
+}

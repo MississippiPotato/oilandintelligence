@@ -1,0 +1,110 @@
+{
+  "kind": "calculation_checks_not_browser_acceptance",
+  "sceneId": "p1",
+  "caseId": "s17x-p1-perforation-design",
+  "passed": 12,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "hand-calculated regression error and empty denominator",
+      "passed": true
+    },
+    {
+      "name": "fixed seed reproduces actual experiment observations",
+      "passed": true
+    },
+    {
+      "name": "whole rock groups and parameter blocks do not cross splits",
+      "passed": true
+    },
+    {
+      "name": "changed test truth cannot alter fitted model or selected design",
+      "passed": true
+    },
+    {
+      "name": "model actually learns changed training response",
+      "passed": true
+    },
+    {
+      "name": "440 candidate evaluations and exact feasible argmax",
+      "passed": true
+    },
+    {
+      "name": "tight budget really has no feasible candidate",
+      "passed": true
+    },
+    {
+      "name": "domain range flags use visible reservoir conditions",
+      "passed": true
+    },
+    {
+      "name": "metrics recomputed from actual predictions with full denominator",
+      "passed": true
+    },
+    {
+      "name": "geometric phase feature derives from azimuths",
+      "passed": true
+    },
+    {
+      "name": "evaluation oracle does not mutate recommendation",
+      "passed": true
+    },
+    {
+      "name": "validation alone selects regularization",
+      "passed": true
+    }
+  ],
+  "actualDefault": {
+    "lambda": 0.001,
+    "model": {
+      "count": 240,
+      "RMSE": 0.775600684602618,
+      "MAE": 0.6390126340461845
+    },
+    "regressionBaseline": {
+      "count": 240,
+      "RMSE": 6.580739481917284,
+      "MAE": 5.403172688552595
+    },
+    "feasibleCount": 274,
+    "candidateCount": 440,
+    "selected": {
+      "permeability": 60,
+      "damage": 18,
+      "anisotropy": 1.8,
+      "density": 4,
+      "penetration": 55,
+      "phase": 120,
+      "feasible": true,
+      "reasons": [],
+      "cost": 16.162900469160014,
+      "crowding": 0.5238095238095237,
+      "clearance": 37,
+      "prediction": 74.78395077600541,
+      "objective": 69.12693561179941
+    },
+    "fixed": {
+      "permeability": 60,
+      "damage": 18,
+      "anisotropy": 1.8,
+      "density": 12,
+      "penetration": 35,
+      "phase": 120,
+      "feasible": true,
+      "reasons": [],
+      "cost": 29.72031477842654,
+      "crowding": 1,
+      "clearance": 17,
+      "prediction": 75.71043493699673,
+      "objective": 65.30832476454745
+    },
+    "gainVsFeasibleFixed": 2.7071388647417507,
+    "objectiveGap": 0.08819231751745349
+  },
+  "unverified": [
+    "original portal folder import",
+    "browser refresh persistence",
+    "sandbox JSON download",
+    "mobile interaction"
+  ]
+}

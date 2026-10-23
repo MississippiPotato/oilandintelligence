@@ -1,0 +1,430 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "c1",
+  "caseId": "s17x-c1-cement-quality",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 5
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow step 1 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 2 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 3 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 4 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 5 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "ready"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "c1",
+          "caseId": "s17x-c1-cement-quality",
+          "status": "ready",
+          "runId": 3,
+          "params": {
+            "noise": 0.035,
+            "eccentric": 0,
+            "micro": 0,
+            "reject": 0.6,
+            "thresholdShift": 0
+          },
+          "metrics": {
+            "model": {
+              "total": 192,
+              "correct": 180,
+              "accepted": 187,
+              "rejected": 5,
+              "macroF1": 0.9498812648418947,
+              "coverage": 0.9739583333333334,
+              "acceptedError": 0.03743315508021394,
+              "recalls": [
+                0.9375,
+                0.90625,
+                0.96875
+              ],
+              "confusion": [
+                [
+                  60,
+                  4,
+                  0,
+                  0
+                ],
+                [
+                  3,
+                  58,
+                  0,
+                  3
+                ],
+                [
+                  0,
+                  0,
+                  62,
+                  2
+                ]
+              ]
+            },
+            "baseline": {
+              "total": 192,
+              "correct": 130,
+              "accepted": 192,
+              "rejected": 0,
+              "macroF1": 0.6746594064700964,
+              "coverage": 1,
+              "acceptedError": 0.32291666666666663,
+              "recalls": [
+                0.859375,
+                0.71875,
+                0.453125
+              ],
+              "confusion": [
+                [
+                  55,
+                  9,
+                  0,
+                  0
+                ],
+                [
+                  18,
+                  46,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  35,
+                  29,
+                  0
+                ]
+              ]
+            }
+          },
+          "reviewCount": 1,
+          "currentReviewCount": 1
+        },
+        "review": null,
+        "text": [
+          "TE-01-17 · run 3 · 本次人工意见保留模型候选：浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。当时模型：弱胶结响应"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:03:37.140Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043",
+      "bytes": 1226
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c",
+      "bytes": 25863
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625",
+      "bytes": 87432
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf",
+      "bytes": 7135
+    }
+  ],
+  "workflow": {
+    "stepControls": 5
+  },
+  "default": {
+    "status": "ready",
+    "metrics": {
+      "model": {
+        "total": 192,
+        "correct": 180,
+        "accepted": 187,
+        "rejected": 5,
+        "macroF1": 0.9498812648418947,
+        "coverage": 0.9739583333333334,
+        "acceptedError": 0.03743315508021394,
+        "recalls": [
+          0.9375,
+          0.90625,
+          0.96875
+        ],
+        "confusion": [
+          [
+            60,
+            4,
+            0,
+            0
+          ],
+          [
+            3,
+            58,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            62,
+            2
+          ]
+        ]
+      },
+      "baseline": {
+        "total": 192,
+        "correct": 130,
+        "accepted": 192,
+        "rejected": 0,
+        "macroF1": 0.6746594064700964,
+        "coverage": 1,
+        "acceptedError": 0.32291666666666663,
+        "recalls": [
+          0.859375,
+          0.71875,
+          0.453125
+        ],
+        "confusion": [
+          [
+            55,
+            9,
+            0,
+            0
+          ],
+          [
+            18,
+            46,
+            0,
+            0
+          ],
+          [
+            0,
+            35,
+            29,
+            0
+          ]
+        ]
+      }
+    },
+    "params": {
+      "noise": 0.035,
+      "eccentric": 0,
+      "micro": 0,
+      "reject": 0.6,
+      "thresholdShift": 0
+    },
+    "runId": 1
+  },
+  "reviewSnapshot": {
+    "sceneId": "c1",
+    "caseId": "s17x-c1-cement-quality",
+    "status": "ready",
+    "runId": 3,
+    "params": {
+      "noise": 0.035,
+      "eccentric": 0,
+      "micro": 0,
+      "reject": 0.6,
+      "thresholdShift": 0
+    },
+    "metrics": {
+      "model": {
+        "total": 192,
+        "correct": 180,
+        "accepted": 187,
+        "rejected": 5,
+        "macroF1": 0.9498812648418947,
+        "coverage": 0.9739583333333334,
+        "acceptedError": 0.03743315508021394,
+        "recalls": [
+          0.9375,
+          0.90625,
+          0.96875
+        ],
+        "confusion": [
+          [
+            60,
+            4,
+            0,
+            0
+          ],
+          [
+            3,
+            58,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            62,
+            2
+          ]
+        ]
+      },
+      "baseline": {
+        "total": 192,
+        "correct": 130,
+        "accepted": 192,
+        "rejected": 0,
+        "macroF1": 0.6746594064700964,
+        "coverage": 1,
+        "acceptedError": 0.32291666666666663,
+        "recalls": [
+          0.859375,
+          0.71875,
+          0.453125
+        ],
+        "confusion": [
+          [
+            55,
+            9,
+            0,
+            0
+          ],
+          [
+            18,
+            46,
+            0,
+            0
+          ],
+          [
+            0,
+            35,
+            29,
+            0
+          ]
+        ]
+      }
+    },
+    "reviewCount": 1,
+    "currentReviewCount": 1
+  },
+  "review": null,
+  "reviewVisibleText": [
+    "TE-01-17 · run 3 · 本次人工意见保留模型候选：浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。当时模型：弱胶结响应"
+  ],
+  "download": {
+    "suggestedFilename": "s17x-c1-cement-quality-run-3.json",
+    "relativePath": "output/exports/v1.7/c1-original.json"
+  },
+  "checkedAt": "2026-10-23T17:03:42.038Z",
+  "passed": 17,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-c1-cement-quality",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 27349,
+        "sha256": "f5799d2160b8db3984795f82580af67e3104e8ddf532568bc635989afad45258"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25863,
+        "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 87432,
+        "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 7135,
+        "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1226,
+        "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

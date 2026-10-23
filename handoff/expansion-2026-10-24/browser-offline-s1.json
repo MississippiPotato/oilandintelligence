@@ -1,0 +1,257 @@
+{
+  "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+  "scene": "s1",
+  "caseId": "s17x-s1-seismic-fault",
+  "checks": [
+    {
+      "name": "offline background graphics render",
+      "passed": true
+    },
+    {
+      "name": "offline workflow graphics render in selected step or static gallery",
+      "passed": true,
+      "detail": {
+        "stepControls": 5,
+        "visibleSvg": 1
+      }
+    },
+    {
+      "name": "offline local model produces metrics",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant defaults to the requested compact phone panel",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700
+      }
+    },
+    {
+      "name": "offline assistant navigates to real workflow",
+      "passed": true
+    },
+    {
+      "name": "390px viewport has no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 18,
+        "paragraphs": [
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          18,
+          18,
+          18
+        ]
+      }
+    },
+    {
+      "name": "body and main explanatory paragraphs are at least 17px",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 18,
+        "paragraphs": [
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          },
+          {
+            "font": 18,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          18,
+          18,
+          18
+        ]
+      }
+    },
+    {
+      "name": "mobile run and reset controls are reachable",
+      "passed": true
+    },
+    {
+      "name": "mobile assistant composer and send control fit viewport with 18px input",
+      "passed": true,
+      "detail": {
+        "left": 6,
+        "right": 384,
+        "top": 6,
+        "bottom": 838,
+        "inputFont": 18,
+        "send": {
+          "left": 324,
+          "right": 357,
+          "top": 741.40625,
+          "bottom": 785.40625
+        }
+      }
+    },
+    {
+      "name": "file offline path makes zero HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no JavaScript exceptions offline",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:04:56.823Z",
+  "workflow": {
+    "stepControls": 5,
+    "visibleSvg": 1
+  },
+  "metrics": {
+    "model": {
+      "tp": 167,
+      "fp": 44,
+      "fn": 1,
+      "tn": 4156,
+      "abstained": 0,
+      "total": 4368,
+      "coverage": 1,
+      "iou": 0.7877358490566038,
+      "f1": 0.8812664907651715,
+      "lineF1": 1,
+      "lineMatched": 56,
+      "predictedRows": 56,
+      "truthRows": 56,
+      "traceTolerance": 2,
+      "tolerance_m": 50
+    },
+    "baseline": {
+      "tp": 168,
+      "fp": 76,
+      "fn": 0,
+      "tn": 4124,
+      "abstained": 0,
+      "total": 4368,
+      "coverage": 1,
+      "iou": 0.6885245901639344,
+      "f1": 0.8155339805825242,
+      "lineF1": 0.9285714285714286,
+      "lineMatched": 52,
+      "predictedRows": 56,
+      "truthRows": 56,
+      "traceTolerance": 2,
+      "tolerance_m": 50
+    }
+  },
+  "assistant": {
+    "width": 410,
+    "height": 700
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390,
+    "body": 390,
+    "font": 18,
+    "paragraphs": [
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      },
+      {
+        "font": 18,
+        "class": ""
+      }
+    ],
+    "mainParagraphs": [
+      18,
+      18,
+      18
+    ]
+  },
+  "mobileAssistant": {
+    "left": 6,
+    "right": 384,
+    "top": 6,
+    "bottom": 838,
+    "inputFont": 18,
+    "send": {
+      "left": 324,
+      "right": 357,
+      "top": 741.40625,
+      "bottom": 785.40625
+    }
+  },
+  "checkedAt": "2026-10-23T17:04:58.700Z",
+  "passed": 11,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-s1-seismic-fault",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 17561,
+        "sha256": "e8194117f53b663d67d614521d7c0d36a34023c7478f484455829f08cc68a9d7"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 26033,
+        "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 71322,
+        "sha256": "ba3eec81573d8be7d0f0dd7b74d5f760a2c0dfb958cef57bbc6478a51fc6c5ac"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 23146,
+        "sha256": "cf47c0b2b9bf1122bf6ba797c3f1e23f1ad8378b294f23bb2887beec259e5b79"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3744,
+        "sha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e"
+      }
+    ],
+    "storedPackageMatchesDisk": null
+  }
+}

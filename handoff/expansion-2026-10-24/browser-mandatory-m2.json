@@ -1,0 +1,275 @@
+{
+  "scope": "Original five required cases remain runnable among all imported packages",
+  "scene": "m2",
+  "caseId": "s17-mudgas-context",
+  "checks": [
+    {
+      "name": "required case runs with evaluation metrics",
+      "passed": true
+    },
+    {
+      "name": "required case downloads actual JSON",
+      "passed": true
+    },
+    {
+      "name": "required case reruns after refresh with same metrics",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:11:26.958Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "e93b628928676c3b9863704c17226e753018fd86275d58ed0c43b09f6e1a14b4",
+      "bytes": 29786
+    },
+    {
+      "path": "README.txt",
+      "sha256": "25777eae8e1c8e7061e2cb1c1a4e06b895ad7be282a80e5e5f6b69938a003d1d",
+      "bytes": 1246
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "9f80c9abf281e1d6ff5e5431862f4c1fd2d9f692daa2b3b4218924b37ef6e6cd",
+      "bytes": 36242
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "03d8bb302e83858696cc0f791b3f8574e6caba0088456006718ff89e0687d6ee",
+      "bytes": 159771
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "e2b4d2c20b7be8eed435f7b57ab4e447fdbc8600d52dc38f375a627871d957c2",
+      "bytes": 8088
+    }
+  ],
+  "metrics": {
+    "pairs": [
+      {
+        "pred": 0,
+        "truth": 0,
+        "error_s": 10
+      },
+      {
+        "pred": 1,
+        "truth": 1,
+        "error_s": 0
+      },
+      {
+        "pred": 2,
+        "truth": 2,
+        "error_s": 0
+      },
+      {
+        "pred": 3,
+        "truth": 3,
+        "error_s": 0
+      },
+      {
+        "pred": 4,
+        "truth": 4,
+        "error_s": 0
+      },
+      {
+        "pred": 5,
+        "truth": 5,
+        "error_s": 0
+      },
+      {
+        "pred": 6,
+        "truth": 6,
+        "error_s": 0
+      },
+      {
+        "pred": 7,
+        "truth": 7,
+        "error_s": 0
+      }
+    ],
+    "misses": [],
+    "extras": [],
+    "detectionRecall": 1,
+    "truthCount": 8,
+    "candidateCount": 8,
+    "model": {
+      "matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 1,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 0,
+      "coverage": 1,
+      "acceptedError": 0
+    },
+    "baseline": {
+      "matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 0.8
+        },
+        {
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      ],
+      "macroF1": 0.8666666666666666,
+      "total": 8,
+      "accepted": 8,
+      "wrong": 1,
+      "coverage": 1,
+      "acceptedError": 0.125
+    },
+    "depthMAE_m": 0,
+    "depthN": 2,
+    "falsePersistent": {
+      "count": 0,
+      "denominator": 6
+    },
+    "allCandidateCoverage": 1
+  },
+  "runId": "s17-r1-input1",
+  "download": "output/exports/v1.7/m2-original.json",
+  "checkedAt": "2026-10-23T17:11:29.150Z",
+  "passed": 4,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/cases/s17-mudgas-context",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 31180,
+        "sha256": "c6e81a4cbce05a7be004ac25606f50eecad1def7ff7eebec7f36a7f3a5618b2e"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 36242,
+        "sha256": "9f80c9abf281e1d6ff5e5431862f4c1fd2d9f692daa2b3b4218924b37ef6e6cd"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 159771,
+        "sha256": "03d8bb302e83858696cc0f791b3f8574e6caba0088456006718ff89e0687d6ee"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 8088,
+        "sha256": "e2b4d2c20b7be8eed435f7b57ab4e447fdbc8600d52dc38f375a627871d957c2"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1246,
+        "sha256": "25777eae8e1c8e7061e2cb1c1a4e06b895ad7be282a80e5e5f6b69938a003d1d"
+      }
+    ],
+    "manifestCanonicalSha256": "e93b628928676c3b9863704c17226e753018fd86275d58ed0c43b09f6e1a14b4",
+    "storedPackageMatchesDisk": true
+  }
+}

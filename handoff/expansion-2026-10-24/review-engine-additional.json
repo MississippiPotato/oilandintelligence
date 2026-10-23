@@ -1,0 +1,314 @@
+{
+  "kind": "independent_calculation_review_not_browser_acceptance",
+  "checkedAt": "2026-10-23T16:34:40.796Z",
+  "cases": [
+    {
+      "scene": "p1",
+      "file": "expansion-src/p1/engine.js",
+      "sha256": "ba19605ba40be8592a02d2978bc6b23292594f3b639c35c4ca0670c61ac4396e",
+      "checks": [
+        {
+          "name": "训练/验证/测试储层组隔离",
+          "passed": true
+        },
+        {
+          "name": "测试真值不改变参数选择",
+          "passed": true
+        },
+        {
+          "name": "选定候选满足全部可行条件",
+          "passed": true
+        },
+        {
+          "name": "无可行方案返回空结果",
+          "passed": true
+        },
+        {
+          "name": "手算回归误差及空分母",
+          "passed": true
+        }
+      ],
+      "metrics": {
+        "model": {
+          "count": 240,
+          "RMSE": 0.775600684602618,
+          "MAE": 0.6390126340461845
+        },
+        "baseline": {
+          "count": 240,
+          "RMSE": 6.580739481917284,
+          "MAE": 5.403172688552595
+        },
+        "candidateCount": 440,
+        "feasibleCount": 274,
+        "objectiveGap": 0.08819231751745349
+      },
+      "sourceStableDuringReview": true
+    },
+    {
+      "scene": "pr1",
+      "file": "expansion-src/pr1/engine.js",
+      "sha256": "2345fbda250d3086fc5041518f7852350ea4319391638187dbf914c9dfe151f2",
+      "checks": [
+        {
+          "name": "整井组隔离",
+          "passed": true
+        },
+        {
+          "name": "修改评价真值不改变预测",
+          "passed": true
+        },
+        {
+          "name": "零点偏移改变原始点且归一化特征不变",
+          "passed": true
+        },
+        {
+          "name": "噪声改变实际曲线与粗糙度",
+          "passed": true
+        },
+        {
+          "name": "无样本宏F1显示不适用",
+          "passed": false,
+          "details": {
+            "matrix": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "name": "充满泵",
+                "actual": 0,
+                "predicted": 0,
+                "TP": 0,
+                "recall": null,
+                "F1": null
+              },
+              {
+                "name": "供液不足形",
+                "actual": 0,
+                "predicted": 0,
+                "TP": 0,
+                "recall": null,
+                "F1": null
+              },
+              {
+                "name": "气影响形",
+                "actual": 0,
+                "predicted": 0,
+                "TP": 0,
+                "recall": null,
+                "F1": null
+              }
+            ],
+            "recalls": [
+              null,
+              null,
+              null
+            ],
+            "macroF1": 0,
+            "count": 0,
+            "accepted": 0,
+            "correct": 0,
+            "rejected": 0,
+            "coverage": null,
+            "acceptedError": null,
+            "accuracy": null
+          }
+        }
+      ],
+      "metrics": {
+        "model": {
+          "matrix": [
+            [
+              24,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              24,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              24,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "name": "充满泵",
+              "actual": 24,
+              "predicted": 24,
+              "TP": 24,
+              "recall": 1,
+              "F1": 1
+            },
+            {
+              "name": "供液不足形",
+              "actual": 24,
+              "predicted": 24,
+              "TP": 24,
+              "recall": 1,
+              "F1": 1
+            },
+            {
+              "name": "气影响形",
+              "actual": 24,
+              "predicted": 24,
+              "TP": 24,
+              "recall": 1,
+              "F1": 1
+            }
+          ],
+          "recalls": [
+            1,
+            1,
+            1
+          ],
+          "macroF1": 1,
+          "count": 72,
+          "accepted": 72,
+          "correct": 72,
+          "rejected": 0,
+          "coverage": 1,
+          "acceptedError": 0,
+          "accuracy": 1
+        },
+        "baseline": {
+          "matrix": [
+            [
+              24,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              11,
+              13,
+              0
+            ],
+            [
+              0,
+              7,
+              17,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "name": "充满泵",
+              "actual": 24,
+              "predicted": 24,
+              "TP": 24,
+              "recall": 1,
+              "F1": 1
+            },
+            {
+              "name": "供液不足形",
+              "actual": 24,
+              "predicted": 18,
+              "TP": 11,
+              "recall": 0.4583333333333333,
+              "F1": 0.5238095238095238
+            },
+            {
+              "name": "气影响形",
+              "actual": 24,
+              "predicted": 30,
+              "TP": 17,
+              "recall": 0.7083333333333334,
+              "F1": 0.6296296296296297
+            }
+          ],
+          "recalls": [
+            1,
+            0.4583333333333333,
+            0.7083333333333334
+          ],
+          "macroF1": 0.7178130511463845,
+          "count": 72,
+          "accepted": 72,
+          "correct": 52,
+          "rejected": 0,
+          "coverage": 1,
+          "acceptedError": 0.2777777777777778,
+          "accuracy": 0.7222222222222222
+        },
+        "nature": "synthetic_teaching",
+        "truthRole": "evaluation_only"
+      },
+      "sourceStableDuringReview": true
+    },
+    {
+      "scene": "r5",
+      "file": "expansion-src/r5/engine.js",
+      "sha256": "43a3fdc3b9672a6ca537a9f8a2da87b0f3820b88d0c6700b5ac61c9a3aa9f717",
+      "checks": [
+        {
+          "name": "delay=15 时选参仅使用截止前已到达的验证标签",
+          "passed": true,
+          "details": {
+            "asOf": 966,
+            "totalValidation": 32,
+            "used": 32,
+            "excluded": 0
+          }
+        },
+        {
+          "name": "delay=15 预测只用当前可知信息",
+          "passed": true
+        },
+        {
+          "name": "delay=30 时选参仅使用截止前已到达的验证标签",
+          "passed": true,
+          "details": {
+            "asOf": 966,
+            "totalValidation": 32,
+            "used": 31,
+            "excluded": 1
+          }
+        },
+        {
+          "name": "delay=30 预测只用当前可知信息",
+          "passed": true
+        },
+        {
+          "name": "delay=40 时选参仅使用截止前已到达的验证标签",
+          "passed": true,
+          "details": {
+            "asOf": 966,
+            "totalValidation": 32,
+            "used": 29,
+            "excluded": 3
+          }
+        },
+        {
+          "name": "delay=40 预测只用当前可知信息",
+          "passed": true
+        }
+      ],
+      "sourceStableDuringReview": true
+    }
+  ]
+}

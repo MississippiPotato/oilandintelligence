@@ -1,0 +1,234 @@
+{
+  "kind": "independent_last_graph_and_denominator_recheck_not_browser_acceptance",
+  "checkedAt": "2026-10-23T16:47:50.149Z",
+  "cases": [
+    {
+      "scene": "g1",
+      "file": "expansion-src/g1/engine.js",
+      "sha256": "2871b43ce69c5117d9020aa0321640dc25f168bbd4995690942e5412d3cf645a",
+      "checks": [
+        {
+          "name": "覆盖率与接受集错误率同时真实计算",
+          "passed": true
+        },
+        {
+          "name": "全拒判仍保留分母且接受集错误率不适用",
+          "passed": true
+        }
+      ],
+      "metrics": {
+        "model": {
+          "matrix": [
+            [
+              1020,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1074,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              922,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              438,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "label": "砂岩露头",
+              "tp": 1020,
+              "fp": 1,
+              "fn": 1,
+              "support": 1021,
+              "f1": 0.9990205680705191,
+              "iou": 0.9980430528375733
+            },
+            {
+              "label": "泥岩露头",
+              "tp": 1074,
+              "fp": 1,
+              "fn": 1,
+              "support": 1075,
+              "f1": 0.9990697674418605,
+              "iou": 0.9981412639405205
+            },
+            {
+              "label": "灰岩露头",
+              "tp": 922,
+              "fp": 0,
+              "fn": 0,
+              "support": 922,
+              "f1": 1,
+              "iou": 1
+            },
+            {
+              "label": "植被覆盖",
+              "tp": 438,
+              "fp": 0,
+              "fn": 0,
+              "support": 438,
+              "f1": 1,
+              "iou": 1
+            }
+          ],
+          "macroF1": 0.9995225838780949,
+          "meanIoU": 0.9990460791945235,
+          "total": 3456,
+          "accepted": 3456,
+          "coverage": 1,
+          "correct": 3454,
+          "acceptedError": 0.0005787037037037037
+        },
+        "baseline": {
+          "matrix": [
+            [
+              893,
+              12,
+              116,
+              0,
+              0
+            ],
+            [
+              35,
+              949,
+              0,
+              91,
+              0
+            ],
+            [
+              49,
+              0,
+              873,
+              0,
+              0
+            ],
+            [
+              0,
+              125,
+              0,
+              313,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "label": "砂岩露头",
+              "tp": 893,
+              "fp": 84,
+              "fn": 128,
+              "support": 1021,
+              "f1": 0.8938938938938938,
+              "iou": 0.8081447963800905
+            },
+            {
+              "label": "泥岩露头",
+              "tp": 949,
+              "fp": 137,
+              "fn": 126,
+              "support": 1075,
+              "f1": 0.8782970846830171,
+              "iou": 0.783003300330033
+            },
+            {
+              "label": "灰岩露头",
+              "tp": 873,
+              "fp": 116,
+              "fn": 49,
+              "support": 922,
+              "f1": 0.9136577708006279,
+              "iou": 0.8410404624277457
+            },
+            {
+              "label": "植被覆盖",
+              "tp": 313,
+              "fp": 91,
+              "fn": 125,
+              "support": 438,
+              "f1": 0.7434679334916865,
+              "iou": 0.5916824196597353
+            }
+          ],
+          "macroF1": 0.8573291707173063,
+          "meanIoU": 0.7559677446994012,
+          "total": 3456,
+          "accepted": 3456,
+          "coverage": 1,
+          "correct": 3028,
+          "acceptedError": 0.12384259259259259
+        }
+      }
+    },
+    {
+      "scene": "s1",
+      "file": "expansion-src/s1/engine.js",
+      "sha256": "327661a57fbdeeecf63779c9114f20bd3224a7b3ce7e52b714838a7794548d34",
+      "checks": [
+        {
+          "name": "重复迹线点只能一对一命中参考一次",
+          "passed": true,
+          "detail": {
+            "matched": 1,
+            "f1": 0.6666666666666666,
+            "predicted": 2,
+            "truth": 1
+          }
+        },
+        {
+          "name": "实际默认断层带与迹线指标可计算",
+          "passed": true
+        }
+      ],
+      "metrics": {
+        "model": {
+          "tp": 167,
+          "fp": 44,
+          "fn": 1,
+          "tn": 4156,
+          "abstained": 0,
+          "total": 4368,
+          "coverage": 1,
+          "iou": 0.7877358490566038,
+          "f1": 0.8812664907651715,
+          "lineF1": 1,
+          "lineMatched": 56,
+          "predictedRows": 56,
+          "truthRows": 56,
+          "traceTolerance": 2,
+          "tolerance_m": 50
+        },
+        "baseline": {
+          "tp": 168,
+          "fp": 76,
+          "fn": 0,
+          "tn": 4124,
+          "abstained": 0,
+          "total": 4368,
+          "coverage": 1,
+          "iou": 0.6885245901639344,
+          "f1": 0.8155339805825242,
+          "lineF1": 0.9285714285714286,
+          "lineMatched": 52,
+          "predictedRows": 56,
+          "truthRows": 56,
+          "traceTolerance": 2,
+          "tolerance_m": 50
+        }
+      }
+    }
+  ]
+}

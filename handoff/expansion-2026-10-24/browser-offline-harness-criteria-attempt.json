@@ -1,0 +1,514 @@
+{
+  "scope": "Harness criteria corrected: interactive workflow keeps one selected figure, and eyebrow/source metadata is not the main explanatory paragraph. No case-source mutation.",
+  "reports": [
+    {
+      "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+      "scene": "c1",
+      "caseId": "s17x-c1-cement-quality",
+      "checks": [
+        {
+          "name": "offline background graphics render",
+          "passed": true
+        },
+        {
+          "name": "offline workflow graphics render",
+          "passed": false
+        }
+      ],
+      "errors": [],
+      "errorDetails": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:56:36.987Z",
+      "exception": "offline workflow graphics render",
+      "finalFrameStates": [
+        {
+          "url": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-c1-cement-quality/demo/index.html",
+          "statusText": "先选择“运行计算”，生成当前声学观测、模型预测与对照。",
+          "state": {
+            "sceneId": "c1",
+            "caseId": "s17x-c1-cement-quality",
+            "status": "idle",
+            "runId": 0,
+            "params": {
+              "noise": 0.035,
+              "eccentric": 0,
+              "micro": 0,
+              "reject": 0.6,
+              "thresholdShift": 0
+            },
+            "metrics": null,
+            "reviewCount": 0,
+            "currentReviewCount": 0
+          }
+        }
+      ],
+      "checkedAt": "2026-10-23T16:56:37.302Z",
+      "passed": 1,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-c1-cement-quality",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 27349,
+            "sha256": "f5799d2160b8db3984795f82580af67e3104e8ddf532568bc635989afad45258"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 25657,
+            "sha256": "77645d265c77401835bfa105f86d8452569bdbbf0af868d6ad69bbbce4f7c7af"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 87255,
+            "sha256": "e73f2602747de4798ee42f0bc18429ac2dca9253e10046ec16bea744d448cf22"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 7135,
+            "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 1226,
+            "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+      "scene": "co1",
+      "caseId": "s17x-co1-completion-choice",
+      "checks": [
+        {
+          "name": "offline background graphics render",
+          "passed": true
+        },
+        {
+          "name": "offline workflow graphics render",
+          "passed": false
+        }
+      ],
+      "errors": [],
+      "errorDetails": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:56:38.707Z",
+      "exception": "offline workflow graphics render",
+      "finalFrameStates": [
+        {
+          "url": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-co1-completion-choice/demo/index.html",
+          "statusText": "运行后，从历史井学习响应、筛除不满足条件的候选并比较。",
+          "state": {
+            "sceneId": "co1",
+            "caseId": "s17x-co1-completion-choice",
+            "status": "idle",
+            "runId": 0,
+            "params": {
+              "budget": 90,
+              "costWeight": 0.22,
+              "queryId": "TE-001",
+              "queryX": [
+                0.6951370144588872,
+                0.7710069122025743,
+                0.4929951655678451,
+                0.48021528166718785,
+                2.4348035863600668,
+                125.03530151792802
+              ]
+            },
+            "metrics": null,
+            "reviewCount": 0,
+            "currentReviewCount": 0
+          }
+        }
+      ],
+      "checkedAt": "2026-10-23T16:56:38.951Z",
+      "passed": 1,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-co1-completion-choice",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 21930,
+            "sha256": "3526554dd5fee424602f98eafcfeaa7bdb7e07d83c09663c7f388668bd133d04"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 25657,
+            "sha256": "77645d265c77401835bfa105f86d8452569bdbbf0af868d6ad69bbbce4f7c7af"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 83300,
+            "sha256": "e9762ad09ce37397b020ec040c9909f9c2d8882cd30bd10ad332b6d8fd642dbd"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 7323,
+            "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 1233,
+            "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+      "scene": "p1",
+      "caseId": "s17x-p1-perforation-design",
+      "checks": [
+        {
+          "name": "offline background graphics render",
+          "passed": true
+        },
+        {
+          "name": "offline workflow graphics render",
+          "passed": false
+        }
+      ],
+      "errors": [],
+      "errorDetails": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:56:40.367Z",
+      "exception": "offline workflow graphics render",
+      "finalFrameStates": [
+        {
+          "url": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-p1-perforation-design/demo/index.html",
+          "statusText": "尚未计算 · 调整条件后运行",
+          "state": {
+            "sceneId": "p1",
+            "caseId": "s17x-p1-perforation-design",
+            "status": "ready",
+            "runId": null,
+            "params": {
+              "permeability": 60,
+              "damage": 18,
+              "anisotropy": 1.8,
+              "budget": 60,
+              "clearance": 5,
+              "maxCrowding": 2.5,
+              "costWeight": 0.35
+            },
+            "metrics": null
+          }
+        }
+      ],
+      "checkedAt": "2026-10-23T16:56:40.662Z",
+      "passed": 1,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-p1-perforation-design",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 24838,
+            "sha256": "b927bda71b55694520b21fa727914b249200cdc6fe31037b3fad988b864ef033"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 24657,
+            "sha256": "730c53a3c40d72fbde26d4fe1918c0fd59979200db3c00fea989f0bef679b60a"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 93806,
+            "sha256": "c56e6f6b21592c8e9e2db9aefec249a3b7c2828346645da247b59e09f6e9b9bc"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 4501,
+            "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 3117,
+            "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+      "scene": "pr1",
+      "caseId": "s17x-pr1-pump-card",
+      "checks": [
+        {
+          "name": "offline background graphics render",
+          "passed": true
+        },
+        {
+          "name": "offline workflow graphics render",
+          "passed": false
+        }
+      ],
+      "errors": [],
+      "errorDetails": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:56:42.059Z",
+      "exception": "offline workflow graphics render",
+      "finalFrameStates": [
+        {
+          "url": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-pr1-pump-card/demo/index.html",
+          "statusText": "尚未计算 · 调整输入后运行",
+          "state": {
+            "sceneId": "pr1",
+            "caseId": "s17x-pr1-pump-card",
+            "status": "ready",
+            "runId": null,
+            "params": {
+              "condition": 2,
+              "noise": 0.015,
+              "offset": 0,
+              "support": 0.6
+            },
+            "metrics": null
+          }
+        }
+      ],
+      "checkedAt": "2026-10-23T16:56:42.341Z",
+      "passed": 1,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-pr1-pump-card",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 22731,
+            "sha256": "ea51ff806cc0c2ab2553ddefa732e742630da42eca0944d6f5f0a78423c4ca94"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 24657,
+            "sha256": "730c53a3c40d72fbde26d4fe1918c0fd59979200db3c00fea989f0bef679b60a"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 92202,
+            "sha256": "b15ba253287d2bb7e4db47d3ec3068af31e4a6ad3c1a8a477eecf829539a8417"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 4305,
+            "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 3458,
+            "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41"
+          }
+        ]
+      }
+    },
+    {
+      "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+      "scene": "e1",
+      "caseId": "s17x-e1-fracture-optimization",
+      "checks": [
+        {
+          "name": "offline background graphics render",
+          "passed": true
+        },
+        {
+          "name": "offline workflow graphics render",
+          "passed": true
+        },
+        {
+          "name": "offline local model produces metrics",
+          "passed": true
+        },
+        {
+          "name": "offline assistant navigates to real workflow",
+          "passed": true
+        },
+        {
+          "name": "390px viewport has no whole-page horizontal overflow",
+          "passed": true,
+          "detail": {
+            "viewport": 390,
+            "document": 390,
+            "body": 390,
+            "font": 17,
+            "paragraphs": [
+              12.92,
+              17,
+              15.98,
+              15.98
+            ]
+          }
+        },
+        {
+          "name": "body and explanatory paragraphs are at least 17px",
+          "passed": false,
+          "detail": {
+            "viewport": 390,
+            "document": 390,
+            "body": 390,
+            "font": 17,
+            "paragraphs": [
+              12.92,
+              17,
+              15.98,
+              15.98
+            ]
+          }
+        }
+      ],
+      "errors": [],
+      "errorDetails": [],
+      "requests": [],
+      "startedAt": "2026-10-23T16:56:43.771Z",
+      "metrics": {
+        "surrogate": {
+          "denominator": 96,
+          "oil90_t": {
+            "MAE": 2.6075275159406908,
+            "RMSE": 2.9698819150043594,
+            "bias": 0.4621513994321906
+          },
+          "pressure_MPa": {
+            "MAE": 0.47644100643047765,
+            "RMSE": 0.5415402618490917,
+            "bias": 0.25062023902484903
+          }
+        },
+        "meanBaseline": {
+          "denominator": 96,
+          "oil90_t": {
+            "MAE": 24.084239159676827,
+            "RMSE": 28.329793999490757,
+            "bias": -13.965674186239204
+          },
+          "pressure_MPa": {
+            "MAE": 2.1507188006335203,
+            "RMSE": 2.597393459006992,
+            "bias": 0.6753578546147736
+          }
+        },
+        "gridCount": 441,
+        "feasibleCount": 284,
+        "feasibleRate": 0.6439909297052154,
+        "objectiveGain": 3.2307837711261413,
+        "oilGain_t": 7.910783771126148
+      },
+      "mobile": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 17,
+        "paragraphs": [
+          12.92,
+          17,
+          15.98,
+          15.98
+        ]
+      },
+      "exception": "body and explanatory paragraphs are at least 17px",
+      "finalFrameStates": [
+        {
+          "url": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-e1-fracture-optimization/demo/index.html",
+          "statusText": "计算完成 · e1-mvl7plli-bs4ui-001",
+          "state": {
+            "sceneId": "e1",
+            "caseId": "s17x-e1-fracture-optimization",
+            "status": "completed",
+            "metrics": {
+              "surrogate": {
+                "denominator": 96,
+                "oil90_t": {
+                  "MAE": 2.6075275159406908,
+                  "RMSE": 2.9698819150043594,
+                  "bias": 0.4621513994321906
+                },
+                "pressure_MPa": {
+                  "MAE": 0.47644100643047765,
+                  "RMSE": 0.5415402618490917,
+                  "bias": 0.25062023902484903
+                }
+              },
+              "meanBaseline": {
+                "denominator": 96,
+                "oil90_t": {
+                  "MAE": 24.084239159676827,
+                  "RMSE": 28.329793999490757,
+                  "bias": -13.965674186239204
+                },
+                "pressure_MPa": {
+                  "MAE": 2.1507188006335203,
+                  "RMSE": 2.597393459006992,
+                  "bias": 0.6753578546147736
+                }
+              },
+              "gridCount": 441,
+              "feasibleCount": 284,
+              "feasibleRate": 0.6439909297052154,
+              "objectiveGain": 3.2307837711261413,
+              "oilGain_t": 7.910783771126148
+            },
+            "runId": "e1-mvl7plli-bs4ui-001",
+            "params": {
+              "preset": "standard",
+              "permeability_mD": 2.5,
+              "brittleness": 0.62,
+              "budget_10k": 54,
+              "pressureMax_MPa": 33,
+              "waterMax_m3": 1100,
+              "sandMax_t": 140,
+              "costWeight_t_per_10k": 1.3
+            },
+            "selectedCandidate": {
+              "fluid_m3": 1000,
+              "proppant_t": 100,
+              "rate_m3_min": 7,
+              "permeability_mD": 2.5,
+              "brittleness": 0.62
+            },
+            "review": null
+          }
+        }
+      ],
+      "checkedAt": "2026-10-23T16:56:44.821Z",
+      "passed": 5,
+      "failed": 1,
+      "nodeArtifactProvenance": {
+        "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+        "directory": "dist/expansion-cases/s17x-e1-fracture-optimization",
+        "files": [
+          {
+            "path": "case.json",
+            "bytes": 25809,
+            "sha256": "51490a009115eb6534de46b01b843de04e773a5f860187a8a0d5ef6d2469fdf9"
+          },
+          {
+            "path": "demo/demo.css",
+            "bytes": 25200,
+            "sha256": "1c223e2df1fd921cfa5af5dd24e75e840dd935ebb220c72ae40cdc8c3a031166"
+          },
+          {
+            "path": "demo/demo.js",
+            "bytes": 62721,
+            "sha256": "44e89f3a3387f5778617cdb92d7722e1e6033f84b732d4553677c5ba09bc7663"
+          },
+          {
+            "path": "demo/index.html",
+            "bytes": 26026,
+            "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3"
+          },
+          {
+            "path": "README.txt",
+            "bytes": 1077,
+            "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+          }
+        ]
+      }
+    }
+  ]
+}

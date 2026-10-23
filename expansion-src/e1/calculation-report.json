@@ -1,0 +1,145 @@
+{
+  "sceneId": "e1",
+  "caseId": "s17x-e1-fracture-optimization",
+  "kind": "node_calculation_checks_not_browser_acceptance",
+  "checkedAt": "2026-10-23T16:42:31.956Z",
+  "passed": 16,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "288/96/96 trials grouped into independent 12/4/4 reservoirs",
+      "passed": true
+    },
+    {
+      "name": "two-equation solver has independently known answer",
+      "passed": true
+    },
+    {
+      "name": "MAE, RMSE and bias use explicit held-out denominator",
+      "passed": true
+    },
+    {
+      "name": "empty error denominator gives null MAE, RMSE, and bias",
+      "passed": true
+    },
+    {
+      "name": "prediction ignores arbitrary evaluation-truth properties",
+      "passed": true
+    },
+    {
+      "name": "training scaler uses training measurements only",
+      "passed": true
+    },
+    {
+      "name": "lambda is selected exclusively from actual validation MAE",
+      "passed": true
+    },
+    {
+      "name": "all 441 grid points and all four constraints are actually checked",
+      "passed": true
+    },
+    {
+      "name": "reported winner maximizes objective over feasible grid, with no hidden optimum",
+      "passed": true
+    },
+    {
+      "name": "every Pareto candidate is non-dominated by any feasible candidate",
+      "passed": true
+    },
+    {
+      "name": "insufficient budget yields no candidate and no false improvement",
+      "passed": true
+    },
+    {
+      "name": "changed resource constraints alter feasible points and invalidate fixed baseline gain",
+      "passed": true
+    },
+    {
+      "name": "out-of-range geology is explicitly marked while domain test metrics stay fixed",
+      "passed": true
+    },
+    {
+      "name": "fixed seed gives deterministic response samples and model predictions",
+      "passed": true
+    },
+    {
+      "name": "evidence envelope links actual versioned inputs, selected candidate, and error sources",
+      "passed": true
+    },
+    {
+      "name": "selecting a different candidate gives a distinct immutable prediction claim",
+      "passed": true
+    }
+  ],
+  "defaultMetrics": {
+    "surrogate": {
+      "denominator": 96,
+      "oil90_t": {
+        "MAE": 2.6075275159406908,
+        "RMSE": 2.9698819150043594,
+        "bias": 0.4621513994321906
+      },
+      "pressure_MPa": {
+        "MAE": 0.47644100643047765,
+        "RMSE": 0.5415402618490917,
+        "bias": 0.25062023902484903
+      }
+    },
+    "meanBaseline": {
+      "denominator": 96,
+      "oil90_t": {
+        "MAE": 24.084239159676827,
+        "RMSE": 28.329793999490757,
+        "bias": -13.965674186239204
+      },
+      "pressure_MPa": {
+        "MAE": 2.1507188006335203,
+        "RMSE": 2.597393459006992,
+        "bias": 0.6753578546147736
+      }
+    },
+    "gridCount": 441,
+    "feasibleCount": 284,
+    "feasibleRate": 0.6439909297052154,
+    "objectiveGain": 3.2307837711261413,
+    "oilGain_t": 7.910783771126148
+  },
+  "defaultBest": {
+    "observation": {
+      "fluid_m3": 1000,
+      "proppant_t": 100,
+      "rate_m3_min": 7,
+      "permeability_mD": 2.5,
+      "brittleness": 0.62
+    },
+    "prediction": {
+      "oil90_t": 157.96333802876782,
+      "pressure_MPa": 29.838571477120336
+    },
+    "issues": [],
+    "cost_10k": 52.4,
+    "objective": 89.84333802876782
+  },
+  "lambda": 10,
+  "sources": [
+    {
+      "title": "SLB Energy Glossary — hydraulic fracturing",
+      "url": "https://glossary.slb.com/en/terms/h/hydraulic_fracturing",
+      "checked": "2026-10-24",
+      "use": "concept only; no experiment data copied"
+    },
+    {
+      "title": "SLB Energy Glossary — proppant",
+      "url": "https://glossary.slb.com/en/terms/p/proppant",
+      "checked": "2026-10-24",
+      "use": "concept only"
+    }
+  ],
+  "notExecuted": [
+    "original portal folder import",
+    "refresh and browser reopen",
+    "offline standalone UI",
+    "mobile and keyboard",
+    "sandbox JSON download"
+  ]
+}

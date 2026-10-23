@@ -1,0 +1,273 @@
+{
+  "scope": "Original five required cases remain runnable among all imported packages",
+  "scene": "m1",
+  "caseId": "s17-cuttings-lithology",
+  "checks": [
+    {
+      "name": "required case runs with evaluation metrics",
+      "passed": true
+    },
+    {
+      "name": "required case downloads actual JSON",
+      "passed": true
+    },
+    {
+      "name": "required case reruns after refresh with same metrics",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:11:15.111Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "bd852f8929df84703578f0ce1c6980c43dd72a07ba2161afe7cc17c127de43b2",
+      "bytes": 26889
+    },
+    {
+      "path": "README.txt",
+      "sha256": "acfdae75a10aeb3e40321360fc1f3c4d0882867e211468b0d8b5ebb5e74d639e",
+      "bytes": 833
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+      "bytes": 37117
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "e00473c1e7d3cfdea7b4a6976ee0f3589c8c6733819ca24765aea3e3c6924006",
+      "bytes": 213809
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "dbac59fa2bfcb71901e3a937112490b37b524d94397abb1c8c21fbc3bbc9cdfe",
+      "bytes": 5135
+    }
+  ],
+  "metrics": {
+    "pairs": [
+      {
+        "pred": 0,
+        "truth": 2,
+        "IoU": 1
+      },
+      {
+        "pred": 1,
+        "truth": 0,
+        "IoU": 1
+      },
+      {
+        "pred": 2,
+        "truth": 1,
+        "IoU": 1
+      },
+      {
+        "pred": 3,
+        "truth": 3,
+        "IoU": 1
+      },
+      {
+        "pred": 4,
+        "truth": 4,
+        "IoU": 1
+      },
+      {
+        "pred": 5,
+        "truth": 7,
+        "IoU": 1
+      },
+      {
+        "pred": 6,
+        "truth": 6,
+        "IoU": 1
+      },
+      {
+        "pred": 7,
+        "truth": 5,
+        "IoU": 1
+      },
+      {
+        "pred": 8,
+        "truth": 10,
+        "IoU": 1
+      },
+      {
+        "pred": 9,
+        "truth": 8,
+        "IoU": 1
+      },
+      {
+        "pred": 10,
+        "truth": 11,
+        "IoU": 1
+      },
+      {
+        "pred": 11,
+        "truth": 9,
+        "IoU": 1
+      }
+    ],
+    "misses": [],
+    "extras": [],
+    "merged": [],
+    "model": {
+      "matrix": [
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          7,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 1,
+          "f1": 1
+        }
+      ],
+      "macroF1": 1,
+      "total": 12,
+      "accepted": 12,
+      "wrong": 0,
+      "coverage": 1,
+      "acceptedError": 0
+    },
+    "baseline": {
+      "matrix": [
+        [
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          5,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "recall": 1,
+          "f1": 1
+        },
+        {
+          "recall": 0,
+          "f1": 0
+        },
+        {
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143
+        }
+      ],
+      "macroF1": 0.5714285714285715,
+      "total": 12,
+      "accepted": 12,
+      "wrong": 4,
+      "coverage": 1,
+      "acceptedError": 0.3333333333333333
+    },
+    "segmentation": {
+      "tp": 14582,
+      "fp": 0,
+      "fn": 0,
+      "tn": 62218,
+      "IoU": 1,
+      "Dice": 1,
+      "recall": 1,
+      "precision": 1
+    },
+    "trueVisiblePixels": 14582,
+    "areaError_pp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "download": "output/exports/v1.7/m1-original.json",
+  "checkedAt": "2026-10-23T17:11:25.333Z",
+  "passed": 4,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/cases/s17-cuttings-lithology",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 28034,
+        "sha256": "3ad9557afcb88afe6032c5e9fd2e08c6780be3856cc125c2a6533602ad5a04cb"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 37117,
+        "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 213809,
+        "sha256": "e00473c1e7d3cfdea7b4a6976ee0f3589c8c6733819ca24765aea3e3c6924006"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 5135,
+        "sha256": "dbac59fa2bfcb71901e3a937112490b37b524d94397abb1c8c21fbc3bbc9cdfe"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 833,
+        "sha256": "acfdae75a10aeb3e40321360fc1f3c4d0882867e211468b0d8b5ebb5e74d639e"
+      }
+    ],
+    "manifestCanonicalSha256": "bd852f8929df84703578f0ce1c6980c43dd72a07ba2161afe7cc17c127de43b2",
+    "storedPackageMatchesDisk": true
+  }
+}

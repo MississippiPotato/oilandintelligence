@@ -1,0 +1,278 @@
+{
+  "scope": "Post-package smoke of freshly extracted full 1.7 archive; actual Chrome file navigation with context offline",
+  "checks": [
+    {
+      "name": "extracted homepage registers all 17 authored cases",
+      "passed": true
+    },
+    {
+      "name": "extracted archive includes all four local generated themes",
+      "passed": true
+    },
+    {
+      "name": "extracted assistant opens in compact 410 by 700 panel",
+      "passed": true
+    },
+    {
+      "name": "extracted m2 teaches four chapters before closed supplementary drawings",
+      "passed": true
+    },
+    {
+      "name": "extracted m2 performs calculation and enables evidence export",
+      "passed": true
+    },
+    {
+      "name": "extracted added workover case performs current calculation",
+      "passed": true
+    },
+    {
+      "name": "extracted added-case assistant works on a file page",
+      "passed": true
+    },
+    {
+      "name": "freshly extracted runtime has no HTTP dependency",
+      "passed": true
+    },
+    {
+      "name": "freshly extracted pages have no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "http": [],
+  "errors": [],
+  "cases": [
+    {
+      "scene": "m2",
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_s": 10
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_s": 0
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "error_s": 0
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "error_s": 0
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "error_s": 0
+          },
+          {
+            "pred": 5,
+            "truth": 5,
+            "error_s": 0
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "error_s": 0
+          },
+          {
+            "pred": 7,
+            "truth": 7,
+            "error_s": 0
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "detectionRecall": 1,
+        "truthCount": 8,
+        "candidateCount": 8,
+        "model": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 0.8
+            },
+            {
+              "recall": 0.5,
+              "f1": 0.6666666666666666
+            }
+          ],
+          "macroF1": 0.8666666666666666,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 1,
+          "coverage": 1,
+          "acceptedError": 0.125
+        },
+        "depthMAE_m": 0,
+        "depthN": 2,
+        "falsePersistent": {
+          "count": 0,
+          "denominator": 6
+        },
+        "allCandidateCoverage": 1
+      }
+    },
+    {
+      "scene": "wo1",
+      "metrics": {
+        "denominator": 20,
+        "model": {
+          "correct": 20,
+          "accuracy": 1,
+          "accepted": 20,
+          "coverage": 1,
+          "selectiveAccuracy": 1,
+          "recallAt3": 1,
+          "recallAt3Count": 20,
+          "evidenceCoverage": 1,
+          "constraintViolations": 0
+        },
+        "baseline": {
+          "correct": 17,
+          "accuracy": 0.85,
+          "accepted": 20,
+          "coverage": 1,
+          "selectiveAccuracy": 0.85,
+          "constraintViolations": 0
+        },
+        "confusion": [
+          [
+            5,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            5,
+            0
+          ]
+        ],
+        "referenceApplicable": true,
+        "referenceDenominator": 20
+      }
+    }
+  ],
+  "paidModelCalls": 0,
+  "checkedAt": "2026-10-23T17:32:03.868Z",
+  "passed": 9,
+  "failed": 0
+}

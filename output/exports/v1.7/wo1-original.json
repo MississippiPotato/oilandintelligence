@@ -1,0 +1,4175 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "s17x-wo1-workover-retrieval",
+  "caseVersion": "1.0.0",
+  "runId": "wo1-mvl7x7q8-k5887-003",
+  "datasetId": "wo-synthetic-history-v1",
+  "wellId": "WO-TEST-001-QUERY",
+  "dataNature": "synthetic_teaching",
+  "runConfig": {
+    "seed": {
+      "train": 110,
+      "validation": 2110,
+      "test": 4110
+    },
+    "dataVersion": "wo-synthetic-history-v1",
+    "splitDescription": "48/16/20 independent well groups; wording families 0/1 train, 2 validation, 3 test",
+    "method": "TF-IDF + nearest-neighbour retrieval with observable features",
+    "parameters": {
+      "preset": "standard",
+      "query": {
+        "wellId": "WO-TEST-001-QUERY",
+        "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+        "integrityStatus": "verified",
+        "pressureLoss_MPa": 1.73,
+        "sand_g_L": 0,
+        "currentVariation_pct": 9.705,
+        "depositIndex": 0.934,
+        "annulusPressure_MPa": 0.159
+      }
+    },
+    "inputRevision": 3
+  },
+  "sources": [
+    {
+      "sourceRecordId": "wo1-mvl7x7q8-k5887-003-query",
+      "sourceVersion": 1,
+      "sourceType": "text_record",
+      "content": {
+        "rawText": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+        "observation": {
+          "wellId": "WO-TEST-001-QUERY",
+          "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.73,
+          "sand_g_L": 0,
+          "currentVariation_pct": 9.705,
+          "depositIndex": 0.934,
+          "annulusPressure_MPa": 0.159
+        }
+      }
+    },
+    {
+      "sourceRecordId": "wo1-mvl7x7q8-k5887-003-candidate",
+      "sourceVersion": 1,
+      "sourceType": "text_record",
+      "content": {
+        "kind": "model_inference",
+        "category": 0,
+        "name": "结垢诊断与清理评估",
+        "accepted": true,
+        "reason": "可进入候选复核",
+        "support": 0.8945774382204488,
+        "method": "TF-IDF + observation similarity + nearest-neighbour vote + explicit constraints"
+      }
+    },
+    {
+      "sourceRecordId": "WO-TRAIN-021",
+      "sourceVersion": 1,
+      "sourceType": "text_record",
+      "content": {
+        "kind": "synthetic_training_record",
+        "datasetId": "wo-synthetic-history-v1",
+        "rawText": "产能降低；流动受阻；管内结垢；出砂升高。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+        "observation": {
+          "wellId": "WO-TRAIN-021",
+          "text": "产能降低；流动受阻；管内结垢；出砂升高。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.437,
+          "sand_g_L": 0,
+          "currentVariation_pct": 9.383,
+          "depositIndex": 0.771,
+          "annulusPressure_MPa": 0
+        },
+        "planCategory": 0
+      }
+    },
+    {
+      "sourceRecordId": "WO-TRAIN-041",
+      "sourceVersion": 1,
+      "sourceType": "text_record",
+      "content": {
+        "kind": "synthetic_training_record",
+        "datasetId": "wo-synthetic-history-v1",
+        "rawText": "产量下降；压差增大；沉积附着；产量波动。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+        "observation": {
+          "wellId": "WO-TRAIN-041",
+          "text": "产量下降；压差增大；沉积附着；产量波动。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.53,
+          "sand_g_L": 0.715,
+          "currentVariation_pct": 7.391,
+          "depositIndex": 0.97,
+          "annulusPressure_MPa": 0.375
+        },
+        "planCategory": 0
+      }
+    },
+    {
+      "sourceRecordId": "WO-TRAIN-001",
+      "sourceVersion": 1,
+      "sourceType": "text_record",
+      "content": {
+        "kind": "synthetic_training_record",
+        "datasetId": "wo-synthetic-history-v1",
+        "rawText": "产量下降；压差增大；沉积附着。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+        "observation": {
+          "wellId": "WO-TRAIN-001",
+          "text": "产量下降；压差增大；沉积附着。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.345,
+          "sand_g_L": 0,
+          "currentVariation_pct": 1.374,
+          "depositIndex": 0.911,
+          "annulusPressure_MPa": 0.247
+        },
+        "planCategory": 0
+      }
+    },
+    {
+      "sourceRecordId": "wo1-mvl7x7q8-k5887-003-review-1",
+      "sourceVersion": 1,
+      "sourceType": "review_note",
+      "content": {
+        "runId": "wo1-mvl7x7q8-k5887-003",
+        "wellId": "WO-TEST-001-QUERY",
+        "note": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+        "modelCategory": 0,
+        "time": "2026-10-23T17:02:41.251Z"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "claimId": "wo1-mvl7x7q8-k5887-003-observation",
+      "revision": 1,
+      "kind": "observation",
+      "statement": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+      "sourceRefs": [
+        {
+          "sourceRecordId": "wo1-mvl7x7q8-k5887-003-query",
+          "sourceVersion": 1,
+          "selector": {
+            "type": "text_span",
+            "start": 0,
+            "end": 65
+          }
+        }
+      ],
+      "reviewStatus": "unreviewed",
+      "traceabilityStatus": "linked",
+      "supportStatus": "unchecked"
+    },
+    {
+      "claimId": "wo1-mvl7x7q8-k5887-003-candidate-claim",
+      "revision": 1,
+      "kind": "model_inference",
+      "statement": "本次检索得到候选类别：结垢诊断与清理评估",
+      "sourceRefs": [
+        {
+          "sourceRecordId": "wo1-mvl7x7q8-k5887-003-candidate",
+          "sourceVersion": 1,
+          "selector": {
+            "type": "whole_record_for_single_fact"
+          }
+        },
+        {
+          "sourceRecordId": "WO-TRAIN-021",
+          "sourceVersion": 1,
+          "selector": {
+            "type": "text_span",
+            "start": 0,
+            "end": 68
+          }
+        },
+        {
+          "sourceRecordId": "WO-TRAIN-041",
+          "sourceVersion": 1,
+          "selector": {
+            "type": "text_span",
+            "start": 0,
+            "end": 68
+          }
+        },
+        {
+          "sourceRecordId": "WO-TRAIN-001",
+          "sourceVersion": 1,
+          "selector": {
+            "type": "text_span",
+            "start": 0,
+            "end": 63
+          }
+        }
+      ],
+      "reviewStatus": "needs_review",
+      "traceabilityStatus": "linked",
+      "supportStatus": "rule_checked",
+      "method": "training-only TF-IDF and nearest-neighbour retrieval; explicit admissibility checks"
+    },
+    {
+      "claimId": "wo1-mvl7x7q8-k5887-003-review-1-claim",
+      "revision": 1,
+      "kind": "reviewer_note",
+      "statement": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+      "sourceRefs": [
+        {
+          "sourceRecordId": "wo1-mvl7x7q8-k5887-003-review-1",
+          "sourceVersion": 1,
+          "selector": {
+            "type": "whole_record_for_single_fact"
+          }
+        }
+      ],
+      "reviewStatus": "confirmed",
+      "traceabilityStatus": "linked",
+      "supportStatus": "unchecked"
+    }
+  ],
+  "limitations": [
+    "默认工单、观测和方案类别均为教学合成。",
+    "当前自由查询无适用参考标签；冲突反事实不计算准确率。",
+    "相似度为支持分，候选类别须结合来源和人工意见复核。"
+  ],
+  "metrics": {
+    "denominator": 20,
+    "model": {
+      "correct": 20,
+      "accuracy": 1,
+      "accepted": 20,
+      "coverage": 1,
+      "selectiveAccuracy": 1,
+      "recallAt3": 1,
+      "recallAt3Count": 20,
+      "evidenceCoverage": 1,
+      "constraintViolations": 0
+    },
+    "baseline": {
+      "correct": 17,
+      "accuracy": 0.85,
+      "accepted": 20,
+      "coverage": 1,
+      "selectiveAccuracy": 0.85,
+      "constraintViolations": 0
+    },
+    "confusion": [
+      [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ]
+    ],
+    "referenceApplicable": true,
+    "referenceDenominator": 20
+  },
+  "result": {
+    "prediction": {
+      "category": 0,
+      "accepted": true,
+      "candidates": [
+        {
+          "name": "结垢诊断与清理评估",
+          "category": 0,
+          "score": 0.8821540716228498,
+          "reasons": []
+        },
+        {
+          "name": "出砂与井筒清理评估",
+          "category": 1,
+          "score": 0,
+          "reasons": [
+            "缺少达到教学筛选线的含砂观测"
+          ]
+        },
+        {
+          "name": "举升系统检修评估",
+          "category": 2,
+          "score": 0,
+          "reasons": [
+            "缺少电流/负载异常证据"
+          ]
+        },
+        {
+          "name": "管柱完整性检测评估",
+          "category": 3,
+          "score": 0,
+          "reasons": []
+        }
+      ],
+      "eligible": [
+        {
+          "name": "结垢诊断与清理评估",
+          "category": 0,
+          "score": 0.8821540716228498,
+          "reasons": []
+        },
+        {
+          "name": "管柱完整性检测评估",
+          "category": 3,
+          "score": 0,
+          "reasons": []
+        }
+      ],
+      "neighbors": [
+        {
+          "id": "WO-TRAIN-021",
+          "category": 0,
+          "textScore": 0.9143536736538543,
+          "featureScore": 0.8352487319202319,
+          "score": 0.8945774382204488,
+          "observation": {
+            "wellId": "WO-TRAIN-021",
+            "text": "产能降低；流动受阻；管内结垢；出砂升高。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+            "integrityStatus": "verified",
+            "pressureLoss_MPa": 1.437,
+            "sand_g_L": 0,
+            "currentVariation_pct": 9.383,
+            "depositIndex": 0.771,
+            "annulusPressure_MPa": 0
+          }
+        },
+        {
+          "id": "WO-TRAIN-041",
+          "category": 0,
+          "textScore": 0.8926361042506772,
+          "featureScore": 0.8815027973653716,
+          "score": 0.8898527775293509,
+          "observation": {
+            "wellId": "WO-TRAIN-041",
+            "text": "产量下降；压差增大；沉积附着；产量波动。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+            "integrityStatus": "verified",
+            "pressureLoss_MPa": 1.53,
+            "sand_g_L": 0.715,
+            "currentVariation_pct": 7.391,
+            "depositIndex": 0.97,
+            "annulusPressure_MPa": 0.375
+          }
+        },
+        {
+          "id": "WO-TRAIN-001",
+          "category": 0,
+          "textScore": 0.9152705825413557,
+          "featureScore": 0.7023162488509309,
+          "score": 0.8620319991187495,
+          "observation": {
+            "wellId": "WO-TRAIN-001",
+            "text": "产量下降；压差增大；沉积附着。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+            "integrityStatus": "verified",
+            "pressureLoss_MPa": 1.345,
+            "sand_g_L": 0,
+            "currentVariation_pct": 1.374,
+            "depositIndex": 0.911,
+            "annulusPressure_MPa": 0.247
+          }
+        }
+      ],
+      "support": 0.8945774382204488,
+      "matchedTerms": [
+        "三次",
+        "业结",
+        "些诊",
+        "作业",
+        "单曾",
+        "单未",
+        "历史",
+        "及密",
+        "及泄",
+        "史工",
+        "增加",
+        "复查",
+        "完整",
+        "密封",
+        "工单",
+        "录完",
+        "提及",
+        "整作",
+        "曾提",
+        "未确",
+        "未记",
+        "本次",
+        "次工",
+        "次未",
+        "泄漏",
+        "漏复",
+        "环空",
+        "确认",
+        "结果",
+        "认这",
+        "记录",
+        "诊断",
+        "近三",
+        "这些",
+        "阻力"
+      ],
+      "missing": [],
+      "reason": "可进入候选复核",
+      "config": {
+        "k": 3,
+        "featureWeight": 0.25,
+        "threshold": 0.35
+      }
+    },
+    "baseline": {
+      "category": 3,
+      "accepted": true,
+      "rank": [
+        {
+          "category": 3,
+          "score": 4,
+          "reasons": []
+        },
+        {
+          "category": 0,
+          "score": 1,
+          "reasons": []
+        },
+        {
+          "category": 1,
+          "score": 0,
+          "reasons": [
+            "缺少达到教学筛选线的含砂观测"
+          ]
+        },
+        {
+          "category": 2,
+          "score": 0,
+          "reasons": [
+            "缺少电流/负载异常证据"
+          ]
+        }
+      ]
+    },
+    "query": {
+      "wellId": "WO-TEST-001-QUERY",
+      "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+      "integrityStatus": "verified",
+      "pressureLoss_MPa": 1.73,
+      "sand_g_L": 0,
+      "currentVariation_pct": 9.705,
+      "depositIndex": 0.934,
+      "annulusPressure_MPa": 0.159
+    },
+    "metrics": {
+      "denominator": 20,
+      "model": {
+        "correct": 20,
+        "accuracy": 1,
+        "accepted": 20,
+        "coverage": 1,
+        "selectiveAccuracy": 1,
+        "recallAt3": 1,
+        "recallAt3Count": 20,
+        "evidenceCoverage": 1,
+        "constraintViolations": 0
+      },
+      "baseline": {
+        "correct": 17,
+        "accuracy": 0.85,
+        "accepted": 20,
+        "coverage": 1,
+        "selectiveAccuracy": 0.85,
+        "constraintViolations": 0
+      },
+      "confusion": [
+        [
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5,
+          0
+        ]
+      ],
+      "referenceApplicable": true,
+      "referenceDenominator": 20
+    },
+    "cohort": [
+      {
+        "observation": {
+          "wellId": "WO-TEST-001",
+          "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.73,
+          "sand_g_L": 0,
+          "currentVariation_pct": 9.705,
+          "depositIndex": 0.934,
+          "annulusPressure_MPa": 0.159
+        },
+        "prediction": {
+          "category": 0,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.8821540716228498,
+              "reasons": []
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.8821540716228498,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-021",
+              "category": 0,
+              "textScore": 0.9143536736538543,
+              "featureScore": 0.8352487319202319,
+              "score": 0.8945774382204488,
+              "observation": {
+                "wellId": "WO-TRAIN-021",
+                "text": "产能降低；流动受阻；管内结垢；出砂升高。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.437,
+                "sand_g_L": 0,
+                "currentVariation_pct": 9.383,
+                "depositIndex": 0.771,
+                "annulusPressure_MPa": 0
+              }
+            },
+            {
+              "id": "WO-TRAIN-041",
+              "category": 0,
+              "textScore": 0.8926361042506772,
+              "featureScore": 0.8815027973653716,
+              "score": 0.8898527775293509,
+              "observation": {
+                "wellId": "WO-TRAIN-041",
+                "text": "产量下降；压差增大；沉积附着；产量波动。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.53,
+                "sand_g_L": 0.715,
+                "currentVariation_pct": 7.391,
+                "depositIndex": 0.97,
+                "annulusPressure_MPa": 0.375
+              }
+            },
+            {
+              "id": "WO-TRAIN-001",
+              "category": 0,
+              "textScore": 0.9152705825413557,
+              "featureScore": 0.7023162488509309,
+              "score": 0.8620319991187495,
+              "observation": {
+                "wellId": "WO-TRAIN-001",
+                "text": "产量下降；压差增大；沉积附着。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.345,
+                "sand_g_L": 0,
+                "currentVariation_pct": 1.374,
+                "depositIndex": 0.911,
+                "annulusPressure_MPa": 0.247
+              }
+            }
+          ],
+          "support": 0.8945774382204488,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "些诊",
+            "作业",
+            "单曾",
+            "单未",
+            "历史",
+            "及密",
+            "及泄",
+            "史工",
+            "增加",
+            "复查",
+            "完整",
+            "密封",
+            "工单",
+            "录完",
+            "提及",
+            "整作",
+            "曾提",
+            "未确",
+            "未记",
+            "本次",
+            "次工",
+            "次未",
+            "泄漏",
+            "漏复",
+            "环空",
+            "确认",
+            "结果",
+            "认这",
+            "记录",
+            "诊断",
+            "近三",
+            "这些",
+            "阻力"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 4,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 1,
+              "reasons": []
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ]
+        },
+        "reference": 0
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-002",
+          "text": "携出固体颗粒；细砂持续增加；井底颗粒堆积。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.385,
+          "sand_g_L": 2.947,
+          "currentVariation_pct": 8.106,
+          "depositIndex": 0.158,
+          "annulusPressure_MPa": 0.404
+        },
+        "prediction": {
+          "category": 1,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.7781104917030245,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.7781104917030245,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-034",
+              "category": 1,
+              "textScore": 0.7740223812510086,
+              "featureScore": 0.8587621135954895,
+              "score": 0.7952073143371289,
+              "observation": {
+                "wellId": "WO-TRAIN-034",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.147,
+                "sand_g_L": 2.333,
+                "currentVariation_pct": 4.588,
+                "depositIndex": 0.182,
+                "annulusPressure_MPa": 0.204
+              }
+            },
+            {
+              "id": "WO-TRAIN-018",
+              "category": 1,
+              "textScore": 0.7740223812510086,
+              "featureScore": 0.7742406501274532,
+              "score": 0.7740769484701198,
+              "observation": {
+                "wellId": "WO-TRAIN-018",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.073,
+                "sand_g_L": 2.76,
+                "currentVariation_pct": 2.181,
+                "depositIndex": 0.159,
+                "annulusPressure_MPa": 0.023
+              }
+            },
+            {
+              "id": "WO-TRAIN-002",
+              "category": 1,
+              "textScore": 0.7740223812510086,
+              "featureScore": 0.7381217054542731,
+              "score": 0.7650472123018248,
+              "observation": {
+                "wellId": "WO-TRAIN-002",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1,
+                "sand_g_L": 3.187,
+                "currentVariation_pct": 9.775,
+                "depositIndex": 0.135,
+                "annulusPressure_MPa": 0
+              }
+            }
+          ],
+          "support": 0.7952073143371289,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "井底",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "砂粒",
+            "结果",
+            "记录",
+            "近三"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 1,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 1,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 1
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-003",
+          "text": "举升能力下降；电机负载摆动；泵效变差；管柱密封待查。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 2.039,
+          "sand_g_L": 0,
+          "currentVariation_pct": 21.506,
+          "depositIndex": 0.052,
+          "annulusPressure_MPa": 0
+        },
+        "prediction": {
+          "category": 2,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.827305442073856,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.827305442073856,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-043",
+              "category": 2,
+              "textScore": 0.8164269162593383,
+              "featureScore": 0.9177227319461717,
+              "score": 0.8417508701810466,
+              "observation": {
+                "wellId": "WO-TRAIN-043",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.839,
+                "sand_g_L": 0,
+                "currentVariation_pct": 19.192,
+                "depositIndex": 0.088,
+                "annulusPressure_MPa": 0.184
+              }
+            },
+            {
+              "id": "WO-TRAIN-027",
+              "category": 2,
+              "textScore": 0.8164269162593383,
+              "featureScore": 0.845761538094514,
+              "score": 0.8237605717181322,
+              "observation": {
+                "wellId": "WO-TRAIN-027",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.765,
+                "sand_g_L": 0,
+                "currentVariation_pct": 26.785,
+                "depositIndex": 0.064,
+                "annulusPressure_MPa": 0.003
+              }
+            },
+            {
+              "id": "WO-TRAIN-019",
+              "category": 2,
+              "textScore": 0.8164269162593383,
+              "featureScore": 0.8163387885115422,
+              "score": 0.8164048843223892,
+              "observation": {
+                "wellId": "WO-TRAIN-019",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.728,
+                "sand_g_L": 0,
+                "currentVariation_pct": 25.582,
+                "depositIndex": 0.053,
+                "annulusPressure_MPa": 0.237
+              }
+            }
+          ],
+          "support": 0.8417508701810466,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "完整",
+            "密封",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "泵效",
+            "电流",
+            "结果",
+            "记录",
+            "近三",
+            "降低"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 2,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 2,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 3,
+              "score": 1,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            }
+          ]
+        },
+        "reference": 2
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-004",
+          "text": "管柱密封待查；环空压力持续增加；完整性记录异常。近三次工单未记录完整作业结果。",
+          "integrityStatus": "suspect",
+          "pressureLoss_MPa": 1.644,
+          "sand_g_L": 0.456,
+          "currentVariation_pct": 9.907,
+          "depositIndex": 0.216,
+          "annulusPressure_MPa": 1.583
+        },
+        "prediction": {
+          "category": 3,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.7962908149555675,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ],
+          "eligible": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.7962908149555675,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-044",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.9120749436403928,
+              "score": 0.8206851577440373,
+              "observation": {
+                "wellId": "WO-TRAIN-044",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.443,
+                "sand_g_L": 0.279,
+                "currentVariation_pct": 7.592,
+                "depositIndex": 0.252,
+                "annulusPressure_MPa": 1.798
+              }
+            },
+            {
+              "id": "WO-TRAIN-020",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.7898918238380704,
+              "score": 0.7901393777934568,
+              "observation": {
+                "wellId": "WO-TRAIN-020",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.333,
+                "sand_g_L": 0.269,
+                "currentVariation_pct": 3.982,
+                "depositIndex": 0.217,
+                "annulusPressure_MPa": 1.852
+              }
+            },
+            {
+              "id": "WO-TRAIN-012",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.7415259499810783,
+              "score": 0.7780479093292088,
+              "observation": {
+                "wellId": "WO-TRAIN-012",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.296,
+                "sand_g_L": 0,
+                "currentVariation_pct": 2.779,
+                "depositIndex": 0.205,
+                "annulusPressure_MPa": 1.436
+              }
+            }
+          ],
+          "support": 0.8206851577440373,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "密封",
+            "工单",
+            "异常",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "环空",
+            "结果",
+            "记录",
+            "近三"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ]
+        },
+        "reference": 3
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-005",
+          "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.749,
+          "sand_g_L": 0,
+          "currentVariation_pct": 5.307,
+          "depositIndex": 0.77,
+          "annulusPressure_MPa": 0.367
+        },
+        "prediction": {
+          "category": 0,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.7091292238150837,
+              "reasons": []
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.7091292238150837,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-037",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.8668649828543381,
+              "score": 0.7172574281209143,
+              "observation": {
+                "wellId": "WO-TRAIN-037",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.511,
+                "sand_g_L": 0.497,
+                "currentVariation_pct": 1.789,
+                "depositIndex": 0.794,
+                "annulusPressure_MPa": 0.167
+              }
+            },
+            {
+              "id": "WO-TRAIN-029",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.8511845983904955,
+              "score": 0.7133373320049536,
+              "observation": {
+                "wellId": "WO-TRAIN-029",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.474,
+                "sand_g_L": 0.06,
+                "currentVariation_pct": 0.586,
+                "depositIndex": 0.782,
+                "annulusPressure_MPa": 0.402
+              }
+            },
+            {
+              "id": "WO-TRAIN-013",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.7850069156482141,
+              "score": 0.6967929113193834,
+              "observation": {
+                "wellId": "WO-TRAIN-013",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.4,
+                "sand_g_L": 0.487,
+                "currentVariation_pct": 8.179,
+                "depositIndex": 0.759,
+                "annulusPressure_MPa": 0.22
+              }
+            }
+          ],
+          "support": 0.7172574281209143,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "结果",
+            "记录",
+            "近三",
+            "阻力"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 0,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 0,
+              "score": 1,
+              "reasons": []
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 0
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-006",
+          "text": "携出固体颗粒；细砂持续增加；井底颗粒堆积；举升能力下降。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.403,
+          "sand_g_L": 3.165,
+          "currentVariation_pct": 3.707,
+          "depositIndex": 0.334,
+          "annulusPressure_MPa": 0
+        },
+        "prediction": {
+          "category": 1,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.8678513060216435,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.8678513060216435,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-026",
+              "category": 1,
+              "textScore": 0.9266861869766675,
+              "featureScore": 0.7994800149779906,
+              "score": 0.8948846439769982,
+              "observation": {
+                "wellId": "WO-TRAIN-026",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.11,
+                "sand_g_L": 3.197,
+                "currentVariation_pct": 3.385,
+                "depositIndex": 0.17,
+                "annulusPressure_MPa": 0.438
+              }
+            },
+            {
+              "id": "WO-TRAIN-046",
+              "category": 1,
+              "textScore": 0.8819346373496333,
+              "featureScore": 0.7734170497673664,
+              "score": 0.8548052404540666,
+              "observation": {
+                "wellId": "WO-TRAIN-046",
+                "text": "出砂升高；携砂增多；井底沉砂。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.203,
+                "sand_g_L": 2.988,
+                "currentVariation_pct": 11.393,
+                "depositIndex": 0.029,
+                "annulusPressure_MPa": 0.177
+              }
+            },
+            {
+              "id": "WO-TRAIN-006",
+              "category": 1,
+              "textScore": 0.8819346373496333,
+              "featureScore": 0.7696522224865632,
+              "score": 0.8538640336338658,
+              "observation": {
+                "wellId": "WO-TRAIN-006",
+                "text": "出砂升高；携砂增多；井底沉砂。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.018,
+                "sand_g_L": 3.406,
+                "currentVariation_pct": 5.376,
+                "depositIndex": 0.311,
+                "annulusPressure_MPa": 0.049
+              }
+            }
+          ],
+          "support": 0.8948846439769982,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "井底",
+            "些诊",
+            "作业",
+            "单曾",
+            "单未",
+            "历史",
+            "及密",
+            "及泄",
+            "史工",
+            "增加",
+            "复查",
+            "完整",
+            "密封",
+            "工单",
+            "录完",
+            "提及",
+            "整作",
+            "曾提",
+            "未确",
+            "未记",
+            "本次",
+            "次工",
+            "次未",
+            "泄漏",
+            "泵效",
+            "漏复",
+            "环空",
+            "砂粒",
+            "确认",
+            "结果",
+            "认这",
+            "记录",
+            "诊断",
+            "近三",
+            "这些",
+            "降低"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 4,
+              "reasons": []
+            },
+            {
+              "category": 1,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 2,
+              "score": 1,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            }
+          ]
+        },
+        "reference": 1
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-007",
+          "text": "举升能力下降；电机负载摆动；泵效变差。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 2.058,
+          "sand_g_L": 0,
+          "currentVariation_pct": 27.108,
+          "depositIndex": 0.227,
+          "annulusPressure_MPa": 0.176
+        },
+        "prediction": {
+          "category": 2,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.844280296991049,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.844280296991049,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-047",
+              "category": 2,
+              "textScore": 0.824466542688743,
+              "featureScore": 0.9140391589717786,
+              "score": 0.8468596967595019,
+              "observation": {
+                "wellId": "WO-TRAIN-047",
+                "text": "举升异常；负载振动；电机不稳。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.857,
+                "sand_g_L": 0,
+                "currentVariation_pct": 24.793,
+                "depositIndex": 0.263,
+                "annulusPressure_MPa": 0.392
+              }
+            },
+            {
+              "id": "WO-TRAIN-027",
+              "category": 2,
+              "textScore": 0.8471414610679201,
+              "featureScore": 0.8342379229890302,
+              "score": 0.8439155765481976,
+              "observation": {
+                "wellId": "WO-TRAIN-027",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.765,
+                "sand_g_L": 0,
+                "currentVariation_pct": 26.785,
+                "depositIndex": 0.064,
+                "annulusPressure_MPa": 0.003
+              }
+            },
+            {
+              "id": "WO-TRAIN-043",
+              "category": 2,
+              "textScore": 0.8471414610679201,
+              "featureScore": 0.8268380874580297,
+              "score": 0.8420656176654475,
+              "observation": {
+                "wellId": "WO-TRAIN-043",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.839,
+                "sand_g_L": 0,
+                "currentVariation_pct": 19.192,
+                "depositIndex": 0.088,
+                "annulusPressure_MPa": 0.184
+              }
+            }
+          ],
+          "support": 0.8468596967595019,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "泵效",
+            "电流",
+            "结果",
+            "记录",
+            "近三",
+            "降低"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 2,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 2,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 2
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-008",
+          "text": "管柱密封待查；环空压力持续增加；完整性记录异常。近三次工单未记录完整作业结果。",
+          "integrityStatus": "suspect",
+          "pressureLoss_MPa": 1.663,
+          "sand_g_L": 0.674,
+          "currentVariation_pct": 5.508,
+          "depositIndex": 0.051,
+          "annulusPressure_MPa": 1.79
+        },
+        "prediction": {
+          "category": 3,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.7912035482039302,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ],
+          "eligible": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.7912035482039302,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-044",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.8684697221314841,
+              "score": 0.8097838523668102,
+              "observation": {
+                "wellId": "WO-TRAIN-044",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.443,
+                "sand_g_L": 0.279,
+                "currentVariation_pct": 7.592,
+                "depositIndex": 0.252,
+                "annulusPressure_MPa": 1.798
+              }
+            },
+            {
+              "id": "WO-TRAIN-020",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.794755550849346,
+              "score": 0.7913553095462756,
+              "observation": {
+                "wellId": "WO-TRAIN-020",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.333,
+                "sand_g_L": 0.269,
+                "currentVariation_pct": 3.982,
+                "depositIndex": 0.217,
+                "annulusPressure_MPa": 1.852
+              }
+            },
+            {
+              "id": "WO-TRAIN-012",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.7192202434590629,
+              "score": 0.7724714826987049,
+              "observation": {
+                "wellId": "WO-TRAIN-012",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.296,
+                "sand_g_L": 0,
+                "currentVariation_pct": 2.779,
+                "depositIndex": 0.205,
+                "annulusPressure_MPa": 1.436
+              }
+            }
+          ],
+          "support": 0.8097838523668102,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "密封",
+            "工单",
+            "异常",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "环空",
+            "结果",
+            "记录",
+            "近三"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ]
+        },
+        "reference": 3
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-009",
+          "text": "流道阻力增加；结晶附着；局部沉积。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.767,
+          "sand_g_L": 0.029,
+          "currentVariation_pct": 0.909,
+          "depositIndex": 0.945,
+          "annulusPressure_MPa": 0
+        },
+        "prediction": {
+          "category": 0,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.6965115603372446,
+              "reasons": []
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.6965115603372446,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-037",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.8529637845294377,
+              "score": 0.7137821285396893,
+              "observation": {
+                "wellId": "WO-TRAIN-037",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.511,
+                "sand_g_L": 0.497,
+                "currentVariation_pct": 1.789,
+                "depositIndex": 0.794,
+                "annulusPressure_MPa": 0.167
+              }
+            },
+            {
+              "id": "WO-TRAIN-029",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.8060698583438367,
+              "score": 0.702058646993289,
+              "observation": {
+                "wellId": "WO-TRAIN-029",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.474,
+                "sand_g_L": 0.06,
+                "currentVariation_pct": 0.586,
+                "depositIndex": 0.782,
+                "annulusPressure_MPa": 0.402
+              }
+            },
+            {
+              "id": "WO-TRAIN-013",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.6926108922857035,
+              "score": 0.6736939054787556,
+              "observation": {
+                "wellId": "WO-TRAIN-013",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.4,
+                "sand_g_L": 0.487,
+                "currentVariation_pct": 8.179,
+                "depositIndex": 0.759,
+                "annulusPressure_MPa": 0.22
+              }
+            }
+          ],
+          "support": 0.7137821285396893,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "结果",
+            "记录",
+            "近三",
+            "阻力"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 0,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 0,
+              "score": 1,
+              "reasons": []
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 0
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-010",
+          "text": "携出固体颗粒；细砂持续增加；井底颗粒堆积；举升能力下降。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.422,
+          "sand_g_L": 3.383,
+          "currentVariation_pct": 9.309,
+          "depositIndex": 0.169,
+          "annulusPressure_MPa": 0.169
+        },
+        "prediction": {
+          "category": 1,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.729320471077847,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.729320471077847,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-042",
+              "category": 1,
+              "textScore": 0.7123812535842621,
+              "featureScore": 0.8612802695328995,
+              "score": 0.7496060075714214,
+              "observation": {
+                "wellId": "WO-TRAIN-042",
+                "text": "产量波动；细砂增加；返出颗粒；产量下降。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.184,
+                "sand_g_L": 2.769,
+                "currentVariation_pct": 5.791,
+                "depositIndex": 0.194,
+                "annulusPressure_MPa": 0
+              }
+            },
+            {
+              "id": "WO-TRAIN-034",
+              "category": 1,
+              "textScore": 0.7060140914730445,
+              "featureScore": 0.786199338285794,
+              "score": 0.7260604031762319,
+              "observation": {
+                "wellId": "WO-TRAIN-034",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.147,
+                "sand_g_L": 2.333,
+                "currentVariation_pct": 4.588,
+                "depositIndex": 0.182,
+                "annulusPressure_MPa": 0.204
+              }
+            },
+            {
+              "id": "WO-TRAIN-018",
+              "category": 1,
+              "textScore": 0.7060140914730445,
+              "featureScore": 0.7311377355244185,
+              "score": 0.7122950024858881,
+              "observation": {
+                "wellId": "WO-TRAIN-018",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.073,
+                "sand_g_L": 2.76,
+                "currentVariation_pct": 2.181,
+                "depositIndex": 0.159,
+                "annulusPressure_MPa": 0.023
+              }
+            }
+          ],
+          "support": 0.7496060075714214,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "井底",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "泵效",
+            "砂粒",
+            "结果",
+            "记录",
+            "近三",
+            "降低"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 1,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 1,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 2,
+              "score": 1,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 1
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-011",
+          "text": "举升能力下降；电机负载摆动；泵效变差。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 2.076,
+          "sand_g_L": 0.168,
+          "currentVariation_pct": 22.709,
+          "depositIndex": 0.063,
+          "annulusPressure_MPa": 0.384
+        },
+        "prediction": {
+          "category": 2,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.607990861175746,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.2422693686895212,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            }
+          ],
+          "eligible": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.607990861175746,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.2422693686895212,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-011",
+              "category": 2,
+              "textScore": 0.9622608246070385,
+              "featureScore": 0.7686407151226033,
+              "score": 0.9138557972359298,
+              "observation": {
+                "wellId": "WO-TRAIN-011",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.691,
+                "sand_g_L": 0.408,
+                "currentVariation_pct": 24.379,
+                "depositIndex": 0.041,
+                "annulusPressure_MPa": 0.472
+              }
+            },
+            {
+              "id": "WO-TRAIN-031",
+              "category": 2,
+              "textScore": 0.9367729595387593,
+              "featureScore": 0.8301482665489538,
+              "score": 0.910116786291308,
+              "observation": {
+                "wellId": "WO-TRAIN-031",
+                "text": "举升异常；负载振动；电机不稳；环空压力升高。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.783,
+                "sand_g_L": 0.199,
+                "currentVariation_pct": 22.387,
+                "depositIndex": 0.24,
+                "annulusPressure_MPa": 0.211
+              }
+            },
+            {
+              "id": "WO-TRAIN-036",
+              "category": 3,
+              "textScore": 0.8895815839583627,
+              "featureScore": 0.23848767239916613,
+              "score": 0.7268081060685636,
+              "observation": {
+                "wellId": "WO-TRAIN-036",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.407,
+                "sand_g_L": 0,
+                "currentVariation_pct": 6.389,
+                "depositIndex": 0.24,
+                "annulusPressure_MPa": 1.383
+              }
+            }
+          ],
+          "support": 0.9138557972359298,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "些诊",
+            "作业",
+            "单曾",
+            "单未",
+            "历史",
+            "及密",
+            "及泄",
+            "史工",
+            "复查",
+            "完整",
+            "密封",
+            "工单",
+            "录完",
+            "提及",
+            "整作",
+            "曾提",
+            "未确",
+            "未记",
+            "本次",
+            "次工",
+            "次未",
+            "泄漏",
+            "泵效",
+            "漏复",
+            "环空",
+            "电流",
+            "确认",
+            "结果",
+            "认这",
+            "记录",
+            "诊断",
+            "近三",
+            "这些",
+            "降低"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 4,
+              "reasons": []
+            },
+            {
+              "category": 2,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            }
+          ]
+        },
+        "reference": 2
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-012",
+          "text": "管柱密封待查；环空压力持续增加；完整性记录异常。近三次工单未记录完整作业结果。",
+          "integrityStatus": "suspect",
+          "pressureLoss_MPa": 1.681,
+          "sand_g_L": 0,
+          "currentVariation_pct": 1.11,
+          "depositIndex": 0.227,
+          "annulusPressure_MPa": 1.348
+        },
+        "prediction": {
+          "category": 3,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.7865896589309623,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ],
+          "eligible": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.7865896589309623,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-044",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.8065533086645659,
+              "score": 0.7943047490000806,
+              "observation": {
+                "wellId": "WO-TRAIN-044",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.443,
+                "sand_g_L": 0.279,
+                "currentVariation_pct": 7.592,
+                "depositIndex": 0.252,
+                "annulusPressure_MPa": 1.798
+              }
+            },
+            {
+              "id": "WO-TRAIN-012",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.7718497119467793,
+              "score": 0.785628849820634,
+              "observation": {
+                "wellId": "WO-TRAIN-012",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.296,
+                "sand_g_L": 0,
+                "currentVariation_pct": 2.779,
+                "depositIndex": 0.205,
+                "annulusPressure_MPa": 1.436
+              }
+            },
+            {
+              "id": "WO-TRAIN-020",
+              "category": 3,
+              "textScore": 0.7902218957785855,
+              "featureScore": 0.7486758245529325,
+              "score": 0.7798353779721723,
+              "observation": {
+                "wellId": "WO-TRAIN-020",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.333,
+                "sand_g_L": 0.269,
+                "currentVariation_pct": 3.982,
+                "depositIndex": 0.217,
+                "annulusPressure_MPa": 1.852
+              }
+            }
+          ],
+          "support": 0.7943047490000806,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "密封",
+            "工单",
+            "异常",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "环空",
+            "结果",
+            "记录",
+            "近三"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ]
+        },
+        "reference": 3
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-013",
+          "text": "流道阻力增加；结晶附着；局部沉积；携出固体颗粒。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.786,
+          "sand_g_L": 0.247,
+          "currentVariation_pct": 6.51,
+          "depositIndex": 0.781,
+          "annulusPressure_MPa": 0.133
+        },
+        "prediction": {
+          "category": 0,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.7008996329848439,
+              "reasons": []
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.7008996329848439,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-037",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.8475638163489494,
+              "score": 0.7124321364945672,
+              "observation": {
+                "wellId": "WO-TRAIN-037",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.511,
+                "sand_g_L": 0.497,
+                "currentVariation_pct": 1.789,
+                "depositIndex": 0.794,
+                "annulusPressure_MPa": 0.167
+              }
+            },
+            {
+              "id": "WO-TRAIN-029",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.7890671813657534,
+              "score": 0.6978079777487681,
+              "observation": {
+                "wellId": "WO-TRAIN-029",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.474,
+                "sand_g_L": 0.06,
+                "currentVariation_pct": 0.586,
+                "depositIndex": 0.782,
+                "annulusPressure_MPa": 0.402
+              }
+            },
+            {
+              "id": "WO-TRAIN-013",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.767670409215467,
+              "score": 0.6924587847111966,
+              "observation": {
+                "wellId": "WO-TRAIN-013",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.4,
+                "sand_g_L": 0.487,
+                "currentVariation_pct": 8.179,
+                "depositIndex": 0.759,
+                "annulusPressure_MPa": 0.22
+              }
+            }
+          ],
+          "support": 0.7124321364945672,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "结果",
+            "记录",
+            "近三",
+            "阻力"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 0,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 0,
+              "score": 1,
+              "reasons": []
+            },
+            {
+              "category": 1,
+              "score": 1,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 0
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-014",
+          "text": "携出固体颗粒；细砂持续增加；井底颗粒堆积。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.44,
+          "sand_g_L": 2.302,
+          "currentVariation_pct": 4.911,
+          "depositIndex": 0.345,
+          "annulusPressure_MPa": 0.377
+        },
+        "prediction": {
+          "category": 1,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.766962735042508,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.766962735042508,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-034",
+              "category": 1,
+              "textScore": 0.7740223812510086,
+              "featureScore": 0.8341800036781212,
+              "score": 0.7890617868577868,
+              "observation": {
+                "wellId": "WO-TRAIN-034",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.147,
+                "sand_g_L": 2.333,
+                "currentVariation_pct": 4.588,
+                "depositIndex": 0.182,
+                "annulusPressure_MPa": 0.204
+              }
+            },
+            {
+              "id": "WO-TRAIN-018",
+              "category": 1,
+              "textScore": 0.7740223812510086,
+              "featureScore": 0.7239694873745374,
+              "score": 0.7615091577818909,
+              "observation": {
+                "wellId": "WO-TRAIN-018",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.073,
+                "sand_g_L": 2.76,
+                "currentVariation_pct": 2.181,
+                "depositIndex": 0.159,
+                "annulusPressure_MPa": 0.023
+              }
+            },
+            {
+              "id": "WO-TRAIN-042",
+              "category": 1,
+              "textScore": 0.7244143139343472,
+              "featureScore": 0.8280261001483437,
+              "score": 0.7503172604878463,
+              "observation": {
+                "wellId": "WO-TRAIN-042",
+                "text": "产量波动；细砂增加；返出颗粒；产量下降。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.184,
+                "sand_g_L": 2.769,
+                "currentVariation_pct": 5.791,
+                "depositIndex": 0.194,
+                "annulusPressure_MPa": 0
+              }
+            }
+          ],
+          "support": 0.7890617868577868,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "井底",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "砂粒",
+            "结果",
+            "记录",
+            "近三"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 1,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 1,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 1
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-015",
+          "text": "举升能力下降；电机负载摆动；泵效变差。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 2.095,
+          "sand_g_L": 0.386,
+          "currentVariation_pct": 28.311,
+          "depositIndex": 0.239,
+          "annulusPressure_MPa": 0
+        },
+        "prediction": {
+          "category": 2,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.8314618950947418,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.8314618950947418,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-027",
+              "category": 2,
+              "textScore": 0.8471414610679201,
+              "featureScore": 0.7939293171238897,
+              "score": 0.8338384250819125,
+              "observation": {
+                "wellId": "WO-TRAIN-027",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.765,
+                "sand_g_L": 0,
+                "currentVariation_pct": 26.785,
+                "depositIndex": 0.064,
+                "annulusPressure_MPa": 0.003
+              }
+            },
+            {
+              "id": "WO-TRAIN-039",
+              "category": 2,
+              "textScore": 0.824466542688743,
+              "featureScore": 0.8478189206992122,
+              "score": 0.8303046371913603,
+              "observation": {
+                "wellId": "WO-TRAIN-039",
+                "text": "举升异常；负载振动；电机不稳。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.82,
+                "sand_g_L": 0.636,
+                "currentVariation_pct": 23.59,
+                "depositIndex": 0.252,
+                "annulusPressure_MPa": 0
+              }
+            },
+            {
+              "id": "WO-TRAIN-047",
+              "category": 2,
+              "textScore": 0.824466542688743,
+              "featureScore": 0.8475708639775801,
+              "score": 0.8302426230109523,
+              "observation": {
+                "wellId": "WO-TRAIN-047",
+                "text": "举升异常；负载振动；电机不稳。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.857,
+                "sand_g_L": 0,
+                "currentVariation_pct": 24.793,
+                "depositIndex": 0.263,
+                "annulusPressure_MPa": 0.392
+              }
+            }
+          ],
+          "support": 0.8338384250819125,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "泵效",
+            "电流",
+            "结果",
+            "记录",
+            "近三",
+            "降低"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 2,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 2,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 2
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-016",
+          "text": "管柱密封待查；环空压力持续增加；完整性记录异常。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+          "integrityStatus": "suspect",
+          "pressureLoss_MPa": 1.699,
+          "sand_g_L": 0,
+          "currentVariation_pct": 6.711,
+          "depositIndex": 0.063,
+          "annulusPressure_MPa": 1.556
+        },
+        "prediction": {
+          "category": 3,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.5954351161102764,
+              "reasons": []
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.2594480683540958,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            }
+          ],
+          "eligible": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.5954351161102764,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-036",
+              "category": 3,
+              "textScore": 0.9587440049236662,
+              "featureScore": 0.8310336906167712,
+              "score": 0.9268164263469425,
+              "observation": {
+                "wellId": "WO-TRAIN-036",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.407,
+                "sand_g_L": 0,
+                "currentVariation_pct": 6.389,
+                "depositIndex": 0.24,
+                "annulusPressure_MPa": 1.383
+              }
+            },
+            {
+              "id": "WO-TRAIN-016",
+              "category": 3,
+              "textScore": 0.8887515518336376,
+              "featureScore": 0.7717010324346343,
+              "score": 0.8594889219838868,
+              "observation": {
+                "wellId": "WO-TRAIN-016",
+                "text": "环空压力升高；管柱泄漏线索；压力异常。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.314,
+                "sand_g_L": 0.051,
+                "currentVariation_pct": 8.381,
+                "depositIndex": 0.041,
+                "annulusPressure_MPa": 1.644
+              }
+            },
+            {
+              "id": "WO-TRAIN-011",
+              "category": 2,
+              "textScore": 0.8820076858692659,
+              "featureScore": 0.4673537626413514,
+              "score": 0.7783442050622873,
+              "observation": {
+                "wellId": "WO-TRAIN-011",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。 历史工单曾提及密封、环空、完整性及泄漏复查，本次未确认这些诊断。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.691,
+                "sand_g_L": 0.408,
+                "currentVariation_pct": 24.379,
+                "depositIndex": 0.041,
+                "annulusPressure_MPa": 0.472
+              }
+            }
+          ],
+          "support": 0.9268164263469425,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "些诊",
+            "作业",
+            "单曾",
+            "单未",
+            "历史",
+            "及密",
+            "及泄",
+            "史工",
+            "增加",
+            "复查",
+            "完整",
+            "密封",
+            "工单",
+            "异常",
+            "录完",
+            "提及",
+            "整作",
+            "曾提",
+            "未确",
+            "未记",
+            "本次",
+            "次工",
+            "次未",
+            "泄漏",
+            "漏复",
+            "环空",
+            "确认",
+            "结果",
+            "认这",
+            "记录",
+            "诊断",
+            "近三",
+            "这些"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 7,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ]
+        },
+        "reference": 3
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-017",
+          "text": "流道阻力增加；结晶附着；局部沉积；携出固体颗粒。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.804,
+          "sand_g_L": 0.465,
+          "currentVariation_pct": 2.112,
+          "depositIndex": 0.957,
+          "annulusPressure_MPa": 0.34
+        },
+        "prediction": {
+          "category": 0,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.6934172308596228,
+              "reasons": []
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0.6934172308596228,
+              "reasons": []
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-037",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.8341762068190032,
+              "score": 0.7090852341120806,
+              "observation": {
+                "wellId": "WO-TRAIN-037",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.511,
+                "sand_g_L": 0.497,
+                "currentVariation_pct": 1.789,
+                "depositIndex": 0.794,
+                "annulusPressure_MPa": 0.167
+              }
+            },
+            {
+              "id": "WO-TRAIN-029",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.7922763529673937,
+              "score": 0.6986102706491782,
+              "observation": {
+                "wellId": "WO-TRAIN-029",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.474,
+                "sand_g_L": 0.06,
+                "currentVariation_pct": 0.586,
+                "depositIndex": 0.782,
+                "annulusPressure_MPa": 0.402
+              }
+            },
+            {
+              "id": "WO-TRAIN-013",
+              "category": 0,
+              "textScore": 0.6673882432097731,
+              "featureScore": 0.6880600216411195,
+              "score": 0.6725561878176096,
+              "observation": {
+                "wellId": "WO-TRAIN-013",
+                "text": "产能降低；流动受阻；管内结垢。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.4,
+                "sand_g_L": 0.487,
+                "currentVariation_pct": 8.179,
+                "depositIndex": 0.759,
+                "annulusPressure_MPa": 0.22
+              }
+            }
+          ],
+          "support": 0.7090852341120806,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "结果",
+            "记录",
+            "近三",
+            "阻力"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 0,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 0,
+              "score": 1,
+              "reasons": []
+            },
+            {
+              "category": 1,
+              "score": 1,
+              "reasons": []
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "缺少电流/负载异常证据"
+              ]
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 0
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-018",
+          "text": "携出固体颗粒；细砂持续增加；井底颗粒堆积。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 1.459,
+          "sand_g_L": 2.52,
+          "currentVariation_pct": 10.512,
+          "depositIndex": 0.181,
+          "annulusPressure_MPa": 0
+        },
+        "prediction": {
+          "category": 1,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.763371803160581,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0.763371803160581,
+              "reasons": []
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-034",
+              "category": 1,
+              "textScore": 0.7740223812510086,
+              "featureScore": 0.7954080669291572,
+              "score": 0.7793688026705459,
+              "observation": {
+                "wellId": "WO-TRAIN-034",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.147,
+                "sand_g_L": 2.333,
+                "currentVariation_pct": 4.588,
+                "depositIndex": 0.182,
+                "annulusPressure_MPa": 0.204
+              }
+            },
+            {
+              "id": "WO-TRAIN-018",
+              "category": 1,
+              "textScore": 0.7740223812510086,
+              "featureScore": 0.6998268551290949,
+              "score": 0.7554734997205302,
+              "observation": {
+                "wellId": "WO-TRAIN-018",
+                "text": "产量波动；细砂增加；返出颗粒。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.073,
+                "sand_g_L": 2.76,
+                "currentVariation_pct": 2.181,
+                "depositIndex": 0.159,
+                "annulusPressure_MPa": 0.023
+              }
+            },
+            {
+              "id": "WO-TRAIN-042",
+              "category": 1,
+              "textScore": 0.7244143139343472,
+              "featureScore": 0.8478494865596251,
+              "score": 0.7552731070906666,
+              "observation": {
+                "wellId": "WO-TRAIN-042",
+                "text": "产量波动；细砂增加；返出颗粒；产量下降。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.184,
+                "sand_g_L": 2.769,
+                "currentVariation_pct": 5.791,
+                "depositIndex": 0.194,
+                "annulusPressure_MPa": 0
+              }
+            }
+          ],
+          "support": 0.7793688026705459,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "井底",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "砂粒",
+            "结果",
+            "记录",
+            "近三"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 1,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 1,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 1
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-019",
+          "text": "举升能力下降；电机负载摆动；泵效变差。近三次工单未记录完整作业结果。",
+          "integrityStatus": "verified",
+          "pressureLoss_MPa": 2.113,
+          "sand_g_L": 0.604,
+          "currentVariation_pct": 23.913,
+          "depositIndex": 0.075,
+          "annulusPressure_MPa": 0.149
+        },
+        "prediction": {
+          "category": 2,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.833071783470492,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "eligible": [
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0.833071783470492,
+              "reasons": []
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-043",
+              "category": 2,
+              "textScore": 0.8471414610679201,
+              "featureScore": 0.8300133123424537,
+              "score": 0.8428594238865535,
+              "observation": {
+                "wellId": "WO-TRAIN-043",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.839,
+                "sand_g_L": 0,
+                "currentVariation_pct": 19.192,
+                "depositIndex": 0.088,
+                "annulusPressure_MPa": 0.184
+              }
+            },
+            {
+              "id": "WO-TRAIN-027",
+              "category": 2,
+              "textScore": 0.8471414610679201,
+              "featureScore": 0.7787841833115536,
+              "score": 0.8300521416288285,
+              "observation": {
+                "wellId": "WO-TRAIN-027",
+                "text": "产量下降；电流波动；泵效降低。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.765,
+                "sand_g_L": 0,
+                "currentVariation_pct": 26.785,
+                "depositIndex": 0.064,
+                "annulusPressure_MPa": 0.003
+              }
+            },
+            {
+              "id": "WO-TRAIN-039",
+              "category": 2,
+              "textScore": 0.824466542688743,
+              "featureScore": 0.831815511518147,
+              "score": 0.826303784896094,
+              "observation": {
+                "wellId": "WO-TRAIN-039",
+                "text": "举升异常；负载振动；电机不稳。近三次工单未记录完整作业结果。",
+                "integrityStatus": "verified",
+                "pressureLoss_MPa": 1.82,
+                "sand_g_L": 0.636,
+                "currentVariation_pct": 23.59,
+                "depositIndex": 0.252,
+                "annulusPressure_MPa": 0
+              }
+            }
+          ],
+          "support": 0.8428594238865535,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "完整",
+            "工单",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "泵效",
+            "电流",
+            "结果",
+            "记录",
+            "近三",
+            "降低"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 2,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 2,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": []
+            },
+            {
+              "category": 3,
+              "score": 0,
+              "reasons": []
+            }
+          ]
+        },
+        "reference": 2
+      },
+      {
+        "observation": {
+          "wellId": "WO-TEST-020",
+          "text": "管柱密封待查；环空压力持续增加；完整性记录异常；流道阻力增加。近三次工单未记录完整作业结果。",
+          "integrityStatus": "suspect",
+          "pressureLoss_MPa": 1.718,
+          "sand_g_L": 0.029,
+          "currentVariation_pct": 2.313,
+          "depositIndex": 0.239,
+          "annulusPressure_MPa": 1.764
+        },
+        "prediction": {
+          "category": 3,
+          "accepted": true,
+          "candidates": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.6713552004281563,
+              "reasons": []
+            },
+            {
+              "name": "结垢诊断与清理评估",
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "name": "出砂与井筒清理评估",
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "name": "举升系统检修评估",
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ],
+          "eligible": [
+            {
+              "name": "管柱完整性检测评估",
+              "category": 3,
+              "score": 0.6713552004281563,
+              "reasons": []
+            }
+          ],
+          "neighbors": [
+            {
+              "id": "WO-TRAIN-044",
+              "category": 3,
+              "textScore": 0.6366562786216126,
+              "featureScore": 0.8408915103309453,
+              "score": 0.6877150865489458,
+              "observation": {
+                "wellId": "WO-TRAIN-044",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.443,
+                "sand_g_L": 0.279,
+                "currentVariation_pct": 7.592,
+                "depositIndex": 0.252,
+                "annulusPressure_MPa": 1.798
+              }
+            },
+            {
+              "id": "WO-TRAIN-020",
+              "category": 3,
+              "textScore": 0.6366562786216126,
+              "featureScore": 0.7686443502971674,
+              "score": 0.6696532965405013,
+              "observation": {
+                "wellId": "WO-TRAIN-020",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.333,
+                "sand_g_L": 0.269,
+                "currentVariation_pct": 3.982,
+                "depositIndex": 0.217,
+                "annulusPressure_MPa": 1.852
+              }
+            },
+            {
+              "id": "WO-TRAIN-012",
+              "category": 3,
+              "textScore": 0.6366562786216126,
+              "featureScore": 0.7168200369152496,
+              "score": 0.6566972181950218,
+              "observation": {
+                "wellId": "WO-TRAIN-012",
+                "text": "产量下降；环空带压；密封异常。近三次工单未记录完整作业结果。",
+                "integrityStatus": "suspect",
+                "pressureLoss_MPa": 1.296,
+                "sand_g_L": 0,
+                "currentVariation_pct": 2.779,
+                "depositIndex": 0.205,
+                "annulusPressure_MPa": 1.436
+              }
+            }
+          ],
+          "support": 0.6877150865489458,
+          "matchedTerms": [
+            "三次",
+            "业结",
+            "作业",
+            "单未",
+            "增加",
+            "完整",
+            "密封",
+            "工单",
+            "异常",
+            "录完",
+            "整作",
+            "未记",
+            "次工",
+            "环空",
+            "结果",
+            "记录",
+            "近三",
+            "阻力"
+          ],
+          "missing": [],
+          "reason": "可进入候选复核",
+          "config": {
+            "k": 3,
+            "featureWeight": 0.25,
+            "threshold": 0.35
+          }
+        },
+        "baseline": {
+          "category": 3,
+          "accepted": true,
+          "rank": [
+            {
+              "category": 3,
+              "score": 3,
+              "reasons": []
+            },
+            {
+              "category": 0,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少沉积证据"
+              ]
+            },
+            {
+              "category": 1,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少达到教学筛选线的含砂观测"
+              ]
+            },
+            {
+              "category": 2,
+              "score": 0,
+              "reasons": [
+                "完整性状态尚未确认，先核查管柱",
+                "缺少电流/负载异常证据"
+              ]
+            }
+          ]
+        },
+        "reference": 3
+      }
+    ],
+    "model": {
+      "config": {
+        "k": 3,
+        "featureWeight": 0.25,
+        "threshold": 0.35
+      },
+      "vocabularySize": 52,
+      "trainCount": 48,
+      "validationCount": 16,
+      "testCount": 20,
+      "groups": {
+        "train": [
+          "WO-TRAIN-001",
+          "WO-TRAIN-002",
+          "WO-TRAIN-003",
+          "WO-TRAIN-004",
+          "WO-TRAIN-005",
+          "WO-TRAIN-006",
+          "WO-TRAIN-007",
+          "WO-TRAIN-008",
+          "WO-TRAIN-009",
+          "WO-TRAIN-010",
+          "WO-TRAIN-011",
+          "WO-TRAIN-012",
+          "WO-TRAIN-013",
+          "WO-TRAIN-014",
+          "WO-TRAIN-015",
+          "WO-TRAIN-016",
+          "WO-TRAIN-017",
+          "WO-TRAIN-018",
+          "WO-TRAIN-019",
+          "WO-TRAIN-020",
+          "WO-TRAIN-021",
+          "WO-TRAIN-022",
+          "WO-TRAIN-023",
+          "WO-TRAIN-024",
+          "WO-TRAIN-025",
+          "WO-TRAIN-026",
+          "WO-TRAIN-027",
+          "WO-TRAIN-028",
+          "WO-TRAIN-029",
+          "WO-TRAIN-030",
+          "WO-TRAIN-031",
+          "WO-TRAIN-032",
+          "WO-TRAIN-033",
+          "WO-TRAIN-034",
+          "WO-TRAIN-035",
+          "WO-TRAIN-036",
+          "WO-TRAIN-037",
+          "WO-TRAIN-038",
+          "WO-TRAIN-039",
+          "WO-TRAIN-040",
+          "WO-TRAIN-041",
+          "WO-TRAIN-042",
+          "WO-TRAIN-043",
+          "WO-TRAIN-044",
+          "WO-TRAIN-045",
+          "WO-TRAIN-046",
+          "WO-TRAIN-047",
+          "WO-TRAIN-048"
+        ],
+        "validation": [
+          "WO-VALID-001",
+          "WO-VALID-002",
+          "WO-VALID-003",
+          "WO-VALID-004",
+          "WO-VALID-005",
+          "WO-VALID-006",
+          "WO-VALID-007",
+          "WO-VALID-008",
+          "WO-VALID-009",
+          "WO-VALID-010",
+          "WO-VALID-011",
+          "WO-VALID-012",
+          "WO-VALID-013",
+          "WO-VALID-014",
+          "WO-VALID-015",
+          "WO-VALID-016"
+        ],
+        "test": [
+          "WO-TEST-001",
+          "WO-TEST-002",
+          "WO-TEST-003",
+          "WO-TEST-004",
+          "WO-TEST-005",
+          "WO-TEST-006",
+          "WO-TEST-007",
+          "WO-TEST-008",
+          "WO-TEST-009",
+          "WO-TEST-010",
+          "WO-TEST-011",
+          "WO-TEST-012",
+          "WO-TEST-013",
+          "WO-TEST-014",
+          "WO-TEST-015",
+          "WO-TEST-016",
+          "WO-TEST-017",
+          "WO-TEST-018",
+          "WO-TEST-019",
+          "WO-TEST-020"
+        ]
+      },
+      "templateFamilies": {
+        "train": [
+          "WORDING-0",
+          "WORDING-1"
+        ],
+        "validation": [
+          "WORDING-2"
+        ],
+        "test": [
+          "WORDING-3"
+        ]
+      }
+    },
+    "dataVersion": "wo-synthetic-history-v1",
+    "preset": "standard"
+  },
+  "manualReview": {
+    "runId": "wo1-mvl7x7q8-k5887-003",
+    "wellId": "WO-TEST-001-QUERY",
+    "note": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+    "modelCategory": 0,
+    "time": "2026-10-23T17:02:41.251Z",
+    "sourceRecordId": "wo1-mvl7x7q8-k5887-003-review-1",
+    "sourceVersion": 1
+  },
+  "reviewHistory": [
+    {
+      "runId": "wo1-mvl7x7q8-k5887-003",
+      "wellId": "WO-TEST-001-QUERY",
+      "note": "浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。",
+      "modelCategory": 0,
+      "time": "2026-10-23T17:02:41.251Z",
+      "sourceRecordId": "wo1-mvl7x7q8-k5887-003-review-1",
+      "sourceVersion": 1
+    }
+  ],
+  "exportedAt": "2026-10-23T17:02:41.452Z"
+}

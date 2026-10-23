@@ -1,0 +1,661 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "pr1",
+  "caseId": "s17x-pr1-pump-card",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 5
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow step 1 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 2 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 3 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 4 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "workflow step 5 becomes selected",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "done"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "pr1",
+          "caseId": "s17x-pr1-pump-card",
+          "status": "done",
+          "runId": "pr1-3",
+          "params": {
+            "condition": 2,
+            "noise": 0.015,
+            "offset": 0,
+            "support": 0.6
+          },
+          "metrics": {
+            "model": {
+              "matrix": [
+                [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  24,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  24,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "充满泵",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "供液不足形",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "气影响形",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                }
+              ],
+              "recalls": [
+                1,
+                1,
+                1
+              ],
+              "macroF1": 1,
+              "count": 72,
+              "accepted": 72,
+              "correct": 72,
+              "rejected": 0,
+              "coverage": 1,
+              "acceptedError": 0,
+              "accuracy": 1
+            },
+            "baseline": {
+              "matrix": [
+                [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  14,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  22,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "充满泵",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "供液不足形",
+                  "actual": 24,
+                  "predicted": 16,
+                  "TP": 14,
+                  "recall": 0.5833333333333334,
+                  "F1": 0.7
+                },
+                {
+                  "name": "气影响形",
+                  "actual": 24,
+                  "predicted": 32,
+                  "TP": 22,
+                  "recall": 0.9166666666666666,
+                  "F1": 0.7857142857142857
+                }
+              ],
+              "recalls": [
+                1,
+                0.5833333333333334,
+                0.9166666666666666
+              ],
+              "macroF1": 0.8285714285714286,
+              "count": 72,
+              "accepted": 72,
+              "correct": 60,
+              "rejected": 0,
+              "coverage": 1,
+              "acceptedError": 0.16666666666666666,
+              "accuracy": 0.8333333333333334
+            },
+            "current": {
+              "label": 2,
+              "support": 1,
+              "distance": 0.09971589653961878,
+              "reasons": []
+            }
+          }
+        },
+        "review": {
+          "present": true,
+          "keys": [
+            "schemaVersion",
+            "sceneId",
+            "caseId",
+            "caseVersion",
+            "version",
+            "datasetId",
+            "wellId",
+            "runId",
+            "status",
+            "resultState",
+            "dataNature",
+            "datasetVersion",
+            "params",
+            "groups",
+            "runConfig",
+            "sources",
+            "claims",
+            "model",
+            "metrics",
+            "currentObservation",
+            "currentPrediction",
+            "test",
+            "review",
+            "references",
+            "limitations"
+          ]
+        },
+        "text": [
+          "已记录：倾向充满泵形状 · pr1-3；保留模型原始结果。"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:03:54.088Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41",
+      "bytes": 3458
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787",
+      "bytes": 24834
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "88ca0562e088df63bb215c7a7b2b20f1e674f0d95e98da7b91dc5342f6917ec7",
+      "bytes": 92379
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2",
+      "bytes": 4305
+    }
+  ],
+  "workflow": {
+    "stepControls": 5
+  },
+  "default": {
+    "status": "done",
+    "metrics": {
+      "model": {
+        "matrix": [
+          [
+            24,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            24,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            24,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "充满泵",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          },
+          {
+            "name": "供液不足形",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          },
+          {
+            "name": "气影响形",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          }
+        ],
+        "recalls": [
+          1,
+          1,
+          1
+        ],
+        "macroF1": 1,
+        "count": 72,
+        "accepted": 72,
+        "correct": 72,
+        "rejected": 0,
+        "coverage": 1,
+        "acceptedError": 0,
+        "accuracy": 1
+      },
+      "baseline": {
+        "matrix": [
+          [
+            24,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            14,
+            10,
+            0
+          ],
+          [
+            0,
+            2,
+            22,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "充满泵",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          },
+          {
+            "name": "供液不足形",
+            "actual": 24,
+            "predicted": 16,
+            "TP": 14,
+            "recall": 0.5833333333333334,
+            "F1": 0.7
+          },
+          {
+            "name": "气影响形",
+            "actual": 24,
+            "predicted": 32,
+            "TP": 22,
+            "recall": 0.9166666666666666,
+            "F1": 0.7857142857142857
+          }
+        ],
+        "recalls": [
+          1,
+          0.5833333333333334,
+          0.9166666666666666
+        ],
+        "macroF1": 0.8285714285714286,
+        "count": 72,
+        "accepted": 72,
+        "correct": 60,
+        "rejected": 0,
+        "coverage": 1,
+        "acceptedError": 0.16666666666666666,
+        "accuracy": 0.8333333333333334
+      },
+      "current": {
+        "label": 2,
+        "support": 1,
+        "distance": 0.09971589653961878,
+        "reasons": []
+      }
+    },
+    "params": {
+      "condition": 2,
+      "noise": 0.015,
+      "offset": 0,
+      "support": 0.6
+    },
+    "runId": "pr1-1"
+  },
+  "reviewSnapshot": {
+    "sceneId": "pr1",
+    "caseId": "s17x-pr1-pump-card",
+    "status": "done",
+    "runId": "pr1-3",
+    "params": {
+      "condition": 2,
+      "noise": 0.015,
+      "offset": 0,
+      "support": 0.6
+    },
+    "metrics": {
+      "model": {
+        "matrix": [
+          [
+            24,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            24,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            24,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "充满泵",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          },
+          {
+            "name": "供液不足形",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          },
+          {
+            "name": "气影响形",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          }
+        ],
+        "recalls": [
+          1,
+          1,
+          1
+        ],
+        "macroF1": 1,
+        "count": 72,
+        "accepted": 72,
+        "correct": 72,
+        "rejected": 0,
+        "coverage": 1,
+        "acceptedError": 0,
+        "accuracy": 1
+      },
+      "baseline": {
+        "matrix": [
+          [
+            24,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            14,
+            10,
+            0
+          ],
+          [
+            0,
+            2,
+            22,
+            0
+          ]
+        ],
+        "perClass": [
+          {
+            "name": "充满泵",
+            "actual": 24,
+            "predicted": 24,
+            "TP": 24,
+            "recall": 1,
+            "F1": 1
+          },
+          {
+            "name": "供液不足形",
+            "actual": 24,
+            "predicted": 16,
+            "TP": 14,
+            "recall": 0.5833333333333334,
+            "F1": 0.7
+          },
+          {
+            "name": "气影响形",
+            "actual": 24,
+            "predicted": 32,
+            "TP": 22,
+            "recall": 0.9166666666666666,
+            "F1": 0.7857142857142857
+          }
+        ],
+        "recalls": [
+          1,
+          0.5833333333333334,
+          0.9166666666666666
+        ],
+        "macroF1": 0.8285714285714286,
+        "count": 72,
+        "accepted": 72,
+        "correct": 60,
+        "rejected": 0,
+        "coverage": 1,
+        "acceptedError": 0.16666666666666666,
+        "accuracy": 0.8333333333333334
+      },
+      "current": {
+        "label": 2,
+        "support": 1,
+        "distance": 0.09971589653961878,
+        "reasons": []
+      }
+    }
+  },
+  "review": {
+    "present": true,
+    "keys": [
+      "schemaVersion",
+      "sceneId",
+      "caseId",
+      "caseVersion",
+      "version",
+      "datasetId",
+      "wellId",
+      "runId",
+      "status",
+      "resultState",
+      "dataNature",
+      "datasetVersion",
+      "params",
+      "groups",
+      "runConfig",
+      "sources",
+      "claims",
+      "model",
+      "metrics",
+      "currentObservation",
+      "currentPrediction",
+      "test",
+      "review",
+      "references",
+      "limitations"
+    ]
+  },
+  "reviewVisibleText": [
+    "已记录：倾向充满泵形状 · pr1-3；保留模型原始结果。"
+  ],
+  "download": {
+    "suggestedFilename": "s17x-pr1-pump-card-pr1-3.json",
+    "relativePath": "output/exports/v1.7/pr1-original.json"
+  },
+  "checkedAt": "2026-10-23T17:03:58.927Z",
+  "passed": 17,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-pr1-pump-card",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 22731,
+        "sha256": "ea51ff806cc0c2ab2553ddefa732e742630da42eca0944d6f5f0a78423c4ca94"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 24834,
+        "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 92379,
+        "sha256": "88ca0562e088df63bb215c7a7b2b20f1e674f0d95e98da7b91dc5342f6917ec7"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4305,
+        "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3458,
+        "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

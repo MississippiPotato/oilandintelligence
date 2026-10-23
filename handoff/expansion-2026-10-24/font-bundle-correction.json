@@ -1,0 +1,9 @@
+{
+  "recordedAt": "2026-10-23T16:49:10.406Z",
+  "kind": "browser_feedback_from_case_author",
+  "reportedBy": "expand_cement_completion",
+  "finding": "assistantCSS included shared/readability.css after new case styles; author browser found body18->16,controls18->15,caption/table18 or17->14",
+  "sourceContractChecksDidNotEstablishRenderedFontSizes": true,
+  "resolution": "make readability optional with legacy default true; expansion packages include assistant-scoped CSS only; rebuild all12; final browser acceptance must use new lock",
+  "oldRuntimeCopiesPreserved": false
+}

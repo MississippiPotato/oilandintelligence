@@ -1,0 +1,170 @@
+{
+  "scope": "Original five required cases remain runnable among all imported packages",
+  "scene": "m3",
+  "caseId": "s17-fluorescence-review",
+  "checks": [
+    {
+      "name": "required case runs with evaluation metrics",
+      "passed": true
+    },
+    {
+      "name": "required case downloads actual JSON",
+      "passed": true
+    },
+    {
+      "name": "required case reruns after refresh with same metrics",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:11:30.670Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "3f7ed22ffc9c518abf20d92030ae08c0d8e79a633e62c9381b4cb7c872f92c36",
+      "bytes": 25612
+    },
+    {
+      "path": "README.txt",
+      "sha256": "9fc3ef05453e133d7574795bbd0f9261d1f290610673e691390cf16ccb65d015",
+      "bytes": 846
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032",
+      "bytes": 37117
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "2590127812c959f526fa03697bae09eeed8469c6142c3ad4450d86e971f78c5f",
+      "bytes": 136378
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "779b83299f9a763c9ea4c06a5beb699a4fc77fb95cb4eac73d51bb87753e6830",
+      "bytes": 4940
+    }
+  ],
+  "metrics": {
+    "methods": {
+      "B0": {
+        "tp": 2027,
+        "fp": 0,
+        "fn": 1445,
+        "tn": 61628,
+        "IoU": 0.5838133640552995,
+        "Dice": 0.7372249499909075,
+        "recall": 0.5838133640552995,
+        "precision": 1,
+        "areaError_pp": 9.90947743793718,
+        "predictedGrade": 1,
+        "referenceGrade": 1,
+        "gradeError": 0
+      },
+      "B1": {
+        "tp": 1914,
+        "fp": 0,
+        "fn": 1558,
+        "tn": 61628,
+        "IoU": 0.5512672811059908,
+        "Dice": 0.7107315261789825,
+        "recall": 0.5512672811059908,
+        "precision": 1,
+        "areaError_pp": 10.684405431353722,
+        "predictedGrade": 1,
+        "referenceGrade": 1,
+        "gradeError": 0
+      },
+      "M0": {
+        "tp": 3472,
+        "fp": 0,
+        "fn": 0,
+        "tn": 61628,
+        "IoU": 1,
+        "Dice": 1,
+        "recall": 1,
+        "precision": 1,
+        "areaError_pp": 0,
+        "predictedGrade": 1,
+        "referenceGrade": 1,
+        "gradeError": 0
+      }
+    },
+    "foreground": {
+      "tp": 14582,
+      "fp": 0,
+      "fn": 0,
+      "tn": 62218,
+      "IoU": 1,
+      "Dice": 1,
+      "recall": 1,
+      "precision": 1
+    },
+    "fixedEvaluationPixels": 65100,
+    "truthSummary": {
+      "count": 3472,
+      "denominator": 14582,
+      "area": 0.23810176930462212,
+      "intensity": 52.75201894500772,
+      "grade": 1
+    }
+  },
+  "download": "output/exports/v1.7/m3-original.json",
+  "checkedAt": "2026-10-23T17:11:36.183Z",
+  "passed": 4,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/cases/s17-fluorescence-review",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 26835,
+        "sha256": "e541ad4f5076d347b1a145ff2f74df9d7f7290eab0f0a8faaf598ad5e43bc8d1"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 37117,
+        "sha256": "4e07db477e01a6569583b244a3fabe8ccbb68623412c59bcac45952f8e380032"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 136378,
+        "sha256": "2590127812c959f526fa03697bae09eeed8469c6142c3ad4450d86e971f78c5f"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4940,
+        "sha256": "779b83299f9a763c9ea4c06a5beb699a4fc77fb95cb4eac73d51bb87753e6830"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 846,
+        "sha256": "9fc3ef05453e133d7574795bbd0f9261d1f290610673e691390cf16ccb65d015"
+      }
+    ],
+    "manifestCanonicalSha256": "3f7ed22ffc9c518abf20d92030ae08c0d8e79a633e62c9381b4cb7c872f92c36",
+    "storedPackageMatchesDisk": true
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "scope": "Teacher original imported case: conceptual graphics, workflow, actual model calculation, changed input, reset, human review and actual download",
+  "scene": "t1",
+  "caseId": "s17x-t1-pipeline-leak",
+  "checks": [
+    {
+      "name": "original background contains at least three concept SVGs",
+      "passed": true,
+      "detail": {
+        "svg": 3
+      }
+    },
+    {
+      "name": "original workflow renders at least four named steps and graphics",
+      "passed": true,
+      "detail": {
+        "svg": 5
+      }
+    },
+    {
+      "name": "standalone background has at least three actual SVGs",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 1 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 2 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 3 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 4 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "workflow graphic 5 is actually displayable",
+      "passed": true
+    },
+    {
+      "name": "calculation reaches completed status with real metrics",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "name": "changing a calculation input invalidates export and marks stale",
+      "passed": true,
+      "detail": {
+        "status": "stale",
+        "exportDisabled": true
+      }
+    },
+    {
+      "name": "changed input recomputes a new run",
+      "passed": true
+    },
+    {
+      "name": "reset restores default model metrics",
+      "passed": true
+    },
+    {
+      "name": "human opinion is recorded without altering model metrics",
+      "passed": true,
+      "detail": {
+        "snapshot": {
+          "sceneId": "t1",
+          "caseId": "s17x-t1-pipeline-leak",
+          "status": "complete",
+          "metrics": {
+            "model": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "truthCount": 3,
+              "candidateCount": 3,
+              "precision": 1,
+              "recall": 1,
+              "f1": 1,
+              "delay_min": 2,
+              "falseEventsPerHour": 0,
+              "normalMinutes": 510,
+              "pairs": [
+                {
+                  "pred": 0,
+                  "truth": 0,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 1,
+                  "truth": 1,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 2,
+                  "truth": 2,
+                  "delay_min": 2
+                }
+              ]
+            },
+            "baseline": {
+              "tp": 3,
+              "fp": 0,
+              "fn": 0,
+              "truthCount": 3,
+              "candidateCount": 3,
+              "precision": 1,
+              "recall": 1,
+              "f1": 1,
+              "delay_min": 2,
+              "falseEventsPerHour": 0,
+              "normalMinutes": 510,
+              "pairs": [
+                {
+                  "pred": 0,
+                  "truth": 0,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 1,
+                  "truth": 1,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 2,
+                  "truth": 2,
+                  "delay_min": 2
+                }
+              ]
+            },
+            "pressure": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 0,
+              "truthCount": 3,
+              "candidateCount": 4,
+              "precision": 0.75,
+              "recall": 1,
+              "f1": 0.8571428571428571,
+              "delay_min": 3,
+              "falseEventsPerHour": 0.11764705882352941,
+              "normalMinutes": 510,
+              "pairs": [
+                {
+                  "pred": 0,
+                  "truth": 0,
+                  "delay_min": 5
+                },
+                {
+                  "pred": 1,
+                  "truth": 1,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 3,
+                  "truth": 2,
+                  "delay_min": 2
+                }
+              ]
+            }
+          },
+          "runId": 3,
+          "params": {
+            "scenario": "normal",
+            "severity": 7,
+            "noise": 1,
+            "sensitivity": 1,
+            "flowThreshold": 5,
+            "seed": 1701
+          }
+        },
+        "review": null,
+        "text": [
+          "已保存当前运行的人工确认。",
+          "运行 3 / 输入修订 2 · 当前确认：浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。"
+        ]
+      }
+    },
+    {
+      "name": "actual browser creates JSON evidence download",
+      "passed": true
+    },
+    {
+      "name": "page refresh and repeat calculation preserve default metrics",
+      "passed": true
+    },
+    {
+      "name": "browser calculations use no external HTTP services",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions during interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [
+    "http://127.0.0.1:8755/portal-original/index.html",
+    "http://127.0.0.1:8755/portal-original/assets/core/tokens.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/layout.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/ui.css?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/data.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/registry.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/kit.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.case.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/cases/welllog-layer.demo.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-demo-host.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/case-upload.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/admin.js?v=20261022i",
+    "http://127.0.0.1:8755/portal-original/assets/core/shell.js?v=20261022i"
+  ],
+  "startedAt": "2026-10-23T17:04:00.412Z",
+  "browserPackageHashes": [
+    {
+      "path": "README.txt",
+      "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a",
+      "bytes": 3506
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214",
+      "bytes": 22806
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44",
+      "bytes": 88203
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0",
+      "bytes": 4630
+    }
+  ],
+  "workflow": {
+    "stepControls": 0,
+    "figures": 5
+  },
+  "default": {
+    "status": "complete",
+    "metrics": {
+      "model": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "baseline": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "pressure": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 4,
+        "precision": 0.75,
+        "recall": 1,
+        "f1": 0.8571428571428571,
+        "delay_min": 3,
+        "falseEventsPerHour": 0.11764705882352941,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 5
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 3,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      }
+    },
+    "params": {
+      "scenario": "normal",
+      "severity": 7,
+      "noise": 1,
+      "sensitivity": 1,
+      "flowThreshold": 5,
+      "seed": 1701
+    },
+    "runId": 1
+  },
+  "reviewSnapshot": {
+    "sceneId": "t1",
+    "caseId": "s17x-t1-pipeline-leak",
+    "status": "complete",
+    "metrics": {
+      "model": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "baseline": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "delay_min": 2,
+        "falseEventsPerHour": 0,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 2
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      },
+      "pressure": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0,
+        "truthCount": 3,
+        "candidateCount": 4,
+        "precision": 0.75,
+        "recall": 1,
+        "f1": 0.8571428571428571,
+        "delay_min": 3,
+        "falseEventsPerHour": 0.11764705882352941,
+        "normalMinutes": 510,
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "delay_min": 5
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "delay_min": 2
+          },
+          {
+            "pred": 3,
+            "truth": 2,
+            "delay_min": 2
+          }
+        ]
+      }
+    },
+    "runId": 3,
+    "params": {
+      "scenario": "normal",
+      "severity": 7,
+      "noise": 1,
+      "sensitivity": 1,
+      "flowThreshold": 5,
+      "seed": 1701
+    }
+  },
+  "review": null,
+  "reviewVisibleText": [
+    "已保存当前运行的人工确认。",
+    "运行 3 / 输入修订 2 · 当前确认：浏览器验收：已核对当前曲线、参数和候选证据，保留原模型结果。"
+  ],
+  "download": {
+    "suggestedFilename": "t1-pipeline-leak-run-3.json",
+    "relativePath": "output/exports/v1.7/t1-original.json"
+  },
+  "checkedAt": "2026-10-23T17:04:03.781Z",
+  "passed": 17,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-t1-pipeline-leak",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 20723,
+        "sha256": "3cdf278d27461b163a8b845b252038c6b0e9b3a58ad40b5a0f9779030679cb4b"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 22806,
+        "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 88203,
+        "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4630,
+        "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3506,
+        "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a"
+      }
+    ],
+    "storedPackageMatchesDisk": true
+  }
+}

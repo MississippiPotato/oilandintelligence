@@ -1,0 +1,753 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-23T16:37:36.058Z",
+  "expectedCount": 12,
+  "actualCount": 2,
+  "complete": false,
+  "totalBytes": 283749,
+  "browserVerifiedByThisBuild": false,
+  "assistantSources": [
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "bytes": 23707,
+      "sha256": "0c37c181d604d77b5733781bae00cb3e772fa137cf70e0e592fe3459c95ada4d"
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "bytes": 16808,
+      "sha256": "d72df2f2042486944af0248761fe0a395579749419bde360cc3f8f4b28f50332"
+    },
+    {
+      "path": "portal/assets/s17-media.js",
+      "bytes": 8759,
+      "sha256": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150"
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "bytes": 5200,
+      "sha256": "34669f96ed529a01eb677505f097958c7fb806dfe488445580a4a583e1480cff"
+    },
+    {
+      "path": "shared/readability.css",
+      "bytes": 1463,
+      "sha256": "9d0b10bdf172b579edd2b0daa6894d2d3f3d0ecb2b9ae5b575c76e0c28cd879f"
+    }
+  ],
+  "cases": [
+    {
+      "sceneId": "c1",
+      "stageId": "cementing",
+      "source": "expansion-src/c1",
+      "status": "built_unverified",
+      "sceneName": "固井质量智能评价",
+      "stageName": "固井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/c1/case.json",
+          "bytes": 27462,
+          "sha256": "63a56bed7f4af38d9eb8147509940a710670478137d6bdcd0cee1a3c371a8150"
+        },
+        {
+          "path": "expansion-src/c1/engine.js",
+          "bytes": 6760,
+          "sha256": "99ca73bfc6b95097b843c655cec44aebb0eaae14b3469ce2b65d2bb03dffd7ee"
+        },
+        {
+          "path": "expansion-src/c1/app.js",
+          "bytes": 38826,
+          "sha256": "e3ddef8e94a7ab6c6543af9a4835833db6c4780be060779829173d82f2824e74"
+        },
+        {
+          "path": "expansion-src/c1/demo.html",
+          "bytes": 7144,
+          "sha256": "9d28dbea3d7bfef7247f42b0a73af5be9afe29a116d96be23d79ed5dbfe2c716"
+        },
+        {
+          "path": "expansion-src/c1/demo.css",
+          "bytes": 8825,
+          "sha256": "f001ddb90746c45f8102c2e608837eef07fb688eb3efb74b08a8fd2178452aee"
+        },
+        {
+          "path": "expansion-src/c1/README.txt",
+          "bytes": 1226,
+          "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-c1-cement-quality",
+      "caseId": "s17x-c1-cement-quality",
+      "version": "1.0.0",
+      "bytes": 146637,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/case.json",
+          "bytes": 27359,
+          "sha256": "dfe712d36be717416a73996c4e33f51c312719f5ff49f0e03e4a94ef949d7c9a",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/README.txt",
+          "bytes": 1226,
+          "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/index.html",
+          "bytes": 7144,
+          "sha256": "9d28dbea3d7bfef7247f42b0a73af5be9afe29a116d96be23d79ed5dbfe2c716",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.css",
+          "bytes": 27099,
+          "sha256": "3a08c4426cc24a5b3a959c06fc4821a6f0d96b4ceb6bd5b22b26d7d49b4ff012",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js",
+          "bytes": 83809,
+          "sha256": "58cef0b76d5203a5e8d85beac2c7bee072ef9824b05ca0962a94f6a3d2359061",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "co1",
+      "stageId": "completion",
+      "source": "expansion-src/co1",
+      "status": "built_unverified",
+      "sceneName": "完井方式智能优选",
+      "stageName": "完井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/co1/case.json",
+          "bytes": 21960,
+          "sha256": "f6277c5889159d2c95f3dc8f7f7cdf2531507f85c3d14efd727683ed89717b10"
+        },
+        {
+          "path": "expansion-src/co1/engine.js",
+          "bytes": 7722,
+          "sha256": "79186b1d27e92a238d5eeab15b35a5d42e3f1d85144a587938ba70eb41b0eb5f"
+        },
+        {
+          "path": "expansion-src/co1/app.js",
+          "bytes": 33647,
+          "sha256": "ead4e8a5c675a2539e859db53ce50b3613e2dd52076b63f6549bfa027821a4c0"
+        },
+        {
+          "path": "expansion-src/co1/demo.html",
+          "bytes": 7323,
+          "sha256": "aa0af0ee64a9beaec35fd0df78d10474b6fd80324228d7a09c9503b87fcf83a3"
+        },
+        {
+          "path": "expansion-src/co1/demo.css",
+          "bytes": 8825,
+          "sha256": "f001ddb90746c45f8102c2e608837eef07fb688eb3efb74b08a8fd2178452aee"
+        },
+        {
+          "path": "expansion-src/co1/README.txt",
+          "bytes": 1233,
+          "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-co1-completion-choice",
+      "caseId": "s17x-co1-completion-choice",
+      "version": "1.0.0",
+      "bytes": 137112,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/case.json",
+          "bytes": 21857,
+          "sha256": "7b1fb9363673a9a40e3fdcf846792efa6990362c30ac328e8eca5a331d75e555",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/README.txt",
+          "bytes": 1233,
+          "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/index.html",
+          "bytes": 7323,
+          "sha256": "aa0af0ee64a9beaec35fd0df78d10474b6fd80324228d7a09c9503b87fcf83a3",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.css",
+          "bytes": 27099,
+          "sha256": "3a08c4426cc24a5b3a959c06fc4821a6f0d96b4ceb6bd5b22b26d7d49b4ff012",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js",
+          "bytes": 79600,
+          "sha256": "a8058f4d6a79f489e6da7bcd86d403ca718fbfab1adfe97b7774d838284d4464",
+          "relative": "demo/demo.js"
+        }
+      ]
+    }
+  ],
+  "missing": [
+    {
+      "sceneId": "g1",
+      "stageId": "geology",
+      "source": "expansion-src/g1",
+      "status": "missing",
+      "missing": [
+        "README.txt"
+      ]
+    },
+    {
+      "sceneId": "s1",
+      "stageId": "seismic",
+      "source": "expansion-src/s1",
+      "status": "missing",
+      "missing": [
+        "case.json",
+        "app.js",
+        "demo.html",
+        "README.txt"
+      ]
+    },
+    {
+      "sceneId": "w4",
+      "stageId": "welllog",
+      "source": "expansion-src/w4",
+      "status": "missing",
+      "missing": [
+        "app.js"
+      ]
+    },
+    {
+      "sceneId": "p1",
+      "stageId": "perforation",
+      "source": "expansion-src/p1",
+      "status": "missing",
+      "missing": [
+        "case.json",
+        "README.txt"
+      ]
+    },
+    {
+      "sceneId": "pr1",
+      "stageId": "production",
+      "source": "expansion-src/pr1",
+      "status": "missing",
+      "missing": [
+        "case.json",
+        "README.txt"
+      ]
+    },
+    {
+      "sceneId": "t1",
+      "stageId": "transport",
+      "source": "expansion-src/t1",
+      "status": "missing",
+      "missing": [
+        "README.txt"
+      ]
+    },
+    {
+      "sceneId": "r5",
+      "stageId": "refining",
+      "source": "expansion-src/r5",
+      "status": "missing",
+      "missing": [
+        "README.txt"
+      ]
+    }
+  ],
+  "invalid": [
+    {
+      "sceneId": "d1",
+      "stageId": "drilling",
+      "source": "expansion-src/d1",
+      "status": "invalid",
+      "manifest": {
+        "id": "s17x-d1-rop-optimization",
+        "sceneId": "d1",
+        "methods": [
+          "ts",
+          "opt"
+        ],
+        "title": "钻速预测与参数优化：从响应面到可行候选",
+        "version": "1.0.0",
+        "updated": "2026-10-24",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "从多口教学井学习钻速响应，比较单钻压经验基线，再在钻压、转速、流量、泵压与扭矩边界内搜索参数。你可以收紧约束、放大噪声，或进入更硬地层的迁移情景。",
+            "judge": [
+              {
+                "label": "输入",
+                "value": "工况参数",
+                "desc": "单位、深度和数据来源一起显示"
+              },
+              {
+                "label": "默认数据",
+                "value": "教学合成",
+                "desc": "整井训练 / 验证 / 测试分开"
+              },
+              {
+                "label": "智能方法",
+                "value": "岭回归 + 约束搜索",
+                "desc": "前端真实拟合、推理和评价"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CONCEPT",
+                "title": "图 B1｜先看钻头：三种可调参数共同作用",
+                "html": "<p>钻压是钻头受到的轴向载荷；转速决定旋转频率；流量影响循环。岩石强度也是输入条件，所以同一组参数不会在所有井段产生相同钻速。</p><figure><div class=\"diagram\" style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"钻头、钻压、转速与钻井液循环\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><path d=\"M390 32V185H510V32M390 185L425 220H475L510 185\" fill=\"#d8e7e1\" stroke=\"#17343f\" stroke-width=\"5\"/><path d=\"M417 30V165M483 165V30\" stroke=\"#648bb0\" stroke-width=\"7\"/><path d=\"M350 240H550\" stroke=\"#c7954d\" stroke-width=\"18\"/><text x=\"40\" y=\"60\" font-size=\"24\" fill=\"#17343f\">WOB · 钻压 / kN</text><path d=\"M230 65L385 130\" fill=\"none\" stroke=\"#107d76\" stroke-width=\"3\" stroke-dasharray=\"\"/><text x=\"582\" y=\"65\" font-size=\"24\" fill=\"#17343f\">RPM · 转速 / r/min</text><path d=\"M578 85L510 125\" fill=\"none\" stroke=\"#107d76\" stroke-width=\"3\" stroke-dasharray=\"\"/><text x=\"45\" y=\"190\" font-size=\"24\" fill=\"#17343f\">Q · 流量 / L/s</text><path d=\"M220 185L410 145\" fill=\"none\" stroke=\"#107d76\" stroke-width=\"3\" stroke-dasharray=\"\"/><text x=\"570\" y=\"200\" font-size=\"24\" fill=\"#17343f\">UCS · 岩石强度 / MPa</text><path d=\"M565 215L515 240\" fill=\"none\" stroke=\"#107d76\" stroke-width=\"3\" stroke-dasharray=\"\"/><text x=\"280\" y=\"284\" font-size=\"20\" fill=\"#17343f\">输入参数 → 破岩响应 → ROP / m·h⁻¹</text></g></svg></div><figcaption>图 B1 · 先看钻头：三种可调参数共同作用</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONCEPT",
+                "title": "图 B2｜钻速用什么单位？从深度—时间图理解",
+                "html": "<p>机械钻速 ROP 是有效钻进时段内的进尺速度：30 分钟钻进 15 m，对应 30 m/h。停钻和接单根时间单独记录；这里展示同一工况下的教学稳态响应。</p><figure><div class=\"diagram\" style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"深度随时间增加与钻速斜率\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><path d=\"M100 55L100 248\" fill=\"none\" stroke=\"#17343f\" stroke-width=\"3\" stroke-dasharray=\"\"/><path d=\"M100 248L790 248\" fill=\"none\" stroke=\"#17343f\" stroke-width=\"3\" stroke-dasharray=\"\"/><path d=\"M100 240L370 160L510 160L760 75\" stroke=\"#107d76\" stroke-width=\"6\" fill=\"none\"/><text x=\"25\" y=\"40\" font-size=\"20\" fill=\"#17343f\">进尺 / m</text><text x=\"685\" y=\"285\" font-size=\"20\" fill=\"#17343f\">时间 / min</text><text x=\"145\" y=\"215\" font-size=\"24\" fill=\"#17343f\">斜率 = ROP</text><text x=\"380\" y=\"140\" font-size=\"22\" fill=\"#cc654f\">停钻段</text><text x=\"555\" y=\"55\" font-size=\"24\" fill=\"#17343f\">15 m ÷ 0.5 h = 30 m/h</text><path d=\"M370 160L510 160\" fill=\"none\" stroke=\"#cc654f\" stroke-width=\"3\" stroke-dasharray=\"6 5\"/></g></svg></div><figcaption>图 B2 · 钻速用什么单位？从深度—时间图理解</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "CONCEPT",
+                "title": "图 B3｜寻找快的区域，同时看到边界",
+                "html": "<p>学习代理把多组历史工况映射成钻速曲面。搜索只在声明的参数网格内进行；泵压、扭矩采用页面列出的透明教学代理计算。推荐点与越界点一起显示，避免只盯住最高值。</p><figure><div class=\"diagram\" style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"钻压转速响应面与受约束搜索\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><rect x=\"90\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#d9e9df\" opacity=\"0.35\"/><rect x=\"90\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#d9e9df\" opacity=\"1\"/><rect x=\"90\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#d9e9df\" opacity=\"1\"/><rect x=\"90\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"90\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"90\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"143\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#d9e9df\" opacity=\"0.35\"/><rect x=\"143\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#d9e9df\" opacity=\"1\"/><rect x=\"143\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"143\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"143\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"143\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"196\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#d9e9df\" opacity=\"0.35\"/><rect x=\"196\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"196\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"196\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"196\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"196\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"249\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"0.35\"/><rect x=\"249\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"249\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"249\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"249\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"249\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"302\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"0.35\"/><rect x=\"302\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"1\"/><rect x=\"302\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"302\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"302\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"302\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"355\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#a3d0ba\" opacity=\"0.35\"/><rect x=\"355\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"355\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"355\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"355\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"355\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"408\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"0.35\"/><rect x=\"408\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"408\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"408\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"408\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"408\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"461\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"0.35\"/><rect x=\"461\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"1\"/><rect x=\"461\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"461\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"461\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"461\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"1\"/><rect x=\"514\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#63b29b\" opacity=\"0.35\"/><rect x=\"514\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"514\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"514\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"1\"/><rect x=\"514\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"1\"/><rect x=\"514\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"1\"/><rect x=\"567\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"0.35\"/><rect x=\"567\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"0.35\"/><rect x=\"567\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"0.35\"/><rect x=\"567\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"567\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"567\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"620\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"0.35\"/><rect x=\"620\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"0.35\"/><rect x=\"620\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"620\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"620\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"620\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"673\" y=\"55\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#238b7e\" opacity=\"0.35\"/><rect x=\"673\" y=\"86\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"673\" y=\"117\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"673\" y=\"148\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"673\" y=\"179\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><rect x=\"673\" y=\"210\" width=\"50\" height=\"28\" rx=\"3\" fill=\"#12635f\" opacity=\"0.35\"/><path d=\"M560 45L560 253\" fill=\"none\" stroke=\"#cc654f\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"590\" y=\"44\" font-size=\"22\" fill=\"#cc654f\">钻压上限</text><circle cx=\"534\" cy=\"194\" r=\"15\" fill=\"none\" stroke=\"#17343f\" stroke-width=\"5\"/><text x=\"100\" y=\"281\" font-size=\"20\" fill=\"#17343f\">WOB →</text><text x=\"23\" y=\"82\" font-size=\"20\" fill=\"#17343f\">RPM</text><text x=\"662\" y=\"235\" font-size=\"23\" fill=\"#17343f\">○ 可行候选</text><text x=\"662\" y=\"270\" font-size=\"20\" fill=\"#17343f\">浅色：约束排除</text></g></svg></div><figcaption>图 B3 · 寻找快的区域，同时看到边界</figcaption></figure><p>专业依据：<a href=\"https://glossary.slb.com/terms/r/rate_of_penetration\" target=\"_blank\" rel=\"noopener\">SLB｜Rate of penetration</a>；<a href=\"https://glossary.slb.com/terms/w/weight_on_bit\" target=\"_blank\" rel=\"noopener\">SLB｜Weight on bit</a>；<a href=\"https://glossary.slb.com/terms/r/rotary_speed\" target=\"_blank\" rel=\"noopener\">SLB｜Rotary speed</a>。图示与默认数值由本案例重新构造。</p>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "钻得更快，也要留在约束内。",
+            "lead": [
+              "从多口教学井学习钻速响应，比较单钻压经验基线，再在钻压、转速、流量、泵压与扭矩边界内搜索参数。你可以收紧约束、放大噪声，或进入更硬地层的迁移情景。"
+            ],
+            "stats": [
+              [
+                "步骤",
+                "5"
+              ],
+              [
+                "测试井",
+                "2 口"
+              ],
+              [
+                "运行",
+                "纯前端离线"
+              ]
+            ],
+            "steps": [
+              {
+                "name": "按整井分开数据",
+                "role": "图 S1",
+                "do": "输入：13 口教学井的工况与钻速；动作：8 口训练、3 口验证、2 口测试；保留整井身份。见图 S1。",
+                "effect": "512 / 192 / 128 条记录",
+                "trap": "随机拆散同井样本会低估迁移难度。"
+              },
+              {
+                "name": "拟合一个可解释的钻速代理",
+                "role": "图 S2",
+                "do": "输入：训练井 WOB、RPM、Q、UCS 和 ROP；动作：训练集标准化，使用一次项、平方项和交互项拟合岭回归。见图 S2。",
+                "effect": "冻结标准化参数与回归系数",
+                "trap": "系数说明统计关系，不能直接当作因果效应。"
+              },
+              {
+                "name": "用验证井选择正则强度",
+                "role": "图 S3",
+                "do": "输入：4 个候选 λ 与同一验证集；动作：分别计算验证 RMSE，保留误差最小的模型。见图 S3。",
+                "effect": "λ、4 个验证分数和基线系数",
+                "trap": "测试指标只报告，不反过来自动选择模型。"
+              },
+              {
+                "name": "在可行域内搜索参数",
+                "role": "图 S4",
+                "do": "输入：冻结代理 + WOB/RPM/Q 网格与 5 项约束；动作：逐点预测 ROP；计算泵压、扭矩；排序合格点。见图 S4。",
+                "effect": "2,145 点、可行点计数与候选设置",
+                "trap": "关闭约束后仍显示违反项；不能隐藏代价。"
+              },
+              {
+                "name": "比较留出误差，留下复核依据",
+                "role": "图 S5",
+                "do": "输入：两口测试井与冻结推荐点；动作：同数据比较多变量模型与单 WOB 基线；推荐冻结后再计算教学实现值。见图 S5。",
+                "effect": "RMSE、MAE、误差位置、约束余量与人工记录",
+                "trap": "代理高估的点要检查；模拟实现值与代理预测分列。"
+              }
+            ],
+            "metrics": {
+              "title": "逐步骤图册与结果口径",
+              "html": "<figure><h3>图 S1｜按整井分开数据</h3><div style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"按整井分开数据\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><rect x=\"40\" y=\"55\" width=\"245\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"56\" y=\"92\" font-size=\"20\" fill=\"#17343f\">8 口训练井 · 512 点</text><rect x=\"325\" y=\"55\" width=\"245\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"341\" y=\"92\" font-size=\"20\" fill=\"#17343f\">3 口验证井 · 192 点</text><rect x=\"610\" y=\"55\" width=\"245\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"626\" y=\"92\" font-size=\"20\" fill=\"#17343f\">2 口测试井 · 128 点</text><path d=\"M100 150V225\" stroke=\"#107d76\" stroke-width=\"8\"/><path d=\"M145 150V225\" stroke=\"#107d76\" stroke-width=\"8\"/><path d=\"M190 150V225\" stroke=\"#107d76\" stroke-width=\"8\"/><path d=\"M390 150V225\" stroke=\"#c7954d\" stroke-width=\"8\"/><path d=\"M440 150V225\" stroke=\"#c7954d\" stroke-width=\"8\"/><path d=\"M680 150V225\" stroke=\"#648bb0\" stroke-width=\"8\"/><path d=\"M735 150V225\" stroke=\"#648bb0\" stroke-width=\"8\"/><text x=\"42\" y=\"275\" font-size=\"20\" fill=\"#17343f\">同一口井的记录只属于一个集合；测试井不参与拟合与选择。</text></g></svg></div><figcaption>输入：13 口教学井的工况与钻速；动作：8 口训练、3 口验证、2 口测试；保留整井身份；产物：512 / 192 / 128 条记录。随机拆散同井样本会低估迁移难度。</figcaption></figure><figure><h3>图 S2｜拟合一个可解释的钻速代理</h3><div style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"拟合一个可解释的钻速代理\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><path d=\"M80 220L600 220\" fill=\"none\" stroke=\"#17343f\" stroke-width=\"3\" stroke-dasharray=\"\"/><path d=\"M80 220L80 55\" fill=\"none\" stroke=\"#17343f\" stroke-width=\"3\" stroke-dasharray=\"\"/><path d=\"M90 210Q310 45 590 85\" stroke=\"#107d76\" stroke-width=\"5\" fill=\"none\"/><circle cx=\"130\" cy=\"180\" r=\"7\" fill=\"#c7954d\"/><circle cx=\"200\" cy=\"151\" r=\"7\" fill=\"#c7954d\"/><circle cx=\"270\" cy=\"112\" r=\"7\" fill=\"#c7954d\"/><circle cx=\"340\" cy=\"99\" r=\"7\" fill=\"#c7954d\"/><circle cx=\"430\" cy=\"83\" r=\"7\" fill=\"#c7954d\"/><circle cx=\"510\" cy=\"76\" r=\"7\" fill=\"#c7954d\"/><text x=\"640\" y=\"95\" font-size=\"24\" fill=\"#17343f\">10 个输入特征</text><text x=\"640\" y=\"140\" font-size=\"22\" fill=\"#17343f\">β 从训练井学习</text><text x=\"640\" y=\"185\" font-size=\"22\" fill=\"#17343f\">惩罚过大的系数</text><text x=\"90\" y=\"275\" font-size=\"20\" fill=\"#17343f\">真实求解 β；没有预存预测表。</text></g></svg></div><figcaption>输入：训练井 WOB、RPM、Q、UCS 和 ROP；动作：训练集标准化，使用一次项、平方项和交互项拟合岭回归；产物：冻结标准化参数与回归系数。系数说明统计关系，不能直接当作因果效应。</figcaption></figure><figure><h3>图 S3｜用验证井选择正则强度</h3><div style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"用验证井选择正则强度\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><rect x=\"40\" y=\"55\" width=\"190\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"56\" y=\"92\" font-size=\"20\" fill=\"#17343f\">λ = 0.01</text><rect x=\"250\" y=\"55\" width=\"190\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"266\" y=\"92\" font-size=\"20\" fill=\"#17343f\">λ = 0.1</text><rect x=\"460\" y=\"55\" width=\"190\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"476\" y=\"92\" font-size=\"20\" fill=\"#17343f\">λ = 1</text><rect x=\"670\" y=\"55\" width=\"190\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"686\" y=\"92\" font-size=\"20\" fill=\"#17343f\">λ = 10</text><rect x=\"87\" y=\"135\" width=\"95\" height=\"80\" rx=\"7\" fill=\"#107d76\"/><rect x=\"297\" y=\"132\" width=\"95\" height=\"83\" rx=\"7\" fill=\"#78aa95\"/><rect x=\"507\" y=\"114\" width=\"95\" height=\"101\" rx=\"7\" fill=\"#78aa95\"/><rect x=\"717\" y=\"87\" width=\"95\" height=\"128\" rx=\"7\" fill=\"#78aa95\"/><text x=\"50\" y=\"277\" font-size=\"20\" fill=\"#17343f\">图中高度示意比较方式；演示下方显示本次实际 RMSE。</text></g></svg></div><figcaption>输入：4 个候选 λ 与同一验证集；动作：分别计算验证 RMSE，保留误差最小的模型；产物：λ、4 个验证分数和基线系数。测试指标只报告，不反过来自动选择模型。</figcaption></figure><figure><h3>图 S4｜在可行域内搜索参数</h3><div style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"在可行域内搜索参数\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><rect x=\"35\" y=\"40\" width=\"245\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"51\" y=\"77\" font-size=\"20\" fill=\"#17343f\">2,145 个参数点</text><rect x=\"330\" y=\"40\" width=\"245\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"346\" y=\"77\" font-size=\"20\" fill=\"#17343f\">约束逐项检查</text><rect x=\"625\" y=\"40\" width=\"245\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"641\" y=\"77\" font-size=\"20\" fill=\"#17343f\">按预测 ROP 排序</text><path d=\"M80 190H790\" stroke=\"#17343f\" stroke-width=\"3\"/><path d=\"M500 125V245\" stroke=\"#cc654f\" stroke-dasharray=\"8 6\" stroke-width=\"3\"/><circle cx=\"90\" cy=\"190\" r=\"9\" fill=\"#107d76\"/><circle cx=\"135\" cy=\"177\" r=\"9\" fill=\"#107d76\"/><circle cx=\"180\" cy=\"164\" r=\"9\" fill=\"#107d76\"/><circle cx=\"225\" cy=\"151\" r=\"9\" fill=\"#107d76\"/><circle cx=\"270\" cy=\"190\" r=\"9\" fill=\"#107d76\"/><circle cx=\"315\" cy=\"177\" r=\"9\" fill=\"#107d76\"/><circle cx=\"360\" cy=\"164\" r=\"9\" fill=\"#107d76\"/><circle cx=\"405\" cy=\"151\" r=\"9\" fill=\"#107d76\"/><circle cx=\"450\" cy=\"190\" r=\"9\" fill=\"#107d76\"/><circle cx=\"495\" cy=\"177\" r=\"9\" fill=\"#cc654f\"/><circle cx=\"540\" cy=\"164\" r=\"9\" fill=\"#cc654f\"/><circle cx=\"585\" cy=\"151\" r=\"9\" fill=\"#cc654f\"/><circle cx=\"630\" cy=\"190\" r=\"9\" fill=\"#cc654f\"/><circle cx=\"675\" cy=\"177\" r=\"9\" fill=\"#cc654f\"/><circle cx=\"720\" cy=\"164\" r=\"9\" fill=\"#cc654f\"/><circle cx=\"765\" cy=\"151\" r=\"9\" fill=\"#cc654f\"/><text x=\"55\" y=\"278\" font-size=\"20\" fill=\"#17343f\">左侧合格点进入排序；被排除点保留具体原因。</text></g></svg></div><figcaption>输入：冻结代理 + WOB/RPM/Q 网格与 5 项约束；动作：逐点预测 ROP；计算泵压、扭矩；排序合格点；产物：2,145 点、可行点计数与候选设置。关闭约束后仍显示违反项；不能隐藏代价。</figcaption></figure><figure><h3>图 S5｜比较留出误差，留下复核依据</h3><div style=\"max-width:100%;overflow-x:auto\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 300\" role=\"img\" aria-label=\"比较留出误差，留下复核依据\"><rect width=\"900\" height=\"300\" rx=\"18\" fill=\"#f1f6f2\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"20\" fill=\"#17343f\"><rect x=\"40\" y=\"40\" width=\"250\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"56\" y=\"77\" font-size=\"20\" fill=\"#17343f\">模型 / 单 WOB 基线</text><rect x=\"330\" y=\"40\" width=\"250\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"346\" y=\"77\" font-size=\"20\" fill=\"#17343f\">同 128 点计算误差</text><rect x=\"620\" y=\"40\" width=\"240\" height=\"60\" rx=\"10\" fill=\"#d7eae2\"/><text x=\"636\" y=\"77\" font-size=\"20\" fill=\"#17343f\">人工复核另存</text><path d=\"M80 210L820 210\" fill=\"none\" stroke=\"#17343f\" stroke-width=\"3\" stroke-dasharray=\"\"/><path d=\"M170 210V150\" stroke=\"#107d76\" stroke-width=\"16\"/><path d=\"M260 210V100\" stroke=\"#c7954d\" stroke-width=\"16\"/><path d=\"M440 210V170\" stroke=\"#107d76\" stroke-width=\"16\"/><path d=\"M530 210V130\" stroke=\"#c7954d\" stroke-width=\"16\"/><text x=\"90\" y=\"278\" font-size=\"20\" fill=\"#17343f\">输入改变 → 结果待重算；重算完成 → 才能导出当前结果。</text></g></svg></div><figcaption>输入：两口测试井与冻结推荐点；动作：同数据比较多变量模型与单 WOB 基线；推荐冻结后再计算教学实现值；产物：RMSE、MAE、误差位置、约束余量与人工记录。代理高估的点要检查；模拟实现值与代理预测分列。</figcaption></figure>"
+            }
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "label": "可运行示范",
+            "height": 1100,
+            "intro": "从多口教学井学习钻速响应，比较单钻压经验基线，再在钻压、转速、流量、泵压与扭矩边界内搜索参数。你可以收紧约束、放大噪声，或进入更硬地层的迁移情景。"
+          }
+        }
+      },
+      "sceneName": "钻速预测与参数优化",
+      "stageName": "钻井",
+      "errors": [
+        "demo HTML has unbundled reference: https://glossary.slb.com/terms/r/rate_of_penetration",
+        "demo HTML has unbundled reference: https://glossary.slb.com/terms/w/weight_on_bit",
+        "demo HTML has unbundled reference: https://glossary.slb.com/terms/r/rotary_speed"
+      ],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/d1/case.json",
+          "bytes": 25762,
+          "sha256": "336f493793e7838aea343c0e0fbdabdf8aee57fb35bc78771313ba57177db0c2"
+        },
+        {
+          "path": "expansion-src/d1/engine.js",
+          "bytes": 7869,
+          "sha256": "f07d0a75657b38e883bcaf18ad6919c0292ed4a97a56658aa7544b667f3ff140"
+        },
+        {
+          "path": "expansion-src/d1/app.js",
+          "bytes": 16081,
+          "sha256": "2aa19fca59c07453e0c606d3b21dee687b28da0cd4642c97f2b7ba11e8da55fc"
+        },
+        {
+          "path": "expansion-src/d1/demo.html",
+          "bytes": 26831,
+          "sha256": "af034a96e6867fc6d7c2279b655e8bcd642dff1efd7be51b962973923d911096"
+        },
+        {
+          "path": "expansion-src/d1/demo.css",
+          "bytes": 9513,
+          "sha256": "68a46787a592d1ba25651c579098b3a9b6bd49b3106a2e0d43437268e4220e9c"
+        },
+        {
+          "path": "expansion-src/d1/README.txt",
+          "bytes": 2221,
+          "sha256": "b4bb7c4fc269a831f4a62256bffc07cdf76d71d2987b6f0fc44533ad0deeb483"
+        }
+      ]
+    },
+    {
+      "sceneId": "wo1",
+      "stageId": "workover",
+      "source": "expansion-src/wo1",
+      "status": "invalid",
+      "manifest": {
+        "id": "s17x-wo1-workover-retrieval",
+        "sceneId": "wo1",
+        "methods": [
+          "kg",
+          "nlp"
+        ],
+        "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+        "version": "1.0.0",
+        "updated": "2026-10-24",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "把工单描述和当前观测放到一起，从独立历史井中找到相似病例，再核查完整性与观测条件。先看证据，再讨论方案类别。",
+            "judge": [
+              {
+                "label": "默认数据",
+                "value": "教学合成",
+                "desc": "独立井组/储层组留出"
+              },
+              {
+                "label": "可交互输出",
+                "value": "候选、来源与约束",
+                "desc": "同数据真实计算基线与模型"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CONCEPT",
+                "title": "图 B1｜井筒里，线索来自哪里",
+                "html": "<figure><h3>图 B1｜井筒里，线索来自哪里</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"井筒、油管、套管与四类故障线索\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><path d=\"M35 55H360V245H35Z\" fill=\"#e4d5bd\"/><path d=\"M35 110H360M35 175H360M35 220H360\" stroke=\"#c3a780\" stroke-width=\"3\"/><rect x=\"155\" y=\"35\" width=\"74\" height=\"205\" fill=\"#8798a4\"/><rect x=\"168\" y=\"35\" width=\"48\" height=\"205\" fill=\"#e7eef0\"/><rect x=\"183\" y=\"35\" width=\"18\" height=\"205\" fill=\"#267e85\"/><path d=\"M195 208l20 -10m-20 10l-22 -9M195 145h32M195 80h35\" stroke=\"#d78f50\" stroke-width=\"6\"/><circle cx=\"191\" cy=\"174\" r=\"12\" fill=\"#213e57\"/><path d=\"M191 174H405M228 80H405M217 208H405M228 145H405\" stroke=\"#82989c\" stroke-dasharray=\"5 5\"/><text x=\"45\" y=\"33\">深度向下 ↓</text><text x=\"414\" y=\"86\">管内沉积 → 结垢诊断</text><text x=\"414\" y=\"150\">套管/密封线索 → 完整性检测</text><text x=\"414\" y=\"180\">举升设备 → 系统检修评估</text><text x=\"414\" y=\"214\">井底携砂 → 出砂与井筒清理</text><text x=\"42\" y=\"265\" font-size=\"17\">井史记录的对象不同，候选方案类别也不同。</text></g></svg></div><figcaption>修井围绕已有井的维护与恢复。图中把沉积、出砂、举升设备和管柱完整性分开，演示输出供复核的方案类别。</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONCEPT",
+                "title": "图 B2｜“曾经怀疑”与“本次观测”有区别",
+                "html": "<figure><h3>图 B2｜“曾经怀疑”与“本次观测”有区别</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"历史工单与本次观测分开阅读\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><circle cx=\"85\" cy=\"100\" r=\"10\" fill=\"#849496\"/><path d=\"M58 100H746\" stroke=\"#94aaa8\" stroke-width=\"4\"/><circle cx=\"290\" cy=\"100\" r=\"10\" fill=\"#849496\"/><path d=\"M58 100H746\" stroke=\"#94aaa8\" stroke-width=\"4\"/><circle cx=\"520\" cy=\"100\" r=\"10\" fill=\"#d18b4d\"/><path d=\"M58 100H746\" stroke=\"#94aaa8\" stroke-width=\"4\"/><circle cx=\"730\" cy=\"100\" r=\"10\" fill=\"#237c82\"/><text x=\"45\" y=\"55\">前次检修</text><text x=\"235\" y=\"55\">历史怀疑</text><text x=\"465\" y=\"55\">当前观测</text><text x=\"682\" y=\"55\">候选复核</text><text x=\"38\" y=\"148\">密封复查</text><text x=\"230\" y=\"148\">曾有环空描述</text><text x=\"445\" y=\"148\">压差 / 含砂 / 电流</text><text x=\"650\" y=\"148\">查看证据</text><rect x=\"60\" y=\"185\" width=\"680\" height=\"55\" rx=\"12\" fill=\"#f1e0cb\"/><text x=\"74\" y=\"218.5\">旧工单中的一个关键词，不等于本次故障的确认。</text></g></svg></div><figcaption>本例合成工单包含旧记录干扰。关键词基线容易被反复出现的历史词项吸引；联合检索还利用当前结构化观测。</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "CONCEPT",
+                "title": "图 B3｜检索提供来源，条件决定能否进入候选",
+                "html": "<figure><h3>图 B3｜检索提供来源，条件决定能否进入候选</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"多源特征检索、候选约束与可追溯来源\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"28\" y=\"35\" width=\"210\" height=\"54\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"42\" y=\"68.0\">描述 → TF-IDF词项</text><rect x=\"28\" y=\"107\" width=\"210\" height=\"54\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"42\" y=\"140.0\">观测 → 标准化特征</text><path d=\"M240 62H300V100H355M240 134H300V100\" fill=\"none\" stroke=\"#638b91\" stroke-width=\"3\"/><rect x=\"355\" y=\"75\" width=\"200\" height=\"58\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"369\" y=\"110.0\">历史井近邻排序</text><rect x=\"585\" y=\"75\" width=\"185\" height=\"58\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"599\" y=\"110.0\">条件筛选</text><path d=\"M557 103H584\" stroke=\"#638b91\" stroke-width=\"3\"/><text x=\"40\" y=\"214\">相似度 = 文本余弦 × (1−w) + 观测相似度 × w</text><text x=\"40\" y=\"250\" font-size=\"17\">历史井编号与原文跟随候选；支持度不称作故障概率。</text></g></svg></div><figcaption>训练井库提供可见井号和原文；IDF、标准化与配置都有独立训练或验证来源。近邻支持分保持为相似度。</figcaption></figure>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "井史里哪些线索值得相信？",
+            "lead": [
+              "把工单描述和当前观测放到一起，从独立历史井中找到相似病例，再核查完整性与观测条件。先看证据，再讨论方案类别。"
+            ],
+            "steps": [
+              {
+                "name": "整理井史与本次观测",
+                "role": "图 S1",
+                "do": "输入：文本、井号、压差、含砂、电流、沉积指标、环空压力。动作：保留历史时间作用域与缺失项；当前观测按单位录入。见图 S1。",
+                "effect": "带来源的查询记录",
+                "trap": "历史怀疑不能直接当作当前诊断"
+              },
+              {
+                "name": "按井分组与拟合词项",
+                "role": "图 S2",
+                "do": "输入：48口训练井、16口验证井、20口测试井。动作：IDF和数值标准化只从训练井拟合；验证井选k、特征权重与接受线。见图 S2。",
+                "effect": "冻结词表、标准化参数和检索配置",
+                "trap": "重复改写不能分到测试井"
+              },
+              {
+                "name": "构造联合相似度",
+                "role": "图 S3",
+                "do": "输入：当前文本词项与5项观测。动作：TF-IDF余弦与高斯型数值相似度加权；缺失值单列。见图 S3。",
+                "effect": "每口历史井的文本分与观测分",
+                "trap": "相似度未经概率校准"
+              },
+              {
+                "name": "检索候选与来源",
+                "role": "图 S4",
+                "do": "输入：冻结训练井库及查询向量。动作：取实际k个近邻，按方案类别累计支持；展示井号和原文。见图 S4。",
+                "effect": "近邻条形图、候选类别排序",
+                "trap": "没有近邻支持的类别不进入接受结果"
+              },
+              {
+                "name": "显式条件筛选",
+                "role": "图 S5",
+                "do": "输入：候选、完整性状态、含砂、电流与沉积证据。动作：逐项记录保留或拒选原因；信息不足时留待复核。见图 S5。",
+                "effect": "候选列表与拒选原因",
+                "trap": "条件筛选是规则，不混称学习模型"
+              },
+              {
+                "name": "独立评价与人工复核",
+                "role": "图 S6",
+                "do": "输入：20口测试井、自由查询和原始模型候选。动作：计算Top-1、Recall@3、覆盖率、出处覆盖；人工意见独立保存。见图 S6。",
+                "effect": "指标、混淆矩阵和当前JSON",
+                "trap": "自由改写无参考标签，不显示单条准确率"
+              }
+            ],
+            "metrics": {
+              "title": "逐步骤图册与输入产物",
+              "html": "<figure><h3>图 S1｜整理井史与本次观测</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"历史工单与本次观测分开阅读\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><circle cx=\"85\" cy=\"100\" r=\"10\" fill=\"#849496\"/><path d=\"M58 100H746\" stroke=\"#94aaa8\" stroke-width=\"4\"/><circle cx=\"290\" cy=\"100\" r=\"10\" fill=\"#849496\"/><path d=\"M58 100H746\" stroke=\"#94aaa8\" stroke-width=\"4\"/><circle cx=\"520\" cy=\"100\" r=\"10\" fill=\"#d18b4d\"/><path d=\"M58 100H746\" stroke=\"#94aaa8\" stroke-width=\"4\"/><circle cx=\"730\" cy=\"100\" r=\"10\" fill=\"#237c82\"/><text x=\"45\" y=\"55\">前次检修</text><text x=\"235\" y=\"55\">历史怀疑</text><text x=\"465\" y=\"55\">当前观测</text><text x=\"682\" y=\"55\">候选复核</text><text x=\"38\" y=\"148\">密封复查</text><text x=\"230\" y=\"148\">曾有环空描述</text><text x=\"445\" y=\"148\">压差 / 含砂 / 电流</text><text x=\"650\" y=\"148\">查看证据</text><rect x=\"60\" y=\"185\" width=\"680\" height=\"55\" rx=\"12\" fill=\"#f1e0cb\"/><text x=\"74\" y=\"218.5\">旧工单中的一个关键词，不等于本次故障的确认。</text></g></svg></div><figcaption>输入：文本、井号、压差、含砂、电流、沉积指标、环空压力；动作：保留历史时间作用域与缺失项；当前观测按单位录入；产物：带来源的查询记录。历史怀疑不能直接当作当前诊断。</figcaption></figure><figure><h3>图 S2｜按井分组与拟合词项</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"按独立井组拆分\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"30\" y=\"36\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"44\" y=\"73.0\">训练</text><text x=\"42\" y=\"133\">48口独立井</text><text x=\"42\" y=\"177\">拟合词项与尺度</text><rect x=\"285\" y=\"36\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#f0dfc8\"/><text x=\"299\" y=\"73.0\">验证</text><text x=\"297\" y=\"133\">16口独立井</text><text x=\"297\" y=\"177\">选择检索配置</text><rect x=\"540\" y=\"36\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#dce4ef\"/><text x=\"554\" y=\"73.0\">测试</text><text x=\"552\" y=\"133\">20口独立井</text><text x=\"552\" y=\"177\">仅评价</text><text x=\"35\" y=\"245\" font-size=\"17\">同一口井 / 储层组不跨集合；改写和试验点留在原组。</text></g></svg></div><figcaption>输入：48口训练井、16口验证井、20口测试井；动作：IDF和数值标准化只从训练井拟合；验证井选k、特征权重与接受线；产物：冻结词表、标准化参数和检索配置。重复改写不能分到测试井。</figcaption></figure><figure><h3>图 S3｜构造联合相似度</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"多源特征检索、候选约束与可追溯来源\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"28\" y=\"35\" width=\"210\" height=\"54\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"42\" y=\"68.0\">描述 → TF-IDF词项</text><rect x=\"28\" y=\"107\" width=\"210\" height=\"54\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"42\" y=\"140.0\">观测 → 标准化特征</text><path d=\"M240 62H300V100H355M240 134H300V100\" fill=\"none\" stroke=\"#638b91\" stroke-width=\"3\"/><rect x=\"355\" y=\"75\" width=\"200\" height=\"58\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"369\" y=\"110.0\">历史井近邻排序</text><rect x=\"585\" y=\"75\" width=\"185\" height=\"58\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"599\" y=\"110.0\">条件筛选</text><path d=\"M557 103H584\" stroke=\"#638b91\" stroke-width=\"3\"/><text x=\"40\" y=\"214\">相似度 = 文本余弦 × (1−w) + 观测相似度 × w</text><text x=\"40\" y=\"250\" font-size=\"17\">历史井编号与原文跟随候选；支持度不称作故障概率。</text></g></svg></div><figcaption>输入：当前文本词项与5项观测；动作：TF-IDF余弦与高斯型数值相似度加权；缺失值单列；产物：每口历史井的文本分与观测分。相似度未经概率校准。</figcaption></figure><figure><h3>图 S4｜检索候选与来源</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"实际近邻投票\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"30\" y=\"40\" width=\"200\" height=\"58\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"44\" y=\"75.0\">本次查询</text><path d=\"M232 70H310M310 70V210\" stroke=\"#78979a\" stroke-width=\"3\"/><rect x=\"350\" y=\"30\" width=\"410\" height=\"54\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"364\" y=\"63.0\">历史井 A：词项 + 观测</text><rect x=\"350\" y=\"107\" width=\"410\" height=\"54\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"364\" y=\"140.0\">历史井 B：词项 + 观测</text><rect x=\"350\" y=\"184\" width=\"410\" height=\"54\" rx=\"12\" fill=\"#e5e8f0\"/><text x=\"364\" y=\"217.0\">历史井 C：词项 + 观测</text></g></svg></div><figcaption>输入：冻结训练井库及查询向量；动作：取实际k个近邻，按方案类别累计支持；展示井号和原文；产物：近邻条形图、候选类别排序。没有近邻支持的类别不进入接受结果。</figcaption></figure><figure><h3>图 S5｜显式条件筛选</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"约束逐项核查\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"30\" y=\"35\" width=\"330\" height=\"52\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"44\" y=\"67.0\">完整性状态是否已确认？</text><rect x=\"30\" y=\"105\" width=\"330\" height=\"52\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"44\" y=\"137.0\">候选是否具备对应观测？</text><rect x=\"420\" y=\"35\" width=\"350\" height=\"52\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"434\" y=\"67.0\">满足 → 进入候选复核</text><rect x=\"420\" y=\"105\" width=\"350\" height=\"52\" rx=\"12\" fill=\"#f1e0cb\"/><text x=\"434\" y=\"137.0\">缺项 / 冲突 → 待补证</text><text x=\"40\" y=\"230\" font-size=\"17\">拒选原因始终显示，支持度高也不能越过显式条件。</text></g></svg></div><figcaption>输入：候选、完整性状态、含砂、电流与沉积证据；动作：逐项记录保留或拒选原因；信息不足时留待复核；产物：候选列表与拒选原因。条件筛选是规则，不混称学习模型。</figcaption></figure><figure><h3>图 S6｜独立评价与人工复核</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"原结果与人工意见分别保留\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"25\" y=\"40\" width=\"225\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"39\" y=\"77.0\">模型原候选</text><rect x=\"285\" y=\"40\" width=\"225\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"299\" y=\"77.0\">人工确认 / 补证</text><rect x=\"545\" y=\"40\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"559\" y=\"77.0\">带来源JSON</text><text x=\"40\" y=\"165\">测试集：分母20口井；拒判仍在Top-1分母中。</text><text x=\"40\" y=\"220\" font-size=\"17\">自由查询：显示近邻与约束，不产生虚构评价标签。</text></g></svg></div><figcaption>输入：20口测试井、自由查询和原始模型候选；动作：计算Top-1、Recall@3、覆盖率、出处覆盖；人工意见独立保存；产物：指标、混淆矩阵和当前JSON。自由改写无参考标签，不显示单条准确率。</figcaption></figure>"
+            }
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "label": "可运行示范",
+            "height": 1150,
+            "intro": "把工单描述和当前观测放到一起，从独立历史井中找到相似病例，再核查完整性与观测条件。先看证据，再讨论方案类别。"
+          }
+        }
+      },
+      "sceneName": "修井作业方案智能推荐",
+      "stageName": "修井",
+      "errors": [
+        "demo HTML has unbundled reference: https://glossary.slb.com/en/terms/w/workover"
+      ],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/wo1/case.json",
+          "bytes": 17825,
+          "sha256": "92c9d30638a3493d1f6c2f633514c691b2a087e101592d5259a4fe2485e32b4d"
+        },
+        {
+          "path": "expansion-src/wo1/engine.js",
+          "bytes": 11546,
+          "sha256": "0df304292c64a9867072fbdcb60353984886f4c265c6ddd512e5a9ac6e20b656"
+        },
+        {
+          "path": "expansion-src/wo1/app.js",
+          "bytes": 9340,
+          "sha256": "c85f0a2b50e896e1f9872e2cdda1d17081ad754221ff17acc66c8271f9a9626c"
+        },
+        {
+          "path": "expansion-src/wo1/demo.html",
+          "bytes": 18509,
+          "sha256": "50b099bc488b34a54d70f76db2cb806944aebabc18e0aeb2769c6cf61cb43c9d"
+        },
+        {
+          "path": "expansion-src/wo1/demo.css",
+          "bytes": 8368,
+          "sha256": "1d27c9bc61b54466f04f09c979cefe3d2cbcff5783f19d8d31c3e0c4e03fcf86"
+        },
+        {
+          "path": "expansion-src/wo1/README.txt",
+          "bytes": 1085,
+          "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+        }
+      ]
+    },
+    {
+      "sceneId": "e1",
+      "stageId": "eor",
+      "source": "expansion-src/e1",
+      "status": "invalid",
+      "manifest": {
+        "id": "s17x-e1-fracture-optimization",
+        "sceneId": "e1",
+        "methods": [
+          "opt"
+        ],
+        "title": "压裂参数智能优化：在资源边界里比较候选",
+        "version": "1.0.0",
+        "updated": "2026-10-24",
+        "tabs": {
+          "background": {
+            "label": "专业背景",
+            "lede": "从独立储层的合成试验学习增油与压力响应，再在441个设计点里逐个检查预算、用水、支撑剂与压力，直观看到收益和代价。",
+            "judge": [
+              {
+                "label": "默认数据",
+                "value": "教学合成",
+                "desc": "独立井组/储层组留出"
+              },
+              {
+                "label": "可交互输出",
+                "value": "候选、来源与约束",
+                "desc": "同数据真实计算基线与模型"
+              }
+            ],
+            "sections": [
+              {
+                "no": 1,
+                "en": "CONCEPT",
+                "title": "图 B1｜液体造缝，支撑剂维持通道",
+                "html": "<figure><h3>图 B1｜液体造缝，支撑剂维持通道</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"压裂液、裂缝和支撑剂的作用\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><circle cx=\"154\" cy=\"143\" r=\"4\" fill=\"#d39650\"/><rect x=\"25\" y=\"75\" width=\"480\" height=\"164\" fill=\"#ddcbb0\"/><path d=\"M25 105H505M25 155H505M25 207H505\" stroke=\"#bda482\" stroke-width=\"3\"/><path d=\"M65 46V174H455\" fill=\"none\" stroke=\"#254c64\" stroke-width=\"16\"/><path d=\"M165 174l-22 -58m22 58l-17 44M260 174l25 -76m-25 76l33 62M380 174l-30 -67m30 67l27 51\" stroke=\"#27929b\" stroke-width=\"9\"/><circle cx=\"158\" cy=\"154\" r=\"4\" fill=\"#d39650\"/><rect x=\"25\" y=\"75\" width=\"480\" height=\"164\" fill=\"#ddcbb0\"/><path d=\"M25 105H505M25 155H505M25 207H505\" stroke=\"#bda482\" stroke-width=\"3\"/><path d=\"M65 46V174H455\" fill=\"none\" stroke=\"#254c64\" stroke-width=\"16\"/><path d=\"M165 174l-22 -58m22 58l-17 44M260 174l25 -76m-25 76l33 62M380 174l-30 -67m30 67l27 51\" stroke=\"#27929b\" stroke-width=\"9\"/><circle cx=\"277\" cy=\"123\" r=\"4\" fill=\"#d39650\"/><rect x=\"25\" y=\"75\" width=\"480\" height=\"164\" fill=\"#ddcbb0\"/><path d=\"M25 105H505M25 155H505M25 207H505\" stroke=\"#bda482\" stroke-width=\"3\"/><path d=\"M65 46V174H455\" fill=\"none\" stroke=\"#254c64\" stroke-width=\"16\"/><path d=\"M165 174l-22 -58m22 58l-17 44M260 174l25 -76m-25 76l33 62M380 174l-30 -67m30 67l27 51\" stroke=\"#27929b\" stroke-width=\"9\"/><circle cx=\"273\" cy=\"134\" r=\"4\" fill=\"#d39650\"/><rect x=\"25\" y=\"75\" width=\"480\" height=\"164\" fill=\"#ddcbb0\"/><path d=\"M25 105H505M25 155H505M25 207H505\" stroke=\"#bda482\" stroke-width=\"3\"/><path d=\"M65 46V174H455\" fill=\"none\" stroke=\"#254c64\" stroke-width=\"16\"/><path d=\"M165 174l-22 -58m22 58l-17 44M260 174l25 -76m-25 76l33 62M380 174l-30 -67m30 67l27 51\" stroke=\"#27929b\" stroke-width=\"9\"/><circle cx=\"360\" cy=\"131\" r=\"4\" fill=\"#d39650\"/><rect x=\"25\" y=\"75\" width=\"480\" height=\"164\" fill=\"#ddcbb0\"/><path d=\"M25 105H505M25 155H505M25 207H505\" stroke=\"#bda482\" stroke-width=\"3\"/><path d=\"M65 46V174H455\" fill=\"none\" stroke=\"#254c64\" stroke-width=\"16\"/><path d=\"M165 174l-22 -58m22 58l-17 44M260 174l25 -76m-25 76l33 62M380 174l-30 -67m30 67l27 51\" stroke=\"#27929b\" stroke-width=\"9\"/><circle cx=\"366\" cy=\"145\" r=\"4\" fill=\"#d39650\"/><rect x=\"25\" y=\"75\" width=\"480\" height=\"164\" fill=\"#ddcbb0\"/><path d=\"M25 105H505M25 155H505M25 207H505\" stroke=\"#bda482\" stroke-width=\"3\"/><path d=\"M65 46V174H455\" fill=\"none\" stroke=\"#254c64\" stroke-width=\"16\"/><path d=\"M165 174l-22 -58m22 58l-17 44M260 174l25 -76m-25 76l33 62M380 174l-30 -67m30 67l27 51\" stroke=\"#27929b\" stroke-width=\"9\"/><circle cx=\"284\" cy=\"214\" r=\"4\" fill=\"#d39650\"/><rect x=\"25\" y=\"75\" width=\"480\" height=\"164\" fill=\"#ddcbb0\"/><path d=\"M25 105H505M25 155H505M25 207H505\" stroke=\"#bda482\" stroke-width=\"3\"/><path d=\"M65 46V174H455\" fill=\"none\" stroke=\"#254c64\" stroke-width=\"16\"/><path d=\"M165 174l-22 -58m22 58l-17 44M260 174l25 -76m-25 76l33 62M380 174l-30 -67m30 67l27 51\" stroke=\"#27929b\" stroke-width=\"9\"/><circle cx=\"399\" cy=\"207\" r=\"4\" fill=\"#d39650\"/><text x=\"540\" y=\"72\">液体：传递压力</text><text x=\"540\" y=\"124\">裂缝：增加接触通道</text><text x=\"540\" y=\"177\">支撑剂：维持通道</text><text x=\"540\" y=\"230\">地层性质：影响响应</text><text x=\"30\" y=\"270\" font-size=\"17\">示意图不按比例；本例学习90天增油量与压力的教学响应。</text></g></svg></div><figcaption>水力压裂通过高压流体形成裂缝，支撑剂帮助维持通道。图形解释对象关系；图中尺寸不对应现场设计。</figcaption></figure>"
+              },
+              {
+                "no": 2,
+                "en": "CONCEPT",
+                "title": "图 B2｜响应会弯曲，地层会改变收益",
+                "html": "<figure><h3>图 B2｜响应会弯曲，地层会改变收益</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"相同投入在不同岩层中具有不同收益\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><path d=\"M75 225V35M75 225H730\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M90 210Q305 25 505 120T735 205\" stroke=\"#237f89\" stroke-width=\"5\" fill=\"none\"/><path d=\"M90 220Q305 110 505 165T735 225\" stroke=\"#b88a58\" stroke-width=\"4\" fill=\"none\" stroke-dasharray=\"9 5\"/><text x=\"91\" y=\"40\">增油量 t</text><text x=\"580\" y=\"260\">液量 m³ →</text><text x=\"390\" y=\"61\" fill=\"#237f89\">脆性较高的教学地层</text><text x=\"392\" y=\"189\" fill=\"#9a7048\">另一地层响应</text><circle cx=\"410\" cy=\"95\" r=\"8\" fill=\"#237f89\"/><text x=\"100\" y=\"275\" font-size=\"17\">增加液量并非持续线性增益；模型从独立试验学习弯曲响应。</text></g></svg></div><figcaption>液量、支撑剂和排量同时影响响应。二次项与交互项允许代理模型表达边际收益变化，输入还包含渗透率与脆性指标。</figcaption></figure>"
+              },
+              {
+                "no": 3,
+                "en": "CONCEPT",
+                "title": "图 B3｜把增油、成本和约束放在一张图",
+                "html": "<figure><h3>图 B3｜把增油、成本和约束放在一张图</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"增油、成本和资源约束的共同权衡\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><circle cx=\"150\" cy=\"205\" r=\"7\" fill=\"#9bb5b6\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"220\" cy=\"176\" r=\"7\" fill=\"#9bb5b6\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"290\" cy=\"155\" r=\"8\" fill=\"#237f89\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"380\" cy=\"118\" r=\"8\" fill=\"#237f89\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"460\" cy=\"92\" r=\"8\" fill=\"#237f89\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"510\" cy=\"100\" r=\"7\" fill=\"#9bb5b6\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"610\" cy=\"62\" r=\"7\" fill=\"#d5ab7c\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"680\" cy=\"80\" r=\"7\" fill=\"#d5ab7c\"/><path d=\"M150 205L290 155L380 118L460 92\" stroke=\"#237f89\" stroke-width=\"3\" fill=\"none\"/><text x=\"95\" y=\"40\">90天增油 t</text><text x=\"590\" y=\"264\">成本 万元 →</text><text x=\"550\" y=\"42\" fill=\"#a9753d\">预算线</text><text x=\"120\" y=\"265\" font-size=\"17\">同成本更高增油 / 同增油更低成本 → Pareto候选</text></g></svg></div><figcaption>可行点先满足资源与代理压力限制，再比较目标。Pareto前沿保留成本与增油之间的不同取舍，固定方案作为清楚的共同参照。</figcaption></figure>"
+              }
+            ]
+          },
+          "workflow": {
+            "label": "案例流程",
+            "title": "多用一些资源，值得吗？",
+            "lead": [
+              "从独立储层的合成试验学习增油与压力响应，再在441个设计点里逐个检查预算、用水、支撑剂与压力，直观看到收益和代价。"
+            ],
+            "steps": [
+              {
+                "name": "独立储层试验分组",
+                "role": "图 S1",
+                "do": "输入：20个教学储层组，每组24个试验点。动作：按完整储层组拆为训练/验证/测试，保留试验编号。见图 S1。",
+                "effect": "288 / 96 / 96个样本",
+                "trap": "同一储层的设计点不可跨集合"
+              },
+              {
+                "name": "构造二次响应特征",
+                "role": "图 S2",
+                "do": "输入：液量m³、支撑剂t、排量m³/min、渗透率mD、脆性指标。动作：只在训练拟合均值与尺度，再构造一次项、平方和交互项。见图 S2。",
+                "effect": "21维可追踪设计向量",
+                "trap": "地层属性为观测输入，不使用隐藏储层偏置"
+              },
+              {
+                "name": "学习增油与压力代理",
+                "role": "图 S3",
+                "do": "输入：训练特征与合成试验响应。动作：分别拟合二次岭回归；验证MAE选择λ，冻结后评价测试集。见图 S3。",
+                "effect": "增油t、压力MPa预测及留出误差",
+                "trap": "测试标签不参与系数或λ选择"
+              },
+              {
+                "name": "搜索441个约束候选",
+                "role": "图 S4",
+                "do": "输入：3个设计变量网格、当前地层属性、成本与资源上限。动作：逐点调用代理，并计算成本、压力、用水和支撑剂约束。见图 S4。",
+                "effect": "可行/不可行二维切片与原因",
+                "trap": "代理压力约束应结合留出误差一起阅读"
+              },
+              {
+                "name": "对照固定方案与Pareto候选",
+                "role": "图 S5",
+                "do": "输入：可行点、固定800m³/100t/7m³·min⁻¹方案。动作：按增油−成本权重排序；保留无支配的成本/增油候选。见图 S5。",
+                "effect": "当前建议点、固定点与权衡曲线",
+                "trap": "固定点超限时不显示有效收益改善"
+              },
+              {
+                "name": "复核外推与当前导出",
+                "role": "图 S6",
+                "do": "输入：候选参数、代理留出误差和人工复核意见。动作：检查地层输入范围；人工选择候选另记，导出当前运行快照。见图 S6。",
+                "effect": "来源、参数、约束、候选与复核记录",
+                "trap": "代理目标改善是预测量，不能称现场实际增油"
+              }
+            ],
+            "metrics": {
+              "title": "逐步骤图册与输入产物",
+              "html": "<figure><h3>图 S1｜独立储层试验分组</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"独立储层组拆分\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"30\" y=\"36\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"44\" y=\"73.0\">训练</text><text x=\"42\" y=\"133\">12个储层组</text><text x=\"42\" y=\"177\">288个试验点</text><rect x=\"285\" y=\"36\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#f0dfc8\"/><text x=\"299\" y=\"73.0\">验证</text><text x=\"297\" y=\"133\">4个储层组</text><text x=\"297\" y=\"177\">96个试验点</text><rect x=\"540\" y=\"36\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#dce4ef\"/><text x=\"554\" y=\"73.0\">测试</text><text x=\"552\" y=\"133\">4个储层组</text><text x=\"552\" y=\"177\">96个试验点</text><text x=\"35\" y=\"245\" font-size=\"17\">同一口井 / 储层组不跨集合；改写和试验点留在原组。</text></g></svg></div><figcaption>输入：20个教学储层组，每组24个试验点；动作：按完整储层组拆为训练/验证/测试，保留试验编号；产物：288 / 96 / 96个样本。同一储层的设计点不可跨集合。</figcaption></figure><figure><h3>图 S2｜构造二次响应特征</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"二次响应特征\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"30\" y=\"40\" width=\"220\" height=\"64\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"44\" y=\"78.0\">5项可见输入</text><rect x=\"290\" y=\"40\" width=\"220\" height=\"64\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"304\" y=\"78.0\">训练均值 / 尺度</text><rect x=\"550\" y=\"40\" width=\"220\" height=\"64\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"564\" y=\"78.0\">21维设计向量</text><text x=\"50\" y=\"180\">φ(x) = [1, z₁…z₅, z₁², z₁z₂…z₅²]</text><text x=\"50\" y=\"235\" font-size=\"17\">平方项表达边际收益变化；交互项表达地层和设计的共同影响。</text></g></svg></div><figcaption>输入：液量m³、支撑剂t、排量m³/min、渗透率mD、脆性指标；动作：只在训练拟合均值与尺度，再构造一次项、平方和交互项；产物：21维可追踪设计向量。地层属性为观测输入，不使用隐藏储层偏置。</figcaption></figure><figure><h3>图 S3｜学习增油与压力代理</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"代理拟合与残差\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><path d=\"M65 225V30M65 225H735M65 225L735 35\" stroke=\"#80989e\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"208\" r=\"7\" fill=\"#257d88\"/><circle cx=\"210\" cy=\"178\" r=\"7\" fill=\"#257d88\"/><circle cx=\"290\" cy=\"154\" r=\"7\" fill=\"#257d88\"/><circle cx=\"390\" cy=\"125\" r=\"7\" fill=\"#257d88\"/><circle cx=\"490\" cy=\"91\" r=\"7\" fill=\"#257d88\"/><circle cx=\"600\" cy=\"66\" r=\"7\" fill=\"#257d88\"/><circle cx=\"690\" cy=\"50\" r=\"7\" fill=\"#257d88\"/><text x=\"90\" y=\"40\">预测增油 t</text><text x=\"558\" y=\"263\">参考增油 t →</text><text x=\"365\" y=\"185\" font-size=\"17\">偏离对角线 = 实际预测残差</text></g></svg></div><figcaption>输入：训练特征与合成试验响应；动作：分别拟合二次岭回归；验证MAE选择λ，冻结后评价测试集；产物：增油t、压力MPa预测及留出误差。测试标签不参与系数或λ选择。</figcaption></figure><figure><h3>图 S4｜搜索441个约束候选</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"可行域切片\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"65\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"65\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"65\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"65\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"65\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"136\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"136\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"136\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"136\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"136\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"207\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"207\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"207\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"207\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"207\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"278\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"278\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"278\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"278\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"278\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"349\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"349\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"349\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"349\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"349\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"420\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"420\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"420\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"420\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"420\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"491\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"491\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"491\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"491\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"491\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#d5c7b7\"/><rect x=\"562\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"562\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"562\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"562\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#d5c7b7\"/><rect x=\"562\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#d5c7b7\"/><rect x=\"633\" y=\"35\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"633\" y=\"70\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#70a8a7\"/><rect x=\"633\" y=\"105\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#d5c7b7\"/><rect x=\"633\" y=\"140\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#d5c7b7\"/><rect x=\"633\" y=\"175\" width=\"58\" height=\"25\" rx=\"5\" fill=\"#d5c7b7\"/><text x=\"80\" y=\"245\" font-size=\"17\">每个色块是一组实际计算的液量/支撑剂组合；排量按切片选择。</text></g></svg></div><figcaption>输入：3个设计变量网格、当前地层属性、成本与资源上限；动作：逐点调用代理，并计算成本、压力、用水和支撑剂约束；产物：可行/不可行二维切片与原因。代理压力约束应结合留出误差一起阅读。</figcaption></figure><figure><h3>图 S5｜对照固定方案与Pareto候选</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"增油、成本和资源约束的共同权衡\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><circle cx=\"150\" cy=\"205\" r=\"7\" fill=\"#9bb5b6\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"220\" cy=\"176\" r=\"7\" fill=\"#9bb5b6\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"290\" cy=\"155\" r=\"8\" fill=\"#237f89\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"380\" cy=\"118\" r=\"8\" fill=\"#237f89\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"460\" cy=\"92\" r=\"8\" fill=\"#237f89\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"510\" cy=\"100\" r=\"7\" fill=\"#9bb5b6\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"610\" cy=\"62\" r=\"7\" fill=\"#d5ab7c\"/><path d=\"M80 230V30M80 230H740\" stroke=\"#839da3\" stroke-width=\"2\"/><path d=\"M545 40V230\" stroke=\"#ce8e4c\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><circle cx=\"680\" cy=\"80\" r=\"7\" fill=\"#d5ab7c\"/><path d=\"M150 205L290 155L380 118L460 92\" stroke=\"#237f89\" stroke-width=\"3\" fill=\"none\"/><text x=\"95\" y=\"40\">90天增油 t</text><text x=\"590\" y=\"264\">成本 万元 →</text><text x=\"550\" y=\"42\" fill=\"#a9753d\">预算线</text><text x=\"120\" y=\"265\" font-size=\"17\">同成本更高增油 / 同增油更低成本 → Pareto候选</text></g></svg></div><figcaption>输入：可行点、固定800m³/100t/7m³·min⁻¹方案；动作：按增油−成本权重排序；保留无支配的成本/增油候选；产物：当前建议点、固定点与权衡曲线。固定点超限时不显示有效收益改善。</figcaption></figure><figure><h3>图 S6｜复核外推与当前导出</h3><div class=\"diagram-scroll\" tabindex=\"0\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 280\" role=\"img\" aria-label=\"当前结果的证据链\"><rect width=\"800\" height=\"280\" rx=\"20\" fill=\"#f1f5f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#203448\"><rect x=\"25\" y=\"40\" width=\"225\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"39\" y=\"77.0\">组号 / 数据版本</text><rect x=\"285\" y=\"40\" width=\"225\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"299\" y=\"77.0\">冻结代理 + 约束</text><rect x=\"545\" y=\"40\" width=\"230\" height=\"62\" rx=\"12\" fill=\"#dcebe7\"/><text x=\"559\" y=\"77.0\">候选与复核意见</text><text x=\"40\" y=\"175\">留出误差、可行率、目标差值与单位跟随JSON。</text><text x=\"40\" y=\"230\" font-size=\"17\">改变输入 → 结果过期 → 重算后才能导出。</text></g></svg></div><figcaption>输入：候选参数、代理留出误差和人工复核意见；动作：检查地层输入范围；人工选择候选另记，导出当前运行快照；产物：来源、参数、约束、候选与复核记录。代理目标改善是预测量，不能称现场实际增油。</figcaption></figure>"
+            }
+          },
+          "demo": {
+            "mode": "page",
+            "html": "demo/index.html",
+            "js": "demo/demo.js",
+            "label": "可运行示范",
+            "height": 1150,
+            "intro": "从独立储层的合成试验学习增油与压力响应，再在441个设计点里逐个检查预算、用水、支撑剂与压力，直观看到收益和代价。"
+          }
+        }
+      },
+      "sceneName": "压裂参数智能优化",
+      "stageName": "增采",
+      "errors": [
+        "demo HTML has unbundled reference: https://glossary.slb.com/en/terms/h/hydraulic_fracturing",
+        "demo HTML has unbundled reference: https://glossary.slb.com/en/terms/p/proppant"
+      ],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/e1/case.json",
+          "bytes": 24796,
+          "sha256": "7a47a51a8057e090473f182997fc992780c9b090479aea888eeaa9f8df3c132f"
+        },
+        {
+          "path": "expansion-src/e1/engine.js",
+          "bytes": 7631,
+          "sha256": "680b9d3a9bb9d9a68b181ba2bb62fcabbd3a725d4ddfd7a992d7536adc106e8c"
+        },
+        {
+          "path": "expansion-src/e1/app.js",
+          "bytes": 12571,
+          "sha256": "fc96f59310aaef5c7b35ab66322ade2d0bd6daeb43e509f9126a7b45ccebaa1d"
+        },
+        {
+          "path": "expansion-src/e1/demo.html",
+          "bytes": 25069,
+          "sha256": "07f9ade00b3a83142d9bd414b492f95e1290188a60695b3cc655b303ec2da212"
+        },
+        {
+          "path": "expansion-src/e1/demo.css",
+          "bytes": 8368,
+          "sha256": "1d27c9bc61b54466f04f09c979cefe3d2cbcff5783f19d8d31c3e0c4e03fcf86"
+        },
+        {
+          "path": "expansion-src/e1/README.txt",
+          "bytes": 1077,
+          "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+        }
+      ]
+    }
+  ],
+  "plugin": {
+    "path": "portal/assets/s17-expansion-cases.js",
+    "bytes": 49958,
+    "sha256": "b5a0c041e022683ac5b6dc5874b5fdfc598af5d9cea15ed630e4648ed8fd808b"
+  }
+}

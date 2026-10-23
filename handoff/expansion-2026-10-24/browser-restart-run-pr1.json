@@ -1,0 +1,244 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "pr1",
+  "caseId": "s17x-pr1-pump-card",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:12:57.765Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "1c3a7b476f66c9bc15d3a91c5d11bd6245936a1a26ee2d53572d22390468f177",
+      "bytes": 21369
+    },
+    {
+      "path": "README.txt",
+      "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41",
+      "bytes": 3458
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787",
+      "bytes": 24834
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "88ca0562e088df63bb215c7a7b2b20f1e674f0d95e98da7b91dc5342f6917ec7",
+      "bytes": 92379
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2",
+      "bytes": 4305
+    }
+  ],
+  "metrics": {
+    "model": {
+      "matrix": [
+        [
+          24,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          24,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          24,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "name": "充满泵",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        },
+        {
+          "name": "供液不足形",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        },
+        {
+          "name": "气影响形",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        }
+      ],
+      "recalls": [
+        1,
+        1,
+        1
+      ],
+      "macroF1": 1,
+      "count": 72,
+      "accepted": 72,
+      "correct": 72,
+      "rejected": 0,
+      "coverage": 1,
+      "acceptedError": 0,
+      "accuracy": 1
+    },
+    "baseline": {
+      "matrix": [
+        [
+          24,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          14,
+          10,
+          0
+        ],
+        [
+          0,
+          2,
+          22,
+          0
+        ]
+      ],
+      "perClass": [
+        {
+          "name": "充满泵",
+          "actual": 24,
+          "predicted": 24,
+          "TP": 24,
+          "recall": 1,
+          "F1": 1
+        },
+        {
+          "name": "供液不足形",
+          "actual": 24,
+          "predicted": 16,
+          "TP": 14,
+          "recall": 0.5833333333333334,
+          "F1": 0.7
+        },
+        {
+          "name": "气影响形",
+          "actual": 24,
+          "predicted": 32,
+          "TP": 22,
+          "recall": 0.9166666666666666,
+          "F1": 0.7857142857142857
+        }
+      ],
+      "recalls": [
+        1,
+        0.5833333333333334,
+        0.9166666666666666
+      ],
+      "macroF1": 0.8285714285714286,
+      "count": 72,
+      "accepted": 72,
+      "correct": 60,
+      "rejected": 0,
+      "coverage": 1,
+      "acceptedError": 0.16666666666666666,
+      "accuracy": 0.8333333333333334
+    },
+    "current": {
+      "label": 2,
+      "support": 1,
+      "distance": 0.09971589653961878,
+      "reasons": []
+    }
+  },
+  "metricsSha256": "c029af653f932a8a82bf0802e43a4056231c8f46107be9571d577425393f57e9",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:12:58.901Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-pr1-pump-card",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 22731,
+        "sha256": "ea51ff806cc0c2ab2553ddefa732e742630da42eca0944d6f5f0a78423c4ca94"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 24834,
+        "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 92379,
+        "sha256": "88ca0562e088df63bb215c7a7b2b20f1e674f0d95e98da7b91dc5342f6917ec7"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4305,
+        "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3458,
+        "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41"
+      }
+    ],
+    "manifestCanonicalSha256": "1c3a7b476f66c9bc15d3a91c5d11bd6245936a1a26ee2d53572d22390468f177",
+    "storedPackageMatchesDisk": true
+  }
+}

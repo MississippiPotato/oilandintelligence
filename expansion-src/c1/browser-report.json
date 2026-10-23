@@ -1,0 +1,852 @@
+{
+  "kind": "Actual standalone browser interaction; does not claim teacher-portal import",
+  "checkedAt": "2026-10-23T16:50:27.326Z",
+  "checks": [
+    {
+      "name": "c1 has 3 independent concept SVGs",
+      "status": "passed"
+    },
+    {
+      "name": "c1 step 1 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "c1 step 2 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "c1 step 3 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "c1 step 4 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "c1 step 5 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "c1 browser metric equals actual Node calculation",
+      "status": "passed"
+    },
+    {
+      "name": "c1 body text is at least 18px",
+      "status": "passed"
+    },
+    {
+      "name": "c1 current review status is exposed",
+      "status": "passed"
+    },
+    {
+      "name": "c1 manual note records current run",
+      "status": "passed"
+    },
+    {
+      "name": "c1 changing inputs invalidates current metrics and export",
+      "status": "passed"
+    },
+    {
+      "name": "c1 input change retains old note as history",
+      "status": "passed"
+    },
+    {
+      "name": "c1 rerun increments run ID and preserves history",
+      "status": "passed"
+    },
+    {
+      "name": "c1 actual JSON download completes",
+      "status": "passed"
+    },
+    {
+      "name": "c1 boundary preset marks results stale",
+      "status": "passed"
+    },
+    {
+      "name": "c1 boundary interaction changes actual result",
+      "status": "passed"
+    },
+    {
+      "name": "c1 reset restores default computation",
+      "status": "passed"
+    },
+    {
+      "name": "c1 emulated mobile has no whole-page horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "c1 chart preserves readable CSS size with local scrolling",
+      "status": "passed"
+    },
+    {
+      "name": "c1 standalone file works while browser network is offline",
+      "status": "passed"
+    },
+    {
+      "name": "co1 has 3 independent concept SVGs",
+      "status": "passed"
+    },
+    {
+      "name": "co1 step 1 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "co1 step 2 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "co1 step 3 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "co1 step 4 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "co1 step 5 has inputs, actions, outputs and own SVG",
+      "status": "passed"
+    },
+    {
+      "name": "co1 browser metric equals actual Node calculation",
+      "status": "passed"
+    },
+    {
+      "name": "co1 body text is at least 18px",
+      "status": "passed"
+    },
+    {
+      "name": "co1 current review status is exposed",
+      "status": "passed"
+    },
+    {
+      "name": "co1 manual note records current run",
+      "status": "passed"
+    },
+    {
+      "name": "co1 changing inputs invalidates current metrics and export",
+      "status": "passed"
+    },
+    {
+      "name": "co1 input change retains old note as history",
+      "status": "passed"
+    },
+    {
+      "name": "co1 rerun increments run ID and preserves history",
+      "status": "passed"
+    },
+    {
+      "name": "co1 actual JSON download completes",
+      "status": "passed"
+    },
+    {
+      "name": "co1 boundary preset marks results stale",
+      "status": "passed"
+    },
+    {
+      "name": "co1 boundary interaction changes actual result",
+      "status": "passed"
+    },
+    {
+      "name": "co1 reset restores default computation",
+      "status": "passed"
+    },
+    {
+      "name": "co1 emulated mobile has no whole-page horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "co1 chart preserves readable CSS size with local scrolling",
+      "status": "passed"
+    },
+    {
+      "name": "co1 standalone file works while browser network is offline",
+      "status": "passed"
+    },
+    {
+      "name": "No JavaScript page exceptions",
+      "status": "passed"
+    },
+    {
+      "name": "No external HTTP requests",
+      "status": "passed"
+    }
+  ],
+  "counts": {
+    "passed": 42,
+    "failed": 0
+  },
+  "pageErrors": [],
+  "externalRequests": [],
+  "results": [
+    {
+      "sceneId": "c1",
+      "caseId": "s17x-c1-cement-quality",
+      "ordinary": {
+        "sceneId": "c1",
+        "caseId": "s17x-c1-cement-quality",
+        "status": "ready",
+        "runId": 1,
+        "params": {
+          "noise": 0.035,
+          "eccentric": 0,
+          "micro": 0,
+          "reject": 0.6,
+          "thresholdShift": 0
+        },
+        "metrics": {
+          "model": {
+            "total": 192,
+            "correct": 180,
+            "accepted": 187,
+            "rejected": 5,
+            "macroF1": 0.9498812648418947,
+            "coverage": 0.9739583333333334,
+            "acceptedError": 0.03743315508021394,
+            "recalls": [
+              0.9375,
+              0.90625,
+              0.96875
+            ],
+            "confusion": [
+              [
+                60,
+                4,
+                0,
+                0
+              ],
+              [
+                3,
+                58,
+                0,
+                3
+              ],
+              [
+                0,
+                0,
+                62,
+                2
+              ]
+            ]
+          },
+          "baseline": {
+            "total": 192,
+            "correct": 130,
+            "accepted": 192,
+            "rejected": 0,
+            "macroF1": 0.6746594064700964,
+            "coverage": 1,
+            "acceptedError": 0.32291666666666663,
+            "recalls": [
+              0.859375,
+              0.71875,
+              0.453125
+            ],
+            "confusion": [
+              [
+                55,
+                9,
+                0,
+                0
+              ],
+              [
+                18,
+                46,
+                0,
+                0
+              ],
+              [
+                0,
+                35,
+                29,
+                0
+              ]
+            ]
+          }
+        },
+        "reviewCount": 0,
+        "currentReviewCount": 0
+      },
+      "second": {
+        "sceneId": "c1",
+        "caseId": "s17x-c1-cement-quality",
+        "status": "ready",
+        "runId": 2,
+        "params": {
+          "noise": 0.04,
+          "eccentric": 0,
+          "micro": 0,
+          "reject": 0.6,
+          "thresholdShift": 0
+        },
+        "metrics": {
+          "model": {
+            "total": 192,
+            "correct": 179,
+            "accepted": 187,
+            "rejected": 5,
+            "macroF1": 0.9448213471330832,
+            "coverage": 0.9739583333333334,
+            "acceptedError": 0.04278074866310155,
+            "recalls": [
+              0.9375,
+              0.9375,
+              0.921875
+            ],
+            "confusion": [
+              [
+                60,
+                4,
+                0,
+                0
+              ],
+              [
+                3,
+                60,
+                0,
+                1
+              ],
+              [
+                0,
+                1,
+                59,
+                4
+              ]
+            ]
+          },
+          "baseline": {
+            "total": 192,
+            "correct": 130,
+            "accepted": 192,
+            "rejected": 0,
+            "macroF1": 0.6746594064700964,
+            "coverage": 1,
+            "acceptedError": 0.32291666666666663,
+            "recalls": [
+              0.859375,
+              0.71875,
+              0.453125
+            ],
+            "confusion": [
+              [
+                55,
+                9,
+                0,
+                0
+              ],
+              [
+                18,
+                46,
+                0,
+                0
+              ],
+              [
+                0,
+                35,
+                29,
+                0
+              ]
+            ]
+          }
+        },
+        "reviewCount": 1,
+        "currentReviewCount": 0
+      },
+      "boundary": {
+        "sceneId": "c1",
+        "caseId": "s17x-c1-cement-quality",
+        "status": "ready",
+        "runId": 3,
+        "params": {
+          "noise": 0.22,
+          "eccentric": 0,
+          "micro": 0,
+          "reject": 0.6,
+          "thresholdShift": 0
+        },
+        "metrics": {
+          "model": {
+            "total": 192,
+            "correct": 81,
+            "accepted": 172,
+            "rejected": 20,
+            "macroF1": 0.3462157809983897,
+            "coverage": 0.8958333333333334,
+            "acceptedError": 0.5290697674418605,
+            "recalls": [
+              0.984375,
+              0.28125,
+              0
+            ],
+            "confusion": [
+              [
+                63,
+                1,
+                0,
+                0
+              ],
+              [
+                34,
+                18,
+                0,
+                12
+              ],
+              [
+                1,
+                55,
+                0,
+                8
+              ]
+            ]
+          },
+          "baseline": {
+            "total": 192,
+            "correct": 108,
+            "accepted": 192,
+            "rejected": 0,
+            "macroF1": 0.47155563013928514,
+            "coverage": 1,
+            "acceptedError": 0.4375,
+            "recalls": [
+              0,
+              0.921875,
+              0.765625
+            ],
+            "confusion": [
+              [
+                0,
+                64,
+                0,
+                0
+              ],
+              [
+                0,
+                59,
+                5,
+                0
+              ],
+              [
+                0,
+                15,
+                49,
+                0
+              ]
+            ]
+          }
+        },
+        "reviewCount": 1,
+        "currentReviewCount": 0
+      },
+      "reset": {
+        "sceneId": "c1",
+        "caseId": "s17x-c1-cement-quality",
+        "status": "ready",
+        "runId": 4,
+        "params": {
+          "noise": 0.035,
+          "eccentric": 0,
+          "micro": 0,
+          "reject": 0.6,
+          "thresholdShift": 0
+        },
+        "metrics": {
+          "model": {
+            "total": 192,
+            "correct": 180,
+            "accepted": 187,
+            "rejected": 5,
+            "macroF1": 0.9498812648418947,
+            "coverage": 0.9739583333333334,
+            "acceptedError": 0.03743315508021394,
+            "recalls": [
+              0.9375,
+              0.90625,
+              0.96875
+            ],
+            "confusion": [
+              [
+                60,
+                4,
+                0,
+                0
+              ],
+              [
+                3,
+                58,
+                0,
+                3
+              ],
+              [
+                0,
+                0,
+                62,
+                2
+              ]
+            ]
+          },
+          "baseline": {
+            "total": 192,
+            "correct": 130,
+            "accepted": 192,
+            "rejected": 0,
+            "macroF1": 0.6746594064700964,
+            "coverage": 1,
+            "acceptedError": 0.32291666666666663,
+            "recalls": [
+              0.859375,
+              0.71875,
+              0.453125
+            ],
+            "confusion": [
+              [
+                55,
+                9,
+                0,
+                0
+              ],
+              [
+                18,
+                46,
+                0,
+                0
+              ],
+              [
+                0,
+                35,
+                29,
+                0
+              ]
+            ]
+          }
+        },
+        "reviewCount": 1,
+        "currentReviewCount": 0
+      },
+      "offline": {
+        "sceneId": "c1",
+        "caseId": "s17x-c1-cement-quality",
+        "status": "ready",
+        "runId": 1,
+        "params": {
+          "noise": 0.035,
+          "eccentric": 0,
+          "micro": 0,
+          "reject": 0.6,
+          "thresholdShift": 0
+        },
+        "metrics": {
+          "model": {
+            "total": 192,
+            "correct": 180,
+            "accepted": 187,
+            "rejected": 5,
+            "macroF1": 0.9498812648418947,
+            "coverage": 0.9739583333333334,
+            "acceptedError": 0.03743315508021394,
+            "recalls": [
+              0.9375,
+              0.90625,
+              0.96875
+            ],
+            "confusion": [
+              [
+                60,
+                4,
+                0,
+                0
+              ],
+              [
+                3,
+                58,
+                0,
+                3
+              ],
+              [
+                0,
+                0,
+                62,
+                2
+              ]
+            ]
+          },
+          "baseline": {
+            "total": 192,
+            "correct": 130,
+            "accepted": 192,
+            "rejected": 0,
+            "macroF1": 0.6746594064700964,
+            "coverage": 1,
+            "acceptedError": 0.32291666666666663,
+            "recalls": [
+              0.859375,
+              0.71875,
+              0.453125
+            ],
+            "confusion": [
+              [
+                55,
+                9,
+                0,
+                0
+              ],
+              [
+                18,
+                46,
+                0,
+                0
+              ],
+              [
+                0,
+                35,
+                29,
+                0
+              ]
+            ]
+          }
+        },
+        "reviewCount": 0,
+        "currentReviewCount": 0
+      },
+      "download": "expansion-src/c1/browser-evidence.json"
+    },
+    {
+      "sceneId": "co1",
+      "caseId": "s17x-co1-completion-choice",
+      "ordinary": {
+        "sceneId": "co1",
+        "caseId": "s17x-co1-completion-choice",
+        "status": "ready",
+        "runId": 1,
+        "params": {
+          "budget": 90,
+          "costWeight": 0.22,
+          "queryId": "TE-001",
+          "queryX": [
+            0.6951370144588872,
+            0.7710069122025743,
+            0.4929951655678451,
+            0.48021528166718785,
+            2.4348035863600668,
+            125.03530151792802
+          ]
+        },
+        "metrics": {
+          "total": 32,
+          "feasibleWellCount": 32,
+          "model": {
+            "recommended": 32,
+            "matched": 31,
+            "violations": 0,
+            "coverage": 1,
+            "top1Agreement": 0.96875,
+            "regret": 0.0294595160361395,
+            "regretTotal": 0.942704513156464
+          },
+          "baseline": {
+            "recommended": 21,
+            "matched": 18,
+            "violations": 0,
+            "excludedRaw": 11,
+            "coverage": 0.65625,
+            "top1Agreement": 0.8571428571428571,
+            "regret": 0.15760121616378747,
+            "regretTotal": 3.309625539439537
+          },
+          "surrogateMAE": 2.8058105435190632,
+          "surrogateDenominator": 128
+        },
+        "reviewCount": 0,
+        "currentReviewCount": 0
+      },
+      "second": {
+        "sceneId": "co1",
+        "caseId": "s17x-co1-completion-choice",
+        "status": "ready",
+        "runId": 2,
+        "params": {
+          "budget": 91,
+          "costWeight": 0.22,
+          "queryId": "TE-001",
+          "queryX": [
+            0.6951370144588872,
+            0.7710069122025743,
+            0.4929951655678451,
+            0.48021528166718785,
+            2.4348035863600668,
+            125.03530151792802
+          ]
+        },
+        "metrics": {
+          "total": 32,
+          "feasibleWellCount": 32,
+          "model": {
+            "recommended": 32,
+            "matched": 31,
+            "violations": 0,
+            "coverage": 1,
+            "top1Agreement": 0.96875,
+            "regret": 0.0294595160361395,
+            "regretTotal": 0.942704513156464
+          },
+          "baseline": {
+            "recommended": 21,
+            "matched": 18,
+            "violations": 0,
+            "excludedRaw": 11,
+            "coverage": 0.65625,
+            "top1Agreement": 0.8571428571428571,
+            "regret": 0.15760121616378747,
+            "regretTotal": 3.309625539439537
+          },
+          "surrogateMAE": 2.8058105435190632,
+          "surrogateDenominator": 128
+        },
+        "reviewCount": 1,
+        "currentReviewCount": 0
+      },
+      "boundary": {
+        "sceneId": "co1",
+        "caseId": "s17x-co1-completion-choice",
+        "status": "ready",
+        "runId": 3,
+        "params": {
+          "budget": 30,
+          "costWeight": 0.22,
+          "queryId": "CUSTOM",
+          "queryX": [
+            0.55,
+            0.9,
+            0.8,
+            0.9,
+            2.4,
+            120
+          ]
+        },
+        "metrics": {
+          "total": 32,
+          "feasibleWellCount": 9,
+          "model": {
+            "recommended": 9,
+            "matched": 9,
+            "violations": 0,
+            "coverage": 0.28125,
+            "top1Agreement": 1,
+            "regret": 0,
+            "regretTotal": 0
+          },
+          "baseline": {
+            "recommended": 6,
+            "matched": 6,
+            "violations": 0,
+            "excludedRaw": 3,
+            "coverage": 0.1875,
+            "top1Agreement": 1,
+            "regret": 0,
+            "regretTotal": 0
+          },
+          "surrogateMAE": 2.8058105435190632,
+          "surrogateDenominator": 128
+        },
+        "reviewCount": 1,
+        "currentReviewCount": 0
+      },
+      "reset": {
+        "sceneId": "co1",
+        "caseId": "s17x-co1-completion-choice",
+        "status": "ready",
+        "runId": 4,
+        "params": {
+          "budget": 90,
+          "costWeight": 0.22,
+          "queryId": "TE-001",
+          "queryX": [
+            0.6951370144588872,
+            0.7710069122025743,
+            0.4929951655678451,
+            0.48021528166718785,
+            2.4348035863600668,
+            125.03530151792802
+          ]
+        },
+        "metrics": {
+          "total": 32,
+          "feasibleWellCount": 32,
+          "model": {
+            "recommended": 32,
+            "matched": 31,
+            "violations": 0,
+            "coverage": 1,
+            "top1Agreement": 0.96875,
+            "regret": 0.0294595160361395,
+            "regretTotal": 0.942704513156464
+          },
+          "baseline": {
+            "recommended": 21,
+            "matched": 18,
+            "violations": 0,
+            "excludedRaw": 11,
+            "coverage": 0.65625,
+            "top1Agreement": 0.8571428571428571,
+            "regret": 0.15760121616378747,
+            "regretTotal": 3.309625539439537
+          },
+          "surrogateMAE": 2.8058105435190632,
+          "surrogateDenominator": 128
+        },
+        "reviewCount": 1,
+        "currentReviewCount": 0
+      },
+      "offline": {
+        "sceneId": "co1",
+        "caseId": "s17x-co1-completion-choice",
+        "status": "ready",
+        "runId": 1,
+        "params": {
+          "budget": 90,
+          "costWeight": 0.22,
+          "queryId": "TE-001",
+          "queryX": [
+            0.6951370144588872,
+            0.7710069122025743,
+            0.4929951655678451,
+            0.48021528166718785,
+            2.4348035863600668,
+            125.03530151792802
+          ]
+        },
+        "metrics": {
+          "total": 32,
+          "feasibleWellCount": 32,
+          "model": {
+            "recommended": 32,
+            "matched": 31,
+            "violations": 0,
+            "coverage": 1,
+            "top1Agreement": 0.96875,
+            "regret": 0.0294595160361395,
+            "regretTotal": 0.942704513156464
+          },
+          "baseline": {
+            "recommended": 21,
+            "matched": 18,
+            "violations": 0,
+            "excludedRaw": 11,
+            "coverage": 0.65625,
+            "top1Agreement": 0.8571428571428571,
+            "regret": 0.15760121616378747,
+            "regretTotal": 3.309625539439537
+          },
+          "surrogateMAE": 2.8058105435190632,
+          "surrogateDenominator": 128
+        },
+        "reviewCount": 0,
+        "currentReviewCount": 0
+      },
+      "download": "expansion-src/co1/browser-evidence.json"
+    }
+  ],
+  "notExecuted": [
+    "Teacher native add-case import and cumulative persistence",
+    "Actual physical mobile touch device",
+    "Firefox or WebKit"
+  ]
+}

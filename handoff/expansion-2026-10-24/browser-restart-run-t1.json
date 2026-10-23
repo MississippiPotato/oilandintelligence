@@ -1,0 +1,206 @@
+{
+  "scope": "Repeat actual calculation after CLI browser close/open; compare with earlier computed default metrics",
+  "scene": "t1",
+  "caseId": "s17x-t1-pipeline-leak",
+  "checks": [
+    {
+      "name": "real computation completes after browser restart",
+      "passed": true
+    },
+    {
+      "name": "restart calculation matches earlier computed default",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant initializes in original sandbox after restart",
+      "passed": true
+    },
+    {
+      "name": "current imported assistant opens as compact phone panel with 18px input",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700,
+        "inputFont": 18
+      }
+    },
+    {
+      "name": "original sandbox local assistant navigates to actual workflow",
+      "passed": true
+    },
+    {
+      "name": "assistant workflow navigation preserves completed calculation",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions after restart",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:13:10.346Z",
+  "browserPackageHashes": [
+    {
+      "path": "case.json#canonical",
+      "sha256": "689349093d50d324abcff155a1eafbbc521ca58a0cef341c53a0d85cf00ac037",
+      "bytes": 19535
+    },
+    {
+      "path": "README.txt",
+      "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a",
+      "bytes": 3506
+    },
+    {
+      "path": "demo/demo.css",
+      "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214",
+      "bytes": 22806
+    },
+    {
+      "path": "demo/demo.js",
+      "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44",
+      "bytes": 88203
+    },
+    {
+      "path": "demo/index.html",
+      "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0",
+      "bytes": 4630
+    }
+  ],
+  "metrics": {
+    "model": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "truthCount": 3,
+      "candidateCount": 3,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "delay_min": 2,
+      "falseEventsPerHour": 0,
+      "normalMinutes": 510,
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "delay_min": 2
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "delay_min": 2
+        },
+        {
+          "pred": 2,
+          "truth": 2,
+          "delay_min": 2
+        }
+      ]
+    },
+    "baseline": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "truthCount": 3,
+      "candidateCount": 3,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "delay_min": 2,
+      "falseEventsPerHour": 0,
+      "normalMinutes": 510,
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "delay_min": 2
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "delay_min": 2
+        },
+        {
+          "pred": 2,
+          "truth": 2,
+          "delay_min": 2
+        }
+      ]
+    },
+    "pressure": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 0,
+      "truthCount": 3,
+      "candidateCount": 4,
+      "precision": 0.75,
+      "recall": 1,
+      "f1": 0.8571428571428571,
+      "delay_min": 3,
+      "falseEventsPerHour": 0.11764705882352941,
+      "normalMinutes": 510,
+      "pairs": [
+        {
+          "pred": 0,
+          "truth": 0,
+          "delay_min": 5
+        },
+        {
+          "pred": 1,
+          "truth": 1,
+          "delay_min": 2
+        },
+        {
+          "pred": 3,
+          "truth": 2,
+          "delay_min": 2
+        }
+      ]
+    }
+  },
+  "metricsSha256": "5809da59a2625b83eef746bfd91ed6a13fc8d740eb17fba9d943f195b958b210",
+  "assistant": {
+    "width": 410,
+    "height": 700,
+    "inputFont": 18
+  },
+  "checkedAt": "2026-10-23T17:13:11.300Z",
+  "passed": 7,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-t1-pipeline-leak",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 20723,
+        "sha256": "3cdf278d27461b163a8b845b252038c6b0e9b3a58ad40b5a0f9779030679cb4b"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 22806,
+        "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 88203,
+        "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 4630,
+        "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 3506,
+        "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a"
+      }
+    ],
+    "manifestCanonicalSha256": "689349093d50d324abcff155a1eafbbc521ca58a0cef341c53a0d85cf00ac037",
+    "storedPackageMatchesDisk": true
+  }
+}

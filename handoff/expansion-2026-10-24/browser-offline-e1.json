@@ -1,0 +1,248 @@
+{
+  "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+  "scene": "e1",
+  "caseId": "s17x-e1-fracture-optimization",
+  "checks": [
+    {
+      "name": "offline background graphics render",
+      "passed": true
+    },
+    {
+      "name": "offline workflow graphics render in selected step or static gallery",
+      "passed": true,
+      "detail": {
+        "stepControls": 0,
+        "visibleSvg": 6
+      }
+    },
+    {
+      "name": "offline local model produces metrics",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant defaults to the requested compact phone panel",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700
+      }
+    },
+    {
+      "name": "offline assistant navigates to real workflow",
+      "passed": true
+    },
+    {
+      "name": "390px viewport has no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 17,
+        "paragraphs": [
+          {
+            "font": 12.92,
+            "class": "eyebrow"
+          },
+          {
+            "font": 17,
+            "class": ""
+          },
+          {
+            "font": 15.98,
+            "class": ""
+          },
+          {
+            "font": 15.98,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          17
+        ]
+      }
+    },
+    {
+      "name": "body and main explanatory paragraphs are at least 17px",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 17,
+        "paragraphs": [
+          {
+            "font": 12.92,
+            "class": "eyebrow"
+          },
+          {
+            "font": 17,
+            "class": ""
+          },
+          {
+            "font": 15.98,
+            "class": ""
+          },
+          {
+            "font": 15.98,
+            "class": ""
+          }
+        ],
+        "mainParagraphs": [
+          17
+        ]
+      }
+    },
+    {
+      "name": "mobile run and reset controls are reachable",
+      "passed": true
+    },
+    {
+      "name": "mobile assistant composer and send control fit viewport with 18px input",
+      "passed": true,
+      "detail": {
+        "left": 6,
+        "right": 384,
+        "top": 6,
+        "bottom": 838,
+        "inputFont": 18,
+        "send": {
+          "left": 324,
+          "right": 357,
+          "top": 739.40625,
+          "bottom": 785.40625
+        }
+      }
+    },
+    {
+      "name": "file offline path makes zero HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no JavaScript exceptions offline",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:05:20.394Z",
+  "workflow": {
+    "stepControls": 0,
+    "visibleSvg": 6
+  },
+  "metrics": {
+    "surrogate": {
+      "denominator": 96,
+      "oil90_t": {
+        "MAE": 2.6075275159406908,
+        "RMSE": 2.9698819150043594,
+        "bias": 0.4621513994321906
+      },
+      "pressure_MPa": {
+        "MAE": 0.47644100643047765,
+        "RMSE": 0.5415402618490917,
+        "bias": 0.25062023902484903
+      }
+    },
+    "meanBaseline": {
+      "denominator": 96,
+      "oil90_t": {
+        "MAE": 24.084239159676827,
+        "RMSE": 28.329793999490757,
+        "bias": -13.965674186239204
+      },
+      "pressure_MPa": {
+        "MAE": 2.1507188006335203,
+        "RMSE": 2.597393459006992,
+        "bias": 0.6753578546147736
+      }
+    },
+    "gridCount": 441,
+    "feasibleCount": 284,
+    "feasibleRate": 0.6439909297052154,
+    "objectiveGain": 3.2307837711261413,
+    "oilGain_t": 7.910783771126148
+  },
+  "assistant": {
+    "width": 410,
+    "height": 700
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390,
+    "body": 390,
+    "font": 17,
+    "paragraphs": [
+      {
+        "font": 12.92,
+        "class": "eyebrow"
+      },
+      {
+        "font": 17,
+        "class": ""
+      },
+      {
+        "font": 15.98,
+        "class": ""
+      },
+      {
+        "font": 15.98,
+        "class": ""
+      }
+    ],
+    "mainParagraphs": [
+      17
+    ]
+  },
+  "mobileAssistant": {
+    "left": 6,
+    "right": 384,
+    "top": 6,
+    "bottom": 838,
+    "inputFont": 18,
+    "send": {
+      "left": 324,
+      "right": 357,
+      "top": 739.40625,
+      "bottom": 785.40625
+    }
+  },
+  "checkedAt": "2026-10-23T17:05:21.497Z",
+  "passed": 11,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-e1-fracture-optimization",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 25809,
+        "sha256": "51490a009115eb6534de46b01b843de04e773a5f860187a8a0d5ef6d2469fdf9"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25377,
+        "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 62898,
+        "sha256": "7c346c3e07ba0d668e58411397d47a363d941f2310af00cfbe3fb3f868b6ebb6"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 26026,
+        "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1077,
+        "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+      }
+    ],
+    "storedPackageMatchesDisk": null
+  }
+}

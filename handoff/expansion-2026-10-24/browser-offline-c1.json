@@ -1,0 +1,243 @@
+{
+  "scope": "Standalone file URL with browser network disabled, real local calculation and assistant workflow navigation; mobile readability",
+  "scene": "c1",
+  "caseId": "s17x-c1-cement-quality",
+  "checks": [
+    {
+      "name": "offline background graphics render",
+      "passed": true
+    },
+    {
+      "name": "offline workflow graphics render in selected step or static gallery",
+      "passed": true,
+      "detail": {
+        "stepControls": 5,
+        "visibleSvg": 1
+      }
+    },
+    {
+      "name": "offline local model produces metrics",
+      "passed": true
+    },
+    {
+      "name": "standalone assistant defaults to the requested compact phone panel",
+      "passed": true,
+      "detail": {
+        "width": 410,
+        "height": 700
+      }
+    },
+    {
+      "name": "offline assistant navigates to real workflow",
+      "passed": true
+    },
+    {
+      "name": "390px viewport has no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 17,
+        "paragraphs": [
+          {
+            "font": 16,
+            "class": "small"
+          }
+        ],
+        "mainParagraphs": []
+      }
+    },
+    {
+      "name": "body and main explanatory paragraphs are at least 17px",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390,
+        "font": 17,
+        "paragraphs": [
+          {
+            "font": 16,
+            "class": "small"
+          }
+        ],
+        "mainParagraphs": []
+      }
+    },
+    {
+      "name": "mobile run and reset controls are reachable",
+      "passed": true
+    },
+    {
+      "name": "mobile assistant composer and send control fit viewport with 18px input",
+      "passed": true,
+      "detail": {
+        "left": 6,
+        "right": 384,
+        "top": 6,
+        "bottom": 838,
+        "inputFont": 18,
+        "send": {
+          "left": 324,
+          "right": 357,
+          "top": 739.40625,
+          "bottom": 785.40625
+        }
+      }
+    },
+    {
+      "name": "file offline path makes zero HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no JavaScript exceptions offline",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "errorDetails": [],
+  "requests": [],
+  "startedAt": "2026-10-23T17:05:06.404Z",
+  "workflow": {
+    "stepControls": 5,
+    "visibleSvg": 1
+  },
+  "metrics": {
+    "model": {
+      "total": 192,
+      "correct": 180,
+      "accepted": 187,
+      "rejected": 5,
+      "macroF1": 0.9498812648418947,
+      "coverage": 0.9739583333333334,
+      "acceptedError": 0.03743315508021394,
+      "recalls": [
+        0.9375,
+        0.90625,
+        0.96875
+      ],
+      "confusion": [
+        [
+          60,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          58,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          62,
+          2
+        ]
+      ]
+    },
+    "baseline": {
+      "total": 192,
+      "correct": 130,
+      "accepted": 192,
+      "rejected": 0,
+      "macroF1": 0.6746594064700964,
+      "coverage": 1,
+      "acceptedError": 0.32291666666666663,
+      "recalls": [
+        0.859375,
+        0.71875,
+        0.453125
+      ],
+      "confusion": [
+        [
+          55,
+          9,
+          0,
+          0
+        ],
+        [
+          18,
+          46,
+          0,
+          0
+        ],
+        [
+          0,
+          35,
+          29,
+          0
+        ]
+      ]
+    }
+  },
+  "assistant": {
+    "width": 410,
+    "height": 700
+  },
+  "mobile": {
+    "viewport": 390,
+    "document": 390,
+    "body": 390,
+    "font": 17,
+    "paragraphs": [
+      {
+        "font": 16,
+        "class": "small"
+      }
+    ],
+    "mainParagraphs": []
+  },
+  "mobileAssistant": {
+    "left": 6,
+    "right": 384,
+    "top": 6,
+    "bottom": 838,
+    "inputFont": 18,
+    "send": {
+      "left": 324,
+      "right": 357,
+      "top": 739.40625,
+      "bottom": 785.40625
+    }
+  },
+  "checkedAt": "2026-10-23T17:05:07.980Z",
+  "passed": 11,
+  "failed": 0,
+  "nodeArtifactProvenance": {
+    "scope": "File hashes recorded by Node beside this browser run; not browser assertions",
+    "directory": "dist/expansion-cases/s17x-c1-cement-quality",
+    "files": [
+      {
+        "path": "case.json",
+        "bytes": 27349,
+        "sha256": "f5799d2160b8db3984795f82580af67e3104e8ddf532568bc635989afad45258"
+      },
+      {
+        "path": "demo/demo.css",
+        "bytes": 25863,
+        "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+      },
+      {
+        "path": "demo/demo.js",
+        "bytes": 87432,
+        "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625"
+      },
+      {
+        "path": "demo/index.html",
+        "bytes": 7135,
+        "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf"
+      },
+      {
+        "path": "README.txt",
+        "bytes": 1226,
+        "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+      }
+    ],
+    "storedPackageMatchesDisk": null
+  }
+}
