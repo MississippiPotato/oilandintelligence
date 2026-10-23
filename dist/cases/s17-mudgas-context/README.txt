@@ -1,4 +1,4 @@
-学号17 / m2 / s17-mudgas-context / 1.4.0
+学号17 / m2 / s17-mudgas-context / 1.4.1
 教学合成数据；默认纯前端自包含离线运行。
 
 使用：在老师原门户点“添加案例”，选择本文件夹（内含case.json、README.txt与demo/），一次选完整目录。不是ZIP，不是cases总目录。校验后先试跑，再“校验并添加”。进入m2的三个标签，点击运行。刷新、关闭重开后再运行。也可直接双击demo/index.html。

@@ -1,0 +1,38 @@
+{
+  "scope": "Post-package actual browser smoke of freshly extracted 1.7.1 full archive, context offline",
+  "checks": [
+    {
+      "name": "extracted m1 has four default-visible concept figures with prose",
+      "passed": true
+    },
+    {
+      "name": "extracted diagram zoom works",
+      "passed": true
+    },
+    {
+      "name": "extracted m1 actually calculates and exports",
+      "passed": true
+    },
+    {
+      "name": "extracted portal registers the 17 authored cases",
+      "passed": true
+    },
+    {
+      "name": "all four extracted themes load locally",
+      "passed": true
+    },
+    {
+      "name": "extracted runtime performs no HTTP request",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "http": [],
+  "errors": [],
+  "checkedAt": "2026-10-23T18:03:17.097Z",
+  "passed": 7,
+  "failed": 0
+}

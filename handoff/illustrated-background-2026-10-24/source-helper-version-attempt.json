@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-10-23T17:49:35.497Z",
+  "kind": "source_and_build_contract_checks",
+  "browserExecuted": false,
+  "expectedCases": 12,
+  "actualBuiltCases": 12,
+  "passed": 6,
+  "failed": 1,
+  "results": [
+    {
+      "name": "teacher copies, four import contract files and original five-case source bytes preserved",
+      "passed": true,
+      "detail": {
+        "files": 80,
+        "browserEvidence": false
+      }
+    },
+    {
+      "name": "build count equals actual complete packages, no planned case registered",
+      "passed": true,
+      "detail": {
+        "actual": 12,
+        "missing": [],
+        "invalid": []
+      }
+    },
+    {
+      "name": "each built folder has exactly five required runtime files with locked bytes",
+      "passed": true,
+      "detail": {
+        "files": 60,
+        "cumulativeBytes": 1696583,
+        "singleFolderLimit": 6291456
+      }
+    },
+    {
+      "name": "assistant included from current shared source, per-page context remains case-specific",
+      "passed": false,
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    bytes: 1027,\n    path: 'tools/assistant-bundle.mjs',\n+   sha256: '7b5c7f021ad1485d95ff6da4142bd778306d4aabb82095d8b571c1e51ebd8659'\n-   sha256: '8487ca2b5abd2f48eea1f37302ead82a5b836ae424923c03126e367b9c087057'\n  }\n"
+    },
+    {
+      "name": "optional assistant can be inlined in head without accessing body before DOM readiness",
+      "passed": true,
+      "detail": {
+        "loadingDocumentExecuted": true,
+        "bodyAccessBeforeDOMContentLoaded": false,
+        "executionKind": "Node VM bootstrap check; post-event browser startup remains a browser check"
+      }
+    },
+    {
+      "name": "plugin uses real teacher Cases.register and retains all background/workflow content",
+      "passed": true,
+      "detail": {
+        "cases": 12,
+        "registryErrors": 0,
+        "iframeUsesOpaqueOrigin": true,
+        "executionKind": "Node VM contract check; not a real browser"
+      }
+    },
+    {
+      "name": "unmodified teacher manifest validator and page host can resolve and inline every package",
+      "passed": true,
+      "detail": {
+        "packages": [
+          {
+            "caseId": "s17x-g1-remote-lithology",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-s1-seismic-fault",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-d1-rop-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-w4-log-lithology",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-c1-cement-quality",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-co1-completion-choice",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-p1-perforation-design",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-pr1-pump-card",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-wo1-workover-retrieval",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-e1-fracture-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-t1-pipeline-leak",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-r5-quality-softsensor",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          }
+        ],
+        "executionKind": "Unmodified teacher source evaluated in Node VM; browser rendering not executed",
+        "manifestCheckUsesPublicAPIWithoutLoadedFileState": true
+      }
+    }
+  ],
+  "notVerified": [
+    "real browser original Add Case directory import",
+    "sandbox rendering and model interactions",
+    "refresh and whole browser reopen persistence",
+    "offline default interactions",
+    "actual download",
+    "narrow screen and keyboard behavior",
+    "scientific correctness and inference/evaluation separation require per-case engine checks and review"
+  ]
+}

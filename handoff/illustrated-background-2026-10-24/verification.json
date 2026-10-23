@@ -1,0 +1,673 @@
+{
+  "checkedAt": "2026-10-23T18:01:45.372Z",
+  "version": "1.7.1-preview",
+  "scope": "File locks and saved actual browser evidence for the illustrated-background revision",
+  "browserExecutedByThisCommand": false,
+  "checks": [
+    {
+      "name": "teacher originals, readonly copy and native import contract are preserved",
+      "passed": true,
+      "detail": {
+        "originalAndCopyFiles": 46,
+        "contractFiles": 4,
+        "teacherSampleFiles": 2
+      }
+    },
+    {
+      "name": "the change preserves all model/data bytes, 12 added packages and the compact assistant",
+      "passed": true,
+      "detail": {
+        "previousCommit": "e4a9b1ef56287a01b11ce5712d26388bc390945e",
+        "modelAndDataFiles": 27,
+        "frozenFiles": 65
+      }
+    },
+    {
+      "name": "85 runtime files match the current five plus unchanged twelve build locks",
+      "passed": true,
+      "detail": {
+        "mandatoryVersion": "1.4.1",
+        "extraVersion": "1.0.0",
+        "selfAuthoredCases": 17,
+        "totalBytes": 3290259
+      }
+    },
+    {
+      "name": "16 inline teaching figures are interleaved with explanations and read-the-figure captions",
+      "passed": true,
+      "detail": {
+        "chaptersPerCase": 4,
+        "figures": 16,
+        "sourceFiles": [
+          "shared/mudlogging-diagrams.js",
+          "shared/mudlogging-knowledge.js"
+        ]
+      }
+    },
+    {
+      "name": "current actual-browser reports pass for offline, original import, enhanced reader, old package and restart",
+      "passed": true,
+      "detail": [
+        {
+          "file": "handoff/illustrated-background-2026-10-24/browser-standalone.json",
+          "scope": "Actual Chrome file/offline checks of five illustrated professional backgrounds, inline reading, zoom, mobile scrolling and unchanged calculation",
+          "passed": 47,
+          "checkedAt": "2026-10-23T17:49:04.390Z"
+        },
+        {
+          "file": "handoff/illustrated-background-2026-10-24/browser-original.json",
+          "scope": "Actual unchanged teacher folder importer: five 1.4.1 illustrated packages, original background and sandbox calculation/download/reload; plus 12 unchanged packages for cumulative capacity",
+          "passed": 41,
+          "checkedAt": "2026-10-23T17:49:47.334Z"
+        },
+        {
+          "file": "handoff/illustrated-background-2026-10-24/browser-enhanced.json",
+          "scope": "Actual enhanced portal reading of current five illustrated backgrounds, figure zoom, compact assistant and 390px layout",
+          "passed": 18,
+          "checkedAt": "2026-10-23T17:54:11.813Z"
+        },
+        {
+          "file": "handoff/illustrated-background-2026-10-24/browser-legacy.json",
+          "scope": "Enhanced portal actually imports preserved old 1.4.0 m1 package and renders new inline explanation without rewriting the stored old package",
+          "passed": 5,
+          "checkedAt": "2026-10-23T17:54:56.936Z"
+        },
+        {
+          "file": "handoff/illustrated-background-2026-10-24/browser-restart.json",
+          "scope": "Actual CLI browser process close/open, same dedicated profile: 17 restored packages and each current mandatory case recalculated",
+          "passed": 12,
+          "checkedAt": "2026-10-23T17:54:40.370Z"
+        }
+      ]
+    },
+    {
+      "name": "all 17 packages persist after real original UI import and whole browser restart",
+      "passed": true,
+      "detail": {
+        "originalStorageCharacters": 3021397,
+        "currentMandatoryVersion": "1.4.1",
+        "extraVersion": "1.0.0"
+      }
+    },
+    {
+      "name": "each mandatory case computes the same default metrics in all three current browser runs",
+      "passed": true,
+      "detail": {
+        "comparedRuns": 15,
+        "baselineCaseVersion": "1.4.0"
+      }
+    },
+    {
+      "name": "current downloaded evidence retains identity, version and specific source references",
+      "passed": true,
+      "detail": {
+        "currentFiveDownloads": 5,
+        "unchangedExtraDownloads": 12,
+        "validationKind": "Node checks actual downloaded bytes, not browser assertions"
+      }
+    },
+    {
+      "name": "available historical archives retain bytes; local-only transport archives are recorded separately",
+      "passed": true,
+      "detail": {
+        "verified": [
+          "dist/s17-cuttings-lithology-1.4.0.zip",
+          "dist/s17-mudgas-context-1.4.0.zip",
+          "dist/s17-fluorescence-review-1.4.0.zip",
+          "dist/s17-drilltime-boundaries-1.4.0.zip",
+          "dist/s17-evidence-report-1.4.0.zip",
+          "dist/s17-mudlogging-cases-only-1.4.0.zip",
+          "dist/s17x-g1-remote-lithology-1.0.0.zip",
+          "dist/s17x-s1-seismic-fault-1.0.0.zip",
+          "dist/s17x-d1-rop-optimization-1.0.0.zip",
+          "dist/s17x-w4-log-lithology-1.0.0.zip",
+          "dist/s17x-c1-cement-quality-1.0.0.zip",
+          "dist/s17x-co1-completion-choice-1.0.0.zip",
+          "dist/s17x-p1-perforation-design-1.0.0.zip",
+          "dist/s17x-pr1-pump-card-1.0.0.zip",
+          "dist/s17x-wo1-workover-retrieval-1.0.0.zip",
+          "dist/s17x-e1-fracture-optimization-1.0.0.zip",
+          "dist/s17x-t1-pipeline-leak-1.0.0.zip",
+          "dist/s17x-r5-quality-softsensor-1.0.0.zip",
+          "dist/s17-expansion-12-cases-1.0.0.zip",
+          "dist/s17-petroleum-17-cases-1.7.0-preview.zip"
+        ],
+        "notIncludedInCheckoutOrTransport": []
+      }
+    }
+  ],
+  "browserReports": [
+    {
+      "file": "handoff/illustrated-background-2026-10-24/browser-standalone.json",
+      "scope": "Actual Chrome file/offline checks of five illustrated professional backgrounds, inline reading, zoom, mobile scrolling and unchanged calculation",
+      "passed": 47,
+      "checkedAt": "2026-10-23T17:49:04.390Z"
+    },
+    {
+      "file": "handoff/illustrated-background-2026-10-24/browser-original.json",
+      "scope": "Actual unchanged teacher folder importer: five 1.4.1 illustrated packages, original background and sandbox calculation/download/reload; plus 12 unchanged packages for cumulative capacity",
+      "passed": 41,
+      "checkedAt": "2026-10-23T17:49:47.334Z"
+    },
+    {
+      "file": "handoff/illustrated-background-2026-10-24/browser-enhanced.json",
+      "scope": "Actual enhanced portal reading of current five illustrated backgrounds, figure zoom, compact assistant and 390px layout",
+      "passed": 18,
+      "checkedAt": "2026-10-23T17:54:11.813Z"
+    },
+    {
+      "file": "handoff/illustrated-background-2026-10-24/browser-legacy.json",
+      "scope": "Enhanced portal actually imports preserved old 1.4.0 m1 package and renders new inline explanation without rewriting the stored old package",
+      "passed": 5,
+      "checkedAt": "2026-10-23T17:54:56.936Z"
+    },
+    {
+      "file": "handoff/illustrated-background-2026-10-24/browser-restart.json",
+      "scope": "Actual CLI browser process close/open, same dedicated profile: 17 restored packages and each current mandatory case recalculated",
+      "passed": 12,
+      "checkedAt": "2026-10-23T17:54:40.370Z"
+    }
+  ],
+  "exports": [
+    {
+      "file": "output/exports/v1.4.1/m1-original.json",
+      "caseId": "s17-cuttings-lithology",
+      "caseVersion": "1.4.1",
+      "sha256": "5029d52939b76a3f1570e9ee2ea9f2132dda7dd263b2a35a368747079b852d6c",
+      "bytes": 50726
+    },
+    {
+      "file": "output/exports/v1.4.1/m2-original.json",
+      "caseId": "s17-mudgas-context",
+      "caseVersion": "1.4.1",
+      "sha256": "824c1e1b315441092be9f5df56ae87a3c98da58a9836ae7a7362a20c1d51abf5",
+      "bytes": 160809
+    },
+    {
+      "file": "output/exports/v1.4.1/m3-original.json",
+      "caseId": "s17-fluorescence-review",
+      "caseVersion": "1.4.1",
+      "sha256": "142ab72022815017e46d193dc9ee1bb734203d84b50a99f52fcf6c2e5f8f15fd",
+      "bytes": 80214
+    },
+    {
+      "file": "output/exports/v1.4.1/m4-original.json",
+      "caseId": "s17-drilltime-boundaries",
+      "caseVersion": "1.4.1",
+      "sha256": "d3b71d044d062b560f5784764d4beeb0d6d742a5cbed2c6b87d5e38e3916bb77",
+      "bytes": 132431
+    },
+    {
+      "file": "output/exports/v1.4.1/m5-original.json",
+      "caseId": "s17-evidence-report",
+      "caseVersion": "1.4.1",
+      "sha256": "13048da925a336ae78ea49432254e9f85b263d7e74674892dbbfff120a7a3c4e",
+      "bytes": 23803
+    },
+    {
+      "file": "output/exports/v1.7/g1-original.json",
+      "caseId": "s17x-g1-remote-lithology",
+      "caseVersion": "1.0.0",
+      "sha256": "2dd0c8a45c71c2a359766e28444f28c8bd949bfb13b5e469910528ec432aa4b4",
+      "bytes": 1077442
+    },
+    {
+      "file": "output/exports/v1.7/s1-original.json",
+      "caseId": "s17x-s1-seismic-fault",
+      "caseVersion": "1.0.0",
+      "sha256": "e9d9097509c97b2182e6aac53f9988142ef0a246fd9078bb6d1907b0f46c3b99",
+      "bytes": 1009046
+    },
+    {
+      "file": "output/exports/v1.7/d1-original.json",
+      "caseId": "s17x-d1-rop-optimization",
+      "caseVersion": "1.0.0",
+      "sha256": "ed273bee39579c657cb2c29cb5ed6ec39e2126f40997389c269466536c670e7a",
+      "bytes": 122081
+    },
+    {
+      "file": "output/exports/v1.7/w4-original.json",
+      "caseId": "s17x-w4-log-lithology",
+      "caseVersion": "1.0.0",
+      "sha256": "60cca1d76def5179436f1c49791c89455956b8c63a928f130b2b415c35832b37",
+      "bytes": 951267
+    },
+    {
+      "file": "output/exports/v1.7/c1-original.json",
+      "caseId": "s17x-c1-cement-quality",
+      "caseVersion": "1.0.0",
+      "sha256": "f3f70d5418b6ec65218e1addf34e4ab812b35643bce11b731ef2ad533c32a9cb",
+      "bytes": 84523
+    },
+    {
+      "file": "output/exports/v1.7/co1-original.json",
+      "caseId": "s17x-co1-completion-choice",
+      "caseVersion": "1.0.0",
+      "sha256": "e94173f6775840d1d4b871130ae8a6a0e5fc0812d1a6e8a73c5ed2c01f6f9eb1",
+      "bytes": 357187
+    },
+    {
+      "file": "output/exports/v1.7/p1-original.json",
+      "caseId": "s17x-p1-perforation-design",
+      "caseVersion": "1.0.0",
+      "sha256": "6f845a05c14bc354983af2d831057c41e7b4feedb4fa4dfae4339a6c45e5a4b8",
+      "bytes": 110725
+    },
+    {
+      "file": "output/exports/v1.7/pr1-original.json",
+      "caseId": "s17x-pr1-pump-card",
+      "caseVersion": "1.0.0",
+      "sha256": "371dd6fe218dfae2adc199c4aff36631d75287f13614495ec3af06cb55e03d7f",
+      "bytes": 215216
+    },
+    {
+      "file": "output/exports/v1.7/wo1-original.json",
+      "caseId": "s17x-wo1-workover-retrieval",
+      "caseVersion": "1.0.0",
+      "sha256": "5a4196e93405e6be855b5509c4764e013c413b0c5bd2cc7da50bd51cb7284d79",
+      "bytes": 128718
+    },
+    {
+      "file": "output/exports/v1.7/e1-original.json",
+      "caseId": "s17x-e1-fracture-optimization",
+      "caseVersion": "1.0.0",
+      "sha256": "705a2192f439b0514b6b57d02f00d975912614943c73a2eb130da0a5e247daa4",
+      "bytes": 392370
+    },
+    {
+      "file": "output/exports/v1.7/t1-original.json",
+      "caseId": "s17x-t1-pipeline-leak",
+      "caseVersion": "1.0.0",
+      "sha256": "b3d6ffe1bcbc0161671ce1ebfdad6894b0a4eb554368f0c809830401218ad1a9",
+      "bytes": 512884
+    },
+    {
+      "file": "output/exports/v1.7/r5-original.json",
+      "caseId": "s17x-r5-quality-softsensor",
+      "caseVersion": "1.0.0",
+      "sha256": "e63104779f9343148d0044ae198a4d1103757472ee7fe70cf6f7f9f4f65f3439",
+      "bytes": 493602
+    }
+  ],
+  "previousArchives": {
+    "verified": [
+      "dist/s17-cuttings-lithology-1.4.0.zip",
+      "dist/s17-mudgas-context-1.4.0.zip",
+      "dist/s17-fluorescence-review-1.4.0.zip",
+      "dist/s17-drilltime-boundaries-1.4.0.zip",
+      "dist/s17-evidence-report-1.4.0.zip",
+      "dist/s17-mudlogging-cases-only-1.4.0.zip",
+      "dist/s17x-g1-remote-lithology-1.0.0.zip",
+      "dist/s17x-s1-seismic-fault-1.0.0.zip",
+      "dist/s17x-d1-rop-optimization-1.0.0.zip",
+      "dist/s17x-w4-log-lithology-1.0.0.zip",
+      "dist/s17x-c1-cement-quality-1.0.0.zip",
+      "dist/s17x-co1-completion-choice-1.0.0.zip",
+      "dist/s17x-p1-perforation-design-1.0.0.zip",
+      "dist/s17x-pr1-pump-card-1.0.0.zip",
+      "dist/s17x-wo1-workover-retrieval-1.0.0.zip",
+      "dist/s17x-e1-fracture-optimization-1.0.0.zip",
+      "dist/s17x-t1-pipeline-leak-1.0.0.zip",
+      "dist/s17x-r5-quality-softsensor-1.0.0.zip",
+      "dist/s17-expansion-12-cases-1.0.0.zip",
+      "dist/s17-petroleum-17-cases-1.7.0-preview.zip"
+    ],
+    "notIncludedInCheckoutOrTransport": []
+  },
+  "previousReleaseBrowserEvidence": {
+    "file": "handoff/expansion-2026-10-24/browser-summary.json",
+    "scope": "Earlier 1.7 release browser evidence; the twelve runtime packages remain byte-identical",
+    "rawChecks": 601,
+    "countsAddedToCurrent": false
+  },
+  "runtimeFiles": [
+    {
+      "path": "dist/cases/s17-cuttings-lithology/case.json",
+      "sha256": "ed2da023e096e5083c8ef53f3e8f2bcae1c554ff3be25bb03de5dd473f32e1e5"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/README.txt",
+      "sha256": "23558c2512a87b3c9a0d6f5dbcd9d463046d1e03ebc24b7b5b690a3dd94baf11"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+      "sha256": "5f15f41f388ad9cc25072d2c1e888e5bd6a8f1b23e3476a93a1680b2fccdc0bb"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+      "sha256": "4877a9282219c0fd0a4822f54cda836162c7eaff8fb1138fe41a6eb43b17ed44"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "sha256": "276287af355264b3043253461af562ef95e9e3ac950d538bba2ddd11814e46f8"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "sha256": "069f5d36fb8dfc254d5b6433fd5630c5518d00fcb199bf93b9965d40ab498eee"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "sha256": "13018d179eab608839c93b41f28ae7f8f0b84cf4527357a2f908a385041df0d6"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "sha256": "7250ae4fe52aca93d95b4064789069d1a8fac3521c09875840ac693adb0ce55e"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "sha256": "e9abc3cd5971060f3d93d4bc1b44503ce61745d9831fb9448bd2278b4cc3bd94"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "sha256": "b66ea589008ffeb7e97d89aae778688d737d28f9aff62845f60b69021e0fbdda"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/case.json",
+      "sha256": "1df12238969d8946b447319a784233c9734fa65f30155107059975a791c37e2b"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/README.txt",
+      "sha256": "82d984c34bb5fb8a5198aa17389a535de1def0eb41df44031d94bf03168d36c8"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/index.html",
+      "sha256": "60352e43713bd0c09b53ec11727cc5315e6147144778aa96f481f2eccf9415b4"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.css",
+      "sha256": "4877a9282219c0fd0a4822f54cda836162c7eaff8fb1138fe41a6eb43b17ed44"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.js",
+      "sha256": "76cff8d8ac210bc5e8dedb874cd903d98977855f31e940559e8787949d9f49ae"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/case.json",
+      "sha256": "297573b47ed2292e7c1fbac41c4f4bad894a56106f4009628300c7b57093b3d6"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/README.txt",
+      "sha256": "451142f8a69e5de58f4a4a934ed894612cc11d159a63d217786a67153ea30793"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/index.html",
+      "sha256": "316de193532daf7eae97b436e682e9307db61882b1b07e582dea2b2bce23b3ed"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+      "sha256": "4877a9282219c0fd0a4822f54cda836162c7eaff8fb1138fe41a6eb43b17ed44"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+      "sha256": "83a7ae4bb2a2eb6fe898818a19c82c0ca1e183ecf299c09d35bd2a3a2aa51f5e"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/case.json",
+      "sha256": "3086f6e6357256dd046e63bd92380788886439159ab91ab5cd70c79eabf6214e"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/README.txt",
+      "sha256": "03fdadd7dcdc707e3af6faf98c5fd3924cc8448139c0c0169446565f2d253d00"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/index.html",
+      "sha256": "996dc690769c344b2a075a374fe37e5005b313483c32d84770988d860b06f800"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.css",
+      "sha256": "4877a9282219c0fd0a4822f54cda836162c7eaff8fb1138fe41a6eb43b17ed44"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.js",
+      "sha256": "c97dfbbf2615ac046221789d7b5dbbd454b3e010688d8fa2facc3ae8d5fdf1a3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/case.json",
+      "sha256": "c5e07d33aae63b8ba722dad9ed85dbad35767dda0dbf7fe6dcec4fa64189c62c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
+      "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html",
+      "sha256": "b1f362e80e5e265bbfcb128ad47de6c5cdb81abda329b78474b10595616d430c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.css",
+      "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js",
+      "sha256": "a2f689137a9f2b0093a9fa6c983a5a6d09fe5676c7276e43b2b47b51a37eeebc"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s1-seismic-fault/case.json",
+      "sha256": "e8194117f53b663d67d614521d7c0d36a34023c7478f484455829f08cc68a9d7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s1-seismic-fault/README.txt",
+      "sha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/index.html",
+      "sha256": "cf47c0b2b9bf1122bf6ba797c3f1e23f1ad8378b294f23bb2887beec259e5b79"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.css",
+      "sha256": "402a774616aa1c35b4367f1631266c66912694c4050729b65f7807c1ba33283d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.js",
+      "sha256": "ba3eec81573d8be7d0f0dd7b74d5f760a2c0dfb958cef57bbc6478a51fc6c5ac"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/case.json",
+      "sha256": "f3d406824ced9b7b53fa2b219b7ce17a80568a89456e4ab368e8b7a0cabf07c7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/README.txt",
+      "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/index.html",
+      "sha256": "b3fc8c282e285799b8bb4fea8a5e25cfcb1bc782eb71713ca8758b14cae8de3b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.css",
+      "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.js",
+      "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/case.json",
+      "sha256": "c5291c63b84c07e633f9a57f992a0797c1052a4cadf039fbb0078b00ce5224e5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/README.txt",
+      "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/index.html",
+      "sha256": "ae8ca65dea1a89b5ee06cd872dbf1025d42993c6ece38ebc8346dde66ec16780"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.css",
+      "sha256": "d09b5384b59905acac07ad62101d18af9e7b0333d97bd30b92e441b8b60e3d68"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.js",
+      "sha256": "bd3b25daa52e8fa5cb6686c9ca2bf1568f9b8270037ba73a5bc975d4b38a1d9e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/case.json",
+      "sha256": "f5799d2160b8db3984795f82580af67e3104e8ddf532568bc635989afad45258"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/README.txt",
+      "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/index.html",
+      "sha256": "110dbc1ab27977be77898db3a130c5df65622c939c2b269bfa1be823e89b7bcf"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.css",
+      "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js",
+      "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/case.json",
+      "sha256": "3526554dd5fee424602f98eafcfeaa7bdb7e07d83c09663c7f388668bd133d04"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/README.txt",
+      "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/index.html",
+      "sha256": "ec0c061486d4e648d33d92cf021915f204b34d72e9308dc6dd9b452f4093033d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.css",
+      "sha256": "1cd7d09155d33d3a80d55ffb5ef71fd32d36829ad1ff7318a9f77c421bcbce7c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js",
+      "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/case.json",
+      "sha256": "b927bda71b55694520b21fa727914b249200cdc6fe31037b3fad988b864ef033"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/README.txt",
+      "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/index.html",
+      "sha256": "7c0ec6176a5a30c99c0cc598ada7c2f8ec2c849db76e86c26e4d955225f32c72"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.css",
+      "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.js",
+      "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/case.json",
+      "sha256": "ea51ff806cc0c2ab2553ddefa732e742630da42eca0944d6f5f0a78423c4ca94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/README.txt",
+      "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/index.html",
+      "sha256": "1918b1d69916f49fa41657574f6458bf722d8baa561a17361674042e9a62ccf2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.css",
+      "sha256": "2ae5aaa3c52e470ec8b44b4c6e5c516dd8a760e5a30929ef8da7655807334787"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.js",
+      "sha256": "88ca0562e088df63bb215c7a7b2b20f1e674f0d95e98da7b91dc5342f6917ec7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/case.json",
+      "sha256": "649d0329d083eb994cc58a7cddd131110b0d550d317133e9448a306ac6901dc2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/README.txt",
+      "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/index.html",
+      "sha256": "e10c441abc5f619b954d9bca63ab789e38f47a9bc7c804b3b69928d6d22fc065"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.css",
+      "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.js",
+      "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e1-fracture-optimization/case.json",
+      "sha256": "51490a009115eb6534de46b01b843de04e773a5f860187a8a0d5ef6d2469fdf9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e1-fracture-optimization/README.txt",
+      "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/index.html",
+      "sha256": "d095953b4fc544c77be0505c63fa50d6e722d6a8ec48925324b34ea958bc8bf3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.css",
+      "sha256": "8790502975e8685b6da5bf89881dd95f2a43b7e63efe6c71746ee8d8f97c5ad2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.js",
+      "sha256": "7c346c3e07ba0d668e58411397d47a363d941f2310af00cfbe3fb3f868b6ebb6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/case.json",
+      "sha256": "3cdf278d27461b163a8b845b252038c6b0e9b3a58ad40b5a0f9779030679cb4b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/README.txt",
+      "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/index.html",
+      "sha256": "32f4f9c9ae58796f478970db5840b7addaab2379208860557c634fcb375e0bc0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.css",
+      "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.js",
+      "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
+      "sha256": "26b391f9558ed2f5c659b9bc1b252a6bb5de6fd430f52789331913856f3ec09c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+      "sha256": "60aefd3c3e5536ee81e38598d815e0df9dc357ee291eeca504cd2c5b9a1b7f53"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html",
+      "sha256": "68115d8da6a6f525711fcbef739d5c2d10a3ff5703c3806c3d20a4dfe6dd1c85"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+      "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+      "sha256": "66251aa0eb7fbe9c375d0f04c9d876eeab75258ec10d1725c0749f2689f9357f"
+    }
+  ],
+  "newPaidModelCalls": 0,
+  "unverified": [
+    "Other browser engines and physical mobile devices",
+    "Physical microphone and listening quality",
+    "Independent public redistribution permission for the Diana Live2D asset"
+  ],
+  "passed": 9,
+  "failed": 0
+}

@@ -7,4 +7,4 @@ const data={wellId:observed.wellId,datasetId:observed.datasetId,dataNature:obser
 fs.writeFileSync(path.join(root,'portal/assets/s17-log-data.js'),'window.S17LogData='+JSON.stringify(data)+';\n');
 fs.writeFileSync(path.join(root,'handoff/assistant-ui-2026-10-23/log-data-provenance.json'),JSON.stringify({createdAt:new Date().toISOString(),source:data.source,wellId:data.wellId,datasetId:data.datasetId,dataNature:data.dataNature,rows:data.rows.length,onlyObservations:true,sourceFiles:['shared/math.js','case-src/m4/engine.js'].map(p=>({path:p,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex')}))},null,2));
 
-fs.copyFileSync(path.join(root,'shared/mudlogging-knowledge.js'),path.join(root,'portal/assets/s17-mudlogging-knowledge.js'));
+fs.writeFileSync(path.join(root,'portal/assets/s17-mudlogging-knowledge.js'),['shared/mudlogging-diagrams.js','shared/mudlogging-knowledge.js'].map(p=>fs.readFileSync(path.join(root,p),'utf8')).join('\n'));

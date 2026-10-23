@@ -1,0 +1,29 @@
+{
+  "scope": "Enhanced portal actually imports preserved old 1.4.0 m1 package and renders new inline explanation without rewriting the stored old package",
+  "checks": [
+    {
+      "name": "stored old package remains 1.4.0",
+      "passed": true
+    },
+    {
+      "name": "stored manifest has no new illustration markup",
+      "passed": true
+    },
+    {
+      "name": "enhanced reader visibly supplies four current inline figures",
+      "passed": true
+    },
+    {
+      "name": "refresh preserves four illustrated concepts and old package version",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "checkedAt": "2026-10-23T17:54:56.936Z",
+  "passed": 5,
+  "failed": 0
+}
