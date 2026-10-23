@@ -1,0 +1,38 @@
+{
+  "scope": "Final 1.6 ZIP extracted copy, offline rendering smoke",
+  "checks": [
+    {
+      "name": "root entry reaches redesigned local homepage",
+      "passed": true
+    },
+    {
+      "name": "local theme image decodes",
+      "passed": true
+    },
+    {
+      "name": "extracted reader retains chapters and filters icon zoom",
+      "passed": true
+    },
+    {
+      "name": "extracted original demo recalculates offline",
+      "passed": true
+    },
+    {
+      "name": "acceptance page has eight embedded screenshot images",
+      "passed": true
+    },
+    {
+      "name": "all acceptance screenshots decode",
+      "passed": true
+    },
+    {
+      "name": "no HTTP requests or JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "checkedAt": "2026-10-23T15:11:54.866Z",
+  "passed": 7,
+  "failed": 0
+}

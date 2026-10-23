@@ -54,7 +54,7 @@
       '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round">' +
       '<path d="M3 17l5-6 4 3 4-6 5 4"/><circle cx="8" cy="11" r="1.6" fill="#fff" stroke="none"/>' +
       '</svg></span>' +
-      '<span class="brand-txt"><b>智能化可能性地图</b><span>Petro × AI Atlas</span></span></a>' +
+      '<span class="brand-txt"><b>井见 · 录井可视实验室</b><span>Petroleum × Intelligence</span></span></a>' +
       '<nav class="nav">' +
       '<a class="nav-keep' + on('home') + '" href="#/">总览</a>' +
       '<a class="nav-keep' + on('chain') + '" href="#/chain">作业链</a>' +
@@ -66,22 +66,7 @@
 
   function footer() {
     var s = Cases.stats();
-    return '<footer class="ftr"><div class="wrap"><div class="ftr-in">' +
-      '<div class="ftr-col" style="max-width:30ch">' +
-      '<h5>关于</h5><p>' + esc(A.meta.title) + '</p>' +
-      '<p style="margin-top:8px;color:var(--ink-4)">' + esc(A.meta.version) + ' · 更新于 ' + esc(A.meta.updated) + '</p></div>' +
-      '<div class="ftr-col"><h5>地图</h5>' +
-      '<a href="#/">总览</a><a href="#/chain">作业链</a><a href="#/method/cv">按方法反查</a></div>' +
-      '<div class="ftr-col"><h5>系统</h5>' +
-      '<a href="#/cases">案例库（' + s.registered + ' 个已接入）</a>' +
-      '<a href="#/guide">接入新案例</a></div>' +
-      '<div class="ftr-col"><h5>参与</h5>' +
-      '<p>发现问题或想补一个场景？</p>' +
-      '<a href="mailto:' + esc(A.meta.email) + '">' + esc(A.meta.email) + '</a></div>' +
-      '</div>' +
-      '<div class="ftr-bot"><span>场景数据：' + A.allScenes.length + ' 个 · 环节：' + A.stages.length + ' 个</span>' +
-      '<span>纯静态 · 无后端 · 可离线运行</span></div>' +
-      '</div></footer>';
+    return '<footer class="s17-footer"><div class="wrap"><div><strong>井见</strong><p>跟着一口教学井，把观察变成可以回查的判断。</p><small>学号17 · 第4阶段录井 · 5个独立案例 · 门户1.6.0-preview</small></div><div><nav aria-label="页脚导航"><a href="#/">返回首页</a><a href="#/chain">完整作业链</a><a href="#/cases">案例库 · 本浏览器'+s.registered+'个已接入</a><a href="#/guide">添加案例指南</a><a href="../portal-original/index.html">老师原站</a></nav><small>原地图 '+A.stages.length+'阶段 / '+A.allScenes.length+'候选场景 · 纯前端 · 离线可运行</small></div></div></footer>';
   }
 
   function crumb(items) {
@@ -517,7 +502,7 @@
         var ck = (M[k] && (M[k].colorKey || k)) || 'cv';
         return '<span class="mtag" data-m="' + ck + '"><b>' + M[k].abbr + '</b>' + esc(M[k].name) + '</span>';
       }).join('') +
-      cBadge +
+      cBadge + (c ? '<span class="s17-case-origin">' + (c.id === 'welllog-layer' ? '老师原样例' : global.S17Course && global.S17Course.cases.some(function (x) { return x.id === c.id; }) ? '录井案例成品' : '导入案例') + '</span>' : '') +
       '</div>' +
       '<h1 class="dh-title">' + esc(sc.name) + '</h1>' +
       '<p class="dh-sub">' + esc(sc.intro) + '</p>' +
@@ -537,6 +522,7 @@
 
   /* ---- 有案例：三块内容由案例提供，这里只套版式 ---- */
   function renderBackground(sc, c) {
+    if (global.S17Reader) return global.S17Reader.background(sc, c);
     var b = c.tabs.background;
     var out = '';
     if (b.judge) out += K.judge(b.judge);
@@ -548,6 +534,7 @@
   }
 
   function renderWorkflow(sc, c) {
+    if (global.S17Reader) return global.S17Reader.workflow(sc, c);
     var w = c.tabs.workflow;
     var out = '<div class="case-lead"><div>' +
       '<span class="kicker clay">CASE WALKTHROUGH</span>' +
@@ -570,7 +557,7 @@
   }
 
   function renderDemoShell(sc, c) {
-    return '<div id="case-demo-root"></div>';
+    return global.S17Reader ? global.S17Reader.demo(sc, c) : '<div id="case-demo-root"></div>';
   }
 
   /* ---- 无案例：展示速览 + 接入引导 ---- */
@@ -1086,7 +1073,7 @@
       var sc2 = A.index.byScene[p[1]];
       var all2 = sc2 && Cases.bySceneAll(sc2.id);
       var c2 = all2 && all2.filter(function (x) { return x.id === r.q.case; })[0] || (all2 && all2[0]) || null;
-      if (c2) bindTabs(sc2, c2);
+      if (c2) { bindTabs(sc2, c2); if (global.S17Reader) global.S17Reader.init(); }
       /* 多案例切换器 */
       [].forEach.call(view.querySelectorAll('.case-switch [data-case]'), function (b) {
         b.addEventListener('click', function () {
@@ -1100,7 +1087,7 @@
       if (rb) rb.addEventListener('click', render);
     }
     if (p[0] === 'admin' && global.Admin) global.Admin.bind(view);
-    document.title = pageTitle(p) + ' · 智能化可能性地图';
+    document.title = pageTitle(p) + ' · 井见';
   }
 
   function pageTitle(p) {

@@ -186,7 +186,7 @@
     "centralVersionService": false,
     "realFieldPredictiveBenchmark": false
   },
-  "currentPhase": "five_case_teaching_complete_with_theme_and_interactive_views",
+  "currentPhase": "five_cases_complete_with_full_portal_reading_redesign",
   "scopeAuthority": "scope-update.json (latest user instruction)",
   "homepageAssistant": {
     "portalVersion": "1.3.1-preview",
@@ -216,9 +216,9 @@
     "m5复杂NER、多语言、批量审核或中心化长期版本服务",
     "G5及其他56例"
   ],
-  "portalVersion": "1.5.0-preview",
-  "currentDelivery": "interactive-views-2026-10-23/acceptance.html",
-  "currentVerification": "interactive-views-2026-10-23/verification.json",
+  "portalVersion": "1.6.0-preview",
+  "currentDelivery": "portal-reading-2026-10-23/acceptance.html",
+  "currentVerification": "portal-reading-2026-10-23/verification.json",
   "teachingRefresh": {
     "reviewFindingsAddressed": 11,
     "scope": "four explicit defects, homepage packaging, five teaching views; original contract preserved",
@@ -267,7 +267,6 @@
   "notVerified": [
     "Diana public redistribution permission",
     "Other browsers, real mobile devices and physical microphone/listening quality",
-    "Whole browser-process close/reopen persistence in this revision (refresh was actually rerun)",
     "Field predictive accuracy; genuine paired field white-light/UV evaluation",
     "Native real-time speech, video UI, other 56 scenes and G5 are outside this revision"
   ],
@@ -346,5 +345,37 @@
     "other56Cases": false,
     "G5": false,
     "newCloudCalls": 0
+  },
+  "portalReading": {
+    "portalVersion": "1.6.0-preview",
+    "caseVersion": "1.3.0",
+    "fullHomepageRebuilt": true,
+    "genericCaseReader": "background chapters / workflow steps / focused demo",
+    "teacherSampleFilesUnchanged": true,
+    "fiveCasePackageFilesUnchanged": 25,
+    "browserReports": [
+      {
+        "file": "handoff/portal-reading-2026-10-23/browser.json",
+        "passed": 39,
+        "checkedAt": "2026-10-23T15:09:44.885Z",
+        "scope": "Current 1.6 portal homepage, teacher w1 reading and computation, responsive and offline file rendering"
+      },
+      {
+        "file": "handoff/portal-reading-2026-10-23/browser-compat.json",
+        "passed": 45,
+        "checkedAt": "2026-10-23T15:02:29.833Z",
+        "scope": "Current portal 1.6 native unchanged folder importer: five case readers, actual sandbox calculation/focus/refresh; unchanged firstbreak and admin entry"
+      },
+      {
+        "file": "handoff/portal-reading-2026-10-23/browser-reopen.json",
+        "passed": 7,
+        "checkedAt": "2026-10-23T15:04:03.950Z",
+        "scope": "After an actual CLI browser close and new browser launch with the same explicit persistent test profile: five native teacher packages restored and recomputed"
+      }
+    ],
+    "wholeBrowserCloseReopenVerified": true,
+    "newCloudRequests": 0,
+    "other56Cases": false,
+    "G5": false
   }
 }

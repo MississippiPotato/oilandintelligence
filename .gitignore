@@ -34,3 +34,12 @@ dist/*.zip
 !dist/*-1.2.0.zip
 !dist/s17-mudlogging-with-assistant-1.4.1-preview.zip
 !dist/s17-mudlogging-with-assistant-1.5.0-preview.zip
+
+!dist/s17-mudlogging-with-assistant-1.6.0-preview.zip
+!output/playwright/portal-reading-2026-10-23/
+output/playwright/portal-reading-2026-10-23/*
+!output/playwright/portal-reading-2026-10-23/*.png
+!output/playwright/portal-reading-2026-10-23/*.json
+
+# Rebuild new complete transport archives locally; keep them out of Git history.
+dist/s17-mudlogging-with-assistant-1.6.0-preview.zip
