@@ -1,5 +1,5 @@
 学号17扩展案例｜固井质量智能评价
-caseId=s17x-c1-cement-quality；sceneId=c1；版本1.0.0
+caseId=s17x-c1-cement-quality；sceneId=c1；版本1.0.1
 
 成品目录结构：case.json、README.txt、demo/index.html、demo/demo.css、demo/demo.js。
 在老师原门户“＋ 添加案例”中一次选择本完整案例文件夹，校验并添加。不要选ZIP或多个案例总目录。

@@ -1,7 +1,7 @@
 修井作业方案智能推荐：从井史找到有出处的候选
 caseId: s17x-wo1-workover-retrieval
 sceneId: wo1
-version: 1.0.0
+version: 1.0.1
 
 成品导入：在老师原站点击“添加案例”，选择含case.json、README.txt和demo/的这个单例文件夹，校验并添加。勿选择ZIP或十二例总目录。
 离线独立运行：双击demo/index.html；三页签、默认合成数据、模型、规则基线、SVG图表和JSON下载均为纯前端。

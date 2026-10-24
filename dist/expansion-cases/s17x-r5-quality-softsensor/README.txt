@@ -1,7 +1,7 @@
 产品质量在线软测量：化验到来之前
 caseId: s17x-r5-quality-softsensor
 sceneId: r5（加工）
-版本：1.0.0，2026-10-24
+版本：1.0.1，2026-10-24
 
 这是扩展案例源码。统一构建器生成 case.json、README.txt、demo/index.html、demo/demo.css、demo/demo.js；整个成品文件夹通过老师原站“＋ 添加案例”导入。源码 demo.html 只引用最终 demo.css/demo.js；engine.js 和 app.js 在构建时拼成普通 IIFE，无 CDN、fetch、API 或后端依赖。
 

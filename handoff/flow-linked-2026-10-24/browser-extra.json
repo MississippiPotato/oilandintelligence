@@ -1,0 +1,321 @@
+{
+  "scope": "Actual offline Chrome: twelve 1.0.1 cases with authored domain workflow graphs and node-to-step navigation",
+  "checks": [
+    {
+      "name": "g1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "g1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "g1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "g1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "s1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "s1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "s1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "s1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "d1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "d1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "d1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "d1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "w4 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "w4 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "w4 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "w4 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "c1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "c1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "c1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "c1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "co1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "co1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "co1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "co1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "p1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "p1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "p1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "p1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "pr1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "pr1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "selected-tab",
+        "valid": true
+      }
+    },
+    {
+      "name": "pr1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "pr1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "wo1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "wo1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "scrolled-chapter",
+        "valid": true
+      }
+    },
+    {
+      "name": "wo1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "wo1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "e1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "e1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "scrolled-chapter",
+        "valid": true
+      }
+    },
+    {
+      "name": "e1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "e1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "t1 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "t1 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "scrolled-chapter",
+        "valid": true
+      }
+    },
+    {
+      "name": "t1 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "t1 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "r5 graph contains a connected model/baseline branch and decision",
+      "passed": true
+    },
+    {
+      "name": "r5 graph node opens or scrolls to its actual workflow step",
+      "passed": true,
+      "detail": {
+        "kind": "scrolled-chapter",
+        "valid": true
+      }
+    },
+    {
+      "name": "r5 narrow graph has internal scroll and no body overflow",
+      "passed": true
+    },
+    {
+      "name": "r5 actual calculation and current export identity",
+      "passed": true
+    },
+    {
+      "name": "twelve pages run without HTTP",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript errors in twelve pages",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "g1",
+      "id": "s17x-g1-remote-lithology",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "s1",
+      "id": "s17x-s1-seismic-fault",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "d1",
+      "id": "s17x-d1-rop-optimization",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "w4",
+      "id": "s17x-w4-log-lithology",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "c1",
+      "id": "s17x-c1-cement-quality",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "co1",
+      "id": "s17x-co1-completion-choice",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "p1",
+      "id": "s17x-p1-perforation-design",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "pr1",
+      "id": "s17x-pr1-pump-card",
+      "flowNavigation": "selected-tab"
+    },
+    {
+      "scene": "wo1",
+      "id": "s17x-wo1-workover-retrieval",
+      "flowNavigation": "scrolled-chapter"
+    },
+    {
+      "scene": "e1",
+      "id": "s17x-e1-fracture-optimization",
+      "flowNavigation": "scrolled-chapter"
+    },
+    {
+      "scene": "t1",
+      "id": "s17x-t1-pipeline-leak",
+      "flowNavigation": "scrolled-chapter"
+    },
+    {
+      "scene": "r5",
+      "id": "s17x-r5-quality-softsensor",
+      "flowNavigation": "scrolled-chapter"
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "checkedAt": "2026-10-24T04:24:09.827Z",
+  "passed": 50,
+  "failed": 0
+}

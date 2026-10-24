@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
+import {flowOverview,flowRuntime} from './case-flowcharts.mjs';
 const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
 const context=vm.createContext({});
 for(const p of ['shared/math.js','shared/mudlogging-study.js','case-src/m1/images.js','case-src/m1/engine.js','case-src/m3/engine.js','case-src/m2/engine.js','case-src/m2/data.js','case-src/m5/engine.js','case-src/m5/data.js'])vm.runInContext(read(p),context);
@@ -24,7 +25,7 @@ const pair=context.S17Images.sample(17,{},1).observations,mask=context.M3Core.pr
 const nb=context.M5Core.train(context.M5Data);
 const names={m1:'岩屑岩性识别',m2:'气测异常解释',m3:'荧光图像判读',m4:'钻时响应分段',m5:'录井报告整理'};
 const stages=[['井底破岩','钻头破碎岩石，钻井液从钻杆内流出。记录钻压、转速与钻速，形成钻进参数。'],['环空返出','钻井液沿钻杆外侧与井壁之间上返，携带岩屑与气体。地面接收的信息对应更早的井下活动。'],['筛分与取样','振动筛分离固体，清洗并登记岩样；拍摄外观，记录采样身份与归位井段。'],['检测与对照','返出液提取气体形成气测曲线；岩样做白光与紫外观察。各记录的单位、时间和样品身份要能对应。'],['解释与记录','把图像、曲线和日志联系起来，提出有依据的候选，逐项核对后整理报告。']];
-const field=scene=>widget('field',{url:uri('data/study/mudlogging-circulation.webp','image/webp'),stages,initial:{stage:{m1:2,m2:3,m3:3,m4:0,m5:4}[scene]}},'','地上与地下：'+names[scene]+'的资料从哪里来');
+const field=scene=>widget('field',{scene,url:uri('data/study/mudlogging-circulation.webp','image/webp'),stages:stages.map((v,j)=>j!==3?v:[v[0],{m1:'清洗后的岩屑在地面工作台拍摄白光照片；用样品编号把轮廓、特征和岩性候选连回同一份样品。',m2:'地面脱气器从返出液提取气体，检测总气与组分。将气测曲线、泵量和工况放在同一时间轴上，再回查来源。',m3:'同一份岩样在地面工作台进行白光与紫外观察；配对身份、曝光和参考片决定两幅图是否可以逐像素比较。',m4:'地面记录系统保存钻压、转速、钻速与井深；把这些参数对齐，再检查操作条件变化对钻时响应的影响。',m5:v[1]}[scene]]),initial:{stage:{m1:2,m2:3,m3:3,m4:0,m5:4}[scene]}},'','地上与地下：'+names[scene]+'的资料从哪里来');
 const creditCore=P('照片：Fatimah Alzubaidi (2021)，原岩芯托盘来自 Geological Survey of South Australia，'+A('Mendeley Lithology dataset V1','https://data.mendeley.com/datasets/b6rj29mrss/1')+'，CC BY 4.0。六张原 JPEG 保留在离线包，图块实际覆盖 2×2 cm。');
 const creditGas=P('实测来源：Strasser, Michael et al. (2025)，'+A('PANGAEA · IODP386-M0091D','https://doi.org/10.1594/PANGAEA.975497')+'，CC BY 4.0。保留全部 62 条及平行记录。这里是回收沉积物的顶空气体，先认识浓度、组分和采样身份；下一节才讨论循环气测的时间对应。');
 const creditUV=P('照片：Herbert Art Gallery and Museum, Coventry，经 Wikimedia Commons 发布，'+A('可见光','https://commons.wikimedia.org/wiki/File:Calcite_HAGAM.jpg')+' / '+A('短波 UV','https://commons.wikimedia.org/wiki/File:Calcite_ShortwaveUV_HAGAM.jpg')+' / '+A('长波 UV','https://commons.wikimedia.org/wiki/File:Calcite_LongWaveUV_HAGAM.jpg')+'，CC BY-SA 3.0。此处缩小显示，原始照片与署名保存在离线包中。');
@@ -110,5 +111,5 @@ m5:[
  ['报告位于流程末端，证据来自前面的每一环',
  P('报告中的岩性、气测和荧光观察各有采样与检测来源。回到这张地上地下流程图，可以逐处追问：这条记录在哪里形成、通过什么方式测得、对应哪个样品或井段。')+field('m5')]
 ]};
-export function decorateKnowledge(scene,k){k.workflowOverview='<div class="study-workflow-overview"><h3>从观察到记录：每一步处理什么</h3><ol class="study-process">'+k.flow.map(([title])=>'<li>'+title+'</li>').join('')+'</ol></div>';k.sections=contents[scene].map(([title,html],i)=>({title,navTitle:['先观察材料','理解关系','看懂智能方法','沿流程回查'][i],en:['OBSERVE','UNDERSTAND','METHOD','TRACE'][i],html:(i===0?'<style>'+read('shared/mudlogging-study.css')+'</style>':'')+'<div class="knowledge-text study-lesson" style="font-size:18px;line-height:1.95" data-study-lesson="2">'+html+'</div>'}));return k;}
-export const studyRuntime=read('shared/mudlogging-study.js');
+export function decorateKnowledge(scene,k){k.workflowOverview=flowOverview(scene);k.sections=contents[scene].map(([title,html],i)=>({title,navTitle:['先观察材料','理解关系','看懂智能方法','沿流程回查'][i],en:['OBSERVE','UNDERSTAND','METHOD','TRACE'][i],html:(i===0?'<style>'+read('shared/mudlogging-study.css')+'</style>':'')+'<div class="knowledge-text study-lesson" style="font-size:18px;line-height:1.95" data-study-lesson="3">'+html+'</div>'}));return k;}
+export const studyRuntime=read('shared/mudlogging-study.js')+'\n'+flowRuntime;

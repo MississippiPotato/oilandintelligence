@@ -148,7 +148,7 @@
   function evidence() {
     if (status !== 'ready') return null;
     const obs = result.observations, sourceId = 's1:' + obs.groupId, index = selected.y * obs.w + selected.x;
-    return { schemaVersion: '1.0', sceneId: 's1', caseId, caseVersion: '1.0.0', runId, datasetId: 's17x-s1-synthetic-v1', wellId: null, areaId: obs.groupId, dataNature: 'synthetic_teaching',
+    return { schemaVersion: '1.0', sceneId: 's1', caseId, caseVersion: '1.0.1', runId, datasetId: 's17x-s1-synthetic-v1', wellId: null, areaId: obs.groupId, dataNature: 'synthetic_teaching',
       runConfig: { seed, dataVersion: 's1-synthetic-v1', splitDescription: '8 independent training sections; 2 validation sections; independent test section', method: 'nine-feature regularized logistic regression', parameters: result.params, inputRevision: runId },
       observations: obs, prediction: { labels: result.prediction.labels, scores: result.prediction.scores, line: result.prediction.line }, baseline: result.baseline, evaluationReference: result.evaluationTruth, metrics: result.metrics, training: { ...result.training.training, validation: result.training.validation, model: result.training.model, threshold: result.threshold },
       sources: [{ sourceRecordId: sourceId, sourceVersion: sourceVersion(), sourceType: 'image_region', content: obs, units: { traceSpacing_m: 25, sampleInterval_ms: 4 } }],

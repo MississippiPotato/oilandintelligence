@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T17:00:19.222Z",
+  "updatedAt": "2026-10-24T04:31:01.196Z",
   "scope": "其他12阶段各1例，原录井5例保持独立，其他44个候选场景未在本轮实现",
   "expectedCount": 12,
   "actualBuiltCount": 12,
@@ -10,270 +10,192 @@
       "stageId": "geology",
       "stageName": "地质勘察",
       "sceneName": "地质剖面遥感解译",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-g1-remote-lithology",
-      "version": "1.0.0",
-      "bytes": 133948,
+      "version": "1.0.1",
+      "bytes": 151544,
       "source": "expansion-src/g1",
       "output": "dist/expansion-cases/s17x-g1-remote-lithology",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "s1",
       "stageId": "seismic",
       "stageName": "物探",
       "sceneName": "地震断层自动解释",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-s1-seismic-fault",
-      "version": "1.0.0",
-      "bytes": 141806,
+      "version": "1.0.1",
+      "bytes": 159414,
       "source": "expansion-src/s1",
       "output": "dist/expansion-cases/s17x-s1-seismic-fault",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "d1",
       "stageId": "drilling",
       "stageName": "钻井",
       "sceneName": "钻速预测与参数优化",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-d1-rop-optimization",
-      "version": "1.0.0",
-      "bytes": 147001,
+      "version": "1.0.1",
+      "bytes": 164545,
       "source": "expansion-src/d1",
       "output": "dist/expansion-cases/s17x-d1-rop-optimization",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "w4",
       "stageId": "welllog",
       "stageName": "测井",
       "sceneName": "岩性识别",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-w4-log-lithology",
-      "version": "1.0.0",
-      "bytes": 135012,
+      "version": "1.0.1",
+      "bytes": 152586,
       "source": "expansion-src/w4",
       "output": "dist/expansion-cases/s17x-w4-log-lithology",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "c1",
       "stageId": "cementing",
       "stageName": "固井",
       "sceneName": "固井质量智能评价",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-c1-cement-quality",
-      "version": "1.0.0",
-      "bytes": 149005,
+      "version": "1.0.1",
+      "bytes": 166589,
       "source": "expansion-src/c1",
       "output": "dist/expansion-cases/s17x-c1-cement-quality",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "co1",
       "stageId": "completion",
       "stageName": "完井",
       "sceneName": "完井方式智能优选",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-co1-completion-choice",
-      "version": "1.0.0",
-      "bytes": 139826,
+      "version": "1.0.1",
+      "bytes": 157496,
       "source": "expansion-src/co1",
       "output": "dist/expansion-cases/s17x-co1-completion-choice",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "p1",
       "stageId": "perforation",
       "stageName": "射孔",
       "sceneName": "射孔参数优化",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-p1-perforation-design",
-      "version": "1.0.0",
-      "bytes": 151273,
+      "version": "1.0.1",
+      "bytes": 168871,
       "source": "expansion-src/p1",
       "output": "dist/expansion-cases/s17x-p1-perforation-design",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "pr1",
       "stageId": "production",
       "stageName": "采油",
       "sceneName": "抽油机井工况诊断",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-pr1-pump-card",
-      "version": "1.0.0",
-      "bytes": 147707,
+      "version": "1.0.1",
+      "bytes": 165325,
       "source": "expansion-src/pr1",
       "output": "dist/expansion-cases/s17x-pr1-pump-card",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "wo1",
       "stageId": "workover",
       "stageName": "修井",
       "sceneName": "修井作业方案智能推荐",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-wo1-workover-retrieval",
-      "version": "1.0.0",
-      "bytes": 128459,
+      "version": "1.0.1",
+      "bytes": 146123,
       "source": "expansion-src/wo1",
       "output": "dist/expansion-cases/s17x-wo1-workover-retrieval",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "e1",
       "stageId": "eor",
       "stageName": "增采",
       "sceneName": "压裂参数智能优化",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-e1-fracture-optimization",
-      "version": "1.0.0",
-      "bytes": 141187,
+      "version": "1.0.1",
+      "bytes": 158787,
       "source": "expansion-src/e1",
       "output": "dist/expansion-cases/s17x-e1-fracture-optimization",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "t1",
       "stageId": "transport",
       "stageName": "运输",
       "sceneName": "管道泄漏智能检测",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-t1-pipeline-leak",
-      "version": "1.0.0",
-      "bytes": 139868,
+      "version": "1.0.1",
+      "bytes": 157556,
       "source": "expansion-src/t1",
       "output": "dist/expansion-cases/s17x-t1-pipeline-leak",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     },
     {
       "sceneId": "r5",
       "stageId": "refining",
       "stageName": "加工",
       "sceneName": "产品质量在线软测量",
-      "status": "accepted_in_local_chromium",
+      "status": "browser_verified",
       "caseId": "s17x-r5-quality-softsensor",
-      "version": "1.0.0",
-      "bytes": 141491,
+      "version": "1.0.1",
+      "bytes": 159205,
       "source": "expansion-src/r5",
       "output": "dist/expansion-cases/s17x-r5-quality-softsensor",
       "sourceErrors": [],
       "missing": [],
-      "browserAcceptance": {
-        "originalImport": true,
-        "refresh": true,
-        "processRestartThenRun": true,
-        "offlineFile": true,
-        "evidence": "browser-summary.json"
-      }
+      "browserAcceptance": "handoff/flow-linked-2026-10-24/browser-original.json",
+      "offlineAcceptance": "handoff/flow-linked-2026-10-24/browser-extra.json"
     }
-  ],
-  "browserAcceptance": {
-    "status": "passed_in_local_chromium",
-    "browserExecuted": true,
-    "selfAuthoredPackages": 17,
-    "extraCases": 12,
-    "summary": "browser-summary.json",
-    "enhancedPortal": "browser-enhanced-portal.json",
-    "checksPassed": 601,
-    "checksFailed": 0,
-    "processRestartThenRun": 17,
-    "fileOfflineExtraCases": 12,
-    "checkedAt": "2026-10-23T17:23:42.633Z"
-  },
-  "latestReconciliation": {
-    "portalVersion": "1.7.1-preview",
-    "reason": "All 60 expansion runtime file hashes match preceding accepted release",
-    "evidence": "../illustrated-background-2026-10-24/baseline.json"
-  }
+  ]
 }

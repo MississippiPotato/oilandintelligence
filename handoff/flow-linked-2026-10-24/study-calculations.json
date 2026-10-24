@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-24T04:26:36.462Z",
+  "scope": "Node calculation/source checks only; not browser evidence",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "reading cumulative-volume lookup equals the case transport calculation",
+      "passed": true
+    },
+    {
+      "name": "reading classifier uses the exact NB counts and formula from the case",
+      "passed": true
+    },
+    {
+      "name": "all source-photo histograms retain the full pixel denominator",
+      "passed": true
+    },
+    {
+      "name": "compiled reading contains observations, source attribution and four chapters per case",
+      "passed": true
+    }
+  ]
+}

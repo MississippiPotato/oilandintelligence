@@ -1,0 +1,38 @@
+{
+  "scope": "Actual offline Chrome after extracting complete 1.8.1 ZIP into a new folder",
+  "checks": [
+    {
+      "name": "extracted fluorescence picture highlights the UV workbench",
+      "passed": true
+    },
+    {
+      "name": "extracted graph opens the detailed model step",
+      "passed": true
+    },
+    {
+      "name": "extracted fluorescence computes and enables export",
+      "passed": true
+    },
+    {
+      "name": "extracted refining graph mounts from local files",
+      "passed": true
+    },
+    {
+      "name": "extracted refining case computes",
+      "passed": true
+    },
+    {
+      "name": "extracted cases make no HTTP requests",
+      "passed": true
+    },
+    {
+      "name": "no JS exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "checkedAt": "2026-10-24T04:32:20.899Z",
+  "passed": 7,
+  "failed": 0
+}

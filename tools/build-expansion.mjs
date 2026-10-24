@@ -4,6 +4,7 @@ import crypto from 'node:crypto';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { assistantJS, assistantCSS } from './assistant-bundle.mjs';
+import { flowOverview, flowRuntime } from './case-flowcharts.mjs';
 
 export const root = path.resolve(import.meta.dirname, '..');
 export const reportDir = 'handoff/expansion-2026-10-24';
@@ -159,12 +160,15 @@ export function buildExpansions({ requireAll = false } = {}) {
       referenceHref: '../../../../portal/reference/fluorescence.html' }) + ';\n';
     const builtManifest = JSON.parse(JSON.stringify(p));
     Object.assign(builtManifest.tabs.demo, { mode: 'page', html: 'demo/index.html', js: 'demo/demo.js' });
+    const chart = flowOverview(p.sceneId);
+    builtManifest.tabs.workflow.metrics.html = chart + builtManifest.tabs.workflow.metrics.html;
+    const chartMount = '\n' + flowRuntime + '\n(function(){function startFlow(){var area=document.getElementById("workflow");if(area&&!area.querySelector(".case-flow-overview"))area.insertAdjacentHTML("afterbegin",'+JSON.stringify(chart)+');S17Flow.mount(area||document);}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",startFlow,{once:true});else startFlow();})();\n';
     const files = {
       'case.json': JSON.stringify(builtManifest, null, 2) + '\n',
       'README.txt': read(item.source + '/README.txt'),
       'demo/index.html': read(item.source + '/demo.html'),
       'demo/demo.css': read(item.source + '/demo.css') + '\n' + cssAssistant,
-      'demo/demo.js': config + read(item.source + '/engine.js') + '\n;\n' + read(item.source + '/app.js') + '\n' + jsAssistant
+      'demo/demo.js': config + read(item.source + '/engine.js') + '\n;\n' + read(item.source + '/app.js') + chartMount + '\n' + jsAssistant
     };
     new vm.Script(files['demo/demo.js'], { filename: out + '/demo/demo.js' });
     for (const [name, content] of Object.entries(files)) fs.writeFileSync(path.join(root, out, name), content);

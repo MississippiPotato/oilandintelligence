@@ -1,0 +1,162 @@
+{
+  "checkedAt": "2026-10-24T04:31:02.833Z",
+  "version": "1.8.1-preview",
+  "browserExecutedByThisCommand": false,
+  "checks": [
+    {
+      "name": "teacher original, read-only copy and native Add Case contract retain their bytes",
+      "passed": true
+    },
+    {
+      "name": "inference calculations and data unchanged; two export metadata versions are the only engine edits",
+      "passed": true,
+      "detail": {
+        "protectedFiles": 24
+      }
+    },
+    {
+      "name": "all 85 current runtime files match build and browser acceptance locks",
+      "passed": true,
+      "detail": {
+        "fiveVersion": "1.5.1",
+        "extraVersion": "1.0.1",
+        "files": 85,
+        "readmeVersionOnlyAmendments": [
+          {
+            "path": "dist/expansion-cases/s17x-c1-cement-quality/README.txt",
+            "previousSha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "bc0da39d13ba2e0b72a7ecf9c2c89b478313477198aa39e184283be3fbb88b7a"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-co1-completion-choice/README.txt",
+            "previousSha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "d0b3e189906ed0e33b275107cd86b13174e5055bbcafe43419c02f9bf03e0fde"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-d1-rop-optimization/README.txt",
+            "previousSha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "8301619e05d2ddbecb913c968e370f7522dc716ccec05b27739366f26b30605f"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-e1-fracture-optimization/README.txt",
+            "previousSha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "022ca931b91647fe879728ea3b9d6d5912929d6d9e1eb6f373b9584234b9c93a"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
+            "previousSha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "c38579e77ddaa74ab88564e142956bc8636713454d8502033137d0ad255021c2"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-p1-perforation-design/README.txt",
+            "previousSha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "523fd90d6ee6cb20f371d51222870394b65915496b1ee669262c29e9303dbdfb"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-pr1-pump-card/README.txt",
+            "previousSha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "31c5e152a14cebf51b445607888e2076e2e61825a126a98cd56c3496c1a95501"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+            "previousSha256": "60aefd3c3e5536ee81e38598d815e0df9dc357ee291eeca504cd2c5b9a1b7f53",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "123ede7031412013e92805228fea94ab3ddf0a194d0c175fc147a91cb420262e"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-s1-seismic-fault/README.txt",
+            "previousSha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "87082bdd8774c27e5db58b74f58c1548786cb96ebcb336984ca9507683cc2dd9"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-t1-pipeline-leak/README.txt",
+            "previousSha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "0d81e2bd293540f1aec4f0836187b3f992b3ab89bd27e80e1e476d91a87b7256"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-w4-log-lithology/README.txt",
+            "previousSha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "402982d2d099ebfef4d08745367cef60c678dfb5fd9d0a56ddadadb97e8ba9ba"
+          },
+          {
+            "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/README.txt",
+            "previousSha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684",
+            "reason": "Only published version text 1.0.0 to 1.0.1; no executable content changes",
+            "sha256": "7162e7235b07544a6d32c1db01889a0aed18b2c8c96dbe8222a51ebc5e39a30e"
+          }
+        ]
+      }
+    },
+    {
+      "name": "all 17 packages carry domain workflow graphs with connections, decisions and explicit outputs",
+      "passed": true
+    },
+    {
+      "name": "saved actual Chrome checks pass on the current built files",
+      "passed": true,
+      "detail": {
+        "reports": [
+          {
+            "name": "browser-five",
+            "passed": 72
+          },
+          {
+            "name": "browser-extra",
+            "passed": 50
+          },
+          {
+            "name": "browser-original",
+            "passed": 94
+          },
+          {
+            "name": "browser-enhanced",
+            "passed": 51
+          },
+          {
+            "name": "browser-restart",
+            "passed": 17
+          }
+        ],
+        "browserChecks": 284
+      }
+    },
+    {
+      "name": "15 actual five-case calculations retain previous model and baseline metrics",
+      "passed": true
+    },
+    {
+      "name": "17 files actually downloaded in Chrome have current package identities and evidence references",
+      "passed": true
+    },
+    {
+      "name": "all 17 native imports persist through refresh and actual Chrome close/reopen",
+      "passed": true,
+      "detail": {
+        "count": 17,
+        "storageCharacters": 5114000
+      }
+    },
+    {
+      "name": "48 calculation/source checks recorded separately from browser evidence",
+      "passed": true,
+      "detail": {
+        "nodeChecks": 48
+      }
+    }
+  ],
+  "notVerified": [
+    "physical mobile device",
+    "Firefox/WebKit",
+    "new microphone or live model call"
+  ]
+}

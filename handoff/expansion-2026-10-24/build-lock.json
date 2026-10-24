@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-10-24T03:26:21.673Z",
+  "createdAt": "2026-10-24T04:30:01.584Z",
   "expectedCount": 12,
   "actualCount": 12,
   "complete": true,
-  "totalBytes": 1696583,
+  "totalBytes": 1908041,
   "browserVerifiedByThisBuild": false,
   "assistantReadabilityIncluded": false,
   "assistantSources": [
@@ -31,7 +31,7 @@
     {
       "path": "tools/assistant-bundle.mjs",
       "bytes": 1068,
-      "sha256": "4b411c7c36b388eb7cb1e6b7e4c7d9a3ef1e778a2f14461899eab8eeef5fa833"
+      "sha256": "53850245f945dc7a0e2fd802ed814c6c62c459c4493193630b035c4b353d439f"
     }
   ],
   "cases": [
@@ -48,7 +48,7 @@
         {
           "path": "expansion-src/g1/case.json",
           "bytes": 17213,
-          "sha256": "2fdd08e14c128efb8259a7202b1c2400c41d6842dc3b7ee0e6a38adcc86086d4"
+          "sha256": "694780c34b1732ef0aeb600b2321d5c6f11f245f74e165b3ea15bae9a1de93de"
         },
         {
           "path": "expansion-src/g1/engine.js",
@@ -58,7 +58,7 @@
         {
           "path": "expansion-src/g1/app.js",
           "bytes": 17424,
-          "sha256": "0ed3d6a449eba6053f364a68eaba97884e846513efc5a5ac06b194b4a74ce98d"
+          "sha256": "fbb1efeda0e44a2ee2c2bd7ca296ebe29a996a17d8b4edf69e008b429f372673"
         },
         {
           "path": "expansion-src/g1/demo.html",
@@ -73,24 +73,24 @@
         {
           "path": "expansion-src/g1/README.txt",
           "bytes": 3221,
-          "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7"
+          "sha256": "c38579e77ddaa74ab88564e142956bc8636713454d8502033137d0ad255021c2"
         }
       ],
       "output": "dist/expansion-cases/s17x-g1-remote-lithology",
       "caseId": "s17x-g1-remote-lithology",
-      "version": "1.0.0",
-      "bytes": 133948,
+      "version": "1.0.1",
+      "bytes": 151544,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-g1-remote-lithology/case.json",
-          "bytes": 17075,
-          "sha256": "c5e07d33aae63b8ba722dad9ed85dbad35767dda0dbf7fe6dcec4fa64189c62c",
+          "bytes": 24835,
+          "sha256": "b3eb2e3a6f2d71da352c17efcb286a3aab13887439da067e1a604663773ab43e",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
           "bytes": 3221,
-          "sha256": "2f209a8aa67502927c5cbba5874798566b7e403a2386ac0f8e19c8a9fa0368b7",
+          "sha256": "c38579e77ddaa74ab88564e142956bc8636713454d8502033137d0ad255021c2",
           "relative": "README.txt"
         },
         {
@@ -107,8 +107,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js",
-          "bytes": 65423,
-          "sha256": "a2f689137a9f2b0093a9fa6c983a5a6d09fe5676c7276e43b2b47b51a37eeebc",
+          "bytes": 75259,
+          "sha256": "5a7def620d4f9350a40b7b268577de3fcda1bc43642f1ce646ddfe93c9d331a2",
           "relative": "demo/demo.js"
         }
       ]
@@ -126,7 +126,7 @@
         {
           "path": "expansion-src/s1/case.json",
           "bytes": 17699,
-          "sha256": "49b4924307b1b3ec5b0e06149432f164cd9f4ce0afdd0d00cc53c6feffb927be"
+          "sha256": "12b54b0377885794270c831629dbc8e027b574a71256ca8dfad6acdd1784033b"
         },
         {
           "path": "expansion-src/s1/engine.js",
@@ -136,7 +136,7 @@
         {
           "path": "expansion-src/s1/app.js",
           "bytes": 21164,
-          "sha256": "21181b95f94b99773fb288bf7fec016c6608abd9f1d641226ec183f981de582a"
+          "sha256": "6bda29f49723516620c92ac1e9982560808140ecf9d44e2de483eb87adacd7ce"
         },
         {
           "path": "expansion-src/s1/demo.html",
@@ -151,24 +151,24 @@
         {
           "path": "expansion-src/s1/README.txt",
           "bytes": 3744,
-          "sha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e"
+          "sha256": "87082bdd8774c27e5db58b74f58c1548786cb96ebcb336984ca9507683cc2dd9"
         }
       ],
       "output": "dist/expansion-cases/s17x-s1-seismic-fault",
       "caseId": "s17x-s1-seismic-fault",
-      "version": "1.0.0",
-      "bytes": 141806,
+      "version": "1.0.1",
+      "bytes": 159414,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-s1-seismic-fault/case.json",
-          "bytes": 17561,
-          "sha256": "e8194117f53b663d67d614521d7c0d36a34023c7478f484455829f08cc68a9d7",
+          "bytes": 25327,
+          "sha256": "8d4ccc3ee1438a9b54fa2a6a2f96333b2e88c0e52b949f6e6ea887caa198488d",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-s1-seismic-fault/README.txt",
           "bytes": 3744,
-          "sha256": "937121c0017b7033266243e0e3659518681e719f255adf72a9c789ea62fdb47e",
+          "sha256": "87082bdd8774c27e5db58b74f58c1548786cb96ebcb336984ca9507683cc2dd9",
           "relative": "README.txt"
         },
         {
@@ -185,8 +185,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.js",
-          "bytes": 71322,
-          "sha256": "ba3eec81573d8be7d0f0dd7b74d5f760a2c0dfb958cef57bbc6478a51fc6c5ac",
+          "bytes": 81164,
+          "sha256": "75951da6ad30c36cfe662b023b9d58a257319b056be8242f78e9837cefc99515",
           "relative": "demo/demo.js"
         }
       ]
@@ -204,7 +204,7 @@
         {
           "path": "expansion-src/d1/case.json",
           "bytes": 25820,
-          "sha256": "b55f4155530e23767f372e1c1eae4b3e6732bc68eb6438ec8d870bc77f42bc2a"
+          "sha256": "5757f96798455d0d6f0b0f3874190be449ff41a3614e11ff4f2bb587cdaa9eb2"
         },
         {
           "path": "expansion-src/d1/engine.js",
@@ -214,7 +214,7 @@
         {
           "path": "expansion-src/d1/app.js",
           "bytes": 18514,
-          "sha256": "12a6a2657bd7977fc2143ef21777e815007b3f405233b67d8a720274ff98958c"
+          "sha256": "da7c3b33057e7fcaaa2fdb4ef1230f36b80372a47a3f67c93c1270cfb59097f2"
         },
         {
           "path": "expansion-src/d1/demo.html",
@@ -229,24 +229,24 @@
         {
           "path": "expansion-src/d1/README.txt",
           "bytes": 2279,
-          "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7"
+          "sha256": "8301619e05d2ddbecb913c968e370f7522dc716ccec05b27739366f26b30605f"
         }
       ],
       "output": "dist/expansion-cases/s17x-d1-rop-optimization",
       "caseId": "s17x-d1-rop-optimization",
-      "version": "1.0.0",
-      "bytes": 147001,
+      "version": "1.0.1",
+      "bytes": 164545,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-d1-rop-optimization/case.json",
-          "bytes": 25698,
-          "sha256": "f3d406824ced9b7b53fa2b219b7ce17a80568a89456e4ab368e8b7a0cabf07c7",
+          "bytes": 33432,
+          "sha256": "0225cce1396a9492e5274acb94a70ca710507a61af8a541808c676e50eb25da4",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-d1-rop-optimization/README.txt",
           "bytes": 2279,
-          "sha256": "d0c1136ef7afb50f5db00bb5ea9264ef380453ee3a27be5e77621b4aa53db2c7",
+          "sha256": "8301619e05d2ddbecb913c968e370f7522dc716ccec05b27739366f26b30605f",
           "relative": "README.txt"
         },
         {
@@ -263,8 +263,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.js",
-          "bytes": 65613,
-          "sha256": "4c7199719d2970356fadc089a3377a45a97bc3ad92de4d583859be7639ff3cbf",
+          "bytes": 75423,
+          "sha256": "9a1a0102566c0b5d8bbed67156cff175ab540ef81a9aa6400add2e356adc2243",
           "relative": "demo/demo.js"
         }
       ]
@@ -282,7 +282,7 @@
         {
           "path": "expansion-src/w4/case.json",
           "bytes": 20271,
-          "sha256": "6b29f244afe3938db05bbf5c16bb12a0bf7d2cce7cb76b6be9ffa7c84bd38890"
+          "sha256": "2810cb50556e8eccf9d3baefc95b527d3dfe4a32e3df034c302ee849f5db0fbf"
         },
         {
           "path": "expansion-src/w4/engine.js",
@@ -292,7 +292,7 @@
         {
           "path": "expansion-src/w4/app.js",
           "bytes": 17689,
-          "sha256": "692be94dfe43cc742b3621b37438b747e6d968467e7cc92d911b176d7c2e2e0a"
+          "sha256": "4a9fcd8890b85c5f8d97bb9058532a2af4f46e51b99c40618d5833913136b424"
         },
         {
           "path": "expansion-src/w4/demo.html",
@@ -307,24 +307,24 @@
         {
           "path": "expansion-src/w4/README.txt",
           "bytes": 2298,
-          "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0"
+          "sha256": "402982d2d099ebfef4d08745367cef60c678dfb5fd9d0a56ddadadb97e8ba9ba"
         }
       ],
       "output": "dist/expansion-cases/s17x-w4-log-lithology",
       "caseId": "s17x-w4-log-lithology",
-      "version": "1.0.0",
-      "bytes": 135012,
+      "version": "1.0.1",
+      "bytes": 152586,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-w4-log-lithology/case.json",
-          "bytes": 20150,
-          "sha256": "c5291c63b84c07e633f9a57f992a0797c1052a4cadf039fbb0078b00ce5224e5",
+          "bytes": 27899,
+          "sha256": "4fb1664e69245a2289078a5c9424c8fca6bd6bb47a34b8c189849311b8a9d8da",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-w4-log-lithology/README.txt",
           "bytes": 2298,
-          "sha256": "a7130eec193acc0c294fadb810106e6b5d1c39321a8d1bd722126fff5629fea0",
+          "sha256": "402982d2d099ebfef4d08745367cef60c678dfb5fd9d0a56ddadadb97e8ba9ba",
           "relative": "README.txt"
         },
         {
@@ -341,8 +341,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.js",
-          "bytes": 63887,
-          "sha256": "bd3b25daa52e8fa5cb6686c9ca2bf1568f9b8270037ba73a5bc975d4b38a1d9e",
+          "bytes": 73712,
+          "sha256": "db21f1d1dd558938f79329ff652201491350d6638559497b1d403dc8176c0ef3",
           "relative": "demo/demo.js"
         }
       ]
@@ -360,7 +360,7 @@
         {
           "path": "expansion-src/c1/case.json",
           "bytes": 27451,
-          "sha256": "bb979172e5efbe5c1bfdb8bd6adde21851b01a425fe76d9fb8e410fd39c58d6c"
+          "sha256": "f544fa62ea157b90919e544e49c2fe2567c4123336e169d4a21a54487e25e47e"
         },
         {
           "path": "expansion-src/c1/engine.js",
@@ -370,7 +370,7 @@
         {
           "path": "expansion-src/c1/app.js",
           "bytes": 41540,
-          "sha256": "8788404edfd5433af8fd36d1ec240f51ddc59ed3d231b2eeef31e374d48a0daf"
+          "sha256": "2837670cb9defa49382a9ad8a65e0771c51be2204d946508030930816e31858a"
         },
         {
           "path": "expansion-src/c1/demo.html",
@@ -385,24 +385,24 @@
         {
           "path": "expansion-src/c1/README.txt",
           "bytes": 1226,
-          "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043"
+          "sha256": "bc0da39d13ba2e0b72a7ecf9c2c89b478313477198aa39e184283be3fbb88b7a"
         }
       ],
       "output": "dist/expansion-cases/s17x-c1-cement-quality",
       "caseId": "s17x-c1-cement-quality",
-      "version": "1.0.0",
-      "bytes": 149005,
+      "version": "1.0.1",
+      "bytes": 166589,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-c1-cement-quality/case.json",
-          "bytes": 27349,
-          "sha256": "f5799d2160b8db3984795f82580af67e3104e8ddf532568bc635989afad45258",
+          "bytes": 35103,
+          "sha256": "434bf6a4cf1e5c2c51f93225716c4cb74973b79739a83d8764d8f7b31b28d3c4",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-c1-cement-quality/README.txt",
           "bytes": 1226,
-          "sha256": "71a6e79d0519a9b8b0604ba613cebbe917e49f4ff91cbf5015e493e957b5d043",
+          "sha256": "bc0da39d13ba2e0b72a7ecf9c2c89b478313477198aa39e184283be3fbb88b7a",
           "relative": "README.txt"
         },
         {
@@ -419,8 +419,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js",
-          "bytes": 87432,
-          "sha256": "5759699c4f05ffa0f673988482c60b10c73823ac65966cb6f53024254645b625",
+          "bytes": 97262,
+          "sha256": "6f1e019bdb182538d2efffe1a9681953001e2f2b64da05f42b2bf08816e2c4d6",
           "relative": "demo/demo.js"
         }
       ]
@@ -438,7 +438,7 @@
         {
           "path": "expansion-src/co1/case.json",
           "bytes": 22033,
-          "sha256": "626af726d8a9c458c76b851d73d6ed2050f849f895e8c6ad75d4adefa0b08b0a"
+          "sha256": "d82613388003ea13ded20cb660d438ca9b9c36e0f1c1e9aecce2887f18ad1148"
         },
         {
           "path": "expansion-src/co1/engine.js",
@@ -448,7 +448,7 @@
         {
           "path": "expansion-src/co1/app.js",
           "bytes": 36615,
-          "sha256": "9f9d8209c270cdf3e7095a4e148d958b75ff4624c271ca9f5834a87dba03b586"
+          "sha256": "0312fbaba3b10e5f05fb29d02727d1705b29b0d2883ba4884e5a964a015820fa"
         },
         {
           "path": "expansion-src/co1/demo.html",
@@ -463,24 +463,24 @@
         {
           "path": "expansion-src/co1/README.txt",
           "bytes": 1233,
-          "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12"
+          "sha256": "d0b3e189906ed0e33b275107cd86b13174e5055bbcafe43419c02f9bf03e0fde"
         }
       ],
       "output": "dist/expansion-cases/s17x-co1-completion-choice",
       "caseId": "s17x-co1-completion-choice",
-      "version": "1.0.0",
-      "bytes": 139826,
+      "version": "1.0.1",
+      "bytes": 157496,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-co1-completion-choice/case.json",
-          "bytes": 21930,
-          "sha256": "3526554dd5fee424602f98eafcfeaa7bdb7e07d83c09663c7f388668bd133d04",
+          "bytes": 29727,
+          "sha256": "c7d564b679c3a6a56a7522658ee96af7bbb47a194d0fe1a972e7627e3f0b320e",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-co1-completion-choice/README.txt",
           "bytes": 1233,
-          "sha256": "b4d5109e8aa7e5bd3d7a930dff8c6acb9496d9e187e8d18d04259b38e025ab12",
+          "sha256": "d0b3e189906ed0e33b275107cd86b13174e5055bbcafe43419c02f9bf03e0fde",
           "relative": "README.txt"
         },
         {
@@ -497,8 +497,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js",
-          "bytes": 83477,
-          "sha256": "8cca02f9eef0ca45f483c8dd92f56264b0b50da51853ed70bd57d2ac1dbe6d90",
+          "bytes": 93350,
+          "sha256": "5f395c7d9be032b8938a86912751b5c21b4c98d9c2a91fa441c24ab5cc002f97",
           "relative": "demo/demo.js"
         }
       ]
@@ -516,7 +516,7 @@
         {
           "path": "expansion-src/p1/case.json",
           "bytes": 24982,
-          "sha256": "a0763b5992e1c428712484439fd616a54e34e7eaebd7eddead70486d290c1b86"
+          "sha256": "82b5adc636cd8b6533f781c82918cdb281ffb60deaa06517840d01db148b8923"
         },
         {
           "path": "expansion-src/p1/engine.js",
@@ -526,7 +526,7 @@
         {
           "path": "expansion-src/p1/app.js",
           "bytes": 45644,
-          "sha256": "df0a7739e88cf4accc65b80619a5eb11a64b0329371184b759079d5fb4d60e27"
+          "sha256": "decc5d0e2b105a7db6b967a184498a4a0b5c228a84e555e7f96883c2a592e1a2"
         },
         {
           "path": "expansion-src/p1/demo.html",
@@ -541,24 +541,24 @@
         {
           "path": "expansion-src/p1/README.txt",
           "bytes": 3117,
-          "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1"
+          "sha256": "523fd90d6ee6cb20f371d51222870394b65915496b1ee669262c29e9303dbdfb"
         }
       ],
       "output": "dist/expansion-cases/s17x-p1-perforation-design",
       "caseId": "s17x-p1-perforation-design",
-      "version": "1.0.0",
-      "bytes": 151273,
+      "version": "1.0.1",
+      "bytes": 168871,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-p1-perforation-design/case.json",
-          "bytes": 24838,
-          "sha256": "b927bda71b55694520b21fa727914b249200cdc6fe31037b3fad988b864ef033",
+          "bytes": 32599,
+          "sha256": "1c9f9b1e0020e875e20e253977a58bc6ce43dc7acd33dc070afcb0d511c9dfb2",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-p1-perforation-design/README.txt",
           "bytes": 3117,
-          "sha256": "0394a6ce9b0630b378a1c03930b5915b7cc30099e54270f5a7955d48f31515b1",
+          "sha256": "523fd90d6ee6cb20f371d51222870394b65915496b1ee669262c29e9303dbdfb",
           "relative": "README.txt"
         },
         {
@@ -575,8 +575,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.js",
-          "bytes": 93983,
-          "sha256": "f5124c48ee3667fa05820c33d7c66ce08f025c7577e6c94e1fef6b9596ecc70d",
+          "bytes": 103820,
+          "sha256": "ec193825a9c541879b45884816e6ea06e6d5fe9e4a3ece6c192ebe53fa360163",
           "relative": "demo/demo.js"
         }
       ]
@@ -594,7 +594,7 @@
         {
           "path": "expansion-src/pr1/case.json",
           "bytes": 22875,
-          "sha256": "b05227062ea0364dc0f3a9b5d83572de6051bed30798457b9f5400bde16d01c1"
+          "sha256": "074ee9a9612882b55b0ed6a04a6394365cd024bdb34dc4194c91fc181fa5a578"
         },
         {
           "path": "expansion-src/pr1/engine.js",
@@ -604,7 +604,7 @@
         {
           "path": "expansion-src/pr1/app.js",
           "bytes": 43056,
-          "sha256": "c163e12a74853e83ef1301b7289e343751a2365bbbb19f38b65f73fe4db92bd1"
+          "sha256": "df7c9d4eea92db24088a72dc2a95a90d3311a7b06796cd5c96ce3005df1da90f"
         },
         {
           "path": "expansion-src/pr1/demo.html",
@@ -619,24 +619,24 @@
         {
           "path": "expansion-src/pr1/README.txt",
           "bytes": 3458,
-          "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41"
+          "sha256": "31c5e152a14cebf51b445607888e2076e2e61825a126a98cd56c3496c1a95501"
         }
       ],
       "output": "dist/expansion-cases/s17x-pr1-pump-card",
       "caseId": "s17x-pr1-pump-card",
-      "version": "1.0.0",
-      "bytes": 147707,
+      "version": "1.0.1",
+      "bytes": 165325,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-pr1-pump-card/case.json",
-          "bytes": 22731,
-          "sha256": "ea51ff806cc0c2ab2553ddefa732e742630da42eca0944d6f5f0a78423c4ca94",
+          "bytes": 30502,
+          "sha256": "3a192a5431e9cba24735bc1818886c8d4eb449b640cdf4eac8f1fdc70fdbca53",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-pr1-pump-card/README.txt",
           "bytes": 3458,
-          "sha256": "dc6f961a1284a6f328ddffc1f9661eecabbd5d9af4ae9c3a7eedff51a0a50c41",
+          "sha256": "31c5e152a14cebf51b445607888e2076e2e61825a126a98cd56c3496c1a95501",
           "relative": "README.txt"
         },
         {
@@ -653,8 +653,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.js",
-          "bytes": 92379,
-          "sha256": "88ca0562e088df63bb215c7a7b2b20f1e674f0d95e98da7b91dc5342f6917ec7",
+          "bytes": 102226,
+          "sha256": "2a95d22530d3aa702f291136b41f6cf22dda57264d0a80c5e91e819f15e6eeac",
           "relative": "demo/demo.js"
         }
       ]
@@ -672,12 +672,12 @@
         {
           "path": "expansion-src/wo1/case.json",
           "bytes": 18953,
-          "sha256": "48ecc72d2ecf02574e891f5344a59c1e275c707686f4ae566e730e61e84cd974"
+          "sha256": "cf1710780b5ec3f5a60f48f80c77d739e6e8c60e9aefed4d52e608aa87448ab8"
         },
         {
           "path": "expansion-src/wo1/engine.js",
           "bytes": 15086,
-          "sha256": "7f1affb847df0a372bdba3595bb590ddf247e8a5f72954653b656948d67bc66f"
+          "sha256": "e8088cceebb0c0be4cb61066132805e87207da9181362369a277f2bdd05c2946"
         },
         {
           "path": "expansion-src/wo1/app.js",
@@ -697,24 +697,24 @@
         {
           "path": "expansion-src/wo1/README.txt",
           "bytes": 1085,
-          "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684"
+          "sha256": "7162e7235b07544a6d32c1db01889a0aed18b2c8c96dbe8222a51ebc5e39a30e"
         }
       ],
       "output": "dist/expansion-cases/s17x-wo1-workover-retrieval",
       "caseId": "s17x-wo1-workover-retrieval",
-      "version": "1.0.0",
-      "bytes": 128459,
+      "version": "1.0.1",
+      "bytes": 146123,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/case.json",
-          "bytes": 18843,
-          "sha256": "649d0329d083eb994cc58a7cddd131110b0d550d317133e9448a306ac6901dc2",
+          "bytes": 26637,
+          "sha256": "1628f945b3dde1c5bca9ae9bfbd9eb9f39937dc3a20385fbea92fd9a03850e79",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/README.txt",
           "bytes": 1085,
-          "sha256": "0cb01c6263fb48dffc798b755a8cda050c6cec7817d6e47997a10c71eae68684",
+          "sha256": "7162e7235b07544a6d32c1db01889a0aed18b2c8c96dbe8222a51ebc5e39a30e",
           "relative": "README.txt"
         },
         {
@@ -731,8 +731,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.js",
-          "bytes": 63674,
-          "sha256": "5e01f440bd15c45fa1c0e9fce85c80108e759575f7bbc1a08f5638b4d939dddc",
+          "bytes": 73544,
+          "sha256": "78d57c55b136a7bd7982210085f4c7efc99d7d8d3ea663838814b13c2b7bddb2",
           "relative": "demo/demo.js"
         }
       ]
@@ -750,12 +750,12 @@
         {
           "path": "expansion-src/e1/case.json",
           "bytes": 25918,
-          "sha256": "4eb860876fd74980d8c5a761007785f78a985f15351d4eb6abf914d2d3eaa6a7"
+          "sha256": "9e3ba5dd41f0fae3c1382ef7fff33a86f8e06c9ae0edb2ca597a9fe614d0cac2"
         },
         {
           "path": "expansion-src/e1/engine.js",
           "bytes": 11094,
-          "sha256": "ce61287fc1ffe7cb7d26fb4389695b632cdbb559ffd9a3500b38b637cac00cb7"
+          "sha256": "d379bd40f1fca085ae45b73f6b57a3c35bd1de40563030dbba2bdbccdec0f925"
         },
         {
           "path": "expansion-src/e1/app.js",
@@ -775,24 +775,24 @@
         {
           "path": "expansion-src/e1/README.txt",
           "bytes": 1077,
-          "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa"
+          "sha256": "022ca931b91647fe879728ea3b9d6d5912929d6d9e1eb6f373b9584234b9c93a"
         }
       ],
       "output": "dist/expansion-cases/s17x-e1-fracture-optimization",
       "caseId": "s17x-e1-fracture-optimization",
-      "version": "1.0.0",
-      "bytes": 141187,
+      "version": "1.0.1",
+      "bytes": 158787,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-e1-fracture-optimization/case.json",
-          "bytes": 25809,
-          "sha256": "51490a009115eb6534de46b01b843de04e773a5f860187a8a0d5ef6d2469fdf9",
+          "bytes": 33571,
+          "sha256": "861ca13e93095ecb5247773e855fe587b94fd20a3870cb81335305a0e9ff1846",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-e1-fracture-optimization/README.txt",
           "bytes": 1077,
-          "sha256": "03be7e0acb6646bc60027fcdd7dda320b6fc0574aaad4dec1ad7f205eece97aa",
+          "sha256": "022ca931b91647fe879728ea3b9d6d5912929d6d9e1eb6f373b9584234b9c93a",
           "relative": "README.txt"
         },
         {
@@ -809,8 +809,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.js",
-          "bytes": 62898,
-          "sha256": "7c346c3e07ba0d668e58411397d47a363d941f2310af00cfbe3fb3f868b6ebb6",
+          "bytes": 72736,
+          "sha256": "dc3e4ce2f5f6c092b0be4a25b8069804ef287e269b057d34c34ae7c2e371803b",
           "relative": "demo/demo.js"
         }
       ]
@@ -828,7 +828,7 @@
         {
           "path": "expansion-src/t1/case.json",
           "bytes": 20849,
-          "sha256": "7cb367971c9df982448049e919f827dfd26d1cd79f7c7e0342741b6d7da35642"
+          "sha256": "06abd0baf4c995093c8719b95982eb4e7018cd733b3935efc2a355b0921dfdb6"
         },
         {
           "path": "expansion-src/t1/engine.js",
@@ -838,7 +838,7 @@
         {
           "path": "expansion-src/t1/app.js",
           "bytes": 41912,
-          "sha256": "90b5fb9757587c6582fbb78200f922bba522d41e8df46a1856b78168b869d312"
+          "sha256": "92a2634b511e4dad14b34a942fe74710232153ea58ceb4ed12c6fa6277d06a7b"
         },
         {
           "path": "expansion-src/t1/demo.html",
@@ -853,24 +853,24 @@
         {
           "path": "expansion-src/t1/README.txt",
           "bytes": 3506,
-          "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a"
+          "sha256": "0d81e2bd293540f1aec4f0836187b3f992b3ab89bd27e80e1e476d91a87b7256"
         }
       ],
       "output": "dist/expansion-cases/s17x-t1-pipeline-leak",
       "caseId": "s17x-t1-pipeline-leak",
-      "version": "1.0.0",
-      "bytes": 139868,
+      "version": "1.0.1",
+      "bytes": 157556,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-t1-pipeline-leak/case.json",
-          "bytes": 20723,
-          "sha256": "3cdf278d27461b163a8b845b252038c6b0e9b3a58ad40b5a0f9779030679cb4b",
+          "bytes": 28529,
+          "sha256": "91d5f843d51da3dae2d1fac41c1a8d0de99612438912ed9c25ddc0bbf0954e93",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-t1-pipeline-leak/README.txt",
           "bytes": 3506,
-          "sha256": "5b8b2e4d0cfb14ce1af33973aa4a9f4d7782aa9410be0a9cf96be55bc859be8a",
+          "sha256": "0d81e2bd293540f1aec4f0836187b3f992b3ab89bd27e80e1e476d91a87b7256",
           "relative": "README.txt"
         },
         {
@@ -887,8 +887,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.js",
-          "bytes": 88203,
-          "sha256": "555307d47112ba9426a99a16b87a2d7f7e17ee8d0d2c214142d202abe99a4f44",
+          "bytes": 98085,
+          "sha256": "c5586dd8908ebf2016bb24a8892f79f07614d7b4cb45a7d272401a648a65e9f6",
           "relative": "demo/demo.js"
         }
       ]
@@ -906,7 +906,7 @@
         {
           "path": "expansion-src/r5/case.json",
           "bytes": 21498,
-          "sha256": "f2334272c9901f4a8ab5187381b31124d7407955a418053a57babb9a65355392"
+          "sha256": "ca0293d0a9c4c08243e88c495f308692a6dd95d7ae3be134a276ddfc3769ef5e"
         },
         {
           "path": "expansion-src/r5/engine.js",
@@ -916,7 +916,7 @@
         {
           "path": "expansion-src/r5/app.js",
           "bytes": 42432,
-          "sha256": "c53fec8020eb9a3fff4a68b40b6678905b198fa5777ee4aac05a79d2f94b4d84"
+          "sha256": "06e14588255a41cf3794be7f7b2c4b22fb4d2e5ca5ff1271fcaf1ef24a229996"
         },
         {
           "path": "expansion-src/r5/demo.html",
@@ -931,24 +931,24 @@
         {
           "path": "expansion-src/r5/README.txt",
           "bytes": 3929,
-          "sha256": "60aefd3c3e5536ee81e38598d815e0df9dc357ee291eeca504cd2c5b9a1b7f53"
+          "sha256": "123ede7031412013e92805228fea94ab3ddf0a194d0c175fc147a91cb420262e"
         }
       ],
       "output": "dist/expansion-cases/s17x-r5-quality-softsensor",
       "caseId": "s17x-r5-quality-softsensor",
-      "version": "1.0.0",
-      "bytes": 141491,
+      "version": "1.0.1",
+      "bytes": 159205,
       "files": [
         {
           "path": "dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
-          "bytes": 21372,
-          "sha256": "26b391f9558ed2f5c659b9bc1b252a6bb5de6fd430f52789331913856f3ec09c",
+          "bytes": 29191,
+          "sha256": "c4a4ac82b4adce39232dfe5541fe7ff46844b505d9070ff2a5164fbd4bfbc81a",
           "relative": "case.json"
         },
         {
           "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
           "bytes": 3929,
-          "sha256": "60aefd3c3e5536ee81e38598d815e0df9dc357ee291eeca504cd2c5b9a1b7f53",
+          "sha256": "123ede7031412013e92805228fea94ab3ddf0a194d0c175fc147a91cb420262e",
           "relative": "README.txt"
         },
         {
@@ -965,8 +965,8 @@
         },
         {
           "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
-          "bytes": 88530,
-          "sha256": "66251aa0eb7fbe9c375d0f04c9d876eeab75258ec10d1725c0749f2689f9357f",
+          "bytes": 98425,
+          "sha256": "72b8c90b7203b8feb404dad6b3d1604cad484e2dda2e36c4993f991953178af4",
           "relative": "demo/demo.js"
         }
       ]
@@ -976,7 +976,7 @@
   "invalid": [],
   "plugin": {
     "path": "portal/assets/s17-expansion-cases.js",
-    "bytes": 254024,
-    "sha256": "a16978e2ce66486a80439c12cd157954f42ba425f472dda90cd8fe39d1b5cf21"
+    "bytes": 347297,
+    "sha256": "19e596f5c7238b7d3bd7fea73f1602eb283ac6435af58a3a2cca04a9e6b6c105"
   }
 }

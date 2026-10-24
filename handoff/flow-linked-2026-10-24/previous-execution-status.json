@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-24T03:45:02.694Z",
+  "portalVersion": "1.8.0-preview",
+  "mandatoryVersion": "1.5.0",
+  "selfAuthoredCases": 17,
+  "scope": "Observation-led reworking of the five mudlogging lessons; other 12 runtime folders unchanged",
+  "browserExecuted": true,
+  "reports": [
+    {
+      "path": "handoff/observation-led-2026-10-24/browser-standalone.json",
+      "passed": 50,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-led-2026-10-24/browser-original.json",
+      "passed": 46,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-led-2026-10-24/browser-enhanced.json",
+      "passed": 19,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-led-2026-10-24/browser-legacy.json",
+      "passed": 5,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-led-2026-10-24/browser-restart.json",
+      "passed": 12,
+      "failed": 0
+    }
+  ],
+  "browserCheckCount": 132,
+  "nativePersisted": {
+    "count": 17,
+    "storageCharacters": 4775101
+  },
+  "sourceChecksAreNotBrowserProof": true,
+  "liveArkModelCallThisRevision": false,
+  "imagegenCallsThisRevision": 1,
+  "remainingSceneExpansion": 44,
+  "unverified": [
+    "physical mobile devices",
+    "Firefox/WebKit",
+    "new microphone/live model connection"
+  ],
+  "priorEvidence": [
+    "handoff/expansion-2026-10-24/browser-restart.json",
+    "handoff/illustrated-background-2026-10-24/verification.json"
+  ]
+}
