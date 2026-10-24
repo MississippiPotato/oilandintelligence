@@ -1,0 +1,1063 @@
+{
+  "scope": "Actual untouched teacher folder importer, five 1.5.0 observation-led packages, sandbox calculations, real JSON downloads, refresh and cumulative 17-package persistence",
+  "checks": [
+    {
+      "name": "dedicated profile begins empty",
+      "passed": true
+    },
+    {
+      "name": "m1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "m1 original background has observed materials and local embedded images",
+      "passed": true
+    },
+    {
+      "name": "m1 importer sandbox mounts the new interactive reading",
+      "passed": true
+    },
+    {
+      "name": "m1 sandbox flow interaction works",
+      "passed": true
+    },
+    {
+      "name": "m1 actual export carries current case identity and version",
+      "passed": true
+    },
+    {
+      "name": "m1 refresh recomputes the same model metrics",
+      "passed": true
+    },
+    {
+      "name": "m2 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "m2 original background has observed materials and local embedded images",
+      "passed": true
+    },
+    {
+      "name": "m2 importer sandbox mounts the new interactive reading",
+      "passed": true
+    },
+    {
+      "name": "m2 sandbox flow interaction works",
+      "passed": true
+    },
+    {
+      "name": "m2 actual export carries current case identity and version",
+      "passed": true
+    },
+    {
+      "name": "m2 refresh recomputes the same model metrics",
+      "passed": true
+    },
+    {
+      "name": "m3 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "m3 original background has observed materials and local embedded images",
+      "passed": true
+    },
+    {
+      "name": "m3 importer sandbox mounts the new interactive reading",
+      "passed": true
+    },
+    {
+      "name": "m3 sandbox flow interaction works",
+      "passed": true
+    },
+    {
+      "name": "m3 actual export carries current case identity and version",
+      "passed": true
+    },
+    {
+      "name": "m3 refresh recomputes the same model metrics",
+      "passed": true
+    },
+    {
+      "name": "m4 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "m4 original background has observed materials and local embedded images",
+      "passed": true
+    },
+    {
+      "name": "m4 importer sandbox mounts the new interactive reading",
+      "passed": true
+    },
+    {
+      "name": "m4 sandbox flow interaction works",
+      "passed": true
+    },
+    {
+      "name": "m4 actual export carries current case identity and version",
+      "passed": true
+    },
+    {
+      "name": "m4 refresh recomputes the same model metrics",
+      "passed": true
+    },
+    {
+      "name": "m5 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "m5 original background has observed materials and local embedded images",
+      "passed": true
+    },
+    {
+      "name": "m5 importer sandbox mounts the new interactive reading",
+      "passed": true
+    },
+    {
+      "name": "m5 sandbox flow interaction works",
+      "passed": true
+    },
+    {
+      "name": "m5 actual export carries current case identity and version",
+      "passed": true
+    },
+    {
+      "name": "m5 refresh recomputes the same model metrics",
+      "passed": true
+    },
+    {
+      "name": "g1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "s1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "d1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "w4 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "c1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "co1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "p1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "pr1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "wo1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "e1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "t1 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "r5 native folder upload persists",
+      "passed": true
+    },
+    {
+      "name": "all 17 packages survive cumulative native import and refresh",
+      "passed": true,
+      "detail": {
+        "count": 17,
+        "storageCharacters": 4775101,
+        "versions": [
+          {
+            "id": "s17-cuttings-lithology",
+            "version": "1.5.0"
+          },
+          {
+            "id": "s17-mudgas-context",
+            "version": "1.5.0"
+          },
+          {
+            "id": "s17-fluorescence-review",
+            "version": "1.5.0"
+          },
+          {
+            "id": "s17-drilltime-boundaries",
+            "version": "1.5.0"
+          },
+          {
+            "id": "s17-evidence-report",
+            "version": "1.5.0"
+          },
+          {
+            "id": "s17x-g1-remote-lithology",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-s1-seismic-fault",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-d1-rop-optimization",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-w4-log-lithology",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-c1-cement-quality",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-co1-completion-choice",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-p1-perforation-design",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-pr1-pump-card",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-wo1-workover-retrieval",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-e1-fracture-optimization",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-t1-pipeline-leak",
+            "version": "1.0.0"
+          },
+          {
+            "id": "s17x-r5-quality-softsensor",
+            "version": "1.0.0"
+          }
+        ]
+      }
+    },
+    {
+      "name": "native import has no external dependency",
+      "passed": true
+    },
+    {
+      "name": "no native/sandbox JavaScript exception",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "m1",
+      "id": "s17-cuttings-lithology",
+      "version": "1.5.0",
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 2,
+            "IoU": 1
+          },
+          {
+            "pred": 1,
+            "truth": 0,
+            "IoU": 1
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "IoU": 1
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "IoU": 1
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "IoU": 1
+          },
+          {
+            "pred": 5,
+            "truth": 7,
+            "IoU": 1
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "IoU": 1
+          },
+          {
+            "pred": 7,
+            "truth": 5,
+            "IoU": 1
+          },
+          {
+            "pred": 8,
+            "truth": 10,
+            "IoU": 1
+          },
+          {
+            "pred": 9,
+            "truth": 8,
+            "IoU": 1
+          },
+          {
+            "pred": 10,
+            "truth": 11,
+            "IoU": 1
+          },
+          {
+            "pred": 11,
+            "truth": 9,
+            "IoU": 1
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "merged": [],
+        "model": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              7,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              5,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 0,
+              "f1": 0
+            },
+            {
+              "recall": 0.7142857142857143,
+              "f1": 0.7142857142857143
+            }
+          ],
+          "macroF1": 0.5714285714285715,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 4,
+          "coverage": 1,
+          "acceptedError": 0.3333333333333333
+        },
+        "segmentation": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "trueVisiblePixels": 14582,
+        "areaError_pp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "evidencePath": "output/exports/v1.5.0/m1-original.json"
+    },
+    {
+      "scene": "m2",
+      "id": "s17-mudgas-context",
+      "version": "1.5.0",
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 0,
+            "error_s": 10
+          },
+          {
+            "pred": 1,
+            "truth": 1,
+            "error_s": 0
+          },
+          {
+            "pred": 2,
+            "truth": 2,
+            "error_s": 0
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "error_s": 0
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "error_s": 0
+          },
+          {
+            "pred": 5,
+            "truth": 5,
+            "error_s": 0
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "error_s": 0
+          },
+          {
+            "pred": 7,
+            "truth": 7,
+            "error_s": 0
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "detectionRecall": 1,
+        "truthCount": 8,
+        "candidateCount": 8,
+        "model": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 0.8
+            },
+            {
+              "recall": 0.5,
+              "f1": 0.6666666666666666
+            }
+          ],
+          "macroF1": 0.8666666666666666,
+          "total": 8,
+          "accepted": 8,
+          "wrong": 1,
+          "coverage": 1,
+          "acceptedError": 0.125
+        },
+        "depthMAE_m": 0,
+        "depthN": 2,
+        "falsePersistent": {
+          "count": 0,
+          "denominator": 6
+        },
+        "allCandidateCoverage": 1
+      },
+      "evidencePath": "output/exports/v1.5.0/m2-original.json"
+    },
+    {
+      "scene": "m3",
+      "id": "s17-fluorescence-review",
+      "version": "1.5.0",
+      "metrics": {
+        "methods": {
+          "B0": {
+            "tp": 2027,
+            "fp": 0,
+            "fn": 1445,
+            "tn": 61628,
+            "IoU": 0.5838133640552995,
+            "Dice": 0.7372249499909075,
+            "recall": 0.5838133640552995,
+            "precision": 1,
+            "areaError_pp": 9.90947743793718,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "B1": {
+            "tp": 1914,
+            "fp": 0,
+            "fn": 1558,
+            "tn": 61628,
+            "IoU": 0.5512672811059908,
+            "Dice": 0.7107315261789825,
+            "recall": 0.5512672811059908,
+            "precision": 1,
+            "areaError_pp": 10.684405431353722,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "M0": {
+            "tp": 3472,
+            "fp": 0,
+            "fn": 0,
+            "tn": 61628,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1,
+            "areaError_pp": 0,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          }
+        },
+        "foreground": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "fixedEvaluationPixels": 65100,
+        "truthSummary": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212,
+          "intensity": 52.75201894500772,
+          "grade": 1
+        }
+      },
+      "evidencePath": "output/exports/v1.5.0/m3-original.json"
+    },
+    {
+      "scene": "m4",
+      "id": "s17-drilltime-boundaries",
+      "version": "1.5.0",
+      "metrics": {
+        "model": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.125
+            },
+            {
+              "pred": 1,
+              "truth": 1,
+              "error_m": 0.125
+            }
+          ],
+          "precision": 1,
+          "recall": 1,
+          "F1": 1,
+          "misses": [],
+          "extras": [],
+          "MAE_m": 0.125,
+          "predCount": 2,
+          "truthCount": 2
+        },
+        "baseline": {
+          "pairs": [
+            {
+              "pred": 0,
+              "truth": 0,
+              "error_m": 0.5
+            },
+            {
+              "pred": 2,
+              "truth": 1,
+              "error_m": 0.5
+            }
+          ],
+          "precision": 0.6666666666666666,
+          "recall": 1,
+          "F1": 0.8,
+          "misses": [],
+          "extras": [
+            1
+          ],
+          "MAE_m": 0.5,
+          "predCount": 3,
+          "truthCount": 2
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      },
+      "evidencePath": "output/exports/v1.5.0/m4-original.json"
+    },
+    {
+      "scene": "m5",
+      "id": "s17-evidence-report",
+      "version": "1.5.0",
+      "metrics": {
+        "model": {
+          "matrix": [
+            [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 36,
+          "accepted": 36,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 36,
+          "accepted": 36,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "fields": {
+          "fieldPrecision": 1,
+          "fieldRecall": 1,
+          "fieldF1": 1,
+          "exactRecords": 6,
+          "totalRecords": 6,
+          "byField": {
+            "depthRangeMD_m": {
+              "correct": 6,
+              "total": 6
+            },
+            "timeRange_s": {
+              "correct": 6,
+              "total": 6
+            },
+            "gasValue": {
+              "correct": 6,
+              "total": 6
+            },
+            "gasUnit": {
+              "correct": 6,
+              "total": 6
+            },
+            "fluorescence": {
+              "correct": 6,
+              "total": 6
+            },
+            "rock": {
+              "correct": 6,
+              "total": 6
+            },
+            "operation": {
+              "correct": 6,
+              "total": 6
+            },
+            "negation": {
+              "correct": 6,
+              "total": 6
+            }
+          },
+          "chapterCoverage": 1,
+          "factCoverage": 1,
+          "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+        },
+        "grounding": {
+          "supported": 6,
+          "total": 6,
+          "unsupported": 0,
+          "unsupportedRate": 0,
+          "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+        },
+        "expectedConflicts": 0,
+        "detectedConflicts": 0
+      },
+      "evidencePath": "output/exports/v1.5.0/m5-original.json"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "persisted": {
+    "count": 17,
+    "storageCharacters": 4775101,
+    "versions": [
+      {
+        "id": "s17-cuttings-lithology",
+        "version": "1.5.0"
+      },
+      {
+        "id": "s17-mudgas-context",
+        "version": "1.5.0"
+      },
+      {
+        "id": "s17-fluorescence-review",
+        "version": "1.5.0"
+      },
+      {
+        "id": "s17-drilltime-boundaries",
+        "version": "1.5.0"
+      },
+      {
+        "id": "s17-evidence-report",
+        "version": "1.5.0"
+      },
+      {
+        "id": "s17x-g1-remote-lithology",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-s1-seismic-fault",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-d1-rop-optimization",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-w4-log-lithology",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-c1-cement-quality",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-co1-completion-choice",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-p1-perforation-design",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-pr1-pump-card",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-wo1-workover-retrieval",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-e1-fracture-optimization",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-t1-pipeline-leak",
+        "version": "1.0.0"
+      },
+      {
+        "id": "s17x-r5-quality-softsensor",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "checkedAt": "2026-10-24T03:38:43.455Z",
+  "passed": 46,
+  "failed": 0
+}

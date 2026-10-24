@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-10-24T03:32:41.849Z",
+  "kind": "source_and_build_contract_checks",
+  "browserExecuted": false,
+  "expectedCases": 12,
+  "actualBuiltCases": 12,
+  "passed": 6,
+  "failed": 1,
+  "results": [
+    {
+      "name": "teacher copies, four import contract files and original five-case source bytes preserved",
+      "passed": true,
+      "detail": {
+        "files": 80,
+        "browserEvidence": false
+      }
+    },
+    {
+      "name": "build count equals actual complete packages, no planned case registered",
+      "passed": true,
+      "detail": {
+        "actual": 12,
+        "missing": [],
+        "invalid": []
+      }
+    },
+    {
+      "name": "each built folder has exactly five required runtime files with locked bytes",
+      "passed": true,
+      "detail": {
+        "files": 60,
+        "cumulativeBytes": 1696583,
+        "singleFolderLimit": 6291456
+      }
+    },
+    {
+      "name": "assistant included from current shared source, per-page context remains case-specific",
+      "passed": false,
+      "error": "legacy five-case CSS default must remain byte-identical\n+ actual - expected\n... Skipped lines\n\n  '\\n' +\n    '/* Reading sizes shared by the five standalone teaching cases. */\\r\\n' +\n    'body{font-size:16px;line-height:1.85;background:#f4f6f7;color:#26333b}\\r\\n' +\n    'body>header{background:#fff;border-color:#dfe5e8;padding-top:24px;padding-bottom:24px}\\r\\n' +\n    'main{padding-top:40px;padding-bottom:65px}\\r\\n' +\n...\n    '\\n' +\n+   '/* Observation-led reading: source material, coordinated charts, and short explanations. */\\n' +\n+   '.study-widget{margin:26px 0 30px;padding:22px;border:1px solid #dce4e5;border-radius:14px;background:#fff;color:#29434c;min-width:0;overflow:hidden}\\n' +\n+   '.study-widget-head{border-bottom:1px solid #e4e9e9;padding-bottom:15px;margin-bottom:18px}.study-widget-head>span{font-size:12px;letter-spacing:.12em;color:#7d9298}.study-widget-head h4{margin:6px 0 0!important;font-size:21px;line-height:1.6}\\n' +\n+   '.study-controls label{white-space:nowrap}.study-controls select{width:auto!important;flex:0 1 auto;min-width:0}.study-controls .study-text-label{white-space:normal}\\n' +\n+   '.study-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:12px 0 20px}.study-controls label{display:flex;gap:10px;align-items:center;font-size:16px;max-width:100%}.study-controls :is(select,input,textarea){font:inherit;max-width:100%;color:#24424d}.study-controls select{padding:7px 12px;border:1px solid #b9cdce;border-radius:7px;background:white}.study-controls input[type=range]{width:165px;accent-color:#257c73}.study-controls button{font:inherit;cursor:pointer;background:#f2f5f5;border:1px solid #d8e2e4;border-radius:8px;padding:10px}.study-controls :is(button,select,input,textarea):disabled{opacity:.72;cursor:default}\\n' +\n+   '.study-photo-button{display:flex;align-items:center;gap:9px;font-size:14px!important;line-height:1.3!important;padding:5px 9px 5px 5px!important}.study-photo-button img{width:46px;height:46px;object-fit:cover;border-radius:4px}.study-photo-button[aria-pressed=true]{background:#e8f3ef;border-color:#2b8377;box-shadow:0 0 0 1px #2b8377}\\n' +\n+   '[data-study-widget=core] .study-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}[data-study-widget=core] .study-photo-button{display:flex;flex-direction:column;padding:8px!important;min-width:0;gap:9px}[data-study-widget=core] .study-photo-button img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}[data-study-widget=core] .study-controls>label{grid-column:1/-1}.study-selected{font-size:17px!important}\\n' +\n+   '[data-study-widget=core] .study-photo-button img{height:170px;aspect-ratio:auto;object-fit:contain;background:#fff}.study-mineral [hidden]{display:none!important}\\n' +\n+   '.study-photo-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 20px}.study-photo-pair figure{margin:0;min-width:0}.study-photo-pair img{display:block;width:100%;height:245px;object-fit:contain;background:#f2f3f1;border-radius:8px}.study-photo-pair figcaption{font-size:15px!important;line-height:1.7;margin:10px 0 0;color:#5f737a}.study-mineral img{height:auto;aspect-ratio:1.5;object-fit:contain;background:#151b20}\\n' +\n+   '.study-chart{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;padding:8px 0}.study-chart svg{width:100%;min-width:640px;display:block;height:auto}.study-chart [role=button]{cursor:pointer}.study-chart [role=button]:focus{outline:2px solid #d6924c;outline-offset:2px}\\n' +\n+   '.study-numbers{display:flex;gap:20px;flex-wrap:wrap;padding:17px 0;margin:10px 0;border-top:1px solid #e3eaea;border-bottom:1px solid #e3eaea}.study-number{flex:1 1 130px;display:flex;flex-direction:column;gap:7px}.study-number>span{font-size:14px;color:#61777e}.study-number strong{font-size:19px;line-height:1.5;color:#204a50}.study-reading{font-size:16px!important;line-height:1.85!important;color:#536e76;margin:18px 0 0!important}.study-lesson .knowledge-example{padding:17px 20px;border-left:3px solid #6f9f91;background:#edf5f1;border-radius:0 8px 8px 0;margin:23px 0}.study-lesson .knowledge-example p{margin:8px 0 0!important}\\n' +\n+   \".study-field{position:relative;min-width:0;background:#fbf7ec;border-radius:10px;overflow:hidden}.study-field>img{width:100%;height:auto;display:block}.study-field-stages{position:absolute;left:69%;right:2%;top:6%;bottom:4%;display:flex;flex-direction:column;justify-content:space-evenly;list-style:none;padding:0;margin:0}.study-field-stages li{position:relative}.study-field-stages li+li:before{content:'↓';position:absolute;left:15px;top:-24px;color:#9aa8a6;font-size:17px}.study-field-stages button{display:flex;align-items:center;gap:8px;cursor:pointer;background:#fff9;border:1px solid #cbd6cf;border-radius:8px;text-align:left;padding:10px 9px;width:100%;font-size:15px;font-weight:600;color:#3c5656}.study-field-stages small{font-size:12px;color:#7c8e89}.study-field-stages button[aria-pressed=true]{background:#266f66;border-color:#266f66;color:#fff}.study-field-stages button[aria-pressed=true] small{color:#c9e9db}.study-field-detail{padding:18px 20px;background:#f0f5f1;border-radius:8px;margin-top:17px}.study-field-detail b{font-size:18px}.study-field-detail p{font-size:17px!important;margin:9px 0 0!important}.study-map-label{position:absolute;font-size:13px;font-weight:600;padding:5px 8px;color:#3b5558;border-radius:5px;background:#fffdf2e8;border:1px solid #c6c8b8}.study-map-bottom{left:24%;bottom:8%}.study-map-return{left:24%;top:60%}.study-map-shaker{left:31%;top:7%}\\n\" +\n+   '.study-text-label{width:100%;align-items:flex-start!important;flex-direction:column}.study-text-label textarea{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid #b9cdce;border-radius:7px;font-size:18px}.study-source,.study-draft{padding:18px 20px;background:#f1f6f4;border:1px solid #d3e3dc;border-radius:9px;margin:20px 0}.study-source>span,.study-draft>span{font-size:14px;color:#6e8489}.study-source p,.study-draft p{font-size:20px!important;margin:14px 0!important}.study-source mark{background:#daece5;padding:2px 3px}.study-source .study-negation{background:#f7dcb8}.study-draft b{font-size:16px}.study-conflict{background:#fff1e6;border-color:#e1b58d}.study-conflict b{color:#99582c}\\n' +\n+   '.study-pixel-result{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;margin:20px 0}.study-pixel-result figure{margin:0}.study-pixel-result canvas{width:100%;height:auto;image-rendering:pixelated;border-radius:8px}.study-pixel-result p{font-size:16px!important}.study-pixel-result strong{font-size:20px;color:#217b70}\\n' +\n+   '.study-process{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0 30px;counter-reset:process;list-style:none;padding:0}.study-process li{padding:17px 18px;border:1px solid #d7e3df;background:#f1f6f3;border-radius:10px;counter-increment:process;font-size:17px;line-height:1.7}.study-process li:before{content:counter(process,decimal-leading-zero);display:block;color:#71948b;font-size:13px;letter-spacing:.12em;margin-bottom:7p'... 17739 more characters\n-   '/* A quiet, spacious chat surface. All rules stay inside the assistant. */\\r\\n' +\n-   '#s17-assistant{--ag-ink:#22252b;--ag-muted:#858891;--ag-line:#e7e8ed;--ag-accent:#4d6bfe;position:fixed;right:22px;bottom:22px;z-index:100;color:var(--ag-ink);font:17px/1.8 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",\"Microsoft YaHei\",sans-serif;text-align:left;letter-spacing:normal}\\r\\n' +\n-   '#s17-assistant,#s17-assistant *{box-sizing:border-box}#s17-assistant[hidden],#s17-assistant [hidden]{display:none!important}\\r\\n' +\n-   '#s17-assistant :is(button,input,textarea){font:inherit;letter-spacing:normal}#s17-assistant button{cursor:pointer;line-height:1.5;color:inherit;margin:0;background:none;border:0;box-shadow:none}#s17-assistant button:disabled{cursor:default}\\r\\n' +\n-   '#s17-assistant :is(button,a,summary,input,textarea):focus-visible{outline:3px solid #9daeff;outline-offset:3px}#s17-assistant svg{display:block;width:22px;height:22px;max-width:none;flex-shrink:0}#s17-assistant :is(p,h2,h3,strong,b){color:inherit}\\r\\n' +\n-   '#s17-agent-launcher{display:flex;align-items:center;gap:10px;padding:9px 18px 9px 8px!important;border:1px solid #dfe4e9!important;border-radius:22px;background:#fffffff5!important;box-shadow:0 6px 26px #283d4c15!important}\\r\\n' +\n-   '#s17-agent-launcher>span{text-align:left}#s17-agent-launcher strong{display:block;font-size:17px;font-weight:600}#s17-agent-launcher small{display:block;font-size:13px;color:#7b8490}\\r\\n' +\n-   '#s17-assistant .s17-agent-avatar{width:49px;height:49px;flex:none;display:block;background:transparent}#s17-assistant .s17-agent-avatar svg{width:100%;height:100%}\\r\\n' +\n-   '#s17-assistant[data-avatar-style=chibi] #s17-agent-launcher{align-items:flex-end;border:0!important;background:transparent!important;box-shadow:none!important;padding:0!important;border-radius:0;gap:6px}\\r\\n' +\n-   '#s17-assistant[data-avatar-style=chibi] .s17-agent-avatar{width:145px;height:153px;filter:drop-shadow(0 6px 10px #39414f15)}#s17-assistant .s17-agent-avatar canvas{display:block;width:100%!important;height:100%!important;background:transparent;border-radius:0}\\r\\n' +\n-   '#s17-assistant[data-avatar-style=chibi] #s17-agent-launcher>span{margin-bottom:7px;background:#fff;border:1px solid #e1e5eb;border-radius:16px 16px 16px 4px;padding:11px 15px;box-shadow:0 5px 22px #263e4f12}\\r\\n' +\n-   '#s17-assistant #s17-agent-compact{display:none;margin:0 4px 6px auto;font-size:13px;color:#7d8590;padding:4px 9px;background:#fffffff0;border:1px solid #e2e5eb;border-radius:7px}#s17-assistant[data-avatar-style=chibi] #s17-agent-compact{display:block}\\r\\n' +\n-   '#s17-assistant[data-compact=true] .s17-agent-avatar{display:none}#s17-assistant[data-compact=true] #s17-agent-launcher{padding:12px 18px!important;background:#fff!important;border:1px solid #dfe4e9!important;border-radius:17px;box-shadow:0 5px 24px #283d4c15!important}#s17-assistant[data-compact=true] #s17-agent-launcher>span{padding:0;border:0;margin:0;background:none;box-shadow:none}#s17-assistant[data-compact=true] #s17-agent-launcher small{display:none}\\r\\n' +\n-   '#s17-assistant[data-open=true]>#s17-agent-launcher,#s17-assistant[data-open=true]>#s17-agent-compact{visibility:hidden;pointer-events:none}\\r\\n' +\n-   '#s17-assistant .s17-agent-panel{position:fixed;right:22px;bottom:22px;width:min(410px,calc(100vw - 44px));height:min(700px,calc(100dvh - 44px));max-height:calc(100dvh - 44px);display:flex;flex-direction:column;background:#fff;border:1px solid #e5e7ed;border-radius:22px;box-shadow:0 18px 90px #17233925,0 3px 16px #17233908;overflow:hidden;isolation:isolate}\\r\\n' +\n-   '#s17-assistant[data-expanded=true] .s17-agent-panel{width:min(720px,calc(100vw - 44px))}\\r\\n' +\n-   '#s17-assistant .s17-agent-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 16px 10px;flex:none;position:static;background:#fff}\\r\\n' +\n-   '#s17-assistant .s17-agent-identity{display:flex;align-items:center;gap:9px;min-width:0}#s17-assistant .s17-agent-mark{display:grid;place-items:center;flex:none;width:31px;height:33px;color:var(--ag-accent)}#s17-assistant .s17-agent-mark svg{width:26px;height:26px}\\r\\n' +\n-   '#s17-assistant .s17-agent-head h2{margin:0;font-size:20px;line-height:1.45;font-weight:650;letter-spacing:-.02em}#s17-assistant .s17-agent-head h2 span{font-size:14px;font-weight:400;color:#8e929c;margin-left:3px}\\r\\n' +\n-   '#s17-assistant .s17-agent-head p{margin:1px 0 0;color:#8c9099;font-size:12px;line-height:1.6;max-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}\\r\\n' +\n-   '#s17-assistant .s17-agent-head-actions{display:flex;gap:4px;align-items:center;flex:none}#s17-assistant .s17-agent-head-actions button{display:grid;place-items:center;width:34px;height:36px;border-radius:9px;color:#747b87;padding:6px}#s17-assistant .s17-agent-head-actions button:hover,#s17-assistant .s17-agent-head-actions [aria-pressed=true]{background:#f3f4f8;color:var(--ag-accent)}\\r\\n' +\n-   '#s17-assistant .s17-agent-context{font-size:13px;color:#90949d;padding:4px 23px 9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:none}#s17-assistant[data-empty=true] .s17-agent-context{display:none}\\r\\n' +\n-   '#s17-assistant .s17-agent-log{flex:1;min-height:60px;max-height:none;overflow:auto;overscroll-behavior:contain;padding:22px 23px 6px;scrollbar-width:thin;scrollbar-color:#e0e2ea transparent}\\r\\n' +\n-   '#s17-assistant[data-empty=true] .s17-agent-log{flex:0 0 31%;display:flex;align-items:flex-end;min-height:125px;padding-bottom:25px;overflow:hidden}\\r\\n' +\n-   '#s17-assistant .s17-agent-welcome{display:flex;justify-content:center;align-items:center;gap:12px;margin:0 auto;text-align:center;max-width:100%}#s17-assistant .s17-welcome-mark{display:grid;place-items:center;color:var(--ag-accent);flex:none}#s17-assistant .s17-welcome-mark svg{width:32px;height:32px}#s17-assistant .s17-agent-welcome h3{font-size:23px;line-height:1.5;font-weight:600;letter-spacing:-.035em;margin:0}\\r\\n' +\n-   '#s17-assistant .s17-agent-message{margin:0 auto 30px;overflow-wrap:anywhere;max-width:680px;padding:0}#s17-assistant .s17-message-origin{display:block;font-size:13px;color:#8a8f9a;margin:0 0 9px;line-height:1.7}#s17-assistant .s17-message-content{font-size:18px;line-height:1.95;color:#272b33}\\r\\n' +\n-   \"#s17-assistant .s17-message-content p{margin:0 0 6px;line-height:inherit;font-size:inherit}#s17-assistant .s17-message-content br{display:block;content:'';margin-top:8px}#s17-assistant .s17-message-content code{font:15px/1.8 Consolas,monospace;background:#f2f3f7;border-radius:5px;padding:2px 5px;overflow-wrap:anywhere}\\r\\n\" +\n-   '#s17-assistant .s17-chat-bullet{position:relative;padding-left:20px}#s17-assistant .s17-chat-bullet:before{conten'... 10527 more characters\n"
+    },
+    {
+      "name": "optional assistant can be inlined in head without accessing body before DOM readiness",
+      "passed": true,
+      "detail": {
+        "loadingDocumentExecuted": true,
+        "bodyAccessBeforeDOMContentLoaded": false,
+        "executionKind": "Node VM bootstrap check; post-event browser startup remains a browser check"
+      }
+    },
+    {
+      "name": "plugin uses real teacher Cases.register and retains all background/workflow content",
+      "passed": true,
+      "detail": {
+        "cases": 12,
+        "registryErrors": 0,
+        "iframeUsesOpaqueOrigin": true,
+        "executionKind": "Node VM contract check; not a real browser"
+      }
+    },
+    {
+      "name": "unmodified teacher manifest validator and page host can resolve and inline every package",
+      "passed": true,
+      "detail": {
+        "packages": [
+          {
+            "caseId": "s17x-g1-remote-lithology",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-s1-seismic-fault",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-d1-rop-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-w4-log-lithology",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-c1-cement-quality",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-co1-completion-choice",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-p1-perforation-design",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-pr1-pump-card",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-wo1-workover-retrieval",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-e1-fracture-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-t1-pipeline-leak",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-r5-quality-softsensor",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          }
+        ],
+        "executionKind": "Unmodified teacher source evaluated in Node VM; browser rendering not executed",
+        "manifestCheckUsesPublicAPIWithoutLoadedFileState": true
+      }
+    }
+  ],
+  "notVerified": [
+    "real browser original Add Case directory import",
+    "sandbox rendering and model interactions",
+    "refresh and whole browser reopen persistence",
+    "offline default interactions",
+    "actual download",
+    "narrow screen and keyboard behavior",
+    "scientific correctness and inference/evaluation separation require per-case engine checks and review"
+  ]
+}

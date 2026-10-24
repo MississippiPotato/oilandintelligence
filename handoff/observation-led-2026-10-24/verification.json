@@ -1,0 +1,116 @@
+{
+  "checkedAt": "2026-10-24T03:45:04.435Z",
+  "version": "1.8.0-preview",
+  "scope": "Current files and saved actual Chrome evidence; source checks are not browser execution",
+  "browserExecutedByThisCommand": false,
+  "checks": [
+    {
+      "name": "teacher copies and native Add Case contract are unchanged",
+      "passed": true,
+      "detail": {
+        "originalAndCopy": 46,
+        "contractFiles": 4,
+        "teacherSampleFiles": 2
+      }
+    },
+    {
+      "name": "all protected model/data files and 12 runtime folders retain their bytes",
+      "passed": true,
+      "detail": {
+        "protectedFiles": 94
+      }
+    },
+    {
+      "name": "85 current runtime files match build and accepted-reading locks",
+      "passed": true,
+      "detail": {
+        "fiveCaseVersion": "1.5.0",
+        "extraVersion": "1.0.0",
+        "mandatoryBytes": 3355906,
+        "extraBytes": 1696583
+      }
+    },
+    {
+      "name": "new source material, interactive reading and workflow overview are compiled into each case",
+      "passed": true,
+      "detail": {
+        "chaptersPerCase": 4,
+        "selfContained": true
+      }
+    },
+    {
+      "name": "saved actual browser reports pass after the accepted build",
+      "passed": true,
+      "detail": {
+        "reports": [
+          {
+            "name": "browser-standalone",
+            "passed": 50,
+            "failed": 0
+          },
+          {
+            "name": "browser-original",
+            "passed": 46,
+            "failed": 0
+          },
+          {
+            "name": "browser-enhanced",
+            "passed": 19,
+            "failed": 0
+          },
+          {
+            "name": "browser-legacy",
+            "passed": 5,
+            "failed": 0
+          },
+          {
+            "name": "browser-restart",
+            "passed": 12,
+            "failed": 0
+          }
+        ],
+        "browserChecks": 132
+      }
+    },
+    {
+      "name": "15 real five-case browser calculations preserve the previous model and baseline results",
+      "passed": true,
+      "detail": {
+        "runs": 15
+      }
+    },
+    {
+      "name": "five evidence files were downloaded from the native sandbox and retain current identities",
+      "passed": true,
+      "detail": {
+        "files": 5
+      }
+    },
+    {
+      "name": "calculation, provenance, exact NB formula and transport calculations pass separately",
+      "passed": true,
+      "detail": {
+        "nodeChecks": 48,
+        "browserProof": false
+      }
+    },
+    {
+      "name": "native import persists 17 cases through refresh and actual Chrome restart",
+      "passed": true,
+      "detail": {
+        "count": 17,
+        "storageCharacters": 4775101
+      }
+    },
+    {
+      "name": "old imported runtime keeps its own version while the enhanced reader displays current material",
+      "passed": true
+    }
+  ],
+  "notVerified": [
+    "physical mobile device",
+    "Firefox/WebKit",
+    "new microphone or live Ark model call",
+    "field-labelled cuttings/fluorescence/event accuracy"
+  ]
+}

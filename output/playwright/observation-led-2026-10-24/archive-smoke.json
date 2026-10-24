@@ -1,0 +1,38 @@
+{
+  "scope": "Freshly extracted full 1.8.0 archive; actual offline Chrome",
+  "checks": [
+    {
+      "name": "s17-cuttings-lithology extracted source pictures decode",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology extracted calculation enables export",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review extracted source pictures decode",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review extracted calculation enables export",
+      "passed": true
+    },
+    {
+      "name": "extracted homepage keeps 17 authored cases and 12 extra gallery cards",
+      "passed": true
+    },
+    {
+      "name": "no HTTP dependency",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "http": [],
+  "checkedAt": "2026-10-24T03:47:35.253Z",
+  "passed": 7,
+  "failed": 0
+}

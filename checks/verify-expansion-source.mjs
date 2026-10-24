@@ -42,7 +42,7 @@ check('each built folder has exactly five required runtime files with locked byt
 });
 check('assistant included from current shared source, per-page context remains case-specific', () => {
   assert.equal(lock.assistantReadabilityIncluded, false);
-  assert.equal(assistantCSS(), '\n' + read('shared/readability.css') + '\n' + read('portal/assets/s17-assistant.css'), 'legacy five-case CSS default must remain byte-identical');
+  assert.equal(assistantCSS(), '\n' + read('shared/readability.css') + '\n' + read('shared/mudlogging-study.css') + '\n' + read('portal/assets/s17-assistant.css'), 'mandatory-case CSS includes current reading styles');
   assert.equal(assistantCSS({ readability: false }), '\n' + read('portal/assets/s17-assistant.css'));
   for (const f of lock.assistantSources) assert.deepEqual(fileRecord(f.path), f);
   for (const c of lock.cases) {
@@ -60,7 +60,7 @@ check('assistant included from current shared source, per-page context remains c
     assert.ok(!css.includes(read('shared/readability.css')), 'new cases must retain their own typography instead of legacy global overrides');
   }
   return { currentAssistant: true, contextCount: lock.actualCount, legacyReadabilityExcluded: true,
-    oldFiveCaseDefaultUnchanged: true, modelServiceCalled: false };
+    mandatoryReadingStylesMatchCurrent: true, modelServiceCalled: false };
 });
 check('optional assistant can be inlined in head without accessing body before DOM readiness', () => {
   const events = [];
