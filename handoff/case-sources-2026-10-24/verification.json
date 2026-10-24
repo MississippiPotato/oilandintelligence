@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-24T05:22:41.077Z",
+  "version": "1.8.2-preview",
+  "browserExecutedByThisCommand": false,
+  "checks": [
+    {
+      "name": "teacher original, read-only copy and Add Case contract are unchanged",
+      "passed": true
+    },
+    {
+      "name": "case engines, real observations and all twelve extra sources/runtimes retain their bytes",
+      "passed": true,
+      "detail": {
+        "protectedFiles": 214
+      }
+    },
+    {
+      "name": "current five-case build and accepted source files match exactly",
+      "passed": true
+    },
+    {
+      "name": "five distinct case-specific small illustrations with translucent rectangles; no old pins or stage switch",
+      "passed": true
+    },
+    {
+      "name": "saved actual Chrome checks pass on the final compact layout",
+      "passed": true,
+      "detail": {
+        "reports": [
+          {
+            "name": "browser-standalone",
+            "passed": 58
+          },
+          {
+            "name": "browser-original",
+            "passed": 46
+          },
+          {
+            "name": "browser-enhanced",
+            "passed": 22
+          },
+          {
+            "name": "browser-legacy",
+            "passed": 21
+          },
+          {
+            "name": "browser-restart",
+            "passed": 17
+          }
+        ],
+        "browserChecks": 164
+      }
+    },
+    {
+      "name": "15 real five-case runs preserve model and baseline metrics",
+      "passed": true
+    },
+    {
+      "name": "five actual Chrome downloads carry current identities and evidence sources",
+      "passed": true
+    },
+    {
+      "name": "17 imports survive refresh and actual Chrome restart",
+      "passed": true,
+      "detail": {
+        "count": 17,
+        "storageCharacters": 4986366
+      }
+    },
+    {
+      "name": "five old 1.5.1 imports use current small support figures while retaining their runtime version",
+      "passed": true
+    },
+    {
+      "name": "48 calculation/source checks are recorded separately from browser execution",
+      "passed": true,
+      "detail": {
+        "nodeChecks": 48
+      }
+    }
+  ],
+  "notVerified": [
+    "physical mobile devices",
+    "Firefox/WebKit",
+    "new microphone or live model connection"
+  ]
+}

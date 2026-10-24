@@ -3,6 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import zlib from 'node:zlib';
 import {flowOverview,flowRuntime} from './case-flowcharts.mjs';
+import {sourceScenes} from './mudlogging-source-scenes.mjs';
 const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
 const context=vm.createContext({});
 for(const p of ['shared/math.js','shared/mudlogging-study.js','case-src/m1/images.js','case-src/m1/engine.js','case-src/m3/engine.js','case-src/m2/engine.js','case-src/m2/data.js','case-src/m5/engine.js','case-src/m5/data.js'])vm.runInContext(read(p),context);
@@ -14,7 +15,7 @@ const P=s=>'<p>'+s+'</p>',H=s=>'<h4>'+s+'</h4>',A=(s,u)=>'<a href="'+u+'" target
 const note=(a,b)=>'<aside class="knowledge-example"><b>'+a+'</b>'+P(b)+'</aside>';
 const select=(key,label,opts,value)=>'<label>'+label+' <select disabled data-study-key="'+key+'">'+opts.map(([k,v])=>'<option value="'+k+'" '+(k===value?'selected':'')+'>'+v+'</option>').join('')+'</select></label>';
 const range=(key,label,min,max,value,step=1)=>'<label>'+label+' <input disabled data-study-key="'+key+'" type="range" min="'+min+'" max="'+max+'" step="'+step+'" value="'+value+'"></label>';
-function widget(type,data,controls,title){const meta=JSON.stringify(data,(key,value)=>['url','white','uv'].includes(key)?undefined:value);return '<figure class="study-widget" data-study-widget="'+type+'" data-study="'+encodeURIComponent(meta)+'"><div class="study-widget-head"><span>观察与计算</span><h4>'+title+'</h4></div><div class="study-controls">'+controls+'</div><div data-study-output>'+context.S17Study.views[type](data,data.initial??{})+'</div></figure>';}
+function widget(type,data,controls,title){const meta=JSON.stringify(data,(key,value)=>['url','white','uv'].includes(key)?undefined:value),field=type==='field';return '<'+(field?'aside':'figure')+' class="study-widget'+(field?' study-source-aside':'')+'" data-study-widget="'+type+'" data-study="'+encodeURIComponent(meta)+'">'+(field?'':'<div class="study-widget-head"><span>观察与计算</span><h4>'+title+'</h4></div>')+(controls?'<div class="study-controls">'+controls+'</div>':'')+'<div data-study-output>'+context.S17Study.views[type](data,data.initial??{})+'</div></'+(field?'aside':'figure')+'>';}
 const core=json('data/study/core-features.json');core.forEach(r=>r.url=uri(r.path));
 const head=json('data/real/pangaea-headspace.json'),sorted=head.rows.map(r=>r.CH4_ppmv).sort((a,b)=>a-b),median=(sorted[30]+sorted[31])/2;
 const usrop=json('data/real/usrop-f15-subset.json');
@@ -24,8 +25,7 @@ const peak=rows.reduce((best,r,i)=>r[1]>rows[best][1]?i:best,0),gasData={rows,op
 const pair=context.S17Images.sample(17,{},1).observations,mask=context.M3Core.prepare(pair).roi,runs=[];for(let i=0;i<mask.length;i++)if(mask[i]){const start=i;while(i+1<mask.length&&mask[i+1])i++;runs.push([start,i-start+1]);}
 const nb=context.M5Core.train(context.M5Data);
 const names={m1:'岩屑岩性识别',m2:'气测异常解释',m3:'荧光图像判读',m4:'钻时响应分段',m5:'录井报告整理'};
-const stages=[['井底破岩','钻头破碎岩石，钻井液从钻杆内流出。记录钻压、转速与钻速，形成钻进参数。'],['环空返出','钻井液沿钻杆外侧与井壁之间上返，携带岩屑与气体。地面接收的信息对应更早的井下活动。'],['筛分与取样','振动筛分离固体，清洗并登记岩样；拍摄外观，记录采样身份与归位井段。'],['检测与对照','返出液提取气体形成气测曲线；岩样做白光与紫外观察。各记录的单位、时间和样品身份要能对应。'],['解释与记录','把图像、曲线和日志联系起来，提出有依据的候选，逐项核对后整理报告。']];
-const field=scene=>widget('field',{scene,url:uri('data/study/mudlogging-circulation.webp','image/webp'),stages:stages.map((v,j)=>j!==3?v:[v[0],{m1:'清洗后的岩屑在地面工作台拍摄白光照片；用样品编号把轮廓、特征和岩性候选连回同一份样品。',m2:'地面脱气器从返出液提取气体，检测总气与组分。将气测曲线、泵量和工况放在同一时间轴上，再回查来源。',m3:'同一份岩样在地面工作台进行白光与紫外观察；配对身份、曝光和参考片决定两幅图是否可以逐像素比较。',m4:'地面记录系统保存钻压、转速、钻速与井深；把这些参数对齐，再检查操作条件变化对钻时响应的影响。',m5:v[1]}[scene]]),initial:{stage:{m1:2,m2:3,m3:3,m4:0,m5:4}[scene]}},'','地上与地下：'+names[scene]+'的资料从哪里来');
+const field=scene=>widget('field',{...sourceScenes[scene],scene,url:uri('data/study/'+scene+'-source.webp','image/webp')},'',sourceScenes[scene].title);
 const creditCore=P('照片：Fatimah Alzubaidi (2021)，原岩芯托盘来自 Geological Survey of South Australia，'+A('Mendeley Lithology dataset V1','https://data.mendeley.com/datasets/b6rj29mrss/1')+'，CC BY 4.0。六张原 JPEG 保留在离线包，图块实际覆盖 2×2 cm。');
 const creditGas=P('实测来源：Strasser, Michael et al. (2025)，'+A('PANGAEA · IODP386-M0091D','https://doi.org/10.1594/PANGAEA.975497')+'，CC BY 4.0。保留全部 62 条及平行记录。这里是回收沉积物的顶空气体，先认识浓度、组分和采样身份；下一节才讨论循环气测的时间对应。');
 const creditUV=P('照片：Herbert Art Gallery and Museum, Coventry，经 Wikimedia Commons 发布，'+A('可见光','https://commons.wikimedia.org/wiki/File:Calcite_HAGAM.jpg')+' / '+A('短波 UV','https://commons.wikimedia.org/wiki/File:Calcite_ShortwaveUV_HAGAM.jpg')+' / '+A('长波 UV','https://commons.wikimedia.org/wiki/File:Calcite_LongWaveUV_HAGAM.jpg')+'，CC BY-SA 3.0。此处缩小显示，原始照片与署名保存在离线包中。');
@@ -59,7 +59,7 @@ m2:[
  P('先检测相对背景升高的连续窗口，再计算峰高、峰宽、组分及来源工况特征。学习方法用这些特征寻找训练井中的相似事件；规则基线则按固定条件给候选。它们使用同一批检测窗口，便于比较上下文带来的作用。')+
  note('最有用的交互：固定曲线，只换工况','在“同峰异因”情景中保持气测曲线不变，切换首峰来源工况，观察近邻和候选解释如何变化。随后去“停泵再开”情景改有效体积，看来源时段如何移动。')+
  P('点选事件后一起看气峰、来源日志和近邻依据。教学井有独立评价记录；修改工况后的反事实主要用于看解释变化。')],
- ['从井底到气测房，逐环节核对资料',
+ ['沿气体采集过程，核对解释所需资料',
  P('总气和组分曲线记录检测结果，泵量控制这里的运移对应，操作日志提供解释上下文。三者连接起来，才能把“发现一个峰”推进到“给出可回查的候选”。')+field('m2')]
 ],
 m3:[
@@ -109,7 +109,7 @@ m5:[
  note('到交互实验完成一次复核','运行默认草稿，选择一句话，核对否定、单位与井段后确认；再改动句子，查看确认状态如何更新。最后下载带来源的 JSON 或 HTML，打开检查同一条引用。')+
  P('智能方法帮助整理、定位和发现冲突；人工核对当前句子与当前来源的含义。记录修改前后的版本，下一位读者才能知道依据如何变化。')],
  ['报告位于流程末端，证据来自前面的每一环',
- P('报告中的岩性、气测和荧光观察各有采样与检测来源。回到这张地上地下流程图，可以逐处追问：这条记录在哪里形成、通过什么方式测得、对应哪个样品或井段。')+field('m5')]
+ P('报告中的岩性、气测和荧光观察各有采样与检测来源。沿着原始资料与报告之间的对应关系，逐项核对：这条记录在哪里形成、通过什么方式测得、对应哪个样品或井段。')+field('m5')]
 ]};
-export function decorateKnowledge(scene,k){k.workflowOverview=flowOverview(scene);k.sections=contents[scene].map(([title,html],i)=>({title,navTitle:['先观察材料','理解关系','看懂智能方法','沿流程回查'][i],en:['OBSERVE','UNDERSTAND','METHOD','TRACE'][i],html:(i===0?'<style>'+read('shared/mudlogging-study.css')+'</style>':'')+'<div class="knowledge-text study-lesson" style="font-size:18px;line-height:1.95" data-study-lesson="3">'+html+'</div>'}));return k;}
+export function decorateKnowledge(scene,k){k.workflowOverview=flowOverview(scene);k.sections=contents[scene].map(([title,html],i)=>({title,navTitle:['先观察材料','理解关系','看懂智能方法','沿流程回查'][i],en:['OBSERVE','UNDERSTAND','METHOD','TRACE'][i],html:(i===0?'<style>'+read('shared/mudlogging-study.css')+'</style>':'')+'<div class="knowledge-text study-lesson" style="font-size:18px;line-height:1.95" data-study-lesson="4">'+html+'</div>'}));return k;}
 export const studyRuntime=read('shared/mudlogging-study.js')+'\n'+flowRuntime;
