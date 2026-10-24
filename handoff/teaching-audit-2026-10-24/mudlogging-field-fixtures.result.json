@@ -1,0 +1,528 @@
+{
+  "status": "passed",
+  "verification": "source_node_vm_not_browser",
+  "fixtureCount": 18,
+  "builtInCount": 3,
+  "results": [
+    {
+      "name": "explicit fluorescence negative: 未见荧光",
+      "status": "passed",
+      "text": "1200–1210 m MD：未见荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未见荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "explicit fluorescence negative: 未见明显荧光",
+      "status": "passed",
+      "text": "1200–1210 m MD：未见明显荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未见明显荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "explicit fluorescence negative: 未发现荧光",
+      "status": "passed",
+      "text": "1200–1210 m MD：未发现荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未发现荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "explicit fluorescence negative: 未检出荧光",
+      "status": "passed",
+      "text": "1200–1210 m MD：未检出荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未检出荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "explicit fluorescence negative: 未观察到明显的荧光",
+      "status": "passed",
+      "text": "1200–1210 m MD：未观察到明显的荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未观察到明显的荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "explicit fluorescence negative: 无荧光",
+      "status": "passed",
+      "text": "1200–1210 m MD：无荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：无荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "negative scope stays in first comma clause",
+      "status": "passed",
+      "text": "1200–1210 m MD：未检出荧光，但气测总气升高至3.2 ppmv。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未检出荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        },
+        {
+          "quote": "气测总气升高至3.2 ppmv",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "gasValue": 3.2,
+            "gasUnit": "ppmv"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked",
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "reverse negative scope",
+      "status": "passed",
+      "text": "1200–1210 m MD：总气升高至3.2 ppmv，但未观察到荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：总气升高至3.2 ppmv",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "gasValue": 3.2,
+            "gasUnit": "ppmv"
+          },
+          "flags": []
+        },
+        {
+          "quote": "未观察到荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked",
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "gas negative retains own target",
+      "status": "passed",
+      "text": "1200–1210 m MD：未观察到总气明显升高。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未观察到总气明显升高",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "gasValue": null,
+            "gasUnit": null
+          },
+          "flags": [
+            "气测数值或单位未提供"
+          ]
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "mixed unseparated targets require review",
+      "status": "passed",
+      "text": "1200–1210 m MD：未检出荧光但总气升高。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未检出荧光但总气升高",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "gasValue": null,
+            "gasUnit": null,
+            "fluorescence": "荧光"
+          },
+          "flags": [
+            "气测数值或单位未提供",
+            "同一子句多类观察，否定作用域需人工复核"
+          ]
+        }
+      ],
+      "support": [
+        "unchecked"
+      ]
+    },
+    {
+      "name": "unsupported negative phrase requires review",
+      "status": "passed",
+      "text": "1200–1210 m MD：不见明显荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：不见明显荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": [
+            "否定表达未能唯一解析，需人工复核"
+          ]
+        }
+      ],
+      "support": [
+        "unchecked"
+      ]
+    },
+    {
+      "name": "whole gas unit: ppmv",
+      "status": "passed",
+      "text": "1200–1210 m MD：总气升高至3.2 ppmv。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：总气升高至3.2 ppmv",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "gasValue": 3.2,
+            "gasUnit": "ppmv"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "whole gas unit: ppm",
+      "status": "passed",
+      "text": "1200–1210 m MD：总气升高至3.2 ppm。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：总气升高至3.2 ppm",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "gasValue": 3.2,
+            "gasUnit": "ppm"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "whole gas unit: %",
+      "status": "passed",
+      "text": "1200–1210 m MD：总气升高至3.2 %。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：总气升高至3.2 %",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "gasValue": 3.2,
+            "gasUnit": "%"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "whole gas unit: 归一化单位",
+      "status": "passed",
+      "text": "1200–1210 m MD：总气升高至3.2 归一化单位。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：总气升高至3.2 归一化单位",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "gasValue": 3.2,
+            "gasUnit": "归一化单位"
+          },
+          "flags": []
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "unknown unit extension is not truncated",
+      "status": "passed",
+      "text": "1200–1210 m MD：总气升高至3.2 ppmv_extra。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：总气升高至3.2 ppmv_extra",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "gasValue": 3.2,
+            "gasUnit": null
+          },
+          "flags": [
+            "气测数值或单位未提供"
+          ]
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "multiple ranges stay ambiguous",
+      "status": "passed",
+      "text": "1200–1210 m MD与1220–1230 m MD：未检出荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD与1220–1230 m MD：未检出荧光",
+          "fields": {
+            "depthRangeMD_m": null,
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": [
+            "同一子句多个范围，无法唯一绑定",
+            "深度未提供或范围不明确"
+          ]
+        }
+      ],
+      "support": [
+        "rule_checked"
+      ]
+    },
+    {
+      "name": "negative-positive same depth remains a conflict",
+      "status": "passed",
+      "text": "1200–1210 m MD：未观察到荧光。1200–1210 m MD：可见荧光。",
+      "facts": [
+        {
+          "quote": "1200–1210 m MD：未观察到荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": true,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": [
+            "同范围来源存在冲突"
+          ]
+        },
+        {
+          "quote": "1200–1210 m MD：可见荧光",
+          "fields": {
+            "depthRangeMD_m": [
+              1200,
+              1210
+            ],
+            "timeRange_s": null,
+            "negation": false,
+            "uncertainty": false,
+            "fluorescence": "荧光"
+          },
+          "flags": [
+            "同范围来源存在冲突"
+          ]
+        }
+      ],
+      "support": [
+        "conflict",
+        "conflict"
+      ]
+    }
+  ],
+  "builtIn": [
+    {
+      "name": "default",
+      "exactRecords": 6,
+      "totalRecords": 6,
+      "conflicts": 0
+    },
+    {
+      "name": "negation",
+      "exactRecords": 7,
+      "totalRecords": 7,
+      "conflicts": 0
+    },
+    {
+      "name": "conflict",
+      "exactRecords": 7,
+      "totalRecords": 7,
+      "conflicts": 1
+    }
+  ]
+}

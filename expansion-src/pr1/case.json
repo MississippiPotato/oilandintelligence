@@ -2,7 +2,7 @@
   "id": "s17x-pr1-pump-card",
   "sceneId": "pr1",
   "title": "抽油机井工况诊断：从井下泵功图读形状",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "updated": "2026-10-24",
   "methods": [
     "cv"
@@ -38,7 +38,7 @@
           "no": 1,
           "en": "PUMP CYCLE",
           "title": "图 B1｜地面抽动杆柱，井下柱塞完成泵循环",
-          "html": "<p>抽油机通过杆柱带动井下柱塞往复。理想上冲程时游动阀关闭、固定阀打开，泵筒吸入流体；下冲程时固定阀关闭、游动阀打开，流体转移到柱塞上方。把位移与载荷同步记录，便得到一圈示功图。</p><figure><h3>理想柱塞泵循环与阀门</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 350\" role=\"img\" aria-label=\"理想柱塞泵循环与阀门\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"350\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"31\" y=\"38\" font-size=\"22\" font-weight=\"600\">上冲程：吸入泵筒；下冲程：流体通过游动阀</text><rect x=\"90\" y=\"68\" width=\"96\" height=\"208\" rx=\"7\" fill=\"#dfeae4\" stroke=\"#5b7e7b\" stroke-width=\"3\"/><rect x=\"103\" y=\"94\" width=\"70\" height=\"25\" rx=\"4\" fill=\"#2e8075\"/><path d=\"M138 54V94\" stroke=\"#8ca7a1\" stroke-width=\"8\"/><circle cx=\"138\" cy=\"106\" r=\"8\" fill=\"#6f8e93\"/><path d=\"M103 260h70l-35 23z\" fill=\"#d2a654\"/><text x=\"85\" y=\"316\" >上冲程：固定阀打开</text><rect x=\"390\" y=\"68\" width=\"96\" height=\"208\" rx=\"7\" fill=\"#dfeae4\" stroke=\"#5b7e7b\" stroke-width=\"3\"/><rect x=\"403\" y=\"176\" width=\"70\" height=\"25\" rx=\"4\" fill=\"#2e8075\"/><path d=\"M438 54V176\" stroke=\"#8ca7a1\" stroke-width=\"8\"/><circle cx=\"438\" cy=\"188\" r=\"8\" fill=\"#d2a654\"/><path d=\"M403 260h70l-35 23z\" fill=\"#6f8e93\"/><text x=\"385\" y=\"316\" >下冲程：游动阀打开</text><text x=\"596\" y=\"88\" >固定阀：泵筒底部</text><text x=\"596\" y=\"131\" >游动阀：随柱塞移动</text><text x=\"596\" y=\"183\" >金色：理想开启状态</text><text x=\"596\" y=\"227\" >位移单位 m，载荷单位 kN</text><text x=\"596\" y=\"279\" >这里讨论井下泵功图。</text></g></svg></div><figcaption>金色表示理想开启阀。循环概念依据 SLB Rod Pump Systems；图形为项目原创。</figcaption></figure>"
+          "html": "<p><b>先认清本例：</b>观测单位是一张完整循环的井下泵功图。横轴是柱塞位移m，纵轴是泵载荷kN；闭合面积为每循环做功kJ，形状反映载荷转移过程。归一化形状近邻帮助整理相似图，不能仅凭图形直接确定故障原因。</p><p>抽油机通过杆柱带动井下柱塞往复。理想上冲程时游动阀关闭、固定阀打开，泵筒吸入流体；下冲程时固定阀关闭、游动阀打开，流体转移到柱塞上方。把位移与载荷同步记录，便得到一圈示功图。</p><figure><h3>理想柱塞泵循环与阀门</h3><div class=\"figure-scroll\" tabindex=\"0\" aria-label=\"图形可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 350\" role=\"img\" aria-label=\"理想柱塞泵循环与阀门\" style=\"width:100%;display:block\"><rect width=\"900\" height=\"350\" rx=\"14\" fill=\"#f0f5f1\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#29494d\"><text x=\"31\" y=\"38\" font-size=\"22\" font-weight=\"600\">上冲程：吸入泵筒；下冲程：流体通过游动阀</text><rect x=\"90\" y=\"68\" width=\"96\" height=\"208\" rx=\"7\" fill=\"#dfeae4\" stroke=\"#5b7e7b\" stroke-width=\"3\"/><rect x=\"103\" y=\"94\" width=\"70\" height=\"25\" rx=\"4\" fill=\"#2e8075\"/><path d=\"M138 54V94\" stroke=\"#8ca7a1\" stroke-width=\"8\"/><circle cx=\"138\" cy=\"106\" r=\"8\" fill=\"#6f8e93\"/><path d=\"M103 260h70l-35 23z\" fill=\"#d2a654\"/><text x=\"85\" y=\"316\" >上冲程：固定阀打开</text><rect x=\"390\" y=\"68\" width=\"96\" height=\"208\" rx=\"7\" fill=\"#dfeae4\" stroke=\"#5b7e7b\" stroke-width=\"3\"/><rect x=\"403\" y=\"176\" width=\"70\" height=\"25\" rx=\"4\" fill=\"#2e8075\"/><path d=\"M438 54V176\" stroke=\"#8ca7a1\" stroke-width=\"8\"/><circle cx=\"438\" cy=\"188\" r=\"8\" fill=\"#d2a654\"/><path d=\"M403 260h70l-35 23z\" fill=\"#6f8e93\"/><text x=\"385\" y=\"316\" >下冲程：游动阀打开</text><text x=\"596\" y=\"88\" >固定阀：泵筒底部</text><text x=\"596\" y=\"131\" >游动阀：随柱塞移动</text><text x=\"596\" y=\"183\" >金色：理想开启状态</text><text x=\"596\" y=\"227\" >位移单位 m，载荷单位 kN</text><text x=\"596\" y=\"279\" >这里讨论井下泵功图。</text></g></svg></div><figcaption>金色表示理想开启阀。循环概念依据 SLB Rod Pump Systems；图形为项目原创。</figcaption></figure>"
         },
         {
           "no": 2,
@@ -57,6 +57,12 @@
           "en": "MODEL & EVIDENCE",
           "title": "让相似案例帮助解释，让独立井组检验结果",
           "html": "<p>训练 18 口合成井、162 张图，验证 6 井、54 图，测试 8 井、72 图。每口井共享冲程、载荷尺度与基本形状参数，其循环变体全部留在同一集合。k 由验证集选择；模型与面积阈值基线共用 72 张测试图。拒判留在混淆矩阵的“待复核”列中，同时报告覆盖率和接受集错误率。</p><div class=\"sources\"><p>专业概念核对于 2026-10-24：</p><ul><li><a href=\"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-rod-pumps\" target=\"_blank\" rel=\"noopener\">SLB · Rod Pump Systems</a></li><li><a href=\"https://glossary.slb.com/en/terms/g/gas_interference\" target=\"_blank\" rel=\"noopener\">SLB · Gas interference</a></li><li><a href=\"https://glossary.slb.com/Terms/d/dynamometer_card.aspx\" target=\"_blank\" rel=\"noopener\">SLB · Dynamometer card</a></li><li><a href=\"https://hs.weatherford.com/knowledge/what-is-the-sucker-rod-pump-downhole-card-calculation-in-petrovisor\" target=\"_blank\" rel=\"noopener\">Weatherford · Downhole card calculation</a></li></ul><p>曲线是本例生成的三类教学形状。图形、模型、指标和导出均在浏览器本地完成。</p></div>"
+        },
+        {
+          "no": 5,
+          "en": "TRY & EXPLAIN",
+          "title": "带着一个问题运行，再用图解释",
+          "html": "<p>先在默认工况运行，再只把载荷零点偏移改为20 kN重算。曲线纵向平移但归一化形状与循环功应基本不变。再用高噪声预设，观察拒判与覆盖率，说明为何不能只报接受样本准确率。</p><p>先说出你预期哪一条曲线或哪个计数会改变，再运行核对。输入变化后旧图仍表示上次结果，只有重算后才能导出当前结果。</p>"
         }
       ]
     },
@@ -137,7 +143,7 @@
       "html": "demo/index.html",
       "js": "demo/demo.js",
       "label": "可运行示范",
-      "intro": "切换教学工况，拖动泵循环、增加噪声或零点偏移，查看真实特征、训练近邻和 72 张独立测试图的评价。",
+      "intro": "先在默认工况运行，再只把载荷零点偏移改为20 kN重算。曲线纵向平移但归一化形状与循环功应基本不变。再用高噪声预设，观察拒判与覆盖率，说明为何不能只报接受样本准确率。",
       "height": 1200
     }
   }

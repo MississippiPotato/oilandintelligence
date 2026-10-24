@@ -1,0 +1,77 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:04:56.821Z",
+  "case": {
+    "scene": "r5",
+    "id": "s17x-r5-quality-softsensor",
+    "version": "1.0.2",
+    "output": "dist/expansion-cases/s17x-r5-quality-softsensor"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "exception": "locator.evaluate: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('#results')\u001b[22m\n",
+  "frameStates": [
+    {
+      "url": "http://127.0.0.1:8755/portal-original/index.html#/scene/r5?tab=demo",
+      "ready": "complete",
+      "text": "智能化可能性地图\nPETRO × AI ATLAS\n总览\n作业链\n案例库\n接入指南\n管理\n＋ 添加案例\n总览\n/\n作业链\n/\n加工\n/\n产品质量在线软测量\n环节 13 · 加工\nTS\n时序预测\n案例 s17x-r5-quality-softsensor · v1.0.2\n产品质量在线软测量\n\n辛烷值、闪点、倾点等质量指标只能化验获得，滞后数小时，在线软测量用过程变量实时估计。\n\n难度 中\n待扩展\nR5\n01\n专业背景\n02\n案例流程\n03\n可运行示范\nRELATED\n相关场景\n同环节 · 加工\n常减压装置操作优化\n→\n催化裂化产物预测\n→\n炼化设备预测性维护\n→\n化验数据智能审核\n→\n同方法 · 时序预测\n初至波自动拾取\n物探 →\n钻速预测与参数优化\n钻井 →\n井下复杂事故前兆预警\n钻井 →\n钻具失效预测\n钻井 →\n← 返回加工环节\n返回总览\n关于\n\n石油勘探开发的智能化可能性地图\n\nv1.0 · 更新于 2026-10\n\n地图\n总览\n作业链\n按方法反查\n系统\n案例库（9 个已接入）\n接入新案例\n参与\n\n发现问题或想补一个场景？\n\natlas@example.com\n场景数据：61 个 · 环节：13 个\n纯静态 · 无后端 · 可离线运行\n✓\n已添加「产品质量在线软测量：化验到来之前」\n正在打开场景页…"
+    },
+    {
+      "url": "about:srcdoc",
+      "ready": "complete",
+      "status": "计算完成 · 教学合成数据 · 参考密度仅用于评价",
+      "text": "点\n训练历史均值\t1.259\t0.972\t-0.342\t180 点\n\nRMSE = √[Σ(估计−参考)² / 180]；模型与两种基线共用全部测试点。\n\n全体测试点：参考密度与模型估计\n估计 / kg·m⁻³\n815.0\n815.0\n817.3\n817.3\n819.5\n819.5\n821.8\n821.8\n824.0\n824.0\n参考 / kg·m⁻³；虚线表示估计 = 参考\n不要让平均误差掩盖工况\n负荷工况\t模型 RMSE kg/m³\t最近化验 RMSE kg/m³\t点数\n低负荷\t1.381\t2.881\t36\n中负荷\t1.630\t2.472\t72\n高负荷\t1.534\t1.648\t72\n\n漂移或原料关系变化可能让历史化验比当前模型更可靠。模型超出训练范围时，把相关时段送去补充化验与仪表核查。\n\n这次标定看到了什么\n12 / 4 / 5 个独立生产批次，按时间前推\n\n训练已配对化验 96 份；验证 32 份，用于选 λ=0.1；测试 180 个逐分钟参考点。标定截止全局 966 min，排除尚未到达的验证化验 0 份。测试不参与标准化或参数选择。\n\n当前化验延迟 15 min；未来过程量进入 0 次，尚未到达化验进入 0 次。超出训练 3σ 的输入 4 / 180 点。\n\n四个变量怎样进入估计\n温度\n-1.431\n压力\n0.389\n流量\n0.508\n回流比\n-0.340\n\n数值是“训练标准差变化 1 倍”对应的线性项系数，受变量相关性影响，不能直接解释成因果效应。\n\n带着具体证据做人工复核\n\n先核对取样时刻与化验到达时刻，再核对温度仪表、原料变化和物料停留时间。误差是定位核查方向的线索。\n\n当前核查依据\n我已核对本轮所有模型结论与其曲线来源、单位和工况保存本轮人工确认\n\n本轮计算完成后，需重新核对当前来源。\n\n尚无人工确认。\n导出当前计算与来源 JSON\n\n导出包括参数、分组、已学模型、观测片段、结论来源、评价分母和人工历史。旧确认不会自动成为新一轮确认。\n\n井见 · s17x-r5-quality-softsensor · v1.0.0 · 默认运行不请求网络\n井见助手"
+    }
+  ],
+  "passed": 5,
+  "failed": 1,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
+      "bytes": 28428,
+      "sha256": "a3038e25ec5688ee773234a1ed0efe98b30e55e8c677bca90377c62b23ce0e52"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+      "bytes": 3929,
+      "sha256": "bc4c602b2d5f9c9fd9e7dbf5d1b0f2d6d513d20d926913e6070cd82a14cb6bc5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html",
+      "bytes": 5202,
+      "sha256": "ab64ea4ad481b478c2e4645648047c1faacbb079d15ae893dc82f91363b80956"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+      "bytes": 22806,
+      "sha256": "a1467ab3121268f66c3a52b7c4d9b0b077fdd0814d03ab84b11c05624c18b214"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+      "bytes": 97990,
+      "sha256": "d2bad255a9684c4074ea197d3f92d5797e0b2519c6db4f9880ea4809ea43af05"
+    }
+  ]
+}

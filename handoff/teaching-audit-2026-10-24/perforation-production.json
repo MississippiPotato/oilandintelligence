@@ -1,0 +1,433 @@
+{
+  "date": "2026-10-24",
+  "scope": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "pr1",
+    "pr2",
+    "pr3",
+    "pr4",
+    "pr5"
+  ],
+  "status": "source_review_not_browser",
+  "reviewed_sources": [
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/06_兼容与验收清单.txt",
+    "portal-original/firstbreak-pick-case/case.json",
+    "expansion-src/p1/case.json",
+    "expansion-src/p1/demo.html",
+    "expansion-src/p1/app.js",
+    "expansion-src/p1/engine.js",
+    "expansion-src/p2/case.json",
+    "expansion-src/p2/demo.html",
+    "expansion-src/p2/app.js",
+    "expansion-src/p2/engine.js",
+    "expansion-src/p3/case.json",
+    "expansion-src/p3/demo.html",
+    "expansion-src/p3/app.js",
+    "expansion-src/p3/engine.js",
+    "expansion-src/p4/case.json",
+    "expansion-src/p4/demo.html",
+    "expansion-src/p4/app.js",
+    "expansion-src/p4/engine.js",
+    "expansion-src/pr1/case.json",
+    "expansion-src/pr1/demo.html",
+    "expansion-src/pr1/app.js",
+    "expansion-src/pr1/engine.js",
+    "expansion-src/pr2/case.json",
+    "expansion-src/pr2/demo.html",
+    "expansion-src/pr2/app.js",
+    "expansion-src/pr2/engine.js",
+    "expansion-src/pr3/case.json",
+    "expansion-src/pr3/demo.html",
+    "expansion-src/pr3/app.js",
+    "expansion-src/pr3/engine.js",
+    "expansion-src/pr4/case.json",
+    "expansion-src/pr4/demo.html",
+    "expansion-src/pr4/app.js",
+    "expansion-src/pr4/engine.js",
+    "expansion-src/pr5/case.json",
+    "expansion-src/pr5/demo.html",
+    "expansion-src/pr5/app.js",
+    "expansion-src/pr5/engine.js"
+  ],
+  "validation": {
+    "static": [
+      {
+        "sceneId": "p1",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "p2",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "p3",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "p4",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "pr1",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "pr2",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "pr3",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "pr4",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      },
+      {
+        "sceneId": "pr5",
+        "syntax": "pass",
+        "case_demo_or_serialized_lesson_sync": "pass",
+        "offline_network_dependency_scan": "pass",
+        "browser": "not_run"
+      }
+    ],
+    "existing_calculation_checks": {
+      "p1": {
+        "passed": 12,
+        "failed": 0,
+        "test_rows": 240,
+        "model_RMSE": 0.775600684602618
+      },
+      "pr1": {
+        "passed": 12,
+        "failed": 0,
+        "test_cards": 72,
+        "model_macro_F1": 1,
+        "baseline_macro_F1": 0.8285714285714286
+      }
+    },
+    "paired_computation_checks": [
+      {
+        "sceneId": "p2",
+        "passed": true,
+        "check": "confinement affects current prediction, fixed heldout metric unchanged"
+      },
+      {
+        "sceneId": "p3",
+        "passed": true,
+        "check": "preference swaps B/F; missing B cannot be recommended"
+      },
+      {
+        "sceneId": "p4",
+        "passed": true,
+        "check": "raw sign reversal with negative corrected response"
+      },
+      {
+        "sceneId": "pr2",
+        "passed": true,
+        "check": "intervention cannot alter coefficients/forecasts/provenance"
+      },
+      {
+        "sceneId": "pr3",
+        "passed": true,
+        "check": "conservation; infeasible baseline gain null; impossible total no solution"
+      },
+      {
+        "sceneId": "pr4",
+        "passed": true,
+        "check": "confirmation at third point; 65/75 markers"
+      },
+      {
+        "sceneId": "pr5",
+        "passed": true,
+        "check": "threshold leaves score unchanged; wall sweep to60; confusion denominator175"
+      }
+    ],
+    "browser": "not_run",
+    "build": "not_run_by_this_agent",
+    "teacher_import": "not_run_by_this_agent",
+    "five_file_compatibility": "source retained ordinary local IIFE, local SVG, no network fetch; packaged execution awaits root build"
+  },
+  "baseline_wins_preserved": [
+    {
+      "sceneId": "pr2",
+      "model_MAE": 7.0116874623060195,
+      "persistence_MAE": 1.429815753412886
+    },
+    {
+      "sceneId": "pr5",
+      "model_F1": 0.7337278106508875,
+      "temperature_baseline_F1": 0.7534883720930232
+    }
+  ],
+  "cases": [
+    {
+      "sceneId": "p1",
+      "judgment": "专属射孔几何/性能面已形成教学闭环；补齐初学术语与可验证约束实验。",
+      "question": "储层条件给定时，怎样选预算内且越过损伤带的射孔几何？",
+      "unit": "一个储层条件组内的一次孔密×相位×穿深试验；响应为教学指数。",
+      "relationship": "穿深须越过损伤带与5cm余量；预测响应与成本代价共同决定净目标。",
+      "figure": "背景B1连通剖面对应储层与井筒沟通段，B2相位图对应角向分布定义；演示性能面对应440候选约束搜索。",
+      "interaction": "固定储层，提高损伤带厚度，观察最小可行穿深与候选数变化；紧预算可无解。",
+      "issues": [
+        "渗透率mD/各向异性对初学者缺解释",
+        "成本散点坐标单位未直接标注",
+        "相位切片独立色阶易被跨图误比较"
+      ],
+      "fixes": [
+        "补观测行与术语解释及配对实验",
+        "成本图加成本/教学点与响应/指数轴标签",
+        "标明各相位切片独立归一化",
+        "保留原专属图和12项计算检查",
+        "补7命名节点flow.json"
+      ],
+      "remaining": [
+        "浏览器窄屏与教师门户导入待root抽验",
+        "合成响应不代表实际产能"
+      ]
+    },
+    {
+      "sceneId": "p2",
+      "judgment": "从材料到孔道形态的业务关系明确；现增加当前条件对应的通道示意，避免只看回归分数。",
+      "question": "同一虚拟试验体系下，强度、孔隙度、围压怎样影响孔道长度和独立清洁评分？",
+      "unit": "材料批次中一次试验；强度MPa、孔隙度%、围压MPa→长度cm与清洁度分。",
+      "relationship": "保持其他条件不变，围压变化引起长度与清洁度输出变化；清洁度不等于流量。",
+      "figure": "新增S1批次表/S2条件曲线/S3带长度标尺的通道剖面/S4手算MAE；运行时实际预测长度驱动通道终点。",
+      "interaction": "固定80MPa与15%，围压3→28MPa，比较当前预测；固定84条留出误差保持不变。",
+      "issues": [
+        "流程全为通用三框",
+        "无当前参数对应几何图",
+        "清洁度评分尺度未解释"
+      ],
+      "fixes": [
+        "四幅专属流程图",
+        "结果中新增实际长度驱动通道图与独立0–100评分",
+        "补图例与84条散点含义",
+        "补配对学习任务"
+      ],
+      "remaining": [
+        "清洁度仍为公开教学评分，不能视作现场标准量表",
+        "图宽固定不代表入口测量或流量"
+      ]
+    },
+    {
+      "sceneId": "p3",
+      "judgment": "知识规则推理有真实排除证据；补可行B/F的双属性取舍和18组分母。",
+      "question": "为什么不能只按最高穿深指数或仅尺寸选型？",
+      "unit": "一条虚构目录记录；六条记录与18组需求枚举。",
+      "relationship": "尺寸/环境/材料三硬约束先筛选；偏好权重只重排可行项。",
+      "figure": "S2约束矩阵直接对应默认B满足/B缺失待核/A不符；结果散点的深度与流通二维坐标呈现B/F取舍。",
+      "interaction": "默认需求把偏好0→1，F/B交换；B等级缺失时只保留F。",
+      "issues": [
+        "流程通用三框",
+        "第二结果图只重复深度柱，没有呈现偏好取舍",
+        "无候选与违反数分母解释不足"
+      ],
+      "fixes": [
+        "字段/约束/取舍/分母四幅专属图",
+        "双属性实际散点与A–F悬停证据",
+        "评分单位与灰色排除项说明",
+        "明确18需求中有选中结果才核查违反"
+      ],
+      "remaining": [
+        "A–F虚构序数等级不能替代真实射孔器型号选型",
+        "当前缺失开关影响当前目录，18组固定评价仍采用完整目录"
+      ]
+    },
+    {
+      "sceneId": "p4",
+      "judgment": "有可核对的工况反转实验，能说明校正服务于低效复核；油液口径已锁定。",
+      "question": "观测增产时，如何检查它是否仅由压差等工况变化带来？",
+      "unit": "一口井的一次完整作业前后事件；统一教学日产油m³/d。",
+      "relationship": "校正剩余=(q后−q前)−(预期后−预期前)。",
+      "figure": "S3手算+5−15=−10对应校正为何有用段；实际结果带作业0日标线和同单位分解柱。",
+      "interaction": "固定效果−10/含水40%，压差6→12，原始增量由负变正、校正剩余仍接近−10。",
+      "issues": [
+        "含水/产量口径未明确为油量或液量",
+        "流程模板无法解释校正价值",
+        "分解柱没有单位"
+      ],
+      "fixes": [
+        "定义教学日产油与含水协变量；声明不解两相流",
+        "四幅专属流程图及手算反转",
+        "同单位分解柱与作业时点标线",
+        "导出记录前后工况与预期贡献及同分母混淆计数"
+      ],
+      "remaining": [
+        "剩余量仍含模型/未记录干预误差，不是现场因果效果",
+        "浏览器图中文字与负柱显示待抽验"
+      ]
+    },
+    {
+      "sceneId": "pr1",
+      "judgment": "原有井下泵功图/循环/近邻解释完整；补观测单位与零点平移实验。",
+      "question": "泵功图的形状怎样帮助整理工况候选，哪些图需要拒判？",
+      "unit": "一张完整井下泵循环图：位移m×载荷kN，闭合面积kJ/循环。",
+      "relationship": "阀门载荷转移形成循环形状；归一化形状近邻与单面积基线同批比较。",
+      "figure": "保留原B1阀门循环与图形形状讲解；当前循环点、近邻和含待复核列混淆图可对照。",
+      "interaction": "只加20kN载荷零点观察平移不改归一化形状；高噪声观察拒判与覆盖率。",
+      "issues": [
+        "初学者不容易连接循环面积单位与业务判断",
+        "缺少明确对照实验任务"
+      ],
+      "fixes": [
+        "补观测单位/做功解释与配对实验",
+        "补7命名节点flow.json",
+        "保留全部原专属图与12项计算检查"
+      ],
+      "remaining": [
+        "三类合成形状不穷尽真实泵况，不直接确诊故障",
+        "浏览器循环拖动与拒判状态待root抽验"
+      ]
+    },
+    {
+      "sceneId": "pr2",
+      "judgment": "真正递归推断已有，现把每步输入来源展示出来，未来干预能验证知识边界。",
+      "question": "只看截止日前历史，能预测未来多远？未知干预为什么无法自动被预测？",
+      "unit": "同一井一天的日产油m³/d；按时间连续留出h日。",
+      "relationship": "lag1/2/7来自历史或先前预测；未知未来观测不回填。",
+      "figure": "S2默认110/111/117日来源表与S3递归回填对应正文；实际结果trace逐行列出三个滞后值/日期/来源。",
+      "interaction": "cut110/h21干预关闭与打开，beta/prediction/trace完全相同；评价第7日后+18，误差改变。",
+      "issues": [
+        "仅文字称递归，未展示回填来源",
+        "缺截止与未来干预可见标线",
+        "默认模型输给持续值需解释"
+      ],
+      "fixes": [
+        "实际infer新增可选trace且与预测同运算",
+        "界面新增来源表并导出trace",
+        "图标首预测日与未知干预时点",
+        "保留并解释默认持续值MAE更低",
+        "四幅专属时序流程图"
+      ],
+      "remaining": [
+        "仅单井合成时序，不作跨井泛化主张",
+        "浏览器trace表横向滚动及干预标线待抽验"
+      ]
+    },
+    {
+      "sceneId": "pr3",
+      "judgment": "响应学习与守恒优化区别明确；无解/不可行均分继续保留。",
+      "question": "三层响应不同，有限总水量怎样配给各层？",
+      "unit": "某层某批的一次注水量m³/d→响应指数试验；分配是同日三配额。",
+      "relationship": "A+B+C=总量，各层≤上限；边际响应决定额外水量去哪更有价值。",
+      "figure": "S2凹曲线解释边际响应，S3守恒三角形解释第三配额；实际散点悬停看A/B/C完整分配。",
+      "interaction": "A上限100→20时保持总量180且均分转不可行；各层上限20时无解。",
+      "issues": [
+        "通用流程三框",
+        "散点只显示A且未解释多个B/C分法",
+        "散点颜色/柱单位缺说明"
+      ],
+      "fixes": [
+        "四幅试验/曲线/守恒/基线专属图",
+        "散点完整配额悬停与颜色说明",
+        "明确灰点可能域外外推仅作排除展示",
+        "配额柱单位与无解状态解释"
+      ],
+      "remaining": [
+        "没有求解井间压力场或真实层间干扰",
+        "不同B/C候选可视觉重叠，使用悬停和前12完整表核对"
+      ]
+    },
+    {
+      "sceneId": "pr4",
+      "judgment": "正常关系残差业务解释合理；修正持续告警时刻与超阈/告警分母，图可核查。",
+      "question": "温升是负荷改变还是正常关系解释不了的额外偏离？",
+      "unit": "独立留出设备每分钟的负荷%、电流A、温度°C。",
+      "relationship": "残差=实际温度−条件预期；逐点超阈需连续3次才能确认持续告警。",
+      "figure": "温度/残差图标65漂移、75评价异常与首次确认；新增逐点0/1对持续3点0/1时间线。",
+      "interaction": "改负荷对比电流阈值正常误报；改残差阈值对比分钟召回与持续事件。",
+      "issues": [
+        "原首次持续告警报连续段第1点，实际第3点才可确认",
+        "原误报事件只是逐点超阈段，文字混成持续告警",
+        "缺65/75评价参考时点"
+      ],
+      "fixes": [
+        "分别导出firstRunStart/firstConfirmation，默认79/81min",
+        "单列正常超阈段与持续确认段",
+        "新增确认时间线与关键标线",
+        "四幅设备/条件预期/三点确认/分母专属图"
+      ],
+      "remaining": [
+        "只一个合成异常阶段，分钟召回不等于事件召回",
+        "65–74min漂移按本页标签定义仍属正常段，应连同正常误报解释"
+      ]
+    },
+    {
+      "sceneId": "pr5",
+      "judgment": "只建模结蜡并守住机理边界；明确WAT/风险分数/复核阈值不同且保留基线获胜。",
+      "question": "为什么同样壁温，不同油样及流动工况可有不同结蜡复核分数？",
+      "unit": "虚拟井的一组壁温/WAT°C、含蜡量%、流速m/s与事件。",
+      "relationship": "WAT−壁温是油样相关温差；逻辑回归分数与用户阈值共同形成复核队列。",
+      "figure": "S1带温差的温度轴对应析蜡条件；实际风险曲线加WAT竖线，结果事件点说明金/灰语义。",
+      "interaction": "固定温度与流速改变含蜡量，温度基线不动；仅改阈值，分数不变但复核/误报漏报变化。",
+      "issues": [
+        "流程模板",
+        "风险曲线只扫25–55而控件至60°C",
+        "事件散点颜色无解释",
+        "默认温度基线胜出需诚实说明"
+      ],
+      "fixes": [
+        "四幅WAT/条件记录/分数阈值/混淆分母专属图",
+        "壁温扫到60且画WAT标线",
+        "事件色义、分数组单位与样本数解释",
+        "显式保留温度基线F1=.7535高于联合.7337"
+      ],
+      "remaining": [
+        "事件为随机教学标签，分数未校准现场概率",
+        "无机结垢不在本例模型范围",
+        "流速关系为生成器假设，不能推广为普适单调结论"
+      ]
+    }
+  ],
+  "recommended_browser_samples": [
+    {
+      "sceneId": "pr2",
+      "steps": [
+        "打开三标签核对S2来源表及S3递归图",
+        "cut110/h21关闭干预运行，核对trace第1步全历史、第2步lag1先前预测、第8步lag7先前预测",
+        "开启未来干预重算，核对预测数值完全不动，第7日起评价观测+18且图有cut/干预标线",
+        "更改控件应提示旧结果过期且禁导出；重算导出JSON应有trace",
+        "窄屏横向滚动trace表与图，无裁切关键日期"
+      ]
+    },
+    {
+      "sceneId": "pr4",
+      "steps": [
+        "默认运行核对65/75参考线与79起点/81确认时刻",
+        "看0/1时间线，持续确认应晚于超阈段前两个点",
+        "平均负荷30和90分别运行，比对电流基线误报与残差结果",
+        "残差阈值4→1核对正常超阈段与正常持续告警段分列",
+        "在opaque iframe切换标签并重算，history异常不得阻断控件；导出保存alertTimeline"
+      ]
+    }
+  ]
+}

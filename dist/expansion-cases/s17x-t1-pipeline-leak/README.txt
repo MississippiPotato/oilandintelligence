@@ -1,7 +1,7 @@
 管道泄漏智能检测：从正常关系到事件核查
 caseId: s17x-t1-pipeline-leak
 sceneId: t1（运输）
-版本：1.0.1，2026-10-24
+版本：1.0.2，2026-10-24
 
 这是扩展案例源码。统一构建器生成 case.json、README.txt、demo/index.html、demo/demo.css、demo/demo.js；整个成品文件夹通过老师原站“＋ 添加案例”导入。源码 demo.html 只引用最终 demo.css/demo.js；engine.js 和 app.js 在构建时拼成普通 IIFE，无 CDN、fetch、API 或后端依赖。
 

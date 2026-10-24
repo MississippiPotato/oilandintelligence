@@ -1,0 +1,42 @@
+{
+  "title": "射孔候选怎样选",
+  "gate": [
+    "有无可行候选？",
+    "域外条件须先复核"
+  ],
+  "input": {
+    "title": "储层与几何",
+    "detail": "渗透率孔密相位穿深",
+    "step": 0
+  },
+  "prepare": {
+    "title": "整组试验留出",
+    "detail": "同源储层不跨集合",
+    "step": 0
+  },
+  "model": {
+    "title": "学习响应代理",
+    "detail": "验证选定岭回归",
+    "step": 1
+  },
+  "baseline": {
+    "title": "固定射孔方案",
+    "detail": "同条件可行才比较",
+    "step": 3
+  },
+  "review": {
+    "title": "约束与域外复核",
+    "detail": "预算越带拥挤核查",
+    "step": 2
+  },
+  "output": {
+    "title": "可行射孔候选",
+    "detail": "在预测净目标上搜索",
+    "step": 3
+  },
+  "compare": {
+    "title": "独立测试评价",
+    "detail": "评价后记录人工意见",
+    "step": 4
+  }
+}

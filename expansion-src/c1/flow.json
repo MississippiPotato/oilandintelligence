@@ -1,0 +1,42 @@
+{
+  "title": "声学响应怎样变成可复核判断？",
+  "input": {
+    "title": "井深与声波",
+    "detail": "四井各四十八深度",
+    "step": 0
+  },
+  "prepare": {
+    "title": "分井与取特征",
+    "detail": "早晚窗提取四维量",
+    "step": 2
+  },
+  "model": {
+    "title": "加权近邻投票",
+    "detail": "验证选邻居数",
+    "step": 3
+  },
+  "baseline": {
+    "title": "单声幅阈值",
+    "detail": "验证拟合两条界线",
+    "step": 3
+  },
+  "review": {
+    "title": "定位待复核段",
+    "detail": "低支持或离群保留",
+    "step": 4
+  },
+  "output": {
+    "title": "分类与证据",
+    "detail": "保留波形近邻原结果",
+    "step": 4
+  },
+  "compare": {
+    "title": "同井同分母对照",
+    "detail": "拒判计入一百九十二点",
+    "step": 4
+  },
+  "gate": [
+    "支持度够吗",
+    "邻距超限吗"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:04:31.453Z",
+  "case": {
+    "scene": "c4",
+    "id": "s17x-c4-casing-standoff",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-c4-casing-standoff"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "negative gap remains visible as contact diagnostic",
+      "passed": true
+    },
+    {
+      "name": "cross-section and gap curve remain finite",
+      "passed": true
+    },
+    {
+      "name": "actual current-result JSON downloaded",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "sample refresh restores package and recomputes",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "contactText": "预测最小间隙\n-4.64\nmm\n无载几何基线\n10.00\nmm\n预测间隙比（接触诊断）\n-15.5\n%\n留出间隙 MAE\n0.15\nmm · 80 组合\n最差截面：窄侧还有多少间隙？\n预测间隙 -4.64 mm\n接触：自由变形假设失效\n井眼半径 120 mm · 套管外半径 90 mm\n同一比例：120 mm = 100 图像单位\n\n井眼与套管半径和圆心偏移使用同一比例。负预测值保留作接触诊断；截面停在接触位置，不把实体穿透当作真实变形。\n\n最差点在支撑之间\n-10\n0\n2.5\n15\n15\n30\n27.5\n45\n40\n60\n井段位置 / m\n窄侧间隙 / mm\n\n绿色为受载间隙；金色虚线是无载基线；底部短线表示扶正支撑。形状用显式正弦平方展开，最小值来自回归预测。支撑从 0 m 起等跨距排列；若 60 m 非跨距整数倍，下一个支撑位于图外。\n\n改变跨距：间隙与支撑数量一起看\n跨距 / m\t预测最小间隙 / mm\t间隙比 / %（负值仅诊断）\t0–60 m 内支撑数（含端点）\n6\t8.36\t27.9\t11\n9\t6.33\t21.1\t7\n12\t3.49\t11.6\t6\n15\t-0.17\t-0.6\t5\n18\t-4.64\t-15.5\t4",
+  "passed": 12,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+      "bytes": 20656,
+      "sha256": "c968ae43675d50b24bbc0368b8259db478590d9d1a29af0b0983db11fce223c8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+      "bytes": 825,
+      "sha256": "81f50567206f7ff4ce9a55a52405f121b5f9738bf1cb948d35688fbf241c338e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+      "bytes": 2452,
+      "sha256": "c3d48d67a4d34665d6181f0766ad8292820f0d7e731bc67a5b6b3eed66225df9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+      "bytes": 19629,
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+      "bytes": 71791,
+      "sha256": "3373ed770976e03aeb8f851424c24b0b42e03ed441becc195230831b8e145857"
+    }
+  ]
+}

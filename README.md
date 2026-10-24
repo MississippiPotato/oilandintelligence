@@ -1,11 +1,11 @@
 # 井见 · 石油智能化可视实验室
 
-当前门户 **1.9.0-preview**，覆盖老师原站 **13 个阶段、61 个场景**。学号末两位 17 对应第 4 阶段录井，m1–m5 保持 1.5.2；其余阶段共 56 例，本轮在已有 12 例基础上新增 44 例。老师原样例单独保留，不计入 61 个自制案例。
+当前门户 **1.9.1-preview**，覆盖老师原站 **13 个阶段、61 个场景**。学号末两位 17 对应第 4 阶段录井，m1–m5 保持 1.5.3；其余阶段共 56 例。本轮由 7 组逐例审阅全部 61 例，重点修订此前新增的 44 例，另做独立横向审阅。老师原样例单独保留，不计入 61 个自制案例。
 
-- [打开首页](portal/index.html) · [全部案例与本轮浏览器验收](handoff/full-coverage-2026-10-24/acceptance.html)
-- [原站只读兼容副本](portal-original/index.html) · [逐例覆盖表](handoff/full-coverage-2026-10-24/coverage.json)
-- [全部61例轻量案例包](dist/s17-all-61-cases-1.9.0-preview.zip) · [跨阶段56例包](dist/s17-expansion-56-cases-1.9.0-preview.zip)
-- [录井五例包1.5.2](dist/s17-mudlogging-cases-only-1.5.2.zip) · [实施计划](handoff/full-coverage-2026-10-24/implementation-plan.json)
+- [打开首页](portal/index.html) · [全部案例与本轮浏览器验收](handoff/teaching-audit-2026-10-24/acceptance.html)
+- [原站只读兼容副本](portal-original/index.html) · [逐例覆盖表](handoff/teaching-audit-2026-10-24/coverage.json)
+- [全部61例轻量案例包](dist/s17-all-61-cases-1.9.1-preview.zip) · [跨阶段56例包](dist/s17-expansion-56-cases-1.9.1-preview.zip)
+- [录井五例包1.5.3](dist/s17-mudlogging-cases-only-1.5.3.zip) · [实施计划](handoff/full-coverage-2026-10-24/implementation-plan.json)
 
 ## 内容与讲解
 
@@ -37,7 +37,7 @@
 
 录井五例位于 dist/cases/，其他 56 例位于 dist/expansion-cases/。ZIP 先解压，通过老师原站“添加案例”一次选择一个完整案例文件夹，内含 case.json、README.txt 和 demo/ 下三个文件。不要选择 ZIP 或全部案例的总目录。
 
-增强门户首页直接提供案例入口，手动导入同 ID 内置案例会提示替换；已经导入的重复 ID 仍会校验。增强门户使用 IndexedDB 保存案例，并读取迁移旧 localStorage 数据。老师原站与只读副本保持原样；它的 localStorage 容量限制仍存在，因此本轮原站兼容验证分批导入，61 例累计保存由增强门户单独验证。
+增强门户首页直接提供案例入口，手动导入同 ID 内置案例会提示替换；已经导入的重复 ID 仍会校验。增强门户使用 IndexedDB 保存案例，并读取迁移旧 localStorage 数据。老师原站与只读副本保持原样；它的 localStorage 容量限制仍存在，此前全覆盖验证在原站分批导入，并由增强门户验证61例累计保存。本轮重新抽查9例当前修订包的原站导入、交互和下载。
 
 首页助手沿用手机式窄面板，新增页面带有当前案例上下文。默认案例计算和基础助手不依赖网络；在线模型、附件及语音为用户自行配置的可选功能。本轮没有调用付费模型，也没有把 API Key 写入代码或案例包。
 
@@ -47,11 +47,17 @@
 - npm test：算法、数据、原站保护、包结构和逐例内容/计算检查。
 - npm run accept：在当前成品与已有浏览器报告哈希一致时汇总验收；内容变更后需要先重新执行对应浏览器检查。重建和源码测试后可用此命令刷新汇总。
 - npm run verify-delivery：对照已保存的实际浏览器报告及当前文件哈希，本命令不重新执行浏览器。
-- npm run package：生成单例包、61例轻量包及完整交付 ZIP。完整包为 dist/s17-petroleum-61-cases-1.9.0-preview.zip，本地保留，不将大体积完整 ZIP 推入 Git。
+- npm run package：生成单例包、61例轻量包及完整交付 ZIP。完整包为 dist/s17-petroleum-61-cases-1.9.1-preview.zip，本地保留，不将大体积完整 ZIP 推入 Git。
 - node checks/browser-full-coverage.mjs smoke / native / enhanced / compat：使用项目现有 Playwright CLI 工具执行实际浏览器检查。enhanced 使用专用持久化测试配置，首次运行要求该配置没有旧导入记录。
 
-本轮按精简方案执行：44 例逐例离线打开、检查三部分并实际计算；老师原站分批实际导入全部 44 个新增目录，每批代表例下载、刷新重跑；增强门户累计导入 61 例后刷新、关闭重开，并在不透明沙箱中重跑新增案例。实际完成范围以验收页和逐项报告为准。失败尝试保留，不累计为通过；Node 源码检查与浏览器结果分开记录。
+本轮完成61例专业知识、图文对应与有意义交互的源码和计算审阅，7组报告逐项对应61个唯一场景；另独立深读14个代表。修订包括：m5目标否定与ppmv单位、pr4连续告警起点和确认时刻、d5候选枚举端点、w3真实掩膜像素、c1波形与幅度图的对应、c3压力裕度方向、c4几何尺度和支撑数量，以及各例坐标、单位、中间量与学习任务。原本正确的振幅符号与三元图顶点没有算作缺陷。
 
-本轮修复了浏览器发现的沙箱历史 API 兼容问题，也放大了射孔/采油图表坐标字。原站原文件、录井五例运行目录及公开观察资料保持锁定。未做实体手机、Firefox/WebKit、新麦克风或在线模型连接验证。
+当前版本实际浏览器抽查9例：s5、w3、c4、pr2、pr4、e3、t5、r5、m5，均通过老师原站上传目录、沙箱计算、具体交互与真实JSON下载；c4/pr4/m5刷新后再次运行。w3/e3/m5另在浏览器断网状态直接打开本地文件并计算，w3独立页面检查390px视口。其余52例没有在本轮逐例重跑浏览器。上一版本的44例离线、原站44例分批导入、增强门户61例累计保存和真实重启等报告保留在[历史验收页](handoff/full-coverage-2026-10-24/acceptance.html)，没有把历史证据改写为当前版本全61例通过。
+
+- [逐例教学审阅总结](handoff/teaching-audit-2026-10-24/review-summary.md)
+- [本轮完成与未验证范围](handoff/teaching-audit-2026-10-24/completion.json)
+- node checks/browser-teaching-audit.mjs samples / offline：实际执行本轮选择的浏览器检查，也可加 --only=场景编号。
+
+原站两份原文件与公开观察资料的63个保护文件保持字节一致。未做实体手机、Firefox/WebKit、全部参数组合、新麦克风或在线模型连接验证。
 
 数据及许可：[公开实测审计](handoff/real-data-source-audit.md)、[岩芯和曲线署名](data/real/ATTRIBUTION.txt)、[白光UV署名](data/real/CALCITE-ATTRIBUTION.txt)。新增案例的概念出处在各自专业背景、README 与源码中。

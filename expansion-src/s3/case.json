@@ -2,7 +2,7 @@
   "id": "s17x-s3-first-arrival",
   "sceneId": "s3",
   "title": "初至波自动拾取：把第一段有效能量定位到时间轴",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "methods": [
     "ts"
@@ -22,13 +22,19 @@
           "no": 2,
           "en": "METHOD",
           "title": "噪声触发与弱信号漏拾，是两种不同错误",
-          "html": "<p>STA/LTA 用短时窗口与较长背景窗口的平均能量比判断波是否到达。短窗突然变强会触发，因此一个孤立脉冲也可能被误拾；弱道虽然已经有有效波，能量比却可能迟迟不够高。</p><p>学习路线把前后窗口能量比、短窗能量、相邻采样变化和邻道能量一起交给逻辑回归。训练来自 7 个独立炮集，模型学习波前与波后窗口的差异，再在新炮集寻找连续三个采样点超过阈值的位置。邻道特征提供观测支持，不能直接复制参考走时。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"局部输入 → 学习支持度 → 初至时间（2 ms/采样）\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">原始带噪炮集</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">局部能量与邻道</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">连续触发位置</text><text x=\"34\" y=\"168\">局部输入 → 学习支持度 → 初至时间（2 ms/采样）</text></g></svg><p class=\"note\">STA/LTA 与学习模型对同一炮集分别拾取，真实计算误差。</p>"
+          "html": "<p>STA/LTA 用短时窗口与较长背景窗口的平均能量比判断波是否到达。短窗突然变强会触发，因此一个孤立脉冲也可能被误拾；弱道虽然已经有有效波，能量比却可能迟迟不够高。</p><p>学习路线把前后窗口能量比、短窗能量、相邻采样变化和邻道能量一起交给逻辑回归。训练来自 7 个独立炮集，模型学习波前与波后窗口的差异，再在新炮集寻找连续三个采样点超过阈值的位置。邻道特征提供观测支持，不能直接复制参考走时。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 260\" role=\"img\" aria-label=\"连续三个采样越阈，回填首个采样时间\"><rect width=\"760\" height=\"260\" fill=\"#f7faf8\" rx=\"12\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><path d=\"M70 40v155h620\" fill=\"none\" stroke=\"#829e91\"/><path d=\"M70 100h620\" stroke=\"#b98739\" stroke-dasharray=\"7 5\"/><text x=\"75\" y=\"29\">模型支持度（无量纲）</text><text x=\"4\" y=\"105\">0.60</text><text x=\"10\" y=\"197\">0</text><path d=\"M130 130L290 94L450 85L610 81\" fill=\"none\" stroke=\"#277c68\" stroke-width=\"4\"/><circle cx=\"130\" cy=\"130\" r=\"6\" fill=\"#277c68\"/><text x=\"108\" y=\"118\">0.42</text><text x=\"110\" y=\"220\">70</text><circle cx=\"290\" cy=\"94\" r=\"6\" fill=\"#277c68\"/><text x=\"268\" y=\"82\">0.63</text><text x=\"270\" y=\"220\">72</text><circle cx=\"450\" cy=\"85\" r=\"6\" fill=\"#277c68\"/><text x=\"428\" y=\"73\">0.68</text><text x=\"430\" y=\"220\">74</text><circle cx=\"610\" cy=\"81\" r=\"6\" fill=\"#277c68\"/><text x=\"588\" y=\"69\">0.70</text><text x=\"590\" y=\"220\">76</text><path d=\"M290 43v155\" stroke=\"#8f5550\" stroke-dasharray=\"4 4\"/><text x=\"330\" y=\"57\">72、74、76 ms连续越阈 → 候选72 ms</text><text x=\"515\" y=\"249\">记录时间 / ms →</text></g></svg></figure><p class=\"note\">STA/LTA 与学习模型对同一炮集分别拾取，真实计算误差。</p>"
         },
         {
           "no": 3,
           "en": "READING",
           "title": "评价拾取时间，也保留漏拾和人工修正",
           "html": "<p>平均绝对误差 MAE 衡量已拾取道的时间偏差；±10 ms 命中率则以全部 18 道作分母，漏拾不能消失在分母里。参考初至用金色虚线叠加，学习拾取与 STA/LTA 各用一种颜色；点击炮集可切换正在放大的单道。</p><p>演示中的炮集为教学合成波形，参考到达由生成过程保留并与预测函数分开。调高噪声或降低每六道中一条弱道的振幅，观察方法何时失效。人工修正只形成复核记录，保留原模型成绩。阅读：<a href=\"https://wiki.seg.org/wiki/First_breaks\" target=\"_blank\" rel=\"noopener\">SEG First breaks</a>、<a href=\"https://doi.org/10.1002/nsg.12316\" target=\"_blank\" rel=\"noopener\">初至拾取研究</a>。</p><p class=\"note\">误差图回答“差了多少”，波形回答“为什么这样拾取”。</p>"
+        },
+        {
+          "no": 4,
+          "en": "READ_AND_TEST",
+          "title": "连续触发怎样落到一个时间点？",
+          "html": "<p>图中数值是连续触发规则的手算示例，不是预写的实验成绩。采样间隔2ms时，连续三个点对应相隔4ms的三个观测；算法确认第3点后把候选放在第1点，所以图示候选为72ms。前向能量窗口还读取未来观测，本例属于离线处理，不能理解为在72ms就已发出实时预警。横向炮集的道号越大，参考初至整体越晚；单道图则把同一过程展开到水平时间轴。</p><p><b>选第9道核查噪声尖峰：</b>默认运行，点选炮集第9道，比较44ms附近脉冲、首个连续越阈位置和参考初至。提高阈值再运行，观察早触发是否减少、弱道是否延迟或漏拾。再降低弱道比例，重点看第1、7、13道。MAE只以已拾取道为分母；±10ms命中率以全部18道为分母，必须和漏拾一起读。手动复核时间另存，不会改写模型原误差。</p>"
         }
       ]
     },

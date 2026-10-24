@@ -1,42 +1,42 @@
 {
-  "title": "修井周期预测",
+  "title": "完整检修间隔估计",
   "input": {
-    "title": "专业观测输入",
-    "detail": "平均负荷率 %",
+    "title": "检修甲前半年",
+    "detail": "负荷含砂与停机",
     "step": 0
   },
   "prepare": {
-    "title": "定义完整检修间隔",
-    "detail": "检查单位和记录范围",
-    "step": 0
-  },
-  "model": {
-    "title": "按设备留出记录",
-    "detail": "由可见输入计算",
+    "title": "设备独立拆分",
+    "detail": "工程常数缩放",
     "step": 1
   },
+  "model": {
+    "title": "岭回归间隔",
+    "detail": "目标检修甲至乙",
+    "step": 2
+  },
   "baseline": {
-    "title": "简单方法对照",
-    "detail": "相同数据独立计算",
+    "title": "训练中位数基线",
+    "detail": "所有设备同一估计",
     "step": 3
   },
   "review": {
-    "title": "检查约束与来源",
-    "detail": "不读评价真值预测",
-    "step": 2
+    "title": "删失边界检查",
+    "detail": "未检修只有间隔下界",
+    "step": 0
   },
   "output": {
-    "title": "图表与当前结果",
-    "detail": "保留参数和评价分母",
-    "step": 3
+    "title": "当前间隔估计",
+    "detail": "不冒充剩余寿命",
+    "step": 2
   },
   "compare": {
-    "title": "独立评价对比",
-    "detail": "误差或合法性可复算",
+    "title": "留出设备评价",
+    "detail": "三十二台误差散点",
     "step": 3
   },
   "gate": [
-    "结果是否满足检查？",
-    "补充观测再重新计算"
+    "完整间隔标签有效？",
+    "删失记录另作处理"
   ]
 }

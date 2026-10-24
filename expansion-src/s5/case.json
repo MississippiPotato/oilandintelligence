@@ -2,7 +2,7 @@
   "id": "s17x-s5-seismic-denoise",
   "sceneId": "s5",
   "title": "地震资料噪声压制：降低干扰，也检查反射是否保真",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "methods": [
     "cv"
@@ -22,13 +22,19 @@
           "no": 2,
           "en": "METHOD",
           "title": "让模型学习“邻域观测如何还原中心采样”",
-          "html": "<p>滑动平均把相邻五个采样点平均，能减弱随机起伏，却也会压低窄波峰。学习去噪则使用训练炮集中“带噪邻域—干净中心采样”的成对样本，拟合合适的线性组合。本例采用岭回归，特征是同道前后两点、当前点和左右邻道当前点，共七个振幅，加一个截距。</p><p>正则项约束权重大小，避免过度追随训练噪声。模型在 6 个独立炮集上真实求解线性方程，预测新炮集时只读取带噪数组。干净参考只在训练标定和预测后的独立评价使用；测试参考不进入预测函数。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"训练用成对样本；测试仅输入带噪观测\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">带噪7点邻域</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">岭回归学习权重</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">中心采样估计</text><text x=\"34\" y=\"168\">训练用成对样本；测试仅输入带噪观测</text></g></svg><p class=\"note\">可展开权重表，查看模型到底平均了哪些位置。</p>"
+          "html": "<p>滑动平均把相邻五个采样点平均，能减弱随机起伏，却也会压低窄波峰。学习去噪则使用训练炮集中“带噪邻域—干净中心采样”的成对样本，拟合合适的线性组合。本例采用岭回归，特征是同道前后两点、当前点和左右邻道当前点，共七个振幅，加一个截距。</p><p>正则项约束权重大小，避免过度追随训练噪声。模型在 6 个独立炮集上真实求解线性方程，预测新炮集时只读取带噪数组。干净参考只在训练标定和预测后的独立评价使用；测试参考不进入预测函数。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 315\" role=\"img\" aria-label=\"去噪回归实际读取的七个时空邻域位置\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><text x=\"25\" y=\"30\">同道前后各2点 + 左右邻道同一时间点 = 7个输入振幅</text><rect x=\"145\" y=\"65\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><rect x=\"230\" y=\"65\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><rect x=\"315\" y=\"65\" width=\"70\" height=\"40\" fill=\"#c8e2d5\" stroke=\"#b3c8be\"/><text x=\"323\" y=\"92\">左邻道</text><rect x=\"400\" y=\"65\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><rect x=\"485\" y=\"65\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><rect x=\"145\" y=\"117\" width=\"70\" height=\"40\" fill=\"#c8e2d5\" stroke=\"#b3c8be\"/><text x=\"153\" y=\"144\">t−2</text><rect x=\"230\" y=\"117\" width=\"70\" height=\"40\" fill=\"#c8e2d5\" stroke=\"#b3c8be\"/><text x=\"238\" y=\"144\">t−1</text><rect x=\"315\" y=\"117\" width=\"70\" height=\"40\" fill=\"#c8e2d5\" stroke=\"#b3c8be\"/><text x=\"323\" y=\"144\">t</text><rect x=\"400\" y=\"117\" width=\"70\" height=\"40\" fill=\"#c8e2d5\" stroke=\"#b3c8be\"/><text x=\"408\" y=\"144\">t+1</text><rect x=\"485\" y=\"117\" width=\"70\" height=\"40\" fill=\"#c8e2d5\" stroke=\"#b3c8be\"/><text x=\"493\" y=\"144\">t+2</text><rect x=\"145\" y=\"169\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><rect x=\"230\" y=\"169\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><rect x=\"315\" y=\"169\" width=\"70\" height=\"40\" fill=\"#c8e2d5\" stroke=\"#b3c8be\"/><text x=\"323\" y=\"196\">右邻道</text><rect x=\"400\" y=\"169\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><rect x=\"485\" y=\"169\" width=\"70\" height=\"40\" fill=\"#f7faf8\" stroke=\"#b3c8be\"/><text x=\"35\" y=\"260\">时间采样 →；跨道位置 ↓。t±2为±8ms；另有一个截距项。</text><text x=\"35\" y=\"292\">输出：这7个观测 × 各自学习权重之和 + 截距 → 中心采样估计</text></g></svg><p class=\"note\">可展开权重表，查看模型到底平均了哪些位置。</p>"
         },
         {
           "no": 3,
           "en": "READING",
           "title": "同时看结果、差值和信噪比",
           "html": "<p>均方根误差 RMSE 比较全部 12 道 × 160 点与干净参考的偏差；信噪比 SNR 把参考信号能量与误差能量相比，单位 dB。指标由当前数组实际计算，分母为全部 1920 个采样点。</p><p>差值“原始−处理”表示被移除的部分：若差值中出现清晰的反射波形，可能连有效信号也删掉了。模型训练只包含随机噪声，切换相干或脉冲噪声可以观察分布变化导致的失效。教学波形按局部反射脉冲生成。方法阅读：<a href=\"https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html\" target=\"_blank\" rel=\"noopener\">岭回归目标与正则化</a>。专业概念：<a href=\"https://glossary.slb.com/en/terms/s/seismic_processing\" target=\"_blank\" rel=\"noopener\">SLB Seismic processing</a>。</p><p class=\"note\">优先解释峰谷与残差，再看单个汇总分数。</p>"
+        },
+        {
+          "no": 4,
+          "en": "READ_AND_TEST",
+          "title": "用同一个干净炮集，检验移除的是噪声还是反射",
+          "html": "<p>波形图横轴为记录时间ms、纵轴为相对振幅。灰线是带噪输入，绿色与蓝紫是两种处理结果；金色虚线是留出的干净参考。下方差值曲线等于“灰线减处理线”，它保留的是被删除部分。若某个反射脉冲的正负波瓣在差值中仍清晰可见，就要检查是否损伤有效信号，不能只把差值越大解释为效果越好。</p><p><b>固定种子、噪声幅度与选中道：</b>先运行随机噪声，再切换相干干扰、脉冲尖峰并重算。三种模式保留完全相同的干净反射波形；改变的是叠加干扰，所以可以比较同一波峰是否被压低或移位。岭回归只在随机噪声上标定，分布外可能输给滑动平均，必须保留结果。SNR=10log10(参考信号平方和/误差平方和)，单位dB，汇总全部1920点；没有真实干净参考的实测资料不能照搬这套SNR作为现场成绩。</p>"
         }
       ]
     },

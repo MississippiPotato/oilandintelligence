@@ -1,0 +1,802 @@
+{
+  "date": "2026-10-24",
+  "scope": "source_review_not_browser",
+  "scenes": [
+    "d1",
+    "d2",
+    "d3",
+    "d4",
+    "d5",
+    "w1",
+    "w2",
+    "w3",
+    "w4",
+    "w5"
+  ],
+  "review_basis": [
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/06_兼容与验收清单.txt",
+    "portal-original/firstbreak-pick-case/case.json",
+    "All 10 case.json/demo.html/app.js/engine.js read; 8 compact manifests and engine-contract.json also reconciled"
+  ],
+  "quality_basis": "逐例核对业务对象、变量单位、物理关系、图文对应、控件改变的知识与模型作用；不以字数、SVG数量或旧检查通过作为教学充分性。",
+  "validation": {
+    "browser_verified": false,
+    "calculation_evidence": "handoff/teaching-audit-2026-10-24/drilling-welllog-source-checks.json",
+    "executed": [
+      "10 engines/apps initialized in Node VM with minimal DOM stub",
+      "all 10 initial SVG outputs checked for NaN/Infinity",
+      "tab navigation executed with history.replaceState deliberately denied",
+      "8 compact apps save escaped independent review, disable exports when inputs stale",
+      "computed output effects checked excluding parameter echoes",
+      "w3 high-threshold empty mask retains finite coordinates",
+      "d5 grid has375 points including1.5% endpoint",
+      "mechanism checks preserve isolated baseline/visualization/search controls and negative examples"
+    ],
+    "boundary": "VM是源码行为检查，不能证明真实浏览器布局、下载、离线双击或原门户opaque iframe实际表现。"
+  },
+  "primary_fact_checks": [
+    {
+      "url": "https://glossary.slb.com/en/terms/p/plastic_viscosity",
+      "used_for": "PV是宾汉高剪切直线斜率，区分YP；使用自己的单位手算例。"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/b/bingham_plastic_model",
+      "used_for": "τ=YP+PVγ以及两参数含义；没有把PV视为全部流变性能。"
+    },
+    {
+      "url": "https://www.epa.gov/environmental-geophysics/gamma-gamma-density-logging",
+      "used_for": "密度响应、ρb=(1−φ)ρma+φρf、骨架/流体假设和井眼影响。"
+    }
+  ],
+  "cases": [
+    {
+      "sceneId": "d1",
+      "teaching_judgment": "保留多井代理预测、真实约束搜索和独立实现对照；补足进尺图刻度与教学约束的单位，读者现在能手算ROP和约束余量。",
+      "business_object": "一组钻进工况对应的稳态机械钻速及可行推荐点。",
+      "variables_units": [
+        "WOB kN",
+        "RPM r/min",
+        "Q L/s",
+        "UCS MPa",
+        "ROP m/h",
+        "泵压MPa",
+        "扭矩kN·m"
+      ],
+      "physical_relationship": "有效钻进进尺/有效钻进时间=ROP；泵压、扭矩是公开系数的教学代理，未宣称完整水力学。",
+      "graphic_text_evidence": [
+        "背景B2把0—30min/15m、停钻段与有刻度进尺时间图对应；后段斜率改变明确表示另一工况。",
+        "背景B3新增泵压与扭矩公式，90/120/26/UCS60的手算值13.98MPa、5.09kN·m；运行热图、余量条与具体违反项对应。",
+        "运行预测散点图图例文字改用对应绿/橙色，误差图明确绿条模型、橙点基线。"
+      ],
+      "interaction_learning_objectives": [
+        "收紧泵压边界→观察可行域与推荐变化，再关闭约束查看违反项。",
+        "硬地层预设→训练代理仍冻结，观察预测与教学实现值偏离，不能以寻优代替真实性验证。"
+      ],
+      "model_role": "512训练/192验证记录的多项式岭回归代理；128留出记录比较单WOB线性基线；候选只按代理预测选点，选后才计算教学实现值。",
+      "issues_and_fixes": [
+        {
+          "issue": "进尺示意无明确刻度；教学机械约束公式仅在代码中，不便核对。",
+          "fix": "重画有刻度时间—进尺图，写明有效时段与工况改变；加入约束公式和手算例。",
+          "files": [
+            "case.json",
+            "demo.html"
+          ]
+        },
+        {
+          "issue": "散点与残差图图例不够明确。",
+          "fix": "给模型/基线文字着对应颜色，残差图写明符号。",
+          "files": [
+            "app.js"
+          ]
+        },
+        {
+          "issue": "缺紧凑总览节点文件。",
+          "fix": "新增绑定实际5步的flow.json。",
+          "files": [
+            "flow.json"
+          ]
+        }
+      ],
+      "pending": [
+        "本轮未浏览器复验热图点击、窄屏、沙箱导出。",
+        "代理未覆盖现场设备全部约束，候选是教学搜索结果。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.html",
+        "flow.json"
+      ],
+      "source_files": [
+        "expansion-src/d1/app.js",
+        "expansion-src/d1/case.json",
+        "expansion-src/d1/demo.html",
+        "expansion-src/d1/flow.json"
+      ]
+    },
+    {
+      "sceneId": "d2",
+      "teaching_judgment": "已从只有压力波形的概念展示变成能复核正常响应、残差和提前量的课堂实验。",
+      "business_object": "钻井循环立管压力的持续偏离线索，不直接诊断某一井下事故。",
+      "variables_units": [
+        "时间min",
+        "Q L/s",
+        "RPM r/min",
+        "压力及残差MPa"
+      ],
+      "physical_relationship": "正常泵压随流量、转速变化；实测−正常预测形成残差，用仅当前与过去5窗均值抑制孤立尖峰。",
+      "graphic_text_evidence": [
+        "B1用P=4+0.18Q+0.012RPM给流量—压力数值图；替换原时间图与散点文案错位。",
+        "B2画同一序列的单窗残差、5窗均值、0.45MPa阈值，有真实刻度。",
+        "运行压力图叠加固定基线阈值、145min教学事件、首次告警139min及6min括线；125—165阴影表示注入区。",
+        "流程用正常/先兆/事件各自170/20/20窗的数值表解释分母，不再用方框重复步骤名。"
+      ],
+      "interaction_learning_objectives": [
+        "附加压0为无可见先兆负对照；1.4MPa恢复渐变，阈值改变会改变提前或滞后。",
+        "单改固定泵压阈值只应影响基线告警，不能改变残差模型预测。",
+        "记录具体告警时间、误报窗和人工判断，参数改变后旧记录标为历史。"
+      ],
+      "model_role": "120正常窗拟合压力统计关系；210未来窗同数据比较残差阈值与绝对压力阈值，事件评价不用于拟合。",
+      "issues_and_fixes": [
+        {
+          "issue": "图注与图形横轴不一致、缺事件与告警定位。",
+          "fix": "重画有量纲的背景图，运行图增加事件/首告警/提前量标注。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "engine.js",
+            "app.js"
+          ]
+        },
+        {
+          "issue": "没有明确负对照和人工复核。",
+          "fix": "drift下限改0，补操作路线与独立复核导出。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        }
+      ],
+      "pending": [
+        "本轮未浏览器检查145/139文字在不同宽度是否需要避让。",
+        "仍仅一个教学事件，无法外推现场事件检出率。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html",
+        "engine.js"
+      ],
+      "source_files": [
+        "expansion-src/d2/app.js",
+        "expansion-src/d2/case.json",
+        "expansion-src/d2/demo.css",
+        "expansion-src/d2/demo.html",
+        "expansion-src/d2/engine.js"
+      ]
+    },
+    {
+      "sceneId": "d3",
+      "teaching_judgment": "已明确MD/TVD、指令/响应、规划/未来执行三层关系；模型失败与不可达目标都保留。",
+      "business_object": "二维井眼转向控制的末端目标偏差。",
+      "variables_units": [
+        "MD/TVD/横向位移m",
+        "转角°",
+        "狗腿度°/30m",
+        "响应增益无量纲"
+      ],
+      "physical_relationship": "Δx=ΔMD sinθ，ΔTVD=ΔMD cosθ；每步10m、60步总MD600m。单位进尺转角约束简化真实狗腿度。",
+      "graphic_text_evidence": [
+        "B1以三角形解释θ=30°时10m分解为5m和8.66m，并标井深向下。",
+        "B2指令转角—响应转角图对照0.74示意增益与单位增益，不把训练拟合值强行等同0.74。",
+        "流程手算表分别解释响应标定、位移分解、原目标与终点欧氏距离；运行曲线保留21个补偿候选目标函数。"
+      ],
+      "interaction_learning_objectives": [
+        "固定未来增益，收紧每30m转角上限，检查平缓路径和目标误差。",
+        "仅改变未来增益，训练系数与规划网格应保持不变，执行路径可失败。"
+      ],
+      "model_role": "80条独立转向试验拟合增益；该增益规划21候选；未来增益只推进冻结指令。",
+      "issues_and_fixes": [
+        {
+          "issue": "背景图缺MD/TVD分解、转角图与文字关系弱；流程通用方框无数值中间量。",
+          "fix": "重画几何图和标定关系，增加转角/坐标/末端距离手算表与操作路线。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css"
+          ]
+        },
+        {
+          "issue": "没有运行绑定的独立人工复核；hash写入有沙箱风险。",
+          "fix": "复核与导出绑定计算版本，history写入guard。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "demo.css"
+          ]
+        }
+      ],
+      "pending": [
+        "未浏览器复验；二维与固定600m进尺简化保留。",
+        "高未来增益可能违反实际转角约束，这作为迁移失败保留，不能包装为安全控制器。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html"
+      ],
+      "source_files": [
+        "expansion-src/d3/app.js",
+        "expansion-src/d3/case.json",
+        "expansion-src/d3/demo.css",
+        "expansion-src/d3/demo.html"
+      ]
+    },
+    {
+      "sceneId": "d4",
+      "teaching_judgment": "时域、频谱、特征、二分类和误差分母已串成同一信号的可核对讲法。",
+      "business_object": "钻具教学振动窗口的正常/退化识别。",
+      "variables_units": [
+        "加速度g",
+        "时间s",
+        "频率Hz",
+        "采样128Hz/128点",
+        "模型支持分数无量纲"
+      ],
+      "physical_relationship": "5Hz负荷与25Hz退化成分在时域混合；DFT分离频率，1Hz分辨率；RMS反映总幅度而非成因。",
+      "graphic_text_evidence": [
+        "B1实际构造5Hz+25Hz一秒信号，有g和秒刻度。",
+        "B2对应同一信号两个幅值峰，写明频率是教学设定，非通用钻具诊断频率。",
+        "流程列RMS、P25/(P5+0.02)、峰值因子计算；90窗的50正常/40退化分别统计误报漏报。"
+      ],
+      "interaction_learning_objectives": [
+        "窗口20/63切换频谱与波形，但全90窗F1应相同。",
+        "负荷2.3g时比较RMS基线和频带模型；阈值与噪声可导致模型失效，分数不是现场风险概率。"
+      ],
+      "model_role": "160独立种子教学窗口拟合正则逻辑回归，90测试窗同数据比较RMS阈值。",
+      "issues_and_fixes": [
+        {
+          "issue": "频谱与时域背景缺刻度，训练来自设备的表述易误读成实测来源。",
+          "fix": "重画对应信号和频谱；改为独立种子教学信号，列清特征和分母。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "缺窗口选择的学习目的、人工复核及沙箱guard。",
+          "fix": "明确仅浏览窗口不改变整体指标；独立复核和guard。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "case.json"
+          ]
+        }
+      ],
+      "pending": [
+        "未浏览器复验频谱切窗和移动端文字。",
+        "不包含真实转速变化导致的阶次分析，不以教学固定频带外推现场。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html",
+        "engine.js"
+      ],
+      "source_files": [
+        "expansion-src/d4/app.js",
+        "expansion-src/d4/case.json",
+        "expansion-src/d4/demo.css",
+        "expansion-src/d4/demo.html",
+        "expansion-src/d4/engine.js"
+      ]
+    },
+    {
+      "sceneId": "d5",
+      "teaching_judgment": "纠正PV图注错位和单位跳跃，并修复真实网格端点遗漏；预测校验与配方约束搜索现在分开解释。",
+      "business_object": "给定温度和塑性黏度范围的教学钻井液候选配方。",
+      "variables_units": [
+        "PV mPa·s",
+        "剪切应力Pa",
+        "剪切速率s⁻¹",
+        "温度℃",
+        "固相体积分数%",
+        "聚合物浓度g/100mL"
+      ],
+      "physical_relationship": "τ=YP+PV γ̇，Pa与s⁻¹配套时PV用Pa·s；0.020Pa·s=20mPa·s。剂量响应含固相平方与聚合物×温度交互。",
+      "graphic_text_evidence": [
+        "B1同YP=5Pa、PV20/50mPa·s的有刻度直线，图注直接解释斜率，不再把宾汉图叫剂量响应。",
+        "B2固定固相6%，用与演示相同响应函数画25/100℃聚合物剂量曲线，明确趋势是配方假设。",
+        "运行剂量图叠加PV上/下界和目标，流程表解释先筛约束再用目标偏差与相对成本排序。"
+      ],
+      "interaction_learning_objectives": [
+        "25→125℃后检查可行数量与响应斜率；训练模型和留出预测保持不变，只有搜索工况改变。",
+        "设min45/max20，确认没有候选而非强行推荐；记录约束冲突原因。"
+      ],
+      "model_role": "140独立批次拟合多项式响应面，70留出批次对照线性经验公式；25×15=375候选搜索。",
+      "issues_and_fixes": [
+        {
+          "issue": "宾汉图无刻度、图注却说固相剂量，PV与Pa·s换算不清。",
+          "fix": "重画两幅符合文字与函数的物理图，明确浓度和成本单位。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "浮点递增a=.1...1.5漏掉1.5端点，仅350点。",
+          "fix": "改整数索引ai/10，25×15=375点，实际验证含1.5端点。",
+          "files": [
+            "engine.js",
+            "engine-contract.json"
+          ]
+        },
+        {
+          "issue": "缺约束线、运行绑定人工意见、沙箱guard。",
+          "fix": "叠加界限和目标；补独立复核和guard。",
+          "files": [
+            "app.js",
+            "engine.js",
+            "demo.html"
+          ]
+        }
+      ],
+      "pending": [
+        "未浏览器复验阈值线/图例拥挤、375点对应门户打包结果。",
+        "只优化PV，未模拟YP、密度、携屑等完整泥浆性能。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html",
+        "engine-contract.json",
+        "engine.js"
+      ],
+      "source_files": [
+        "expansion-src/d5/app.js",
+        "expansion-src/d5/case.json",
+        "expansion-src/d5/demo.css",
+        "expansion-src/d5/demo.html",
+        "expansion-src/d5/engine-contract.json",
+        "expansion-src/d5/engine.js"
+      ]
+    },
+    {
+      "sceneId": "w1",
+      "teaching_judgment": "已补足“模型用了Rt但图上看不到”的证据缺口，并以深度向下三道图说明边界识别和去重。",
+      "business_object": "测井持续响应改变形成的候选地层边界。",
+      "variables_units": [
+        "MD m，每0.5m采样",
+        "GR API",
+        "log₁₀(Rt/(1Ω·m))无量纲",
+        "边界匹配±1.5m"
+      ],
+      "physical_relationship": "同一候选深度上下滑窗的GR、logRt均值差反映持续改变；去重最小间距不等于地质最小层厚。",
+      "graphic_text_evidence": [
+        "B1纵向深度图标明持续GR跳变；B2上下窗均值35/105API与Rt差手算例对应模型特征。",
+        "运行新增独立Rt深度道及分数阈值，GR、Rt和分数均深度向下；预测/真边界水平虚线对齐。",
+        "流程明确重复预测仍为FP、单真边界只能匹配一次，匹配MAE空集为不适用。"
+      ],
+      "interaction_learning_objectives": [
+        "噪声3、学习阈值0.05时，把最小间距4→30点，检查近邻候选由34降5。",
+        "默认三边界距离远，单改间距可能不改变输出；保留这个合理阴性结果。",
+        "调上下窗大小比较平滑与定位，不据当前宽层序声称薄层验证。"
+      ],
+      "model_role": "6口训练井/1020位置学习逻辑回归边界支持，测试655井3真边界只用于一对一评价；单点GR梯度基线同井比较。",
+      "issues_and_fixes": [
+        {
+          "issue": "模型用Rt却只展示GR；MD横置；最小间距误叫最小层厚。",
+          "fix": "补Rt道、阈值与深度向下绘图，修正概念用语。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "流程重复通用方框，无窗口/匹配中间量。",
+          "fix": "替换均值差、去重、容差匹配数值表，加入失败路线与独立复核。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css"
+          ]
+        }
+      ],
+      "pending": [
+        "本轮未浏览器复验三道深度图、标注与图例。",
+        "当前数据只有宽层响应，真正薄层未验证。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html",
+        "engine.js"
+      ],
+      "source_files": [
+        "expansion-src/w1/app.js",
+        "expansion-src/w1/case.json",
+        "expansion-src/w1/demo.css",
+        "expansion-src/w1/demo.html",
+        "expansion-src/w1/engine.js"
+      ]
+    },
+    {
+      "sceneId": "w2",
+      "teaching_judgment": "将孔隙体积分数、密度混合公式、泥质偏差与多曲线标定联系起来；不把孔隙度当油量。",
+      "business_object": "用曲线预测教学岩心孔隙度并定位泥质造成的密度公式偏差。",
+      "variables_units": [
+        "孔隙度v/v或%",
+        "误差孔隙度百分点",
+        "RHOB g/cm³",
+        "NPHI中子响应v/v",
+        "GR API"
+      ],
+      "physical_relationship": "ρb=(1−φ)ρma+φρf；固定2.65/1.03g/cm³，φ20%给ρb2.326；额外0.12泥质项会使洁净公式低估φ。",
+      "graphic_text_evidence": [
+        "B1用100等体积格中20孔隙格解释20%，并举20→22%=2个百分点。",
+        "B2两条有单位混合密度线及2.326/2.446手算值对应泥质偏差文字。",
+        "运行沿深度误差图改MD向下；仅RHOB模式指标不再误称“多曲线”。"
+      ],
+      "interaction_learning_objectives": [
+        "切换全通道/仅RHOB、降低标定点数，比较固定120留出点误差。",
+        "说明NPHI是含泥质影响的仪器响应，不能直接当φ标签；训练点更多不保证每次单调改善。"
+      ],
+      "model_role": "独立CAL313标定点拟合带正则线性回归；TEST819的φ只在评分，基线固定洁净密度公式。",
+      "issues_and_fixes": [
+        {
+          "issue": "孔隙度定义图和公式图的数量关系薄弱；单位NPHI与百分点不清；单通道标题失真。",
+          "fix": "重画体积分数/混合密度图，补物理手算与输入字段表，动态指标标签。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "MD横置且无独立复核/沙箱guard。",
+          "fix": "深度向下误差图，运行绑定人工意见与guard。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "demo.css"
+          ]
+        }
+      ],
+      "pending": [
+        "未浏览器复验单通道切换和长图例。",
+        "教学泥质项简化，不据此声称能替代现场岩心/岩性校正。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html",
+        "engine.js"
+      ],
+      "source_files": [
+        "expansion-src/w2/app.js",
+        "expansion-src/w2/case.json",
+        "expansion-src/w2/demo.css",
+        "expansion-src/w2/demo.html",
+        "expansion-src/w2/engine.js"
+      ]
+    },
+    {
+      "sceneId": "w3",
+      "teaching_judgment": "补齐圆柱展开几何、坐标/灰度语义与局部特征，再让像素指标可回到真实掩膜定位；删除虚假中心轨迹。",
+      "business_object": "井壁展开教学图中窄暗轨迹的像素分割，区别纵向条带干扰。",
+      "variables_units": [
+        "井周方位°",
+        "相对深度像素行0—71向下",
+        "归一灰度0—1",
+        "6912测试像素",
+        "Dice/IoU无量纲"
+      ],
+      "physical_relationship": "倾斜平面与圆柱井壁相交后展开为周期轨迹；局部上下反差区分窄暗线和宽纵带，未标定米尺度则不估产状倾角。",
+      "graphic_text_evidence": [
+        "B1显示圆柱剪开处、左右接缝与展开周期线，B2列局部灰度和邻域反差。",
+        "运行四栏补0/90/180/270/360°、0/24/48/71像素行及深绿正类/浅色背景、0暗1亮。",
+        "删去每列所有误检取平均的“中心”，改为全部真实选中像素散点，空掩膜保留已知坐标范围避免Infinity。"
+      ],
+      "interaction_learning_objectives": [
+        "提高灰度阈值观察纵带误选，降低对比看窄轨迹漏检；高局部阈值可能空掩膜。",
+        "单改灰度基线阈值不应改变模型掩膜；像素分割正确不能唯一确定地质裂缝。"
+      ],
+      "model_role": "4幅独立图的8448采样像素学习局部特征逻辑回归，留出96×72图仅用于推断和评价，灰度阈值是同像素基线。",
+      "issues_and_fixes": [
+        {
+          "issue": "展开图缺深度与灰度标尺，容易误看成普通照片；背景缺圆柱几何。",
+          "fix": "重画圆柱展开与局部像素示意；四栏补轴、语义和未校准米尺度说明。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "对每列误检求均值会造出并不存在的单条“裂缝中心”。",
+          "fix": "用实际掩膜像素散点替代，明确断续和误检，空掩膜用固定图像坐标范围。",
+          "files": [
+            "app.js",
+            "engine.js",
+            "case.json",
+            "demo.html"
+          ]
+        },
+        {
+          "issue": "无实例复核与沙箱guard。",
+          "fix": "复核提醒纵带/窄线，意见独立导出；guard history。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "demo.css"
+          ]
+        }
+      ],
+      "pending": [
+        "本轮未浏览器复验四栏在窄屏的字号/横向滚动和大量像素绘制耗时。",
+        "没有米尺度/井径/方位校正，不能输出真实裂缝产状。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html",
+        "engine.js"
+      ],
+      "source_files": [
+        "expansion-src/w3/app.js",
+        "expansion-src/w3/case.json",
+        "expansion-src/w3/demo.css",
+        "expansion-src/w3/demo.html",
+        "expansion-src/w3/engine.js"
+      ]
+    },
+    {
+      "sceneId": "w4",
+      "teaching_judgment": "保留原有近邻解释、拒判、人工列和全分母评价，修正背景四道同形曲线与log单位。",
+      "business_object": "砂岩/泥岩/灰岩的多曲线教学识别与拒判复核。",
+      "variables_units": [
+        "MD m，0.5m采样",
+        "GR API",
+        "Rt Ω·m",
+        "RHOB g/cm³",
+        "NPHI v/v",
+        "邻居支持票数比例"
+      ],
+      "physical_relationship": "多物理响应需深度对齐；Rt先作log₁₀(Rt/(1Ω·m))、每通道在训练井标准化，再用距离与投票；支持不是现场概率。",
+      "graphic_text_evidence": [
+        "B1不再画四条相同wiggle；六个0.5m对齐教学观测给四种不同响应及独立有单位刻度。",
+        "运行四道、基线/模型/人工/独立真值色柱与深度游标对应，近邻表给实际训练井深度与距离。",
+        "背景B3新增全通道/仅GR、跨域和支持阈值操作路线，明确显隐真值只影响显示。"
+      ],
+      "interaction_learning_objectives": [
+        "切仅GR比较砂/灰混淆，定位同一深度近邻依据。",
+        "跨域加高支持门槛，比较覆盖率与全320点评价；拒判不能从分母删除。",
+        "打开关闭真值不改预测，人工复核单列且输入修改后成为历史。"
+      ],
+      "model_role": "720训练/240验证/320测试整井划分；验证选择k与GR规则，距离阈值只从验证井定；拒判计入总体混淆。",
+      "issues_and_fixes": [
+        {
+          "issue": "背景四道同形曲线没有体现不同物理响应/量纲；log单位写法易误读。",
+          "fix": "背景替换深度对齐数值图，明确无量纲log与训练尺度，补具体学习路线。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "缺实际路线紧凑总览。",
+          "fix": "新增flow.json，近邻识别与基线、拒判复核、全分母输出分别定位。",
+          "files": [
+            "flow.json"
+          ]
+        }
+      ],
+      "pending": [
+        "本轮未浏览器复验近邻点选、支持阈值与沙箱下载。",
+        "固定教学岩性族不代表现场复杂岩性泛化。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "case.json",
+        "demo.html",
+        "engine.js",
+        "flow.json"
+      ],
+      "source_files": [
+        "expansion-src/w4/case.json",
+        "expansion-src/w4/demo.html",
+        "expansion-src/w4/engine.js",
+        "expansion-src/w4/flow.json"
+      ]
+    },
+    {
+      "sceneId": "w5",
+      "teaching_judgment": "已把缺失身份、层界形态、可见辅助通道和缺口专属评价连成实验；保留插值胜出的同层负例。",
+      "business_object": "RHOB密度测井的遮蔽缺口估计。",
+      "variables_units": [
+        "MD m",
+        "RHOB g/cm³",
+        "GR API",
+        "log₁₀(Rt/(1Ω·m))无量纲",
+        "缺口点数"
+      ],
+      "physical_relationship": "端点插值隐含平滑假设；同深度辅助GR/Rt可提示层内跳变。近邻平均训练密度，测试缺口RHOB置null且不作输入。",
+      "graphic_text_evidence": [
+        "B1深度向下展示跨层真实形态与端点直线的差异，B2同深度GR持续跳变。",
+        "运行RHOB与辅助道改深度向下、缺口用水平带；线型与颜色共同区分重建、基线、封存评价原值。",
+        "流程给null输入表、固定GR/100与logRt距离、近邻均值例与缺口专属分母。"
+      ],
+      "interaction_learning_objectives": [
+        "跨层起点100/长38对比同层起点10/长20；同层插值RMSE0.01993优于近邻0.04208g/cm³。",
+        "切仅GR或修改k，观察辅助电性信息与邻域平均；灰色原值只评分，不影响推断。",
+        "人工意见绑定计算版本，导出保留估计身份。"
+      ],
+      "model_role": "TRAIN1721的320样本近邻回归；TEST8801的180点中只遮蔽区评分。使用固定特征尺度，未声称训练标准差归一。",
+      "issues_and_fixes": [
+        {
+          "issue": "横向MD、不明log单位，流程宣称学习尺度但代码只是固定缩放。",
+          "fix": "改深度向下道和水平缺口带；明确无量纲log与GR/100固定尺度。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "原流程方框无缺失/null、平均及评价细节；缺具体反例与复核。",
+          "fix": "替换数值表、补跨层/同层操作及模型非必胜说明；意见单独保存与historyguard。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css"
+          ]
+        }
+      ],
+      "pending": [
+        "本轮未浏览器复验缺口带、重叠曲线可辨性与导出。",
+        "只支持内部缺口；不声称可处理井首井尾无两端点的缺失。"
+      ],
+      "review_mode": "source_review_not_browser",
+      "files_reviewed": [
+        "case.json",
+        "demo.html",
+        "app.js",
+        "engine.js"
+      ],
+      "fix_files": [
+        "app.js",
+        "case.json",
+        "demo.css",
+        "demo.html",
+        "engine.js"
+      ],
+      "source_files": [
+        "expansion-src/w5/app.js",
+        "expansion-src/w5/case.json",
+        "expansion-src/w5/demo.css",
+        "expansion-src/w5/demo.html",
+        "expansion-src/w5/engine.js"
+      ]
+    }
+  ],
+  "recommended_browser_spot_checks": [
+    {
+      "sceneId": "d5",
+      "why": "新补PV概念图、约束线、整数网格及无候选交互覆盖专业概念与计算。",
+      "steps": [
+        "专业背景看B1：500s⁻¹处低PV线应τ15Pa，图注20mPa·s换算正确；B2同配方25/100℃斜率不同。",
+        "进入示范，默认可行数量分母应375；温度25→125℃，重新计算，看PV曲线/可行数变化而留出RMSE不变。",
+        "下限45、上限20，重新计算，确认无可行候选；恢复默认。",
+        "写入复核并保存，改一个参数后确认导出禁用、复核显示历史；重算后导出JSON应含独立reviewHistory。",
+        "在教师opaque iframe再做tab切换、重算与下载，检查控制台和窄屏图例。"
+      ]
+    },
+    {
+      "sceneId": "w3",
+      "why": "圆柱展开、像素坐标、形态干扰与空掩膜是本组最容易发生图文误读的交互。",
+      "steps": [
+        "背景看圆柱剪缝与0/360°接缝；进入示范，四栏应标方位0/90/180/270/360°和相对深度0/24/48/71行。",
+        "灰度阈值升0.65后重算，观察纵带误选；模型掩膜应保持原样，只有基线改变。",
+        "降低对比0.15再重算，观察细窄轨迹丢失；局部阈值升0.6，检查少选/空掩膜时坐标仍有限、无虚构中心线。",
+        "保存具体纵带/窄轨迹复核，重算与导出验证reviewHistory；窄屏检查四栏可横向查看而非字体缩成不可读。",
+        "原门户opaque iframe中切tab、重算与下载，核对无history权限异常。"
+      ]
+    }
+  ],
+  "remaining_global_items": [
+    "Root重新打包为5文件上传契约，源目录并非直接上传包；本agent未改dist/tools/shared/portal或版本号。",
+    "Root执行真实浏览器/原门户opaque iframe/窄屏/导出复验；本报告未把源码计算当成浏览器验收。"
+  ]
+}

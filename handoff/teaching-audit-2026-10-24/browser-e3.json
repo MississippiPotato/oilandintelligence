@@ -1,0 +1,86 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:04:47.232Z",
+  "case": {
+    "scene": "e3",
+    "id": "s17x-e3-chemical-mixture",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-e3-chemical-mixture"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "budget change makes old export stale",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "proportion grid and fixed performance scale are visible",
+      "passed": true
+    },
+    {
+      "name": "actual current-result JSON downloaded",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "resultText": "最佳可行比例 A 0.30 / B 0.50 / C 0.20；成本 6.00 元/L\n性能指数 MAE\n0.92\n均值对照 MAE\n9.57\n可行候选数\n139\n枚举候选总数\n231\n20% A\n40% A\n60% A\n80% A\nA=100%\nC=100%\nB=100%\na=上升比例，b=向右比例，c=1−a−b；网格间距20%\n灰=超预算，圈=最优，方=固定；点选读取比例/性能/成本。\n−20\n80\n预测指数\n\n140批训练、45批独立留出；231个网格点。候选的比例总和为1，成本是已知单价线性加权；性能只调用冻结回归。当前盐度 30g/L、预算 6.00元/L；固定配方预测 43.38，成本 5.10元/L，满足预算。当前最优预测 48.74；性能是无量纲教学指数（可低于自定零点），不是采收率百分点。",
+  "passed": 10,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+      "bytes": 18288,
+      "sha256": "8dd0d3c8d936008d542269286ab4082c7a642f838c5e3a15f2f164842065a071"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+      "bytes": 557,
+      "sha256": "39a58f484362448b5d36e498e06010b84a8adbbfcb60b9ab34316dc0d856beb3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+      "bytes": 11461,
+      "sha256": "7a29f90ca970ae9f135d7ca543f1f924eb84b1658be07b92474c906631ecf5e3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+      "bytes": 19506,
+      "sha256": "536fa225d10bcc547a47eaa02a7b7240a4cd61cb0cc1a41beb0d837409577dd4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+      "bytes": 57621,
+      "sha256": "142c0ea0f394c01fccb6fca2123ccd9f1fbb9caf69e5b955a981633a143f2c80"
+    }
+  ]
+}

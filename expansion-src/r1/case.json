@@ -5,7 +5,7 @@
     "opt"
   ],
   "title": "常减压操作优化：收率、质量与能耗的边界",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "tabs": {
     "background": {
@@ -20,7 +20,7 @@
         {
           "no": 2,
           "title": "看懂三个指标，才知道优化什么",
-          "html": "<p>本例把总馏分回收率作为收益指标：每100 kg原料有多少进入目标馏分。单位能耗用GJ/t表示；终馏点用°C表示，是描述该馏分蒸发末端的指标。回收更多重组分可能抬高终馏点，产品质量边界因此会限制收率。教学中固定原油批次，只讨论炉出口温度、回流比、减压塔绝压三个输入。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 170\" role=\"img\" aria-label=\"加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#233d46\"><path d=\"M75 20V135H690\" stroke=\"#78918e\" fill=\"none\"/><path d=\"M85 120Q350 30 670 25\" stroke=\"#257f78\" stroke-width=\"4\" fill=\"none\"/><path d=\"M85 130Q400 125 670 30\" stroke=\"#c28148\" stroke-width=\"4\" fill=\"none\"/><text x=\"90\" y=\"25\">趋势示意：各指标单独归一化</text><text x=\"300\" y=\"160\">操作强度增加 →</text><text x=\"200\" y=\"63\" fill=\"#257f78\">回收率：提高后趋缓</text><text x=\"410\" y=\"117\" fill=\"#a45e2e\">能耗：逐渐上升</text></g></svg><figcaption>加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。</figcaption></figure><table><tr><th>输入</th><th>含义 / 教学范围</th></tr><tr><td>炉出口温度</td><td>350–380°C，提供汽化所需热量</td></tr><tr><td>回流比</td><td>1.4–2.6，塔顶返回液量与采出量之比</td></tr><tr><td>减压塔绝压</td><td>5–11kPa，数值越小真空越深</td></tr></table>"
+          "html": "<p>本例把总馏分回收率作为收益指标：每100 kg原料有多少进入目标馏分。单位能耗用GJ/t表示；终馏点用°C表示，是描述该馏分蒸发末端的指标。回收更多重组分可能抬高终馏点，产品质量边界因此会限制收率。教学中固定原油批次，只讨论炉出口温度、回流比、减压塔绝压三个输入。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 170\" role=\"img\" aria-label=\"加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#233d46\"><path d=\"M75 20V135H690\" stroke=\"#78918e\" fill=\"none\"/><path d=\"M85 120Q350 30 670 25\" stroke=\"#257f78\" stroke-width=\"4\" fill=\"none\"/><path d=\"M85 130Q400 125 670 30\" stroke=\"#c28148\" stroke-width=\"4\" fill=\"none\"/><text x=\"90\" y=\"25\">趋势示意：各指标单独归一化</text><text x=\"300\" y=\"160\">操作强度增加 →</text><text x=\"200\" y=\"63\" fill=\"#257f78\">回收率：提高后趋缓</text><text x=\"410\" y=\"117\" fill=\"#a45e2e\">能耗：逐渐上升</text></g></svg><figcaption>加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。</figcaption></figure><table><tr><th>输入</th><th>含义 / 教学范围</th></tr><tr><td>炉出口温度</td><td>350–380°C，提供汽化所需热量</td></tr><tr><td>回流比</td><td>1.4–2.6，塔顶返回液量与采出量之比</td></tr><tr><td>减压塔绝压</td><td>5–11kPa，数值越小真空越深</td></tr></table><p class=\"note\">这是把常压与减压单元汇总为三个输入、三个输出的教学代理系统。减压塔绝压与柴油终馏点在生成公式里的关联是人为设定，不能据此断言调减压塔压力会直接控制常压柴油终馏点。现场需要各塔的物流、侧线、换热和控制回路模型，并用留出工况实测核对推荐点。</p>"
         },
         {
           "no": 3,

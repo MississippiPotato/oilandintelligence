@@ -5,7 +5,7 @@
     "opt"
   ],
   "title": "集输工况优化：同样输量怎样少用电",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "tabs": {
     "background": {
@@ -20,7 +20,7 @@
         {
           "no": 2,
           "title": "并联与调速改变了什么",
-          "html": "<p>并联泵的流量相加，每台承担总流量的一部分。调速改变泵的扬程曲线与效率。本例用一组教学泵曲线计算不同组合：H=70s²−0.0008q²，q 是单泵流量，s 是相对额定转速。液体密度取 850 kg/m³，电功率由 ρgQH/η 换算为 kW。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 60Q380 70 690 155\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 100Q380 105 690 175\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">单泵流量 q，m³/h；实线额定，虚线降速</text><text x=\"75\" y=\"28\">扬程 H，m</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure>"
+          "html": "<p>并联泵的流量相加，每台承担总流量的一部分。调速改变泵的扬程曲线与效率。本例用一组教学泵曲线计算不同组合：H=70s²−0.0008q²，q 是单泵流量，s 是相对额定转速。液体密度取 850 kg/m³，电功率由 ρgQH/η 换算为 kW。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 60Q380 70 690 155\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 100Q380 105 690 175\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">单泵流量 q，m³/h；实线额定，虚线降速</text><text x=\"75\" y=\"28\">扬程 H，m</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure><p class=\"note\">本例 η 是泵、电机与驱动合并的总效率教学曲线，P电 = ρg(Q总/3600)H/η/1000。Q必须先由m³/h换成m³/s，W再换成kW；泵曲线中的q=Q总/台数。多余扬程假设由下游阀门节流消耗，因此产生扬程仍计入电耗。相同最低扬程不代表已求得完整管网系统曲线。</p>"
         },
         {
           "no": 3,
@@ -30,7 +30,7 @@
         {
           "no": 4,
           "title": "图上的每个点都代表一个可复查方案",
-          "html": "<p>散点图横轴是产生的扬程，纵轴是功率。低功率但落在最低扬程左侧的方案不能用。改变输量时，最优泵数量可能跳变，原因是连续转速与离散启停组合共同作用。表格显示计算出的可行点数、最优组合及固定转速基线。</p><p class=\"note\">专业资料：<a href=\"https://www.energy.gov/cmei/ito/pump-systems\" target=\"_blank\" rel=\"noreferrer\">美国能源部：泵系统与变速运行</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p>"
+          "html": "<p>散点图横轴是产生的扬程，纵轴是功率。低功率但落在最低扬程左侧的方案不能用。改变输量时，最优泵数量可能跳变，原因是连续转速与离散启停组合共同作用。表格显示计算出的可行点数、最优组合及固定转速基线。</p><p class=\"note\">专业资料：<a href=\"https://www.energy.gov/cmei/ito/pump-systems\" target=\"_blank\" rel=\"noreferrer\">美国能源部：泵系统与变速运行</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p><p class=\"note\">电价对所有候选相同且为正时，只会等比例改变日费用，不会改变最低功率的泵数与转速；试着只改电价验证这一点，再改流量观察最优组合是否切换。</p>"
         }
       ]
     },

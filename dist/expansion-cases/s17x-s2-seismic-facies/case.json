@@ -5,7 +5,7 @@
     "cv"
   ],
   "title": "地震相智能分类：从反射纹理认识沉积线索",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "tabs": {
     "background": {
@@ -31,6 +31,12 @@
         {
           "title": "数据与阅读来源",
           "html": "<p class=\"sources\">专业资料：<a href=\"https://wiki.aapg.org/Facies_analysis\" target=\"_blank\" rel=\"noopener\">AAPG · 地震相分析</a>；<a href=\"https://wiki.seg.org/wiki/Dictionary%3AAttribute%2C_seismic\" target=\"_blank\" rel=\"noopener\">SEG · 地震属性</a>；<a href=\"https://www.syxb-cps.com.cn/EN/10.7623/syxb200604014\" target=\"_blank\" rel=\"noopener\">石油学报 · 地震数据孔隙度与饱和度反演</a>。本页图形自行绘制，计算数据为固定随机种子的教学数据；可离线运行。</p>"
+        },
+        {
+          "no": 6,
+          "en": "READ_AND_TEST",
+          "title": "读懂小窗色标，才能判断“振幅相同但结构不同”",
+          "html": "<p>60格排列只是样本索引表，不是连续剖面的空间相带；每格是独立生成的小窗。点一格打开24道×24采样点的振幅图。该图纵轴为采样号，尚未设定ms采样间隔；颜色除以本窗最大绝对振幅后显示，适合看平行、倾斜和杂乱形态。不能根据两窗“颜色一样深”断定真实振幅相同，跨窗强弱要读RMS数值。</p><p><b>验证结构信息：</b>保持噪声0.25，先在RMS–横向差异图中找横坐标接近、纵坐标不同的点，点选回看原始小窗和两条预测。RMS基线只看能量，四属性近邻还看空间结构。然后提高噪声并重算，观察红框误分、小窗纹理与混淆矩阵是否一致。调整k属于测试探索，并没有验证集替你选择最佳k；最高邻居占比仍是支持度。三种标签是反射样式，不直接表示含油性或真实沉积成因。</p>"
         }
       ]
     },

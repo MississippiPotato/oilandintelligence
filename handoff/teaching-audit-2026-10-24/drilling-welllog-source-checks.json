@@ -1,0 +1,1265 @@
+{
+  "scope": "source_review_not_browser",
+  "method": "VM evaluation using a minimal DOM stub; not browser validation",
+  "checks": [
+    {
+      "id": "d1",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": {
+        "model": {
+          "n": 128,
+          "mae": 1.9624040748572056,
+          "rmse": 2.427219142121692,
+          "bias": 0.9465490001269504
+        },
+        "baseline": {
+          "n": 128,
+          "mae": 5.405732935300523,
+          "rmse": 6.634852065423579,
+          "bias": 0.7670855040351894
+        },
+        "outsideCount": 2
+      }
+    },
+    {
+      "id": "d2",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "事件是否检出",
+          "value": "检出",
+          "unit": ""
+        },
+        {
+          "label": "相对145min事件提前",
+          "value": 6,
+          "unit": "min"
+        },
+        {
+          "label": "正常段告警窗",
+          "value": 3,
+          "unit": "/170"
+        }
+      ],
+      "escapedIndependentReview": true,
+      "staleExportDisabled": true
+    },
+    {
+      "id": "d3",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "学习响应路径末端偏差",
+          "value": 24.1075134303346,
+          "unit": "m"
+        },
+        {
+          "label": "单位增益基线偏差",
+          "value": 52.817763542139005,
+          "unit": "m"
+        },
+        {
+          "label": "转角约束超限步",
+          "value": 0,
+          "unit": "/60"
+        }
+      ],
+      "escapedIndependentReview": true,
+      "staleExportDisabled": true
+    },
+    {
+      "id": "d4",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "频带模型 F1",
+          "value": 1,
+          "unit": ""
+        },
+        {
+          "label": "RMS基线 F1",
+          "value": 1,
+          "unit": ""
+        },
+        {
+          "label": "模型漏报",
+          "value": 0,
+          "unit": "/40个退化窗"
+        }
+      ],
+      "escapedIndependentReview": true,
+      "staleExportDisabled": true
+    },
+    {
+      "id": "d5",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "留出批次 PV RMSE",
+          "value": 0.5391085328861015,
+          "unit": "mPa·s"
+        },
+        {
+          "label": "线性经验基线 RMSE",
+          "value": 3.0950323586553035,
+          "unit": "mPa·s"
+        },
+        {
+          "label": "可行配方候选",
+          "value": "306/375",
+          "unit": "个"
+        }
+      ],
+      "escapedIndependentReview": true,
+      "gridCount": 375,
+      "staleExportDisabled": true
+    },
+    {
+      "id": "w1",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "多曲线边界 F1",
+          "value": 1,
+          "unit": ""
+        },
+        {
+          "label": "单点梯度基线 F1",
+          "value": 1,
+          "unit": ""
+        },
+        {
+          "label": "边界误差 MAE",
+          "value": 0,
+          "unit": "m / 3个匹配边界"
+        }
+      ],
+      "escapedIndependentReview": true,
+      "staleExportDisabled": true
+    },
+    {
+      "id": "w2",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "多曲线孔隙度 RMSE",
+          "value": 0.4530796590618517,
+          "unit": "百分点"
+        },
+        {
+          "label": "密度公式 RMSE",
+          "value": 4.68268784089037,
+          "unit": "百分点"
+        },
+        {
+          "label": "独立测试岩心点",
+          "value": 120,
+          "unit": "点"
+        }
+      ],
+      "escapedIndependentReview": true,
+      "staleExportDisabled": true
+    },
+    {
+      "id": "w3",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "局部特征分割 Dice",
+          "value": 0.7647058823529411,
+          "unit": ""
+        },
+        {
+          "label": "灰度阈值 Dice",
+          "value": 0.6688206785137318,
+          "unit": ""
+        },
+        {
+          "label": "模型 IoU",
+          "value": 0.6190476190476191,
+          "unit": ""
+        }
+      ],
+      "escapedIndependentReview": true,
+      "highThresholdMaskPixels": 0,
+      "staleExportDisabled": true
+    },
+    {
+      "id": "w4",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": {
+        "model": {
+          "n": 320,
+          "accuracy": 0.965625,
+          "macroF1": 0.9616014607556188,
+          "coverage": 1,
+          "accepted": 320,
+          "acceptedError": 0.034375,
+          "confusion": [
+            [
+              78,
+              0,
+              11,
+              0
+            ],
+            [
+              0,
+              125,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              106,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "name": "砂岩",
+              "tp": 78,
+              "fn": 11,
+              "fp": 0,
+              "recall": 0.8764044943820225,
+              "precision": 1,
+              "f1": 0.9341317365269461
+            },
+            {
+              "name": "泥岩",
+              "tp": 125,
+              "fn": 0,
+              "fp": 0,
+              "recall": 1,
+              "precision": 1,
+              "f1": 1
+            },
+            {
+              "name": "灰岩",
+              "tp": 106,
+              "fn": 0,
+              "fp": 11,
+              "recall": 1,
+              "precision": 0.905982905982906,
+              "f1": 0.9506726457399103
+            }
+          ]
+        },
+        "baseline": {
+          "n": 320,
+          "accuracy": 0.8125,
+          "macroF1": 0.7939560439560439,
+          "coverage": 1,
+          "accepted": 320,
+          "acceptedError": 0.1875,
+          "confusion": [
+            [
+              61,
+              0,
+              28,
+              0
+            ],
+            [
+              0,
+              125,
+              0,
+              0
+            ],
+            [
+              32,
+              0,
+              74,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "name": "砂岩",
+              "tp": 61,
+              "fn": 28,
+              "fp": 32,
+              "recall": 0.6853932584269663,
+              "precision": 0.6559139784946236,
+              "f1": 0.6703296703296703
+            },
+            {
+              "name": "泥岩",
+              "tp": 125,
+              "fn": 0,
+              "fp": 0,
+              "recall": 1,
+              "precision": 1,
+              "f1": 1
+            },
+            {
+              "name": "灰岩",
+              "tp": 74,
+              "fn": 32,
+              "fp": 28,
+              "recall": 0.6981132075471698,
+              "precision": 0.7254901960784313,
+              "f1": 0.7115384615384616
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "w5",
+      "initialization": "ready",
+      "finiteCoordinates": true,
+      "tabSwitchWithDeniedHistory": "passed",
+      "defaultMetrics": [
+        {
+          "label": "近邻修复 RMSE",
+          "value": 0.03187827554475037,
+          "unit": "g/cm³"
+        },
+        {
+          "label": "线性插值 RMSE",
+          "value": 0.039097091519122155,
+          "unit": "g/cm³"
+        },
+        {
+          "label": "仅遮蔽区评价点",
+          "value": 38,
+          "unit": "点"
+        }
+      ],
+      "escapedIndependentReview": true,
+      "staleExportDisabled": true
+    }
+  ],
+  "controlEvidence": [
+    {
+      "id": "d2",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "drift",
+          "value": 0,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "事件是否检出",
+              "value": "未检出",
+              "unit": ""
+            },
+            {
+              "label": "相对145min事件提前",
+              "value": "—",
+              "unit": "min"
+            },
+            {
+              "label": "正常段告警窗",
+              "value": 0,
+              "unit": "/170"
+            }
+          ]
+        },
+        {
+          "control": "noise",
+          "value": 0.5,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "事件是否检出",
+              "value": "检出",
+              "unit": ""
+            },
+            {
+              "label": "相对145min事件提前",
+              "value": 6,
+              "unit": "min"
+            },
+            {
+              "label": "正常段告警窗",
+              "value": 3,
+              "unit": "/170"
+            }
+          ]
+        },
+        {
+          "control": "threshold",
+          "value": 0.1,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "事件是否检出",
+              "value": "检出",
+              "unit": ""
+            },
+            {
+              "label": "相对145min事件提前",
+              "value": 15,
+              "unit": "min"
+            },
+            {
+              "label": "正常段告警窗",
+              "value": 4,
+              "unit": "/170"
+            }
+          ]
+        },
+        {
+          "control": "absolute",
+          "value": 9,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "事件是否检出",
+              "value": "检出",
+              "unit": ""
+            },
+            {
+              "label": "相对145min事件提前",
+              "value": 6,
+              "unit": "min"
+            },
+            {
+              "label": "正常段告警窗",
+              "value": 3,
+              "unit": "/170"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "targetX",
+          "value": 30,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "学习响应路径末端偏差",
+              "value": 49.26195740970976,
+              "unit": "m"
+            },
+            {
+              "label": "单位增益基线偏差",
+              "value": 50.1101218088146,
+              "unit": "m"
+            },
+            {
+              "label": "转角约束超限步",
+              "value": 0,
+              "unit": "/60"
+            }
+          ]
+        },
+        {
+          "control": "targetZ",
+          "value": 450,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "学习响应路径末端偏差",
+              "value": 111.55981813738745,
+              "unit": "m"
+            },
+            {
+              "label": "单位增益基线偏差",
+              "value": 133.2565459594231,
+              "unit": "m"
+            },
+            {
+              "label": "转角约束超限步",
+              "value": 0,
+              "unit": "/60"
+            }
+          ]
+        },
+        {
+          "control": "gain",
+          "value": 0.35,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "学习响应路径末端偏差",
+              "value": 94.71022233101307,
+              "unit": "m"
+            },
+            {
+              "label": "单位增益基线偏差",
+              "value": 123.71549988934191,
+              "unit": "m"
+            },
+            {
+              "label": "转角约束超限步",
+              "value": 0,
+              "unit": "/60"
+            }
+          ]
+        },
+        {
+          "control": "limit",
+          "value": 2,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "学习响应路径末端偏差",
+              "value": 32.7338496555903,
+              "unit": "m"
+            },
+            {
+              "label": "单位增益基线偏差",
+              "value": 48.396469959837425,
+              "unit": "m"
+            },
+            {
+              "label": "转角约束超限步",
+              "value": 0,
+              "unit": "/60"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "load",
+          "value": 0.4,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "频带模型 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "RMS基线 F1",
+              "value": 0,
+              "unit": ""
+            },
+            {
+              "label": "模型漏报",
+              "value": 0,
+              "unit": "/40个退化窗"
+            }
+          ]
+        },
+        {
+          "control": "noise",
+          "value": 0.5,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "频带模型 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "RMS基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "模型漏报",
+              "value": 0,
+              "unit": "/40个退化窗"
+            }
+          ]
+        },
+        {
+          "control": "threshold",
+          "value": 0.1,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "频带模型 F1",
+              "value": 0.6153846153846154,
+              "unit": ""
+            },
+            {
+              "label": "RMS基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "模型漏报",
+              "value": 0,
+              "unit": "/40个退化窗"
+            }
+          ]
+        },
+        {
+          "control": "rms",
+          "value": 0.3,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "频带模型 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "RMS基线 F1",
+              "value": 0.6153846153846154,
+              "unit": ""
+            },
+            {
+              "label": "模型漏报",
+              "value": 0,
+              "unit": "/40个退化窗"
+            }
+          ]
+        },
+        {
+          "control": "cursor",
+          "value": 0,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "频带模型 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "RMS基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "模型漏报",
+              "value": 0,
+              "unit": "/40个退化窗"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d5",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "temp",
+          "value": 25,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "留出批次 PV RMSE",
+              "value": 0.5391085328861015,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "线性经验基线 RMSE",
+              "value": 3.0950323586553035,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "可行配方候选",
+              "value": "314/375",
+              "unit": "个"
+            }
+          ]
+        },
+        {
+          "control": "target",
+          "value": 10,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "留出批次 PV RMSE",
+              "value": 0.5391085328861015,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "线性经验基线 RMSE",
+              "value": 3.0950323586553035,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "可行配方候选",
+              "value": "306/375",
+              "unit": "个"
+            }
+          ]
+        },
+        {
+          "control": "min",
+          "value": 5,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "留出批次 PV RMSE",
+              "value": 0.5391085328861015,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "线性经验基线 RMSE",
+              "value": 3.0950323586553035,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "可行配方候选",
+              "value": "337/375",
+              "unit": "个"
+            }
+          ]
+        },
+        {
+          "control": "max",
+          "value": 20,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "留出批次 PV RMSE",
+              "value": 0.5391085328861015,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "线性经验基线 RMSE",
+              "value": 3.0950323586553035,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "可行配方候选",
+              "value": "46/375",
+              "unit": "个"
+            }
+          ]
+        },
+        {
+          "control": "noise",
+          "value": 0.5,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "留出批次 PV RMSE",
+              "value": 0.29552848586416663,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "线性经验基线 RMSE",
+              "value": 3.0239882476594255,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "可行配方候选",
+              "value": "306/375",
+              "unit": "个"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "noise",
+          "value": 0.5,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "多曲线边界 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "单点梯度基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "边界误差 MAE",
+              "value": 0,
+              "unit": "m / 3个匹配边界"
+            }
+          ]
+        },
+        {
+          "control": "window",
+          "value": 2,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "多曲线边界 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "单点梯度基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "边界误差 MAE",
+              "value": 0,
+              "unit": "m / 3个匹配边界"
+            }
+          ]
+        },
+        {
+          "control": "gap",
+          "value": 4,
+          "computedOutputsDiffer": false,
+          "metrics": [
+            {
+              "label": "多曲线边界 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "单点梯度基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "边界误差 MAE",
+              "value": 0,
+              "unit": "m / 3个匹配边界"
+            }
+          ]
+        },
+        {
+          "control": "threshold",
+          "value": 0.05,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "多曲线边界 F1",
+              "value": 0.42857142857142855,
+              "unit": ""
+            },
+            {
+              "label": "单点梯度基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "边界误差 MAE",
+              "value": 0,
+              "unit": "m / 3个匹配边界"
+            }
+          ]
+        },
+        {
+          "control": "gradient",
+          "value": 10,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "多曲线边界 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "单点梯度基线 F1",
+              "value": 0.46153846153846156,
+              "unit": ""
+            },
+            {
+              "label": "边界误差 MAE",
+              "value": 0,
+              "unit": "m / 3个匹配边界"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "count",
+          "value": 12,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "多曲线孔隙度 RMSE",
+              "value": 1.6119836921358464,
+              "unit": "百分点"
+            },
+            {
+              "label": "密度公式 RMSE",
+              "value": 4.68268784089037,
+              "unit": "百分点"
+            },
+            {
+              "label": "独立测试岩心点",
+              "value": 120,
+              "unit": "点"
+            }
+          ]
+        },
+        {
+          "control": "noise",
+          "value": 0.5,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "多曲线孔隙度 RMSE",
+              "value": 0.24539870002481065,
+              "unit": "百分点"
+            },
+            {
+              "label": "密度公式 RMSE",
+              "value": 4.657194539088673,
+              "unit": "百分点"
+            },
+            {
+              "label": "独立测试岩心点",
+              "value": 120,
+              "unit": "点"
+            }
+          ]
+        },
+        {
+          "control": "mode",
+          "value": "density",
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "单RHOB学习回归 RMSE",
+              "value": 2.195523210268921,
+              "unit": "百分点"
+            },
+            {
+              "label": "密度公式 RMSE",
+              "value": 4.68268784089037,
+              "unit": "百分点"
+            },
+            {
+              "label": "独立测试岩心点",
+              "value": 120,
+              "unit": "点"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w3",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "noise",
+          "value": 0.3,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "局部特征分割 Dice",
+              "value": 0.9285714285714286,
+              "unit": ""
+            },
+            {
+              "label": "灰度阈值 Dice",
+              "value": 0.6698564593301436,
+              "unit": ""
+            },
+            {
+              "label": "模型 IoU",
+              "value": 0.8666666666666667,
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "control": "contrast",
+          "value": 0.15,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "局部特征分割 Dice",
+              "value": 0.028169014084507043,
+              "unit": ""
+            },
+            {
+              "label": "灰度阈值 Dice",
+              "value": 0.3420523138832998,
+              "unit": ""
+            },
+            {
+              "label": "模型 IoU",
+              "value": 0.014285714285714285,
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "control": "threshold",
+          "value": 0.05,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "局部特征分割 Dice",
+              "value": 0.1254855094114132,
+              "unit": ""
+            },
+            {
+              "label": "灰度阈值 Dice",
+              "value": 0.6688206785137318,
+              "unit": ""
+            },
+            {
+              "label": "模型 IoU",
+              "value": 0.066942939113803,
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "control": "dark",
+          "value": 0.2,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "局部特征分割 Dice",
+              "value": 0.7647058823529411,
+              "unit": ""
+            },
+            {
+              "label": "灰度阈值 Dice",
+              "value": 0.5723905723905723,
+              "unit": ""
+            },
+            {
+              "label": "模型 IoU",
+              "value": 0.6190476190476191,
+              "unit": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w5",
+      "outputChangesExcludingParameters": [
+        {
+          "control": "start",
+          "value": 2,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "近邻修复 RMSE",
+              "value": 0.042733102270601044,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "线性插值 RMSE",
+              "value": 0.042622346302837566,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "仅遮蔽区评价点",
+              "value": 38,
+              "unit": "点"
+            }
+          ]
+        },
+        {
+          "control": "length",
+          "value": 4,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "近邻修复 RMSE",
+              "value": 0.0053292078418150125,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "线性插值 RMSE",
+              "value": 0.009209344245006064,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "仅遮蔽区评价点",
+              "value": 4,
+              "unit": "点"
+            }
+          ]
+        },
+        {
+          "control": "noise",
+          "value": 0.5,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "近邻修复 RMSE",
+              "value": 0.024312139449142227,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "线性插值 RMSE",
+              "value": 0.03864155485033471,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "仅遮蔽区评价点",
+              "value": 38,
+              "unit": "点"
+            }
+          ]
+        },
+        {
+          "control": "k",
+          "value": 3,
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "近邻修复 RMSE",
+              "value": 0.04007313707436515,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "线性插值 RMSE",
+              "value": 0.039097091519122155,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "仅遮蔽区评价点",
+              "value": 38,
+              "unit": "点"
+            }
+          ]
+        },
+        {
+          "control": "mode",
+          "value": "gr",
+          "computedOutputsDiffer": true,
+          "metrics": [
+            {
+              "label": "近邻修复 RMSE",
+              "value": 0.04826317547642918,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "线性插值 RMSE",
+              "value": 0.039097091519122155,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "仅遮蔽区评价点",
+              "value": 38,
+              "unit": "点"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mechanismChecks": [
+    {
+      "id": "d2",
+      "fixedThresholdChangesOnlyBaseline": true,
+      "zeroDriftMetrics": [
+        {
+          "label": "事件是否检出",
+          "value": "未检出",
+          "unit": ""
+        },
+        {
+          "label": "相对145min事件提前",
+          "value": "—",
+          "unit": "min"
+        },
+        {
+          "label": "正常段告警窗",
+          "value": 0,
+          "unit": "/170"
+        }
+      ]
+    },
+    {
+      "id": "d3",
+      "futureGainDoesNotRefitTrainingOrSearch": true,
+      "highGainMetrics": [
+        {
+          "label": "学习响应路径末端偏差",
+          "value": 162.10926013828475,
+          "unit": "m"
+        },
+        {
+          "label": "单位增益基线偏差",
+          "value": 55.684207659969324,
+          "unit": "m"
+        },
+        {
+          "label": "转角约束超限步",
+          "value": 15,
+          "unit": "/60"
+        }
+      ]
+    },
+    {
+      "id": "d4",
+      "cursorChangesViewNotMetrics": true,
+      "highLoadMetrics": [
+        {
+          "label": "频带模型 F1",
+          "value": 1,
+          "unit": ""
+        },
+        {
+          "label": "RMS基线 F1",
+          "value": 0.6153846153846154,
+          "unit": ""
+        },
+        {
+          "label": "模型漏报",
+          "value": 0,
+          "unit": "/40个退化窗"
+        }
+      ]
+    },
+    {
+      "id": "d5",
+      "temperatureChangesSearchNotFit": true,
+      "conflictingBoundsHaveNoCandidate": true
+    },
+    {
+      "id": "w1",
+      "gapChangesNoisyLowThresholdCandidates": true,
+      "noisyCandidateCounts": [
+        34,
+        5
+      ]
+    },
+    {
+      "id": "w3",
+      "grayThresholdDoesNotChangeModelMask": true
+    },
+    {
+      "id": "w5",
+      "sameLayerGapMetrics": [
+        {
+          "label": "近邻修复 RMSE",
+          "value": 0.04207671217227762,
+          "unit": "g/cm³"
+        },
+        {
+          "label": "线性插值 RMSE",
+          "value": 0.01993229465917925,
+          "unit": "g/cm³"
+        },
+        {
+          "label": "仅遮蔽区评价点",
+          "value": 20,
+          "unit": "点"
+        }
+      ]
+    }
+  ]
+}

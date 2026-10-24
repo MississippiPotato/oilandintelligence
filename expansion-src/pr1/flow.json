@@ -1,0 +1,42 @@
+{
+  "title": "泵功图怎样诊断",
+  "gate": [
+    "近邻是否支持判断？",
+    "噪声或陌生形状转复核"
+  ],
+  "input": {
+    "title": "完整泵循环",
+    "detail": "位移与载荷曲线",
+    "step": 0
+  },
+  "prepare": {
+    "title": "提取归一化形状",
+    "detail": "训练尺度不读测试",
+    "step": 1
+  },
+  "model": {
+    "title": "形状近邻分类",
+    "detail": "验证选择近邻数",
+    "step": 2
+  },
+  "baseline": {
+    "title": "面积阈值规则",
+    "detail": "同批测试图对照",
+    "step": 3
+  },
+  "review": {
+    "title": "低支持转复核",
+    "detail": "保留待复核分母",
+    "step": 3
+  },
+  "output": {
+    "title": "候选泵况与证据",
+    "detail": "循环与近邻可核查",
+    "step": 4
+  },
+  "compare": {
+    "title": "同分母评价",
+    "detail": "覆盖率与接受集错误",
+    "step": 3
+  }
+}

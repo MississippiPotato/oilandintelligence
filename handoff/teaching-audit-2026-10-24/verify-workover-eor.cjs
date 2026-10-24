@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
+const root='G:/可视化导论/5/expansion-src',out=path.resolve(__dirname,'workover-eor-numeric.json');
+const ids=['wo1','wo2','wo3','wo4','wo5','e1','e2','e3','e4','e5'];let evidence={reviewStatus:'source_review_not_browser',runtime:'Node vm source calculation and SVG serialization; no browser execution',cases:[]};
+for(const id of ids){const dir=path.join(root,id),ctx={document:{readyState:'loading',addEventListener(){}},console};ctx.globalThis=ctx;vm.createContext(ctx);const engine=fs.readFileSync(path.join(dir,'engine.js'),'utf8');vm.runInContext(engine,ctx);const c=ctx.SceneCore||ctx.WorkoverCore||ctx.FractureCore;const p=c.params?Object.fromEntries(c.params.map(a=>[a[0],a[2]])):id==='e1'?{...c.defaults}:{preset:'standard'};const r=c.run(p);let app=fs.readFileSync(path.join(dir,'app.js'),'utf8');if(ctx.SceneCore)app=app.replace('g.CaseInspect=','g.__chart=chart;g.CaseInspect=');vm.runInContext(app,ctx);const ev={id,defaultParams:p,metrics:r.metrics,summary:r.summary||null,syntax:'engine_and_app_parsed',boundaries:[]};if(ctx.SceneCore){fs.writeFileSync(path.join(__dirname,id+'-calculated.svg'),ctx.__chart(r.chart));ev.serializedSVG=true;for(const a of c.params){for(const v of [a[3],a[4]]){const q={...p,[a[0]]:v};if(id==='wo2'&&q.bore>=q.fish){ev.boundaries.push({input:q,expected:'geometry rejected'});continue;}const z=c.run(q);assert(z&&z.metrics);ev.boundaries.push({changed:a[0],value:v,metrics:z.metrics,summary:z.summary});}}}
+if(id==='wo2'){assert(r.rows.find(x=>x.name.endsWith('O1')).legal);const z=c.run({...p,clearance:100});assert(!z.rows.find(x=>x.name.endsWith('O1')).legal);assert(z.rows.find(x=>x.name.endsWith('S2')).legal);}
+if(id==='wo3'){const z=c.run({...p,depth:0,noise:0});assert(z.metrics.falsePixels===0&&z.metrics.IoU===1);}
+if(id==='wo4'){const z=c.run({...p,event:0});assert(z.metrics.eventRecall===null);assert(r.metrics.delay_min===2);}
+if(id==='wo5'){assert(c.run({...p,stops:0}).metrics.predictedInterval_days>c.run({...p,stops:8}).metrics.predictedInterval_days);assert(c.run({...p,load:95}).metrics.MAE_days===r.metrics.MAE_days);}
+if(id==='e3'){for(const z of r.chart.candidates)assert(Math.abs(z.a+z.b+z.c-1)<1e-9);assert(Math.abs(r.chart.fixed.cost-(.3*9+.3*6+.4*1.5))<1e-9);}
+if(id==='e4'){assert(c.run({...p,steamMax:600}).metrics.predictedGain_t===null);}
+if(id==='wo1'){const z=c.run({preset:'conflict'});assert(z.metrics.referenceApplicable===false);ev.boundaries.push({preset:'conflict',metrics:z.metrics});}
+if(id==='e1'){const z=c.run({...p,budget_10k:20});assert(z.best===null);ev.boundaries.push({preset:'impossible',feasibleCount:z.metrics.feasibleCount});}
+evidence.cases.push(ev);console.log(id+': source calculations, boundaries and app parse completed');}
+fs.writeFileSync(out,JSON.stringify(evidence,null,2));

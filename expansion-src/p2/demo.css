@@ -2,3 +2,6 @@
 
 /* Keep plotted axis labels legible at desktop and phone widths. */
 .plots{grid-template-columns:minmax(0,1fr)}.plot{min-width:0;overflow-x:auto}.plot svg{display:block;min-width:620px;max-width:900px;margin:0 auto}.plot h3{min-height:0;font-size:20px}.legend{font-size:15px}#results{scroll-margin-top:84px}
+
+/* Teaching audit: keep explanatory diagrams readable without shrinking labels. */
+.teaching-figure{overflow-x:auto}.teaching-figure svg{display:block;min-width:680px;width:100%}.learning-task{border-left:4px solid #ce8b3c;background:#f6f2e6;padding:18px 22px;margin-bottom:24px}.learning-task h2{font-size:21px}.plot-note{line-height:1.7;font-size:16px}.reading figure{margin:22px 0} .reading figcaption{line-height:1.7}

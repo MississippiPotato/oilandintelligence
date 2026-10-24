@@ -89,3 +89,13 @@ output/playwright/case-sources-2026-10-24/*
 output/playwright/full-coverage-2026-10-24/*
 !output/playwright/full-coverage-2026-10-24/*.png
 !output/playwright/full-coverage-2026-10-24/*.json
+
+# Teaching audit revision: small distributions and current sampled browser evidence.
+!dist/*-1.5.3.zip
+!dist/s17x-*-1.0.2.zip
+!dist/s17-expansion-56-cases-1.9.1-preview.zip
+!dist/s17-all-61-cases-1.9.1-preview.zip
+!output/playwright/teaching-audit-2026-10-24/
+output/playwright/teaching-audit-2026-10-24/*
+!output/playwright/teaching-audit-2026-10-24/*.png
+!output/playwright/teaching-audit-2026-10-24/*.json

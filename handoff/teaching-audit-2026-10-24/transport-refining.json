@@ -1,0 +1,462 @@
+{
+  "date": "2026-10-24",
+  "scope": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5"
+  ],
+  "status": "source_review_not_browser",
+  "review_basis": [
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/06_兼容与验收清单.txt",
+    "portal-original/firstbreak-pick-case/case.json",
+    "每例case.json/demo.html/app.js/engine.js逐源审阅"
+  ],
+  "method": "专业判断依据业务量、公式、数据流、图轴/单位、教学任务与实际计算对应关系；未用字数、SVG数量、旧704检查替代教学审阅。",
+  "shared_changes": [
+    "十例独立demo加入可检验的操作任务，case.json与app.js序列化manifest同步。",
+    "t2–t5折线/散点补数字轴、实际索引、单位与系列线型；标签更新不依赖opaque origin下history成功。",
+    "十例flow.json按本例具体输入/算法/基线/输出/评价重写；补缺失t1/r5；未修改公共绘图工具。",
+    "r1/r2恢复默认按钮已加入；其余既有恢复默认保留。"
+  ],
+  "verification": {
+    "method": "Node VM执行源engine与固定对照参数；node --check app.js/engine.js；JSON语义比较case.tabs与序列化Lesson.tabs。",
+    "syntax_files": 20,
+    "manifest_tabs_all_ten_equal": true,
+    "browser_executed": false,
+    "build_executed": false,
+    "engine_results_are_synthetic_teaching_only": true
+  },
+  "cases": [
+    {
+      "sceneId": "t1",
+      "status": "source_review_not_browser",
+      "professional_judgment": "可由两端物料平衡与正常动态关系解释持续偏差；新增库存、时间对齐与残差标准化说明，避免把瞬态流差直接称为泄漏量。模型异常不能定位或确诊泄漏。",
+      "text_figure_evidence": [
+        "B1对应入口/出口P、Q测点；B2仅为瞬态与持续损失概念图；B3解释正常期望与残差。",
+        "demo实际流量/压力曲线由infer输出expectedQ/expectedP，事件图补分数与分钟刻度，确认事件与独立参考窗分开。"
+      ],
+      "interaction_learning_goals": [
+        "控制损失、噪声、阈值比较检出与多报；传感器漂移情景要求查看压力是否共同偏离。",
+        "无事件情景检验空分母，事件F1/precision/recall为null并保留正常时长576 min。"
+      ],
+      "issues_and_fixes": [
+        "此前没有解释库存瞬态与体积参考状态；已补物理边界。",
+        "事件图没有分数/时间数字刻度；已补。"
+      ],
+      "changed_source_files": [
+        "expansion-src/t1/app.js",
+        "expansion-src/t1/case.json",
+        "expansion-src/t1/demo.html",
+        "expansion-src/t1/flow.json"
+      ],
+      "computed_source_evidence": {
+        "normal_tp": 3,
+        "normal_fp": 0,
+        "normal_delay_min": 2,
+        "drift_tp": 3,
+        "drift_fp": 3,
+        "no_event_truth": 0,
+        "no_event_f1": null
+      },
+      "remaining_items": [
+        "演示中的0.46入口变化响应是教学代理，并非水力瞬态解；未模拟时钟误差控制。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "t2",
+      "status": "source_review_not_browser",
+      "professional_judgment": "先配准、再匹配、再计算增长率的因果链成立。修复两次测深误差只在第二次注入而正文声称两次均有误差的不一致；保留有符号增长率及教学6 mm损失触发线。",
+      "text_figure_evidence": [
+        "B1讲10 mm壁厚与局部损失；B2解释焊缝整体坐标漂移；新增匹配代价单位、贪心一对一与适用限制。",
+        "运行图改为相对首次里程的配准前/后残差；增长图同24个缺陷，表给两次原始/校正里程、两次损失深度，能手算增长率。"
+      ],
+      "interaction_learning_goals": [
+        "保持误差不变比较1年与6年，区分增长率本身与噪声除以间隔。",
+        "把偏移0改14，比较未配准最近邻与配准路线；查看错配与增长误差是否同向。"
+      ],
+      "issues_and_fixes": [
+        "横轴无刻度；已加实际缺陷1–24刻度。",
+        "观测对象附隐藏ref索引；已拆独立referenceIndex数组，匹配观测无真值属性。",
+        "随机比较器sort不保证复现；已换固定种子Fisher–Yates。",
+        "表格缺两次深度，无法核查增长率；已补。"
+      ],
+      "changed_source_files": [
+        "expansion-src/t2/app.js",
+        "expansion-src/t2/case.json",
+        "expansion-src/t2/demo.html",
+        "expansion-src/t2/engine.js",
+        "expansion-src/t2/flow.json"
+      ],
+      "computed_source_evidence": {
+        "shift_m": 7,
+        "noise_multiplier": 1,
+        "one_year_growth_MAE_mm_per_year": 0.213,
+        "six_year_growth_MAE_mm_per_year": 0.036,
+        "matching_accuracy_percent": 100,
+        "unregistered_accuracy_percent": 4.2,
+        "label_free_matching_observations": true
+      },
+      "remaining_items": [
+        "夹具假设缺陷全集对应，无新增、消失或拒配；贪心代价并非全局最优；线性触发年数不能解释为寿命。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "t3",
+      "status": "source_review_not_browser",
+      "professional_judgment": "并联流量、泵曲线、扬程约束和电耗比较成立；修正η含义为泵、电机、驱动合并总效率，明确m³/h→m³/s和W→kW换算与多余扬程节流假设。",
+      "text_figure_evidence": [
+        "系统图对应来液需求→泵站→管道→下站；泵曲线明确q为单泵流量、s为相对转速。",
+        "散点来自153个实际候选，横轴H/m纵轴电功率/kW；已加数字刻度、最低扬程标线与可行/不可行图例。"
+      ],
+      "interaction_learning_goals": [
+        "同流量扬程只改正电价，最优不变而费用等比例变化。",
+        "提高扬程要求，解释低功率但不满足约束的点为何不能执行。"
+      ],
+      "issues_and_fixes": [
+        "效率被称电功率但损失口径不清；已补总效率及单位换算。",
+        "散点横轴无数字，无法定位最低扬程；已补。"
+      ],
+      "changed_source_files": [
+        "expansion-src/t3/app.js",
+        "expansion-src/t3/case.json",
+        "expansion-src/t3/demo.html",
+        "expansion-src/t3/engine.js",
+        "expansion-src/t3/flow.json"
+      ],
+      "computed_source_evidence": {
+        "default_best": {
+          "pumps": 3,
+          "relative_speed": 0.81,
+          "head_m": 38.9581,
+          "total_efficiency": 0.81454,
+          "electric_kW": 31.0191
+        },
+        "nominal_baseline_kW": 43.1757,
+        "price_double_keeps_combination": true,
+        "rounded_daily_costs_yuan": [
+          521,
+          1042
+        ]
+      },
+      "remaining_items": [
+        "未求完整管网交点、汽蚀余量、备用冗余与启停损耗；教学最优限定于已列约束。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "t4",
+      "status": "source_review_not_browser",
+      "professional_judgment": "独立标定拟合比例/零点，固定旧系数用于后续段的链条成立。新增标定图让斜率、截距与比例误差可被实际观察，累计体积按60个一分钟区间求和。",
+      "text_figure_evidence": [
+        "背景区分参考状态、标定与运行，不声称补偿体积温压换算。",
+        "新增24个标定散点、拟合线与y=x参考；60点运行图、累计量表与误差同源，补完整时间刻度。"
+      ],
+      "interaction_learning_goals": [
+        "噪声0时先看y=x偏离与回归校正，再只加新增漂移验证标定系数不变。",
+        "比例偏差0且噪声0时固定差基线与回归均MAE0，保留基线持平。"
+      ],
+      "issues_and_fixes": [
+        "此前只展示后续曲线，没有可读的标定数据证据；已返回calibration并加散点图。",
+        "累计体积与分钟采样关系此前难读；图示与正文补ΣQ/60。"
+      ],
+      "changed_source_files": [
+        "expansion-src/t4/app.js",
+        "expansion-src/t4/case.json",
+        "expansion-src/t4/demo.html",
+        "expansion-src/t4/engine.js",
+        "expansion-src/t4/flow.json"
+      ],
+      "computed_source_evidence": {
+        "zero_noise_original_gain_percent": 6,
+        "extra_drift_change_percent": [
+          0,
+          8
+        ],
+        "coefficients_unchanged": true,
+        "corrected_MAE_change_m3_per_h": [
+          0,
+          7.58
+        ],
+        "gain_zero_no_noise_regression_and_difference_MAE": [
+          0,
+          0
+        ]
+      },
+      "remaining_items": [
+        "标定范围固定40–155 m³/h，未实现窄标定区间控制；不能用噪声0的理想结果声称现场计量精度。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "t5",
+      "status": "source_review_not_browser",
+      "professional_judgment": "当前范围为固定标尺观察窗视觉液位与雷达交叉核对，专业链为像素→逐行中位数→梯度行→标尺高度。两条测量链不一致不能直接定责。",
+      "text_figure_evidence": [
+        "B1的h=10×(1−y/99)与engine中换算一致；实际32×100灰度像素在canvas显示，算法只读取像素。",
+        "灰度/梯度曲线补0–99行数字刻度；18帧图补1–18刻度；输出检测行、视觉高度、雷达高度、边界四行跨度灰度差。"
+      ],
+      "interaction_learning_goals": [
+        "只改雷达偏移，视觉像素和视觉结果须完全不变。",
+        "增加成像噪声观察像素、梯度与18帧MAE；从检测行手算高度。"
+      ],
+      "issues_and_fixes": [
+        "正文声称边界强度可见但结果没给；已返回并展示strength。",
+        "图表无行/帧定位刻度；已补。",
+        "新增说明梯度强度未校准，不是置信度；噪声亦能产生伪梯度。"
+      ],
+      "changed_source_files": [
+        "expansion-src/t5/app.js",
+        "expansion-src/t5/case.json",
+        "expansion-src/t5/demo.html",
+        "expansion-src/t5/engine.js",
+        "expansion-src/t5/flow.json"
+      ],
+      "computed_source_evidence": {
+        "level_m": 5,
+        "noise_multiplier": 1,
+        "radar_bias_only_change_m": [
+          0,
+          2
+        ],
+        "pixels_identical": true,
+        "visual_height_identical": true,
+        "visual_height_m": 4.9971521465,
+        "edge_row": 49.52819375,
+        "boundary_strength_gray_levels": 118.998107983
+      },
+      "remaining_items": [
+        "无罐容表、透视估计或完整储量；成像噪声控制不是物理雾散射模拟。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "r1",
+      "status": "source_review_not_browser",
+      "professional_judgment": "蒸馏分离沸程、常减压作用和约束代理搜索解释成立；新增明确合并常减压教学代理中的压力/柴油终馏点联系为人为设定，避免读成现场直接因果。",
+      "text_figure_evidence": [
+        "背景两塔物流图解释分离；归一化趋势图仅示意；运行热图每格由预测三输出判可行。",
+        "热图增加灰色/推荐框/固定点十字与55–73%色阶说明；独立测试parity图加纵轴数字，48批评价与推荐搜索分开。"
+      ],
+      "interaction_learning_goals": [
+        "收紧能耗与终馏点约束，观察可行域收缩及无可行解。",
+        "把固定基线越界与预测推荐增益区分；比较测试MAE，不能把搜索最大值称实测收益。"
+      ],
+      "issues_and_fixes": [
+        "热图缺明确色阶与固定点标志；已补。",
+        "独立测试图纵轴没数字；已补。",
+        "没有恢复默认；已加按钮与事件。"
+      ],
+      "changed_source_files": [
+        "expansion-src/r1/app.js",
+        "expansion-src/r1/case.json",
+        "expansion-src/r1/demo.html",
+        "expansion-src/r1/flow.json"
+      ],
+      "computed_source_evidence": {
+        "default_feasible_of_961": 759,
+        "energy_1_3_endpoint_338_feasible": 0
+      },
+      "remaining_items": [
+        "没有新推荐点的独立装置实测验证；固定合成代理不代表真实炼厂机理。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "r2",
+      "status": "source_review_not_browser",
+      "professional_judgment": "FCC化学转化、焦炭再生与六项同质量基准收率解释成立；非负闭合与准确性分开，输入密度只作原料简化表征。",
+      "text_figure_evidence": [
+        "FCC物流/再生图与六项质量账对应；当前堆叠条、温度敏感曲线、独立批次对照均由实际回归输出。",
+        "堆叠条增加0/50/100质量%尺度；按原料类别均值保留真实分组跳变和54批MAE。"
+      ],
+      "interaction_learning_goals": [
+        "固定密度、剂油比扫温度，观察汽油趋缓以及其他去向。",
+        "918→922 kg/m³跨组比较基线跳变与连续回归；闭合100%仍须检查各项误差。"
+      ],
+      "issues_and_fixes": [
+        "没有恢复默认；已补。",
+        "组成条只有成分标签没有整体数量尺度；已补质量百分比尺度。"
+      ],
+      "changed_source_files": [
+        "expansion-src/r2/app.js",
+        "expansion-src/r2/case.json",
+        "expansion-src/r2/demo.html",
+        "expansion-src/r2/flow.json"
+      ],
+      "computed_source_evidence": {
+        "six_component_closure_error": 0
+      },
+      "remaining_items": [
+        "未建热平衡、焦炭燃烧氧量或装置约束；六项闭合为教学边界而非完整现场核算。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "r3",
+      "status": "source_review_not_browser",
+      "professional_judgment": "负荷条件正常回归→验证阈值→连续三小时→同96小时评价闭环成立。频谱DFT是真计算，但波形由负荷/RMS残差构造，已明确其非独立故障证据。",
+      "text_figure_evidence": [
+        "RMS图与分数图补曲线/阈值图例，标出43 h评价退化起点和首次持续提醒。",
+        "频谱由128点/512 Hz实际DFT，32/100 Hz对应构造成分；加幅值刻度和生成关系说明，0–192 Hz只是显示频段。"
+      ],
+      "interaction_learning_goals": [
+        "退化速度0先检验正常误报，再比较30/80小时。",
+        "看持续确认引入的漏报小时，区分逐小时指标、故障事件数与目标分数8的条件趋势外推。"
+      ],
+      "issues_and_fixes": [
+        "频谱可能被误读为独立实测通道；已在正文/运行结果明确构造来源。",
+        "时间图缺曲线图例、频谱缺幅值刻度；已补。",
+        "首次提醒与标签边界难定位；已加事后标记。"
+      ],
+      "changed_source_files": [
+        "expansion-src/r3/app.js",
+        "expansion-src/r3/case.json",
+        "expansion-src/r3/demo.html",
+        "expansion-src/r3/flow.json"
+      ],
+      "computed_source_evidence": {
+        "zero_degradation_normal_hours": 96,
+        "zero_degradation_both_FP": 0,
+        "zero_degradation_precision_recall": null,
+        "default_model": {
+          "tp": 47,
+          "fp": 0,
+          "fn": 6,
+          "tn": 43
+        },
+        "default_baseline": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 50,
+          "tn": 43
+        }
+      },
+      "remaining_items": [
+        "时序与频谱并非两份独立观测；不支持具体轴承故障类别或剩余寿命结论。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "r4",
+      "status": "source_review_not_browser",
+      "professional_judgment": "先原文、单位、范围，再用密度硫含量条件关系审核黏度，专业逻辑成立。没有自由文本金标时不计算性能的边界保留。",
+      "text_figure_evidence": [
+        "流程图对应取样/字段/量纲/关系；真实文本解析支持kg/m3、kg/L、g/cm3，转换与原单位同表保留。",
+        "关系散点新增各行条件期望空心点和实际→期望残差竖线，避免把硫1%截面当全部样品真值；图外/缺失行仍完整列出。"
+      ],
+      "interaction_learning_goals": [
+        "只选关系冲突，检验单列规则漏报、多元关系检出。",
+        "手改合法kg/L成为kg/m3，核查量纲证据并确认性能区撤销。"
+      ],
+      "issues_and_fixes": [
+        "二维截面容易误导关系残差；已画每行真实条件期望。",
+        "图域之外黏度可能画到轴外，遗漏说明只统计密度；已过滤并完整统计缺失/图外。"
+      ],
+      "changed_source_files": [
+        "expansion-src/r4/app.js",
+        "expansion-src/r4/case.json",
+        "expansion-src/r4/demo.html",
+        "expansion-src/r4/flow.json"
+      ],
+      "computed_source_evidence": {
+        "builtin_model": {
+          "n": 30,
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "builtin_baseline": {
+          "n": 30,
+          "tp": 3,
+          "fp": 0,
+          "fn": 3
+        },
+        "custom_text_metrics": null
+      },
+      "remaining_items": [
+        "关系仅针对同类合成样品；解析依赖指定字段格式，非通用语义模型。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    },
+    {
+      "sceneId": "r5",
+      "status": "source_review_not_browser",
+      "professional_judgment": "过程物料3 min滞后与化验发布5–40 min延迟分开；训练标准化/参数选择锁定，推理仅用在线可见过程量和已发布化验。原料变化时化验基线更好，负面证据保留。",
+      "text_figure_evidence": [
+        "背景蒸馏物流、取样/到达时刻、岭回归关系对应三类图；密度时序同180点比较。",
+        "全测试parity图补双轴数字与网格；可用性时间线补分钟刻度；新增说明跨批次沿用已发布化验的连续装置假设。"
+      ],
+      "interaction_learning_goals": [
+        "比较5与40 min发布延迟，查看化验样本/发布时刻及保持值变化。",
+        "关闭3 min对齐是在推理时故意错配旧模型，不是重训；原料变化后检验化验保持值胜出。"
+      ],
+      "issues_and_fixes": [
+        "parity图无可读数值刻度；已补。",
+        "两类延迟的作用易混淆；已补区别与受控实验任务。"
+      ],
+      "changed_source_files": [
+        "expansion-src/r5/app.js",
+        "expansion-src/r5/case.json",
+        "expansion-src/r5/demo.html",
+        "expansion-src/r5/flow.json"
+      ],
+      "computed_source_evidence": {
+        "delay5_model_RMSE": 0.52815188194,
+        "delay40_model_RMSE": 0.530054733662,
+        "delay5_lab_baseline_RMSE": 1.37381787818,
+        "delay40_lab_baseline_RMSE": 1.63526884576,
+        "delay40_future_feature_count": 0,
+        "delay40_future_lab_count": 0,
+        "feed_shift_model_RMSE": 4.7788349247,
+        "feed_shift_lab_baseline_RMSE": 3.0894740404
+      },
+      "remaining_items": [
+        "每个批次均为同一装置连续运行假设；未验证现场滞后辨识、样本代表性或跨装置泛化。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ]
+    }
+  ],
+  "recommended_browser_spot_checks": [
+    {
+      "sceneId": "t5",
+      "steps": [
+        "由原门户添加五文件包，打开专业背景与案例流程，确认SVG真实渲染且文字无裁切。",
+        "运行默认，记录视觉高度、检测行、边界强度、像素和18帧MAE；只改雷达偏移到+2，确认显示stale且导出禁用；重算后视觉像素/高度与18帧MAE应不变，雷达差改变。",
+        "液位5、噪声1时视觉约4.997 m，检测行约49.528；检查公式10×(1−y/99)。",
+        "噪声改4后重算，核对逐行曲线0–99、帧图1–18、图例与表格均可读；窄屏键盘操作并恢复默认。"
+      ]
+    },
+    {
+      "sceneId": "r5",
+      "steps": [
+        "原门户导入后运行，比较同一批次同一光标的过程特征时刻、取样、到达与现在；检查新分钟轴和parity双轴数字。",
+        "发布延迟5→40应先stale并禁导出；重算后未来特征/化验计数都为0，保持值变化；允许因标定截止可用标签不同造成模型微小变化。",
+        "关闭过程对齐再算，查看3 min错配影响；恢复对齐切原料变化，默认RMSE模型约4.779、化验保持约3.089，确认界面与导出保留基线胜出。",
+        "保存一条人工复核，再改输入，确认旧复核仅历史，当前需重核；断网重复、导出JSON并检查来源与时间字段。"
+      ]
+    }
+  ],
+  "external_primary_source_checked": [
+    {
+      "url": "https://www.energy.gov/sites/default/files/2014/05/f16/pump.pdf",
+      "supports": "电耗分析需同时明确泵、电机及系统效率；已把本例η明确为合并总效率，未搬用现场节能率。"
+    },
+    {
+      "url": "https://betterbuildingssolutioncenter.energy.gov/better-plants/pumps",
+      "supports": "系统层面比较需求与供给、调速与节流关系；本例同时声明不含完整管网约束。"
+    }
+  ],
+  "public_dependency_requests": [
+    "无公共代码修改要求；请主代理按项目现有流程生成五文件包并执行浏览器抽查。"
+  ]
+}

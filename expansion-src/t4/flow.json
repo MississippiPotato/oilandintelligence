@@ -1,42 +1,42 @@
 {
-  "title": "校正后累计交接量的偏差能减少多少？",
+  "title": "固定旧标定检查新漂移",
   "gate": [
-    "结果与工况",
-    "是否一致？"
+    "标定窗与运行段分开",
+    "同参考状态累加体积"
   ],
   "input": {
-    "title": "标定与读数",
-    "detail": "观测量不含参考答案",
+    "title": "标定配对",
+    "detail": "二十四组读数与参考",
     "step": 0
   },
   "prepare": {
-    "title": "区分标定窗",
-    "detail": "处理专业量纲与来源",
-    "step": 1
+    "title": "量纲统一",
+    "detail": "同温压下立方米每时",
+    "step": 0
   },
   "model": {
-    "title": "斜率与截距",
-    "detail": "真实计算当前结果",
-    "step": 2
+    "title": "回归校正",
+    "detail": "斜率和截距由标定拟合",
+    "step": 1
   },
   "baseline": {
-    "title": "固定差校正",
-    "detail": "相同输入对照",
-    "step": 3
+    "title": "固定差基线",
+    "detail": "标定平均差保持不变",
+    "step": 1
   },
   "review": {
-    "title": "记录与工况复核",
-    "detail": "保留异常与分歧",
-    "step": 3
+    "title": "漂移复核",
+    "detail": "旧系数不读取运行真值",
+    "step": 2
   },
   "output": {
-    "title": "候选与单位",
-    "detail": "输出可复查记录",
-    "step": 3
+    "title": "运行校正",
+    "detail": "六十个一分钟区间",
+    "step": 2
   },
   "compare": {
-    "title": "同分母比较",
-    "detail": "最后读取独立参考",
+    "title": "误差与体积",
+    "detail": "同六十点算误差和累计",
     "step": 3
   }
 }

@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
-import {root,reportDir,fileRecord,walk} from './build-expansion.mjs';
+import {root,fileRecord,walk} from './build-expansion.mjs';
+const reportDir='handoff/full-coverage-2026-10-24';
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const write=(p,value)=>fs.writeFileSync(path.join(root,p),JSON.stringify(value,null,2)+'\n');
 const plan=read(reportDir+'/implementation-plan.json'),build=read(reportDir+'/build-lock.json'),suite=read('handoff/suite-build-lock.json');

@@ -2,7 +2,7 @@
   "id": "s17x-p2-perforation-shape",
   "sceneId": "p2",
   "title": "射孔孔道形态预测：材料变化如何影响通道？",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "methods": [
     "opt"
@@ -28,7 +28,7 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "先理解孔道连接了什么",
-          "html": "<p>井筒外侧通常还有套管、水泥环和储层岩石。储层中的流体要进入井筒，需要有连通路径；孔道长度反映通道延伸多远，入口宽度与孔道内部残留则影响流动通畅程度。长度更大并不自动代表产能更高，因为储层渗透性、孔道污染和压差也会参与。这里先把问题收窄为“同一虚拟试验体系内，材料变化会改变怎样的孔道形态”。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"套管—水泥环—储层的概念剖面。横向线条表示连通路径，比例不对应实际井径。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><rect x=\"30\" y=\"45\" width=\"80\" height=\"150\" rx=\"8\" fill=\"#d9e7ed\"/><rect x=\"112\" y=\"45\" width=\"65\" height=\"150\" rx=\"8\" fill=\"#dedfd7\"/><rect x=\"179\" y=\"45\" width=\"430\" height=\"150\" rx=\"8\" fill=\"#eee5d1\"/><path d=\"M60 120H490\" fill=\"none\" stroke=\"#f6fbf8\" stroke-width=\"20\"/><path d=\"M60 120H490\" fill=\"none\" stroke=\"#6c9b92\" stroke-width=\"2\"/><text x=\"36\" y=\"32\" font-size=\"17\">井筒</text><text x=\"112\" y=\"32\" font-size=\"17\">水泥</text><text x=\"270\" y=\"32\" font-size=\"17\">储层岩石</text><text x=\"219\" y=\"165\" font-size=\"15\">孔道把井筒与孔隙中的流体连起来</text><text x=\"204\" y=\"218\" font-size=\"15\">长度是几何量；清洁度是单独的试验评价指标</text></g></svg><figcaption>套管—水泥环—储层的概念剖面。横向线条表示连通路径，比例不对应实际井径。</figcaption></figure>"
+          "html": "<p><b>先认清本例：</b>观测单位是同一虚拟试验体系中一块材料的一次试验。强度、孔隙度、围压都是输入；孔道长度（cm）和清洁度（0–100分）是独立观测目标。清洁度为教学评分，表示通道残留影响，不是现场统一量表。</p><p>井筒外侧通常还有套管、水泥环和储层岩石。储层中的流体要进入井筒，需要有连通路径；孔道长度反映通道延伸多远，入口宽度与孔道内部残留则影响流动通畅程度。长度更大并不自动代表产能更高，因为储层渗透性、孔道污染和压差也会参与。这里先把问题收窄为“同一虚拟试验体系内，材料变化会改变怎样的孔道形态”。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"套管—水泥环—储层的概念剖面。横向线条表示连通路径，比例不对应实际井径。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><rect x=\"30\" y=\"45\" width=\"80\" height=\"150\" rx=\"8\" fill=\"#d9e7ed\"/><rect x=\"112\" y=\"45\" width=\"65\" height=\"150\" rx=\"8\" fill=\"#dedfd7\"/><rect x=\"179\" y=\"45\" width=\"430\" height=\"150\" rx=\"8\" fill=\"#eee5d1\"/><path d=\"M60 120H490\" fill=\"none\" stroke=\"#f6fbf8\" stroke-width=\"20\"/><path d=\"M60 120H490\" fill=\"none\" stroke=\"#6c9b92\" stroke-width=\"2\"/><text x=\"36\" y=\"32\" font-size=\"17\">井筒</text><text x=\"112\" y=\"32\" font-size=\"17\">水泥</text><text x=\"270\" y=\"32\" font-size=\"17\">储层岩石</text><text x=\"219\" y=\"165\" font-size=\"15\">孔道把井筒与孔隙中的流体连起来</text><text x=\"204\" y=\"218\" font-size=\"15\">长度是几何量；清洁度是单独的试验评价指标</text></g></svg><figcaption>套管—水泥环—储层的概念剖面。横向线条表示连通路径，比例不对应实际井径。</figcaption></figure>"
         },
         {
           "no": 2,
@@ -47,6 +47,12 @@
           "en": "DATA & SOURCES",
           "title": "数据、评价与概念来源",
           "html": "<p>专业概念参考以下行业或研究机构的一手资料；本例数据为离线合成教学数据，不复制来源网站图像。</p><ul><li><a href=\"https://glossary.slb.com/en/terms/p/perforation\" target=\"_blank\" rel=\"noopener\">SLB：perforation</a></li><li><a href=\"https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-p\" target=\"_blank\" rel=\"noopener\">OSHA：P 术语表</a></li></ul>"
+        },
+        {
+          "no": 5,
+          "en": "TRY & EXPLAIN",
+          "title": "带着一个问题运行，再用图解释",
+          "html": "<p>固定强度80 MPa、孔隙度15%，只将围压从3改到28 MPa后运行。比较长度与清洁度两项输出；留出MAE应不变，因为它评价同一84条固定测试记录。</p><p>先说出你预期哪一条曲线或哪个计数会改变，再运行核对。输入变化后旧图仍表示上次结果，只有重算后才能导出当前结果。</p>"
         }
       ]
     },
@@ -76,33 +82,33 @@
           "do": "采集强度、孔隙度、围压以及试验测量长度与清洁度；把同一批次试验留在同一集合。",
           "effect": "6 个训练批次与 3 个测试批次；同批材料不会跨集合。",
           "trap": "不同材料批次的误差比随机拆分单条试验更能反映泛化。",
-          "role": "环节 1"
+          "role": "图 S1"
         },
         {
           "name": "拟合双目标代理",
           "do": "用训练批次构造归一化多项式特征，分别求解长度和清洁度的岭回归系数。",
           "effect": "冻结两组模型系数，输入材料属性即可得到两个预测。",
           "trap": "清洁度是独立分数，不从长度直接推断，也不等同产能。",
-          "role": "环节 2"
+          "role": "图 S2"
         },
         {
           "name": "改变条件比较响应",
           "do": "保持孔隙度与围压不变，扫描强度形成条件响应曲线；同时计算分组均值基线。",
           "effect": "看清联合关系相对分组平均增加了哪些信息。",
           "trap": "横轴扫描只在试验范围内解释，曲线不能直接外推到任意材料。",
-          "role": "环节 3"
+          "role": "图 S3"
         },
         {
           "name": "独立评价与记录",
           "do": "冻结模型后才读取测试测量值，计算两项 MAE 并列出残差，再导出本轮条件与结果。",
           "effect": "84 条测试记录的比较和当前材料预测。",
           "trap": "修改输入后旧结果会标为待重算；不要把示意孔道当成实物照片。",
-          "role": "环节 4"
+          "role": "图 S4"
         }
       ],
       "metrics": {
         "title": "逐步骤输入与输出",
-        "html": "<figure><h3>组织材料批次</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"材料试验记录到训练 / 测试\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">材料试验记录</text><text x=\"228\" y=\"56\" font-size=\"15\">按批次分开</text><text x=\"437\" y=\"56\" font-size=\"15\">训练 / 测试</text></g></svg><figcaption>6 个训练批次与 3 个测试批次；同批材料不会跨集合。</figcaption></figure><figure><h3>拟合双目标代理</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"三项输入属性到长度 / 清洁度\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">三项输入属性</text><text x=\"228\" y=\"56\" font-size=\"15\">两组岭回归</text><text x=\"437\" y=\"56\" font-size=\"15\">长度 / 清洁度</text></g></svg><figcaption>冻结两组模型系数，输入材料属性即可得到两个预测。</figcaption></figure><figure><h3>改变条件比较响应</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"当前材料条件到两条响应曲线\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">当前材料条件</text><text x=\"228\" y=\"56\" font-size=\"15\">扫描强度变量</text><text x=\"437\" y=\"56\" font-size=\"15\">两条响应曲线</text></g></svg><figcaption>看清联合关系相对分组平均增加了哪些信息。</figcaption></figure><figure><h3>独立评价与记录</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结测试预测到误差 / 导出\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结测试预测</text><text x=\"228\" y=\"56\" font-size=\"15\">读取评价测量</text><text x=\"437\" y=\"56\" font-size=\"15\">误差 / 导出</text></g></svg><figcaption>84 条测试记录的比较和当前材料预测。</figcaption></figure>"
+        "html": "<figure><h3>图 S1｜一行是一次材料试验；整批留出</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S1｜一行是一次材料试验；整批留出\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><text x=\"22.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">材料批次</text><text x=\"192.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">强度 MPa</text><text x=\"362.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">孔隙度 %</text><text x=\"532.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">围压 MPa</text><rect x=\"15\" y=\"56\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">训练 1–6</text><text x=\"192.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">30–150</text><text x=\"362.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">5–28</text><text x=\"532.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">3–28</text><rect x=\"15\" y=\"99\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#e8eee6\"/><text x=\"22.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">测试 7–9</text><text x=\"192.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">相同范围</text><text x=\"362.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">相同范围</text><text x=\"532.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">相同范围</text><rect x=\"15\" y=\"142\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">观测目标</text><text x=\"192.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">长度 / cm</text><text x=\"362.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">清洁度 / 分</text><text x=\"532.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">固定试验体系</text></g></svg></div><figcaption>每批 28 条，6×28=168 条拟合、3×28=84 条评价。范围为生成器设定，非真实材料试验标准。</figcaption></figure><figure><h3>图 S2｜同样强度，不同围压仍有不同长度</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S2｜同样强度，不同围压仍有不同长度\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><path d=\"M65 225L670 225\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><path d=\"M65 60L65 225\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><text x=\"65\" y=\"43\" font-size=\"17\" fill=\"#284b55\">孔道长度 / cm（概念坐标）</text><text x=\"365\" y=\"264\" font-size=\"17\" fill=\"#284b55\">材料强度 / MPa →（概念坐标）</text><polyline points=\"65,90.0 355.0,142.5 645,162.0\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><text x=\"390\" y=\"66\" font-size=\"16\" fill=\"#237d73\">较低围压</text><polyline points=\"65,127.5 355.0,180.0 645,199.5\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"390\" y=\"91\" font-size=\"16\" fill=\"#ce8b3c\">较高围压</text></g></svg></div><figcaption>此图仅解释条件关系；演示图显示实际拟合数值。长度与清洁度分别拟合，不把长度当作清洁度。</figcaption></figure><figure><h3>图 S3｜预测的是通道几何与独立清洁评分</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S3｜预测的是通道几何与独立清洁评分\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><rect x=\"35\" y=\"78\" width=\"65\" height=\"120\" rx=\"5\" fill=\"#cadce2\"/><rect x=\"100\" y=\"78\" width=\"55\" height=\"120\" rx=\"5\" fill=\"#dddacb\"/><rect x=\"155\" y=\"78\" width=\"510\" height=\"120\" rx=\"5\" fill=\"#ebdec3\"/><rect x=\"75\" y=\"126\" width=\"420\" height=\"24\" rx=\"5\" fill=\"#83b8a9\"/><path d=\"M155 222L495 222\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><path d=\"M155 214L155 230\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><path d=\"M495 214L495 230\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><text x=\"190\" y=\"253\" font-size=\"17\" fill=\"#284b55\">长度 / cm：从进入岩石处量起</text><text x=\"35\" y=\"53\" font-size=\"17\" fill=\"#284b55\">井筒侧</text><text x=\"160\" y=\"53\" font-size=\"17\" fill=\"#284b55\">岩石侧</text><text x=\"205\" y=\"102\" font-size=\"17\" fill=\"#284b55\">绿色通道；非实物影像</text><text x=\"215\" y=\"182\" font-size=\"17\" fill=\"#284b55\">清洁度另记 0–100 分</text></g></svg></div><figcaption>保持强度不变，改变围压后运行：观察长度如何变化；清洁度有独立规则，不能从图宽倒推流量。</figcaption></figure><figure><h3>图 S4｜误差要带回材料试验看</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S4｜误差要带回材料试验看\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><text x=\"22.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">测试试验</text><text x=\"192.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">预测长度</text><text x=\"362.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">测量长度</text><text x=\"532.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">绝对误差</text><rect x=\"15\" y=\"56\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">讲解例 A</text><text x=\"192.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">42 cm</text><text x=\"362.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">40 cm</text><text x=\"532.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">2 cm</text><rect x=\"15\" y=\"99\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#e8eee6\"/><text x=\"22.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">讲解例 B</text><text x=\"192.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">36 cm</text><text x=\"362.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">37 cm</text><text x=\"532.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">1 cm</text><rect x=\"15\" y=\"142\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">MAE</text><text x=\"192.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">(2+1) / 2</text><text x=\"362.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">=</text><text x=\"532.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">1.5 cm</text></g></svg></div><figcaption>此表是手算讲解例。页面实际 MAE 使用全部 84 条留出试验，详细表只展示前 10 条。</figcaption></figure>"
       },
       "fails": [
         {
@@ -116,7 +122,7 @@
       "html": "demo/index.html",
       "js": "demo/demo.js",
       "label": "可运行示范",
-      "intro": "改变条件后运行，查看真实计算的曲线、对照与评价表。",
+      "intro": "固定强度80 MPa、孔隙度15%，只将围压从3改到28 MPa后运行。比较长度与清洁度两项输出；留出MAE应不变，因为它评价同一84条固定测试记录。",
       "height": 1250
     }
   }

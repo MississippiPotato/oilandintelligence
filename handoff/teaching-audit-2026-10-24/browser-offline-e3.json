@@ -1,0 +1,69 @@
+{
+  "scope": "Three selected standalone files opened with browser offline mode and actual calculation",
+  "checkedAt": "2026-10-24T07:06:01.620Z",
+  "case": {
+    "scene": "e3",
+    "id": "s17x-e3-chemical-mixture",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-e3-chemical-mixture"
+  },
+  "checks": [
+    {
+      "name": "offline professional background renders",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "actual offline computation enables export",
+      "passed": true
+    },
+    {
+      "name": "offline result contains no nonfinite display",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "passed": 6,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+      "bytes": 18288,
+      "sha256": "8dd0d3c8d936008d542269286ab4082c7a642f838c5e3a15f2f164842065a071"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+      "bytes": 557,
+      "sha256": "39a58f484362448b5d36e498e06010b84a8adbbfcb60b9ab34316dc0d856beb3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+      "bytes": 11461,
+      "sha256": "7a29f90ca970ae9f135d7ca543f1f924eb84b1658be07b92474c906631ecf5e3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+      "bytes": 19506,
+      "sha256": "536fa225d10bcc547a47eaa02a7b7240a4cd61cb0cc1a41beb0d837409577dd4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+      "bytes": 57621,
+      "sha256": "142c0ea0f394c01fccb6fca2123ccd9f1fbb9caf69e5b955a981633a143f2c80"
+    }
+  ]
+}

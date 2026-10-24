@@ -1,0 +1,86 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:04:15.884Z",
+  "case": {
+    "scene": "s5",
+    "id": "s17x-s5-seismic-denoise",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-s5-seismic-denoise"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "noise type change invalidates export",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "waveform and removed residual stay finite after noise switch",
+      "passed": true
+    },
+    {
+      "name": "actual current-result JSON downloaded",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "changedNoiseType": "coherent",
+  "passed": 10,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/case.json",
+      "bytes": 20411,
+      "sha256": "e54a57a2ea84057cb80771165b58facc2fd214320e6df5a3e1c9e82ae7741386"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/README.txt",
+      "bytes": 672,
+      "sha256": "1ab6af30c6e8188bfa3c8fc988fb08fe9684cd72f909fa64f58ebb1fd0c2acd5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html",
+      "bytes": 11119,
+      "sha256": "086115393b8270f0ba091e617f725a1b01c2f7d0c3f0d84b95ce670512e0d7c9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css",
+      "bytes": 19331,
+      "sha256": "44c6a0fb25ca52067b3bac41c6b0d2c26f933dfa515491e976c443fd8efacada"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js",
+      "bytes": 58314,
+      "sha256": "f0824f44ca07aaf49a4976b99a2c2ac8864295ff49cd171b752e1360706dfacc"
+    }
+  ]
+}

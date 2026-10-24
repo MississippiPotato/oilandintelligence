@@ -1,42 +1,42 @@
 {
-  "title": "满足输量与扬程后，哪组泵速耗电更少？",
+  "title": "输量约束下比较电耗",
   "gate": [
-    "结果与工况",
-    "是否一致？"
+    "先满足输量和扬程",
+    "再比功率与费用"
   ],
   "input": {
-    "title": "工况输入",
-    "detail": "观测量不含参考答案",
+    "title": "泵站需求",
+    "detail": "总流量最低扬程电价",
     "step": 0
   },
   "prepare": {
-    "title": "设备曲线",
-    "detail": "处理专业量纲与来源",
+    "title": "单泵工况",
+    "detail": "总流量除以并联台数",
     "step": 1
   },
   "model": {
-    "title": "约束枚举",
-    "detail": "真实计算当前结果",
-    "step": 2
+    "title": "组合搜索",
+    "detail": "三种台数五十一转速",
+    "step": 1
   },
   "baseline": {
-    "title": "额定泵速",
-    "detail": "相同输入对照",
+    "title": "额定基线",
+    "detail": "固定转速同约束筛选",
     "step": 3
   },
   "review": {
-    "title": "记录与工况复核",
-    "detail": "保留异常与分歧",
-    "step": 3
+    "title": "约束复核",
+    "detail": "单泵流量与最低扬程",
+    "step": 2
   },
   "output": {
-    "title": "候选与单位",
-    "detail": "输出可复查记录",
-    "step": 3
+    "title": "可行最优",
+    "detail": "扬程效率电功率费用",
+    "step": 2
   },
   "compare": {
-    "title": "同分母比较",
-    "detail": "最后读取独立参考",
+    "title": "同需求比较",
+    "detail": "保留不可行与基线差异",
     "step": 3
   }
 }

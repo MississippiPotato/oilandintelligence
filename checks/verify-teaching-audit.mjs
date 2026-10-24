@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {reportDir} from '../tools/build-expansion.mjs';
+import {read,write,same,currentEvidence} from '../tools/teaching-audit-contract.mjs';
+const e=currentEvidence(),accepted=read(reportDir+'/accepted-files.json'),state=read(reportDir+'/completion.json');
+accepted.files.forEach(same);
+assert.equal(state.selfAuthoredCases,61);assert.equal(state.sourceTeachingReview.caseCount,61);assert.equal(state.browserScope.currentRevisionOriginalFolderImportCases,9);assert.equal(state.browserScope.all61BrowserPassClaimed,false);
+assert.equal(state.browserReports.length,12);assert.equal(state.portalVersion,read('package.json').version);
+const result={checkedAt:new Date().toISOString(),status:'passed',kind:'current_artifact_and_saved_browser_evidence_consistency_not_new_browser_run',sourceReviewed:61,new44Reviewed:44,currentBrowserSamples:9,offlineSamples:3,filesMatched:accepted.files.length,protectedFilesMatched:e.baseline.files.length,all61CurrentBrowserPassClaimed:false};
+if(!process.argv.includes('--no-write'))write(reportDir+'/delivery-verification.json',result);
+console.log(JSON.stringify(result,null,2));

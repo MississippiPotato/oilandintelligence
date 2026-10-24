@@ -1,42 +1,42 @@
 {
-  "title": "套管损伤智能识别",
+  "title": "套管方位展开检测",
   "input": {
-    "title": "专业观测输入",
-    "detail": "仪器偏心 mm",
+    "title": "半径矩阵",
+    "detail": "深度方位及毫米",
     "step": 0
   },
   "prepare": {
-    "title": "采集深度×方位矩阵",
-    "detail": "检查单位和记录范围",
-    "step": 0
-  },
-  "model": {
-    "title": "估计偏心背景",
-    "detail": "由可见输入计算",
+    "title": "方位背景中位数",
+    "detail": "多数深度须完好",
     "step": 1
   },
+  "model": {
+    "title": "残差阈值分割",
+    "detail": "只查局部正偏差",
+    "step": 2
+  },
   "baseline": {
-    "title": "简单方法对照",
-    "detail": "相同数据独立计算",
+    "title": "原始半径基线",
+    "detail": "偏心可能误报警",
     "step": 3
   },
   "review": {
-    "title": "检查约束与来源",
-    "detail": "不读评价真值预测",
-    "step": 2
-  },
-  "output": {
-    "title": "图表与当前结果",
-    "detail": "保留参数和评价分母",
+    "title": "检查噪声阈值",
+    "detail": "无缺陷也查误报",
     "step": 3
   },
+  "output": {
+    "title": "两幅展开图",
+    "detail": "同一色标和切口",
+    "step": 2
+  },
   "compare": {
-    "title": "独立评价对比",
-    "detail": "误差或合法性可复算",
+    "title": "掩膜独立评价",
+    "detail": "交并比及误报格数",
     "step": 3
   },
   "gate": [
-    "结果是否满足检查？",
-    "补充观测再重新计算"
+    "局部异常可解释？",
+    "回查仪器再计算"
   ]
 }

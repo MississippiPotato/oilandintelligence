@@ -1,0 +1,89 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:04:22.774Z",
+  "case": {
+    "scene": "w3",
+    "id": "s17x-w3-borehole-fractures",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-w3-borehole-fractures"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "segmentation threshold marks old results stale",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "high-threshold mask still renders finite image coordinates",
+      "passed": true
+    },
+    {
+      "name": "image comparison scrolls internally on phone width",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "exception": "image comparison scrolls internally on phone width",
+  "frameStates": [
+    {
+      "url": "http://127.0.0.1:8755/portal-original/index.html#/scene/w3?tab=demo",
+      "ready": "complete",
+      "text": "智能化可能性地图\nPETRO × AI ATLAS\n总览\n作业链\n案例库\n接入指南\n管理\n＋ 添加案例\n总览\n/\n作业链\n/\n测井\n/\n成像测井裂缝识别\n环节 05 · 测井\nCV\n计算机视觉\n案例 s17x-w3-borehole-fractures · v1.0.1\n成像测井裂缝识别\n\n电成像与声成像测井把井壁展开成图像，裂缝、孔洞、层理在图像上表现为特定形态，是裂缝型储层评价的主要依据。\n\n难度 高\nW3\n01\n专业背景\n02\n案例流程\n03\n可运行示范\nRELATED\n相关场景\n同环节 · 测井\n测井曲线智能分层\n→\n储层参数智能解释\n→\n岩性识别\n→\n测井数据修复\n→\n同方法 · 计算机视觉\n地质剖面遥感解译\n地质勘察 →\n地质图件要素智能提取\n地质勘察 →\n露头裂缝自动统计\n地质勘察 →\n地震断层自动解释\n物探 →\n← 返回测井环节\n返回总览\n关于\n\n石油勘探开发的智能化可能性地图\n\nv1.0 · 更新于 2026-10\n\n地图\n总览\n作业链\n按方法反查\n系统\n案例库（3 个已接入）\n接入新案例\n参与\n\n发现问题或想补一个场景？\n\natlas@example.com\n场景数据：61 个 · 环节：13 个\n纯静态 · 无后端 · 可离线运行\n✓\n已添加「成像测井裂缝识别：从井壁展开图分出窄曲线」\n正在打开场景页…"
+    },
+    {
+      "url": "about:srcdoc",
+      "ready": "complete",
+      "status": "计算完成：当前图表、模型、基线与评价使用同一组参数。",
+      "text": "e。把局部模型阈值调高可出现少选/空掩膜，散点应保留断续；低分割误差不能证明曲线一定是地质裂缝。\n\n图像噪声倍率\n1\n裂缝灰度对比\n0.4\n局部模型阈值\n0.6\n灰度基线阈值\n0.45\n重新计算\n恢复默认\n导出本次计算 JSON\n计算完成：当前图表、模型、基线与评价使用同一组参数。\n局部特征分割 Dice\n0\n灰度阈值 Dice\n0.669\n模型 IoU\n0\n井壁展开图：暗色窄曲线与纵向条带应分开\n原始归一响应\n0°\n90°\n180°\n270°\n360°\n0\n24\n48\n71\n灰度基线\n0°\n90°\n180°\n270°\n360°\n0\n24\n48\n71\n局部特征模型\n0°\n90°\n180°\n270°\n360°\n0\n24\n48\n71\n独立评价真值\n0°\n90°\n180°\n270°\n360°\n0\n24\n48\n71\n纵向：相对深度像素行 ↓ ｜ 0°/360°为同一井周接缝\n原图：0暗 → 1亮；掩膜：深绿=选中，浅色=未选中\n掩膜像素位置：散点保留断续与误检\n0\n-6\n90\n15\n180\n36\n270\n56\n360\n77\n方位 / °\n相对深度 / 像素行\n模型选中像素\n怎样阅读本次结果\n\n训练来自4幅不同相位、振幅和条带位置的井壁教学图像；测试96×72=6912像素，不参与拟合。\n\n纵向为相对深度像素行0—71（向下）；未给每像素米数，不估计倾角。灰度0暗、1亮，为归一教学响应，不是Ω·m。正类掩膜深绿，背景浅色。同一倾斜平面与圆柱井壁相交，展开后呈周期轨迹；纵向条带表示仪器条带扰动。\n\n图上并列显示原图、灰度基线、模型掩膜与独立真值；Dice=2TP/(2TP+FP+FN)，当前TP=0、FP=0、FN=210。\n\n保存人工复核依据\n\n写明比较了哪条曲线、哪个参数与何处失效；复核意见独立保存，不改写模型原结果或评价真值。\n\n本次观察与决定\n保存本次复核\n\n尚未记录人工依据。\n\n查看训练、测试划分与模型参数\ns17x-w3-borehole-fractures · v1.0.1 · 固定种子教学数据，来源与单位见专业背景。所有图表和指标由浏览器中的当前输入计算。\n井见助手"
+    }
+  ],
+  "passed": 7,
+  "failed": 1,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+      "bytes": 25275,
+      "sha256": "eba8ef243cf34b677c922a381e48b7456b2524e504f4d51aa9e3ee5c1f34cf73"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+      "bytes": 735,
+      "sha256": "75b23bdfe7a62be98f5494193f7045c6da3cab747f76d18e3e78bd4908797dac"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+      "bytes": 18741,
+      "sha256": "451820e4464ac23d125973472278a6480050a9d29f716f4a34209572b5d5aaa5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+      "bytes": 20104,
+      "sha256": "d6cdb028ca57bd5bb9215a0973283b97d0b64b84bee5468d04ff8e8b1cbb4441"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+      "bytes": 64592,
+      "sha256": "5ce44b6c4b31647cb9448cf37e01303e7425f30f679b5eed967385d23e026092"
+    }
+  ]
+}

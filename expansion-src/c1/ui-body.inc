@@ -9,12 +9,12 @@
   function reviewObservation(){const s=selected();return s?JSON.parse(JSON.stringify(s)):null;}
   function selected() {return state.result?{row:state.result.data.observations[state.selected],prediction:state.result.predictions[state.selected]}:null;}
   function choose() {state.selected=Number($('#well').value)*48+Number($('#depth').value);if(state.result)renderSelected();}
-  $('#well').onchange=choose;$('#depth').oninput=choose;$('#show-truth').onchange=()=>state.result&&drawLogs();
+  $('#well').onchange=choose;$('#depth').oninput=choose;$('#show-truth').onchange=()=>state.result&&renderSelected();
   $('#logs').onclick=e=>{if(!state.result)return;const c=e.currentTarget, y=(e.clientY-c.getBoundingClientRect().top)/c.getBoundingClientRect().height*720;$('#depth').value=Math.max(0,Math.min(47,Math.round((y-78)/12)));choose();};
   function drawLogs() {
     const q=chart('logs',760,720),r=state.result,well=Number($('#well').value),start=well*48,truth=$('#show-truth').checked;
     label(q,14,27,'MD / m');label(q,170,27,'早到 RMS',undefined,'center');label(q,442,27,'VDL · 传播时间 →',undefined,'center');label(q,596,27,'模型',undefined,'center');label(q,642,27,'阈值',undefined,'center');if(truth)label(q,697,27,'参考',undefined,'center');
-    [0,0.25,0.5,0.75].forEach(a=>label(q,105+a/0.75*155,54,a.toFixed(2),undefined,'center'));
+    const rmsMax=Math.max(.75,Math.ceil(Math.max(...r.predictions.slice(start,start+48).map(p=>p.x[0]))*4)/4);[0,1,2,3].forEach(i=>label(q,105+i/3*155,54,(i/3*rmsMax).toFixed(2),undefined,'center'));
     q.strokeStyle='#d7e0dd';q.beginPath();q.moveTo(92,65);q.lineTo(92,662);q.stroke();
     for(let i=0;i<48;i++){
       const row=r.data.observations[start+i],p=r.predictions[start+i],y=78+i*12;
@@ -22,22 +22,22 @@
       row.waveform.forEach((a,t)=>{const v=Math.max(-1,Math.min(1,a)),c=Math.round(145+v*95);q.fillStyle=`rgb(${c-18},${c+6},${c+8})`;q.fillRect(325+t*2.9,y-6,3.1,12);});
       [p.label,p.baseline,truth?r.data.evaluationTruth[start+i]:null].forEach((c,j)=>{if(c===null)return;q.fillStyle=c<0?'#adb7b9':colors[c];q.fillRect(579+j*47,y-5.5,31,11);if(c<0){q.strokeStyle='#eff3f0';q.beginPath();q.moveTo(579+j*47,y+4);q.lineTo(605+j*47,y-4);q.stroke();}});
     }
-    q.beginPath();for(let i=0;i<48;i++){const x=105+Math.min(.75,r.predictions[start+i].x[0])/.75*155,y=78+i*12;i?q.lineTo(x,y):q.moveTo(x,y);}q.strokeStyle='#276f73';q.lineWidth=2.6;q.stroke();
+    q.beginPath();for(let i=0;i<48;i++){const x=105+r.predictions[start+i].x[0]/rmsMax*155,y=78+i*12;i?q.lineTo(x,y):q.moveTo(x,y);}q.strokeStyle='#276f73';q.lineWidth=2.6;q.stroke();
     const selectedY=78+(state.selected%48)*12;q.strokeStyle='#1b3d47';q.lineWidth=1.7;q.setLineDash([5,4]);q.beginPath();q.moveTo(93,selectedY);q.lineTo(725,selectedY);q.stroke();q.setLineDash([]);
-    label(q,325,684,'0');label(q,557,684,'1200 μs',undefined,'right');label(q,103,706,'单幅度曲线',undefined);label(q,325,706,'完整声波按深度排列',undefined);label(q,580,706,'三类 / 复核',undefined);
+    label(q,325,684,'0');label(q,557,684,'1200 μs',undefined,'right');label(q,103,706,'单幅度曲线',undefined);q.font='12px system-ui,"Microsoft YaHei"';label(q,325,706,'暗=负幅 · 明=正幅（颜色限幅 ±1）',undefined);label(q,580,706,'三类 / 复核',undefined);
   }
   function drawWave() {
-    const {row}=selected(),q=chart('wave',440,235),x=t=>35+t/79*375,y=a=>112-a*69;
+    const {row}=selected(),q=chart('wave',440,235),amax=Math.max(1,Math.ceil(Math.max(...row.waveform.map(Math.abs))*2)/2),x=t=>40+t/79*370,y=a=>112-a/amax*69;
     q.fillStyle='#f0e5d1';q.fillRect(x(10),35,x(36)-x(10),155);q.fillStyle='#dbece5';q.fillRect(x(42),35,x(74)-x(42),155);
-    label(q,75,19,'早到波窗');label(q,270,19,'后到波窗');q.strokeStyle='#b7c9c2';q.beginPath();q.moveTo(30,112);q.lineTo(415,112);q.stroke();
+    q.font='12px system-ui,"Microsoft YaHei"';[-1,0,1].forEach(v=>label(q,34,y(v*amax),(v*amax).toFixed(1),undefined,'right'));q.font='14px system-ui,"Microsoft YaHei"';label(q,75,19,'早到波窗');label(q,270,19,'后到波窗');q.strokeStyle='#b7c9c2';q.beginPath();q.moveTo(30,112);q.lineTo(415,112);q.stroke();
     q.strokeStyle='#276f73';q.lineWidth=2;q.beginPath();row.waveform.forEach((a,t)=>t?q.lineTo(x(t),y(a)):q.moveTo(x(t),y(a)));q.stroke();label(q,35,211,'0');label(q,407,211,'1200 μs →',undefined,'right');
   }
   function drawScatter() {
-    const {prediction:p}=selected(),q=chart('scatter',440,280),toX=v=>45+v/.7*345,toY=v=>225-v/.6*180;
+    const {prediction:p}=selected(),q=chart('scatter',440,280),xmax=Math.max(.7,Math.ceil(Math.max(p.x[0],...state.result.model.bank.map(d=>d.x[0]))*4)/4),ymax=Math.max(.6,Math.ceil(Math.max(p.x[1],...state.result.model.bank.map(d=>d.x[1]))*4)/4),toX=v=>45+v/xmax*345,toY=v=>225-v/ymax*180;
     q.strokeStyle='#afc2bf';q.beginPath();q.moveTo(45,25);q.lineTo(45,225);q.lineTo(415,225);q.stroke();
-    state.result.model.bank.filter((_,i)=>i%3===0).forEach(d=>{q.globalAlpha=.45;q.fillStyle=colors[d.y];q.beginPath();q.arc(toX(d.x[0]),toY(d.x[1]),3,0,Math.PI*2);q.fill();});q.globalAlpha=1;
+    q.font='12px system-ui,"Microsoft YaHei"';[0,1,2].forEach(i=>{label(q,toX(xmax*i/2),242,(xmax*i/2).toFixed(2),undefined,'center');label(q,40,toY(ymax*i/2),(ymax*i/2).toFixed(2),undefined,'right');});q.font='14px system-ui,"Microsoft YaHei"';state.result.model.bank.filter((_,i)=>i%3===0).forEach(d=>{q.globalAlpha=.45;q.fillStyle=colors[d.y];q.beginPath();q.arc(toX(d.x[0]),toY(d.x[1]),3,0,Math.PI*2);q.fill();});q.globalAlpha=1;
     p.neighbors.forEach(d=>{q.strokeStyle='#b4c5c2';q.beginPath();q.moveTo(toX(p.x[0]),toY(p.x[1]));q.lineTo(toX(d.x[0]),toY(d.x[1]));q.stroke();q.fillStyle=colors[d.y];q.beginPath();q.arc(toX(d.x[0]),toY(d.x[1]),5,0,Math.PI*2);q.fill();});
-    q.strokeStyle='#183b44';q.lineWidth=3;q.beginPath();q.moveTo(toX(p.x[0])-7,toY(p.x[1])-7);q.lineTo(toX(p.x[0])+7,toY(p.x[1])+7);q.moveTo(toX(p.x[0])-7,toY(p.x[1])+7);q.lineTo(toX(p.x[0])+7,toY(p.x[1])-7);q.stroke();label(q,48,18,'后到 RMS ↑');label(q,405,255,'早到 RMS →',undefined,'right');
+    q.strokeStyle='#183b44';q.lineWidth=3;q.beginPath();q.moveTo(toX(p.x[0])-7,toY(p.x[1])-7);q.lineTo(toX(p.x[0])+7,toY(p.x[1])+7);q.moveTo(toX(p.x[0])-7,toY(p.x[1])+7);q.lineTo(toX(p.x[0])+7,toY(p.x[1])-7);q.stroke();label(q,48,18,'后到 RMS ↑');label(q,405,269,'早到 RMS →',undefined,'right');
   }
   function renderSelected() {
     const {row,prediction:p}=selected();drawLogs();drawWave();drawScatter();
@@ -65,7 +65,7 @@
     const sources=[{sourceRecordId,sourceVersion,sourceType:'series_segment',content:{wellId:row.wellId,sampleId:row.sampleId,depthMD_m:row.depth,propagationTime_us:row.waveform.map((_,i)=>i/79*1200),amplitudeRelativeUnit:row.waveform},dataNature:'synthetic_teaching'}];
     const claims=[{claimId:row.sampleId+'-response',revision:state.runId,kind:'model_inference',statement:name(p.label),value:p.label,sourceRefs:[sourceRef],reviewStatus:p.label<0?'needs_review':'unreviewed',traceabilityStatus:'linked',supportStatus:'unchecked',depthScope:{from_m:row.depth,to_m:row.depth},method:{name:'four-feature weighted kNN',k:state.result.model.k,support:p.support,meanNeighborDistance:p.distance}}];
     state.reviews.forEach((r,i)=>{const id=CASE_ID+'-review-'+r.recordedAt+'-'+(i+1),immutable={...r};delete immutable.recordStatus;sources.push({sourceRecordId:id,sourceVersion:'1',sourceType:'review_note',content:immutable});claims.push({claimId:id+'-claim',revision:state.runId,kind:'reviewer_note',statement:r.opinion+'：'+r.note,sourceRefs:[{sourceRecordId:id,sourceVersion:'1',selector:{type:'whole_record_for_single_fact'}}],reviewStatus:r.recordStatus==='current'?'unreviewed':'needs_review',traceabilityStatus:r.recordStatus==='stale'?'stale':'linked',supportStatus:'unchecked'});});
-    return {schemaVersion:'1.0',sceneId:SCENE_ID,caseId:CASE_ID,caseVersion:'1.0.0',runId:state.runId,datasetId:'c1-synthetic-wells-v1',wellId:row.wellId,dataNature:'synthetic_teaching',runConfig:{seed:17000,dataVersion:'c1-waves-v1',splitDescription:'18 training wells / 6 validation wells / 4 test wells; 48 depths each',method:'four-feature weighted kNN vs validated early-RMS thresholds',parameters:params,inputRevision:state.inputRevision},sources,claims,limitations:['默认观测为教学合成声波。','响应类别与现场完整性结论分别处理；投票支持度未作现场概率校准。'],references:LESSON.sources,splits:state.result.data.splits,training:{k:state.result.model.k,mu:state.result.model.mu,sd:state.result.model.sd,baseline:state.result.model.baseline,validationScores:state.result.model.validationScores},metrics:state.result.metrics,predictions:state.result.predictions.map(p=>({sampleId:p.sampleId,label:p.label,baseline:p.baseline,support:p.support,distance:p.distance,features:p.x})),selected:{observation:row,prediction:p},reviewHistory:state.reviews};
+    return {schemaVersion:'1.0',sceneId:SCENE_ID,caseId:CASE_ID,caseVersion:'1.0.2',runId:state.runId,datasetId:'c1-synthetic-wells-v1',wellId:row.wellId,dataNature:'synthetic_teaching',runConfig:{seed:17000,dataVersion:'c1-waves-v1',splitDescription:'18 training wells / 6 validation wells / 4 test wells; 48 depths each',method:'four-feature weighted kNN vs validated early-RMS thresholds',parameters:params,inputRevision:state.inputRevision},sources,claims,limitations:['默认观测为教学合成声波。','响应类别与现场完整性结论分别处理；投票支持度未作现场概率校准。'],references:LESSON.sources,splits:state.result.data.splits,training:{k:state.result.model.k,mu:state.result.model.mu,sd:state.result.model.sd,baseline:state.result.model.baseline,validationScores:state.result.model.validationScores},metrics:state.result.metrics,predictions:state.result.predictions.map(p=>({sampleId:p.sampleId,label:p.label,baseline:p.baseline,support:p.support,distance:p.distance,features:p.x})),selected:{observation:row,prediction:p},reviewHistory:state.reviews};
   }
   outputs();['logs','wave','scatter'].forEach((id,i)=>{const q=chart(id,[760,440,440][i],[720,235,280][i]);label(q,25,45,'运行计算后显示当前声学证据');});
 })(globalThis);

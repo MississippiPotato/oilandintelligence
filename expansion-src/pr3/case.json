@@ -2,7 +2,7 @@
   "id": "s17x-pr3-water-allocation",
   "sceneId": "pr3",
   "title": "智能注水调配：有限水量怎样分给三层？",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "methods": [
     "opt"
@@ -28,7 +28,7 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "注入井、储层层段与采出井怎样联系？",
-          "html": "<p>水从注入井进入储层后，在孔隙中推动和补充地层流体，最终影响相邻采出井的产出。不同层的厚度、渗透性和连通性不同，吸水能力与有效驱替也不同。向高吸水层继续加水未必带来同等产油增量，还可能出现注入分布失衡。这里把地下复杂联系简化为 A、B、C 三层各自的响应，先理解“分多少”和“得到多少”之间的关系。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"分层联系示意是问题结构；演示中的收益来自下方拟合曲线，而不是这张示意图。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"30\" font-size=\"17\">同一注入总量，经过三个层段形成不同响应</text><rect x=\"30\" y=\"55\" width=\"100\" height=\"135\" rx=\"8\" fill=\"#dce7ef\"/><text x=\"42\" y=\"124\" font-size=\"17\">注入井</text><rect x=\"510\" y=\"55\" width=\"100\" height=\"135\" rx=\"8\" fill=\"#ede8d6\"/><text x=\"522\" y=\"124\" font-size=\"17\">采出井</text><rect x=\"180\" y=\"54\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"180\" y=\"105\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#ecefd7\"/><rect x=\"180\" y=\"156\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#e4e6f1\"/><text x=\"195\" y=\"78\" font-size=\"14\">A：早期响应快，后期趋缓</text><text x=\"195\" y=\"129\" font-size=\"14\">B：中等边际响应</text><text x=\"195\" y=\"180\" font-size=\"14\">C：早期弱，后期仍有空间</text><path d=\"M135 71H175M135 122H175M135 173H175M465 71H505M465 122H505M465 173H505\" fill=\"none\" stroke=\"#739e98\" stroke-width=\"2\"/><text x=\"110\" y=\"220\" font-size=\"16\">总注入量 = A 层配额 + B 层配额 + C 层配额</text></g></svg><figcaption>分层联系示意是问题结构；演示中的收益来自下方拟合曲线，而不是这张示意图。</figcaption></figure>"
+          "html": "<p><b>先认清本例：</b>观测单位是某层某批次的一次“注水量→响应指数”试验。目标是把同一日的有限注水量分给A/B/C三层。智能代理学出各层响应曲线，约束搜索再比较每一份水放在哪里更有价值。</p><p>水从注入井进入储层后，在孔隙中推动和补充地层流体，最终影响相邻采出井的产出。不同层的厚度、渗透性和连通性不同，吸水能力与有效驱替也不同。向高吸水层继续加水未必带来同等产油增量，还可能出现注入分布失衡。这里把地下复杂联系简化为 A、B、C 三层各自的响应，先理解“分多少”和“得到多少”之间的关系。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"分层联系示意是问题结构；演示中的收益来自下方拟合曲线，而不是这张示意图。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"30\" font-size=\"17\">同一注入总量，经过三个层段形成不同响应</text><rect x=\"30\" y=\"55\" width=\"100\" height=\"135\" rx=\"8\" fill=\"#dce7ef\"/><text x=\"42\" y=\"124\" font-size=\"17\">注入井</text><rect x=\"510\" y=\"55\" width=\"100\" height=\"135\" rx=\"8\" fill=\"#ede8d6\"/><text x=\"522\" y=\"124\" font-size=\"17\">采出井</text><rect x=\"180\" y=\"54\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"180\" y=\"105\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#ecefd7\"/><rect x=\"180\" y=\"156\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#e4e6f1\"/><text x=\"195\" y=\"78\" font-size=\"14\">A：早期响应快，后期趋缓</text><text x=\"195\" y=\"129\" font-size=\"14\">B：中等边际响应</text><text x=\"195\" y=\"180\" font-size=\"14\">C：早期弱，后期仍有空间</text><path d=\"M135 71H175M135 122H175M135 173H175M465 71H505M465 122H505M465 173H505\" fill=\"none\" stroke=\"#739e98\" stroke-width=\"2\"/><text x=\"110\" y=\"220\" font-size=\"16\">总注入量 = A 层配额 + B 层配额 + C 层配额</text></g></svg><figcaption>分层联系示意是问题结构；演示中的收益来自下方拟合曲线，而不是这张示意图。</figcaption></figure>"
         },
         {
           "no": 2,
@@ -47,6 +47,12 @@
           "en": "DATA & SOURCES",
           "title": "数据、评价与概念来源",
           "html": "<p>专业概念参考以下行业或研究机构的一手资料；本例数据为离线合成教学数据，不复制来源网站图像。</p><ul><li><a href=\"https://glossary.slb.com/en/terms/w/waterflood\" target=\"_blank\" rel=\"noopener\">SLB：waterflood</a></li><li><a href=\"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-reservoir-engineering\" target=\"_blank\" rel=\"noopener\">SLB：储层工程与注采剖面</a></li></ul>"
+        },
+        {
+          "no": 5,
+          "en": "TRY & EXPLAIN",
+          "title": "带着一个问题运行，再用图解释",
+          "html": "<p>默认总量180 m³/d运行，随后把A层上限从100降到20重算。新候选仍需守恒；均分不可行时增益应显示不适用。再把三层上限都设20、总量仍180，观察明确无解。</p><p>先说出你预期哪一条曲线或哪个计数会改变，再运行核对。输入变化后旧图仍表示上次结果，只有重算后才能导出当前结果。</p>"
         }
       ]
     },
@@ -76,33 +82,33 @@
           "do": "各层按完整试验批次划分训练和评价，输入是该层注入量，目标是响应指数。",
           "effect": "三层各有独立拟合与测试样本。",
           "trap": "层间响应关系在本例中固定，真实变化需要重新识别。",
-          "role": "环节 1"
+          "role": "图 S1"
         },
         {
           "name": "拟合三条响应曲线",
           "do": "用归一化注入量及平方项分别拟合二次岭回归，随后冻结系数。",
           "effect": "可见每层响应和边际变化。",
           "trap": "测试测量值不参与候选搜索，只用于代理误差评价。",
-          "role": "环节 2"
+          "role": "图 S2"
         },
         {
           "name": "守恒枚举与约束筛除",
           "do": "以 5 m³/d 递增 A、B 配额，由总量确定 C 配额；检查每层上限。",
           "effect": "全部组合与可行率，或者明确的无解。",
           "trap": "不把总量少分或超上限的组合称作优化方案。",
-          "role": "环节 3"
+          "role": "图 S3"
         },
         {
           "name": "比较均分并记录",
           "do": "只对可行组合计算代理响应之和；均分可行时才报告相对增益，另给留出 MAE。",
           "effect": "候选配额、排序与基线可行性。",
           "trap": "三层模型为教学响应，不包含真实压力场与井间动态。",
-          "role": "环节 4"
+          "role": "图 S4"
         }
       ],
       "metrics": {
         "title": "逐步骤输入与输出",
-        "html": "<figure><h3>整理分层响应试验</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"分层试验记录到三层训练数据\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">分层试验记录</text><text x=\"228\" y=\"56\" font-size=\"15\">整批次留出</text><text x=\"437\" y=\"56\" font-size=\"15\">三层训练数据</text></g></svg><figcaption>三层各有独立拟合与测试样本。</figcaption></figure><figure><h3>拟合三条响应曲线</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"注入量与响应到三条代理曲线\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">注入量与响应</text><text x=\"228\" y=\"56\" font-size=\"15\">分层二次回归</text><text x=\"437\" y=\"56\" font-size=\"15\">三条代理曲线</text></g></svg><figcaption>可见每层响应和边际变化。</figcaption></figure><figure><h3>守恒枚举与约束筛除</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"总量 + 层上限到可行组合集合\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">总量 + 层上限</text><text x=\"228\" y=\"56\" font-size=\"15\">守恒候选枚举</text><text x=\"437\" y=\"56\" font-size=\"15\">可行组合集合</text></g></svg><figcaption>全部组合与可行率，或者明确的无解。</figcaption></figure><figure><h3>比较均分并记录</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结可行候选到配额 / 基线对照\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结可行候选</text><text x=\"228\" y=\"56\" font-size=\"15\">代理目标排序</text><text x=\"437\" y=\"56\" font-size=\"15\">配额 / 基线对照</text></g></svg><figcaption>候选配额、排序与基线可行性。</figcaption></figure>"
+        "html": "<figure><h3>图 S1｜一行是某层某批的一次响应试验</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S1｜一行是某层某批的一次响应试验\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><text x=\"22.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">层</text><text x=\"192.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">训练批次/条数</text><text x=\"362.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">测试批次/条数</text><text x=\"532.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">单位</text><rect x=\"15\" y=\"56\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">A</text><text x=\"192.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">4 / 80</text><text x=\"362.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">2 / 40</text><text x=\"532.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">m³/d → 指数</text><rect x=\"15\" y=\"99\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#e8eee6\"/><text x=\"22.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">B</text><text x=\"192.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">4 / 80</text><text x=\"362.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">2 / 40</text><text x=\"532.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">m³/d → 指数</text><rect x=\"15\" y=\"142\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">C</text><text x=\"192.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">4 / 80</text><text x=\"362.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">2 / 40</text><text x=\"532.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">m³/d → 指数</text></g></svg></div><figcaption>同批不跨集合；响应指数只用于教学优化，不能直接换成现场增产。</figcaption></figure><figure><h3>图 S2｜相同增量水，在曲线不同处价值不同</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S2｜相同增量水，在曲线不同处价值不同\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><path d=\"M65 225L670 225\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><path d=\"M65 60L65 225\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><text x=\"65\" y=\"43\" font-size=\"17\" fill=\"#284b55\">累计响应指数（概念坐标）</text><text x=\"365\" y=\"264\" font-size=\"17\" fill=\"#284b55\">单层注水 / m³/d →（概念坐标）</text><polyline points=\"65,225 239.0,150.0 413.0,112.5 645,105.0\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><text x=\"390\" y=\"66\" font-size=\"16\" fill=\"#237d73\">A：初期陡、后期平</text><polyline points=\"65,225 239.0,192.0 413.0,160.5 645,130.5\" fill=\"none\" stroke=\"#6479b4\" stroke-width=\"3\"/><text x=\"390\" y=\"91\" font-size=\"16\" fill=\"#6479b4\">C：初期缓、仍有增量空间</text></g></svg></div><figcaption>边际响应是曲线的斜率：增加少量注水带来的响应增量。演示画出三层实际拟合曲线。</figcaption></figure><figure><h3>图 S3｜两个配额决定第三个；总量不能凭空增减</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S3｜两个配额决定第三个；总量不能凭空增减\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><path d=\"M70 225L340 225\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><path d=\"M70 225L70 50\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><path d=\"M70 50L340 225\" stroke=\"#819b9c\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"\"/><polygon points=\"70,125 180,125 205,145 205,225 70,225\" fill=\"#d9e8dd\"/><text x=\"355\" y=\"87\" font-size=\"17\" fill=\"#284b55\">A + B + C = 总量</text><text x=\"355\" y=\"129\" font-size=\"17\" fill=\"#284b55\">C = 总量 − A − B</text><text x=\"355\" y=\"171\" font-size=\"17\" fill=\"#284b55\">各层配额 ≤ 本层上限</text><text x=\"355\" y=\"213\" font-size=\"17\" fill=\"#284b55\">枚举步长：5 m³/d</text><text x=\"75\" y=\"259\" font-size=\"17\" fill=\"#284b55\">A 层配额 →</text><text x=\"82\" y=\"53\" font-size=\"17\" fill=\"#284b55\">B 层配额 ↑</text></g></svg></div><figcaption>三角形示意 A、B 非负且 A+B≤总量；绿色只示意一部分可行域，实际筛除三个层上限后以演示散点为准。</figcaption></figure><figure><h3>图 S4｜先核对守恒，再谈增益</h3><div class=\"teaching-figure\" tabindex=\"0\" aria-label=\"横向滚动阅读图解\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 290\" role=\"img\" aria-label=\"图 S4｜先核对守恒，再谈增益\"><rect width=\"720\" height=\"290\" rx=\"12\" fill=\"#f1f6f3\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\"><text x=\"22.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">方案</text><text x=\"192.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">A</text><text x=\"362.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">B</text><text x=\"532.0\" y=\"40\" font-size=\"16\" fill=\"#284b55\">C</text><rect x=\"15\" y=\"56\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">讲解均分</text><text x=\"192.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">60</text><text x=\"362.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">60</text><text x=\"532.0\" y=\"81\" font-size=\"16\" fill=\"#284b55\">60</text><rect x=\"15\" y=\"99\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#e8eee6\"/><text x=\"22.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">总量核对</text><text x=\"192.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">60+60+60</text><text x=\"362.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">=</text><text x=\"532.0\" y=\"124\" font-size=\"16\" fill=\"#284b55\">180 m³/d</text><rect x=\"15\" y=\"142\" width=\"690\" height=\"37\" rx=\"5\" fill=\"#dcebe5\"/><text x=\"22.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">若 A 上限为20</text><text x=\"192.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">均分不可行</text><text x=\"362.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">不报告相对增益</text><text x=\"532.0\" y=\"167\" font-size=\"16\" fill=\"#284b55\">调整后重算</text></g></svg></div><figcaption>当前候选表显示所有前排方案的完整 A/B/C 配额；鼠标悬停散点可查看同一个 A 配额下 B/C 的不同分法。</figcaption></figure>"
       },
       "fails": [
         {
@@ -116,7 +122,7 @@
       "html": "demo/index.html",
       "js": "demo/demo.js",
       "label": "可运行示范",
-      "intro": "改变条件后运行，查看真实计算的曲线、对照与评价表。",
+      "intro": "默认总量180 m³/d运行，随后把A层上限从100降到20重算。新候选仍需守恒；均分不可行时增益应显示不适用。再把三层上限都设20、总量仍180，观察明确无解。",
       "height": 1250
     }
   }

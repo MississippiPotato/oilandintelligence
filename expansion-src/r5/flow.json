@@ -1,0 +1,42 @@
+{
+  "title": "等化验时估计馏分密度",
+  "gate": [
+    "过程滞后与发布延迟分开",
+    "预测只读当时可见信息"
+  ],
+  "input": {
+    "title": "过程与样品",
+    "detail": "温压流量回流比",
+    "step": 0
+  },
+  "prepare": {
+    "title": "时间对齐",
+    "detail": "三分钟物料滞后配对",
+    "step": 0
+  },
+  "model": {
+    "title": "岭回归标定",
+    "detail": "训练定尺度验证选参数",
+    "step": 2
+  },
+  "baseline": {
+    "title": "两种基线",
+    "detail": "已到化验保持与历史均值",
+    "step": 3
+  },
+  "review": {
+    "title": "时效复核",
+    "detail": "结果发布时间不晚于现在",
+    "step": 3
+  },
+  "output": {
+    "title": "在线估计",
+    "detail": "密度序列和超范围标志",
+    "step": 3
+  },
+  "compare": {
+    "title": "独立评价",
+    "detail": "五批一百八十点误差",
+    "step": 4
+  }
+}

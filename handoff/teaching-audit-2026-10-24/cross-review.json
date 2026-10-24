@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "1.0",
+  "reviewDate": "2026-10-24",
+  "reviewRole": "independent_cross_case_teaching_review",
+  "scope": {
+    "catalog": 61,
+    "newImplementationPlan": 44,
+    "deepComparedScenes": [
+      "pr2",
+      "pr4",
+      "d2",
+      "wo4",
+      "r3",
+      "e2",
+      "e3",
+      "e4",
+      "wo3",
+      "t5",
+      "g3",
+      "s2",
+      "c2",
+      "co3"
+    ],
+    "claimBoundary": "本记录是14个代表场景的横向教学审阅，不能单独推出61例全部通过。其余逐例结论由各组审阅记录承担。"
+  },
+  "method": {
+    "readTeacherExamples": [
+      "石油勘探开发智能化案例集/firstbreak-pick-case/case.json",
+      "石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js"
+    ],
+    "readChecklist": "s17_development_kit/06_兼容与验收清单.txt",
+    "readPlan": "handoff/full-coverage-2026-10-24/implementation-plan.json",
+    "sourceInspection": "逐个阅读专业说明、实际SVG/Canvas绘图计算、前端参数事件和engine输出关系。判断是否能解释专业任务、测量量、算法动作及边界。",
+    "existingImagesActuallyViewed": [
+      "output/playwright/teacher-text-and-figure-reference.png",
+      "output/playwright/full-coverage-2026-10-24/c2-background.png",
+      "output/playwright/full-coverage-2026-10-24/d2-lab.png"
+    ],
+    "imageLimit": "仅查看本地已有图片的像素。未亲自生成这些截图，未验证其来源时点与当前源码是否完全对应。",
+    "browserOperationPerformed": false,
+    "buildPerformed": false,
+    "sourceEditedByReviewer": false,
+    "excludedEvidence": [
+      "旧704项检查",
+      "SVG数量",
+      "文字数量",
+      "代码能运行替代教学判断"
+    ]
+  },
+  "findings": [
+    {
+      "id": "cross-pr2-01",
+      "case": "pr2",
+      "file": "expansion-src/pr2/engine.js; expansion-src/pr2/app.js",
+      "severity": "P2",
+      "evidence": "原始图标题声称截止日右侧是真正未来，但原始plot只有四条series，没有cut线、未来区域或第7日干预标记；infer确实把预测写入history，却只在协议文字说明。",
+      "readerMisunderstanding": "不能从图直接核对哪些点参与训练，也难以理解多步预测为什么不偷读未来lag。",
+      "actionableSuggestion": "画训练截止与未来区域、第7日干预；展示lag1/2/7数值和来自历史观测还是先前预测。",
+      "owner": "audit_perforation_production",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "最终复读engine与app：首预测日cut及干预cut+6标线、线型说明、逐步lag1/2/7的值/日期/历史观测或先前预测来源表已实际接入。infer依次读取h再push当前预测，未来观测只作事后评价。本项是可读性补强，原递归算法并未偷读未来。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-pr4-01",
+      "case": "pr4",
+      "file": "expansion-src/pr4/engine.js; expansion-src/pr4/app.js",
+      "severity": "P1",
+      "evidence": "原engine把连续3个超阈点的第1点eventStart称首次持续告警；该时点实际还不能知道未来两点。图未标65min漂移、75min评价边界或持续报警。",
+      "readerMisunderstanding": "会把事后找到的连续段起点当作实时可确认告警，提前量少算2min；也无法从图核对误报与事件定义。",
+      "actionableSuggestion": "分开连续段起点与第3点确认时刻；标65/75参考线并画持续告警条，分钟超阈指标与持续事件指标分开。",
+      "owner": "audit_perforation_production",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "最终复读：eventStart仍保留连续段起点，confirmTime=eventStart+2；confirmed用i及前2点因果形成。页面分别显示起点和确认，默认责任组报告79/81min；65/75参考线及0/1逐点超阈/持续确认图已接入；正常超阈段与正常持续告警段分列。此处已修正真实的实时确认语义问题，横审未另行执行默认参数。",
+      "findingKind": "confirmed_alarm_timing_semantics_defect",
+      "confirmedFunctionalBug": true
+    },
+    {
+      "id": "cross-d2-01",
+      "case": "d2",
+      "file": "expansion-src/d2/app.js; expansion-src/d2/engine.js",
+      "severity": "P2",
+      "evidence": "既存d2-lab图能看125–165注入带与阈值，但未画145min教学事件与首次告警点；指标显示相对145事件提前6min。",
+      "readerMisunderstanding": "读者只能相信数值，不能在同一时间轴复核提前量的两个端点。",
+      "actionableSuggestion": "用markers标145min事件及首次有效告警，图例说明注入带与事件定义不同，可用小箭头标时间差。",
+      "owner": "audit_drilling_welllog",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "已独立复读engine annotations与span：145min事件、首次告警、事件−告警括线，以及app虚线文字渲染器均接入；固定压力基线与0附加压负对照已补。没有新版浏览器验证。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-wo4-01",
+      "case": "wo4",
+      "file": "expansion-src/wo4/app.js",
+      "severity": "P2",
+      "evidence": "原warning图固定y=270-(v-60)*2.7，无钩载纵轴刻度，速度/漂移升高可越出画布；阶段、异常65–79和残差阈值不在图上。",
+      "readerMisunderstanding": "难以分辨正常起管增载与异常附加载荷，也不能读出报警阈值的含义。",
+      "actionableSuggestion": "自适应钩载轴及刻度，增加阶段/异常带和残差阈值图。",
+      "owner": "audit_workover_eor",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "最终复读app与engine：动态钩载/残差范围，108kN基线、35/96阶段带、65–79事件阴影、阈值及持续3点报警条齐全；stage生成t<35或t>95为0，与35/96边界一致。alarm读取当前及前2残差，不回看未来。未验新版浏览器布局。",
+      "findingKind": "source_identified_axis_range_risk_and_readability",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-e2-01",
+      "case": "e2",
+      "file": "expansion-src/e2/app.js",
+      "severity": "P2",
+      "evidence": "原椭圆只有每像素约0.71m文字，无x/y数值刻度，难以读半长和半高。",
+      "readerMisunderstanding": "容易把轮廓外观作为任意插画，无法连接几何参数、物理距离与面积。",
+      "actionableSuggestion": "横纵同尺、距离与相对高度刻度，明确当前L/H及参考轮廓。",
+      "owner": "audit_workover_eor",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "复读app现有extX/extY、同一scale用于rx/ry、xy刻度及L/H数值；仅源码确认，未验新版截图。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-e3-01",
+      "case": "e3",
+      "file": "expansion-src/e3/app.js",
+      "severity": "P2",
+      "evidence": "原三角图只有A/B/C顶点，无比例刻度；性能颜色每次按候选min/max重缩放，盐度改变后颜色不能横向比较。",
+      "readerMisunderstanding": "不能从点位置读配比，可能把不同环境下相同深色误读为同一性能。",
+      "actionableSuggestion": "比例网格、固定数值色标及候选点比例/性能/成本读数。",
+      "owner": "audit_workover_eor",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "复读app已有20%网格、100%顶点、固定0–80色标、data-mixture点选和键盘读取。未实际操作浏览器。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false,
+      "nonIssueClarification": "原xy=[70+b*540+a*270,300-a*250]中a=1在顶部A，b=1在右侧B，a=b=0在左侧C，三个顶点原本正确。问题仅为比例/数值图例可读性及跨盐度颜色可比性，不计顶点方向bug。"
+    },
+    {
+      "id": "cross-e4-01",
+      "case": "e4",
+      "file": "expansion-src/e4/app.js",
+      "severity": "P2",
+      "evidence": "原J散点无纵轴刻度/单位，8个焖井天数共用同色，固定策略无图上标记；时间带只写总阶段长度。",
+      "readerMisunderstanding": "无法核对最佳方案为何胜出、不同焖井条件如何影响J，也难看周期的时间成本。",
+      "actionableSuggestion": "标J的t油单位和刻度、固定策略、周期边界天数，并区分焖井曲线或给可点选条件。",
+      "owner": "audit_workover_eor",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "最终复读：J刻度/t油单位、可行固定方案方块、周期边界，已对每个soak分别连候选线，并突出最佳焖井天数轨迹且写明该天数。仍是90天累计产油代理与固定注汽200t/d时间构造，不声称逐日产油仿真；这是教学编码补强。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-wo3-01",
+      "case": "wo3",
+      "file": "expansion-src/wo3/app.js",
+      "severity": "P2",
+      "evidence": "原展开图只写0→360和深度向下，无数值色标/深度刻度；颜色函数对(v+2)/8截断，较大偏心下无法区分幅度。",
+      "readerMisunderstanding": "把颜色当作任意热图，无法定位或定量复核缺陷与偏心背景。",
+      "actionableSuggestion": "两图同一固定有单位色标、深度/方位刻度、点击或键盘读格数值。",
+      "owner": "audit_workover_eor",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "复读app已有−8至14mm色标、相对深度0–3.5m和0/90/180/270/360°，格子可读。保留这是内半径偏差、不是壁厚。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-t5-01",
+      "case": "t5",
+      "file": "expansion-src/t5/app.js",
+      "severity": "P2",
+      "evidence": "原通用chart只有纵轴两端数值，像素行灰度与多帧结果没有x刻度；曾发现内嵌HTML疑似多余转义。",
+      "readerMisunderstanding": "无法定位梯度对应的像素行或误差对应的帧；如HTML转义残留，SVG属性会失效。",
+      "actionableSuggestion": "各图x/y数值刻度、单位与线型图例；核对解析后的HTML不含字面反斜杠引号；给雷达漂移单独实验。",
+      "owner": "audit_transport_refining",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "已独立复读app与engine：标准HTML转义、x/y数值刻度、单位线型、edgeRow/boundaryStrength显示与像素横线已接入；尚未浏览器操作。",
+      "findingKind": "readability_improvement_with_unconfirmed_escaping_hypothesis",
+      "confirmedFunctionalBug": false,
+      "withdrawnHypothesis": "初读源中的过转义仅为疑点，未亲自复现浏览器渲染故障，因此不把它列为已经证实的功能bug；最新源的标准HTML转义已核对。"
+    },
+    {
+      "id": "cross-g3-01",
+      "case": "g3",
+      "file": "expansion-src/g3/engine.js; expansion-src/g3/case.json",
+      "severity": "P2",
+      "evidence": "predict实际是9个固定模板像素距离；parseLegend仅对手工文本分code/description，没有整图定位、OCR、矢量线条关联，图例改变不影响预测。",
+      "readerMisunderstanding": "若沿用整图提取/自动关联描述，会把相互独立的模板识别与文本分字段误读为完整图件结构化系统。",
+      "actionableSuggestion": "按真实能力命名；展示三原型和不做OCR/不自动关联说明；加入只改图例预测不变的对照任务。",
+      "owner": "audit_geology_seismic",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "已独立复读case.json：16×16原型、第三类非OCR、手工图例分字段、未自动关联及只改图例预测不变实验均已写明。界面图块与文字未自动关联仍为真实能力边界。",
+      "findingKind": "capability_scope_clarification",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-c2-01",
+      "case": "c2",
+      "file": "expansion-src/c2/case.json",
+      "severity": "P2",
+      "evidence": "原概念图讲窄侧与流动方向，却画同心对称环空和没有箭头头的直线；已有c2背景截图也显示此问题。",
+      "readerMisunderstanding": "不能直观看出偏心如何产生宽/窄侧，文字说箭头但图中方向不明确。",
+      "actionableSuggestion": "偏移套管、标宽窄侧、补向下/向上箭头，说明偏心是无量纲几何比例。",
+      "owner": "audit_cement_completion",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "复读case.json已移动套管、标宽/窄侧、加入三组箭头头及e=圆心偏移/半径差说明。新版视觉布局未验。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-co3-01",
+      "case": "co3",
+      "file": "expansion-src/co3/engine.js",
+      "severity": "P2",
+      "evidence": "原轴向/环向/等效应力图固定−250至600MPa；force700、temperature150、pressure4、anchor1时底部轴向响应可低于−250，负号分量可能越出图域。",
+      "readerMisunderstanding": "无法完整观察约束热压应力，可能误以为负应力不发生或被截断为边界。",
+      "actionableSuggestion": "范围包含当前四类分量与300MPa参考，或显式扩展并标越界。",
+      "owner": "audit_cement_completion",
+      "repairStatus": "source_verified_fixed",
+      "repaired": true,
+      "verification": "复读render现对四个分量flatMap后算ymin/ymax，再共用sy；横向展开深度已明确标注，不作方向硬错误。",
+      "findingKind": "source_identified_axis_range_risk_and_readability",
+      "confirmedFunctionalBug": false
+    },
+    {
+      "id": "cross-r3-01",
+      "case": "r3",
+      "file": "expansion-src/r3/app.js; expansion-src/r3/engine.js",
+      "severity": "P3",
+      "evidence": "现有RMS/分数时间图未直接标40h退化开始、43h评价界线和首次持续提醒；summary有首次提醒。",
+      "readerMisunderstanding": "对首次提醒和事后退化定义的时间关系不够直接。",
+      "actionableSuggestion": "补注入与评价界线、首次提醒标记；保留外推分数8不等于剩余寿命的说明。",
+      "owner": "audit_transport_refining",
+      "repairStatus": "source_verified_improvement",
+      "repaired": true,
+      "verification": "最终复读plot：退化速度>0时标43h评价退化界线，并标firstAlarm持续提醒；图例/DFT幅值轴与512Hz采样、4Hz间隔说明已补。40h开始连续注入没有单独画线，属可选增强，现有43h标签和首次提醒足以明确评价关系；本项不是原有算法错误。",
+      "findingKind": "teaching_readability_improvement",
+      "confirmedFunctionalBug": false
+    }
+  ],
+  "positiveComparisons": [
+    {
+      "case": "s2",
+      "finding": "24×24振幅小窗→从真实矩阵计算RMS/梯度属性→可点选属性散点和混淆矩阵形成可解释链；有窗内归一化色标及跨窗RMS区别说明。不是把场景名贴到通用预测散点上。",
+      "source": "expansion-src/s2/app.js; expansion-src/s2/engine.js"
+    },
+    {
+      "case": "d2",
+      "finding": "泵压与正常关系并列，再画瞬时/5窗平均残差及MPa阈值，能解释工况变化与异常偏离；已把正常段和先兆段分母区分。",
+      "source": "expansion-src/d2/app.js; output/playwright/full-coverage-2026-10-24/d2-lab.png"
+    },
+    {
+      "case": "r3",
+      "finding": "RMS/温度/峭度的负荷正常关系、96h趋势、选小时真实DFT计算与32/100Hz概念图相接；明确不把频谱峰命名成唯一故障，也不把分数外推当寿命。",
+      "source": "expansion-src/r3/app.js; expansion-src/r3/engine.js"
+    },
+    {
+      "case": "c2",
+      "finding": "候选图使用排量-压力坐标、效率颜色、压力上限、推荐点、选点条件和偏心切片，专业概念直接控制可行域，优于仅画参考值-预测值散点。",
+      "source": "expansion-src/c2/engine.js"
+    },
+    {
+      "case": "co3",
+      "finding": "学习两个带符号应力分量后显式von Mises合成，沿深度比较分量、基线和利用比，数据量与300MPa教学限制在页可见。",
+      "source": "expansion-src/co3/engine.js"
+    },
+    {
+      "case": "e2/e3/e4/wo3",
+      "finding": "分别用了几何轮廓、配方单纯形、吞吐阶段时间带/目标图、深度-方位展开图。存在各自专业编码，并非同一张图改标题；本次集中修复可读刻度、图例和边界。",
+      "source": "expansion-src/e2/app.js; expansion-src/e3/app.js; expansion-src/e4/app.js; expansion-src/wo3/app.js"
+    }
+  ],
+  "remainingVerification": [
+    "源修复后由root执行build与浏览器抽样，重点检查pr2/pr4/wo4/e4/r3标记重叠、图例和窄屏。",
+    "横审没有运行demo，不把全部13条源层解决计为浏览器交互通过。",
+    "保留真实能力边界：g3为模板分类+手工图例分字段，无整图/OCR/自动关联；e2为固定中心椭圆非3D裂缝；e4为90天累计产油代理而非逐日产油；r3频谱由RMS残差构造、不是独立故障验证，分数8外推不是剩余寿命。",
+    "e3顶点与s3振幅正负方向原本正确，不计入缺陷或修复数量。"
+  ],
+  "finalSourceReview": {
+    "status": "all_13_entries_resolved_at_source_review_level",
+    "pendingOrPartialEntries": 0,
+    "browserVerifiedByThisReviewer": false,
+    "actualFunctionalBugConfirmed": "pr4连续3点的段起点与可确认时刻曾混淆；现已分开",
+    "readabilityAndScopeChanges": "其余主要是坐标/参考点/图例/操作解释/能力范围补强，不应统称已经复现的程序bug"
+  },
+  "nonIssuesAndWithdrawnHypotheses": [
+    {
+      "case": "e3",
+      "claim": "配方三角图顶点反了",
+      "status": "rejected_not_a_bug",
+      "evidence": "原a=1映射顶部A、b=1映射右B、c=1映射左C，数学与标注一致；横审未登记顶点错误。",
+      "whatChanged": "增加比例网格、固定色标和候选读数，属于可读性补强。"
+    },
+    {
+      "case": "s3",
+      "claim": "相对振幅正负轴颠倒",
+      "status": "rejected_not_a_bug",
+      "evidence": "复读axes中v=0对应底部−amp，v=1对应顶部+amp；line中正v使py减小，正振幅向上。两者一致。",
+      "whatChanged": "不把原有正负方向记为bug；本次仅补核对，不将s3增计为14代表的完整深审。"
+    },
+    {
+      "case": "t5",
+      "claim": "多余HTML转义必然造成SVG坏图",
+      "status": "unconfirmed_initial_hypothesis_not_counted_as_confirmed_bug",
+      "evidence": "初读疑似过转义但没有浏览器复现记录；现源标准引号已独立复读确认。",
+      "whatChanged": "保留疑点来历与修复核查，避免把推测写成已证实渲染失败。"
+    }
+  ]
+}

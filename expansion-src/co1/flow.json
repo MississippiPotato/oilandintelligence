@@ -1,0 +1,42 @@
+{
+  "title": "完井方案如何兼顾多种需求？",
+  "input": {
+    "title": "六项可见井况",
+    "detail": "指数渗透率和温度",
+    "step": 0
+  },
+  "prepare": {
+    "title": "整井划分样本",
+    "detail": "每井四方案整体分组",
+    "step": 1
+  },
+  "model": {
+    "title": "近邻响应回归",
+    "detail": "验证选择历史邻居数",
+    "step": 2
+  },
+  "baseline": {
+    "title": "单条件经验法",
+    "detail": "同样接受硬条件检查",
+    "step": 3
+  },
+  "review": {
+    "title": "逐条核查条件",
+    "detail": "预算防砂隔离温度",
+    "step": 3
+  },
+  "output": {
+    "title": "可行方案排序",
+    "detail": "综合响应减费用罚项",
+    "step": 4
+  },
+  "compare": {
+    "title": "覆盖与机会损失",
+    "detail": "三十二井同口径评价",
+    "step": 4
+  },
+  "gate": [
+    "所有条件满足",
+    "没有可行候选吗"
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:04:37.089Z",
+  "case": {
+    "scene": "pr2",
+    "id": "s17x-pr2-production-forecast",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-pr2-production-forecast"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "future intervention requires new calculation",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "unknown intervention does not change recursive prediction or lag trace",
+      "passed": true
+    },
+    {
+      "name": "actual recursive trace has 21 forecast steps",
+      "passed": true
+    },
+    {
+      "name": "actual current-result JSON downloaded",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "traceExample": [
+    {
+      "day": 110,
+      "step": 1,
+      "lags": [
+        {
+          "lag": 1,
+          "day": 109,
+          "value": 63.67870704152478,
+          "source": "历史观测"
+        },
+        {
+          "lag": 2,
+          "day": 108,
+          "value": 62.706788040045375,
+          "source": "历史观测"
+        },
+        {
+          "lag": 7,
+          "day": 103,
+          "value": 62.79973367573557,
+          "source": "历史观测"
+        }
+      ],
+      "prediction": 62.58478455103787
+    },
+    {
+      "day": 111,
+      "step": 2,
+      "lags": [
+        {
+          "lag": 1,
+          "day": 110,
+          "value": 62.58478455103787,
+          "source": "先前预测"
+        },
+        {
+          "lag": 2,
+          "day": 109,
+          "value": 63.67870704152478,
+          "source": "历史观测"
+        },
+        {
+          "lag": 7,
+          "day": 104,
+          "value": 62.19921885932429,
+          "source": "历史观测"
+        }
+      ],
+      "prediction": 62.45718804114498
+    }
+  ],
+  "passed": 11,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/case.json",
+      "bytes": 23510,
+      "sha256": "8cdd9bebe9945ff10bc71ed64a988c8311da673ed5b38fd901f70f1ae37e961a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/README.txt",
+      "bytes": 1016,
+      "sha256": "93829f34cf7083d81192abcc8f3a346bcb70c8788d72f4651ada8b0cd1cbefc9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html",
+      "bytes": 16964,
+      "sha256": "864e0c9c61e42957c45d4717bc0748e47e7372de0e617d722fab926b567d15fe"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css",
+      "bytes": 21397,
+      "sha256": "e8de29d16055ef972de310e97e6002f8988695d772f191403ddf05e9af134632"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js",
+      "bytes": 61389,
+      "sha256": "87b96d729c52aa68dc727cdd923a01cfec4f50bca315683a21e9c08a39f32cd2"
+    }
+  ]
+}

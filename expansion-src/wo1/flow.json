@@ -1,0 +1,42 @@
+{
+  "title": "井史检索与约束",
+  "input": {
+    "title": "井史与当前观测",
+    "detail": "文本及五项观测",
+    "step": 0
+  },
+  "prepare": {
+    "title": "训练拟合表示",
+    "detail": "词项权重及尺度",
+    "step": 1
+  },
+  "model": {
+    "title": "联合近邻检索",
+    "detail": "文本与观测合并",
+    "step": 2
+  },
+  "baseline": {
+    "title": "关键词基线",
+    "detail": "共用候选约束",
+    "step": 4
+  },
+  "review": {
+    "title": "检查完整性",
+    "detail": "冲突先补证据",
+    "step": 3
+  },
+  "output": {
+    "title": "候选及来源",
+    "detail": "保留井号和原文",
+    "step": 5
+  },
+  "compare": {
+    "title": "独立井评价",
+    "detail": "拒判保留在分母",
+    "step": 4
+  },
+  "gate": [
+    "候选是否有证据？",
+    "补证后重新计算"
+  ]
+}

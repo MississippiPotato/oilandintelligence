@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-10-24T07:23:04.723Z",
+  "portalVersion": "1.9.1-preview",
+  "mandatoryVersion": "1.5.3",
+  "selfAuthoredCases": 61,
+  "stageCount": 13,
+  "newCasesThisRevision": 0,
+  "remainingSceneExpansion": 0,
+  "teacherSampleIncludedInAuthoredCount": false,
+  "sourceTeachingReview": {
+    "caseCount": 61,
+    "new44": 44,
+    "groups": 7,
+    "independentCrossRead": 14,
+    "summary": "handoff/teaching-audit-2026-10-24/review-summary.json",
+    "calculationChecks": 704,
+    "calculationChecksAreNotBrowserProof": true
+  },
+  "browserExecuted": true,
+  "browserScope": {
+    "currentRevisionOriginalFolderImportCases": 9,
+    "caseSpecificInteractionAndDownloadCases": 9,
+    "refreshAndRecomputeCases": [
+      "c4",
+      "pr4",
+      "m5"
+    ],
+    "standaloneOfflineCases": [
+      "w3",
+      "e3",
+      "m5"
+    ],
+    "mobileStandalone390pxCases": [
+      "w3"
+    ],
+    "all61BrowserPassClaimed": false
+  },
+  "browserReports": [
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-s5.json",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-w3.json",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-c4.json",
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-pr2.json",
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-pr4.json",
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-e3.json",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-t5.json",
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-r5.json",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-m5.json",
+      "passed": 15,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-offline-w3.json",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-offline-e3.json",
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "path": "handoff/teaching-audit-2026-10-24/browser-offline-m5.json",
+      "passed": 6,
+      "failed": 0
+    }
+  ],
+  "browserCheckCount": 118,
+  "protectedFileCount": 63,
+  "sourceChecksAreNotBrowserProof": true,
+  "thisRevisionPaidModelCalls": 0,
+  "imagegenCallsThisRevision": 0,
+  "historicalEvidence": {
+    "release": "1.9.0-preview",
+    "path": "handoff/full-coverage-2026-10-24/acceptance.html",
+    "meaning": "Previous release full-coverage results retained as history; not a current all61 browser pass."
+  },
+  "unverified": [
+    "当前修订后其余52例的逐例浏览器重跑",
+    "全部参数组合",
+    "实体手机与Firefox/WebKit",
+    "新语音或在线模型连接",
+    "老师原站localStorage同时累计61例"
+  ],
+  "remainingTeachingScope": "可控教学数据和简化工况的具体边界见逐例报告；模型落后于基线、拒判及无解均保留。"
+}

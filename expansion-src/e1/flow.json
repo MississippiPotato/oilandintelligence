@@ -1,0 +1,42 @@
+{
+  "title": "压裂资源约束搜索",
+  "input": {
+    "title": "地层及资源上限",
+    "detail": "单位及范围先对齐",
+    "step": 0
+  },
+  "prepare": {
+    "title": "二次特征",
+    "detail": "训练拟合缩放",
+    "step": 1
+  },
+  "model": {
+    "title": "增油压力代理",
+    "detail": "验证选择正则",
+    "step": 2
+  },
+  "baseline": {
+    "title": "固定设计基线",
+    "detail": "同代理同约束",
+    "step": 4
+  },
+  "review": {
+    "title": "逐点检查资源",
+    "detail": "枚举四百四十一点",
+    "step": 3
+  },
+  "output": {
+    "title": "最佳目标及前沿",
+    "detail": "收益成本共同读",
+    "step": 4
+  },
+  "compare": {
+    "title": "独立储层评价",
+    "detail": "误差仅描述原域",
+    "step": 5
+  },
+  "gate": [
+    "资源约束都满足？",
+    "调整边界再计算"
+  ]
+}

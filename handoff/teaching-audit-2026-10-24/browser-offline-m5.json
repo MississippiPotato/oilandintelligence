@@ -1,0 +1,69 @@
+{
+  "scope": "Three selected standalone files opened with browser offline mode and actual calculation",
+  "checkedAt": "2026-10-24T07:20:20.080Z",
+  "case": {
+    "scene": "m5",
+    "id": "s17-evidence-report",
+    "version": "1.5.3",
+    "output": "dist/cases/s17-evidence-report"
+  },
+  "checks": [
+    {
+      "name": "offline professional background renders",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "actual offline computation enables export",
+      "passed": true
+    },
+    {
+      "name": "offline result contains no nonfinite display",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "passed": 6,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-evidence-report/case.json",
+      "bytes": 139734,
+      "sha256": "36f3492c1641ca09a1b106b4796002af57c6f8431c5bbe92ae14bbf60cc9f696"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/README.txt",
+      "bytes": 875,
+      "sha256": "8e9527a34522eed61c2b2b02e18d2ca655c13ddd2287941d56bb7da1446850f0"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/index.html",
+      "bytes": 5508,
+      "sha256": "ad20c77277a2f69d9251c84b78723e8c426794c67be8575167105873d6865b6a"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.css",
+      "bytes": 45148,
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.js",
+      "bytes": 469076,
+      "sha256": "59267db80904dd02854739adb1e20c04aba4e44e27e6c0d3475a288d6e23d215"
+    }
+  ]
+}

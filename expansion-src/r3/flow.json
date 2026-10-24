@@ -1,42 +1,42 @@
 {
-  "title": "设备负荷与退化",
+  "title": "解释负荷再看持续偏差",
   "gate": [
-    "先解释正常关系",
-    "再用偏差组织复核"
+    "频谱仅为教学合成",
+    "趋势外推不等于寿命"
   ],
   "input": {
-    "title": "设备观测",
-    "detail": "负荷与三类状态量",
+    "title": "小时观测",
+    "detail": "负荷振动温度峭度",
     "step": 0
   },
   "prepare": {
-    "title": "正常建模",
-    "detail": "统一测点和单位",
-    "step": 0
+    "title": "正常分组",
+    "detail": "九十训练四十五验证",
+    "step": 1
   },
   "model": {
-    "title": "关系偏差",
-    "detail": "正常回归加持续性",
-    "step": 2
+    "title": "负荷回归",
+    "detail": "三类正常关系残差",
+    "step": 1
   },
   "baseline": {
     "title": "固定阈值",
-    "detail": "振动与温度规则",
+    "detail": "振动或温度超限",
     "step": 3
   },
   "review": {
-    "title": "检修复核",
-    "detail": "核对工况与原记录",
-    "step": 3
+    "title": "持续确认",
+    "detail": "连续三小时超验证阈值",
+    "step": 2
   },
   "output": {
-    "title": "趋势清单",
-    "detail": "时段与偏差证据",
+    "title": "提醒与趋势",
+    "detail": "时段分数与条件外推",
     "step": 3
   },
   "compare": {
-    "title": "独立评价",
-    "detail": "同一96小时分母",
+    "title": "同分母评价",
+    "detail": "九十六小时独立标签",
     "step": 3
   }
 }

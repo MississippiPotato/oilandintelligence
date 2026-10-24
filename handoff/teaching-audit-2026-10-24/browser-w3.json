@@ -1,0 +1,85 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:11:41.951Z",
+  "case": {
+    "scene": "w3",
+    "id": "s17x-w3-borehole-fractures",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-w3-borehole-fractures"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "segmentation threshold marks old results stale",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "high-threshold mask still renders finite image coordinates",
+      "passed": true
+    },
+    {
+      "name": "actual current-result JSON downloaded",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "passed": 10,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+      "bytes": 25275,
+      "sha256": "eba8ef243cf34b677c922a381e48b7456b2524e504f4d51aa9e3ee5c1f34cf73"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+      "bytes": 735,
+      "sha256": "75b23bdfe7a62be98f5494193f7045c6da3cab747f76d18e3e78bd4908797dac"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+      "bytes": 18741,
+      "sha256": "451820e4464ac23d125973472278a6480050a9d29f716f4a34209572b5d5aaa5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+      "bytes": 20104,
+      "sha256": "d6cdb028ca57bd5bb9215a0973283b97d0b64b84bee5468d04ff8e8b1cbb4441"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+      "bytes": 64592,
+      "sha256": "5ce44b6c4b31647cb9448cf37e01303e7425f30f679b5eed967385d23e026092"
+    }
+  ]
+}

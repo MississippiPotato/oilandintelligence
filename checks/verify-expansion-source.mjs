@@ -12,7 +12,7 @@ const lock = JSON.parse(read(lockPath)), baseline = JSON.parse(read(reportDir + 
 const results = [], check = (name, action) => { try { const detail = action(); results.push({ name, passed: true, detail }); }
   catch (e) { results.push({ name, passed: false, error: e.message }); } };
 
-check('teacher copies, original five-case source/runtime bytes and real observations preserved', () => {
+check('protected teacher originals and public observation bytes preserved during teaching revisions', () => {
   for (const before of baseline.files) assert.deepEqual(fileRecord(before.path), before);
   return { files: baseline.files.length, browserEvidence: false };
 });

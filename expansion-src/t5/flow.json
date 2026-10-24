@@ -1,42 +1,42 @@
 {
-  "title": "视觉与雷达不一致时，该先核查哪条测量链？",
+  "title": "像素液位与雷达互核",
   "gate": [
-    "结果与工况",
-    "是否一致？"
+    "先标定高度与行号",
+    "差值只提示测量不一致"
   ],
   "input": {
-    "title": "灰度观察窗",
-    "detail": "观测量不含参考答案",
+    "title": "观察窗像素",
+    "detail": "三十二列一百行灰度",
     "step": 0
   },
   "prepare": {
-    "title": "行中位数",
-    "detail": "处理专业量纲与来源",
+    "title": "逐行统计",
+    "detail": "列方向中位数抑制遮挡",
     "step": 1
   },
   "model": {
-    "title": "梯度液面",
-    "detail": "真实计算当前结果",
-    "step": 2
+    "title": "梯度读数",
+    "detail": "强转折行换算高度",
+    "step": 1
   },
   "baseline": {
-    "title": "单列阈值",
-    "detail": "相同输入对照",
-    "step": 3
+    "title": "阈值基线",
+    "detail": "单列固定亮度阈值",
+    "step": 1
   },
   "review": {
-    "title": "记录与工况复核",
-    "detail": "保留异常与分歧",
-    "step": 3
+    "title": "雷达互核",
+    "detail": "同一时刻高度差",
+    "step": 2
   },
   "output": {
-    "title": "候选与单位",
-    "detail": "输出可复查记录",
-    "step": 3
+    "title": "可查读数",
+    "detail": "像素行高度与边界强度",
+    "step": 2
   },
   "compare": {
-    "title": "同分母比较",
-    "detail": "最后读取独立参考",
+    "title": "十八帧评价",
+    "detail": "照明变化下高度误差",
     "step": 3
   }
 }

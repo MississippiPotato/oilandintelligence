@@ -1,0 +1,42 @@
+{
+  "title": "压力流量到核查事件",
+  "gate": [
+    "偏差不等于泄漏",
+    "先对时再复核"
+  ],
+  "input": {
+    "title": "两端观测",
+    "detail": "压力流量与入口变化",
+    "step": 0
+  },
+  "prepare": {
+    "title": "运行分组",
+    "detail": "九训三验六测试",
+    "step": 1
+  },
+  "model": {
+    "title": "正常关系",
+    "detail": "双岭回归预测出口",
+    "step": 2
+  },
+  "baseline": {
+    "title": "固定规则",
+    "detail": "流差和出口压力",
+    "step": 3
+  },
+  "review": {
+    "title": "工况复核",
+    "detail": "时钟泵阀与仪表",
+    "step": 4
+  },
+  "output": {
+    "title": "确认事件",
+    "detail": "三点平滑三点确认",
+    "step": 3
+  },
+  "compare": {
+    "title": "事件评价",
+    "detail": "一对一匹配独立参考",
+    "step": 4
+  }
+}

@@ -1,42 +1,42 @@
 {
-  "title": "化学驱配方智能筛选",
+  "title": "配方成本与盐度",
   "input": {
-    "title": "专业观测输入",
-    "detail": "盐度 g/L",
+    "title": "母液比例与盐度",
+    "detail": "比例和恒为一",
     "step": 0
   },
   "prepare": {
-    "title": "整理比例与盐度试验",
-    "detail": "检查单位和记录范围",
-    "step": 0
+    "title": "独立试验批次",
+    "detail": "二次混合盐度交互",
+    "step": 1
   },
   "model": {
-    "title": "学习混合响应代理",
-    "detail": "由可见输入计算",
+    "title": "性能回归代理",
+    "detail": "冻结后搜索配方",
     "step": 1
   },
   "baseline": {
-    "title": "简单方法对照",
-    "detail": "相同数据独立计算",
+    "title": "固定比例基线",
+    "detail": "成本五点一元每升",
     "step": 3
   },
   "review": {
-    "title": "检查约束与来源",
-    "detail": "不读评价真值预测",
+    "title": "网格逐点查成本",
+    "detail": "已知单价线性加权",
     "step": 2
   },
   "output": {
-    "title": "图表与当前结果",
-    "detail": "保留参数和评价分母",
+    "title": "三元可行配方",
+    "detail": "比例网格及固定色标",
     "step": 3
   },
   "compare": {
-    "title": "独立评价对比",
-    "detail": "误差或合法性可复算",
+    "title": "留出误差评价",
+    "detail": "性能非采收率百分点",
     "step": 3
   },
   "gate": [
-    "结果是否满足检查？",
-    "补充观测再重新计算"
+    "当前配方满足预算？",
+    "调整预算再计算"
   ]
 }

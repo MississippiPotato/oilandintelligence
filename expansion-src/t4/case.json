@@ -5,7 +5,7 @@
     "ts"
   ],
   "title": "油气计量校正：分清读数变化与仪表偏移",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2026-10-24",
   "tabs": {
     "background": {
@@ -20,7 +20,7 @@
         {
           "no": 2,
           "title": "标定记录提供的是独立参照",
-          "html": "<p>标定把被检表读数与参考装置在相同工况下比较。多流量点可以识别比例偏差和零点偏差。本例用前 24 个标定点拟合 Q参考=a+bQ读数；另一组 60 个运行点用于评价。参考值在运行评价阶段才参与误差计算。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 160L690 50\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 160L690 75\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">被检表读数 m³/h；斜率偏离 1 表示比例误差</text><text x=\"75\" y=\"28\">参考流量 m³/h</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure>"
+          "html": "<p>标定把被检表读数与参考装置在相同工况下比较。多流量点可以识别比例偏差和零点偏差。本例用前 24 个标定点拟合 Q参考=a+bQ读数；另一组 60 个运行点用于评价。参考值在运行评价阶段才参与误差计算。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 160L690 50\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 160L690 75\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">被检表读数 m³/h；斜率偏离 1 表示比例误差</text><text x=\"75\" y=\"28\">参考流量 m³/h</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure><p class=\"note\">新增的标定散点图只使用24个标定点；拟合线与 y=x 参考线用来分辨比例偏差。运行图含60个一分钟区间，累计体积按 ΣQ/60 计算，不能把60个瞬时值直接相加当m³。</p>"
         },
         {
           "no": 3,
@@ -30,7 +30,7 @@
         {
           "no": 4,
           "title": "旧校正系数不会自动跟随新漂移",
-          "html": "<p>本例的“后续新增漂移”只施加在评价运行段，旧标定仍保持原状。增加它后，原有校正会失准；这正是需要再次核查标定的信号。结果同时展示逐点曲线、流量 MAE 和整段累计体积相对偏差，不能只看一个平均指标。</p><p class=\"note\">专业资料：<a href=\"https://www.nist.gov/publications/liquid-flow-meter-calibrations-nists-15-kgs-water-flow-standard\" target=\"_blank\" rel=\"noreferrer\">NIST：液体流量计标定及不确定度</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p>"
+          "html": "<p>本例的“后续新增漂移”只施加在评价运行段，旧标定仍保持原状。增加它后，原有校正会失准；这正是需要再次核查标定的信号。结果同时展示逐点曲线、流量 MAE 和整段累计体积相对偏差，不能只看一个平均指标。</p><p class=\"note\">专业资料：<a href=\"https://www.nist.gov/publications/liquid-flow-meter-calibrations-nists-15-kgs-water-flow-standard\" target=\"_blank\" rel=\"noreferrer\">NIST：液体流量计标定及不确定度</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p><p class=\"note\">这里漂移改变的是后续仪表增益：读数 = Q参考×[1+(原偏差+新增漂移)/100]+2+噪声；旧系数保持固定。只改新增漂移后，标定散点与系数应保持一致，但后续误差增加。这是检验是否偷用运行真值重新标定的可观察实验。</p>"
         }
       ]
     },

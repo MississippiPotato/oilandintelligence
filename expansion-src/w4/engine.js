@@ -1,6 +1,6 @@
 (function(g){
   'use strict';
-  const SCENE='w4',ID='s17x-w4-log-lithology',labels=['砂岩','泥岩','灰岩'],names=['GR / API','log₁₀ Rt / Ω·m','RHOB / g·cm⁻³','NPHI / v/v'];
+  const SCENE='w4',ID='s17x-w4-log-lithology',labels=['砂岩','泥岩','灰岩'],names=['GR / API','log₁₀(Rt / 1 Ω·m)','RHOB / g·cm⁻³','NPHI / v/v'];
   const mean=a=>a.reduce((s,v)=>s+v,0)/a.length;
   function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t^=t+Math.imul(t^t>>>7,61|t);return((t^t>>>14)>>>0)/4294967296;};}
   function normal(r){return Math.sqrt(-2*Math.log(Math.max(1e-9,r())))*Math.cos(2*Math.PI*r());}

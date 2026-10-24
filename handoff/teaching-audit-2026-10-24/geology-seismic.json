@@ -1,0 +1,259 @@
+{
+  "reviewDate": "2026-10-24",
+  "reviewMode": "source_review_not_browser",
+  "scope": [
+    "g1",
+    "g2",
+    "g3",
+    "g4",
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5"
+  ],
+  "sourceBasis": [
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/06_兼容与验收清单.txt",
+    "portal-original/firstbreak-pick-case/case.json",
+    "portal-original/assets/core/kit.js",
+    "石油AI案例集_开发任务书 (1).txt",
+    "each scoped case.json/demo.html/app.js/engine.js"
+  ],
+  "judgmentBoundary": "没有使用字数、SVG数或上轮704检查替代教学审阅。未执行浏览器布局、原版导入或下载实测；Node计算不是浏览器验收。没有build、commit、版本号调整或共享文件修改。",
+  "checksExecuted": [
+    {
+      "kind": "syntax_and_engine_smoke",
+      "detail": "Node vm.Script解析18个engine/app；9例独立VM执行默认计算；9例新增正文与独立demo原文一致断言。",
+      "result": "passed"
+    },
+    {
+      "kind": "controlled_computation",
+      "detail": "g2阈值3.3→6浓度数组不变且候选不增加；g4 scanY10→65提取线与P21不变，P10 0.166667→0.333333个/m；s1零位移参考/候选0；s5三噪声模式干净参考逐值一致、带噪数组不同。",
+      "result": "passed"
+    },
+    {
+      "kind": "observed_results",
+      "detail": "g1默认宏F1 0.999523；g3默认准确率1、噪声0.30时0.9；g4默认F1 0.888889；s1默认带F1 0.881266、迹线F1 1；s2默认60窗准确率1；s3默认MAE3.222222ms、命中17/18；s4默认RMSE0.501517pp；s5 noise=.25 三模式模型SNR随机10.865599、相干3.650859、尖峰6.995760dB。仅教学默认计算快照，不是现场效果。",
+      "result": "recorded"
+    }
+  ],
+  "cases": [
+    {
+      "sceneId": "g1",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "可从地表露头—波段反射率—像素类别建立理解，原有图幅划分和近邻溯源完整；补充明确伪彩色不是本色，植被不能解释下伏岩性。",
+      "figureTextCorrespondence": "图B2波长/反射率曲线对应观测灰度通道；选中像素的三波段图与近邻表对应六维分类输入。",
+      "realInteractionLearningGoal": "固定种子切只红光/完整特征，点相同坐标比较近邻和错分；再固定特征提高阴影，检验多波段差异能否保留类别线索。",
+      "actualAlgorithmRole": "六维训练标准化、验证选k、距离加权kNN用于地表类别候选；单红光阈值同图评价。",
+      "findings": [
+        "原控制已有计算但缺串起图B2、观测通道、消融与覆盖类别变化的具体读图路线。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/g1/case.json",
+        "expansion-src/g1/demo.html",
+        "expansion-src/g1/flow.json"
+      ],
+      "remainingIssues": [
+        "数据光谱由人为设定，默认宏F1接近1仅说明简单教学数据易分，不能外推真实卫星岩性精度。",
+        "浏览器布局和原站导入未在本组执行。"
+      ]
+    },
+    {
+      "sceneId": "g2",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "背景/异常/位置已有专业解释；新增带数轴的两点采样记录图替换泛三框，让初学者知道每点同时带坐标与三个浓度。",
+      "figureTextCorrespondence": "新采样图A/B说明记录格式；空间图定位，C1–C2交会显示同一编号，C3在详情仍参与联合距离。",
+      "realInteractionLearningGoal": "保持种子把阈值3.3升至6，浓度/距离不变候选只减少；再改背景波动辨认训练背景和测试背景一起改变。",
+      "actualAlgorithmRole": "260点拟合均值协方差，Mahalanobis距离找偏离背景的候选，与C1标准分数同180点比较。",
+      "findings": [
+        "原采样图为同深度采样/测量/表格三框，缺变量和位置关系。",
+        "原散点固定范围/点选固定尺寸与当前画布匹配，并无当前默认裁切/错位证据；现改自适应范围和依实际画布尺寸计算，作为可读性与维护改进。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/g2/case.json",
+        "expansion-src/g2/demo.html",
+        "expansion-src/g2/app.js"
+      ],
+      "remainingIssues": [
+        "坐标只做展示，未进行空间聚集判断。",
+        "教学异常区按几何固定，默认方法F1=1不构成真实油气来源判断。"
+      ]
+    },
+    {
+      "sceneId": "g3",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "原地质图专业对象清楚，但实际任务只到预切图块分类与手工图例字段拆分；已明确不含OCR、整图定位或自动图例关联。",
+      "figureTextCorrespondence": "新增三个与engine完全一致的16×16清洁模板，说明接触线/产状/代号形状；选中观测图块可直接对照。",
+      "realInteractionLearningGoal": "同种子提高像素翻转比较距离及误分；只改图例文字后重算，文本表变而图像预测不变，验证两条独立数据流。",
+      "actualAlgorithmRole": "9个固定模板的像素汉明距离识别三类符号；parseLegend只分字段，基线不能输出产状类。",
+      "findings": [
+        "原型图与实际简化模板不完全可对应。",
+        "原关联图容易让人以为已识别字符并自动关联图例；已改标题/图注并在正文标明缺失能力。",
+        "缺恢复默认操作，已补。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/g3/case.json",
+        "expansion-src/g3/demo.html",
+        "expansion-src/g3/app.js"
+      ],
+      "remainingIssues": [
+        "没有自由文本OCR、符号定位/矢量线提取，不能宣传完成整张地质图要素提取。",
+        "模板与测试同族，不是跨地图泛化；默认30块准确率1，高噪声0.30时0.9。"
+      ]
+    },
+    {
+      "sceneId": "g4",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "裂缝面/迹线、观察窗口、P10/P21、照片角和地理走向区分已有基础；补足实际图比例尺与扫描位置约定。",
+      "figureTextCorrespondence": "青色L编号对应逐线表与玫瑰图；橙色扫描线对应P10分子，12×8m窗口对应P21面积分母。",
+      "realInteractionLearningGoal": "保持阈值与票数，移动扫描线验证P21不变而P10可变；再升票数检查哪条L线被筛除。",
+      "actualAlgorithmRole": "暗像素Hough投票与近峰抑制用于贯穿直线候选，再统计长度/角度并一对一匹配参考。",
+      "findings": [
+        "原实际灰度图没有比例尺，扫描线高度表述容易与向下像素坐标混淆。",
+        "原玫瑰对称图容易双倍计数；补明确两侧是同一无向迹线，非两条。",
+        "缺默认恢复，已补。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/g4/case.json",
+        "expansion-src/g4/demo.html",
+        "expansion-src/g4/app.js"
+      ],
+      "remainingIssues": [
+        "只适用于贯穿窗口直线，不能解释短线弯曲、真实开度/连通性或三维渗透率。",
+        "基线固定只取最多2条，在4条参考上能力受限；未为了公平表象修改结果。"
+      ]
+    },
+    {
+      "sceneId": "s1",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "原地震同相轴错断/相关特征/缺测有较完整教学；补上逐行最大值候选的边界和无断层反例路线。",
+      "figureTextCorrespondence": "图B1地层错断对应振幅剖面；点选左右波形对应不连续性与移位匹配特征；误差图对应固定4368像素分母。",
+      "realInteractionLearningGoal": "默认点错断两侧，再运行无断层场景检查候选是否为空；增加缺道观察灰色拒判及召回变化。",
+      "actualAlgorithmRole": "9维正则逻辑回归组合不连续性和持续性，验证选阈后逐行挑候选；同一剖面比较不连续性阈值。",
+      "findings": [
+        "原有流程已具体，非泛模板；需明确逐行候选尚无地质连通约束，并给无断层控制实验。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/s1/case.json",
+        "expansion-src/s1/demo.html",
+        "expansion-src/s1/flow.json"
+      ],
+      "remainingIssues": [
+        "位移仅双程时间域，不能直接换算断距m。",
+        "二维合成剖面且每时间行最多一候选，不能覆盖复杂多断层。"
+      ]
+    },
+    {
+      "sceneId": "s2",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "三种地震反射结构与真实沉积成因区分清楚，原小窗—属性散点—混淆链已有意义；补单位与归一化防止错误读图。",
+      "figureTextCorrespondence": "24×24小窗改采样号刻度；色标±1为按本窗最大绝对振幅归一化，跨窗强度需看RMS，散点横向差异显示结构。",
+      "realInteractionLearningGoal": "先找RMS接近而横向差异不同的点回看纹理与基线，再升噪声看红框/混淆；改变k明确只属测试探索。",
+      "actualAlgorithmRole": "四属性标准化kNN比较空间结构与RMS；单RMS均值中心是能量基线。",
+      "findings": [
+        "原小窗写时间而未指定采样ms，现改采样号。",
+        "原正负色标未说明各窗独立归一化，现显示数值与本窗最大振幅。",
+        "参数改变后仍能导出旧计算，已禁导出并加事件guard；增加恢复默认。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/s2/case.json",
+        "expansion-src/s2/demo.html",
+        "expansion-src/s2/app.js"
+      ],
+      "remainingIssues": [
+        "没有独立验证组选k，页面现明确不据测试选最优。",
+        "60格只是独立样本索引，不能解释成连续相带空间图。"
+      ]
+    },
+    {
+      "sceneId": "s3",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "初至/峰值、炮集/单道、2ms采样、MAE和全18道命中分母已有解释；补连续触发如何落点的可手算图。",
+      "figureTextCorrespondence": "泛三框流程图已换成70/72/74/76ms支持度曲线，阈值0.60时连续72/74/76触发候选72ms；对应真实predict的3连续规则。",
+      "realInteractionLearningGoal": "点第9道44ms脉冲比较参考与拾取，提高阈值观察延迟/漏拾；降低weak重点核对第1/7/13道。",
+      "actualAlgorithmRole": "7个炮集拟合局部能量/变化/邻道四特征逻辑回归，找首个连续越阈；STA/LTA同道基线。",
+      "findings": [
+        "原泛三框没有解释连续触发落点。",
+        "原波形固定±1.5可能隐藏高噪声尖峰，改当前波形自适应范围。",
+        "初判振幅正负轴有误，经坐标映射复核确认原轴正确，已撤销该处改动，未记为修复。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/s3/case.json",
+        "expansion-src/s3/demo.html",
+        "expansion-src/s3/app.js"
+      ],
+      "remainingIssues": [
+        "读取未来窗口是离线算法，非零延迟实时预警。",
+        "得分未经概率校准，测试阈值由用户探索；已拾取MAE必须与漏拾/全道命中并读。"
+      ]
+    },
+    {
+      "sceneId": "s4",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "孔隙度/声阻抗/VpVs与井震尺度区别已有专业骨架；新增同阻抗两个井段的手算图，使第二属性价值具体。",
+      "figureTextCorrespondence": "Z=10.37时φ10%、Vsh10%与φ15%、Vsh≈35.9%对应不同Vp/Vs；实际留出井曲线与45°散点可核查。",
+      "realInteractionLearningGoal": "固定噪声对比λ1和100，读系数收缩/曲线向均值；再升测试噪声对照散点与逐井误差。",
+      "actualAlgorithmRole": "整井留出、训练标准化的双属性岭回归反演孔隙度，单阻抗回归同64段基线。",
+      "findings": [
+        "原混合效应文字缺可代公式核对的数值例，已补精确教学关系例图。",
+        "原噪声没有解释两属性扰动比例，补Vp/Vs幅度为阻抗扰动0.07倍。",
+        "参数改变后仍能导出旧结果，已阻止并加恢复默认。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/s4/case.json",
+        "expansion-src/s4/demo.html",
+        "expansion-src/s4/app.js"
+      ],
+      "remainingIssues": [
+        "输入已是阻抗和Vp/Vs属性，不是从波形直接完成弹性反演。",
+        "每井段独立教学生成，整井分组不能当真实工区地质差异验证。"
+      ]
+    },
+    {
+      "sceneId": "s5",
+      "reviewMode": "source_review_not_browser",
+      "professionalKnowledgeJudgment": "信号+干扰、七点邻域回归与保真/残差已有文字；补实际邻域位置图和严格固定干净信号的模式比较。",
+      "figureTextCorrespondence": "泛三框换成3道×5时间位置的七点观测图，中心同道±2与左右邻道t可对应权重表；残差图解释被移除部分。",
+      "realInteractionLearningGoal": "固定种子/幅度比较随机、相干、尖峰，干净参考完全相同；检查主波瓣是否进残差，读全1920点SNR。",
+      "actualAlgorithmRole": "6炮集5616邻域对拟合8系数岭回归，与五点均值相同输入对照，干净测试参考只评价。",
+      "findings": [
+        "原spikes分支额外调用共用RNG，导致后续干净参考也改变；拆尖峰RNG后各噪声模式参考逐值完全一致。",
+        "波形±1.7与残差±1.2固定范围可能藏尖峰，均改按当前数组自适应。",
+        "原七点邻域为泛三框，改真实时空邻域图。"
+      ],
+      "modifiedFiles": [
+        "expansion-src/s5/case.json",
+        "expansion-src/s5/demo.html",
+        "expansion-src/s5/app.js",
+        "expansion-src/s5/engine.js"
+      ],
+      "remainingIssues": [
+        "信号几何是简单固定脉冲族，只改变随机扰动，不能视为真实复杂波场泛化。",
+        "SNR依赖干净参考；实测缺参考时不能直接给出同等成绩。"
+      ]
+    }
+  ],
+  "browserSpotCheckCandidates": [
+    {
+      "sceneId": "g3",
+      "steps": [
+        "专业背景最后一节核对3个16×16清洁原型与选中图块",
+        "演示默认分析，记录某编号预测；噪声0.30再分析看同编号像素破坏与混淆",
+        "只改J2s图例描述再运行，确认图像预测不变，图例表改变",
+        "恢复默认验证噪声/种子/图例均回到初值"
+      ],
+      "focus": "图文是否准确收窄为模板符号识别，未把手工文字当OCR。"
+    },
+    {
+      "sceneId": "s5",
+      "steps": [
+        "专业背景七点时空邻域图检查文字与格子可读",
+        "演示默认随机，选第1道后切尖峰运行；主波形/残差坐标应容纳尖峰",
+        "勾选干净参考，切相干/尖峰比较干净波形位置不变",
+        "调噪声但不重算，确认导出禁用；运行后重启用"
+      ],
+      "focus": "波形/残差的可读性，固定参考控制实验，训练分布外失效可见。"
+    }
+  ]
+}

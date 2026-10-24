@@ -10,6 +10,7 @@
   },
   "verification": {
     "nodeExecuted": true,
+    "method": "2026-10-24 source engine execution, not browser review",
     "defaultMetrics": [
       {
         "label": "事件是否检出",
@@ -30,17 +31,17 @@
     "lowParameterMetrics": [
       {
         "label": "事件是否检出",
-        "value": "检出",
+        "value": "未检出",
         "unit": ""
       },
       {
         "label": "相对145min事件提前",
-        "value": -5,
+        "value": "—",
         "unit": "min"
       },
       {
         "label": "正常段告警窗",
-        "value": 2,
+        "value": 0,
         "unit": "/170"
       }
     ],

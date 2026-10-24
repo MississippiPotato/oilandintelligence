@@ -1,42 +1,42 @@
 {
-  "title": "化验数据逐行审核",
+  "title": "化验原文到关系审核",
   "gate": [
-    "先解释正常关系",
-    "再用偏差组织复核"
+    "先单位再看指标关系",
+    "改写文本不给伪指标"
   ],
   "input": {
-    "title": "化验原文",
-    "detail": "样品字段与单位",
+    "title": "中文化验单",
+    "detail": "保留样品原文和单位",
     "step": 0
   },
   "prepare": {
-    "title": "量纲规范",
-    "detail": "识别并保留原文",
-    "step": 0
+    "title": "字段与量纲",
+    "detail": "密度换算范围缺失检查",
+    "step": 1
   },
   "model": {
-    "title": "关系审核",
-    "detail": "正常回归残差",
+    "title": "关系回归",
+    "detail": "密度硫含量预测黏度",
     "step": 2
   },
   "baseline": {
-    "title": "范围规则",
-    "detail": "格式与单列界限",
-    "step": 3
+    "title": "规则基线",
+    "detail": "相同表单仅查单列",
+    "step": 1
   },
   "review": {
-    "title": "人工复核",
-    "detail": "回查样品与方法",
+    "title": "残差复核",
+    "detail": "按验证尺度标记关系外",
     "step": 3
   },
   "output": {
-    "title": "逐行证据",
-    "detail": "规则原因与残差",
+    "title": "审核证据",
+    "detail": "原单位期望残差和原因",
     "step": 3
   },
   "compare": {
-    "title": "参考评价",
-    "detail": "自定义文本不评分",
+    "title": "独立参考",
+    "detail": "仅内置错误表计算指标",
     "step": 3
   }
 }

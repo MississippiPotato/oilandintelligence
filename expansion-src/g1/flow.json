@@ -1,0 +1,42 @@
+{
+  "title": "用多波段区分露头，覆盖区仍保留为覆盖",
+  "gate": [
+    "波段与近邻",
+    "支持判断？"
+  ],
+  "input": {
+    "title": "三波段地表图",
+    "detail": "同图观测与参考分离",
+    "step": 0
+  },
+  "prepare": {
+    "title": "提取六维观测",
+    "detail": "波段差异与局部纹理",
+    "step": 1
+  },
+  "model": {
+    "title": "距离加权近邻",
+    "detail": "训练标准化验证选k",
+    "step": 2
+  },
+  "baseline": {
+    "title": "单红光阈值",
+    "detail": "同图独立验证选阈",
+    "step": 3
+  },
+  "review": {
+    "title": "点选像素核查",
+    "detail": "查看原波段与邻居",
+    "step": 4
+  },
+  "output": {
+    "title": "地表类别候选",
+    "detail": "坐标与独立人工意见",
+    "step": 4
+  },
+  "compare": {
+    "title": "整图同分母评价",
+    "detail": "含拒判列的F1与IoU",
+    "step": 4
+  }
+}

@@ -1,42 +1,42 @@
 {
-  "title": "哪一处缺陷增长快，值得优先复测？",
+  "title": "配准后再算腐蚀增长",
   "gate": [
-    "结果与工况",
-    "是否一致？"
+    "同一处缺陷才可比",
+    "误差除以检测间隔"
   ],
   "input": {
-    "title": "检测数据",
-    "detail": "观测量不含参考答案",
+    "title": "两期内检测",
+    "detail": "里程周向长度深度",
     "step": 0
   },
   "prepare": {
-    "title": "统一坐标",
-    "detail": "处理专业量纲与来源",
+    "title": "焊缝配准",
+    "detail": "五处里程差中位数",
     "step": 1
   },
   "model": {
-    "title": "多特征匹配",
-    "detail": "真实计算当前结果",
-    "step": 2
+    "title": "一对一匹配",
+    "detail": "加权代价贪心选取",
+    "step": 1
   },
   "baseline": {
-    "title": "原始里程",
-    "detail": "相同输入对照",
-    "step": 3
+    "title": "未配准基线",
+    "detail": "原始里程最近邻",
+    "step": 1
   },
   "review": {
-    "title": "记录与工况复核",
-    "detail": "保留异常与分歧",
-    "step": 3
+    "title": "测量复核",
+    "detail": "两次测深与误配记录",
+    "step": 2
   },
   "output": {
-    "title": "候选与单位",
-    "detail": "输出可复查记录",
-    "step": 3
+    "title": "增长率排序",
+    "detail": "深度差除以年数",
+    "step": 2
   },
   "compare": {
-    "title": "同分母比较",
-    "detail": "最后读取独立参考",
+    "title": "独立参考",
+    "detail": "匹配正确率和增长误差",
     "step": 3
   }
 }

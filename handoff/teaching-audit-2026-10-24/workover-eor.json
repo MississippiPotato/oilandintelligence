@@ -1,0 +1,1109 @@
+{
+  "date": "2026-10-24",
+  "status": "source_review_not_browser",
+  "scope": [
+    "wo1",
+    "e1",
+    "wo2",
+    "wo3",
+    "wo4",
+    "wo5",
+    "e2",
+    "e3",
+    "e4",
+    "e5"
+  ],
+  "referenceRead": [
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/06_兼容与验收清单.txt",
+    "portal-original/firstbreak-pick-case/case.json"
+  ],
+  "reviewMethod": "逐例阅读case.json、demo.html、app.js、engine.js；按专业对象、单位、因果、图文对应、学习任务和实际计算作判断；未用字数/SVG计数或旧检查替代教学审阅。",
+  "validationBoundary": "Node vm运行当前源计算、默认及参数边界、应用语法、SVG序列化与XML解析；没有浏览器、原门户导入、截图或视觉通过声明。",
+  "protectedContracts": "无版本/build/commit变更；未改portal/shared/tools/dist；保留前端五文件打包入口、预测/评价分离及真实模型与基线；8个通用应用hash写入加try/catch以容忍opaque iframe。",
+  "primarySourcesVerified": [
+    {
+      "url": "https://glossary.slb.com/en/terms/m/multifinger_caliper",
+      "supports": "多臂井径测内壁直径，不能只凭该值求外壁或剩余壁厚"
+    },
+    {
+      "url": "https://glossary.slb.com/terms/f/fracture_conductivity",
+      "supports": "裂缝导流能力为渗透率与宽度之积，几何不等于产能"
+    },
+    {
+      "url": "https://glossary.slb.com/terms/c/cyclic_steam_injection",
+      "supports": "同井注汽、焖井、生产三阶段及加热降黏机制"
+    }
+  ],
+  "cases": [
+    {
+      "sceneId": "wo1",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "保留联合检索的真实训练/验证/测试划分，补变量物理对象与局部查询评价边界。",
+      "specificTextAndFigureEvidence": "B1井筒对象示意与新增五变量释义；B2历史怀疑不等于当前观测；查询原文/近邻井号可查。",
+      "interactionLearningGoal": "默认近邻来源→冲突完整性→缺项拒判，说明覆盖率与单井准确率的区别。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\wo1\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\wo1\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\wo1\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "wo1",
+        "defaultParams": {
+          "preset": "standard"
+        },
+        "metrics": {
+          "denominator": 20,
+          "model": {
+            "correct": 20,
+            "accuracy": 1,
+            "accepted": 20,
+            "coverage": 1,
+            "selectiveAccuracy": 1,
+            "recallAt3": 1,
+            "recallAt3Count": 20,
+            "evidenceCoverage": 1,
+            "constraintViolations": 0
+          },
+          "baseline": {
+            "correct": 17,
+            "accuracy": 0.85,
+            "accepted": 20,
+            "coverage": 1,
+            "selectiveAccuracy": 0.85,
+            "constraintViolations": 0
+          },
+          "confusion": [
+            [
+              5,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ]
+          ],
+          "referenceApplicable": true,
+          "referenceDenominator": 20
+        },
+        "summary": null,
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "preset": "conflict",
+            "metrics": {
+              "denominator": 20,
+              "model": {
+                "correct": null,
+                "accuracy": null,
+                "accepted": 11,
+                "coverage": 0.55,
+                "selectiveAccuracy": null,
+                "recallAt3": null,
+                "recallAt3Count": null,
+                "evidenceCoverage": 1,
+                "constraintViolations": 0
+              },
+              "baseline": {
+                "correct": null,
+                "accuracy": null,
+                "accepted": 20,
+                "coverage": 1,
+                "selectiveAccuracy": null,
+                "constraintViolations": 0
+              },
+              "confusion": null,
+              "referenceApplicable": false,
+              "referenceDenominator": 0
+            }
+          }
+        ]
+      },
+      "remainingItems": [
+        "未在浏览器验证近邻原文面板及门户导入。"
+      ]
+    },
+    {
+      "sceneId": "e1",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "资源约束与代理收益的专业故事完整；修掉重复遮盖的井筒图并补几何/导流/产能的关系。",
+      "specificTextAndFigureEvidence": "新B1清楚标井筒、压裂液、支撑剂；运行可行域441点、Pareto、测试残差均实算；静态概念图明确非定量响应。",
+      "interactionLearningGoal": "成本权重0比较最高增油和J，资源紧张看失败原因，预算不足保持无可行点。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\e1\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\e1\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\e1\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "e1",
+        "defaultParams": {
+          "permeability_mD": 2.5,
+          "brittleness": 0.62,
+          "budget_10k": 54,
+          "pressureMax_MPa": 33,
+          "waterMax_m3": 1100,
+          "sandMax_t": 140,
+          "costWeight_t_per_10k": 1.3
+        },
+        "metrics": {
+          "surrogate": {
+            "denominator": 96,
+            "oil90_t": {
+              "MAE": 2.6075275159406908,
+              "RMSE": 2.9698819150043594,
+              "bias": 0.4621513994321906
+            },
+            "pressure_MPa": {
+              "MAE": 0.47644100643047765,
+              "RMSE": 0.5415402618490917,
+              "bias": 0.25062023902484903
+            }
+          },
+          "meanBaseline": {
+            "denominator": 96,
+            "oil90_t": {
+              "MAE": 24.084239159676827,
+              "RMSE": 28.329793999490757,
+              "bias": -13.965674186239204
+            },
+            "pressure_MPa": {
+              "MAE": 2.1507188006335203,
+              "RMSE": 2.597393459006992,
+              "bias": 0.6753578546147736
+            }
+          },
+          "gridCount": 441,
+          "feasibleCount": 284,
+          "feasibleRate": 0.6439909297052154,
+          "objectiveGain": 3.2307837711261413,
+          "oilGain_t": 7.910783771126148
+        },
+        "summary": null,
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "preset": "impossible",
+            "feasibleCount": 0
+          }
+        ]
+      },
+      "remainingItems": [
+        "压力为代理预测，未作现场裂缝/流动验证；旧独立背景草图无数值刻度并已明确示意。"
+      ]
+    },
+    {
+      "sceneId": "wo2",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "尺寸匹配和承载必须依次看，教学规则推理本身是真实方法。",
+      "specificTextAndFigureEvidence": "新内捞/外捞并排图区分落鱼内外径、工具本体及井筒；承载条轴有0–200kN刻度，表格显示逐项排除理由。",
+      "interactionLearningGoal": "通径125→100mm保留S2排除O1，再加拉力160kN检查抓持与承载。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\wo2\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\wo2\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\wo2\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\wo2\\engine.js",
+        "G:\\可视化导论\\5\\expansion-src\\wo2\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\wo2\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "wo2",
+        "defaultParams": {
+          "fish": 65,
+          "bore": 40,
+          "clearance": 125,
+          "pull": 90
+        },
+        "metrics": {
+          "legalCandidates": 3,
+          "diameterOnly": 4,
+          "baselineViolations": 2,
+          "catalogSize": 6
+        },
+        "summary": "合法候选：外捞筒 O1、内捞矛 S1、内捞矛 S2",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "input": {
+              "fish": 35,
+              "bore": 40,
+              "clearance": 125,
+              "pull": 90
+            },
+            "expected": "geometry rejected"
+          },
+          {
+            "changed": "fish",
+            "value": 110,
+            "metrics": {
+              "legalCandidates": 2,
+              "diameterOnly": 1,
+              "baselineViolations": 1,
+              "catalogSize": 6
+            },
+            "summary": "合法候选：内捞矛 S1、内捞矛 S2"
+          },
+          {
+            "changed": "bore",
+            "value": 15,
+            "metrics": {
+              "legalCandidates": 1,
+              "diameterOnly": 4,
+              "baselineViolations": 3,
+              "catalogSize": 6
+            },
+            "summary": "合法候选：外捞筒 O1"
+          },
+          {
+            "input": {
+              "fish": 65,
+              "bore": 85,
+              "clearance": 125,
+              "pull": 90
+            },
+            "expected": "geometry rejected"
+          },
+          {
+            "changed": "clearance",
+            "value": 90,
+            "metrics": {
+              "legalCandidates": 1,
+              "diameterOnly": 4,
+              "baselineViolations": 4,
+              "catalogSize": 6
+            },
+            "summary": "合法候选：内捞矛 S1"
+          },
+          {
+            "changed": "clearance",
+            "value": 165,
+            "metrics": {
+              "legalCandidates": 4,
+              "diameterOnly": 4,
+              "baselineViolations": 1,
+              "catalogSize": 6
+            },
+            "summary": "合法候选：外捞筒 O1、外捞筒 O2、内捞矛 S1、内捞矛 S2"
+          },
+          {
+            "changed": "pull",
+            "value": 30,
+            "metrics": {
+              "legalCandidates": 3,
+              "diameterOnly": 4,
+              "baselineViolations": 2,
+              "catalogSize": 6
+            },
+            "summary": "合法候选：外捞筒 O1、内捞矛 S1、内捞矛 S2"
+          },
+          {
+            "changed": "pull",
+            "value": 200,
+            "metrics": {
+              "legalCandidates": 0,
+              "diameterOnly": 4,
+              "baselineViolations": 4,
+              "catalogSize": 6
+            },
+            "summary": "当前没有同时满足几何、通径和承载的候选"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "4mm直径余量及目录是教学假设；不支持井斜、鱼顶破损、解卡力和扭矩设计。"
+      ]
+    },
+    {
+      "sceneId": "wo3",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "套管展开和正负半径必须先解释，去背景假定与漏检边界需可见。",
+      "specificTextAndFigureEvidence": "新圆周切口→深度方位图；两幅运行图共用−8至14mm色标，0/90/180/270/360°、0–3.5m刻度；两图格子支持键盘与点选。",
+      "interactionLearningGoal": "偏心0→5mm比较原阈值和去背景；幅度0+噪声高+阈值低查误报。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\wo3\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\wo3\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\wo3\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\wo3\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\wo3\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "wo3",
+        "defaultParams": {
+          "ecc": 2,
+          "depth": 3,
+          "noise": 0.2,
+          "threshold": 0.9
+        },
+        "metrics": {
+          "IoU": 1,
+          "baselineIoU": 0.12037037037037036,
+          "falsePixels": 0,
+          "predictedPixels": 72
+        },
+        "summary": "去偏心后局部异常 72 格；原始半径阈值 533 格。",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "changed": "ecc",
+            "value": 0,
+            "metrics": {
+              "IoU": 1,
+              "baselineIoU": 1,
+              "falsePixels": 0,
+              "predictedPixels": 72
+            },
+            "summary": "去偏心后局部异常 72 格；原始半径阈值 72 格。"
+          },
+          {
+            "changed": "ecc",
+            "value": 5,
+            "metrics": {
+              "IoU": 1,
+              "baselineIoU": 0.02748091603053435,
+              "falsePixels": 0,
+              "predictedPixels": 72
+            },
+            "summary": "去偏心后局部异常 72 格；原始半径阈值 601 格。"
+          },
+          {
+            "changed": "depth",
+            "value": 0,
+            "metrics": {
+              "IoU": 1,
+              "baselineIoU": 0,
+              "falsePixels": 0,
+              "predictedPixels": 0
+            },
+            "summary": "去偏心后局部异常 0 格；原始半径阈值 468 格。"
+          },
+          {
+            "changed": "depth",
+            "value": 6,
+            "metrics": {
+              "IoU": 1,
+              "baselineIoU": 0.13333333333333333,
+              "falsePixels": 0,
+              "predictedPixels": 72
+            },
+            "summary": "去偏心后局部异常 72 格；原始半径阈值 540 格。"
+          },
+          {
+            "changed": "noise",
+            "value": 0,
+            "metrics": {
+              "IoU": 1,
+              "baselineIoU": 0.11666666666666667,
+              "falsePixels": 0,
+              "predictedPixels": 72
+            },
+            "summary": "去偏心后局部异常 72 格；原始半径阈值 531 格。"
+          },
+          {
+            "changed": "noise",
+            "value": 0.9,
+            "metrics": {
+              "IoU": 0.7422680412371134,
+              "baselineIoU": 0.10614525139664804,
+              "falsePixels": 25,
+              "predictedPixels": 97
+            },
+            "summary": "去偏心后局部异常 97 格；原始半径阈值 522 格。"
+          },
+          {
+            "changed": "threshold",
+            "value": 0.2,
+            "metrics": {
+              "IoU": 0.7422680412371134,
+              "baselineIoU": 0.10557184750733138,
+              "falsePixels": 25,
+              "predictedPixels": 97
+            },
+            "summary": "去偏心后局部异常 97 格；原始半径阈值 682 格。"
+          },
+          {
+            "changed": "threshold",
+            "value": 2.5,
+            "metrics": {
+              "IoU": 1,
+              "baselineIoU": 0.125,
+              "falsePixels": 0,
+              "predictedPixels": 72
+            },
+            "summary": "去偏心后局部异常 72 格；原始半径阈值 9 格。"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "仅正残差局部凹坑；不估外壁、剩余壁厚或长段连续损伤；需浏览器抽查格子交互。"
+      ]
+    },
+    {
+      "sceneId": "wo4",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "有正常动作关系才可把钩载偏离解释为线索；残差与传感器漂移不能混为事故确诊。",
+      "specificTextAndFigureEvidence": "上下两个定量图分别展示钩载/残差，真实自适应刻度、108kN基线、当前残差阈值、阶段0/1带、评价事件阴影和持续报警底带。",
+      "interactionLearningGoal": "先无异常+提速看基线误报，再异常20kN看2分钟延迟，最后无异常+漂移12kN看伪警。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\wo4\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\wo4\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\wo4\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\wo4\\engine.js",
+        "G:\\可视化导论\\5\\expansion-src\\wo4\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\wo4\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "wo4",
+        "defaultParams": {
+          "speed": 1,
+          "drift": 0,
+          "event": 20,
+          "threshold": 9
+        },
+        "metrics": {
+          "eventRecall": 1,
+          "falseMinutes": 0,
+          "delay_min": 2,
+          "baselineFalseMinutes": 0
+        },
+        "summary": "异常发生后 2 分钟首次覆盖",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "changed": "speed",
+            "value": 0.5,
+            "metrics": {
+              "eventRecall": 1,
+              "falseMinutes": 0,
+              "delay_min": 2,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "异常发生后 2 分钟首次覆盖"
+          },
+          {
+            "changed": "speed",
+            "value": 1.8,
+            "metrics": {
+              "eventRecall": 1,
+              "falseMinutes": 0,
+              "delay_min": 2,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "异常发生后 2 分钟首次覆盖"
+          },
+          {
+            "changed": "drift",
+            "value": -8,
+            "metrics": {
+              "eventRecall": 1,
+              "falseMinutes": 0,
+              "delay_min": 2,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "异常发生后 2 分钟首次覆盖"
+          },
+          {
+            "changed": "drift",
+            "value": 12,
+            "metrics": {
+              "eventRecall": 1,
+              "falseMinutes": 103,
+              "delay_min": 0,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "异常发生后 0 分钟首次覆盖"
+          },
+          {
+            "changed": "event",
+            "value": 0,
+            "metrics": {
+              "eventRecall": null,
+              "falseMinutes": 0,
+              "delay_min": null,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "无异常场景：请关注误报分钟数"
+          },
+          {
+            "changed": "event",
+            "value": 35,
+            "metrics": {
+              "eventRecall": 1,
+              "falseMinutes": 0,
+              "delay_min": 2,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "异常发生后 2 分钟首次覆盖"
+          },
+          {
+            "changed": "threshold",
+            "value": 4,
+            "metrics": {
+              "eventRecall": 1,
+              "falseMinutes": 0,
+              "delay_min": 2,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "异常发生后 2 分钟首次覆盖"
+          },
+          {
+            "changed": "threshold",
+            "value": 18,
+            "metrics": {
+              "eventRecall": 1,
+              "falseMinutes": 0,
+              "delay_min": 2,
+              "baselineFalseMinutes": 0
+            },
+            "summary": "异常发生后 2 分钟首次覆盖"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "阶段项及速度系数是教学构造，尚无现场动作/力学验证；浏览器视觉待验。"
+      ]
+    },
+    {
+      "sceneId": "wo5",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "完整间隔回归与右删失/RUL不同，预测锚点已明确为检修A。",
+      "specificTextAndFigureEvidence": "输入只取A前半年，图中32台留出预测/参考散点附真实天数刻度和训练中位数；正文移除不存在的误差区间承诺，说明固定工程缩放。",
+      "interactionLearningGoal": "改变历史停机0→8次只变当前估计；口述>180d右删失并保持测试MAE不变。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\wo5\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\wo5\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\wo5\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\wo5\\engine.js",
+        "G:\\可视化导论\\5\\expansion-src\\wo5\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\wo5\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "wo5",
+        "defaultParams": {
+          "load": 70,
+          "sand": 1.2,
+          "stops": 3
+        },
+        "metrics": {
+          "MAE_days": 10.072247233707861,
+          "baselineMAE_days": 61.62678697935189,
+          "testDevices": 32,
+          "predictedInterval_days": 275.63032785312964
+        },
+        "summary": "当前条件的完整检修间隔估计 276 天；留出平均绝对误差 10.1 天。",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "changed": "load",
+            "value": 35,
+            "metrics": {
+              "MAE_days": 10.072247233707861,
+              "baselineMAE_days": 61.62678697935189,
+              "testDevices": 32,
+              "predictedInterval_days": 365.14651245706585
+            },
+            "summary": "当前条件的完整检修间隔估计 365 天；留出平均绝对误差 10.1 天。"
+          },
+          {
+            "changed": "load",
+            "value": 95,
+            "metrics": {
+              "MAE_days": 10.072247233707861,
+              "baselineMAE_days": 61.62678697935189,
+              "testDevices": 32,
+              "predictedInterval_days": 211.69019599317522
+            },
+            "summary": "当前条件的完整检修间隔估计 212 天；留出平均绝对误差 10.1 天。"
+          },
+          {
+            "changed": "sand",
+            "value": 0,
+            "metrics": {
+              "MAE_days": 10.072247233707861,
+              "baselineMAE_days": 61.62678697935189,
+              "testDevices": 32,
+              "predictedInterval_days": 315.1276003241743
+            },
+            "summary": "当前条件的完整检修间隔估计 315 天；留出平均绝对误差 10.1 天。"
+          },
+          {
+            "changed": "sand",
+            "value": 3,
+            "metrics": {
+              "MAE_days": 10.072247233707861,
+              "baselineMAE_days": 61.62678697935189,
+              "testDevices": 32,
+              "predictedInterval_days": 216.38441914656266
+            },
+            "summary": "当前条件的完整检修间隔估计 216 天；留出平均绝对误差 10.1 天。"
+          },
+          {
+            "changed": "stops",
+            "value": 0,
+            "metrics": {
+              "MAE_days": 10.072247233707861,
+              "baselineMAE_days": 61.62678697935189,
+              "testDevices": 32,
+              "predictedInterval_days": 320.4036653755235
+            },
+            "summary": "当前条件的完整检修间隔估计 320 天；留出平均绝对误差 10.1 天。"
+          },
+          {
+            "changed": "stops",
+            "value": 8,
+            "metrics": {
+              "MAE_days": 10.072247233707861,
+              "baselineMAE_days": 61.62678697935189,
+              "testDevices": 32,
+              "predictedInterval_days": 201.00809864913995
+            },
+            "summary": "当前条件的完整检修间隔估计 201 天；留出平均绝对误差 10.1 天。"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "只含已完成间隔，可能有完整病例选择偏倚；未实现生存模型或剩余寿命。"
+      ]
+    },
+    {
+      "sceneId": "e2",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "二维几何必须与产能隔开，横纵同尺并覆盖所有参数。",
+      "specificTextAndFigureEvidence": "L/H由实算回归生成，椭圆自适应同尺缩放、x及相对高度刻度、半长半高数值；正文解释πLH不是增油率，导流还需渗透率×宽度等量。",
+      "interactionLearningGoal": "液量300→1200比较L/H/面积，再约束0.1→0.9比较长高比。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\e2\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\e2\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\e2\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\e2\\engine.js",
+        "G:\\可视化导论\\5\\expansion-src\\e2\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\e2\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "e2",
+        "defaultParams": {
+          "volume": 700,
+          "stress": 5,
+          "barrier": 0.5
+        },
+        "metrics": {
+          "lengthMAE_m": 2.064633120046353,
+          "heightMAE_m": 0.79950717697245,
+          "baselineLengthMAE_m": 28.114200987767664,
+          "testCases": 40,
+          "contourIoU": 0.9342463163301893
+        },
+        "summary": "预测半长 134.1 m、半高 19.3 m；二维几何投影面积 8121 m²。",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "changed": "volume",
+            "value": 300,
+            "metrics": {
+              "lengthMAE_m": 2.064633120046353,
+              "heightMAE_m": 0.79950717697245,
+              "baselineLengthMAE_m": 28.114200987767664,
+              "testCases": 40,
+              "contourIoU": 0.9342463163301893
+            },
+            "summary": "预测半长 90.3 m、半高 8.3 m；二维几何投影面积 2355 m²。"
+          },
+          {
+            "changed": "volume",
+            "value": 1200,
+            "metrics": {
+              "lengthMAE_m": 2.064633120046353,
+              "heightMAE_m": 0.79950717697245,
+              "baselineLengthMAE_m": 28.114200987767664,
+              "testCases": 40,
+              "contourIoU": 0.9342463163301893
+            },
+            "summary": "预测半长 188.8 m、半高 33.0 m；二维几何投影面积 19575 m²。"
+          },
+          {
+            "changed": "stress",
+            "value": 2,
+            "metrics": {
+              "lengthMAE_m": 2.064633120046353,
+              "heightMAE_m": 0.79950717697245,
+              "baselineLengthMAE_m": 28.114200987767664,
+              "testCases": 40,
+              "contourIoU": 0.9342463163301893
+            },
+            "summary": "预测半长 125.1 m、半高 21.9 m；二维几何投影面积 8621 m²。"
+          },
+          {
+            "changed": "stress",
+            "value": 10,
+            "metrics": {
+              "lengthMAE_m": 2.064633120046353,
+              "heightMAE_m": 0.79950717697245,
+              "baselineLengthMAE_m": 28.114200987767664,
+              "testCases": 40,
+              "contourIoU": 0.9342463163301893
+            },
+            "summary": "预测半长 149.0 m、半高 14.9 m；二维几何投影面积 6954 m²。"
+          },
+          {
+            "changed": "barrier",
+            "value": 0.1,
+            "metrics": {
+              "lengthMAE_m": 2.064633120046353,
+              "heightMAE_m": 0.79950717697245,
+              "baselineLengthMAE_m": 28.114200987767664,
+              "testCases": 40,
+              "contourIoU": 0.9342463163301893
+            },
+            "summary": "预测半长 128.6 m、半高 29.1 m；二维几何投影面积 11772 m²。"
+          },
+          {
+            "changed": "barrier",
+            "value": 0.9,
+            "metrics": {
+              "lengthMAE_m": 2.064633120046353,
+              "heightMAE_m": 0.79950717697245,
+              "baselineLengthMAE_m": 28.114200987767664,
+              "testCases": 40,
+              "contourIoU": 0.9342463163301893
+            },
+            "summary": "预测半长 139.6 m、半高 9.4 m；二维几何投影面积 4128 m²。"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "仅同中心二维椭圆，不建模分叉、真实地应力传播、三维连通性或产能。"
+      ]
+    },
+    {
+      "sceneId": "e3",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "真实重心坐标原先已正确；现补可读比例、固定数值色标及固定方案预算状态。",
+      "specificTextAndFigureEvidence": "A顶、C左下、B右下；20%比例网格、5%候选步长；色标−20至80；点选/键盘显示A/B/C、成本、性能、可行状态。",
+      "interactionLearningGoal": "预算5→6读0.3/0.3/0.4成本5.10元/L，盐度30→70检查最优移动但成本不变。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\e3\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\e3\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\e3\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\e3\\engine.js",
+        "G:\\可视化导论\\5\\expansion-src\\e3\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\e3\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "e3",
+        "defaultParams": {
+          "salinity": 30,
+          "budget": 5
+        },
+        "metrics": {
+          "MAE_index": 0.9196983912209196,
+          "baselineMAE_index": 9.567580423053398,
+          "feasibleCount": 85,
+          "candidateCount": 231
+        },
+        "summary": "最佳可行比例 A 0.25 / B 0.35 / C 0.40；成本 4.95 元/L",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "changed": "salinity",
+            "value": 5,
+            "metrics": {
+              "MAE_index": 0.9196983912209196,
+              "baselineMAE_index": 9.567580423053398,
+              "feasibleCount": 85,
+              "candidateCount": 231
+            },
+            "summary": "最佳可行比例 A 0.25 / B 0.35 / C 0.40；成本 4.95 元/L"
+          },
+          {
+            "changed": "salinity",
+            "value": 70,
+            "metrics": {
+              "MAE_index": 0.9196983912209196,
+              "baselineMAE_index": 9.567580423053398,
+              "feasibleCount": 85,
+              "candidateCount": 231
+            },
+            "summary": "最佳可行比例 A 0.15 / B 0.50 / C 0.35；成本 4.88 元/L"
+          },
+          {
+            "changed": "budget",
+            "value": 2.5,
+            "metrics": {
+              "MAE_index": 0.9196983912209196,
+              "baselineMAE_index": 9.567580423053398,
+              "feasibleCount": 10,
+              "candidateCount": 231
+            },
+            "summary": "最佳可行比例 A 0.00 / B 0.20 / C 0.80；成本 2.40 元/L"
+          },
+          {
+            "changed": "budget",
+            "value": 8,
+            "metrics": {
+              "MAE_index": 0.9196983912209196,
+              "baselineMAE_index": 9.567580423053398,
+              "feasibleCount": 217,
+              "candidateCount": 231
+            },
+            "summary": "最佳可行比例 A 0.45 / B 0.55 / C 0.00；成本 7.35 元/L"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "母液与指数均虚构；负指数只是相对教学零点；无真实化学体系兼容性试验。"
+      ]
+    },
+    {
+      "sceneId": "e4",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "注焖采时间边界与投入/产油口径已对齐；正文不再承诺未实现的日产曲线。",
+      "specificTextAndFigureEvidence": "周期带列注汽/焖井/90d生产边界；J轴刻度/单位、最佳焖井轨迹、可行固定方案方块；结果解释总天数、汽油比及固定方案可行性。",
+      "interactionLearningGoal": "成本0.02→0.12比较最佳J；上限600t时固定1200t超限，改善NA；核算总周期。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\e4\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\e4\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\e4\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\e4\\engine.js",
+        "G:\\可视化导论\\5\\expansion-src\\e4\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\e4\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "e4",
+        "defaultParams": {
+          "steamMax": 1500,
+          "price": 0.05,
+          "temperature": 45
+        },
+        "metrics": {
+          "MAE_oil_t": 3.8363895405240647,
+          "baselineMAE_oil_t": 18.71274249289882,
+          "feasibleCount": 80,
+          "predictedGain_t": 0
+        },
+        "summary": "网格最佳：蒸汽 1200 t，焖井 4 d；预测90天产油 292.6 t，折算目标 232.6 t油。",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "changed": "steamMax",
+            "value": 600,
+            "metrics": {
+              "MAE_oil_t": 3.8363895405240647,
+              "baselineMAE_oil_t": 18.71274249289882,
+              "feasibleCount": 8,
+              "predictedGain_t": null
+            },
+            "summary": "网格最佳：蒸汽 600 t，焖井 4 d；预测90天产油 242.6 t，折算目标 212.6 t油。"
+          },
+          {
+            "changed": "steamMax",
+            "value": 2200,
+            "metrics": {
+              "MAE_oil_t": 3.8363895405240647,
+              "baselineMAE_oil_t": 18.71274249289882,
+              "feasibleCount": 136,
+              "predictedGain_t": 0
+            },
+            "summary": "网格最佳：蒸汽 1200 t，焖井 4 d；预测90天产油 292.6 t，折算目标 232.6 t油。"
+          },
+          {
+            "changed": "price",
+            "value": 0.02,
+            "metrics": {
+              "MAE_oil_t": 3.8363895405240647,
+              "baselineMAE_oil_t": 18.71274249289882,
+              "feasibleCount": 80,
+              "predictedGain_t": 5.4372737225825745
+            },
+            "summary": "网格最佳：蒸汽 1500 t，焖井 4 d；预测90天产油 304.0 t，折算目标 274.0 t油。"
+          },
+          {
+            "changed": "price",
+            "value": 0.12,
+            "metrics": {
+              "MAE_oil_t": 3.8363895405240647,
+              "baselineMAE_oil_t": 18.71274249289882,
+              "feasibleCount": 80,
+              "predictedGain_t": 21.989252607205458
+            },
+            "summary": "网格最佳：蒸汽 600 t，焖井 4 d；预测90天产油 242.6 t，折算目标 170.6 t油。"
+          },
+          {
+            "changed": "temperature",
+            "value": 30,
+            "metrics": {
+              "MAE_oil_t": 3.8363895405240647,
+              "baselineMAE_oil_t": 18.71274249289882,
+              "feasibleCount": 80,
+              "predictedGain_t": 1.1452065254026706
+            },
+            "summary": "网格最佳：蒸汽 1400 t，焖井 4 d；预测90天产油 317.0 t，折算目标 247.0 t油。"
+          },
+          {
+            "changed": "temperature",
+            "value": 70,
+            "metrics": {
+              "MAE_oil_t": 3.8363895405240647,
+              "baselineMAE_oil_t": 18.71274249289882,
+              "feasibleCount": 80,
+              "predictedGain_t": 1.5421168632702233
+            },
+            "summary": "网格最佳：蒸汽 1000 t，焖井 4 d；预测90天产油 262.0 t，折算目标 212.0 t油。"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "200t/d仅教学速率；质量汽油比不等于含蒸汽品质的热效率；无逐日产量或热传导模拟。"
+      ]
+    },
+    {
+      "sceneId": "e5",
+      "status": "source_review_not_browser",
+      "teachingJudgment": "活性与增采区分充分加强，温盐联合影响必须用有坐标和覆盖的响应面教学。",
+      "specificTextAndFigureEvidence": "温度25–70°C/盐度5–90g/L刻度、固定0–100活性色标、训练空心点与查询圈；正文解释培养边界与代谢/相容/驱替的缺失证据。",
+      "interactionLearningGoal": "45°C下盐度25→90比较kNN和单温度基线，再k3→15看平滑及误差。",
+      "fixedFiles": [
+        "G:\\可视化导论\\5\\expansion-src\\e5\\case.json",
+        "G:\\可视化导论\\5\\expansion-src\\e5\\demo.html",
+        "G:\\可视化导论\\5\\expansion-src\\e5\\app.js",
+        "G:\\可视化导论\\5\\expansion-src\\e5\\engine.js",
+        "G:\\可视化导论\\5\\expansion-src\\e5\\demo.css",
+        "G:\\可视化导论\\5\\expansion-src\\e5\\flow.json"
+      ],
+      "calculationEvidence": {
+        "id": "e5",
+        "defaultParams": {
+          "temperature": 45,
+          "salinity": 35,
+          "neighbors": 7
+        },
+        "metrics": {
+          "MAE_activity": 3.945063396994277,
+          "baselineMAE_activity": 11.454348856282225,
+          "predictedActivity": 83.47509355903456,
+          "testBatches": 30
+        },
+        "summary": "当前环境预测活性指数 83.5 /100；温度分箱对照 58.1。",
+        "syntax": "engine_and_app_parsed",
+        "boundaries": [
+          {
+            "changed": "temperature",
+            "value": 25,
+            "metrics": {
+              "MAE_activity": 3.945063396994277,
+              "baselineMAE_activity": 11.454348856282225,
+              "predictedActivity": 33.16965789301559,
+              "testBatches": 30
+            },
+            "summary": "当前环境预测活性指数 33.2 /100；温度分箱对照 32.0。"
+          },
+          {
+            "changed": "temperature",
+            "value": 70,
+            "metrics": {
+              "MAE_activity": 3.945063396994277,
+              "baselineMAE_activity": 11.454348856282225,
+              "predictedActivity": 12.304959683278563,
+              "testBatches": 30
+            },
+            "summary": "当前环境预测活性指数 12.3 /100；温度分箱对照 9.8。"
+          },
+          {
+            "changed": "salinity",
+            "value": 5,
+            "metrics": {
+              "MAE_activity": 3.945063396994277,
+              "baselineMAE_activity": 11.454348856282225,
+              "predictedActivity": 75.09856571531981,
+              "testBatches": 30
+            },
+            "summary": "当前环境预测活性指数 75.1 /100；温度分箱对照 58.1。"
+          },
+          {
+            "changed": "salinity",
+            "value": 90,
+            "metrics": {
+              "MAE_activity": 3.945063396994277,
+              "baselineMAE_activity": 11.454348856282225,
+              "predictedActivity": 12.086223738807554,
+              "testBatches": 30
+            },
+            "summary": "当前环境预测活性指数 12.1 /100；温度分箱对照 58.1。"
+          },
+          {
+            "changed": "neighbors",
+            "value": 3,
+            "metrics": {
+              "MAE_activity": 3.3031501482455647,
+              "baselineMAE_activity": 11.454348856282225,
+              "predictedActivity": 85.14473224542061,
+              "testBatches": 30
+            },
+            "summary": "当前环境预测活性指数 85.1 /100；温度分箱对照 58.1。"
+          },
+          {
+            "changed": "neighbors",
+            "value": 15,
+            "metrics": {
+              "MAE_activity": 6.119592660319094,
+              "baselineMAE_activity": 11.454348856282225,
+              "predictedActivity": 81.92930693949405,
+              "testBatches": 30
+            },
+            "summary": "当前环境预测活性指数 81.9 /100；温度分箱对照 58.1。"
+          }
+        ],
+        "serializedSVG": true
+      },
+      "remainingItems": [
+        "同一合成菌群、固定培养时长；调k是测试探索，不能当调后最终独立验收；无现场增油结论。"
+      ]
+    }
+  ],
+  "recommendedBrowserSpotChecks": [
+    {
+      "sceneId": "wo4",
+      "steps": [
+        "在原门户opaque iframe导入后切三标签，确认hash不导致失效。",
+        "无异常0kN、速度1.8运行；核读钩载数轴、108基线、阶段带及误报。",
+        "默认异常20kN运行；下图读阈值9kN、65–79事件带、67min首次报警。",
+        "无异常且漂移12kN运行；看到残差持续偏离并说明为何不能确诊事故。"
+      ],
+      "watchFor": "上下图轴标签/刻度重叠、窄屏横向滚动、图例与真值评价带是否可读。"
+    },
+    {
+      "sceneId": "e3",
+      "steps": [
+        "预算5、盐度30运行，读三元比例网格和−20至80固定色标。",
+        "用鼠标及键盘选择0.30/0.30/0.40附近方块对应网格点，读取成本5.10且超预算。",
+        "预算改6，旧结果stale且导出禁用；重算后固定点可行。",
+        "盐度改70，重算后观察预测和最优点移动；单价不变、比例和为1。"
+      ],
+      "watchFor": "重心顶点对应、候选点击与键盘、选中说明、色标负值及固定方案框是否清楚。"
+    }
+  ]
+}

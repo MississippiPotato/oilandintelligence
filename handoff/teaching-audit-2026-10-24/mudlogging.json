@@ -1,0 +1,205 @@
+{
+  "auditDate": "2026-10-24",
+  "scope": "mudlogging mandatory scenes m1-m5; part of root 61-scene audit",
+  "verification": "source_review_not_browser",
+  "reviewedArtifacts": [
+    "s17_development_kit/00_READ_FIRST.txt",
+    "s17_development_kit/01_学号17_详细开发方案.txt",
+    "s17_development_kit/06_兼容与验收清单.txt",
+    "portal-original/firstbreak-pick-case/case.json",
+    "tools/mudlogging-content.mjs",
+    "tools/mudlogging-study-content.mjs",
+    "tools/mudlogging-source-scenes.mjs",
+    "shared/mudlogging-knowledge.js",
+    "shared/mudlogging-study.js",
+    "shared/teaching-view.js",
+    "case-src/m1/lesson.js; ui.js; engine.js",
+    "case-src/m2/lesson.js; ui.js; engine.js; index.html; enhance.js",
+    "case-src/m3/lesson.js; ui.js; engine.js",
+    "case-src/m4/lesson.js; ui.js; engine.js",
+    "case-src/m5/lesson.js; ui.js; engine.js; data.js",
+    "dist/cases/s17-cuttings-lithology/case.json; demo/index.html; demo/demo.js",
+    "dist/cases/s17-mudgas-context/case.json; demo/index.html; demo/demo.js",
+    "dist/cases/s17-fluorescence-review/case.json; demo/index.html; demo/demo.js",
+    "dist/cases/s17-drilltime-boundaries/case.json; demo/index.html; demo/demo.js",
+    "dist/cases/s17-evidence-report/case.json; demo/index.html; demo/demo.js"
+  ],
+  "artifactSnapshot": {
+    "caseJsonVersionAtReview": "1.5.2 for all five",
+    "note": "dist was read before root rebuild. Source repair below is verified in Node VM only; root must rebuild and inspect final browser artifacts.",
+    "buildRunByAuditor": false,
+    "browserRunByAuditor": false,
+    "commitRunByAuditor": false
+  },
+  "overallJudgement": "五例已形成各自有业务问题、材料观察、实际算法与可复核输出的教学链条。不是只有三标签或装饰图的空壳。专业方向总体成立；m1/m2/m4的新背景替换掉原有详细释义后，仍需补少量读图必需的概念。最实质问题是m5明确否定和ppmv单位抽取不一致，已修源代码。其余建议以具体理解障碍为依据，不按字数或图片数判定质量。",
+  "contractAssessment": {
+    "teacherThreePartStructure": "Five case.json files retain professional background, workflow, runnable demo with original m1-m5 scene IDs.",
+    "workflowQuality": "Each workflow has an input, operation, output, trap and a specific step diagram; intermediate output is connected to the real algorithm in demo source.",
+    "comparisonWithTeacherExample": "Firstbreak is a useful three-part import contract and question-led baseline, not evidence that its particular metrics, work estimates or signal method are obligations for these cases.",
+    "interactionAssessment": "Controls call image operations, event detection, learned classifiers, calibration/clustering or extraction; learning tasks concern a change in evidence and its consequence rather than animation alone.",
+    "notEstablishedByThisAudit": "No claims about browser layout, mounted controls, offline import persistence, keyboard usability or final distribution behavior are made from source reading."
+  },
+  "cases": [
+    {
+      "sceneId": "m1",
+      "businessQuestion": "一盘返出碎屑更像哪些岩类，哪些颗粒应复核，如何按颗粒数或可见面积汇总？",
+      "professionalBackgroundJudgement": "方向正确：说明破岩、返出、筛分、样品身份和迟到；真实岩芯图块被明确用于认识外观，未冒充岩屑识别测试集。但当前首节只提页岩细粒/层状、灰岩碳酸盐，没有把这些词解释为初学者能比较的岩类概念；真实页岩与主实验泥岩教学外观之间缺少显式桥接。",
+      "specificFigureTextCorrespondence": [
+        "六张真实2×2 cm岩芯图块逐张对应亮度-纹理散点，照片按钮和图点共享记录选择；解释纹理取水平相邻像素亮度差，另可切亮度直方图。",
+        "筛上清洗岩屑插画的框选与取样-登记-拍照流程对应，标注采集原理插画而非现场照片。",
+        "主实验320×240真实合成像素对应分割轮廓、连通域颗粒、实际训练近邻缩略图与距离；面积/计数切换确实改变分母。"
+      ],
+      "interactiveLearningGoal": "改变泥浆附着看分割是否先失效；点误判颗粒看近邻依据；同盘切换计数/面积理解大颗粒权重与待复核分母。",
+      "dataNature": "真实署名岩芯观察材料 + 自带合成托盘训练/评价；二者用途分开。分类只评价匹配实例，漏检/合并另列；二维面积不称地层组成。",
+      "defects": [
+        {
+          "severity": "P2 teaching clarity",
+          "file": "tools/mudlogging-study-content.mjs",
+          "location": "m1首节，真实岩芯段落；约29-30行",
+          "issue": "公开材料的页岩与主实验泥岩教学外观未解释关系，岩类本身的识别线索释义被背景覆盖逻辑移除。",
+          "suggestion": "在照片旁用简短释义说明砂级颗粒、细粒泥质岩、页岩薄层易劈裂及灰岩以碳酸盐矿物为主；明确页岩照片不是泥岩类的严格同类金标，不以两个特征直接鉴定矿物。",
+          "status": "sent_to_root_for_integration"
+        }
+      ],
+      "strengthsToKeep": ["真实照片与合成逐粒任务之间的用途说明", "可回看实际近邻", "分割损失独立列示", "按两种分母汇总并保留拒判"]
+    },
+    {
+      "sceneId": "m2",
+      "businessQuestion": "地面相似气峰与哪些较早的来源工况有关，累计泵量和操作日志怎样改变解释？",
+      "professionalBackgroundJudgement": "机制和结论边界成立。接单根停泵/短时移动与起钻抽吸的机制经SLB原始术语核对，无需纠正成单一成因。当前装饰后的背景缺少接单根=接长钻柱、起下钻=提出/下入钻具这两个初学者读图前提，应补一句动作释义。",
+      "specificFigureTextCorrespondence": [
+        "PANGAEA甲烷散点沿沉积深度排列，记录游标返回甲烷、乙烷、IGSN；阈值是中位数倍数的描述性高值。正文明确顶空气体不是循环泥浆气测。",
+        "同一教学观测的总气、泵量、工况条共享时间轴，地面与来源两条虚线由累计泵量反查实际变化；停泵平台不能简单按固定分钟平移。",
+        "主实验的气峰窗口、双时钟井深、工况距离与实际近邻局部峰共同对应同一选中事件。"
+      ],
+      "interactiveLearningGoal": "固定曲线改首峰工况，比较候选与近邻变化；再改有效体积或停泵条件，说明为何需要迟到回查。工况反事实无金标时不显示准确率。",
+      "dataNature": "公开离散顶空实测与教学连续气测分开；主算法使用归一化仪器单位，不能当体积分数。独立整井划分、事件一对一匹配、检测漏检与解释成绩分开。",
+      "defects": [
+        {
+          "severity": "P2 teaching clarity",
+          "file": "tools/mudlogging-study-content.mjs",
+          "location": "m2第二节“迟到…接单根常伴随停泵…”段落",
+          "issue": "读者先遇到行业操作名，再看到其后果，尚不知道操作本身是什么。原细节图有动作定义，但门户背景已被decorateKnowledge替换，不能依赖独立demo的折叠补充图。",
+          "suggestion": "在首次出现时直接补接单根、起下钻的动作定义；保留停泵和抽吸可能共同作用的当前表述。",
+          "status": "sent_to_root_for_integration"
+        },
+        {
+          "severity": "P3 wording",
+          "file": "shared/mudlogging-study.js",
+          "location": "gas()阅读反馈，约28行",
+          "issue": "“高值…病因还需要其他资料”使用医疗词汇。",
+          "suggestion": "改为“来源或成因还需要其他资料”。",
+          "status": "recommendation_only"
+        }
+      ],
+      "strengthsToKeep": ["顶空数据与泥浆气测的类型区分", "累计体积双时钟", "同峰异因控制变量", "关联候选而非油气发现", "反事实不伪造金标"]
+    },
+    {
+      "sceneId": "m3",
+      "businessQuestion": "哪些像素有荧光显示，拍摄条件怎样影响面积，显示来源还有哪些待核查问题？",
+      "professionalBackgroundJudgement": "五例中专业概念与图像任务的对应较直接。先讲可见发光，再用同标本方解石说明矿物也会发光；分割与油气来源解释始终分开。背景没有把高亮直接解释成含油或把面积当饱和度。",
+      "specificFigureTextCorrespondence": [
+        "馆藏同组方解石白光/短波/长波照片说明矿物发光的反例；正文标出拍摄条件不同，只做现象与位置对照，不宣称跨波长定量校正。",
+        "固定教学白光ROI、UV曝光倍率和阈值直接对应真实像素、直方图、圈选掩膜和显示像素/可见像素分母。",
+        "主实验B0原始阈值、B1参考校正阈值、M0逻辑回归分开，真实梯度损失与权重可读，避免把曝光校正收益全归学习。"
+      ],
+      "interactiveLearningGoal": "先预测提高曝光是否让圈选面积增加，观察饱和损失；比较三方法并用独立笔刷修订，理解正确分割仍不能确认发光来源。",
+      "dataNature": "署名真实矿物照片用于现象认识；自带同几何WL/UV合成像素用于训练与逐像素评价。评价域预先固定，不通过预测ROI排除漏掉岩屑；矿物发光仍是分割正类。",
+      "defects": [],
+      "strengthsToKeep": ["同样品身份与位置", "显示面积清楚分子分母", "B0/B1/M0比较", "饱和不可逆", "矿物发光正例与来源未定", "人工掩膜不覆盖模型成绩"]
+    },
+    {
+      "sceneId": "m4",
+      "businessQuestion": "钻速台阶是操作变化还是候选地层响应，减少碎片边界会付出什么薄层代价？",
+      "professionalBackgroundJudgement": "专业口径谨慎且教学任务有取舍：同区间ROP=60/钻时、有效钻进筛选、工况可能制造假界面、簇不等于岩性。背景可补WOB/RPM的动作/量纲释义；方法部分必须说明辅助扭矩项是固定教学变换，不能让读者把两维都理解成标定学习所得。",
+      "specificFigureTextCorrespondence": [
+        "USROP真实记录三轨共用MD深度轴，游标联动同一行，散点说明相关性线索，原CSV行号和采样间隙保留；没有补造真实岩性边界。",
+        "工况阶跃预设固定地层，原始/校正曲线及基线/模型边界对齐，帮助看假界面；薄层预设固定工况，调最小段长看边界减少与漏检。",
+        "实际训练井聚类中心、SSE迭代与分段候选连接到学习过程，而非直接赋砂岩/泥岩名称。"
+      ],
+      "interactiveLearningGoal": "先检查1240 m工况阶跃附近是否多切边界，再逐步加大最小段长看薄层是否丢失；评价同时读漏检、多余和匹配误差。",
+      "dataNature": "真实USROP只用于曲线认识与观测对照；独立合成标定/训练/演示用于可控实验。显式离线分段，人工候选与模型评价分开。",
+      "defects": [
+        {
+          "severity": "P2 method explanation",
+          "file": "case-src/m4/engine.js; case-src/m4/lesson.js; case-src/m4/ui.js",
+          "location": "engine.js:9 normalize() x第二维；ui.js:12中心表；lesson.js构造响应/聚类步骤",
+          "issue": "第二维为(T-4-0.12WOB)/0.8，系数与合成生成器同式；页面主要解释ROP独立标定，尚未说明扭矩维的固定教学变换。结果确有学习，不能把这项先验简化全部归因于学习。",
+          "suggestion": "明确列示两维的来源：ROP项来自独立标定，扭矩辅助项用固定教学变换；系数不称现场物理定律。补扭矩为旋转作用的量及kN·m单位，便于理解中心表。",
+          "status": "sent_to_root_for_integration"
+        },
+        {
+          "severity": "P2 teaching clarity",
+          "file": "tools/mudlogging-study-content.mjs",
+          "location": "m4首节三轨图前或图注",
+          "issue": "WOB/RPM虽给中文缩写，未向初学者解释钻压为压在钻头上的轴向载荷、转速为每分钟旋转次数。",
+          "suggestion": "在读三轨图前附两句量的定义，并保留正确单位与相关不等于成因的表述。",
+          "status": "sent_to_root_for_integration"
+        }
+      ],
+      "strengthsToKeep": ["同有效区间单位倒数", "独立标定而非测试井拟合", "工况与薄层两项控制变量", "候选响应段命名", "漏检和多报不被平均误差掩盖"]
+    },
+    {
+      "sceneId": "m5",
+      "businessQuestion": "怎样把异构录井记录整理成逐句可查、否定/单位/范围不丢且能重核的报告草稿？",
+      "professionalBackgroundJudgement": "业务目标与NLP步骤区分清楚：分类负责分流，规则抽字段，约束引述模板组装，人工核对含义。原文/字段/句子的图文联动有教学价值。但审阅时发现常用明确否定和ppmv抽取不一致，属于会改变学生所读事实字段的实质问题，已在本例源代码修复。",
+      "specificFigureTextCorrespondence": [
+        "背景直接编辑原文，实际字符NB得分、深度字段和否定高亮与草稿对照；故意删除否定说明分类正确不能保证事实正确。",
+        "主实验点击句子对应原文字符范围、具体来源ID/版本、规则字段、实际类别得分和字符贡献。",
+        "确认后改写或变来源撤销核验；上游快照明确为构建期真实计算，本页不重新运行其他模型；自由文本无金标时不显示性能。"
+      ],
+      "interactiveLearningGoal": "对一条记录核对否定、单位与井段，确认后改变文字观察旧确认失效；比较关键词/NB归类，用来源关系区分可追溯和语义已核对。",
+      "dataNature": "教学模板族句库与带金标内置记录；自由输入只报工作流数量。上游公开材料导入保留井号与数据性质，不自动合成一口实井。",
+      "defects": [
+        {
+          "severity": "P1 field semantics",
+          "file": "case-src/m5/engine.js; case-src/m5/ui.js",
+          "location": "engine.js extract(); ui.js fieldHighlights()",
+          "issue": "修复前“未检出荧光”“未观察到荧光”被抽成negation:false且无警告，而UI已把未检出高亮成否定；“3.2 ppmv”被截为gasUnit:ppm。引用原文仍保留，所以不是草稿文字直接翻转，但字段、冲突检查与讲解不一致。",
+          "repair": "扩充明确的目标邻近否定表达并保留子句范围；不解析的否定或单子句混合观察标待复核/support unchecked；单位匹配ppmv优先并检查完整英数token，UI高亮同步支持明确否定与单位。未改数值、offset、split、多范围逻辑、模型训练或版本。",
+          "status": "fixed_in_source_verified_node_vm; final dist rebuild and browser confirmation owned by root"
+        },
+        {
+          "severity": "P2 consistency",
+          "file": "shared/mudlogging-study.js",
+          "location": "report(), originally line47",
+          "issue": "背景小实验另有否定匹配与删除逻辑，需要同步明确支持未检出/未观察到；不能由第一处无关“无”字触发草稿改写。",
+          "suggestion": "与本例明确荧光否定模式一致，仅替换已匹配目标的否定前缀；复杂或并列输入保留人工核查提示。",
+          "status": "sent_to_root_for_shared_integration"
+        }
+      ],
+      "strengthsToKeep": ["分类/规则/模板真实分工", "原文字符定位", "不可变来源版本", "人工确认撤销与历史", "自由输入无假准确率", "导出原文与限制"]
+    }
+  ],
+  "repairVerification": {
+    "status": "passed_source_node_vm_not_browser",
+    "command": "node handoff/teaching-audit-2026-10-24/mudlogging-field-fixtures.mjs",
+    "fixtureCount": 18,
+    "builtInFixtureCount": 3,
+    "builtInExactFields": ["default 6/6", "negation 7/7", "conflict 7/7"],
+    "builtInConflictCounts": [0,0,1],
+    "evidence": "handoff/teaching-audit-2026-10-24/mudlogging-field-fixtures.result.json",
+    "checks": ["clear fluorescence negatives", "comma clause scope in both orders", "gas target-specific negatives", "unresolved negative review", "whole-unit preservation", "unknown unit not truncated", "original quote offsets and source versions", "multiple-range ambiguity", "negative-positive conflict retained"],
+    "syntax": "node --check passed for m5 engine.js and ui.js",
+    "remaining": "Root rebuild, shared background sync and final browser observation."
+  },
+  "primaryProfessionalChecks": [
+    {"url":"https://glossary.slb.com/en/terms/s/shale","result":"SLB states shale is fine-grained and fissile; supports retaining a distinction rather than silently treating shale/mudstone labels as identical."},
+    {"url":"https://glossary.slb.com/en/terms/c/connection_gas","result":"SLB describes stopped pumps and minor swabbing during connections, followed by lagged short peak; current m2 mechanism is defensible."},
+    {"url":"https://glossary.slb.com/en/terms/t/trip_gas","result":"SLB describes lack of circulation and swabbing when pulling drillstring; current m2 avoids single-cause overstatement."},
+    {"url":"https://iadclexicon.org/fluorescence/","result":"IADC defines visible radiation following UV absorption in this context; m3 introductory definition is appropriate."}
+  ],
+  "recommendedBrowserSample": {
+    "sceneId": "m5",
+    "artifact": "rebuilt dist/cases/s17-evidence-report/demo/index.html and corresponding portal import",
+    "reason": "It connects profession, visual field explanations, actual NLP and review-state interaction, and covers the source repair that cannot be accepted solely from Node results.",
+    "observe": [
+      "In background enter 1200–1210 m MD：未检出荧光; confirm negative field and highlight agree, and deliberate draft negation removal changes only the intended target.",
+      "In main demo enter 1200–1210 m MD：未检出荧光，但气测总气升高至3.2 ppmv; after calculation first fact is negative, gas fact positive, ppmv complete, both quotes select correct original spans.",
+      "For unsupported/mixed negative wording, inspect visible review flag rather than assuming a correct false/true field.",
+      "Confirm a sentence after checking scope/meaning, modify it, and observe current confirmation invalidated while history remains; free input must hide accuracy/F1.",
+      "Check narrow-screen source/field/claim relationship remains readable and controls mount in the teacher portal sandbox as well as standalone."
+    ],
+    "status": "recommended_not_executed_by_auditor"
+  }
+}

@@ -1,7 +1,7 @@
 压裂参数智能优化：在资源边界里比较候选
 caseId: s17x-e1-fracture-optimization
 sceneId: e1
-version: 1.0.1
+version: 1.0.2
 
 成品导入：在老师原站点击“添加案例”，选择含case.json、README.txt和demo/的这个单例文件夹，校验并添加。勿选择ZIP或十二例总目录。
 离线独立运行：双击demo/index.html；三页签、默认合成数据、模型、规则基线、SVG图表和JSON下载均为纯前端。

@@ -1,0 +1,602 @@
+{
+  "auditKind": "source_review_not_browser",
+  "checkedAt": "2026-10-24T06:53:45.996Z",
+  "calculationAndSourceChecks": {
+    "c1": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps"
+      ],
+      "metrics": {
+        "model": {
+          "total": 192,
+          "correct": 180,
+          "accepted": 187,
+          "rejected": 5,
+          "macroF1": 0.9498812648418947,
+          "coverage": 0.9739583333333334,
+          "acceptedError": 0.03743315508021394,
+          "recalls": [
+            0.9375,
+            0.90625,
+            0.96875
+          ],
+          "confusion": [
+            [
+              60,
+              4,
+              0,
+              0
+            ],
+            [
+              3,
+              58,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              62,
+              2
+            ]
+          ]
+        },
+        "baseline": {
+          "total": 192,
+          "correct": 130,
+          "accepted": 192,
+          "rejected": 0,
+          "macroF1": 0.6746594064700964,
+          "coverage": 1,
+          "acceptedError": 0.32291666666666663,
+          "recalls": [
+            0.859375,
+            0.71875,
+            0.453125
+          ],
+          "confusion": [
+            [
+              55,
+              9,
+              0,
+              0
+            ],
+            [
+              18,
+              46,
+              0,
+              0
+            ],
+            [
+              0,
+              35,
+              29,
+              0
+            ]
+          ]
+        }
+      },
+      "summary": null
+    },
+    "c2": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps",
+        "Default renderer emits finite coordinates"
+      ],
+      "metrics": {
+        "efficiencyMAE": 0.2645672251810069,
+        "pressureMAE": 0.09445131941006982,
+        "denominator": 60,
+        "candidates": 357,
+        "feasible": 155
+      },
+      "summary": "357 个候选中 155 个满足条件；推荐排量 1.70 m³/min、密度 1.700 g/cm³。"
+    },
+    "c3": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps",
+        "Default renderer emits finite coordinates"
+      ],
+      "metrics": {
+        "model": {
+          "tp": 44,
+          "fp": 16,
+          "tn": 81,
+          "fn": 19,
+          "precision": 0.7333333333333333,
+          "recall": 0.6984126984126984,
+          "f1": 0.7154471544715447,
+          "total": 160
+        },
+        "baseline": {
+          "tp": 45,
+          "fp": 11,
+          "tn": 86,
+          "fn": 18,
+          "precision": 0.8035714285714286,
+          "recall": 0.7142857142857143,
+          "f1": 0.7563025210084033,
+          "total": 160
+        }
+      },
+      "summary": "160 口独立留出井，当前阈值 0.50；模型报出 60 井，改变阈值可观察误报与漏报的取舍。"
+    },
+    "c4": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps",
+        "Default renderer emits finite coordinates"
+      ],
+      "metrics": {
+        "mae": 0.14956516087690136,
+        "denominator": 80,
+        "standoff": 45.85105950191078
+      },
+      "summary": "当前最小间隙 13.76 mm，居中度 45.9%；无载几何估计 18.00 mm。"
+    },
+    "co1": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps"
+      ],
+      "metrics": {
+        "total": 32,
+        "feasibleWellCount": 32,
+        "model": {
+          "recommended": 32,
+          "matched": 31,
+          "violations": 0,
+          "coverage": 1,
+          "top1Agreement": 0.96875,
+          "regret": 0.0294595160361395,
+          "regretTotal": 0.942704513156464
+        },
+        "baseline": {
+          "recommended": 21,
+          "matched": 18,
+          "violations": 0,
+          "excludedRaw": 11,
+          "coverage": 0.65625,
+          "top1Agreement": 0.8571428571428571,
+          "regret": 0.15760121616378747,
+          "regretTotal": 3.309625539439537
+        },
+        "surrogateMAE": 2.8058105435190632,
+        "surrogateDenominator": 128
+      },
+      "summary": null
+    },
+    "co2": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps",
+        "Default renderer emits finite coordinates"
+      ],
+      "metrics": {
+        "candidates": 81,
+        "feasible": 11,
+        "violations": 0,
+        "exhaustiveCoverage": 1
+      },
+      "summary": "81 个组合完整搜索，11 个可行；推荐 A高密 / B不射 / C高密 / D不射。"
+    },
+    "co3": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps",
+        "Default renderer emits finite coordinates"
+      ],
+      "metrics": {
+        "mae": 0.2883803689897209,
+        "denominator": 80,
+        "exceed": 0,
+        "baselineExceed": 0,
+        "limit": 300
+      },
+      "summary": "最大等效应力 254.8 MPa，位置 0 m；0 / 51 节点超过本例 300 MPa 教学限制。"
+    },
+    "co4": {
+      "checks": [
+        "Engine and application syntax parsed",
+        "Default calculation executed",
+        "Manifest and standalone lesson checked in Python",
+        "Seven compact flow nodes point to valid steps",
+        "Default renderer emits finite coordinates"
+      ],
+      "metrics": {
+        "oilMAE": 0.07897946344336144,
+        "waterMAE": 0.07342044989690233,
+        "denominator": 70
+      },
+      "summary": "12 天计算完成；策略累计产油 859.9 m³，产水 374.8 m³。"
+    }
+  },
+  "reviewMethod": "Read kit00/06, teacher firstbreak manifest, all eight case.json/demo.html/app.js/engine.js. Judge domain concepts, figure semantics, parameter causality and calculation boundaries directly. Source review and Node calculation checks only; no browser acceptance is claimed.",
+  "scope": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "co1",
+    "co2",
+    "co3",
+    "co4"
+  ],
+  "versionsChanged": false,
+  "buildOrCommitPerformed": false,
+  "reviewedFilesPerCase": [
+    "case.json",
+    "demo.html",
+    "app.js",
+    "engine.js",
+    "flow.json"
+  ],
+  "commonRepairs": [
+    "Six local axes helpers now print numeric ticks matched to engine coordinate transforms.",
+    "All six duplicated workflow atlases regenerated from current authored steps, including outputs and traps.",
+    "case.json and serialized C or LESSON agree; c1/co1 lesson-prefix.inc and ui-body.inc synchronized.",
+    "All eight compact flow maps use scenario-specific short nodes and valid step targets; c1/co1 newly supplied."
+  ],
+  "notExecuted": [
+    "Teacher five-file folder import and reload persistence",
+    "Desktop or mobile browser screenshots",
+    "Real browser download and offline-mode verification",
+    "Final build of delivery directories"
+  ],
+  "primarySourcesConsulted": [
+    {
+      "url": "https://glossary.slb.com/en/terms/c/cement_bond_log",
+      "use": "CBL casing-wave attenuation, qualitative response, microannulus sensitivity"
+    },
+    {
+      "url": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/well-construction/well-cementing/cement-evaluation/cement-bond-logging-tools",
+      "use": "Field CBL amplitude mV or attenuation dB; paired VDL"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/m/microannulus",
+      "use": "Small casing-cement gap and temperature/pressure origins"
+    },
+    {
+      "url": "https://glossary.slb.com/terms/e/eccentric",
+      "use": "Concentric 0 and wall-contact 100 percent geometric meaning"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-cementing",
+      "use": "Mud displacement and cement placement in annulus"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-intelligent-completions",
+      "use": "Sensors, adjustable sleeves and packer zonal isolation"
+    },
+    {
+      "url": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/completions/well-completions/completion-accessories/sliding-sleeves",
+      "use": "Sleeves connect tubing and annulus; control communication, not isolation by themselves"
+    }
+  ],
+  "cases": [
+    {
+      "sceneId": "c1",
+      "title": "固井质量智能评价",
+      "professionalKnowledgeJudgment": "合成声学响应分类的教学闭环成立；CBL/VDL、水泥环、微环空、模型拒判与实际水力封隔的界限现已明确。",
+      "figureTextEvidence": [
+        "旧图B2标题声称CBL曲线，实际左侧画的是单条波形；现为相同MD行对齐的早到RMS曲线与VDL，并标传播时间与相对单位。",
+        "图B1补传播箭头头；正文说明灰蓝套管、环空水泥和外侧地层，强调不能由低声幅证明周向完整。",
+        "选点波形与近邻散点自动覆盖当前实测特征范围；补RMS数值刻度；VDL标明正负声幅和±1色阶限幅。",
+        "图B2每一行VDL实际画80点，左侧RMS从同一行10–36点实算；六行分别0.09521、0.13981、0.20748、0.27547、0.36631、0.45725，避免概念图的数值仍与波形脱节。"
+      ],
+      "interactionLearningGoals": [
+        "只改微环空，定位1806–1809.5m波形并对照两种预测；扰动为响应强度，不是mm。",
+        "高噪声及拒判门槛实验连接覆盖率、接受集错误率与全部192点分母。"
+      ],
+      "specificDefectsRepaired": [
+        "概念图与术语缺少初学者铺垫。",
+        "CBL与波形图的语义错位。",
+        "固定RMS坐标可能截断高扰动选点；真值开关只更新图未同步当前描述。"
+      ],
+      "changedFiles": [
+        "expansion-src/c1/case.json",
+        "expansion-src/c1/app.js",
+        "expansion-src/c1/lesson-prefix.inc",
+        "expansion-src/c1/ui-body.inc",
+        "expansion-src/c1/flow.json",
+        "expansion-src/c1/verification.json"
+      ],
+      "remainingIssues": [
+        "仍为归一化教学RMS代理，未模拟实际仪器标定和完整声学反演。",
+        "合成微环空机制刻意保留后到波证据，不能解释为现场保证可恢复。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    },
+    {
+      "sceneId": "c2",
+      "title": "注水泥参数优化",
+      "professionalKnowledgeJudgment": "置换方向、偏心几何、效率与承压约束可供初学者建立变量关系；明确仅检查固定控制点承压上界。",
+      "figureTextEvidence": [
+        "图1套管右移，画出宽窄环空；蓝箭头向下、金箭头向上，图文一致。",
+        "压力候选图从固定40–66改为覆盖当前全部候选和压力上限的动态刻度；偏心0.8实测候选最大77.895MPa，原图确有漏画。",
+        "同密度效率曲线刻度与实际50至95外的情况改为40–100，绿色同心、金色当前、红色偏心0.8。"
+      ],
+      "interactionLearningGoals": [
+        "固定偏心只收紧压力上限，看可行域；再恢复上限只增加偏心，看效率曲线。",
+        "点击灰点读取具体密度、效率、压力和排除原因，理解先约束后排序。"
+      ],
+      "specificDefectsRepaired": [
+        "流动路径没有箭头头且窄侧正文对应同心图。",
+        "候选压力可超过固定图域。",
+        "压力窗口易被误读为上下界俱全；无推荐表仍写全部满足。"
+      ],
+      "changedFiles": [
+        "expansion-src/c2/case.json",
+        "expansion-src/c2/app.js",
+        "expansion-src/c2/engine.js",
+        "expansion-src/c2/flow.json"
+      ],
+      "remainingIssues": [
+        "压力是教学控制点代理，不是全井压力剖面；不检查孔隙压力下界。",
+        "色彩效率仅为辅助，点击读精确值；需浏览器确认窄屏箭头和轴标签。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    },
+    {
+      "sceneId": "c3",
+      "title": "固井漏失风险预测",
+      "professionalKnowledgeJudgment": "压力裕度、通道条件与阈值三种概念已区分；保留模型默认逊于基线的真实结果。",
+      "figureTextEvidence": [
+        "旧风险概念图随裕度增加向上，和风险方向冲突；现两条曲线随裕度增大向下，裂缝发育曲线仍高于裂缝少曲线。",
+        "新增52−50=+2和52−53=−1MPa裕度示例。",
+        "散点明确四输入含义与无量纲指数，点选增加渗透性和m³/min排量；PR图有数值刻度。"
+      ],
+      "interactionLearningGoals": [
+        "仅改阈值0.2→0.8，每井risk不变，名单和漏报误报改变。",
+        "修改裕度/裂缝改变教学井况与结局，不能当同一测试集模型升级。"
+      ],
+      "specificDefectsRepaired": [
+        "裕度风险关系图方向错误。",
+        "裂缝/渗透性指数单位及裕度正负解释不足。"
+      ],
+      "changedFiles": [
+        "expansion-src/c3/case.json",
+        "expansion-src/c3/app.js",
+        "expansion-src/c3/engine.js",
+        "expansion-src/c3/flow.json"
+      ],
+      "remainingIssues": [
+        "逻辑分数未现场校准，随机结局不是确定安全标签。",
+        "默认F1模型0.715447、基线0.756303；该劣势原样保留。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    },
+    {
+      "sceneId": "c4",
+      "title": "套管居中度智能评估",
+      "professionalKnowledgeJudgment": "半径差、毫米偏心、居中度与受载跨距可手算；负预测明确标作自由变形模型越界诊断。",
+      "figureTextEvidence": [
+        "修正截面套管圆心偏移由错误1.55改100/120，井眼R120和套管r90同尺度。",
+        "负预测gap保留曲线诊断，截面停在0间隙接触位，不画实体穿透。",
+        "曲线纵轴动态覆盖负间隙；支撑数按floor(60/s)+1统计0–60m，下一支撑可在图外。"
+      ],
+      "interactionLearningGoals": [
+        "12mm偏心→18mm无载间隙→60%居中度，与受载结果比较。",
+        "跨距6→18m固定其余条件；极端ecc20/load2/spacing18出现−4.641mm，转接触复核。"
+      ],
+      "specificDefectsRepaired": [
+        "图形几何比例错误。",
+        "负间隙当真实实体相交。",
+        "18m跨距支撑数用ceil误算为5，实际0/18/36/54共4。"
+      ],
+      "changedFiles": [
+        "expansion-src/c4/case.json",
+        "expansion-src/c4/app.js",
+        "expansion-src/c4/engine.js",
+        "expansion-src/c4/flow.json"
+      ],
+      "remainingIssues": [
+        "未求解接触力、扶正器刚度或有限元变形。",
+        "负间隙比是诊断数，不应当作物理居中度。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    },
+    {
+      "sceneId": "co1",
+      "title": "完井方式智能优选",
+      "professionalKnowledgeJudgment": "四种构型与防砂、支撑、选择性隔离的关系讲清；近邻响应与硬条件判断分工明确。",
+      "figureTextEvidence": [
+        "图B1配文字说明筛管/砾石拦砂但不能自动控水，套管候选额外包含封隔配置。",
+        "图B2用出砂与控水双轴解释同一井的双重需求，不把筛管当万能方案。",
+        "响应/效用比较图取消负效用−19截断，动态范围显示真实费用扣分。"
+      ],
+      "interactionLearningGoals": [
+        "双重需求与预算不足预设，核查多约束和空推荐。",
+        "改变费用偏好观察可行候选排序，自定义井只推理；评价固定32留出井。"
+      ],
+      "specificDefectsRepaired": [
+        "术语与构型配置对初学者解释不足。",
+        "负效用可能被显示截断。",
+        "缺少独立紧凑flow。"
+      ],
+      "changedFiles": [
+        "expansion-src/co1/case.json",
+        "expansion-src/co1/app.js",
+        "expansion-src/co1/lesson-prefix.inc",
+        "expansion-src/co1/ui-body.inc",
+        "expansion-src/co1/flow.json",
+        "expansion-src/co1/verification.json"
+      ],
+      "remainingIssues": [
+        "规则额定温度与费用均教学指数，不可泛化厂商参数。",
+        "近邻输出综合表现而非真实产油量或概率。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    },
+    {
+      "sceneId": "co2",
+      "title": "射孔参数智能设计",
+      "professionalKnowledgeJudgment": "定位为完井选层与离散孔密等级的规则搜索，区别于现场孔眼几何设计。",
+      "figureTextEvidence": [
+        "新增四层深度、压力、低档产液与含水表，和引擎layers一致。",
+        "A+C低档手算油85.45、水12.55、液98、含水12.806%；A+B压差5MPa对应无隔离排除。",
+        "81组合全展示并圈出推荐点，坐标刻度对应资源和目标。"
+      ],
+      "interactionLearningGoals": [
+        "切换隔离0/1，观察A+B类压差排除与预算含水约束独立生效。",
+        "点灰候选定位排除理由，D水层始终禁射；允许无推荐。"
+      ],
+      "specificDefectsRepaired": [
+        "缺少原始层参数表，无法独立复算。",
+        "高低孔密看起来像实际孔/米但引擎仅等级与1.35流量乘数。"
+      ],
+      "changedFiles": [
+        "expansion-src/co2/case.json",
+        "expansion-src/co2/app.js",
+        "expansion-src/co2/engine.js",
+        "expansion-src/co2/flow.json"
+      ],
+      "remainingIssues": [
+        "两档不是现场孔/米；未优化孔眼方位、穿深或求解层间窜流。",
+        "4MPa为教学筛查门槛。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    },
+    {
+      "sceneId": "co3",
+      "title": "完井管柱受力智能分析",
+      "professionalKnowledgeJudgment": "轴向与环向应力、温升约束、正负号与平面等效合成已按同一单位解释。",
+      "figureTextEvidence": [
+        "补1100kN/4500mm²=244.4MPa示例，澄清力与应力。",
+        "应力图动态覆盖全部分量；极端轴向−274.638MPa原来超出−250固定范围。",
+        "顶部拉力/径向压差示意补箭头头；深度横向展开已标明m。"
+      ],
+      "interactionLearningGoals": [
+        "固定温压切换约束0/1，看轴向符号和极值位置。",
+        "增加温升未必增大最大等效应力，可能先抵消拉应力；同步读分量和等效。"
+      ],
+      "specificDefectsRepaired": [
+        "固定坐标漏画极端压应力。",
+        "模型边界、kN换MPa、受热压应力方向缺少解释。"
+      ],
+      "changedFiles": [
+        "expansion-src/co3/case.json",
+        "expansion-src/co3/app.js",
+        "expansion-src/co3/engine.js",
+        "expansion-src/co3/flow.json"
+      ],
+      "remainingIssues": [
+        "薄壁平面应力，忽略径向/剪切及屈曲、连接、疲劳等；300MPa仅教学限制。",
+        "横向深度图是明确标注的展开，不作纵向井身图读法。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    },
+    {
+      "sceneId": "co4",
+      "title": "智能完井滑套控制策略",
+      "professionalKnowledgeJudgment": "滑套调进流、封隔器分区、油水处理与逐日动作约束形成可解释控制实验。",
+      "figureTextEvidence": [
+        "概念图补分段边界与进流箭头，正文区分滑套与封隔器。",
+        "逐日柱中心与1–12天数值轴一致；热图用A/B/C短行名及独立低中高含水图例，补逐日标签。",
+        "新增处理能力虚线，与油水堆叠总柱高比较。"
+      ],
+      "interactionLearningGoals": [
+        "capacity50/changes1无可行首日动作而停止；changes3可执行12天且实际零超限。",
+        "调水处理偏好，观察关高水段的得失；明确当天贪心，不能声称12天全局最优。"
+      ],
+      "specificDefectsRepaired": [
+        "装置分工、50%开度不等于半流量和贪心边界未说清。",
+        "日轴与柱坐标不一致、热图长行名重叠风险。"
+      ],
+      "changedFiles": [
+        "expansion-src/co4/case.json",
+        "expansion-src/co4/app.js",
+        "expansion-src/co4/engine.js",
+        "expansion-src/co4/flow.json"
+      ],
+      "remainingIssues": [
+        "模型及环境是教学流入响应，未求解实际多相管流或水锥。",
+        "两策略独立推进；停机策略执行天数不同，累积量须连同天数读。"
+      ],
+      "reviewStatus": "source_review_not_browser"
+    }
+  ],
+  "targetedCalculationEvidence": {
+    "c2": {
+      "maxPressureMPaAtEccentricity08": 77.8953041881435,
+      "previousPlotUpperMPa": 66
+    },
+    "c3": {
+      "defaultModelF1": 0.7154471544715447,
+      "defaultBaselineF1": 0.7563025210084033,
+      "threshold02": {
+        "fp": 28,
+        "fn": 6
+      },
+      "threshold08": {
+        "fp": 2,
+        "fn": 36
+      },
+      "perWellScoresIdenticalWhenOnlyThresholdChanges": true
+    },
+    "c4": {
+      "contactCase": {
+        "eccMM": 20,
+        "loadIndex": 2,
+        "spacingM": 18,
+        "predictedGapMM": -4.6412831199793825
+      },
+      "supportsWithin60mAt18mSpacing": 4
+    },
+    "co2": {
+      "manualACLow": {
+        "oil": 85.45,
+        "water": 12.55,
+        "liquid": 98,
+        "watercut": 0.12806122448979593
+      }
+    },
+    "co3": {
+      "extremeAxialMPa": -274.63759169822197,
+      "previousPlotLowerMPa": -250
+    },
+    "co4": {
+      "capacity50Changes1Days": 0,
+      "capacity50Changes3Days": 12,
+      "capacity50Changes3ActualViolations": 0
+    }
+  },
+  "browserSpotCheckRecommendations": [
+    {
+      "sceneId": "c4",
+      "steps": [
+        "构建后在原门户按五文件格式导入并打开三个标签；看新增名义间隙手算解释。",
+        "默认运行，读无载18mm与预测约13.76mm，检查截面R120/r90同一比例。",
+        "ecc20/load2/spacing18运行：读gap约−4.64，截面停在贴壁位，曲线仍显示负诊断。",
+        "表格18m跨距显示0–60m内4支撑；375px窄屏检查数字、图注、轴刻度与接触提醒可读。"
+      ]
+    },
+    {
+      "sceneId": "co4",
+      "steps": [
+        "默认运行，检查油水堆叠、处理能力线、逐日1–12轴与三行热图相互对应。",
+        "capacity50、changes1运行，确认立即停止、0天、图中热图为空但基线12天仍有真实对照。",
+        "仅changes改3重算，确认12天可执行、零实际超限并点第1天柱读取动作。",
+        "改变任一输入确认旧结果清除且禁止导出；重算后下载JSON核对天数、actions和原始基线。"
+      ]
+    }
+  ],
+  "crossCuttingCaution": "No claim of browser readability, native import, build completion, physical operational safety or field-calibrated performance. Existing bootstrap generator c1/generate-source.py is historical; current case/app/inc are synchronized delivery sources and root build reads them directly."
+}

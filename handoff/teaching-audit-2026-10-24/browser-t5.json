@@ -1,0 +1,95 @@
+{
+  "scope": "Teacher original folder import, real sandbox computation and case-specific teaching interaction; sampled, not all61 browser acceptance",
+  "checkedAt": "2026-10-24T07:04:51.965Z",
+  "case": {
+    "scene": "t5",
+    "id": "s17x-t5-tank-level-crosscheck",
+    "version": "1.0.1",
+    "output": "dist/expansion-cases/s17x-t5-tank-level-crosscheck"
+  },
+  "checks": [
+    {
+      "name": "actual unchanged teacher folder import",
+      "passed": true
+    },
+    {
+      "name": "teacher workflow displays one compact connected overview",
+      "passed": true
+    },
+    {
+      "name": "runtime overview remains compact",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "actual calculation completes",
+      "passed": true
+    },
+    {
+      "name": "radar bias leaves actual pixels and visual height unchanged",
+      "passed": true
+    },
+    {
+      "name": "radar measurement changes independently",
+      "passed": true
+    },
+    {
+      "name": "detected row and boundary strength are shown",
+      "passed": true
+    },
+    {
+      "name": "actual current-result JSON downloaded",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime dependency",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "vision": {
+    "before": 6.008565892449457,
+    "after": 6.008565892449457,
+    "beforeRadar": 6,
+    "afterRadar": 8
+  },
+  "passed": 11,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/case.json",
+      "bytes": 17763,
+      "sha256": "28da5e1a2578c08c0a3cc98f4625b4f369ab22d150d4d9184deda2ddf652a19d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/README.txt",
+      "bytes": 469,
+      "sha256": "b825498d70ffa1ebc9cb99bdb69c14d36d1a250f037c284405b8f3477f6dc056"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/index.html",
+      "bytes": 2372,
+      "sha256": "37dbb1fc0313abf0be2dffe126c94c8c317e17d94ead92033f5c023e277f6d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.css",
+      "bytes": 18938,
+      "sha256": "b22915aa2f46fa40f1eaf1d856cb1d80163cc006732a66b729797a88f89aad94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.js",
+      "bytes": 72023,
+      "sha256": "940aa77926d1e8190276bc55a1dad9769c9edd191c9961b0532efb20d8f8cfaa"
+    }
+  ]
+}

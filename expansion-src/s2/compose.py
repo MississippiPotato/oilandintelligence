@@ -32,7 +32,7 @@ COMMON_CSS='''*{box-sizing:border-box}body{margin:0;background:#f4f7f5;color:#22
 def create(scene,id,title,lede,sections,steps,lab,methods):
     d=ROOT/'expansion-src'/scene
     d.mkdir(parents=True,exist_ok=True)
-    m={'id':id,'sceneId':scene,'methods':methods,'title':title,'version':'1.0.0','updated':'2026-10-24','tabs':{'background':{'label':'专业背景','lede':lede,'sections':[]},'workflow':{'label':'案例流程','title':title.split('：')[0]+'的计算路径','lead':['从观测和井资料出发，分别训练、预测、评价，保留人工核查入口。'],'steps':[],'metrics':{'html':''}},'demo':{'label':'可运行示范','intro':lede,'height':1500}}}
+    m={'id':id,'sceneId':scene,'methods':methods,'title':title,'version':'1.0.1','updated':'2026-10-24','tabs':{'background':{'label':'专业背景','lede':lede,'sections':[]},'workflow':{'label':'案例流程','title':title.split('：')[0]+'的计算路径','lead':['从观测和井资料出发，分别训练、预测、评价，保留人工核查入口。'],'steps':[],'metrics':{'html':''}},'demo':{'label':'可运行示范','intro':lede,'height':1500}}}
     bg=''
     for i,(name,text,graphic,caption) in enumerate(sections):
         html=f'<p>{text}</p><figure>{graphic}<figcaption>{caption}</figcaption></figure>'
@@ -50,7 +50,7 @@ def create(scene,id,title,lede,sections,steps,lab,methods):
     (d/'case.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     (d/'demo.html').write_text(html,encoding='utf-8')
     (d/'demo.css').write_text(COMMON_CSS,encoding='utf-8')
-    (d/'README.txt').write_text(f'{title}\n场景 {scene}；版本 1.0.0；纯前端五文件案例包。\n\n通过老师门户“添加案例”选择包含 case.json、README.txt 和 demo 目录的案例文件夹。也可双击 demo/index.html 直接离线运行。\n\n本例包括专业背景、案例流程、可运行示范。所有默认计算在浏览器中进行，不请求网络。数据为代码内固定种子教学生成；不是实测工区精度。背景资料与链接已列在页面末尾，图形自行绘制。\n训练与测试来源种子固定分开，训练集计算标准化参数，预测函数只接收输入特征；测试标签仅在预测结束后计算指标和显示参考对照。调整参数后标记旧结果，点击运行更新图表。\n数据来源、算法细节、训练测试分组和单位见各教学段落及演示结果。\n',encoding='utf-8')
+    (d/'README.txt').write_text(f'{title}\n场景 {scene}；版本 1.0.1；纯前端五文件案例包。\n\n通过老师门户“添加案例”选择包含 case.json、README.txt 和 demo 目录的案例文件夹。也可双击 demo/index.html 直接离线运行。\n\n本例包括专业背景、案例流程、可运行示范。所有默认计算在浏览器中进行，不请求网络。数据为代码内固定种子教学生成；不是实测工区精度。背景资料与链接已列在页面末尾，图形自行绘制。\n训练与测试来源种子固定分开，训练集计算标准化参数，预测函数只接收输入特征；测试标签仅在预测结束后计算指标和显示参考对照。调整参数后标记旧结果，点击运行更新图表。\n数据来源、算法细节、训练测试分组和单位见各教学段落及演示结果。\n',encoding='utf-8')
 
 s2sec=[
 ('地震相是什么，为什么与储层有关？','地震波遇到声阻抗变化的界面会发生反射。把相邻位置的反射波形排在一起，就是地震剖面。解释人员依据反射的连续性、倾角、振幅和内部结构，把外观相似的一片划为“地震相”。地震相提供沉积环境的线索，仍需井资料、岩心与地层框架标定，不能直接把某种颜色等同于含油砂岩。',wave('平行反射：层状、连续','flat'),'左图是地震同相轴的概念表达。横轴表示位置，纵轴表示波从地面到界面再返回的双程时间；并非地下岩层的直接照片。'),

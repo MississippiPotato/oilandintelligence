@@ -120,7 +120,7 @@
   function evidence() {
     if (status !== 'ready') return null;
     const index = selected.y * 72 + selected.x, sourceId = 'g1:' + result.observations.groupId;
-    return { schemaVersion: '1.0', sceneId: 'g1', caseId, caseVersion: '1.0.1', runId, datasetId: 's17x-g1-synthetic-v1', wellId: null, areaId: result.observations.groupId, dataNature: 'synthetic_teaching',
+    return { schemaVersion: '1.0', sceneId: 'g1', caseId, caseVersion: '1.0.2', runId, datasetId: 's17x-g1-synthetic-v1', wellId: null, areaId: result.observations.groupId, dataNature: 'synthetic_teaching',
       runConfig: { seed, dataVersion: 'g1-synthetic-v1', splitDescription: '6 independent training images; 2 validation images; independent test image', method: result.params.featureMode === 'full' ? 'six-feature weighted kNN' : 'red-only weighted kNN ablation', parameters: result.params, inputRevision: runId },
       observations: result.observations, prediction: { labels: result.prediction.labels, support: result.prediction.scores.map(s => s.support) }, baseline: result.baseline, evaluationReference: result.evaluationTruth, metrics: result.metrics,
       training: { ...result.training.training, k: result.training.k, validation: result.training.validation, baselineRule: result.training.baselineRule, model: result.training.model },

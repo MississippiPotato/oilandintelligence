@@ -7,7 +7,7 @@ import { assistantJS, assistantCSS } from './assistant-bundle.mjs';
 import { flowOverview, flowRuntime } from './case-flowcharts.mjs';
 
 export const root = path.resolve(import.meta.dirname, '..');
-export const reportDir = 'handoff/full-coverage-2026-10-24';
+export const reportDir = 'handoff/teaching-audit-2026-10-24';
 // Keep the teacher's scene identifiers as the sole coverage denominator.
 const taxonomy = JSON.parse(fs.readFileSync(path.join(root, 's17_development_kit/09_全分类及覆盖表.json'), 'utf8')).taxonomy;
 export const targets = taxonomy.filter(s => s.id !== 'mudlogging')
@@ -91,10 +91,10 @@ function preserveBaseline() {
   if (fs.existsSync(path.join(root, target))) return;
   const files = [
     ...walk('portal-original'), ...walk('石油勘探开发智能化案例集'),
-    ...walk('case-src'), ...walk('dist/cases'), ...walk('data/real')
+    ...walk('data/real')
   ];
   fs.writeFileSync(path.join(root, target), JSON.stringify({ createdAt: new Date().toISOString(),
-    meaning: 'Protected original teacher copies, five mudlogging source/runtime directories, and real observations. Enhanced persistence may change without changing teacher package format.',
+    meaning: 'Protected original teacher copies and real observations. Teaching case sources and runtime may change under this explicit review-and-fix task.',
     files: files.map(fileRecord) }, null, 2));
 }
 
@@ -136,7 +136,7 @@ export function pluginSource(records) {
   g.S17Expansion = { cases: catalog, builtCount: catalog.length, expectedCount: ${targets.length},
     registration: 'builtin-plugin', browserAcceptance: 'see ${reportDir}',
     byScene: function (id) { return catalog.filter(function (c) { return c.sceneId === id; })[0] || null; },
-    href: function (id, tab) { var c = this.byScene(id); return c ? '#/scene/' + c.sceneId + '?case=' + encodeURIComponent(c.id) + '&tab=' + (tab || 'bg') : null; } };
+    href: function (id, tab) { var c = this.byScene(id); if (!c) return null; var saved = g.Cases && g.Cases.get(c.id); if (saved && saved.version !== c.version) return c.standaloneHref + '#' + ({ bg: 'background', flow: 'workflow', demo: 'lab' }[tab || 'bg'] || 'background'); return '#/scene/' + c.sceneId + '?case=' + encodeURIComponent(c.id) + '&tab=' + (tab || 'bg'); } };
 })(window);
 `;
 }

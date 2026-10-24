@@ -1,0 +1,42 @@
+{
+  "title": "从不连续波形提出断层候选，缺测与误报可定位",
+  "gate": [
+    "波形与层位",
+    "支持断层？"
+  ],
+  "input": {
+    "title": "反射振幅剖面",
+    "detail": "时间向下缺道另标",
+    "step": 0
+  },
+  "prepare": {
+    "title": "九维波形特征",
+    "detail": "相关移位与持续性",
+    "step": 1
+  },
+  "model": {
+    "title": "正则逻辑回归",
+    "detail": "训练拟合验证选阈",
+    "step": 2
+  },
+  "baseline": {
+    "title": "不连续性阈值",
+    "detail": "同剖面同区域对照",
+    "step": 3
+  },
+  "review": {
+    "title": "核查错断与缺道",
+    "detail": "查看左右波形留意见",
+    "step": 4
+  },
+  "output": {
+    "title": "逐行候选迹线",
+    "detail": "原模型与人工层分存",
+    "step": 4
+  },
+  "compare": {
+    "title": "像素带与迹线评价",
+    "detail": "固定区域与两道容差",
+    "step": 4
+  }
+}

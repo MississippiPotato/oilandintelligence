@@ -1,42 +1,42 @@
 {
-  "title": "约束与独立检验",
+  "title": "代理模型到约束推荐",
   "gate": [
-    "输入、输出单位统一",
-    "约束与独立测试分别检查"
+    "预测可行不等于实测",
+    "空可行域也保留"
   ],
   "input": {
-    "title": "批次输入",
-    "detail": "独立工况与测量配对",
+    "title": "独立工况",
+    "detail": "三项操作与三项测量",
     "step": 0
   },
   "prepare": {
-    "title": "整理单位",
-    "detail": "固定训练与测试批次",
+    "title": "锁定分组",
+    "detail": "一百一十二训四十八测",
     "step": 0
   },
   "model": {
-    "title": "拟合代理回归",
-    "detail": "实际求解系数",
+    "title": "二次回归",
+    "detail": "拟合回收率能耗终馏点",
     "step": 1
   },
   "baseline": {
-    "title": "基线",
-    "detail": "固定点 / 原料分类均值",
+    "title": "两条基线",
+    "detail": "固定操作点与训练均值",
     "step": 3
   },
   "review": {
     "title": "约束筛选",
-    "detail": "能耗质量 / 组成闭合",
+    "detail": "能耗和终馏点上限",
     "step": 2
   },
   "output": {
-    "title": "交互结果",
-    "detail": "改变输入重新计算",
-    "step": 3
+    "title": "网格推荐",
+    "detail": "九百六十一候选搜索",
+    "step": 2
   },
   "compare": {
-    "title": "独立评价",
-    "detail": "留出批次MAE",
+    "title": "独立检验",
+    "detail": "留出误差与推荐限制",
     "step": 3
   }
 }

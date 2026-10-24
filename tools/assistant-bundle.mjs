@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-export const CASE_VERSION='1.5.2';
+export const CASE_VERSION='1.5.3';
 const root=path.resolve(import.meta.dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 export function casePageConfig(sceneId){return 'window.S17Page='+JSON.stringify({sceneId,caseVersion:CASE_VERSION,portalHref:'../../../../portal/index.html',referenceHref:'../../../../portal/reference/fluorescence.html'})+';\n';}

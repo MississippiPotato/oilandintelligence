@@ -1,0 +1,1848 @@
+{
+  "schemaVersion": "1.0",
+  "reviewDate": "2026-10-24",
+  "documentRole": "seven_group_teaching_review_summary_not_browser_acceptance",
+  "evidenceLevel": "case_specific_source_and_calculation_review",
+  "scope": {
+    "groupReports": 7,
+    "catalogScenes": 61,
+    "caseRecords": 61,
+    "uniqueSceneIds": 61,
+    "new44": 44,
+    "existing17": 17,
+    "duplicates": [],
+    "missingFromImplementationPlan": [],
+    "unexpectedSceneIds": [],
+    "teacherSampleCountsAsAuthored": false,
+    "allCasesMappedToImplementationPlan": true
+  },
+  "method": {
+    "basis": [
+      "老师firstbreak与welllog原例",
+      "s17_development_kit/06_兼容与验收清单.txt",
+      "专业概念、实际绘图、参数交互与算法数据链逐例审阅"
+    ],
+    "doesNotUseAsTeachingProof": [
+      "旧704检查",
+      "SVG数量",
+      "字数",
+      "代码能运行"
+    ],
+    "sourceVsCalculation": "7组负责逐例源审及适用的小型计算对照；横审独立回读14代表并查看3张既存图片。报告中计算为教学夹具，不是现场效果。",
+    "browserClaim": "本汇总没有操作浏览器，也不读取浏览器通过结果作为结论；实际build、门户导入、窄屏与交互验收由root另行汇总。"
+  },
+  "groups": [
+    {
+      "group": "geology-seismic",
+      "report": "geology-seismic.json",
+      "sha256": "a1761040921e759e9e46c358aa373507ff232152f7f52dd9bb03c15c713b308a",
+      "caseCount": 9,
+      "new44Count": 7,
+      "existing17Count": 2,
+      "sceneIds": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "evidenceLevel": "case_specific_source_and_reported_calculation_review_not_browser"
+    },
+    {
+      "group": "drilling-welllog",
+      "report": "drilling-welllog.json",
+      "sha256": "1cc516e6917e47ffe8c4deae89bed2e99a3e9629f2b1a6ddcc3dd7793057894a",
+      "caseCount": 10,
+      "new44Count": 8,
+      "existing17Count": 2,
+      "sceneIds": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5"
+      ],
+      "evidenceLevel": "case_specific_source_and_reported_calculation_review_not_browser"
+    },
+    {
+      "group": "cement-completion",
+      "report": "cement-completion.json",
+      "sha256": "6388f34330db70e4da364f12ec30cdb6456fa8f5a911764b60d7846a9beba8c0",
+      "caseCount": 8,
+      "new44Count": 6,
+      "existing17Count": 2,
+      "sceneIds": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "co1",
+        "co2",
+        "co3",
+        "co4"
+      ],
+      "evidenceLevel": "case_specific_source_and_reported_calculation_review_not_browser"
+    },
+    {
+      "group": "perforation-production",
+      "report": "perforation-production.json",
+      "sha256": "2e73f78eae377918c74982c6159ca2f27a109daabd8ebbcf4f6e13864c45568b",
+      "caseCount": 9,
+      "new44Count": 7,
+      "existing17Count": 2,
+      "sceneIds": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "pr1",
+        "pr2",
+        "pr3",
+        "pr4",
+        "pr5"
+      ],
+      "evidenceLevel": "case_specific_source_and_reported_calculation_review_not_browser"
+    },
+    {
+      "group": "workover-eor",
+      "report": "workover-eor.json",
+      "sha256": "540bfa14b8dca371705bdabe70f30067968fbc42cbadbe43f57648c8c66c001b",
+      "caseCount": 10,
+      "new44Count": 8,
+      "existing17Count": 2,
+      "sceneIds": [
+        "wo1",
+        "e1",
+        "wo2",
+        "wo3",
+        "wo4",
+        "wo5",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "evidenceLevel": "case_specific_source_and_reported_calculation_review_not_browser"
+    },
+    {
+      "group": "transport-refining",
+      "report": "transport-refining.json",
+      "sha256": "02e5787c56572da98f9c390b1cc8a2d1c8fba27ac5c5138705b214501ac43984",
+      "caseCount": 10,
+      "new44Count": 8,
+      "existing17Count": 2,
+      "sceneIds": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "evidenceLevel": "case_specific_source_and_reported_calculation_review_not_browser"
+    },
+    {
+      "group": "mudlogging",
+      "report": "mudlogging.json",
+      "sha256": "0f26ccb36b884d8c6d2606d3fb38f6f12458f064e693ae78ae27543fc85ed468",
+      "caseCount": 5,
+      "new44Count": 0,
+      "existing17Count": 5,
+      "sceneIds": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5"
+      ],
+      "evidenceLevel": "case_specific_source_and_reported_calculation_review_not_browser"
+    }
+  ],
+  "crossReview": {
+    "report": "cross-review.json",
+    "deepComparedCases": [
+      "pr2",
+      "pr4",
+      "d2",
+      "wo4",
+      "r3",
+      "e2",
+      "e3",
+      "e4",
+      "wo3",
+      "t5",
+      "g3",
+      "s2",
+      "c2",
+      "co3"
+    ],
+    "entries": 13,
+    "pendingOrPartial": 0,
+    "status": "source_resolved_not_browser",
+    "classification": "13条包含真实语义错误、轴范围风险、教学可读性改进与能力澄清，不是13个已复现程序bug。"
+  },
+  "selectedFindingsAndRepairs": [
+    {
+      "cases": [
+        "m5"
+      ],
+      "kind": "confirmed_field_semantics_defect",
+      "before": "未检出/未观察到荧光可被抽为negation=false；3.2ppmv可截为ppm，字段与UI/冲突判断不一致。",
+      "after": "目标邻近明确否定与子句范围、复杂输入待核查、完整ppmv token和高亮同步；共享否定实验匹配目标前缀。",
+      "evidence": [
+        "mudlogging.json",
+        "mudlogging-field-fixtures.result.json",
+        "case-src/m5/engine.js",
+        "case-src/m5/ui.js",
+        "shared/mudlogging-study.js"
+      ],
+      "status": "source_fixed_calculation_fixture_passed_not_browser"
+    },
+    {
+      "cases": [
+        "pr4"
+      ],
+      "kind": "confirmed_alert_timing_semantics_defect",
+      "before": "连续3点的段起点被称为首次持续告警，实时可确认时刻比它晚2min。",
+      "after": "分别输出firstRunStart/firstConfirmation；默认组报告79/81min；逐点超阈、持续确认与各自误报段分列。",
+      "evidence": [
+        "perforation-production.json",
+        "cross-review.json",
+        "expansion-src/pr4/engine.js"
+      ],
+      "status": "independently_reread_source_fixed_not_browser"
+    },
+    {
+      "cases": [
+        "d5"
+      ],
+      "kind": "confirmed_candidate_enumeration_defect",
+      "before": "浮点累加a=.1…1.5漏掉1.5端点，实际350点。",
+      "after": "整数索引ai/10，25×15=375点且保留1.5端点。",
+      "evidence": [
+        "drilling-welllog.json",
+        "drilling-welllog-source-checks.json"
+      ],
+      "status": "group_source_and_calculation_verified_not_browser"
+    },
+    {
+      "cases": [
+        "w3"
+      ],
+      "kind": "misleading_derived_graphic",
+      "before": "各列误检像素均值可能画出不存在的单条裂缝中心轨迹。",
+      "after": "用实际掩膜像素散点展示断续/误检，空掩膜保留固定图域。",
+      "evidence": [
+        "drilling-welllog.json"
+      ],
+      "status": "group_source_and_calculation_verified_not_browser"
+    },
+    {
+      "cases": [
+        "c1",
+        "c3",
+        "c4"
+      ],
+      "kind": "concept_graphic_and_geometry_mismatch",
+      "before": "CBL标题对应单波形、裕度增加风险图反向、扶正器截面比例和18m跨距支撑点数不符。",
+      "after": "CBL RMS与同深度VDL从同一行实际计算；风险随裕度增加向下；统一比例、负间隙作接触诊断、0/18/36/54共4点。",
+      "evidence": [
+        "cement-completion.json"
+      ],
+      "status": "group_source_and_calculation_verified_not_browser"
+    },
+    {
+      "cases": [
+        "t2"
+      ],
+      "kind": "observation_reference_boundary_and_reproducibility",
+      "before": "观测附隐藏ref索引、随机比较器sort、两次测深误差口径与正文不一致。",
+      "after": "参考索引独立数组，固定种子Fisher–Yates，两次观测与增长率数据表可复核。",
+      "evidence": [
+        "transport-refining.json"
+      ],
+      "status": "group_source_and_calculation_verified_not_browser"
+    },
+    {
+      "cases": [
+        "pr2",
+        "d2",
+        "wo4"
+      ],
+      "kind": "teaching_evidence_readability_improvement",
+      "before": "递归回填/提前量/正常阶段与残差只能依赖文字，图上缺中间证据。",
+      "after": "pr2逐步lag来源与未来干预标线；d2事件−告警时间差；wo4阶段、事件带、钩载/残差/阈值和报警条。",
+      "evidence": [
+        "cross-review.json"
+      ],
+      "status": "independently_reread_source_improved_not_browser"
+    },
+    {
+      "cases": [
+        "e2",
+        "e3",
+        "e4",
+        "wo3"
+      ],
+      "kind": "professional_encoding_readability_improvement",
+      "before": "已有专业轮廓/配方/周期/展开图，但比例、刻度、数值色标或候选条件不易读取。",
+      "after": "轮廓同尺刻度；配方比例网格与固定色标；J轴和最佳焖井轨迹；深度方位展开固定色标与格子读数。",
+      "evidence": [
+        "cross-review.json",
+        "workover-eor.json"
+      ],
+      "status": "independently_reread_source_improved_not_browser"
+    },
+    {
+      "cases": [
+        "g3",
+        "t5",
+        "r3"
+      ],
+      "kind": "capability_scope_clarification",
+      "before": "图块分类/图例解析、液位核对、残差构造频谱容易被读成完整整图提取、完整罐容泄漏或独立故障证据。",
+      "after": "分别写明无OCR/自动关联；固定观察窗像素到高度与雷达核对；DFT真计算但波形由负荷/RMS残差构造。",
+      "evidence": [
+        "geology-seismic.json",
+        "transport-refining.json",
+        "cross-review.json"
+      ],
+      "status": "source_scope_clarified_not_browser"
+    }
+  ],
+  "nonDefectsAndWithdrawnHypotheses": [
+    {
+      "case": "e3",
+      "claim": "配方三角图顶点反了",
+      "status": "rejected_not_a_bug",
+      "evidence": "原a=1映射顶部A、b=1映射右B、c=1映射左C，数学与标注一致；横审未登记顶点错误。",
+      "whatChanged": "增加比例网格、固定色标和候选读数，属于可读性补强。"
+    },
+    {
+      "case": "s3",
+      "claim": "相对振幅正负轴颠倒",
+      "status": "rejected_not_a_bug",
+      "evidence": "复读axes中v=0对应底部−amp，v=1对应顶部+amp；line中正v使py减小，正振幅向上。两者一致。",
+      "whatChanged": "不把原有正负方向记为bug；本次仅补核对，不将s3增计为14代表的完整深审。"
+    },
+    {
+      "case": "t5",
+      "claim": "多余HTML转义必然造成SVG坏图",
+      "status": "unconfirmed_initial_hypothesis_not_counted_as_confirmed_bug",
+      "evidence": "初读疑似过转义但没有浏览器复现记录；现源标准引号已独立复读确认。",
+      "whatChanged": "保留疑点来历与修复核查，避免把推测写成已证实渲染失败。"
+    }
+  ],
+  "negativeResultsPreserved": [
+    "c3默认模型F1约0.7154低于基线0.7563",
+    "pr2默认持续值基线MAE更低",
+    "pr5默认温度基线F1约0.7535高于联合约0.7337",
+    "w5同层缺口可能由插值胜出",
+    "r5原料变化时已发布化验基线更好",
+    "规则无解、拒判、缺参考、空事件分母继续显示原边界"
+  ],
+  "residualTeachingSimplifications": [
+    "教学合成数据与同族生成器居多；高默认分数不能外推现场或跨来源泛化。",
+    "g3仅预切图块固定模板分类+手工文本分字段，无整图定位/OCR/自动矢量关联。",
+    "s1二维单候选断层、s3离线未来窗口、s4已给定地震属性、s5固定脉冲族，均不等同完整现场处理。",
+    "w3无米尺度/井径方位标定；w1宽层响应、w5内部缺口限制保留。",
+    "c2是控制点承压上界代理；co3薄壁平面应力忽略屈曲疲劳；e2仅同中心二维椭圆。",
+    "co2孔密是离散等级；p3与wo2目录虚构，不能当真实工具型号选择。",
+    "e3母液/性能指数虚构；e4固定200t/d及90天累计代理，无热传导和逐日产量；e5活性不等现场增油。",
+    "wo5只含完整间隔，非删失生存模型/RUL；r3合成频谱非独立观测，目标分数8外推非寿命。",
+    "t2假设缺陷全集对应、贪心匹配；t3并联泵简化、非完整管网；t5无罐容表/透视；r1/r2无完整装置物热平衡。",
+    "m5自由文本无金标不输出真实性性能；复杂否定/混合观察仍需人工核对。"
+  ],
+  "minorOpenWording": [
+    {
+      "case": "m2",
+      "file": "shared/mudlogging-study.js",
+      "issue": "实测甲烷阅读反馈已改为“来源或成因还需要其他资料”；最终回读当前源确认。",
+      "severity": "P3 wording",
+      "status": "integrated_source_verified"
+    }
+  ],
+  "nextVerification": "由root对本轮build产物另行做门户导入、真实图形布局、参数重算、stale导出、刷新和窄屏抽样；不得把本汇总源层解决等同61例浏览器全通过。",
+  "cases": [
+    {
+      "sceneId": "g1",
+      "scope": "existing17",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "可从地表露头—波段反射率—像素类别建立理解，原有图幅划分和近邻溯源完整；补充明确伪彩色不是本色，植被不能解释下伏岩性。",
+      "figureAlgorithmEvidence": "图B2波长/反射率曲线对应观测灰度通道；选中像素的三波段图与近邻表对应六维分类输入。",
+      "reviewFindingsAtGroupSnapshot": "原控制已有计算但缺串起图B2、观测通道、消融与覆盖类别变化的具体读图路线。",
+      "remainingItemsAtGroupSnapshot": [
+        "数据光谱由人为设定，默认宏F1接近1仅说明简单教学数据易分，不能外推真实卫星岩性精度。",
+        "浏览器布局和原站导入未在本组执行。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "g2",
+      "scope": "new44",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "背景/异常/位置已有专业解释；新增带数轴的两点采样记录图替换泛三框，让初学者知道每点同时带坐标与三个浓度。",
+      "figureAlgorithmEvidence": "新采样图A/B说明记录格式；空间图定位，C1–C2交会显示同一编号，C3在详情仍参与联合距离。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原采样图为同深度采样/测量/表格三框，缺变量和位置关系。",
+        "原散点固定范围/点选固定尺寸与当前画布匹配，并无当前默认裁切/错位证据；现改自适应范围和依实际画布尺寸计算，作为可读性与维护改进。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "坐标只做展示，未进行空间聚集判断。",
+        "教学异常区按几何固定，默认方法F1=1不构成真实油气来源判断。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "g3",
+      "scope": "new44",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "原地质图专业对象清楚，但实际任务只到预切图块分类与手工图例字段拆分；已明确不含OCR、整图定位或自动图例关联。",
+      "figureAlgorithmEvidence": "新增三个与engine完全一致的16×16清洁模板，说明接触线/产状/代号形状；选中观测图块可直接对照。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原型图与实际简化模板不完全可对应。",
+        "原关联图容易让人以为已识别字符并自动关联图例；已改标题/图注并在正文标明缺失能力。",
+        "缺恢复默认操作，已补。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "没有自由文本OCR、符号定位/矢量线提取，不能宣传完成整张地质图要素提取。",
+        "模板与测试同族，不是跨地图泛化；默认30块准确率1，高噪声0.30时0.9。"
+      ],
+      "crossReviewIds": [
+        "cross-g3-01"
+      ]
+    },
+    {
+      "sceneId": "g4",
+      "scope": "new44",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "裂缝面/迹线、观察窗口、P10/P21、照片角和地理走向区分已有基础；补足实际图比例尺与扫描位置约定。",
+      "figureAlgorithmEvidence": "青色L编号对应逐线表与玫瑰图；橙色扫描线对应P10分子，12×8m窗口对应P21面积分母。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原实际灰度图没有比例尺，扫描线高度表述容易与向下像素坐标混淆。",
+        "原玫瑰对称图容易双倍计数；补明确两侧是同一无向迹线，非两条。",
+        "缺默认恢复，已补。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "只适用于贯穿窗口直线，不能解释短线弯曲、真实开度/连通性或三维渗透率。",
+        "基线固定只取最多2条，在4条参考上能力受限；未为了公平表象修改结果。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "s1",
+      "scope": "existing17",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "原地震同相轴错断/相关特征/缺测有较完整教学；补上逐行最大值候选的边界和无断层反例路线。",
+      "figureAlgorithmEvidence": "图B1地层错断对应振幅剖面；点选左右波形对应不连续性与移位匹配特征；误差图对应固定4368像素分母。",
+      "reviewFindingsAtGroupSnapshot": "原有流程已具体，非泛模板；需明确逐行候选尚无地质连通约束，并给无断层控制实验。",
+      "remainingItemsAtGroupSnapshot": [
+        "位移仅双程时间域，不能直接换算断距m。",
+        "二维合成剖面且每时间行最多一候选，不能覆盖复杂多断层。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "s2",
+      "scope": "new44",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "三种地震反射结构与真实沉积成因区分清楚，原小窗—属性散点—混淆链已有意义；补单位与归一化防止错误读图。",
+      "figureAlgorithmEvidence": "24×24小窗改采样号刻度；色标±1为按本窗最大绝对振幅归一化，跨窗强度需看RMS，散点横向差异显示结构。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原小窗写时间而未指定采样ms，现改采样号。",
+        "原正负色标未说明各窗独立归一化，现显示数值与本窗最大振幅。",
+        "参数改变后仍能导出旧计算，已禁导出并加事件guard；增加恢复默认。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "没有独立验证组选k，页面现明确不据测试选最优。",
+        "60格只是独立样本索引，不能解释成连续相带空间图。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "s3",
+      "scope": "new44",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "初至/峰值、炮集/单道、2ms采样、MAE和全18道命中分母已有解释；补连续触发如何落点的可手算图。",
+      "figureAlgorithmEvidence": "泛三框流程图已换成70/72/74/76ms支持度曲线，阈值0.60时连续72/74/76触发候选72ms；对应真实predict的3连续规则。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原泛三框没有解释连续触发落点。",
+        "原波形固定±1.5可能隐藏高噪声尖峰，改当前波形自适应范围。",
+        "初判振幅正负轴有误，经坐标映射复核确认原轴正确，已撤销该处改动，未记为修复。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "读取未来窗口是离线算法，非零延迟实时预警。",
+        "得分未经概率校准，测试阈值由用户探索；已拾取MAE必须与漏拾/全道命中并读。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "s4",
+      "scope": "new44",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "孔隙度/声阻抗/VpVs与井震尺度区别已有专业骨架；新增同阻抗两个井段的手算图，使第二属性价值具体。",
+      "figureAlgorithmEvidence": "Z=10.37时φ10%、Vsh10%与φ15%、Vsh≈35.9%对应不同Vp/Vs；实际留出井曲线与45°散点可核查。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原混合效应文字缺可代公式核对的数值例，已补精确教学关系例图。",
+        "原噪声没有解释两属性扰动比例，补Vp/Vs幅度为阻抗扰动0.07倍。",
+        "参数改变后仍能导出旧结果，已阻止并加恢复默认。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "输入已是阻抗和Vp/Vs属性，不是从波形直接完成弹性反演。",
+        "每井段独立教学生成，整井分组不能当真实工区地质差异验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "s5",
+      "scope": "new44",
+      "group": "geology-seismic",
+      "groupReport": "geology-seismic.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "信号+干扰、七点邻域回归与保真/残差已有文字；补实际邻域位置图和严格固定干净信号的模式比较。",
+      "figureAlgorithmEvidence": "泛三框换成3道×5时间位置的七点观测图，中心同道±2与左右邻道t可对应权重表；残差图解释被移除部分。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原spikes分支额外调用共用RNG，导致后续干净参考也改变；拆尖峰RNG后各噪声模式参考逐值完全一致。",
+        "波形±1.7与残差±1.2固定范围可能藏尖峰，均改按当前数组自适应。",
+        "原七点邻域为泛三框，改真实时空邻域图。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "信号几何是简单固定脉冲族，只改变随机扰动，不能视为真实复杂波场泛化。",
+        "SNR依赖干净参考；实测缺参考时不能直接给出同等成绩。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "d1",
+      "scope": "existing17",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "保留多井代理预测、真实约束搜索和独立实现对照；补足进尺图刻度与教学约束的单位，读者现在能手算ROP和约束余量。",
+      "figureAlgorithmEvidence": [
+        "背景B2把0—30min/15m、停钻段与有刻度进尺时间图对应；后段斜率改变明确表示另一工况。",
+        "背景B3新增泵压与扭矩公式，90/120/26/UCS60的手算值13.98MPa、5.09kN·m；运行热图、余量条与具体违反项对应。",
+        "运行预测散点图图例文字改用对应绿/橙色，误差图明确绿条模型、橙点基线。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "进尺示意无明确刻度；教学机械约束公式仅在代码中，不便核对。",
+          "fix": "重画有刻度时间—进尺图，写明有效时段与工况改变；加入约束公式和手算例。",
+          "files": [
+            "case.json",
+            "demo.html"
+          ]
+        },
+        {
+          "issue": "散点与残差图图例不够明确。",
+          "fix": "给模型/基线文字着对应颜色，残差图写明符号。",
+          "files": [
+            "app.js"
+          ]
+        },
+        {
+          "issue": "缺紧凑总览节点文件。",
+          "fix": "新增绑定实际5步的flow.json。",
+          "files": [
+            "flow.json"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "本轮未浏览器复验热图点击、窄屏、沙箱导出。",
+        "代理未覆盖现场设备全部约束，候选是教学搜索结果。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "d2",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "已从只有压力波形的概念展示变成能复核正常响应、残差和提前量的课堂实验。",
+      "figureAlgorithmEvidence": [
+        "B1用P=4+0.18Q+0.012RPM给流量—压力数值图；替换原时间图与散点文案错位。",
+        "B2画同一序列的单窗残差、5窗均值、0.45MPa阈值，有真实刻度。",
+        "运行压力图叠加固定基线阈值、145min教学事件、首次告警139min及6min括线；125—165阴影表示注入区。",
+        "流程用正常/先兆/事件各自170/20/20窗的数值表解释分母，不再用方框重复步骤名。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "图注与图形横轴不一致、缺事件与告警定位。",
+          "fix": "重画有量纲的背景图，运行图增加事件/首告警/提前量标注。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "engine.js",
+            "app.js"
+          ]
+        },
+        {
+          "issue": "没有明确负对照和人工复核。",
+          "fix": "drift下限改0，补操作路线与独立复核导出。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "本轮未浏览器检查145/139文字在不同宽度是否需要避让。",
+        "仍仅一个教学事件，无法外推现场事件检出率。"
+      ],
+      "crossReviewIds": [
+        "cross-d2-01"
+      ]
+    },
+    {
+      "sceneId": "d3",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "已明确MD/TVD、指令/响应、规划/未来执行三层关系；模型失败与不可达目标都保留。",
+      "figureAlgorithmEvidence": [
+        "B1以三角形解释θ=30°时10m分解为5m和8.66m，并标井深向下。",
+        "B2指令转角—响应转角图对照0.74示意增益与单位增益，不把训练拟合值强行等同0.74。",
+        "流程手算表分别解释响应标定、位移分解、原目标与终点欧氏距离；运行曲线保留21个补偿候选目标函数。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "背景图缺MD/TVD分解、转角图与文字关系弱；流程通用方框无数值中间量。",
+          "fix": "重画几何图和标定关系，增加转角/坐标/末端距离手算表与操作路线。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css"
+          ]
+        },
+        {
+          "issue": "没有运行绑定的独立人工复核；hash写入有沙箱风险。",
+          "fix": "复核与导出绑定计算版本，history写入guard。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "demo.css"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "未浏览器复验；二维与固定600m进尺简化保留。",
+        "高未来增益可能违反实际转角约束，这作为迁移失败保留，不能包装为安全控制器。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "d4",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "时域、频谱、特征、二分类和误差分母已串成同一信号的可核对讲法。",
+      "figureAlgorithmEvidence": [
+        "B1实际构造5Hz+25Hz一秒信号，有g和秒刻度。",
+        "B2对应同一信号两个幅值峰，写明频率是教学设定，非通用钻具诊断频率。",
+        "流程列RMS、P25/(P5+0.02)、峰值因子计算；90窗的50正常/40退化分别统计误报漏报。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "频谱与时域背景缺刻度，训练来自设备的表述易误读成实测来源。",
+          "fix": "重画对应信号和频谱；改为独立种子教学信号，列清特征和分母。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "缺窗口选择的学习目的、人工复核及沙箱guard。",
+          "fix": "明确仅浏览窗口不改变整体指标；独立复核和guard。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "case.json"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "未浏览器复验频谱切窗和移动端文字。",
+        "不包含真实转速变化导致的阶次分析，不以教学固定频带外推现场。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "d5",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "纠正PV图注错位和单位跳跃，并修复真实网格端点遗漏；预测校验与配方约束搜索现在分开解释。",
+      "figureAlgorithmEvidence": [
+        "B1同YP=5Pa、PV20/50mPa·s的有刻度直线，图注直接解释斜率，不再把宾汉图叫剂量响应。",
+        "B2固定固相6%，用与演示相同响应函数画25/100℃聚合物剂量曲线，明确趋势是配方假设。",
+        "运行剂量图叠加PV上/下界和目标，流程表解释先筛约束再用目标偏差与相对成本排序。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "宾汉图无刻度、图注却说固相剂量，PV与Pa·s换算不清。",
+          "fix": "重画两幅符合文字与函数的物理图，明确浓度和成本单位。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "浮点递增a=.1...1.5漏掉1.5端点，仅350点。",
+          "fix": "改整数索引ai/10，25×15=375点，实际验证含1.5端点。",
+          "files": [
+            "engine.js",
+            "engine-contract.json"
+          ]
+        },
+        {
+          "issue": "缺约束线、运行绑定人工意见、沙箱guard。",
+          "fix": "叠加界限和目标；补独立复核和guard。",
+          "files": [
+            "app.js",
+            "engine.js",
+            "demo.html"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "未浏览器复验阈值线/图例拥挤、375点对应门户打包结果。",
+        "只优化PV，未模拟YP、密度、携屑等完整泥浆性能。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "w1",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "已补足“模型用了Rt但图上看不到”的证据缺口，并以深度向下三道图说明边界识别和去重。",
+      "figureAlgorithmEvidence": [
+        "B1纵向深度图标明持续GR跳变；B2上下窗均值35/105API与Rt差手算例对应模型特征。",
+        "运行新增独立Rt深度道及分数阈值，GR、Rt和分数均深度向下；预测/真边界水平虚线对齐。",
+        "流程明确重复预测仍为FP、单真边界只能匹配一次，匹配MAE空集为不适用。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "模型用Rt却只展示GR；MD横置；最小间距误叫最小层厚。",
+          "fix": "补Rt道、阈值与深度向下绘图，修正概念用语。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "流程重复通用方框，无窗口/匹配中间量。",
+          "fix": "替换均值差、去重、容差匹配数值表，加入失败路线与独立复核。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "本轮未浏览器复验三道深度图、标注与图例。",
+        "当前数据只有宽层响应，真正薄层未验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "w2",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "将孔隙体积分数、密度混合公式、泥质偏差与多曲线标定联系起来；不把孔隙度当油量。",
+      "figureAlgorithmEvidence": [
+        "B1用100等体积格中20孔隙格解释20%，并举20→22%=2个百分点。",
+        "B2两条有单位混合密度线及2.326/2.446手算值对应泥质偏差文字。",
+        "运行沿深度误差图改MD向下；仅RHOB模式指标不再误称“多曲线”。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "孔隙度定义图和公式图的数量关系薄弱；单位NPHI与百分点不清；单通道标题失真。",
+          "fix": "重画体积分数/混合密度图，补物理手算与输入字段表，动态指标标签。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "MD横置且无独立复核/沙箱guard。",
+          "fix": "深度向下误差图，运行绑定人工意见与guard。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "demo.css"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "未浏览器复验单通道切换和长图例。",
+        "教学泥质项简化，不据此声称能替代现场岩心/岩性校正。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "w3",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "补齐圆柱展开几何、坐标/灰度语义与局部特征，再让像素指标可回到真实掩膜定位；删除虚假中心轨迹。",
+      "figureAlgorithmEvidence": [
+        "B1显示圆柱剪开处、左右接缝与展开周期线，B2列局部灰度和邻域反差。",
+        "运行四栏补0/90/180/270/360°、0/24/48/71像素行及深绿正类/浅色背景、0暗1亮。",
+        "删去每列所有误检取平均的“中心”，改为全部真实选中像素散点，空掩膜保留已知坐标范围避免Infinity。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "展开图缺深度与灰度标尺，容易误看成普通照片；背景缺圆柱几何。",
+          "fix": "重画圆柱展开与局部像素示意；四栏补轴、语义和未校准米尺度说明。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "对每列误检求均值会造出并不存在的单条“裂缝中心”。",
+          "fix": "用实际掩膜像素散点替代，明确断续和误检，空掩膜用固定图像坐标范围。",
+          "files": [
+            "app.js",
+            "engine.js",
+            "case.json",
+            "demo.html"
+          ]
+        },
+        {
+          "issue": "无实例复核与沙箱guard。",
+          "fix": "复核提醒纵带/窄线，意见独立导出；guard history。",
+          "files": [
+            "app.js",
+            "demo.html",
+            "demo.css"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "本轮未浏览器复验四栏在窄屏的字号/横向滚动和大量像素绘制耗时。",
+        "没有米尺度/井径/方位校正，不能输出真实裂缝产状。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "w4",
+      "scope": "existing17",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "保留原有近邻解释、拒判、人工列和全分母评价，修正背景四道同形曲线与log单位。",
+      "figureAlgorithmEvidence": [
+        "B1不再画四条相同wiggle；六个0.5m对齐教学观测给四种不同响应及独立有单位刻度。",
+        "运行四道、基线/模型/人工/独立真值色柱与深度游标对应，近邻表给实际训练井深度与距离。",
+        "背景B3新增全通道/仅GR、跨域和支持阈值操作路线，明确显隐真值只影响显示。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "背景四道同形曲线没有体现不同物理响应/量纲；log单位写法易误读。",
+          "fix": "背景替换深度对齐数值图，明确无量纲log与训练尺度，补具体学习路线。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "缺实际路线紧凑总览。",
+          "fix": "新增flow.json，近邻识别与基线、拒判复核、全分母输出分别定位。",
+          "files": [
+            "flow.json"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "本轮未浏览器复验近邻点选、支持阈值与沙箱下载。",
+        "固定教学岩性族不代表现场复杂岩性泛化。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "w5",
+      "scope": "new44",
+      "group": "drilling-welllog",
+      "groupReport": "drilling-welllog.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "已把缺失身份、层界形态、可见辅助通道和缺口专属评价连成实验；保留插值胜出的同层负例。",
+      "figureAlgorithmEvidence": [
+        "B1深度向下展示跨层真实形态与端点直线的差异，B2同深度GR持续跳变。",
+        "运行RHOB与辅助道改深度向下、缺口用水平带；线型与颜色共同区分重建、基线、封存评价原值。",
+        "流程给null输入表、固定GR/100与logRt距离、近邻均值例与缺口专属分母。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "issue": "横向MD、不明log单位，流程宣称学习尺度但代码只是固定缩放。",
+          "fix": "改深度向下道和水平缺口带；明确无量纲log与GR/100固定尺度。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css",
+            "engine.js"
+          ]
+        },
+        {
+          "issue": "原流程方框无缺失/null、平均及评价细节；缺具体反例与复核。",
+          "fix": "替换数值表、补跨层/同层操作及模型非必胜说明；意见单独保存与historyguard。",
+          "files": [
+            "case.json",
+            "demo.html",
+            "app.js",
+            "demo.css"
+          ]
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "本轮未浏览器复验缺口带、重叠曲线可辨性与导出。",
+        "只支持内部缺口；不声称可处理井首井尾无两端点的缺失。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "c1",
+      "scope": "existing17",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "合成声学响应分类的教学闭环成立；CBL/VDL、水泥环、微环空、模型拒判与实际水力封隔的界限现已明确。",
+      "figureAlgorithmEvidence": [
+        "旧图B2标题声称CBL曲线，实际左侧画的是单条波形；现为相同MD行对齐的早到RMS曲线与VDL，并标传播时间与相对单位。",
+        "图B1补传播箭头头；正文说明灰蓝套管、环空水泥和外侧地层，强调不能由低声幅证明周向完整。",
+        "选点波形与近邻散点自动覆盖当前实测特征范围；补RMS数值刻度；VDL标明正负声幅和±1色阶限幅。",
+        "图B2每一行VDL实际画80点，左侧RMS从同一行10–36点实算；六行分别0.09521、0.13981、0.20748、0.27547、0.36631、0.45725，避免概念图的数值仍与波形脱节。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "概念图与术语缺少初学者铺垫。",
+        "CBL与波形图的语义错位。",
+        "固定RMS坐标可能截断高扰动选点；真值开关只更新图未同步当前描述。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "仍为归一化教学RMS代理，未模拟实际仪器标定和完整声学反演。",
+        "合成微环空机制刻意保留后到波证据，不能解释为现场保证可恢复。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "c2",
+      "scope": "new44",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "置换方向、偏心几何、效率与承压约束可供初学者建立变量关系；明确仅检查固定控制点承压上界。",
+      "figureAlgorithmEvidence": [
+        "图1套管右移，画出宽窄环空；蓝箭头向下、金箭头向上，图文一致。",
+        "压力候选图从固定40–66改为覆盖当前全部候选和压力上限的动态刻度；偏心0.8实测候选最大77.895MPa，原图确有漏画。",
+        "同密度效率曲线刻度与实际50至95外的情况改为40–100，绿色同心、金色当前、红色偏心0.8。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "流动路径没有箭头头且窄侧正文对应同心图。",
+        "候选压力可超过固定图域。",
+        "压力窗口易被误读为上下界俱全；无推荐表仍写全部满足。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "压力是教学控制点代理，不是全井压力剖面；不检查孔隙压力下界。",
+        "色彩效率仅为辅助，点击读精确值；需浏览器确认窄屏箭头和轴标签。"
+      ],
+      "crossReviewIds": [
+        "cross-c2-01"
+      ]
+    },
+    {
+      "sceneId": "c3",
+      "scope": "new44",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "压力裕度、通道条件与阈值三种概念已区分；保留模型默认逊于基线的真实结果。",
+      "figureAlgorithmEvidence": [
+        "旧风险概念图随裕度增加向上，和风险方向冲突；现两条曲线随裕度增大向下，裂缝发育曲线仍高于裂缝少曲线。",
+        "新增52−50=+2和52−53=−1MPa裕度示例。",
+        "散点明确四输入含义与无量纲指数，点选增加渗透性和m³/min排量；PR图有数值刻度。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "裕度风险关系图方向错误。",
+        "裂缝/渗透性指数单位及裕度正负解释不足。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "逻辑分数未现场校准，随机结局不是确定安全标签。",
+        "默认F1模型0.715447、基线0.756303；该劣势原样保留。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "c4",
+      "scope": "new44",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "半径差、毫米偏心、居中度与受载跨距可手算；负预测明确标作自由变形模型越界诊断。",
+      "figureAlgorithmEvidence": [
+        "修正截面套管圆心偏移由错误1.55改100/120，井眼R120和套管r90同尺度。",
+        "负预测gap保留曲线诊断，截面停在0间隙接触位，不画实体穿透。",
+        "曲线纵轴动态覆盖负间隙；支撑数按floor(60/s)+1统计0–60m，下一支撑可在图外。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "图形几何比例错误。",
+        "负间隙当真实实体相交。",
+        "18m跨距支撑数用ceil误算为5，实际0/18/36/54共4。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "未求解接触力、扶正器刚度或有限元变形。",
+        "负间隙比是诊断数，不应当作物理居中度。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "co1",
+      "scope": "existing17",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "四种构型与防砂、支撑、选择性隔离的关系讲清；近邻响应与硬条件判断分工明确。",
+      "figureAlgorithmEvidence": [
+        "图B1配文字说明筛管/砾石拦砂但不能自动控水，套管候选额外包含封隔配置。",
+        "图B2用出砂与控水双轴解释同一井的双重需求，不把筛管当万能方案。",
+        "响应/效用比较图取消负效用−19截断，动态范围显示真实费用扣分。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "术语与构型配置对初学者解释不足。",
+        "负效用可能被显示截断。",
+        "缺少独立紧凑flow。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "规则额定温度与费用均教学指数，不可泛化厂商参数。",
+        "近邻输出综合表现而非真实产油量或概率。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "co2",
+      "scope": "new44",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "定位为完井选层与离散孔密等级的规则搜索，区别于现场孔眼几何设计。",
+      "figureAlgorithmEvidence": [
+        "新增四层深度、压力、低档产液与含水表，和引擎layers一致。",
+        "A+C低档手算油85.45、水12.55、液98、含水12.806%；A+B压差5MPa对应无隔离排除。",
+        "81组合全展示并圈出推荐点，坐标刻度对应资源和目标。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "缺少原始层参数表，无法独立复算。",
+        "高低孔密看起来像实际孔/米但引擎仅等级与1.35流量乘数。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "两档不是现场孔/米；未优化孔眼方位、穿深或求解层间窜流。",
+        "4MPa为教学筛查门槛。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "co3",
+      "scope": "new44",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "轴向与环向应力、温升约束、正负号与平面等效合成已按同一单位解释。",
+      "figureAlgorithmEvidence": [
+        "补1100kN/4500mm²=244.4MPa示例，澄清力与应力。",
+        "应力图动态覆盖全部分量；极端轴向−274.638MPa原来超出−250固定范围。",
+        "顶部拉力/径向压差示意补箭头头；深度横向展开已标明m。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "固定坐标漏画极端压应力。",
+        "模型边界、kN换MPa、受热压应力方向缺少解释。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "薄壁平面应力，忽略径向/剪切及屈曲、连接、疲劳等；300MPa仅教学限制。",
+        "横向深度图是明确标注的展开，不作纵向井身图读法。"
+      ],
+      "crossReviewIds": [
+        "cross-co3-01"
+      ]
+    },
+    {
+      "sceneId": "co4",
+      "scope": "new44",
+      "group": "cement-completion",
+      "groupReport": "cement-completion.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "滑套调进流、封隔器分区、油水处理与逐日动作约束形成可解释控制实验。",
+      "figureAlgorithmEvidence": [
+        "概念图补分段边界与进流箭头，正文区分滑套与封隔器。",
+        "逐日柱中心与1–12天数值轴一致；热图用A/B/C短行名及独立低中高含水图例，补逐日标签。",
+        "新增处理能力虚线，与油水堆叠总柱高比较。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "装置分工、50%开度不等于半流量和贪心边界未说清。",
+        "日轴与柱坐标不一致、热图长行名重叠风险。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "模型及环境是教学流入响应，未求解实际多相管流或水锥。",
+        "两策略独立推进；停机策略执行天数不同，累积量须连同天数读。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "p1",
+      "scope": "existing17",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "专属射孔几何/性能面已形成教学闭环；补齐初学术语与可验证约束实验。",
+      "figureAlgorithmEvidence": "背景B1连通剖面对应储层与井筒沟通段，B2相位图对应角向分布定义；演示性能面对应440候选约束搜索。",
+      "reviewFindingsAtGroupSnapshot": [
+        "渗透率mD/各向异性对初学者缺解释",
+        "成本散点坐标单位未直接标注",
+        "相位切片独立色阶易被跨图误比较"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "浏览器窄屏与教师门户导入待root抽验",
+        "合成响应不代表实际产能"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "p2",
+      "scope": "new44",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "从材料到孔道形态的业务关系明确；现增加当前条件对应的通道示意，避免只看回归分数。",
+      "figureAlgorithmEvidence": "新增S1批次表/S2条件曲线/S3带长度标尺的通道剖面/S4手算MAE；运行时实际预测长度驱动通道终点。",
+      "reviewFindingsAtGroupSnapshot": [
+        "流程全为通用三框",
+        "无当前参数对应几何图",
+        "清洁度评分尺度未解释"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "清洁度仍为公开教学评分，不能视作现场标准量表",
+        "图宽固定不代表入口测量或流量"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "p3",
+      "scope": "new44",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "知识规则推理有真实排除证据；补可行B/F的双属性取舍和18组分母。",
+      "figureAlgorithmEvidence": "S2约束矩阵直接对应默认B满足/B缺失待核/A不符；结果散点的深度与流通二维坐标呈现B/F取舍。",
+      "reviewFindingsAtGroupSnapshot": [
+        "流程通用三框",
+        "第二结果图只重复深度柱，没有呈现偏好取舍",
+        "无候选与违反数分母解释不足"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "A–F虚构序数等级不能替代真实射孔器型号选型",
+        "当前缺失开关影响当前目录，18组固定评价仍采用完整目录"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "p4",
+      "scope": "new44",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "有可核对的工况反转实验，能说明校正服务于低效复核；油液口径已锁定。",
+      "figureAlgorithmEvidence": "S3手算+5−15=−10对应校正为何有用段；实际结果带作业0日标线和同单位分解柱。",
+      "reviewFindingsAtGroupSnapshot": [
+        "含水/产量口径未明确为油量或液量",
+        "流程模板无法解释校正价值",
+        "分解柱没有单位"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "剩余量仍含模型/未记录干预误差，不是现场因果效果",
+        "浏览器图中文字与负柱显示待抽验"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "pr1",
+      "scope": "existing17",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "原有井下泵功图/循环/近邻解释完整；补观测单位与零点平移实验。",
+      "figureAlgorithmEvidence": "保留原B1阀门循环与图形形状讲解；当前循环点、近邻和含待复核列混淆图可对照。",
+      "reviewFindingsAtGroupSnapshot": [
+        "初学者不容易连接循环面积单位与业务判断",
+        "缺少明确对照实验任务"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "三类合成形状不穷尽真实泵况，不直接确诊故障",
+        "浏览器循环拖动与拒判状态待root抽验"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "pr2",
+      "scope": "new44",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "真正递归推断已有，现把每步输入来源展示出来，未来干预能验证知识边界。",
+      "figureAlgorithmEvidence": "S2默认110/111/117日来源表与S3递归回填对应正文；实际结果trace逐行列出三个滞后值/日期/来源。",
+      "reviewFindingsAtGroupSnapshot": [
+        "仅文字称递归，未展示回填来源",
+        "缺截止与未来干预可见标线",
+        "默认模型输给持续值需解释"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "仅单井合成时序，不作跨井泛化主张",
+        "浏览器trace表横向滚动及干预标线待抽验"
+      ],
+      "crossReviewIds": [
+        "cross-pr2-01"
+      ]
+    },
+    {
+      "sceneId": "pr3",
+      "scope": "new44",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "响应学习与守恒优化区别明确；无解/不可行均分继续保留。",
+      "figureAlgorithmEvidence": "S2凹曲线解释边际响应，S3守恒三角形解释第三配额；实际散点悬停看A/B/C完整分配。",
+      "reviewFindingsAtGroupSnapshot": [
+        "通用流程三框",
+        "散点只显示A且未解释多个B/C分法",
+        "散点颜色/柱单位缺说明"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "没有求解井间压力场或真实层间干扰",
+        "不同B/C候选可视觉重叠，使用悬停和前12完整表核对"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "pr4",
+      "scope": "new44",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "正常关系残差业务解释合理；修正持续告警时刻与超阈/告警分母，图可核查。",
+      "figureAlgorithmEvidence": "温度/残差图标65漂移、75评价异常与首次确认；新增逐点0/1对持续3点0/1时间线。",
+      "reviewFindingsAtGroupSnapshot": [
+        "原首次持续告警报连续段第1点，实际第3点才可确认",
+        "原误报事件只是逐点超阈段，文字混成持续告警",
+        "缺65/75评价参考时点"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "只一个合成异常阶段，分钟召回不等于事件召回",
+        "65–74min漂移按本页标签定义仍属正常段，应连同正常误报解释"
+      ],
+      "crossReviewIds": [
+        "cross-pr4-01"
+      ]
+    },
+    {
+      "sceneId": "pr5",
+      "scope": "new44",
+      "group": "perforation-production",
+      "groupReport": "perforation-production.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "只建模结蜡并守住机理边界；明确WAT/风险分数/复核阈值不同且保留基线获胜。",
+      "figureAlgorithmEvidence": "S1带温差的温度轴对应析蜡条件；实际风险曲线加WAT竖线，结果事件点说明金/灰语义。",
+      "reviewFindingsAtGroupSnapshot": [
+        "流程模板",
+        "风险曲线只扫25–55而控件至60°C",
+        "事件散点颜色无解释",
+        "默认温度基线胜出需诚实说明"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "事件为随机教学标签，分数未校准现场概率",
+        "无机结垢不在本例模型范围",
+        "流速关系为生成器假设，不能推广为普适单调结论"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "wo1",
+      "scope": "existing17",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "保留联合检索的真实训练/验证/测试划分，补变量物理对象与局部查询评价边界。",
+      "figureAlgorithmEvidence": "B1井筒对象示意与新增五变量释义；B2历史怀疑不等于当前观测；查询原文/近邻井号可查。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "未在浏览器验证近邻原文面板及门户导入。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "e1",
+      "scope": "existing17",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "资源约束与代理收益的专业故事完整；修掉重复遮盖的井筒图并补几何/导流/产能的关系。",
+      "figureAlgorithmEvidence": "新B1清楚标井筒、压裂液、支撑剂；运行可行域441点、Pareto、测试残差均实算；静态概念图明确非定量响应。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "压力为代理预测，未作现场裂缝/流动验证；旧独立背景草图无数值刻度并已明确示意。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "wo2",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "尺寸匹配和承载必须依次看，教学规则推理本身是真实方法。",
+      "figureAlgorithmEvidence": "新内捞/外捞并排图区分落鱼内外径、工具本体及井筒；承载条轴有0–200kN刻度，表格显示逐项排除理由。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "4mm直径余量及目录是教学假设；不支持井斜、鱼顶破损、解卡力和扭矩设计。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "wo3",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "套管展开和正负半径必须先解释，去背景假定与漏检边界需可见。",
+      "figureAlgorithmEvidence": "新圆周切口→深度方位图；两幅运行图共用−8至14mm色标，0/90/180/270/360°、0–3.5m刻度；两图格子支持键盘与点选。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "仅正残差局部凹坑；不估外壁、剩余壁厚或长段连续损伤；需浏览器抽查格子交互。"
+      ],
+      "crossReviewIds": [
+        "cross-wo3-01"
+      ]
+    },
+    {
+      "sceneId": "wo4",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "有正常动作关系才可把钩载偏离解释为线索；残差与传感器漂移不能混为事故确诊。",
+      "figureAlgorithmEvidence": "上下两个定量图分别展示钩载/残差，真实自适应刻度、108kN基线、当前残差阈值、阶段0/1带、评价事件阴影和持续报警底带。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "阶段项及速度系数是教学构造，尚无现场动作/力学验证；浏览器视觉待验。"
+      ],
+      "crossReviewIds": [
+        "cross-wo4-01"
+      ]
+    },
+    {
+      "sceneId": "wo5",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "完整间隔回归与右删失/RUL不同，预测锚点已明确为检修A。",
+      "figureAlgorithmEvidence": "输入只取A前半年，图中32台留出预测/参考散点附真实天数刻度和训练中位数；正文移除不存在的误差区间承诺，说明固定工程缩放。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "只含已完成间隔，可能有完整病例选择偏倚；未实现生存模型或剩余寿命。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "e2",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "二维几何必须与产能隔开，横纵同尺并覆盖所有参数。",
+      "figureAlgorithmEvidence": "L/H由实算回归生成，椭圆自适应同尺缩放、x及相对高度刻度、半长半高数值；正文解释πLH不是增油率，导流还需渗透率×宽度等量。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "仅同中心二维椭圆，不建模分叉、真实地应力传播、三维连通性或产能。"
+      ],
+      "crossReviewIds": [
+        "cross-e2-01"
+      ]
+    },
+    {
+      "sceneId": "e3",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "真实重心坐标原先已正确；现补可读比例、固定数值色标及固定方案预算状态。",
+      "figureAlgorithmEvidence": "A顶、C左下、B右下；20%比例网格、5%候选步长；色标−20至80；点选/键盘显示A/B/C、成本、性能、可行状态。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "母液与指数均虚构；负指数只是相对教学零点；无真实化学体系兼容性试验。"
+      ],
+      "crossReviewIds": [
+        "cross-e3-01"
+      ]
+    },
+    {
+      "sceneId": "e4",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "注焖采时间边界与投入/产油口径已对齐；正文不再承诺未实现的日产曲线。",
+      "figureAlgorithmEvidence": "周期带列注汽/焖井/90d生产边界；J轴刻度/单位、最佳焖井轨迹、可行固定方案方块；结果解释总天数、汽油比及固定方案可行性。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "200t/d仅教学速率；质量汽油比不等于含蒸汽品质的热效率；无逐日产量或热传导模拟。"
+      ],
+      "crossReviewIds": [
+        "cross-e4-01"
+      ]
+    },
+    {
+      "sceneId": "e5",
+      "scope": "new44",
+      "group": "workover-eor",
+      "groupReport": "workover-eor.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "活性与增采区分充分加强，温盐联合影响必须用有坐标和覆盖的响应面教学。",
+      "figureAlgorithmEvidence": "温度25–70°C/盐度5–90g/L刻度、固定0–100活性色标、训练空心点与查询圈；正文解释培养边界与代谢/相容/驱替的缺失证据。",
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        "同一合成菌群、固定培养时长；调k是测试探索，不能当调后最终独立验收；无现场增油结论。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "t1",
+      "scope": "existing17",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "可由两端物料平衡与正常动态关系解释持续偏差；新增库存、时间对齐与残差标准化说明，避免把瞬态流差直接称为泄漏量。模型异常不能定位或确诊泄漏。",
+      "figureAlgorithmEvidence": [
+        "B1对应入口/出口P、Q测点；B2仅为瞬态与持续损失概念图；B3解释正常期望与残差。",
+        "demo实际流量/压力曲线由infer输出expectedQ/expectedP，事件图补分数与分钟刻度，确认事件与独立参考窗分开。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "此前没有解释库存瞬态与体积参考状态；已补物理边界。",
+        "事件图没有分数/时间数字刻度；已补。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "演示中的0.46入口变化响应是教学代理，并非水力瞬态解；未模拟时钟误差控制。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "t2",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "先配准、再匹配、再计算增长率的因果链成立。修复两次测深误差只在第二次注入而正文声称两次均有误差的不一致；保留有符号增长率及教学6 mm损失触发线。",
+      "figureAlgorithmEvidence": [
+        "B1讲10 mm壁厚与局部损失；B2解释焊缝整体坐标漂移；新增匹配代价单位、贪心一对一与适用限制。",
+        "运行图改为相对首次里程的配准前/后残差；增长图同24个缺陷，表给两次原始/校正里程、两次损失深度，能手算增长率。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "横轴无刻度；已加实际缺陷1–24刻度。",
+        "观测对象附隐藏ref索引；已拆独立referenceIndex数组，匹配观测无真值属性。",
+        "随机比较器sort不保证复现；已换固定种子Fisher–Yates。",
+        "表格缺两次深度，无法核查增长率；已补。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "夹具假设缺陷全集对应，无新增、消失或拒配；贪心代价并非全局最优；线性触发年数不能解释为寿命。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "t3",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "并联流量、泵曲线、扬程约束和电耗比较成立；修正η含义为泵、电机、驱动合并总效率，明确m³/h→m³/s和W→kW换算与多余扬程节流假设。",
+      "figureAlgorithmEvidence": [
+        "系统图对应来液需求→泵站→管道→下站；泵曲线明确q为单泵流量、s为相对转速。",
+        "散点来自153个实际候选，横轴H/m纵轴电功率/kW；已加数字刻度、最低扬程标线与可行/不可行图例。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "效率被称电功率但损失口径不清；已补总效率及单位换算。",
+        "散点横轴无数字，无法定位最低扬程；已补。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "未求完整管网交点、汽蚀余量、备用冗余与启停损耗；教学最优限定于已列约束。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "t4",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "独立标定拟合比例/零点，固定旧系数用于后续段的链条成立。新增标定图让斜率、截距与比例误差可被实际观察，累计体积按60个一分钟区间求和。",
+      "figureAlgorithmEvidence": [
+        "背景区分参考状态、标定与运行，不声称补偿体积温压换算。",
+        "新增24个标定散点、拟合线与y=x参考；60点运行图、累计量表与误差同源，补完整时间刻度。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "此前只展示后续曲线，没有可读的标定数据证据；已返回calibration并加散点图。",
+        "累计体积与分钟采样关系此前难读；图示与正文补ΣQ/60。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "标定范围固定40–155 m³/h，未实现窄标定区间控制；不能用噪声0的理想结果声称现场计量精度。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "t5",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "当前范围为固定标尺观察窗视觉液位与雷达交叉核对，专业链为像素→逐行中位数→梯度行→标尺高度。两条测量链不一致不能直接定责。",
+      "figureAlgorithmEvidence": [
+        "B1的h=10×(1−y/99)与engine中换算一致；实际32×100灰度像素在canvas显示，算法只读取像素。",
+        "灰度/梯度曲线补0–99行数字刻度；18帧图补1–18刻度；输出检测行、视觉高度、雷达高度、边界四行跨度灰度差。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "正文声称边界强度可见但结果没给；已返回并展示strength。",
+        "图表无行/帧定位刻度；已补。",
+        "新增说明梯度强度未校准，不是置信度；噪声亦能产生伪梯度。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "无罐容表、透视估计或完整储量；成像噪声控制不是物理雾散射模拟。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": [
+        "cross-t5-01"
+      ]
+    },
+    {
+      "sceneId": "r1",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "蒸馏分离沸程、常减压作用和约束代理搜索解释成立；新增明确合并常减压教学代理中的压力/柴油终馏点联系为人为设定，避免读成现场直接因果。",
+      "figureAlgorithmEvidence": [
+        "背景两塔物流图解释分离；归一化趋势图仅示意；运行热图每格由预测三输出判可行。",
+        "热图增加灰色/推荐框/固定点十字与55–73%色阶说明；独立测试parity图加纵轴数字，48批评价与推荐搜索分开。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "热图缺明确色阶与固定点标志；已补。",
+        "独立测试图纵轴没数字；已补。",
+        "没有恢复默认；已加按钮与事件。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "没有新推荐点的独立装置实测验证；固定合成代理不代表真实炼厂机理。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "r2",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "FCC化学转化、焦炭再生与六项同质量基准收率解释成立；非负闭合与准确性分开，输入密度只作原料简化表征。",
+      "figureAlgorithmEvidence": [
+        "FCC物流/再生图与六项质量账对应；当前堆叠条、温度敏感曲线、独立批次对照均由实际回归输出。",
+        "堆叠条增加0/50/100质量%尺度；按原料类别均值保留真实分组跳变和54批MAE。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "没有恢复默认；已补。",
+        "组成条只有成分标签没有整体数量尺度；已补质量百分比尺度。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "未建热平衡、焦炭燃烧氧量或装置约束；六项闭合为教学边界而非完整现场核算。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "r3",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "负荷条件正常回归→验证阈值→连续三小时→同96小时评价闭环成立。频谱DFT是真计算，但波形由负荷/RMS残差构造，已明确其非独立故障证据。",
+      "figureAlgorithmEvidence": [
+        "RMS图与分数图补曲线/阈值图例，标出43 h评价退化起点和首次持续提醒。",
+        "频谱由128点/512 Hz实际DFT，32/100 Hz对应构造成分；加幅值刻度和生成关系说明，0–192 Hz只是显示频段。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "频谱可能被误读为独立实测通道；已在正文/运行结果明确构造来源。",
+        "时间图缺曲线图例、频谱缺幅值刻度；已补。",
+        "首次提醒与标签边界难定位；已加事后标记。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "时序与频谱并非两份独立观测；不支持具体轴承故障类别或剩余寿命结论。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": [
+        "cross-r3-01"
+      ]
+    },
+    {
+      "sceneId": "r4",
+      "scope": "new44",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "先原文、单位、范围，再用密度硫含量条件关系审核黏度，专业逻辑成立。没有自由文本金标时不计算性能的边界保留。",
+      "figureAlgorithmEvidence": [
+        "流程图对应取样/字段/量纲/关系；真实文本解析支持kg/m3、kg/L、g/cm3，转换与原单位同表保留。",
+        "关系散点新增各行条件期望空心点和实际→期望残差竖线，避免把硫1%截面当全部样品真值；图外/缺失行仍完整列出。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "二维截面容易误导关系残差；已画每行真实条件期望。",
+        "图域之外黏度可能画到轴外，遗漏说明只统计密度；已过滤并完整统计缺失/图外。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "关系仅针对同类合成样品；解析依赖指定字段格式，非通用语义模型。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "r5",
+      "scope": "existing17",
+      "group": "transport-refining",
+      "groupReport": "transport-refining.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "过程物料3 min滞后与化验发布5–40 min延迟分开；训练标准化/参数选择锁定，推理仅用在线可见过程量和已发布化验。原料变化时化验基线更好，负面证据保留。",
+      "figureAlgorithmEvidence": [
+        "背景蒸馏物流、取样/到达时刻、岭回归关系对应三类图；密度时序同180点比较。",
+        "全测试parity图补双轴数字与网格；可用性时间线补分钟刻度；新增说明跨批次沿用已发布化验的连续装置假设。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        "parity图无可读数值刻度；已补。",
+        "两类延迟的作用易混淆；已补区别与受控实验任务。"
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        "每个批次均为同一装置连续运行假设；未验证现场滞后辨识、样本代表性或跨装置泛化。",
+        "需要在原门户opaque iframe中检查标签切换、图形实际布局、窄屏、键盘与stale导出禁用；本次未执行浏览器验证。"
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "m1",
+      "scope": "existing17",
+      "group": "mudlogging",
+      "groupReport": "mudlogging.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "方向正确：说明破岩、返出、筛分、样品身份和迟到；真实岩芯图块被明确用于认识外观，未冒充岩屑识别测试集。但当前首节只提页岩细粒/层状、灰岩碳酸盐，没有把这些词解释为初学者能比较的岩类概念；真实页岩与主实验泥岩教学外观之间缺少显式桥接。",
+      "figureAlgorithmEvidence": [
+        "六张真实2×2 cm岩芯图块逐张对应亮度-纹理散点，照片按钮和图点共享记录选择；解释纹理取水平相邻像素亮度差，另可切亮度直方图。",
+        "筛上清洗岩屑插画的框选与取样-登记-拍照流程对应，标注采集原理插画而非现场照片。",
+        "主实验320×240真实合成像素对应分割轮廓、连通域颗粒、实际训练近邻缩略图与距离；面积/计数切换确实改变分母。"
+      ],
+      "reviewFindingsAtGroupSnapshot": {
+        "severity": "P2 teaching clarity",
+        "file": "tools/mudlogging-study-content.mjs",
+        "location": "m1首节，真实岩芯段落；约29-30行",
+        "issue": "公开材料的页岩与主实验泥岩教学外观未解释关系，岩类本身的识别线索释义被背景覆盖逻辑移除。",
+        "suggestion": "在照片旁用简短释义说明砂级颗粒、细粒泥质岩、页岩薄层易劈裂及灰岩以碳酸盐矿物为主；明确页岩照片不是泥岩类的严格同类金标，不以两个特征直接鉴定矿物。",
+        "status": "sent_to_root_for_integration"
+      },
+      "remainingItemsAtGroupSnapshot": [
+        null
+      ],
+      "crossReviewIds": [],
+      "integrationOverride": "已回读tools/mudlogging-study-content.mjs：砂岩/页岩/灰岩释义及真实页岩照片与泥岩教学外观的标签桥接已集成，原报告待集成项在源层解决。"
+    },
+    {
+      "sceneId": "m2",
+      "scope": "existing17",
+      "group": "mudlogging",
+      "groupReport": "mudlogging.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "机制和结论边界成立。接单根停泵/短时移动与起钻抽吸的机制经SLB原始术语核对，无需纠正成单一成因。当前装饰后的背景缺少接单根=接长钻柱、起下钻=提出/下入钻具这两个初学者读图前提，应补一句动作释义。",
+      "figureAlgorithmEvidence": [
+        "PANGAEA甲烷散点沿沉积深度排列，记录游标返回甲烷、乙烷、IGSN；阈值是中位数倍数的描述性高值。正文明确顶空气体不是循环泥浆气测。",
+        "同一教学观测的总气、泵量、工况条共享时间轴，地面与来源两条虚线由累计泵量反查实际变化；停泵平台不能简单按固定分钟平移。",
+        "主实验的气峰窗口、双时钟井深、工况距离与实际近邻局部峰共同对应同一选中事件。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "severity": "P2 teaching clarity",
+          "file": "tools/mudlogging-study-content.mjs",
+          "location": "m2第二节“迟到…接单根常伴随停泵…”段落",
+          "issue": "读者先遇到行业操作名，再看到其后果，尚不知道操作本身是什么。原细节图有动作定义，但门户背景已被decorateKnowledge替换，不能依赖独立demo的折叠补充图。",
+          "suggestion": "在首次出现时直接补接单根、起下钻的动作定义；保留停泵和抽吸可能共同作用的当前表述。",
+          "status": "sent_to_root_for_integration"
+        },
+        {
+          "severity": "P3 wording",
+          "file": "shared/mudlogging-study.js",
+          "location": "gas()阅读反馈，约28行",
+          "issue": "“高值…病因还需要其他资料”使用医疗词汇。",
+          "suggestion": "改为“来源或成因还需要其他资料”。",
+          "status": "recommendation_only"
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        null
+      ],
+      "crossReviewIds": [],
+      "integrationOverride": "已回读tools/mudlogging-study-content.mjs：接单根与起下钻动作释义已集成；停泵与移动可能共同作用的当前机制不作错误。最终回读shared/mudlogging-study.js，实测甲烷阅读反馈已由病因改为来源或成因，措辞建议已整合。"
+    },
+    {
+      "sceneId": "m3",
+      "scope": "existing17",
+      "group": "mudlogging",
+      "groupReport": "mudlogging.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "五例中专业概念与图像任务的对应较直接。先讲可见发光，再用同标本方解石说明矿物也会发光；分割与油气来源解释始终分开。背景没有把高亮直接解释成含油或把面积当饱和度。",
+      "figureAlgorithmEvidence": [
+        "馆藏同组方解石白光/短波/长波照片说明矿物发光的反例；正文标出拍摄条件不同，只做现象与位置对照，不宣称跨波长定量校正。",
+        "固定教学白光ROI、UV曝光倍率和阈值直接对应真实像素、直方图、圈选掩膜和显示像素/可见像素分母。",
+        "主实验B0原始阈值、B1参考校正阈值、M0逻辑回归分开，真实梯度损失与权重可读，避免把曝光校正收益全归学习。"
+      ],
+      "reviewFindingsAtGroupSnapshot": null,
+      "remainingItemsAtGroupSnapshot": [
+        null
+      ],
+      "crossReviewIds": []
+    },
+    {
+      "sceneId": "m4",
+      "scope": "existing17",
+      "group": "mudlogging",
+      "groupReport": "mudlogging.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "专业口径谨慎且教学任务有取舍：同区间ROP=60/钻时、有效钻进筛选、工况可能制造假界面、簇不等于岩性。背景可补WOB/RPM的动作/量纲释义；方法部分必须说明辅助扭矩项是固定教学变换，不能让读者把两维都理解成标定学习所得。",
+      "figureAlgorithmEvidence": [
+        "USROP真实记录三轨共用MD深度轴，游标联动同一行，散点说明相关性线索，原CSV行号和采样间隙保留；没有补造真实岩性边界。",
+        "工况阶跃预设固定地层，原始/校正曲线及基线/模型边界对齐，帮助看假界面；薄层预设固定工况，调最小段长看边界减少与漏检。",
+        "实际训练井聚类中心、SSE迭代与分段候选连接到学习过程，而非直接赋砂岩/泥岩名称。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "severity": "P2 method explanation",
+          "file": "case-src/m4/engine.js; case-src/m4/lesson.js; case-src/m4/ui.js",
+          "location": "engine.js:9 normalize() x第二维；ui.js:12中心表；lesson.js构造响应/聚类步骤",
+          "issue": "第二维为(T-4-0.12WOB)/0.8，系数与合成生成器同式；页面主要解释ROP独立标定，尚未说明扭矩维的固定教学变换。结果确有学习，不能把这项先验简化全部归因于学习。",
+          "suggestion": "明确列示两维的来源：ROP项来自独立标定，扭矩辅助项用固定教学变换；系数不称现场物理定律。补扭矩为旋转作用的量及kN·m单位，便于理解中心表。",
+          "status": "sent_to_root_for_integration"
+        },
+        {
+          "severity": "P2 teaching clarity",
+          "file": "tools/mudlogging-study-content.mjs",
+          "location": "m4首节三轨图前或图注",
+          "issue": "WOB/RPM虽给中文缩写，未向初学者解释钻压为压在钻头上的轴向载荷、转速为每分钟旋转次数。",
+          "suggestion": "在读三轨图前附两句量的定义，并保留正确单位与相关不等于成因的表述。",
+          "status": "sent_to_root_for_integration"
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        null
+      ],
+      "crossReviewIds": [],
+      "integrationOverride": "已回读tools/mudlogging-study-content.mjs和case-src/m4/ui.js：WOB/RPM释义、ROP独立标定学习与扭矩固定教学变换(T−4−0.12WOB)/0.8的来源区分及手算例已集成。"
+    },
+    {
+      "sceneId": "m5",
+      "scope": "existing17",
+      "group": "mudlogging",
+      "groupReport": "mudlogging.json",
+      "evidenceLevel": "source_and_calculation_review_not_browser",
+      "groupJudgmentAtReview": "业务目标与NLP步骤区分清楚：分类负责分流，规则抽字段，约束引述模板组装，人工核对含义。原文/字段/句子的图文联动有教学价值。但审阅时发现常用明确否定和ppmv抽取不一致，属于会改变学生所读事实字段的实质问题，已在本例源代码修复。",
+      "figureAlgorithmEvidence": [
+        "背景直接编辑原文，实际字符NB得分、深度字段和否定高亮与草稿对照；故意删除否定说明分类正确不能保证事实正确。",
+        "主实验点击句子对应原文字符范围、具体来源ID/版本、规则字段、实际类别得分和字符贡献。",
+        "确认后改写或变来源撤销核验；上游快照明确为构建期真实计算，本页不重新运行其他模型；自由文本无金标时不显示性能。"
+      ],
+      "reviewFindingsAtGroupSnapshot": [
+        {
+          "severity": "P1 field semantics",
+          "file": "case-src/m5/engine.js; case-src/m5/ui.js",
+          "location": "engine.js extract(); ui.js fieldHighlights()",
+          "issue": "修复前“未检出荧光”“未观察到荧光”被抽成negation:false且无警告，而UI已把未检出高亮成否定；“3.2 ppmv”被截为gasUnit:ppm。引用原文仍保留，所以不是草稿文字直接翻转，但字段、冲突检查与讲解不一致。",
+          "repair": "扩充明确的目标邻近否定表达并保留子句范围；不解析的否定或单子句混合观察标待复核/support unchecked；单位匹配ppmv优先并检查完整英数token，UI高亮同步支持明确否定与单位。未改数值、offset、split、多范围逻辑、模型训练或版本。",
+          "status": "fixed_in_source_verified_node_vm; final dist rebuild and browser confirmation owned by root"
+        },
+        {
+          "severity": "P2 consistency",
+          "file": "shared/mudlogging-study.js",
+          "location": "report(), originally line47",
+          "issue": "背景小实验另有否定匹配与删除逻辑，需要同步明确支持未检出/未观察到；不能由第一处无关“无”字触发草稿改写。",
+          "suggestion": "与本例明确荧光否定模式一致，仅替换已匹配目标的否定前缀；复杂或并列输入保留人工核查提示。",
+          "status": "sent_to_root_for_shared_integration"
+        }
+      ],
+      "remainingItemsAtGroupSnapshot": [
+        null
+      ],
+      "crossReviewIds": [],
+      "integrationOverride": "主引擎/UI明确否定与完整ppmv单位已修；已回读shared/mudlogging-study.js，未检出/未观察到荧光目标匹配及仅删除匹配前缀已同步。mudlogging-field-fixtures.result.json记录18个fixture及3个内置样本source_node_vm通过；本汇总不引用浏览器结果。"
+    }
+  ]
+}
