@@ -6,7 +6,7 @@ import {flowOverview,flowRuntime} from './case-flowcharts.mjs';
 import {sourceScenes} from './mudlogging-source-scenes.mjs';
 const root=path.resolve(import.meta.dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),json=p=>JSON.parse(read(p));
 const context=vm.createContext({});
-for(const p of ['shared/math.js','shared/mudlogging-study.js','case-src/m1/images.js','case-src/m1/engine.js','case-src/m3/engine.js','case-src/m2/engine.js','case-src/m2/data.js','case-src/m5/engine.js','case-src/m5/data.js'])vm.runInContext(read(p),context);
+for(const p of ['shared/math.js','shared/mudlogging-study.js','shared/mudlogging-reading-interactions.js','case-src/m1/images.js','case-src/m1/engine.js','case-src/m3/engine.js','case-src/m2/engine.js','case-src/m2/data.js','case-src/m5/engine.js','case-src/m5/data.js'])vm.runInContext(read(p),context);
 const uri=(p,mime='image/jpeg')=>'data:'+mime+';base64,'+fs.readFileSync(path.join(root,p)).toString('base64');
 // Encode observation pixels directly as PNG, without opening or transforming a source photograph.
 function png(im){const table=Array.from({length:256},(_,i)=>{let c=i;for(let j=0;j<8;j++)c=c&1?0xedb88320^(c>>>1):c>>>1;return c>>>0;});const chunk=(name,data)=>{const b=Buffer.from(name),c=Buffer.concat([b,data]);let crc=0xffffffff;for(const v of c)crc=table[(crc^v)&255]^(crc>>>8);const h=Buffer.alloc(4),t=Buffer.alloc(4);h.writeUInt32BE(data.length);t.writeUInt32BE((crc^0xffffffff)>>>0);return Buffer.concat([h,c,t]);};const ih=Buffer.alloc(13);ih.writeUInt32BE(im.width);ih.writeUInt32BE(im.height,4);ih[8]=8;ih[9]=6;const stride=im.width*4,raw=Buffer.alloc((stride+1)*im.height);for(let y=0;y<im.height;y++)Buffer.from(im.pixels.slice(y*stride,(y+1)*stride)).copy(raw,y*(stride+1)+1);return 'data:image/png;base64,'+Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',ih),chunk('IDAT',zlib.deflateSync(raw)),chunk('IEND',Buffer.alloc(0))]).toString('base64');}
@@ -15,7 +15,7 @@ const P=s=>'<p>'+s+'</p>',H=s=>'<h4>'+s+'</h4>',A=(s,u)=>'<a href="'+u+'" target
 const note=(a,b)=>'<aside class="knowledge-example"><b>'+a+'</b>'+P(b)+'</aside>';
 const select=(key,label,opts,value)=>'<label>'+label+' <select disabled data-study-key="'+key+'">'+opts.map(([k,v])=>'<option value="'+k+'" '+(k===value?'selected':'')+'>'+v+'</option>').join('')+'</select></label>';
 const range=(key,label,min,max,value,step=1)=>'<label>'+label+' <input disabled data-study-key="'+key+'" type="range" min="'+min+'" max="'+max+'" step="'+step+'" value="'+value+'"></label>';
-function widget(type,data,controls,title){const meta=JSON.stringify(data,(key,value)=>['url','white','uv'].includes(key)?undefined:value),field=type==='field';return '<'+(field?'aside':'figure')+' class="study-widget'+(field?' study-source-aside':'')+'" data-study-widget="'+type+'" data-study="'+encodeURIComponent(meta)+'">'+(field?'':'<div class="study-widget-head"><span>观察与计算</span><h4>'+title+'</h4></div>')+(controls?'<div class="study-controls">'+controls+'</div>':'')+'<div data-study-output>'+context.S17Study.views[type](data,data.initial??{})+'</div></'+(field?'aside':'figure')+'>';}
+function widget(type,data,controls,title){const meta=JSON.stringify(data,(key,value)=>['url','white','uv'].includes(key)?undefined:value),field=type==='field';return '<'+(field?'aside':'figure')+' class="study-widget'+(field?' study-source-aside':'')+'" data-study-widget="'+type+'" data-study="'+encodeURIComponent(meta)+'">'+(field?'':'<div class="study-widget-head"><span>观察与计算</span><h4>'+title+'</h4></div>')+(controls?'<p class="study-static-hint">资料预览；交互观察可在“可运行示范”的专业背景中操作。</p><div class="study-controls">'+controls+'</div>':'')+'<div data-study-output>'+context.S17Study.views[type](data,data.initial??{})+'</div></'+(field?'aside':'figure')+'>';}
 const core=json('data/study/core-features.json');core.forEach(r=>r.url=uri(r.path));
 const head=json('data/real/pangaea-headspace.json'),sorted=head.rows.map(r=>r.CH4_ppmv).sort((a,b)=>a-b),median=(sorted[30]+sorted[31])/2;
 const usrop=json('data/real/usrop-f15-subset.json');
@@ -35,7 +35,7 @@ m1:[
  P('钻头破碎地下岩石，钻井液把碎片带回地面，筛分、清洗后得到<b>岩屑</b>。录井人员观察它们的颜色、颗粒、层理与结构，记录钻过的岩石类型及变化。<b>岩性识别</b>首先是在回答“这是什么岩石”。')+
  P('先看下面的真实岩芯图块：砂岩常能看到颗粒结构，页岩可见细粒或层状外观，灰岩则有不同的碳酸盐结构。照片保留了完整岩石表面的纹理，适合认识这些线索；实际岩屑是更小的碎片，还会遇到混样、泥浆遮盖和颗粒黏连。')+
  P('砂岩主要由砂级颗粒组成；页岩属于细粒沉积岩，常见页理、容易沿薄层劈开；灰岩主要由碳酸盐矿物组成。这里的真实照片沿用发布者的“页岩”标签，主实验则把细粒碎屑类统称“泥岩教学外观”。观察页理可以帮助理解两者的联系，照片标签与实验类别各自保留。'+A('页岩的专业释义','https://glossary.slb.com/en/terms/s/shale'))+
- widget('core',{rows:core,initial:{row:2,mode:'scatter'}},core.map((r,i)=>'<button disabled class="study-photo-button" type="button" data-study-row="'+i+'">'+`<img src="${r.url}" alt="${{limestone:'灰岩',sandstone:'砂岩',shale:'页岩'}[r.label]}真实照片 ${i%2+1}">`+'<span>'+({limestone:'灰岩',sandstone:'砂岩',shale:'页岩'}[r.label])+' '+(i%2+1)+'</span></button>').join('')+select('mode','观察方式',[['scatter','亮度 × 纹理特征'],['hist','当前照片亮度分布']],'scatter'),'点一张照片，看它在特征图中的位置')+creditCore],
+ widget('core',{rows:core,initial:{row:2,mode:'scatter'}},core.map((r,i)=>'<button disabled class="study-photo-button" type="button" data-study-row="'+i+'">'+`<img src="${r.url}" alt="${{limestone:'灰岩',sandstone:'砂岩',shale:'页岩'}[r.label]}真实照片 ${i%2+1}">`+'<span>'+({limestone:'灰岩',sandstone:'砂岩',shale:'页岩'}[r.label])+' '+(i%2+1)+'</span></button>').join('')+select('mode','观察方式',[['scatter','亮度 × 纹理特征'],['hist','当前照片亮度分布']],'scatter'),'点原图看局部：照片、特征与数值对应')+creditCore],
  ['把肉眼线索变成数值，才可以比较相似样品',
  P('颜色相近的两种岩石可能有不同纹理；同一种岩石也会因为光照不同而看起来变色。因此，先分别描述颜色和纹理，再把它们合起来比较。上图的平均亮度由全部像素计算；纹理指标取水平方向相邻像素的亮度差，变化频繁时数值通常更大。')+
  P('散点图中每个点对应一张照片，横坐标表示亮度，纵坐标表示纹理指标。切换直方图，还能看到同样平均亮度背后，是均匀的灰色还是明暗混合。这里展示两个可解释维度；完整实验会先标准化多维特征，再计算近邻距离。')+
@@ -68,7 +68,7 @@ m3:[
  ['先看真实照片：发光的物质不只有油气',
  P('<b>荧光</b>是物质吸收激发光后发出可见光的现象。录井中，白光帮助辨认岩屑的轮廓和普通外观，紫外光帮助观察显示颜色、强弱和分布。解释时要先认识“哪里发光”，再检查“为什么发光”。')+
  P('下面是同一组真实方解石标本。切换短波与长波紫外光，比较相同位置的外观。矿物也能产生明显显示，所以亮区本身还需要结合样品背景、添加物及进一步检验来解释。')+
- widget('mineral',{images:calcite.images,initial:{light:'shortwave'}},select('light','紫外光条件',[['shortwave','短波 UV'],['longwave','长波 UV']],'shortwave'),'同标本白光 / 紫外对照')+creditUV],
+ widget('mineral',{images:calcite.images,initial:{light:'shortwave'}},select('specimen','对应观察区域',[['0','中央直立标本'],['1','左侧大标本'],['2','前方小标本']],'0')+select('light','紫外光条件',[['shortwave','短波 UV'],['longwave','长波 UV']],'shortwave'),'同标本白光 / 紫外对照')+creditUV],
  ['把“看着亮”变成可以重复核对的面积',
  P('图像分析先用白光确定可见岩屑范围，再在相应 UV 图上圈出显示区域。显示面积比例 = 显示像素数 ÷ 可见岩屑像素数。曝光和阈值都会改变结果，需要同时观察原像素、掩膜和分母。')+
  widget('pixel',{white:png(pair.white),uv:png(pair.uv),roi:runs,initial:{exposure:1,threshold:45}},range('exposure','固定像素的曝光倍率',.4,5,1,.1)+range('threshold','原始亮度阈值 / 0–255',10,220,45,1),'调节曝光与阈值，查看区域和直方图')+
@@ -103,7 +103,7 @@ m5:[
  ['一份报告怎样把不同观察联系到同一井段',
  P('录井报告将采样描述、连续曲线和操作日志按井段与时间整理，让下一位读者知道钻到了哪里、观察到了什么、解释依据是什么。深度范围、数值单位和否定词共同决定一句话的含义。')+
  P('下方直接使用可编辑的教学原文。模型按字符片段计算类别分数，随后保留深度与否定字段，再形成引用式草稿。把“未见”从草稿中漏掉，观察来源与表述如何发生冲突。')+
- widget('report',{model:nb.model,labels:context.M5Core.labels,text:'1200–1210 m MD，未见荧光',initial:{text:'1200–1210 m MD，未见荧光',draft:'keep'}},'<label class="study-text-label">来源记录 <textarea disabled data-study-key="text" rows="2" maxlength="500">1200–1210 m MD，未见荧光</textarea></label>'+select('draft','草稿处理',[['keep','保留原文含义'],['remove','试着漏掉否定词']],'keep'),'原文 → 分类分数 → 字段 → 草稿')],
+ widget('report',{model:nb.model,labels:context.M5Core.labels,text:'1200–1210 m MD，未见荧光',initial:{text:'1200–1210 m MD，未见荧光',draft:'keep'}},'<label class="study-text-label">来源记录 <textarea disabled data-study-key="text" rows="2" maxlength="500">1200–1210 m MD，未见荧光</textarea></label>'+select('field','这次核对',[['negation','荧光否定'],['depth','深度范围']],'negation')+select('draft','草稿处理',[['keep','保留原文含义'],['remove','试着漏掉否定词']],'keep'),'原文 → 分类分数 → 字段 → 草稿')],
  ['分类分流和事实保留，分别解决什么问题',
  P('<b>字符朴素贝叶斯</b>从训练句子学习哪些字符片段更常见于岩性、气测、荧光或工况记录。分类解决资料分流；“见荧光”和“未见荧光”都可能归入荧光类，区别则由否定字段保留。')+
  P('因此，看懂类别柱状图之后，还要回看原文字段。页上 log 分差由实际训练计数计算；改写来源文字时分数会重算。图中深度和否定高亮，用来帮助逐处核对。')+
@@ -115,5 +115,5 @@ m5:[
  ['报告位于流程末端，证据来自前面的每一环',
  P('报告中的岩性、气测和荧光观察各有采样与检测来源。沿着原始资料与报告之间的对应关系，逐项核对：这条记录在哪里形成、通过什么方式测得、对应哪个样品或井段。')+field('m5')]
 ]};
-export function decorateKnowledge(scene,k){k.workflowOverview=flowOverview(scene);k.sections=contents[scene].map(([title,html],i)=>({title,navTitle:['先观察材料','理解关系','看懂智能方法','沿流程回查'][i],en:['OBSERVE','UNDERSTAND','METHOD','TRACE'][i],html:(i===0?'<style>'+read('shared/mudlogging-study.css')+'</style>':'')+'<div class="knowledge-text study-lesson" style="font-size:18px;line-height:1.95" data-study-lesson="4">'+html+'</div>'}));return k;}
-export const studyRuntime=read('shared/mudlogging-study.js')+'\n'+flowRuntime;
+export function decorateKnowledge(scene,k){k.workflowOverview=flowOverview(scene);k.sections=contents[scene].map(([title,html],i)=>({title,navTitle:['先观察材料','理解关系','看懂智能方法','沿流程回查'][i],en:['OBSERVE','UNDERSTAND','METHOD','TRACE'][i],html:(i===0?'<style>'+read('shared/mudlogging-study.css')+'\n'+read('shared/mudlogging-reading-interactions.css')+'</style>':'')+'<div class="knowledge-text study-lesson" style="font-size:18px;line-height:1.95" data-study-lesson="4" data-reading-design="2026-10-24">'+html+'</div>'}));return k;}
+export const studyRuntime=read('shared/mudlogging-study.js')+'\n'+read('shared/mudlogging-reading-interactions.js')+'\n'+flowRuntime;

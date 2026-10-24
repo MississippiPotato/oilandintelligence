@@ -1,0 +1,130 @@
+{
+  "checkedAt": "2026-10-24T12:30:00.449Z",
+  "scope": "Actual original teacher folder import, reading interaction, calculation, download and refresh",
+  "case": {
+    "scene": "m2",
+    "id": "s17-mudgas-context",
+    "version": "1.6.0",
+    "output": "dist/cases/s17-mudgas-context"
+  },
+  "checks": [
+    {
+      "name": "unchanged original teacher folder importer accepts current five-file package",
+      "passed": true
+    },
+    {
+      "name": "native background has real photos and compact preview",
+      "passed": true
+    },
+    {
+      "name": "static preview does not show stuck image loading",
+      "passed": true
+    },
+    {
+      "name": "background explains professional knowledge in four chapters",
+      "passed": true
+    },
+    {
+      "name": "pump-stop clock explains cumulative volume",
+      "passed": true
+    },
+    {
+      "name": "peak selection moves actual observation and source clock",
+      "passed": true,
+      "detail": {
+        "before": "更早的井下来源\n9.67 min\n累计泵送体积\n12.00 m³\n停泵时这段体积不增长 →\n地面检测时刻\n17.67 min",
+        "after": "更早的井下来源\n17.67 min\n累计泵送体积\n12.00 m³\n停泵时这段体积不增长 →\n地面检测时刻\n33.17 min"
+      }
+    },
+    {
+      "name": "cumulative volume backtrack uses selected volume",
+      "passed": true,
+      "detail": {
+        "v": 12,
+        "pumped": 12
+      }
+    },
+    {
+      "name": "creative process drawing stays at most260px tall",
+      "passed": true,
+      "detail": {
+        "height": 260
+      }
+    },
+    {
+      "name": "diagram object click selects matching workflow step",
+      "passed": true
+    },
+    {
+      "name": "diagram keyboard selects first workflow step",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "changed input invalidates old export",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "current calculation evidence actually downloads",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "refresh restores imported files and reruns",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no external runtime requests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "flowNodes": 6,
+  "flowHeight": 260,
+  "passed": 18,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "bytes": 189306,
+      "sha256": "afc88d8aa229ed683bb9c656b5e5113d80af8286b85813845bcb40eb04fb2714"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "bytes": 1246,
+      "sha256": "54439857c2c8c96c05ca6cf19a548680c7b6f27b754d49b51ed6a3ce2af1342d"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "bytes": 8088,
+      "sha256": "18e788930c12bd174cbea817d93d413b09d6b3762dc0d5e8b8eb1d7617f67f92"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "bytes": 44273,
+      "sha256": "60316a42348b97cabeb20d84c9a717ba434c72a82c19c8b3da85badd73c6fe9c"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "bytes": 358915,
+      "sha256": "9f62759e567539b11989aab275b94eb0a37ba166ec7c171ee24159550be1238b"
+    }
+  ]
+}

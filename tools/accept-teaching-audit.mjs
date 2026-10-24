@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {root,reportDir,fileRecord,walk} from './build-expansion.mjs';
+import {root,fileRecord,walk} from './build-expansion.mjs';
+const reportDir='handoff/teaching-audit-2026-10-24';
 import {read,write,currentEvidence,sampleScenes,offlineScenes,groupNames} from './teaching-audit-contract.mjs';
 const e=currentEvidence(),now=new Date().toISOString(),version=read('package.json').version;
 const plan=read('handoff/full-coverage-2026-10-24/implementation-plan.json');

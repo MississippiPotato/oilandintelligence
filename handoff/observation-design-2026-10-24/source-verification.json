@@ -1,0 +1,422 @@
+{
+  "checkedAt": "2026-10-24T12:21:10.882Z",
+  "kind": "source_and_build_contract_checks",
+  "browserExecuted": false,
+  "expectedCases": 56,
+  "actualBuiltCases": 56,
+  "passed": 7,
+  "failed": 0,
+  "results": [
+    {
+      "name": "protected teacher originals and public observation bytes preserved during teaching revisions",
+      "passed": true,
+      "detail": {
+        "files": 63,
+        "browserEvidence": false
+      }
+    },
+    {
+      "name": "build count equals actual complete packages, no planned case registered",
+      "passed": true,
+      "detail": {
+        "actual": 56,
+        "missing": [],
+        "invalid": []
+      }
+    },
+    {
+      "name": "each built folder has exactly five required runtime files with locked bytes",
+      "passed": true,
+      "detail": {
+        "files": 280,
+        "cumulativeBytes": 7086606,
+        "singleFolderLimit": 6291456
+      }
+    },
+    {
+      "name": "assistant included from current shared source, per-page context remains case-specific",
+      "passed": true,
+      "detail": {
+        "currentAssistant": true,
+        "contextCount": 56,
+        "legacyReadabilityExcluded": true,
+        "mandatoryReadingStylesMatchCurrent": true,
+        "modelServiceCalled": false
+      }
+    },
+    {
+      "name": "optional assistant can be inlined in head without accessing body before DOM readiness",
+      "passed": true,
+      "detail": {
+        "loadingDocumentExecuted": true,
+        "bodyAccessBeforeDOMContentLoaded": false,
+        "executionKind": "Node VM bootstrap check; post-event browser startup remains a browser check"
+      }
+    },
+    {
+      "name": "plugin uses real teacher Cases.register and retains all background/workflow content",
+      "passed": true,
+      "detail": {
+        "cases": 56,
+        "registryErrors": 0,
+        "iframeUsesOpaqueOrigin": true,
+        "executionKind": "Node VM contract check; not a real browser"
+      }
+    },
+    {
+      "name": "unmodified teacher manifest validator and page host can resolve and inline every package",
+      "passed": true,
+      "detail": {
+        "packages": [
+          {
+            "caseId": "s17x-g1-remote-lithology",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-g2-geochemical-anomaly",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-g3-map-elements",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-g4-fracture-survey",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-s1-seismic-fault",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-s2-seismic-facies",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-s3-first-arrival",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-s4-reservoir-inversion",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-s5-seismic-denoise",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-d1-rop-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-d2-drilling-precursor",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-d3-trajectory-control",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-d4-tool-condition",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-d5-mud-rheology",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-w1-log-boundaries",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-w2-porosity-calibration",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-w3-borehole-fractures",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-w4-log-lithology",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-w5-curve-repair",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-c1-cement-quality",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-c2-cement-displacement",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-c3-cement-loss-risk",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-c4-casing-standoff",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-co1-completion-choice",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-co2-completion-zone-design",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-co3-tubing-stress",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-co4-sliding-sleeve-control",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-p1-perforation-design",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-p2-perforation-shape",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-p3-perforation-catalog",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-p4-perforation-effect",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-pr1-pump-card",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-pr2-production-forecast",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-pr3-water-allocation",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-pr4-esp-warning",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-pr5-wax-risk",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-wo1-workover-retrieval",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-wo2-fishing-tools",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-wo3-casing-damage",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-wo4-workover-warning",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-wo5-maintenance-interval",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-e1-fracture-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-e2-fracture-geometry",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-e3-chemical-mixture",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-e4-steam-cycle",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-e5-microbial-activity",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-t1-pipeline-leak",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-t2-corrosion-growth",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-t3-gathering-pump-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-t4-meter-drift-calibration",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-t5-tank-level-crosscheck",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-r1-distillation-optimization",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-r2-fcc-product-yields",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-r3-maintenance-trend",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-r4-lab-audit",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          },
+          {
+            "caseId": "s17x-r5-quality-softsensor",
+            "manifestErrors": 0,
+            "resolvedMode": "page",
+            "parsedInlineScripts": 2
+          }
+        ],
+        "executionKind": "Unmodified teacher source evaluated in Node VM; browser rendering not executed",
+        "manifestCheckUsesPublicAPIWithoutLoadedFileState": true
+      }
+    }
+  ],
+  "notVerified": [
+    "real browser original Add Case directory import",
+    "sandbox rendering and model interactions",
+    "refresh and whole browser reopen persistence",
+    "offline default interactions",
+    "actual download",
+    "narrow screen and keyboard behavior",
+    "scientific correctness and inference/evaluation separation require per-case engine checks and review"
+  ]
+}

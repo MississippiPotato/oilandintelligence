@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-24T12:28:46.919Z",
+  "scope": "Actual file:// offline reading interaction, calculation and mobile layout",
+  "case": {
+    "scene": "m1",
+    "id": "s17-cuttings-lithology",
+    "version": "1.6.0",
+    "output": "dist/cases/s17-cuttings-lithology"
+  },
+  "checks": [
+    {
+      "name": "background explains professional knowledge in four chapters",
+      "passed": true
+    },
+    {
+      "name": "local brightness independently recomputed from actual source pixels",
+      "passed": true,
+      "detail": {
+        "computed": 55.49185709876439,
+        "display": 55.491857,
+        "x": 90,
+        "y": 114
+      }
+    },
+    {
+      "name": "selected real shale photo retained",
+      "passed": true
+    },
+    {
+      "name": "histogram selection opens the actual data comparison",
+      "passed": true
+    },
+    {
+      "name": "creative process drawing stays at most260px tall",
+      "passed": true,
+      "detail": {
+        "height": 219.171875
+      }
+    },
+    {
+      "name": "diagram object click selects matching workflow step",
+      "passed": true
+    },
+    {
+      "name": "diagram keyboard selects first workflow step",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "changed input invalidates old export",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "actual count and area denominator comparison renders",
+      "passed": true
+    },
+    {
+      "name": "current calculation evidence actually downloads",
+      "passed": true
+    },
+    {
+      "name": "390px layout keeps scrolling inside plots",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no external runtime requests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "localPixels": {
+    "computed": 55.49185709876439,
+    "display": 55.491857,
+    "x": 90,
+    "y": 114
+  },
+  "flowNodes": 6,
+  "flowHeight": 219.171875,
+  "passed": 15,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-cuttings-lithology/case.json",
+      "bytes": 209341,
+      "sha256": "4bd73419c6a01e382b99f5942dc6284c7ee08a2dcd3cb9c62faa3369b9ea7305"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/README.txt",
+      "bytes": 848,
+      "sha256": "ebbe45ec9f898de4c2e70bfac2b058f30a8a3ba948af84a44b5f6d3516b733ff"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+      "bytes": 5135,
+      "sha256": "5a1ecfaae826e32ae9821beaf2caaaf2897ed4dc95c952028a04978417a147e6"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+      "bytes": 45148,
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "bytes": 436810,
+      "sha256": "d112231a8d3f7f08e0343c0df49ebabbeb0f18e4c9528b841fb88f7fdcfabd15"
+    }
+  ]
+}

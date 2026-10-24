@@ -31,7 +31,7 @@
       standaloneHref: page, builtIn: true, imported: false, bytes: entry.bytes });
   });
   g.S17Expansion = { cases: catalog, builtCount: catalog.length, expectedCount: 56,
-    registration: 'builtin-plugin', browserAcceptance: 'see handoff/teaching-audit-2026-10-24',
+    registration: 'builtin-plugin', browserAcceptance: 'see handoff/observation-design-2026-10-24',
     byScene: function (id) { return catalog.filter(function (c) { return c.sceneId === id; })[0] || null; },
     href: function (id, tab) { var c = this.byScene(id); if (!c) return null; var saved = g.Cases && g.Cases.get(c.id); if (saved && saved.version !== c.version) return c.standaloneHref + '#' + ({ bg: 'background', flow: 'workflow', demo: 'lab' }[tab || 'bg'] || 'background'); return '#/scene/' + c.sceneId + '?case=' + encodeURIComponent(c.id) + '&tab=' + (tab || 'bg'); } };
 })(window);

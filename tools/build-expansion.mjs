@@ -7,7 +7,7 @@ import { assistantJS, assistantCSS } from './assistant-bundle.mjs';
 import { flowOverview, flowRuntime } from './case-flowcharts.mjs';
 
 export const root = path.resolve(import.meta.dirname, '..');
-export const reportDir = 'handoff/teaching-audit-2026-10-24';
+export const reportDir = 'handoff/observation-design-2026-10-24';
 // Keep the teacher's scene identifiers as the sole coverage denominator.
 const taxonomy = JSON.parse(fs.readFileSync(path.join(root, 's17_development_kit/09_全分类及覆盖表.json'), 'utf8')).taxonomy;
 export const targets = taxonomy.filter(s => s.id !== 'mudlogging')

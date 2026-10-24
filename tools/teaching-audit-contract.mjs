@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
-import {root,reportDir,fileRecord,walk} from './build-expansion.mjs';
+import {root,fileRecord,walk} from './build-expansion.mjs';
+const reportDir='handoff/teaching-audit-2026-10-24';
 export const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 export const write=(p,x)=>fs.writeFileSync(path.join(root,p),JSON.stringify(x,null,2)+'\n');
 export const sampleScenes=['s5','w3','c4','pr2','pr4','e3','t5','r5','m5'];

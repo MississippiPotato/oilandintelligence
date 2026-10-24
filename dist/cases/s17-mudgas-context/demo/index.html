@@ -14,5 +14,5 @@
 <article id="metrics-panel" class="panel" hidden><h2>实际评价 · 教学合成测试井</h2><p>事件匹配：峰时差 ≤170 s，一对一最大匹配、总时间误差最小。解释 F1 只在匹配事件上统计，拒判保留在真值行分母；漏检与多余候选另报。点击混淆单元格可回到事件。</p><div id="metrics"></div></article>
 <article class="panel"><h2>证据、数据与计算边界</h2><div id="data-station"></div><p>总气/C1–C3 为教学归一化仪器单位，不能当作体积分数。V_eff 是教学有效体积；不模拟溶解、混合和完整管线迟到。支持度是近邻投票占比，未经现场概率校准。</p><p>本例只给关联解释和复核线索，不据此宣布油气发现，不提供井控处置建议。训练、验证与测试按整井隔离；人工复核不会回写模型指标。</p><button id="export" disabled>下载当前运行证据 JSON</button><p id="export-tip" class="fine">只有 ready 的当前结果可导出。来源片段、版本、参数、复核状态与限制一起保存。</p></article>
 <article class="panel exercise"><h2>先判断，再看参考</h2><p>如果地面出现一个峰，且较早的来源时段有接单根记录，你会先给哪种候选解释？</p><label>我的判断<select id="guess"><option value="">选择后再揭示</option><option value="0">接单根关联，仍需复核</option><option value="2">已经发现油气层</option><option value="3">肯定是仪器故障</option></select></label><button id="reveal-answer">查看解释</button><p id="answer"></p></article>
-</section></main><footer>井见 · s17-mudgas-context v1.5.3 · 默认离线、自包含 · 学号 17 第 4 阶段“录井”<br>录井必做 m1–m5 已完成；本例为气测异常解释。五例可各自独立运行，也可显式交换证据。</footer></div>
+</section></main><footer>井见 · s17-mudgas-context v1.6.0 · 默认离线、自包含 · 学号 17 第 4 阶段“录井”<br>录井必做 m1–m5 已完成；本例为气测异常解释。五例可各自独立运行，也可显式交换证据。</footer></div>
 <script src="demo.js"></script></body></html>

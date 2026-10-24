@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-10-24T12:31:51.042Z",
+  "kind": "source_and_numeric_checks_not_browser",
+  "suiteCommand": "npm test",
+  "suiteExitCode": 0,
+  "finalReadingCheck": "node checks/verify-study.mjs",
+  "finalReadingExitCode": 0,
+  "records": [
+    {
+      "path": "handoff/calculation-checks.json",
+      "bytes": 48288,
+      "sha256": "8affb583aff3184e5bdfbcee32f193afe05448f07afc8e88cba171a6227fee8a",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "path": "handoff/mandatory-calculation-checks.json",
+      "bytes": 39340,
+      "sha256": "4a1a14005ce6fe49abcac9e3cadf5a24bbdbc969f6c06366aaac7ecfc6903ce7",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "path": "handoff/enhancement-calculation-checks.json",
+      "bytes": 3039,
+      "sha256": "dc1e0c3b35da5775950039709d75766ed873d0856a4805c417ce83ecf4923bf9",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/source-verification.json",
+      "bytes": 12874,
+      "sha256": "8464d22ab253cc8054e4be0e0df6e8578c9e5f7ecd35d45cd9e1fb29e3264543",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/study-calculations.json",
+      "bytes": 658,
+      "sha256": "78680c9f2c0b133fe26cd4791898ea78bdc912c22606bc5b5a40837bffeca784",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/calculation-review.json",
+      "bytes": 186511,
+      "sha256": "9b11f84b829e289739f4225bc76708f8bcaf474ab950b984c46935d319c3141e",
+      "passed": 704,
+      "failed": 0
+    }
+  ]
+}

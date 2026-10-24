@@ -1,0 +1,136 @@
+{
+  "checkedAt": "2026-10-24T12:30:11.428Z",
+  "scope": "Actual original teacher folder import, reading interaction, calculation, download and refresh",
+  "case": {
+    "scene": "m3",
+    "id": "s17-fluorescence-review",
+    "version": "1.6.0",
+    "output": "dist/cases/s17-fluorescence-review"
+  },
+  "checks": [
+    {
+      "name": "unchanged original teacher folder importer accepts current five-file package",
+      "passed": true
+    },
+    {
+      "name": "native background has real photos and compact preview",
+      "passed": true
+    },
+    {
+      "name": "static preview does not show stuck image loading",
+      "passed": true
+    },
+    {
+      "name": "background explains professional knowledge in four chapters",
+      "passed": true
+    },
+    {
+      "name": "same specimen area is paired across white and UV photos",
+      "passed": true,
+      "detail": [
+        [
+          "10",
+          "43",
+          "42",
+          "42"
+        ],
+        [
+          "10",
+          "43",
+          "42",
+          "42"
+        ]
+      ]
+    },
+    {
+      "name": "longwave selection changes visible source photo",
+      "passed": true
+    },
+    {
+      "name": "observation text follows the selected physical specimen",
+      "passed": true
+    },
+    {
+      "name": "creative process drawing stays at most260px tall",
+      "passed": true,
+      "detail": {
+        "height": 219.171875
+      }
+    },
+    {
+      "name": "diagram object click selects matching workflow step",
+      "passed": true
+    },
+    {
+      "name": "diagram keyboard selects first workflow step",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "changed input invalidates old export",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "current calculation evidence actually downloads",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "refresh restores imported files and reruns",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no external runtime requests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "flowNodes": 7,
+  "flowHeight": 219.171875,
+  "passed": 18,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-fluorescence-review/case.json",
+      "bytes": 269493,
+      "sha256": "6e4762befd20f96b44136721dfdb1cbd0ecc5de6c38b1daaadf273f8ec0f6d9a"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/README.txt",
+      "bytes": 861,
+      "sha256": "5ac07685bdf347fefad71b7dedc2a84ca479e247ca0733fdbc99b2a697c43e21"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/index.html",
+      "bytes": 4940,
+      "sha256": "8692db42a5deda50a6ed609836e33718f8d6279abcacfc08cb234b787365b9df"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.css",
+      "bytes": 45148,
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.js",
+      "bytes": 418139,
+      "sha256": "3a150406b8f296c366b8ef487e47722866d9b2fc11e114f7fb60a6cf6490c533"
+    }
+  ]
+}

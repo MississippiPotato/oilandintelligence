@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {reportDir} from '../tools/build-expansion.mjs';
+const reportDir='handoff/teaching-audit-2026-10-24';
 import {read,write,same,currentEvidence} from '../tools/teaching-audit-contract.mjs';
 const e=currentEvidence(),accepted=read(reportDir+'/accepted-files.json'),state=read(reportDir+'/completion.json');
 accepted.files.forEach(same);

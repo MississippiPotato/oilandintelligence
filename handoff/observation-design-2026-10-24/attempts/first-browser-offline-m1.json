@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-24T12:19:01.024Z",
+  "scope": "Actual file:// offline reading interaction, calculation and mobile layout",
+  "case": {
+    "scene": "m1",
+    "id": "s17-cuttings-lithology",
+    "version": "1.6.0",
+    "output": "dist/cases/s17-cuttings-lithology"
+  },
+  "checks": [
+    {
+      "name": "background explains professional knowledge in four chapters",
+      "passed": true
+    },
+    {
+      "name": "local brightness independently recomputed from actual source pixels",
+      "passed": false,
+      "detail": {
+        "computed": 55.516823032406734,
+        "display": 55.491857,
+        "x": 90,
+        "y": 114
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "exception": "local brightness independently recomputed from actual source pixels",
+  "passed": 1,
+  "failed": 1,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-cuttings-lithology/case.json",
+      "bytes": 209341,
+      "sha256": "4bd73419c6a01e382b99f5942dc6284c7ee08a2dcd3cb9c62faa3369b9ea7305"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/README.txt",
+      "bytes": 848,
+      "sha256": "ebbe45ec9f898de4c2e70bfac2b058f30a8a3ba948af84a44b5f6d3516b733ff"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+      "bytes": 5135,
+      "sha256": "5a1ecfaae826e32ae9821beaf2caaaf2897ed4dc95c952028a04978417a147e6"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+      "bytes": 45148,
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "bytes": 436531,
+      "sha256": "5df05ed660b4c2dda4defb74903a958945829900af8f11e9f0f9597f57d46f4b"
+    }
+  ]
+}

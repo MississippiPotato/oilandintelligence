@@ -1,118 +1,159 @@
 {
-  "checkedAt": "2026-10-24T07:23:04.723Z",
-  "portalVersion": "1.9.1-preview",
-  "mandatoryVersion": "1.5.3",
+  "checkedAt": "2026-10-24T12:41:34.425Z",
+  "portalVersion": "1.9.2-preview",
+  "mandatoryVersion": "1.6.0",
   "selfAuthoredCases": 61,
-  "stageCount": 13,
+  "updatedScenes": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
   "newCasesThisRevision": 0,
-  "remainingSceneExpansion": 0,
-  "teacherSampleIncludedInAuthoredCount": false,
-  "sourceTeachingReview": {
-    "caseCount": 61,
-    "new44": 44,
-    "groups": 7,
-    "independentCrossRead": 14,
-    "summary": "handoff/teaching-audit-2026-10-24/review-summary.json",
-    "calculationChecks": 704,
-    "calculationChecksAreNotBrowserProof": true
-  },
+  "unchangedOtherCases": 56,
+  "unchangedRuntimeFiles": 280,
   "browserExecuted": true,
   "browserScope": {
-    "currentRevisionOriginalFolderImportCases": 9,
-    "caseSpecificInteractionAndDownloadCases": 9,
-    "refreshAndRecomputeCases": [
-      "c4",
-      "pr4",
-      "m5"
-    ],
-    "standaloneOfflineCases": [
-      "w3",
-      "e3",
-      "m5"
-    ],
-    "mobileStandalone390pxCases": [
-      "w3"
-    ],
-    "all61BrowserPassClaimed": false
+    "currentStandaloneOfflineCases": 5,
+    "currentOriginalFolderImportCases": 5,
+    "currentCaseSpecificInteractionCases": 5,
+    "currentRefreshAndRecomputeCases": 5,
+    "current390pxLayoutCases": 5,
+    "all61CurrentBrowserPassClaimed": false
   },
   "browserReports": [
     {
-      "path": "handoff/teaching-audit-2026-10-24/browser-s5.json",
-      "passed": 10,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-w3.json",
-      "passed": 10,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-c4.json",
-      "passed": 12,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-pr2.json",
-      "passed": 11,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-pr4.json",
-      "passed": 11,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-e3.json",
-      "passed": 10,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-t5.json",
-      "passed": 11,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-r5.json",
-      "passed": 9,
-      "failed": 0
-    },
-    {
-      "path": "handoff/teaching-audit-2026-10-24/browser-m5.json",
+      "path": "handoff/observation-design-2026-10-24/browser-offline-m1.json",
       "passed": 15,
       "failed": 0
     },
     {
-      "path": "handoff/teaching-audit-2026-10-24/browser-offline-w3.json",
-      "passed": 7,
+      "path": "handoff/observation-design-2026-10-24/browser-offline-m2.json",
+      "passed": 14,
       "failed": 0
     },
     {
-      "path": "handoff/teaching-audit-2026-10-24/browser-offline-e3.json",
-      "passed": 6,
+      "path": "handoff/observation-design-2026-10-24/browser-offline-m3.json",
+      "passed": 14,
       "failed": 0
     },
     {
-      "path": "handoff/teaching-audit-2026-10-24/browser-offline-m5.json",
-      "passed": 6,
+      "path": "handoff/observation-design-2026-10-24/browser-offline-m4.json",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/browser-offline-m5.json",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/browser-native-m1.json",
+      "passed": 19,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/browser-native-m2.json",
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/browser-native-m3.json",
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/browser-native-m4.json",
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "path": "handoff/observation-design-2026-10-24/browser-native-m5.json",
+      "passed": 18,
       "failed": 0
     }
   ],
-  "browserCheckCount": 118,
-  "protectedFileCount": 63,
+  "browserCheckCount": 185,
+  "portalCompatibilityReport": "handoff/observation-design-2026-10-24/browser-portal-compat.json",
+  "flowLinkageReport": "handoff/observation-design-2026-10-24/browser-flow-linkage.json",
+  "protectedFiles": 63,
+  "flowDrawingHeights": [
+    {
+      "scene": "m1",
+      "height": 219.171875,
+      "nodes": 6
+    },
+    {
+      "scene": "m2",
+      "height": 260,
+      "nodes": 6
+    },
+    {
+      "scene": "m3",
+      "height": 219.171875,
+      "nodes": 7
+    },
+    {
+      "scene": "m4",
+      "height": 219.171875,
+      "nodes": 7
+    },
+    {
+      "scene": "m5",
+      "height": 219.171875,
+      "nodes": 6
+    }
+  ],
   "sourceChecksAreNotBrowserProof": true,
   "thisRevisionPaidModelCalls": 0,
   "imagegenCallsThisRevision": 0,
   "historicalEvidence": {
-    "release": "1.9.0-preview",
-    "path": "handoff/full-coverage-2026-10-24/acceptance.html",
-    "meaning": "Previous release full-coverage results retained as history; not a current all61 browser pass."
+    "teachingAudit": "handoff/teaching-audit-2026-10-24/acceptance.html",
+    "fullCoverage": "handoff/full-coverage-2026-10-24/acceptance.html"
   },
   "unverified": [
-    "当前修订后其余52例的逐例浏览器重跑",
+    "其余56例本轮未重新逐例运行浏览器",
     "全部参数组合",
-    "实体手机与Firefox/WebKit",
-    "新语音或在线模型连接",
-    "老师原站localStorage同时累计61例"
+    "实体手机、Firefox与WebKit",
+    "麦克风及在线模型连接",
+    "老师原站一次累计保存61例"
   ],
-  "remainingTeachingScope": "可控教学数据和简化工况的具体边界见逐例报告；模型落后于基线、拒判及无解均保留。"
+  "changes": [
+    {
+      "scene": "m1",
+      "title": "岩屑岩性",
+      "flow": "一盘样品的旅程",
+      "interaction": "真实照片点选局部，按实际像素重算亮度与纹理；实验中用成对点比较颗粒计数和可见面积，分母同时列出。",
+      "researchRefs": "n17 / n12 / n05"
+    },
+    {
+      "scene": "m2",
+      "title": "气测异常",
+      "flow": "两个时钟的回查",
+      "interaction": "气峰、停泵和恢复循环可直接定位；累计量把地面时刻连回井下来源，旁边解释恒定泵量近似何时失效。",
+      "researchRefs": "n02 / n18"
+    },
+    {
+      "scene": "m3",
+      "title": "荧光判读",
+      "flow": "白光与UV双路径",
+      "interaction": "同一标本的白光与紫外照片同步框选。区分矿物发光和油气解释，再到固定像素实验比较曝光、掩膜和分母。",
+      "researchRefs": "n12 / n17"
+    },
+    {
+      "scene": "m4",
+      "title": "钻时分段",
+      "flow": "沿共同井深推进",
+      "interaction": "真实三轨曲线可点选、按方向键逐条读取，ROP、WOB、RPM同深度联动；显示相邻源记录变化，实验比较工况校正与候选分段。",
+      "researchRefs": "n20 / n21"
+    },
+    {
+      "scene": "m5",
+      "title": "报告证据",
+      "flow": "让“未见”随原文流动",
+      "interaction": "原文、子句、字段、草稿和修订沿一条证据链；实际删除否定词时来源与草稿并排显示含义冲突，并定位字符范围。",
+      "researchRefs": "n17 / n01"
+    }
+  ]
 }

@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-10-24T12:30:23.508Z",
+  "scope": "Actual original teacher folder import, reading interaction, calculation, download and refresh",
+  "case": {
+    "scene": "m4",
+    "id": "s17-drilltime-boundaries",
+    "version": "1.6.0",
+    "output": "dist/cases/s17-drilltime-boundaries"
+  },
+  "checks": [
+    {
+      "name": "unchanged original teacher folder importer accepts current five-file package",
+      "passed": true
+    },
+    {
+      "name": "native background has real photos and compact preview",
+      "passed": true
+    },
+    {
+      "name": "static preview does not show stuck image loading",
+      "passed": true
+    },
+    {
+      "name": "background explains professional knowledge in four chapters",
+      "passed": true
+    },
+    {
+      "name": "depth pointer selects next actual record",
+      "passed": true,
+      "detail": {
+        "before": "120",
+        "after": "121"
+      }
+    },
+    {
+      "name": "linked readout reports actual MD and operating differences",
+      "passed": true
+    },
+    {
+      "name": "scatter comparison remains available",
+      "passed": true
+    },
+    {
+      "name": "creative process drawing stays at most260px tall",
+      "passed": true,
+      "detail": {
+        "height": 219.171875
+      }
+    },
+    {
+      "name": "diagram object click selects matching workflow step",
+      "passed": true
+    },
+    {
+      "name": "diagram keyboard selects first workflow step",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "changed input invalidates old export",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "current calculation evidence actually downloads",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "refresh restores imported files and reruns",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no external runtime requests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "flowNodes": 7,
+  "flowHeight": 219.171875,
+  "passed": 18,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/case.json",
+      "bytes": 256579,
+      "sha256": "abfb3e6348ae4f68aabee00bcb341e36b81731bf34b7aefa5990f47ef78866f6"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/README.txt",
+      "bytes": 874,
+      "sha256": "8c1b2e9e1d84840715ce1cbd940c238ca4eae3b4d764ec5faf4132700dd2c121"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/index.html",
+      "bytes": 4759,
+      "sha256": "d62490f5e157a2db8c7007fb3b2f87397168bca0a52b1bdfd0cbe332dd690c68"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+      "bytes": 45148,
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+      "bytes": 492477,
+      "sha256": "b8be1a8c57b1a2d9d7056a107daee4b06cd01883e2ae25780b1fc2964ad72002"
+    }
+  ]
+}

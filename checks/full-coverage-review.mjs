@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {reportDir} from '../tools/build-expansion.mjs';
 import path from 'node:path';
 import vm from 'node:vm';
 import crypto from 'node:crypto';
@@ -98,7 +99,7 @@ for (const item of plan.cases) {
 }
 const duplicateIds = records.map(r => r.caseId).filter((x, i, a) => x && a.indexOf(x) !== i);
 const output = {createdAt: new Date().toISOString(), evidenceType: 'independent_source_and_vm_computation_review_not_browser', scope: {plannedNew: plan.cases.length, completeSource: records.filter(r => r.status !== 'awaiting_source_files').length, missingSource: records.filter(r => r.status === 'awaiting_source_files').length}, duplicateIds, checksPassed: records.flatMap(r => r.checks).filter(c => c.passed).length, checksFailed: records.flatMap(r => r.checks).filter(c => !c.passed).length, limitations: ['No browser is operated by this script.', 'Concept accuracy and truth isolation need a case-specific reading of the engine and displayed explanations.', 'Default numerical execution uses control values from demo.html, not an assumption that every API supports run().'], records};
-const out = path.join(root, 'handoff/teaching-audit-2026-10-24/calculation-review.json');
+const out = path.join(root, reportDir+'/calculation-review.json');
 fs.writeFileSync(out, JSON.stringify(output, null, 2) + '\n');
 console.log(JSON.stringify({report: out, ...output.scope, checksPassed: output.checksPassed, checksFailed: output.checksFailed, duplicateIds, attention: records.filter(r => r.status === 'needs_review' || r.status === 'review_error').map(r => ({sceneId: r.sceneId, failed: r.checks.filter(c => !c.passed), findings: r.findings}))}, null, 2));
 if (process.argv.includes('--require-complete') && (output.scope.missingSource || output.checksFailed || duplicateIds.length)) process.exitCode = 1;

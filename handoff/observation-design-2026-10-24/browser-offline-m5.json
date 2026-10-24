@@ -1,0 +1,135 @@
+{
+  "checkedAt": "2026-10-24T12:29:08.098Z",
+  "scope": "Actual file:// offline reading interaction, calculation and mobile layout",
+  "case": {
+    "scene": "m5",
+    "id": "s17-evidence-report",
+    "version": "1.6.0",
+    "output": "dist/cases/s17-evidence-report"
+  },
+  "checks": [
+    {
+      "name": "background explains professional knowledge in four chapters",
+      "passed": true
+    },
+    {
+      "name": "negation removal visibly changes meaning",
+      "passed": true
+    },
+    {
+      "name": "selected depth field reports source character range",
+      "passed": true
+    },
+    {
+      "name": "creative process drawing stays at most260px tall",
+      "passed": true,
+      "detail": {
+        "height": 219.171875
+      }
+    },
+    {
+      "name": "diagram object click selects matching workflow step",
+      "passed": true
+    },
+    {
+      "name": "diagram keyboard selects first workflow step",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "changed input invalidates old export",
+      "passed": true
+    },
+    {
+      "name": "real calculation enables current export",
+      "passed": true
+    },
+    {
+      "name": "actual parser retains fluorescence negation and parallel ppmv gas unit",
+      "passed": true
+    },
+    {
+      "name": "current calculation evidence actually downloads",
+      "passed": true
+    },
+    {
+      "name": "390px layout keeps scrolling inside plots",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no external runtime requests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "flowNodes": 6,
+  "flowHeight": 219.171875,
+  "facts": [
+    {
+      "fields": {
+        "depthRangeMD_m": [
+          1200,
+          1210
+        ],
+        "timeRange_s": null,
+        "negation": true,
+        "uncertainty": false,
+        "fluorescence": "荧光"
+      },
+      "rawQuote": "1200–1210 m MD：未检出明显荧光"
+    },
+    {
+      "fields": {
+        "depthRangeMD_m": [
+          1200,
+          1210
+        ],
+        "timeRange_s": null,
+        "negation": false,
+        "uncertainty": false,
+        "gasValue": 3.2,
+        "gasUnit": "ppmv"
+      },
+      "rawQuote": "气测总气升高至3.2 ppmv"
+    }
+  ],
+  "passed": 14,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-evidence-report/case.json",
+      "bytes": 146239,
+      "sha256": "6f20a04489f371d33a3e3775c43ee07755dbad9097a2e3d5281b3310f74d90a1"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/README.txt",
+      "bytes": 875,
+      "sha256": "06a042282c73f516ca6e1438a519539c44f5f507811c4c2dc553aa4b64e45486"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/index.html",
+      "bytes": 5508,
+      "sha256": "718a2b8018d12ec03bbb5054d57eb7f2a2539b4dbf0ec38c952acccadb721934"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.css",
+      "bytes": 45148,
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.js",
+      "bytes": 489073,
+      "sha256": "c5503f269aba288265a8dc5d611746d84afd7f5d44814ffc481940a72ac9e893"
+    }
+  ]
+}

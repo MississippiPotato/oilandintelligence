@@ -1,0 +1,421 @@
+{
+  "checkedAt": "2026-10-24T12:38:14.427Z",
+  "scope": "Actual enhanced portal background runtime and unchanged teacher firstbreak Add Case / refresh",
+  "checks": [
+    {
+      "name": "homepage still lists61 authored cases",
+      "passed": true
+    },
+    {
+      "name": "enhanced portal mounts new reading interaction directly",
+      "passed": true
+    },
+    {
+      "name": "unmodified teacher sample imported through enhanced Add Case",
+      "passed": true
+    },
+    {
+      "name": "original sample slider changes actual waveform",
+      "passed": true
+    },
+    {
+      "name": "original sample restores after enhanced portal refresh",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "passed": 6,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "portal/.workbuddy/memory/2026-10-22.md",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    {
+      "path": "portal/.workbuddy/memory/MEMORY.md",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    {
+      "path": "portal/assets/cases/_template.case.js",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    {
+      "path": "portal/assets/cases/_template.case.json",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    {
+      "path": "portal/assets/cases/welllog-layer.case.js",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    {
+      "path": "portal/assets/cases/welllog-layer.demo.js",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    {
+      "path": "portal/assets/core/admin.js",
+      "bytes": 24972,
+      "sha256": "7299a1be09022687d2e2a97a8e57eee883345191f33c1408dd5456ddc8b0b6f9"
+    },
+    {
+      "path": "portal/assets/core/case-demo-host.js",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    {
+      "path": "portal/assets/core/case-upload.js",
+      "bytes": 75367,
+      "sha256": "9ada6dba2cd484dfeb19ac5a425ed131e1bb83bb2f61c708abaa76b48bbad39f"
+    },
+    {
+      "path": "portal/assets/core/kit.js",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    {
+      "path": "portal/assets/core/layout.css",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    {
+      "path": "portal/assets/core/registry.js",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    {
+      "path": "portal/assets/core/shell.js",
+      "bytes": 63840,
+      "sha256": "614e13d90a3e128c07d5f121e75b3c8a16b9a7792917ef0cec564e0ee2f6ae77"
+    },
+    {
+      "path": "portal/assets/core/tokens.css",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    {
+      "path": "portal/assets/core/ui.css",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    {
+      "path": "portal/assets/data.js",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    {
+      "path": "portal/assets/live2d/ATTRIBUTION.txt",
+      "bytes": 1480,
+      "sha256": "664f7d2ff66b60e815146eda605c64798abce887d19e0df275d88ab0b5676651"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.4096/texture_00.png",
+      "bytes": 791443,
+      "sha256": "6f2ffda5f3efaaa4507bd9c5bf93b1a6582be1733598d0e14d5a269592ee1d10"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.moc3",
+      "bytes": 350016,
+      "sha256": "9b8017464a582c41dfb231ed750577efd16f93368a13699dd0b80457d8c87711"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.model3.json",
+      "bytes": 4372,
+      "sha256": "963acfcd664a792f4a3a22bbb9352ad4e2e40b4bb075e2ec8e6c1571784ac7d6"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.physics3.json",
+      "bytes": 12705,
+      "sha256": "0e05640f203252bedc0ac077e11cf175ed5a2cccf0a0d1194d63dc424d9c32e5"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_idle.motion3.json",
+      "bytes": 5993,
+      "sha256": "40b455a122ab312d0dfa467ce244eca220c072e2256bea2f5bc6d7d8848d3aff"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_tap03.motion3.json",
+      "bytes": 45497,
+      "sha256": "502152ee20663175ff2fca6e1eeacfc8c794ffb4ba559d8b94f2ba5073894450"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_tap07.motion3.json",
+      "bytes": 54088,
+      "sha256": "b38c864bba26c9dcd42c7e520a0723a95735859cdcdb4d97d827ff84e3b1e1a7"
+    },
+    {
+      "path": "portal/assets/petroleum-dawn-v1.png",
+      "bytes": 2651693,
+      "sha256": "29a868236fe8a74d6642b9cee0f59d8ac463cdc847299cea1aacca3a003891a4"
+    },
+    {
+      "path": "portal/assets/petroleum-dawn-v1.txt",
+      "bytes": 1682,
+      "sha256": "8cd7d210091aee6db9a1433815f6ed78b98d5ac7f11d2e41c612f37bb30655ee"
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "bytes": 17007,
+      "sha256": "f3150fabe17a44af24ac0c67bd5d750472f0a65d4e0f35ae946ca10618094fb0"
+    },
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "bytes": 24439,
+      "sha256": "cf47ae39e2f603dbafeca8e0e0ddaaa5276962becadc2d58aefd6e797dcad69a"
+    },
+    {
+      "path": "portal/assets/s17-catalog.css",
+      "bytes": 6305,
+      "sha256": "9a14f53ce436b40e78612b0d1d028bfab8affa59590e250c0a28d1aedd790a6b"
+    },
+    {
+      "path": "portal/assets/s17-catalog.js",
+      "bytes": 5710,
+      "sha256": "a459587e2f992c40dfdd7e1cdfafca7fa00b4b622fc548cae39cdcfdc9772c28"
+    },
+    {
+      "path": "portal/assets/s17-course.js",
+      "bytes": 2151,
+      "sha256": "28416b07288c713261d706f7555493522773ddea279358d992d8a61c5765ee7a"
+    },
+    {
+      "path": "portal/assets/s17-expansion-cases.js",
+      "bytes": 1258586,
+      "sha256": "fcdc2f7e1038939d460d7ade45a8be73c86a6975cbb33e9acd56263d88665a38"
+    },
+    {
+      "path": "portal/assets/s17-expansion-gallery.css",
+      "bytes": 6168,
+      "sha256": "90d55f1078a874c73e17d5f66b48516af7d165959f4776a44a7b3f91708edc03"
+    },
+    {
+      "path": "portal/assets/s17-expansion-gallery.js",
+      "bytes": 10020,
+      "sha256": "538295e4ea066a9da192744d9566b1f5d74e03a9512ced94ec989389785165b8"
+    },
+    {
+      "path": "portal/assets/s17-field-atlas.css",
+      "bytes": 4900,
+      "sha256": "e837896bd7f2911e142aefc0c1689b7bce8a3d9a3c91cf4ab24bbfec4c842ed2"
+    },
+    {
+      "path": "portal/assets/s17-field-atlas.js",
+      "bytes": 13181,
+      "sha256": "c78a04afe9d3a6e1032d0e872e2c2f9b364b85023e1cb9e4f8423acdba50d563"
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "bytes": 10040,
+      "sha256": "858317f49477923dad8cd72379ad26c0f1f2ffebb6042d0a88bf4b1f839e6216"
+    },
+    {
+      "path": "portal/assets/s17-live2d-data.js",
+      "bytes": 1681022,
+      "sha256": "9caef4af1ab325f3a72a14032ba61c0bdf2501a0ac0bf4f396ea6ea89d9ae596"
+    },
+    {
+      "path": "portal/assets/s17-live2d.js",
+      "bytes": 2867,
+      "sha256": "d925a09b163bce0d65e56f6c4d15fe586bfaf83c5a0c733b60e43c32aa4e954a"
+    },
+    {
+      "path": "portal/assets/s17-log-data.js",
+      "bytes": 12875,
+      "sha256": "5db929b5991547d1676bce82c54b97218fd8be25240cd04fd2043ff4351b0aad"
+    },
+    {
+      "path": "portal/assets/s17-log-preview.css",
+      "bytes": 3491,
+      "sha256": "4820214b0e1416ef5110eea5557bfbe00759a745451bf7641d4194be56e40348"
+    },
+    {
+      "path": "portal/assets/s17-log-preview.js",
+      "bytes": 5584,
+      "sha256": "abe334144cd5db44b2f195a3e4cd54c78a89d7b3cc214330d25b9c4aa99c826c"
+    },
+    {
+      "path": "portal/assets/s17-media.js",
+      "bytes": 8759,
+      "sha256": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150"
+    },
+    {
+      "path": "portal/assets/s17-mudlogging-knowledge.js",
+      "bytes": 1042253,
+      "sha256": "97347c103c7741a384322467f2e0907120b23d767a80dab99b71178be3ea0ae0"
+    },
+    {
+      "path": "portal/assets/s17-reader.css",
+      "bytes": 9382,
+      "sha256": "c7e730882a8262161affaa1274f750030f2a02b74b84b414d06e4509b9c2c428"
+    },
+    {
+      "path": "portal/assets/s17-reader.js",
+      "bytes": 7678,
+      "sha256": "d8707b42321435e3a42fb44fc19f3a3d76ee0d3de95291317b592f4699f30b8b"
+    },
+    {
+      "path": "portal/assets/s17-study.css",
+      "bytes": 7390,
+      "sha256": "6c42e8d432b3b005b2c3a24d9b3a5ec55d02365ed121d1c62a44c175d183a949"
+    },
+    {
+      "path": "portal/assets/s17-visual-polish.css",
+      "bytes": 8599,
+      "sha256": "4f0568140adcbbab105d7458dd24e8c3c7e08c4a464bf16989bc4624ad3c699b"
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "bytes": 5200,
+      "sha256": "34669f96ed529a01eb677505f097958c7fb806dfe488445580a4a583e1480cff"
+    },
+    {
+      "path": "portal/assets/s17.css",
+      "bytes": 7557,
+      "sha256": "9c7d1e0e65ff32cdf79bb3f50b7a86c0f9cd46248f33f941c3599e72b471ff61"
+    },
+    {
+      "path": "portal/assets/themes/theme-geology-v1.webp",
+      "bytes": 147572,
+      "sha256": "74c0bf3f2d15aa98ef89190863ba1b9847bf0853118f1daf96b058698bf2771a"
+    },
+    {
+      "path": "portal/assets/themes/theme-production-v1.webp",
+      "bytes": 129494,
+      "sha256": "81bad966e16561280b9b84db030094cd0fbd511d390f6674679cb446f86540ab"
+    },
+    {
+      "path": "portal/assets/themes/theme-refining-v1.webp",
+      "bytes": 145644,
+      "sha256": "f9e37de012db6a7f420e295746a52c3d6c584563ddea3aab063680f6907e5a8d"
+    },
+    {
+      "path": "portal/assets/themes/theme-well-v1.webp",
+      "bytes": 125870,
+      "sha256": "c1ed035fa0a58fc0da0f0f21ac8bb555ef99eb505ee7348577f5a8ce0a858961"
+    },
+    {
+      "path": "portal/assets/vendor/Live2D-Core-LICENSE.txt",
+      "bytes": 520,
+      "sha256": "b81e37048010ef1d336106151201a0323c3309cae44aecdedf57831fe88fa991"
+    },
+    {
+      "path": "portal/assets/vendor/Live2D-Core-RedistributableFiles.txt",
+      "bytes": 205,
+      "sha256": "d16c123688299e1e69a7f5ebc01b3bd75a8d408c024002a7d35b2aae94003f8c"
+    },
+    {
+      "path": "portal/assets/vendor/PIXI-LICENSE.txt",
+      "bytes": 1092,
+      "sha256": "536a16e090f0b6c1454a7c0b47ee8414a39a2f1724a154f10ca1edc750a2dcfd"
+    },
+    {
+      "path": "portal/assets/vendor/PIXI-LIVE2D-LICENSE.txt",
+      "bytes": 1061,
+      "sha256": "8ccace668a041e78ed525d091b0b5daf8b623ff447f912616de535415e4f302f"
+    },
+    {
+      "path": "portal/assets/vendor/live2dcubismcore.min.js",
+      "bytes": 207155,
+      "sha256": "25ae938cb4fe282ce189b357bcc97e603d1e1f7ec78bf04150d401c23cdc792f"
+    },
+    {
+      "path": "portal/assets/vendor/pixi-6.5.10.min.js",
+      "bytes": 460333,
+      "sha256": "403f2f2ee8145fa17f60c5c89403056efe2680e5096ec2762036486914ed19c5"
+    },
+    {
+      "path": "portal/assets/vendor/pixi-live2d-0.4.0.min.js",
+      "bytes": 119922,
+      "sha256": "af1267e6d52759b245766c578d905bfa025b532d5c3cc727c370957c4409e21b"
+    },
+    {
+      "path": "portal/docs/如何添加新案例.md",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/README.txt",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/case.json",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/demo/demo.css",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/demo/demo.js",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/demo/index.html",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    },
+    {
+      "path": "portal/index.html",
+      "bytes": 4506,
+      "sha256": "064e5a543dea10337ee783c8c697f9e07c86488c9c1efb4c2479221d485382dd"
+    },
+    {
+      "path": "portal/reference/fluorescence-data.js",
+      "bytes": 3455,
+      "sha256": "b52674d3e40ca3f74b8d62e98678ba7f5d5f36dcd681dc8f506a7f35ae675952"
+    },
+    {
+      "path": "portal/reference/fluorescence.html",
+      "bytes": 4294,
+      "sha256": "db8994a38160d1eb7abddf05a4b54ea7898a7ab528ba78a15b0411cb8a1e4e4e"
+    },
+    {
+      "path": "portal/reference/fluorescence.js",
+      "bytes": 783,
+      "sha256": "5554cbe7a7e5772f81d3b0812430aa29b48cfb01ca590aced33fb23f0745c6dd"
+    },
+    {
+      "path": "portal/reference/reference-assistant.js",
+      "bytes": 133,
+      "sha256": "b140f05816c57d900e649cca10642199b2d641b5206c441878f2c0776c482212"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/README.txt",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/case.json",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.css",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.js",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/index.html",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    }
+  ]
+}
