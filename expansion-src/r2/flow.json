@@ -1,0 +1,42 @@
+{
+  "title": "约束与独立检验",
+  "gate": [
+    "输入、输出单位统一",
+    "约束与独立测试分别检查"
+  ],
+  "input": {
+    "title": "批次输入",
+    "detail": "独立工况与测量配对",
+    "step": 0
+  },
+  "prepare": {
+    "title": "整理单位",
+    "detail": "固定训练与测试批次",
+    "step": 0
+  },
+  "model": {
+    "title": "拟合代理回归",
+    "detail": "实际求解系数",
+    "step": 1
+  },
+  "baseline": {
+    "title": "基线",
+    "detail": "固定点 / 原料分类均值",
+    "step": 3
+  },
+  "review": {
+    "title": "约束筛选",
+    "detail": "能耗质量 / 组成闭合",
+    "step": 2
+  },
+  "output": {
+    "title": "交互结果",
+    "detail": "改变输入重新计算",
+    "step": 3
+  },
+  "compare": {
+    "title": "独立评价",
+    "detail": "留出批次MAE",
+    "step": 3
+  }
+}

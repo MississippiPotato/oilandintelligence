@@ -1,0 +1,156 @@
+{
+  "scope": "Actual dedicated Chrome close and reopen: all 61 imported packages retained; six representative sandbox calculations",
+  "checkedAt": "2026-10-24T06:12:15.842Z",
+  "checks": [
+    {
+      "name": "61 packages survive actual browser restart",
+      "passed": true
+    },
+    {
+      "name": "g2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "g2",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "g2 imported assistant initializes with its case context",
+      "passed": true
+    },
+    {
+      "name": "d2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "d2",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "事件是否检出",
+            "value": "检出",
+            "unit": ""
+          },
+          {
+            "label": "相对145min事件提前",
+            "value": 6,
+            "unit": "min"
+          },
+          {
+            "label": "正常段告警窗",
+            "value": 3,
+            "unit": "/170"
+          }
+        ]
+      }
+    },
+    {
+      "name": "d2 imported assistant initializes with its case context",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "scene": "g2",
+      "id": "s17x-g2-geochemical-anomaly",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "restartRun": true,
+      "metrics": null
+    },
+    {
+      "scene": "d2",
+      "id": "s17x-d2-drilling-precursor",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "restartRun": true,
+      "metrics": [
+        {
+          "label": "事件是否检出",
+          "value": "检出",
+          "unit": ""
+        },
+        {
+          "label": "相对145min事件提前",
+          "value": 6,
+          "unit": "min"
+        },
+        {
+          "label": "正常段告警窗",
+          "value": 3,
+          "unit": "/170"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal/index.html#background' cannot be created in a document with origin 'null' and URL 'about:srcdoc'.",
+    "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal/index.html#lab' cannot be created in a document with origin 'null' and URL 'about:srcdoc'."
+  ],
+  "external": [],
+  "exception": "locator.evaluate: Error: calculation never enabled export\n    at eval (eval at evaluate (:301:30), <anonymous>:1:204)",
+  "failureDOM": [
+    {
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/c2?case=s17x-c2-cement-displacement&tab=demo",
+      "ready": "complete",
+      "hasRun": false,
+      "title": "注水泥参数优化 · 井见",
+      "text": "井见 · 石油智能化可视实验室\nPETROLEUM × INTELLIGENCE\n总览\n作业链\n案例库\n接入指南\n管理\n＋ 添加案例\n总览\n/\n作业链\n/\n固井\n/\n注水泥参数优化\n环节 06 · 固井\nOPT\n优化算法\n案例 s17x-c2-cement-displacement · v1.0.0\n导入案例\n注水泥参数优化\n\n注水泥设计要确定水泥浆密度、流变性、排量与替浆方案，目标是在不漏失的前提下实现全封固。\n\n难度 中\nC2\n01\n专业背景\n02\n案例流程\n03\n可运行示范\n03 / 动手看变化\n注水泥参数优化\n\n把置换效率和环空压力放在同一张候选图上，观察压力上限怎样改变可选排量与浆体密度。\n\n专注演示 ↗\nRELATED\n相关场景\n同环节 · 固井\n固井质量智能评价\n→\n固井漏失风险预测\n→\n套管居中度智能评估\n→\n同方法 · 优化算法\n油气地球化学异常识别\n地质勘察 →\n储层参数反演\n物探 →\n钻速预测与参数优化\n钻井 →\n井眼轨迹智能控制\n钻井 →\n← 返回固井环节\n返回总览\n井见\n\n跟着一口教学井，把观察变成可以回查的判断。\n\n学号17 · 录井必做5例 + 跨阶段12例 · 门户1.7.0-preview\n返回首页\n完整作业链\n案例库 · 本浏览器62个已接入\n添加案例指南\n老师原站\n原地图 13阶段 / 61候选场景 · 纯前端 · 离线可运行\n收起角色\n井见助"
+    },
+    {
+      "url": "about:srcdoc",
+      "ready": "complete",
+      "hasRun": true,
+      "title": "注水泥参数优化",
+      "text": "井见 / 固井 / C2\n排量加大到什么程度，才能兼顾置换与压力窗口？\n\n把置换效率和环空压力放在同一张候选图上，观察压力上限怎样改变可选排量与浆体密度。\n\n方法：双输出岭回归 + 约束网格搜索 · 固定种子教学数据 · 浏览器离线计算\n\n专业背景\n案例流程\n可运行示范\n偏心比例\n压力上限 / MPa\n泵量上限 / m³/min\n运行计算\n恢复默认\n下载本次结果 JSON\n调整参数后运行，查看数据、模型与基线的同条件对照。\n\n运行后显示当前参数下的分析图表。\n\n学号 17 · 注水泥参数优化 · v1.0.0 · 纯前端离线案例"
+    }
+  ],
+  "passed": 5,
+  "failed": 1,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/case.json",
+      "sha256": "0fd79f590d6b94fb1b633fd26381adce65c4fc13068c47e644fd0ad293152943"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/index.html",
+      "sha256": "f108a0509c4bffd903df8276cfd659e63b880ba8375e72abfb86b7bd23c51b6f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.css",
+      "sha256": "44c6a0fb25ca52067b3bac41c6b0d2c26f933dfa515491e976c443fd8efacada"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.js",
+      "sha256": "ec9879e44d130a73c425b944e63dc78395e52fa8e3bdb0b0a457bde698c1183f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/README.txt",
+      "sha256": "20c5dcf8f8732f197cca8e2ea295a13930a354f279e832752e253db24f4b2f12"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/case.json",
+      "sha256": "b6e5dee0b9801a9f740c10d65166150ca7135ae02d54cbc3379dac4b5df213c1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/index.html",
+      "sha256": "a23d7510a7e407bf0d783d7904bc94717e8ae4886e2bc796ab4f19ab24a4f29b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.js",
+      "sha256": "ae014f369716e68783036d216a473db064981886c911806cafe04d7609ee5232"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/README.txt",
+      "sha256": "ab9c3dfbbd1561204332c08c5b4efcff77edcaedc564b0c0feed33d5c67cbf27"
+    }
+  ]
+}

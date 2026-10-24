@@ -1,0 +1,123 @@
+{
+  "id": "s17x-pr4-esp-warning",
+  "sceneId": "pr4",
+  "title": "电潜泵故障预警：先解释负荷，再找额外偏离",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "ts"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "泵温升高可能来自负荷变化，也可能是异常。把电流、温度和负荷放到共同时间轴，先学习正常关系，再用持续残差区分值得复核的变化。",
+      "judge": [
+        {
+          "label": "数据性质",
+          "value": "合成教学数据",
+          "desc": "固定种子，可重复计算"
+        },
+        {
+          "label": "观察重点",
+          "value": "正常关系回归",
+          "desc": "与明确基线并列比较"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "电潜泵怎样把井下流体送向地面？",
+          "html": "<p>电潜泵是一种井下人工举升设备：电机提供动力，多级泵把能量传给流体，使其沿生产通道向上输送。井下传感器和地面电气信号可以提供电流、温度、压力等信息。本例选择负荷、电流和温度三个量：负荷变化会带来电气与热响应，因此温度高或电流大并不天然等于故障。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"电潜泵概念结构，省略其他组件；信号之间的关系是预警依据，不能由单一信号直接确定故障。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><rect x=\"80\" y=\"40\" width=\"100\" height=\"165\" rx=\"8\" fill=\"#dce7ef\"/><rect x=\"105\" y=\"65\" width=\"50\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"105\" y=\"142\" width=\"50\" height=\"42\" rx=\"8\" fill=\"#e9dfce\"/><text x=\"205\" y=\"90\" font-size=\"17\">泵：给流体增加能量</text><text x=\"205\" y=\"166\" font-size=\"17\">电机：提供动力并产生热</text><path d=\"M130 60V18M180 95H200M180 164H200\" fill=\"none\" stroke=\"#4c978a\" stroke-width=\"2\"/><text x=\"260\" y=\"210\" font-size=\"16\">可观测：负荷、电流、温度 → 同时解释</text></g></svg><figcaption>电潜泵概念结构，省略其他组件；信号之间的关系是预警依据，不能由单一信号直接确定故障。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "OBSERVATION",
+          "title": "正常关系提供比固定阈值更合适的参照",
+          "html": "<p>如果负荷加大，电流与温度一起上升，可能仍符合正常工况。固定电流阈值容易在高负荷时误报，也可能漏掉电流变化不大但温度额外上升的情况。正常关系回归在已知正常设备上学习温度与负荷、电流之间的关系；实际温度减去预期温度称为残差。残差持续增大，意味着正常关系已不能解释全部变化。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"固定阈值和条件预期回答不同问题：横纵轴分别表示设备负荷 →、温度 / °C，用于理解变量关系。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"28\" font-size=\"19\">固定阈值和条件预期回答不同问题</text><path d=\"M65 57V187H590\" fill=\"none\" stroke=\"#9db4b8\" stroke-width=\"1\"/><path d=\"M80 180L560 67\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><path d=\"M80 120H560\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"65\" y=\"218\" font-size=\"14\">设备负荷 →</text><text x=\"78\" y=\"55\" font-size=\"14\">温度 / °C</text><text x=\"350\" y=\"65\" font-size=\"14\">绿：随负荷变化的正常预期</text><text x=\"350\" y=\"90\" font-size=\"14\">金：固定温度阈值示意</text></g></svg><figcaption>固定阈值和条件预期回答不同问题：横纵轴分别表示设备负荷 →、温度 / °C，用于理解变量关系。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "METHOD",
+          "title": "怎样把噪声点变成可复核的告警？",
+          "html": "<p>单个超阈值点可能来自噪声，持续偏离更值得关注。演示同时显示逐分钟超阈值结果与连续三次超阈值的首次时间，并把正常时段的连续告警合并计为误报事件。教学序列中 65 min 开始缓慢漂移，75 min 后定义为评价异常段；这个时间标签只用于评价，不进入残差计算。图中看到提前告警时，应连同正常段误报一起看。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"残差把正常工况变化扣除后，观察持续偏离：横纵轴分别表示监测时间 / min →、温度残差 / °C，用于理解变量关系。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"28\" font-size=\"19\">残差把正常工况变化扣除后，观察持续偏离</text><path d=\"M65 57V187H590\" fill=\"none\" stroke=\"#9db4b8\" stroke-width=\"1\"/><path d=\"M80 174L160 169L240 177L310 173L360 165L410 126L470 90L560 65\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><path d=\"M80 139H560\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"65\" y=\"218\" font-size=\"14\">监测时间 / min →</text><text x=\"78\" y=\"55\" font-size=\"14\">温度残差 / °C</text><text x=\"350\" y=\"65\" font-size=\"14\">绿：逐分钟正常关系残差</text><text x=\"350\" y=\"90\" font-size=\"14\">金：所选残差阈值</text></g></svg><figcaption>残差把正常工况变化扣除后，观察持续偏离：横纵轴分别表示监测时间 / min →、温度残差 / °C，用于理解变量关系。</figcaption></figure>"
+        },
+        {
+          "no": 4,
+          "en": "DATA & SOURCES",
+          "title": "数据、评价与概念来源",
+          "html": "<p>专业概念参考以下行业或研究机构的一手资料；本例数据为离线合成教学数据，不复制来源网站图像。</p><ul><li><a href=\"https://www.slb.com/-/media/files/oilfield-review/p30-43-2\" target=\"_blank\" rel=\"noopener\">SLB：电潜泵技术综述</a></li><li><a href=\"https://ieeexplore.ieee.org/abstract/document/9312611\" target=\"_blank\" rel=\"noopener\">IEEE：井下电潜泵参数监测</a></li></ul>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "从工况解释到残差预警",
+      "lead": [
+        "每个环节都说明输入、动作、输出与复核要点。"
+      ],
+      "stats": [
+        [
+          "计算",
+          "浏览器本地"
+        ],
+        [
+          "数据",
+          "内置可重复"
+        ],
+        [
+          "评价",
+          "预测冻结之后"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "按设备组织正常记录",
+          "do": "6 台设备的正常负荷、电流和温度进入训练，完整第 7 台设备的时间序列用于演示评价。",
+          "effect": "设备来源不跨训练与测试。",
+          "trap": "正常训练记录也应经过运行状态核查。",
+          "role": "环节 1"
+        },
+        {
+          "name": "拟合正常温度关系",
+          "do": "以负荷和电流为输入拟合温度回归，冻结模型，在测试序列逐时计算预期。",
+          "effect": "每个时刻的观测温度与预期温度。",
+          "trap": "温度既是观测响应，不把未来温度或事件时刻放进输入。",
+          "role": "环节 2"
+        },
+        {
+          "name": "从残差形成告警",
+          "do": "实际温度减去预期温度，按阈值标出偏离，并寻找连续三个超阈值点。",
+          "effect": "告警序列与首次持续告警时间。",
+          "trap": "阈值降低会更敏感，也可能增加正常段误报。",
+          "role": "环节 3"
+        },
+        {
+          "name": "核查事件与基线",
+          "do": "预测冻结后再读取评价时段，统计精确率、召回和正常误报事件；与单电流阈值对照。",
+          "effect": "分钟级指标与事件计数分别显示。",
+          "trap": "不能把分钟级召回写成事件召回，演示只有一个异常阶段。",
+          "role": "环节 4"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤输入与输出",
+        "html": "<figure><h3>按设备组织正常记录</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"正常设备三信号到训练 / 完整序列\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">正常设备三信号</text><text x=\"228\" y=\"56\" font-size=\"15\">按设备切分</text><text x=\"437\" y=\"56\" font-size=\"15\">训练 / 完整序列</text></g></svg><figcaption>设备来源不跨训练与测试。</figcaption></figure><figure><h3>拟合正常温度关系</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"正常负荷与电流到温度预期\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">正常负荷与电流</text><text x=\"228\" y=\"56\" font-size=\"15\">正常关系回归</text><text x=\"437\" y=\"56\" font-size=\"15\">温度预期</text></g></svg><figcaption>每个时刻的观测温度与预期温度。</figcaption></figure><figure><h3>从残差形成告警</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"温度观测 − 预期到复核告警\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">温度观测 − 预期</text><text x=\"228\" y=\"56\" font-size=\"15\">阈值 + 持续性</text><text x=\"437\" y=\"56\" font-size=\"15\">复核告警</text></g></svg><figcaption>告警序列与首次持续告警时间。</figcaption></figure><figure><h3>核查事件与基线</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结两种告警到PR / 误报事件\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结两种告警</text><text x=\"228\" y=\"56\" font-size=\"15\">评价时段对照</text><text x=\"437\" y=\"56\" font-size=\"15\">PR / 误报事件</text></g></svg><figcaption>分钟级指标与事件计数分别显示。</figcaption></figure>"
+      },
+      "fails": [
+        {
+          "name": "条件改变",
+          "why": "输入修改后需要重算；独立评价不参与当前预测。"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "intro": "改变条件后运行，查看真实计算的曲线、对照与评价表。",
+      "height": 1250
+    }
+  }
+}

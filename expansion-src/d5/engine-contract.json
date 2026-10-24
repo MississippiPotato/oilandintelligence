@@ -1,0 +1,77 @@
+{
+  "sceneId": "d5",
+  "global": "Experiment",
+  "runEntry": "Experiment.run",
+  "defaultParams": {
+    "temp": 75,
+    "target": 30,
+    "min": 15,
+    "max": 45,
+    "noise": 1
+  },
+  "verification": {
+    "nodeExecuted": true,
+    "defaultMetrics": [
+      {
+        "label": "留出批次 PV RMSE",
+        "value": 0.5391085328861015,
+        "unit": "mPa·s"
+      },
+      {
+        "label": "线性经验基线 RMSE",
+        "value": 3.0950323586553035,
+        "unit": "mPa·s"
+      },
+      {
+        "label": "可行配方候选",
+        "value": "288/350",
+        "unit": "个"
+      }
+    ],
+    "lowParameterMetrics": [
+      {
+        "label": "留出批次 PV RMSE",
+        "value": 0.29552848586416663,
+        "unit": "mPa·s"
+      },
+      {
+        "label": "线性经验基线 RMSE",
+        "value": 3.0239882476594255,
+        "unit": "mPa·s"
+      },
+      {
+        "label": "可行配方候选",
+        "value": "54/350",
+        "unit": "个"
+      }
+    ],
+    "highParameterMetrics": [
+      {
+        "label": "留出批次 PV RMSE",
+        "value": 1.5903005868582087,
+        "unit": "mPa·s"
+      },
+      {
+        "label": "线性经验基线 RMSE",
+        "value": 3.56977885406435,
+        "unit": "mPa·s"
+      },
+      {
+        "label": "可行配方候选",
+        "value": "25/350",
+        "unit": "个"
+      }
+    ],
+    "sourceErrors": [],
+    "sourceWarnings": [],
+    "browserVerified": false
+  },
+  "returned": {
+    "metrics": "array label/value/unit",
+    "predictions": "scenario-specific",
+    "observations": "visible input",
+    "evaluationTruth": "evaluation only",
+    "training": "fitted parameters",
+    "split": "independent fixture groups"
+  }
+}

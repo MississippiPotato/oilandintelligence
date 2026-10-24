@@ -1,0 +1,42 @@
+{
+  "title": "钻具状态识别：振动变大还是频带变了",
+  "input": {
+    "title": "加速度时间窗",
+    "detail": "128Hz采样与设备分组",
+    "step": 0
+  },
+  "prepare": {
+    "title": "计算振动特征",
+    "detail": "RMS频带比峰值因子",
+    "step": 0
+  },
+  "model": {
+    "title": "逻辑回归分类",
+    "detail": "训练160窗冻结系数",
+    "step": 1
+  },
+  "baseline": {
+    "title": "RMS单阈值",
+    "detail": "对照总体振动幅度",
+    "step": 1
+  },
+  "compare": {
+    "title": "独立窗口推断",
+    "detail": "90窗同一评价分母",
+    "step": 2
+  },
+  "review": {
+    "title": "频谱定位",
+    "detail": "区分5Hz与25Hz成分",
+    "step": 2
+  },
+  "output": {
+    "title": "状态与错误计数",
+    "detail": "误报漏报与F1",
+    "step": 2
+  },
+  "gate": [
+    "输入与场景是否对应？",
+    "差异需要人工复核吗？"
+  ]
+}

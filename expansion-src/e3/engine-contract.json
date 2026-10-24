@@ -1,0 +1,21 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "salinity": 30,
+    "budget": 5
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "MAE_index": 0.9196983912209196,
+    "baselineMAE_index": 9.567580423053398,
+    "feasibleCount": 85,
+    "candidateCount": 231
+  },
+  "boundaryChecks": [
+    "salinity=5",
+    "salinity=70",
+    "budget=2.5",
+    "budget=8"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "title": "满足输量与扬程后，哪组泵速耗电更少？",
+  "gate": [
+    "结果与工况",
+    "是否一致？"
+  ],
+  "input": {
+    "title": "工况输入",
+    "detail": "观测量不含参考答案",
+    "step": 0
+  },
+  "prepare": {
+    "title": "设备曲线",
+    "detail": "处理专业量纲与来源",
+    "step": 1
+  },
+  "model": {
+    "title": "约束枚举",
+    "detail": "真实计算当前结果",
+    "step": 2
+  },
+  "baseline": {
+    "title": "额定泵速",
+    "detail": "相同输入对照",
+    "step": 3
+  },
+  "review": {
+    "title": "记录与工况复核",
+    "detail": "保留异常与分歧",
+    "step": 3
+  },
+  "output": {
+    "title": "候选与单位",
+    "detail": "输出可复查记录",
+    "step": 3
+  },
+  "compare": {
+    "title": "同分母比较",
+    "detail": "最后读取独立参考",
+    "step": 3
+  }
+}

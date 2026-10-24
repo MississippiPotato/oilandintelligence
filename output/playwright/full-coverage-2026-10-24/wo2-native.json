@@ -1,0 +1,209 @@
+{
+  "caseId": "s17x-wo2-fishing-tools",
+  "sceneId": "wo2",
+  "status": "completed",
+  "params": {
+    "fish": 65,
+    "bore": 40,
+    "clearance": 125,
+    "pull": 90
+  },
+  "result": {
+    "rows": [
+      {
+        "name": "外捞筒 O1",
+        "mode": "outer",
+        "min": 40,
+        "max": 75,
+        "od": 100,
+        "cap": 110,
+        "reasons": [],
+        "legal": true,
+        "baseline": true
+      },
+      {
+        "name": "外捞筒 O2",
+        "mode": "outer",
+        "min": 60,
+        "max": 95,
+        "od": 125,
+        "cap": 170,
+        "reasons": [
+          "本体外径+4mm通行余量超限"
+        ],
+        "legal": false,
+        "baseline": true
+      },
+      {
+        "name": "外捞筒 O3",
+        "mode": "outer",
+        "min": 85,
+        "max": 110,
+        "od": 148,
+        "cap": 200,
+        "reasons": [
+          "抓持直径不在 85–110 mm",
+          "本体外径+4mm通行余量超限"
+        ],
+        "legal": false,
+        "baseline": false
+      },
+      {
+        "name": "内捞矛 S1",
+        "mode": "inner",
+        "min": 20,
+        "max": 45,
+        "od": 68,
+        "cap": 90,
+        "reasons": [],
+        "legal": true,
+        "baseline": false
+      },
+      {
+        "name": "内捞矛 S2",
+        "mode": "inner",
+        "min": 35,
+        "max": 65,
+        "od": 92,
+        "cap": 150,
+        "reasons": [],
+        "legal": true,
+        "baseline": true
+      },
+      {
+        "name": "内捞矛 S3",
+        "mode": "inner",
+        "min": 55,
+        "max": 85,
+        "od": 112,
+        "cap": 200,
+        "reasons": [
+          "抓持直径不在 55–85 mm"
+        ],
+        "legal": false,
+        "baseline": true
+      }
+    ],
+    "accepted": [
+      {
+        "name": "外捞筒 O1",
+        "mode": "outer",
+        "min": 40,
+        "max": 75,
+        "od": 100,
+        "cap": 110,
+        "reasons": [],
+        "legal": true,
+        "baseline": true
+      },
+      {
+        "name": "内捞矛 S1",
+        "mode": "inner",
+        "min": 20,
+        "max": 45,
+        "od": 68,
+        "cap": 90,
+        "reasons": [],
+        "legal": true,
+        "baseline": false
+      },
+      {
+        "name": "内捞矛 S2",
+        "mode": "inner",
+        "min": 35,
+        "max": 65,
+        "od": 92,
+        "cap": 150,
+        "reasons": [],
+        "legal": true,
+        "baseline": true
+      }
+    ],
+    "metrics": {
+      "legalCandidates": 3,
+      "diameterOnly": 4,
+      "baselineViolations": 2,
+      "catalogSize": 6
+    },
+    "summary": "合法候选：外捞筒 O1、内捞矛 S1、内捞矛 S2",
+    "chart": {
+      "kind": "tools",
+      "rows": [
+        {
+          "name": "外捞筒 O1",
+          "mode": "outer",
+          "min": 40,
+          "max": 75,
+          "od": 100,
+          "cap": 110,
+          "reasons": [],
+          "legal": true,
+          "baseline": true
+        },
+        {
+          "name": "外捞筒 O2",
+          "mode": "outer",
+          "min": 60,
+          "max": 95,
+          "od": 125,
+          "cap": 170,
+          "reasons": [
+            "本体外径+4mm通行余量超限"
+          ],
+          "legal": false,
+          "baseline": true
+        },
+        {
+          "name": "外捞筒 O3",
+          "mode": "outer",
+          "min": 85,
+          "max": 110,
+          "od": 148,
+          "cap": 200,
+          "reasons": [
+            "抓持直径不在 85–110 mm",
+            "本体外径+4mm通行余量超限"
+          ],
+          "legal": false,
+          "baseline": false
+        },
+        {
+          "name": "内捞矛 S1",
+          "mode": "inner",
+          "min": 20,
+          "max": 45,
+          "od": 68,
+          "cap": 90,
+          "reasons": [],
+          "legal": true,
+          "baseline": false
+        },
+        {
+          "name": "内捞矛 S2",
+          "mode": "inner",
+          "min": 35,
+          "max": 65,
+          "od": 92,
+          "cap": 150,
+          "reasons": [],
+          "legal": true,
+          "baseline": true
+        },
+        {
+          "name": "内捞矛 S3",
+          "mode": "inner",
+          "min": 55,
+          "max": 85,
+          "od": 112,
+          "cap": 200,
+          "reasons": [
+            "抓持直径不在 55–85 mm"
+          ],
+          "legal": false,
+          "baseline": true
+        }
+      ]
+    },
+    "details": "每个候选均保留抓持区间、本体尺寸、承载和排除理由。工具目录为教学虚构规格。"
+  }
+}

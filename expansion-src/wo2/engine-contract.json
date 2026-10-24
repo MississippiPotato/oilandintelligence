@@ -1,0 +1,25 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "fish": 65,
+    "bore": 40,
+    "clearance": 125,
+    "pull": 90
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "legalCandidates": 3,
+    "diameterOnly": 4,
+    "baselineViolations": 2,
+    "catalogSize": 6
+  },
+  "boundaryChecks": [
+    "fish=110",
+    "bore=15",
+    "clearance=90",
+    "clearance=165",
+    "pull=30",
+    "pull=200"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "sceneId": "d3",
+  "global": "Experiment",
+  "runEntry": "Experiment.run",
+  "defaultParams": {
+    "targetX": 180,
+    "targetZ": 550,
+    "gain": 0.75,
+    "limit": 7
+  },
+  "verification": {
+    "nodeExecuted": true,
+    "defaultMetrics": [
+      {
+        "label": "学习响应路径末端偏差",
+        "value": 24.1075134303346,
+        "unit": "m"
+      },
+      {
+        "label": "单位增益基线偏差",
+        "value": 52.817763542139005,
+        "unit": "m"
+      },
+      {
+        "label": "转角约束超限步",
+        "value": 0,
+        "unit": "/60"
+      }
+    ],
+    "lowParameterMetrics": [
+      {
+        "label": "学习响应路径末端偏差",
+        "value": 149.79506846513,
+        "unit": "m"
+      },
+      {
+        "label": "单位增益基线偏差",
+        "value": 151.13281226540803,
+        "unit": "m"
+      },
+      {
+        "label": "转角约束超限步",
+        "value": 0,
+        "unit": "/60"
+      }
+    ],
+    "highParameterMetrics": [
+      {
+        "label": "学习响应路径末端偏差",
+        "value": 309.5802245713734,
+        "unit": "m"
+      },
+      {
+        "label": "单位增益基线偏差",
+        "value": 140.0170687243589,
+        "unit": "m"
+      },
+      {
+        "label": "转角约束超限步",
+        "value": 12,
+        "unit": "/60"
+      }
+    ],
+    "sourceErrors": [],
+    "sourceWarnings": [],
+    "browserVerified": false
+  },
+  "returned": {
+    "metrics": "array label/value/unit",
+    "predictions": "scenario-specific",
+    "observations": "visible input",
+    "evaluationTruth": "evaluation only",
+    "training": "fitted parameters",
+    "split": "independent fixture groups"
+  }
+}

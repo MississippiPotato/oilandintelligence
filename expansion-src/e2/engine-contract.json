@@ -1,0 +1,25 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "volume": 700,
+    "stress": 5,
+    "barrier": 0.5
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "lengthMAE_m": 2.064633120046353,
+    "heightMAE_m": 0.79950717697245,
+    "baselineLengthMAE_m": 28.114200987767664,
+    "testCases": 40,
+    "contourIoU": 0.9342463163301893
+  },
+  "boundaryChecks": [
+    "volume=300",
+    "volume=1200",
+    "stress=2",
+    "stress=10",
+    "barrier=0.1",
+    "barrier=0.9"
+  ]
+}

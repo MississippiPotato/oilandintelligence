@@ -1,0 +1,55 @@
+{
+  "scene": "g2",
+  "checkedAt": "2026-10-24T06:01:47.675Z",
+  "kind": "Node engine checks; not browser acceptance",
+  "checks": [
+    {
+      "name": "deterministic full run",
+      "passed": true
+    },
+    {
+      "name": "finite model metrics",
+      "passed": true
+    },
+    {
+      "name": "fixed evaluation denominator",
+      "passed": true
+    },
+    {
+      "name": "evaluation truth absent from score input",
+      "passed": true
+    },
+    {
+      "name": "threshold actually changes classification",
+      "passed": true
+    },
+    {
+      "name": "all concentration values finite",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": 0,
+  "defaults": {
+    "model": {
+      "tp": 17,
+      "fp": 0,
+      "fn": 0,
+      "tn": 163,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fpr": 0
+    },
+    "baseline": {
+      "tp": 13,
+      "fp": 1,
+      "fn": 4,
+      "tn": 162,
+      "precision": 0.9285714285714286,
+      "recall": 0.7647058823529411,
+      "f1": 0.8387096774193549,
+      "fpr": 0.006134969325153374
+    }
+  }
+}

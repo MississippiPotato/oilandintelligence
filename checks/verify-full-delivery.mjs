@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {root,reportDir,fileRecord} from '../tools/build-expansion.mjs';
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const results=[],check=(name,fn)=>{try{results.push({name,passed:true,detail:fn()})}catch(e){results.push({name,passed:false,error:e.message})}};
+check('61 actual unique authored scenes, full expansion build and unchanged teacher denominator',()=>{const a=read(reportDir+'/build-lock.json'),b=read('handoff/suite-build-lock.json');assert.equal(a.complete,true);assert.equal(a.actualCount,56);assert.equal(b.caseCount,5);assert.equal(new Set([...a.cases,...b.cases].map(c=>c.sceneId)).size,61);return{expansion:56,mudlogging:5}});
+check('current files match accepted sources, runtime and actual browser report hashes',()=>{const a=read(reportDir+'/accepted-files.json');for(const f of a.files)assert.deepEqual(fileRecord(f.path),f);return{lockedFiles:a.files.length}});
+check('teacher original copies, five mudlogging cases and real observations unchanged',()=>{const a=read(reportDir+'/contract-before.json');for(const f of a.files)assert.deepEqual(fileRecord(f.path),f);return{protectedFiles:a.files.length}});
+check('actual browser coverage is complete only for its explicitly recorded scope',()=>{const s=read(reportDir+'/completion.json');assert.equal(s.selfAuthoredCases,61);assert.equal(s.browserScope.standaloneNewCases,44);assert.equal(s.browserScope.originalDirectoryImports,44);assert.equal(s.browserScope.originalRefreshAndDownloadRepresentatives,6);assert.equal(s.browserScope.enhancedSandboxNewCasesAfterRealRestart,44);for(const r of s.reports){const a=read(r.path);assert.equal(a.failed,0);assert.equal(a.passed,r.passed)}return s.browserScope});
+check('independent source/computation checks remain separate from browser evidence',()=>{const r=read(reportDir+'/review-source.json');assert.equal(r.checksFailed,0);assert.equal(r.scope.completeSource,44);assert.equal(read(reportDir+'/review-manual.json').openBlockingFindings,0);return{sourceChecks:r.checksPassed,browserExecutedByThisVerifier:false}});
+const result={checkedAt:new Date().toISOString(),kind:'saved_artifact_and_evidence_consistency_check_not_browser_execution',browserExecuted:false,passed:results.filter(r=>r.passed).length,failed:results.filter(r=>!r.passed).length,results};
+if(!process.argv.includes('--no-write'))fs.writeFileSync(path.join(root,reportDir,'verification.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));if(result.failed)process.exitCode=1;

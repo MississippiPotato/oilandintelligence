@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-24T06:32:24.276Z",
+  "kind": "saved_artifact_and_evidence_consistency_check_not_browser_execution",
+  "browserExecuted": false,
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "name": "61 actual unique authored scenes, full expansion build and unchanged teacher denominator",
+      "passed": true,
+      "detail": {
+        "expansion": 56,
+        "mudlogging": 5
+      }
+    },
+    {
+      "name": "current files match accepted sources, runtime and actual browser report hashes",
+      "passed": true,
+      "detail": {
+        "lockedFiles": 897
+      }
+    },
+    {
+      "name": "teacher original copies, five mudlogging cases and real observations unchanged",
+      "passed": true,
+      "detail": {
+        "protectedFiles": 118
+      }
+    },
+    {
+      "name": "actual browser coverage is complete only for its explicitly recorded scope",
+      "passed": true,
+      "detail": {
+        "standaloneNewCases": 44,
+        "originalDirectoryImports": 44,
+        "originalRefreshAndDownloadRepresentatives": 6,
+        "enhancedDirectoryImports": 61,
+        "enhancedSandboxNewCasesAfterRealRestart": 44,
+        "parameterChangeRepresentatives": 4,
+        "sampledNarrowViewports": 6,
+        "unmodifiedTeacherSample": true
+      }
+    },
+    {
+      "name": "independent source/computation checks remain separate from browser evidence",
+      "passed": true,
+      "detail": {
+        "sourceChecks": 704,
+        "browserExecutedByThisVerifier": false
+      }
+    }
+  ]
+}

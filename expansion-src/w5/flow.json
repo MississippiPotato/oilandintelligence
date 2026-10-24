@@ -1,0 +1,42 @@
+{
+  "title": "测井曲线修复：用可见曲线重建密度缺口",
+  "input": {
+    "title": "三条深度对齐曲线",
+    "detail": "GR与Rt可见RHOB缺失",
+    "step": 0
+  },
+  "prepare": {
+    "title": "先封存缺口原值",
+    "detail": "置空后才向模型传入",
+    "step": 0
+  },
+  "model": {
+    "title": "跨曲线近邻修复",
+    "detail": "独立训练井检索密度",
+    "step": 1
+  },
+  "baseline": {
+    "title": "端点线性插值",
+    "detail": "仅用缺口两端密度",
+    "step": 1
+  },
+  "compare": {
+    "title": "同一缺口对照",
+    "detail": "不让可见区稀释误差",
+    "step": 2
+  },
+  "review": {
+    "title": "核对跨层位置",
+    "detail": "结合GR和Rt辨认变化",
+    "step": 2
+  },
+  "output": {
+    "title": "修复曲线与误差",
+    "detail": "遮蔽区RMSE与MAE",
+    "step": 2
+  },
+  "gate": [
+    "输入与场景是否对应？",
+    "差异需要人工复核吗？"
+  ]
+}

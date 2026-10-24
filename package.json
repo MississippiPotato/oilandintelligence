@@ -1,15 +1,16 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.8.2-preview",
+  "version": "1.9.0-preview",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
     "build": "node tools/build.mjs && node tools/build-expansion.mjs --require-all",
-    "test": "node checks/verify.mjs && node checks/verify-mandatory.mjs && node checks/verify-enhancements.mjs && node checks/verify-expansion-source.mjs --require-all && node checks/verify-study.mjs",
-    "verify-delivery": "node checks/verify-current-delivery.mjs",
-    "verify-guide": "node checks/verify-current-delivery.mjs",
-    "package": "node tools/package.mjs --guide-preview",
-    "serve": "node tools/serve.mjs"
+    "test": "node checks/verify.mjs && node checks/verify-mandatory.mjs && node checks/verify-enhancements.mjs && node checks/verify-expansion-source.mjs --require-all && node checks/verify-study.mjs && node checks/full-coverage-review.mjs",
+    "verify-delivery": "node checks/verify-full-delivery.mjs",
+    "verify-guide": "node checks/verify-full-delivery.mjs",
+    "package": "node checks/verify-full-delivery.mjs --no-write && node tools/package.mjs --guide-preview",
+    "serve": "node tools/serve.mjs",
+    "accept": "node tools/accept-full-coverage.mjs"
   }
 }

@@ -1,0 +1,82 @@
+{
+  "id": "s17x-t5-tank-level-crosscheck",
+  "sceneId": "t5",
+  "methods": [
+    "cv"
+  ],
+  "title": "储罐液位监控：图像读数怎样与雷达互相核对",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "固定机位图像里的液面边界与雷达读数来自不同测量链。先从像素中提取边界，再换算液位，与雷达并列核查，避免把某个单一读数当成唯一依据。",
+      "sections": [
+        {
+          "no": 1,
+          "title": "液位不是储量，先确定高度标尺",
+          "html": "<p>液位是液面距基准面的垂直高度，单位 m；储量还取决于储罐形状和容积标定表。本例是固定机位下的液位标尺观察窗：100 行像素对应 0～10 m，越靠下高度越低。小图仅表示观察窗的像素强度，不把整幅罐体插画当作检测结果。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"固定机位的高度映射需要先用标尺或已知位置标定。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><rect x=\"100\" y=\"30\" width=\"120\" height=\"155\" fill=\"#edf2eb\" stroke=\"#87a69b\"/><rect x=\"100\" y=\"95\" width=\"120\" height=\"90\" fill=\"#77aaa3\"/><path d=\"M245 30V185M240 30H260M240 185H260\" stroke=\"#668d80\"/><text x=\"275\" y=\"45\">顶部 10 m</text><text x=\"275\" y=\"112\">液面边界 → 像素行 y</text><text x=\"275\" y=\"183\">底部 0 m</text><text x=\"470\" y=\"95\">h = 10 × (1−y/99)</text></g></svg><figcaption>固定机位的高度映射需要先用标尺或已知位置标定。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "title": "从图像到高度，需要真正计算像素",
+          "html": "<p>本例生成 32 列×100 行的教学灰度图：液面上下具有不同亮度，叠加灯光渐变、噪声与局部遮挡。算法对每行求列方向中位数，以降低局部污点影响；再寻找相邻行的最大亮度梯度。简单基线只在图像中心列寻找固定亮度阈值。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 65H340L355 150H690\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 105H690\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">像素行 y；亮度阈值不随灯光变化调整</text><text x=\"75\" y=\"28\">行中位数灰度</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "title": "雷达与视觉各有独立误差",
+          "html": "<p>雷达通过电磁波传播时间或频差测距，再换算高度；图像依赖成像、视角与标尺。雾气或遮挡会降低图像边界清晰度，而雷达漂移可能让数值平滑却不正确。当二者差值超过 0.6 m，本例列为“测量链不一致”，并显示图像边界强度，供选择优先核查对象。</p>"
+        },
+        {
+          "no": 4,
+          "title": "为什么还要做多帧评价",
+          "html": "<p>单张清晰图成功不等于所有照明条件都成功。演示同时生成 18 帧、不同液位与照明的评价片段，逐帧识别后再计算高度 MAE。参考高度只在生成器与评价器中使用，图像识别函数只接收像素矩阵，雷达读数也不进入视觉预测。</p><p class=\"note\">专业资料：<a href=\"https://www.endress.com/en/support-overview/learning-center/radar-level-measurement-explained\" target=\"_blank\" rel=\"noreferrer\">Endress+Hauser：雷达液位测量原理</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "视觉与雷达不一致时，该先核查哪条测量链？",
+      "lead": [
+        "固定机位图像里的液面边界与雷达读数来自不同测量链。先从像素中提取边界，再换算液位，与雷达并列核查，避免把某个单一读数当成唯一依据。"
+      ],
+      "steps": [
+        {
+          "name": "获取观察窗",
+          "do": "生成灰度图并固定像素到米的映射。",
+          "effect": "把检测对象限定为可解释的标尺观察窗。",
+          "trap": "直接从预设高度返回预测值。"
+        },
+        {
+          "name": "提取液面",
+          "do": "逐行中位数后计算梯度峰，输出高度和边界强度。",
+          "effect": "展示像素到读数的计算链。",
+          "trap": "把雷达读数传入视觉识别器。"
+        },
+        {
+          "name": "交叉核查",
+          "do": "比较视觉高度与独立雷达读数，超过阈值保留分歧。",
+          "effect": "区分一致与可靠是两回事。",
+          "trap": "强行平均两个冲突测量。"
+        },
+        {
+          "name": "多帧评价",
+          "do": "18 帧同场比较梯度方法与单列阈值方法。",
+          "effect": "观察噪声、照明变化下的误差。",
+          "trap": "只报告最好的一帧。"
+        }
+      ],
+      "metrics": {
+        "html": "<figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"获取观察窗的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">32×100 灰度图</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">固定机位与标尺</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">每行对应高度</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">像素不含答案</text></g></svg><figcaption>把检测对象限定为可解释的标尺观察窗。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"提取液面的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">列方向中位数</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">相邻行梯度</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">峰位置 y</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">高度 h 与强度</text></g></svg><figcaption>展示像素到读数的计算链。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"交叉核查的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">视觉液位 h</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">独立雷达读数</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">差值超过0.6 m</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">保留测量分歧</text></g></svg><figcaption>区分一致与可靠是两回事。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"多帧评价的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">18 帧照明变化</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">逐帧像素识别</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">单列阈值基线</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">最后计算 MAE</text></g></svg><figcaption>观察噪声、照明变化下的误差。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "视觉与雷达不一致时，该先核查哪条测量链？",
+      "height": 1300,
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "sceneId": "s4",
+  "engineGlobal": "S17Case",
+  "globalPath": "window.S17Case",
+  "runMethod": "run",
+  "defaultOptions": {
+    "noise": 0.25,
+    "lambda": 1
+  },
+  "runSignature": "S17Case.run(options)",
+  "predictMethod": "predict",
+  "predictSignature": "S17Case.predict(trainedModel, attributeRows)",
+  "fitMethod": "fit",
+  "fitSignature": "S17Case.fit(trainingRows, lambda, dimensions)",
+  "featureInputField": "attributes",
+  "predictionOutputField": "predictions",
+  "referenceField": "phi",
+  "evaluationField": "metrics",
+  "expectedTestCount": 64,
+  "note": "run creates fixed-seed teaching train/test data, fits on training rows, predicts features only, then evaluates. S2 prediction array contains label, votes, confidence, baseline; S4 array contains numeric porosity percent."
+}

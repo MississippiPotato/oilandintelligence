@@ -1,0 +1,87 @@
+{
+  "scene": "s3",
+  "checkedAt": "2026-10-24T06:01:49.469Z",
+  "kind": "Node engine checks; not browser acceptance",
+  "checks": [
+    {
+      "name": "deterministic full run",
+      "passed": true
+    },
+    {
+      "name": "finite model metrics",
+      "passed": true
+    },
+    {
+      "name": "full18trace denominator",
+      "passed": true
+    },
+    {
+      "name": "reference mutation cannot affect picks",
+      "passed": true
+    },
+    {
+      "name": "actual fitted loss decreases",
+      "passed": true
+    },
+    {
+      "name": "high threshold allows real missed picks",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": 0,
+  "defaults": {
+    "model": {
+      "mae": 3.2222222222222223,
+      "hit": 0.9444444444444444,
+      "miss": 0,
+      "errors": [
+        16,
+        4,
+        2,
+        2,
+        4,
+        2,
+        8,
+        2,
+        2,
+        2,
+        0,
+        2,
+        6,
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      "n": 18
+    },
+    "baseline": {
+      "mae": 8.444444444444445,
+      "hit": 0.9444444444444444,
+      "miss": 0,
+      "errors": [
+        4,
+        -4,
+        -6,
+        -6,
+        -6,
+        -6,
+        4,
+        -4,
+        -68,
+        -4,
+        -4,
+        -6,
+        -2,
+        -6,
+        -6,
+        -6,
+        -4,
+        -6
+      ],
+      "n": 18
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "s17x-wo2-fishing-tools",
+  "sceneId": "wo2",
+  "methods": [
+    "kg"
+  ],
+  "title": "落物打捞工具智能选型",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "落入井中的管柱或工具称为落鱼。打捞先确定鱼顶、内外径和可接触表面，再判断工具能否通过井筒、抓住落鱼并承受所需拉力。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "内捞、外捞和井筒通径",
+          "html": "<p>捞矛进入落鱼内部，卡瓦贴紧内壁；打捞筒从外部包住落鱼。工具本体首先要能通过井筒最窄处。外径匹配只回答“能否套上”，不能回答能否下入或承载。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"内捞、外捞和井筒通径\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"55\" y=\"30\" width=\"160\" height=\"150\" fill=\"#cad8db\"/><rect x=\"85\" y=\"30\" width=\"100\" height=\"150\" fill=\"#fff\"/><rect x=\"105\" y=\"65\" width=\"60\" height=\"115\" fill=\"#b3a188\"/><rect x=\"121\" y=\"65\" width=\"28\" height=\"115\" fill=\"#fff\"/><polyline points=\"135,25 135,110\" fill=\"none\" stroke=\"#d29356\" stroke-width=\"3\"/><text x=\"240\" y=\"65\">内捞矛 → 进入落鱼内壁</text><text x=\"240\" y=\"105\">外捞筒 → 包住落鱼外壁</text><text x=\"240\" y=\"145\">工具本体 → 必须通过井筒</text></g></svg><figcaption>落鱼内、外壁是两种抓持对象；工具本体通径是进入井筒的另一项条件。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "METHOD",
+          "title": "属性图把适用范围串起来",
+          "html": "<p>本例工具目录是一组虚构规格：工具→抓持方式→尺寸区间→本体外径→拉力上限。知识匹配逐项核查，保留或排除都显示理由。它是可解释的知识规则推理，不是假称训练出的概率。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"属性图把适用范围串起来\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"170\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">工具 O1</text><rect x=\"250\" y=\"20\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"48\">抓持 40–75mm</text><rect x=\"250\" y=\"85\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"113\">本体外径 100mm</text><rect x=\"250\" y=\"150\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"178\">拉力上限 110kN</text><polyline points=\"190,52 220,52 220,42 250,42\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"220,52 220,107 250,107\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"220,107 220,172 250,172\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"480\" y=\"108\">三项都满足才保留</text></g></svg><figcaption>一个工具同时关联尺寸、本体外径和承载，任何条件冲突都需要排除。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "EVIDENCE",
+          "title": "候选是复核的起点",
+          "html": "<p>尺寸以毫米、拉力以千牛记录。改变落鱼尺寸与拉力后，观察合法工具数量。直径基线只检查外部尺寸，会漏掉通径与拉力冲突；完整筛选显示这些冲突，不把空候选强行补成推荐。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://glossary.slb.com/en/terms/f/fishing_tool\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "落物外径相同，为什么不能只凭直径挑工具？",
+      "lead": [
+        "落入井中的管柱或工具称为落鱼。打捞先确定鱼顶、内外径和可接触表面，再判断工具能否通过井筒、抓住落鱼并承受所需拉力。"
+      ],
+      "steps": [
+        {
+          "name": "记录落鱼与井筒属性",
+          "role": "步骤 1",
+          "do": "量清落鱼外径、内径、井筒通径和所需拉力。若内径大于外径，几何记录自相矛盾，界面会要求修正后再计算。",
+          "effect": "一份带mm与kN单位的当前查询",
+          "trap": "通径是可通过的最小尺寸，不是井眼名义直径"
+        },
+        {
+          "name": "沿工具关系找候选",
+          "role": "步骤 2",
+          "do": "查询目录中每个工具的抓持方式。外捞筒拿落鱼外径对照区间，内捞矛拿落鱼内径对照区间，两者不能使用同一尺寸字段。",
+          "effect": "六种工具各自的尺寸匹配记录",
+          "trap": "内捞矛与外捞筒应读取不同属性"
+        },
+        {
+          "name": "检查通径和拉力约束",
+          "role": "步骤 3",
+          "do": "尺寸匹配后，还要检查工具本体外径加4mm教学余量是否小于通径，承载是否达到所需拉力。任一项不符便排除，并展示具体原因。",
+          "effect": "全部约束满足的候选列表",
+          "trap": "不能凭一个高分抵消拉力或几何不满足"
+        },
+        {
+          "name": "对照单尺寸基线",
+          "role": "步骤 4",
+          "do": "同时运行只按落鱼外径检查目录区间的简化基线。统计其候选中有多少违反完整条件，再比较两种方法为何给出不同列表。",
+          "effect": "合法数量、基线违约数和工具理由表",
+          "trap": "目录为虚构教学规格；输出是条件匹配结果"
+        }
+      ],
+      "metrics": {
+        "title": "步骤的输入与产物",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"wo2\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"落物打捞工具智能选型\"><defs><marker id=\"cf-wo2\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-wo2)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-wo2)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">专业观测输入</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">落鱼外径 mm</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">记录落鱼与井筒属性</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">检查单位和记录范围</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">沿工具关系找候选</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">由可见输入计算</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">简单方法对照</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">相同数据独立计算</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"2\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">结果是否满足检查？补充观测再重新计算</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">检查约束与来源</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">不读评价真值预测</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">图表与当前结果</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">保留参数和评价分母</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">独立评价对比</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">误差或合法性可复算</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><h3>记录落鱼与井筒属性</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录落鱼与井筒属性</text><rect x=\"12\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">沿工具关系找候选</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">检查通径和拉力约束</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">对照单尺寸基线</text><text x=\"25\" y=\"125\">当前步骤：记录落鱼与井筒属性</text></g></svg><figcaption>一份带mm与kN单位的当前查询。通径是可通过的最小尺寸，不是井眼名义直径。</figcaption></figure><figure><h3>沿工具关系找候选</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录落鱼与井筒属性</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">沿工具关系找候选</text><rect x=\"187\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">检查通径和拉力约束</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">对照单尺寸基线</text><text x=\"25\" y=\"125\">当前步骤：沿工具关系找候选</text></g></svg><figcaption>六种工具各自的尺寸匹配记录。内捞矛与外捞筒应读取不同属性。</figcaption></figure><figure><h3>检查通径和拉力约束</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录落鱼与井筒属性</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">沿工具关系找候选</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">检查通径和拉力约束</text><rect x=\"362\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">对照单尺寸基线</text><text x=\"25\" y=\"125\">当前步骤：检查通径和拉力约束</text></g></svg><figcaption>全部约束满足的候选列表。不能凭一个高分抵消拉力或几何不满足。</figcaption></figure><figure><h3>对照单尺寸基线</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录落鱼与井筒属性</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">沿工具关系找候选</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">检查通径和拉力约束</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">对照单尺寸基线</text><rect x=\"537\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><text x=\"25\" y=\"125\">当前步骤：对照单尺寸基线</text></g></svg><figcaption>合法数量、基线违约数和工具理由表。目录为虚构教学规格；输出是条件匹配结果。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "height": 1150,
+      "intro": "落入井中的管柱或工具称为落鱼。打捞先确定鱼顶、内外径和可接触表面，再判断工具能否通过井筒、抓住落鱼并承受所需拉力。"
+    }
+  }
+}

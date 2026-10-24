@@ -12,7 +12,8 @@
        demo/*.png|svg|json… 可选。示范用到的素材，自动转 data URL
 
    流程：下载模板 → 改内容 → 把整个文件夹拖进弹窗 → 校验 → 添加。
-   添加后案例存进 localStorage 并注册进 Cases，全站立即可见。
+   添加后案例持久保存在 IndexedDB，并注册进 Cases。
+   旧版 localStorage 案例在首次打开时迁移；不可用时回退到真实的 localStorage 保存。
    ========================================================= */
 
 (function (global) {
@@ -27,6 +28,7 @@
   var KEY = 'atlas.casepack.v2';
   var KEY_V1 = 'atlas.casepack.v1';
   var KEY_BLOCKED = 'atlas.case.blocked.v1';
+  var KEY_PENDING = 'atlas.casepack.enhanced.pending.v1';
   var ID_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
   var MAX_TOTAL = 6 * 1024 * 1024;
   var WARN_TOTAL = 1.6 * 1024 * 1024;
@@ -40,7 +42,12 @@
   };
 
   var saved = [];
-  var memFallback = null;
+  var storageDB = null;
+  var storageBackend = 'loading';
+  var storageError = '';
+  var readyPromise = null;
+  var mutationQueue = Promise.resolve();
+  var builtinCases = Object.create(null);
 
   var S = {
     pkg: null,        /* 清单对象 */
@@ -92,18 +99,132 @@
       var raw = JSON.parse(global.localStorage.getItem(key) || '[]');
       return Array.isArray(raw) ? raw : [];
     } catch (e) {
-      return (key === KEY && memFallback) || [];
+      return [];
     }
   }
 
   function writeStore(list) {
-    memFallback = list;
-    try {
-      global.localStorage.setItem(KEY, JSON.stringify(list));
-      return true;
-    } catch (e) {
-      return false;
+    if (storageBackend === 'indexedDB' && storageDB) {
+      return new Promise(function (resolve, reject) {
+        var tx;
+        try {
+          tx = storageDB.transaction('catalog', 'readwrite');
+          tx.objectStore('catalog').put(list, 'packages');
+          tx.oncomplete = function () {
+            storageError = '';
+            try { global.localStorage.removeItem(KEY_PENDING); } catch (e) { }
+            resolve();
+          };
+          tx.onabort = tx.onerror = function () { reject(tx.error || new Error('IndexedDB 写入失败')); };
+        } catch (e) { reject(e); }
+      });
     }
+    if (storageBackend !== 'localStorage') return Promise.reject(new Error(storageError || '案例存储尚未就绪，请刷新后重试'));
+    return new Promise(function (resolve, reject) {
+      var oldMarker = null, markerWritten = false;
+      try {
+        oldMarker = global.localStorage.getItem(KEY_PENDING);
+        var pending = pendingChanges() || { upsert: [], removed: [] };
+        list.forEach(function (r) {
+          if (saved.some(function (old) { return old === r; })) return;
+          if (pending.upsert.indexOf(r.meta.id) < 0) pending.upsert.push(r.meta.id);
+          pending.removed = pending.removed.filter(function (id) { return id !== r.meta.id; });
+        });
+        saved.forEach(function (r) {
+          if (list.some(function (next) { return next.meta.id === r.meta.id; })) return;
+          if (pending.removed.indexOf(r.meta.id) < 0) pending.removed.push(r.meta.id);
+          pending.upsert = pending.upsert.filter(function (id) { return id !== r.meta.id; });
+        });
+        global.localStorage.setItem(KEY_PENDING, JSON.stringify(pending)); markerWritten = true;
+        global.localStorage.setItem(KEY, JSON.stringify(list)); storageError = ''; resolve();
+      } catch (e) {
+        if (markerWritten) {
+          try {
+            if (oldMarker === null) global.localStorage.removeItem(KEY_PENDING);
+            else global.localStorage.setItem(KEY_PENDING, oldMarker);
+          } catch (restoreError) { }
+        }
+        reject(e);
+      }
+    });
+  }
+
+  function pendingChanges() {
+    try {
+      var pending = JSON.parse(global.localStorage.getItem(KEY_PENDING) || 'null');
+      return pending && Array.isArray(pending.upsert) && Array.isArray(pending.removed) ? pending : null;
+    } catch (e) { return null; }
+  }
+
+  /* 每次变更先持久化，成功后才替换内存列表；失败不会报告“已添加”。 */
+  function changeStore(transform) {
+    var pending = mutationQueue.then(function () {
+      return readyPromise;
+    }).then(function () {
+      var next = transform(saved);
+      return writeStore(next).then(function () { saved = next; return next; });
+    });
+    mutationQueue = pending.catch(function (e) { storageError = (e && e.message) || String(e); });
+    return pending;
+  }
+
+  function validRecord(r) { return !!(r && r.pkg && r.meta && r.meta.id); }
+
+  function legacyRecords() {
+    var list = readStore(KEY).filter(validRecord);
+    readStore(KEY_V1).forEach(function (r) {
+      if (!validRecord(r) || list.some(function (x) { return x.meta.id === r.meta.id; })) return;
+      list.push({ v: 1, pkg: r.pkg, meta: r.meta, files: [], savedAt: r.savedAt });
+    });
+    var pending = pendingChanges();
+    return pending ? list.filter(function (r) { return pending.removed.indexOf(r.meta.id) < 0; }) : list;
+  }
+
+  function openDatabase() {
+    return new Promise(function (resolve, reject) {
+      if (!global.indexedDB) { reject(new Error('当前浏览器未提供 IndexedDB')); return; }
+      var request, finished = false;
+      var timer = setTimeout(function () { finish(new Error('案例存储打开超时，请关闭其他旧版本页面后重试')); }, 8000);
+      function finish(error, db) {
+        if (finished) { if (db) db.close(); return; }
+        finished = true; clearTimeout(timer);
+        if (error) reject(error); else resolve(db);
+      }
+      try { request = global.indexedDB.open('atlas.casepack.enhanced.v1', 1); }
+      catch (e) { finish(e); return; }
+      request.onupgradeneeded = function () {
+        if (!request.result.objectStoreNames.contains('catalog')) request.result.createObjectStore('catalog');
+      };
+      request.onerror = function () { finish(request.error || new Error('无法打开案例存储')); };
+      request.onsuccess = function () { finish(null, request.result); };
+    });
+  }
+
+  function databaseRecords(db) {
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction('catalog', 'readonly'), req = tx.objectStore('catalog').get('packages');
+      tx.oncomplete = function () {
+        if (req.result !== undefined && !Array.isArray(req.result)) { reject(new Error('案例存储格式异常，原数据已保留')); return; }
+        resolve(req.result);
+      };
+      tx.onabort = tx.onerror = function () { reject(tx.error || new Error('读取案例存储失败')); };
+    });
+  }
+
+  function storageStatus() {
+    return { backend: storageBackend, ready: storageBackend !== 'loading', count: saved.length, error: storageError };
+  }
+
+  function registerRecord(rec) {
+    var existing = global.Cases.get(rec.meta.id);
+    if (existing && !existing.imported) builtinCases[rec.meta.id] = existing;
+    if (existing) global.Cases.unregister(rec.meta.id);
+    global.Cases.register(toCase(rec));
+  }
+
+  function unregisterRecord(id) {
+    global.Cases.unregister(id);
+    if (builtinCases[id] && readBlocklist().indexOf(id) < 0) global.Cases.register(builtinCases[id]);
   }
 
   /* ---------------------------------------------------------
@@ -304,7 +425,8 @@
     /* 1 id */
     if (!meta.id) err('案例 id 没填', '建议「环节-关键词」，例如 welllog-layer');
     else if (!ID_RE.test(meta.id)) err('案例 id 格式不合法：' + meta.id, '只能小写字母、数字、连字符，不能有空格或下划线');
-    else if (global.Cases.get(meta.id)) err('案例 id 已被占用：' + meta.id, '换一个 id；若是之前上传的旧版本，先在案例库里移除');
+    else if (global.Cases.get(meta.id) && global.Cases.get(meta.id).imported) err('案例 id 已被占用：' + meta.id, '换一个 id；若是之前上传的旧版本，先在案例库里移除');
+    else if (global.Cases.get(meta.id)) warn('将使用上传版本替换内置案例：' + meta.id, '上传版本保存在本机；原案例文件保持不变');
     else ok('id 可用：' + meta.id);
 
     /* 2 场景 */
@@ -685,7 +807,7 @@
     '  都没有的话，可以在 case.json 里写 tabs.demo.builtin = "welllog-layer"',
     '  复用系统已有的示范。',
     '',
-    '注意：案例存在浏览器 localStorage 里，换电脑/换浏览器要重新上传。',
+    '注意：案例保存在当前浏览器的本机案例库（IndexedDB，必要时回退到 localStorage）；换电脑/换浏览器要重新上传。',
     '要永久发布给所有人看，请用开发者方式：把文件放进 assets/cases/ 并在 index.html 引一行 script。',
     ''
   ].join('\n');
@@ -1161,6 +1283,7 @@
 
   /* ---- 提交 ---- */
   function commit() {
+    if (S.committing) return;
     var meta = metaNow();
     var list = checkAll(S.pkg, meta, S.files);
     paintResults(list);
@@ -1169,25 +1292,33 @@
     if (!S.pkg) { tip('请先拖入案例文件夹', 'is-err'); return; }
     if (sum.errors) { tip(sum.errors + ' 项不符合要求，按右侧红色提示修改后再添加', 'is-err'); return; }
 
-    saved = saved.filter(function (r) { return r.meta && r.meta.id !== meta.id; });
     var rec = { v: 2, pkg: S.pkg, meta: meta, files: S.files, savedAt: new Date().toISOString() };
-    saved.push(rec);
-    /* 同 id 的插件案例若曾被隐藏，重新上传时解除隐藏 */
-    var bl = readBlocklist();
-    if (bl.indexOf(meta.id) >= 0) writeBlocklist(bl.filter(function (x) { return x !== meta.id; }));
-
-    var stored = writeStore(saved);
-    global.Cases.register(toCase(rec));
-
-    close();
-    toast('已添加「' + meta.title + '」' + (stored ? '' : '（仅本次有效）'),
-      stored ? '正在打开场景页…' : '内容太大，浏览器没能保存，刷新后会丢失');
-
-    var target = '#/scene/' + meta.sceneId;
-    setTimeout(function () {
-      if (global.location.hash === target) global.dispatchEvent(new Event('hashchange'));
-      else global.location.hash = target;
-    }, 620);
+    S.committing = true;
+    q('#imp-ok').disabled = true;
+    tip('正在保存案例文件…', '');
+    return changeStore(function (current) {
+      return current.filter(function (r) { return r.meta && r.meta.id !== meta.id; }).concat([rec]);
+    }).then(function () {
+      /* 同 id 的插件案例若曾被隐藏，重新上传时解除隐藏 */
+      var bl = readBlocklist();
+      if (bl.indexOf(meta.id) >= 0) writeBlocklist(bl.filter(function (x) { return x !== meta.id; }));
+      registerRecord(rec);
+      close();
+      toast('已添加「' + meta.title + '」', '已保存到本机，正在打开场景页…');
+      var target = '#/scene/' + meta.sceneId;
+      setTimeout(function () {
+        if (global.location.hash === target) global.dispatchEvent(new Event('hashchange'));
+        else global.location.hash = target;
+      }, 620);
+      return true;
+    }).catch(function (e) {
+      tip('保存失败，案例尚未添加：' + ((e && e.message) || e) + '。请保留磁盘上的案例包，释放浏览器空间后重试。', 'is-err');
+      return false;
+    }).then(function (result) {
+      S.committing = false;
+      q('#imp-ok').disabled = false;
+      return result;
+    });
   }
 
   function bind() {
@@ -1406,6 +1537,9 @@
   }
 
   function open(opts) {
+    if (storageBackend === 'loading') {
+      return readyPromise.then(function () { return open(opts); });
+    }
     if (!S.el) { S.el = build(); bind(); }
     reset(opts || {});
     S.el.hidden = false;
@@ -1443,21 +1577,53 @@
      8. 对外接口
      --------------------------------------------------------- */
   function loadSaved() {
-    /* v2 */
-    saved = readStore(KEY).filter(function (r) { return r && r.pkg && r.meta && r.meta.id; });
-    /* v1：只有清单没有文件，按原样升级 */
-    readStore(KEY_V1).forEach(function (r) {
-      if (!r || !r.pkg || !r.meta || !r.meta.id) return;
-      if (saved.some(function (x) { return x.meta.id === r.meta.id; })) return;
-      saved.push({ v: 1, pkg: r.pkg, meta: r.meta, files: [], savedAt: r.savedAt });
-    });
-
-    saved.forEach(function (r) {
-      if (global.Cases.get(r.meta.id)) return;   /* JS 插件优先 */
-      global.Cases.register(toCase(r));
-    });
-    /* 最后应用隐藏名单：被删除的插件案例不再出现 */
+    if (readyPromise) return readyPromise;
+    var legacy = legacyRecords();
+    /* 同步注册旧数据保证首屏兼容；IndexedDB 读取完成后按持久记录替换。 */
+    saved = legacy;
+    legacy.forEach(registerRecord);
     applyBlocklist();
+    readyPromise = openDatabase().then(function (db) {
+      storageDB = db;
+      storageBackend = 'indexedDB';
+      db.onversionchange = function () { db.close(); storageDB = null; storageError = '案例存储已在其他页面升级，请刷新后再保存'; };
+      return databaseRecords(db).then(function (records) {
+        if (records === undefined) {
+          /* 只有事务完成才视为迁移成功，原 localStorage 留作兼容备份。 */
+          return writeStore(legacy).then(function () { return legacy; });
+        }
+        var pending = pendingChanges();
+        if (pending) {
+          /* 暂时回退期间只合并实际改动，不以较旧的备份覆盖 IDB 中的其他案例。 */
+          records = records.filter(function (r) { return validRecord(r) && pending.removed.indexOf(r.meta.id) < 0; });
+          legacy.forEach(function (r) {
+            if (pending.upsert.indexOf(r.meta.id) < 0) return;
+            records = records.filter(function (old) { return old.meta.id !== r.meta.id; }).concat([r]);
+          });
+          return writeStore(records).then(function () { return records; });
+        }
+        return records.filter(validRecord);
+      });
+    }).catch(function (e) {
+      storageError = (e && e.message) || String(e);
+      if (storageDB) {
+        /* 已打开但读取失败时禁止覆盖未知记录，避免以空列表覆盖历史案例。 */
+        storageDB.close(); storageDB = null; storageBackend = 'unavailable';
+      } else storageBackend = 'localStorage';
+      return legacy;
+    }).then(function (records) {
+      legacy.forEach(function (r) {
+        var c = global.Cases.get(r.meta.id);
+        if (c && c.imported && !records.some(function (x) { return x.meta.id === r.meta.id; })) unregisterRecord(r.meta.id);
+      });
+      saved = records;
+      records.forEach(registerRecord);
+      applyBlocklist();
+      global.dispatchEvent(new Event('hashchange'));
+      global.dispatchEvent(new Event('caseimportready'));
+      return storageStatus();
+    });
+    return readyPromise;
   }
 
   /* 删除案例：上传案例 = 移除本地存储；插件案例 = 记入隐藏名单。
@@ -1472,8 +1638,12 @@
     if (!global.confirm(msg)) return false;
 
     if (isImported) {
-      saved = saved.filter(function (r) { return r.meta.id !== id; });
-      writeStore(saved);
+      return changeStore(function (current) { return current.filter(function (r) { return r.meta.id !== id; }); }).then(function () {
+        unregisterRecord(id);
+        toast('已删除「' + (c.title || id) + '」', '页面已同步更新');
+        global.dispatchEvent(new Event('hashchange'));
+        return true;
+      }).catch(function (e) { toast('删除未完成', '本机保存失败：' + ((e && e.message) || e)); return false; });
     } else {
       var bl = readBlocklist();
       if (bl.indexOf(id) < 0) { bl.push(id); writeBlocklist(bl); }
@@ -1497,6 +1667,7 @@
   function updateMeta(id, patch) {
     var rec = saved.filter(function (r) { return r.meta.id === id; })[0];
     if (!rec) return { ok: false, error: '不是本机上传的案例，无法在线编辑（插件案例请改源文件）' };
+    rec = JSON.parse(JSON.stringify(rec));
     var p = patch || {};
     if (p.title != null) rec.meta.title = String(p.title).slice(0, 40);
     if (p.version != null) rec.meta.version = String(p.version).slice(0, 16);
@@ -1511,10 +1682,12 @@
         return global.ATLAS.methods && global.ATLAS.methods[k];
       });
     }
-    if (!writeStore(saved)) return { ok: false, error: '浏览器存储失败' };
-    global.Cases.unregister(id);
-    global.Cases.register(toCase(rec));
-    return { ok: true };
+    return changeStore(function (current) {
+      return current.map(function (r) { return r.meta.id === id ? rec : r; });
+    }).then(function () {
+      registerRecord(rec);
+      return { ok: true };
+    }).catch(function (e) { return { ok: false, error: (e && e.message) || '浏览器存储失败' }; });
   }
 
   function exported() {
@@ -1527,6 +1700,8 @@
     open: open,
     close: close,
     loadSaved: loadSaved,
+    ready: null,
+    storageStatus: storageStatus,
     remove: remove,
     restore: restore,
     updateMeta: updateMeta,
@@ -1571,9 +1746,9 @@
     restore(btn.getAttribute('data-restore-case'));
   });
 
-  /* 启动即恢复：必须在 shell.js 渲染之前完成 */
+  /* 旧数据首屏同步恢复；较大的 IndexedDB 案例读取完成后通知外壳重新渲染。 */
   if (global.Cases) {
-    try { loadSaved(); } catch (e) { /* 存储损坏时静默跳过，不影响站点启动 */ }
+    global.CaseImport.ready = loadSaved();
   }
 
 })(window);

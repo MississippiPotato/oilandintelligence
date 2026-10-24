@@ -1,0 +1,85 @@
+{
+  "id": "s17x-s3-first-arrival",
+  "sceneId": "s3",
+  "title": "初至波自动拾取：把第一段有效能量定位到时间轴",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "ts"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "炮响之后，各检波器最早何时接收到有效波？从走时曲线与带噪波形理解初至，再比较能量触发和学习边界的方法。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONTEXT",
+          "title": "初至是最早可辨认的到达，不是最大的波峰",
+          "html": "<p>地震采集时，震源激发的弹性波向地下和地表传播，检波器把运动记录为一条随时间变化的地震道。一个炮点对应许多条地震道，合起来称为炮集。初至时间是每条记录上最早能识别的有效到达时间，用于近地表速度分析与后续处理。</p><p>最大波峰通常出现在初至之后：有效波刚到达时振幅可能很小，随后能量才逐渐增强。图中的横轴是记录时间，纵轴是振幅；炮集图则把每一条地震道横向排开，时间向下增加。本例采样间隔为 2 ms，道间距为 15 m。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"初至位置与较强波峰不同\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><path d=\"M60 145H700M60 145V35\" stroke=\"#91a59b\" fill=\"none\"/><path d=\"M65 145h170l8-4 8 7 8-7 8 6 10-15 10 28 10-45 10 59 10-63 10 55 10-44 10 28 10-13 10 8 10-4h240\" stroke=\"#2a7e75\" fill=\"none\" stroke-width=\"3\"/><path d=\"M235 36v130\" stroke=\"#bc764d\" stroke-dasharray=\"6 4\"/><text x=\"155\" y=\"30\">初至：有效波刚开始</text><text x=\"420\" y=\"72\">较强波峰在后面</text><text x=\"557\" y=\"187\">时间 / ms →</text></g></svg><p class=\"note\">振幅增强是过程，拾取要定位过程起点。</p>"
+        },
+        {
+          "no": 2,
+          "en": "METHOD",
+          "title": "噪声触发与弱信号漏拾，是两种不同错误",
+          "html": "<p>STA/LTA 用短时窗口与较长背景窗口的平均能量比判断波是否到达。短窗突然变强会触发，因此一个孤立脉冲也可能被误拾；弱道虽然已经有有效波，能量比却可能迟迟不够高。</p><p>学习路线把前后窗口能量比、短窗能量、相邻采样变化和邻道能量一起交给逻辑回归。训练来自 7 个独立炮集，模型学习波前与波后窗口的差异，再在新炮集寻找连续三个采样点超过阈值的位置。邻道特征提供观测支持，不能直接复制参考走时。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"局部输入 → 学习支持度 → 初至时间（2 ms/采样）\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">原始带噪炮集</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">局部能量与邻道</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">连续触发位置</text><text x=\"34\" y=\"168\">局部输入 → 学习支持度 → 初至时间（2 ms/采样）</text></g></svg><p class=\"note\">STA/LTA 与学习模型对同一炮集分别拾取，真实计算误差。</p>"
+        },
+        {
+          "no": 3,
+          "en": "READING",
+          "title": "评价拾取时间，也保留漏拾和人工修正",
+          "html": "<p>平均绝对误差 MAE 衡量已拾取道的时间偏差；±10 ms 命中率则以全部 18 道作分母，漏拾不能消失在分母里。参考初至用金色虚线叠加，学习拾取与 STA/LTA 各用一种颜色；点击炮集可切换正在放大的单道。</p><p>演示中的炮集为教学合成波形，参考到达由生成过程保留并与预测函数分开。调高噪声或降低每六道中一条弱道的振幅，观察方法何时失效。人工修正只形成复核记录，保留原模型成绩。阅读：<a href=\"https://wiki.seg.org/wiki/First_breaks\" target=\"_blank\" rel=\"noopener\">SEG First breaks</a>、<a href=\"https://doi.org/10.1002/nsg.12316\" target=\"_blank\" rel=\"noopener\">初至拾取研究</a>。</p><p class=\"note\">误差图回答“差了多少”，波形回答“为什么这样拾取”。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "从观测到可核查的解释",
+      "lead": [
+        "炮响之后，各检波器最早何时接收到有效波？从走时曲线与带噪波形理解初至，再比较能量触发和学习边界的方法。"
+      ],
+      "steps": [
+        {
+          "name": "以炮集为单位划分",
+          "role": "资料",
+          "do": "输入：7个独立训练炮集与独立测试炮集。 动作：从波前、波后窗口采样，保留炮集来源分组。",
+          "effect": "训练窗口与独立18道测试观测。",
+          "trap": "不能把同一炮集中相邻窗口随机分到训练与测试。"
+        },
+        {
+          "name": "提取波前变化",
+          "role": "方法",
+          "do": "输入：每道当前时刻附近的振幅与相邻道。 动作：计算前后能量比、短窗能量、变化量和邻道能量。",
+          "effect": "四维局部观测特征。",
+          "trap": "前后窗口意味着离线拾取；不宣称是无延迟实时预警。"
+        },
+        {
+          "name": "拟合与实际拾取",
+          "role": "计算",
+          "do": "输入：仅训练炮集的窗口特征和训练参考。 动作：180轮梯度下降拟合逻辑回归，在新炮集找连续触发。",
+          "effect": "每道支持度曲线、首个连续触发位置与损失记录。",
+          "trap": "阈值由用户设置，不在测试参考上自动找最优值。"
+        },
+        {
+          "name": "对比并复核",
+          "role": "解释",
+          "do": "输入：固定STA/LTA触发、学习拾取与独立参考。 动作：计算MAE、全部道命中率及漏拾，点选弱道复查。",
+          "effect": "波形、误差表、人工修正记录与JSON。",
+          "trap": "人工修正与原始模型输出分别保存。"
+        }
+      ],
+      "metrics": {
+        "title": "逐步说明与产物",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"s3\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"初至波自动拾取：把第一段有效能量定位到时间轴\"><defs><marker id=\"cf-s3\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-s3)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-s3)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">独立炮集</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">多道振幅与采样间隔</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">滑窗与邻道</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">能量与变化特征</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">逻辑回归触发</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">连续超阈位置</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">STA/LTA触发</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">短长时能量之比</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"3\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">资料与结果需要复核？</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">逐道核查</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">回看弱道与噪声</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">初至拾取表</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">模型与人工分开</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">误差与漏拾</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">全18道命中率</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><h3>以炮集为单位划分</h3><p>输入：7个独立训练炮集与独立测试炮集。 动作：从波前、波后窗口采样，保留炮集来源分组。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"以炮集为单位划分\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">7个独立训练炮集与独</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">从波前、波后窗口采样</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">训练窗口与独立18道</text><text x=\"34\" y=\"168\">以炮集为单位划分</text></g></svg><h3>提取波前变化</h3><p>输入：每道当前时刻附近的振幅与相邻道。 动作：计算前后能量比、短窗能量、变化量和邻道能量。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"提取波前变化\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">每道当前时刻附近的振</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">计算前后能量比、短窗</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">四维局部观测特征。</text><text x=\"34\" y=\"168\">提取波前变化</text></g></svg><h3>拟合与实际拾取</h3><p>输入：仅训练炮集的窗口特征和训练参考。 动作：180轮梯度下降拟合逻辑回归，在新炮集找连续触发。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"拟合与实际拾取\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">仅训练炮集的窗口特征</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">180轮梯度下降拟合</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">每道支持度曲线、首个</text><text x=\"34\" y=\"168\">拟合与实际拾取</text></g></svg><h3>对比并复核</h3><p>输入：固定STA/LTA触发、学习拾取与独立参考。 动作：计算MAE、全部道命中率及漏拾，点选弱道复查。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"对比并复核\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">固定STA/LTA触</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">计算MAE、全部道命</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">波形、误差表、人工修</text><text x=\"34\" y=\"168\">对比并复核</text></g></svg>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "点击左侧炮集选中一条地震道，右图同步显示波形与三种时间位置。",
+      "height": 1500,
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js"
+    }
+  }
+}

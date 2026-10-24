@@ -1,0 +1,480 @@
+{
+  "scope": "Actual offline Chrome, new cases: three sections and one computed run per case; selected screenshots and mobile checks",
+  "checkedAt": "2026-10-24T06:08:38.683Z",
+  "checks": [
+    {
+      "name": "c2 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "c2 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "c2 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "c2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "c2",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "efficiencyMAE": 0.2645672251810069,
+          "pressureMAE": 0.09445131941006982,
+          "denominator": 60,
+          "candidates": 357,
+          "feasible": 155
+        }
+      }
+    },
+    {
+      "name": "c2 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "c2 sampled mobile page contains charts internally",
+      "passed": true
+    },
+    {
+      "name": "c2 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "c3 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "c3 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "c3 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "c3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "c3",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "model": {
+            "tp": 44,
+            "fp": 16,
+            "tn": 81,
+            "fn": 19,
+            "precision": 0.7333333333333333,
+            "recall": 0.6984126984126984,
+            "f1": 0.7154471544715447,
+            "total": 160
+          },
+          "baseline": {
+            "tp": 45,
+            "fp": 11,
+            "tn": 86,
+            "fn": 18,
+            "precision": 0.8035714285714286,
+            "recall": 0.7142857142857143,
+            "f1": 0.7563025210084033,
+            "total": 160
+          }
+        }
+      }
+    },
+    {
+      "name": "c3 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "c3 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "c4 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "c4 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "c4 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "c4 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "c4",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "mae": 0.1495651608769014,
+          "denominator": 80,
+          "standoff": 45.85105950191078
+        }
+      }
+    },
+    {
+      "name": "c4 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "c4 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "co2 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "co2 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "co2 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "co2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "co2",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "candidates": 81,
+          "feasible": 11,
+          "violations": 0,
+          "exhaustiveCoverage": 1
+        }
+      }
+    },
+    {
+      "name": "co2 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "co2 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "co3 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "co3 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "co3 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "co3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "co3",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "mae": 0.2883803689897209,
+          "denominator": 80,
+          "exceed": 0,
+          "baselineExceed": 0,
+          "limit": 300
+        }
+      }
+    },
+    {
+      "name": "co3 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "co3 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "co4 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "co4 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "co4 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "co4 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "co4",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "oilMAE": 0.07897946344336144,
+          "waterMAE": 0.07342044989690233,
+          "denominator": 70
+        }
+      }
+    },
+    {
+      "name": "co4 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "co4 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "c2",
+      "id": "s17x-c2-cement-displacement",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "standaloneRun": true,
+      "metrics": {
+        "efficiencyMAE": 0.2645672251810069,
+        "pressureMAE": 0.09445131941006982,
+        "denominator": 60,
+        "candidates": 357,
+        "feasible": 155
+      }
+    },
+    {
+      "scene": "c3",
+      "id": "s17x-c3-cement-loss-risk",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "standaloneRun": true,
+      "metrics": {
+        "model": {
+          "tp": 44,
+          "fp": 16,
+          "tn": 81,
+          "fn": 19,
+          "precision": 0.7333333333333333,
+          "recall": 0.6984126984126984,
+          "f1": 0.7154471544715447,
+          "total": 160
+        },
+        "baseline": {
+          "tp": 45,
+          "fp": 11,
+          "tn": 86,
+          "fn": 18,
+          "precision": 0.8035714285714286,
+          "recall": 0.7142857142857143,
+          "f1": 0.7563025210084033,
+          "total": 160
+        }
+      }
+    },
+    {
+      "scene": "c4",
+      "id": "s17x-c4-casing-standoff",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "standaloneRun": true,
+      "metrics": {
+        "mae": 0.1495651608769014,
+        "denominator": 80,
+        "standoff": 45.85105950191078
+      }
+    },
+    {
+      "scene": "co2",
+      "id": "s17x-co2-completion-zone-design",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "standaloneRun": true,
+      "metrics": {
+        "candidates": 81,
+        "feasible": 11,
+        "violations": 0,
+        "exhaustiveCoverage": 1
+      }
+    },
+    {
+      "scene": "co3",
+      "id": "s17x-co3-tubing-stress",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "standaloneRun": true,
+      "metrics": {
+        "mae": 0.2883803689897209,
+        "denominator": 80,
+        "exceed": 0,
+        "baselineExceed": 0,
+        "limit": 300
+      }
+    },
+    {
+      "scene": "co4",
+      "id": "s17x-co4-sliding-sleeve-control",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "standaloneRun": true,
+      "metrics": {
+        "oilMAE": 0.07897946344336144,
+        "waterMAE": 0.07342044989690233,
+        "denominator": 70
+      }
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "passed": 39,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/case.json",
+      "sha256": "a07a24f122dc9b804e4c32ac3f31a0f43957009c5b088ecd695359a3f330896c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/index.html",
+      "sha256": "4ad22097e8afa9e06591c03b83d4a84924446b5340c1bb0948efa890f521db45"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.js",
+      "sha256": "b715eded92c13acd216f6334de465fd3e9226799f24076dcdfbdf4b604692c4f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/README.txt",
+      "sha256": "1125d320bcae028d4c643cce9f17886cc1cd34777c34fbf46cfb527fd68f6713"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/case.json",
+      "sha256": "30c0ac34d00569518fbdd5b7435238457e0403541d33cca08667da80e9f34f1b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/index.html",
+      "sha256": "a96c2cb7108de324382f9ce699cf2e1fd481f81159fd5a98f2ec59c068253f5c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.js",
+      "sha256": "320c7a77c89720a3785f11006f11f645e2087182fd02907527961b8eb6ef8e47"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/README.txt",
+      "sha256": "0ed93ab6ec92e002c314e446063c3bb1b6dbd2e977941bf1b8c3e14b8cc83edb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+      "sha256": "951c3e2152e2bc37f9c28174cf14e2b015ad9ea38f421138ede628de11a693f4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+      "sha256": "e79259397deba9b06b8ec6e84e63d9972906f62eda5b529dc145beaae9a476e9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+      "sha256": "d01e4faa0ba976dbbdccddfc4d28903dd9596a0e92dab20d71f503dfb9682eab"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+      "sha256": "81f50567206f7ff4ce9a55a52405f121b5f9738bf1cb948d35688fbf241c338e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/case.json",
+      "sha256": "c1c6eb11264ff0da0bfe15b9a151c1cd967a90ec30e94672f187c707360b1d1c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/index.html",
+      "sha256": "de0e86f538238969a250737bb90da81a29b2c9b706a9599202b17568519d6d48"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.js",
+      "sha256": "3a28e4a9ca8f20b2857660c0e5d2bb19600bf670b221fcfdf01477adbc526696"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/README.txt",
+      "sha256": "3ca58006653385755a16ba6f3b2a91d86d2aae92ee4c3d2855dd45a6f7e95c8e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/case.json",
+      "sha256": "f999a75373d4ebc41dfd6f9e2b3e306233a7f409e162c539c612add083c8b6a1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/index.html",
+      "sha256": "42551eff32979d527a87171b835e073efe1d39773d4828bf5a94e4d05c49a54b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.js",
+      "sha256": "16e6a9a01b78093896813da8455ef4a51dd8974f058da0bc9318a0f57f064ffb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/README.txt",
+      "sha256": "2fec7a5036a088424242791bc3a080209f3acf2033bbba002c667ac6edbf25ff"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/case.json",
+      "sha256": "104dc264243e8e28c478c57ad845c0118a4d3a9a3bb5818b759660d38ef38a2b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/index.html",
+      "sha256": "7af542a8958de401175ecc7b96ffc0639bc8cff430ecc02ebb98dd831d07f24d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.js",
+      "sha256": "33136d5a890691b2697067a0c551a7f0dc78b76498f718547bcabb27a22858bc"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/README.txt",
+      "sha256": "9ba5d804f627c2094bffc19b926024ed5ca9d03654b06d5e1f9087cde1633be4"
+    }
+  ]
+}

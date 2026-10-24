@@ -397,22 +397,27 @@
       var t = e.target.closest('[data-adm-del-case]');
       if (!t) return;
       e.preventDefault();
-      global.CaseImport.remove(t.dataset.admDelCase);
-      refresh();
+      Promise.resolve(global.CaseImport.remove(t.dataset.admDelCase)).then(function () { refresh(); });
     });
     bindCheck(root, function (e) {
       if (e.target.id !== 'adm-c-save' && e.target.id !== 'adm-c-cancel') return;
       e.preventDefault();
       if (e.target.id === 'adm-c-cancel') { global.location.hash = '#/admin/cases'; return; }
-      var r = global.CaseImport.updateMeta(root.querySelector('.adm-edit').dataset.editing, {
+      e.target.disabled = true;
+      Promise.resolve(global.CaseImport.updateMeta(root.querySelector('.adm-edit').dataset.editing, {
         title: val('adm-c-title'),
         sceneId: val('adm-c-scene'),
         methods: chipVals('adm-c-methods'),
         version: val('adm-c-ver'),
         updated: val('adm-c-date')
+      })).then(function (r) {
+        e.target.disabled = false;
+        admMsg(r.ok ? '已保存，站点已同步更新。' : ('保存失败：' + r.error), !r.ok);
+        if (r.ok) { global.location.hash = '#/admin/cases'; refresh(); }
+      }).catch(function (error) {
+        e.target.disabled = false;
+        admMsg('保存失败：' + ((error && error.message) || error), true);
       });
-      admMsg(r.ok ? '已保存，站点已同步更新。' : ('保存失败：' + r.error), !r.ok);
-      if (r.ok) { global.location.hash = '#/admin/cases'; refresh(); }
     });
     bindChips('adm-c-methods');
 

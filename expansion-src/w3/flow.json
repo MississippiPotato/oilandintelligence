@@ -1,0 +1,42 @@
+{
+  "title": "成像测井裂缝识别：从井壁展开图分出窄曲线",
+  "input": {
+    "title": "井壁展开图",
+    "detail": "方位与深度构成像素",
+    "step": 0
+  },
+  "prepare": {
+    "title": "局部灰度特征",
+    "detail": "邻域反差与横向变化",
+    "step": 0
+  },
+  "model": {
+    "title": "像素逻辑回归",
+    "detail": "不同几何训练图像",
+    "step": 1
+  },
+  "baseline": {
+    "title": "灰度单阈值",
+    "detail": "保留纵向条带误分",
+    "step": 1
+  },
+  "compare": {
+    "title": "独立井段分割",
+    "detail": "测试6912个像素",
+    "step": 2
+  },
+  "review": {
+    "title": "掩膜位置核对",
+    "detail": "原图与模型并排看",
+    "step": 2
+  },
+  "output": {
+    "title": "裂缝掩膜评价",
+    "detail": "Dice与IoU实际计数",
+    "step": 2
+  },
+  "gate": [
+    "输入与场景是否对应？",
+    "差异需要人工复核吗？"
+  ]
+}

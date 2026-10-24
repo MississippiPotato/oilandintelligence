@@ -1,0 +1,82 @@
+{
+  "id": "s17x-t5-tank-level-crosscheck",
+  "sceneId": "t5",
+  "methods": [
+    "cv"
+  ],
+  "title": "储罐液位监控：图像读数怎样与雷达互相核对",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "固定机位图像里的液面边界与雷达读数来自不同测量链。先从像素中提取边界，再换算液位，与雷达并列核查，避免把某个单一读数当成唯一依据。",
+      "sections": [
+        {
+          "no": 1,
+          "title": "液位不是储量，先确定高度标尺",
+          "html": "<p>液位是液面距基准面的垂直高度，单位 m；储量还取决于储罐形状和容积标定表。本例是固定机位下的液位标尺观察窗：100 行像素对应 0～10 m，越靠下高度越低。小图仅表示观察窗的像素强度，不把整幅罐体插画当作检测结果。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"固定机位的高度映射需要先用标尺或已知位置标定。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><rect x=\"100\" y=\"30\" width=\"120\" height=\"155\" fill=\"#edf2eb\" stroke=\"#87a69b\"/><rect x=\"100\" y=\"95\" width=\"120\" height=\"90\" fill=\"#77aaa3\"/><path d=\"M245 30V185M240 30H260M240 185H260\" stroke=\"#668d80\"/><text x=\"275\" y=\"45\">顶部 10 m</text><text x=\"275\" y=\"112\">液面边界 → 像素行 y</text><text x=\"275\" y=\"183\">底部 0 m</text><text x=\"470\" y=\"95\">h = 10 × (1−y/99)</text></g></svg><figcaption>固定机位的高度映射需要先用标尺或已知位置标定。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "title": "从图像到高度，需要真正计算像素",
+          "html": "<p>本例生成 32 列×100 行的教学灰度图：液面上下具有不同亮度，叠加灯光渐变、噪声与局部遮挡。算法对每行求列方向中位数，以降低局部污点影响；再寻找相邻行的最大亮度梯度。简单基线只在图像中心列寻找固定亮度阈值。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 65H340L355 150H690\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 105H690\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">像素行 y；亮度阈值不随灯光变化调整</text><text x=\"75\" y=\"28\">行中位数灰度</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "title": "雷达与视觉各有独立误差",
+          "html": "<p>雷达通过电磁波传播时间或频差测距，再换算高度；图像依赖成像、视角与标尺。雾气或遮挡会降低图像边界清晰度，而雷达漂移可能让数值平滑却不正确。当二者差值超过 0.6 m，本例列为“测量链不一致”，并显示图像边界强度，供选择优先核查对象。</p>"
+        },
+        {
+          "no": 4,
+          "title": "为什么还要做多帧评价",
+          "html": "<p>单张清晰图成功不等于所有照明条件都成功。演示同时生成 18 帧、不同液位与照明的评价片段，逐帧识别后再计算高度 MAE。参考高度只在生成器与评价器中使用，图像识别函数只接收像素矩阵，雷达读数也不进入视觉预测。</p><p class=\"note\">专业资料：<a href=\"https://www.endress.com/en/support-overview/learning-center/radar-level-measurement-explained\" target=\"_blank\" rel=\"noreferrer\">Endress+Hauser：雷达液位测量原理</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "视觉与雷达不一致时，该先核查哪条测量链？",
+      "lead": [
+        "固定机位图像里的液面边界与雷达读数来自不同测量链。先从像素中提取边界，再换算液位，与雷达并列核查，避免把某个单一读数当成唯一依据。"
+      ],
+      "steps": [
+        {
+          "name": "获取观察窗",
+          "do": "生成灰度图并固定像素到米的映射。",
+          "effect": "把检测对象限定为可解释的标尺观察窗。",
+          "trap": "直接从预设高度返回预测值。"
+        },
+        {
+          "name": "提取液面",
+          "do": "逐行中位数后计算梯度峰，输出高度和边界强度。",
+          "effect": "展示像素到读数的计算链。",
+          "trap": "把雷达读数传入视觉识别器。"
+        },
+        {
+          "name": "交叉核查",
+          "do": "比较视觉高度与独立雷达读数，超过阈值保留分歧。",
+          "effect": "区分一致与可靠是两回事。",
+          "trap": "强行平均两个冲突测量。"
+        },
+        {
+          "name": "多帧评价",
+          "do": "18 帧同场比较梯度方法与单列阈值方法。",
+          "effect": "观察噪声、照明变化下的误差。",
+          "trap": "只报告最好的一帧。"
+        }
+      ],
+      "metrics": {
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"t5\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"视觉与雷达不一致时，该先核查哪条测量链？\"><defs><marker id=\"cf-t5\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-t5)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t5)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">灰度观察窗</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">观测量不含参考答案</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">行中位数</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">处理专业量纲与来源</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">梯度液面</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">真实计算当前结果</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">单列阈值</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">相同输入对照</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"3\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">结果与工况是否一致？</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">记录与工况复核</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">保留异常与分歧</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">候选与单位</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">输出可复查记录</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">同分母比较</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">最后读取独立参考</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"获取观察窗的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">32×100 灰度图</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">固定机位与标尺</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">每行对应高度</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">像素不含答案</text></g></svg><figcaption>把检测对象限定为可解释的标尺观察窗。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"提取液面的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">列方向中位数</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">相邻行梯度</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">峰位置 y</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">高度 h 与强度</text></g></svg><figcaption>展示像素到读数的计算链。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"交叉核查的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">视觉液位 h</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">独立雷达读数</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">差值超过0.6 m</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">保留测量分歧</text></g></svg><figcaption>区分一致与可靠是两回事。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"多帧评价的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">18 帧照明变化</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">逐帧像素识别</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">单列阈值基线</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">最后计算 MAE</text></g></svg><figcaption>观察噪声、照明变化下的误差。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "视觉与雷达不一致时，该先核查哪条测量链？",
+      "height": 1300,
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js"
+    }
+  }
+}

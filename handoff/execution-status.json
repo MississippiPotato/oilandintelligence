@@ -1,53 +1,409 @@
 {
-  "checkedAt": "2026-10-24T05:22:39.222Z",
-  "portalVersion": "1.8.2-preview",
+  "checkedAt": "2026-10-24T06:32:23.672Z",
+  "portalVersion": "1.9.0-preview",
   "mandatoryVersion": "1.5.2",
-  "expansionVersion": "1.0.1",
-  "selfAuthoredCases": 17,
-  "scope": "Five small case-specific source figures and compact method overviews; twelve extra sources and runtime folders unchanged",
+  "selfAuthoredCases": 61,
+  "newCasesThisRevision": 44,
+  "stageCount": 13,
+  "sceneCount": 61,
+  "remainingSceneExpansion": 0,
   "browserExecuted": true,
+  "teacherSampleIncludedInAuthoredCount": false,
+  "browserScope": {
+    "standaloneNewCases": 44,
+    "originalDirectoryImports": 44,
+    "originalRefreshAndDownloadRepresentatives": 6,
+    "enhancedDirectoryImports": 61,
+    "enhancedSandboxNewCasesAfterRealRestart": 44,
+    "parameterChangeRepresentatives": 4,
+    "sampledNarrowViewports": 6,
+    "unmodifiedTeacherSample": true
+  },
+  "storage": {
+    "count": 61,
+    "characters": 9484451,
+    "backend": "indexedDB"
+  },
+  "originalPortalCumulative61NotClaimed": true,
+  "sourceChecksAreNotBrowserProof": true,
+  "sourceAndVMReviewChecks": 704,
+  "browserCheckCount": 605,
   "reports": [
     {
-      "path": "handoff/case-sources-2026-10-24/browser-standalone.json",
-      "passed": 58,
+      "path": "handoff/full-coverage-2026-10-24/browser-smoke-batch-1.json",
+      "passed": 45,
       "failed": 0
     },
     {
-      "path": "handoff/case-sources-2026-10-24/browser-original.json",
-      "passed": 46,
+      "path": "handoff/full-coverage-2026-10-24/browser-smoke-batch-2.json",
+      "passed": 51,
       "failed": 0
     },
     {
-      "path": "handoff/case-sources-2026-10-24/browser-enhanced.json",
-      "passed": 22,
+      "path": "handoff/full-coverage-2026-10-24/browser-smoke-batch-3.json",
+      "passed": 39,
       "failed": 0
     },
     {
-      "path": "handoff/case-sources-2026-10-24/browser-legacy.json",
-      "passed": 21,
+      "path": "handoff/full-coverage-2026-10-24/browser-smoke-batch-4.json",
+      "passed": 45,
       "failed": 0
     },
     {
-      "path": "handoff/case-sources-2026-10-24/browser-restart.json",
+      "path": "handoff/full-coverage-2026-10-24/browser-smoke-batch-5.json",
+      "passed": 51,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-smoke-batch-6.json",
+      "passed": 51,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-native-batch-1.json",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-native-batch-2.json",
+      "passed": 15,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-native-batch-3.json",
+      "passed": 13,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-native-batch-4.json",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-native-batch-5.json",
+      "passed": 15,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-native-batch-6.json",
+      "passed": 15,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-start.json",
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-1.json",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-2.json",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-3.json",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-4.json",
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-5.json",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-6.json",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-7.json",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-import-8.json",
+      "passed": 14,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-persist.json",
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-restart-batch-1.json",
       "passed": 17,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-restart-batch-2.json",
+      "passed": 19,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-restart-batch-3.json",
+      "passed": 15,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-restart-batch-4.json",
+      "passed": 17,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-restart-batch-5.json",
+      "passed": 19,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-enhanced-restart-batch-6.json",
+      "passed": 19,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-storage-capacity.json",
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-firstbreak-compat.json",
+      "passed": 5,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-interaction.json",
+      "passed": 20,
+      "failed": 0
+    },
+    {
+      "path": "handoff/full-coverage-2026-10-24/browser-catalog-final.json",
+      "passed": 4,
       "failed": 0
     }
   ],
-  "browserCheckCount": 164,
-  "nodeCheckCount": 48,
-  "nativePersisted": {
-    "count": 17,
-    "storageCharacters": 4986366
-  },
-  "realDownloadsThisRevision": 5,
-  "sourceChecksAreNotBrowserProof": true,
+  "protectedFileCount": 118,
   "liveArkModelCallThisRevision": false,
-  "imagegenCallsThisRevision": 5,
-  "remainingSceneExpansion": 44,
+  "thisRevisionPaidModelCalls": 0,
+  "imagegenCallsThisRevision": 0,
   "unverified": [
-    "physical mobile devices",
-    "Firefox/WebKit",
-    "new microphone or live model connection"
+    "实体手机、Firefox/WebKit",
+    "新语音或在线模型调用",
+    "全部参数组合",
+    "原站localStorage同时累计61例"
   ],
-  "previousExtraBrowserEvidence": "handoff/flow-linked-2026-10-24/browser-extra.json"
+  "previousFiveCaseBrowserEvidence": "handoff/case-sources-2026-10-24/acceptance.html",
+  "stageCoverage": [
+    {
+      "stageId": "geology",
+      "stageName": "地质勘察",
+      "total": 4,
+      "existing": [
+        "g1"
+      ],
+      "remaining": [
+        "g2",
+        "g3",
+        "g4"
+      ],
+      "built": 4,
+      "newCount": 3
+    },
+    {
+      "stageId": "seismic",
+      "stageName": "物探",
+      "total": 5,
+      "existing": [
+        "s1"
+      ],
+      "remaining": [
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "built": 5,
+      "newCount": 4
+    },
+    {
+      "stageId": "drilling",
+      "stageName": "钻井",
+      "total": 5,
+      "existing": [
+        "d1"
+      ],
+      "remaining": [
+        "d2",
+        "d3",
+        "d4",
+        "d5"
+      ],
+      "built": 5,
+      "newCount": 4
+    },
+    {
+      "stageId": "mudlogging",
+      "stageName": "录井",
+      "total": 5,
+      "existing": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5"
+      ],
+      "remaining": [],
+      "built": 5,
+      "newCount": 0
+    },
+    {
+      "stageId": "welllog",
+      "stageName": "测井",
+      "total": 5,
+      "existing": [
+        "w4"
+      ],
+      "remaining": [
+        "w1",
+        "w2",
+        "w3",
+        "w5"
+      ],
+      "built": 5,
+      "newCount": 4
+    },
+    {
+      "stageId": "cementing",
+      "stageName": "固井",
+      "total": 4,
+      "existing": [
+        "c1"
+      ],
+      "remaining": [
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "built": 4,
+      "newCount": 3
+    },
+    {
+      "stageId": "completion",
+      "stageName": "完井",
+      "total": 4,
+      "existing": [
+        "co1"
+      ],
+      "remaining": [
+        "co2",
+        "co3",
+        "co4"
+      ],
+      "built": 4,
+      "newCount": 3
+    },
+    {
+      "stageId": "perforation",
+      "stageName": "射孔",
+      "total": 4,
+      "existing": [
+        "p1"
+      ],
+      "remaining": [
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "built": 4,
+      "newCount": 3
+    },
+    {
+      "stageId": "production",
+      "stageName": "采油",
+      "total": 5,
+      "existing": [
+        "pr1"
+      ],
+      "remaining": [
+        "pr2",
+        "pr3",
+        "pr4",
+        "pr5"
+      ],
+      "built": 5,
+      "newCount": 4
+    },
+    {
+      "stageId": "workover",
+      "stageName": "修井",
+      "total": 5,
+      "existing": [
+        "wo1"
+      ],
+      "remaining": [
+        "wo2",
+        "wo3",
+        "wo4",
+        "wo5"
+      ],
+      "built": 5,
+      "newCount": 4
+    },
+    {
+      "stageId": "eor",
+      "stageName": "增采",
+      "total": 5,
+      "existing": [
+        "e1"
+      ],
+      "remaining": [
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "built": 5,
+      "newCount": 4
+    },
+    {
+      "stageId": "transport",
+      "stageName": "运输",
+      "total": 5,
+      "existing": [
+        "t1"
+      ],
+      "remaining": [
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "built": 5,
+      "newCount": 4
+    },
+    {
+      "stageId": "refining",
+      "stageName": "加工",
+      "total": 5,
+      "existing": [
+        "r5"
+      ],
+      "remaining": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "built": 5,
+      "newCount": 4
+    }
+  ]
 }

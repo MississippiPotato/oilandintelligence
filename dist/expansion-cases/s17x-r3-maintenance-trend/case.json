@@ -1,0 +1,78 @@
+{
+  "id": "s17x-r3-maintenance-trend",
+  "sceneId": "r3",
+  "methods": [
+    "ts"
+  ],
+  "title": "炼化设备预测性维护：先解释负荷，再追踪退化",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "正常负荷会抬高振动；持续超出正常关系的偏差，才值得安排一次有依据的设备检查。",
+      "sections": [
+        {
+          "no": 1,
+          "title": "炼厂机泵为什么需要看趋势，而不只看一次报警",
+          "html": "<div><p>原油输送、塔底循环和换热系统都依靠机泵连续运行。转轴由轴承支撑，轴封隔开工艺介质与外部环境；同一台泵在输送量、转速或介质改变时，振动和温度也会改变。因此，某个测值升高，首先需要问：负荷变了吗？</p><p>本例记录负荷（额定负荷的百分比）、振动速度有效值 RMS（mm/s）、轴承温度（°C）和峭度。RMS描述振动的整体强度；峭度对少量尖锐冲击更敏感。它们互相补充，不直接对应唯一故障原因。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 190\" role=\"img\" aria-label=\"专业知识示意图\"><rect width=\"740\" height=\"190\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><path d=\"M65 145H680M65 145V25\" stroke=\"#91a9ad\" fill=\"none\"/><text x=\"82\" y=\"30\" fill=\"#27454c\" font-size=\"16\">振动速度 RMS（mm/s）</text><text x=\"500\" y=\"176\" fill=\"#27454c\" font-size=\"16\">负荷（%）</text><path d=\"M85 133L640 65\" stroke=\"#237d76\" stroke-width=\"3\"/><path d=\"M85 148L640 80L640 50L85 118Z\" fill=\"#237d76\" opacity=\".1\"/><circle cx=\"510\" cy=\"80\" r=\"6\" fill=\"#237d76\"/><circle cx=\"510\" cy=\"38\" r=\"7\" fill=\"#bb7139\"/><path d=\"M510 80V38\" stroke=\"#bb7139\" stroke-dasharray=\"4 4\"/><text x=\"525\" y=\"44\" fill=\"#bb7139\" font-size=\"16\">同负荷下额外升高</text><text x=\"110\" y=\"110\" fill=\"#27454c\" font-size=\"16\">正常负荷关系</text></g></svg><p>图中比较的是同一负荷下的差异。高负荷时的正常振动，和相同负荷下突然增大的振动，含义不同。演示会先从正常记录拟合这条关系，再观察偏离。</p></div>"
+        },
+        {
+          "no": 2,
+          "title": "RMS看强度，频谱看能量落在哪里",
+          "html": "<div><p>时域振动是传感器随时间记录的波动。傅里叶变换把它分解成不同频率的成分；频谱峰值的位置表示周期，峰值高度表示该频率的贡献。转频、叶片通过频率和轴承冲击可能占据不同区域，现场还需要转速、测点方向和设备结构来解释。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 190\" role=\"img\" aria-label=\"专业知识示意图\"><rect width=\"740\" height=\"190\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><path d=\"M55 140H690M55 140V25\" fill=\"none\" stroke=\"#91a9ad\"/><text x=\"65\" y=\"28\" fill=\"#27454c\" font-size=\"16\">相对幅值</text><text x=\"565\" y=\"175\" fill=\"#27454c\" font-size=\"16\">频率（Hz）</text><path d=\"M90 140V118M120 140V40M150 140V126M180 140V132M260 140V128M335 140V78M365 140V124M450 140V132M555 140V127\" stroke=\"#267f79\" stroke-width=\"10\"/><text x=\"100\" y=\"164\" fill=\"#27454c\" font-size=\"16\">32</text><text x=\"316\" y=\"164\" fill=\"#27454c\" font-size=\"16\">100</text><text x=\"170\" y=\"58\" fill=\"#27454c\" font-size=\"16\">转动相关成分</text><text x=\"360\" y=\"76\" fill=\"#bb7139\" font-size=\"16\">新增周期成分</text></g></svg><p>图为概念频谱。演示中的频谱由128个教学波形采样点实际计算离散傅里叶变换得到，用来帮助理解信号组成。异常分数采用RMS、温度和峭度相对正常负荷关系的偏差，不把频谱峰直接命名为某种轴承故障。</p></div>"
+        },
+        {
+          "no": 3,
+          "title": "从“偏离正常”到安排一次有依据的检查",
+          "html": "<div><p>模型先回答“这组测量是否还像正常运行”，再把连续偏离的时段交给检修人员。连续三小时超过验证阈值才触发本例提醒，可减少单个噪声尖峰的影响。固定阈值基线只检查振动是否超过4.5 mm/s或温度是否超过80°C；两项数值是本例对比参数，不是设备通用标准。</p><p>对异常分数的最近16小时拟合直线，可得到到达教学目标分数8的趋势外推时间。斜率不为正时不输出时间。这个时间依赖退化继续按当前速度发展，应和油样、检修历史及工况一起复核。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 145\" role=\"img\" aria-label=\"数据处理的输入、转换和输出\"><rect width=\"740\" height=\"145\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"20\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"32\" y=\"84\" fill=\"#27454c\" font-size=\"16\">当前测量＋负荷</text><path d=\"M233 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"265\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"277\" y=\"84\" fill=\"#27454c\" font-size=\"16\">正常关系的持续偏差</text><path d=\"M478 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"510\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"522\" y=\"84\" fill=\"#27454c\" font-size=\"16\">定位时段并安排复核</text></g></svg><p>专业依据：<a href=\"https://www.energy.gov/sites/prod/files/2020/04/f74/omguide_complete_w-eo-disclaimer.pdf\" target=\"_blank\" rel=\"noreferrer\">美国能源部《Operations &amp; Maintenance Best Practices Guide》第6章</a>介绍旋转设备振动、温度和状态监测。本文图形、96小时数据和退化过程为本课程制作。</p></div>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "炼化设备预测性维护：先解释负荷，再追踪退化",
+      "lead": [
+        "正常负荷会抬高振动；持续超出正常关系的偏差，才值得安排一次有依据的设备检查。"
+      ],
+      "steps": [
+        {
+          "name": "建立可比较的设备记录",
+          "do": "整理同一测点的负荷%、振动mm/s、温度°C和峭度。",
+          "effect": "单位一致的小时记录。",
+          "trap": "不同转速与测点方向不应混作同一基准。"
+        },
+        {
+          "name": "只用正常运行学习关系",
+          "do": "90份正常记录拟合三个负荷线性关系。",
+          "effect": "给定负荷时的正常期望值。",
+          "trap": "训练数据若夹入退化，会把异常学习为正常。"
+        },
+        {
+          "name": "用独立验证设置提醒阈值",
+          "do": "45份正常验证记录确定分数阈值，连续三小时超出才提醒。",
+          "effect": "持续偏差事件。",
+          "trap": "调阈值会改变误报与漏报，不能只展示最好的一个指标。"
+        },
+        {
+          "name": "与固定阈值比较并检查趋势",
+          "do": "96小时新运行只输入测量；事后参考标签单独计算指标。",
+          "effect": "两种策略精确率／召回率和趋势投影。",
+          "trap": "趋势外推依赖当前斜率，不能等同于真实剩余寿命。"
+        }
+      ],
+      "metrics": {
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"r3\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"设备负荷与退化\"><defs><marker id=\"cf-r3\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-r3)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-r3)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">设备观测</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">负荷与三类状态量</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">正常建模</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">统一测点和单位</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">关系偏差</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">正常回归加持续性</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">固定阈值</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">振动与温度规则</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"3\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">先解释正常关系再用偏差组织复核</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">检修复核</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">核对工况与原记录</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">趋势清单</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">时段与偏差证据</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">独立评价</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">同一96小时分母</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 145\" role=\"img\" aria-label=\"数据处理的输入、转换和输出\"><rect width=\"740\" height=\"145\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"20\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"32\" y=\"84\" fill=\"#27454c\" font-size=\"16\">固定测点与设备</text><path d=\"M233 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"265\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"277\" y=\"84\" fill=\"#27454c\" font-size=\"16\">测量值＋负荷</text><path d=\"M478 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"510\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"522\" y=\"84\" fill=\"#27454c\" font-size=\"16\">统一小时记录</text></g></svg><figcaption>步骤1：建立可比较的设备记录</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 145\" role=\"img\" aria-label=\"数据处理的输入、转换和输出\"><rect width=\"740\" height=\"145\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"20\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"32\" y=\"84\" fill=\"#27454c\" font-size=\"16\">正常记录90份</text><path d=\"M233 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"265\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"277\" y=\"84\" fill=\"#27454c\" font-size=\"16\">负荷条件回归</text><path d=\"M478 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"510\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"522\" y=\"84\" fill=\"#27454c\" font-size=\"16\">正常RMS／温度／峭度</text></g></svg><figcaption>步骤2：只用正常运行学习关系</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 145\" role=\"img\" aria-label=\"数据处理的输入、转换和输出\"><rect width=\"740\" height=\"145\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"20\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"32\" y=\"84\" fill=\"#27454c\" font-size=\"16\">正常验证45份</text><path d=\"M233 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"265\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"277\" y=\"84\" fill=\"#27454c\" font-size=\"16\">阈值＋持续性</text><path d=\"M478 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"510\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"522\" y=\"84\" fill=\"#27454c\" font-size=\"16\">异常时段</text></g></svg><figcaption>步骤3：用独立验证设置提醒阈值</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 145\" role=\"img\" aria-label=\"数据处理的输入、转换和输出\"><rect width=\"740\" height=\"145\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"20\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"32\" y=\"84\" fill=\"#27454c\" font-size=\"16\">新运行测量</text><path d=\"M233 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"265\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"277\" y=\"84\" fill=\"#27454c\" font-size=\"16\">模型／固定阈值</text><path d=\"M478 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"510\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"522\" y=\"84\" fill=\"#27454c\" font-size=\"16\">同分母评价＋检修依据</text></g></svg><figcaption>步骤4：与固定阈值比较并检查趋势</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "正常负荷会抬高振动；持续超出正常关系的偏差，才值得安排一次有依据的设备检查。",
+      "height": 1750,
+      "mode": "page",
+      "page": "demo/index.html",
+      "html": "demo/index.html",
+      "js": "demo/demo.js"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "sceneId": "pr5",
+  "global": "CaseCore",
+  "runEntry": "CaseCore.run(params)",
+  "defaults": {
+    "wall": 38,
+    "wat": 48,
+    "wax": 9,
+    "velocity": 1.5,
+    "threshold": 0.5
+  },
+  "inferenceContract": "CaseCore.predict(observation,beta)",
+  "selfCheck": "Numeric VM checks only, not browser acceptance",
+  "metrics": [
+    {
+      "label": "多变量精确率",
+      "value": 76.5432098765432,
+      "unit": "%",
+      "note": ""
+    },
+    {
+      "label": "多变量召回",
+      "value": 70.45454545454545,
+      "unit": "%",
+      "note": ""
+    },
+    {
+      "label": "温度基线 F1",
+      "value": 0.7534883720930232,
+      "unit": "",
+      "note": ""
+    },
+    {
+      "label": "多变量 F1",
+      "value": 0.7337278106508875,
+      "unit": "",
+      "note": ""
+    },
+    {
+      "label": "当前风险分数",
+      "value": 57.602203536134176,
+      "unit": "%",
+      "note": "不是经过现场校准的概率"
+    }
+  ]
+}

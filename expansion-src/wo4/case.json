@@ -1,0 +1,85 @@
+{
+  "id": "s17x-wo4-workover-warning",
+  "sceneId": "wo4",
+  "methods": [
+    "ts"
+  ],
+  "title": "修井作业风险预警",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "起下管柱时，钩载随运动阶段、速度和井下阻力变化。单一载荷上限容易在正常高速段报警，本例用正常作业关系预测载荷，再监测持续偏离。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "钩载与动作要一起读",
+          "html": "<p>钩载是地面悬重测量。速度变化、加速减速都可能改变读数。本例用速度和阶段项解释正常载荷，把无法由动作解释的部分留作异常线索；不直接把高载荷等同井下事故。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"钩载与动作要一起读\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><polyline points=\"30,160 75,150 120,145 165,115 210,95 255,100 300,110 345,95 390,100 435,60 480,50 525,100 570,110 625,145 680,155\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"30,165 75,150 120,145 165,120 210,100 255,105 300,110 345,100 390,105 435,100 480,100 525,105 570,115 625,145 680,160\" fill=\"none\" stroke=\"#94aaa9\" stroke-width=\"3\"/><text x=\"45\" y=\"35\">钩载 kN：实测与正常预测</text><text x=\"420\" y=\"190\">局部偏离 → 需要复核</text></g></svg><figcaption>实测钩载偏离正常关系时形成局部差距；普通提速也能推高整条曲线。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "METHOD",
+          "title": "正常关系模型与持续残差",
+          "html": "<p>以60段独立正常作业片段拟合线性关系。当前片段的预测载荷不读取事件标签。实测减预测得到残差，连续3点超过阈值才合成一个报警区间；正常过程变化与局部异常由此分开显示。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"正常关系模型与持续残差\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"175\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">速度 + 阶段</text><rect x=\"255\" y=\"30\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"267\" y=\"58\">预测正常载荷</text><rect x=\"500\" y=\"30\" width=\"195\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"512\" y=\"58\">实测减预测</text><polyline points=\"197,52 253,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"437,52 498,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"45\" y=\"130\">只有持续3点超限才形成报警区间</text><text x=\"45\" y=\"170\">整体漂移与局部事件会产生不同时间分布</text></g></svg><figcaption>把速度和阶段带入正常关系后，报警依据变成持续残差而非单一载荷。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "EVIDENCE",
+          "title": "事件召回与误报分别看",
+          "html": "<p>教学异常设在第65–79分钟，显示触发是否覆盖事件、首次报警相对事件开始的延迟，以及事件外报警点数。无异常时事件召回显示不适用。传感器漂移也会形成持续残差，提醒读者回查仪器与阶段，而非把模型分数当确诊。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-c\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "正常提速引起的载荷增加，怎样与异常阻力区分？",
+      "lead": [
+        "起下管柱时，钩载随运动阶段、速度和井下阻力变化。单一载荷上限容易在正常高速段报警，本例用正常作业关系预测载荷，再监测持续偏离。"
+      ],
+      "steps": [
+        {
+          "name": "记录速度和载荷",
+          "role": "步骤 1",
+          "do": "每分钟记录运动速度、阶段和钩载。当前120分钟片段含两段低速边界阶段与中间作业阶段，速度曲线和钩载一起输入。",
+          "effect": "对齐时间轴的速度、阶段与载荷",
+          "trap": "时间顺序必须保留，不能把每分钟当独立井"
+        },
+        {
+          "name": "学习正常载荷关系",
+          "role": "步骤 2",
+          "do": "用60段独立正常片段拟合钩载=截距+速度项+阶段项。训练只使用正常关系，当前测试片段不参加拟合。",
+          "effect": "正常条件下的预测载荷曲线",
+          "trap": "不能用异常片段反复校正正常模型"
+        },
+        {
+          "name": "连续残差形成事件",
+          "role": "步骤 3",
+          "do": "当前实测钩载减去预测钩载。连续3个残差超过输入阈值时，第三点开始报警，避免单点噪声直接触发事件。",
+          "effect": "报警时间带和残差阈值",
+          "trap": "持续整体漂移也可能报警，应回查传感器"
+        },
+        {
+          "name": "核查报警时间与漂移",
+          "role": "步骤 4",
+          "do": "用参考事件区间计算是否检出和延迟，统计区间外报警分钟。对照方法仅判断钩载是否超过108kN；调高速度可观察正常高载荷带来的差异。",
+          "effect": "事件召回、延迟和误报分钟",
+          "trap": "不把“事件未发生”计成100%事件召回"
+        }
+      ],
+      "metrics": {
+        "title": "步骤的输入与产物",
+        "html": "<figure><h3>记录速度和载荷</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录速度和载荷</text><rect x=\"12\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">学习正常载荷关系</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">连续残差形成事件</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核查报警时间与漂移</text><text x=\"25\" y=\"125\">当前步骤：记录速度和载荷</text></g></svg><figcaption>对齐时间轴的速度、阶段与载荷。时间顺序必须保留，不能把每分钟当独立井。</figcaption></figure><figure><h3>学习正常载荷关系</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录速度和载荷</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">学习正常载荷关系</text><rect x=\"187\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">连续残差形成事件</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核查报警时间与漂移</text><text x=\"25\" y=\"125\">当前步骤：学习正常载荷关系</text></g></svg><figcaption>正常条件下的预测载荷曲线。不能用异常片段反复校正正常模型。</figcaption></figure><figure><h3>连续残差形成事件</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录速度和载荷</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">学习正常载荷关系</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">连续残差形成事件</text><rect x=\"362\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核查报警时间与漂移</text><text x=\"25\" y=\"125\">当前步骤：连续残差形成事件</text></g></svg><figcaption>报警时间带和残差阈值。持续整体漂移也可能报警，应回查传感器。</figcaption></figure><figure><h3>核查报警时间与漂移</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录速度和载荷</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">学习正常载荷关系</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">连续残差形成事件</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核查报警时间与漂移</text><rect x=\"537\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><text x=\"25\" y=\"125\">当前步骤：核查报警时间与漂移</text></g></svg><figcaption>事件召回、延迟和误报分钟。不把“事件未发生”计成100%事件召回。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "height": 1150,
+      "intro": "起下管柱时，钩载随运动阶段、速度和井下阻力变化。单一载荷上限容易在正常高速段报警，本例用正常作业关系预测载荷，再监测持续偏离。"
+    }
+  }
+}

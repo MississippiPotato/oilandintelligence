@@ -1,0 +1,89 @@
+{
+  "id": "s17x-c4-casing-standoff",
+  "sceneId": "c4",
+  "methods": [
+    "opt"
+  ],
+  "title": "套管居中度智能评估",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "改变偏心、侧向载荷与扶正器跨距，观察截面间隙及支撑之间的下垂，比较有载与无载评估。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "PETROLEUM",
+          "title": "居中度是窄侧间隙与名义间隙的比值",
+          "html": "<p>井眼与套管不是两条线，而是两个不同半径的截面。套管居中时各方向间隙接近；偏心后，一侧变窄、另一侧变宽。本例井眼半径 120 mm、套管半径 90 mm，名义间隙为 30 mm。</p><p>最小间隙除以名义间隙就是本例的居中度。相同平均环空面积并不意味着窄侧流动同样好，因此要寻找最差方向和最差深度，而不只看平均值。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"偏心套管使一侧环空间隙变窄\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><circle cx=\"175\" cy=\"105\" r=\"80\" fill=\"#decdb3\"/><circle cx=\"175\" cy=\"105\" r=\"65\" fill=\"#f7faf9\"/><circle cx=\"194\" cy=\"105\" r=\"45\" fill=\"#78929e\"/><circle cx=\"194\" cy=\"105\" r=\"34\" fill=\"#f7faf9\"/><path d=\"M239 105L240 105\" fill=\"none\" stroke=\"#bb5d4a\" stroke-width=\"5\"/><text x=\"290\" y=\"55\">井眼半径 R，套管外半径 r</text><text x=\"290\" y=\"95\">名义间隙 c = R − r</text><text x=\"290\" y=\"135\">偏心距离 e：最小间隙 c − e</text><text x=\"290\" y=\"175\">居中度 = 最小间隙 / 名义间隙 × 100%</text></g></svg><figcaption>圆心偏移使窄侧更容易留下泥浆通道。扶正器提供支撑，但井斜和跨距载荷仍可能让套管下垂。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "PETROLEUM",
+          "title": "扶正器之间仍有跨距变形",
+          "html": "<p>扶正器提供支撑，套管在支撑之间受到侧向载荷。井斜增大时，重力的侧向分量通常更明显。跨距越大、侧向载荷越大，本例的下垂响应越明显。</p><p>无载几何基线直接用 30 − 初始偏心，忽略支撑间的变形。模型从教学几何与载荷样本学习最小间隙，演示把预测值还原为沿井段的间隙曲线。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"扶正器之间的跨距产生下垂\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M70 60L690 60\" fill=\"none\" stroke=\"#9baead\" stroke-width=\"2\"/><path d=\"M90 65Q220 155 350 65Q480 155 610 65\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"6\"/><rect x=\"85\" y=\"35\" width=\"10\" height=\"60\" fill=\"#c18b44\"/><rect x=\"345\" y=\"35\" width=\"10\" height=\"60\" fill=\"#c18b44\"/><rect x=\"605\" y=\"35\" width=\"10\" height=\"60\" fill=\"#c18b44\"/><text x=\"155\" y=\"175\">跨距越长、侧向载荷越大 → 中部间隙越小</text><text x=\"78\" y=\"28\">扶正器</text><text x=\"317\" y=\"28\">扶正器</text><text x=\"577\" y=\"28\">扶正器</text></g></svg><figcaption>示意图夸张了变形，帮助读者识别最差点通常在支撑之间。演示中的间隙用毫米，跨距用米。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "PETROLEUM",
+          "title": "用间隙曲线比较有限布置",
+          "html": "<p>本例在偏心 0–20 mm、跨距 6–18 m、侧向载荷指数 0.5–2 的教学范围内拟合回归；评价使用另一批独立几何/载荷组合。</p><p>右图比较五种跨距。缩短跨距通常改善最小间隙，但意味着更多支撑点。演示只比较几何与载荷响应，不虚构材料强度与厂商额定参数。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "截面看起来居中，受载后最窄的环空会在哪里？",
+      "lead": [
+        "改变偏心、侧向载荷与扶正器跨距，观察截面间隙及支撑之间的下垂，比较有载与无载评估。"
+      ],
+      "steps": [
+        {
+          "name": "定义截面与载荷",
+          "role": "图 S1",
+          "do": "输入：井眼 120 mm、套管 90 mm 半径。处理：枚举偏心、跨距、载荷及井斜组合。",
+          "effect": "240 训练组合 / 80 留出组合",
+          "trap": "半径与直径不能混用",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"定义截面与载荷\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><circle cx=\"160\" cy=\"105\" r=\"78\" fill=\"#dfcdb0\"/><circle cx=\"160\" cy=\"105\" r=\"65\" fill=\"#f3f7f5\"/><circle cx=\"177\" cy=\"105\" r=\"48\" fill=\"#79949d\"/><text x=\"300\" y=\"65\">R = 120 mm，r = 90 mm</text><text x=\"300\" y=\"110\">名义间隙 = R − r = 30 mm</text><text x=\"300\" y=\"155\">无载最小间隙 = 30 − e</text></g></svg>"
+        },
+        {
+          "name": "学习最小间隙",
+          "role": "图 S2",
+          "do": "输入：训练组已知变形后的间隙。处理：用偏心及载荷×跨距平方等特征回归。",
+          "effect": "毫米单位的间隙预测",
+          "trap": "无载几何不是有载评价真值",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"学习最小间隙\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M60 65L680 65\" stroke=\"#9aaca4\" fill=\"none\" stroke-width=\"2\"/><path d=\"M80 65Q330 180 650 65\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"4\"/><rect x=\"75\" y=\"35\" width=\"10\" height=\"65\" fill=\"#c18b44\" rx=\"5\"/><rect x=\"645\" y=\"35\" width=\"10\" height=\"65\" fill=\"#c18b44\" rx=\"5\"/><text x=\"100\" y=\"190\">特征：偏心 e、侧向载荷 × 跨距² × 井斜因子</text></g></svg>"
+        },
+        {
+          "name": "定位支撑间窄侧",
+          "role": "图 S3",
+          "do": "输入：当前几何、载荷和跨距。处理：沿 60 m 井段按支撑位置展开下垂形状。",
+          "effect": "间隙深度曲线和窄侧截面",
+          "trap": "示意形变夸张，数值以坐标与读数为准",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"定位支撑间窄侧\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M55 160L700 160\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M70 60Q170 155 270 60Q370 155 470 60Q570 155 670 60\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"3\"/><text x=\"70\" y=\"35\">支撑点间隙大</text><text x=\"280\" y=\"195\">跨中是需要检查的窄侧</text></g></svg>"
+        },
+        {
+          "name": "比较扶正布置",
+          "role": "图 S4",
+          "do": "输入：五个固定跨距候选。处理：对照最小间隙、支撑数量与无载基线。",
+          "effect": "间隙 MAE 与布置对照",
+          "trap": "间隙为负表示该教学几何发生接触，不截掉负值",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"比较扶正布置\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"100\" y=\"145\" width=\"65\" height=\"30\" fill=\"#267d78\" rx=\"5\"/><text x=\"108\" y=\"200\">18 m</text><rect x=\"210\" y=\"128\" width=\"65\" height=\"47\" fill=\"#57998b\" rx=\"5\"/><text x=\"218\" y=\"200\">15 m</text><rect x=\"320\" y=\"111\" width=\"65\" height=\"64\" fill=\"#88b5a3\" rx=\"5\"/><text x=\"328\" y=\"200\">12 m</text><rect x=\"430\" y=\"94\" width=\"65\" height=\"81\" fill=\"#c4d7b9\" rx=\"5\"/><text x=\"438\" y=\"200\">9 m</text><rect x=\"540\" y=\"77\" width=\"65\" height=\"98\" fill=\"#e4c58a\" rx=\"5\"/><text x=\"548\" y=\"200\">6 m</text><text x=\"80\" y=\"35\">跨距缩短 → 支撑数量增多 → 最小间隙改善</text></g></svg>"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤图解",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"c4\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"截面看起来居中，受载后最窄的环空会在哪里？\"><defs><marker id=\"cf-c4\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-c4)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c4)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">井眼 120 mm、套</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">带单位的可见输入</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">定义截面与载荷</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">240 训练组合 / 80 留</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">受载间隙回归</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">用偏心及载荷×跨距平方等特征回</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">显式同条件基线</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">比较扶正布置</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"2\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">条件是否满足资料是否支持？</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">核查排除原因</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">示意形变夸张，数值以坐标与读数</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">间隙深度曲线和窄侧截面</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">保留当前参数与依据</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">间隙 MAE 与布置对</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">同输入、同口径对照</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><h3>图 S1｜定义截面与载荷</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"定义截面与载荷\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><circle cx=\"160\" cy=\"105\" r=\"78\" fill=\"#dfcdb0\"/><circle cx=\"160\" cy=\"105\" r=\"65\" fill=\"#f3f7f5\"/><circle cx=\"177\" cy=\"105\" r=\"48\" fill=\"#79949d\"/><text x=\"300\" y=\"65\">R = 120 mm，r = 90 mm</text><text x=\"300\" y=\"110\">名义间隙 = R − r = 30 mm</text><text x=\"300\" y=\"155\">无载最小间隙 = 30 − e</text></g></svg><figcaption>输入：井眼 120 mm、套管 90 mm 半径。处理：枚举偏心、跨距、载荷及井斜组合。</figcaption></figure><figure><h3>图 S2｜学习最小间隙</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"学习最小间隙\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M60 65L680 65\" stroke=\"#9aaca4\" fill=\"none\" stroke-width=\"2\"/><path d=\"M80 65Q330 180 650 65\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"4\"/><rect x=\"75\" y=\"35\" width=\"10\" height=\"65\" fill=\"#c18b44\" rx=\"5\"/><rect x=\"645\" y=\"35\" width=\"10\" height=\"65\" fill=\"#c18b44\" rx=\"5\"/><text x=\"100\" y=\"190\">特征：偏心 e、侧向载荷 × 跨距² × 井斜因子</text></g></svg><figcaption>输入：训练组已知变形后的间隙。处理：用偏心及载荷×跨距平方等特征回归。</figcaption></figure><figure><h3>图 S3｜定位支撑间窄侧</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"定位支撑间窄侧\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M55 160L700 160\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M70 60Q170 155 270 60Q370 155 470 60Q570 155 670 60\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"3\"/><text x=\"70\" y=\"35\">支撑点间隙大</text><text x=\"280\" y=\"195\">跨中是需要检查的窄侧</text></g></svg><figcaption>输入：当前几何、载荷和跨距。处理：沿 60 m 井段按支撑位置展开下垂形状。</figcaption></figure><figure><h3>图 S4｜比较扶正布置</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"比较扶正布置\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"100\" y=\"145\" width=\"65\" height=\"30\" fill=\"#267d78\" rx=\"5\"/><text x=\"108\" y=\"200\">18 m</text><rect x=\"210\" y=\"128\" width=\"65\" height=\"47\" fill=\"#57998b\" rx=\"5\"/><text x=\"218\" y=\"200\">15 m</text><rect x=\"320\" y=\"111\" width=\"65\" height=\"64\" fill=\"#88b5a3\" rx=\"5\"/><text x=\"328\" y=\"200\">12 m</text><rect x=\"430\" y=\"94\" width=\"65\" height=\"81\" fill=\"#c4d7b9\" rx=\"5\"/><text x=\"438\" y=\"200\">9 m</text><rect x=\"540\" y=\"77\" width=\"65\" height=\"98\" fill=\"#e4c58a\" rx=\"5\"/><text x=\"548\" y=\"200\">6 m</text><text x=\"80\" y=\"35\">跨距缩短 → 支撑数量增多 → 最小间隙改善</text></g></svg><figcaption>输入：五个固定跨距候选。处理：对照最小间隙、支撑数量与无载基线。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "height": 1400,
+      "intro": "改变偏心、侧向载荷与扶正器跨距，观察截面间隙及支撑之间的下垂，比较有载与无载评估。"
+    }
+  }
+}

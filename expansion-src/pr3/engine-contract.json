@@ -1,0 +1,39 @@
+{
+  "sceneId": "pr3",
+  "global": "CaseCore",
+  "runEntry": "CaseCore.run(params)",
+  "defaults": {
+    "total": 180,
+    "capA": 100,
+    "capB": 110,
+    "capC": 120
+  },
+  "inferenceContract": "CaseCore.run returns model/prediction; predictor closure reads observation only",
+  "selfCheck": "Numeric VM checks only, not browser acceptance",
+  "metrics": [
+    {
+      "label": "代理留出 MAE",
+      "value": 0.5067974507711576,
+      "unit": "响应指数",
+      "note": "120 条独立批次试验"
+    },
+    {
+      "label": "可行分配比例",
+      "value": 54.62304409672831,
+      "unit": "%",
+      "note": ""
+    },
+    {
+      "label": "候选组合数",
+      "value": 703,
+      "unit": "组",
+      "note": ""
+    },
+    {
+      "label": "预测增益",
+      "value": 0.7743514718086288,
+      "unit": "响应指数",
+      "note": "仅当均分也可行时比较"
+    }
+  ]
+}

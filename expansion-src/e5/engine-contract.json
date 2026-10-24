@@ -1,0 +1,24 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "temperature": 45,
+    "salinity": 35,
+    "neighbors": 7
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "MAE_activity": 3.945063396994277,
+    "baselineMAE_activity": 11.454348856282225,
+    "predictedActivity": 83.47509355903456,
+    "testBatches": 30
+  },
+  "boundaryChecks": [
+    "temperature=25",
+    "temperature=70",
+    "salinity=5",
+    "salinity=90",
+    "neighbors=3",
+    "neighbors=15"
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "scope": "Unchanged teacher Add Case importer: every new folder imported in isolated stage batches; representative sandbox run, download and refresh rerun",
+  "checkedAt": "2026-10-24T06:20:43.636Z",
+  "checks": [
+    {
+      "name": "isolated original batch begins empty",
+      "passed": true
+    },
+    {
+      "name": "p2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "p3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "p4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "pr2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "pr3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "pr4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "pr5 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "p2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "p2",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "孔道长度 MAE",
+            "value": 0.6593521743395491,
+            "unit": "cm",
+            "note": "84 条独立材料批次试验"
+          },
+          {
+            "label": "分组均值 MAE",
+            "value": 2.3464743923516993,
+            "unit": "cm",
+            "note": "同一测试集"
+          },
+          {
+            "label": "清洁度 MAE",
+            "value": 0.5276217570880778,
+            "unit": "分",
+            "note": ""
+          },
+          {
+            "label": "当前预测长度",
+            "value": 42.765754833172956,
+            "unit": "cm",
+            "note": ""
+          },
+          {
+            "label": "当前清洁度",
+            "value": 76.3298316299414,
+            "unit": "分 / 100",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "p2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "p2",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "孔道长度 MAE",
+            "value": 0.6593521743395491,
+            "unit": "cm",
+            "note": "84 条独立材料批次试验"
+          },
+          {
+            "label": "分组均值 MAE",
+            "value": 2.3464743923516993,
+            "unit": "cm",
+            "note": "同一测试集"
+          },
+          {
+            "label": "清洁度 MAE",
+            "value": 0.5276217570880778,
+            "unit": "分",
+            "note": ""
+          },
+          {
+            "label": "当前预测长度",
+            "value": 42.765754833172956,
+            "unit": "cm",
+            "note": ""
+          },
+          {
+            "label": "当前清洁度",
+            "value": 76.3298316299414,
+            "unit": "分 / 100",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "p2 representative refresh reruns same computed metrics",
+      "passed": true
+    },
+    {
+      "name": "all stage-batch imports survive teacher refresh",
+      "passed": true
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "p2",
+      "id": "s17x-p2-perforation-shape",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "nativeImported": true
+    },
+    {
+      "scene": "p3",
+      "id": "s17x-p3-perforation-catalog",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "nativeImported": true
+    },
+    {
+      "scene": "p4",
+      "id": "s17x-p4-perforation-effect",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "nativeImported": true
+    },
+    {
+      "scene": "pr2",
+      "id": "s17x-pr2-production-forecast",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "nativeImported": true
+    },
+    {
+      "scene": "pr3",
+      "id": "s17x-pr3-water-allocation",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "nativeImported": true
+    },
+    {
+      "scene": "pr4",
+      "id": "s17x-pr4-esp-warning",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "nativeImported": true
+    },
+    {
+      "scene": "pr5",
+      "id": "s17x-pr5-wax-risk",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "nativeImported": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "representative": "p2",
+  "persistedCount": 7,
+  "passed": 14,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/case.json",
+      "sha256": "9ec6685940a4e716801d4862c6a567e8c16c6ebb4e83299ad28d14029778e5fa"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/index.html",
+      "sha256": "8e1006851d136a5157766ee724b5a3cb26b386d7931e7a9a54faeee7563f9ccd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.css",
+      "sha256": "1f66afadb436eaf63f42cf2958c627bae4121015dd1175840246b81962351195"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.js",
+      "sha256": "bbbcd51f14f9a05626407bd65844fb9ff85c4e2ad18fe44d71db7fcde72bb692"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/README.txt",
+      "sha256": "085a7f8d0720ead7314e03a43509d7d02d5d4dcf354a1ecc1d44a76873ecea85"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/case.json",
+      "sha256": "f678050e02b59164678331a73ee2d675f65035761d97924162a821ae56a4a08f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/index.html",
+      "sha256": "2236614876f14d31eac1c15b14907b1652d737c49c599def02bf3882c58b529b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.css",
+      "sha256": "1f66afadb436eaf63f42cf2958c627bae4121015dd1175840246b81962351195"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.js",
+      "sha256": "1931cdb28f02188b42db3eda81650a44033d5b12546333c78b6cce687278fa37"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/README.txt",
+      "sha256": "4a967410a7e63b77888a04631cc8b9e1ec74c933cfe30d94e3ce003341d5bbc1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/case.json",
+      "sha256": "e14531dc4b91bcf4638c21092bcbd4b5db2dc92ee1c86033e11cce352523dea8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/index.html",
+      "sha256": "df19ae11d4ce260f7dadcf803b721ba7852dc6a35b40f697883be8134d7e8d68"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.css",
+      "sha256": "1f66afadb436eaf63f42cf2958c627bae4121015dd1175840246b81962351195"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.js",
+      "sha256": "e5443024bbeb5ff3a395543d929d97b917c8176b9908bfb47ef0926763e83f14"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/README.txt",
+      "sha256": "99089445b44b0578213e6ec171915432d76752ac7056b7efcafae209794433f1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/case.json",
+      "sha256": "fc83e4be2230fd9b2b191c35da3315cd2face62809e450c95f7d88ecf52d5c8a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html",
+      "sha256": "d2f6271c5b9a0db3f4e63989a96a01e19863f334285b13a21e5d4c83a41ea421"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css",
+      "sha256": "1f66afadb436eaf63f42cf2958c627bae4121015dd1175840246b81962351195"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js",
+      "sha256": "21b24324acd202aa94e29eed79faa3ea69a267464ab31d2940149a673229cc75"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/README.txt",
+      "sha256": "93829f34cf7083d81192abcc8f3a346bcb70c8788d72f4651ada8b0cd1cbefc9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/case.json",
+      "sha256": "b91438cca3f19d0f39cda8319c6fbe624a28d05098fd46276d09f7e20920d1ab"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/index.html",
+      "sha256": "94a68f356749c4c957857ce66ab32bda75fecf9b16861e3f8af169b09e7566cd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.css",
+      "sha256": "1f66afadb436eaf63f42cf2958c627bae4121015dd1175840246b81962351195"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.js",
+      "sha256": "8638d2751d692c65359377458ba7d2d919c3a23a221544f091a95e65232f8a30"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/README.txt",
+      "sha256": "883d87b13299ce437ef6c5ac3e7c4dd3b706df2b2d4d19f971cf29ba7f96afce"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/case.json",
+      "sha256": "6b86bb8b78b0a15fbd5906aef042ae887bbae973c1d797c954de2c21fb0020c4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/index.html",
+      "sha256": "45b4a5ebf41bfa73bd8d85d4ca1cf6f581dc043ba9ca9320e2fb31554574a685"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.css",
+      "sha256": "1f66afadb436eaf63f42cf2958c627bae4121015dd1175840246b81962351195"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.js",
+      "sha256": "e886be28a2f29b823597d71967a9ecb8dc6e41ee9817345ae72131bb149db992"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/README.txt",
+      "sha256": "f115121d41a1b1c729bf54b5a08af904a1253c8b9725b440b030b57a9c87c803"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/case.json",
+      "sha256": "ebab659a71e2450d5eeb3ef8b71044f54909ac40ad4d52dde8cba8ba410b4420"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/index.html",
+      "sha256": "d925dac0029cf80fcc515c9692d725b6c77e5f3b1cca9498357164af853625c8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.css",
+      "sha256": "1f66afadb436eaf63f42cf2958c627bae4121015dd1175840246b81962351195"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.js",
+      "sha256": "72a9373b0a5db66a00e5ba03e0e570fe402598da435dbc173b8bbfbbc68fd6b4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/README.txt",
+      "sha256": "529f655005924999b7f62ac6404d036ac5f52031a32533d261fe4293802f5641"
+    }
+  ]
+}

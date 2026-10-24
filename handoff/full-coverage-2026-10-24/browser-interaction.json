@@ -1,0 +1,346 @@
+{
+  "scope": "Four representative real keyboard parameter changes, stale result state and recomputation; actual full IndexedDB capacity",
+  "checkedAt": "2026-10-24T06:29:10.222Z",
+  "checks": [
+    {
+      "name": "interaction audit uses all 61 persisted production cases",
+      "passed": true
+    },
+    {
+      "name": "all 61 use the durable expanded store",
+      "passed": true,
+      "detail": {
+        "count": 61,
+        "characters": 9484451,
+        "backend": "indexedDB"
+      }
+    },
+    {
+      "name": "s3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s3",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "s3 actual input change invalidates previous export",
+      "passed": true
+    },
+    {
+      "name": "s3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s3",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "s3 changed input actually changes computed display",
+      "passed": true
+    },
+    {
+      "name": "w5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "w5",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "近邻修复 RMSE",
+            "value": 0.03187827554475034,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "线性插值 RMSE",
+            "value": 0.039097091519122135,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "仅遮蔽区评价点",
+            "value": 38,
+            "unit": "点"
+          }
+        ]
+      }
+    },
+    {
+      "name": "w5 actual input change invalidates previous export",
+      "passed": true
+    },
+    {
+      "name": "w5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "w5",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "近邻修复 RMSE",
+            "value": 0.033904933330794,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "线性插值 RMSE",
+            "value": 0.03900379197171674,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "仅遮蔽区评价点",
+            "value": 38,
+            "unit": "点"
+          }
+        ]
+      }
+    },
+    {
+      "name": "w5 changed input actually changes computed display",
+      "passed": true
+    },
+    {
+      "name": "e3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "e3",
+        "status": "completed",
+        "resultPresent": true,
+        "metrics": {
+          "MAE_index": 0.9196983912209196,
+          "baselineMAE_index": 9.567580423053398,
+          "feasibleCount": 85,
+          "candidateCount": 231
+        }
+      }
+    },
+    {
+      "name": "e3 actual input change invalidates previous export",
+      "passed": true
+    },
+    {
+      "name": "e3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "e3",
+        "status": "completed",
+        "resultPresent": true,
+        "metrics": {
+          "MAE_index": 0.9196983912209196,
+          "baselineMAE_index": 9.567580423053398,
+          "feasibleCount": 85,
+          "candidateCount": 231
+        }
+      }
+    },
+    {
+      "name": "e3 changed input actually changes computed display",
+      "passed": true
+    },
+    {
+      "name": "t5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "t5",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          [
+            "当前视觉高度",
+            "6.01 m"
+          ],
+          [
+            "雷达高度",
+            "6.00 m"
+          ],
+          [
+            "18 帧视觉 MAE",
+            "0.045 m"
+          ],
+          [
+            "单列阈值 MAE",
+            "1.276 m"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "t5 actual input change invalidates previous export",
+      "passed": true
+    },
+    {
+      "name": "t5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "t5",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          [
+            "当前视觉高度",
+            "9.03 m"
+          ],
+          [
+            "雷达高度",
+            "9.00 m"
+          ],
+          [
+            "18 帧视觉 MAE",
+            "0.045 m"
+          ],
+          [
+            "单列阈值 MAE",
+            "1.276 m"
+          ]
+        ]
+      }
+    },
+    {
+      "name": "t5 changed input actually changes computed display",
+      "passed": true
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "s3",
+      "id": "s17x-s3-first-arrival",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "changedInput": true,
+      "recomputed": true
+    },
+    {
+      "scene": "w5",
+      "id": "s17x-w5-curve-repair",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "changedInput": true,
+      "recomputed": true
+    },
+    {
+      "scene": "e3",
+      "id": "s17x-e3-chemical-mixture",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "changedInput": true,
+      "recomputed": true
+    },
+    {
+      "scene": "t5",
+      "id": "s17x-t5-tank-level-crosscheck",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "changedInput": true,
+      "recomputed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "storage": {
+    "count": 61,
+    "characters": 9484451,
+    "backend": "indexedDB"
+  },
+  "passed": 20,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/case.json",
+      "sha256": "b790fbab9e292faf974b47047c7c13e86a9863fa17c1e4500d4a0faad75a0eb7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/index.html",
+      "sha256": "c45612d86dcc06726bf1345733eeb4f5a321f5d266b79b306d19e8bb79edd063"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.css",
+      "sha256": "44c6a0fb25ca52067b3bac41c6b0d2c26f933dfa515491e976c443fd8efacada"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.js",
+      "sha256": "4eb088aac08c9808b60ea136d6bf9e7dd4396976cbf784deb098174cc5191730"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/README.txt",
+      "sha256": "45b2f6e04c5fe507e6dd4a34047e84b305c1696408ff64fe6868d1960236b29e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/case.json",
+      "sha256": "f7bf413f27ab0ef9e43dfefe078dbb551b83474e4d9bce26505001bfbfe91f7c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/index.html",
+      "sha256": "d0743ea5ac242b54711dbf16ea9c79a34ce12feeeaefde152bf7d4115e819e3e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js",
+      "sha256": "de560dbb8f05eeb2af02c785e2256a0575d94a87b180463eeffdecf32b504919"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/README.txt",
+      "sha256": "1f1c811f846c37a9ea8f2956cceaf22642c173bc3a46a9fd26f82f5f9131bd61"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+      "sha256": "ad1960a4252398fd7fbf44feb8b9bb64dedc82c38ce31d4d5c4b1fc6804e4617"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+      "sha256": "a14ed52f2acc9b04a35c6ce7f86c5b864e254c89ddda8751c5fdfd4817236fb4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+      "sha256": "c9b0846c46663633efe631f273b54dd56a484a7a2e629094246adca35711d9a6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+      "sha256": "01165ec96d2660285407c224c61ee506cc0d3229501ae90f459870c0018557af"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/case.json",
+      "sha256": "5e1d6bd4f7492d6de525e0df6d38c67f98778054cd3046abe165a7bfed385aea"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/index.html",
+      "sha256": "156c372796be795bb95e32c8227251b9d3ba72a515fdbfb3775558dd8b0fe362"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.css",
+      "sha256": "b22915aa2f46fa40f1eaf1d856cb1d80163cc006732a66b729797a88f89aad94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.js",
+      "sha256": "c1adbefe9392747f32bf2105476fa9263f04ad670e56dbe8fe3ebb8371f4d30d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/README.txt",
+      "sha256": "b825498d70ffa1ebc9cb99bdb69c14d36d1a250f037c284405b8f3477f6dc056"
+    }
+  ]
+}

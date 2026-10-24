@@ -1,0 +1,86 @@
+{
+  "id": "s17x-s4-reservoir-inversion",
+  "sceneId": "s4",
+  "methods": [
+    "cv",
+    "opt"
+  ],
+  "title": "储层参数反演：用井震关系估计孔隙度",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "把“反射波形背后的属性”转换为储层参数，需要井资料标定，也需要辨别岩性与孔隙的混合影响。",
+      "sections": [
+        {
+          "title": "储层孔隙度是什么，地震又测到了什么？",
+          "html": "<p>孔隙度是岩石孔隙体积占总体积的比例，决定了单位体积岩石能容纳多少流体。地震仪并不直接测量孔隙度，而是记录反射波形。波形受声阻抗变化影响，声阻抗等于密度乘纵波速度。孔隙、岩性和流体都能改变这些量，所以从地震到孔隙度必须借助井资料与岩石物理关系。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 190\" role=\"img\" aria-label=\"孔隙度与声阻抗的区别\"><rect width=\"720\" height=\"190\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><rect x=\"38\" y=\"36\" width=\"154\" height=\"110\" fill=\"#d7be88\" rx=\"8\"/><circle cx=\"68\" cy=\"65\" r=\"10\" fill=\"#f8fbfb\"/><circle cx=\"112\" cy=\"59\" r=\"10\" fill=\"#f8fbfb\"/><circle cx=\"155\" cy=\"74\" r=\"10\" fill=\"#f8fbfb\"/><circle cx=\"83\" cy=\"111\" r=\"10\" fill=\"#f8fbfb\"/><circle cx=\"137\" cy=\"119\" r=\"10\" fill=\"#f8fbfb\"/><text x=\"228\" y=\"65\">孔隙度 φ = 孔隙体积 / 岩石总体积</text><text x=\"228\" y=\"101\">声阻抗 Z = 密度 ρ × 纵波速度 Vp</text><text x=\"228\" y=\"137\">φ 与 Z 有联系，却不是一一对应</text></g></svg><figcaption>孔洞仅用于解释体积分数，形状不代表真实微观孔隙。演示输出孔隙度单位为%，误差单位为百分点。</figcaption></figure>"
+        },
+        {
+          "title": "同一个阻抗，为何可能对应不同孔隙度？",
+          "html": "<p>泥质含量、压实和流体变化会与孔隙度产生混合影响。在本教学关系中，孔隙度增大使阻抗降低，泥质含量增加则使阻抗上升；二者可以相互抵消。只看一条阻抗会把泥质变化误当成孔隙变化。引入Vp/Vs比值作为第二属性，可以帮助区分这两种影响。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 190\" role=\"img\" aria-label=\"泥质导致的阻抗孔隙度关系移动\"><rect width=\"720\" height=\"190\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><path d=\"M55 25v125h600\" fill=\"none\" stroke=\"#829b8d\"/><path d=\"M85 46L335 136M250 45L500 136M410 45L650 132\" stroke=\"#347f77\" stroke-width=\"3\"/><text x=\"82\" y=\"28\">同一泥质水平：φ↑ → Z↓</text><text x=\"444\" y=\"58\">泥质水平不同</text><text x=\"488\" y=\"84\">关系整体移动</text><path d=\"M365 45v93\" stroke=\"#d4a650\" stroke-dasharray=\"5 4\"/><text x=\"52\" y=\"178\">纵轴：阻抗 Z；横轴：孔隙度 φ →　　虚线示意多解性</text></g></svg><figcaption>线条示意混合影响；实际计算采用明确的教学前向关系，不把这套系数用于真实工区。</figcaption></figure>"
+        },
+        {
+          "title": "用井震标定，学习从属性到参数的映射",
+          "html": "<p>井资料提供孔隙度解释值，地震提供附近同一层段的属性。将二者在同一层位和尺度上对齐，形成训练样本。本例用8口教学井拟合多属性岭回归，另4口井完全留出。岭回归学习属性组合与孔隙度的关系，正则强度限制过大的系数；单属性回归只使用声阻抗，构成对照。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 165\" role=\"img\" aria-label=\"井孔隙度 → 层段对齐 → 多属性回归 → 留出井预测\"><rect width=\"720\" height=\"165\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><rect x=\"20\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"97\" y=\"72\" text-anchor=\"middle\">井孔隙度</text><path d=\"M175 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"198\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e1ebf4\" stroke=\"#b5c9c1\"/><text x=\"275\" y=\"72\" text-anchor=\"middle\">层段对齐</text><path d=\"M353 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"376\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#f1e6cc\" stroke=\"#b5c9c1\"/><text x=\"453\" y=\"72\" text-anchor=\"middle\">多属性回归</text><path d=\"M531 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"554\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"631\" y=\"72\" text-anchor=\"middle\">留出井预测</text><text x=\"22\" y=\"139\">本演示采样深度2200–2320m，8m/点；真实井震匹配还要考虑时间深度关系。</text></g></svg><figcaption>真实地震的垂向分辨率低于常规测井，不能把每个高分辨率井点都当成一个独立地震样本。本例为统一层段尺度的教学数据。</figcaption></figure>"
+        },
+        {
+          "title": "看误差，也看它发生在哪里",
+          "html": "<p>RMSE概括留出井总体误差，井段曲线则告诉你偏差集中在哪个深度。观测与预测散点接近45°线表示接近参考值；偏离表示误差。更复杂的模型不一定在任何噪声下都更好，调高测试噪声、改变正则强度，可以观察单属性和多属性模型的差异。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 190\" role=\"img\" aria-label=\"预测参考交会图与误差的阅读\"><rect width=\"720\" height=\"190\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><path d=\"M55 25v125h610M55 150L245 30\" stroke=\"#859a8d\" fill=\"none\"/><circle cx=\"90\" cy=\"116\" r=\"6\" fill=\"#397e73\"/><circle cx=\"127\" cy=\"93\" r=\"6\" fill=\"#397e73\"/><circle cx=\"175\" cy=\"76\" r=\"6\" fill=\"#397e73\"/><circle cx=\"212\" cy=\"41\" r=\"6\" fill=\"#397e73\"/><text x=\"305\" y=\"61\">预测与井参考值一致 → 靠近对角线</text><text x=\"305\" y=\"100\">误差 = 预测孔隙度 − 井参考孔隙度</text><text x=\"55\" y=\"180\">横轴：井参考 φ(%)；纵轴：预测 φ(%)</text></g></svg><figcaption>预测函数只接收地震属性，参考孔隙度在预测完成后用于绘图和评价。此页的井数据由固定种子生成。</figcaption></figure>"
+        },
+        {
+          "title": "数据与阅读来源",
+          "html": "<p class=\"sources\">专业资料：<a href=\"https://wiki.aapg.org/Facies_analysis\" target=\"_blank\" rel=\"noopener\">AAPG · 地震相分析</a>；<a href=\"https://wiki.seg.org/wiki/Dictionary%3AAttribute%2C_seismic\" target=\"_blank\" rel=\"noopener\">SEG · 地震属性</a>；<a href=\"https://www.syxb-cps.com.cn/EN/10.7623/syxb200604014\" target=\"_blank\" rel=\"noopener\">石油学报 · 地震数据孔隙度与饱和度反演</a>。本页图形自行绘制，计算数据为固定随机种子的教学数据；可离线运行。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "储层参数反演的计算路径",
+      "lead": [
+        "从观测和井资料出发，分别训练、预测、评价，保留人工核查入口。"
+      ],
+      "steps": [
+        {
+          "name": "建立井与属性的对应关系",
+          "do": "按8m统一层段生成孔隙度、泥质含量和声阻抗、Vp/Vs属性。教学前向关系：Z=11.5−14φ+2.7Vsh+噪声；Vp/Vs=1.68+Vsh+0.15φ+噪声，其中φ与Vsh是0–1体积分数。",
+          "effect": "每个井段得到一对地震属性和一个井参考孔隙度。",
+          "trap": "系数仅定义本教学数据；不是经验通用公式。"
+        },
+        {
+          "name": "按整口井留出",
+          "do": "前8口井共128个井段用于训练，另4口井共64个井段测试；不同种子生成。标准化参数仅来自训练井。",
+          "effect": "避免同一口井相邻深度同时进入训练和测试。",
+          "trap": "井段相关性会让随机拆点显得过于乐观；本演示按整井划分。"
+        },
+        {
+          "name": "真实拟合两条回归",
+          "do": "标准化属性后求解岭回归正规方程，截距不惩罚。多属性模型使用阻抗与Vp/Vs，基线只使用阻抗；两者使用相同训练样本和正则强度。",
+          "effect": "得到实际计算的系数，而不是预写预测曲线。",
+          "trap": "正则过强会压低系数，使预测收缩到训练均值附近。"
+        },
+        {
+          "name": "只用属性预测留出井",
+          "do": "把64个留出井段的阻抗和Vp/Vs输入模型。参考孔隙度不进入预测函数。选择任意一口留出井，查看两条预测曲线。",
+          "effect": "得到每个留出井段的孔隙度估计。",
+          "trap": "超出训练属性范围时需要核查岩性和仪器条件，不能只看预测曲线平滑。"
+        },
+        {
+          "name": "统一分母评价并复核",
+          "do": "预测完成后调用参考值计算64个井段的MAE、RMSE和R²；并显示预测参考散点、逐井误差及系数。",
+          "effect": "同一64个井段上比较单属性与多属性。",
+          "trap": "MAE与RMSE单位是百分点；R²可能为负。4口教学井不代表工区泛化结论。"
+        }
+      ],
+      "metrics": {
+        "html": "<article class=\"step-card workflow-step\"><h3>建立井与属性的对应关系</h3><p>按8m统一层段生成孔隙度、泥质含量和声阻抗、Vp/Vs属性。教学前向关系：Z=11.5−14φ+2.7Vsh+噪声；Vp/Vs=1.68+Vsh+0.15φ+噪声，其中φ与Vsh是0–1体积分数。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 165\" role=\"img\" aria-label=\"孔隙 / 泥质 → 声学响应 → 观测噪声 → 井段样本\"><rect width=\"720\" height=\"165\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><rect x=\"20\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"97\" y=\"72\" text-anchor=\"middle\">孔隙 / 泥质</text><path d=\"M175 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"198\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e1ebf4\" stroke=\"#b5c9c1\"/><text x=\"275\" y=\"72\" text-anchor=\"middle\">声学响应</text><path d=\"M353 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"376\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#f1e6cc\" stroke=\"#b5c9c1\"/><text x=\"453\" y=\"72\" text-anchor=\"middle\">观测噪声</text><path d=\"M531 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"554\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"631\" y=\"72\" text-anchor=\"middle\">井段样本</text><text x=\"22\" y=\"139\">Z单位：10⁶ kg·m⁻²·s⁻¹；Vp/Vs无量纲；孔隙度输出%。</text></g></svg></figure><p><b>本步得到：</b>每个井段得到一对地震属性和一个井参考孔隙度。</p><p class=\"note\"><b>核查要点：</b>系数仅定义本教学数据；不是经验通用公式。</p></article><article class=\"step-card workflow-step\"><h3>按整口井留出</h3><p>前8口井共128个井段用于训练，另4口井共64个井段测试；不同种子生成。标准化参数仅来自训练井。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 165\" role=\"img\" aria-label=\"12口教学井 → 训练8口 → 留出4口 → 固定分组\"><rect width=\"720\" height=\"165\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><rect x=\"20\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"97\" y=\"72\" text-anchor=\"middle\">12口教学井</text><path d=\"M175 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"198\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e1ebf4\" stroke=\"#b5c9c1\"/><text x=\"275\" y=\"72\" text-anchor=\"middle\">训练8口</text><path d=\"M353 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"376\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#f1e6cc\" stroke=\"#b5c9c1\"/><text x=\"453\" y=\"72\" text-anchor=\"middle\">留出4口</text><path d=\"M531 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"554\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"631\" y=\"72\" text-anchor=\"middle\">固定分组</text><text x=\"22\" y=\"139\">测试噪声可调，训练观测固定，便于比较输入质量变化。</text></g></svg></figure><p><b>本步得到：</b>避免同一口井相邻深度同时进入训练和测试。</p><p class=\"note\"><b>核查要点：</b>井段相关性会让随机拆点显得过于乐观；本演示按整井划分。</p></article><article class=\"step-card workflow-step\"><h3>真实拟合两条回归</h3><p>标准化属性后求解岭回归正规方程，截距不惩罚。多属性模型使用阻抗与Vp/Vs，基线只使用阻抗；两者使用相同训练样本和正则强度。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 165\" role=\"img\" aria-label=\"训练属性 → 标准化 → 求解系数 → 两条模型\"><rect width=\"720\" height=\"165\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><rect x=\"20\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"97\" y=\"72\" text-anchor=\"middle\">训练属性</text><path d=\"M175 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"198\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e1ebf4\" stroke=\"#b5c9c1\"/><text x=\"275\" y=\"72\" text-anchor=\"middle\">标准化</text><path d=\"M353 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"376\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#f1e6cc\" stroke=\"#b5c9c1\"/><text x=\"453\" y=\"72\" text-anchor=\"middle\">求解系数</text><path d=\"M531 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"554\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"631\" y=\"72\" text-anchor=\"middle\">两条模型</text><text x=\"22\" y=\"139\">求解 (XᵀX + λD)β = Xᵀy，D的截距位置为0。</text></g></svg></figure><p><b>本步得到：</b>得到实际计算的系数，而不是预写预测曲线。</p><p class=\"note\"><b>核查要点：</b>正则过强会压低系数，使预测收缩到训练均值附近。</p></article><article class=\"step-card workflow-step\"><h3>只用属性预测留出井</h3><p>把64个留出井段的阻抗和Vp/Vs输入模型。参考孔隙度不进入预测函数。选择任意一口留出井，查看两条预测曲线。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 165\" role=\"img\" aria-label=\"留出井属性 → 固定模型 → 逐段预测 → 孔隙度曲线\"><rect width=\"720\" height=\"165\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><rect x=\"20\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"97\" y=\"72\" text-anchor=\"middle\">留出井属性</text><path d=\"M175 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"198\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e1ebf4\" stroke=\"#b5c9c1\"/><text x=\"275\" y=\"72\" text-anchor=\"middle\">固定模型</text><path d=\"M353 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"376\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#f1e6cc\" stroke=\"#b5c9c1\"/><text x=\"453\" y=\"72\" text-anchor=\"middle\">逐段预测</text><path d=\"M531 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"554\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"631\" y=\"72\" text-anchor=\"middle\">孔隙度曲线</text><text x=\"22\" y=\"139\">预测不裁剪到真值区间，保留偏差以便观察。</text></g></svg></figure><p><b>本步得到：</b>得到每个留出井段的孔隙度估计。</p><p class=\"note\"><b>核查要点：</b>超出训练属性范围时需要核查岩性和仪器条件，不能只看预测曲线平滑。</p></article><article class=\"step-card workflow-step\"><h3>统一分母评价并复核</h3><p>预测完成后调用参考值计算64个井段的MAE、RMSE和R²；并显示预测参考散点、逐井误差及系数。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 165\" role=\"img\" aria-label=\"预测完成 → 井参考值 → 误差统计 → 地质复核\"><rect width=\"720\" height=\"165\" rx=\"10\" fill=\"#f3f7f6\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" fill=\"#28463f\" font-size=\"17\"><rect x=\"20\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"97\" y=\"72\" text-anchor=\"middle\">预测完成</text><path d=\"M175 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"198\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e1ebf4\" stroke=\"#b5c9c1\"/><text x=\"275\" y=\"72\" text-anchor=\"middle\">井参考值</text><path d=\"M353 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"376\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#f1e6cc\" stroke=\"#b5c9c1\"/><text x=\"453\" y=\"72\" text-anchor=\"middle\">误差统计</text><path d=\"M531 67h20l-6-4m6 4l-6 4\" fill=\"none\" stroke=\"#668b7c\"/><rect x=\"554\" y=\"35\" width=\"155\" height=\"63\" rx=\"8\" fill=\"#e0efea\" stroke=\"#b5c9c1\"/><text x=\"631\" y=\"72\" text-anchor=\"middle\">地质复核</text><text x=\"22\" y=\"139\">误差不是流体识别证据；储量计算还需要厚度、面积及饱和度。</text></g></svg></figure><p><b>本步得到：</b>同一64个井段上比较单属性与多属性。</p><p class=\"note\"><b>核查要点：</b>MAE与RMSE单位是百分点；R²可能为负。4口教学井不代表工区泛化结论。</p></article>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "把“反射波形背后的属性”转换为储层参数，需要井资料标定，也需要辨别岩性与孔隙的混合影响。",
+      "height": 1500
+    }
+  }
+}

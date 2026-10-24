@@ -1,0 +1,77 @@
+{
+  "sceneId": "w5",
+  "global": "Experiment",
+  "runEntry": "Experiment.run",
+  "defaultParams": {
+    "start": 100,
+    "length": 38,
+    "noise": 1,
+    "k": 9,
+    "mode": "all"
+  },
+  "verification": {
+    "nodeExecuted": true,
+    "defaultMetrics": [
+      {
+        "label": "近邻修复 RMSE",
+        "value": 0.03187827554475037,
+        "unit": "g/cm³"
+      },
+      {
+        "label": "线性插值 RMSE",
+        "value": 0.039097091519122155,
+        "unit": "g/cm³"
+      },
+      {
+        "label": "仅遮蔽区评价点",
+        "value": 38,
+        "unit": "点"
+      }
+    ],
+    "lowParameterMetrics": [
+      {
+        "label": "近邻修复 RMSE",
+        "value": 0.03546428855076629,
+        "unit": "g/cm³"
+      },
+      {
+        "label": "线性插值 RMSE",
+        "value": 0.013356283088151422,
+        "unit": "g/cm³"
+      },
+      {
+        "label": "仅遮蔽区评价点",
+        "value": 4,
+        "unit": "点"
+      }
+    ],
+    "highParameterMetrics": [
+      {
+        "label": "近邻修复 RMSE",
+        "value": 0.052390377526114154,
+        "unit": "g/cm³"
+      },
+      {
+        "label": "线性插值 RMSE",
+        "value": 0.0426879285189777,
+        "unit": "g/cm³"
+      },
+      {
+        "label": "仅遮蔽区评价点",
+        "value": 45,
+        "unit": "点"
+      }
+    ],
+    "sourceErrors": [],
+    "sourceWarnings": [],
+    "browserVerified": false
+  },
+  "returned": {
+    "metrics": "array label/value/unit",
+    "predictions": "scenario-specific",
+    "observations": "visible input",
+    "evaluationTruth": "evaluation only",
+    "training": "fitted parameters",
+    "split": "independent fixture groups"
+  }
+}

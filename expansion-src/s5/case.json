@@ -1,0 +1,82 @@
+{
+  "id": "s17x-s5-seismic-denoise",
+  "sceneId": "s5",
+  "title": "地震资料噪声压制：降低干扰，也检查反射是否保真",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "cv"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "一条更平滑的地震道不一定更正确。观察反射波的峰谷、邻道连续性和残差，理解学习去噪为什么要同时检查降噪与信号保留。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONTEXT",
+          "title": "振幅记录由反射信号和干扰共同组成",
+          "html": "<p>地下介质的弹性性质发生变化时，会产生反射波。检波器记录的是随时间变化的振幅，其中还混有环境、采集或其他传播成分造成的干扰。处理的目标是让有用反射更容易识别，同时保留峰谷位置和波形形态。</p><p>随机噪声在相邻采样点间变化快；相干干扰具有一定规律，可能跨道延续；脉冲噪声则表现为少数异常尖峰。三类噪声对同一种方法提出不同难题。演示可切换噪声类型，输入的观测都是真正相加得到的数组。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"反射信号与噪声的不同形态\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><path d=\"M42 72h675M42 142h675\" stroke=\"#b5c5be\"/><path d=\"M45 72h160q20-60 40 0t40 0h110q20-50 40 0t40 0h230\" stroke=\"#2f7c71\" fill=\"none\" stroke-width=\"3\"/><path d=\"M45 142l15-13 15 21 15-11 15 15 15-19 15 11 15-7 15 9 15-12 15 6 15-10 15 15 15-11 15 7 15-5 15 12 15-16 15 6 15 7 15-13 15 13 15-7 15 5 15-9 15 13 15-10 15 8 15-10 15 14 15-6 15 5 15-11 15 9 15-5 15 11 15-8 15 4 15-10 15 8 15-4 15 7\" stroke=\"#b97a50\" fill=\"none\" stroke-width=\"2\"/><text x=\"45\" y=\"32\">反射信号：波峰与波谷携带结构信息</text><text x=\"45\" y=\"193\">干扰：可能随机、相干或含有尖峰；不能只追求平滑</text></g></svg><p class=\"note\">概念波形用于解释组成；可运行示范显示独立炮集实际数组。</p>"
+        },
+        {
+          "no": 2,
+          "en": "METHOD",
+          "title": "让模型学习“邻域观测如何还原中心采样”",
+          "html": "<p>滑动平均把相邻五个采样点平均，能减弱随机起伏，却也会压低窄波峰。学习去噪则使用训练炮集中“带噪邻域—干净中心采样”的成对样本，拟合合适的线性组合。本例采用岭回归，特征是同道前后两点、当前点和左右邻道当前点，共七个振幅，加一个截距。</p><p>正则项约束权重大小，避免过度追随训练噪声。模型在 6 个独立炮集上真实求解线性方程，预测新炮集时只读取带噪数组。干净参考只在训练标定和预测后的独立评价使用；测试参考不进入预测函数。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"训练用成对样本；测试仅输入带噪观测\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">带噪7点邻域</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">岭回归学习权重</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">中心采样估计</text><text x=\"34\" y=\"168\">训练用成对样本；测试仅输入带噪观测</text></g></svg><p class=\"note\">可展开权重表，查看模型到底平均了哪些位置。</p>"
+        },
+        {
+          "no": 3,
+          "en": "READING",
+          "title": "同时看结果、差值和信噪比",
+          "html": "<p>均方根误差 RMSE 比较全部 12 道 × 160 点与干净参考的偏差；信噪比 SNR 把参考信号能量与误差能量相比，单位 dB。指标由当前数组实际计算，分母为全部 1920 个采样点。</p><p>差值“原始−处理”表示被移除的部分：若差值中出现清晰的反射波形，可能连有效信号也删掉了。模型训练只包含随机噪声，切换相干或脉冲噪声可以观察分布变化导致的失效。教学波形按局部反射脉冲生成。方法阅读：<a href=\"https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html\" target=\"_blank\" rel=\"noopener\">岭回归目标与正则化</a>。专业概念：<a href=\"https://glossary.slb.com/en/terms/s/seismic_processing\" target=\"_blank\" rel=\"noopener\">SLB Seismic processing</a>。</p><p class=\"note\">优先解释峰谷与残差，再看单个汇总分数。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "从观测到可核查的解释",
+      "lead": [
+        "一条更平滑的地震道不一定更正确。观察反射波的峰谷、邻道连续性和残差，理解学习去噪为什么要同时检查降噪与信号保留。"
+      ],
+      "steps": [
+        {
+          "name": "成对炮集标定",
+          "role": "资料",
+          "do": "输入：6个独立炮集，各有带噪观测和训练干净目标。 动作：只在训练炮集提取邻域—中心成对样本。",
+          "effect": "5616个训练采样窗口与独立测试炮集。",
+          "trap": "独立炮集分组；相邻窗口不能跨训练测试混用。"
+        },
+        {
+          "name": "建立邻域回归",
+          "role": "方法",
+          "do": "输入：同道±2点和左右邻道当前点，加截距。 动作：构造正规方程并加入0.4的L2正则项。",
+          "effect": "8个拟合系数，可逐项查看。",
+          "trap": "权重依据训练信号与噪声分布，不能假定适合所有干扰。"
+        },
+        {
+          "name": "预测并运行基线",
+          "role": "计算",
+          "do": "输入：当前带噪炮集，仅有观测振幅。 动作：岭回归逐点估计中心值，同时计算5点滑动平均。",
+          "effect": "学习结果、平均结果与各自移除差值。",
+          "trap": "两种方法使用相同输入，测试干净参考不进入推理。"
+        },
+        {
+          "name": "检查保真与失效",
+          "role": "解释",
+          "do": "输入：两种结果与独立测试干净参考。 动作：计算RMSE、SNR与SNR改善，检查选中道的波峰和残差。",
+          "effect": "全1920点对比、权重表与可导出数组。",
+          "trap": "分布外噪声可能降低效果；保留这种结果供教学解释。"
+        }
+      ],
+      "metrics": {
+        "title": "逐步说明与产物",
+        "html": "<h3>成对炮集标定</h3><p>输入：6个独立炮集，各有带噪观测和训练干净目标。 动作：只在训练炮集提取邻域—中心成对样本。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"成对炮集标定\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">6个独立炮集，各有带</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">只在训练炮集提取邻域</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">5616个训练采样窗</text><text x=\"34\" y=\"168\">成对炮集标定</text></g></svg><h3>建立邻域回归</h3><p>输入：同道±2点和左右邻道当前点，加截距。 动作：构造正规方程并加入0.4的L2正则项。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"建立邻域回归\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">同道±2点和左右邻道</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">构造正规方程并加入0</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">8个拟合系数，可逐项</text><text x=\"34\" y=\"168\">建立邻域回归</text></g></svg><h3>预测并运行基线</h3><p>输入：当前带噪炮集，仅有观测振幅。 动作：岭回归逐点估计中心值，同时计算5点滑动平均。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"预测并运行基线\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">当前带噪炮集，仅有观</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">岭回归逐点估计中心值</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">学习结果、平均结果与</text><text x=\"34\" y=\"168\">预测并运行基线</text></g></svg><h3>检查保真与失效</h3><p>输入：两种结果与独立测试干净参考。 动作：计算RMSE、SNR与SNR改善，检查选中道的波峰和残差。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"检查保真与失效\"><rect width=\"760\" height=\"210\" rx=\"12\" fill=\"#f4f7f5\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#23453f\"><rect x=\"30\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#dceee6\"/><text x=\"42\" y=\"87\">两种结果与独立测试干</text><path d=\"M240 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"260\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#e2eaf4\"/><text x=\"272\" y=\"87\">计算RMSE、SNR</text><path d=\"M470 80h18l-5-4m5 4l-5 4\" stroke=\"#718c81\" fill=\"none\"/><rect x=\"490\" y=\"42\" width=\"208\" height=\"76\" rx=\"8\" fill=\"#f2e6cc\"/><text x=\"502\" y=\"87\">全1920点对比、权</text><text x=\"34\" y=\"168\">检查保真与失效</text></g></svg>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "点击炮集选择地震道。右侧对比原始、学习去噪、滑动平均和干净参考；差值图检查被移除的成分。",
+      "height": 1500
+    }
+  }
+}

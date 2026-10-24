@@ -1,0 +1,124 @@
+{
+  "id": "s17x-p4-perforation-effect",
+  "sceneId": "p4",
+  "title": "射孔效果智能评估：把工况变化与效果分开",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "ts",
+    "opt"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "作业后产量上升，不一定全部来自射孔；压差、含水和生产制度也会改变响应。本例先学习稳定工况下的预期产量，再观察前后变化中有多少仍需解释。",
+      "judge": [
+        {
+          "label": "数据性质",
+          "value": "合成教学数据",
+          "desc": "固定种子，可重复计算"
+        },
+        {
+          "label": "观察重点",
+          "value": "工况预期回归",
+          "desc": "与明确基线并列比较"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "前后产量为何不能直接当作效果？",
+          "html": "<p>储层向井筒供液需要压力差。产量通常会随压差改变，含水变化也会改变所见油量与液量之间的关系。因此“前一天 50、后一天 60”只说明观测多了 10，并没有说明这 10 来自哪里。分析射孔效果前，应先把时间、压差、含水以及产量口径对齐。本例统一使用教学日产量 m³/d，通过可控数据展示工况变化可能掩盖或放大作业响应。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"前后时间线需要同时保留生产工况。只画两根产量柱，会把工况变化也算到作业头上。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"35\" font-size=\"17\">同一作业前后，两个来源都能改变产量</text><path d=\"M55 110H580\" fill=\"none\" stroke=\"#9ab2b6\" stroke-width=\"2\"/><rect x=\"55\" y=\"70\" width=\"200\" height=\"70\" rx=\"8\" fill=\"#dceee7\"/><text x=\"70\" y=\"99\" font-size=\"17\">前：压差 6 MPa</text><text x=\"70\" y=\"126\" font-size=\"15\">含水 40% / 稳态产量</text><rect x=\"360\" y=\"70\" width=\"220\" height=\"70\" rx=\"8\" fill=\"#ecefd8\"/><text x=\"374\" y=\"99\" font-size=\"17\">后：压差和含水改变</text><text x=\"374\" y=\"126\" font-size=\"15\">再叠加作业响应</text><text x=\"275\" y=\"106\" font-size=\"24\">→</text><text x=\"86\" y=\"194\" font-size=\"21\">直接增量 = 工况贡献 + 剩余响应</text></g></svg><figcaption>前后时间线需要同时保留生产工况。只画两根产量柱，会把工况变化也算到作业头上。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "OBSERVATION",
+          "title": "用稳定工况学习一个参照系",
+          "html": "<p>稳定参考井提供“给定压差与含水时，通常能观察到怎样的产量”。多变量回归把压差、含水及它们的交互关系作为输入，输出预期产量。模型不是在看作业效果标签，而是学习参考工况关系。交互演示里改变作业后压差而保持设定效果不变，直接增量会变化；扣除预期工况贡献后的剩余量应相对稳定。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"产量随压差变化，含水使关系发生偏移：横纵轴分别表示生产压差 / MPa →、日产量 / m³/d，用于理解变量关系。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"28\" font-size=\"19\">产量随压差变化，含水使关系发生偏移</text><path d=\"M65 57V187H590\" fill=\"none\" stroke=\"#9db4b8\" stroke-width=\"1\"/><path d=\"M80 170L560 60\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><path d=\"M80 185L560 115\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"65\" y=\"218\" font-size=\"14\">生产压差 / MPa →</text><text x=\"78\" y=\"55\" font-size=\"14\">日产量 / m³/d</text><text x=\"350\" y=\"65\" font-size=\"14\">绿：较低含水工况</text><text x=\"350\" y=\"90\" font-size=\"14\">金：较高含水工况</text></g></svg><figcaption>产量随压差变化，含水使关系发生偏移：横纵轴分别表示生产压差 / MPa →、日产量 / m³/d，用于理解变量关系。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "METHOD",
+          "title": "校正后剩余量是什么、怎样评价？",
+          "html": "<p>校正剩余量定义为：实际前后增量，减去模型预测的工况前后增量。它可以帮助筛出需要复核的低效井段，却仍可能混有模型误差、储层变化和未记录干预。演示用独立虚拟井的已知设定效果作为评价标签，比较校正筛查和直接增量筛查的 F1；线上预测函数只接收工况与观测产量，不接收设定效果。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"分解图说明三个量之间的计算关系。剩余响应是筛查线索，进一步归因需要更多记录。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><rect x=\"35\" y=\"45\" width=\"165\" height=\"70\" rx=\"8\" fill=\"#dceee7\"/><text x=\"50\" y=\"76\" font-size=\"17\">观测前后变化</text><text x=\"65\" y=\"102\" font-size=\"22\">Δq</text><text x=\"218\" y=\"89\" font-size=\"27\">−</text><rect x=\"255\" y=\"45\" width=\"165\" height=\"70\" rx=\"8\" fill=\"#ecefd8\"/><text x=\"270\" y=\"76\" font-size=\"17\">预期工况贡献</text><text x=\"275\" y=\"102\" font-size=\"22\">Δq̂</text><text x=\"437\" y=\"89\" font-size=\"27\">=</text><rect x=\"475\" y=\"45\" width=\"135\" height=\"70\" rx=\"8\" fill=\"#dceee7\"/><text x=\"489\" y=\"77\" font-size=\"17\">校正剩余</text><text x=\"493\" y=\"102\" font-size=\"15\">待复核量</text><text x=\"52\" y=\"177\" font-size=\"17\">负值 → 低效复核；并列查看原始曲线与残差</text></g></svg><figcaption>分解图说明三个量之间的计算关系。剩余响应是筛查线索，进一步归因需要更多记录。</figcaption></figure>"
+        },
+        {
+          "no": 4,
+          "en": "DATA & SOURCES",
+          "title": "数据、评价与概念来源",
+          "html": "<p>专业概念参考以下行业或研究机构的一手资料；本例数据为离线合成教学数据，不复制来源网站图像。</p><ul><li><a href=\"https://glossary.slb.com/en/Terms/p/productivity_index_pi.aspx\" target=\"_blank\" rel=\"noopener\">SLB：productivity index</a></li><li><a href=\"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-reservoir-engineering\" target=\"_blank\" rel=\"noopener\">SLB：储层工程工作</a></li></ul>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "把增量放回工况背景",
+      "lead": [
+        "每个环节都说明输入、动作、输出与复核要点。"
+      ],
+      "stats": [
+        [
+          "计算",
+          "浏览器本地"
+        ],
+        [
+          "数据",
+          "内置可重复"
+        ],
+        [
+          "评价",
+          "预测冻结之后"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "对齐前后工况",
+          "do": "参考稳定井形成压差、含水与产量表；完整前后事件放在测试井。",
+          "effect": "输入单位一致，作业前后不被拆散。",
+          "trap": "用油量或液量时必须保持口径一致，避免把含水变化看成产能变化。",
+          "role": "环节 1"
+        },
+        {
+          "name": "学习工况预期",
+          "do": "在稳定训练井上拟合含交互项的岭回归，然后冻结系数。",
+          "effect": "每个前后工况都有模型预期产量。",
+          "trap": "效果标签只在评价处出现，不参与预期模型拟合。",
+          "role": "环节 2"
+        },
+        {
+          "name": "分解实际变化",
+          "do": "计算实际增量与模型预期工况增量之差，以负剩余为低效复核标记。",
+          "effect": "原始变化、工况贡献和校正剩余并排显示。",
+          "trap": "负剩余提示核查，不能自动归结为某项作业质量问题。",
+          "role": "环节 3"
+        },
+        {
+          "name": "独立井对照评价",
+          "do": "对 5 口独立虚拟井的 60 个事件读取评价标签，比较 F1 和预期响应 MAE。",
+          "effect": "同一事件集合上两种筛查方法的差别。",
+          "trap": "教学可控标签用于解释方法，不代替现场因果研究。",
+          "role": "环节 4"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤输入与输出",
+        "html": "<figure><h3>对齐前后工况</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"工况与产量记录到稳定参考 / 事件\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">工况与产量记录</text><text x=\"228\" y=\"56\" font-size=\"15\">按井及事件切分</text><text x=\"437\" y=\"56\" font-size=\"15\">稳定参考 / 事件</text></g></svg><figcaption>输入单位一致，作业前后不被拆散。</figcaption></figure><figure><h3>学习工况预期</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"稳定参考工况到预期产量 q̂\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">稳定参考工况</text><text x=\"228\" y=\"56\" font-size=\"15\">条件响应回归</text><text x=\"437\" y=\"56\" font-size=\"15\">预期产量 q̂</text></g></svg><figcaption>每个前后工况都有模型预期产量。</figcaption></figure><figure><h3>分解实际变化</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"前后 q 与 q̂到校正剩余量\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">前后 q 与 q̂</text><text x=\"228\" y=\"56\" font-size=\"15\">增量相减</text><text x=\"437\" y=\"56\" font-size=\"15\">校正剩余量</text></g></svg><figcaption>原始变化、工况贡献和校正剩余并排显示。</figcaption></figure><figure><h3>独立井对照评价</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结筛查结果到F1 / 残差表\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结筛查结果</text><text x=\"228\" y=\"56\" font-size=\"15\">读取事件评价</text><text x=\"437\" y=\"56\" font-size=\"15\">F1 / 残差表</text></g></svg><figcaption>同一事件集合上两种筛查方法的差别。</figcaption></figure>"
+      },
+      "fails": [
+        {
+          "name": "条件改变",
+          "why": "输入修改后需要重算；独立评价不参与当前预测。"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "intro": "改变条件后运行，查看真实计算的曲线、对照与评价表。",
+      "height": 1250
+    }
+  }
+}

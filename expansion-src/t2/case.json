@@ -1,0 +1,83 @@
+{
+  "id": "s17x-t2-corrosion-growth",
+  "sceneId": "t2",
+  "methods": [
+    "cv",
+    "ts"
+  ],
+  "title": "管道腐蚀评估：先找对缺陷，再谈增长",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "两次智能清管记录中的同一处金属损失，位置可能并不完全重合。先把两次记录配准、匹配，再用壁厚损失的变化筛选优先开挖位置。",
+      "sections": [
+        {
+          "no": 1,
+          "title": "内检测看的是管壁损失，而不是一条裂口照片",
+          "html": "<p>输油管道内的检测器沿管线行进，用磁漏或超声等信号识别金属损失。记录里的里程是沿线距离，周向角说明缺陷在管子哪一侧，深度以毫米或壁厚百分比表示。这里采用 10 mm 名义壁厚：损失 3 mm 表示还剩 7 mm 金属。深度、长度与内压一起影响承载能力，不能只看一个颜色。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"管壁纵剖面：凹陷表示局部腐蚀损失。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M55 66H695V155H55Z\" fill=\"#c9d8d7\"/><path d=\"M55 89H350L370 116H440L460 89H695V132H55Z\" fill=\"#fbfcfa\"/><path d=\"M390 66V115\" stroke=\"#bd7441\" stroke-width=\"3\"/><text x=\"465\" y=\"50\">10 mm 名义壁厚</text><text x=\"360\" y=\"192\">局部金属损失 → 剩余壁厚变小</text></g></svg><figcaption>管壁纵剖面：凹陷表示局部腐蚀损失。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "title": "两次记录为什么要先对齐",
+          "html": "<p>清管器里程计的累积误差会让整段记录发生平移。同一缺陷若错配到邻近缺陷，计算出的增长率就会失真。焊缝等稳定标志点可以提供共同坐标。本例用 5 个焊缝的里程差中位数估计偏移，再结合里程、周向角和缺陷长度匹配。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 145L190 145L190 70L200 145L390 145L390 60L400 145L620 145\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 160L235 160L235 85L245 160L435 160L435 75L445 160L665 160\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">沿线里程 m；两次焊缝整体右移</text><text x=\"75\" y=\"28\">检测信号</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "title": "增长率是两次测量差，需要看到误差",
+          "html": "<p>增长率 =（第二次损失深度 − 第一次损失深度）/ 年数，单位 mm/年。两次测深误差都会进入差值，间隔很短时误差对增长率影响更大。负值常提示测量波动，不说明金属长回去了。本例保留有符号差值，并把距 60% 壁厚损失的线性外推年数作为排序信息。这个 60% 是本教学任务的复测触发线。</p>"
+        },
+        {
+          "no": 4,
+          "title": "智能方法帮助整理，复核需要回到具体记录",
+          "html": "<p>演示把配准匹配与未配准最近里程基线放在同一组两次检测记录上。匹配正确率与增长率 MAE 在计算结束后才读取独立参考对应关系。读者可以故意增加里程偏移或测深误差，查看“找对位置”和“量准深度”各自会怎样影响结果。</p><p class=\"note\">专业资料：<a href=\"https://primis.phmsa.dot.gov/stakeholder-comms/factsheets/fssmartpig/\" target=\"_blank\" rel=\"noreferrer\">PHMSA：智能清管工具与检测信息</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "哪一处缺陷增长快，值得优先复测？",
+      "lead": [
+        "两次智能清管记录中的同一处金属损失，位置可能并不完全重合。先把两次记录配准、匹配，再用壁厚损失的变化筛选优先开挖位置。"
+      ],
+      "steps": [
+        {
+          "name": "统一坐标",
+          "do": "读取焊缝和缺陷的里程、周向角、长度、深度。",
+          "effect": "位置与毫米单位一致后才能跨期比较。",
+          "trap": "把壁厚百分比直接当毫米。"
+        },
+        {
+          "name": "配准与匹配",
+          "do": "先取焊缝差中位数，再用三个观测特征进行一对一匹配。",
+          "effect": "排除整体里程偏移造成的错配。",
+          "trap": "只按原始里程找最近点。"
+        },
+        {
+          "name": "增长与排序",
+          "do": "按时间间隔计算有符号增长率和到触发线的年数。",
+          "effect": "找到变化较快的复测候选。",
+          "trap": "把短间隔的小差值无限外推。"
+        },
+        {
+          "name": "独立评价",
+          "do": "最后读取参考对应关系，比较两条路线。",
+          "effect": "分清配准收益与测量噪声。",
+          "trap": "预测过程中读取参考编号。"
+        }
+      ],
+      "metrics": {
+        "html": "<figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"统一坐标的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">首次里程 x₁</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">二次里程 x₂</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">周向角与长度</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">深度单位 mm</text></g></svg><figcaption>位置与毫米单位一致后才能跨期比较。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"配准与匹配的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">五处稳定焊缝</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">逐处里程差</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">中位数偏移 Δx</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">校正二次坐标</text></g></svg><figcaption>排除整体里程偏移造成的错配。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"增长与排序的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">里程+周向+长度</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">一对一匹配</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">深度差 ÷ 年数</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">到触发线年数</text></g></svg><figcaption>找到变化较快的复测候选。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"独立评价的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">当前预测对应</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">最后打开参考</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">匹配正确率</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">增长率 MAE</text></g></svg><figcaption>分清配准收益与测量噪声。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "哪一处缺陷增长快，值得优先复测？",
+      "height": 1300,
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js"
+    }
+  }
+}

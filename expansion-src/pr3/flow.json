@@ -1,0 +1,42 @@
+{
+  "title": "注水资源的受约束分配",
+  "gate": [
+    "总量能容纳？",
+    "无可行解则调整"
+  ],
+  "input": {
+    "title": "分层响应试验",
+    "detail": "各层注入量与响应",
+    "step": 0
+  },
+  "prepare": {
+    "title": "试验批次切分",
+    "detail": "完整试验批次留出",
+    "step": 0
+  },
+  "model": {
+    "title": "分层二次代理",
+    "detail": "拟合三层二次响应",
+    "step": 1
+  },
+  "baseline": {
+    "title": "等量均分",
+    "detail": "各层平分给定总量",
+    "step": 2
+  },
+  "review": {
+    "title": "配额与上限复核",
+    "detail": "守恒与分层上限",
+    "step": 3
+  },
+  "output": {
+    "title": "三层注水配额",
+    "detail": "可行方案的配额与收益",
+    "step": 3
+  },
+  "compare": {
+    "title": "同约束响应收益",
+    "detail": "同约束的预测收益",
+    "step": 3
+  }
+}

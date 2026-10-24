@@ -1,0 +1,42 @@
+{
+  "title": "储层参数智能解释：用岩心标定孔隙度",
+  "input": {
+    "title": "曲线与岩心标定",
+    "detail": "密度中子与GR",
+    "step": 0
+  },
+  "prepare": {
+    "title": "独立标定点划分",
+    "detail": "训练点不进入测试井",
+    "step": 0
+  },
+  "model": {
+    "title": "多曲线回归",
+    "detail": "学习泥质相关偏差",
+    "step": 1
+  },
+  "baseline": {
+    "title": "固定密度公式",
+    "detail": "骨架与流体密度明示",
+    "step": 1
+  },
+  "compare": {
+    "title": "留出孔隙度对照",
+    "detail": "120个独立测试点",
+    "step": 2
+  },
+  "review": {
+    "title": "沿井深看残差",
+    "detail": "定位高低估的深度",
+    "step": 2
+  },
+  "output": {
+    "title": "孔隙度与误差",
+    "detail": "百分点RMSE和MAE",
+    "step": 2
+  },
+  "gate": [
+    "输入与场景是否对应？",
+    "差异需要人工复核吗？"
+  ]
+}

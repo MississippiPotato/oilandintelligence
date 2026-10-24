@@ -1,0 +1,42 @@
+{
+  "title": "目录匹配的证据链",
+  "gate": [
+    "条件全部满足？",
+    "缺失则待核查"
+  ],
+  "input": {
+    "title": "井筒需求",
+    "detail": "通道环境与材料类别",
+    "step": 0
+  },
+  "prepare": {
+    "title": "目录属性对齐",
+    "detail": "尺寸等级统一词表",
+    "step": 0
+  },
+  "model": {
+    "title": "知识约束推理",
+    "detail": "逐条规则与排除证据",
+    "step": 1
+  },
+  "baseline": {
+    "title": "仅尺寸匹配",
+    "detail": "漏掉环境与材料要求",
+    "step": 2
+  },
+  "review": {
+    "title": "排除理由核对",
+    "detail": "缺失属性单独待核查",
+    "step": 3
+  },
+  "output": {
+    "title": "可行目录排序",
+    "detail": "可行项才计算偏好分",
+    "step": 3
+  },
+  "compare": {
+    "title": "违反数与覆盖率",
+    "detail": "18 组需求完整枚举",
+    "step": 3
+  }
+}

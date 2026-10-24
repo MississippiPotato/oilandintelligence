@@ -1,0 +1,85 @@
+{
+  "id": "s17x-g3-map-elements",
+  "sceneId": "g3",
+  "methods": [
+    "cv",
+    "nlp"
+  ],
+  "title": "地质图要素提取：把符号与图例变成可检索记录",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "接触线、产状符号与地层代号分别表达什么？识别图块并关联图例文字，先读懂地图，再整理数据。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONTEXT",
+          "title": "先认清地质图上的三种语言",
+          "html": "<p>地质图把地表出露的地质单元、单元边界以及构造观测放到同一个空间坐标中。石油勘探早期利用这些信息理解地层分布和构造格局，规划剖面与后续调查。彩色区域是地质单元，界线是接触关系，产状符号则记录局部岩层的方向；它们不能互相替代。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 700 230\" role=\"img\" aria-label=\"接触线、产状符号和地层代号各表达什么\"><rect width=\"700\" height=\"230\" rx=\"12\" fill=\"#f5f8f7\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#24414a\"><path d=\"M40 85Q90 65 140 85T240 85\" stroke=\"#285f58\" stroke-width=\"4\" fill=\"none\"/><text x=\"50\" y=\"132\">接触线：不同地质单元边界</text><path d=\"M310 70h120m-60 0v52\" stroke=\"#294553\" stroke-width=\"4\"/><text x=\"383\" y=\"119\">35</text><text x=\"295\" y=\"161\">长线示走向，短线示倾向</text><text x=\"540\" y=\"90\" font-size=\"35\">J2s</text><text x=\"502\" y=\"145\">代号需查询本图图例</text><text x=\"40\" y=\"205\">同一位置可以同时存在符号、数字和线；提取前先分清它们的角色。</text></g></svg><figcaption>符号按 USGS 标准解释；本案例简化三类自绘图块，地层代号以当前图图例为准。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "MEASURE",
+          "title": "为什么需要“图形识别 + 文字关联”",
+          "html": "<p>扫描图上的黑色既可能是接触线，也可能是字母的一笔。这里先把已裁切的图块归为三类，再将输入的“代号：描述”图例整理成字段。当前演示不做整图定位或通用 OCR；这样可以直接观察图形分类与语义关联各自解决的步骤。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 700 230\" role=\"img\" aria-label=\"像素提取与图例关联共同构成结构化记录\"><rect width=\"700\" height=\"230\" rx=\"12\" fill=\"#f5f8f7\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#24414a\"><rect x=\"35\" y=\"45\" width=\"160\" height=\"110\" fill=\"#e9ddba\"/><path d=\"M35 116l160-42\" stroke=\"#264f50\" stroke-width=\"3\"/><text x=\"90\" y=\"83\">J2s</text><path d=\"M215 98h60\" stroke=\"#346e67\" stroke-width=\"3\"/><text x=\"280\" y=\"82\">图块分类</text><text x=\"280\" y=\"116\">+ 图例代号解析</text><path d=\"M425 98h50\" stroke=\"#346e67\" stroke-width=\"3\"/><text x=\"485\" y=\"70\">类型：地层代号</text><text x=\"485\" y=\"104\">代号：J2s</text><text x=\"485\" y=\"138\">描述：中侏罗统砂岩</text><text x=\"35\" y=\"204\">图形识别回答“是什么符号”；文本关联回答“这个代号在此图代表什么”。</text></g></svg><figcaption>图块类别与图例文字是两类证据，二者关联后才能形成可检索的地质图记录。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "METHOD",
+          "title": "像素距离怎样帮助地质人员整理图件",
+          "html": "<p>每个图块是 16×16 的二值数组。分类器与三类符号的 -1、0、+1 行平移模板比较，统计不同像素的比例，取距离最小者；这属于有图例参照的计算机视觉识别。基线只数垂直相邻黑像素，难以区分线与产状符号。点击结果图块可以核对原图、类别、距离和混淆矩阵；结果接近时应回到原图检查。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "从观测到可核查结果",
+      "lead": [
+        "接触线、产状符号与地层代号分别表达什么？识别图块并关联图例文字，先读懂地图，再整理数据。"
+      ],
+      "steps": [
+        {
+          "name": "检查图块与图例",
+          "role": "数据",
+          "do": "阅读30个教学图块，设置翻转噪声；图例按一行一个“代号：描述”输入。",
+          "effect": "产生图块数组和图例条目。",
+          "trap": "实际扫描图还需要分辨率、裁切和坐标配准。"
+        },
+        {
+          "name": "比较模板与规则基线",
+          "role": "方法",
+          "do": "分别计算9个平移模板的像素差异，和垂向相邻像素数规则。",
+          "effect": "每块取得候选类别、最小距离与类别距离差。",
+          "trap": "模板距离小不等于经过校准的概率。"
+        },
+        {
+          "name": "关联、评价并核查",
+          "role": "解释",
+          "do": "在预测完成后计算30块的准确率与宏F1，解析当前图例文字，逐块查看。",
+          "effect": "输出类别表、混淆矩阵和图例字段JSON。",
+          "trap": "未知格式保留为待复核，不能猜造地层描述。"
+        }
+      ],
+      "metrics": {
+        "title": "步骤图解与统计口径",
+        "html": "<h3>检查图块与图例</h3><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 700 220\" role=\"img\" aria-label=\"检查图块和图例字段\"><rect width=\"700\" height=\"220\" rx=\"12\" fill=\"#f5f8f7\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#24414a\"><rect x=\"35\" y=\"35\" width=\"160\" height=\"140\" fill=\"#e4ece9\"/><path d=\"M55 100h120m-60 0v50\" stroke=\"#284b50\" stroke-width=\"6\"/><text x=\"238\" y=\"65\">观测：16×16 二值数组</text><text x=\"238\" y=\"110\">图例：J2s：中侏罗统砂岩</text><text x=\"238\" y=\"155\">检查：裁切完整 / 每行一个代号</text></g></svg><figcaption>图块提供图形证据，图例提供语义。当前图块已经裁切，不把裁切结果冒充整图检测。</figcaption></figure><h3>比较模板与规则基线</h3><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 700 220\" role=\"img\" aria-label=\"比较各类别模板距离\"><rect width=\"700\" height=\"220\" rx=\"12\" fill=\"#f5f8f7\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#24414a\"><text x=\"30\" y=\"48\">不同像素数 / 256（概念示例）</text><text x=\"30\" y=\"95\">接触线</text><rect x=\"150\" y=\"76\" width=\"200\" height=\"25\" fill=\"#7aa393\"/><text x=\"30\" y=\"140\">产状</text><rect x=\"150\" y=\"121\" width=\"65\" height=\"25\" fill=\"#2f7d70\"/><text x=\"30\" y=\"185\">代号</text><rect x=\"150\" y=\"166\" width=\"280\" height=\"25\" fill=\"#8b9fb4\"/><text x=\"468\" y=\"113\">最小距离 → 候选类型</text><text x=\"468\" y=\"150\">差距小 → 优先核查</text></g></svg><figcaption>图形说明距离比较的方式，条长是原理示例。本次精确距离在示范页点击图块查看。</figcaption></figure><h3>关联、评价并核查</h3><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 700 220\" role=\"img\" aria-label=\"图例关联后保留复核状态\"><rect width=\"700\" height=\"220\" rx=\"12\" fill=\"#f5f8f7\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"18\" fill=\"#24414a\"><rect x=\"30\" y=\"40\" width=\"290\" height=\"65\" rx=\"9\" fill=\"#dceee7\"/><text x=\"48\" y=\"81\">J2s → 中侏罗统砂岩 → 已分字段</text><rect x=\"30\" y=\"125\" width=\"290\" height=\"65\" rx=\"9\" fill=\"#f5e9cf\"/><text x=\"48\" y=\"166\">未分隔文字 → 原文 → 待核查</text><text x=\"365\" y=\"76\">类别表：每块保留参考与预测</text><text x=\"365\" y=\"121\">评价：30块构成混淆矩阵</text><text x=\"365\" y=\"166\">导出：观测、参数、结果、图例</text></g></svg><figcaption>解析失败保留原文；图块分类和图例解析分别提供证据，不擅自补全缺失的地质含义。</figcaption></figure>"
+      },
+      "fails": [
+        {
+          "name": "观测质量降低",
+          "why": "使用困难预设比较实际误差与原图。"
+        }
+      ]
+    },
+    "demo": {
+      "label": "可运行示范",
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "height": 1300,
+      "intro": "接触线、产状符号与地层代号分别表达什么？识别图块并关联图例文字，先读懂地图，再整理数据。"
+    }
+  }
+}

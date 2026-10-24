@@ -1,0 +1,185 @@
+{
+  "scope": "Actual enhanced Add Case uploads, transaction committed before recorded success",
+  "checkedAt": "2026-10-24T06:08:48.487Z",
+  "checks": [
+    {
+      "name": "m1 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "m2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "m3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "m4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "m5 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "m1",
+      "id": "s17-cuttings-lithology",
+      "version": "1.5.2",
+      "directory": "cases",
+      "batch": 0,
+      "enhancedImported": true
+    },
+    {
+      "scene": "m2",
+      "id": "s17-mudgas-context",
+      "version": "1.5.2",
+      "directory": "cases",
+      "batch": 0,
+      "enhancedImported": true
+    },
+    {
+      "scene": "m3",
+      "id": "s17-fluorescence-review",
+      "version": "1.5.2",
+      "directory": "cases",
+      "batch": 0,
+      "enhancedImported": true
+    },
+    {
+      "scene": "m4",
+      "id": "s17-drilltime-boundaries",
+      "version": "1.5.2",
+      "directory": "cases",
+      "batch": 0,
+      "enhancedImported": true
+    },
+    {
+      "scene": "m5",
+      "id": "s17-evidence-report",
+      "version": "1.5.2",
+      "directory": "cases",
+      "batch": 0,
+      "enhancedImported": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "persistedCount": 5,
+  "passed": 7,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/cases/s17-cuttings-lithology/case.json",
+      "sha256": "b547748ebf6b1d53f914aeb5c262308677052ff83c484f18bae1337082fe82fd"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+      "sha256": "af9f6ebc40e065db0e758855be2958b07a214438d194a9ea85b27e2c7e82131d"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "sha256": "053e72a3c3f7098a7a33ce7a055231cbdf9bc99ab55ad405de28d1f721fe0e8a"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/README.txt",
+      "sha256": "e25f1f1f847a39206f1021d8550c6de77873cdd955b56d44641d8b3fc08f3f6a"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "sha256": "9a98861089cff1af2eedfdce3ad5f04ce4d7add5079f88793ab76ecb9aef0543"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "sha256": "af97fbb4adec20192e4fc97fa0055cd8661d0dce7a622a6dd2ad59e98f2f9bdb"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "sha256": "60316a42348b97cabeb20d84c9a717ba434c72a82c19c8b3da85badd73c6fe9c"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "sha256": "0a563d5f7ee7f3b06edc2392cba7b0654e226b5d71db219f28abab357e914e90"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "sha256": "e2f70f79101ca1bf91e4dc9d9b52a5c21890d823fa7600b65605b67e691212f9"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/case.json",
+      "sha256": "1f08919bed1fd69142fc737135ecb3199016bf10c402a3ad2fb92c9e4e2a6765"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/index.html",
+      "sha256": "00e4cb4a954946541fec832e9be03226c67e9c4c66dce7032364d39f983b54cf"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.css",
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.js",
+      "sha256": "380086b93f2339e4295b94d677b55e6d1ccca775e26a45bf35c5d85d022767e4"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/README.txt",
+      "sha256": "3e02623900c9ce9169a3d5c7f92dfafecf64c12b7d7ba5443f8a6d5134565323"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/case.json",
+      "sha256": "f6335f766dca2e72cfa6ea9ac25f264ee72221553d6f78a0bdd48b95f01b200a"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/index.html",
+      "sha256": "ca898c51e3fee52b13363c224e7413c1b7b83f89966c3da3bc557fa2567bede6"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+      "sha256": "1a0f094ff035149c2f03fc11faf19f88a7070724f7156c5e3304127b8cdf1f40"
+    },
+    {
+      "path": "dist/cases/s17-drilltime-boundaries/README.txt",
+      "sha256": "ed314c3a94b32ddf135dbfd779b701aad64228cc2324633694642c5ed03bfd2d"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/case.json",
+      "sha256": "b2be51b3c7eb7704bcb310ae4ba6df56852808e1363e7f67db5ddf943acc6868"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/index.html",
+      "sha256": "ca4ebb9d736f06a083a7ea604473c3a6bd9de76d92c8f2fc8d21535a9f8163a1"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.css",
+      "sha256": "17dc9f136dc25e452c97f13bdb736c25569bfff9afe89b32bce4b9b7fe00952e"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.js",
+      "sha256": "e475d82641a1cf7b72b3b64a839826a2ce7977bb7b5600ebe26f4278efbfe145"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/README.txt",
+      "sha256": "cf90259a03ccf0662ae826cd6a43edc00bc8503ba7b05e84c99c1cd9b2e2b7dc"
+    }
+  ]
+}

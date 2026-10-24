@@ -12,7 +12,7 @@ const lock = JSON.parse(read(lockPath)), baseline = JSON.parse(read(reportDir + 
 const results = [], check = (name, action) => { try { const detail = action(); results.push({ name, passed: true, detail }); }
   catch (e) { results.push({ name, passed: false, error: e.message }); } };
 
-check('teacher copies, four import contract files and original five-case source bytes preserved', () => {
+check('teacher copies, original five-case source/runtime bytes and real observations preserved', () => {
   for (const before of baseline.files) assert.deepEqual(fileRecord(before.path), before);
   return { files: baseline.files.length, browserEvidence: false };
 });
@@ -23,8 +23,8 @@ check('build count equals actual complete packages, no planned case registered',
   assert.equal(lock.actualCount, scan.filter(s => s.status === 'source_valid').length);
   assert.equal(new Set(lock.cases.map(c => c.sceneId)).size, lock.actualCount);
   assert.equal(new Set(lock.cases.map(c => c.caseId)).size, lock.actualCount);
-  assert.equal(lock.expectedCount, 12);
-  if (process.argv.includes('--require-all')) assert.equal(lock.actualCount, 12);
+  assert.equal(lock.expectedCount, targets.length);
+  if (process.argv.includes('--require-all')) assert.equal(lock.actualCount, targets.length);
   return { actual: lock.actualCount, missing: lock.missing.map(c => c.sceneId), invalid: lock.invalid.map(c => c.sceneId) };
 });
 check('each built folder has exactly five required runtime files with locked bytes', () => {
@@ -84,7 +84,7 @@ check('plugin uses real teacher Cases.register and retains all background/workfl
   vm.runInContext(read('portal-original/assets/core/registry.js'), sandbox);
   vm.runInContext(read(lock.plugin.path), sandbox);
   const catalog = window.S17Expansion;
-  assert.equal(catalog.expectedCount, 12); assert.equal(catalog.builtCount, lock.actualCount);
+  assert.equal(catalog.expectedCount, targets.length); assert.equal(catalog.builtCount, lock.actualCount);
   assert.equal(window.Cases.list().length, lock.actualCount);
   assert.deepEqual(JSON.parse(JSON.stringify(window.Cases.problems())), []);
   for (const row of lock.cases) {
@@ -141,7 +141,7 @@ check('unmodified teacher manifest validator and page host can resolve and inlin
 });
 
 const report = { checkedAt: new Date().toISOString(), kind: 'source_and_build_contract_checks',
-  browserExecuted: false, expectedCases: 12, actualBuiltCases: lock.actualCount,
+  browserExecuted: false, expectedCases: targets.length, actualBuiltCases: lock.actualCount,
   passed: results.filter(r => r.passed).length, failed: results.filter(r => !r.passed).length, results,
   notVerified: ['real browser original Add Case directory import', 'sandbox rendering and model interactions',
     'refresh and whole browser reopen persistence', 'offline default interactions', 'actual download', 'narrow screen and keyboard behavior',

@@ -1,0 +1,17 @@
+{
+  "scope": "Actual dedicated Chrome close and reopen: all 61 imported packages retained; six representative sandbox calculations",
+  "checkedAt": "2026-10-24T06:09:35.898Z",
+  "checks": [
+    {
+      "name": "61 packages survive actual browser restart",
+      "passed": true
+    }
+  ],
+  "cases": [],
+  "errors": [],
+  "external": [],
+  "exception": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('#run') to be visible\u001b[22m\n\u001b[2m    14 × locator resolved to hidden <button id=\"run\" class=\"primary\">运行计算与对比</button>\u001b[22m\n",
+  "passed": 1,
+  "failed": 1,
+  "artifactHashesRecordedByNode": []
+}

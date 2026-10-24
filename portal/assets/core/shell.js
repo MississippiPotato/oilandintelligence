@@ -66,7 +66,7 @@
 
   function footer() {
     var s = Cases.stats();
-    return '<footer class="s17-footer"><div class="wrap"><div><strong>井见</strong><p>跟着一口教学井，把观察变成可以回查的判断。</p><small>学号17 · 录井必做5例 + 跨阶段12例 · 门户1.7.0-preview</small></div><div><nav aria-label="页脚导航"><a href="#/">返回首页</a><a href="#/chain">完整作业链</a><a href="#/cases">案例库 · 本浏览器'+s.registered+'个已接入</a><a href="#/guide">添加案例指南</a><a href="../portal-original/index.html">老师原站</a></nav><small>原地图 '+A.stages.length+'阶段 / '+A.allScenes.length+'候选场景 · 纯前端 · 离线可运行</small></div></div></footer>';
+    return '<footer class="s17-footer"><div class="wrap"><div><strong>井见</strong><p>跟着一口教学井，把观察变成可以回查的判断。</p><small>学号17 · 录井必做5例 + 全阶段56例 · 门户1.9.0-preview</small></div><div><nav aria-label="页脚导航"><a href="#/">返回首页</a><a href="#/chain">完整作业链</a><a href="#/cases">案例库 · 本浏览器'+s.registered+'个已接入</a><a href="#/guide">添加案例指南</a><a href="../portal-original/index.html">老师原站</a></nav><small>原地图 '+A.stages.length+'阶段 / '+A.allScenes.length+'场景 · 纯前端 · 离线可运行</small></div></div></footer>';
   }
 
   function crumb(items) {
@@ -507,7 +507,7 @@
       '<h1 class="dh-title">' + esc(sc.name) + '</h1>' +
       '<p class="dh-sub">' + esc(sc.intro) + '</p>' +
       '<div class="dh-tags">' + K.dtag(sc.diff) +
-      (sc.status === 'ext' ? '<span class="badge-wip">待扩展</span>' : '') +
+      (sc.status === 'ext' && !(c && c.tabs.demo) ? '<span class="badge-wip">待扩展</span>' : '') +
       '<span class="tag"><span class="dot" style="color:var(--ink-4)"></span>' + esc(sc.id.toUpperCase()) + '</span>' +
       '</div></div>';
 

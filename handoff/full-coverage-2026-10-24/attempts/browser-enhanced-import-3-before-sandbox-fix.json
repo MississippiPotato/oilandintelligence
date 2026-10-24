@@ -1,0 +1,281 @@
+{
+  "scope": "Actual enhanced Add Case uploads, transaction committed before recorded success",
+  "checkedAt": "2026-10-24T06:08:58.004Z",
+  "checks": [
+    {
+      "name": "d2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "d3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "d4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "d5 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "w1 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "w2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "w3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "w5 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "d2",
+      "id": "s17x-d2-drilling-precursor",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    },
+    {
+      "scene": "d3",
+      "id": "s17x-d3-trajectory-control",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    },
+    {
+      "scene": "d4",
+      "id": "s17x-d4-tool-condition",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    },
+    {
+      "scene": "d5",
+      "id": "s17x-d5-mud-rheology",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    },
+    {
+      "scene": "w1",
+      "id": "s17x-w1-log-boundaries",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    },
+    {
+      "scene": "w2",
+      "id": "s17x-w2-porosity-calibration",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    },
+    {
+      "scene": "w3",
+      "id": "s17x-w3-borehole-fractures",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    },
+    {
+      "scene": "w5",
+      "id": "s17x-w5-curve-repair",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "enhancedImported": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "persistedCount": 20,
+  "passed": 10,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/case.json",
+      "sha256": "b6e5dee0b9801a9f740c10d65166150ca7135ae02d54cbc3379dac4b5df213c1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/index.html",
+      "sha256": "a23d7510a7e407bf0d783d7904bc94717e8ae4886e2bc796ab4f19ab24a4f29b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.js",
+      "sha256": "ae014f369716e68783036d216a473db064981886c911806cafe04d7609ee5232"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/README.txt",
+      "sha256": "ab9c3dfbbd1561204332c08c5b4efcff77edcaedc564b0c0feed33d5c67cbf27"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/case.json",
+      "sha256": "0903bff82cf6bc11ee7a08d76930562fb03cd44d3f74a26ac9f338dff87441cf"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/index.html",
+      "sha256": "6ddd16bd4c4a0cfd17abe1e4c95890451122487bcec4c1ad795ac00696e8bdd6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.js",
+      "sha256": "f14a410d3acee872547b58d8c932de11aa099c9ccf3570b16fc7cb9e01a9081b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/README.txt",
+      "sha256": "732d71aa93806a1655322b7e60b326d7e85a9738270f07dca5c4a256116da816"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/case.json",
+      "sha256": "ca6f7839918c73f6c9490f066ec6beaf582da0230329aed5606412d9924a2e30"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/index.html",
+      "sha256": "368c4fafb295175935a09e50c6f8306a47e2a8ed61094efc376e3e415c29efed"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.js",
+      "sha256": "ee46a536b2c94e567ec7964b92f660f57951c773f2459585b0f7428d0ab24579"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/README.txt",
+      "sha256": "257d28a4facec22b4ee0314312464ec9e30bf7d567267620ddba4ca7cb8100d0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/case.json",
+      "sha256": "ce756378043b16a936c8c466826e1a1dcbf691809ca84539e7ba13979ecfa0ce"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/index.html",
+      "sha256": "0ede59524ee7ae65f3c74d3fe8e7f103d3721e1ff117eb242bb6ccdf539740f2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.js",
+      "sha256": "93900194a34f790e258ef726e77b8ba09c3313f1d61b8afc11926d1c25c435b0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/README.txt",
+      "sha256": "73d07921fcd51362177db8a5a4b521d0c44262bc7f14810a2b0595506fc20caf"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/case.json",
+      "sha256": "a584640f0995f7f2c970761330b51aa48ebd652b495f460c2827d941399d822d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/index.html",
+      "sha256": "b3e6806d9bbef3bf2ee13cdf0a3c20ae99e5699dc19e800c8515b1ccf18b657e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.js",
+      "sha256": "12e84e408c8ad4e5528a943f0d4d08218dd554be449d7c879522c4ed818f582e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/README.txt",
+      "sha256": "c31d3d97b0fe1e6e3e1e3f0aada91692d9fe00339d26156310265b2c0467256e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/case.json",
+      "sha256": "d9e1669e1b0eb882c44fd136e636730af42a3d4e0d8f7982249a5bde2a16c89f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/index.html",
+      "sha256": "f5426ab1e6b6ac62785468dc2a0a703a3bfb182313155fe3455ed9b5ba3684f9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.js",
+      "sha256": "c17dfefd01af6a31b3e662893b705cc785b6a1a3e372e0b664094d820420222d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/README.txt",
+      "sha256": "4f590db0571d54782fa75d28511622693a5d50b378c926d861811c2847da1f00"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+      "sha256": "55f7cd4a865d5b1664c296c8cc6453ceddbf4c258bb1960541dee1c58321a374"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+      "sha256": "0e8bb6a7c512a1afa872399384d3deeea362c1818dc178b3d86a53a3ffe13527"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+      "sha256": "e9a12157360e3a30b1a424332f144f63212e9a8229549028e93d9924260980ad"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+      "sha256": "f00ebabf62a3fbe4e9a014789abe321e33897701d80b2f64a72b8e7096a892f6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+      "sha256": "75b23bdfe7a62be98f5494193f7045c6da3cab747f76d18e3e78bd4908797dac"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/case.json",
+      "sha256": "f7bf413f27ab0ef9e43dfefe078dbb551b83474e4d9bce26505001bfbfe91f7c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/index.html",
+      "sha256": "d0743ea5ac242b54711dbf16ea9c79a34ce12feeeaefde152bf7d4115e819e3e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js",
+      "sha256": "de560dbb8f05eeb2af02c785e2256a0575d94a87b180463eeffdecf32b504919"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/README.txt",
+      "sha256": "1f1c811f846c37a9ea8f2956cceaf22642c173bc3a46a9fd26f82f5f9131bd61"
+    }
+  ]
+}

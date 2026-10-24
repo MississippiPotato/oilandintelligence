@@ -1,0 +1,258 @@
+{
+  "scope": "Unchanged teacher Add Case importer: every new folder imported in isolated stage batches; representative sandbox run, download and refresh rerun",
+  "checkedAt": "2026-10-24T06:16:42.556Z",
+  "checks": [
+    {
+      "name": "isolated original batch begins empty",
+      "passed": true
+    },
+    {
+      "name": "c2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "c3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "c4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "co2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "co3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "co4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "c2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "c4",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "mae": 0.1495651608769014,
+          "denominator": 80,
+          "standoff": 45.85105950191078
+        }
+      }
+    },
+    {
+      "name": "c2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "c4",
+        "status": "complete",
+        "resultPresent": true,
+        "metrics": {
+          "mae": 0.1495651608769014,
+          "denominator": 80,
+          "standoff": 45.85105950191078
+        }
+      }
+    },
+    {
+      "name": "c2 representative refresh reruns same computed metrics",
+      "passed": true
+    },
+    {
+      "name": "all stage-batch imports survive teacher refresh",
+      "passed": true
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "c2",
+      "id": "s17x-c2-cement-displacement",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "nativeImported": true
+    },
+    {
+      "scene": "c3",
+      "id": "s17x-c3-cement-loss-risk",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "nativeImported": true
+    },
+    {
+      "scene": "c4",
+      "id": "s17x-c4-casing-standoff",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "nativeImported": true
+    },
+    {
+      "scene": "co2",
+      "id": "s17x-co2-completion-zone-design",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "nativeImported": true
+    },
+    {
+      "scene": "co3",
+      "id": "s17x-co3-tubing-stress",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "nativeImported": true
+    },
+    {
+      "scene": "co4",
+      "id": "s17x-co4-sliding-sleeve-control",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 3,
+      "nativeImported": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "representative": "c2",
+  "persistedCount": 6,
+  "passed": 13,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/case.json",
+      "sha256": "a07a24f122dc9b804e4c32ac3f31a0f43957009c5b088ecd695359a3f330896c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/index.html",
+      "sha256": "4ad22097e8afa9e06591c03b83d4a84924446b5340c1bb0948efa890f521db45"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.js",
+      "sha256": "3e6e5efd4ecfba49d2a050a2ebc993bad05f38f83e9a8588e23c8b726fb627d1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/README.txt",
+      "sha256": "1125d320bcae028d4c643cce9f17886cc1cd34777c34fbf46cfb527fd68f6713"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/case.json",
+      "sha256": "30c0ac34d00569518fbdd5b7435238457e0403541d33cca08667da80e9f34f1b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/index.html",
+      "sha256": "a96c2cb7108de324382f9ce699cf2e1fd481f81159fd5a98f2ec59c068253f5c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.js",
+      "sha256": "801bf6bd84b215f17b48a94a000ff2af4bc410813175553cdda86102fd7a4912"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/README.txt",
+      "sha256": "0ed93ab6ec92e002c314e446063c3bb1b6dbd2e977941bf1b8c3e14b8cc83edb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+      "sha256": "951c3e2152e2bc37f9c28174cf14e2b015ad9ea38f421138ede628de11a693f4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+      "sha256": "e79259397deba9b06b8ec6e84e63d9972906f62eda5b529dc145beaae9a476e9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+      "sha256": "bbe302954e713f005aecf5a99a93189f66d82b0837391d0d383377722fdb42fe"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+      "sha256": "81f50567206f7ff4ce9a55a52405f121b5f9738bf1cb948d35688fbf241c338e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/case.json",
+      "sha256": "c1c6eb11264ff0da0bfe15b9a151c1cd967a90ec30e94672f187c707360b1d1c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/index.html",
+      "sha256": "de0e86f538238969a250737bb90da81a29b2c9b706a9599202b17568519d6d48"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.js",
+      "sha256": "ff6b4c61dd907d09003df5b36b5a12524fa2361d65ed414a96b8a8ebd30c60b9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/README.txt",
+      "sha256": "3ca58006653385755a16ba6f3b2a91d86d2aae92ee4c3d2855dd45a6f7e95c8e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/case.json",
+      "sha256": "f999a75373d4ebc41dfd6f9e2b3e306233a7f409e162c539c612add083c8b6a1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/index.html",
+      "sha256": "42551eff32979d527a87171b835e073efe1d39773d4828bf5a94e4d05c49a54b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.js",
+      "sha256": "71f663e4cb3aab7206b41d7f83f08d74f23d62b592de1efe4733280edac07dea"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/README.txt",
+      "sha256": "2fec7a5036a088424242791bc3a080209f3acf2033bbba002c667ac6edbf25ff"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/case.json",
+      "sha256": "104dc264243e8e28c478c57ad845c0118a4d3a9a3bb5818b759660d38ef38a2b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/index.html",
+      "sha256": "7af542a8958de401175ecc7b96ffc0639bc8cff430ecc02ebb98dd831d07f24d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.css",
+      "sha256": "aa8b7925ea2ce671f9dc5a059121677c941211448b4b8f62f64f1d9fafab9ac5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.js",
+      "sha256": "83695916bdd26458be7d993fa246fccf71ea277477e424be980ab26413b4cd87"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/README.txt",
+      "sha256": "9ba5d804f627c2094bffc19b926024ed5ca9d03654b06d5e1f9087cde1633be4"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "sceneId": "pr2",
+  "global": "CaseCore",
+  "runEntry": "CaseCore.run(params)",
+  "defaults": {
+    "cut": 110,
+    "horizon": 21,
+    "intervention": "no"
+  },
+  "inferenceContract": "CaseCore.infer(history,beta,horizon)",
+  "selfCheck": "Numeric VM checks only, not browser acceptance",
+  "metrics": [
+    {
+      "label": "递归预测 MAE",
+      "value": 7.0116874623060195,
+      "unit": "m³/d",
+      "note": ""
+    },
+    {
+      "label": "持续值 MAE",
+      "value": 1.429815753412886,
+      "unit": "m³/d",
+      "note": ""
+    },
+    {
+      "label": "预测 RMSE",
+      "value": 7.72007292929902,
+      "unit": "m³/d",
+      "note": ""
+    },
+    {
+      "label": "预测长度",
+      "value": 21,
+      "unit": "d",
+      "note": ""
+    }
+  ]
+}

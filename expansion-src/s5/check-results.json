@@ -1,0 +1,45 @@
+{
+  "scene": "s5",
+  "checkedAt": "2026-10-24T06:01:49.725Z",
+  "kind": "Node engine checks; not browser acceptance",
+  "checks": [
+    {
+      "name": "deterministic full run",
+      "passed": true
+    },
+    {
+      "name": "finite model metrics",
+      "passed": true
+    },
+    {
+      "name": "full1920sample denominator",
+      "passed": true
+    },
+    {
+      "name": "clean evaluation truth absent from predict input",
+      "passed": true
+    },
+    {
+      "name": "learning improves default RMSE",
+      "passed": true
+    },
+    {
+      "name": "outofdistribution spikes can degrade",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": 0,
+  "defaults": {
+    "model": {
+      "rmse": 0.06101426144978788,
+      "snr": 10.865599248096043,
+      "n": 1920
+    },
+    "baseline": {
+      "rmse": 0.09961193888089852,
+      "snr": 6.6079985533468655,
+      "n": 1920
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "evidenceType": "independent_code_and_teaching_content_review_not_browser",
+  "scope": "44 newly assigned scenes; final source availability is recorded separately in review-source.json",
+  "criteria": [
+    "The background defines the petroleum object, measured quantities, units and the operational question before naming the model.",
+    "Concept and process figures support specific prose, with substantial data charts in the running demonstration.",
+    "Each engine performs its scenario-specific calculation; a shared rendering shell is acceptable, a renamed identical model is not.",
+    "Training labels may be read by fitting; held-out reference labels must be used only after prediction for evaluation or display.",
+    "Actual numerical comparisons, null metrics and results where the baseline is better remain visible.",
+    "Source/VM checks do not establish browser operation, importer operation or persistence."
+  ],
+  "findings": [
+    {
+      "sceneId": "w1",
+      "file": "expansion-src/w1/engine.js",
+      "severity": "medium",
+      "issue": "An unmatched-boundary MAE was converted from null to zero, which would falsely imply perfect accuracy.",
+      "resolution": "Author retained null, UI renders an em dash, and the matched-boundary count is included in the unit label.",
+      "status": "fixed_source_verified"
+    },
+    {
+      "sceneId": "w3",
+      "file": "expansion-src/w3/engine.js",
+      "severity": "medium",
+      "issue": "Training and test seeds initially changed noise only while keeping identical fracture geometry.",
+      "resolution": "Author varied phase, amplitude, center depth and stripe position with the seed. Default Dice after this change is approximately 0.765, rather than hiding the harder test.",
+      "status": "fixed_source_and_numerical_verified"
+    },
+    {
+      "sceneId": "d3",
+      "file": "expansion-src/d3/engine.js",
+      "severity": "medium",
+      "issue": "The control compensation target must not replace the original intended target in the reported terminal error.",
+      "resolution": "Author now reports endpoint distance to the original target; compensated target is used only for constructing the controller action.",
+      "status": "fixed_source_verified"
+    },
+    {
+      "sceneId": "e3,e5,e2",
+      "file": "expansion-src/e3/case.json; expansion-src/e5/case.json; expansion-src/e2/case.json",
+      "severity": "teaching_content",
+      "issue": "The original short background moved too quickly to formulation, activity and ellipse parameters without sufficient explanation of chemical flooding, microbial mechanisms or half-length/half-height.",
+      "requestedResolution": "Add concrete petroleum mechanism paragraphs and figure-specific captions while keeping illustrations supplementary.",
+      "status": "fixed_source_verified",
+      "resolution": "Added chemical-flood mobility/interface mechanisms, microbial metabolite/environment context, complete length=2L and complete height=2H, and figure-specific captions."
+    },
+    {
+      "sceneId": "c2,c3,c4,co2,co3,co4,p2,p3,p4,pr2,pr3,pr4,pr5,r3,r4",
+      "file": [
+        "expansion-src/c2/app.js",
+        "expansion-src/c3/app.js",
+        "expansion-src/c4/app.js",
+        "expansion-src/co2/app.js",
+        "expansion-src/co3/app.js",
+        "expansion-src/co4/app.js",
+        "expansion-src/p2/app.js",
+        "expansion-src/p3/app.js",
+        "expansion-src/p4/app.js",
+        "expansion-src/pr2/app.js",
+        "expansion-src/pr3/app.js",
+        "expansion-src/pr4/app.js",
+        "expansion-src/pr5/app.js",
+        "expansion-src/r3/app.js",
+        "expansion-src/r4/app.js"
+      ],
+      "severity": "high",
+      "issue": "Actual teacher sandbox uses an opaque-origin about:srcdoc. Unguarded history.replaceState threw SecurityError, stopping initialization in six solidification/completion cases and throwing during tab changes in other affected cases.",
+      "resolution": "Root wrapped optional URL bookmarking in rememberTab try/catch; actual panel switching remains outside the optional operation, preserving the teacher sandbox instead of relaxing iframe permissions.",
+      "status": "fixed_source_verified_and_representative_browser_logs_reviewed",
+      "sourceVerification": {
+        "affectedAppFiles": 15,
+        "eachHasOneGuardedReplaceState": true,
+        "sourceAndDefaultCalculationChecks": 704,
+        "failures": 0
+      },
+      "browserEvidenceReviewed": [
+        {
+          "path": "handoff/full-coverage-2026-10-24/browser-native-batch-3.json",
+          "checkedAt": "2026-10-24T06:16:42.556Z",
+          "passed": 13,
+          "failed": 0,
+          "errors": [],
+          "representative": "c2"
+        },
+        {
+          "path": "handoff/full-coverage-2026-10-24/browser-native-batch-4.json",
+          "checkedAt": "2026-10-24T06:16:47.043Z",
+          "passed": 14,
+          "failed": 0,
+          "errors": [],
+          "representative": "p2"
+        },
+        {
+          "path": "handoff/full-coverage-2026-10-24/browser-native-batch-6.json",
+          "checkedAt": "2026-10-24T06:16:57.138Z",
+          "passed": 15,
+          "failed": 0,
+          "errors": [],
+          "representative": "t2"
+        }
+      ],
+      "browserScopeBoundary": "Reviewer read root-produced actual browser logs; original-site representative executions do not imply every affected case was independently sandbox-executed by this reviewer."
+    }
+  ],
+  "negativeOrNeutralResultsToPreserve": [
+    {
+      "sceneId": "c3",
+      "setting": "default",
+      "learnedF1": 0.7154471544715447,
+      "baselineF1": 0.7563025210084033
+    },
+    {
+      "sceneId": "w1",
+      "setting": "default",
+      "learnedF1": 1,
+      "baselineF1": 1
+    },
+    {
+      "sceneId": "e4",
+      "setting": "default",
+      "predictedObjectiveImprovement": 0
+    }
+  ],
+  "manualTruthBoundaryReview": [
+    {
+      "scenes": [
+        "g2",
+        "g3",
+        "g4",
+        "s2",
+        "s3",
+        "s4",
+        "s5"
+      ],
+      "finding": "Scoring/prediction takes observed indicator values, pixels, attributes or noisy traces; reference values are consumed by metric functions after prediction."
+    },
+    {
+      "scenes": [
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "w1",
+        "w2",
+        "w3",
+        "w5"
+      ],
+      "finding": "Test observations are fed to the fitted residual, regression, classification, segmentation or neighbor calculation. The original target in d3 is a requested control target; w5 masked RHOB is excluded from neighbor input."
+    },
+    {
+      "scenes": [
+        "c2",
+        "c3",
+        "c4",
+        "co2",
+        "co3",
+        "co4"
+      ],
+      "finding": "Learned surrogate prediction uses operation inputs. co2 is an explicit finite expert-constraint search. co4 predicts candidate responses from visible state, then advances the simulated plant only after action selection."
+    },
+    {
+      "scenes": [
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "finding": "t2 reference identity is read for matching accuracy only; t3 is finite constrained search; t4 correction uses calibrated coefficients; t5 inference receives pixels. Refining predictors receive measured inputs/parsed records; r4 custom text correctly disables label-based metrics."
+    },
+    {
+      "scenes": [
+        "wo2",
+        "wo3",
+        "wo4",
+        "wo5",
+        "e2",
+        "e3",
+        "e4",
+        "e5"
+      ],
+      "finding": "Knowledge constraints, background residual segmentation, normal residual alarms, regression or neighbor predictors use observations/candidates/training records. In wo3 the local mask is thresholded before its overlap is scored against the reference."
+    },
+    {
+      "scenes": [
+        "p2",
+        "p3",
+        "p4",
+        "pr2",
+        "pr3",
+        "pr4",
+        "pr5"
+      ],
+      "finding": "p2 regressions consume material inputs; p3 applies explicit catalog constraints; p4 subtracts learned operating-condition changes from observed before/after production; pr2 recursively appends predictions to historical values and applies intervention only to future evaluation; pr3 ranks feasible allocations using learned layer responses; pr4 residual alarms use load/current/temperature; pr5 strips held-out labels before inference. Seven sets of petroleum background paragraphs were read and linked to their displayed plots."
+    }
+  ],
+  "browserEvidence": "None generated by this reviewer. Root browser acceptance reports must be consulted separately.",
+  "createdAt": "2026-10-24T06:17:52.815Z",
+  "reviewedAll44SourceEntrypoints": true,
+  "openBlockingFindings": 0,
+  "additionalChartAdvice": [
+    {
+      "sceneId": "p2",
+      "severity": "presentation",
+      "request": "Avoid a common bar axis comparing length in cm with cleanliness points; separate scales or omit the mixed-unit auxiliary chart.",
+      "status": "fixed_source_verified"
+    },
+    {
+      "sceneId": "pr5",
+      "severity": "presentation",
+      "request": "Do not render an empty score bin as an observed zero event rate; label no samples or omit empty bins.",
+      "status": "fixed_source_verified"
+    }
+  ]
+}

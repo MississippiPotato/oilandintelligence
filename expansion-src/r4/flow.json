@@ -1,0 +1,42 @@
+{
+  "title": "化验数据逐行审核",
+  "gate": [
+    "先解释正常关系",
+    "再用偏差组织复核"
+  ],
+  "input": {
+    "title": "化验原文",
+    "detail": "样品字段与单位",
+    "step": 0
+  },
+  "prepare": {
+    "title": "量纲规范",
+    "detail": "识别并保留原文",
+    "step": 0
+  },
+  "model": {
+    "title": "关系审核",
+    "detail": "正常回归残差",
+    "step": 2
+  },
+  "baseline": {
+    "title": "范围规则",
+    "detail": "格式与单列界限",
+    "step": 3
+  },
+  "review": {
+    "title": "人工复核",
+    "detail": "回查样品与方法",
+    "step": 3
+  },
+  "output": {
+    "title": "逐行证据",
+    "detail": "规则原因与残差",
+    "step": 3
+  },
+  "compare": {
+    "title": "参考评价",
+    "detail": "自定义文本不评分",
+    "step": 3
+  }
+}

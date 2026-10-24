@@ -1,0 +1,42 @@
+{
+  "title": "振幅小窗 → 四维纹理 → k近邻分类",
+  "input": {
+    "title": "振幅小窗",
+    "detail": "观测输入",
+    "step": 0
+  },
+  "prepare": {
+    "title": "四维纹理",
+    "detail": "仅训练尺度",
+    "step": 1
+  },
+  "model": {
+    "title": "k近邻分类",
+    "detail": "实际拟合与预测",
+    "step": 2
+  },
+  "baseline": {
+    "title": "RMS基线",
+    "detail": "同一测试样本",
+    "step": 2
+  },
+  "gate": [
+    "结果与资料",
+    "是否一致？"
+  ],
+  "review": {
+    "title": "误分复核",
+    "detail": "回看原始观测",
+    "step": 4
+  },
+  "output": {
+    "title": "相样式候选",
+    "detail": "保留候选与来源",
+    "step": 3
+  },
+  "compare": {
+    "title": "留出资料评价",
+    "detail": "固定分母与误差",
+    "step": 4
+  }
+}

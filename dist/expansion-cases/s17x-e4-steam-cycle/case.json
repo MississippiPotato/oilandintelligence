@@ -1,0 +1,86 @@
+{
+  "id": "s17x-e4-steam-cycle",
+  "sceneId": "e4",
+  "methods": [
+    "ts",
+    "opt"
+  ],
+  "title": "蒸汽吞吐注采参数优化",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "蒸汽吞吐在同一口井交替经历注汽、焖井和生产。注汽带入热量，焖井促进热交换，生产阶段回收流体；本例比较周期内的预测产油与蒸汽投入。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "三个阶段不能混成连续注采",
+          "html": "<p>注汽阶段向井中送入蒸汽；焖井阶段暂时关闭井口；生产阶段再开井产出。三段的时间加总才是一个周期。界面用时间带对齐阶段，用产油曲线说明产出来自生产段。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"三个阶段不能混成连续注采\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"25\" y=\"45\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"37\" y=\"73\">注汽：送入热量</text><rect x=\"265\" y=\"45\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"277\" y=\"73\">焖井：热量交换</text><rect x=\"505\" y=\"45\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"517\" y=\"73\">生产：回收流体</text><polyline points=\"207,67 263,67\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"447,67 503,67\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"45\" y=\"145\">同一口井，阶段先后发生</text><text x=\"45\" y=\"185\">比较候选时统一生产窗口：90天</text></g></svg><figcaption>同一口井依次注汽、焖井和生产；比较前必须统一生产统计窗口。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "METHOD",
+          "title": "产油和热投入用同一边界比较",
+          "html": "<p>输入蒸汽量t、焖井天数d和初温°C，代理输出固定90天生产窗的产油量t。目标J=预测产油−成本折算系数×蒸汽量，单位是折算油吨。改变成本系数后，最佳点可能从高注汽量移向较低用量。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"产油和热投入用同一边界比较\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"30\" y=\"35\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"42\" y=\"63\">预测产油 t</text><rect x=\"265\" y=\"35\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"277\" y=\"63\">蒸汽量 × 折算系数</text><rect x=\"500\" y=\"35\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"512\" y=\"63\">净目标 J（t油）</text><text x=\"235\" y=\"65\">−</text><text x=\"470\" y=\"65\">=</text><text x=\"50\" y=\"140\">预算变化会改变可行区；价格变化会改变排序</text><text x=\"50\" y=\"180\">同时看汽油比，避免只追逐累计产油</text></g></svg><figcaption>折算目标从预测产油扣除蒸汽投入，性能最高与投入最合算并非同一件事。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "EVIDENCE",
+          "title": "候选搜索并不读取产油真值",
+          "html": "<p>120条教学周期训练回归，40条完整留出周期评价MAE。网格候选只调用冻结回归，蒸汽上限逐点过滤。固定1200t、焖井4天为对照。最终同时展示目标值、汽油比和周期时间，不把代理增益写成现场增油。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://glossary.slb.com/en/terms/c/cyclic_steam_stimulation\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "注汽更久，新增产油是否足以补偿热量投入？",
+      "lead": [
+        "蒸汽吞吐在同一口井交替经历注汽、焖井和生产。注汽带入热量，焖井促进热交换，生产阶段回收流体；本例比较周期内的预测产油与蒸汽投入。"
+      ],
+      "steps": [
+        {
+          "name": "对齐注汽焖井生产",
+          "role": "步骤 1",
+          "do": "统一90天生产窗口，分别记录蒸汽量、焖井天数和初温。注汽天数按200t/d教学速率计算，不能把不同长度生产窗混在一起。",
+          "effect": "时间边界一致的完整周期记录",
+          "trap": "焖井阶段没有生产量，不与生产阶段重叠"
+        },
+        {
+          "name": "拟合周期产油代理",
+          "role": "步骤 2",
+          "do": "从120个训练周期学习二次产油响应，40个独立周期计算留出MAE；训练均值给出不看条件的对照误差。",
+          "effect": "冻结的周期产油代理",
+          "trap": "候选预测不调用生成式或测试标签"
+        },
+        {
+          "name": "约束蒸汽量搜索参数",
+          "role": "步骤 3",
+          "do": "枚举17档蒸汽量×8档焖井时间共136点，逐点检查蒸汽上限。可行点目标为预测产油减去蒸汽量乘成本折算系数。",
+          "effect": "满足资源上限的候选和J值",
+          "trap": "目标单位是折算油吨，不是货币利润"
+        },
+        {
+          "name": "核对收益与热量账",
+          "role": "步骤 4",
+          "do": "展示最佳点的注汽、焖井、生产时间带，以及全部候选目标散点和汽油比；固定1200t、焖井4天按同一代理比较。",
+          "effect": "周期图、资源收益与真实预测差值",
+          "trap": "若固定方案已经最佳，目标改善如实为0"
+        }
+      ],
+      "metrics": {
+        "title": "步骤的输入与产物",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"e4\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"蒸汽吞吐注采参数优化\"><defs><marker id=\"cf-e4\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-e4)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e4)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">专业观测输入</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">单周期蒸汽上限 t</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">对齐注汽焖井生产</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">检查单位和记录范围</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">拟合周期产油代理</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">由可见输入计算</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">简单方法对照</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">相同数据独立计算</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"2\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">结果是否满足检查？补充观测再重新计算</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">检查约束与来源</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">不读评价真值预测</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">图表与当前结果</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">保留参数和评价分母</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">独立评价对比</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">误差或合法性可复算</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><h3>对齐注汽焖井生产</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">对齐注汽焖井生产</text><rect x=\"12\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">拟合周期产油代理</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">约束蒸汽量搜索参数</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核对收益与热量账</text><text x=\"25\" y=\"125\">当前步骤：对齐注汽焖井生产</text></g></svg><figcaption>时间边界一致的完整周期记录。焖井阶段没有生产量，不与生产阶段重叠。</figcaption></figure><figure><h3>拟合周期产油代理</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">对齐注汽焖井生产</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">拟合周期产油代理</text><rect x=\"187\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">约束蒸汽量搜索参数</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核对收益与热量账</text><text x=\"25\" y=\"125\">当前步骤：拟合周期产油代理</text></g></svg><figcaption>冻结的周期产油代理。候选预测不调用生成式或测试标签。</figcaption></figure><figure><h3>约束蒸汽量搜索参数</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">对齐注汽焖井生产</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">拟合周期产油代理</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">约束蒸汽量搜索参数</text><rect x=\"362\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核对收益与热量账</text><text x=\"25\" y=\"125\">当前步骤：约束蒸汽量搜索参数</text></g></svg><figcaption>满足资源上限的候选和J值。目标单位是折算油吨，不是货币利润。</figcaption></figure><figure><h3>核对收益与热量账</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">对齐注汽焖井生产</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">拟合周期产油代理</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">约束蒸汽量搜索参数</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">核对收益与热量账</text><rect x=\"537\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><text x=\"25\" y=\"125\">当前步骤：核对收益与热量账</text></g></svg><figcaption>周期图、资源收益与真实预测差值。若固定方案已经最佳，目标改善如实为0。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "height": 1150,
+      "intro": "蒸汽吞吐在同一口井交替经历注汽、焖井和生产。注汽带入热量，焖井促进热交换，生产阶段回收流体；本例比较周期内的预测产油与蒸汽投入。"
+    }
+  }
+}

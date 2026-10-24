@@ -1,0 +1,8 @@
+完井管柱受力智能分析
+场景：co3；案例 ID：s17x-co3-tubing-stress
+打开 demo/index.html，无需网络或后端。通过老师“添加案例”选择包含 case.json、README.txt 和 demo/ 三文件的完整文件夹。
+沿 2500 m 管柱对照轴向、环向与等效应力，切换温度约束，理解为何简单拉力基线会遗漏风险。
+方法：应力分量回归 + 等效应力计算。各输入、计算步骤和评价分母在页面中说明。
+专业概念参考：https://www.slb.com/resource-library/oilfield-review/defining-series/defining-completion
+数据：固定种子的教学合成；真实数值算法在浏览器执行。导出 JSON 保存当前参数及实际结果。修改输入会清除旧结果，需重新运行。
+验收：本文件不宣称浏览器通过；实际浏览器结果由整站验收报告单独记录。

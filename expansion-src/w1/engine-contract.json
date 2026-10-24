@@ -1,0 +1,77 @@
+{
+  "sceneId": "w1",
+  "global": "Experiment",
+  "runEntry": "Experiment.run",
+  "defaultParams": {
+    "noise": 1,
+    "window": 5,
+    "gap": 12,
+    "threshold": 0.15,
+    "gradient": 32
+  },
+  "verification": {
+    "nodeExecuted": true,
+    "defaultMetrics": [
+      {
+        "label": "多曲线边界 F1",
+        "value": 1,
+        "unit": ""
+      },
+      {
+        "label": "单点梯度基线 F1",
+        "value": 1,
+        "unit": ""
+      },
+      {
+        "label": "边界误差 MAE",
+        "value": 0,
+        "unit": "m / 3个匹配边界"
+      }
+    ],
+    "lowParameterMetrics": [
+      {
+        "label": "多曲线边界 F1",
+        "value": 0.15,
+        "unit": ""
+      },
+      {
+        "label": "单点梯度基线 F1",
+        "value": 1,
+        "unit": ""
+      },
+      {
+        "label": "边界误差 MAE",
+        "value": 0,
+        "unit": "m / 3个匹配边界"
+      }
+    ],
+    "highParameterMetrics": [
+      {
+        "label": "多曲线边界 F1",
+        "value": 0,
+        "unit": ""
+      },
+      {
+        "label": "单点梯度基线 F1",
+        "value": 1,
+        "unit": ""
+      },
+      {
+        "label": "边界误差 MAE",
+        "value": null,
+        "unit": "m / 0个匹配边界"
+      }
+    ],
+    "sourceErrors": [],
+    "sourceWarnings": [],
+    "browserVerified": false
+  },
+  "returned": {
+    "metrics": "array label/value/unit",
+    "predictions": "scenario-specific",
+    "observations": "visible input",
+    "evaluationTruth": "evaluation only",
+    "training": "fitted parameters",
+    "split": "independent fixture groups"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "speed": 1,
+    "drift": 0,
+    "event": 20,
+    "threshold": 9
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "eventRecall": 1,
+    "falseMinutes": 0,
+    "delay_min": 2,
+    "baselineFalseMinutes": 0
+  },
+  "boundaryChecks": [
+    "speed=0.5",
+    "speed=1.8",
+    "drift=-8",
+    "drift=12",
+    "event=0",
+    "event=35",
+    "threshold=4",
+    "threshold=18"
+  ]
+}

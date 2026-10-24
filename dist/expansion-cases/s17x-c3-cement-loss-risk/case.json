@@ -1,0 +1,89 @@
+{
+  "id": "s17x-c3-cement-loss-risk",
+  "sceneId": "c3",
+  "methods": [
+    "opt"
+  ],
+  "title": "固井漏失风险预测",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "调整压力裕度和判定阈值，比较多变量风险筛查与单压力裕度规则的漏报、误报。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "PETROLEUM",
+          "title": "漏失指浆体离开预期流道进入地层",
+          "html": "<p>固井时希望浆体沿环空到达预定高度；如果流体进入裂缝、溶洞或高渗通道，环空回流量可能减少，实际置入位置也会受影响。裂缝与渗透性描述的是“流体能够去哪里”。</p><p>压力裕度描述“当前压力距离地层承压边界还有多少”。裕度小与裂缝多是不同的观测，二者应一起检查，而非互相替代。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"静液压力与循环摩阻叠加\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M70 170L690 170\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"2\"/><path d=\"M70 170L70 30\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"2\"/><rect x=\"150\" y=\"90\" width=\"100\" height=\"80\" fill=\"#afcdd1\"/><rect x=\"150\" y=\"55\" width=\"100\" height=\"35\" fill=\"#e4bd7c\"/><rect x=\"400\" y=\"90\" width=\"100\" height=\"80\" fill=\"#afcdd1\"/><rect x=\"400\" y=\"30\" width=\"100\" height=\"60\" fill=\"#e4bd7c\"/><path d=\"M70 48L690 48\" fill=\"none\" stroke=\"#bb5d4a\" stroke-width=\"2\"/><text x=\"270\" y=\"106\">静液压力</text><text x=\"270\" y=\"65\">循环摩阻</text><text x=\"120\" y=\"198\">低排量</text><text x=\"400\" y=\"198\">高排量</text><text x=\"525\" y=\"42\">地层承压界限</text></g></svg><figcaption>同一浆体密度下，排量改变摩阻压力；若总压力超过地层可承受范围，可能发生漏失。柱高仅表达关系，非现场数值。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "PETROLEUM",
+          "title": "风险分数与报警阈值是两件事",
+          "html": "<p>逻辑回归把压力裕度、裂缝指数、渗透性指数和排量组合成一个分数。调低报警阈值，会让更多样本进入复核，也可能增加误报；调高阈值则可能漏掉风险样本。</p><p>精确率回答“报出的井里有多少被标记为风险”；召回率回答“全部风险井找到了多少”。在同一留出样本上画出 PR 曲线，可以直观看到取舍。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"压力裕度与裂缝共同影响漏失\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M75 165L690 165\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"2\"/><path d=\"M75 165L75 30\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"2\"/><path d=\"M95 140L655 65\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"2\"/><path d=\"M95 95L655 30\" fill=\"none\" stroke=\"#c18b44\" stroke-width=\"2\"/><text x=\"125\" y=\"48\">裂缝发育：相同裕度仍需更谨慎</text><text x=\"405\" y=\"120\">裂缝少</text><text x=\"270\" y=\"195\">压力裕度由小到大 →</text><text x=\"86\" y=\"25\">风险由高到低</text></g></svg><figcaption>压力裕度 = 地层承压上限 − 估计环空压力。裕度不是漏失的唯一因素；裂缝和渗透性也提供流体流失通道。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "PETROLEUM",
+          "title": "井级留出让评价问题更清楚",
+          "html": "<p>本例由教学风险关系生成 400 口训练井和 160 口独立留出井；风险标签含随机性，同条件的井不保证具有相同结局。训练只接触训练标签。</p><p>演示中的“裕度偏移”只改变留出井观测与该教学状态的评价标签，模型系数保持不变。单变量基线只看裕度是否低于 1 MPa；两条路线在相同 160 井上评分。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "压力裕度相同，为什么两口井的漏失风险还会不同？",
+      "lead": [
+        "调整压力裕度和判定阈值，比较多变量风险筛查与单压力裕度规则的漏报、误报。"
+      ],
+      "steps": [
+        {
+          "name": "按井组织观测",
+          "role": "图 S1",
+          "do": "输入：压力裕度、裂缝、渗透性、排量。处理：建立独立井级训练与留出组。",
+          "effect": "400 训练井 / 160 留出井",
+          "trap": "风险标签不进入预测输入",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"按井组织观测\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"50\" y=\"45\" width=\"390\" height=\"85\" fill=\"#d7e7df\" rx=\"5\"/><text x=\"70\" y=\"80\">400 口训练井</text><text x=\"70\" y=\"113\">四项观测 + 已知风险标签</text><rect x=\"485\" y=\"45\" width=\"220\" height=\"85\" fill=\"#eee3cd\" rx=\"5\"/><text x=\"505\" y=\"80\">160 口留出井</text><text x=\"505\" y=\"113\">观测 → 预测 → 计分</text><text x=\"85\" y=\"177\">井号分开：同一口井不跨训练与留出</text></g></svg>"
+        },
+        {
+          "name": "学习联合风险",
+          "role": "图 S2",
+          "do": "输入：训练井的四项特征和标签。处理：标准化后执行梯度下降拟合逻辑回归。",
+          "effect": "模型系数与训练尺度",
+          "trap": "仅训练集拟合均值、标准差",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"学习联合风险\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M80 165L680 165\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M80 165L80 30\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M90 155C320 155 340 40 660 40\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"4\"/><text x=\"115\" y=\"40\">分数 0 → 1</text><text x=\"300\" y=\"195\">β₀ + β₁×裕度 + … →</text></g></svg>"
+        },
+        {
+          "name": "确定复核名单",
+          "role": "图 S3",
+          "do": "输入：留出输入和当前报警阈值。处理：计算分数并与阈值比较。",
+          "effect": "逐井分数、误报与漏报位置",
+          "trap": "分数阈值改变名单，不改模型",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"确定复核名单\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M70 155L690 155\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M360 35L360 175\" stroke=\"#bb5d4a\" fill=\"none\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"185\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"260\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"335\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"410\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><circle cx=\"485\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><circle cx=\"560\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><circle cx=\"635\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><text x=\"100\" y=\"65\">分数小：暂不触发</text><text x=\"435\" y=\"65\">分数大：进入复核</text><text x=\"270\" y=\"198\">阈值滑动 → 名单改变</text></g></svg>"
+        },
+        {
+          "name": "读取留出标签评价",
+          "role": "图 S4",
+          "do": "输入：两条路线的原始预测。处理：计算 PR、混淆计数和召回。",
+          "effect": "相同 160 井的对照",
+          "trap": "不以准确率掩盖少数类漏报",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"读取留出标签评价\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"150\" y=\"50\" width=\"180\" height=\"55\" fill=\"#d7e7df\" rx=\"5\"/><rect x=\"335\" y=\"50\" width=\"180\" height=\"55\" fill=\"#f0dbc2\" rx=\"5\"/><rect x=\"150\" y=\"110\" width=\"180\" height=\"55\" fill=\"#f0dbc2\" rx=\"5\"/><rect x=\"335\" y=\"110\" width=\"180\" height=\"55\" fill=\"#d7e7df\" rx=\"5\"/><text x=\"180\" y=\"85\">真阳性 TP</text><text x=\"370\" y=\"85\">误报 FP</text><text x=\"180\" y=\"145\">漏报 FN</text><text x=\"365\" y=\"145\">真阴性 TN</text><text x=\"50\" y=\"195\">召回 = TP/(TP+FN)；精确率 = TP/(TP+FP)</text></g></svg>"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤图解",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"c3\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"压力裕度相同，为什么两口井的漏失风险还会不同？\"><defs><marker id=\"cf-c3\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-c3)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-c3)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">压力裕度、裂缝、渗透性</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">带单位的可见输入</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">按井组织观测</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">400 训练井 / 160 留</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">多变量逻辑回归</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">标准化后执行梯度下降拟合逻辑回</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">显式同条件基线</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">读取留出标签评价</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"2\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">条件是否满足资料是否支持？</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">核查排除原因</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">分数阈值改变名单，不改模型</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">逐井分数、误报与漏报位</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">保留当前参数与依据</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">相同 160 井的对照</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">同输入、同口径对照</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><h3>图 S1｜按井组织观测</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"按井组织观测\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"50\" y=\"45\" width=\"390\" height=\"85\" fill=\"#d7e7df\" rx=\"5\"/><text x=\"70\" y=\"80\">400 口训练井</text><text x=\"70\" y=\"113\">四项观测 + 已知风险标签</text><rect x=\"485\" y=\"45\" width=\"220\" height=\"85\" fill=\"#eee3cd\" rx=\"5\"/><text x=\"505\" y=\"80\">160 口留出井</text><text x=\"505\" y=\"113\">观测 → 预测 → 计分</text><text x=\"85\" y=\"177\">井号分开：同一口井不跨训练与留出</text></g></svg><figcaption>输入：压力裕度、裂缝、渗透性、排量。处理：建立独立井级训练与留出组。</figcaption></figure><figure><h3>图 S2｜学习联合风险</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"学习联合风险\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M80 165L680 165\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M80 165L80 30\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M90 155C320 155 340 40 660 40\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"4\"/><text x=\"115\" y=\"40\">分数 0 → 1</text><text x=\"300\" y=\"195\">β₀ + β₁×裕度 + … →</text></g></svg><figcaption>输入：训练井的四项特征和标签。处理：标准化后执行梯度下降拟合逻辑回归。</figcaption></figure><figure><h3>图 S3｜确定复核名单</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"确定复核名单\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><path d=\"M70 155L690 155\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M360 35L360 175\" stroke=\"#bb5d4a\" fill=\"none\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"185\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"260\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"335\" cy=\"115\" r=\"10\" fill=\"#267d78\"/><circle cx=\"410\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><circle cx=\"485\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><circle cx=\"560\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><circle cx=\"635\" cy=\"115\" r=\"10\" fill=\"#bb5d4a\"/><text x=\"100\" y=\"65\">分数小：暂不触发</text><text x=\"435\" y=\"65\">分数大：进入复核</text><text x=\"270\" y=\"198\">阈值滑动 → 名单改变</text></g></svg><figcaption>输入：留出输入和当前报警阈值。处理：计算分数并与阈值比较。</figcaption></figure><figure><h3>图 S4｜读取留出标签评价</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"读取留出标签评价\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"150\" y=\"50\" width=\"180\" height=\"55\" fill=\"#d7e7df\" rx=\"5\"/><rect x=\"335\" y=\"50\" width=\"180\" height=\"55\" fill=\"#f0dbc2\" rx=\"5\"/><rect x=\"150\" y=\"110\" width=\"180\" height=\"55\" fill=\"#f0dbc2\" rx=\"5\"/><rect x=\"335\" y=\"110\" width=\"180\" height=\"55\" fill=\"#d7e7df\" rx=\"5\"/><text x=\"180\" y=\"85\">真阳性 TP</text><text x=\"370\" y=\"85\">误报 FP</text><text x=\"180\" y=\"145\">漏报 FN</text><text x=\"365\" y=\"145\">真阴性 TN</text><text x=\"50\" y=\"195\">召回 = TP/(TP+FN)；精确率 = TP/(TP+FP)</text></g></svg><figcaption>输入：两条路线的原始预测。处理：计算 PR、混淆计数和召回。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "height": 1400,
+      "intro": "调整压力裕度和判定阈值，比较多变量风险筛查与单压力裕度规则的漏报、误报。"
+    }
+  }
+}

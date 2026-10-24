@@ -1,0 +1,42 @@
+{
+  "title": "预测边界与时间顺序",
+  "gate": [
+    "未来信息可见？",
+    "只允许历史输入"
+  ],
+  "input": {
+    "title": "历史日产油",
+    "detail": "截止日前的日产油",
+    "step": 0
+  },
+  "prepare": {
+    "title": "截止日向前切分",
+    "detail": "保持时间向前顺序",
+    "step": 0
+  },
+  "model": {
+    "title": "滞后岭回归",
+    "detail": "历史滞后递归外推",
+    "step": 1
+  },
+  "baseline": {
+    "title": "最后一天持续值",
+    "detail": "未来保持最后一天",
+    "step": 2
+  },
+  "review": {
+    "title": "未来干预复核",
+    "detail": "查看新干预和步长误差",
+    "step": 3
+  },
+  "output": {
+    "title": "短期预测曲线",
+    "detail": "未来逐日预测与误差",
+    "step": 3
+  },
+  "compare": {
+    "title": "同窗口 MAE",
+    "detail": "同一未来窗口 MAE",
+    "step": 3
+  }
+}

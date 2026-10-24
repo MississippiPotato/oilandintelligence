@@ -1,0 +1,42 @@
+{
+  "title": "孔道形态的条件预测",
+  "gate": [
+    "材料范围内？",
+    "超出则另行试验"
+  ],
+  "input": {
+    "title": "材料属性",
+    "detail": "强度孔隙度与围压",
+    "step": 0
+  },
+  "prepare": {
+    "title": "材料批次留出",
+    "detail": "6 批训练 3 批评价",
+    "step": 0
+  },
+  "model": {
+    "title": "双目标岭回归",
+    "detail": "长度与清洁度分别拟合",
+    "step": 1
+  },
+  "baseline": {
+    "title": "强度分组均值",
+    "detail": "只按强度取组均值",
+    "step": 2
+  },
+  "review": {
+    "title": "误差与材料复核",
+    "detail": "核对材料范围与残差",
+    "step": 3
+  },
+  "output": {
+    "title": "长度和清洁度",
+    "detail": "当前材料的两项预测",
+    "step": 3
+  },
+  "compare": {
+    "title": "两种长度 MAE",
+    "detail": "84 条独立试验 MAE",
+    "step": 3
+  }
+}

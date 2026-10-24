@@ -1,0 +1,42 @@
+{
+  "title": "油气地球化学异常：从单点高值到联合背景偏离",
+  "input": {
+    "title": "背景标定点",
+    "detail": "独立背景浓度",
+    "step": 0
+  },
+  "prepare": {
+    "title": "学习背景关系",
+    "detail": "均值与协方差",
+    "step": 1
+  },
+  "model": {
+    "title": "联合距离筛选",
+    "detail": "三组分偏离得分",
+    "step": 2
+  },
+  "baseline": {
+    "title": "C1标准分数",
+    "detail": "同点位单指标",
+    "step": 2
+  },
+  "gate": [
+    "资料与结果",
+    "需要复核？"
+  ],
+  "review": {
+    "title": "核查采样来源",
+    "detail": "点选浓度与位置",
+    "step": 3
+  },
+  "output": {
+    "title": "异常候选点表",
+    "detail": "坐标与方法依据",
+    "step": 3
+  },
+  "compare": {
+    "title": "独立参考评价",
+    "detail": "召回与误报分母",
+    "step": 3
+  }
+}

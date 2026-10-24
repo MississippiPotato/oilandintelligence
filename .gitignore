@@ -81,3 +81,11 @@ output/playwright/flow-linked-2026-10-24/*
 output/playwright/case-sources-2026-10-24/*
 !output/playwright/case-sources-2026-10-24/*.png
 !output/playwright/case-sources-2026-10-24/*.json
+
+# Full scene coverage: small case-only distributions and real browser evidence.
+!dist/s17-expansion-56-cases-1.9.0-preview.zip
+!dist/s17-all-61-cases-1.9.0-preview.zip
+!output/playwright/full-coverage-2026-10-24/
+output/playwright/full-coverage-2026-10-24/*
+!output/playwright/full-coverage-2026-10-24/*.png
+!output/playwright/full-coverage-2026-10-24/*.json

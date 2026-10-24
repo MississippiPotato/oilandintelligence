@@ -1,0 +1,44 @@
+{
+  "sceneId": "p2",
+  "global": "CaseCore",
+  "runEntry": "CaseCore.run(params)",
+  "defaults": {
+    "strength": 80,
+    "porosity": 15,
+    "confinement": 14
+  },
+  "inferenceContract": "CaseCore.run returns model/prediction; predictor closure reads observation only",
+  "selfCheck": "Numeric VM checks only, not browser acceptance",
+  "metrics": [
+    {
+      "label": "孔道长度 MAE",
+      "value": 0.6593521743395491,
+      "unit": "cm",
+      "note": "84 条独立材料批次试验"
+    },
+    {
+      "label": "分组均值 MAE",
+      "value": 2.3464743923516993,
+      "unit": "cm",
+      "note": "同一测试集"
+    },
+    {
+      "label": "清洁度 MAE",
+      "value": 0.5276217570880778,
+      "unit": "分",
+      "note": ""
+    },
+    {
+      "label": "当前预测长度",
+      "value": 42.765754833172956,
+      "unit": "cm",
+      "note": ""
+    },
+    {
+      "label": "当前清洁度",
+      "value": 76.3298316299414,
+      "unit": "分 / 100",
+      "note": ""
+    }
+  ]
+}

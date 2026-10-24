@@ -1,0 +1,24 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "load": 70,
+    "sand": 1.2,
+    "stops": 3
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "MAE_days": 10.072247233707861,
+    "baselineMAE_days": 61.62678697935189,
+    "testDevices": 32,
+    "predictedInterval_days": 275.63032785312964
+  },
+  "boundaryChecks": [
+    "load=35",
+    "load=95",
+    "sand=0",
+    "sand=3",
+    "stops=0",
+    "stops=8"
+  ]
+}

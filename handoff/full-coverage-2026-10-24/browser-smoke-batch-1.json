@@ -1,0 +1,550 @@
+{
+  "scope": "Actual offline Chrome, new cases: three sections and one computed run per case; selected screenshots and mobile checks",
+  "checkedAt": "2026-10-24T06:16:02.578Z",
+  "checks": [
+    {
+      "name": "g2 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "g2 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "g2 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "g2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "g2",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "g2 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "g2 sampled mobile page contains charts internally",
+      "passed": true
+    },
+    {
+      "name": "g2 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "g3 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "g3 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "g3 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "g3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "resultPresent": true,
+        "metrics": {
+          "accuracy": 1,
+          "macroF1": 1,
+          "cm": [
+            [
+              7,
+              0,
+              0
+            ],
+            [
+              0,
+              9,
+              0
+            ],
+            [
+              0,
+              0,
+              14
+            ]
+          ],
+          "n": 30
+        }
+      }
+    },
+    {
+      "name": "g3 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "g3 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "g4 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "g4 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "g4 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "g4 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "resultPresent": true,
+        "metrics": {
+          "tp": 4,
+          "predicted": 5,
+          "reference": 4,
+          "precision": 0.8,
+          "recall": 1,
+          "f1": 0.888888888888889
+        }
+      }
+    },
+    {
+      "name": "g4 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "g4 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "s2 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "s2 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "s2 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "s2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s2",
+        "resultPresent": true,
+        "metrics": {
+          "matrix": [
+            [
+              20,
+              0,
+              0
+            ],
+            [
+              0,
+              20,
+              0
+            ],
+            [
+              0,
+              0,
+              20
+            ]
+          ],
+          "accuracy": 1,
+          "macroF1": 1,
+          "n": 60
+        }
+      }
+    },
+    {
+      "name": "s2 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "s2 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "s3 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "s3 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "s3 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "s3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s3",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "s3 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "s3 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "s4 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "s4 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "s4 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "s4 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s4",
+        "resultPresent": true,
+        "metrics": {
+          "mae": 0.4267025564259907,
+          "rmse": 0.501517266464643,
+          "r2": 0.9912079104184945,
+          "n": 64
+        }
+      }
+    },
+    {
+      "name": "s4 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "s4 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "s5 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "s5 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "s5 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "s5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s5",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "s5 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "s5 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "g2",
+      "id": "s17x-g2-geochemical-anomaly",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "standaloneRun": true,
+      "metrics": null
+    },
+    {
+      "scene": "g3",
+      "id": "s17x-g3-map-elements",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "standaloneRun": true,
+      "metrics": {
+        "accuracy": 1,
+        "macroF1": 1,
+        "cm": [
+          [
+            7,
+            0,
+            0
+          ],
+          [
+            0,
+            9,
+            0
+          ],
+          [
+            0,
+            0,
+            14
+          ]
+        ],
+        "n": 30
+      }
+    },
+    {
+      "scene": "g4",
+      "id": "s17x-g4-fracture-survey",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "standaloneRun": true,
+      "metrics": {
+        "tp": 4,
+        "predicted": 5,
+        "reference": 4,
+        "precision": 0.8,
+        "recall": 1,
+        "f1": 0.888888888888889
+      }
+    },
+    {
+      "scene": "s2",
+      "id": "s17x-s2-seismic-facies",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "standaloneRun": true,
+      "metrics": {
+        "matrix": [
+          [
+            20,
+            0,
+            0
+          ],
+          [
+            0,
+            20,
+            0
+          ],
+          [
+            0,
+            0,
+            20
+          ]
+        ],
+        "accuracy": 1,
+        "macroF1": 1,
+        "n": 60
+      }
+    },
+    {
+      "scene": "s3",
+      "id": "s17x-s3-first-arrival",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "standaloneRun": true,
+      "metrics": null
+    },
+    {
+      "scene": "s4",
+      "id": "s17x-s4-reservoir-inversion",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "standaloneRun": true,
+      "metrics": {
+        "mae": 0.4267025564259907,
+        "rmse": 0.501517266464643,
+        "r2": 0.9912079104184945,
+        "n": 64
+      }
+    },
+    {
+      "scene": "s5",
+      "id": "s17x-s5-seismic-denoise",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "standaloneRun": true,
+      "metrics": null
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "passed": 45,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/case.json",
+      "sha256": "0fd79f590d6b94fb1b633fd26381adce65c4fc13068c47e644fd0ad293152943"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/index.html",
+      "sha256": "f108a0509c4bffd903df8276cfd659e63b880ba8375e72abfb86b7bd23c51b6f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.css",
+      "sha256": "44c6a0fb25ca52067b3bac41c6b0d2c26f933dfa515491e976c443fd8efacada"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.js",
+      "sha256": "ec9879e44d130a73c425b944e63dc78395e52fa8e3bdb0b0a457bde698c1183f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/README.txt",
+      "sha256": "20c5dcf8f8732f197cca8e2ea295a13930a354f279e832752e253db24f4b2f12"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g3-map-elements/case.json",
+      "sha256": "150a870b9b3db89b88b1e7d0acc97ecddc276982000f00776c70a48051d1a7da"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g3-map-elements/demo/index.html",
+      "sha256": "51576371e5e16bdb5a220dc7c93794034f15d71a9195cfacfe030f149df01f0b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g3-map-elements/demo/demo.css",
+      "sha256": "831294f31cb7650d0695cb46608af765582524af9ba09d946b38da9a0b227f30"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g3-map-elements/demo/demo.js",
+      "sha256": "47173cdbd96d5e1b49cdd910b96e262ac731f838926c108ea7536453cd62a6a9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g3-map-elements/README.txt",
+      "sha256": "b931f4a2c64161ee22ff27288ba166b1ab5af1aa00c7c674c6ee08bb5f201973"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g4-fracture-survey/case.json",
+      "sha256": "4edc67991425a4d4f06ceba68ec1868b55efaf0e0b7bc485b868c4e5fadde991"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/index.html",
+      "sha256": "2e8aa895826d4ef21ca5c904055795052b4380fa5b27da2a3189db15f733dee7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.css",
+      "sha256": "831294f31cb7650d0695cb46608af765582524af9ba09d946b38da9a0b227f30"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.js",
+      "sha256": "66ce63b53048870f4d0ac27457e3281e85b7b24c3ef4333acbe1b2547c5e06fb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g4-fracture-survey/README.txt",
+      "sha256": "edaad4f47eb333bd6a8ad091f816647670a971e1676a308a8c8f401a029361d3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s2-seismic-facies/case.json",
+      "sha256": "7e7644fd680e238804972478f530b49d071f5b70401f3c1f9ae1942857640f34"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/index.html",
+      "sha256": "f5706d79b804fde95b09b4e70f8f13a3edaf56ed7b08262e0e8a2a0ab8be5325"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.css",
+      "sha256": "63ed575e4316310176c3a214b3dafc895767160863ec08202d5344f5661d805b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.js",
+      "sha256": "81decf0378a84769b1498c69e93617f85e137caf8698d4d2f5f98f96b1cf0cbb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s2-seismic-facies/README.txt",
+      "sha256": "1b2af90a9ed062a2bde0f7c9345b44c10b77d2cd729919bccab09b3221c2bf94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/case.json",
+      "sha256": "b790fbab9e292faf974b47047c7c13e86a9863fa17c1e4500d4a0faad75a0eb7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/index.html",
+      "sha256": "c45612d86dcc06726bf1345733eeb4f5a321f5d266b79b306d19e8bb79edd063"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.css",
+      "sha256": "44c6a0fb25ca52067b3bac41c6b0d2c26f933dfa515491e976c443fd8efacada"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.js",
+      "sha256": "4eb088aac08c9808b60ea136d6bf9e7dd4396976cbf784deb098174cc5191730"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/README.txt",
+      "sha256": "45b2f6e04c5fe507e6dd4a34047e84b305c1696408ff64fe6868d1960236b29e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/case.json",
+      "sha256": "cd4adab4da72092bfad8eb915d7e7ff442bc9011d9a375c6f334a346e0e7416e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/index.html",
+      "sha256": "15ddc2bbf98959ecd8abf4221d2556e64d06bebff80bbc7ef2149c525259fc3c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.css",
+      "sha256": "63ed575e4316310176c3a214b3dafc895767160863ec08202d5344f5661d805b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.js",
+      "sha256": "c705f0983dab1a81c6fde7c0f78de8438a966f0452336a6958b5ea935f54e0ad"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/README.txt",
+      "sha256": "cc9c7cac5222fa26d5469fed6374535213f3298dcde7a7773f680d4c26756cb4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/case.json",
+      "sha256": "1fe4789b8c5c8713ef5e38f1cb4eceb77bd35a2f505e1093d282b2b096065511"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html",
+      "sha256": "d5f54d47788b7100335a24aafef4245e73f25087d8ff6d720096e76b63d55703"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css",
+      "sha256": "44c6a0fb25ca52067b3bac41c6b0d2c26f933dfa515491e976c443fd8efacada"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js",
+      "sha256": "cd3df78bfe3242ffbf74a62782f7c787977e410309efff494c93ca0f4b6c6c36"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/README.txt",
+      "sha256": "1ab6af30c6e8188bfa3c8fc988fb08fe9684cd72f909fa64f58ebb1fd0c2acd5"
+    }
+  ]
+}

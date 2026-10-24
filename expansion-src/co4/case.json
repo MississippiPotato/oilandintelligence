@@ -1,0 +1,89 @@
+{
+  "id": "s17x-co4-sliding-sleeve-control",
+  "sceneId": "co4",
+  "methods": [
+    "opt"
+  ],
+  "title": "智能完井滑套控制策略",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "比较三段滑套逐日开度、油水贡献和固定全开策略，观察动作频次限制怎样影响调节速度。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "PETROLEUM",
+          "title": "滑套控制的是进流通道，不是凭空增加储量",
+          "html": "<p>多段完井利用封隔建立相对独立的生产单元，通过滑套或流入控制装置改变各段进入管柱的通道。传感器提供压力、温度等信息，控制动作改变后续的产液分配。</p><p>本例把三个分段的开度离散为 0、50%、100%。开度变化影响该段的流入量；完全关闭意味着当前时段不从该段采出，但也没有该段油量贡献。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"滑套开度改变分段进流量\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"70\" y=\"45\" width=\"140\" height=\"60\" fill=\"#c9e2d8\"/><text x=\"87\" y=\"82\">A 低含水</text><rect x=\"280\" y=\"45\" width=\"140\" height=\"60\" fill=\"#bfd4e2\"/><text x=\"297\" y=\"82\">B 高含水</text><rect x=\"490\" y=\"45\" width=\"140\" height=\"60\" fill=\"#dac9a6\"/><text x=\"507\" y=\"82\">C 中含水</text><path d=\"M105 125L650 125\" fill=\"none\" stroke=\"#6f8b98\" stroke-width=\"12\"/><path d=\"M140 107L140 123\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"5\"/><path d=\"M350 107L350 123\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"5\"/><path d=\"M560 107L560 123\" fill=\"none\" stroke=\"#267d78\" stroke-width=\"5\"/><text x=\"80\" y=\"175\">分段封隔 → 独立调节 → 进入共同生产管柱</text></g></svg><figcaption>分段隔离提供独立控制条件；滑套或流入控制阀调节地层进入管柱的通道。本例把开度离散为 0、50%、100%。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "PETROLEUM",
+          "title": "产液、产油、产水必须一起看",
+          "html": "<p>产液量由油和水组成。对于相同产液量，高含水段贡献的油更少，却同样占用地面处理能力。限制总液量时，关闭高含水段可能腾出空间。</p><p>这里 A 段初始含水 15%、B 段 72%、C 段 35%，并具有不同生产能力。目标“产油 − 水处理偏好×产水”把两种效果放在同一口径比较，偏好系数可调。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"多产液不一定多产油\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"110\" y=\"60\" width=\"100\" height=\"100\" fill=\"#267d78\"/><rect x=\"110\" y=\"35\" width=\"100\" height=\"25\" fill=\"#83b7d7\"/><rect x=\"400\" y=\"120\" width=\"100\" height=\"40\" fill=\"#267d78\"/><rect x=\"400\" y=\"35\" width=\"100\" height=\"85\" fill=\"#83b7d7\"/><text x=\"100\" y=\"195\">低含水段</text><text x=\"390\" y=\"195\">高含水段</text><text x=\"545\" y=\"75\">■ 产油量</text><text x=\"545\" y=\"115\">■ 产水量</text></g></svg><figcaption>含水率 = 产水量 / 产液量。高含水段即使产液较多，也可能占用大量处理能力，挤占低含水段的生产空间。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "PETROLEUM",
+          "title": "控制必须沿时间执行并尊重动作限制",
+          "html": "<p>一天只允许调整一段与三段同时调整会得到不同轨迹。每次都要从当前开度出发枚举动作，筛掉超处理能力和超动作数的方案，再选择预测目标最高者。</p><p>代理模型从独立的开度—井况—响应样本拟合。动作确定后，教学环境才生成当天实际响应并推进含水与压力状态；未来响应没有进入动作选择。固定全开是公开的对照策略，其超处理能力次数单独显示。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "处理能力有限时，先调哪一段滑套，才能减少水又保留油？",
+      "lead": [
+        "比较三段滑套逐日开度、油水贡献和固定全开策略，观察动作频次限制怎样影响调节速度。"
+      ],
+      "steps": [
+        {
+          "name": "学习分段动作响应",
+          "role": "图 S1",
+          "do": "输入：开度、压力、生产能力与含水状态。处理：从 280 条教学动作样本拟合产油/产水模型。",
+          "effect": "另留 70 条独立动作响应评分",
+          "trap": "未来分段响应不出现在控制器输入",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"学习分段动作响应\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"40\" y=\"45\" width=\"210\" height=\"95\" fill=\"#d3e6da\" rx=\"5\"/><text x=\"55\" y=\"80\">A 含水 15%</text><text x=\"55\" y=\"120\">开度 → 油量、水量</text><rect x=\"275\" y=\"45\" width=\"210\" height=\"95\" fill=\"#c2dbe4\" rx=\"5\"/><text x=\"290\" y=\"80\">B 含水 72%</text><text x=\"290\" y=\"120\">开度 → 油量、水量</text><rect x=\"510\" y=\"45\" width=\"210\" height=\"95\" fill=\"#e2d3b7\" rx=\"5\"/><text x=\"525\" y=\"80\">C 含水 35%</text><text x=\"525\" y=\"120\">开度 → 油量、水量</text><text x=\"70\" y=\"190\">280 条动作响应训练；70 条独立响应留出评分</text></g></svg>"
+        },
+        {
+          "name": "枚举当天动作",
+          "role": "图 S2",
+          "do": "输入：当前开度与三段可见状态。处理：生成 27 个开度组合。",
+          "effect": "候选动作与预测油水量",
+          "trap": "不是直接选择当天真实产油最高动作",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"枚举当天动作\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"50\" y=\"70\" width=\"180\" height=\"60\" fill=\"#d7e7df\" rx=\"5\"/><text x=\"65\" y=\"108\">当前开度与状态</text><path d=\"M235 100L330 35\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M235 100L330 100\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M235 100L330 165\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><text x=\"350\" y=\"40\">0% / 50% / 100%</text><text x=\"350\" y=\"105\">三段共 27 个动作组合</text><text x=\"350\" y=\"170\">代理预测每个组合的油和水</text></g></svg>"
+        },
+        {
+          "name": "筛选并执行",
+          "role": "图 S3",
+          "do": "输入：处理能力和每日调整分段数。处理：排除超限方案，再按预测目标选择。",
+          "effect": "当天可行开度与排除数量",
+          "trap": "无可行动作时停止，不强行执行超限动作",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"筛选并执行\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"120\" y=\"85\" width=\"110\" height=\"75\" fill=\"#d7e7df\" rx=\"5\"/><rect x=\"120\" y=\"35\" width=\"110\" height=\"50\" fill=\"#8bbbd4\" rx=\"5\"/><rect x=\"430\" y=\"120\" width=\"110\" height=\"40\" fill=\"#d7e7df\" rx=\"5\"/><rect x=\"430\" y=\"15\" width=\"110\" height=\"105\" fill=\"#8bbbd4\" rx=\"5\"/><path d=\"M65 60L690 60\" stroke=\"#bb5d4a\" fill=\"none\" stroke-width=\"2\"/><text x=\"245\" y=\"48\">处理能力边界</text><text x=\"85\" y=\"195\">约束检查：总液量 + 每日最多调整段数</text></g></svg>"
+        },
+        {
+          "name": "推进状态与比较",
+          "role": "图 S4",
+          "do": "输入：已选动作和当前教学环境。处理：环境产生当天响应，再进入下一天，连续 12 天。",
+          "effect": "逐日油水量、开度热图、累计目标与基线",
+          "trap": "评价只在动作确定后读取环境响应",
+          "figure": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"推进状态与比较\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"80\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"128\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"176\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"224\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"272\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"320\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"368\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"416\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"464\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"512\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"560\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"608\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"80\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"128\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"176\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"224\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"272\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"320\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"368\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"416\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"464\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"512\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"560\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"608\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"80\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"128\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"176\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"224\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"272\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"320\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"368\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"416\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"464\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"512\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"560\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"608\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><text x=\"80\" y=\"28\">每天先预测选动作，再由环境响应推进状态</text><text x=\"85\" y=\"200\">逐日开度热图 + 油水曲线 + 累计目标对照</text></g></svg>"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤图解",
+        "html": "<figure><h3>图 S1｜学习分段动作响应</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"学习分段动作响应\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"40\" y=\"45\" width=\"210\" height=\"95\" fill=\"#d3e6da\" rx=\"5\"/><text x=\"55\" y=\"80\">A 含水 15%</text><text x=\"55\" y=\"120\">开度 → 油量、水量</text><rect x=\"275\" y=\"45\" width=\"210\" height=\"95\" fill=\"#c2dbe4\" rx=\"5\"/><text x=\"290\" y=\"80\">B 含水 72%</text><text x=\"290\" y=\"120\">开度 → 油量、水量</text><rect x=\"510\" y=\"45\" width=\"210\" height=\"95\" fill=\"#e2d3b7\" rx=\"5\"/><text x=\"525\" y=\"80\">C 含水 35%</text><text x=\"525\" y=\"120\">开度 → 油量、水量</text><text x=\"70\" y=\"190\">280 条动作响应训练；70 条独立响应留出评分</text></g></svg><figcaption>输入：开度、压力、生产能力与含水状态。处理：从 280 条教学动作样本拟合产油/产水模型。</figcaption></figure><figure><h3>图 S2｜枚举当天动作</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"枚举当天动作\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"50\" y=\"70\" width=\"180\" height=\"60\" fill=\"#d7e7df\" rx=\"5\"/><text x=\"65\" y=\"108\">当前开度与状态</text><path d=\"M235 100L330 35\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M235 100L330 100\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><path d=\"M235 100L330 165\" stroke=\"#267d78\" fill=\"none\" stroke-width=\"2\"/><text x=\"350\" y=\"40\">0% / 50% / 100%</text><text x=\"350\" y=\"105\">三段共 27 个动作组合</text><text x=\"350\" y=\"170\">代理预测每个组合的油和水</text></g></svg><figcaption>输入：当前开度与三段可见状态。处理：生成 27 个开度组合。</figcaption></figure><figure><h3>图 S3｜筛选并执行</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"筛选并执行\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"120\" y=\"85\" width=\"110\" height=\"75\" fill=\"#d7e7df\" rx=\"5\"/><rect x=\"120\" y=\"35\" width=\"110\" height=\"50\" fill=\"#8bbbd4\" rx=\"5\"/><rect x=\"430\" y=\"120\" width=\"110\" height=\"40\" fill=\"#d7e7df\" rx=\"5\"/><rect x=\"430\" y=\"15\" width=\"110\" height=\"105\" fill=\"#8bbbd4\" rx=\"5\"/><path d=\"M65 60L690 60\" stroke=\"#bb5d4a\" fill=\"none\" stroke-width=\"2\"/><text x=\"245\" y=\"48\">处理能力边界</text><text x=\"85\" y=\"195\">约束检查：总液量 + 每日最多调整段数</text></g></svg><figcaption>输入：处理能力和每日调整分段数。处理：排除超限方案，再按预测目标选择。</figcaption></figure><figure><h3>图 S4｜推进状态与比较</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 210\" role=\"img\" aria-label=\"推进状态与比较\"><rect width=\"760\" height=\"210\" fill=\"#f3f7f5\" rx=\"8\"/><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#263f49\"><rect x=\"80\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"128\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"176\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"224\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"272\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"320\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"368\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"416\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"464\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"512\" y=\"45\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"560\" y=\"45\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"608\" y=\"45\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"80\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"128\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"176\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"224\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"272\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"320\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"368\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"416\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"464\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"512\" y=\"90\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"560\" y=\"90\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"608\" y=\"90\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"80\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"128\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"176\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"224\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"272\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"320\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"368\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"416\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"464\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><rect x=\"512\" y=\"135\" width=\"40\" height=\"34\" fill=\"#267d78\" rx=\"5\"/><rect x=\"560\" y=\"135\" width=\"40\" height=\"34\" fill=\"#e2eae3\" rx=\"5\"/><rect x=\"608\" y=\"135\" width=\"40\" height=\"34\" fill=\"#9cc5b4\" rx=\"5\"/><text x=\"80\" y=\"28\">每天先预测选动作，再由环境响应推进状态</text><text x=\"85\" y=\"200\">逐日开度热图 + 油水曲线 + 累计目标对照</text></g></svg><figcaption>输入：已选动作和当前教学环境。处理：环境产生当天响应，再进入下一天，连续 12 天。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "height": 1400,
+      "intro": "比较三段滑套逐日开度、油水贡献和固定全开策略，观察动作频次限制怎样影响调节速度。"
+    }
+  }
+}

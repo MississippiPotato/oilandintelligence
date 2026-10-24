@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0",
+  "sceneId": "g4",
+  "engineGlobal": "G4Core",
+  "run": {
+    "method": "run",
+    "signature": "run(params = {})",
+    "parameters": {
+      "seed": 1704,
+      "noise": 0.12,
+      "contrast": 0.5,
+      "threshold": 0.4,
+      "minVotes": 35,
+      "maxLines": 8,
+      "scanY": 40
+    }
+  },
+  "predict": {
+    "method": "predict",
+    "signature": "predict(observations, params)",
+    "arguments": [
+      "observations",
+      "params"
+    ],
+    "readsEvaluationTruth": false
+  },
+  "result": {
+    "observations": "observations",
+    "prediction": "prediction",
+    "evaluationTruth": "evaluationTruth",
+    "metrics": "metrics",
+    "baselineMetrics": "baselineMetrics"
+  },
+  "verification": "Node sanity, syntax, source contract and mutation-of-reference checks passed; browser acceptance pending integration."
+}

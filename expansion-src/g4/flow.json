@@ -1,0 +1,42 @@
+{
+  "title": "从露头迹线到裂缝强度",
+  "input": {
+    "title": "露头窗口",
+    "detail": "12m乘8m灰度图",
+    "step": 0
+  },
+  "prepare": {
+    "title": "灰度分割",
+    "detail": "阈值筛选暗像素",
+    "step": 0
+  },
+  "model": {
+    "title": "Hough提取",
+    "detail": "角度距离投票去重",
+    "step": 1
+  },
+  "baseline": {
+    "title": "严格取峰",
+    "detail": "70票且最多2条",
+    "step": 1
+  },
+  "review": {
+    "title": "叠加核查",
+    "detail": "逐线位置与方向",
+    "step": 2
+  },
+  "output": {
+    "title": "裂缝统计",
+    "detail": "P21与扫描线P10",
+    "step": 2
+  },
+  "compare": {
+    "title": "几何匹配",
+    "detail": "角度距离容差下F1",
+    "step": 2
+  },
+  "gate": [
+    "先核查阴影与层理",
+    "再解释裂缝连通性"
+  ]
+}

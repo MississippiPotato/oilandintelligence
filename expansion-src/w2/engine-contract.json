@@ -1,0 +1,75 @@
+{
+  "sceneId": "w2",
+  "global": "Experiment",
+  "runEntry": "Experiment.run",
+  "defaultParams": {
+    "count": 90,
+    "noise": 1,
+    "mode": "all"
+  },
+  "verification": {
+    "nodeExecuted": true,
+    "defaultMetrics": [
+      {
+        "label": "多曲线孔隙度 RMSE",
+        "value": 0.4530796590618517,
+        "unit": "百分点"
+      },
+      {
+        "label": "密度公式 RMSE",
+        "value": 4.68268784089037,
+        "unit": "百分点"
+      },
+      {
+        "label": "独立测试岩心点",
+        "value": 120,
+        "unit": "点"
+      }
+    ],
+    "lowParameterMetrics": [
+      {
+        "label": "多曲线孔隙度 RMSE",
+        "value": 2.638433160767426,
+        "unit": "百分点"
+      },
+      {
+        "label": "密度公式 RMSE",
+        "value": 4.657194539088673,
+        "unit": "百分点"
+      },
+      {
+        "label": "独立测试岩心点",
+        "value": 120,
+        "unit": "点"
+      }
+    ],
+    "highParameterMetrics": [
+      {
+        "label": "多曲线孔隙度 RMSE",
+        "value": 2.4420093853810596,
+        "unit": "百分点"
+      },
+      {
+        "label": "密度公式 RMSE",
+        "value": 4.890608023953169,
+        "unit": "百分点"
+      },
+      {
+        "label": "独立测试岩心点",
+        "value": 120,
+        "unit": "点"
+      }
+    ],
+    "sourceErrors": [],
+    "sourceWarnings": [],
+    "browserVerified": false
+  },
+  "returned": {
+    "metrics": "array label/value/unit",
+    "predictions": "scenario-specific",
+    "observations": "visible input",
+    "evaluationTruth": "evaluation only",
+    "training": "fitted parameters",
+    "split": "independent fixture groups"
+  }
+}

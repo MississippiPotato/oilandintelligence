@@ -1,0 +1,42 @@
+{
+  "title": "地震资料噪声压制：降低干扰，也检查反射是否保真",
+  "input": {
+    "title": "带噪训练炮集",
+    "detail": "独立成对信号",
+    "step": 0
+  },
+  "prepare": {
+    "title": "七点邻域",
+    "detail": "同道与邻道振幅",
+    "step": 1
+  },
+  "model": {
+    "title": "岭回归去噪",
+    "detail": "真实拟合七点权重",
+    "step": 2
+  },
+  "baseline": {
+    "title": "滑动平均",
+    "detail": "同道五点平均",
+    "step": 2
+  },
+  "gate": [
+    "资料与结果",
+    "需要复核？"
+  ],
+  "review": {
+    "title": "检查信号保留",
+    "detail": "峰谷与差值对照",
+    "step": 3
+  },
+  "output": {
+    "title": "处理波形",
+    "detail": "保留输入与系数",
+    "step": 3
+  },
+  "compare": {
+    "title": "独立参考评价",
+    "detail": "全1920点RMSE",
+    "step": 3
+  }
+}

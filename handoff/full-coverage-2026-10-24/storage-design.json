@@ -1,0 +1,40 @@
+{
+  "scope": "Enhanced portal persistence capacity; original teacher source and portal-original are unchanged",
+  "database": "atlas.casepack.enhanced.v1",
+  "version": 1,
+  "store": "catalog",
+  "recordKey": "packages",
+  "format": "Original v2 package records are stored without changing manifest or folder import formats",
+  "startup": "Legacy v2/v1 records are immediately registered; IndexedDB then hydrates the durable snapshot, applies uploaded versions before builtins, and emits caseimportready/hashchange",
+  "migration": "If no IndexedDB snapshot exists, migrate legacy records only after a completed read/write transaction. Keep localStorage backup for the original portal. Once a snapshot exists, it is authoritative, including an empty snapshot after deletions.",
+  "writes": "Serialize changes within this page; commit the storage transaction before mutating saved records, registering a case, or reporting success. Failed writes retain existing metadata and keep an import open for retry.",
+  "fallback": "If IndexedDB cannot be opened, use localStorage and require setItem success. A small pending upsert/deletion marker records only successful fallback changes; when IndexedDB returns, reconcile those changes without replacing newer packages with an older legacy backup. If an opened database cannot be read, block writes instead of overwriting unknown data. No memory-only import success.",
+  "builtinReplacement": "Enhanced Add Case allows a same-ID builtin to be replaced by a user upload, with explicit preview warning. An existing uploaded ID is still rejected. Removing an uploaded replacement restores the builtin when available.",
+  "publicApi": {
+    "CaseImport.ready": "Promise resolving after initialization and migration; browser acceptance should await it after each navigation or refresh",
+    "CaseImport.loadSaved()": "Idempotently returns the same ready Promise",
+    "CaseImport.list()": "Synchronous list of hydrated imported package metadata",
+    "CaseImport.storageStatus()": "backend, ready, count, error",
+    "CaseImport.updateMeta()": "Validation failures may return an immediate result; durable updates return a Promise of {ok,error}. Callers should await Promise.resolve(result).",
+    "CaseImport.remove()": "Builtin actions may return boolean; imported removal returns a Promise of boolean. Callers should await Promise.resolve(result)."
+  },
+  "modifiedProductionFiles": [
+    "portal/assets/core/case-upload.js",
+    "portal/assets/core/admin.js"
+  ],
+  "actualBrowserReport": "handoff/full-coverage-2026-10-24/browser-storage-capacity.json",
+  "actualBrowserChecks": {"passed": 18, "failed": 0},
+  "capacityFixture": {
+    "syntheticLegacyPaddingCharacters": 4900000,
+    "actualProductionFolderImports": ["s17-cuttings-lithology", "s17x-g1-remote-lithology"],
+    "persistedCharactersAtFirstImport": 5519905,
+    "localStorageRejectedSameSnapshot": true
+  },
+  "verificationBoundary": "Capacity/migration/rollback/file-origin proof uses a labeled synthetic legacy fixture plus actual package UI imports. It is not cumulative 61-case acceptance. Browser profile was isolated and closed.",
+  "remainingIntegrationVerification": [
+    "Actual cumulative 61 package imports through enhanced Add Case UI after final packages exist",
+    "Page refresh and browser restart with representative reruns after cumulative import",
+    "Teacher original importer compatibility in batches; do not promise its localStorage can cumulatively store 61 packages"
+  ],
+  "knownScope": "The mutation queue serializes operations within a page. Simultaneous edits from multiple independent tabs are not a synchronized collaborative editing protocol."
+}

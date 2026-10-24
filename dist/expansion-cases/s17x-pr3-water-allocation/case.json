@@ -1,0 +1,123 @@
+{
+  "id": "s17x-pr3-water-allocation",
+  "sceneId": "pr3",
+  "title": "智能注水调配：有限水量怎样分给三层？",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "opt"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "注水通过维持压力和驱替作用帮助开采，但三个层对同样水量的响应不相同。本例从分层试验学习响应曲线，在总量守恒与分层上限内搜索分配方案。",
+      "judge": [
+        {
+          "label": "数据性质",
+          "value": "合成教学数据",
+          "desc": "固定种子，可重复计算"
+        },
+        {
+          "label": "观察重点",
+          "value": "分层二次代理",
+          "desc": "与明确基线并列比较"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "注入井、储层层段与采出井怎样联系？",
+          "html": "<p>水从注入井进入储层后，在孔隙中推动和补充地层流体，最终影响相邻采出井的产出。不同层的厚度、渗透性和连通性不同，吸水能力与有效驱替也不同。向高吸水层继续加水未必带来同等产油增量，还可能出现注入分布失衡。这里把地下复杂联系简化为 A、B、C 三层各自的响应，先理解“分多少”和“得到多少”之间的关系。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"分层联系示意是问题结构；演示中的收益来自下方拟合曲线，而不是这张示意图。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"30\" font-size=\"17\">同一注入总量，经过三个层段形成不同响应</text><rect x=\"30\" y=\"55\" width=\"100\" height=\"135\" rx=\"8\" fill=\"#dce7ef\"/><text x=\"42\" y=\"124\" font-size=\"17\">注入井</text><rect x=\"510\" y=\"55\" width=\"100\" height=\"135\" rx=\"8\" fill=\"#ede8d6\"/><text x=\"522\" y=\"124\" font-size=\"17\">采出井</text><rect x=\"180\" y=\"54\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"180\" y=\"105\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#ecefd7\"/><rect x=\"180\" y=\"156\" width=\"280\" height=\"34\" rx=\"8\" fill=\"#e4e6f1\"/><text x=\"195\" y=\"78\" font-size=\"14\">A：早期响应快，后期趋缓</text><text x=\"195\" y=\"129\" font-size=\"14\">B：中等边际响应</text><text x=\"195\" y=\"180\" font-size=\"14\">C：早期弱，后期仍有空间</text><path d=\"M135 71H175M135 122H175M135 173H175M465 71H505M465 122H505M465 173H505\" fill=\"none\" stroke=\"#739e98\" stroke-width=\"2\"/><text x=\"110\" y=\"220\" font-size=\"16\">总注入量 = A 层配额 + B 层配额 + C 层配额</text></g></svg><figcaption>分层联系示意是问题结构；演示中的收益来自下方拟合曲线，而不是这张示意图。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "OBSERVATION",
+          "title": "为什么不能简单平均分？",
+          "html": "<p>如果三层的响应完全一样、注入上限也相同，均分可能合理。但当某层的边际响应已下降，剩余水量可能在另一层更有价值。边际响应指再增加一小份注水所增加的产油响应，而不是当前总产量。演示用独立批次的试验拟合三条二次响应曲线；曲线斜率不同，就产生了优化分配的空间。响应指数为教学目标，不能直接换算现场增产量。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"凹形响应意味着边际收益逐步下降：横纵轴分别表示单层注水 / m³/d →、产油响应指数，用于理解变量关系。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"28\" font-size=\"19\">凹形响应意味着边际收益逐步下降</text><path d=\"M65 57V187H590\" fill=\"none\" stroke=\"#9db4b8\" stroke-width=\"1\"/><path d=\"M80 185Q250 66 560 105\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><path d=\"M80 185Q320 100 560 68\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><path d=\"M80 185Q320 150 560 118\" fill=\"none\" stroke=\"#6479b4\" stroke-width=\"3\"/><text x=\"65\" y=\"218\" font-size=\"14\">单层注水 / m³/d →</text><text x=\"78\" y=\"55\" font-size=\"14\">产油响应指数</text><text x=\"350\" y=\"65\" font-size=\"14\">绿 / 金 / 蓝：A / B / C 层</text><text x=\"350\" y=\"90\" font-size=\"14\">实际拟合曲线见可运行示范</text></g></svg><figcaption>凹形响应意味着边际收益逐步下降：横纵轴分别表示单层注水 / m³/d →、产油响应指数，用于理解变量关系。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "METHOD",
+          "title": "优化首先要守住哪些条件？",
+          "html": "<p>总量守恒要求三层配额之和等于给定注水总量；每层还受可注能力上限约束，这里把给定压力条件下的能力直接表示为配额上限。程序以 5 m³/d 的步长枚举全部分配，先检查可行性，再用拟合响应求和排序。均分方案若超出某层上限，就必须显示“不可行”，不能用一个不可行基线制造很大的收益对比。当总量超过三层上限之和，正确输出就是无解。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"可行域由资源总量和层上限共同决定。交互散点显示实际候选，而不是预先画好的推荐点。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"28\" y=\"35\" font-size=\"17\">先看可行域，再看目标值</text><path d=\"M85 190V65H380V190Z\" fill=\"none\" stroke=\"#96b4b4\" stroke-width=\"1\"/><path d=\"M85 190L300 65L380 145L200 190Z\" fill=\"none\" stroke=\"#278577\" stroke-width=\"3\"/><text x=\"120\" y=\"150\" font-size=\"15\">总量守恒 + 分层上限</text><text x=\"405\" y=\"90\" font-size=\"17\">枚举全部组合</text><text x=\"405\" y=\"127\" font-size=\"15\">灰点：超出上限</text><text x=\"405\" y=\"164\" font-size=\"15\">可行点才比较收益</text><text x=\"90\" y=\"220\" font-size=\"15\">A 层配额 →，其余水量分给 B / C 层</text></g></svg><figcaption>可行域由资源总量和层上限共同决定。交互散点显示实际候选，而不是预先画好的推荐点。</figcaption></figure>"
+        },
+        {
+          "no": 4,
+          "en": "DATA & SOURCES",
+          "title": "数据、评价与概念来源",
+          "html": "<p>专业概念参考以下行业或研究机构的一手资料；本例数据为离线合成教学数据，不复制来源网站图像。</p><ul><li><a href=\"https://glossary.slb.com/en/terms/w/waterflood\" target=\"_blank\" rel=\"noopener\">SLB：waterflood</a></li><li><a href=\"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-reservoir-engineering\" target=\"_blank\" rel=\"noopener\">SLB：储层工程与注采剖面</a></li></ul>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "注水资源的受约束分配",
+      "lead": [
+        "每个环节都说明输入、动作、输出与复核要点。"
+      ],
+      "stats": [
+        [
+          "计算",
+          "浏览器本地"
+        ],
+        [
+          "数据",
+          "内置可重复"
+        ],
+        [
+          "评价",
+          "预测冻结之后"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "整理分层响应试验",
+          "do": "各层按完整试验批次划分训练和评价，输入是该层注入量，目标是响应指数。",
+          "effect": "三层各有独立拟合与测试样本。",
+          "trap": "层间响应关系在本例中固定，真实变化需要重新识别。",
+          "role": "环节 1"
+        },
+        {
+          "name": "拟合三条响应曲线",
+          "do": "用归一化注入量及平方项分别拟合二次岭回归，随后冻结系数。",
+          "effect": "可见每层响应和边际变化。",
+          "trap": "测试测量值不参与候选搜索，只用于代理误差评价。",
+          "role": "环节 2"
+        },
+        {
+          "name": "守恒枚举与约束筛除",
+          "do": "以 5 m³/d 递增 A、B 配额，由总量确定 C 配额；检查每层上限。",
+          "effect": "全部组合与可行率，或者明确的无解。",
+          "trap": "不把总量少分或超上限的组合称作优化方案。",
+          "role": "环节 3"
+        },
+        {
+          "name": "比较均分并记录",
+          "do": "只对可行组合计算代理响应之和；均分可行时才报告相对增益，另给留出 MAE。",
+          "effect": "候选配额、排序与基线可行性。",
+          "trap": "三层模型为教学响应，不包含真实压力场与井间动态。",
+          "role": "环节 4"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤输入与输出",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"pr3\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"注水资源的受约束分配\"><defs><marker id=\"cf-pr3\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-pr3)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr3)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">分层响应试验</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">各层注入量与响应</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">试验批次切分</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">完整试验批次留出</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">分层二次代理</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">拟合三层二次响应</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">等量均分</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">各层平分给定总量</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"3\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">总量能容纳？无可行解则调整</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">配额与上限复核</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">守恒与分层上限</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">三层注水配额</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">可行方案的配额与收益</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">同约束响应收益</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">同约束的预测收益</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><h3>整理分层响应试验</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"分层试验记录到三层训练数据\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">分层试验记录</text><text x=\"228\" y=\"56\" font-size=\"15\">整批次留出</text><text x=\"437\" y=\"56\" font-size=\"15\">三层训练数据</text></g></svg><figcaption>三层各有独立拟合与测试样本。</figcaption></figure><figure><h3>拟合三条响应曲线</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"注入量与响应到三条代理曲线\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">注入量与响应</text><text x=\"228\" y=\"56\" font-size=\"15\">分层二次回归</text><text x=\"437\" y=\"56\" font-size=\"15\">三条代理曲线</text></g></svg><figcaption>可见每层响应和边际变化。</figcaption></figure><figure><h3>守恒枚举与约束筛除</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"总量 + 层上限到可行组合集合\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">总量 + 层上限</text><text x=\"228\" y=\"56\" font-size=\"15\">守恒候选枚举</text><text x=\"437\" y=\"56\" font-size=\"15\">可行组合集合</text></g></svg><figcaption>全部组合与可行率，或者明确的无解。</figcaption></figure><figure><h3>比较均分并记录</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结可行候选到配额 / 基线对照\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结可行候选</text><text x=\"228\" y=\"56\" font-size=\"15\">代理目标排序</text><text x=\"437\" y=\"56\" font-size=\"15\">配额 / 基线对照</text></g></svg><figcaption>候选配额、排序与基线可行性。</figcaption></figure>"
+      },
+      "fails": [
+        {
+          "name": "条件改变",
+          "why": "输入修改后需要重算；独立评价不参与当前预测。"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "intro": "改变条件后运行，查看真实计算的曲线、对照与评价表。",
+      "height": 1250
+    }
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "scope": "Unchanged teacher Add Case importer: every new folder imported in isolated stage batches; representative sandbox run, download and refresh rerun",
+  "checkedAt": "2026-10-24T06:16:51.903Z",
+  "checks": [
+    {
+      "name": "isolated original batch begins empty",
+      "passed": true
+    },
+    {
+      "name": "wo2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "wo3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "wo4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "wo5 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "e2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "e3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "e4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "e5 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "wo2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "wo2",
+        "status": "completed",
+        "resultPresent": true,
+        "metrics": {
+          "legalCandidates": 3,
+          "diameterOnly": 4,
+          "baselineViolations": 2,
+          "catalogSize": 6
+        }
+      }
+    },
+    {
+      "name": "wo2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "wo2",
+        "status": "completed",
+        "resultPresent": true,
+        "metrics": {
+          "legalCandidates": 3,
+          "diameterOnly": 4,
+          "baselineViolations": 2,
+          "catalogSize": 6
+        }
+      }
+    },
+    {
+      "name": "wo2 representative refresh reruns same computed metrics",
+      "passed": true
+    },
+    {
+      "name": "all stage-batch imports survive teacher refresh",
+      "passed": true
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "wo2",
+      "id": "s17x-wo2-fishing-tools",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    },
+    {
+      "scene": "wo3",
+      "id": "s17x-wo3-casing-damage",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    },
+    {
+      "scene": "wo4",
+      "id": "s17x-wo4-workover-warning",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    },
+    {
+      "scene": "wo5",
+      "id": "s17x-wo5-maintenance-interval",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    },
+    {
+      "scene": "e2",
+      "id": "s17x-e2-fracture-geometry",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    },
+    {
+      "scene": "e3",
+      "id": "s17x-e3-chemical-mixture",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    },
+    {
+      "scene": "e4",
+      "id": "s17x-e4-steam-cycle",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    },
+    {
+      "scene": "e5",
+      "id": "s17x-e5-microbial-activity",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 5,
+      "nativeImported": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "representative": "wo2",
+  "persistedCount": 8,
+  "passed": 15,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-wo2-fishing-tools/case.json",
+      "sha256": "ea96a7ecc0dcd4e0fd858945c9d603f7ccf83f4b807d38d1d383f492670b39cc"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/index.html",
+      "sha256": "6614f8844e3661d7658a0c813620da9b7eba0778bf1933eecf69f0b48d7af5d5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.js",
+      "sha256": "0f5952ffc728067d92b274a52f6d193487a024ee206ac05928de3f59e61e5cc8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo2-fishing-tools/README.txt",
+      "sha256": "e0039eab640718427a55797706d4c59d9e70649f7f66d6b5b694f7116a5770c8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/case.json",
+      "sha256": "15c022429d0c8dfd99a067bd0b3a0ed3fe52a7ae221d645f13056d3d5fe8fea9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/index.html",
+      "sha256": "3876f8f38d7ed459dec6168e10f4305034b339fffcaecb56d37f29d58c690e2f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.js",
+      "sha256": "24a3e161d03e0bc894399a018adee5099e6b6ca5198c56d66669cd2e1d257302"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/README.txt",
+      "sha256": "9133baa730b8f806665b1111ea8699ba846c8cc6385da1eab6fbc5d1d2c613f7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo4-workover-warning/case.json",
+      "sha256": "29bd36f5088c9b2a81030fadaa6004cc348ad3dac2292e00097891f4b82ddeb1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/index.html",
+      "sha256": "983fe06fd4eb4961674d757a885dc6b267bc752cd2afaf0488e67ba328d368bf"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.js",
+      "sha256": "e59a5e004ebf7e02221ac3ad5d2183c36548ebcc508a221d64fbaf6c147455cd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo4-workover-warning/README.txt",
+      "sha256": "d7f149ccab985354fe991657be889eacc1fa859d8096273283287a30574644a9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/case.json",
+      "sha256": "0741939835efff8dfb83d48d9084a6eddc260e8c3986f7083c6f2391ebd30324"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/index.html",
+      "sha256": "6c010dd65534342e901291df84332654f9ce104d58d19ec70cc0f65cee111048"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.js",
+      "sha256": "fd9979a29d2ef366ec17ad65f621aafd370d29b52f93c5a3bf46a3e09e5edcea"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/README.txt",
+      "sha256": "8cab36d97d8db8952a989f5fa47f7a7304a173e63083edd81ae500270af7aa89"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/case.json",
+      "sha256": "438639f91ef0839f09659d0d5471725630df4384576382f5cb50a1ecbbc2742a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/index.html",
+      "sha256": "0d86d26ab9e2df7e888ac491c71515627b52e4d3bff9056a967255cc707b4f9b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.js",
+      "sha256": "950f681bb03589908a8a2fba9c420da54a90ff71972abae1727a168229dae53c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/README.txt",
+      "sha256": "7655bafe78910bbe472b07e8978117c4ae6e2aa7ee50f9e94987a8b54854f6ee"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+      "sha256": "ad1960a4252398fd7fbf44feb8b9bb64dedc82c38ce31d4d5c4b1fc6804e4617"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+      "sha256": "a14ed52f2acc9b04a35c6ce7f86c5b864e254c89ddda8751c5fdfd4817236fb4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+      "sha256": "c9b0846c46663633efe631f273b54dd56a484a7a2e629094246adca35711d9a6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+      "sha256": "01165ec96d2660285407c224c61ee506cc0d3229501ae90f459870c0018557af"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/case.json",
+      "sha256": "4293cebf82559089fb3cc0a970acc98631c2a5be81f1de3a128fc021501b1010"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/index.html",
+      "sha256": "a3bceca5c2780147f63ca051bcf57525eee11d65e7fedef14793378c91edbd90"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.js",
+      "sha256": "d78090886e12a091a94b27109b305ed65f19d35decf2dbd25abd738c0387a96f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/README.txt",
+      "sha256": "f918a6f7610712a2ca2b76334174040b5739fa9b414f6d35a67c86a5d38262be"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/case.json",
+      "sha256": "bfa811fa1d2f06b623937a1676a8b7faf4171a93b6eaa2856f130af7ee6fdb9a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/index.html",
+      "sha256": "1780cf2a8f70de38f08def795596247b4e33fa1e20a83ec47fe76ce82d5ae496"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.css",
+      "sha256": "b54bca3819f2f9eb15f74a75b84fd3043a9af89274fbb464d4d4794a51a14955"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.js",
+      "sha256": "bcdccc78e83c27822a483649337c8e122c8ef5701a25f7df91d042f053bbf988"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/README.txt",
+      "sha256": "dbf860c5dea88244e6e4baab697014a9ea3cc4027c6e6e7a8f8f313c9e5c30d3"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "sceneId": "s3",
+  "global": "S3Core",
+  "runMethod": "run",
+  "defaultParams": {
+    "noise": 0.14,
+    "weak": 0.55,
+    "threshold": 0.55,
+    "seed": 2209
+  },
+  "predictEntry": "predict(traces, trainedModel, threshold)",
+  "testTruthSeparation": "score/predict inputs do not include test evaluation labels or clean reference. run() evaluates only after predictions.",
+  "engineGlobal": "S3Core",
+  "run": {
+    "method": "run",
+    "signature": "run(params = {})",
+    "parameters": {
+      "noise": 0.14,
+      "weak": 0.55,
+      "threshold": 0.55,
+      "seed": 2209
+    }
+  }
+}

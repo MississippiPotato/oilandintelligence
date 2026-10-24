@@ -1,0 +1,123 @@
+{
+  "id": "s17x-pr2-production-forecast",
+  "sceneId": "pr2",
+  "title": "产量智能预测：用过去推向未来的一小段",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "ts"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "产量曲线记录一口井怎样随时间变化。把训练截止日画清楚，用过去的产量学习短期规律，再看预测能走多远，以及一次新的干预怎样打破规律。",
+      "judge": [
+        {
+          "label": "数据性质",
+          "value": "合成教学数据",
+          "desc": "固定种子，可重复计算"
+        },
+        {
+          "label": "观察重点",
+          "value": "滞后岭回归",
+          "desc": "与明确基线并列比较"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "先读懂产量曲线里的三个时间尺度",
+          "html": "<p>日产油量表示一天生产的油体积，单位 m³/d；把它沿生产日排列，就得到产量时间序列。长期趋势可能随储层能量消耗而递减，短期还有生产制度、计量波动等起伏，作业或制度改变可能引起曲线台阶。建模前应先看这些变化发生在哪一天，不能把每天看作没有顺序的独立样本。本例用一条带递减、周期与噪声的可重复教学序列，重点观察预测边界。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"同一曲线同时包含趋势、起伏和变化：横纵轴分别表示生产日 / d →、日产油 / m³/d，用于理解变量关系。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"28\" font-size=\"19\">同一曲线同时包含趋势、起伏和变化</text><path d=\"M65 57V187H590\" fill=\"none\" stroke=\"#9db4b8\" stroke-width=\"1\"/><path d=\"M78 65Q180 82 275 115Q370 133 560 170\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><path d=\"M78 70L125 90L170 80L210 109L255 98L300 132L345 119L390 149L440 138L490 164L558 155\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"65\" y=\"218\" font-size=\"14\">生产日 / d →</text><text x=\"78\" y=\"55\" font-size=\"14\">日产油 / m³/d</text><text x=\"350\" y=\"65\" font-size=\"14\">绿：缓慢递减的趋势</text><text x=\"350\" y=\"90\" font-size=\"14\">金：叠加短期起伏的观测</text></g></svg><figcaption>同一曲线同时包含趋势、起伏和变化：横纵轴分别表示生产日 / d →、日产油 / m³/d，用于理解变量关系。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "OBSERVATION",
+          "title": "时间切分是预测问题的核心",
+          "html": "<p>“预测下一天”时，模型能看到当天以前的记录，不能看到未来。随机打乱整条序列会把晚期信息提前泄露给训练。演示用清晰的训练截止日，把左边作为已知历史，右边作为未来评价。输入使用前 1、2、7 天产量与时间位置；多步预测时，第一步的预测会作为第二步可用的历史继续向前滚动，因此误差也会累积。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"截止日右侧的观测在预测冻结之后才显示。切换截止日会重新划分历史与评价区间。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"32\" font-size=\"17\">用一条时间轴区分“知道”和“将来才知道”</text><rect x=\"30\" y=\"62\" width=\"320\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><text x=\"50\" y=\"98\" font-size=\"17\">已知历史 → 拟合模型</text><rect x=\"370\" y=\"62\" width=\"235\" height=\"65\" rx=\"8\" fill=\"#ecefd7\"/><text x=\"387\" y=\"98\" font-size=\"17\">未来 → 只做评价</text><path d=\"M360 45V170\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"306\" y=\"192\" font-size=\"16\">训练截止日</text><text x=\"40\" y=\"218\" font-size=\"16\">下一步只接收历史与模型；不读取未来实测滞后</text></g></svg><figcaption>截止日右侧的观测在预测冻结之后才显示。切换截止日会重新划分历史与评价区间。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "METHOD",
+          "title": "智能预测应该和什么比较？",
+          "html": "<p>持续值基线假设未来仍等于最后一天，简单却常常很有竞争力。滞后岭回归则从历史学习短期依赖与趋势。两者在同一个未来窗口上计算 MAE 和 RMSE，同时画逐步长误差，避免只给一个平均分看不出远期恶化。打开“未来干预”后，第 7 个预测日起观测额外增加；这一变化没有告诉模型，能帮助理解为什么历史拟合好也不能保证未来预测好。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"误差随步长累积，未来干预更难从过去猜到：横纵轴分别表示预测步长 / d →、绝对误差 / m³/d，用于理解变量关系。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"28\" font-size=\"19\">误差随步长累积，未来干预更难从过去猜到</text><path d=\"M65 57V187H590\" fill=\"none\" stroke=\"#9db4b8\" stroke-width=\"1\"/><path d=\"M80 172Q300 153 555 86\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><path d=\"M80 182L220 175L300 170L330 92L555 65\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"65\" y=\"218\" font-size=\"14\">预测步长 / d →</text><text x=\"78\" y=\"55\" font-size=\"14\">绝对误差 / m³/d</text><text x=\"350\" y=\"65\" font-size=\"14\">绿：无新干预的误差趋势</text><text x=\"350\" y=\"90\" font-size=\"14\">金：未来发生未见变化</text></g></svg><figcaption>误差随步长累积，未来干预更难从过去猜到：横纵轴分别表示预测步长 / d →、绝对误差 / m³/d，用于理解变量关系。</figcaption></figure>"
+        },
+        {
+          "no": 4,
+          "en": "DATA & SOURCES",
+          "title": "数据、评价与概念来源",
+          "html": "<p>专业概念参考以下行业或研究机构的一手资料；本例数据为离线合成教学数据，不复制来源网站图像。</p><ul><li><a href=\"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-reservoir-engineering\" target=\"_blank\" rel=\"noopener\">SLB：储层工程与递减分析</a></li></ul>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "预测边界与时间顺序",
+      "lead": [
+        "每个环节都说明输入、动作、输出与复核要点。"
+      ],
+      "stats": [
+        [
+          "计算",
+          "浏览器本地"
+        ],
+        [
+          "数据",
+          "内置可重复"
+        ],
+        [
+          "评价",
+          "预测冻结之后"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "按截止日整理历史",
+          "do": "截取截止日前日产油观测，不打乱时间顺序；其后选定长度单独保存为评价窗口。",
+          "effect": "明确训练和未来的时间边界。",
+          "trap": "拟合和标准化都只能使用截止日前的数据。",
+          "role": "环节 1"
+        },
+        {
+          "name": "构造滞后并拟合",
+          "do": "在历史内部提取 1、2、7 日滞后和时间项，求解岭回归系数。",
+          "effect": "每行特征的时间都早于它预测的目标日。",
+          "trap": "窗口不足 7 天时不能构造完整特征，本页输入范围已保证足够历史。",
+          "role": "环节 2"
+        },
+        {
+          "name": "递归走完未来窗口",
+          "do": "第一天从历史末端预测；将预测值接回序列，再继续下一天；同时生成持续值基线。",
+          "effect": "两条真正向未来延伸的预测曲线。",
+          "trap": "递归时绝不能用未来实测产量补充滞后，否则会高估效果。",
+          "role": "环节 3"
+        },
+        {
+          "name": "显示未来并计算误差",
+          "do": "预测全部冻结后再取未来观测，包括可选的新干预变化，计算同窗口 MAE 与逐日残差。",
+          "effect": "总体误差、步长误差和逐日结果可导出。",
+          "trap": "新干预改变数据规律；此时需要重新建模或加入已知干预信息。",
+          "role": "环节 4"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤输入与输出",
+        "html": "<figure><h3>按截止日整理历史</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"按日排列的产量到历史 / 未来\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">按日排列的产量</text><text x=\"228\" y=\"56\" font-size=\"15\">选择训练截止日</text><text x=\"437\" y=\"56\" font-size=\"15\">历史 / 未来</text></g></svg><figcaption>明确训练和未来的时间边界。</figcaption></figure><figure><h3>构造滞后并拟合</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"历史日序列到冻结预测模型\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">历史日序列</text><text x=\"228\" y=\"56\" font-size=\"15\">滞后特征 + 岭回归</text><text x=\"437\" y=\"56\" font-size=\"15\">冻结预测模型</text></g></svg><figcaption>每行特征的时间都早于它预测的目标日。</figcaption></figure><figure><h3>递归走完未来窗口</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"已知历史与模型到多步预测曲线\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">已知历史与模型</text><text x=\"228\" y=\"56\" font-size=\"15\">预测值逐步回填</text><text x=\"437\" y=\"56\" font-size=\"15\">多步预测曲线</text></g></svg><figcaption>两条真正向未来延伸的预测曲线。</figcaption></figure><figure><h3>显示未来并计算误差</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结预测到误差随步长\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结预测</text><text x=\"228\" y=\"56\" font-size=\"15\">揭示未来评价</text><text x=\"437\" y=\"56\" font-size=\"15\">误差随步长</text></g></svg><figcaption>总体误差、步长误差和逐日结果可导出。</figcaption></figure>"
+      },
+      "fails": [
+        {
+          "name": "条件改变",
+          "why": "输入修改后需要重算；独立评价不参与当前预测。"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "intro": "改变条件后运行，查看真实计算的曲线、对照与评价表。",
+      "height": 1250
+    }
+  }
+}

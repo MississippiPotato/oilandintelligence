@@ -1,0 +1,106 @@
+{
+  "id": "s17x-w2-porosity-calibration",
+  "sceneId": "w2",
+  "methods": [
+    "ts",
+    "opt"
+  ],
+  "title": "储层参数智能解释：用岩心标定孔隙度",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "密度曲线怎样变成孔隙度，泥质偏差又怎样被校正？",
+      "judge": [
+        {
+          "label": "业务问题",
+          "value": "先理解测量",
+          "desc": "密度曲线怎样变成孔隙度，泥质偏差又怎样被校正？"
+        },
+        {
+          "label": "数据",
+          "value": "固定种子教学数据",
+          "desc": "训练与测试数据分开"
+        },
+        {
+          "label": "运行",
+          "value": "前端离线计算",
+          "desc": "模型与基线实际计算"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "OBSERVATION",
+          "title": "孔隙度是空隙体积分数",
+          "html": "<p>孔隙度φ等于岩石孔隙体积除以总体积。20%孔隙度意味着1cm³岩石中有0.2cm³孔隙，并不直接等于可采油量，因为流体类型、连通性和压力也会影响生产。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 230\" role=\"img\" aria-label=\"骨架—孔隙混合密度\"><path d=\"M60 35V176H710\" fill=\"none\" stroke=\"#bccfc3\"/><polyline points=\"60.0,63.4 73.3,65.6 86.5,67.8 99.8,70.0 113.1,72.1 126.3,74.3 139.6,76.5 152.9,78.7 166.1,80.8 179.4,83.0 192.7,85.2 205.9,87.4 219.2,89.5 232.4,91.7 245.7,93.9 259.0,96.1 272.2,98.2 285.5,100.4 298.8,102.6 312.0,104.8 325.3,106.9 338.6,109.1 351.8,111.3 365.1,113.5 378.4,115.6 391.6,117.8 404.9,120.0 418.2,122.2 431.4,124.3 444.7,126.5 458.0,128.7 471.2,130.9 484.5,133.0 497.8,135.2 511.0,137.4 524.3,139.6 537.6,141.7 550.8,143.9 564.1,146.1 577.3,148.3 590.6,150.4 603.9,152.6 617.1,154.8 630.4,157.0 643.7,159.1 656.9,161.3 670.2,163.5 683.5,165.7 696.7,167.8 710.0,170.0\" fill=\"none\" stroke=\"#14796f\" stroke-width=\"2.5\"/><text x=\"70\" y=\"220\" fill=\"#14796f\" font-size=\"15\">砂岩骨架2.65</text><polyline points=\"60.0,50.0 73.3,52.3 86.5,54.6 99.8,56.9 113.1,59.2 126.3,61.5 139.6,63.9 152.9,66.2 166.1,68.5 179.4,70.8 192.7,73.1 205.9,75.4 219.2,77.7 232.4,80.0 245.7,82.3 259.0,84.6 272.2,86.9 285.5,89.3 298.8,91.6 312.0,93.9 325.3,96.2 338.6,98.5 351.8,100.8 365.1,103.1 378.4,105.4 391.6,107.7 404.9,110.0 418.2,112.3 431.4,114.7 444.7,117.0 458.0,119.3 471.2,121.6 484.5,123.9 497.8,126.2 511.0,128.5 524.3,130.8 537.6,133.1 550.8,135.4 564.1,137.8 577.3,140.1 590.6,142.4 603.9,144.7 617.1,147.0 630.4,149.3 643.7,151.6 656.9,153.9 670.2,156.2 683.5,158.5 696.7,160.8 710.0,163.2\" fill=\"none\" stroke=\"#c07648\" stroke-width=\"2.5\"/><text x=\"290\" y=\"220\" fill=\"#c07648\" font-size=\"15\">较高骨架密度</text><text x=\"60\" y=\"22\" font-size=\"16\" fill=\"#243740\">体积密度 / g·cm⁻³</text><text x=\"580\" y=\"197\" font-size=\"15\">孔隙度 / %</text></svg><figcaption>骨架—孔隙混合密度。本例输出用百分比显示，误差用孔隙度百分点报告。 图内数值为用于解释概念的教学示意；运行示范另行计算。</figcaption></figure><p>本例输出用百分比显示，误差用孔隙度百分点报告。</p>"
+        },
+        {
+          "no": 2,
+          "en": "PRINCIPLE",
+          "title": "密度法需要骨架和流体假设",
+          "html": "<p>体积密度是骨架和孔隙流体共同贡献：ρb=(1−φ)ρma+φρf。已知骨架和流体密度时可解出φ。实际解释还需考虑岩性、泥质和井眼影响，单一假设会形成系统偏差。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 230\" role=\"img\" aria-label=\"泥质造成公式偏差\"><path d=\"M60 35V176H710\" fill=\"none\" stroke=\"#bccfc3\"/><polyline points=\"60.0,82.7 73.3,78.1 86.5,73.5 99.8,69.1 113.1,65.0 126.3,61.3 139.6,58.0 152.9,55.2 166.1,53.0 179.4,51.3 192.7,50.3 205.9,50.0 219.2,50.3 232.4,51.3 245.7,53.0 259.0,55.2 272.2,58.0 285.5,61.3 298.8,65.1 312.0,69.2 325.3,73.5 338.6,78.1 351.8,82.8 365.1,87.4 378.4,92.0 391.6,96.4 404.9,100.5 418.2,104.2 431.4,107.5 444.7,110.3 458.0,112.5 471.2,114.1 484.5,115.1 497.8,115.5 511.0,115.1 524.3,114.1 537.6,112.5 550.8,110.2 564.1,107.4 577.3,104.1 590.6,100.4 603.9,96.3 617.1,91.9 630.4,87.3 643.7,82.6 656.9,78.0 670.2,73.4 683.5,69.1 696.7,65.0 710.0,61.2\" fill=\"none\" stroke=\"#14796f\" stroke-width=\"2.5\"/><text x=\"70\" y=\"220\" fill=\"#14796f\" font-size=\"15\">真实孔隙度</text><polyline points=\"60.0,82.7 73.3,78.1 86.5,73.5 99.8,69.1 113.1,65.0 126.3,61.3 139.6,58.0 152.9,55.2 166.1,53.0 179.4,51.3 192.7,50.3 205.9,50.0 219.2,50.3 232.4,51.3 245.7,53.0 259.0,55.2 272.2,58.0 285.5,61.3 298.8,65.1 312.0,69.2 325.3,73.5 338.6,132.7 351.8,137.3 365.1,142.0 378.4,146.5 391.6,150.9 404.9,155.0 418.2,158.7 431.4,162.0 444.7,164.8 458.0,167.1 471.2,168.7 484.5,169.7 497.8,170.0 511.0,169.7 524.3,168.7 537.6,167.0 550.8,164.8 564.1,162.0 577.3,158.6 590.6,154.9 603.9,150.8 617.1,146.4 630.4,141.9 643.7,137.2 656.9,132.5 670.2,128.0 683.5,123.6 696.7,119.5 710.0,115.8\" fill=\"none\" stroke=\"#c07648\" stroke-width=\"2.5\"/><text x=\"290\" y=\"220\" fill=\"#c07648\" font-size=\"15\">单密度估计</text><text x=\"60\" y=\"22\" font-size=\"16\" fill=\"#243740\">孔隙度 / %</text><text x=\"580\" y=\"197\" font-size=\"15\">井深 →</text></svg><figcaption>泥质造成公式偏差。基线固定ρma=2.65、ρf=1.03g/cm³；多曲线模型利用GR与中子响应学习教学泥质偏差。 图内数值为用于解释概念的教学示意；运行示范另行计算。</figcaption></figure><p>基线固定ρma=2.65、ρf=1.03g/cm³；多曲线模型利用GR与中子响应学习教学泥质偏差。</p>"
+        },
+        {
+          "no": 3,
+          "en": "INTERPRETATION",
+          "title": "标定点是学习依据，测试点是检查依据",
+          "html": "<p>训练集把曲线与岩心孔隙度配对，拟合后只给测试模型输入曲线。测试岩心值到评价阶段才打开。减少标定点或关闭通道，可观察模型是否依赖足够信息。</p><p>交会图中贴近对角线表示预测接近标定，残差图则显示沿深度偏差。</p><p class=\"sub\">专业资料：<a href=\"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-porosity\" target=\"_blank\" rel=\"noopener\">SLB｜Defining porosity</a>；<a href=\"https://www.epa.gov/environmental-geophysics/gamma-gamma-density-logging\" target=\"_blank\" rel=\"noopener\">US EPA｜Gamma-gamma density logging</a>。本例采用固定种子教学数据；数据结构、单位与评价范围在演示中列出。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "密度曲线怎样变成孔隙度，泥质偏差又怎样被校正？",
+      "lead": [
+        "先理解观测和单位，再对照方法，最后定位误差。"
+      ],
+      "stats": [
+        [
+          "步骤",
+          "3"
+        ],
+        [
+          "运行",
+          "离线"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "组织标定与留出",
+          "role": "步骤1",
+          "do": "独立种子生成训练标定点和120测试点。",
+          "effect": "不重叠的标定与测试",
+          "trap": "孔隙度不放进预测输入。"
+        },
+        {
+          "name": "拟合与公式对照",
+          "role": "步骤2",
+          "do": "多曲线岭回归对照固定密度公式。",
+          "effect": "预测孔隙度与系数",
+          "trap": "骨架和流体密度假设明示。"
+        },
+        {
+          "name": "检查误差位置",
+          "role": "步骤3",
+          "do": "计算RMSE、MAE和逐点残差。",
+          "effect": "百分点误差与交会图",
+          "trap": "相关性好不代表所有点误差小。"
+        }
+      ],
+      "metrics": {
+        "title": "每步数据怎样改变",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"w2\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"储层参数智能解释：用岩心标定孔隙度\"><defs><marker id=\"cf-w2\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-w2)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-w2)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">曲线与岩心标定</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">密度中子与GR</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">独立标定点划分</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">训练点不进入测试井</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">多曲线回归</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">学习泥质相关偏差</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">固定密度公式</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">骨架与流体密度明示</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"2\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">输入与场景是否对应？差异需要人工复核吗？</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">沿井深看残差</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">定位高低估的深度</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">孔隙度与误差</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">百分点RMSE和MAE</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">留出孔隙度对照</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">120个独立测试点</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><article class=\"workflow-step flow-step\" data-step=\"0\"><h3>1. 组织标定与留出</h3><p>独立种子生成训练标定点和120测试点。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 95\" role=\"img\" aria-label=\"组织标定与留出的输入动作与产物\"><rect x=\"8\" y=\"16\" width=\"250\" height=\"55\" rx=\"9\" fill=\"#e7efea\"/><path d=\"M270 43H340l-10-7m10 7l-10 7\" stroke=\"#14796f\" fill=\"none\" stroke-width=\"2\"/><rect x=\"352\" y=\"16\" width=\"398\" height=\"55\" rx=\"9\" fill=\"#f7f1e6\"/><text x=\"24\" y=\"51\" font-size=\"19\" fill=\"#243740\">组织标定与留出</text><text x=\"369\" y=\"51\" font-size=\"18\" fill=\"#243740\">不重叠的标定与测试</text></svg><p><b>产物：</b>不重叠的标定与测试</p><p class=\"sub\">注意：孔隙度不放进预测输入。</p></article><article class=\"workflow-step flow-step\" data-step=\"1\"><h3>2. 拟合与公式对照</h3><p>多曲线岭回归对照固定密度公式。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 95\" role=\"img\" aria-label=\"拟合与公式对照的输入动作与产物\"><rect x=\"8\" y=\"16\" width=\"250\" height=\"55\" rx=\"9\" fill=\"#e7efea\"/><path d=\"M270 43H340l-10-7m10 7l-10 7\" stroke=\"#14796f\" fill=\"none\" stroke-width=\"2\"/><rect x=\"352\" y=\"16\" width=\"398\" height=\"55\" rx=\"9\" fill=\"#f7f1e6\"/><text x=\"24\" y=\"51\" font-size=\"19\" fill=\"#243740\">拟合与公式对照</text><text x=\"369\" y=\"51\" font-size=\"18\" fill=\"#243740\">预测孔隙度与系数</text></svg><p><b>产物：</b>预测孔隙度与系数</p><p class=\"sub\">注意：骨架和流体密度假设明示。</p></article><article class=\"workflow-step flow-step\" data-step=\"2\"><h3>3. 检查误差位置</h3><p>计算RMSE、MAE和逐点残差。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 95\" role=\"img\" aria-label=\"检查误差位置的输入动作与产物\"><rect x=\"8\" y=\"16\" width=\"250\" height=\"55\" rx=\"9\" fill=\"#e7efea\"/><path d=\"M270 43H340l-10-7m10 7l-10 7\" stroke=\"#14796f\" fill=\"none\" stroke-width=\"2\"/><rect x=\"352\" y=\"16\" width=\"398\" height=\"55\" rx=\"9\" fill=\"#f7f1e6\"/><text x=\"24\" y=\"51\" font-size=\"19\" fill=\"#243740\">检查误差位置</text><text x=\"369\" y=\"51\" font-size=\"18\" fill=\"#243740\">百分点误差与交会图</text></svg><p><b>产物：</b>百分点误差与交会图</p><p class=\"sub\">注意：相关性好不代表所有点误差小。</p></article>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "intro": "密度曲线怎样变成孔隙度，泥质偏差又怎样被校正？",
+      "height": 1300
+    }
+  }
+}

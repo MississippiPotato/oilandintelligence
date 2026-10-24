@@ -1,0 +1,27 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "ecc": 2,
+    "depth": 3,
+    "noise": 0.2,
+    "threshold": 0.9
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "IoU": 1,
+    "baselineIoU": 0.12037037037037036,
+    "falsePixels": 0,
+    "predictedPixels": 72
+  },
+  "boundaryChecks": [
+    "ecc=0",
+    "ecc=5",
+    "depth=0",
+    "depth=6",
+    "noise=0",
+    "noise=0.9",
+    "threshold=0.2",
+    "threshold=2.5"
+  ]
+}

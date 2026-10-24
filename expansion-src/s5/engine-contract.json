@@ -1,0 +1,22 @@
+{
+  "sceneId": "s5",
+  "global": "S5Core",
+  "runMethod": "run",
+  "defaultParams": {
+    "noise": 0.24,
+    "type": "random",
+    "seed": 1901
+  },
+  "predictEntry": "predict(noisyTraces, fittedModel)",
+  "testTruthSeparation": "score/predict inputs do not include test evaluation labels or clean reference. run() evaluates only after predictions.",
+  "engineGlobal": "S5Core",
+  "run": {
+    "method": "run",
+    "signature": "run(params = {})",
+    "parameters": {
+      "noise": 0.24,
+      "type": "random",
+      "seed": 1901
+    }
+  }
+}

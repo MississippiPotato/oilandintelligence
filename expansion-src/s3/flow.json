@@ -1,0 +1,42 @@
+{
+  "title": "初至波自动拾取：把第一段有效能量定位到时间轴",
+  "input": {
+    "title": "独立炮集",
+    "detail": "多道振幅与采样间隔",
+    "step": 0
+  },
+  "prepare": {
+    "title": "滑窗与邻道",
+    "detail": "能量与变化特征",
+    "step": 1
+  },
+  "model": {
+    "title": "逻辑回归触发",
+    "detail": "连续超阈位置",
+    "step": 2
+  },
+  "baseline": {
+    "title": "STA/LTA触发",
+    "detail": "短长时能量之比",
+    "step": 2
+  },
+  "gate": [
+    "资料与结果",
+    "需要复核？"
+  ],
+  "review": {
+    "title": "逐道核查",
+    "detail": "回看弱道与噪声",
+    "step": 3
+  },
+  "output": {
+    "title": "初至拾取表",
+    "detail": "模型与人工分开",
+    "step": 3
+  },
+  "compare": {
+    "title": "误差与漏拾",
+    "detail": "全18道命中率",
+    "step": 3
+  }
+}

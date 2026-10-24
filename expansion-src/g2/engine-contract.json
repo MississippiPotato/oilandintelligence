@@ -1,0 +1,22 @@
+{
+  "sceneId": "g2",
+  "global": "G2Core",
+  "runMethod": "run",
+  "defaultParams": {
+    "organic": 1.8,
+    "threshold": 3.3,
+    "seed": 733
+  },
+  "predictEntry": "score(values, fit(backgroundRows))",
+  "testTruthSeparation": "score/predict inputs do not include test evaluation labels or clean reference. run() evaluates only after predictions.",
+  "engineGlobal": "G2Core",
+  "run": {
+    "method": "run",
+    "signature": "run(params = {})",
+    "parameters": {
+      "organic": 1.8,
+      "threshold": 3.3,
+      "seed": 733
+    }
+  }
+}

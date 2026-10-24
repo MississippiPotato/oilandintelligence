@@ -7,13 +7,11 @@ import { assistantJS, assistantCSS } from './assistant-bundle.mjs';
 import { flowOverview, flowRuntime } from './case-flowcharts.mjs';
 
 export const root = path.resolve(import.meta.dirname, '..');
-export const reportDir = 'handoff/expansion-2026-10-24';
-export const targets = [
-  ['g1', 'geology'], ['s1', 'seismic'], ['d1', 'drilling'],
-  ['w4', 'welllog'], ['c1', 'cementing'], ['co1', 'completion'],
-  ['p1', 'perforation'], ['pr1', 'production'], ['wo1', 'workover'],
-  ['e1', 'eor'], ['t1', 'transport'], ['r5', 'refining']
-].map(([sceneId, stageId]) => ({ sceneId, stageId }));
+export const reportDir = 'handoff/full-coverage-2026-10-24';
+// Keep the teacher's scene identifiers as the sole coverage denominator.
+const taxonomy = JSON.parse(fs.readFileSync(path.join(root, 's17_development_kit/09_全分类及覆盖表.json'), 'utf8')).taxonomy;
+export const targets = taxonomy.filter(s => s.id !== 'mudlogging')
+  .flatMap(stage => stage.scenes.map(scene => ({ sceneId: scene.id, stageId: stage.id })));
 export const sourceNames = ['case.json', 'engine.js', 'app.js', 'demo.html', 'demo.css', 'README.txt'];
 export const packageNames = ['case.json', 'README.txt', 'demo/index.html', 'demo/demo.css', 'demo/demo.js'];
 export const contractNames = ['case-upload.js', 'case-demo-host.js', 'registry.js', 'admin.js'];
@@ -39,6 +37,9 @@ export function inspectSource(target, atlas = teacherAtlas()) {
   const missing = sourceNames.filter(p => !fs.existsSync(path.join(root, source, p)));
   if (missing.length) return { ...target, source, status: 'missing', missing };
   const errors = [], warnings = [];
+  const isNew = !['g1','s1','d1','w4','c1','co1','p1','pr1','wo1','e1','t1','r5'].includes(target.sceneId);
+  const flowFile = path.join(root, source, 'flow.json');
+  if (isNew && !fs.existsSync(flowFile)) errors.push('new case requires its authored compact flow.json');
   let manifest;
   try { manifest = JSON.parse(read(source + '/case.json')); }
   catch (e) { return { ...target, source, status: 'invalid', errors: ['case.json: ' + e.message] }; }
@@ -82,7 +83,7 @@ export function inspectSource(target, atlas = teacherAtlas()) {
   }
   if (/@import\b/i.test(css)) errors.push('CSS imports must be bundled into demo.css');
   return { ...target, source, status: errors.length ? 'invalid' : 'source_valid', manifest, sceneName: scene?.name, stageName: scene?.stageName, errors, warnings,
-    sourceFiles: sourceNames.map(n => fileRecord(source + '/' + n)) };
+    sourceFiles: [...sourceNames, ...(fs.existsSync(flowFile) ? ['flow.json'] : [])].map(n => fileRecord(source + '/' + n)) };
 }
 
 function preserveBaseline() {
@@ -90,10 +91,10 @@ function preserveBaseline() {
   if (fs.existsSync(path.join(root, target))) return;
   const files = [
     ...walk('portal-original'), ...walk('石油勘探开发智能化案例集'),
-    ...contractNames.map(n => 'portal/assets/core/' + n), ...walk('case-src')
+    ...walk('case-src'), ...walk('dist/cases'), ...walk('data/real')
   ];
   fs.writeFileSync(path.join(root, target), JSON.stringify({ createdAt: new Date().toISOString(),
-    meaning: 'Pre-expansion original teacher copies, four import contract files, and original five-case source bytes. Optional assistant bundle is built from shared current source.',
+    meaning: 'Protected original teacher copies, five mudlogging source/runtime directories, and real observations. Enhanced persistence may change without changing teacher package format.',
     files: files.map(fileRecord) }, null, 2));
 }
 
@@ -132,8 +133,8 @@ export function pluginSource(records) {
       href: '#/scene/' + p.sceneId + '?case=' + encodeURIComponent(p.id) + '&tab=bg',
       standaloneHref: page, builtIn: true, imported: false, bytes: entry.bytes });
   });
-  g.S17Expansion = { cases: catalog, builtCount: catalog.length, expectedCount: 12,
-    registration: 'builtin-plugin', browserAcceptance: 'see handoff/expansion-2026-10-24',
+  g.S17Expansion = { cases: catalog, builtCount: catalog.length, expectedCount: ${targets.length},
+    registration: 'builtin-plugin', browserAcceptance: 'see ${reportDir}',
     byScene: function (id) { return catalog.filter(function (c) { return c.sceneId === id; })[0] || null; },
     href: function (id, tab) { var c = this.byScene(id); return c ? '#/scene/' + c.sceneId + '?case=' + encodeURIComponent(c.id) + '&tab=' + (tab || 'bg') : null; } };
 })(window);
@@ -160,7 +161,9 @@ export function buildExpansions({ requireAll = false } = {}) {
       referenceHref: '../../../../portal/reference/fluorescence.html' }) + ';\n';
     const builtManifest = JSON.parse(JSON.stringify(p));
     Object.assign(builtManifest.tabs.demo, { mode: 'page', html: 'demo/index.html', js: 'demo/demo.js' });
-    const chart = flowOverview(p.sceneId);
+    const authoredFlowPath = path.join(root, item.source, 'flow.json');
+    const authoredFlow = fs.existsSync(authoredFlowPath) ? JSON.parse(fs.readFileSync(authoredFlowPath, 'utf8')) : null;
+    const chart = flowOverview(p.sceneId, authoredFlow);
     builtManifest.tabs.workflow.metrics.html = chart + builtManifest.tabs.workflow.metrics.html;
     const chartMount = '\n' + flowRuntime + '\n(function(){function startFlow(){var area=document.getElementById("workflow");if(area&&!area.querySelector(".case-flow-overview"))area.insertAdjacentHTML("afterbegin",'+JSON.stringify(chart)+');S17Flow.mount(area||document);}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",startFlow,{once:true});else startFlow();})();\n';
     const files = {
@@ -193,16 +196,16 @@ export function buildExpansions({ requireAll = false } = {}) {
       sourceErrors: row.errors || [], missing: row.missing || [], browserAcceptance: 'not_recorded_by_build' };
   });
   fs.writeFileSync(path.join(root, reportDir, 'coverage.json'), JSON.stringify({ updatedAt: lock.createdAt,
-    scope: '其他12阶段各1例，原录井5例保持独立，其他44个候选场景未在本轮实现', expectedCount: 12,
+    scope: '补齐老师全部61场景：录井5例独立保留，其他12阶段共56例。构建不代表浏览器验收。', expectedCount: targets.length,
     actualBuiltCount: records.length, browserAcceptanceCount: null, cases: coverage }, null, 2) + '\n');
-  const md = ['# 十二阶段扩展覆盖', '', '范围：保留原录井五例，其他十二阶段各完成一例。本表由真实存在且源码齐全的成品构建生成；构建数量不代表浏览器验收数量。', '',
+  const md = ['# 全场景扩展覆盖', '', '范围：保留录井五例，补齐其他十二阶段56例。本表由真实存在且源码齐全的成品构建生成；构建数量不代表浏览器验收数量。', '',
     '| 阶段 | 场景 | 案例 ID | 版本 | 成品字节 | 状态 |', '| --- | --- | --- | --- | ---: | --- |',
     ...coverage.map(c => `| ${c.stageName} | ${c.sceneId} · ${c.sceneName} | ${c.caseId || '—'} | ${c.version || '—'} | ${c.bytes ?? '—'} | ${c.status} |`), '',
-    `实际齐全并构建：${records.length}/12；累计 ${lock.totalBytes} 字节。`, '',
+    `实际齐全并构建：${records.length}/${targets.length}；累计 ${lock.totalBytes} 字节。`, '',
     '每例上传目录只有 case.json、README.txt、demo/index.html、demo/demo.css、demo/demo.js 五个文件。源码、来源清单及检查脚本留在开发目录。', '',
     '构建不访问网络，不调用模型服务。默认计算、图形和基础助手可离线运行；可选在线对话需用户在当前页面配置。', '',
     '未由构建验收：原站真实文件夹导入、沙箱执行、刷新、关闭重开、离线交互、窄屏与实际下载。这些只能引用后续真实浏览器记录。', '',
-    '增强门户通过原 Cases.register 契约内置注册，不写 localStorage。原站重复 ID 检查仍有效；若要在增强站手动导入同名内置案例，先通过原案例库功能隐藏该插件。未修改的老师原站没有这些内置 ID。', ''];
+    '增强门户通过 Cases.register 契约内置注册。手动导入包保持老师的原文件格式；增强门户的大容量保存与原站分批导入分别验收。原站重复 ID 检查保持原样。', ''];
   fs.writeFileSync(path.join(root, reportDir, 'coverage.md'), md.join('\n'));
   const failed = lock.invalid.length > 0 || (requireAll && !lock.complete);
   return { lock, failed };

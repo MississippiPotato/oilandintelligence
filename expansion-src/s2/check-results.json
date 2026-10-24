@@ -1,0 +1,40 @@
+{
+  "sceneId": "s2",
+  "at": "2026-10-24T06:00:40.425Z",
+  "kind": "Node source and numerical checks only; browser integration pending",
+  "passed": 8,
+  "checks": [
+    {
+      "name": "source contract",
+      "passed": true
+    },
+    {
+      "name": "deterministic fixed inputs",
+      "passed": true
+    },
+    {
+      "name": "finite computed predictions",
+      "passed": true
+    },
+    {
+      "name": "training/test ids disjoint",
+      "passed": true
+    },
+    {
+      "name": "all expected heldout rows evaluated",
+      "passed": true
+    },
+    {
+      "name": "prediction API accepts observations only",
+      "passed": true
+    },
+    {
+      "name": "high noise changes predictions and retains denominator",
+      "passed": true
+    },
+    {
+      "name": "parameter setting changes actual calculation",
+      "passed": true
+    }
+  ]
+}

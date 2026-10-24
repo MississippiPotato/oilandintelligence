@@ -1,0 +1,42 @@
+{
+  "title": "从工况解释到残差预警",
+  "gate": [
+    "残差持续超限？",
+    "回看原始信号"
+  ],
+  "input": {
+    "title": "负荷电流温度",
+    "detail": "负荷电流温度时间线",
+    "step": 0
+  },
+  "prepare": {
+    "title": "设备与时间切分",
+    "detail": "正常设备整组训练",
+    "step": 0
+  },
+  "model": {
+    "title": "正常关系回归",
+    "detail": "温度减正常关系预期",
+    "step": 1
+  },
+  "baseline": {
+    "title": "单电流阈值",
+    "detail": "电流高于固定阈值",
+    "step": 2
+  },
+  "review": {
+    "title": "持续偏离复核",
+    "detail": "连续超限再回看信号",
+    "step": 3
+  },
+  "output": {
+    "title": "异常时间片段",
+    "detail": "异常时片与首次告警",
+    "step": 3
+  },
+  "compare": {
+    "title": "召回与误报事件",
+    "detail": "分钟召回和误报事件",
+    "step": 3
+  }
+}

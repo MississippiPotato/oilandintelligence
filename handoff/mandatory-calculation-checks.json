@@ -1,5 +1,5 @@
 {
-  "createdAt": "2026-10-24T04:59:50.552Z",
+  "createdAt": "2026-10-24T06:25:41.939Z",
   "scope": "G2/G3/G4 calculations and source/build checks; not browser proof",
   "passed": 14,
   "failed": 0,
@@ -630,6 +630,8 @@
       "status": "passed",
       "evidence": {
         "changedWorkingFiles": [
+          "assets/core/admin.js",
+          "assets/core/case-upload.js",
           "assets/core/shell.js",
           "index.html"
         ],
@@ -637,7 +639,7 @@
           "assets/s17.css",
           "assets/s17-home.js"
         ],
-        "cumulativePackageBytes": 3377818
+        "cumulativePackageBytes": 3355113
       }
     }
   ],

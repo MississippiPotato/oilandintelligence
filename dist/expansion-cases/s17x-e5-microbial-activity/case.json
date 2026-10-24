@@ -1,0 +1,85 @@
+{
+  "id": "s17x-e5-microbial-activity",
+  "sceneId": "e5",
+  "methods": [
+    "ts"
+  ],
+  "title": "微生物采油菌群活性预测",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "微生物采油研究关注菌群在储层环境中的代谢及其产物。温度与盐度共同影响活性，单看温度不足以描述复杂环境。本例把多变量响应面变成可探索的实验图。",
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "菌群活性为何与采油研究有关",
+          "html": "<p>微生物代谢可能产生表面活性物质、聚合物或气体，进而影响油水界面、流动或局部孔隙环境。这些机制能否带来增油，需要另外的相容性与驱替试验。本例活性是0–100的相对培养响应，不能直接换算成采收率。温度偏离适宜范围会影响代谢，盐度过高会增加渗透压力，因此温度适宜时仍可能因盐度而低活性。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"菌群活性为何与采油研究有关\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><polyline points=\"35,175 90,155 145,115 200,70 255,45 310,55 365,90 420,140 475,165\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"50\" y=\"28\">归一化活性</text><text x=\"490\" y=\"180\">培养温度 →</text><text x=\"490\" y=\"70\">适宜区间</text><text x=\"490\" y=\"110\">不是越热越好</text></g></svg><figcaption>活性常有适宜环境区间，不能假定温度越高活性就越强。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "METHOD",
+          "title": "多变量响应面怎么看",
+          "html": "<p>横轴温度、纵轴盐度，颜色越深表示预测活性越高。移动当前查询点可看到在相似温度下盐度升高的抑制作用。训练试验以空心点标出，远离它们的区域也更需要补实验。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"多变量响应面怎么看\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"25\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"53\">温度 / 盐度</text><rect x=\"270\" y=\"25\" width=\"190\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"282\" y=\"53\">相似培养实验</text><rect x=\"520\" y=\"25\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"532\" y=\"53\">加权活性预测</text><polyline points=\"212,47 268,47\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"462,47 518,47\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"45\" y=\"125\">单变量温度基线把不同盐度混在一起</text><text x=\"45\" y=\"170\">响应面保留两个环境维度，读出联合影响</text></g></svg><figcaption>温度与盐度共同确定相似实验，单温度分箱会混合盐度不同的试验。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "EVIDENCE",
+          "title": "近邻从相似实验寻找支持",
+          "html": "<p>90批训练培养实验提供温度、盐度与活性；kNN按标准化环境距离取近邻加权。30批独立实验评价MAE。对照仅用温度分箱均值，读者可观察加入盐度后是否减少误差，以及k值变大怎样平滑响应。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.netl.doe.gov/sites/default/files/2018-05/NT15522_FinalReport.pdf\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "为什么温度适宜时，菌群活性仍可能很低？",
+      "lead": [
+        "微生物采油研究关注菌群在储层环境中的代谢及其产物。温度与盐度共同影响活性，单看温度不足以描述复杂环境。本例把多变量响应面变成可探索的实验图。"
+      ],
+      "steps": [
+        {
+          "name": "记录培养环境与活性",
+          "role": "步骤 1",
+          "do": "输入为培养温度和盐度，输出0–100相对活性。90个训练批和30个独立留出批来自同一公开教学响应式，噪声按批次独立。",
+          "effect": "带温度、盐度和活性的培养试验记录",
+          "trap": "活性不是油藏采收率"
+        },
+        {
+          "name": "按批次留出实验",
+          "role": "步骤 2",
+          "do": "训练批次仅进入近邻库，测试批次只计算评价。距离按45°C与85g/L的设计跨度缩放，防止单位大小主导邻居选择。",
+          "effect": "统一尺度下的二维环境距离",
+          "trap": "缩放取设计范围，不读取测试标签"
+        },
+        {
+          "name": "标准化后近邻回归",
+          "role": "步骤 3",
+          "do": "对查询点找到k个最近训练环境，按1/(距离+0.025)加权活性。改变k会改变局部响应的平滑程度。温度基线只按9°C温度分箱取均值。",
+          "effect": "当前预测与单温度对照",
+          "trap": "k值改变后必须重算，旧结果标为过期"
+        },
+        {
+          "name": "阅读响应面与误差",
+          "role": "步骤 4",
+          "do": "对19×19环境网格重复调用近邻代理，绘制温盐响应面并叠加训练位置；30批测试同时给出两种方法的MAE。",
+          "effect": "响应面、训练覆盖和留出误差",
+          "trap": "远离试验点的平滑颜色不代表有真实实验支持"
+        }
+      ],
+      "metrics": {
+        "title": "步骤的输入与产物",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"e5\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"微生物采油菌群活性预测\"><defs><marker id=\"cf-e5\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-e5)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-e5)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">专业观测输入</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">培养温度 °C</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">记录培养环境与活性</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">检查单位和记录范围</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">按批次留出实验</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">由可见输入计算</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">简单方法对照</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">相同数据独立计算</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"2\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">结果是否满足检查？补充观测再重新计算</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">检查约束与来源</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">不读评价真值预测</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">图表与当前结果</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">保留参数和评价分母</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">独立评价对比</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">误差或合法性可复算</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><h3>记录培养环境与活性</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录培养环境与活性</text><rect x=\"12\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">按批次留出实验</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">标准化后近邻回归</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">阅读响应面与误差</text><text x=\"25\" y=\"125\">当前步骤：记录培养环境与活性</text></g></svg><figcaption>带温度、盐度和活性的培养试验记录。活性不是油藏采收率。</figcaption></figure><figure><h3>按批次留出实验</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录培养环境与活性</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">按批次留出实验</text><rect x=\"187\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">标准化后近邻回归</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">阅读响应面与误差</text><text x=\"25\" y=\"125\">当前步骤：按批次留出实验</text></g></svg><figcaption>统一尺度下的二维环境距离。缩放取设计范围，不读取测试标签。</figcaption></figure><figure><h3>标准化后近邻回归</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录培养环境与活性</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">按批次留出实验</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">标准化后近邻回归</text><rect x=\"362\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">阅读响应面与误差</text><text x=\"25\" y=\"125\">当前步骤：标准化后近邻回归</text></g></svg><figcaption>当前预测与单温度对照。k值改变后必须重算，旧结果标为过期。</figcaption></figure><figure><h3>阅读响应面与误差</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"输入与结果之间的有向流程\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"15\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"27\" y=\"63\">记录培养环境与活性</text><polyline points=\"175,57 189,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"174\" y=\"53\">›</text><rect x=\"190\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"202\" y=\"63\">按批次留出实验</text><polyline points=\"350,57 364,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"349\" y=\"53\">›</text><rect x=\"365\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"377\" y=\"63\">标准化后近邻回归</text><polyline points=\"525,57 539,57\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"524\" y=\"53\">›</text><rect x=\"540\" y=\"35\" width=\"158\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"552\" y=\"63\">阅读响应面与误差</text><rect x=\"537\" y=\"32\" width=\"164\" height=\"50\" rx=\"10\" fill=\"none\" stroke=\"#b97e45\" stroke-width=\"3\"/><text x=\"25\" y=\"125\">当前步骤：阅读响应面与误差</text></g></svg><figcaption>响应面、训练覆盖和留出误差。远离试验点的平滑颜色不代表有真实实验支持。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "height": 1150,
+      "intro": "微生物采油研究关注菌群在储层环境中的代谢及其产物。温度与盐度共同影响活性，单看温度不足以描述复杂环境。本例把多变量响应面变成可探索的实验图。"
+    }
+  }
+}

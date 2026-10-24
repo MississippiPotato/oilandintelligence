@@ -1,0 +1,82 @@
+{
+  "id": "s17x-t4-meter-drift-calibration",
+  "sceneId": "t4",
+  "methods": [
+    "ts"
+  ],
+  "title": "油气计量校正：分清读数变化与仪表偏移",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "流量增长不一定是产量提高，也可能是流量计的比例偏差。利用独立标定点学出读数到参考流量的关系，再检查后续运行区间。",
+      "sections": [
+        {
+          "no": 1,
+          "title": "交接计量为什么要关心系统偏差",
+          "html": "<p>流量计每分钟给出体积流量，交接量是流量对时间的累加。本例统一采用同一参考温压下的 m³/h，不混入体积状态换算。若仪表每次都多报 6%，一分钟的差异看似不大，整班累计后会形成持续偏差。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"本例采样间隔 1 min，因此每个点的体积是 Q/60。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M45 110H710\" stroke=\"#85aaa2\" stroke-width=\"22\"/><rect x=\"285\" y=\"65\" width=\"180\" height=\"90\" rx=\"9\" fill=\"#d9e9e2\"/><text x=\"375\" y=\"102\" text-anchor=\"middle\">流量计读数 Q</text><text x=\"375\" y=\"132\" text-anchor=\"middle\">m³/h</text><text x=\"68\" y=\"192\">累计体积 = ΣQ × 每个采样间隔（小时）</text></g></svg><figcaption>本例采样间隔 1 min，因此每个点的体积是 Q/60。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "title": "标定记录提供的是独立参照",
+          "html": "<p>标定把被检表读数与参考装置在相同工况下比较。多流量点可以识别比例偏差和零点偏差。本例用前 24 个标定点拟合 Q参考=a+bQ读数；另一组 60 个运行点用于评价。参考值在运行评价阶段才参与误差计算。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 160L690 50\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 160L690 75\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">被检表读数 m³/h；斜率偏离 1 表示比例误差</text><text x=\"75\" y=\"28\">参考流量 m³/h</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "title": "为什么同时保留简单基线",
+          "html": "<p>简单基线用标定点的平均差值做固定扣减；回归校正同时估计斜率和截距。比例误差明显时，固定扣减在不同流量处仍可能残留误差。噪声很大或标定流量范围狭窄时，斜率估计也会变得不稳定。</p>"
+        },
+        {
+          "no": 4,
+          "title": "旧校正系数不会自动跟随新漂移",
+          "html": "<p>本例的“后续新增漂移”只施加在评价运行段，旧标定仍保持原状。增加它后，原有校正会失准；这正是需要再次核查标定的信号。结果同时展示逐点曲线、流量 MAE 和整段累计体积相对偏差，不能只看一个平均指标。</p><p class=\"note\">专业资料：<a href=\"https://www.nist.gov/publications/liquid-flow-meter-calibrations-nists-15-kgs-water-flow-standard\" target=\"_blank\" rel=\"noreferrer\">NIST：液体流量计标定及不确定度</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "校正后累计交接量的偏差能减少多少？",
+      "lead": [
+        "流量增长不一定是产量提高，也可能是流量计的比例偏差。利用独立标定点学出读数到参考流量的关系，再检查后续运行区间。"
+      ],
+      "steps": [
+        {
+          "name": "选定标定窗",
+          "do": "取 24 个覆盖多流量的读数—参考值配对。",
+          "effect": "拟合与评价分开。",
+          "trap": "把后续参考值加入拟合。"
+        },
+        {
+          "name": "拟合比例与零点",
+          "do": "最小二乘拟合截距和斜率；另算平均差基线。",
+          "effect": "区别比例偏差与固定偏差。",
+          "trap": "只用一个点外推全量程。"
+        },
+        {
+          "name": "校正运行段",
+          "do": "只向校正器传入后续流量计读数。",
+          "effect": "校正过程不访问评价参考量。",
+          "trap": "参数变更后沿用旧图表。"
+        },
+        {
+          "name": "计算计量差",
+          "do": "在最后比较参考量并积分累计体积。",
+          "effect": "同时观察逐点和总量误差。",
+          "trap": "正负误差相互抵消后误称读数准确。"
+        }
+      ],
+      "metrics": {
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"t4\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"校正后累计交接量的偏差能减少多少？\"><defs><marker id=\"cf-t4\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-t4)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-t4)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">标定与读数</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">观测量不含参考答案</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">区分标定窗</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">处理专业量纲与来源</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">斜率与截距</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">真实计算当前结果</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">固定差校正</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">相同输入对照</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"3\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">结果与工况是否一致？</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">记录与工况复核</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">保留异常与分歧</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">候选与单位</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">输出可复查记录</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">同分母比较</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">最后读取独立参考</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"选定标定窗的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">24 组标定点</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">独立参考装置</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">相同参考温压</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">锁定拟合窗口</text></g></svg><figcaption>拟合与评价分开。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"拟合比例与零点的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">均值与协方差</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">斜率 b</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">零点截距 a</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">固定差基线</text></g></svg><figcaption>区别比例偏差与固定偏差。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"校正运行段的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">60 分钟读数</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">只传入观测量</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">a+b×读数</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">逐点更新曲线</text></g></svg><figcaption>校正过程不访问评价参考量。</figcaption></figure><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 145\" role=\"img\" aria-label=\"计算计量差的数据流\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#365c4e\"><rect x=\"16\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#e2eeea\" stroke=\"#9ab5a8\"/><text x=\"98\" y=\"75\" text-anchor=\"middle\">留出参考流量</text><path d=\"M181 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"199\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#edf0e9\" stroke=\"#9ab5a8\"/><text x=\"281\" y=\"75\" text-anchor=\"middle\">逐点绝对误差</text><path d=\"M364 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"382\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#deeae4\" stroke=\"#9ab5a8\"/><text x=\"464\" y=\"75\" text-anchor=\"middle\">Q×1/60 小时</text><path d=\"M547 67h17l-5 -4m5 4l-5 4\" fill=\"none\" stroke=\"#678a7c\" stroke-width=\"2\"/><rect x=\"565\" y=\"35\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#f1eadc\" stroke=\"#9ab5a8\"/><text x=\"647\" y=\"75\" text-anchor=\"middle\">累计体积偏差</text></g></svg><figcaption>同时观察逐点和总量误差。</figcaption></figure>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "intro": "校正后累计交接量的偏差能减少多少？",
+      "height": 1300,
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js"
+    }
+  }
+}

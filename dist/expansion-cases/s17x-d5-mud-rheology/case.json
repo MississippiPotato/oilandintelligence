@@ -1,0 +1,106 @@
+{
+  "id": "s17x-d5-mud-rheology",
+  "sceneId": "d5",
+  "methods": [
+    "ts",
+    "opt"
+  ],
+  "title": "钻井液性能调控：温度变化下寻找可行塑性黏度",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "温度变了，固相和聚合物剂量如何共同影响塑性黏度？",
+      "judge": [
+        {
+          "label": "业务问题",
+          "value": "先理解测量",
+          "desc": "温度变了，固相和聚合物剂量如何共同影响塑性黏度？"
+        },
+        {
+          "label": "数据",
+          "value": "固定种子教学数据",
+          "desc": "训练与测试数据分开"
+        },
+        {
+          "label": "运行",
+          "value": "前端离线计算",
+          "desc": "模型与基线实际计算"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "OBSERVATION",
+          "title": "钻井液不仅要流动，还要携屑",
+          "html": "<p>钻井液循环把钻屑带回地面。流动行为与黏度有关，但密度、携屑能力和静止时悬浮能力是不同性质。这里专门解释塑性黏度PV，不把一种指标当成全部性能。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 230\" role=\"img\" aria-label=\"宾汉流变模型\"><path d=\"M60 35V176H710\" fill=\"none\" stroke=\"#bccfc3\"/><polyline points=\"60.0,170.0 73.3,169.1 86.5,168.2 99.8,167.2 113.1,166.3 126.3,165.4 139.6,164.5 152.9,163.6 166.1,162.7 179.4,161.7 192.7,160.8 205.9,159.9 219.2,159.0 232.4,158.1 245.7,157.1 259.0,156.2 272.2,155.3 285.5,154.4 298.8,153.5 312.0,152.6 325.3,151.6 338.6,150.7 351.8,149.8 365.1,148.9 378.4,148.0 391.6,147.0 404.9,146.1 418.2,145.2 431.4,144.3 444.7,143.4 458.0,142.4 471.2,141.5 484.5,140.6 497.8,139.7 511.0,138.8 524.3,137.9 537.6,136.9 550.8,136.0 564.1,135.1 577.3,134.2 590.6,133.3 603.9,132.3 617.1,131.4 630.4,130.5 643.7,129.6 656.9,128.7 670.2,127.8 683.5,126.8 696.7,125.9 710.0,125.0\" fill=\"none\" stroke=\"#14796f\" stroke-width=\"2.5\"/><text x=\"70\" y=\"220\" fill=\"#14796f\" font-size=\"15\">低PV</text><polyline points=\"60.0,170.0 73.3,167.6 86.5,165.1 99.8,162.7 113.1,160.2 126.3,157.8 139.6,155.3 152.9,152.9 166.1,150.4 179.4,148.0 192.7,145.5 205.9,143.1 219.2,140.6 232.4,138.2 245.7,135.7 259.0,133.3 272.2,130.8 285.5,128.4 298.8,125.9 312.0,123.5 325.3,121.0 338.6,118.6 351.8,116.1 365.1,113.7 378.4,111.2 391.6,108.8 404.9,106.3 418.2,103.9 431.4,101.4 444.7,99.0 458.0,96.5 471.2,94.1 484.5,91.6 497.8,89.2 511.0,86.7 524.3,84.3 537.6,81.8 550.8,79.4 564.1,76.9 577.3,74.5 590.6,72.0 603.9,69.6 617.1,67.1 630.4,64.7 643.7,62.2 656.9,59.8 670.2,57.3 683.5,54.9 696.7,52.4 710.0,50.0\" fill=\"none\" stroke=\"#c07648\" stroke-width=\"2.5\"/><text x=\"290\" y=\"220\" fill=\"#c07648\" font-size=\"15\">高PV</text><text x=\"60\" y=\"22\" font-size=\"16\" fill=\"#243740\">剪切应力 / Pa</text><text x=\"580\" y=\"197\" font-size=\"15\">剪切速率 →</text></svg><figcaption>宾汉流变模型。图中比较不同固相含量的剂量响应，每条线对应同一温度。 图内数值为用于解释概念的教学示意；运行示范另行计算。</figcaption></figure><p>图中比较不同固相含量的剂量响应，每条线对应同一温度。</p>"
+        },
+        {
+          "no": 2,
+          "en": "PRINCIPLE",
+          "title": "PV是流变曲线中的一个斜率",
+          "html": "<p>宾汉塑性模型写作τ=YP+PV·γ。YP是外推截距，PV是高剪切区斜率。本例的输出单位为mPa·s；固相、聚合物和温度共同改变这个响应。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 230\" role=\"img\" aria-label=\"温度改变剂量响应\"><path d=\"M60 35V176H710\" fill=\"none\" stroke=\"#bccfc3\"/><polyline points=\"60.0,151.5 73.3,149.7 86.5,147.8 99.8,146.0 113.1,144.1 126.3,142.3 139.6,140.4 152.9,138.6 166.1,136.7 179.4,134.9 192.7,133.0 205.9,131.2 219.2,129.3 232.4,127.5 245.7,125.6 259.0,123.8 272.2,121.9 285.5,120.1 298.8,118.2 312.0,116.4 325.3,114.6 338.6,112.7 351.8,110.9 365.1,109.0 378.4,107.2 391.6,105.3 404.9,103.5 418.2,101.6 431.4,99.8 444.7,97.9 458.0,96.1 471.2,94.2 484.5,92.4 497.8,90.5 511.0,88.7 524.3,86.8 537.6,85.0 550.8,83.1 564.1,81.3 577.3,79.4 590.6,77.6 603.9,75.7 617.1,73.9 630.4,72.0 643.7,70.2 656.9,68.3 670.2,66.5 683.5,64.6 696.7,62.8 710.0,61.0\" fill=\"none\" stroke=\"#14796f\" stroke-width=\"2.5\"/><text x=\"70\" y=\"220\" fill=\"#14796f\" font-size=\"15\">25℃</text><polyline points=\"60.0,170.0 73.3,167.6 86.5,165.1 99.8,162.7 113.1,160.2 126.3,157.8 139.6,155.3 152.9,152.9 166.1,150.4 179.4,148.0 192.7,145.5 205.9,143.1 219.2,140.6 232.4,138.2 245.7,135.7 259.0,133.3 272.2,130.8 285.5,128.4 298.8,125.9 312.0,123.5 325.3,121.0 338.6,118.6 351.8,116.1 365.1,113.7 378.4,111.2 391.6,108.8 404.9,106.3 418.2,103.9 431.4,101.4 444.7,99.0 458.0,96.5 471.2,94.1 484.5,91.6 497.8,89.2 511.0,86.7 524.3,84.3 537.6,81.8 550.8,79.4 564.1,76.9 577.3,74.5 590.6,72.0 603.9,69.6 617.1,67.1 630.4,64.7 643.7,62.2 656.9,59.8 670.2,57.3 683.5,54.9 696.7,52.4 710.0,50.0\" fill=\"none\" stroke=\"#c07648\" stroke-width=\"2.5\"/><text x=\"290\" y=\"220\" fill=\"#c07648\" font-size=\"15\">100℃</text><text x=\"60\" y=\"22\" font-size=\"16\" fill=\"#243740\">教学 PV / mPa·s</text><text x=\"580\" y=\"197\" font-size=\"15\">聚合物剂量 →</text></svg><figcaption>温度改变剂量响应。专业概念示意与教学响应面分开：公式解释含义，实验批次用于拟合数值。 图内数值为用于解释概念的教学示意；运行示范另行计算。</figcaption></figure><p>专业概念示意与教学响应面分开：公式解释含义，实验批次用于拟合数值。</p>"
+        },
+        {
+          "no": 3,
+          "en": "INTERPRETATION",
+          "title": "先检验预测，再搜索配方",
+          "html": "<p>用140个教学实验批次拟合非线性响应，用70个独立批次检查预测误差。随后才在给定温度和PV范围内扫描候选，并将目标偏差与相对成本综合排序。</p><p>候选少或没有候选都是约束计算的实际结果，页面不会强行给出最优配方。</p><p class=\"sub\">专业资料：<a href=\"https://glossary.slb.com/en/terms/p/plastic_viscosity\" target=\"_blank\" rel=\"noopener\">SLB｜Plastic viscosity</a>；<a href=\"https://glossary.slb.com/en/terms/b/bingham_plastic_model\" target=\"_blank\" rel=\"noopener\">SLB｜Bingham plastic model</a>。本例采用固定种子教学数据；数据结构、单位与评价范围在演示中列出。</p>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "温度变了，固相和聚合物剂量如何共同影响塑性黏度？",
+      "lead": [
+        "先理解观测和单位，再对照方法，最后定位误差。"
+      ],
+      "stats": [
+        [
+          "步骤",
+          "3"
+        ],
+        [
+          "运行",
+          "离线"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "分开实验批次",
+          "role": "步骤1",
+          "do": "140批拟合，70批独立评价。",
+          "effect": "批次RMSE",
+          "trap": "噪声只改变留出批次。"
+        },
+        {
+          "name": "建立流变响应面",
+          "role": "步骤2",
+          "do": "拟合固相、剂量、温度及平方/交互项。",
+          "effect": "多项式系数与经验基线",
+          "trap": "响应面只覆盖本例参数范围。"
+        },
+        {
+          "name": "搜索可行配方",
+          "role": "步骤3",
+          "do": "扫描剂量和固相网格，筛选PV范围再排序。",
+          "effect": "可行数量与候选剂量",
+          "trap": "没有可行点时说明约束冲突。"
+        }
+      ],
+      "metrics": {
+        "title": "每步数据怎样改变",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"d5\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"钻井液性能调控：温度变化下寻找可行塑性黏度\"><defs><marker id=\"cf-d5\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-d5)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-d5)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">流变实验批次</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">固相剂量温度与PV</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">分开实验批次</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">140训练与70留出</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">非线性响应面</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">拟合平方项与交互项</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">线性经验基线</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">同样实验条件比较</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"2\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">输入与场景是否对应？差异需要人工复核吗？</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">筛选可行配方</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">温度和PV上下限</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">配方候选排序</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">目标偏差和相对成本</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">批次误差比较</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">留出PV的RMSE</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><article class=\"workflow-step flow-step\" data-step=\"0\"><h3>1. 分开实验批次</h3><p>140批拟合，70批独立评价。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 95\" role=\"img\" aria-label=\"分开实验批次的输入动作与产物\"><rect x=\"8\" y=\"16\" width=\"250\" height=\"55\" rx=\"9\" fill=\"#e7efea\"/><path d=\"M270 43H340l-10-7m10 7l-10 7\" stroke=\"#14796f\" fill=\"none\" stroke-width=\"2\"/><rect x=\"352\" y=\"16\" width=\"398\" height=\"55\" rx=\"9\" fill=\"#f7f1e6\"/><text x=\"24\" y=\"51\" font-size=\"19\" fill=\"#243740\">分开实验批次</text><text x=\"369\" y=\"51\" font-size=\"18\" fill=\"#243740\">批次RMSE</text></svg><p><b>产物：</b>批次RMSE</p><p class=\"sub\">注意：噪声只改变留出批次。</p></article><article class=\"workflow-step flow-step\" data-step=\"1\"><h3>2. 建立流变响应面</h3><p>拟合固相、剂量、温度及平方/交互项。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 95\" role=\"img\" aria-label=\"建立流变响应面的输入动作与产物\"><rect x=\"8\" y=\"16\" width=\"250\" height=\"55\" rx=\"9\" fill=\"#e7efea\"/><path d=\"M270 43H340l-10-7m10 7l-10 7\" stroke=\"#14796f\" fill=\"none\" stroke-width=\"2\"/><rect x=\"352\" y=\"16\" width=\"398\" height=\"55\" rx=\"9\" fill=\"#f7f1e6\"/><text x=\"24\" y=\"51\" font-size=\"19\" fill=\"#243740\">建立流变响应面</text><text x=\"369\" y=\"51\" font-size=\"18\" fill=\"#243740\">多项式系数与经验基线</text></svg><p><b>产物：</b>多项式系数与经验基线</p><p class=\"sub\">注意：响应面只覆盖本例参数范围。</p></article><article class=\"workflow-step flow-step\" data-step=\"2\"><h3>3. 搜索可行配方</h3><p>扫描剂量和固相网格，筛选PV范围再排序。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 95\" role=\"img\" aria-label=\"搜索可行配方的输入动作与产物\"><rect x=\"8\" y=\"16\" width=\"250\" height=\"55\" rx=\"9\" fill=\"#e7efea\"/><path d=\"M270 43H340l-10-7m10 7l-10 7\" stroke=\"#14796f\" fill=\"none\" stroke-width=\"2\"/><rect x=\"352\" y=\"16\" width=\"398\" height=\"55\" rx=\"9\" fill=\"#f7f1e6\"/><text x=\"24\" y=\"51\" font-size=\"19\" fill=\"#243740\">搜索可行配方</text><text x=\"369\" y=\"51\" font-size=\"18\" fill=\"#243740\">可行数量与候选剂量</text></svg><p><b>产物：</b>可行数量与候选剂量</p><p class=\"sub\">注意：没有可行点时说明约束冲突。</p></article>"
+      }
+    },
+    "demo": {
+      "label": "可运行示范",
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "intro": "温度变了，固相和聚合物剂量如何共同影响塑性黏度？",
+      "height": 1300
+    }
+  }
+}

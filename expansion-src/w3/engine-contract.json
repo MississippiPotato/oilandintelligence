@@ -1,0 +1,76 @@
+{
+  "sceneId": "w3",
+  "global": "Experiment",
+  "runEntry": "Experiment.run",
+  "defaultParams": {
+    "noise": 1,
+    "contrast": 0.4,
+    "threshold": 0.2,
+    "dark": 0.45
+  },
+  "verification": {
+    "nodeExecuted": true,
+    "defaultMetrics": [
+      {
+        "label": "局部特征分割 Dice",
+        "value": 0.7647058823529411,
+        "unit": ""
+      },
+      {
+        "label": "灰度阈值 Dice",
+        "value": 0.6688206785137318,
+        "unit": ""
+      },
+      {
+        "label": "模型 IoU",
+        "value": 0.6190476190476191,
+        "unit": ""
+      }
+    ],
+    "lowParameterMetrics": [
+      {
+        "label": "局部特征分割 Dice",
+        "value": 0.12024048096192384,
+        "unit": ""
+      },
+      {
+        "label": "灰度阈值 Dice",
+        "value": 0.0821917808219178,
+        "unit": ""
+      },
+      {
+        "label": "模型 IoU",
+        "value": 0.06396588486140725,
+        "unit": ""
+      }
+    ],
+    "highParameterMetrics": [
+      {
+        "label": "局部特征分割 Dice",
+        "value": 0.20512820512820512,
+        "unit": ""
+      },
+      {
+        "label": "灰度阈值 Dice",
+        "value": 0.11510002740476843,
+        "unit": ""
+      },
+      {
+        "label": "模型 IoU",
+        "value": 0.11428571428571428,
+        "unit": ""
+      }
+    ],
+    "sourceErrors": [],
+    "sourceWarnings": [],
+    "browserVerified": false
+  },
+  "returned": {
+    "metrics": "array label/value/unit",
+    "predictions": "scenario-specific",
+    "observations": "visible input",
+    "evaluationTruth": "evaluation only",
+    "training": "fitted parameters",
+    "split": "independent fixture groups"
+  }
+}

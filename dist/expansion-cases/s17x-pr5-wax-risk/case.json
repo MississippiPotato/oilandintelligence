@@ -1,0 +1,123 @@
+{
+  "id": "s17x-pr5-wax-risk",
+  "sceneId": "pr5",
+  "title": "结蜡 / 结垢预测：先把结蜡机理讲清楚",
+  "version": "1.0.0",
+  "updated": "2026-10-24",
+  "methods": [
+    "ts"
+  ],
+  "tabs": {
+    "background": {
+      "label": "专业背景",
+      "lede": "原油沿井筒或管线冷却，蜡组分可能析出并在壁面沉积。温度是重要线索，还要结合油样和流动条件。本例聚焦结蜡，避免把不同机理的结垢混作同一种风险。",
+      "judge": [
+        {
+          "label": "数据性质",
+          "value": "合成教学数据",
+          "desc": "固定种子，可重复计算"
+        },
+        {
+          "label": "观察重点",
+          "value": "逻辑回归分数",
+          "desc": "与明确基线并列比较"
+        }
+      ],
+      "sections": [
+        {
+          "no": 1,
+          "en": "CONCEPT",
+          "title": "结蜡发生在哪里，为什么影响生产？",
+          "html": "<p>原油中的蜡组分在一定条件下可从液相析出；靠近较冷管壁的沉积会改变有效流通空间、粗糙度和输送阻力。析蜡温度（WAT）是理解这一过程的重要油样属性。管壁温度低于 WAT 提供了结蜡条件，但是否形成明显沉积还受成分与流动传质等因素影响。结垢则通常讨论无机盐析出，机理与蜡晶体不同。本例只为结蜡建立教学分类模型。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"管道横截面解释壁面沉积与流通空间的关系，不把结蜡与无机结垢混在一起。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><circle cx=\"160\" cy=\"121\" r=\"82\" fill=\"#d8e4e8\"/><circle cx=\"160\" cy=\"121\" r=\"65\" fill=\"#d4b675\"/><circle cx=\"160\" cy=\"121\" r=\"48\" fill=\"#f8f5e9\"/><text x=\"282\" y=\"78\" font-size=\"17\">外圈：管壁</text><text x=\"282\" y=\"120\" font-size=\"17\">金色层：蜡沉积概念</text><text x=\"282\" y=\"162\" font-size=\"17\">中心：剩余流通空间</text><path d=\"M245 75H274M231 120H274M210 161H274\" fill=\"none\" stroke=\"#86a7a7\" stroke-width=\"2\"/><text x=\"67\" y=\"226\" font-size=\"15\">沉积厚度变化会影响通道；本图不按实际比例绘制</text></g></svg><figcaption>管道横截面解释壁面沉积与流通空间的关系，不把结蜡与无机结垢混在一起。</figcaption></figure>"
+        },
+        {
+          "no": 2,
+          "en": "OBSERVATION",
+          "title": "温差、含蜡量和流动条件怎样联合影响判断？",
+          "html": "<p>WAT 减去管壁温度得到冷却温差：正值说明管壁低于该油样的析蜡温度，不能简单用固定的绝对温度替代。不同油样含蜡量不同，流动条件也会影响输运与沉积。演示同时输入管壁温度、WAT、含蜡量和流速，观察相同温度下风险分数为何不同。这里的流速关系由教学生成器设定，只用于展示多变量判断，不把它宣称为所有油田都适用的单调规律。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"同样的管壁温度，不同油样的温差不同：横纵轴分别表示管壁温度 / °C →、风险倾向，用于理解变量关系。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><text x=\"25\" y=\"28\" font-size=\"19\">同样的管壁温度，不同油样的温差不同</text><path d=\"M65 57V187H590\" fill=\"none\" stroke=\"#9db4b8\" stroke-width=\"1\"/><path d=\"M80 65Q310 75 560 181\" fill=\"none\" stroke=\"#237d73\" stroke-width=\"3\"/><path d=\"M80 92Q310 135 560 187\" fill=\"none\" stroke=\"#ce8b3c\" stroke-width=\"3\"/><text x=\"65\" y=\"218\" font-size=\"14\">管壁温度 / °C →</text><text x=\"78\" y=\"55\" font-size=\"14\">风险倾向</text><text x=\"350\" y=\"65\" font-size=\"14\">绿：较高 WAT 的油样</text><text x=\"350\" y=\"90\" font-size=\"14\">金：较低 WAT 的油样</text></g></svg><figcaption>同样的管壁温度，不同油样的温差不同：横纵轴分别表示管壁温度 / °C →、风险倾向，用于理解变量关系。</figcaption></figure>"
+        },
+        {
+          "no": 3,
+          "en": "METHOD",
+          "title": "联合分类怎样体现价值，又怎样看误报？",
+          "html": "<p>逻辑回归从虚拟井的历史工况与事件标签中学习系数，输出风险分数；阈值把分数转为需要复核的记录。对照基线仅判断管壁是否低于 WAT。评价按整口井留出，列出真阳性、误报、漏报与真阴性，并观察精确率和召回的权衡。图中的百分数是教学模型分数，不是经过现场校准的故障概率；同类工况也可能因未观测因素出现不同结果。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"多变量输入先得到分数，再由阈值决定复核队列；评价标签在预测完成后才参与计算。\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"17\" fill=\"#284b55\"><rect x=\"25\" y=\"54\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><text x=\"40\" y=\"82\" font-size=\"17\">温差 + 油样</text><text x=\"40\" y=\"105\" font-size=\"16\">流动条件</text><rect x=\"236\" y=\"54\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#ecefd7\"/><text x=\"252\" y=\"82\" font-size=\"17\">逻辑回归分数</text><text x=\"252\" y=\"105\" font-size=\"16\">选择复核阈值</text><rect x=\"449\" y=\"54\" width=\"165\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><text x=\"463\" y=\"82\" font-size=\"17\">复核 / 未触发</text><text x=\"463\" y=\"105\" font-size=\"16\">再看误报漏报</text><path d=\"M195 85H229M405 85H442\" fill=\"none\" stroke=\"#277e75\" stroke-width=\"3\"/><text x=\"67\" y=\"183\" font-size=\"17\">阈值越低通常召回越高，同时可能增加误报</text></g></svg><figcaption>多变量输入先得到分数，再由阈值决定复核队列；评价标签在预测完成后才参与计算。</figcaption></figure>"
+        },
+        {
+          "no": 4,
+          "en": "DATA & SOURCES",
+          "title": "数据、评价与概念来源",
+          "html": "<p>专业概念参考以下行业或研究机构的一手资料；本例数据为离线合成教学数据，不复制来源网站图像。</p><ul><li><a href=\"https://www.slb.com/products-and-services/delivering-digital-at-scale/software/olga/olga-solids-management/olga-wax\" target=\"_blank\" rel=\"noopener\">SLB：Olga wax 机理说明</a></li><li><a href=\"https://www.slb.com/products-and-services/innovating-in-oil-and-gas/reservoir-characterization/rock-and-fluid-analysis/fluid-analysis/composition-analysis\" target=\"_blank\" rel=\"noopener\">SLB：流体成分与析蜡温度测试</a></li></ul>"
+        }
+      ]
+    },
+    "workflow": {
+      "label": "案例流程",
+      "title": "结蜡条件的联合判断",
+      "lead": [
+        "每个环节都说明输入、动作、输出与复核要点。"
+      ],
+      "stats": [
+        [
+          "计算",
+          "浏览器本地"
+        ],
+        [
+          "数据",
+          "内置可重复"
+        ],
+        [
+          "评价",
+          "预测冻结之后"
+        ]
+      ],
+      "steps": [
+        {
+          "name": "区分机理并组织工况",
+          "do": "只收集结蜡教学事件，输入包含管壁温度、WAT、含蜡量和流速；按井分开训练测试。",
+          "effect": "10 口训练井与 5 口独立评价井。",
+          "trap": "结垢需要不同特征与标签，不能直接复用结蜡模型。",
+          "role": "环节 1"
+        },
+        {
+          "name": "学习联合风险关系",
+          "do": "构造温差与交互项，实际迭代训练逻辑回归；随后冻结系数。",
+          "effect": "当前工况和每条留出工况的风险分数。",
+          "trap": "预测对象去掉事件标签，不能按测试真值选择系数。",
+          "role": "环节 2"
+        },
+        {
+          "name": "用阈值形成复核队列",
+          "do": "把联合分数与所选阈值比较，同时执行仅按管壁低于 WAT 的基线。",
+          "effect": "两组独立的复核标记。",
+          "trap": "阈值改变的是筛查权衡，不改变物理析蜡温度。",
+          "role": "环节 3"
+        },
+        {
+          "name": "按独立井计算评价",
+          "do": "读取测试事件标签，列出混淆计数、精确率、召回和分数组事件比例。",
+          "effect": "175 条留出工况上的真实计算。",
+          "trap": "分数组事件率只是此教学样本中的结果，不作为现场概率校准。",
+          "role": "环节 4"
+        }
+      ],
+      "metrics": {
+        "title": "逐步骤输入与输出",
+        "html": "<figure class=\"case-flow-overview case-flow-compact study-workflow-overview\" data-flow-scene=\"pr5\" style=\"margin:18px 0 24px;padding:12px 14px;background:#fafbf9;border:1px solid #e0e6e0;border-radius:8px;min-width:0;max-width:100%;box-sizing:border-box\"><style>.case-flow-compact h3{font-size:19px!important;line-height:1.6!important;color:#355a50;margin:0 0 5px!important}.case-flow-compact .case-flow-scroll{overflow-x:auto;max-width:1000px;margin:0 auto;overscroll-behavior-x:contain}.case-flow-compact svg{display:block;width:100%;min-width:940px;height:auto;font-family:system-ui,Microsoft YaHei,sans-serif}.case-flow-compact .case-flow-title{font-size:19px;font-weight:600;fill:#355a50}.case-flow-compact .case-flow-detail{font-size:14px;fill:#6b8078}.case-flow-compact .case-flow-edge{font-size:13px;fill:#70877d;paint-order:stroke;stroke:#fafbf9;stroke-width:4px}.case-flow-compact .case-flow-node rect,.case-flow-compact .case-flow-node polygon{stroke:#b7c8bc;stroke-width:1}.case-flow-compact .case-flow-node[role=button]{cursor:pointer;outline:none}.case-flow-compact .case-flow-node[aria-current=true] rect,.case-flow-compact .case-flow-node[aria-current=true] polygon,.case-flow-compact .case-flow-node:focus rect,.case-flow-compact .case-flow-node:focus polygon{stroke:#347a65;stroke-width:2}.case-flow-compact svg text{pointer-events:none}.case-flow-compact figcaption{font-size:14px!important;line-height:1.7!important;color:#75877b;margin:4px 0 0!important}</style><h3>本例方法概览</h3><div class=\"case-flow-scroll\" tabindex=\"0\" aria-label=\"流程概览，可横向滚动\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1100 250\" role=\"group\" aria-label=\"结蜡条件的联合判断\"><defs><marker id=\"cf-pr5\" markerWidth=\"7\" markerHeight=\"6\" refX=\"6\" refY=\"3\" orient=\"auto\"><path d=\"M0 0L6 3L0 6Z\" fill=\"#78958b\"/></marker></defs>\n <path d=\"M210 65H230\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><path d=\"M420 65H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><path d=\"M630 65H670\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><path d=\"M800 65H880\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><text x=\"840\" y=\"53\" text-anchor=\"middle\" class=\"case-flow-edge\">可继续</text><path d=\"M735 110V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><text x=\"775\" y=\"130\" text-anchor=\"middle\" class=\"case-flow-edge\">需核查</text><path d=\"M325 95V170H440\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><text x=\"380\" y=\"159\" text-anchor=\"middle\" class=\"case-flow-edge\">同一观测</text><path d=\"M860 170H870V120H975V95\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\" stroke-dasharray=\"5 4\" marker-end=\"url(#cf-pr5)\"/><text x=\"927\" y=\"132\" text-anchor=\"middle\" class=\"case-flow-edge\">确认后</text><path d=\"M975 95V140\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><path d=\"M535 195V222H975V195\" fill=\"none\" stroke=\"#78958b\" stroke-width=\"1.8\"  marker-end=\"url(#cf-pr5)\"/><text x=\"750\" y=\"239\" text-anchor=\"middle\" class=\"case-flow-edge\">同条件对照</text>\n <g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"input\" transform=\"translate(20 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eef2ed\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">油样与流动工况</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">温差含蜡量与流速</text></g><g class=\"case-flow-node\" data-flow-step=\"0\" data-flow-node=\"prepare\" transform=\"translate(230 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">按井切分特征</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">训练与评价井分开</text></g><g class=\"case-flow-node\" data-flow-step=\"1\" data-flow-node=\"model\" transform=\"translate(440 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">逻辑回归分数</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">迭代学习多变量关系</text></g><g class=\"case-flow-node\" data-flow-step=\"2\" data-flow-node=\"baseline\" transform=\"translate(440 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f4efe4\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">仅按温差阈值</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">仅看管壁低于 WAT</text></g>\n <g class=\"case-flow-node\" data-flow-node=\"gate\" data-flow-step=\"3\"><polygon points=\"735,20 800,65 735,110 670,65\" fill=\"#fbf0d9\"/><text x=\"735\" y=\"71\" text-anchor=\"middle\" class=\"case-flow-title\">只研究结蜡？结垢另设机理</text></g>\n <g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"review\" transform=\"translate(670 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#f6eade\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">误报漏报复核</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">误报漏报对应工况</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"output\" transform=\"translate(880 30)\"><rect width=\"190\" height=\"65\" rx=\"9\" fill=\"#e4f0e7\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">结蜡复核队列</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">风险分数与复核标记</text></g><g class=\"case-flow-node\" data-flow-step=\"3\" data-flow-node=\"compare\" transform=\"translate(880 140)\"><rect width=\"190\" height=\"55\" rx=\"9\" fill=\"#eff3f5\"/><text x=\"95\" y=\"26\" text-anchor=\"middle\" class=\"case-flow-title\">同井组 PR 对照</text><text x=\"95\" y=\"47\" text-anchor=\"middle\" class=\"case-flow-detail\">175 条工况 PR 对照</text></g>\n </svg></div><figcaption>详细原理、数据图表与计算见下方各步骤。<span data-flow-instruction></span></figcaption></figure><figure><h3>区分机理并组织工况</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"井与油样工况到训练 / 独立井\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">井与油样工况</text><text x=\"228\" y=\"56\" font-size=\"15\">整井分组切分</text><text x=\"437\" y=\"56\" font-size=\"15\">训练 / 独立井</text></g></svg><figcaption>10 口训练井与 5 口独立评价井。</figcaption></figure><figure><h3>学习联合风险关系</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"温差与条件特征到冻结风险模型\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">温差与条件特征</text><text x=\"228\" y=\"56\" font-size=\"15\">逻辑回归训练</text><text x=\"437\" y=\"56\" font-size=\"15\">冻结风险模型</text></g></svg><figcaption>当前工况和每条留出工况的风险分数。</figcaption></figure><figure><h3>用阈值形成复核队列</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结模型分数到两组筛查结果\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结模型分数</text><text x=\"228\" y=\"56\" font-size=\"15\">复核阈值对比</text><text x=\"437\" y=\"56\" font-size=\"15\">两组筛查结果</text></g></svg><figcaption>两组独立的复核标记。</figcaption></figure><figure><h3>按独立井计算评价</h3><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 110\" role=\"img\" aria-label=\"冻结筛查标记到PR / 混淆表\"><g font-family=\"system-ui,Microsoft YaHei,sans-serif\" font-size=\"15\" fill=\"#284b55\"><rect x=\"5\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><rect x=\"215\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#edf0d9\"/><rect x=\"425\" y=\"18\" width=\"170\" height=\"65\" rx=\"8\" fill=\"#dceee7\"/><path d=\"M178 50H210M388 50H420\" fill=\"none\" stroke=\"#5c8f8a\" stroke-width=\"2\"/><text x=\"17\" y=\"56\" font-size=\"15\">冻结筛查标记</text><text x=\"228\" y=\"56\" font-size=\"15\">评价事件对照</text><text x=\"437\" y=\"56\" font-size=\"15\">PR / 混淆表</text></g></svg><figcaption>175 条留出工况上的真实计算。</figcaption></figure>"
+      },
+      "fails": [
+        {
+          "name": "条件改变",
+          "why": "输入修改后需要重算；独立评价不参与当前预测。"
+        }
+      ]
+    },
+    "demo": {
+      "mode": "page",
+      "html": "demo/index.html",
+      "js": "demo/demo.js",
+      "label": "可运行示范",
+      "intro": "改变条件后运行，查看真实计算的曲线、对照与评价表。",
+      "height": 1250
+    }
+  }
+}

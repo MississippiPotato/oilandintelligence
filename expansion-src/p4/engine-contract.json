@@ -1,0 +1,38 @@
+{
+  "sceneId": "p4",
+  "global": "CaseCore",
+  "runEntry": "CaseCore.run(params)",
+  "defaults": {
+    "drawdown": 8,
+    "water": 40,
+    "effect": 8
+  },
+  "inferenceContract": "CaseCore.run returns model/prediction; predictor closure reads observation only",
+  "selfCheck": "Numeric VM checks only, not browser acceptance",
+  "metrics": [
+    {
+      "label": "校正判别 F1",
+      "value": 1,
+      "unit": "",
+      "note": ""
+    },
+    {
+      "label": "直接前后比较 F1",
+      "value": 0.72,
+      "unit": "",
+      "note": ""
+    },
+    {
+      "label": "预期响应 MAE",
+      "value": 0.07969699434011031,
+      "unit": "m³/d",
+      "note": ""
+    },
+    {
+      "label": "当前工况校正增量",
+      "value": 7.980944877034304,
+      "unit": "m³/d",
+      "note": ""
+    }
+  ]
+}

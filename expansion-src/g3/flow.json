@@ -1,0 +1,42 @@
+{
+  "title": "图例符号与文字关联",
+  "input": {
+    "title": "裁切图块",
+    "detail": "30块独立教学观测",
+    "step": 0
+  },
+  "prepare": {
+    "title": "检查图例",
+    "detail": "按代号描述分字段",
+    "step": 0
+  },
+  "model": {
+    "title": "模板匹配",
+    "detail": "9模板逐像素距离",
+    "step": 1
+  },
+  "baseline": {
+    "title": "规则基线",
+    "detail": "垂向相邻像素计数",
+    "step": 1
+  },
+  "review": {
+    "title": "逐块核查",
+    "detail": "原像素与候选距离",
+    "step": 2
+  },
+  "output": {
+    "title": "要素记录",
+    "detail": "类别与图例JSON",
+    "step": 2
+  },
+  "compare": {
+    "title": "对照评价",
+    "detail": "30块准确率与宏F1",
+    "step": 2
+  },
+  "gate": [
+    "未知图例保留复核",
+    "参考仅用于评价"
+  ]
+}

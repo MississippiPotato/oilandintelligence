@@ -1,0 +1,48 @@
+{
+  "scope": "Real browser: synthetic large legacy fixture plus actual production folder imports; not full 61-case acceptance",
+  "checks": [
+    {
+      "name": "legacy fixture migrated to IndexedDB",
+      "passed": true,
+      "detail": {
+        "backend": "indexedDB",
+        "ready": true,
+        "count": 1,
+        "error": ""
+      }
+    },
+    {
+      "name": "legacy backup retained for original portal",
+      "passed": true
+    },
+    {
+      "name": "actual folder plus migration fixture exceeds localStorage capacity and persists",
+      "passed": true,
+      "detail": {
+        "characters": 5519905,
+        "count": 2,
+        "quotaRejected": true
+      }
+    },
+    {
+      "name": "both packages survive refresh",
+      "passed": true
+    }
+  ],
+  "startedAt": "2026-10-24T06:01:25.763Z",
+  "migration": {
+    "backend": "indexedDB",
+    "ready": true,
+    "count": 1,
+    "error": ""
+  },
+  "capacity": {
+    "characters": 5519905,
+    "count": 2,
+    "quotaRejected": true
+  },
+  "exception": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('body[data-study-mounted=\"true\"]') to be visible\u001b[22m\n",
+  "finishedAt": "2026-10-24T06:01:33.686Z",
+  "passed": 4,
+  "failed": 1
+}

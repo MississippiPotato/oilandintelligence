@@ -1,0 +1,42 @@
+{
+  "title": "把增量放回工况背景",
+  "gate": [
+    "工况记录齐全？",
+    "缺项先补充核对"
+  ],
+  "input": {
+    "title": "前后工况产量",
+    "detail": "压差含水与前后产量",
+    "step": 0
+  },
+  "prepare": {
+    "title": "按井事件切分",
+    "detail": "整井完整事件留出",
+    "step": 0
+  },
+  "model": {
+    "title": "工况预期回归",
+    "detail": "拟合稳定工况预期",
+    "step": 1
+  },
+  "baseline": {
+    "title": "直接前后增量",
+    "detail": "忽略工况只看增量",
+    "step": 2
+  },
+  "review": {
+    "title": "剩余量人工复核",
+    "detail": "检查校正剩余来源",
+    "step": 3
+  },
+  "output": {
+    "title": "低效筛查记录",
+    "detail": "低效井段与变化分解",
+    "step": 3
+  },
+  "compare": {
+    "title": "同事件 F1 对照",
+    "detail": "60 个前后事件 F1",
+    "step": 3
+  }
+}

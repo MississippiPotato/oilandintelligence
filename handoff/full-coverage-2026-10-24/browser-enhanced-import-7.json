@@ -1,0 +1,281 @@
+{
+  "scope": "Actual enhanced Add Case uploads, transaction committed before recorded success",
+  "checkedAt": "2026-10-24T06:21:39.215Z",
+  "checks": [
+    {
+      "name": "t2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "t3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "t4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "t5 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "r1 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "r2 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "r3 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "r4 actual Add Case directory import registered and saved",
+      "passed": true
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "t2",
+      "id": "s17x-t2-corrosion-growth",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    },
+    {
+      "scene": "t3",
+      "id": "s17x-t3-gathering-pump-optimization",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    },
+    {
+      "scene": "t4",
+      "id": "s17x-t4-meter-drift-calibration",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    },
+    {
+      "scene": "t5",
+      "id": "s17x-t5-tank-level-crosscheck",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    },
+    {
+      "scene": "r1",
+      "id": "s17x-r1-distillation-optimization",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    },
+    {
+      "scene": "r2",
+      "id": "s17x-r2-fcc-product-yields",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    },
+    {
+      "scene": "r3",
+      "id": "s17x-r3-maintenance-trend",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    },
+    {
+      "scene": "r4",
+      "id": "s17x-r4-lab-audit",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 6,
+      "enhancedImported": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "persistedCount": 49,
+  "passed": 10,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/case.json",
+      "sha256": "ae30742113cc5ab000f3b642fdbb223091a5bdc674d444d8c9b10463ab46a413"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html",
+      "sha256": "42b132a992c5327fc11c132847fbcad9ecfadd1f4658d1afd38c3186741e3ff4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.css",
+      "sha256": "b22915aa2f46fa40f1eaf1d856cb1d80163cc006732a66b729797a88f89aad94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.js",
+      "sha256": "03a93b781b86d184f3bba1ee07d87bd3a1da5347bb96e9e1731888aab3e97731"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/README.txt",
+      "sha256": "9448e0fe67cdcaf30ea7e5a13283e9a42e9ec7db51be22e64a7b1bed80905f2b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/case.json",
+      "sha256": "6394edb006680e309083b645ddc27567394039cd5b0da32c6ab2461477e7de9c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/index.html",
+      "sha256": "744a1d1def53ee2a8fc345c4350ba199f38d8434cdb24a65f7e05a50b423cbde"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.css",
+      "sha256": "b22915aa2f46fa40f1eaf1d856cb1d80163cc006732a66b729797a88f89aad94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.js",
+      "sha256": "ffe232c479eb960b53ecdfa6eaa31175e0901bf43060efecce8315010a65c0f6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/README.txt",
+      "sha256": "c620bf32dc790dc3363f6f5ca901bd6a0604dd7fc18bc1cd41ca0cf044395748"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/case.json",
+      "sha256": "20509178b91d4f6be5c44dfe5073f17ccb43982f55ed0b210876c7a86cf77830"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/index.html",
+      "sha256": "65f142cf3fdcf640273a96a2ed3bd75f94a1fe7d1ac2aee43cef85083b36bc85"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.css",
+      "sha256": "b22915aa2f46fa40f1eaf1d856cb1d80163cc006732a66b729797a88f89aad94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.js",
+      "sha256": "6c4a71744dad7152af982517bec945156e37670858839c4fa44890d3c3db2cb0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/README.txt",
+      "sha256": "10aee24620fd2cc87573b1f3ae4950c4670e3efa3d20f66cd919f68bd8cd6f0f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/case.json",
+      "sha256": "5e1d6bd4f7492d6de525e0df6d38c67f98778054cd3046abe165a7bfed385aea"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/index.html",
+      "sha256": "156c372796be795bb95e32c8227251b9d3ba72a515fdbfb3775558dd8b0fe362"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.css",
+      "sha256": "b22915aa2f46fa40f1eaf1d856cb1d80163cc006732a66b729797a88f89aad94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.js",
+      "sha256": "c1adbefe9392747f32bf2105476fa9263f04ad670e56dbe8fe3ebb8371f4d30d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/README.txt",
+      "sha256": "b825498d70ffa1ebc9cb99bdb69c14d36d1a250f037c284405b8f3477f6dc056"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r1-distillation-optimization/case.json",
+      "sha256": "de6413c36164d98e82e2051a5a583edf675983d32c7fc73d653ae7b90f451247"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/index.html",
+      "sha256": "0e590fbc0d9acdc432a93bf090c653c8396476918b849166204e36f0eae192c2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.css",
+      "sha256": "022b63673e0805562c832ef50cfc381af2f9585dbe494430360a2f87b93d94df"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.js",
+      "sha256": "c25319d3b63b171c018d04c068014e247608c10d1b64c9a19f639b01d8572c39"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r1-distillation-optimization/README.txt",
+      "sha256": "3928259fe6b0197864686179d17463d7cd0bb4d90bea0c45a6a1e963f163a869"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/case.json",
+      "sha256": "5bc690cf76b71e8ad74fab44160bdfaddcff7aad644b675999ff06c9b9b07b82"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/index.html",
+      "sha256": "6009bd85b622b019d275f79d264e328a3a054da3da88677f920623b9ba5112a5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.css",
+      "sha256": "022b63673e0805562c832ef50cfc381af2f9585dbe494430360a2f87b93d94df"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.js",
+      "sha256": "b9574e4be6fbfd1aea36d8c39cb38cbc349008bb700177116b5b6feb4b8f97c4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/README.txt",
+      "sha256": "b4e902a10b9c943d22d630af706a307b4639914f5e56f6d99686d2936ffa2002"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r3-maintenance-trend/case.json",
+      "sha256": "3032f45ae5207f04d0ca873fce5c4409af3f6c20c36f77c37b61d62a185d3128"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/index.html",
+      "sha256": "90d5d19825912d326dc8ab3972203372964db096867a456fbabbd1ffa0674b4a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.css",
+      "sha256": "66a91e61232a7c9ee71b20c031973e53601589bedc5b3ae0e8343221bc9e2e6d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.js",
+      "sha256": "599b08f700ca3f84cac7b56740cb1280768119da59a84ef47ca5248b009c3ddf"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r3-maintenance-trend/README.txt",
+      "sha256": "e1482e513f66de1264489e5eec27140206fcf5bdc1e0cb84081e96a5d0d1c6d0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/case.json",
+      "sha256": "96860e65f31ee46bb9e4ed45149915e5da9c94bd8f32330a76121cbbffe73013"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/index.html",
+      "sha256": "434430dcb331005230818c02fe144f5d40b36ec59b348f639e508468e603d102"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css",
+      "sha256": "66a91e61232a7c9ee71b20c031973e53601589bedc5b3ae0e8343221bc9e2e6d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js",
+      "sha256": "77643817ece67bd36453e4c623d0ca7cc6613f01792a2c4df4072f5989084237"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/README.txt",
+      "sha256": "f373fbd05452c2cf6ccbe57a3f401d65011d77874fad210e7647c3e935e30f6f"
+    }
+  ]
+}

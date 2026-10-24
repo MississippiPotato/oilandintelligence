@@ -1,0 +1,24 @@
+{
+  "global": "SceneCore",
+  "run": "SceneCore.run(params)",
+  "defaults": {
+    "steamMax": 1500,
+    "price": 0.05,
+    "temperature": 45
+  },
+  "truthBoundary": "Current predictions read visible inputs and frozen training only; references in fit/evaluation",
+  "numericSmoke": {
+    "MAE_oil_t": 3.8363895405240647,
+    "baselineMAE_oil_t": 18.71274249289882,
+    "feasibleCount": 80,
+    "predictedGain_t": 0
+  },
+  "boundaryChecks": [
+    "steamMax=600",
+    "steamMax=2200",
+    "price=0.02",
+    "price=0.12",
+    "temperature=30",
+    "temperature=70"
+  ]
+}

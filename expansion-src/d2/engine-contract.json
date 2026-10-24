@@ -1,0 +1,76 @@
+{
+  "sceneId": "d2",
+  "global": "Experiment",
+  "runEntry": "Experiment.run",
+  "defaultParams": {
+    "drift": 1.4,
+    "noise": 1,
+    "threshold": 0.45,
+    "absolute": 11
+  },
+  "verification": {
+    "nodeExecuted": true,
+    "defaultMetrics": [
+      {
+        "label": "事件是否检出",
+        "value": "检出",
+        "unit": ""
+      },
+      {
+        "label": "相对145min事件提前",
+        "value": 6,
+        "unit": "min"
+      },
+      {
+        "label": "正常段告警窗",
+        "value": 3,
+        "unit": "/170"
+      }
+    ],
+    "lowParameterMetrics": [
+      {
+        "label": "事件是否检出",
+        "value": "检出",
+        "unit": ""
+      },
+      {
+        "label": "相对145min事件提前",
+        "value": -5,
+        "unit": "min"
+      },
+      {
+        "label": "正常段告警窗",
+        "value": 2,
+        "unit": "/170"
+      }
+    ],
+    "highParameterMetrics": [
+      {
+        "label": "事件是否检出",
+        "value": "检出",
+        "unit": ""
+      },
+      {
+        "label": "相对145min事件提前",
+        "value": -2,
+        "unit": "min"
+      },
+      {
+        "label": "正常段告警窗",
+        "value": 2,
+        "unit": "/170"
+      }
+    ],
+    "sourceErrors": [],
+    "sourceWarnings": [],
+    "browserVerified": false
+  },
+  "returned": {
+    "metrics": "array label/value/unit",
+    "predictions": "scenario-specific",
+    "observations": "visible input",
+    "evaluationTruth": "evaluation only",
+    "training": "fitted parameters",
+    "split": "independent fixture groups"
+  }
+}

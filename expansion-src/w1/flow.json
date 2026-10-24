@@ -1,0 +1,42 @@
+{
+  "title": "测井曲线智能分层：识别持续改变的地层响应",
+  "input": {
+    "title": "GR与电阻率",
+    "detail": "0.5m深度对齐曲线",
+    "step": 0
+  },
+  "prepare": {
+    "title": "两侧滑窗特征",
+    "detail": "比较均值的持续改变",
+    "step": 0
+  },
+  "model": {
+    "title": "学习边界分数",
+    "detail": "6训练井逻辑回归",
+    "step": 1
+  },
+  "baseline": {
+    "title": "GR单点梯度",
+    "detail": "局部尖峰阈值对照",
+    "step": 1
+  },
+  "compare": {
+    "title": "间距约束合并",
+    "detail": "保留最小边界间距",
+    "step": 2
+  },
+  "review": {
+    "title": "一对一边界核对",
+    "detail": "每真边界只匹配一次",
+    "step": 2
+  },
+  "output": {
+    "title": "分层位置与误差",
+    "detail": "边界F1与深度MAE",
+    "step": 2
+  },
+  "gate": [
+    "输入与场景是否对应？",
+    "差异需要人工复核吗？"
+  ]
+}

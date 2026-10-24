@@ -1,0 +1,45 @@
+{
+  "sceneId": "pr4",
+  "global": "CaseCore",
+  "runEntry": "CaseCore.run(params)",
+  "defaults": {
+    "load": 65,
+    "noise": 3,
+    "threshold": 4,
+    "currentLimit": 48
+  },
+  "inferenceContract": "CaseCore.run returns model/prediction; predictor closure reads observation only",
+  "selfCheck": "Numeric VM checks only, not browser acceptance",
+  "metrics": [
+    {
+      "label": "多变量告警精确率",
+      "value": 100,
+      "unit": "%",
+      "note": ""
+    },
+    {
+      "label": "多变量告警召回",
+      "value": 93.33333333333333,
+      "unit": "%",
+      "note": ""
+    },
+    {
+      "label": "电流阈值召回",
+      "value": 15.555555555555555,
+      "unit": "%",
+      "note": ""
+    },
+    {
+      "label": "正常段误报事件",
+      "value": 0,
+      "unit": "次 / 75 min",
+      "note": ""
+    },
+    {
+      "label": "首次持续告警",
+      "value": 79,
+      "unit": "min",
+      "note": ""
+    }
+  ]
+}

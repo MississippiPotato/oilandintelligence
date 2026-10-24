@@ -1,0 +1,40 @@
+{
+  "sceneId": "p3",
+  "global": "CaseCore",
+  "runEntry": "CaseCore.run(params)",
+  "defaults": {
+    "size": "窄",
+    "temp": "2",
+    "rock": "硬",
+    "priority": 0.65,
+    "missing": "no"
+  },
+  "inferenceContract": "CaseCore.infer(requirement,missing)",
+  "selfCheck": "Numeric VM checks only, not browser acceptance",
+  "metrics": [
+    {
+      "label": "当前可行候选",
+      "value": 2,
+      "unit": "/ 6",
+      "note": ""
+    },
+    {
+      "label": "知识约束违反",
+      "value": 0,
+      "unit": "项",
+      "note": "18 组需求选中结果逐项核查"
+    },
+    {
+      "label": "仅按尺寸基线违反",
+      "value": 15,
+      "unit": "/ 18",
+      "note": "18 组独立需求枚举"
+    },
+    {
+      "label": "目录需求覆盖",
+      "value": 83.33333333333333,
+      "unit": "%",
+      "note": "无候选时如实显示无解"
+    }
+  ]
+}

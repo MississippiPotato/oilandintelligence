@@ -1,0 +1,834 @@
+{
+  "scope": "Actual offline Chrome, new cases: three sections and one computed run per case; selected screenshots and mobile checks",
+  "checkedAt": "2026-10-24T06:08:43.246Z",
+  "checks": [
+    {
+      "name": "p2 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "p2 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "p2 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "p2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "p2",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "孔道长度 MAE",
+            "value": 0.6593521743395491,
+            "unit": "cm",
+            "note": "84 条独立材料批次试验"
+          },
+          {
+            "label": "分组均值 MAE",
+            "value": 2.3464743923516993,
+            "unit": "cm",
+            "note": "同一测试集"
+          },
+          {
+            "label": "清洁度 MAE",
+            "value": 0.5276217570880778,
+            "unit": "分",
+            "note": ""
+          },
+          {
+            "label": "当前预测长度",
+            "value": 42.765754833172956,
+            "unit": "cm",
+            "note": ""
+          },
+          {
+            "label": "当前清洁度",
+            "value": 76.3298316299414,
+            "unit": "分 / 100",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "p2 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "p2 sampled mobile page contains charts internally",
+      "passed": true
+    },
+    {
+      "name": "p2 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "p3 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "p3 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "p3 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "p3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "p3",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "当前可行候选",
+            "value": 2,
+            "unit": "/ 6",
+            "note": ""
+          },
+          {
+            "label": "知识约束违反",
+            "value": 0,
+            "unit": "项",
+            "note": "18 组需求选中结果逐项核查"
+          },
+          {
+            "label": "仅按尺寸基线违反",
+            "value": 15,
+            "unit": "/ 18",
+            "note": "18 组独立需求枚举"
+          },
+          {
+            "label": "目录需求覆盖",
+            "value": 83.33333333333333,
+            "unit": "%",
+            "note": "无候选时如实显示无解"
+          }
+        ]
+      }
+    },
+    {
+      "name": "p3 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "p3 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "p4 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "p4 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "p4 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "p4 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "p4",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "校正判别 F1",
+            "value": 1,
+            "unit": "",
+            "note": ""
+          },
+          {
+            "label": "直接前后比较 F1",
+            "value": 0.72,
+            "unit": "",
+            "note": ""
+          },
+          {
+            "label": "预期响应 MAE",
+            "value": 0.07969699434011031,
+            "unit": "m³/d",
+            "note": ""
+          },
+          {
+            "label": "当前工况校正增量",
+            "value": 7.980944877034304,
+            "unit": "m³/d",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "p4 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "p4 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "pr2 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "pr2 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "pr2 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "pr2 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "pr2",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "递归预测 MAE",
+            "value": 7.011687462306327,
+            "unit": "m³/d",
+            "note": ""
+          },
+          {
+            "label": "持续值 MAE",
+            "value": 1.429815753412886,
+            "unit": "m³/d",
+            "note": ""
+          },
+          {
+            "label": "预测 RMSE",
+            "value": 7.720072929299216,
+            "unit": "m³/d",
+            "note": ""
+          },
+          {
+            "label": "预测长度",
+            "value": 21,
+            "unit": "d",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "pr2 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "pr2 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "pr3 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "pr3 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "pr3 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "pr3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "pr3",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "代理留出 MAE",
+            "value": 0.5067974507711576,
+            "unit": "响应指数",
+            "note": "120 条独立批次试验"
+          },
+          {
+            "label": "可行分配比例",
+            "value": 54.62304409672831,
+            "unit": "%",
+            "note": ""
+          },
+          {
+            "label": "候选组合数",
+            "value": 703,
+            "unit": "组",
+            "note": ""
+          },
+          {
+            "label": "预测增益",
+            "value": 0.7743514718086288,
+            "unit": "响应指数",
+            "note": "仅当均分也可行时比较"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pr3 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "pr3 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "pr4 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "pr4 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "pr4 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "pr4 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "pr4",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "多变量告警精确率",
+            "value": 100,
+            "unit": "%",
+            "note": ""
+          },
+          {
+            "label": "多变量告警召回",
+            "value": 93.33333333333333,
+            "unit": "%",
+            "note": ""
+          },
+          {
+            "label": "电流阈值召回",
+            "value": 15.555555555555555,
+            "unit": "%",
+            "note": ""
+          },
+          {
+            "label": "正常段误报事件",
+            "value": 0,
+            "unit": "次 / 75 min",
+            "note": ""
+          },
+          {
+            "label": "首次持续告警",
+            "value": 79,
+            "unit": "min",
+            "note": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "pr4 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "pr4 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "pr5 has explained background and at least two rendered concept/data figures",
+      "passed": true
+    },
+    {
+      "name": "pr5 has one compact authored connected flow",
+      "passed": true
+    },
+    {
+      "name": "pr5 flow node responds",
+      "passed": true
+    },
+    {
+      "name": "pr5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "pr5",
+        "status": "computed",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "多变量精确率",
+            "value": 76.5432098765432,
+            "unit": "%",
+            "note": ""
+          },
+          {
+            "label": "多变量召回",
+            "value": 70.45454545454545,
+            "unit": "%",
+            "note": ""
+          },
+          {
+            "label": "温度基线 F1",
+            "value": 0.7534883720930232,
+            "unit": "",
+            "note": ""
+          },
+          {
+            "label": "多变量 F1",
+            "value": 0.7337278106508875,
+            "unit": "",
+            "note": ""
+          },
+          {
+            "label": "当前风险分数",
+            "value": 57.602203536134176,
+            "unit": "%",
+            "note": "不是经过现场校准的概率"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pr5 results visible and finite text",
+      "passed": true
+    },
+    {
+      "name": "pr5 no page-specific JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no unexpected network dependency",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no browser JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "p2",
+      "id": "s17x-p2-perforation-shape",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "standaloneRun": true,
+      "metrics": [
+        {
+          "label": "孔道长度 MAE",
+          "value": 0.6593521743395491,
+          "unit": "cm",
+          "note": "84 条独立材料批次试验"
+        },
+        {
+          "label": "分组均值 MAE",
+          "value": 2.3464743923516993,
+          "unit": "cm",
+          "note": "同一测试集"
+        },
+        {
+          "label": "清洁度 MAE",
+          "value": 0.5276217570880778,
+          "unit": "分",
+          "note": ""
+        },
+        {
+          "label": "当前预测长度",
+          "value": 42.765754833172956,
+          "unit": "cm",
+          "note": ""
+        },
+        {
+          "label": "当前清洁度",
+          "value": 76.3298316299414,
+          "unit": "分 / 100",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scene": "p3",
+      "id": "s17x-p3-perforation-catalog",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "standaloneRun": true,
+      "metrics": [
+        {
+          "label": "当前可行候选",
+          "value": 2,
+          "unit": "/ 6",
+          "note": ""
+        },
+        {
+          "label": "知识约束违反",
+          "value": 0,
+          "unit": "项",
+          "note": "18 组需求选中结果逐项核查"
+        },
+        {
+          "label": "仅按尺寸基线违反",
+          "value": 15,
+          "unit": "/ 18",
+          "note": "18 组独立需求枚举"
+        },
+        {
+          "label": "目录需求覆盖",
+          "value": 83.33333333333333,
+          "unit": "%",
+          "note": "无候选时如实显示无解"
+        }
+      ]
+    },
+    {
+      "scene": "p4",
+      "id": "s17x-p4-perforation-effect",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "standaloneRun": true,
+      "metrics": [
+        {
+          "label": "校正判别 F1",
+          "value": 1,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "label": "直接前后比较 F1",
+          "value": 0.72,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "label": "预期响应 MAE",
+          "value": 0.07969699434011031,
+          "unit": "m³/d",
+          "note": ""
+        },
+        {
+          "label": "当前工况校正增量",
+          "value": 7.980944877034304,
+          "unit": "m³/d",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scene": "pr2",
+      "id": "s17x-pr2-production-forecast",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "standaloneRun": true,
+      "metrics": [
+        {
+          "label": "递归预测 MAE",
+          "value": 7.011687462306327,
+          "unit": "m³/d",
+          "note": ""
+        },
+        {
+          "label": "持续值 MAE",
+          "value": 1.429815753412886,
+          "unit": "m³/d",
+          "note": ""
+        },
+        {
+          "label": "预测 RMSE",
+          "value": 7.720072929299216,
+          "unit": "m³/d",
+          "note": ""
+        },
+        {
+          "label": "预测长度",
+          "value": 21,
+          "unit": "d",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scene": "pr3",
+      "id": "s17x-pr3-water-allocation",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "standaloneRun": true,
+      "metrics": [
+        {
+          "label": "代理留出 MAE",
+          "value": 0.5067974507711576,
+          "unit": "响应指数",
+          "note": "120 条独立批次试验"
+        },
+        {
+          "label": "可行分配比例",
+          "value": 54.62304409672831,
+          "unit": "%",
+          "note": ""
+        },
+        {
+          "label": "候选组合数",
+          "value": 703,
+          "unit": "组",
+          "note": ""
+        },
+        {
+          "label": "预测增益",
+          "value": 0.7743514718086288,
+          "unit": "响应指数",
+          "note": "仅当均分也可行时比较"
+        }
+      ]
+    },
+    {
+      "scene": "pr4",
+      "id": "s17x-pr4-esp-warning",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "standaloneRun": true,
+      "metrics": [
+        {
+          "label": "多变量告警精确率",
+          "value": 100,
+          "unit": "%",
+          "note": ""
+        },
+        {
+          "label": "多变量告警召回",
+          "value": 93.33333333333333,
+          "unit": "%",
+          "note": ""
+        },
+        {
+          "label": "电流阈值召回",
+          "value": 15.555555555555555,
+          "unit": "%",
+          "note": ""
+        },
+        {
+          "label": "正常段误报事件",
+          "value": 0,
+          "unit": "次 / 75 min",
+          "note": ""
+        },
+        {
+          "label": "首次持续告警",
+          "value": 79,
+          "unit": "min",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "scene": "pr5",
+      "id": "s17x-pr5-wax-risk",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 4,
+      "standaloneRun": true,
+      "metrics": [
+        {
+          "label": "多变量精确率",
+          "value": 76.5432098765432,
+          "unit": "%",
+          "note": ""
+        },
+        {
+          "label": "多变量召回",
+          "value": 70.45454545454545,
+          "unit": "%",
+          "note": ""
+        },
+        {
+          "label": "温度基线 F1",
+          "value": 0.7534883720930232,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "label": "多变量 F1",
+          "value": 0.7337278106508875,
+          "unit": "",
+          "note": ""
+        },
+        {
+          "label": "当前风险分数",
+          "value": 57.602203536134176,
+          "unit": "%",
+          "note": "不是经过现场校准的概率"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "passed": 45,
+  "failed": 0,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/case.json",
+      "sha256": "9ec6685940a4e716801d4862c6a567e8c16c6ebb4e83299ad28d14029778e5fa"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/index.html",
+      "sha256": "8e1006851d136a5157766ee724b5a3cb26b386d7931e7a9a54faeee7563f9ccd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.css",
+      "sha256": "6f13fa0ea6fc61c84f15db9a60cd13ca8bbe8e71d1d4e9b0dea89d11a0b75d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.js",
+      "sha256": "b20a1f82d56c55ab5e1b170c21298b2b37cbb7ee86e30e31728bed47a95d707f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/README.txt",
+      "sha256": "085a7f8d0720ead7314e03a43509d7d02d5d4dcf354a1ecc1d44a76873ecea85"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/case.json",
+      "sha256": "f678050e02b59164678331a73ee2d675f65035761d97924162a821ae56a4a08f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/index.html",
+      "sha256": "2236614876f14d31eac1c15b14907b1652d737c49c599def02bf3882c58b529b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.css",
+      "sha256": "6f13fa0ea6fc61c84f15db9a60cd13ca8bbe8e71d1d4e9b0dea89d11a0b75d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.js",
+      "sha256": "a8b9592c690c3377e4026fbde4e67199b3de54cc9cc14bf9319b908800c4d87b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/README.txt",
+      "sha256": "4a967410a7e63b77888a04631cc8b9e1ec74c933cfe30d94e3ce003341d5bbc1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/case.json",
+      "sha256": "e14531dc4b91bcf4638c21092bcbd4b5db2dc92ee1c86033e11cce352523dea8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/index.html",
+      "sha256": "df19ae11d4ce260f7dadcf803b721ba7852dc6a35b40f697883be8134d7e8d68"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.css",
+      "sha256": "6f13fa0ea6fc61c84f15db9a60cd13ca8bbe8e71d1d4e9b0dea89d11a0b75d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.js",
+      "sha256": "b90e6aaf671b40826737347f57d7bbfa8056f3296a0086ca070571fc6ae32600"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/README.txt",
+      "sha256": "99089445b44b0578213e6ec171915432d76752ac7056b7efcafae209794433f1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/case.json",
+      "sha256": "fc83e4be2230fd9b2b191c35da3315cd2face62809e450c95f7d88ecf52d5c8a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html",
+      "sha256": "d2f6271c5b9a0db3f4e63989a96a01e19863f334285b13a21e5d4c83a41ea421"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css",
+      "sha256": "6f13fa0ea6fc61c84f15db9a60cd13ca8bbe8e71d1d4e9b0dea89d11a0b75d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js",
+      "sha256": "bce798a607a7c30d8d038b75ee0ac4686a0d29d708001fa4dafc356bfbe40b5f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/README.txt",
+      "sha256": "93829f34cf7083d81192abcc8f3a346bcb70c8788d72f4651ada8b0cd1cbefc9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/case.json",
+      "sha256": "b91438cca3f19d0f39cda8319c6fbe624a28d05098fd46276d09f7e20920d1ab"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/index.html",
+      "sha256": "94a68f356749c4c957857ce66ab32bda75fecf9b16861e3f8af169b09e7566cd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.css",
+      "sha256": "6f13fa0ea6fc61c84f15db9a60cd13ca8bbe8e71d1d4e9b0dea89d11a0b75d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.js",
+      "sha256": "b31a91946718b5488cca44211f7f41255fcc04f839d79f65532d58e47f9559fb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/README.txt",
+      "sha256": "883d87b13299ce437ef6c5ac3e7c4dd3b706df2b2d4d19f971cf29ba7f96afce"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/case.json",
+      "sha256": "6b86bb8b78b0a15fbd5906aef042ae887bbae973c1d797c954de2c21fb0020c4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/index.html",
+      "sha256": "45b4a5ebf41bfa73bd8d85d4ca1cf6f581dc043ba9ca9320e2fb31554574a685"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.css",
+      "sha256": "6f13fa0ea6fc61c84f15db9a60cd13ca8bbe8e71d1d4e9b0dea89d11a0b75d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.js",
+      "sha256": "6727f412a4e7c0078b4fee846736b0f0d86aab1427b85246c5c06f199486aa88"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/README.txt",
+      "sha256": "f115121d41a1b1c729bf54b5a08af904a1253c8b9725b440b030b57a9c87c803"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/case.json",
+      "sha256": "ebab659a71e2450d5eeb3ef8b71044f54909ac40ad4d52dde8cba8ba410b4420"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/index.html",
+      "sha256": "d925dac0029cf80fcc515c9692d725b6c77e5f3b1cca9498357164af853625c8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.css",
+      "sha256": "6f13fa0ea6fc61c84f15db9a60cd13ca8bbe8e71d1d4e9b0dea89d11a0b75d42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.js",
+      "sha256": "dd45e6958901d80ef14582e6527ef0d016fe73e7d1f483926cf2543a48580831"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr5-wax-risk/README.txt",
+      "sha256": "529f655005924999b7f62ac6404d036ac5f52031a32533d261fe4293802f5641"
+    }
+  ]
+}

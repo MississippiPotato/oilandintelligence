@@ -1,0 +1,42 @@
+{
+  "title": "结蜡条件的联合判断",
+  "gate": [
+    "只研究结蜡？",
+    "结垢另设机理"
+  ],
+  "input": {
+    "title": "油样与流动工况",
+    "detail": "温差含蜡量与流速",
+    "step": 0
+  },
+  "prepare": {
+    "title": "按井切分特征",
+    "detail": "训练与评价井分开",
+    "step": 0
+  },
+  "model": {
+    "title": "逻辑回归分数",
+    "detail": "迭代学习多变量关系",
+    "step": 1
+  },
+  "baseline": {
+    "title": "仅按温差阈值",
+    "detail": "仅看管壁低于 WAT",
+    "step": 2
+  },
+  "review": {
+    "title": "误报漏报复核",
+    "detail": "误报漏报对应工况",
+    "step": 3
+  },
+  "output": {
+    "title": "结蜡复核队列",
+    "detail": "风险分数与复核标记",
+    "step": 3
+  },
+  "compare": {
+    "title": "同井组 PR 对照",
+    "detail": "175 条工况 PR 对照",
+    "step": 3
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "scope": "Four representative real keyboard parameter changes, stale result state and recomputation; actual full IndexedDB capacity",
+  "checkedAt": "2026-10-24T06:24:42.211Z",
+  "checks": [
+    {
+      "name": "interaction audit uses all 61 persisted production cases",
+      "passed": true
+    },
+    {
+      "name": "all 61 use the durable expanded store",
+      "passed": true,
+      "detail": {
+        "count": 61,
+        "characters": 9484451,
+        "backend": "indexedDB"
+      }
+    },
+    {
+      "name": "s3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s3",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "s3 actual slider change invalidates previous export",
+      "passed": true
+    },
+    {
+      "name": "s3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "s3",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": null
+      }
+    },
+    {
+      "name": "s3 changed input actually changes computed display",
+      "passed": true
+    },
+    {
+      "name": "w5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "w5",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "近邻修复 RMSE",
+            "value": 0.03187827554475034,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "线性插值 RMSE",
+            "value": 0.039097091519122135,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "仅遮蔽区评价点",
+            "value": 38,
+            "unit": "点"
+          }
+        ]
+      }
+    },
+    {
+      "name": "w5 actual slider change invalidates previous export",
+      "passed": true
+    },
+    {
+      "name": "w5 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "w5",
+        "status": "ready",
+        "resultPresent": true,
+        "metrics": [
+          {
+            "label": "近邻修复 RMSE",
+            "value": 0.033904933330794,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "线性插值 RMSE",
+            "value": 0.03900379197171674,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "仅遮蔽区评价点",
+            "value": 38,
+            "unit": "点"
+          }
+        ]
+      }
+    },
+    {
+      "name": "w5 changed input actually changes computed display",
+      "passed": true
+    },
+    {
+      "name": "e3 actually computes and enables current export",
+      "passed": true,
+      "detail": {
+        "sceneId": "e3",
+        "status": "completed",
+        "resultPresent": true,
+        "metrics": {
+          "MAE_index": 0.9196983912209196,
+          "baselineMAE_index": 9.567580423053398,
+          "feasibleCount": 85,
+          "candidateCount": 231
+        }
+      }
+    }
+  ],
+  "cases": [
+    {
+      "scene": "s3",
+      "id": "s17x-s3-first-arrival",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 1,
+      "changedInput": true,
+      "recomputed": true
+    },
+    {
+      "scene": "w5",
+      "id": "s17x-w5-curve-repair",
+      "version": "1.0.0",
+      "directory": "expansion-cases",
+      "batch": 2,
+      "changedInput": true,
+      "recomputed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "storage": {
+    "count": 61,
+    "characters": 9484451,
+    "backend": "indexedDB"
+  },
+  "exception": "locator.inputValue: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('#lab input[type=range]').first()\u001b[22m\n",
+  "failureDOM": [
+    {
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/e3?case=s17x-e3-chemical-mixture&tab=demo",
+      "ready": "complete",
+      "hasRun": false,
+      "title": "化学驱配方智能筛选 · 井见",
+      "text": "井见 · 石油智能化可视实验室\nPETROLEUM × INTELLIGENCE\n总览\n作业链\n案例库\n接入指南\n管理\n＋ 添加案例\n总览\n/\n作业链\n/\n增采\n/\n化学驱配方智能筛选\n环节 11 · 增采\nOPT\n优化算法\n案例 s17x-e3-chemical-mixture · v1.0.0\n导入案例\n化学驱配方智能筛选\n\n聚合物驱、表面活性剂驱的配方（类型、浓度、段塞）需通过大量室内实验筛选，再进入矿场试验。\n\n难度 中\n待扩展\nE3\n01\n专业背景\n02\n案例流程\n03\n可运行示范\n03 / 动手看变化\n化学驱配方智能筛选\n\n化学驱通过改变流体性质改善驱替。把三种教学母液A、B与载液C的比例限制为总和1，利用小型试验学习响应，再筛出预算内候选。\n\n专注演示 ↗\nRELATED\n相关场景\n同环节 · 增采\n压裂参数智能优化\n→\n压裂裂缝形态预测\n→\n蒸汽吞吐注采参数优化\n→\n微生物采油菌群活性预测\n→\n同方法 · 优化算法\n油气地球化学异常识别\n地质勘察 →\n储层参数反演\n物探 →\n钻速预测与参数优化\n钻井 →\n井眼轨迹智能控制\n钻井 →\n← 返回增采环节\n返回总览\n井见\n\n跟着一口教学井，把观察变成可以回查的判断。\n\n学号17 · 录井必做5例 + 全阶段56例 · 门户1.9.0-preview\n返回首页\n完整作业链\n案例库 · 本浏览器62个已接入\n添加案例指南\n老师"
+    },
+    {
+      "url": "about:srcdoc#lab",
+      "ready": "complete",
+      "hasRun": true,
+      "title": "化学驱配方智能筛选",
+      "text": "E3 / PETROLEUM INTELLIGENCE\n\n提高性能时，怎样同时看见配方成本与盐度影响？\n\n化学驱通过改变流体性质改善驱替。把三种教学母液A、B与载液C的比例限制为总和1，利用小型试验学习响应，再筛出预算内候选。\n\n专业背景\n案例流程\n可运行示范\n改变参数，观察模型与对照怎样变化\n盐度 g/L\n成本上限 元/L\n运行计算\n恢复默认并运行\n导出当前结果\n\n计算完成\n\n最佳可行比例 A 0.25 / B 0.35 / C 0.40；成本 4.95 元/L\n性能指数 MAE\n0.92\n均值对照 MAE\n9.57\n可行候选数\n85\n枚举候选总数\n231\nA\nC\nB\n灰：超预算；颜色：预测性能由浅到深；圈：最优；方：固定配方\n\n140批训练、45批独立留出；231个网格点。候选的比例总和为1，成本是已知单价线性加权；性能只调用冻结回归。固定配方成本5.10元/L，超预算时不作为可行对照。"
+    }
+  ],
+  "passed": 11,
+  "failed": 1,
+  "artifactHashesRecordedByNode": [
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/case.json",
+      "sha256": "b790fbab9e292faf974b47047c7c13e86a9863fa17c1e4500d4a0faad75a0eb7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/index.html",
+      "sha256": "c45612d86dcc06726bf1345733eeb4f5a321f5d266b79b306d19e8bb79edd063"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.css",
+      "sha256": "44c6a0fb25ca52067b3bac41c6b0d2c26f933dfa515491e976c443fd8efacada"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.js",
+      "sha256": "4eb088aac08c9808b60ea136d6bf9e7dd4396976cbf784deb098174cc5191730"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s3-first-arrival/README.txt",
+      "sha256": "45b2f6e04c5fe507e6dd4a34047e84b305c1696408ff64fe6868d1960236b29e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/case.json",
+      "sha256": "f7bf413f27ab0ef9e43dfefe078dbb551b83474e4d9bce26505001bfbfe91f7c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/index.html",
+      "sha256": "d0743ea5ac242b54711dbf16ea9c79a34ce12feeeaefde152bf7d4115e819e3e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css",
+      "sha256": "cecfecc6e179a906fb959c96ab189479de63d1912b6564d7d5baa7a9536ccb54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js",
+      "sha256": "de560dbb8f05eeb2af02c785e2256a0575d94a87b180463eeffdecf32b504919"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/README.txt",
+      "sha256": "1f1c811f846c37a9ea8f2956cceaf22642c173bc3a46a9fd26f82f5f9131bd61"
+    }
+  ]
+}

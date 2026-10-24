@@ -1,0 +1,42 @@
+{
+  "title": "钻井液性能调控：温度变化下寻找可行塑性黏度",
+  "input": {
+    "title": "流变实验批次",
+    "detail": "固相剂量温度与PV",
+    "step": 0
+  },
+  "prepare": {
+    "title": "分开实验批次",
+    "detail": "140训练与70留出",
+    "step": 0
+  },
+  "model": {
+    "title": "非线性响应面",
+    "detail": "拟合平方项与交互项",
+    "step": 1
+  },
+  "baseline": {
+    "title": "线性经验基线",
+    "detail": "同样实验条件比较",
+    "step": 1
+  },
+  "compare": {
+    "title": "批次误差比较",
+    "detail": "留出PV的RMSE",
+    "step": 2
+  },
+  "review": {
+    "title": "筛选可行配方",
+    "detail": "温度和PV上下限",
+    "step": 2
+  },
+  "output": {
+    "title": "配方候选排序",
+    "detail": "目标偏差和相对成本",
+    "step": 2
+  },
+  "gate": [
+    "输入与场景是否对应？",
+    "差异需要人工复核吗？"
+  ]
+}
