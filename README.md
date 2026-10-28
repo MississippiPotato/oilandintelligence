@@ -1,11 +1,15 @@
 # 井见 · 石油智能化可视实验室
 
-当前门户 **1.9.2-preview**，覆盖老师原站 **13 个阶段、61 个场景**。学号末两位 17 对应第 4 阶段录井，m1–m5 保持 1.6.0；其余阶段共 56 例。本轮把可视化调研落实到录井五例：样品旅程、双时钟回查、白光/UV配对、共同井深与报告证据链分别组织讲解。其余56例运行文件保持上轮版本。老师原样例单独保留，不计入 61 个自制案例。
+当前门户 **1.9.2-preview**，覆盖老师原站 **13 个阶段、61 个场景**。学号末两位 17 对应第 4 阶段录井，m2 单例升级为 **1.7.0**，m1、m3–m5 保持1.6.0；其余阶段共56例。2026-10-28本轮只实施m2试点：纸本微缩画卷、朱红展陈界面、同峰三阶段解释。其他60例的300个运行文件与此前一致。老师原样例单独保留，不计入 61 个自制案例。
 
-- [打开首页](portal/index.html) · [五例本轮实际浏览器验收](handoff/observation-design-2026-10-24/acceptance.html)
+- [打开首页](portal/index.html) · [m2试点与实际浏览器验收](handoff/m2-exhibit-2026-10-28/acceptance.html)
+- [直接打开m2](dist/cases/s17-mudgas-context/demo/index.html#background) · [m2成品包1.7.0](dist/s17-mudgas-context-1.7.0.zip) · [知识稿](case-src/m2/knowledge.md)
+- [2026-10-24五例历史验收](handoff/observation-design-2026-10-24/acceptance.html)
 - [原站只读兼容副本](portal-original/index.html) · [上轮61例覆盖表](handoff/teaching-audit-2026-10-24/coverage.json)
-- [全部61例轻量案例包](dist/s17-all-61-cases-1.9.2-preview.zip) · [跨阶段56例包](dist/s17-expansion-56-cases-1.9.2-preview.zip)
-- [录井五例包1.6.0](dist/s17-mudlogging-cases-only-1.6.0.zip) · [实施计划](handoff/full-coverage-2026-10-24/implementation-plan.json)
+- [上轮61例轻量案例包（内含m2旧1.6）](dist/s17-all-61-cases-1.9.2-preview.zip) · [跨阶段56例包](dist/s17-expansion-56-cases-1.9.2-preview.zip)
+- [上轮录井五例包1.6.0](dist/s17-mudlogging-cases-only-1.6.0.zip) · [实施计划](handoff/full-coverage-2026-10-24/implementation-plan.json)
+
+m2试点开发与验证：`npm run build:m2`、`npm run verify:m2`、`npm run accept:m2`、`npm run package:m2`。总门户版本保持1.9.2-preview；门户按单例版本识别m2入口。
 
 ## 内容与讲解
 
@@ -37,9 +41,9 @@
 
 录井五例位于 dist/cases/，其他 56 例位于 dist/expansion-cases/。ZIP 先解压，通过老师原站“添加案例”一次选择一个完整案例文件夹，内含 case.json、README.txt 和 demo/ 下三个文件。不要选择 ZIP 或全部案例的总目录。
 
-增强门户首页直接提供案例入口，手动导入同 ID 内置案例会提示替换；已经导入的重复 ID 仍会校验。增强门户使用 IndexedDB 保存案例，并读取迁移旧 localStorage 数据。老师原站与只读副本保持原样；它的 localStorage 容量限制仍存在，此前全覆盖验证在原站分批导入，并由增强门户验证61例累计保存。本轮重新验证五个录井当前修订包的原站导入、讲解交互、计算和下载，每例刷新后再次运行。
+增强门户首页直接提供案例入口，手动导入同 ID 内置案例会提示替换；已经导入的重复 ID 仍会校验。增强门户使用 IndexedDB 保存案例，并读取迁移旧 localStorage 数据。老师原站与只读副本保持原样；它的 localStorage 容量限制仍存在，此前全覆盖验证在原站分批导入，并由增强门户验证61例累计保存。2026-10-24五例验收保留原日期；本轮只重新验证m2的原站导入、讲解交互、计算和下载，刷新后再次运行。其他60例通过文件哈希确认保持原版，本轮不逐例重跑浏览器。
 
-首页助手沿用手机式窄面板，新增页面带有当前案例上下文。默认案例计算和基础助手不依赖网络；在线模型、附件及语音为用户自行配置的可选功能。本轮没有调用付费模型，也没有把 API Key 写入代码或案例包。
+首页助手沿用手机式窄面板，新增页面带有当前案例上下文。默认案例计算和基础助手不依赖网络；在线模型、附件及语音为用户自行配置的可选功能。本轮使用内置imagegen绘制两种构图，没有调用已配置的在线助手模型，也没有把 API Key 写入代码或案例包。
 
 ## 验证与交付
 

@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-10-28T03:57:38.651Z",
+  "scope": "Actual Chrome m2 only:1440px/390px, offline file, enhanced portal, original folder import and refresh",
+  "checks": [
+    {
+      "name": "Offline file default actually computes and selects first peak",
+      "passed": true,
+      "detail": {
+        "train": 224,
+        "valid": 64,
+        "source_s": 1050
+      }
+    },
+    {
+      "name": "Desktop scroll drawing is 320–400px tall",
+      "passed": true,
+      "detail": {
+        "x": 181,
+        "y": 458.40625,
+        "width": 1078,
+        "height": 359.328125
+      }
+    },
+    {
+      "name": "Body18px and explanatory copy at least16px",
+      "passed": true
+    },
+    {
+      "name": "Macro entrance 1 locates corresponding prose via mouse",
+      "passed": true,
+      "detail": {
+        "top": 119.734375
+      }
+    },
+    {
+      "name": "Macro entrance 2 locates corresponding prose via keyboard",
+      "passed": true,
+      "detail": {
+        "top": 120.25
+      }
+    },
+    {
+      "name": "Macro entrance 3 locates corresponding prose via mouse",
+      "passed": true,
+      "detail": {
+        "top": 120.40625
+      }
+    },
+    {
+      "name": "Macro entrance 4 locates corresponding prose via keyboard",
+      "passed": true,
+      "detail": {
+        "top": 120.109375
+      }
+    },
+    {
+      "name": "Background volume control changes computed source text",
+      "passed": true,
+      "detail": "峰A到达 27分00秒 → 来源候选 14分50秒；实际回查间隔 730 s，归位参考 1204.96 m MD。"
+    },
+    {
+      "name": "Background pause option visibly updates cumulative figure",
+      "passed": true
+    },
+    {
+      "name": "Background comparison computes actual trip candidate",
+      "passed": true
+    },
+    {
+      "name": "Six-step workflow reaches actual evidence checklist",
+      "passed": true
+    },
+    {
+      "name": "Workflow keyboard Home returns to input step",
+      "passed": true
+    },
+    {
+      "name": "Observation question gives source-first feedback",
+      "passed": true
+    },
+    {
+      "name": "Volume actually moves same-peak source",
+      "passed": true,
+      "detail": {
+        "before": 1050,
+        "after": 890
+      }
+    },
+    {
+      "name": "Uncorrected source equals arrival",
+      "passed": true
+    },
+    {
+      "name": "Pump-stop example really changes arrival and preserves a source",
+      "passed": true,
+      "detail": {
+        "arrival_s": 2000,
+        "source_s": 1160
+      }
+    },
+    {
+      "name": "Context connection keeps gas and removes invalid evaluation",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [],
+  "exception": "Context connection keeps gas and removes invalid evaluation",
+  "passed": 16,
+  "failed": 1
+}

@@ -6,11 +6,15 @@
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
     "build": "node tools/build.mjs && node tools/build-expansion.mjs --require-all",
-    "test": "node checks/verify.mjs && node checks/verify-mandatory.mjs && node checks/verify-enhancements.mjs && node checks/verify-expansion-source.mjs --require-all && node checks/verify-study.mjs && node checks/full-coverage-review.mjs",
-    "verify-delivery": "node checks/verify-observation-design.mjs",
-    "verify-guide": "node checks/verify-observation-design.mjs",
-    "package": "node checks/verify-observation-design.mjs --no-write && node tools/package.mjs --guide-preview",
+    "test": "node checks/verify-m2-exhibit.mjs && node checks/verify.mjs --no-write && node checks/verify-mandatory.mjs --no-write && node checks/verify-enhancements.mjs --no-write && node checks/verify-expansion-source.mjs --require-all --no-write && node checks/verify-study.mjs --no-write && node checks/full-coverage-review.mjs --no-write",
+    "verify-delivery": "node checks/verify-m2-delivery.mjs",
+    "verify-guide": "node checks/verify-m2-delivery.mjs",
+    "package": "node checks/verify-m2-delivery.mjs && node tools/package-m2-exhibit.mjs",
     "serve": "node tools/serve.mjs",
-    "accept": "node tools/accept-observation-design.mjs"
+    "accept": "node tools/accept-m2-exhibit.mjs",
+    "build:m2": "node tools/build.mjs --m2-only",
+    "verify:m2": "node checks/verify-m2-exhibit.mjs",
+    "accept:m2": "node checks/browser-m2-exhibit.mjs",
+    "package:m2": "node tools/package-m2-exhibit.mjs"
   }
 }

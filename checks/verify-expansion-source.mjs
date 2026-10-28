@@ -146,6 +146,6 @@ const report = { checkedAt: new Date().toISOString(), kind: 'source_and_build_co
   notVerified: ['real browser original Add Case directory import', 'sandbox rendering and model interactions',
     'refresh and whole browser reopen persistence', 'offline default interactions', 'actual download', 'narrow screen and keyboard behavior',
     'scientific correctness and inference/evaluation separation require per-case engine checks and review'] };
-fs.writeFileSync(path.join(root, reportDir, 'source-verification.json'), JSON.stringify(report, null, 2) + '\n');
+if(!process.argv.includes('--no-write'))fs.writeFileSync(path.join(root, reportDir, 'source-verification.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(JSON.stringify(report, null, 2));
 if (report.failed) process.exitCode = 1;

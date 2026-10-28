@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-10-28T04:16:38.342Z",
+  "scope": "Source, hash and numeric verification only; separate from browser acceptance",
+  "checks": [
+    {
+      "name": "Other60 cases retain all300 runtime files byte for byte",
+      "passed": true,
+      "detail": {
+        "cases": 60,
+        "files": 300
+      }
+    },
+    {
+      "name": "Teacher originals, source materials and homepage entry are unchanged",
+      "passed": true,
+      "detail": {
+        "protected": 63,
+        "homepage": 1
+      }
+    },
+    {
+      "name": "Current gas engine and data generation remain byte identical",
+      "passed": true,
+      "detail": [
+        "case-src/m2/engine.js",
+        "case-src/m2/data.js"
+      ]
+    },
+    {
+      "name": "Only m2 independently upgrades case version",
+      "passed": true,
+      "detail": {
+        "m1": "1.6.0",
+        "m2": "1.7.0",
+        "m3": "1.6.0",
+        "m4": "1.6.0",
+        "m5": "1.6.0"
+      }
+    },
+    {
+      "name": "Gas inputs fixed across actual context counterfactuals and no inherited gold metrics",
+      "passed": true,
+      "detail": {
+        "connection": {
+          "label": 0,
+          "nearest": {
+            "index": 24,
+            "label": 0,
+            "distance": 0.1198827301097326
+          }
+        },
+        "trip": {
+          "label": 1,
+          "nearest": {
+            "index": 54,
+            "label": 1,
+            "distance": 0.15633913982883066
+          }
+        },
+        "drilling": {
+          "label": 2,
+          "nearest": {
+            "index": 108,
+            "label": 2,
+            "distance": 0.44944815398442484
+          }
+        }
+      }
+    },
+    {
+      "name": "Prediction is invariant to deleted or corrupted evaluation truth",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "Volume and lag settings actually move source; pump pause forms a plateau",
+      "passed": true,
+      "detail": {
+        "v12": 1050,
+        "v16": 890,
+        "uncorrected": 1620,
+        "pauseArrival": 2000
+      }
+    },
+    {
+      "name": "Diagrams use actual rows, samples and finite computed values",
+      "passed": true,
+      "detail": {
+        "events": 8,
+        "svgCount": 24
+      }
+    },
+    {
+      "name": "Workflow final stage has evidence rather than repeated nearest neighbors",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "Five-file ordinary-script self contained original-portal package and lock",
+      "passed": true,
+      "detail": {
+        "bytes": 1594241,
+        "caseVersion": "1.7.0"
+      }
+    }
+  ],
+  "passed": 10,
+  "failed": 0
+}

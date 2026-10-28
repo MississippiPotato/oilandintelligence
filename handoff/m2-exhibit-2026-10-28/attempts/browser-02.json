@@ -1,0 +1,284 @@
+{
+  "checkedAt": "2026-10-28T03:58:20.325Z",
+  "scope": "Actual Chrome m2 only:1440px/390px, offline file, enhanced portal, original folder import and refresh",
+  "checks": [
+    {
+      "name": "Offline file default actually computes and selects first peak",
+      "passed": true,
+      "detail": {
+        "train": 224,
+        "valid": 64,
+        "source_s": 1050
+      }
+    },
+    {
+      "name": "Desktop scroll drawing is 320–400px tall",
+      "passed": true,
+      "detail": {
+        "x": 181,
+        "y": 458.40625,
+        "width": 1078,
+        "height": 359.328125
+      }
+    },
+    {
+      "name": "Body18px and explanatory copy at least16px",
+      "passed": true
+    },
+    {
+      "name": "Macro entrance 1 locates corresponding prose via mouse",
+      "passed": true,
+      "detail": {
+        "top": 119.734375
+      }
+    },
+    {
+      "name": "Macro entrance 2 locates corresponding prose via keyboard",
+      "passed": true,
+      "detail": {
+        "top": 120.25
+      }
+    },
+    {
+      "name": "Macro entrance 3 locates corresponding prose via mouse",
+      "passed": true,
+      "detail": {
+        "top": 120.40625
+      }
+    },
+    {
+      "name": "Macro entrance 4 locates corresponding prose via keyboard",
+      "passed": true,
+      "detail": {
+        "top": 120.109375
+      }
+    },
+    {
+      "name": "Background volume control changes computed source text",
+      "passed": true,
+      "detail": "峰A到达 27分00秒 → 来源候选 14分50秒；实际回查间隔 730 s，归位参考 1204.96 m MD。"
+    },
+    {
+      "name": "Background pause option visibly updates cumulative figure",
+      "passed": true
+    },
+    {
+      "name": "Background comparison computes actual trip candidate",
+      "passed": true
+    },
+    {
+      "name": "Six-step workflow reaches actual evidence checklist",
+      "passed": true
+    },
+    {
+      "name": "Workflow keyboard Home returns to input step",
+      "passed": true
+    },
+    {
+      "name": "Observation question gives source-first feedback",
+      "passed": true
+    },
+    {
+      "name": "Volume actually moves same-peak source",
+      "passed": true,
+      "detail": {
+        "before": 1050,
+        "after": 890
+      }
+    },
+    {
+      "name": "Uncorrected source equals arrival",
+      "passed": true
+    },
+    {
+      "name": "Pump-stop example really changes arrival and preserves a source",
+      "passed": true,
+      "detail": {
+        "arrival_s": 2000,
+        "source_s": 1160
+      }
+    },
+    {
+      "name": "Context connection keeps gas and removes invalid evaluation",
+      "passed": true
+    },
+    {
+      "name": "Context trip keeps gas and removes invalid evaluation",
+      "passed": true
+    },
+    {
+      "name": "Context drilling keeps gas and removes invalid evaluation",
+      "passed": true
+    },
+    {
+      "name": "Same gas actual kNN candidates differ across operation logs",
+      "passed": true,
+      "detail": [
+        {
+          "log": "connection",
+          "label": 0,
+          "source_s": 1050,
+          "firstNeighbor": {
+            "index": 24,
+            "label": 0,
+            "distance": 0.1198827301097326
+          },
+          "gas": "fnv1a32-ab4391ca"
+        },
+        {
+          "log": "trip",
+          "label": 1,
+          "source_s": 1050,
+          "firstNeighbor": {
+            "index": 54,
+            "label": 1,
+            "distance": 0.15633913982883066
+          },
+          "gas": "fnv1a32-ab4391ca"
+        },
+        {
+          "log": "drilling",
+          "label": 2,
+          "source_s": 1050,
+          "firstNeighbor": {
+            "index": 108,
+            "label": 2,
+            "distance": 0.44944815398442484
+          },
+          "gas": "fnv1a32-ab4391ca"
+        }
+      ]
+    },
+    {
+      "name": "Operation edit clearly applies only to peakA",
+      "passed": true
+    },
+    {
+      "name": "390px mobile has full image and four text entrances",
+      "passed": true
+    },
+    {
+      "name": "390px background has no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "390px lab keeps graph scrolling inside its container",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal imports independently versionedm2",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal macro navigation works",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal explanation actually recomputes",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal six-step content is interactive",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal sandbox runs actual newm2",
+      "passed": true
+    },
+    {
+      "name": "Unchanged teacher original accepts full folder through Add Case",
+      "passed": true
+    },
+    {
+      "name": "Teacher background explicitly labels static preview",
+      "passed": true
+    },
+    {
+      "name": "Teacher preview has image loaded and four disabled entrances",
+      "passed": true
+    },
+    {
+      "name": "Teacher iframe calculates changed source",
+      "passed": true
+    },
+    {
+      "name": "Teacher iframe same-gas actual inference changes",
+      "passed": true
+    },
+    {
+      "name": "After teacher refresh imported files rerun with new operation",
+      "passed": true
+    },
+    {
+      "name": "Teacher original built-in reference still renders",
+      "passed": true
+    },
+    {
+      "name": "No page JavaScript exceptions",
+      "passed": false,
+      "detail": [
+        "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal/index.html#lab' cannot be created in a document with origin 'null' and URL 'about:srcdoc'.",
+        "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal-original/index.html#lab' cannot be created in a document with origin 'null' and URL 'about:srcdoc'.",
+        "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal-original/index.html#lab' cannot be created in a document with origin 'null' and URL 'about:srcdoc'."
+      ]
+    }
+  ],
+  "errors": [
+    "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal/index.html#lab' cannot be created in a document with origin 'null' and URL 'about:srcdoc'.",
+    "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal-original/index.html#lab' cannot be created in a document with origin 'null' and URL 'about:srcdoc'.",
+    "Failed to execute 'replaceState' on 'History': A history state object with URL 'http://127.0.0.1:8755/portal-original/index.html#lab' cannot be created in a document with origin 'null' and URL 'about:srcdoc'."
+  ],
+  "external": [],
+  "downloads": [
+    {
+      "path": "handoff/m2-exhibit-2026-10-28/offline-evidence.json",
+      "suggested": "s17-m2-m2-v10-r8.json"
+    },
+    {
+      "path": "handoff/m2-exhibit-2026-10-28/teacher-before-refresh-evidence.json",
+      "suggested": "s17-m2-m2-v4-r4.json"
+    },
+    {
+      "path": "handoff/m2-exhibit-2026-10-28/teacher-after-refresh-evidence.json",
+      "suggested": "s17-m2-m2-v2-r2.json"
+    }
+  ],
+  "contextStates": [
+    {
+      "log": "connection",
+      "label": 0,
+      "source_s": 1050,
+      "firstNeighbor": {
+        "index": 24,
+        "label": 0,
+        "distance": 0.1198827301097326
+      },
+      "gas": "fnv1a32-ab4391ca"
+    },
+    {
+      "log": "trip",
+      "label": 1,
+      "source_s": 1050,
+      "firstNeighbor": {
+        "index": 54,
+        "label": 1,
+        "distance": 0.15633913982883066
+      },
+      "gas": "fnv1a32-ab4391ca"
+    },
+    {
+      "log": "drilling",
+      "label": 2,
+      "source_s": 1050,
+      "firstNeighbor": {
+        "index": 108,
+        "label": 2,
+        "distance": 0.44944815398442484
+      },
+      "gas": "fnv1a32-ab4391ca"
+    }
+  ],
+  "exception": "No page JavaScript exceptions",
+  "passed": 36,
+  "failed": 1
+}
