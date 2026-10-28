@@ -1,4 +1,4 @@
-学号17 / 录井m2 / s17-mudgas-context / 1.7.0
+学号17 / 录井m2 / s17-mudgas-context / 1.7.1
 
 使用：在老师原门户“添加案例”中选择本目录，须包含case.json、README.txt和demo/共5个文件。先试跑，再校验并添加；刷新后进入m2再次操作。ZIP须先解压。也可直接双击demo/index.html离线运行。
 
@@ -8,8 +8,8 @@
 
 实际方法：共享峰检测、累计体积归位、训练均值标准差、加权kNN与固定规则基线。28口训练井224事件、8口验证井64事件，整井隔离；默认seed17，有效体积12m³。模型预测仅接收observations，评价答案在预测后单独匹配。
 
-进阶区：阈值、近邻参数、噪声、缺失与重叠，全段指标、人工复核、证据JSON。M2Inspect.snapshot()/evidence()及schemaVersion1.0沿用。
+页面专注观察、归位、工况对照；底部小入口可保存本次结果，计算记录仍可通过M2Inspect读取。M2Inspect.snapshot()/evidence()及schemaVersion1.0沿用。
 
 数据：固定种子的教学情景。真实泥浆气入口与顶空气旁例见来源拓展。场景画卷由内置imagegen生成，用于采集链定位；所有定量图来自实际输入和计算。图像、脚本和样式均随包嵌入，无后端或CDN要求。
 
-源码知识稿、提示词、独立复核和实际浏览器验收见开发根目录case-src/m2与handoff/m2-exhibit-2026-10-28。
+源码知识稿、提示词、独立复核和实际浏览器验收见开发根目录case-src/m2与handoff/m2-clarity-2026-10-28。

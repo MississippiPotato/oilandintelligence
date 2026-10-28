@@ -65,7 +65,7 @@
     return [min, (min + max) / 2, max].map(v => line(L, y(v), R, y(v)) + text(L - 12, y(v) + 5, compact(v), `text-anchor="end" fill="${muted}"`)).join('');
   }
 
-  function gas(input, event, { components = false, wide = false } = {}) {
+  function gas(input, event, { components = false, wide = false, detectionThreshold = null } = {}) {
     const rows = times(input);
     if (!rows.length) return empty('gas', '气峰与组分', '当前没有可绘制的时间记录。');
     const domain = domainFor(rows, event, wide), x = scale(...domain, L, R);
@@ -73,20 +73,23 @@
     const keys = components ? ['gas', 'c1', 'c2', 'c3'] : ['gas'];
     const names = { gas: '总气', c1: 'C1 · 甲烷', c2: 'C2 · 乙烷', c3: 'C3 · 丙烷' };
     const rowH = components ? 110 : 212, top = 78, height = top + rowH * keys.length + 69;
-    let out = text(24, 28, components ? '总气与 C1–C3：沿同一时间窗读取' : '选中的气峰：读数、范围与峰顶', 'font-size="19" font-weight="650"');
-    out += text(24, 55, components ? '纵轴均为教学仪器读数；各行独立刻度，不直接比较线高。' : '阴影是检测窗口，竖线是选中峰顶；曲线来自当前可见记录。', `fill="${muted}"`);
+    const detecting = !components && finite(detectionThreshold);
+    const smoothed = detecting ? rows.map((r,i)=>[r.time_s,g.M2Core.mean(rows.slice(Math.max(0,i-1),i+2).map(v=>v.gas))]) : [];
+    let out = text(24, 28, components ? '总气与 C1–C3：沿同一时间窗读取' : detecting ? '为什么选中这一段：平滑、平时水平与检测线' : '选中的气峰：读数、范围与峰顶', 'font-size="19" font-weight="650"');
+    out += text(24, 55, components ? '纵轴均为教学仪器读数；各行独立刻度，不直接比较线高。' : detecting ? '浅灰：原始读数；朱红：相邻3次平均；阴影：超过检测线的连续窗口。' : '阴影是检测窗口，竖线是选中峰顶；曲线来自当前可见记录。', `fill="${muted}"`);
     keys.forEach((key, j) => {
       const a = top + rowH * j + 22, b = top + rowH * (j + 1) - 12;
       const values = shown.map(r => r[key]).filter(finite), max = niceMax(Math.max(0, ...values)), y = scale(0, max, b, a);
       out += `<rect x="${L}" y="${a}" width="${R - L}" height="${b - a}" rx="5" fill="${paper}"/>`;
       out += verticalGrid(domain, x, a, b) + selectedBand(event, domain, x, a, b) + valueAxis(max, a, b, y);
       out += text(L, a - 8, names[key], `fill="${colors[j]}" font-weight="650"`);
-      if (values.length) out += `<path d="${path(shown.map(r => [r.time_s, r[key]]), x, y)}" fill="none" stroke="${colors[j]}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+      if (values.length) out += `<path d="${path(shown.map(r => [r.time_s, r[key]]), x, y)}" fill="none" stroke="${detecting?'#b5aba3':colors[j]}" stroke-width="${detecting?'1.5':'2.5'}" stroke-linecap="round" stroke-linejoin="round"/>`;
       else out += text((L + R) / 2, (a + b) / 2, '当前分量无可用记录', `text-anchor="middle" fill="${muted}"`);
       if (event && finite(event.time_s) && event.time_s >= domain[0] && event.time_s <= domain[1] && g.M2Core) {
-        const v = rows.length > 1 ? g.M2Core.at(rows, event.time_s, key) : rows[0][key];
+        const v = detecting ? smoothed.find(p=>p[0]===event.time_s)?.[1] : rows.length > 1 ? g.M2Core.at(rows, event.time_s, key) : rows[0][key];
         if (finite(v)) out += `<circle cx="${f(x(event.time_s), 2)}" cy="${f(y(v), 2)}" r="4.5" fill="${colors[j]}" stroke="white" stroke-width="1.5"><title>${esc(names[key])} ${f(v, 3)}；${f(event.time_s / 60, 2)} min</title></circle>`;
       }
+      if(detecting){const background=event.background,limit=background+detectionThreshold,curve=smoothed.filter(p=>p[0]>=domain[0]&&p[0]<=domain[1]);out+=`<path data-m2-smoothed d="${path(curve,x,y)}" fill="none" stroke="${red}" stroke-width="2.6"/>`;out+=line(L,y(background),R,y(background),blue,`data-m2-background-line data-value="${background}" stroke-dasharray="3 5" stroke-width="1.7"`)+line(L,y(limit),R,y(limit),gold,`data-m2-threshold-line data-value="${limit}" stroke-dasharray="7 4" stroke-width="1.7"`);out+=text(R-8,y(background)+20,`平时水平 ${f(background,2)}`,`text-anchor="end" fill="${blue}"`)+text(R-8,y(limit)-10,`检测线：平时水平 + ${f(detectionThreshold,2)}`,`text-anchor="end" fill="${gold}"`);}
     });
     out += timeAxis(domain, top + rowH * keys.length - 10, x);
     return svg('gas', height, components ? '同一时间窗内的总气及三个组分读数' : '当前选中气峰的实际读数', components ? '四行共用记录时间，各行纵轴分别按实际数据定标。红色阴影和竖线在所有行标出同一检测窗口及峰顶。' : '曲线为实际输入记录，阴影表示检测起止时间，竖线表示当前事件峰顶时间。', out);
@@ -103,7 +106,7 @@
     });
     return stops;
   }
-  function clocks(input, event, features, { volume = 12, correctLag = true } = {}) {
+  function clocks(input, event, features, { volume = 12, correctLag = true, operations = [] } = {}) {
     const rows = times(input), C = g.M2Core;
     if (rows.length < 2 || !C?.cumulative || !event || !finite(event.time_s)) return empty('clocks', '到达与来源', '需要当前事件、泵量和至少两条时间记录。');
     const arrival = event.time_s, source = finite(features?.sourceTime_s) ? features.sourceTime_s : null;
@@ -117,7 +120,7 @@
     const cArrival = C.at(all, arrival, 'cumulative');
     const cSource = source == null ? null : C.at(all, source, 'cumulative');
     const stops = stopIntervals(rows).filter(s => s[1] > domain[0] && s[0] < domain[1]);
-    const tracks = [{ key: 'gas', name: '地面总气 · 教学仪器读数', top: 117, bottom: 196, color: red }, { key: 'flowLs', name: '泵量 Q · L/s', top: 255, bottom: 321, color: gold }, { key: 'cumulative', name: '累计泵量 C(t) · m³（局部纵轴）', top: 382, bottom: 461, color: blue }];
+    const tracks = [{ key: 'gas', name: '地面总气 · 教学仪器读数', top: 117, bottom: 196, color: red }, { key: 'flowLs', name: '泵送流量 Q · L/s', top: 255, bottom: 321, color: gold }, { key: 'cumulative', name: '累计泵送体积 C(t) · m³（局部纵轴）', top: 382, bottom: 461, color: blue }];
     let out = text(24, 28, '地面到达时刻，与井下来源时刻', 'font-size="19" font-weight="650"');
     out += text(24, 57, `地面到达 tₐ = ${f(arrival / 60, 2)} min`, `fill="${red}" font-weight="650"`);
     out += text(24, 84, source == null ? '来源 tₛ：累计体积不足，当前记录内无解' : `来源 tₛ = ${f(source / 60, 2)} min${finite(features?.sourceDepthMD_m) ? ' · ' + f(features.sourceDepthMD_m, 2) + ' m MD' : ''}`, `fill="${source == null ? gold : blue}" font-weight="650"`);
@@ -148,10 +151,12 @@
       const longest = stops.slice().sort((u, v) => (v[1] - v[0]) - (u[1] - u[0]))[0];
       out += text(R, 235, `赭金区：停泵 ${f(longest[0] / 60, 1)}–${f(longest[1] / 60, 1)} min${stops.length > 1 ? ' 等' : ''}`, `text-anchor="end" fill="${gold}"`);
     } else out += text(R, 235, '当前时间窗内无停泵区间', `text-anchor="end" fill="${muted}"`);
-    out += timeAxis(domain, 462, x);
+    out += text(L,493,'实际作业记录 · 与上方共用时间轴，蓝线为来源候选',`fill="${muted}"`);
+    [['connection','接单根',516],['trip','起下钻',549]].forEach(([type,label,yy])=>{out+=text(L-12,yy+15,label,`text-anchor="end" fill="${muted}"`)+`<rect x="${L}" y="${yy}" width="${R-L}" height="21" rx="4" fill="${paper}"/>`;operations.filter(o=>o.type===type&&o.end_s>=domain[0]&&o.start_s<=domain[1]).forEach(o=>{const xx=x(Math.max(domain[0],o.start_s)),width=Math.max(2,x(Math.min(domain[1],o.end_s))-xx);out+=`<rect data-m2-operation="${type}" data-start-s="${o.start_s}" data-end-s="${o.end_s}" x="${f(xx,2)}" y="${yy}" width="${f(width,2)}" height="21" rx="3" fill="${type==='connection'?gold:blue}" fill-opacity=".55"><title>${esc(label)}：${f(o.start_s/60,2)}—${f(o.end_s/60,2)} min</title></rect>`;});if(source!=null)out+=line(x(source),yy-4,x(source),yy+25,blue,'stroke-width="2" stroke-dasharray="2 3"');out+=line(x(arrival),yy-4,x(arrival),yy+25,red,'stroke-width="1.5" stroke-dasharray="5 4"');});
+    out += timeAxis(domain, 580, x);
     const delta = finite(cArrival) && finite(cSource) ? cArrival - cSource : null;
-    out += text(24, 540, delta == null ? `当前 Veff = ${f(volume, 2)} m³；起点前所需体积未包含在记录中。` : `C(tₐ) − C(tₛ) = ${f(delta, 2)} m³；当前 Veff = ${f(volume, 2)} m³${correctLag ? '' : '（未执行体积回退）'}`, `fill="${delta == null || !correctLag ? gold : ink}" font-weight="600"`);
-    return svg('clocks', 560, '用实际累计泵量回查气峰来源', '三轨共用时间轴，分别为总气、泵量和由引擎左区间积分计算的累计泵量。到达时刻为朱红虚线，来源为蓝灰点线，赭金区域对应实际零泵量。累计量轨道标出两个时刻的体积差。', out);
+    out += text(24, 661, delta == null ? `当前有效体积 = ${f(volume, 2)} m³；起点前所需体积未包含在记录中。` : `C(tₐ) − C(tₛ) = ${f(delta, 2)} m³；当前有效体积 = ${f(volume, 2)} m³${correctLag ? '' : '（未执行体积回退）'}`, `fill="${delta == null || !correctLag ? gold : ink}" font-weight="600"`);
+    return svg('clocks', 682, '用实际累计体积与作业日志回查气峰来源', '总气、泵送流量、累计泵送体积和实际作业区间共用时间轴。到达为朱红虚线，来源为蓝灰点线；作业色带来自可见操作日志。', out);
   }
 
   const featureNames = ['峰高', '峰宽', '峰面积 /100', '上升斜率 ×100', '下降斜率 ×100', '组分协同', '距接单根 /300', '距起下钻 /300', '泵量 ×40', 'ROP /20', '工况缺失'];

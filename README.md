@@ -1,9 +1,9 @@
 # 井见 · 石油智能化可视实验室
 
-当前门户 **1.9.2-preview**，覆盖老师原站 **13 个阶段、61 个场景**。学号末两位 17 对应第 4 阶段录井，m2 单例升级为 **1.7.0**，m1、m3–m5 保持1.6.0；其余阶段共56例。2026-10-28本轮只实施m2试点：纸本微缩画卷、朱红展陈界面、同峰三阶段解释。其他60例的300个运行文件与此前一致。老师原样例单独保留，不计入 61 个自制案例。
+当前门户 **1.9.2-preview**，覆盖老师原站 **13 个阶段、61 个场景**。学号末两位 17 对应第 4 阶段录井，m2 单例升级为 **1.7.1**，m1、m3–m5 保持1.6.0；其余阶段共56例。2026-10-28本轮只实施m2试点：纸本微缩画卷、朱红展陈界面、同峰三阶段解释。当前1.7.1移除了整块进阶工程界面，并按外行可读性审阅补齐术语、检测线与实际作业时间带。其他60例的300个运行文件与此前一致。老师原样例单独保留，不计入 61 个自制案例。
 
-- [打开首页](portal/index.html) · [m2试点与实际浏览器验收](handoff/m2-exhibit-2026-10-28/acceptance.html)
-- [直接打开m2](dist/cases/s17-mudgas-context/demo/index.html#background) · [m2成品包1.7.0](dist/s17-mudgas-context-1.7.0.zip) · [知识稿](case-src/m2/knowledge.md)
+- [打开首页](portal/index.html) · [m2试点与实际浏览器验收](handoff/m2-clarity-2026-10-28/acceptance.html)
+- [直接打开m2](dist/cases/s17-mudgas-context/demo/index.html#background) · [m2成品包1.7.1](dist/s17-mudgas-context-1.7.1.zip) · [知识稿](case-src/m2/knowledge.md)
 - [2026-10-24五例历史验收](handoff/observation-design-2026-10-24/acceptance.html)
 - [原站只读兼容副本](portal-original/index.html) · [上轮61例覆盖表](handoff/teaching-audit-2026-10-24/coverage.json)
 - [上轮61例轻量案例包（内含m2旧1.6）](dist/s17-all-61-cases-1.9.2-preview.zip) · [跨阶段56例包](dist/s17-expansion-56-cases-1.9.2-preview.zip)

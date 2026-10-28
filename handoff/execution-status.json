@@ -1,8 +1,8 @@
 {
-  "completedAt": "2026-10-28T04:20:49.800Z",
+  "completedAt": "2026-10-28T12:05:01.790Z",
   "scope": "m2 only pilot",
   "caseId": "s17-mudgas-context",
-  "caseVersion": "1.7.0",
+  "caseVersion": "1.7.1",
   "portalVersion": "1.9.2-preview",
   "otherCasesUnchanged": 60,
   "otherRuntimeFilesUnchanged": 300,
@@ -12,7 +12,7 @@
   "portalChanges": "Per-case version routing and m2-scoped reader mounting only",
   "browser": {
     "executed": true,
-    "passed": 42,
+    "passed": 46,
     "failed": 0,
     "paths": [
       "offline file://",
@@ -35,16 +35,16 @@
     "passed": 10,
     "failed": 0,
     "browserProof": false,
-    "reusedG0Report": "handoff/m2-exhibit-2026-10-28/reused-g0-calculation-checks.json"
+    "reusedG0Report": "handoff/m2-clarity-2026-10-28/reused-g0-calculation-checks.json"
   },
   "actualEvidenceDownloads": [
-    "handoff/m2-exhibit-2026-10-28/offline-evidence.json",
-    "handoff/m2-exhibit-2026-10-28/teacher-before-refresh-evidence.json",
-    "handoff/m2-exhibit-2026-10-28/teacher-after-refresh-evidence.json"
+    "handoff/m2-clarity-2026-10-28/offline-evidence.json",
+    "handoff/m2-clarity-2026-10-28/teacher-before-refresh-evidence.json",
+    "handoff/m2-clarity-2026-10-28/teacher-after-refresh-evidence.json"
   ],
   "imagegen": {
-    "mode": "built-in imagegen",
-    "calls": 2,
+    "mode": "inherited built-in imagegen assets from1.7.0",
+    "calls": 0,
     "selected": "composition A",
     "prompts": "case-src/m2/assets/prompts.json",
     "asset": "case-src/m2/assets/scroll-selected.jpg"
@@ -56,12 +56,9 @@
     "Online assistant model, microphone and voice services",
     "Real-field labeled gas-event performance; the default experiment remains a controlled teaching dataset"
   ],
-  "failedAttemptsRetained": [
-    "attempts/browser-01.json",
-    "attempts/browser-02.json"
-  ],
+  "failedAttemptsRetained": [],
   "knowledge": "case-src/m2/knowledge.md",
-  "currentAcceptance": "handoff/m2-exhibit-2026-10-28/acceptance.html",
+  "currentAcceptance": "handoff/m2-clarity-2026-10-28/acceptance.html",
   "historicalAcceptance": {
     "fiveCases": "handoff/observation-design-2026-10-24/acceptance.html",
     "allCases": "handoff/teaching-audit-2026-10-24/acceptance.html"
