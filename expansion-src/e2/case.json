@@ -6,8 +6,8 @@
     "opt"
   ],
   "title": "压裂裂缝形态预测",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -17,25 +17,25 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "半长、高度与二维投影",
-          "html": "<p>水力压裂通过加压液体在岩层中建立裂缝，使井筒接触更大范围的储层。以井筒中心向一端量得半长L、向上量得半高H，因此图中完整水平长度为2L，完整垂直高度为2H。本例椭圆只表达两个尺度的二维投影；横轴距离m，纵轴相对井筒高度m。面积πLH变大与形状拉长是不同变化。几何扩大可能增加与储层的接触，但产能还取决于裂缝导流能力（渗透率×宽度）、支撑剂分布和储层渗透性；本例没有这些量，也没有产量模型，不能从面积直接换算增油。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"半长、高度与二维投影\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><ellipse cx=\"300\" cy=\"100\" rx=\"230\" ry=\"65\" fill=\"#a8cfca\" fill-opacity=\".6\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"70,100 530,100\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"300,35 300,165\" fill=\"none\" stroke=\"#b88651\" stroke-width=\"3\"/><text x=\"340\" y=\"90\">半长 L</text><text x=\"310\" y=\"150\">半高 H</text><text x=\"560\" y=\"95\">井筒中心</text><text x=\"560\" y=\"135\">二维投影</text></g></svg><figcaption>半长L与半高H从中心量起，完整长与高分别为2L、2H。</figcaption></figure>"
+          "html": "<p>水力压裂通过加压液体在岩层中建立裂缝，使井筒接触更大范围的储层。以井筒中心向一端量得半长L、向上量得半高H，因此图中完整水平长度为2L，完整垂直高度为2H。本例椭圆只表达两个尺度的二维投影；横轴距离m，纵轴相对井筒高度m。面积πLH变大与形状拉长是不同变化。几何扩大可能增加与储层的接触，但产能还取决于裂缝导流能力（渗透率×宽度）、支撑剂分布和储层渗透性；本页围绕半长、半高与长高比比较几何响应。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"半长、高度与二维投影\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><ellipse cx=\"300\" cy=\"100\" rx=\"230\" ry=\"65\" fill=\"#a8cfca\" fill-opacity=\".6\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"70,100 530,100\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"300,35 300,165\" fill=\"none\" stroke=\"#b88651\" stroke-width=\"3\"/><text x=\"340\" y=\"90\">半长 L</text><text x=\"310\" y=\"150\">半高 H</text><text x=\"560\" y=\"95\">井筒中心</text><text x=\"560\" y=\"135\">二维投影</text></g></svg><figcaption>半长L与半高H从中心量起，完整长与高分别为2L、2H。</figcaption></figure>"
         },
         {
           "no": 2,
           "en": "METHOD",
           "title": "地层约束影响流体分配",
-          "html": "<p>液量增加提供更多造缝资源；应力差和层间约束会改变横向与纵向分配。数据中的关系由公开的教学生成式设定。双输出回归学习L、H，不能把绘出的平滑椭圆称为实测裂缝边界。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"地层约束影响流体分配\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"185\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">液量 / 应力 / 约束</text><rect x=\"270\" y=\"30\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"282\" y=\"58\">双输出回归</text><rect x=\"515\" y=\"30\" width=\"175\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"527\" y=\"58\">半长L、半高H</text><polyline points=\"207,52 268,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"452,52 513,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"50\" y=\"130\">同样液量，可对应不同的长高比</text><text x=\"50\" y=\"170\">预测几何参数后绘图；绘图本身不是预测算法</text></g></svg><figcaption>同样液量在不同地层约束下，预测的L和H可朝不同方向变化。</figcaption></figure>"
+          "html": "<p>液量增加提供更多造缝资源；应力差和层间约束会改变横向与纵向分配。数据中的关系由公开的教学生成式设定。双输出回归分别预测L、H，椭圆据此绘出对应的几何尺度。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"地层约束影响流体分配\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"185\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">液量 / 应力 / 约束</text><rect x=\"270\" y=\"30\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"282\" y=\"58\">双输出回归</text><rect x=\"515\" y=\"30\" width=\"175\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"527\" y=\"58\">半长L、半高H</text><polyline points=\"207,52 268,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"452,52 513,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"50\" y=\"130\">同样液量，可对应不同的长高比</text><text x=\"50\" y=\"170\">预测几何参数后绘图；按L、H预测值绘制轮廓</text></g></svg><figcaption>同样液量在不同地层约束下，预测的L和H可朝不同方向变化。</figcaption></figure>"
         },
         {
           "no": 3,
           "en": "EVIDENCE",
           "title": "冻结回归后再重建轮廓",
-          "html": "<p>120个训练工况拟合带交互项的岭回归，40个留出工况评价半长和半高MAE。模型只从参数生成预测；留出参考轮廓在评价时单独读入。当前自由查询只显示预测与训练均值基线，不捏造现场真值。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://glossary.slb.com/en/terms/h/hydraulic_fracturing\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+          "html": "<p>120个训练工况拟合带交互项的岭回归，40个留出工况评价半长和半高MAE。模型只从参数生成预测；留出参考轮廓在评价时单独读入。当前自由查询只显示预测与训练均值基线，不捏造现场真值。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://glossary.slb.com/en/terms/h/hydraulic_fracturing\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。</p>"
         },
         {
           "no": 4,
           "en": "LEARNING_TASK",
           "title": "课堂实验：一次只改变一个条件",
-          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>固定应力差5MPa、约束0.5，将液量由300改到1200m³，分别记录L、H和πLH。再固定液量700m³，把约束从0.1升至0.9，比较长高比。图中横纵同尺，极端参数也应完整显示；面积变大只说明几何投影变化，不能据此宣布产量同比增加。</p></aside>"
+          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>固定应力差5MPa、约束0.5，将液量由300改到1200m³，分别记录L、H和πLH。再固定液量700m³，把约束从0.1升至0.9，比较长高比。图中横纵同尺，极端参数也应完整显示；将面积与长高比并列，分别说明投影范围和延伸形态怎样改变。</p></aside>"
         }
       ]
     },
@@ -51,33 +51,33 @@
           "role": "步骤 1",
           "do": "输入注入液量、应力差和层间约束指数，二维裂缝采用固定井筒中心、水平半长L与垂直半高H描述。",
           "effect": "当前工况三项输入",
-          "trap": "约束指数为教学无量纲参数"
+          "trap": "层间约束以无量纲教学指数表示。"
         },
         {
           "name": "学习半长与半高",
           "role": "步骤 2",
           "do": "120个训练工况分别拟合L和H，使用液量、应力、约束及交互项；40个留出工况整组保留评价。",
           "effect": "冻结的双输出岭回归",
-          "trap": "当前查询不使用参考裂缝尺寸"
+          "trap": "当前查询向代理输入液量、应力差和约束指数。"
         },
         {
           "name": "由参数重建椭圆",
           "role": "步骤 3",
           "do": "将预测L、H转为椭圆轮廓。横纵轴保持同一像素比例，防止改变绘图比例后看起来像裂缝变长；训练平均几何用虚线叠加。",
           "effect": "当前椭圆和均值轮廓",
-          "trap": "形态变化来自参数预测，不能由绘图装饰捏造"
+          "trap": "图形的长短轴按当前L、H预测值绘制。"
         },
         {
           "name": "独立工况比较轮廓",
           "role": "步骤 4",
           "do": "在独立40工况计算L/H平均绝对误差，并以720个角度数值积分求同中心椭圆的交并比。当前自由查询不显示虚构参考轮廓。",
           "effect": "几何参数误差与轮廓IoU",
-          "trap": "二维几何不提供分叉、连通性或三维传播结论"
+          "trap": "二维椭圆展示半长、半高与长高比。"
         }
       ],
       "metrics": {
         "title": "步骤的输入与产物",
-        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜定义液量和地层条件</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：定义液量和地层条件的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜定义液量和地层条件</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：输入注入液量、应力差和层间约束指数，二维裂缝采用固定井筒中心、水平半</text><text x=\"42\" y=\"113\" font-size=\"16\">长L与垂直半高H描述。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前工况三项输入</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：约束指数为教学无量纲参数</text></g></svg><figcaption>图 F1：定义液量和地层条件的动作、产物和检查点。</figcaption></figure><h4>图 F2｜学习半长与半高</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：学习半长与半高的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜学习半长与半高</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：120个训练工况分别拟合L和H，使用液量、应力、约束及交互项；40个</text><text x=\"42\" y=\"113\" font-size=\"16\">留出工况整组保留评价。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：冻结的双输出岭回归</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：当前查询不使用参考裂缝尺寸</text></g></svg><figcaption>图 F2：学习半长与半高的动作、产物和检查点。</figcaption></figure><h4>图 F3｜由参数重建椭圆</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：由参数重建椭圆的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜由参数重建椭圆</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：将预测L、H转为椭圆轮廓。横纵轴保持同一像素比例，防止改变绘图比例后</text><text x=\"42\" y=\"113\" font-size=\"16\">看起来像裂缝变长；训练平均几何用虚线叠加。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前椭圆和均值轮廓</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：形态变化来自参数预测，不能由绘图装饰捏造</text></g></svg><figcaption>图 F3：由参数重建椭圆的动作、产物和检查点。</figcaption></figure><h4>图 F4｜独立工况比较轮廓</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：独立工况比较轮廓的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜独立工况比较轮廓</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：在独立40工况计算L/H平均绝对误差，并以720个角度数值积分求同中</text><text x=\"42\" y=\"113\" font-size=\"16\">心椭圆的交并比。当前自由查询不显示虚构参考轮廓。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：几何参数误差与轮廓IoU</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：二维几何不提供分叉、连通性或三维传播结论</text></g></svg><figcaption>图 F4：独立工况比较轮廓的动作、产物和检查点。</figcaption></figure>"
+        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜定义液量和地层条件</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：定义液量和地层条件的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜定义液量和地层条件</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：输入注入液量、应力差和层间约束指数，二维裂缝采用固定井筒中心、水平半</text><text x=\"42\" y=\"113\" font-size=\"16\">长L与垂直半高H描述。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前工况三项输入</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：层间约束以无量纲教学指数表示。</text></g></svg><figcaption>图 F1：定义液量和地层条件的动作、产物和检查点。</figcaption></figure><h4>图 F2｜学习半长与半高</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：学习半长与半高的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜学习半长与半高</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：120个训练工况分别拟合L和H，使用液量、应力、约束及交互项；40个</text><text x=\"42\" y=\"113\" font-size=\"16\">留出工况整组保留评价。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：冻结的双输出岭回归</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：当前查询向代理输入液量、应力差和约束指数。</text></g></svg><figcaption>图 F2：学习半长与半高的动作、产物和检查点。</figcaption></figure><h4>图 F3｜由参数重建椭圆</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：由参数重建椭圆的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜由参数重建椭圆</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：将预测L、H转为椭圆轮廓。横纵轴保持同一像素比例，防止改变绘图比例后</text><text x=\"42\" y=\"113\" font-size=\"16\">看起来像裂缝变长；训练平均几何用虚线叠加。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前椭圆和均值轮廓</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：图形的长短轴按当前L、H预测值绘制。</text></g></svg><figcaption>图 F3：由参数重建椭圆的动作、产物和检查点。</figcaption></figure><h4>图 F4｜独立工况比较轮廓</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：独立工况比较轮廓的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜独立工况比较轮廓</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：在独立40工况计算L/H平均绝对误差，并以720个角度数值积分求同中</text><text x=\"42\" y=\"113\" font-size=\"16\">心椭圆的交并比。当前自由查询不显示虚构参考轮廓。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：几何参数误差与轮廓IoU</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：二维椭圆展示半长、半高与长高比。</text></g></svg><figcaption>图 F4：独立工况比较轮廓的动作、产物和检查点。</figcaption></figure>"
       }
     },
     "demo": {

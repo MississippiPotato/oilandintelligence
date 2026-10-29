@@ -5,8 +5,8 @@
     "opt"
   ],
   "title": "化学驱配方智能筛选",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -16,7 +16,7 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "先理解化学驱，再阅读配方空间",
-          "html": "<p>常规水驱中，水与原油流动能力不同，可能更容易沿高渗通道前进而绕过部分油。聚合物驱利用水相增黏改善流度控制，表面活性剂体系可降低油水界面张力；两类作用分别涉及波及范围与驱替效率。本例不配置真实药剂，而用三种虚构母液A、B和载液C理解配方筛选。三元图内部任一点都满足a+b+c=1，顶点表示单一组分。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"先理解化学驱，再阅读配方空间\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><path d=\"M60 175L250 25L440 175Z\" fill=\"#dcebe7\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"40\" y=\"200\">C载液</text><text x=\"235\" y=\"22\">A</text><text x=\"450\" y=\"180\">B</text><circle cx=\"250\" cy=\"125\" r=\"8\" fill=\"#be8952\"/><text x=\"480\" y=\"70\">任一点：a+b+c=1</text><text x=\"480\" y=\"115\">边上：一个组分为0</text><text x=\"480\" y=\"160\">顶点：单一组分</text></g></svg><figcaption>三角形每个点都是比例总和1的配方；移动点会同时改变三种比例。</figcaption></figure>"
+          "html": "<p>常规水驱中，水与原油流动能力不同，可能更容易沿高渗通道前进而绕过部分油。聚合物驱利用水相增黏改善流度控制，表面活性剂体系可降低油水界面张力；两类作用分别涉及波及范围与驱替效率。本例用虚构母液A、B和载液C练习配方比例与成本筛选。三元图内部任一点都满足a+b+c=1，顶点表示单一组分。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"先理解化学驱，再阅读配方空间\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><path d=\"M60 175L250 25L440 175Z\" fill=\"#dcebe7\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"40\" y=\"200\">C载液</text><text x=\"235\" y=\"22\">A</text><text x=\"450\" y=\"180\">B</text><circle cx=\"250\" cy=\"125\" r=\"8\" fill=\"#be8952\"/><text x=\"480\" y=\"70\">任一点：a+b+c=1</text><text x=\"480\" y=\"115\">边上：一个组分为0</text><text x=\"480\" y=\"160\">顶点：单一组分</text></g></svg><figcaption>三角形每个点都是比例总和1的配方；移动点会同时改变三种比例。</figcaption></figure>"
         },
         {
           "no": 2,
@@ -28,7 +28,7 @@
           "no": 3,
           "en": "EVIDENCE",
           "title": "先验证代理，再搜索可行配方",
-          "html": "<p>140批训练试验拟合代理，45批独立试验计算MAE。随后枚举231个比例点，逐个检查预算，在可行点里选预测指数最高者。固定配方也按相同成本和代理评价；若它超预算，会明确显示超限。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.sodir.no/en/facts/production/improved-oil-recovery-ior/enhanced-oil-recovery-EOR/water-based-methods/\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+          "html": "<p>140批训练试验拟合代理，45批独立试验计算MAE。随后枚举231个比例点，逐个检查预算，在可行点里选预测指数最高者。固定配方也按相同成本和代理评价；若它超预算，会明确显示超限。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.sodir.no/en/facts/production/improved-oil-recovery-ior/enhanced-oil-recovery-EOR/water-based-methods/\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。</p>"
         },
         {
           "no": 4,
@@ -50,33 +50,33 @@
           "role": "步骤 1",
           "do": "每批试验保留A、B比例与盐度，C比例由1−A−B确定。训练与留出按不同试验批次生成，响应指数有独立噪声。",
           "effect": "140批训练、45批测试与固定比例约束",
-          "trap": "A、B为虚构母液，不是现场可用配方"
+          "trap": "A、B为虚构母液，C为载液，用三元比例练习筛选。"
         },
         {
           "name": "学习混合响应代理",
           "role": "步骤 2",
           "do": "二次回归包括A²、B²、AB和盐度交互，学习同一比例在不同盐度下的响应变化。训练均值是独立对照。",
           "effect": "冻结性能代理和留出MAE",
-          "trap": "代理预测性能不是实验实测性能"
+          "trap": "性能栏显示代理预测值，留出误差单独列出。"
         },
         {
           "name": "枚举单纯形并查成本",
           "role": "步骤 3",
           "do": "以0.05为比例步长枚举231点，每个点满足比例总和1。按单价9、6、1.5元/L直接加权计算成本，超预算点灰显。",
           "effect": "三元配方图上的真实可行域",
-          "trap": "不能用性能排名替代成本约束"
+          "trap": "先按成本约束筛选，再在可行配方中比较性能。"
         },
         {
           "name": "比较可行性能与基线",
           "role": "步骤 4",
           "do": "只在可行点中按预测性能排序，圈出当前最佳；固定0.3/0.3/0.4配方以方块标出。改变盐度或预算后重新计算图中颜色与最优点；色标固定−20–80，便于跨盐度比较。三元图上顶A、左下C、右下B，20%网格用于读比例，单点步长5%。",
           "effect": "当前候选、固定配方和约束计数",
-          "trap": "固定配方成本5.10元/L，超预算时明确标识"
+          "trap": "固定配方成本为5.10元/L，与同一预算逐项比较。"
         }
       ],
       "metrics": {
         "title": "步骤的输入与产物",
-        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜整理比例与盐度试验</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：整理比例与盐度试验的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜整理比例与盐度试验</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：每批试验保留A、B比例与盐度，C比例由1−A−B确定。训练与留出按不</text><text x=\"42\" y=\"113\" font-size=\"16\">同试验批次生成，响应指数有独立噪声。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：140批训练、45批测试与固定比例约束</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：A、B为虚构母液，不是现场可用配方</text></g></svg><figcaption>图 F1：整理比例与盐度试验的动作、产物和检查点。</figcaption></figure><h4>图 F2｜学习混合响应代理</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：学习混合响应代理的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜学习混合响应代理</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：二次回归包括A²、B²、AB和盐度交互，学习同一比例在不同盐度下的响</text><text x=\"42\" y=\"113\" font-size=\"16\">应变化。训练均值是独立对照。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：冻结性能代理和留出MAE</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：代理预测性能不是实验实测性能</text></g></svg><figcaption>图 F2：学习混合响应代理的动作、产物和检查点。</figcaption></figure><h4>图 F3｜枚举单纯形并查成本</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：枚举单纯形并查成本的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜枚举单纯形并查成本</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：以0.05为比例步长枚举231点，每个点满足比例总和1。按单价9、6</text><text x=\"42\" y=\"113\" font-size=\"16\">、1.5元/L直接加权计算成本，超预算点灰显。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：三元配方图上的真实可行域</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：不能用性能排名替代成本约束</text></g></svg><figcaption>图 F3：枚举单纯形并查成本的动作、产物和检查点。</figcaption></figure><h4>图 F4｜比较可行性能与基线</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：比较可行性能与基线的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜比较可行性能与基线</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：只在可行点中按预测性能排序，圈出当前最佳；固定0.3/0.3/0.4</text><text x=\"42\" y=\"113\" font-size=\"16\">配方以方块标出。改变盐度或预算后重新计算图中颜色与最优点；色标固定0–8</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前候选、固定配方和约束计数</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：固定配方成本5.10元/L，超预算时明确标识</text></g></svg><figcaption>图 F4：比较可行性能与基线的动作、产物和检查点。</figcaption></figure>"
+        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜整理比例与盐度试验</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：整理比例与盐度试验的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜整理比例与盐度试验</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：每批试验保留A、B比例与盐度，C比例由1−A−B确定。训练与留出按不</text><text x=\"42\" y=\"113\" font-size=\"16\">同试验批次生成，响应指数有独立噪声。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：140批训练、45批测试与固定比例约束</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：A、B为虚构母液，C为载液，用三元比例练习筛选。</text></g></svg><figcaption>图 F1：整理比例与盐度试验的动作、产物和检查点。</figcaption></figure><h4>图 F2｜学习混合响应代理</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：学习混合响应代理的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜学习混合响应代理</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：二次回归包括A²、B²、AB和盐度交互，学习同一比例在不同盐度下的响</text><text x=\"42\" y=\"113\" font-size=\"16\">应变化。训练均值是独立对照。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：冻结性能代理和留出MAE</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：性能栏显示代理预测值，留出误差单独列出。</text></g></svg><figcaption>图 F2：学习混合响应代理的动作、产物和检查点。</figcaption></figure><h4>图 F3｜枚举单纯形并查成本</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：枚举单纯形并查成本的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜枚举单纯形并查成本</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：以0.05为比例步长枚举231点，每个点满足比例总和1。按单价9、6</text><text x=\"42\" y=\"113\" font-size=\"16\">、1.5元/L直接加权计算成本，超预算点灰显。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：三元配方图上的真实可行域</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：先按成本约束筛选，再在可行配方中比较性能。</text></g></svg><figcaption>图 F3：枚举单纯形并查成本的动作、产物和检查点。</figcaption></figure><h4>图 F4｜比较可行性能与基线</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：比较可行性能与基线的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜比较可行性能与基线</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：只在可行点中按预测性能排序，圈出当前最佳；固定0.3/0.3/0.4</text><text x=\"42\" y=\"113\" font-size=\"16\">配方以方块标出。改变盐度或预算后重新计算图中颜色与最优点；色标固定0–8</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前候选、固定配方和约束计数</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：固定配方成本为5.10元/L，与同一预算逐项比较。</text></g></svg><figcaption>图 F4：比较可行性能与基线的动作、产物和检查点。</figcaption></figure>"
       }
     },
     "demo": {

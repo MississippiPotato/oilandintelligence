@@ -1,0 +1,285 @@
+{
+  "appliedAt": "2026-10-29T15:58:28.500Z",
+  "kind": "literal_source_copy_edits",
+  "items": [
+    {
+      "id": "SOL-001",
+      "source": "case-src/m1/exhibit.js",
+      "original": "先比较颗粒感与纹理，不凭颜色判定。",
+      "replacement": "先比较颗粒感、纹理与颜色的组合。"
+    },
+    {
+      "id": "SOL-002",
+      "source": "case-src/m1/exhibit.js",
+      "original": "这些可见线索需要一起观察，不把每条暗纹都认作页理。",
+      "replacement": "一起比较明暗带、裂隙与薄层结构。"
+    },
+    {
+      "id": "SOL-003",
+      "source": "case-src/m1/exhibit.js",
+      "original": "比较细密底子与表面纹理，浅色团块本身不足以认定为化石。",
+      "replacement": "比较细密底子、浅色团块与表面纹理。"
+    },
+    {
+      "id": "SOL-004",
+      "source": "case-src/m1/exhibit.js",
+      "original": "照片保持发布者的<b>shale／页岩</b>原标签。主演示的“泥岩教学外观”是给合成盘中细粒层状纹理取的<b>教学分组名</b>，没有把真实照片改标为泥岩。页岩的薄层劈开特征需要具体岩石证据，不能只凭一种合成纹理把这两个名称互换。砂岩、页岩和灰岩都有多种颜色，判断要结合颗粒、纹理及结构。",
+      "replacement": "照片沿用原数据标签：砂岩、页岩和灰岩。<b>页岩</b>常沿薄层劈开；演示中的“泥岩教学外观”指合成盘里的细粒层状纹理分组。观察时，把颗粒、纹理与结构放在一起比较。"
+    },
+    {
+      "id": "SOL-005",
+      "source": "case-src/m1/exhibit.js",
+      "original": "这里用真实照片认识观察线索，主演示使用单独生成的教学岩屑图像，研究逐粒识别过程。",
+      "replacement": ""
+    },
+    {
+      "id": "SOL-006",
+      "source": "case-src/m1/exhibit.js",
+      "original": "照明与附着在同一教学盘内比较，固定原图像位置。切换“重排教学盘”后，坐标只用于比较两幅图的对应位置，颗粒身份未确认；新轮廓与旧区域相交，也不能据此认定是原来那一粒。",
+      "replacement": "先在同一盘内调照明和附着，观察选中位置的轮廓与近邻怎样变化；再切换摆盘，比较相同坐标的轮廓形状与交叠。"
+    },
+    {
+      "id": "SOL-007",
+      "source": "case-src/m1/exhibit.js",
+      "original": "读结果时说清“这一盘图像的颗粒数比例”或“可见二维面积比例”。照片没有测到隐藏部分、厚度和密度，直接保留这两个口径。",
+      "replacement": "两条比例带分别回答：这一盘里各类颗粒有多少、各占多大可见面积。读数时连同分子和分母一起比较。"
+    },
+    {
+      "id": "SOL-008",
+      "source": "case-src/m1/exhibit.js",
+      "original": "照明与附着在同一教学盘内比较，保留选中位置；“重排教学盘”提供另一幅摆盘情景，固定坐标用于位置对照，不自动认定颗粒身份。",
+      "replacement": "调节照明和附着，比较选中位置；切换“重排教学盘”，再比较同一坐标的摆盘差异。"
+    },
+    {
+      "id": "SOL-009",
+      "source": "case-src/m1/exhibit.js",
+      "original": "重排不确认同一粒的身份。",
+      "replacement": ""
+    },
+    {
+      "id": "SOL-010",
+      "source": "case-src/m1/exhibit.js",
+      "original": "教学盘已重排 · 颗粒身份未确认",
+      "replacement": "教学盘已重排 · 比较当前位置"
+    },
+    {
+      "id": "SOL-011",
+      "source": "case-src/m1/exhibit.js",
+      "original": "这里只比较观测轮廓的空间交叠。",
+      "replacement": "查看新旧轮廓在此处的交叠。"
+    },
+    {
+      "id": "SOL-012",
+      "source": "case-src/m1/exhibit.js",
+      "original": "图上保留虚线定位，这次不借用另一粒的候选或近邻。",
+      "replacement": "图上用虚线保留观察位置。"
+    },
+    {
+      "id": "SOL-013",
+      "source": "case-src/m1/exhibit.js",
+      "original": "本步不借用其他颗粒的近邻。",
+      "replacement": "恢复照明或摆盘条件后可继续查看近邻。"
+    },
+    {
+      "id": "SOL-014",
+      "source": "case-src/m3/exhibit.js",
+      "original": "不同拍摄的框仅帮助辨认标本；后面的逐像素分割另用一组可控教学图像。",
+      "replacement": "比较观察框内标本在两种光下的外观。"
+    },
+    {
+      "id": "SOL-015",
+      "source": "case-src/m3/exhibit.js",
+      "original": "显示得分表达本例分割任务中的倾向，面积比例描述当前可见表面的显示范围。",
+      "replacement": "面积比例由检出显示像素数除以可见岩屑像素数。"
+    },
+    {
+      "id": "SOL-016",
+      "source": "case-src/m3/exhibit.js",
+      "original": "本例默认方法实验使用原有可控教学配对数据，真实矿物照片用于专业观察。预测只读取观测图像；评价真值由独立评价函数读取。",
+      "replacement": "数据：合成教学配对图像。"
+    },
+    {
+      "id": "SOL-017",
+      "source": "case-src/m3/exhibit.js",
+      "original": "这里的得分不是含油概率。",
+      "replacement": ""
+    },
+    {
+      "id": "SOL-018",
+      "source": "case-src/m4/exhibit.js",
+      "original": "组号不是岩性",
+      "replacement": "响应组 A / B / C"
+    },
+    {
+      "id": "SOL-019",
+      "source": "case-src/m4/exhibit.js",
+      "original": "只有有效钻进记录才做换算；停钻不是“钻时为零”。",
+      "replacement": "有效钻进时按下式换算；停钻位置在曲线上保留为缺口。"
+    },
+    {
+      "id": "SOL-020",
+      "source": "case-src/m4/exhibit.js",
+      "original": "本例所有曲线都用 m MD 对齐，不把曲线上的 1240 m 当作竖直埋深。",
+      "replacement": "本例所有曲线都按沿井眼量取的 m MD 对齐。"
+    },
+    {
+      "id": "SOL-021",
+      "source": "case-src/m4/exhibit.js",
+      "original": "没有观测的深度跨度断开；一起变化提示需要核查操作与地层资料，单靠这些曲线不能直接给岩性命名。",
+      "replacement": "深度跨度中的缺测以断线显示。沿红色横线比较三条曲线，再对照同深度的操作与岩屑记录。"
+    },
+    {
+      "id": "SOL-022",
+      "source": "case-src/m4/exhibit.js",
+      "original": "480 条原行摘录，保留原始行号；无插值、无独立地层界面标签。此段用来认识实测曲线；下方方法实验采用可控制的教学井段。",
+      "replacement": "实测摘录共480条，保留原始行号。下方采用教学井段比较工况与响应。"
+    },
+    {
+      "id": "SOL-023",
+      "source": "case-src/m4/exhibit.js",
+      "original": "这里的工况估计使用现有引擎的独立岭回归标定；扭矩用固定教学变换。标定和当前演示井分开，实测 USROP 曲线不套用这组教学标定。",
+      "replacement": "教学井段用独立岭回归标定工况响应，并以固定变换处理扭矩。"
+    },
+    {
+      "id": "SOL-024",
+      "source": "case-src/m5/exhibit.js",
+      "original": "0 = 最高类；分数差不是概率",
+      "replacement": "0 = 最高类；其余为相对对数分差"
+    },
+    {
+      "id": "SOL-025",
+      "source": "case-src/m5/exhibit.js",
+      "original": "“未见”限制这次观察：报告必须保留未见，不能只留下“荧光”。",
+      "replacement": "“未见”记录了这次观察的否定含义，报告中与“荧光”一起保留。"
+    },
+    {
+      "id": "SOL-026",
+      "source": "case-src/m5/exhibit.js",
+      "original": "操作可能按时间记录，例如“30—60 s：接单根停泵”，不能直接当成一个已知井段。",
+      "replacement": "操作常按时间记录，例如“30—60 s：接单根停泵”；整理时保留该时段，结合深度记录归位。"
+    },
+    {
+      "id": "SOL-027",
+      "source": "case-src/m5/exhibit.js",
+      "original": "看左侧：三条记录属于三个井段。整理报告时，不能因为文字相邻就把它们合成“同一井段同时出现这些现象”。",
+      "replacement": "左侧三条观察各有自己的井段。整理时按井段分别归档，再检查同一范围内有哪些共同线索。"
+    },
+    {
+      "id": "SOL-028",
+      "source": "case-src/m5/exhibit.js",
+      "original": "“归一化单位”是本例气测教学读数的口径，不是可直接换算的现场浓度。",
+      "replacement": "“归一化单位”表示本例气测读数采用统一的教学数值尺度。"
+    },
+    {
+      "id": "SOL-029",
+      "source": "case-src/m5/exhibit.js",
+      "original": "看图时要分开检查：候选栏目是“气测”，并不能替代对“1210—1220 m MD、3.2、归一化单位”的核对。归类正确与事实完整是两个产物。",
+      "replacement": "栏目回答“放在哪里”，字段回答“具体说什么”：把“1210—1220 m MD、3.2、归一化单位”逐项对照原文。"
+    },
+    {
+      "id": "SOL-030",
+      "source": "case-src/m5/exhibit.js",
+      "original": "最高类为0，分差不是概率。",
+      "replacement": "最高类为0，其余数值表示与最高类的对数分差。"
+    },
+    {
+      "id": "SOL-031",
+      "source": "case-src/m5/exhibit.js",
+      "original": "报告必须保存改变后的观察含义，不能由此直接判断油层。",
+      "replacement": "报告随之保存改变后的观察含义。"
+    },
+    {
+      "id": "SOL-032",
+      "source": "tools/m2-exhibit-content.mjs",
+      "original": "本例总气与组分为教学仪器读数，不与真实资料的ppmv或百分比混算。",
+      "replacement": "本例总气与组分采用统一的教学仪器读数。"
+    },
+    {
+      "id": "SOL-033",
+      "source": "tools/m2-exhibit-content.mjs",
+      "original": "此处计算泵送运移，地面输气延迟另行核对。来源时段的钻头深度是教学归位参考；接单根或起下钻关联气可能来自已钻开的井段，不能由它唯一确定产气层。",
+      "replacement": "归位后，先用参考深度对照已钻开井段，再结合当时的操作、岩屑和气体组分解释来源。"
+    },
+    {
+      "id": "SOL-034",
+      "source": "tools/m2-exhibit-content.mjs",
+      "original": "不同步还可能涉及检出限、采样效率和分析周期，不能直接判定故障。",
+      "replacement": "组分不同步时，结合检出限、采样效率与分析周期核对。"
+    },
+    {
+      "id": "SOL-035",
+      "source": "tools/m2-exhibit-content.mjs",
+      "original": "峰高和峰宽本身不能直接给气峰定名。",
+      "replacement": "将峰高、峰宽与来源时段的作业记录一起比较。"
+    },
+    {
+      "id": "SOL-036",
+      "source": "tools/m2-exhibit-content.mjs",
+      "original": "让相似事件帮助判断，而不是替证据下结论",
+      "replacement": "用相似事件理解气峰与工况的关系"
+    },
+    {
+      "id": "SOL-037",
+      "source": "tools/m2-exhibit-content.mjs",
+      "original": "逐秒泵量与作业事件尚未配对，本页不拿它构造带标签分类。",
+      "replacement": "可结合其多仪器组分与作业报告，拓展阅读采样过程。"
+    },
+    {
+      "id": "SOL-038",
+      "source": "case-src/m2/exhibit.html",
+      "original": "它们还不能单独说明气体为什么进入泥浆。",
+      "replacement": "解释来源时，再补上来源时段与操作记录。"
+    },
+    {
+      "id": "SOL-039",
+      "source": "case-src/m2/exhibit.html",
+      "original": "参考深度是归位时段的钻头深度；作业关联气不能据此唯一归因到某一层。本例泵送模型之外的混合、溶解与地面输气延迟，需要另行核对。",
+      "replacement": "参考深度对应归位时段的钻头位置。把它与已钻开井段、当时的操作和岩屑记录一起比较。"
+    },
+    {
+      "id": "SOL-040",
+      "source": "case-src/m2/presentation.js",
+      "original": "不等于现场概率。",
+      "replacement": "表示这次近邻投票的一致程度。"
+    },
+    {
+      "id": "SOL-041",
+      "source": "case-src/m2/presentation.js",
+      "original": "两行的距离分别在6维、11维特征空间内计算，不把距离大小直接当作模型优劣。",
+      "replacement": "两行分别按6维与11维特征寻找近邻，可对照各自的训练事件与投票结果。"
+    },
+    {
+      "id": "SOL-042",
+      "source": "case-src/m2/presentation.js",
+      "original": "作业关联气可能来自已钻开的井段；参考钻头深度不能唯一确定产气层。",
+      "replacement": "把参考钻头深度与已钻开井段、岩屑和作业记录共同核对。"
+    },
+    {
+      "id": "SOL-043",
+      "source": "case-src/m2/presentation.js",
+      "original": "组分变化比是本例的计算特征，不是标准湿度指标。",
+      "replacement": "组分变化比 =（C2增量＋C3增量）÷C1增量。"
+    },
+    {
+      "id": "SOL-044",
+      "source": "case-src/m3/exhibit.js",
+      "original": "就能理解为什么<strong>发光不直接等于油气</strong>。",
+      "replacement": "可以看到<strong>矿物自身的荧光</strong>。"
+    },
+    {
+      "id": "SOL-045",
+      "source": "case-src/m3/exhibit.js",
+      "original": "这个得分描述本例图像分割中的倾向，<strong>不是含油概率</strong>。",
+      "replacement": "得分表示该像素被分入显示区域的倾向。"
+    }
+  ],
+  "files": [
+    "case-src/m1/exhibit.js",
+    "case-src/m3/exhibit.js",
+    "case-src/m4/exhibit.js",
+    "case-src/m5/exhibit.js",
+    "tools/m2-exhibit-content.mjs",
+    "case-src/m2/exhibit.html",
+    "case-src/m2/presentation.js"
+  ]
+}

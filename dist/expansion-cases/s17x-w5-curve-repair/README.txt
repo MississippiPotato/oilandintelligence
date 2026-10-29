@@ -6,6 +6,6 @@ SLB｜Basic well log interpretation: https://www.slb.com/-/media/files/oilfield-
 US EPA｜Nuclear logging: https://www.epa.gov/environmental-geophysics/logging-techniques-and-tools-nuclear-logging
 数据为固定种子的教学构造，不包含外部自动加载资源。预测输入与评价真值分开；详细分母见页面结果。
 
-当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+当前教学版：1.1.1。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
 比较任务：延长缺口：查看修复曲线与端点插值在缺口中段的差异及误差分布。
 只留GR依据：比较缺口内预测，观察移除电阻率信息后是否损失局部变化。

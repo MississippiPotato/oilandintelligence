@@ -1,0 +1,68 @@
+{
+  "phase": "media",
+  "checkedAt": "2026-10-29T16:15:46.553Z",
+  "checks": [
+    {
+      "name": "Real image decodes and has a local preview",
+      "passed": true
+    },
+    {
+      "name": "Image reaches existing provider as current-turn multimodal input",
+      "passed": true
+    },
+    {
+      "name": "Successful image send clears attachment bytes from composer",
+      "passed": true
+    },
+    {
+      "name": "Real WAV decodes into a local audio preview",
+      "passed": true
+    },
+    {
+      "name": "Audio reaches provider as current-turn WAV input",
+      "passed": true
+    },
+    {
+      "name": "Previous-turn image is not silently retransmitted",
+      "passed": true
+    },
+    {
+      "name": "Archive retains filenames but no binary attachment or key",
+      "passed": true
+    },
+    {
+      "name": "Existing greeting or hug motion executes on the same model",
+      "passed": true
+    },
+    {
+      "name": "Read control invokes browser speech and speaking animation state",
+      "passed": true
+    },
+    {
+      "name": "Stop control cancels speech and resets speaking state",
+      "passed": true
+    },
+    {
+      "name": "Media and voice wiring test has no browser exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [],
+  "onlineProviderCallVerified": false,
+  "physicalMicrophoneAndAudibleSpeechVerified": false,
+  "mockProviderRequests": 2,
+  "speechMethodsSpied": true,
+  "passed": 11,
+  "failed": 0,
+  "assistantSources": {
+    "portal/assets/s17-assistant.css": "cebb04f584e925bdf7050f5869ecfa26830fdbb41ccb1d1c3b8aad09281e5b6d",
+    "portal/assets/s17-assistant-history.js": "669ed7dc6d7ed9d31732445b413c5a701787ece6a50897f589b91526f3fcb59a",
+    "portal/assets/s17-assistant.js": "c62ba37bef434aa45d063929159fda04a42994da5c4367270e66f841ff26e683",
+    "portal/assets/s17-media.js": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150",
+    "portal/assets/s17-volcengine.js": "7e89470764fd2cb8cdfe0030bdda106c2bda00c0f8b57777dddeb5c97663b849",
+    "portal/assets/s17-live2d.js": "43da66b0027a565c27b8ba1fd71f7f05bff22d3aa3eebc3c2d9d486f8941547c",
+    "portal/assets/s17-live2d-loader.js": "2c4d6f5d1221fd09208cba5119d77991ed98cf87fde3c6e2b19f1f7fe5a4162a"
+  }
+}

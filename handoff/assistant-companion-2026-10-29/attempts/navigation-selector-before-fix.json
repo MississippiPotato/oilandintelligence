@@ -1,0 +1,103 @@
+{
+  "phase": "core",
+  "checkedAt": "2026-10-29T15:50:48.140Z",
+  "checks": [
+    {
+      "name": "1440 desktop compact dock fits 390 by 320",
+      "passed": true,
+      "detail": {
+        "x": 1050,
+        "y": 572,
+        "width": 370,
+        "height": 312
+      }
+    },
+    {
+      "name": "Live2D stays visible while composing",
+      "passed": true
+    },
+    {
+      "name": "Single Live2D canvas",
+      "passed": true
+    },
+    {
+      "name": "Initial textarea is 44px",
+      "passed": true
+    },
+    {
+      "name": "Composer uses translucent warm paper",
+      "passed": true
+    },
+    {
+      "name": "History lists a saved conversation",
+      "passed": true
+    },
+    {
+      "name": "History has a bounded 420px desktop height",
+      "passed": true
+    },
+    {
+      "name": "Character remains visible with history",
+      "passed": true
+    },
+    {
+      "name": "Continue opens full transcript",
+      "passed": true
+    },
+    {
+      "name": "Refresh restores current session and complete messages",
+      "passed": true
+    },
+    {
+      "name": "New conversation preserves earlier conversation",
+      "passed": true
+    },
+    {
+      "name": "Can switch to an older conversation",
+      "passed": true
+    },
+    {
+      "name": "Deleting a conversation persists across refresh",
+      "passed": true
+    },
+    {
+      "name": "Settings retain the character",
+      "passed": true
+    },
+    {
+      "name": "Provider connection clears key input",
+      "passed": true
+    },
+    {
+      "name": "Full archive retains more than 24 messages",
+      "passed": true,
+      "detail": 28
+    },
+    {
+      "name": "Provider receives only last 24 plus system",
+      "passed": true,
+      "detail": 25
+    },
+    {
+      "name": "Long bubble stays within the compact dock stage",
+      "passed": true
+    },
+    {
+      "name": "Full transcript renders all messages",
+      "passed": true
+    },
+    {
+      "name": "Navigation actions are still real allowlisted links",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "output/playwright/assistant-desktop-history.png"
+  ],
+  "onlineProviderCallVerified": false,
+  "physicalMicrophoneAndAudibleSpeechVerified": false,
+  "exception": "Navigation actions are still real allowlisted links",
+  "passed": 19,
+  "failed": 1
+}

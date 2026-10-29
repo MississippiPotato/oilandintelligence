@@ -1,0 +1,93 @@
+{
+  "phase": "paths",
+  "checkedAt": "2026-10-29T16:15:22.230Z",
+  "checks": [
+    {
+      "name": "Independent m2 still computes actual default results",
+      "passed": true
+    },
+    {
+      "name": "Independent page reuses local Live2D resources",
+      "passed": true
+    },
+    {
+      "name": "Same-origin case continues portal conversation",
+      "passed": true
+    },
+    {
+      "name": "Expansion case shares history and local avatar",
+      "passed": true
+    },
+    {
+      "name": "Expansion demonstration retains default computed state",
+      "passed": true
+    },
+    {
+      "name": "Offline file with site assets retains animated avatar and guide",
+      "passed": true
+    },
+    {
+      "name": "Isolated five-file package works without model resources",
+      "passed": true
+    },
+    {
+      "name": "Teacher original imports current five-file package",
+      "passed": true
+    },
+    {
+      "name": "Teacher sandbox gives honest memory-only storage notice",
+      "passed": true
+    },
+    {
+      "name": "Teacher refresh reruns demonstration and assistant",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal keeps only its host assistant visible",
+      "passed": true
+    },
+    {
+      "name": "Portal assistant recognizes the current case",
+      "passed": true
+    },
+    {
+      "name": "Reference page loads history before assistant initialization",
+      "passed": true
+    },
+    {
+      "name": "Reference page shares saved conversations",
+      "passed": true
+    },
+    {
+      "name": "Reference page compact guide remains interactive",
+      "passed": true
+    },
+    {
+      "name": "Sampled paths contain no JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "output/playwright/assistant-m2-independent.png",
+    "output/playwright/assistant-file-offline.png",
+    "output/playwright/assistant-isolated-offline.png",
+    "output/playwright/assistant-teacher-import.png",
+    "output/playwright/assistant-portal-case.png"
+  ],
+  "onlineProviderCallVerified": false,
+  "physicalMicrophoneAndAudibleSpeechVerified": false,
+  "fileStorage": "persistent",
+  "passed": 16,
+  "failed": 0,
+  "assistantSources": {
+    "portal/assets/s17-assistant.css": "cebb04f584e925bdf7050f5869ecfa26830fdbb41ccb1d1c3b8aad09281e5b6d",
+    "portal/assets/s17-assistant-history.js": "669ed7dc6d7ed9d31732445b413c5a701787ece6a50897f589b91526f3fcb59a",
+    "portal/assets/s17-assistant.js": "c62ba37bef434aa45d063929159fda04a42994da5c4367270e66f841ff26e683",
+    "portal/assets/s17-media.js": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150",
+    "portal/assets/s17-volcengine.js": "7e89470764fd2cb8cdfe0030bdda106c2bda00c0f8b57777dddeb5c97663b849",
+    "portal/assets/s17-live2d.js": "43da66b0027a565c27b8ba1fd71f7f05bff22d3aa3eebc3c2d9d486f8941547c",
+    "portal/assets/s17-live2d-loader.js": "2c4d6f5d1221fd09208cba5119d77991ed98cf87fde3c6e2b19f1f7fe5a4162a"
+  }
+}

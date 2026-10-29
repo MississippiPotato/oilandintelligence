@@ -1,7 +1,5 @@
 # 测井曲线修复：用可见曲线重建密度缺口
 
-本轮只整理已有专业内容与图表，计算引擎、控制器和观测数据沿用原实现。
-
 ## 核心认识
 
 缺测曲线的修复值来自其他观测关系；要把原始测量、缺口和估计值明确区分。
@@ -28,7 +26,7 @@
 
 模型在独立训练井中寻找GR和logRt相近的样本，把这些样本的密度均值作为缺口估计。测试井被遮蔽的密度不会进入近邻搜索；修复后再与封存原值比较，只在缺口内计算RMSE和MAE。
 
-显示原值用于核对，不会改变模型输出。曲线修复结果保留估计身份，不能当成仪器重新测量。
+显示原值用于核对，不会改变模型输出。修复曲线标为模型估计，沿缺口与封存原值比较。
 
 专业资料： SLB｜Basic well log interpretation ； US EPA｜Nuclear logging 。本例采用固定种子教学数据；数据结构、单位与评价范围在演示中列出。
 
@@ -63,5 +61,3 @@
 - http://www.w3.org/2000/svg
 - https://www.slb.com/-/media/files/oilfield-review/defining-log-interpretation.ashx
 - https://www.epa.gov/environmental-geophysics/logging-techniques-and-tools-nuclear-logging
-
-来源沿用本例原有资料；本稿是本轮的内容组织记录，不冒称新增外部专业审稿。

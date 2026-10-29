@@ -1,18 +1,61 @@
 (function(){'use strict';
-const C=window.S17Course,esc=window.K.esc;let signature='';
-function icon(kind){const drawings={grains:'<ellipse cx="34" cy="38" rx="16" ry="11"/><ellipse cx="76" cy="28" rx="12" ry="17"/><ellipse cx="115" cy="40" rx="18" ry="12"/><path d="M25 36l18 4M67 26l15 7M106 37l16 5" stroke="#a16e40"/>',gas:'<path d="M12 53H140M12 49Q40 49 48 18T70 28T91 49H140" fill="none" stroke-width="3"/><path d="M48 60v8m44-8v8" stroke="#aa7144" stroke-width="3"/>',glow:'<ellipse cx="42" cy="36" rx="24" ry="18" fill="#a89875"/><ellipse cx="108" cy="36" rx="24" ry="18" fill="#33463f"/><circle cx="103" cy="34" r="10" fill="#b0ce72"/><path d="M66 36h17" stroke-width="2"/>',depth:'<path d="M25 8v56m36-56v56m32-56v56m-66-3h92" fill="none" stroke="#bdc8b7"/><path d="M38 8l5 12-14 10 13 8-7 12 6 14M82 8v22h24v10H82v24" fill="none" stroke-width="3"/>',report:'<path d="M35 8h65v56H35zM45 20h45m-45 12h28m-28 12h38" fill="none" stroke-width="2"/><path d="M100 33h27m-7-5l7 5-7 5" fill="none"/><circle cx="132" cy="33" r="6"/>'};return '<svg viewBox="0 0 155 76" aria-hidden="true" fill="#7e9a7e" stroke="#286e57">'+drawings[kind]+'</svg>';}
-function story(){return '<svg viewBox="0 0 400 270" role="img" aria-label="岩屑、气测、荧光和钻时四种观察汇入可追溯报告"><g font-family="system-ui,Microsoft YaHei" font-size="13" fill="#3b594b"><path d="M110 45v150h45V45" fill="#e3e9d9" stroke="#829c81" stroke-width="2"/><path d="M130 28v150l-13 17h27l-14-17" fill="none" stroke="#51816d" stroke-width="5"/><path d="M78 170V65m-5 7l5-7 5 7" stroke="#aa794b" fill="none" stroke-width="3"/><text x="25" y="216">井下形成 → 地面观察</text>'+['岩屑','气测','荧光','钻时'].map((v,i)=>'<path d="M164 '+(48+i*48)+'H220L262 116" fill="none" stroke="#a6b99c"/><circle cx="194" cy="'+(48+i*48)+'" r="20" fill="#f3f3e5" stroke="#b5c2aa"/><text x="181" y="'+(53+i*48)+'">'+v+'</text>').join('')+'<rect x="268" y="76" width="112" height="95" rx="12" fill="#fffdf3" stroke="#829b78"/><text x="290" y="108" font-weight="700">证据报告</text><text x="282" y="133">每句话可回查</text><path d="M286 150h76" stroke="#c1c8ad"/><text x="222" y="239">观察 · 推断 · 人工意见分开</text></g></svg>';}
+const C=window.S17Course,A=window.ATLAS,esc=window.K.esc;let signature='';
+const directions=[
+ {id:'geology',title:'地质勘探',stages:['geology','seismic'],image:'geology',alt:'露头地层与远山',intro:'认识地下有什么，寻找油气藏。'},
+ {id:'well',title:'建井与测量',stages:['drilling','mudlogging','welllog','cementing','completion','perforation'],image:'well',alt:'陆地钻井井场',intro:'怎样建好一口井，并了解井下情况。'},
+ {id:'production',title:'生产与增采',stages:['production','workover','eor'],image:'production',alt:'沿道路排列的抽油机',intro:'了解油井怎样生产，怎样改善产量。'},
+ {id:'refining',title:'储运与加工',stages:['transport','refining'],image:'refining',alt:'炼厂塔器、储罐与管线',intro:'把原油安全送达，制成合格产品。'}
+];
+const lessons=[
+ ['岩屑识别','观察一盘岩屑，比较颗粒的颜色、纹理和形状。'],
+ ['气测解释','追踪一个气峰，判断它与井下作业有什么关系。'],
+ ['荧光判读','对照白光和紫外照片，分清发光区域与含义。'],
+ ['钻时分段','对照钻进速度和操作条件，寻找变化的井段。'],
+ ['报告生成','把原始记录整理成报告，逐句检查依据。']
+];
 function render(){
+ const route=location.hash.split('?')[0],isHome=!route||route==='#/';
+ document.body.classList.toggle('s17-overview-active',isHome);
+ document.body.classList.toggle('s17-lesson-reading',/^#\/scene\/m[1-5]$/.test(route));
  const main=document.querySelector('#view main');if(!main)return;
- const route=location.hash.split('?')[0],scene=route.match(/^#\/scene\/(m[1-5])$/)?.[1];
+ const scene=route.match(/^#\/scene\/(m[1-5])$/)?.[1];
  if(scene){const c=C.byScene(scene);if(c&&!document.getElementById('s17-scope')){const note=document.createElement('aside');note.id='s17-scope';note.className='s17-scope';note.innerHTML='<b>这次要解决的问题 · '+esc(c.name)+'</b><span>'+esc(c.scope)+'。</span>'+((window.Cases?.get(c.id)&&window.Cases.get(c.id).version!==C.expectedVersion(c))?'<p>当前浏览器仍是旧版 '+esc(window.Cases.get(c.id).version)+'。<a href="'+C.href(c)+'">打开新版'+C.expectedVersion(c)+'成品 →</a>；更新门户请在案例库移除自己的旧包后重导。</p>':'');main.prepend(note);}return;}
- if(route&&route!=='#/')return;document.title='井见 · 石油智能化可视实验室';
- const imported=C.cases.filter(c=>window.Cases?.get(c.id)?.imported),outdated=imported.filter(c=>window.Cases.get(c.id).version!==C.expectedVersion(c)),expanded=(window.S17Expansion?.cases||[]).filter(c=>window.Cases?.get(c.id)),sig=imported.map(c=>c.id+'@'+window.Cases.get(c.id).version).join('|')+'#'+expanded.map(c=>c.id+'@'+c.version).join('|');
+ if(!isHome)return;
+ document.title='井见 · 石油智能化可视实验室';
+ const sig=C.cases.map(c=>c.id+'@'+(window.Cases?.get(c.id)?.version||'')).join('|');
  let block=document.getElementById('s17-personal');if(block&&signature===sig)return;
- if(!block){block=document.createElement('section');block.id='s17-personal';block.className='s17-home';main.classList.add('s17-home-main');main.replaceChildren(block);}signature=sig;
- block.innerHTML='<div class="s17-hero"><figure class="s17-theme"><img src="assets/themes/theme-well-v1.webp" width="1280" height="640" alt="清晨的陆地钻井井场，灰蓝远山与砂金色地表的石油主题图"><figcaption>井场晨光 · AI 绘制主题图</figcaption></figure><div class="s17-hero-copy"><div class="s17-kicker">石油智能化可视实验室 · 学号17 · 录井必做5例</div><h1>井见<span>从地表到炼厂，<br>看见智能方法的依据。</span></h1><p class="s17-lead">从一盘岩屑、一个气峰出发，沿着地质、井筒、生产和运输加工继续探索。先用图形看懂专业问题，再亲手改变一个条件，观察模型、基线和判断依据怎样变化。</p><div class="s17-hero-actions"><a class="s17-primary" data-flagship href="'+C.href(C.cases[1])+'">先看气测：同峰，为何异因？ →</a><a href="#s17-five" data-five-scroll>录井五例</a><a href="#s17-expansion" data-home-scroll="s17-expansion">跨阶段探索 →</a></div><p class="s17-offline">专业背景 · 逐步流程 · 交互计算｜案例均可独立、纯前端离线运行</p></div></div><div class="s17-completion"><div><strong id="s17-built-count">'+(C.cases.length+expanded.length)+'</strong><span>自制案例成品 · 5例录井 + '+expanded.length+'例拓展</span></div><div><strong>5 / 5</strong><span>学号17 · 录井必做</span></div><div><strong id="s17-import-count">'+imported.length+' / 5</strong><span>录井已导入 · 此浏览器</span></div><div><strong>'+window.ATLAS.stages.length+' / '+window.ATLAS.allScenes.length+'</strong><span>原地图 · 阶段 / 场景</span></div></div>'+(outdated.length?'<p class="s17-update">此浏览器有 '+outdated.length+' 个旧包。下方主入口打开对应最新版；在案例库移除自己的旧包后，通过原添加入口重导即可更新。<a href="#/cases">管理已导入案例 →</a></p>':'')+'<div class="s17-section-head" id="s17-five"><div><div class="s17-kicker">从现场问题出发</div><h2>五种证据，一条能回查的故事</h2></div><p>先看场景 → 逐步看方法 → 动一个条件，观察判断变化</p></div><div class="s17-cards">'+C.cases.map((c,i)=>{const registered=window.Cases?.get(c.id);return '<article class="s17-card"><div class="s17-card-top"><span>0'+(i+1)+' · '+esc(c.name)+'</span><small>'+ (registered?(registered.version===C.expectedVersion(c)?'此浏览器已导入 '+C.expectedVersion(c):'已导入旧版 '+esc(registered.version)):'独立成品已提供')+'</small></div>'+icon(c.icon)+'<h3>'+esc(c.question)+'</h3><p class="s17-try">试一试：'+esc(c.action)+'</p><p class="s17-method">'+esc(c.method)+'</p><a class="s17-open" href="'+C.href(c)+'">看背景、方法与演示 →</a><a class="s17-secondary" href="'+C.href(c,'lab')+'">'+esc(c.visualTitle)+' ↗</a>'+(registered?(registered.version===C.expectedVersion(c)?'<a class="s17-secondary" href="'+C.href(c,'demo')+'">进入门户实验</a>':'<a class="s17-secondary" href="#/cases">更新：移除旧包后重导</a>'):'<button data-import data-scene="'+c.scene+'">通过原入口添加</button>')+'</article>';}).join('')+'</div><div class="s17-path"><div><small>01 / 看懂场景</small><b>专业背景</b><p>从井筒、样品与曲线，认识一个具体问题。</p></div><div><small>02 / 看懂方法</small><b>案例流程</b><p>每步读输入、动作与产物，展开图示看清细节。</p></div><div><small>03 / 动手验证</small><b>可运行示范</b><p>改变一个条件，观察结果，再回到证据。</p></div></div>'+(window.S17ExpansionGallery?.markup()||'')+window.S17FieldAtlas.markup()+window.S17LogPreview.markup()+window.S17Catalog.markup()+'<div class="s17-reference-row"><article><span class="s17-kicker">原样例 · 测井</span><h3>从一条 GR 曲线，理解智能分层</h3><p>老师的测井分层样例保留原有内容与算法，可对照专业背景、流程和交互演示。</p><a href="#/scene/w1?case=welllog-layer&tab=bg">阅读老师样例 →</a><a href="reference/fluorescence.html">看真实白光 / UV 对照</a></article><article><span class="s17-kicker">让更多场景，有可运行的案例</span><h3>把你的案例带进来</h3><p>ZIP先解压，一次选择一个完整案例目录；添加后即可在门户阅读三部分并运行。</p><button data-import>＋ 添加案例</button><a href="#/guide">查看接入说明 →</a></article></div><div class="s17-bottom"><div><b>把计算，变成看得懂的证据</b><p>颗粒与近邻、同峰与工况、白光与UV、工况与层段、句子与来源。比较预测与规则基线，回查每个结果的来源；公开实测对照附有独立出处。</p></div><div class="s17-guide"><button data-s17-assistant>让井见向导带路 →</button><a href="reference/fluorescence.html" target="_blank" rel="noopener">真实白光 / UV 对照</a><a href="../portal-original/index.html">老师原门户只读副本</a></div></div><details class="s17-instructions"><summary>添加自己的案例，或按 7 分钟路线展示</summary><p>录井五例位于 dist/cases/，跨阶段案例位于 dist/expansion-cases/；ZIP先解压，一次选择一个完整案例目录。添加后可在门户查看三部分；刷新后再次运行。当前注册状态属于此浏览器和地址，换浏览器需重新导入。原始 firstbreak 和其他同学的兼容包仍走同一个添加入口。</p><p>展示路线：先说明录井5/5与跨阶段覆盖 → 用原入口添加m2并刷新 → 固定气峰切工况 → 从m1颗粒、m3荧光、m4曲线走到m5报告回查 → 任选一例跨阶段演示，改变一个条件并比较结果。</p><p><a href="../handoff/observation-design-2026-10-24/acceptance.html">本轮改动与实际验收</a> · <a href="../README.md">完整使用说明</a></p></details>';
- window.S17FieldAtlas.init();window.S17LogPreview.init();window.S17Catalog.init();
+ if(!block){block=document.createElement('section');block.id='s17-personal';block.className='s17-overview';main.classList.add('s17-home-main');main.replaceChildren(block);}signature=sig;
+ block.innerHTML=`
+ <section class="ov-hero" aria-labelledby="ov-title">
+  <div class="ov-hero-copy"><p class="ov-eyebrow">井见 · 石油智能化可视实验室</p>
+   <h1 id="ov-title">看懂石油场景，<br>动手体验智能方法。</h1>
+   <p class="ov-intro">每个案例都有专业背景、案例流程和可运行示范。选一个问题，读懂知识，再改变条件看结果。</p>
+   <div class="ov-actions"><button type="button" class="ov-primary" data-ov-directory>浏览全部 ${A.allScenes.length} 个案例 <span aria-hidden="true">↗</span></button><a class="ov-start" href="${C.href(C.cases[1])}">从气测案例开始 <span aria-hidden="true">→</span></a></div>
+   <p class="ov-facts">${A.stages.length} 个石油作业阶段<span aria-hidden="true">·</span>${A.allScenes.length} 个交互案例<span aria-hidden="true">·</span>可离线运行</p>
+  </div>
+  <figure class="ov-cover"><img src="assets/themes/theme-well-v1.webp" width="1280" height="640" alt="清晨的陆地钻井井场，钻机、道路与地层相连"><figcaption>从一个井场，走进石油的世界</figcaption></figure>
+ </section>
+ <section class="ov-section" id="s17-expansion" aria-labelledby="ov-directions-title">
+  <header class="ov-section-head"><div><h2 id="ov-directions-title">按方向，找到感兴趣的案例</h2><p>从寻找油气，到生产、运输与加工。</p></div></header>
+  <div class="ov-directions">${directions.map((d,i)=>{const stages=A.stages.filter(s=>d.stages.includes(s.id)),count=stages.reduce((n,s)=>n+s.scenes.length,0);return `<button type="button" class="ov-direction" data-ov-direction="${d.id}" aria-label="${d.title}，${count}个案例，展开目录"><div class="ov-direction-image"><img src="assets/themes/theme-${d.image}-v1.webp" alt="${d.alt}" width="640" height="266" loading="lazy"><span class="ov-number" aria-hidden="true">0${i+1}</span></div><div class="ov-direction-body"><div class="ov-direction-title"><h3>${d.title}</h3><span aria-hidden="true">↗</span></div><p>${d.intro}</p><span class="ov-direction-meta">${stages.length} 个阶段 · ${count} 个案例</span></div></button>`;}).join('')}</div>
+ </section>
+ <section class="ov-section ov-mudlogging" id="s17-five" aria-labelledby="ov-five-title">
+  <header class="ov-section-head"><div><h2 id="ov-five-title">录井专题 · 五个入门案例</h2><p>录井，就是在钻井过程中记录岩屑、气体和钻进情况，了解地下地层。</p></div><span class="ov-section-note">先认识对象，再动手比较</span></header>
+  <div class="ov-lessons">${C.cases.map((c,i)=>`<a class="ov-lesson" href="${C.href(c)}"><span class="ov-lesson-id">M${i+1}</span><h3>${lessons[i][0]}</h3><p>${lessons[i][1]}</p><span class="ov-lesson-open">进入案例 <span aria-hidden="true">→</span></span></a>`).join('')}</div>
+ </section>
+ <details class="ov-directory" id="s17-directory"><summary><span><b>全部 ${A.allScenes.length} 个案例</b><span>按作业阶段或关键词查找</span></span><span class="ov-directory-toggle" aria-hidden="true"></span></summary>${window.S17Catalog.markup()}</details>
+ <div class="ov-utilities"><span>想加入自己的案例？</span><button type="button" data-import>＋ 添加案例</button><a href="#/guide">接入说明</a><a href="../portal-original/index.html">老师原门户</a><a href="#/scene/w1?case=welllog-layer&tab=bg">老师原样例</a></div>`;
+ window.S17Catalog.init();
+ const footerCases=document.querySelector('.s17-footer a[href="#/cases"]');if(footerCases)footerCases.textContent='案例库';
 }
-document.addEventListener('click',e=>{const link=e.target.closest('[data-five-scroll],[data-home-scroll]');if(link){e.preventDefault();document.getElementById(link.dataset.homeScroll||'s17-five')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}});
+function openDirectory(direction){
+ const directory=document.getElementById('s17-directory');if(!directory)return;
+ directory.open=true;
+ if(direction)window.S17Catalog.selectGroup(direction.stages,direction.title);else window.S17Catalog.reset();
+ directory.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+ // Continue keyboard navigation at the destination after opening the directory.
+ directory.querySelector('summary').focus({preventScroll:true});
+}
+document.addEventListener('click',e=>{const button=e.target.closest('[data-ov-directory],[data-ov-direction]');if(button)openDirectory(directions.find(d=>d.id===button.dataset.ovDirection));});
 new MutationObserver(render).observe(document.getElementById('view'),{childList:true,subtree:true});addEventListener('hashchange',render);render();
 })();

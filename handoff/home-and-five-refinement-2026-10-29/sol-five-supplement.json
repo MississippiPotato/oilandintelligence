@@ -1,0 +1,186 @@
+{
+  "browserVerified": false,
+  "scope": "currently active five-case exhibit dynamic narration only",
+  "replacements": [
+    {
+      "id": "SOL-1519",
+      "source": "case-src/m1/exhibit.js",
+      "line": 137,
+      "scenes": [
+        "m1"
+      ],
+      "original": "当前近邻未触发分歧或距离复核条件",
+      "replacement": "当前近邻满足支持度与距离条件",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "a862d6e64bd0baae63e9e430d4f7fb64e0e85460ded541931f5e407f7bf703e5",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1520",
+      "source": "case-src/m4/exhibit.js",
+      "line": 43,
+      "scenes": [
+        "m4"
+      ],
+      "original": "校正改变相对钻速响应；因为机器还比较扭矩，最终界面未必随校正开关变化。",
+      "replacement": "同时比较相对钻速和扭矩响应，再对照校正前后的界面位置。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "14cd5b2c4403133308df06577273f6056cecda9f252e966547403a3912328abe",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1521",
+      "source": "case-src/m5/exhibit.js",
+      "line": 199,
+      "scenes": [
+        "m5"
+      ],
+      "original": "这句没有抽出否定词。仍需结合原句核对它是否在肯定一项荧光观察。",
+      "replacement": "逐字查看荧光描述，读出这次观察的肯定或否定语义。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "23ee45b16059ea2af81b9073a066177d5bc5bba140d4ac718a6ece67b24c46f9",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1522",
+      "source": "case-src/m5/exhibit.js",
+      "line": 199,
+      "scenes": [
+        "m5"
+      ],
+      "original": "只看数字会失去这条记录的范围和口径。",
+      "replacement": "一起比较数值、单位和适用井段。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "23ee45b16059ea2af81b9073a066177d5bc5bba140d4ac718a6ece67b24c46f9",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1523",
+      "source": "case-src/m5/exhibit.js",
+      "line": 199,
+      "scenes": [
+        "m5"
+      ],
+      "original": "它的时段可以辅助解释观测，却不自动等于某一井段。",
+      "replacement": "保留操作时段，再结合深度记录辅助解释观测。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "23ee45b16059ea2af81b9073a066177d5bc5bba140d4ac718a6ece67b24c46f9",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1524",
+      "source": "case-src/m5/exhibit.js",
+      "line": 328,
+      "scenes": [
+        "m5"
+      ],
+      "original": "井段和单位未改，油气解释仍需结合其他观察。",
+      "replacement": "井段和单位保持一致，可逐项对照本次读数变化。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "23ee45b16059ea2af81b9073a066177d5bc5bba140d4ac718a6ece67b24c46f9",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1525",
+      "source": "case-src/m2/presentation.js",
+      "line": 20,
+      "scenes": [
+        "m2"
+      ],
+      "original": "峰宽是秒，组分又是另一尺度，不能直接相加。先用训练事件的均值和标准差统一尺度。",
+      "replacement": "峰宽以秒计，组分采用教学读数。先用训练事件的均值和标准差统一各特征的尺度。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "5a42a9d279f218fdf732bfb88d012451b676f34cfad0e0d30d2e2655f32be060",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1526",
+      "source": "case-src/m2/presentation.js",
+      "line": 20,
+      "scenes": [
+        "m2"
+      ],
+      "original": "标准化参数不使用本演示井的评价答案。",
+      "replacement": "标准化参数由训练事件确定。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "5a42a9d279f218fdf732bfb88d012451b676f34cfad0e0d30d2e2655f32be060",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1527",
+      "source": "case-src/m2/presentation.js",
+      "line": 18,
+      "scenes": [
+        "m2"
+      ],
+      "original": "检测到变化还没有解释变化。",
+      "replacement": "检测得到时间窗，下一步继续回查来源。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "5a42a9d279f218fdf732bfb88d012451b676f34cfad0e0d30d2e2655f32be060",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1528",
+      "source": "case-src/m2/presentation.js",
+      "line": 7,
+      "scenes": [
+        "m2"
+      ],
+      "original": "这些读数不进入峰A归位和分类。",
+      "replacement": "下方单列原始组分记录，可对照采样方式与深度基准。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "5a42a9d279f218fdf732bfb88d012451b676f34cfad0e0d30d2e2655f32be060",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1529",
+      "source": "case-src/m2/presentation.js",
+      "line": 7,
+      "scenes": [
+        "m2"
+      ],
+      "original": "沉积物深度不是本教学井的井深。",
+      "replacement": "深度沿用原资料的沉积物测量基准。",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "5a42a9d279f218fdf732bfb88d012451b676f34cfad0e0d30d2e2655f32be060",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    },
+    {
+      "id": "SOL-1530",
+      "source": "tools/m2-exhibit-content.mjs",
+      "line": 17,
+      "scenes": [
+        "m2"
+      ],
+      "original": "到达不等于来源；",
+      "replacement": "到达与来源分属两个时刻；",
+      "action": "literal_substring",
+      "originalOccurrences": 1,
+      "sourceSha256AtAudit": "d966638bd24c88b87298e919954e5c30a8668b8565b79445c9ccb8e4773a6b81",
+      "reason": "可见动态说明改成正向读数与操作任务；保留枚举与导出数据。",
+      "status": "recommended_root_owned"
+    }
+  ]
+}

@@ -5,8 +5,8 @@
     "kg"
   ],
   "title": "落物打捞工具智能选型",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -16,31 +16,31 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "内捞、外捞和井筒通径",
-          "html": "<p>捞矛进入落鱼内部，卡瓦贴紧内壁；打捞筒从外部包住落鱼。工具本体首先要能通过井筒最窄处。外径匹配只回答“能否套上”，不能回答能否下入或承载。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"灰蓝=井筒限制，棕=落鱼，橙=抓持工具。位置示意不按比例；尺寸须看数值。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"30\" y=\"30\" font-size=\"17\">内捞：对照落鱼内径</text><path d=\"M55 60V210M295 60V210\" stroke=\"#72939b\" stroke-width=\"8\"/><rect x=\"130\" y=\"110\" width=\"90\" height=\"105\" fill=\"#b7a185\"/><rect x=\"156\" y=\"110\" width=\"38\" height=\"105\" fill=\"#fff\"/><path d=\"M175 55V165\" stroke=\"#cb8a49\" stroke-width=\"15\"/><text x=\"35\" y=\"245\" font-size=\"16\">内径40mm → S2抓持35–65mm</text><text x=\"390\" y=\"30\" font-size=\"17\">外捞：对照落鱼外径</text><path d=\"M415 60V210M655 60V210\" stroke=\"#72939b\" stroke-width=\"8\"/><rect x=\"490\" y=\"110\" width=\"90\" height=\"105\" fill=\"#b7a185\"/><rect x=\"516\" y=\"110\" width=\"38\" height=\"105\" fill=\"#fff\"/><path d=\"M481 70V157M589 70V157M481 70H589\" stroke=\"#cb8a49\" stroke-width=\"12\" fill=\"none\"/><text x=\"395\" y=\"245\" font-size=\"16\">外径65mm → O1抓持40–75mm</text><text x=\"28\" y=\"282\" font-size=\"16\">默认通径125mm：S2本体92+4≤125；O1本体100+4≤125（均为直径）。</text></g></svg><figcaption>灰蓝=井筒限制，棕=落鱼，橙=抓持工具。位置示意不按比例；尺寸须看数值。</figcaption></figure>"
+          "html": "<p>捞矛进入落鱼内部，卡瓦贴紧内壁；打捞筒从外部包住落鱼。工具本体首先要能通过井筒最窄处。先看内外抓持尺寸，再检查工具通径与拉力上限。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"灰蓝=井筒限制，棕=落鱼，橙=抓持工具。位置示意不按比例；尺寸须看数值。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"30\" y=\"30\" font-size=\"17\">内捞：对照落鱼内径</text><path d=\"M55 60V210M295 60V210\" stroke=\"#72939b\" stroke-width=\"8\"/><rect x=\"130\" y=\"110\" width=\"90\" height=\"105\" fill=\"#b7a185\"/><rect x=\"156\" y=\"110\" width=\"38\" height=\"105\" fill=\"#fff\"/><path d=\"M175 55V165\" stroke=\"#cb8a49\" stroke-width=\"15\"/><text x=\"35\" y=\"245\" font-size=\"16\">内径40mm → S2抓持35–65mm</text><text x=\"390\" y=\"30\" font-size=\"17\">外捞：对照落鱼外径</text><path d=\"M415 60V210M655 60V210\" stroke=\"#72939b\" stroke-width=\"8\"/><rect x=\"490\" y=\"110\" width=\"90\" height=\"105\" fill=\"#b7a185\"/><rect x=\"516\" y=\"110\" width=\"38\" height=\"105\" fill=\"#fff\"/><path d=\"M481 70V157M589 70V157M481 70H589\" stroke=\"#cb8a49\" stroke-width=\"12\" fill=\"none\"/><text x=\"395\" y=\"245\" font-size=\"16\">外径65mm → O1抓持40–75mm</text><text x=\"28\" y=\"282\" font-size=\"16\">默认通径125mm：S2本体92+4≤125；O1本体100+4≤125（均为直径）。</text></g></svg><figcaption>灰蓝=井筒限制，棕=落鱼，橙=抓持工具。位置示意不按比例；尺寸须看数值。</figcaption></figure>"
         },
         {
           "no": 2,
           "en": "METHOD",
           "title": "属性图把适用范围串起来",
-          "html": "<p>本例工具目录是一组虚构规格：工具→抓持方式→尺寸区间→本体外径→拉力上限。知识匹配逐项核查，保留或排除都显示理由。它是可解释的知识规则推理，不是假称训练出的概率。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"属性图把适用范围串起来\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"170\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">工具 O1</text><rect x=\"250\" y=\"20\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"48\">抓持 40–75mm</text><rect x=\"250\" y=\"85\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"113\">本体外径 100mm</text><rect x=\"250\" y=\"150\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"178\">拉力上限 110kN</text><polyline points=\"190,52 220,52 220,42 250,42\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"220,52 220,107 250,107\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"220,107 220,172 250,172\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"480\" y=\"108\">三项都满足才保留</text></g></svg><figcaption>一个工具同时关联尺寸、本体外径和承载，任何条件冲突都需要排除。</figcaption></figure>"
+          "html": "<p>本例工具目录是一组虚构规格：工具→抓持方式→尺寸区间→本体外径→拉力上限。知识匹配逐项核查，保留或排除都显示理由。它用显式知识规则逐项形成匹配与排除理由。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"属性图把适用范围串起来\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"170\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">工具 O1</text><rect x=\"250\" y=\"20\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"48\">抓持 40–75mm</text><rect x=\"250\" y=\"85\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"113\">本体外径 100mm</text><rect x=\"250\" y=\"150\" width=\"205\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"262\" y=\"178\">拉力上限 110kN</text><polyline points=\"190,52 220,52 220,42 250,42\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"220,52 220,107 250,107\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"220,107 220,172 250,172\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"480\" y=\"108\">三项都满足才保留</text></g></svg><figcaption>一个工具同时关联尺寸、本体外径和承载，任何条件冲突都需要排除。</figcaption></figure>"
         },
         {
           "no": 3,
           "en": "EVIDENCE",
           "title": "候选是复核的起点",
-          "html": "<p>尺寸以毫米、拉力以千牛记录。4mm是直径余量（单侧2mm），是本例自定筛选条件，不是通用施工标准。改变落鱼尺寸与拉力后，观察合法工具数量。直径基线只检查外部尺寸，会漏掉通径与拉力冲突；完整筛选显示这些冲突，不把空候选强行补成推荐。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://glossary.slb.com/en/terms/f/fishing_tool\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+          "html": "<p>尺寸以毫米、拉力以千牛记录。4mm是直径余量（单侧2mm），采用本例的4 mm直径余量筛选条件。改变落鱼尺寸与拉力后，观察合法工具数量。直径基线只检查外部尺寸，会漏掉通径与拉力冲突；完整筛选显示这些冲突，可行集合为空时，显示冲突条件。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://glossary.slb.com/en/terms/f/fishing_tool\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。</p>"
         },
         {
           "no": 4,
           "en": "LEARNING_TASK",
           "title": "课堂实验：一次只改变一个条件",
-          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>保持外径65mm、内径40mm、拉力90kN，先用通径125mm运行，再改为100mm：逐项核算 O1 的100+4>100，以及 S2 的92+4≤100。随后把拉力改为160kN，解释为何不能用“抓得住”抵消“拉不动”。恢复默认后再比较单尺寸基线漏掉了哪些条件。</p></aside>"
+          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>保持外径65mm、内径40mm、拉力90kN，先用通径125mm运行，再改为100mm：逐项核算 O1 的100+4>100，以及 S2 的92+4≤100。随后把拉力改为160kN，分别核查抓持尺寸与拉力上限。恢复默认后再比较单尺寸基线漏掉了哪些条件。</p></aside>"
         }
       ]
     },
     "workflow": {
       "label": "案例流程",
-      "title": "落物外径相同，为什么不能只凭直径挑工具？",
+      "title": "落物外径相同，通径与拉力怎样影响工具匹配？",
       "lead": [
         "落入井中的管柱或工具称为落鱼。打捞先确定鱼顶、内外径和可接触表面，再判断工具能否通过井筒、抓住落鱼并承受所需拉力。"
       ],
@@ -50,33 +50,33 @@
           "role": "步骤 1",
           "do": "量清落鱼外径、内径、井筒通径和所需拉力。若内径大于外径，几何记录自相矛盾，界面会要求修正后再计算。",
           "effect": "一份带mm与kN单位的当前查询",
-          "trap": "通径是可通过的最小尺寸，不是井眼名义直径"
+          "trap": "通径为工具必须通过的最窄内径。"
         },
         {
           "name": "沿工具关系找候选",
           "role": "步骤 2",
-          "do": "查询目录中每个工具的抓持方式。外捞筒拿落鱼外径对照区间，内捞矛拿落鱼内径对照区间，两者不能使用同一尺寸字段。",
+          "do": "查询目录中每个工具的抓持方式。外捞筒拿落鱼外径对照区间，内捞矛拿落鱼内径对照区间，分别读取对应的内径与外径字段。",
           "effect": "六种工具各自的尺寸匹配记录",
-          "trap": "内捞矛与外捞筒应读取不同属性"
+          "trap": "内捞矛对照落鱼内径，外捞筒对照落鱼外径。"
         },
         {
           "name": "检查通径和拉力约束",
           "role": "步骤 3",
           "do": "尺寸匹配后，还要检查工具本体外径加4mm教学直径余量是否不大于通径，承载是否达到所需拉力。任一项不符便排除，并展示具体原因。",
           "effect": "全部约束满足的候选列表",
-          "trap": "不能凭一个高分抵消拉力或几何不满足"
+          "trap": "几何、通径与拉力三项全部满足后再排序。"
         },
         {
           "name": "对照单尺寸基线",
           "role": "步骤 4",
           "do": "同时运行只按落鱼外径检查目录区间的简化基线。统计其候选中有多少违反完整条件，再比较两种方法为何给出不同列表。",
           "effect": "合法数量、基线违约数和工具理由表",
-          "trap": "目录为虚构教学规格；输出是条件匹配结果"
+          "trap": "虚构教学目录逐项输出条件匹配结果。"
         }
       ],
       "metrics": {
         "title": "步骤的输入与产物",
-        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜记录落鱼与井筒属性</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：记录落鱼与井筒属性的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜记录落鱼与井筒属性</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：量清落鱼外径、内径、井筒通径和所需拉力。若内径大于外径，几何记录自相</text><text x=\"42\" y=\"113\" font-size=\"16\">矛盾，界面会要求修正后再计算。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：一份带mm与kN单位的当前查询</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：通径是可通过的最小尺寸，不是井眼名义直径</text></g></svg><figcaption>图 F1：记录落鱼与井筒属性的动作、产物和检查点。</figcaption></figure><h4>图 F2｜沿工具关系找候选</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：沿工具关系找候选的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜沿工具关系找候选</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：查询目录中每个工具的抓持方式。外捞筒拿落鱼外径对照区间，内捞矛拿落鱼</text><text x=\"42\" y=\"113\" font-size=\"16\">内径对照区间，两者不能使用同一尺寸字段。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：六种工具各自的尺寸匹配记录</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：内捞矛与外捞筒应读取不同属性</text></g></svg><figcaption>图 F2：沿工具关系找候选的动作、产物和检查点。</figcaption></figure><h4>图 F3｜检查通径和拉力约束</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：检查通径和拉力约束的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜检查通径和拉力约束</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：尺寸匹配后，还要检查工具本体外径加4mm教学直径余量是否不大于通径，</text><text x=\"42\" y=\"113\" font-size=\"16\">承载是否达到所需拉力。任一项不符便排除，并展示具体原因。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：全部约束满足的候选列表</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：不能凭一个高分抵消拉力或几何不满足</text></g></svg><figcaption>图 F3：检查通径和拉力约束的动作、产物和检查点。</figcaption></figure><h4>图 F4｜对照单尺寸基线</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：对照单尺寸基线的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜对照单尺寸基线</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：同时运行只按落鱼外径检查目录区间的简化基线。统计其候选中有多少违反完</text><text x=\"42\" y=\"113\" font-size=\"16\">整条件，再比较两种方法为何给出不同列表。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：合法数量、基线违约数和工具理由表</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：目录为虚构教学规格；输出是条件匹配结果</text></g></svg><figcaption>图 F4：对照单尺寸基线的动作、产物和检查点。</figcaption></figure>"
+        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜记录落鱼与井筒属性</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：记录落鱼与井筒属性的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜记录落鱼与井筒属性</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：量清落鱼外径、内径、井筒通径和所需拉力。若内径大于外径，几何记录自相</text><text x=\"42\" y=\"113\" font-size=\"16\">矛盾，界面会要求修正后再计算。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：一份带mm与kN单位的当前查询</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：通径为工具必须通过的最窄内径。</text></g></svg><figcaption>图 F1：记录落鱼与井筒属性的动作、产物和检查点。</figcaption></figure><h4>图 F2｜沿工具关系找候选</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：沿工具关系找候选的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜沿工具关系找候选</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：查询目录中每个工具的抓持方式。外捞筒拿落鱼外径对照区间，内捞矛拿落鱼</text><text x=\"42\" y=\"113\" font-size=\"16\">内径对照区间，分别读取对应的内径与外径字段。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：六种工具各自的尺寸匹配记录</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：内捞矛对照落鱼内径，外捞筒对照落鱼外径。</text></g></svg><figcaption>图 F2：沿工具关系找候选的动作、产物和检查点。</figcaption></figure><h4>图 F3｜检查通径和拉力约束</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：检查通径和拉力约束的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜检查通径和拉力约束</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：尺寸匹配后，还要检查工具本体外径加4mm教学直径余量是否不大于通径，</text><text x=\"42\" y=\"113\" font-size=\"16\">承载是否达到所需拉力。任一项不符便排除，并展示具体原因。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：全部约束满足的候选列表</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：几何、通径与拉力三项全部满足后再排序。</text></g></svg><figcaption>图 F3：检查通径和拉力约束的动作、产物和检查点。</figcaption></figure><h4>图 F4｜对照单尺寸基线</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：对照单尺寸基线的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜对照单尺寸基线</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：同时运行只按落鱼外径检查目录区间的简化基线。统计其候选中有多少违反完</text><text x=\"42\" y=\"113\" font-size=\"16\">整条件，再比较两种方法为何给出不同列表。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：合法数量、基线违约数和工具理由表</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：虚构教学目录逐项输出条件匹配结果。</text></g></svg><figcaption>图 F4：对照单尺寸基线的动作、产物和检查点。</figcaption></figure>"
       }
     },
     "demo": {

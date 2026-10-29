@@ -1,0 +1,180 @@
+{
+  "phase": "core",
+  "checkedAt": "2026-10-29T16:15:13.436Z",
+  "checks": [
+    {
+      "name": "1440 desktop compact dock fits 390 by 320",
+      "passed": true,
+      "detail": {
+        "x": 1050,
+        "y": 572,
+        "width": 370,
+        "height": 312
+      }
+    },
+    {
+      "name": "Live2D stays visible while composing",
+      "passed": true
+    },
+    {
+      "name": "Single Live2D canvas",
+      "passed": true
+    },
+    {
+      "name": "Initial textarea is 44px",
+      "passed": true
+    },
+    {
+      "name": "Composer uses translucent warm paper",
+      "passed": true
+    },
+    {
+      "name": "History lists a saved conversation",
+      "passed": true
+    },
+    {
+      "name": "History has a bounded 420px desktop height",
+      "passed": true
+    },
+    {
+      "name": "Character remains visible with history",
+      "passed": true
+    },
+    {
+      "name": "Continue opens full transcript",
+      "passed": true
+    },
+    {
+      "name": "Refresh restores current session and complete messages",
+      "passed": true
+    },
+    {
+      "name": "New conversation preserves earlier conversation",
+      "passed": true
+    },
+    {
+      "name": "Can switch to an older conversation",
+      "passed": true
+    },
+    {
+      "name": "Deleting a conversation persists across refresh",
+      "passed": true
+    },
+    {
+      "name": "Settings retain the character",
+      "passed": true
+    },
+    {
+      "name": "Provider connection clears key input",
+      "passed": true
+    },
+    {
+      "name": "Full archive retains more than 24 messages",
+      "passed": true,
+      "detail": 28
+    },
+    {
+      "name": "Provider receives only last 24 plus system",
+      "passed": true,
+      "detail": 25
+    },
+    {
+      "name": "Long bubble stays within the compact dock stage",
+      "passed": true
+    },
+    {
+      "name": "Full transcript renders all messages",
+      "passed": true
+    },
+    {
+      "name": "Navigation actions are still real allowlisted links",
+      "passed": true
+    },
+    {
+      "name": "1366x768 dock remains compact",
+      "passed": true
+    },
+    {
+      "name": "Multiline composer stops at 88px",
+      "passed": true
+    },
+    {
+      "name": "390px dock fits width and keeps character",
+      "passed": true
+    },
+    {
+      "name": "Mobile history uses at most 65 percent height",
+      "passed": true
+    },
+    {
+      "name": "Mobile history preserves visible character",
+      "passed": true
+    },
+    {
+      "name": "Short viewport / keyboard-size dock stays within visible screen",
+      "passed": true
+    },
+    {
+      "name": "Cancelled late reply cannot enter a new conversation",
+      "passed": true
+    },
+    {
+      "name": "Picture and audio controls remain available",
+      "passed": true
+    },
+    {
+      "name": "Microphone control remains available",
+      "passed": true
+    },
+    {
+      "name": "Read and stop controls retained",
+      "passed": true
+    },
+    {
+      "name": "Collapsing chat leaves animated avatar",
+      "passed": true
+    },
+    {
+      "name": "Explicit minimize leaves a small launcher",
+      "passed": true
+    },
+    {
+      "name": "Restoring reuses the single canvas",
+      "passed": true
+    },
+    {
+      "name": "Stored conversations contain no key or media data URL",
+      "passed": true
+    },
+    {
+      "name": "Core browser path has no JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "output/playwright/assistant-desktop-history.png",
+    "output/playwright/assistant-desktop-transcript.png",
+    "output/playwright/assistant-desktop-1366.png",
+    "output/playwright/assistant-mobile-chat.png",
+    "output/playwright/assistant-mobile-history.png",
+    "output/playwright/assistant-mobile-short-viewport.png"
+  ],
+  "onlineProviderCallVerified": false,
+  "physicalMicrophoneAndAudibleSpeechVerified": false,
+  "mockProviderRequests": 14,
+  "realMicrophoneAndAudibleSpeechNotTested": true,
+  "viewportKeyboardSimulationOnly": true,
+  "passed": 35,
+  "failed": 0,
+  "assistantSources": {
+    "portal/assets/s17-assistant.css": "cebb04f584e925bdf7050f5869ecfa26830fdbb41ccb1d1c3b8aad09281e5b6d",
+    "portal/assets/s17-assistant-history.js": "669ed7dc6d7ed9d31732445b413c5a701787ece6a50897f589b91526f3fcb59a",
+    "portal/assets/s17-assistant.js": "c62ba37bef434aa45d063929159fda04a42994da5c4367270e66f841ff26e683",
+    "portal/assets/s17-media.js": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150",
+    "portal/assets/s17-volcengine.js": "7e89470764fd2cb8cdfe0030bdda106c2bda00c0f8b57777dddeb5c97663b849",
+    "portal/assets/s17-live2d.js": "43da66b0027a565c27b8ba1fd71f7f05bff22d3aa3eebc3c2d9d486f8941547c",
+    "portal/assets/s17-live2d-loader.js": "2c4d6f5d1221fd09208cba5119d77991ed98cf87fde3c6e2b19f1f7fe5a4162a"
+  }
+}

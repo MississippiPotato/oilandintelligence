@@ -5,8 +5,8 @@
     "cv"
   ],
   "title": "套管损伤智能识别",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -16,7 +16,7 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "从圆周到展开图",
-          "html": "<p>横轴是方位角0–360°，纵轴是相对深度0–3.5m（向下增加）。0°与360°是同一方向，切口两侧在井筒上相邻。把一圈测点展开，就能同时看到缺陷持续多深、覆盖多少方位。颜色表示相对名义内半径的偏差，单位mm。正值表示内腔半径变大，可能对应内壁金属损失；负值可能来自结垢或变形。本演示只检测正残差局部凹坑，不能据此求剩余壁厚或检测外壁腐蚀。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"圆周切开成为深度×方位图；切口左右实际相邻，不能当成两个井壁。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><circle cx=\"125\" cy=\"132\" r=\"75\" fill=\"none\" stroke=\"#8da7ae\" stroke-width=\"18\"/><path d=\"M125 132H200\" stroke=\"#bf8150\" stroke-width=\"3\"/><text x=\"73\" y=\"135\" font-size=\"17\">内腔</text><text x=\"207\" y=\"137\" font-size=\"17\">0°/360°切口</text><text x=\"60\" y=\"240\" font-size=\"17\">半径增大：内壁凹坑</text><path d=\"M335 60H720M335 60V235\" stroke=\"#809fa6\" fill=\"none\"/><text x=\"325.0\" y=\"45\" font-size=\"15\">0°</text><path d=\"M335.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"415.0\" y=\"45\" font-size=\"15\">90°</text><path d=\"M425.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"505.0\" y=\"45\" font-size=\"15\">180°</text><path d=\"M515.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"595.0\" y=\"45\" font-size=\"15\">270°</text><path d=\"M605.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"685.0\" y=\"45\" font-size=\"15\">360°</text><path d=\"M695.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"65.0\" font-size=\"15\">0</text><path d=\"M335 60.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"115.0\" font-size=\"15\">1</text><path d=\"M335 110.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"165.0\" font-size=\"15\">2</text><path d=\"M335 160.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"215.0\" font-size=\"15\">3</text><path d=\"M335 210.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"240.0\" font-size=\"15\">3.5</text><path d=\"M335 235.0H695\" stroke=\"#cfdbd6\"/><rect x=\"455\" y=\"125\" width=\"80\" height=\"45\" fill=\"#bd7949\"/><text x=\"365\" y=\"266\" font-size=\"16\">展开后：相对深度m向下；方位向右</text><text x=\"335\" y=\"287\" font-size=\"15\">棕块示意局部正半径偏差；实算色标见演示</text></g></svg><figcaption>圆周切开成为深度×方位图；切口左右实际相邻，不能当成两个井壁。</figcaption></figure>"
+          "html": "<p>横轴是方位角0–360°，纵轴是相对深度0–3.5m（向下增加）。0°与360°是同一方向，切口两侧在井筒上相邻。把一圈测点展开，就能同时看到缺陷持续多深、覆盖多少方位。颜色表示相对名义内半径的偏差，单位mm。正值表示内腔半径变大，可能对应内壁金属损失；负值可能来自结垢或变形。本演示从内半径正残差中提取局部凹坑，再比较缺陷掩膜。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"圆周切开成为深度×方位图；切口左右实际相邻，在360°处与0°首尾相接。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><circle cx=\"125\" cy=\"132\" r=\"75\" fill=\"none\" stroke=\"#8da7ae\" stroke-width=\"18\"/><path d=\"M125 132H200\" stroke=\"#bf8150\" stroke-width=\"3\"/><text x=\"73\" y=\"135\" font-size=\"17\">内腔</text><text x=\"207\" y=\"137\" font-size=\"17\">0°/360°切口</text><text x=\"60\" y=\"240\" font-size=\"17\">半径增大：内壁凹坑</text><path d=\"M335 60H720M335 60V235\" stroke=\"#809fa6\" fill=\"none\"/><text x=\"325.0\" y=\"45\" font-size=\"15\">0°</text><path d=\"M335.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"415.0\" y=\"45\" font-size=\"15\">90°</text><path d=\"M425.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"505.0\" y=\"45\" font-size=\"15\">180°</text><path d=\"M515.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"595.0\" y=\"45\" font-size=\"15\">270°</text><path d=\"M605.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"685.0\" y=\"45\" font-size=\"15\">360°</text><path d=\"M695.0 60V235\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"65.0\" font-size=\"15\">0</text><path d=\"M335 60.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"115.0\" font-size=\"15\">1</text><path d=\"M335 110.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"165.0\" font-size=\"15\">2</text><path d=\"M335 160.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"215.0\" font-size=\"15\">3</text><path d=\"M335 210.0H695\" stroke=\"#cfdbd6\"/><text x=\"295\" y=\"240.0\" font-size=\"15\">3.5</text><path d=\"M335 235.0H695\" stroke=\"#cfdbd6\"/><rect x=\"455\" y=\"125\" width=\"80\" height=\"45\" fill=\"#bd7949\"/><text x=\"365\" y=\"266\" font-size=\"16\">展开后：相对深度m向下；方位向右</text><text x=\"335\" y=\"287\" font-size=\"15\">棕块示意局部正半径偏差；实算色标见演示</text></g></svg><figcaption>圆周切开成为深度×方位图；切口左右实际相邻，在360°处与0°首尾相接。</figcaption></figure>"
         },
         {
           "no": 2,
@@ -28,13 +28,13 @@
           "no": 3,
           "en": "EVIDENCE",
           "title": "面积重叠评价定位",
-          "html": "<p>教学数据含一个已知位置的局部缺陷。预测只看半径矩阵，评价阶段再读取隐藏掩膜计算IoU：交集格数除以并集格数。缺陷幅度设为0时是真正的无缺陷样本，IoU在双方都为空时记1，并报告误报格数。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-c\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+          "html": "<p>教学数据含一个已知位置的局部缺陷。预测只看半径矩阵，评价阶段再读取隐藏掩膜计算IoU：交集格数除以并集格数。缺陷幅度设为0时是真正的无缺陷样本，IoU在双方都为空时记1，并报告误报格数。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-c\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。</p>"
         },
         {
           "no": 4,
           "en": "LEARNING_TASK",
           "title": "课堂实验：一次只改变一个条件",
-          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>先固定缺陷幅度3mm，把仪器偏心从0调到5mm，比较两幅展开图和IoU：正常方位条带为何不应算局部腐蚀？再将缺陷幅度设为0、噪声0.9mm、阈值0.2mm，检查误报格数。点选或键盘选择格子读取相对深度、方位和mm数值；0°和360°是展开切口的同一方向。</p></aside>"
+          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>先固定缺陷幅度3mm，把仪器偏心从0调到5mm，比较两幅展开图和IoU：对照背景校正如何处理正常方位条带。再将缺陷幅度设为0、噪声0.9mm、阈值0.2mm，检查误报格数。点选或键盘选择格子读取相对深度、方位和mm数值；0°和360°是展开切口的同一方向。</p></aside>"
         }
       ]
     },
@@ -50,33 +50,33 @@
           "role": "步骤 1",
           "do": "按36个相对深度位置和36个方位采样半径偏差。界面生成平滑偏心项、局部凹坑和测量噪声，三者叠加成算法看到的矩阵。",
           "effect": "1296格半径偏差矩阵",
-          "trap": "颜色数值表示mm，不是损伤类别"
+          "trap": "颜色显示相对名义内半径的偏差，单位mm。"
         },
         {
           "name": "估计偏心背景",
           "role": "步骤 2",
           "do": "对每个方位收集36个深度值，取中位数作为该方位的平滑背景。该方法利用本例缺陷只占少量深度的条件，不读取缺陷位置。",
           "effect": "36个方位背景值",
-          "trap": "大范围损伤占据多数深度时，中位数背景也会受影响"
+          "trap": "大范围损伤占多数深度时，检查中位数背景的偏移。"
         },
         {
           "name": "残差阈值分割缺陷",
           "role": "步骤 3",
           "do": "将半径矩阵减去方位背景，残差超过当前阈值的格子形成预测掩膜。点击右图格子读出深度、方位和残差；细描边标识模型预测。",
           "effect": "去背景热图和预测缺陷格子",
-          "trap": "阈值过低放大噪声；过高会遗漏浅缺陷"
+          "trap": "阈值变化时，同时查看噪声误报与浅缺陷漏检。"
         },
         {
           "name": "与原始阈值对照",
           "role": "步骤 4",
           "do": "另一路直接对原始半径使用同阈值，作为基线。最后仅在评价函数读取参考掩膜，计算两路IoU及预测误报格数。",
           "effect": "IoU、误报格数与并排热图",
-          "trap": "缺陷幅度为0时评价无缺陷情况，不除以0"
+          "trap": "缺陷幅度为0时，统计误报，空召回分母显示不适用。"
         }
       ],
       "metrics": {
         "title": "步骤的输入与产物",
-        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜采集深度×方位矩阵</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：采集深度×方位矩阵的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜采集深度×方位矩阵</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：按36个相对深度位置和36个方位采样半径偏差。界面生成平滑偏心项、局</text><text x=\"42\" y=\"113\" font-size=\"16\">部凹坑和测量噪声，三者叠加成算法看到的矩阵。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：1296格半径偏差矩阵</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：颜色数值表示mm，不是损伤类别</text></g></svg><figcaption>图 F1：采集深度×方位矩阵的动作、产物和检查点。</figcaption></figure><h4>图 F2｜估计偏心背景</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：估计偏心背景的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜估计偏心背景</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：对每个方位收集36个深度值，取中位数作为该方位的平滑背景。该方法利用</text><text x=\"42\" y=\"113\" font-size=\"16\">本例缺陷只占少量深度的条件，不读取缺陷位置。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：36个方位背景值</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：大范围损伤占据多数深度时，中位数背景也会受影响</text></g></svg><figcaption>图 F2：估计偏心背景的动作、产物和检查点。</figcaption></figure><h4>图 F3｜残差阈值分割缺陷</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：残差阈值分割缺陷的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜残差阈值分割缺陷</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：将半径矩阵减去方位背景，残差超过当前阈值的格子形成预测掩膜。点击右图</text><text x=\"42\" y=\"113\" font-size=\"16\">格子读出深度、方位和残差；细描边标识模型预测。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：去背景热图和预测缺陷格子</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：阈值过低放大噪声；过高会遗漏浅缺陷</text></g></svg><figcaption>图 F3：残差阈值分割缺陷的动作、产物和检查点。</figcaption></figure><h4>图 F4｜与原始阈值对照</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：与原始阈值对照的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜与原始阈值对照</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：另一路直接对原始半径使用同阈值，作为基线。最后仅在评价函数读取参考掩</text><text x=\"42\" y=\"113\" font-size=\"16\">膜，计算两路IoU及预测误报格数。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：IoU、误报格数与并排热图</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：缺陷幅度为0时评价无缺陷情况，不除以0</text></g></svg><figcaption>图 F4：与原始阈值对照的动作、产物和检查点。</figcaption></figure>"
+        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜采集深度×方位矩阵</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：采集深度×方位矩阵的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜采集深度×方位矩阵</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：按36个相对深度位置和36个方位采样半径偏差。界面生成平滑偏心项、局</text><text x=\"42\" y=\"113\" font-size=\"16\">部凹坑和测量噪声，三者叠加成算法看到的矩阵。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：1296格半径偏差矩阵</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：颜色显示相对名义内半径的偏差，单位mm。</text></g></svg><figcaption>图 F1：采集深度×方位矩阵的动作、产物和检查点。</figcaption></figure><h4>图 F2｜估计偏心背景</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：估计偏心背景的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜估计偏心背景</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：对每个方位收集36个深度值，取中位数作为该方位的平滑背景。该方法利用</text><text x=\"42\" y=\"113\" font-size=\"16\">本例缺陷只占少量深度的条件，不读取缺陷位置。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：36个方位背景值</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：大范围损伤占多数深度时，检查中位数背景的偏移。</text></g></svg><figcaption>图 F2：估计偏心背景的动作、产物和检查点。</figcaption></figure><h4>图 F3｜残差阈值分割缺陷</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：残差阈值分割缺陷的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜残差阈值分割缺陷</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：将半径矩阵减去方位背景，残差超过当前阈值的格子形成预测掩膜。点击右图</text><text x=\"42\" y=\"113\" font-size=\"16\">格子读出深度、方位和残差；细描边标识模型预测。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：去背景热图和预测缺陷格子</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：阈值变化时，同时查看噪声误报与浅缺陷漏检。</text></g></svg><figcaption>图 F3：残差阈值分割缺陷的动作、产物和检查点。</figcaption></figure><h4>图 F4｜与原始阈值对照</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：与原始阈值对照的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜与原始阈值对照</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：另一路直接对原始半径使用同阈值，作为基线。最后仅在评价函数读取参考掩</text><text x=\"42\" y=\"113\" font-size=\"16\">膜，计算两路IoU及预测误报格数。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：IoU、误报格数与并排热图</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：缺陷幅度为0时，统计误报，空召回分母显示不适用。</text></g></svg><figcaption>图 F4：与原始阈值对照的动作、产物和检查点。</figcaption></figure>"
       }
     },
     "demo": {

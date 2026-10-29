@@ -1,7 +1,5 @@
 # 钻具状态识别：振动变大还是频带变了
 
-本轮只整理已有专业内容与图表，计算引擎、控制器和观测数据沿用原实现。
-
 ## 核心认识
 
 振动强度相似的钻具状态，频率组成可能不同；时域与频域需要对照。
@@ -32,7 +30,7 @@
 
 专业资料： SLB｜Drillstring vibration measurements 。本例采用固定种子教学数据；数据结构、单位与评价范围在演示中列出。
 
-先看窗口20和63，重算后对比25 Hz峰；仅改变查看窗口，90窗F1应不变。再将负荷振幅升到2.3 g，比较RMS基线误报与模型误报；两种方法都可能失败，5/25 Hz仅是教学频带。
+先看窗口20和63，重算后对比25 Hz峰；仅改变查看窗口，90窗F1应不变。再将负荷振幅升到2.3 g，比较RMS基线误报与模型误报；结合时域、频谱与误报，比较两种方法受负荷变化影响的程度。
 
 **图支持的认识：** 选同一个窗口查看特征、模型类别和仅RMS基线。
 
@@ -62,5 +60,3 @@
 
 - http://www.w3.org/2000/svg
 - https://www.slb.com/products-and-services/innovating-in-oil-and-gas/well-construction/drilling/drill-bits/engineered-drillstring-design/synapse-performance-insights-and-optimization-service
-
-来源沿用本例原有资料；本稿是本轮的内容组织记录，不冒称新增外部专业审稿。

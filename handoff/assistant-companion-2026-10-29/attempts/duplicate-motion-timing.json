@@ -1,0 +1,45 @@
+{
+  "phase": "media",
+  "checkedAt": "2026-10-29T15:55:41.740Z",
+  "checks": [
+    {
+      "name": "Real image decodes and has a local preview",
+      "passed": true
+    },
+    {
+      "name": "Image reaches existing provider as current-turn multimodal input",
+      "passed": true
+    },
+    {
+      "name": "Successful image send clears attachment bytes from composer",
+      "passed": true
+    },
+    {
+      "name": "Real WAV decodes into a local audio preview",
+      "passed": true
+    },
+    {
+      "name": "Audio reaches provider as current-turn WAV input",
+      "passed": true
+    },
+    {
+      "name": "Previous-turn image is not silently retransmitted",
+      "passed": true
+    },
+    {
+      "name": "Archive retains filenames but no binary attachment or key",
+      "passed": true
+    },
+    {
+      "name": "Existing greeting motion executes on the same model",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "screenshots": [],
+  "onlineProviderCallVerified": false,
+  "physicalMicrophoneAndAudibleSpeechVerified": false,
+  "exception": "Existing greeting motion executes on the same model",
+  "passed": 7,
+  "failed": 1
+}

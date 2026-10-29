@@ -5,8 +5,8 @@
     "opt"
   ],
   "title": "集输工况优化：同样输量怎样少用电",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -15,12 +15,12 @@
         {
           "no": 1,
           "title": "集输系统为什么需要泵",
-          "html": "<p>井口来液进入站场后，需要克服高差和管道摩阻才能送达下一站。流量 Q 是每小时输送多少液体；扬程 H 表示每单位重量液体得到的机械能，单位 m。不是转得越快越好：超过需求的压力常被阀门消耗，电费却仍然发生。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"按数据流向阅读；输入、处理、计算与核查各有分工。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><rect x=\"18\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"98\" y=\"110\" text-anchor=\"middle\">来液需求 Q</text><path d=\"M178 102h20l-7 -5m7 5l-7 5\" fill=\"none\" stroke=\"#547a73\" stroke-width=\"2\"/><rect x=\"201\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"281\" y=\"110\" text-anchor=\"middle\">并联泵站</text><path d=\"M361 102h20l-7 -5m7 5l-7 5\" fill=\"none\" stroke=\"#547a73\" stroke-width=\"2\"/><rect x=\"384\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"464\" y=\"110\" text-anchor=\"middle\">管道损失 H</text><path d=\"M544 102h20l-7 -5m7 5l-7 5\" fill=\"none\" stroke=\"#547a73\" stroke-width=\"2\"/><rect x=\"567\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"647\" y=\"110\" text-anchor=\"middle\">下一站入口</text></g></svg><figcaption>按数据流向阅读；输入、处理、计算与核查各有分工。</figcaption></figure>"
+          "html": "<p>井口来液进入站场后，需要克服高差和管道摩阻才能送达下一站。流量 Q 是每小时输送多少液体；扬程 H 表示每单位重量液体得到的机械能，单位 m。调速时同时看供给与需求：超过需求的压力常被阀门消耗，电费却仍然发生。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"按数据流向阅读；输入、处理、计算与核查各有分工。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><rect x=\"18\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"98\" y=\"110\" text-anchor=\"middle\">来液需求 Q</text><path d=\"M178 102h20l-7 -5m7 5l-7 5\" fill=\"none\" stroke=\"#547a73\" stroke-width=\"2\"/><rect x=\"201\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"281\" y=\"110\" text-anchor=\"middle\">并联泵站</text><path d=\"M361 102h20l-7 -5m7 5l-7 5\" fill=\"none\" stroke=\"#547a73\" stroke-width=\"2\"/><rect x=\"384\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"464\" y=\"110\" text-anchor=\"middle\">管道损失 H</text><path d=\"M544 102h20l-7 -5m7 5l-7 5\" fill=\"none\" stroke=\"#547a73\" stroke-width=\"2\"/><rect x=\"567\" y=\"70\" width=\"160\" height=\"65\" rx=\"9\" fill=\"#deeeea\" stroke=\"#8cafaa\"/><text x=\"647\" y=\"110\" text-anchor=\"middle\">下一站入口</text></g></svg><figcaption>按数据流向阅读；输入、处理、计算与核查各有分工。</figcaption></figure>"
         },
         {
           "no": 2,
           "title": "并联与调速改变了什么",
-          "html": "<p>并联泵的流量相加，每台承担总流量的一部分。调速改变泵的扬程曲线与效率。本例用一组教学泵曲线计算不同组合：H=70s²−0.0008q²，q 是单泵流量，s 是相对额定转速。液体密度取 850 kg/m³，电功率由 ρgQH/η 换算为 kW。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 60Q380 70 690 155\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 100Q380 105 690 175\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">单泵流量 q，m³/h；实线额定，虚线降速</text><text x=\"75\" y=\"28\">扬程 H，m</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure><p class=\"note\">本例 η 是泵、电机与驱动合并的总效率教学曲线，P电 = ρg(Q总/3600)H/η/1000。Q必须先由m³/h换成m³/s，W再换成kW；泵曲线中的q=Q总/台数。多余扬程假设由下游阀门节流消耗，因此产生扬程仍计入电耗。相同最低扬程不代表已求得完整管网系统曲线。</p>"
+          "html": "<p>并联泵的流量相加，每台承担总流量的一部分。调速改变泵的扬程曲线与效率。本例用一组教学泵曲线计算不同组合：H=70s²−0.0008q²，q 是单泵流量，s 是相对额定转速。液体密度取 850 kg/m³，电功率由 ρgQH/η 换算为 kW。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 220\" role=\"img\" aria-label=\"青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。\"><rect width=\"760\" height=\"220\" rx=\"12\" fill=\"#f2f6f3\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"18\" fill=\"#294b49\"><path d=\"M65 170H705M65 170V32\" stroke=\"#9ab3af\" fill=\"none\"/><path d=\"M65 60Q380 70 690 155\" stroke=\"#246d69\" fill=\"none\" stroke-width=\"4\"/><path d=\"M65 100Q380 105 690 175\" stroke=\"#bd7441\" fill=\"none\" stroke-width=\"3\" stroke-dasharray=\"7 5\"/><text x=\"70\" y=\"205\">单泵流量 q，m³/h；实线额定，虚线降速</text><text x=\"75\" y=\"28\">扬程 H，m</text></g></svg><figcaption>青绿为算法或当前观测，棕色为对照；形状用于解释关系，演示中重新计算。</figcaption></figure><p class=\"note\">本例 η 是泵、电机与驱动合并的总效率教学曲线，P电 = ρg(Q总/3600)H/η/1000。Q必须先由m³/h换成m³/s，W再换成kW；泵曲线中的q=Q总/台数。多余扬程假设由下游阀门节流消耗，因此产生扬程仍计入电耗。本页以最低扬程表示输送需求，逐点比较泵站供给。</p>"
         },
         {
           "no": 3,
@@ -30,7 +30,7 @@
         {
           "no": 4,
           "title": "图上的每个点都代表一个可复查方案",
-          "html": "<p>散点图横轴是产生的扬程，纵轴是功率。低功率但落在最低扬程左侧的方案不能用。改变输量时，最优泵数量可能跳变，原因是连续转速与离散启停组合共同作用。表格显示计算出的可行点数、最优组合及固定转速基线。</p><p class=\"note\">专业资料：<a href=\"https://www.energy.gov/cmei/ito/pump-systems\" target=\"_blank\" rel=\"noreferrer\">美国能源部：泵系统与变速运行</a>。资料用于原理说明；本例数据与图表为自主制作的教学夹具。</p><p class=\"note\">电价对所有候选相同且为正时，只会等比例改变日费用，不会改变最低功率的泵数与转速；试着只改电价验证这一点，再改流量观察最优组合是否切换。</p>"
+          "html": "<p>散点图横轴是产生的扬程，纵轴是功率。先排除最低扬程左侧的点，再在可行点中比较功率。改变输量时，最优泵数量可能跳变，原因是连续转速与离散启停组合共同作用。表格显示计算出的可行点数、最优组合及固定转速基线。</p><p class=\"note\">专业资料：<a href=\"https://www.energy.gov/cmei/ito/pump-systems\" target=\"_blank\" rel=\"noreferrer\">美国能源部：泵系统与变速运行</a>。数据为合成教学样本，图表由本例绘制。</p><p class=\"note\">电价对所有候选相同且为正时，只会等比例改变日费用，不会改变最低功率的泵数与转速；试着只改电价验证这一点，再改流量观察最优组合是否切换。</p>"
         }
       ]
     },
@@ -45,25 +45,25 @@
           "name": "读入任务",
           "do": "给定流量、最低扬程、电价。",
           "effect": "明确优化目标与约束。",
-          "trap": "把电价当作设备效率。"
+          "trap": "电价将电耗换成费用，设备效率用于功率计算。"
         },
         {
           "name": "建立候选",
           "do": "枚举泵数、转速，按曲线计算扬程和效率。",
           "effect": "每个点对应可解释的设备工况。",
-          "trap": "只展示一个预设最优值。"
+          "trap": "逐点计算1—3台泵与各转速候选，再查看排序。"
         },
         {
           "name": "筛选与寻优",
           "do": "剔除不满足扬程或流量的点，在可行集中找最低电功率。",
           "effect": "推荐方案来自实际搜索。",
-          "trap": "让不达标的低功率点参与排名。"
+          "trap": "先满足最低扬程与单泵流量范围，再按功率排序。"
         },
         {
           "name": "对比并复核",
           "do": "与额定转速基线比较，查看负荷变化后的组合。",
           "effect": "说明节能来自哪里。",
-          "trap": "没有可行点时仍给出推荐。"
+          "trap": "可行集合为空时，显示约束冲突和空推荐。"
         }
       ],
       "metrics": {

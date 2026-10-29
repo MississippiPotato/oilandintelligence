@@ -1,17 +1,17 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.9.2-preview",
+  "version": "1.10.0-preview",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build-expansion-lessons.mjs",
-    "test": "node checks/verify-expansion-lessons.mjs",
-    "verify-delivery": "node checks/verify-expansion-lesson-delivery.mjs",
-    "verify-guide": "node checks/verify-expansion-lesson-delivery.mjs",
-    "package": "node checks/verify-expansion-lesson-delivery.mjs --skip-packages && node tools/package-expansion-lessons.mjs && node checks/verify-expansion-lesson-delivery.mjs",
+    "build": "node tools/build-five-refinement.mjs --all",
+    "test": "node checks/verify-refinement.mjs --source-only",
+    "verify-delivery": "node checks/verify-refinement.mjs",
+    "verify-guide": "node checks/verify-refinement.mjs",
+    "package": "node checks/verify-refinement.mjs && node tools/report-refinement.mjs && node tools/package-refinement.mjs",
     "serve": "node tools/serve.mjs",
-    "accept": "node tools/accept-expansion-lessons.mjs",
+    "accept": "node checks/verify-refinement.mjs",
     "build:m2": "node tools/build.mjs --m2-only",
     "verify:m2": "node checks/verify.mjs --no-write",
     "accept:m2": "node checks/browser-m2-four-smoke.mjs",
@@ -19,7 +19,16 @@
     "build:four": "node tools/build.mjs",
     "capture:four-flow": "node tools/capture-four-flow.mjs",
     "accept:four": "node checks/browser-four-exhibits.mjs --open && node checks/browser-four-exhibits.mjs && node checks/browser-m2-four-smoke.mjs",
-    "accept:browser": "node tools/run-expansion-lesson-browser.mjs",
-    "build:expansion": "node tools/build-expansion-lessons.mjs"
+    "accept:browser": "node tools/accept-refinement.mjs",
+    "build:expansion": "node tools/build-expansion-lessons.mjs",
+    "build:assistant": "node tools/sync-assistant.mjs",
+    "verify:assistant": "node checks/verify-assistant-companion.mjs",
+    "accept:assistant": "node tools/accept-assistant.mjs",
+    "package:assistant": "node checks/verify-assistant-companion.mjs && node tools/package-assistant.mjs",
+    "build:previous-lessons": "node tools/build-expansion-lessons.mjs",
+    "test:previous-lessons": "node checks/verify-expansion-lessons.mjs",
+    "build:five:draft": "node tools/build-five-refinement.mjs --draft",
+    "build:five": "node tools/build-five-refinement.mjs",
+    "report:refinement": "node tools/report-refinement.mjs"
   }
 }

@@ -6,8 +6,8 @@
     "opt"
   ],
   "title": "化验数据智能审核：从原文单位到指标关系",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -16,17 +16,17 @@
         {
           "no": 1,
           "title": "化验单怎样影响炼厂的操作判断",
-          "html": "<div><p>炼厂从原料与产品物流中取样，实验室测量密度、硫含量、黏度等性质，结果进入LIMS（实验室信息管理系统）。操作人员据此调整装置或核对批次质量。一个数看起来“很正常”，也可能因为样品编号、单位或录入位置出了问题而误导判断。</p><p>本例是虚构的同类馏分样品。密度统一为kg/m³；硫用质量分数百分数%；运动黏度统一为40°C下的mm²/s。测量温度是黏度定义的一部分，不应把不同温度的结果直接比较。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 145\" role=\"img\" aria-label=\"数据处理的输入、转换和输出\"><rect width=\"740\" height=\"145\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"20\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"32\" y=\"84\" fill=\"#27454c\" font-size=\"16\">取样：确认物流与批次</text><path d=\"M233 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"265\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"277\" y=\"84\" fill=\"#27454c\" font-size=\"16\">化验：方法、单位、条件</text><path d=\"M478 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"510\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"522\" y=\"84\" fill=\"#27454c\" font-size=\"16\">审核：数值与上下文</text></g></svg><p>第一层审核检查字段能否识别、数值是否完整、单位是否可转换。第二层检查多个指标之间的关系。它们回答不同的问题，应同时保留各自的证据。</p></div>"
+          "html": "<div><p>炼厂从原料与产品物流中取样，实验室测量密度、硫含量、黏度等性质，结果进入LIMS（实验室信息管理系统）。操作人员据此调整装置或核对批次质量。一个数看起来“很正常”，也可能因为样品编号、单位或录入位置出了问题而误导判断。</p><p>本例是虚构的同类馏分样品。密度统一为kg/m³；硫用质量分数百分数%；运动黏度统一为40°C下的mm²/s。测量温度是黏度定义的一部分，同一温度下再比较黏度。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 145\" role=\"img\" aria-label=\"数据处理的输入、转换和输出\"><rect width=\"740\" height=\"145\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"20\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"32\" y=\"84\" fill=\"#27454c\" font-size=\"16\">取样：确认物流与批次</text><path d=\"M233 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"265\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"277\" y=\"84\" fill=\"#27454c\" font-size=\"16\">化验：方法、单位、条件</text><path d=\"M478 78h24m-8 -6 8 6-8 6\" stroke=\"#267f79\" fill=\"none\" stroke-width=\"2\"/><rect x=\"510\" y=\"45\" width=\"210\" height=\"65\" rx=\"9\" fill=\"#fff\" stroke=\"#9cbfba\"/><text x=\"522\" y=\"84\" fill=\"#27454c\" font-size=\"16\">审核：数值与上下文</text></g></svg><p>第一层审核检查字段能否识别、数值是否完整、单位是否可转换。第二层检查多个指标之间的关系。它们回答不同的问题，应同时保留各自的证据。</p></div>"
         },
         {
           "no": 2,
-          "title": "单位换算正确，不等于这一行就没有问题",
-          "html": "<div><p>0.840 kg/L与840 kg/m³表示同一密度，二者相差1000倍来自体积单位。读取文字后，应先识别单位，再转换到统一量纲。如果把0.840直接填在kg/m³栏，算法应显示原文和换算结果，便于追查。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 190\" role=\"img\" aria-label=\"专业知识示意图\"><rect width=\"740\" height=\"190\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"30\" y=\"45\" width=\"245\" height=\"70\" rx=\"10\" fill=\"#fff\" stroke=\"#94b7b3\"/><text x=\"46\" y=\"75\" fill=\"#27454c\" font-size=\"16\">原文：密度=0.840 kg/L</text><text x=\"46\" y=\"100\" fill=\"#27454c\" font-size=\"16\">识别数值与体积单位</text><path d=\"M280 80h105m-9 -6 9 6-9 6\" fill=\"none\" stroke=\"#237d76\" stroke-width=\"2\"/><text x=\"295\" y=\"65\" fill=\"#27454c\" font-size=\"16\">×1000</text><rect x=\"400\" y=\"45\" width=\"305\" height=\"70\" rx=\"10\" fill=\"#fff\" stroke=\"#94b7b3\"/><text x=\"417\" y=\"75\" fill=\"#27454c\" font-size=\"16\">统一记录：840 kg/m³</text><text x=\"417\" y=\"100\" fill=\"#27454c\" font-size=\"16\">保留原文与换算标志</text><text x=\"35\" y=\"158\" fill=\"#27454c\" font-size=\"16\">规则负责格式与量纲；回归模型负责指标之间的关系。</text></g></svg><p>演示使用明确的字段抽取规则，能够读取固定格式中文化验文本与三种密度单位。无法识别的字段会标记缺失，不以0补齐。合法单位换算不会被当作异常。</p></div>"
+          "title": "先统一单位，再检查这一行的指标关系",
+          "html": "<div><p>0.840 kg/L与840 kg/m³表示同一密度，二者相差1000倍来自体积单位。读取文字后，应先识别单位，再转换到统一量纲。如果把0.840直接填在kg/m³栏，算法应显示原文和换算结果，便于追查。</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 190\" role=\"img\" aria-label=\"专业知识示意图\"><rect width=\"740\" height=\"190\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><rect x=\"30\" y=\"45\" width=\"245\" height=\"70\" rx=\"10\" fill=\"#fff\" stroke=\"#94b7b3\"/><text x=\"46\" y=\"75\" fill=\"#27454c\" font-size=\"16\">原文：密度=0.840 kg/L</text><text x=\"46\" y=\"100\" fill=\"#27454c\" font-size=\"16\">识别数值与体积单位</text><path d=\"M280 80h105m-9 -6 9 6-9 6\" fill=\"none\" stroke=\"#237d76\" stroke-width=\"2\"/><text x=\"295\" y=\"65\" fill=\"#27454c\" font-size=\"16\">×1000</text><rect x=\"400\" y=\"45\" width=\"305\" height=\"70\" rx=\"10\" fill=\"#fff\" stroke=\"#94b7b3\"/><text x=\"417\" y=\"75\" fill=\"#27454c\" font-size=\"16\">统一记录：840 kg/m³</text><text x=\"417\" y=\"100\" fill=\"#27454c\" font-size=\"16\">保留原文与换算标志</text><text x=\"35\" y=\"158\" fill=\"#27454c\" font-size=\"16\">规则负责格式与量纲；回归模型负责指标之间的关系。</text></g></svg><p>演示使用明确的字段抽取规则，能够读取固定格式中文化验文本与三种密度单位。识别失败的字段保留原文并标为缺失；合法单位转换到统一数值。</p></div>"
         },
         {
           "no": 3,
           "title": "每列都在范围内，为什么仍需要关系审核",
-          "html": "<div><p>对于同一类教学馏分，密度、硫含量与黏度由生成器设定为相关关系。先用80份独立正常样品拟合多元回归，再用30份正常验证样品估计关系残差尺度。新的化验行若远离关系带，便值得核查：是否抄错行、样品混淆、方法变化，或确有不同原料？</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 190\" role=\"img\" aria-label=\"专业知识示意图\"><rect width=\"740\" height=\"190\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><path d=\"M60 145H690M60 145V25\" fill=\"none\" stroke=\"#91a9ad\"/><text x=\"80\" y=\"28\" fill=\"#27454c\" font-size=\"16\">40°C运动黏度（mm²/s）</text><text x=\"490\" y=\"176\" fill=\"#27454c\" font-size=\"16\">密度（kg/m³）</text><path d=\"M90 129L640 63\" stroke=\"#237d76\" stroke-width=\"3\"/><path d=\"M90 142L640 76L640 50L90 116Z\" fill=\"#237d76\" opacity=\".12\"/><circle cx=\"100\" cy=\"126\" r=\"5\" fill=\"#237d76\"/><circle cx=\"170\" cy=\"118\" r=\"5\" fill=\"#237d76\"/><circle cx=\"240\" cy=\"110\" r=\"5\" fill=\"#237d76\"/><circle cx=\"310\" cy=\"102\" r=\"5\" fill=\"#237d76\"/><circle cx=\"380\" cy=\"94\" r=\"5\" fill=\"#237d76\"/><circle cx=\"450\" cy=\"86\" r=\"5\" fill=\"#237d76\"/><circle cx=\"520\" cy=\"78\" r=\"5\" fill=\"#237d76\"/><circle cx=\"590\" cy=\"70\" r=\"5\" fill=\"#237d76\"/><circle cx=\"450\" cy=\"42\" r=\"7\" fill=\"#bb7139\"/><text x=\"465\" y=\"48\" fill=\"#bb7139\" font-size=\"16\">范围内，关系外</text></g></svg><p>单列范围规则与“规则＋关系残差”在同一批注入错误上计算精确率、召回率和误报数。用户改写化验文本后，程序不再假定原有注入标签仍然有效，因此只展示审核证据，不给任意文本伪造准确率。</p><p>方法依据：<a href=\"https://itl.nist.gov/div898/handbook/eda/section3/eda35h.htm\" target=\"_blank\" rel=\"noreferrer\">NIST统计手册：异常值标记与调查</a>强调识别可疑观测后调查原因。本文样品、范围、关系和图形为教学构造。</p></div><p class=\"note\">二维散点图固定硫含量1%的虚线只供参考，不是每行的完整预测。每条样品的竖线连接实际黏度与使用该行密度、硫含量算出的期望值；残差应沿这条线读。超出图域或无法解析的行保留在表格中。此相关关系限定同类教学样品，不能宣称硫含量本身决定黏度。</p>"
+          "html": "<div><p>对于同一类教学馏分，密度、硫含量与黏度由生成器设定为相关关系。先用80份独立正常样品拟合多元回归，再用30份正常验证样品估计关系残差尺度。新的化验行若远离关系带，便值得核查：是否抄错行、样品混淆、方法变化，或确有不同原料？</p><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 740 190\" role=\"img\" aria-label=\"专业知识示意图\"><rect width=\"740\" height=\"190\" rx=\"12\" fill=\"#f0f6f5\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#27454c\"><path d=\"M60 145H690M60 145V25\" fill=\"none\" stroke=\"#91a9ad\"/><text x=\"80\" y=\"28\" fill=\"#27454c\" font-size=\"16\">40°C运动黏度（mm²/s）</text><text x=\"490\" y=\"176\" fill=\"#27454c\" font-size=\"16\">密度（kg/m³）</text><path d=\"M90 129L640 63\" stroke=\"#237d76\" stroke-width=\"3\"/><path d=\"M90 142L640 76L640 50L90 116Z\" fill=\"#237d76\" opacity=\".12\"/><circle cx=\"100\" cy=\"126\" r=\"5\" fill=\"#237d76\"/><circle cx=\"170\" cy=\"118\" r=\"5\" fill=\"#237d76\"/><circle cx=\"240\" cy=\"110\" r=\"5\" fill=\"#237d76\"/><circle cx=\"310\" cy=\"102\" r=\"5\" fill=\"#237d76\"/><circle cx=\"380\" cy=\"94\" r=\"5\" fill=\"#237d76\"/><circle cx=\"450\" cy=\"86\" r=\"5\" fill=\"#237d76\"/><circle cx=\"520\" cy=\"78\" r=\"5\" fill=\"#237d76\"/><circle cx=\"590\" cy=\"70\" r=\"5\" fill=\"#237d76\"/><circle cx=\"450\" cy=\"42\" r=\"7\" fill=\"#bb7139\"/><text x=\"465\" y=\"48\" fill=\"#bb7139\" font-size=\"16\">范围内，关系外</text></g></svg><p>单列范围规则与“规则＋关系残差”在同一批注入错误上计算精确率、召回率和误报数。用户改写化验文本后，程序不再假定原有注入标签仍然有效，自定义文本展示当前字段、规则与关系残差；固定注入错误另作统一评价。</p><p>方法依据：<a href=\"https://itl.nist.gov/div898/handbook/eda/section3/eda35h.htm\" target=\"_blank\" rel=\"noreferrer\">NIST统计手册：异常值标记与调查</a>强调识别可疑观测后调查原因。本文样品、范围、关系和图形为教学构造。</p></div><p class=\"note\">二维散点图的虚线固定硫含量为1%；每行的预测值再使用该行实际的硫含量。每条样品的竖线连接实际黏度与使用该行密度、硫含量算出的期望值；残差应沿这条线读。超出图域或无法解析的行保留在表格中。在同类教学馏分内，结合密度与硫含量计算期望黏度。</p>"
         }
       ]
     },
@@ -41,25 +41,25 @@
           "name": "保留原文并抽取化验字段",
           "do": "从固定格式中文文本抽取样品编号、密度、硫和黏度。",
           "effect": "每条记录仍可追溯到原始一行。",
-          "trap": "无法识别的字段应标记缺失，不能默默补零。"
+          "trap": "解析失败的字段保留原文并标为缺失。"
         },
         {
           "name": "先做量纲和范围审核",
           "do": "kg/L、g/cm3换算至kg/m³，再检查缺失与单列范围。",
           "effect": "规则原因列表与合法换算标志。",
-          "trap": "单位换算正确的0.840 kg/L不应报警。"
+          "trap": "0.840 kg/L统一换算为840 kg/m³。"
         },
         {
           "name": "学习正常样品的指标关系",
           "do": "80份正常样品拟合黏度回归，30份正常样品估计残差尺度。",
           "effect": "预测黏度和可调阈值。",
-          "trap": "本例关系属于同类教学馏分，不能跨产品套用。"
+          "trap": "在同类教学馏分内比较密度、硫含量与黏度关系。"
         },
         {
           "name": "给出证据，再核对参考标签",
           "do": "对输入行给出规则或关系原因；只有内置未修改样本才评价。",
           "effect": "精确率、召回率、误报以及待复核行。",
-          "trap": "可疑不等于错误；修改文本后不再沿用旧真值。"
+          "trap": "可疑行列出核查依据；修改文本后显示当前审核证据。"
         }
       ],
       "metrics": {

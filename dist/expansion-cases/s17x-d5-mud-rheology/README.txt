@@ -6,6 +6,6 @@ SLB｜Plastic viscosity: https://glossary.slb.com/en/terms/p/plastic_viscosity
 SLB｜Bingham plastic model: https://glossary.slb.com/en/terms/b/bingham_plastic_model
 数据为固定种子的教学构造，不包含外部自动加载资源。预测输入与评价真值分开；详细分母见页面结果。
 
-当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+当前教学版：1.1.1。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
 比较任务：升高温度：比较性能预测与可行配方集合，检查温度改变后目标是否仍能达到。
 提高目标PV：查看推荐配方和预测值怎样变化，并对照允许区间。

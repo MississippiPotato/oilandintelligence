@@ -28,6 +28,6 @@ NTSB/SS-05/02，Supervisory Control and Data Acquisition (SCADA) in Liquid Pipel
 https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/docs/technical-resources/pipeline/control-room-management/60341/ss0502ntsbscadastudy2005.pdf
 用于解释传感器数据、显示、告警与工况核查。图形、合成参数、数据和阈值均为本例原创教学设计，来源中没有这些合成成绩。
 
-当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
-比较任务：没有损失事件：检查正常负荷变化中是否误报，不能只测含事件的情况。
+当前教学版：1.1.1。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：没有损失事件：检查正常负荷变化中的误报位置与事件外报警数。
 出口传感器漂移：对照流量差和残差趋势，查看与损失事件是否容易混淆。

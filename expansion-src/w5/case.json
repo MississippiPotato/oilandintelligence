@@ -5,8 +5,8 @@
     "ts"
   ],
   "title": "测井曲线修复：用可见曲线重建密度缺口",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -33,7 +33,7 @@
           "no": 1,
           "en": "OBSERVATION",
           "title": "先认清三条曲线测量什么",
-          "html": "<p>自然伽马GR以API表示天然放射性变化；深电阻率Rt用Ω·m表示地层电性；体积密度RHOB用g/cm³表示地层整体密度。它们都按井深对齐，但测量的是不同物理量。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 320\" role=\"img\" aria-label=\"密度缺口的教学示例\"><rect width=\"800\" height=\"320\" fill=\"#fafcf9\"/><text x=\"85\" y=\"25\" font-size=\"17\" text-anchor=\"start\" fill=\"#243740\">MD / m ↓</text><path d=\"M85.0 55V240M85 55.0H720\" stroke=\"#dce5dd\"/><text x=\"85.0\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.2</text><text x=\"73\" y=\"60.0\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1500</text><path d=\"M243.75000000000017 55V240M85 101.25H720\" stroke=\"#dce5dd\"/><text x=\"243.75000000000017\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.3</text><text x=\"73\" y=\"106.25\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1502</text><path d=\"M402.50000000000034 55V240M85 147.5H720\" stroke=\"#dce5dd\"/><text x=\"402.50000000000034\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.4</text><text x=\"73\" y=\"152.5\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1504</text><path d=\"M561.2499999999998 55V240M85 193.75H720\" stroke=\"#dce5dd\"/><text x=\"561.2499999999998\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.5</text><text x=\"73\" y=\"198.75\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1506</text><path d=\"M720.0 55V240M85 240.0H720\" stroke=\"#dce5dd\"/><text x=\"720.0\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.6</text><text x=\"73\" y=\"245.0\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1508</text><path d=\"M275.50,55.00L275.50,101.25L275.50,147.50L561.25,159.06L561.25,193.75L561.25,240.00\" stroke=\"#929ca3\" stroke-width=\"3\" fill=\"none\"/><text x=\"95\" y=\"300\" font-size=\"14\" text-anchor=\"start\" fill=\"#929ca3\">封存原值</text><path d=\"M275.50,101.25L561.25,240.00\" stroke=\"#c07648\" stroke-width=\"3\" fill=\"none\"/><text x=\"305\" y=\"300\" font-size=\"14\" text-anchor=\"start\" fill=\"#c07648\">仅用两端插值</text><text x=\"400\" y=\"283\" font-size=\"16\" text-anchor=\"middle\" fill=\"#243740\">RHOB / g·cm⁻³</text></svg><figcaption>图B1｜端点直线可能跨过真实层界。假设1502—1508 m为缺口；橙线把两个端点连直，而灰色封存原值在内部跳变。灰色只在评价时查看，不能充当修复特征。</figcaption></figure>"
+          "html": "<p>自然伽马GR以API表示天然放射性变化；深电阻率Rt用Ω·m表示地层电性；体积密度RHOB用g/cm³表示地层整体密度。它们都按井深对齐，但测量的是不同物理量。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 800 320\" role=\"img\" aria-label=\"密度缺口的教学示例\"><rect width=\"800\" height=\"320\" fill=\"#fafcf9\"/><text x=\"85\" y=\"25\" font-size=\"17\" text-anchor=\"start\" fill=\"#243740\">MD / m ↓</text><path d=\"M85.0 55V240M85 55.0H720\" stroke=\"#dce5dd\"/><text x=\"85.0\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.2</text><text x=\"73\" y=\"60.0\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1500</text><path d=\"M243.75000000000017 55V240M85 101.25H720\" stroke=\"#dce5dd\"/><text x=\"243.75000000000017\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.3</text><text x=\"73\" y=\"106.25\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1502</text><path d=\"M402.50000000000034 55V240M85 147.5H720\" stroke=\"#dce5dd\"/><text x=\"402.50000000000034\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.4</text><text x=\"73\" y=\"152.5\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1504</text><path d=\"M561.2499999999998 55V240M85 193.75H720\" stroke=\"#dce5dd\"/><text x=\"561.2499999999998\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.5</text><text x=\"73\" y=\"198.75\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1506</text><path d=\"M720.0 55V240M85 240.0H720\" stroke=\"#dce5dd\"/><text x=\"720.0\" y=\"263\" font-size=\"14\" text-anchor=\"middle\" fill=\"#243740\">2.6</text><text x=\"73\" y=\"245.0\" font-size=\"14\" text-anchor=\"end\" fill=\"#243740\">1508</text><path d=\"M275.50,55.00L275.50,101.25L275.50,147.50L561.25,159.06L561.25,193.75L561.25,240.00\" stroke=\"#929ca3\" stroke-width=\"3\" fill=\"none\"/><text x=\"95\" y=\"300\" font-size=\"14\" text-anchor=\"start\" fill=\"#929ca3\">封存原值</text><path d=\"M275.50,101.25L561.25,240.00\" stroke=\"#c07648\" stroke-width=\"3\" fill=\"none\"/><text x=\"305\" y=\"300\" font-size=\"14\" text-anchor=\"start\" fill=\"#c07648\">仅用两端插值</text><text x=\"400\" y=\"283\" font-size=\"16\" text-anchor=\"middle\" fill=\"#243740\">RHOB / g·cm⁻³</text></svg><figcaption>图B1｜端点直线可能跨过真实层界。假设1502—1508 m为缺口；橙线把两个端点连直，而灰色封存原值在内部跳变。灰色封存原值在修复后打开核对。</figcaption></figure>"
         },
         {
           "no": 2,
@@ -45,7 +45,7 @@
           "no": 3,
           "en": "INTERPRETATION",
           "title": "修复值与原测量值必须区分",
-          "html": "<p>模型在独立训练井中寻找GR和logRt相近的样本，把这些样本的密度均值作为缺口估计。测试井被遮蔽的密度不会进入近邻搜索；修复后再与封存原值比较，只在缺口内计算RMSE和MAE。</p><p>显示原值用于核对，不会改变模型输出。曲线修复结果保留估计身份，不能当成仪器重新测量。</p><p class=\"sub\">专业资料：<a href=\"https://www.slb.com/-/media/files/oilfield-review/defining-log-interpretation.ashx\" target=\"_blank\" rel=\"noopener\">SLB｜Basic well log interpretation</a>；<a href=\"https://www.epa.gov/environmental-geophysics/logging-techniques-and-tools-nuclear-logging\" target=\"_blank\" rel=\"noopener\">US EPA｜Nuclear logging</a>。本例采用固定种子教学数据；数据结构、单位与评价范围在演示中列出。</p><aside class=\"learning-task\"><h3>先做一个可核对实验</h3><p>起点100、长度38让缺口跨越地层改变；再将起点10、长度20放到同层内，逐次重算比较插值与近邻RMSE。切换仅GR后对照结果，说明辅助Rt提供的信息；平滑同层缺口下插值可能更好。</p></aside>"
+          "html": "<p>模型在独立训练井中寻找GR和logRt相近的样本，把这些样本的密度均值作为缺口估计。测试井被遮蔽的密度不会进入近邻搜索；修复后再与封存原值比较，只在缺口内计算RMSE和MAE。</p><p>显示原值用于核对，不会改变模型输出。修复曲线标为模型估计，沿缺口与封存原值比较。</p><p class=\"sub\">专业资料：<a href=\"https://www.slb.com/-/media/files/oilfield-review/defining-log-interpretation.ashx\" target=\"_blank\" rel=\"noopener\">SLB｜Basic well log interpretation</a>；<a href=\"https://www.epa.gov/environmental-geophysics/logging-techniques-and-tools-nuclear-logging\" target=\"_blank\" rel=\"noopener\">US EPA｜Nuclear logging</a>。本例采用固定种子教学数据；数据结构、单位与评价范围在演示中列出。</p><aside class=\"learning-task\"><h3>先做一个可核对实验</h3><p>起点100、长度38让缺口跨越地层改变；再将起点10、长度20放到同层内，逐次重算比较插值与近邻RMSE。切换仅GR后对照结果，说明辅助Rt提供的信息；平滑同层缺口下插值可能更好。</p></aside>"
         }
       ]
     },
@@ -72,26 +72,26 @@
           "role": "步骤1",
           "do": "测试井按起点和长度把RHOB置为空。",
           "effect": "可见GR/Rt与带缺口RHOB",
-          "trap": "封存原值不进入修复函数。"
+          "trap": "修复读取可见曲线，封存密度在预测后打开核对。"
         },
         {
           "name": "寻找可比训练样本",
           "role": "步骤2",
           "do": "固定使用GR/100与logRt的欧氏距离，检索k近邻后平均密度。",
           "effect": "重建曲线与线性基线",
-          "trap": "关闭Rt后只按GR近邻搜索。"
+          "trap": "关闭Rt后，按GR寻找独立训练样本。"
         },
         {
           "name": "只评价遮蔽区",
           "role": "步骤3",
           "do": "解封原值，计算同一缺口的两种误差。",
           "effect": "缺口点数、RMSE和MAE",
-          "trap": "可见区不能稀释修复误差。"
+          "trap": "MAE、RMSE以缺口内采样点为分母。"
         }
       ],
       "metrics": {
         "title": "逐步核对输入、中间量与评价分母",
-        "html": "<article class=\"workflow-step flow-step\" data-step=\"0\"><h3>1. 封存并遮蔽缺口</h3><p><b>输入与动作：</b>测试井按起点和长度把RHOB置为空。</p><div class=\"table-scroll\"><table><caption>缺失与低值要区分（手算教学例，非本次运行成绩）</caption><thead><tr><th>MD / m</th><th>可见GR / API</th><th>可见RHOB / g·cm⁻³</th></tr></thead><tbody><tr><td>1550</td><td>36</td><td>2.32</td></tr><tr><td>1550.5</td><td>38</td><td>null：缺失</td></tr><tr><td>1551</td><td>103</td><td>null：缺失</td></tr><tr><td>1551.5</td><td>104</td><td>2.5</td></tr></tbody></table></div><p>缺口密度为null，不填0；GR与logRt仍可作为预测输入。</p><p><b>产物：</b>可见GR/Rt与带缺口RHOB</p><p class=\"sub\">注意：封存原值不进入修复函数。</p></article><article class=\"workflow-step flow-step\" data-step=\"1\"><h3>2. 寻找可比训练样本</h3><p><b>输入与动作：</b>固定使用GR/100与logRt的欧氏距离，检索k近邻后平均密度。</p><div class=\"table-scroll\"><table><caption>近邻平均与端点直线分开（手算教学例，非本次运行成绩）</caption><thead><tr><th>方法</th><th>可用输入</th><th>估计示例</th></tr></thead><tbody><tr><td>kNN</td><td>训练样本GR/logRt与其RHOB</td><td>(2.31+2.33+2.32)/3=2.32</td></tr><tr><td>插值</td><td>测试缺口外两端RHOB</td><td>端点之间线性变化</td></tr></tbody></table></div><p>距离用固定GR/100 API和log₁₀(Rt/1 Ω·m)；未声称学习了标准差或自动物理校正。</p><p><b>产物：</b>重建曲线与线性基线</p><p class=\"sub\">注意：关闭Rt后只按GR近邻搜索。</p></article><article class=\"workflow-step flow-step\" data-step=\"2\"><h3>3. 只评价遮蔽区</h3><p><b>输入与动作：</b>解封原值，计算同一缺口的两种误差。</p><div class=\"table-scroll\"><table><caption>同一缺口评价两种修复（手算教学例，非本次运行成绩）</caption><thead><tr><th>评价区</th><th>是否计入RMSE</th><th>原因</th></tr></thead><tbody><tr><td>缺口内</td><td>是</td><td>检验真正未知位置</td></tr><tr><td>原本可见区</td><td>否</td><td>复制观测不能稀释误差</td></tr></tbody></table></div><p>灰色封存原值只用来显示/评分；关闭Rt通道后重新计算，观察额外电性信息是否有帮助。</p><p><b>产物：</b>缺口点数、RMSE和MAE</p><p class=\"sub\">注意：可见区不能稀释修复误差。</p></article>"
+        "html": "<article class=\"workflow-step flow-step\" data-step=\"0\"><h3>1. 封存并遮蔽缺口</h3><p><b>输入与动作：</b>测试井按起点和长度把RHOB置为空。</p><div class=\"table-scroll\"><table><caption>缺失与低值要区分（手算教学例）</caption><thead><tr><th>MD / m</th><th>可见GR / API</th><th>可见RHOB / g·cm⁻³</th></tr></thead><tbody><tr><td>1550</td><td>36</td><td>2.32</td></tr><tr><td>1550.5</td><td>38</td><td>null：缺失</td></tr><tr><td>1551</td><td>103</td><td>null：缺失</td></tr><tr><td>1551.5</td><td>104</td><td>2.5</td></tr></tbody></table></div><p>缺口密度为null，不填0；GR与logRt仍可作为预测输入。</p><p><b>产物：</b>可见GR/Rt与带缺口RHOB</p><p class=\"sub\">读图要点：修复读取可见曲线，封存密度在预测后打开核对。</p></article><article class=\"workflow-step flow-step\" data-step=\"1\"><h3>2. 寻找可比训练样本</h3><p><b>输入与动作：</b>固定使用GR/100与logRt的欧氏距离，检索k近邻后平均密度。</p><div class=\"table-scroll\"><table><caption>近邻平均与端点直线分开（手算教学例）</caption><thead><tr><th>方法</th><th>可用输入</th><th>估计示例</th></tr></thead><tbody><tr><td>kNN</td><td>训练样本GR/logRt与其RHOB</td><td>(2.31+2.33+2.32)/3=2.32</td></tr><tr><td>插值</td><td>测试缺口外两端RHOB</td><td>端点之间线性变化</td></tr></tbody></table></div><p>距离用固定GR/100 API和log₁₀(Rt/1 Ω·m)；未声称学习了标准差或自动物理校正。</p><p><b>产物：</b>重建曲线与线性基线</p><p class=\"sub\">读图要点：关闭Rt后，按GR寻找独立训练样本。</p></article><article class=\"workflow-step flow-step\" data-step=\"2\"><h3>3. 只评价遮蔽区</h3><p><b>输入与动作：</b>解封原值，计算同一缺口的两种误差。</p><div class=\"table-scroll\"><table><caption>同一缺口评价两种修复（手算教学例）</caption><thead><tr><th>评价区</th><th>是否计入RMSE</th><th>原因</th></tr></thead><tbody><tr><td>缺口内</td><td>是</td><td>检验真正未知位置</td></tr><tr><td>原本可见区</td><td>否</td><td>缺口内点单独作为误差分母</td></tr></tbody></table></div><p>灰色封存原值只用来显示/评分；关闭Rt通道后重新计算，观察额外电性信息是否有帮助。</p><p><b>产物：</b>缺口点数、RMSE和MAE</p><p class=\"sub\">读图要点：MAE、RMSE以缺口内采样点为分母。</p></article>"
       }
     },
     "demo": {

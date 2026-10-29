@@ -1,7 +1,5 @@
 # 钻速预测与参数优化：从响应面到可行候选
 
-本轮只整理已有专业内容与图表，计算引擎、控制器和观测数据沿用原实现。
-
 ## 核心认识
 
 钻得更快需要同时满足泵压、扭矩和参数边界；预测高值要与可行区域一起看。
@@ -30,7 +28,7 @@
 
 专业依据： SLB｜Rate of penetration ； SLB｜Bottomhole assembly ； SLB｜Optimizing Drilling Rate of Penetration 。图示与默认数值由本案例重新构造。
 
-本例约束代理可以手算： P/MPa=3+0.016Q²+0.000015·WOB·RPM；T/(kN·m)=0.035·WOB·(UCS/60)+0.00018·WOB·RPM，其中Q用L/s、WOB用kN、RPM用r/min、UCS用MPa，系数已含对应单位。90/120/26、UCS=60时P=13.98 MPa、T=5.09 kN·m。这两式是教学代理，未模拟全部井筒水力学。
+本例约束代理可以手算： P/MPa=3+0.016Q²+0.000015·WOB·RPM；T/(kN·m)=0.035·WOB·(UCS/60)+0.00018·WOB·RPM，其中Q用L/s、WOB用kN、RPM用r/min、UCS用MPa，系数已含对应单位。90/120/26、UCS=60时P=13.98 MPa、T=5.09 kN·m。以上两式用于本页教学网格的压力与扭矩筛查。
 
 可核对操作： 先记录默认可行点数；将泵压上限调至8 MPa后运行，看推荐消失或可行域收缩，再关闭约束并运行，查看被保留的具体违反项。进入硬地层迁移预设时，训练模型不接触额外磨损项，代理预测和教学实现值可能出现明显偏差。
 
@@ -68,5 +66,3 @@
 - https://glossary.slb.com/terms/r/rate_of_penetration
 - https://glossary.slb.com/terms/b/bha
 - https://investorcenter.slb.com/static-files/41a10f14-81ca-442f-83f6-05dae85b6f67
-
-来源沿用本例原有资料；本稿是本轮的内容组织记录，不冒称新增外部专业审稿。

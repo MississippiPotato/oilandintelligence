@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-29T16:49:29.809Z",
+  "kind": "actual_Chrome_offline_file_all_five",
+  "checks": [
+    {
+      "name": "m1 file with browser network offline calculates and runs again",
+      "passed": true,
+      "detail": {
+        "runId": "s17-cuttings-lithology-r2-v1"
+      }
+    },
+    {
+      "name": "m1 file refresh calculates a new default without network",
+      "passed": true
+    },
+    {
+      "name": "m2 file with browser network offline calculates and runs again",
+      "passed": true,
+      "detail": {
+        "runId": "m2-v1-r2"
+      }
+    },
+    {
+      "name": "m2 file refresh calculates a new default without network",
+      "passed": true
+    },
+    {
+      "name": "m3 file with browser network offline calculates and runs again",
+      "passed": true,
+      "detail": {
+        "runId": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "m3 file refresh calculates a new default without network",
+      "passed": true
+    },
+    {
+      "name": "m4 file with browser network offline calculates and runs again",
+      "passed": true,
+      "detail": {
+        "runId": "s17-drilltime-boundaries-r2-v2"
+      }
+    },
+    {
+      "name": "m4 file refresh calculates a new default without network",
+      "passed": true
+    },
+    {
+      "name": "m5 file with browser network offline calculates and runs again",
+      "passed": true,
+      "detail": {
+        "runId": "s17-evidence-report-r2-v2"
+      }
+    },
+    {
+      "name": "m5 file refresh calculates a new default without network",
+      "passed": true
+    },
+    {
+      "name": "No uncaught offline calculation errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "downloads": [
+    "downloads/m1-offline.json",
+    "downloads/m2-offline.json",
+    "downloads/m3-offline.json",
+    "downloads/m4-offline.json",
+    "downloads/m5-offline.json"
+  ],
+  "screenshots": [
+    "m1-offline.png",
+    "m2-offline.png",
+    "m5-offline.png"
+  ],
+  "passed": 11,
+  "failed": 0
+}

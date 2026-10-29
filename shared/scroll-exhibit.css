@@ -1,0 +1,25 @@
+.lesson-scroll-figure{margin:20px -12px 35px!important;padding:10px 0 0;position:relative;isolation:isolate}
+.lesson-scroll{position:relative;width:100%;aspect-ratio:3;max-height:400px;isolation:isolate;perspective:1200px;overflow:visible;background:radial-gradient(ellipse at 50% 65%,#eee4d477,transparent 72%)}
+.lesson-scroll .scroll-base{position:absolute;inset:0;background:var(--scroll-art) center/100% 100% no-repeat;mask-image:var(--scroll-paper-mask);mask-size:100% 100%;mask-repeat:no-repeat;mix-blend-mode:multiply;opacity:.65;transition:opacity .5s}
+.lesson-scroll .scroll-layer{position:absolute;inset:0;pointer-events:none;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .65s,opacity .55s;opacity:.68;filter:saturate(.65);z-index:2;will-change:transform}
+.lesson-scroll .scroll-cut{position:absolute;inset:0;background:var(--scroll-art) center/100% 100% no-repeat;mask-image:var(--scroll-region-mask);mask-size:100% 100%;mask-repeat:no-repeat}
+.lesson-scroll .scroll-layer.is-current{transform:translate3d(0,-12px,36px) scale(1.03);opacity:1;filter:drop-shadow(0 12px 9px #30221342) brightness(1.035);z-index:5}
+.lesson-scroll .scroll-boundaries{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:4;max-width:none}
+.lesson-scroll .scroll-boundaries polygon{fill:none;stroke:#89715b72;stroke-width:1;stroke-dasharray:2 5;vector-effect:non-scaling-stroke;transition:stroke-opacity .45s}
+.lesson-scroll .scroll-boundaries .is-current{stroke-opacity:0}
+.lesson-scroll-figure .scroll-hotspot{position:absolute!important;inset:0;width:100%;height:100%;min-height:0!important;border:0!important;border-radius:0!important;padding:0!important;background:transparent!important;box-shadow:none!important;cursor:pointer;outline-offset:0}
+.lesson-scroll-figure .scroll-hotspot:disabled{display:none}
+.lesson-scroll-figure .scroll-hotspot:focus-visible{background:#c5a26a21!important;outline:0!important}
+.lesson-scroll-figure .scroll-menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-bottom:1px solid #ded4c8;margin:10px 18px 0;padding:0;background:transparent}
+.fx-exhibit .lesson-scroll-figure .scroll-menu button,.m2-exhibit .lesson-scroll-figure .scroll-menu button{display:flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:0;background:transparent;color:#74685f;box-shadow:none;padding:12px 8px;font-size:17px;line-height:1.5;min-height:52px;position:relative}
+.lesson-scroll-figure .scroll-menu button::after{content:'';position:absolute;left:18px;right:18px;bottom:-1px;height:2px;background:transparent;transition:background .2s}
+.fx-exhibit .lesson-scroll-figure .scroll-menu button[aria-pressed=true],.m2-exhibit .lesson-scroll-figure .scroll-menu button[aria-pressed=true]{background:transparent;color:#332d28;font-weight:650}
+.lesson-scroll-figure .scroll-menu button[aria-pressed=true]::after{background:#aa7934}
+.lesson-scroll-figure .scroll-menu button>span{color:#a88e70;font-size:15px;font-variant-numeric:tabular-nums}
+.lesson-scroll-figure .scroll-caption{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 18px;padding:13px 0;font-size:16px;color:#6a5c52}
+.lesson-scroll-figure .scroll-caption>span{display:flex;align-items:baseline;gap:15px;flex-wrap:wrap}
+.lesson-scroll-figure .scroll-caption b{font-size:17px;font-weight:600;color:#4f4239}
+.lesson-scroll-figure .scroll-caption small{font-size:15px;color:#8c8176}
+.fx-exhibit .lesson-scroll-figure .scroll-read,.m2-exhibit .lesson-scroll-figure .scroll-read{border:0;background:transparent;color:#9d4236;padding:8px 0;min-height:44px;white-space:nowrap;box-shadow:none;font-size:16px;font-weight:600}
+@media(max-width:700px){.lesson-scroll-figure{margin:16px -4px 25px!important}.lesson-scroll{max-height:none}.lesson-scroll .scroll-layer.is-current{transform:translate3d(0,-6px,18px) scale(1.025);filter:drop-shadow(0 6px 4px #30221342) brightness(1.035)}.lesson-scroll-figure .scroll-menu{grid-template-columns:repeat(2,minmax(0,1fr));margin:6px 0 0}.fx-exhibit .lesson-scroll-figure .scroll-menu button,.m2-exhibit .lesson-scroll-figure .scroll-menu button{justify-content:flex-start;padding:10px 9px;min-height:48px;font-size:16px}.lesson-scroll-figure .scroll-menu button::after{left:9px;right:9px}.lesson-scroll-figure .scroll-caption{margin:0 5px;gap:10px;align-items:center}.lesson-scroll-figure .scroll-caption>span{display:block}.lesson-scroll-figure .scroll-caption small{display:block;font-size:14px}.lesson-scroll-figure .scroll-caption b{font-size:16px}.lesson-scroll .scroll-boundaries polygon{stroke-width:.8}}
+@media(prefers-reduced-motion:reduce){.lesson-scroll *{transition:none!important}.lesson-scroll .scroll-layer.is-current{transform:translateY(-3px)}}

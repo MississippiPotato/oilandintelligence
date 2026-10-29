@@ -5,8 +5,8 @@
     "ts"
   ],
   "title": "修井周期预测",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -16,25 +16,25 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "间隔从一次检修到下一次",
-          "html": "<p>本例目标是两次已完成检修之间的天数，不是当前设备的剩余寿命。未发生下一次检修的记录属于右删失，不能把观测截止日误写成检修日；此简化数据集只包含完整间隔。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"间隔从一次检修到下一次\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><polyline points=\"35,90 680,90\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><circle cx=\"65\" cy=\"90\" r=\"7\" fill=\"#247d83\"/><text x=\"45\" y=\"65\">检修A</text><circle cx=\"330\" cy=\"90\" r=\"7\" fill=\"#247d83\"/><text x=\"310\" y=\"65\">检修B</text><circle cx=\"580\" cy=\"90\" r=\"7\" fill=\"#247d83\"/><text x=\"560\" y=\"65\">观测截止</text><text x=\"100\" y=\"140\">完整间隔：A → B</text><text x=\"375\" y=\"180\">B之后尚未检修：右删失</text></g></svg><figcaption>A至B是已知完整间隔；观测截止前尚未检修的记录只有下界。</figcaption></figure>"
+          "html": "<p>本例预测两次已完成检修之间的间隔天数，起点为检修A。未发生下一次检修的记录属于右删失，截止日只记录已观察到的间隔下界；此简化数据集只包含完整间隔。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"间隔从一次检修到下一次\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><polyline points=\"35,90 680,90\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><circle cx=\"65\" cy=\"90\" r=\"7\" fill=\"#247d83\"/><text x=\"45\" y=\"65\">检修A</text><circle cx=\"330\" cy=\"90\" r=\"7\" fill=\"#247d83\"/><text x=\"310\" y=\"65\">检修B</text><circle cx=\"580\" cy=\"90\" r=\"7\" fill=\"#247d83\"/><text x=\"560\" y=\"65\">观测截止</text><text x=\"100\" y=\"140\">完整间隔：A → B</text><text x=\"375\" y=\"180\">B之后尚未检修：右删失</text></g></svg><figcaption>A至B是已知完整间隔；观测截止前尚未检修的记录只有下界。</figcaption></figure>"
         },
         {
           "no": 2,
           "en": "METHOD",
           "title": "从运行条件解释间隔差异",
-          "html": "<p>输入为检修A时已知的、A之前半年平均负荷、含砂与停机次数。负荷增加可能加重磨损，含砂与停机也提供运行状态线索。模型使用这些可见量；设备编号和目标间隔均不作为预测输入。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"从运行条件解释间隔差异\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">负荷 / 含砂 / 停机</text><rect x=\"265\" y=\"30\" width=\"185\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"277\" y=\"58\">线性关系 + 正则</text><rect x=\"510\" y=\"30\" width=\"185\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"522\" y=\"58\">估计完整间隔</text><polyline points=\"202,52 263,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"452,52 508,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"50\" y=\"125\">预测输入先于下一次检修发生</text><text x=\"50\" y=\"170\">设备编号不参与拟合；按设备独立留出</text></g></svg><figcaption>负荷、含砂与历史停机可见于预测时，下一次检修日期只属于训练目标。</figcaption></figure>"
+          "html": "<p>输入为检修A时已知的、A之前半年平均负荷、含砂与停机次数。负荷增加可能加重磨损，含砂与停机也提供运行状态线索。模型使用这些可见量；模型读取负荷、含砂与停机次数，设备编号定位来源，目标间隔在评价时使用。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"从运行条件解释间隔差异\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><rect x=\"20\" y=\"30\" width=\"180\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"32\" y=\"58\">负荷 / 含砂 / 停机</text><rect x=\"265\" y=\"30\" width=\"185\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"277\" y=\"58\">线性关系 + 正则</text><rect x=\"510\" y=\"30\" width=\"185\" height=\"44\" rx=\"8\" fill=\"#dcebe7\"/><text x=\"522\" y=\"58\">估计完整间隔</text><polyline points=\"202,52 263,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><polyline points=\"452,52 508,52\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"50\" y=\"125\">预测输入先于下一次检修发生</text><text x=\"50\" y=\"170\">设备编号不参与拟合；按设备独立留出</text></g></svg><figcaption>负荷、含砂与历史停机可见于预测时，下一次检修日期只属于训练目标。</figcaption></figure>"
         },
         {
           "no": 3,
           "en": "EVIDENCE",
           "title": "误差反映估计的不确定",
-          "html": "<p>80台训练设备拟合按预先工程范围缩放的岭回归，32台独立设备留出评价MAE。预测间隔与经验中位数同图比较，另显示32台留出设备的MAE。查询改变后不会生成一条虚假的“真实下次检修日”。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-c\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+          "html": "<p>80台训练设备拟合按预先工程范围缩放的岭回归，32台独立设备留出评价MAE。预测间隔与经验中位数同图比较，另显示32台留出设备的MAE。查询改变时，更新估计间隔，并保留32台留出设备的误差。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-c\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。</p>"
         },
         {
           "no": 4,
           "en": "LEARNING_TASK",
           "title": "课堂实验：一次只改变一个条件",
-          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>固定负荷70%、含砂1.2g/L，将历史停机从0改为8次，记录查询估计下降多少天；留出32台设备的MAE不应随查询改变。再口述一个右删失例子：检修A后180天仍未检修，只知道间隔>180天，不能把180当完整标签。预测以检修A为起点，三个输入均来自A之前半年。</p></aside>"
+          "html": "<aside class=\"learning-task\"><h3>动手前先提出判断</h3><p>固定负荷70%、含砂1.2g/L，将历史停机从0改为8次，记录查询估计下降多少天；留出32台设备的MAE不应随查询改变。再口述一个右删失例子：检修A后180天仍未检修，只知道间隔>180天，记录为右删失下界“>180天”。预测以检修A为起点，三个输入均来自A之前半年。</p></aside>"
         }
       ]
     },
@@ -50,33 +50,33 @@
           "role": "步骤 1",
           "do": "目标为已完成两次检修之间的天数，预测时点固定在检修A，负荷、含砂、停机仅取A之前半年历史；目标为之后A至B的完整间隔。数据集中每台设备只出现一次。",
           "effect": "80条训练与32条独立留出完整间隔",
-          "trap": "尚未检修的记录不能直接当成已知间隔"
+          "trap": "完整间隔与右删失分开，截止日记录为已观察下界。"
         },
         {
           "name": "按设备留出记录",
           "role": "步骤 2",
           "do": "按设备划分训练和测试；特征按预先声明的工程范围缩放，保留同一套单位。测试设备不会影响拟合系数或训练中位数。",
           "effect": "隔离的设备组与固定尺度",
-          "trap": "设备编号不是可用于学习的数值特征"
+          "trap": "模型读取负荷、含砂与停机次数，设备编号用于定位来源。"
         },
         {
           "name": "拟合负荷与间隔关系",
           "role": "步骤 3",
           "do": "按固定工程尺度缩放后输入带截距的岭回归，以负荷率、含砂和停机次数估计间隔。改变三个输入后仅调用冻结系数生成当前查询结果。",
           "effect": "当前条件的间隔估计天数",
-          "trap": "当前估计没有未发生检修的参考真值"
+          "trap": "当前查询显示估计间隔，32台留出设备用于评价。"
         },
         {
           "name": "比较误差与当前估计",
           "role": "步骤 4",
           "do": "逐台预测32台测试设备，计算绝对误差均值；基线对所有测试设备输出训练中位数。在散点图上比较预测与参考的偏离。",
           "effect": "独立MAE、散点与中位数对照",
-          "trap": "留出平均误差并非当前设备的置信区间"
+          "trap": "留出MAE概括本批设备的平均误差。"
         }
       ],
       "metrics": {
         "title": "步骤的输入与产物",
-        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜定义完整检修间隔</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：定义完整检修间隔的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜定义完整检修间隔</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：目标为已完成两次检修之间的天数，预测时点固定在检修A，负荷、含砂、停</text><text x=\"42\" y=\"113\" font-size=\"16\">机仅取A之前半年历史；目标为之后A至B的完整间隔。数据集中每台设备只出现</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：80条训练与32条独立留出完整间隔</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：尚未检修的记录不能直接当成已知间隔</text></g></svg><figcaption>图 F1：定义完整检修间隔的动作、产物和检查点。</figcaption></figure><h4>图 F2｜按设备留出记录</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：按设备留出记录的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜按设备留出记录</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：按设备划分训练和测试；特征按预先声明的工程范围缩放，保留同一套单位。</text><text x=\"42\" y=\"113\" font-size=\"16\">测试设备不会影响拟合系数或训练中位数。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：隔离的设备组与固定尺度</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：设备编号不是可用于学习的数值特征</text></g></svg><figcaption>图 F2：按设备留出记录的动作、产物和检查点。</figcaption></figure><h4>图 F3｜拟合负荷与间隔关系</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：拟合负荷与间隔关系的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜拟合负荷与间隔关系</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：按固定工程尺度缩放后输入带截距的岭回归，以负荷率、含砂和停机次数估计</text><text x=\"42\" y=\"113\" font-size=\"16\">间隔。改变三个输入后仅调用冻结系数生成当前查询结果。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前条件的间隔估计天数</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：当前估计没有未发生检修的参考真值</text></g></svg><figcaption>图 F3：拟合负荷与间隔关系的动作、产物和检查点。</figcaption></figure><h4>图 F4｜比较误差与当前估计</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：比较误差与当前估计的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜比较误差与当前估计</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：逐台预测32台测试设备，计算绝对误差均值；基线对所有测试设备输出训练</text><text x=\"42\" y=\"113\" font-size=\"16\">中位数。在散点图上比较预测与参考的偏离。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：独立MAE、散点与中位数对照</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：留出平均误差并非当前设备的置信区间</text></g></svg><figcaption>图 F4：比较误差与当前估计的动作、产物和检查点。</figcaption></figure>"
+        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜定义完整检修间隔</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：定义完整检修间隔的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜定义完整检修间隔</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：目标为已完成两次检修之间的天数，预测时点固定在检修A，负荷、含砂、停</text><text x=\"42\" y=\"113\" font-size=\"16\">机仅取A之前半年历史；目标为之后A至B的完整间隔。数据集中每台设备只出现</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：80条训练与32条独立留出完整间隔</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：完整间隔与右删失分开，截止日记录为已观察下界。</text></g></svg><figcaption>图 F1：定义完整检修间隔的动作、产物和检查点。</figcaption></figure><h4>图 F2｜按设备留出记录</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：按设备留出记录的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜按设备留出记录</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：按设备划分训练和测试；特征按预先声明的工程范围缩放，保留同一套单位。</text><text x=\"42\" y=\"113\" font-size=\"16\">测试设备不会影响拟合系数或训练中位数。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：隔离的设备组与固定尺度</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：模型读取负荷、含砂与停机次数，设备编号用于定位来源。</text></g></svg><figcaption>图 F2：按设备留出记录的动作、产物和检查点。</figcaption></figure><h4>图 F3｜拟合负荷与间隔关系</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：拟合负荷与间隔关系的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜拟合负荷与间隔关系</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：按固定工程尺度缩放后输入带截距的岭回归，以负荷率、含砂和停机次数估计</text><text x=\"42\" y=\"113\" font-size=\"16\">间隔。改变三个输入后仅调用冻结系数生成当前查询结果。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前条件的间隔估计天数</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：当前查询显示估计间隔，32台留出设备用于评价。</text></g></svg><figcaption>图 F3：拟合负荷与间隔关系的动作、产物和检查点。</figcaption></figure><h4>图 F4｜比较误差与当前估计</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：比较误差与当前估计的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜比较误差与当前估计</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：逐台预测32台测试设备，计算绝对误差均值；基线对所有测试设备输出训练</text><text x=\"42\" y=\"113\" font-size=\"16\">中位数。在散点图上比较预测与参考的偏离。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：独立MAE、散点与中位数对照</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：留出MAE概括本批设备的平均误差。</text></g></svg><figcaption>图 F4：比较误差与当前估计的动作、产物和检查点。</figcaption></figure>"
       }
     },
     "demo": {

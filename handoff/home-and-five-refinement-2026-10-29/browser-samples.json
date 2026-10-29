@@ -1,0 +1,136 @@
+{
+  "checkedAt": "2026-10-29T16:45:54.600Z",
+  "kind": "actual_Chrome_four_of_56_audit_samples",
+  "checks": [
+    {
+      "name": "g3 rebuilt case computes default with existing engine",
+      "passed": true
+    },
+    {
+      "name": "g3 audited defensive and misleading sentences removed",
+      "passed": true
+    },
+    {
+      "name": "g3 source-matched flow renders",
+      "passed": true
+    },
+    {
+      "name": "g3 comparison task reaches real controls and changes calculated data",
+      "passed": true,
+      "detail": {
+        "before": {
+          "seed": 901,
+          "noise": 0.04
+        },
+        "after": {
+          "seed": 901,
+          "noise": 0.12
+        }
+      }
+    },
+    {
+      "name": "pr4 rebuilt case computes default with existing engine",
+      "passed": true
+    },
+    {
+      "name": "pr4 audited defensive and misleading sentences removed",
+      "passed": true
+    },
+    {
+      "name": "pr4 source-matched flow renders",
+      "passed": true
+    },
+    {
+      "name": "pr4 comparison task reaches real controls and changes calculated data",
+      "passed": true,
+      "detail": {
+        "before": {
+          "load": 65,
+          "noise": 3,
+          "threshold": 4,
+          "currentLimit": 48
+        },
+        "after": {
+          "load": 85,
+          "noise": 3,
+          "threshold": 4,
+          "currentLimit": 48
+        }
+      }
+    },
+    {
+      "name": "t3 rebuilt case computes default with existing engine",
+      "passed": true
+    },
+    {
+      "name": "t3 audited defensive and misleading sentences removed",
+      "passed": true
+    },
+    {
+      "name": "t3 source-matched flow renders",
+      "passed": true
+    },
+    {
+      "name": "t3 comparison task reaches real controls and changes calculated data",
+      "passed": true,
+      "detail": {
+        "before": {
+          "demand": 280,
+          "head": 38,
+          "price": 0.7
+        },
+        "after": {
+          "demand": 350,
+          "head": 38,
+          "price": 0.7
+        }
+      }
+    },
+    {
+      "name": "t4 rebuilt case computes default with existing engine",
+      "passed": true
+    },
+    {
+      "name": "t4 audited defensive and misleading sentences removed",
+      "passed": true
+    },
+    {
+      "name": "t4 source-matched flow renders",
+      "passed": true
+    },
+    {
+      "name": "t4 comparison task reaches real controls and changes calculated data",
+      "passed": true,
+      "detail": {
+        "before": {
+          "gain": 6,
+          "noise": 2,
+          "drift": 0
+        },
+        "after": {
+          "gain": 6,
+          "noise": 2,
+          "drift": 5
+        }
+      }
+    },
+    {
+      "name": "Enhanced portal recognizes newly rebuilt 1.1.1 lessons",
+      "passed": true
+    },
+    {
+      "name": "No uncaught sampled-case errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "g3-audited-flow.png",
+    "pr4-audited-flow.png",
+    "t3-audited-flow.png",
+    "t4-audited-flow.png"
+  ],
+  "passed": 18,
+  "failed": 0
+}

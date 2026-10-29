@@ -1,0 +1,5786 @@
+{
+  "checkedAt": "2026-10-29T16:18:00.432Z",
+  "scope": "Shared assistant 0.6.0 only; preserves current case calculations during assembly. Other concurrent teaching revisions recorded separately; no rerun of all 61 algorithms",
+  "passed": 1401,
+  "failed": 0,
+  "browserPassed": 62,
+  "cases": 61,
+  "runtimeFiles": 305,
+  "protectedFiles": 659,
+  "concurrentSourceChanges": [
+    "case-src/m1/exhibit.js",
+    "case-src/m1/flow-preview.json",
+    "case-src/m2/exhibit-ui.js",
+    "case-src/m2/presentation.js",
+    "case-src/m2/reading.js",
+    "case-src/m3/exhibit.js",
+    "case-src/m3/flow-preview.json",
+    "case-src/m4/exhibit.js",
+    "case-src/m4/flow-preview.json",
+    "case-src/m5/exhibit.js",
+    "case-src/m5/flow-preview.json",
+    "expansion-src/c1/app.js",
+    "expansion-src/c1/case.json",
+    "expansion-src/c1/knowledge.md",
+    "expansion-src/c2/app.js",
+    "expansion-src/c2/case.json",
+    "expansion-src/c2/knowledge.md",
+    "expansion-src/c3/app.js",
+    "expansion-src/c3/case.json",
+    "expansion-src/c4/app.js",
+    "expansion-src/c4/case.json",
+    "expansion-src/co1/app.js",
+    "expansion-src/co1/case.json",
+    "expansion-src/co1/flow.json",
+    "expansion-src/co1/knowledge.md",
+    "expansion-src/co2/app.js",
+    "expansion-src/co2/case.json",
+    "expansion-src/co3/app.js",
+    "expansion-src/co3/case.json",
+    "expansion-src/co4/app.js",
+    "expansion-src/co4/case.json",
+    "expansion-src/d1/case.json",
+    "expansion-src/d1/demo.html",
+    "expansion-src/d2/app.js",
+    "expansion-src/d2/case.json",
+    "expansion-src/d2/demo.html",
+    "expansion-src/d3/app.js",
+    "expansion-src/d3/case.json",
+    "expansion-src/d3/demo.html",
+    "expansion-src/d4/app.js",
+    "expansion-src/d4/case.json",
+    "expansion-src/d4/demo.html",
+    "expansion-src/d5/app.js",
+    "expansion-src/d5/case.json",
+    "expansion-src/d5/demo.html",
+    "expansion-src/e1/case.json",
+    "expansion-src/e1/demo.html",
+    "expansion-src/e1/flow.json",
+    "expansion-src/e2/case.json",
+    "expansion-src/e2/demo.html",
+    "expansion-src/e2/flow.json",
+    "expansion-src/e3/case.json",
+    "expansion-src/e3/demo.html",
+    "expansion-src/e4/case.json",
+    "expansion-src/e4/demo.html",
+    "expansion-src/e4/flow.json",
+    "expansion-src/e4/knowledge.md",
+    "expansion-src/e5/case.json",
+    "expansion-src/e5/demo.html",
+    "expansion-src/e5/flow.json",
+    "expansion-src/g1/case.json",
+    "expansion-src/g1/demo.html",
+    "expansion-src/g2/case.json",
+    "expansion-src/g2/demo.html",
+    "expansion-src/g2/knowledge.md",
+    "expansion-src/g3/case.json",
+    "expansion-src/g3/demo.html",
+    "expansion-src/g3/flow.json",
+    "expansion-src/g4/case.json",
+    "expansion-src/g4/demo.html",
+    "expansion-src/g4/knowledge.md",
+    "expansion-src/p1/app.js",
+    "expansion-src/p1/case.json",
+    "expansion-src/p1/flow.json",
+    "expansion-src/p1/knowledge.md",
+    "expansion-src/p2/case.json",
+    "expansion-src/p2/demo.html",
+    "expansion-src/p2/knowledge.md",
+    "expansion-src/p3/case.json",
+    "expansion-src/p3/demo.html",
+    "expansion-src/p3/knowledge.md",
+    "expansion-src/p4/case.json",
+    "expansion-src/p4/demo.html",
+    "expansion-src/pr1/app.js",
+    "expansion-src/pr1/case.json",
+    "expansion-src/pr1/demo.html",
+    "expansion-src/pr2/case.json",
+    "expansion-src/pr2/demo.html",
+    "expansion-src/pr2/flow.json",
+    "expansion-src/pr2/knowledge.md",
+    "expansion-src/pr3/case.json",
+    "expansion-src/pr3/demo.html",
+    "expansion-src/pr3/knowledge.md",
+    "expansion-src/pr4/case.json",
+    "expansion-src/pr4/demo.html",
+    "expansion-src/pr4/knowledge.md",
+    "expansion-src/pr5/case.json",
+    "expansion-src/pr5/demo.html",
+    "expansion-src/pr5/flow.json",
+    "expansion-src/r1/app.js",
+    "expansion-src/r1/demo.html",
+    "expansion-src/r1/flow.json",
+    "expansion-src/r2/app.js",
+    "expansion-src/r2/case.json",
+    "expansion-src/r2/flow.json",
+    "expansion-src/r2/knowledge.md",
+    "expansion-src/r3/app.js",
+    "expansion-src/r3/flow.json",
+    "expansion-src/r4/app.js",
+    "expansion-src/r4/flow.json",
+    "expansion-src/r5/app.js",
+    "expansion-src/r5/case.json",
+    "expansion-src/r5/flow.json",
+    "expansion-src/s1/case.json",
+    "expansion-src/s1/demo.html",
+    "expansion-src/s2/case.json",
+    "expansion-src/s2/demo.html",
+    "expansion-src/s3/demo.html",
+    "expansion-src/s4/case.json",
+    "expansion-src/s4/demo.html",
+    "expansion-src/s4/knowledge.md",
+    "expansion-src/s5/case.json",
+    "expansion-src/s5/demo.html",
+    "expansion-src/t1/app.js",
+    "expansion-src/t1/case.json",
+    "expansion-src/t1/flow.json",
+    "expansion-src/t2/app.js",
+    "expansion-src/t3/app.js",
+    "expansion-src/t4/app.js",
+    "expansion-src/t5/app.js",
+    "expansion-src/t5/flow.json",
+    "expansion-src/w1/app.js",
+    "expansion-src/w1/case.json",
+    "expansion-src/w1/demo.html",
+    "expansion-src/w2/app.js",
+    "expansion-src/w2/case.json",
+    "expansion-src/w2/demo.html",
+    "expansion-src/w3/app.js",
+    "expansion-src/w3/case.json",
+    "expansion-src/w3/demo.html",
+    "expansion-src/w4/case.json",
+    "expansion-src/w4/demo.html",
+    "expansion-src/w5/app.js",
+    "expansion-src/w5/case.json",
+    "expansion-src/w5/demo.html",
+    "expansion-src/wo1/case.json",
+    "expansion-src/wo1/demo.html",
+    "expansion-src/wo2/case.json",
+    "expansion-src/wo2/demo.html",
+    "expansion-src/wo2/knowledge.md",
+    "expansion-src/wo3/case.json",
+    "expansion-src/wo3/demo.html",
+    "expansion-src/wo4/case.json",
+    "expansion-src/wo4/demo.html",
+    "expansion-src/wo5/case.json",
+    "expansion-src/wo5/demo.html",
+    "expansion-src/wo5/flow.json",
+    "expansion-src/wo5/knowledge.md"
+  ],
+  "concurrentRuntimeChanges": [
+    "dist/cases/s17-cuttings-lithology",
+    "dist/cases/s17-drilltime-boundaries",
+    "dist/cases/s17-evidence-report",
+    "dist/cases/s17-fluorescence-review",
+    "dist/cases/s17-mudgas-context"
+  ],
+  "concurrentSourceChangesDuringVerification": [],
+  "onlineProviderCallVerified": false,
+  "full61AlgorithmAcceptanceClaimed": false,
+  "checks": [
+    {
+      "name": "61 current cases",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-cuttings-lithology/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-drilltime-boundaries/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-evidence-report/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-fluorescence-review/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17-mudgas-context/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c1-cement-quality/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c2-cement-displacement/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c3-cement-loss-risk/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-c4-casing-standoff/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co1-completion-choice/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co2-completion-zone-design/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co3-tubing-stress/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-co4-sliding-sleeve-control/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d1-rop-optimization/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d2-drilling-precursor/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d3-trajectory-control/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d4-tool-condition/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-d5-mud-rheology/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e1-fracture-optimization/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e2-fracture-geometry/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e3-chemical-mixture/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e4-steam-cycle/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-e5-microbial-activity/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g1-remote-lithology/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g2-geochemical-anomaly/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g3-map-elements/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-g4-fracture-survey/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p1-perforation-design/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p2-perforation-shape/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p3-perforation-catalog/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-p4-perforation-effect/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr1-pump-card/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr2-production-forecast/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr3-water-allocation/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr4-esp-warning/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-pr5-wax-risk/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r1-distillation-optimization/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r2-fcc-product-yields/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r3-maintenance-trend/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r4-lab-audit/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-r5-quality-softsensor/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s1-seismic-fault/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s2-seismic-facies/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s3-first-arrival/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s4-reservoir-inversion/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-s5-seismic-denoise/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t1-pipeline-leak/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t2-corrosion-growth/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t3-gathering-pump-optimization/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t4-meter-drift-calibration/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-t5-tank-level-crosscheck/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w1-log-boundaries/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w2-porosity-calibration/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w3-borehole-fractures/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w4-log-lithology/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-w5-curve-repair/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo1-workover-retrieval/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo2-fishing-tools/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo3-casing-damage/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo4-workover-warning/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval assistant synchronization preserves calculation bytes",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval assistant synchronization preserves other case styles",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval current self-contained assistant and five-file limit",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/case.json matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/case.json preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/demo/demo.css matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/demo/demo.js matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/demo/index.html matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/demo/index.html preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/README.txt matches current lock",
+      "passed": true
+    },
+    {
+      "name": "s17x-wo5-maintenance-interval/README.txt preserved during assistant synchronization",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/.workbuddy/memory/2026-10-22.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/.workbuddy/memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/cases/welllog-layer.case.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/cases/welllog-layer.demo.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/cases/_template.case.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/cases/_template.case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/admin.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/case-demo-host.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/case-upload.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/kit.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/layout.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/registry.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/shell.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/tokens.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/core/ui.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/assets/data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/docs/如何添加新案例.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/firstbreak-pick-case/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/firstbreak-pick-case/demo/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/firstbreak-pick-case/demo/demo.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/firstbreak-pick-case/demo/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/firstbreak-pick-case/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot portal-original/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/.workbuddy/memory/2026-10-22.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/.workbuddy/memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/cases/welllog-layer.demo.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/cases/_template.case.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/cases/_template.case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/admin.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/case-demo-host.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/case-upload.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/kit.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/layout.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/registry.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/shell.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/tokens.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/core/ui.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/assets/data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/docs/如何添加新案例.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/firstbreak-pick-case/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/firstbreak-pick-case/demo/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/firstbreak-pick-case/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot 石油勘探开发智能化案例集/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/assets/prompts.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/assets/scroll-a.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/assets/scroll-b.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/assets/scroll-selected.jpg",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/enhance.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/exhibit.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/flow-preview.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/images.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/lesson.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/real-data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m1/ui.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/assets/prompts.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/assets/scroll-a.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/assets/scroll-b.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/assets/scroll-selected.jpg",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/enhance.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/exhibit-ui.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/exhibit.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/exhibit.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/figures.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/index.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/lesson.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/presentation.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/reading.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/real-data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m2/ui.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/assets/prompts.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/assets/scroll-a.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/assets/scroll-b.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/assets/scroll-selected.jpg",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/enhance.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/exhibit-data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/exhibit.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/flow-preview.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/lesson.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m3/ui.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/assets/prompts.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/assets/scroll-a.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/assets/scroll-b.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/assets/scroll-selected.jpg",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/enhance.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/exhibit.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/flow-preview.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/lesson.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/real-data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m4/ui.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/assets/prompts.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/assets/scroll-a.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/assets/scroll-b.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/assets/scroll-selected.jpg",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/data.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/enhance-core.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/enhance.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/exhibit.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/fixtures.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/flow-preview.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/lesson.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot case-src/m5/ui.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-attempt-font.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-check.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-desktop.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-display-check.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-display-report.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-evidence-check.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-evidence.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-mobile.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/browser-report.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/generate-source.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/implementation-notes.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/lesson-prefix.inc",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/ui-body.inc",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/verification.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/verify-downloads.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c1/verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/c4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/browser-desktop.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/browser-evidence.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/browser-mobile.png",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/implementation-notes.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/lesson-prefix.inc",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/ui-body.inc",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/verification.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co1/verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/co4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/author.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/calculation-checks.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/calculation-console.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d1/verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/d5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/calculation-report.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/checks.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/e5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/check-results.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/compose.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g1/sources.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/check-results.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/compose.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/g4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/author-content.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/calculation-checks.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/p4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/author-content.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/calculation-checks.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/pr5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/computation-checks.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/r5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/check-results.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/compose.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s1/sources.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/check-results.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/compose.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/check-results.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/check-results.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/check-results.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/s5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/checks.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/computation-checks.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/t5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/calculation-checks.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/calculation-console.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w4/verify.mjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/w5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/author-content.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/calculation-report.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/checks.cjs",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo1/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/generate-owned.py",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo2/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo3/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo4/README.txt",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/app.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/case.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/demo.css",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/demo.html",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/engine-contract.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/engine.js",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/flow.json",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/knowledge.md",
+      "passed": true
+    },
+    {
+      "name": "protected snapshot expansion-src/wo5/README.txt",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/.workbuddy/memory/2026-10-22.md",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/.workbuddy/memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/cases/welllog-layer.case.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/cases/welllog-layer.demo.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/cases/_template.case.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/cases/_template.case.json",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/admin.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/case-demo-host.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/case-upload.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/kit.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/layout.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/registry.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/shell.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/tokens.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/core/ui.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/assets/data.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/docs/如何添加新案例.md",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/firstbreak-pick-case/case.json",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/firstbreak-pick-case/demo/demo.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/firstbreak-pick-case/demo/demo.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/firstbreak-pick-case/demo/index.html",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/firstbreak-pick-case/README.txt",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started portal-original/index.html",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/.workbuddy/memory/2026-10-22.md",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/.workbuddy/memory/MEMORY.md",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/cases/welllog-layer.demo.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/cases/_template.case.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/cases/_template.case.json",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/admin.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/case-demo-host.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/case-upload.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/kit.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/layout.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/registry.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/shell.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/tokens.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/core/ui.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/assets/data.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/docs/如何添加新案例.md",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/firstbreak-pick-case/case.json",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.css",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.js",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/firstbreak-pick-case/demo/index.html",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/firstbreak-pick-case/README.txt",
+      "passed": true
+    },
+    {
+      "name": "teacher original unchanged since task started 石油勘探开发智能化案例集/index.html",
+      "passed": true
+    },
+    {
+      "name": "actual browser core completed",
+      "passed": true
+    },
+    {
+      "name": "core tested current source portal/assets/s17-assistant.css",
+      "passed": true
+    },
+    {
+      "name": "core tested current source portal/assets/s17-assistant-history.js",
+      "passed": true
+    },
+    {
+      "name": "core tested current source portal/assets/s17-assistant.js",
+      "passed": true
+    },
+    {
+      "name": "core tested current source portal/assets/s17-media.js",
+      "passed": true
+    },
+    {
+      "name": "core tested current source portal/assets/s17-volcengine.js",
+      "passed": true
+    },
+    {
+      "name": "core tested current source portal/assets/s17-live2d.js",
+      "passed": true
+    },
+    {
+      "name": "core tested current source portal/assets/s17-live2d-loader.js",
+      "passed": true
+    },
+    {
+      "name": "actual browser paths completed",
+      "passed": true
+    },
+    {
+      "name": "paths tested current source portal/assets/s17-assistant.css",
+      "passed": true
+    },
+    {
+      "name": "paths tested current source portal/assets/s17-assistant-history.js",
+      "passed": true
+    },
+    {
+      "name": "paths tested current source portal/assets/s17-assistant.js",
+      "passed": true
+    },
+    {
+      "name": "paths tested current source portal/assets/s17-media.js",
+      "passed": true
+    },
+    {
+      "name": "paths tested current source portal/assets/s17-volcengine.js",
+      "passed": true
+    },
+    {
+      "name": "paths tested current source portal/assets/s17-live2d.js",
+      "passed": true
+    },
+    {
+      "name": "paths tested current source portal/assets/s17-live2d-loader.js",
+      "passed": true
+    },
+    {
+      "name": "actual browser media completed",
+      "passed": true
+    },
+    {
+      "name": "media tested current source portal/assets/s17-assistant.css",
+      "passed": true
+    },
+    {
+      "name": "media tested current source portal/assets/s17-assistant-history.js",
+      "passed": true
+    },
+    {
+      "name": "media tested current source portal/assets/s17-assistant.js",
+      "passed": true
+    },
+    {
+      "name": "media tested current source portal/assets/s17-media.js",
+      "passed": true
+    },
+    {
+      "name": "media tested current source portal/assets/s17-volcengine.js",
+      "passed": true
+    },
+    {
+      "name": "media tested current source portal/assets/s17-live2d.js",
+      "passed": true
+    },
+    {
+      "name": "media tested current source portal/assets/s17-live2d-loader.js",
+      "passed": true
+    }
+  ]
+}

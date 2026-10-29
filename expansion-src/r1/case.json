@@ -5,22 +5,22 @@
     "opt"
   ],
   "title": "常减压操作优化：收率、质量与能耗的边界",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
-      "lede": "同一原油批次，为什么不能只把炉温调高？先读懂分馏与质量约束，再用实际拟合的代理模型寻找可行操作点。",
+      "lede": "同一原油批次，炉温、回流与真空怎样共同影响分离？先读懂分馏与质量约束，再用实际拟合的代理模型寻找可行操作点。",
       "sections": [
         {
           "no": 1,
           "title": "原油怎样被分成不同馏分",
-          "html": "<p>原油包含许多沸点不同的烃。加热后进入常压塔，较易挥发的组分向上，较重组分更多留在下部；不同位置取出的馏分还需后续处理，不能简单等同于最终商品油。常压塔底重油进入减压塔，降低压力后可在较低温度汽化，减少过度加热带来的裂化和结焦风险。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 170\" role=\"img\" aria-label=\"分离依据是沸程；常压塔底重油进入减压塔，降低沸腾所需温度。\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#233d46\"><rect x=\"20\" y=\"65\" width=\"130\" height=\"48\" rx=\"8\" fill=\"#e1efed\" stroke=\"#8eb4af\"/><text x=\"85.0\" y=\"95.0\" text-anchor=\"middle\">原油 → 加热炉</text><path d=\"M150 88 L220 88\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M214 84L220 88L214 92\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><rect x=\"220\" y=\"20\" width=\"110\" height=\"130\" rx=\"8\" fill=\"#e1efed\" stroke=\"#8eb4af\"/><text x=\"275.0\" y=\"91.0\" text-anchor=\"middle\">常压塔</text><path d=\"M330 45 L440 45\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M434 41L440 45L434 49\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><text x=\"450\" y=\"50\">轻馏分：石脑油等</text><path d=\"M330 95 L440 95\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M434 91L440 95L434 99\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><text x=\"450\" y=\"100\">中间馏分：煤油、柴油</text><path d=\"M330 135 L440 135\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M434 131L440 135L434 139\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><rect x=\"445\" y=\"115\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#e1efed\" stroke=\"#8eb4af\"/><text x=\"510.0\" y=\"143.0\" text-anchor=\"middle\">减压塔</text><path d=\"M575 137 L625 137\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M619 133L625 137L619 141\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><text x=\"630\" y=\"143\">蜡油、渣油</text></g></svg><figcaption>分离依据是沸程；常压塔底重油进入减压塔，降低沸腾所需温度。</figcaption></figure>"
+          "html": "<p>原油包含许多沸点不同的烃。加热后进入常压塔，较易挥发的组分向上，较重组分更多留在下部；不同位置取出的馏分还需后续处理，进入后续加工，逐步满足成品要求。常压塔底重油进入减压塔，降低压力后可在较低温度汽化，减少过度加热带来的裂化和结焦风险。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 170\" role=\"img\" aria-label=\"分离依据是沸程；常压塔底重油进入减压塔，降低沸腾所需温度。\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#233d46\"><rect x=\"20\" y=\"65\" width=\"130\" height=\"48\" rx=\"8\" fill=\"#e1efed\" stroke=\"#8eb4af\"/><text x=\"85.0\" y=\"95.0\" text-anchor=\"middle\">原油 → 加热炉</text><path d=\"M150 88 L220 88\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M214 84L220 88L214 92\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><rect x=\"220\" y=\"20\" width=\"110\" height=\"130\" rx=\"8\" fill=\"#e1efed\" stroke=\"#8eb4af\"/><text x=\"275.0\" y=\"91.0\" text-anchor=\"middle\">常压塔</text><path d=\"M330 45 L440 45\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M434 41L440 45L434 49\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><text x=\"450\" y=\"50\">轻馏分：石脑油等</text><path d=\"M330 95 L440 95\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M434 91L440 95L434 99\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><text x=\"450\" y=\"100\">中间馏分：煤油、柴油</text><path d=\"M330 135 L440 135\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M434 131L440 135L434 139\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><rect x=\"445\" y=\"115\" width=\"130\" height=\"44\" rx=\"8\" fill=\"#e1efed\" stroke=\"#8eb4af\"/><text x=\"510.0\" y=\"143.0\" text-anchor=\"middle\">减压塔</text><path d=\"M575 137 L625 137\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"3\"/><path d=\"M619 133L625 137L619 141\" fill=\"none\" stroke=\"#377e7a\" stroke-width=\"2\"/><text x=\"630\" y=\"143\">蜡油、渣油</text></g></svg><figcaption>分离依据是沸程；常压塔底重油进入减压塔，降低沸腾所需温度。</figcaption></figure>"
         },
         {
           "no": 2,
           "title": "看懂三个指标，才知道优化什么",
-          "html": "<p>本例把总馏分回收率作为收益指标：每100 kg原料有多少进入目标馏分。单位能耗用GJ/t表示；终馏点用°C表示，是描述该馏分蒸发末端的指标。回收更多重组分可能抬高终馏点，产品质量边界因此会限制收率。教学中固定原油批次，只讨论炉出口温度、回流比、减压塔绝压三个输入。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 170\" role=\"img\" aria-label=\"加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#233d46\"><path d=\"M75 20V135H690\" stroke=\"#78918e\" fill=\"none\"/><path d=\"M85 120Q350 30 670 25\" stroke=\"#257f78\" stroke-width=\"4\" fill=\"none\"/><path d=\"M85 130Q400 125 670 30\" stroke=\"#c28148\" stroke-width=\"4\" fill=\"none\"/><text x=\"90\" y=\"25\">趋势示意：各指标单独归一化</text><text x=\"300\" y=\"160\">操作强度增加 →</text><text x=\"200\" y=\"63\" fill=\"#257f78\">回收率：提高后趋缓</text><text x=\"410\" y=\"117\" fill=\"#a45e2e\">能耗：逐渐上升</text></g></svg><figcaption>加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。</figcaption></figure><table><tr><th>输入</th><th>含义 / 教学范围</th></tr><tr><td>炉出口温度</td><td>350–380°C，提供汽化所需热量</td></tr><tr><td>回流比</td><td>1.4–2.6，塔顶返回液量与采出量之比</td></tr><tr><td>减压塔绝压</td><td>5–11kPa，数值越小真空越深</td></tr></table><p class=\"note\">这是把常压与减压单元汇总为三个输入、三个输出的教学代理系统。减压塔绝压与柴油终馏点在生成公式里的关联是人为设定，不能据此断言调减压塔压力会直接控制常压柴油终馏点。现场需要各塔的物流、侧线、换热和控制回路模型，并用留出工况实测核对推荐点。</p>"
+          "html": "<p>本例把总馏分回收率作为收益指标：每100 kg原料有多少进入目标馏分。单位能耗用GJ/t表示；终馏点用°C表示，是描述该馏分蒸发末端的指标。回收更多重组分可能抬高终馏点，产品质量边界因此会限制收率。教学中固定原油批次，只讨论炉出口温度、回流比、减压塔绝压三个输入。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 170\" role=\"img\" aria-label=\"加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。\"><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"16\" fill=\"#233d46\"><path d=\"M75 20V135H690\" stroke=\"#78918e\" fill=\"none\"/><path d=\"M85 120Q350 30 670 25\" stroke=\"#257f78\" stroke-width=\"4\" fill=\"none\"/><path d=\"M85 130Q400 125 670 30\" stroke=\"#c28148\" stroke-width=\"4\" fill=\"none\"/><text x=\"90\" y=\"25\">趋势示意：各指标单独归一化</text><text x=\"300\" y=\"160\">操作强度增加 →</text><text x=\"200\" y=\"63\" fill=\"#257f78\">回收率：提高后趋缓</text><text x=\"410\" y=\"117\" fill=\"#a45e2e\">能耗：逐渐上升</text></g></svg><figcaption>加热和回流会改变分离效果，也带来能耗；最优点取决于质量与能耗边界。</figcaption></figure><table><tr><th>输入</th><th>含义 / 教学范围</th></tr><tr><td>炉出口温度</td><td>350–380°C，提供汽化所需热量</td></tr><tr><td>回流比</td><td>1.4–2.6，塔顶返回液量与采出量之比</td></tr><tr><td>减压塔绝压</td><td>5–11kPa，数值越小真空越深</td></tr></table><p class=\"note\">这是把常压与减压单元汇总为三个输入、三个输出的教学代理系统。三输入、三输出的关联由本页教学公式设定。先分别改变操作量，再比较收率、能耗和终馏点的响应。</p>"
         },
         {
           "no": 3,
@@ -41,25 +41,25 @@
           "name": "整理独立工况",
           "do": "把炉温、回流、绝压与同批测量结果配对，固定112/48训练测试切分。",
           "effect": "每条记录的输入、结果和单位明确。",
-          "trap": "不同原油或取样时段混合会使关联失真。"
+          "trap": "在同一原油和对齐时段内拟合操作响应。"
         },
         {
           "name": "拟合并检查三个代理",
           "do": "分别拟合回收率、能耗、终馏点的二次回归，用48个独立工况计算误差。",
           "effect": "得到可重复计算的系数和各指标MAE。",
-          "trap": "高收率预测并不意味着能耗和质量也合格。"
+          "trap": "回收率、能耗与质量三项同时筛查。"
         },
         {
           "name": "筛选可行域",
           "do": "固定用户选择的绝压，枚举31×31组温度与回流，按两个上限筛选。",
           "effect": "可行与越界候选在二维图上分开。",
-          "trap": "若无可行点，应显示空解，不能放宽约束后假装成功。"
+          "trap": "可行集合为空时，显示约束冲突和空解。"
         },
         {
           "name": "比较并解释推荐点",
           "do": "在可行点中选最高回收率，与固定操作点并排比较，再检查是否贴近约束。",
           "effect": "得到条件明确的候选方案和基线差异。",
-          "trap": "结果只覆盖当前搜索范围；模型误差意味着贴边方案应额外核查。"
+          "trap": "在当前网格内搜索，将贴近约束边界的点与模型误差一起核对。"
         }
       ],
       "metrics": {
@@ -68,7 +68,7 @@
     },
     "demo": {
       "label": "可运行示范",
-      "intro": "同一原油批次，为什么不能只把炉温调高？先读懂分馏与质量约束，再用实际拟合的代理模型寻找可行操作点。",
+      "intro": "同一原油批次，炉温、回流与真空怎样共同影响分离？先读懂分馏与质量约束，再用实际拟合的代理模型寻找可行操作点。",
       "page": "demo/index.html",
       "height": 1400
     }

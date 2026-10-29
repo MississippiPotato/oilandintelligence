@@ -1,0 +1,417 @@
+{
+  "checkedAt": "2026-10-29T15:40:19.924Z",
+  "kind": "actual_chrome_homepage_only",
+  "checks": [
+    {
+      "name": "Directory starts collapsed",
+      "passed": true
+    },
+    {
+      "name": "Two detailed teaching previews removed from home",
+      "passed": true
+    },
+    {
+      "name": "Four directions and five mudlogging entries",
+      "passed": true
+    },
+    {
+      "name": "Desktop layout and images",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "documentWidth": 1440,
+        "height": 1688,
+        "images": [
+          {
+            "src": "assets/themes/theme-well-v1.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/themes/theme-geology-v1.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/themes/theme-well-v1.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/themes/theme-production-v1.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/themes/theme-refining-v1.webp",
+            "loaded": true
+          }
+        ],
+        "bodyFont": "18px"
+      }
+    },
+    {
+      "name": "Direction 地质勘探 opens matching directory",
+      "passed": true,
+      "detail": {
+        "count": "9",
+        "name": "地质勘探",
+        "keyboard": false
+      }
+    },
+    {
+      "name": "Direction 建井与测量 opens matching directory",
+      "passed": true,
+      "detail": {
+        "count": "27",
+        "name": "建井与测量",
+        "keyboard": false
+      }
+    },
+    {
+      "name": "Direction 生产与增采 opens matching directory",
+      "passed": true,
+      "detail": {
+        "count": "15",
+        "name": "生产与增采",
+        "keyboard": false
+      }
+    },
+    {
+      "name": "Direction 储运与加工 opens matching directory",
+      "passed": true,
+      "detail": {
+        "count": "10",
+        "name": "储运与加工",
+        "keyboard": true
+      }
+    },
+    {
+      "name": "All cases button clears group and starts with 12 entries",
+      "passed": true
+    },
+    {
+      "name": "Show more exposes all 61 distinct case entries",
+      "passed": true,
+      "detail": {
+        "count": 61,
+        "links": [
+          {
+            "id": "G1",
+            "url": "#/scene/g1?case=s17x-g1-remote-lithology&tab=bg"
+          },
+          {
+            "id": "G2",
+            "url": "#/scene/g2?case=s17x-g2-geochemical-anomaly&tab=bg"
+          },
+          {
+            "id": "G3",
+            "url": "#/scene/g3?case=s17x-g3-map-elements&tab=bg"
+          },
+          {
+            "id": "G4",
+            "url": "#/scene/g4?case=s17x-g4-fracture-survey&tab=bg"
+          },
+          {
+            "id": "S1",
+            "url": "#/scene/s1?case=s17x-s1-seismic-fault&tab=bg"
+          },
+          {
+            "id": "S2",
+            "url": "#/scene/s2?case=s17x-s2-seismic-facies&tab=bg"
+          },
+          {
+            "id": "S3",
+            "url": "#/scene/s3?case=s17x-s3-first-arrival&tab=bg"
+          },
+          {
+            "id": "S4",
+            "url": "#/scene/s4?case=s17x-s4-reservoir-inversion&tab=bg"
+          },
+          {
+            "id": "S5",
+            "url": "#/scene/s5?case=s17x-s5-seismic-denoise&tab=bg"
+          },
+          {
+            "id": "D1",
+            "url": "#/scene/d1?case=s17x-d1-rop-optimization&tab=bg"
+          },
+          {
+            "id": "D2",
+            "url": "#/scene/d2?case=s17x-d2-drilling-precursor&tab=bg"
+          },
+          {
+            "id": "D3",
+            "url": "#/scene/d3?case=s17x-d3-trajectory-control&tab=bg"
+          },
+          {
+            "id": "D4",
+            "url": "#/scene/d4?case=s17x-d4-tool-condition&tab=bg"
+          },
+          {
+            "id": "D5",
+            "url": "#/scene/d5?case=s17x-d5-mud-rheology&tab=bg"
+          },
+          {
+            "id": "M1",
+            "url": "../dist/cases/s17-cuttings-lithology/demo/index.html#background"
+          },
+          {
+            "id": "M2",
+            "url": "../dist/cases/s17-mudgas-context/demo/index.html#background"
+          },
+          {
+            "id": "M3",
+            "url": "../dist/cases/s17-fluorescence-review/demo/index.html#background"
+          },
+          {
+            "id": "M4",
+            "url": "../dist/cases/s17-drilltime-boundaries/demo/index.html#background"
+          },
+          {
+            "id": "M5",
+            "url": "../dist/cases/s17-evidence-report/demo/index.html#background"
+          },
+          {
+            "id": "W1",
+            "url": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg"
+          },
+          {
+            "id": "W2",
+            "url": "#/scene/w2?case=s17x-w2-porosity-calibration&tab=bg"
+          },
+          {
+            "id": "W3",
+            "url": "#/scene/w3?case=s17x-w3-borehole-fractures&tab=bg"
+          },
+          {
+            "id": "W4",
+            "url": "#/scene/w4?case=s17x-w4-log-lithology&tab=bg"
+          },
+          {
+            "id": "W5",
+            "url": "#/scene/w5?case=s17x-w5-curve-repair&tab=bg"
+          },
+          {
+            "id": "C1",
+            "url": "#/scene/c1?case=s17x-c1-cement-quality&tab=bg"
+          },
+          {
+            "id": "C2",
+            "url": "#/scene/c2?case=s17x-c2-cement-displacement&tab=bg"
+          },
+          {
+            "id": "C3",
+            "url": "#/scene/c3?case=s17x-c3-cement-loss-risk&tab=bg"
+          },
+          {
+            "id": "C4",
+            "url": "#/scene/c4?case=s17x-c4-casing-standoff&tab=bg"
+          },
+          {
+            "id": "CO1",
+            "url": "#/scene/co1?case=s17x-co1-completion-choice&tab=bg"
+          },
+          {
+            "id": "CO2",
+            "url": "#/scene/co2?case=s17x-co2-completion-zone-design&tab=bg"
+          },
+          {
+            "id": "CO3",
+            "url": "#/scene/co3?case=s17x-co3-tubing-stress&tab=bg"
+          },
+          {
+            "id": "CO4",
+            "url": "#/scene/co4?case=s17x-co4-sliding-sleeve-control&tab=bg"
+          },
+          {
+            "id": "P1",
+            "url": "#/scene/p1?case=s17x-p1-perforation-design&tab=bg"
+          },
+          {
+            "id": "P2",
+            "url": "#/scene/p2?case=s17x-p2-perforation-shape&tab=bg"
+          },
+          {
+            "id": "P3",
+            "url": "#/scene/p3?case=s17x-p3-perforation-catalog&tab=bg"
+          },
+          {
+            "id": "P4",
+            "url": "#/scene/p4?case=s17x-p4-perforation-effect&tab=bg"
+          },
+          {
+            "id": "PR1",
+            "url": "#/scene/pr1?case=s17x-pr1-pump-card&tab=bg"
+          },
+          {
+            "id": "PR2",
+            "url": "#/scene/pr2?case=s17x-pr2-production-forecast&tab=bg"
+          },
+          {
+            "id": "PR3",
+            "url": "#/scene/pr3?case=s17x-pr3-water-allocation&tab=bg"
+          },
+          {
+            "id": "PR4",
+            "url": "#/scene/pr4?case=s17x-pr4-esp-warning&tab=bg"
+          },
+          {
+            "id": "PR5",
+            "url": "#/scene/pr5?case=s17x-pr5-wax-risk&tab=bg"
+          },
+          {
+            "id": "WO1",
+            "url": "#/scene/wo1?case=s17x-wo1-workover-retrieval&tab=bg"
+          },
+          {
+            "id": "WO2",
+            "url": "#/scene/wo2?case=s17x-wo2-fishing-tools&tab=bg"
+          },
+          {
+            "id": "WO3",
+            "url": "#/scene/wo3?case=s17x-wo3-casing-damage&tab=bg"
+          },
+          {
+            "id": "WO4",
+            "url": "#/scene/wo4?case=s17x-wo4-workover-warning&tab=bg"
+          },
+          {
+            "id": "WO5",
+            "url": "#/scene/wo5?case=s17x-wo5-maintenance-interval&tab=bg"
+          },
+          {
+            "id": "E1",
+            "url": "#/scene/e1?case=s17x-e1-fracture-optimization&tab=bg"
+          },
+          {
+            "id": "E2",
+            "url": "#/scene/e2?case=s17x-e2-fracture-geometry&tab=bg"
+          },
+          {
+            "id": "E3",
+            "url": "#/scene/e3?case=s17x-e3-chemical-mixture&tab=bg"
+          },
+          {
+            "id": "E4",
+            "url": "#/scene/e4?case=s17x-e4-steam-cycle&tab=bg"
+          },
+          {
+            "id": "E5",
+            "url": "#/scene/e5?case=s17x-e5-microbial-activity&tab=bg"
+          },
+          {
+            "id": "T1",
+            "url": "#/scene/t1?case=s17x-t1-pipeline-leak&tab=bg"
+          },
+          {
+            "id": "T2",
+            "url": "#/scene/t2?case=s17x-t2-corrosion-growth&tab=bg"
+          },
+          {
+            "id": "T3",
+            "url": "#/scene/t3?case=s17x-t3-gathering-pump-optimization&tab=bg"
+          },
+          {
+            "id": "T4",
+            "url": "#/scene/t4?case=s17x-t4-meter-drift-calibration&tab=bg"
+          },
+          {
+            "id": "T5",
+            "url": "#/scene/t5?case=s17x-t5-tank-level-crosscheck&tab=bg"
+          },
+          {
+            "id": "R1",
+            "url": "#/scene/r1?case=s17x-r1-distillation-optimization&tab=bg"
+          },
+          {
+            "id": "R2",
+            "url": "#/scene/r2?case=s17x-r2-fcc-product-yields&tab=bg"
+          },
+          {
+            "id": "R3",
+            "url": "#/scene/r3?case=s17x-r3-maintenance-trend&tab=bg"
+          },
+          {
+            "id": "R4",
+            "url": "#/scene/r4?case=s17x-r4-lab-audit&tab=bg"
+          },
+          {
+            "id": "R5",
+            "url": "#/scene/r5?case=s17x-r5-quality-softsensor&tab=bg"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Stage filter selects the five mudlogging cases",
+      "passed": true
+    },
+    {
+      "name": "Keyword search finds gas interpretation",
+      "passed": true
+    },
+    {
+      "name": "Empty search can be cleared",
+      "passed": true
+    },
+    {
+      "name": "Optional method filter computes a subset",
+      "passed": true,
+      "detail": 4
+    },
+    {
+      "name": "Existing Add Case dialog still opens",
+      "passed": true
+    },
+    {
+      "name": "Overview theme does not leak to other routes",
+      "passed": true
+    },
+    {
+      "name": "Returning home restores the new overview",
+      "passed": true
+    },
+    {
+      "name": "Gas case entry navigates to the existing case",
+      "passed": true,
+      "detail": {
+        "url": "http://127.0.0.1:8755/dist/cases/s17-mudgas-context/demo/index.html#background"
+      }
+    },
+    {
+      "name": "Refresh restores a collapsed directory",
+      "passed": true
+    },
+    {
+      "name": "390px home has no horizontal page overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "documentWidth": 390,
+        "height": 2963
+      }
+    },
+    {
+      "name": "390px directory opens and filters without page overflow",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "documentWidth": 390
+      }
+    },
+    {
+      "name": "390px directory search works",
+      "passed": true
+    },
+    {
+      "name": "No uncaught JavaScript error during homepage interactions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "passed": 23,
+  "failed": 0,
+  "notTested": [
+    "No full rerun of 61 case computations",
+    "No new teacher portal import or offline case acceptance; protected files compared separately",
+    "Online assistant model requests"
+  ]
+}

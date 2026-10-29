@@ -5,8 +5,8 @@
     "ts"
   ],
   "title": "微生物采油菌群活性预测",
-  "version": "1.1.0",
-  "updated": "2026-10-29",
+  "version": "1.1.1",
+  "updated": "2026-10-30",
   "tabs": {
     "background": {
       "label": "专业背景",
@@ -16,7 +16,7 @@
           "no": 1,
           "en": "CONCEPT",
           "title": "菌群活性为何与采油研究有关",
-          "html": "<p>微生物代谢可能产生表面活性物质、聚合物或气体，进而影响油水界面、流动或局部孔隙环境。这些机制能否带来增油，需要另做代谢产物测定、油水界面性质、储层相容性及岩心驱替试验；培养条件下活跃也可能无法在孔隙中存活或运移。本例固定同一教学菌群与培养时长，活性是0–100的相对培养响应（无量纲，非菌数、代谢速率或真实实验检测值），不能直接换算成采收率。温度偏离适宜范围会影响代谢，盐度过高会增加渗透压力，因此温度适宜时仍可能因盐度而低活性。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"菌群活性为何与采油研究有关\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><polyline points=\"35,175 90,155 145,115 200,70 255,45 310,55 365,90 420,140 475,165\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"50\" y=\"28\">归一化活性</text><text x=\"490\" y=\"180\">培养温度 →</text><text x=\"490\" y=\"70\">适宜区间</text><text x=\"490\" y=\"110\">不是越热越好</text></g></svg><figcaption>活性常有适宜环境区间，不能假定温度越高活性就越强。</figcaption></figure>"
+          "html": "<p>微生物代谢可能产生表面活性物质、聚合物或气体，进而影响油水界面、流动或局部孔隙环境。从培养到采油，需要联系代谢产物、界面性质与岩心驱替观察。本页先研究培养环境怎样影响同一菌群的活性。本例固定同一教学菌群与培养时长，活性采用0–100的合成教学响应，表示相同培养时长下的相对状态，单位为无量纲。温度偏离适宜范围会影响代谢，盐度过高会增加渗透压力，因此温度适宜时仍可能因盐度而低活性。</p><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 720 210\" role=\"img\" aria-label=\"菌群活性为何与采油研究有关\"><rect width=\"720\" height=\"210\" rx=\"12\" fill=\"#f0f5f4\"/><g fill=\"#254755\" font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\"><polyline points=\"35,175 90,155 145,115 200,70 255,45 310,55 365,90 420,140 475,165\" fill=\"none\" stroke=\"#247d83\" stroke-width=\"3\"/><text x=\"50\" y=\"28\">归一化活性</text><text x=\"490\" y=\"180\">培养温度 →</text><text x=\"490\" y=\"70\">适宜区间</text><text x=\"490\" y=\"110\">沿温度寻找适宜区间</text></g></svg><figcaption>沿温度与盐度两方向比较，找到活性较高的适宜环境区间。</figcaption></figure>"
         },
         {
           "no": 2,
@@ -28,7 +28,7 @@
           "no": 3,
           "en": "EVIDENCE",
           "title": "近邻从相似实验寻找支持",
-          "html": "<p>90批训练培养实验提供温度、盐度与活性；kNN按标准化环境距离取近邻加权。30批独立实验评价MAE。对照仅用温度分箱均值，读者可观察加入盐度后是否减少误差，以及k值变大怎样平滑响应。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.netl.doe.gov/sites/default/files/2018-05/NT15522_FinalReport.pdf\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。教学数据与上述专业概念来源分开记录。</p>"
+          "html": "<p>90批训练培养实验提供温度、盐度与活性；kNN按标准化环境距离取近邻加权。30批独立实验评价MAE。对照仅用温度分箱均值，读者可观察加入盐度后是否减少误差，以及k值变大怎样平滑响应。</p><p>默认数据为固定种子的教学构造数据，所有计算在浏览器本地执行。结果随当前参数生成，可导出JSON查看。</p><p>专业概念参考：<a href=\"https://www.netl.doe.gov/sites/default/files/2018-05/NT15522_FinalReport.pdf\" target=\"_blank\" rel=\"noopener\">专业机构原始资料</a>。</p>"
         },
         {
           "no": 4,
@@ -50,33 +50,33 @@
           "role": "步骤 1",
           "do": "输入为培养温度和盐度，输出0–100相对活性。90个训练批和30个独立留出批来自同一公开教学响应式，噪声按批次独立。",
           "effect": "带温度、盐度和活性的培养试验记录",
-          "trap": "活性不是油藏采收率"
+          "trap": "活性为0—100的相对培养响应，反映固定菌群与培养时长下的状态。"
         },
         {
           "name": "按批次留出实验",
           "role": "步骤 2",
           "do": "训练批次仅进入近邻库，测试批次只计算评价。距离按45°C与85g/L的设计跨度缩放，防止单位大小主导邻居选择。",
           "effect": "统一尺度下的二维环境距离",
-          "trap": "缩放取设计范围，不读取测试标签"
+          "trap": "输入按预设设计范围缩放。"
         },
         {
           "name": "标准化后近邻回归",
           "role": "步骤 3",
           "do": "对查询点找到k个最近训练环境，按1/(距离+0.025)加权活性。改变k会改变局部响应的平滑程度。温度基线只按9°C温度分箱取均值。",
           "effect": "当前预测与单温度对照",
-          "trap": "k值改变后必须重算，旧结果标为过期"
+          "trap": "改变k后，等待当前条件更新完成再读取结果。"
         },
         {
           "name": "阅读响应面与误差",
           "role": "步骤 4",
           "do": "对19×19环境网格重复调用近邻代理，绘制温盐响应面并叠加训练位置；30批测试同时给出两种方法的MAE。",
           "effect": "响应面、训练覆盖和留出误差",
-          "trap": "远离试验点的平滑颜色不代表有真实实验支持"
+          "trap": "同时查看查询附近的试验点分布与预测颜色。"
         }
       ],
       "metrics": {
         "title": "步骤的输入与产物",
-        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜记录培养环境与活性</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：记录培养环境与活性的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜记录培养环境与活性</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：输入为培养温度和盐度，输出0–100相对活性。90个训练批和30个独</text><text x=\"42\" y=\"113\" font-size=\"16\">立留出批来自同一公开教学响应式，噪声按批次独立。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：带温度、盐度和活性的培养试验记录</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：活性不是油藏采收率</text></g></svg><figcaption>图 F1：记录培养环境与活性的动作、产物和检查点。</figcaption></figure><h4>图 F2｜按批次留出实验</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：按批次留出实验的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜按批次留出实验</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：训练批次仅进入近邻库，测试批次只计算评价。距离按45°C与85g/L</text><text x=\"42\" y=\"113\" font-size=\"16\">的设计跨度缩放，防止单位大小主导邻居选择。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：统一尺度下的二维环境距离</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：缩放取设计范围，不读取测试标签</text></g></svg><figcaption>图 F2：按批次留出实验的动作、产物和检查点。</figcaption></figure><h4>图 F3｜标准化后近邻回归</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：标准化后近邻回归的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜标准化后近邻回归</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：对查询点找到k个最近训练环境，按1/(距离+0.025)加权活性。改</text><text x=\"42\" y=\"113\" font-size=\"16\">变k会改变局部响应的平滑程度。温度基线只按9°C温度分箱取均值。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前预测与单温度对照</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：k值改变后必须重算，旧结果标为过期</text></g></svg><figcaption>图 F3：标准化后近邻回归的动作、产物和检查点。</figcaption></figure><h4>图 F4｜阅读响应面与误差</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：阅读响应面与误差的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜阅读响应面与误差</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：对19×19环境网格重复调用近邻代理，绘制温盐响应面并叠加训练位置；</text><text x=\"42\" y=\"113\" font-size=\"16\">30批测试同时给出两种方法的MAE。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：响应面、训练覆盖和留出误差</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：远离试验点的平滑颜色不代表有真实实验支持</text></g></svg><figcaption>图 F4：阅读响应面与误差的动作、产物和检查点。</figcaption></figure>"
+        "html": "<h3>逐步图册（与独立演示相同）</h3><h4>图 F1｜记录培养环境与活性</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F1：记录培养环境与活性的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 1｜记录培养环境与活性</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：输入为培养温度和盐度，输出0–100相对活性。90个训练批和30个独</text><text x=\"42\" y=\"113\" font-size=\"16\">立留出批来自同一公开教学响应式，噪声按批次独立。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：带温度、盐度和活性的培养试验记录</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：活性为0—100的相对培养响应，反映固定菌群与培养时长下的状态。</text></g></svg><figcaption>图 F1：记录培养环境与活性的动作、产物和检查点。</figcaption></figure><h4>图 F2｜按批次留出实验</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F2：按批次留出实验的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 2｜按批次留出实验</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：训练批次仅进入近邻库，测试批次只计算评价。距离按45°C与85g/L</text><text x=\"42\" y=\"113\" font-size=\"16\">的设计跨度缩放，防止单位大小主导邻居选择。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：统一尺度下的二维环境距离</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：输入按预设设计范围缩放。</text></g></svg><figcaption>图 F2：按批次留出实验的动作、产物和检查点。</figcaption></figure><h4>图 F3｜标准化后近邻回归</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F3：标准化后近邻回归的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 3｜标准化后近邻回归</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：对查询点找到k个最近训练环境，按1/(距离+0.025)加权活性。改</text><text x=\"42\" y=\"113\" font-size=\"16\">变k会改变局部响应的平滑程度。温度基线只按9°C温度分箱取均值。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：当前预测与单温度对照</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：改变k后，等待当前条件更新完成再读取结果。</text></g></svg><figcaption>图 F3：标准化后近邻回归的动作、产物和检查点。</figcaption></figure><h4>图 F4｜阅读响应面与误差</h4><figure><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 760 300\" role=\"img\" aria-label=\"图 F4：阅读响应面与误差的动作、产物和检查点。\"><rect width=\"760\" height=\"300\" rx=\"14\" fill=\"#f0f5f4\"/><g font-family=\"system-ui,Microsoft YaHei\" font-size=\"17\" fill=\"#254755\"><text x=\"28\" y=\"36\" font-size=\"21\">步骤 4｜阅读响应面与误差</text><rect x=\"25\" y=\"60\" width=\"710\" height=\"67\" rx=\"10\" fill=\"#dcebe7\"/><text x=\"42\" y=\"89\" font-size=\"16\">动作：对19×19环境网格重复调用近邻代理，绘制温盐响应面并叠加训练位置；</text><text x=\"42\" y=\"113\" font-size=\"16\">30批测试同时给出两种方法的MAE。</text><path d=\"M380 132V158\" stroke=\"#247e85\" stroke-width=\"3\"/><text x=\"360\" y=\"151\" font-size=\"19\">↓</text><text x=\"28\" y=\"187\" font-size=\"18\">产物：响应面、训练覆盖和留出误差</text><text x=\"28\" y=\"235\" font-size=\"16\">检查：同时查看查询附近的试验点分布与预测颜色。</text></g></svg><figcaption>图 F4：阅读响应面与误差的动作、产物和检查点。</figcaption></figure>"
       }
     },
     "demo": {
