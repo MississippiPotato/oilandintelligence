@@ -1,0 +1,10 @@
+import fs from 'node:fs';import path from 'node:path';
+import {ROOT,REPORT,FOUR,RUNTIME,record,walk,read} from './four-exhibit-contract.mjs';
+const target=path.join(ROOT,REPORT,'before.json');if(fs.existsSync(target))throw Error('Freeze already exists; never overwrite the starting baseline.');
+const historical=JSON.parse(read('handoff/m2-clarity-2026-10-28/before.json'));
+const mutable=FOUR.map(c=>'dist/cases/'+c.id+'/');
+const otherCaseFiles=historical.otherCaseFiles.filter(f=>!mutable.some(p=>f.path.startsWith(p))).map(f=>record(f.path)).concat(RUNTIME.map(p=>record('dist/cases/s17-mudgas-context/'+p)));
+if(otherCaseFiles.length!==285)throw Error('Expected 57 cases / 285 files');
+const engineFiles=[...new Set(FOUR.flatMap(c=>c.files).filter(p=>!p.startsWith('shared/lab')))].map(record);
+const baseline={createdAt:new Date().toISOString(),scope:'Only m1 m3 m4 m5 may change their five-file runtime packages',otherCaseFiles,protectedFiles:historical.protectedFiles.map(f=>record(f.path)),homepageStyleFiles:historical.homepageStyleFiles.map(f=>record(f.path)),engineFiles,sourceDataFiles:walk('data/real').concat(walk('data/study')).map(record),originalCaseFiles:FOUR.flatMap(c=>RUNTIME.map(p=>record('dist/cases/'+c.id+'/'+p)))};
+fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,JSON.stringify(baseline,null,2));console.log(JSON.stringify({otherCases:57,files:otherCaseFiles.length,protected:baseline.protectedFiles.length,homepage:baseline.homepageStyleFiles.length,engines:engineFiles.length,publicData:baseline.sourceDataFiles.length}));

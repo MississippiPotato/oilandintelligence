@@ -1,0 +1,154 @@
+{
+  "checkedAt": "2026-10-28T17:09:48.684Z",
+  "caseId": "s17-cuttings-lithology",
+  "scene": "m1",
+  "scope": "Actual Chrome:1440px and390px, offline file, enhanced portal, teacher original directory import/refresh/rerun/save",
+  "checks": [
+    {
+      "name": "Offline file actually computes default before interaction",
+      "passed": true
+    },
+    {
+      "name": "Desktop macro occupies320to400px height",
+      "passed": true,
+      "detail": {
+        "x": 175,
+        "y": 431.65625,
+        "width": 1090,
+        "height": 363.328125
+      }
+    },
+    {
+      "name": "Body18px and captions16px",
+      "passed": true
+    },
+    {
+      "name": "Entrance1 locates corresponding knowledge by mouse",
+      "passed": true,
+      "detail": {
+        "top": 159.96875
+      }
+    },
+    {
+      "name": "Entrance1 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance2 locates corresponding knowledge by keyboard",
+      "passed": true,
+      "detail": {
+        "top": 159.953125
+      }
+    },
+    {
+      "name": "Entrance2 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance3 locates corresponding knowledge by mouse",
+      "passed": true,
+      "detail": {
+        "top": 159.6875
+      }
+    },
+    {
+      "name": "Entrance3 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance4 locates corresponding knowledge by keyboard",
+      "passed": true,
+      "detail": {
+        "top": 159.671875
+      }
+    },
+    {
+      "name": "Entrance4 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Workflow shows current actual final product",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-cuttings-lithology-r1-v1",
+        "after": "s17-cuttings-lithology-r2-v2"
+      }
+    },
+    {
+      "name": "Overexposure loses outline without replacing selected object",
+      "passed": true,
+      "detail": {
+        "state": "missing",
+        "identityStatus": "same_layout_observation",
+        "contributors": 0,
+        "retainedPixels": 0,
+        "referenceArea": 1054
+      }
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-cuttings-lithology-r2-v2",
+        "after": "s17-cuttings-lithology-r3-v3"
+      }
+    },
+    {
+      "name": "Restoring light returns to same pixel anchor",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [],
+  "screenshots": [
+    "handoff/four-exhibits-2026-10-29/m1-desktop-map.png",
+    "handoff/four-exhibits-2026-10-29/m1-desktop-workflow.png",
+    "handoff/four-exhibits-2026-10-29/m1-outline-lost.png"
+  ],
+  "default": {
+    "runId": "s17-cuttings-lithology-r1-v1",
+    "selected": 1,
+    "counts": {
+      "detected": 12,
+      "train": 288,
+      "validation": 96,
+      "visiblePixels": 14582
+    },
+    "stepCount": 6
+  },
+  "exception": "locator.fill: Error: Malformed value\nCall log:\n\u001b[2m  - waiting for locator('#m1-coating')\u001b[22m\n\u001b[2m    - locator resolved to <input min=\"0\" max=\"1\" value=\"0\" step=\"0.05\" type=\"range\" id=\"m1-coating\"/>\u001b[22m\n\u001b[2m    - fill(\".5\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n",
+  "passed": 16,
+  "failed": 1,
+  "runtimeFiles": [
+    {
+      "path": "dist/cases/s17-cuttings-lithology/case.json",
+      "bytes": 506153,
+      "sha256": "dacbbb8e8ea4bf8711069fa1919fa842c20994c74667ffa16b8c4824ea49edb0"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/README.txt",
+      "bytes": 1392,
+      "sha256": "a1d1784238000d1469da721e6a0eae5cadeee8c4b7b87468a28a7b93cf86f825"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+      "bytes": 483657,
+      "sha256": "03df3288a303b4582d2f8dc06692b3c23b3139b5da3c0fd812a1d3b15de96197"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+      "bytes": 26844,
+      "sha256": "6d1358bbc4a15639223baaedeae773c4528c4f49b276565e0ee2f3cafb9330fd"
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "bytes": 184286,
+      "sha256": "59e44f5defde410777c4de89ecaed37320ed0fd4be80634d95d8fb23393f1b3a"
+    }
+  ]
+}

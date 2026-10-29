@@ -1,0 +1,278 @@
+{
+  "capturedAt": "2026-10-28T16:56:20.535Z",
+  "producer": "Actual Chrome default S17Inspect.flowHTML; static preview, not a browser acceptance report",
+  "caseId": "s17-fluorescence-review",
+  "sources": [
+    {
+      "path": "shared/math.js",
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    },
+    {
+      "path": "case-src/m1/images.js",
+      "sha256": "2aceee1aaf81e849b13dc959a977e2491269f110533bd55083bf543998f273bf"
+    },
+    {
+      "path": "case-src/m1/engine.js",
+      "sha256": "abd18b858e38bba96beec6ad9333f1d44b49eee3ed3e7b5fb841acce6203b63e"
+    },
+    {
+      "path": "case-src/m3/engine.js",
+      "sha256": "4c6ccc0168ed53dcba48cc28bb6350a7e369cdba2576a283c019ec9836d05148"
+    },
+    {
+      "path": "shared/lab.js",
+      "sha256": "5a483c9d484de8b52e7a5a11b3ea8f41883d78c5daf4d0596a0ab8fca523b074"
+    },
+    {
+      "path": "case-src/m3/exhibit-data.js",
+      "sha256": "e66b78176e1e511fd35d20023af1c43da0f8afde645ceb3a2fb727777cbbb49e"
+    },
+    {
+      "path": "case-src/m3/exhibit.js",
+      "sha256": "fc539a0e43a10aa18b8e3847c695e4f76a6698d842f7089058c5e292b5938f40"
+    }
+  ],
+  "snapshot": {
+    "id": "s17-fluorescence-review",
+    "version": "1.7.1",
+    "status": "ready",
+    "revision": 1,
+    "selected": 12539,
+    "activeStage": 0,
+    "identity": {
+      "wellId": "DEMO-017",
+      "parentSampleId": "DEMO-017-P1",
+      "sampleId": "DEMO-017-S1",
+      "capturePairId": "DEMO-017-WLUV1",
+      "splitGroupId": "DEMO-017-P1"
+    },
+    "exposure": 1,
+    "method": "M0",
+    "pixelCounts": {
+      "B0": {
+        "count": 2027,
+        "denominator": 14582,
+        "area": 0.13900699492525032
+      },
+      "B1": {
+        "count": 1914,
+        "denominator": 14582,
+        "area": 0.1312577149910849
+      },
+      "M0": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212
+      }
+    },
+    "selectedPixel": {
+      "index": 12539,
+      "x": 59,
+      "y": 39,
+      "inROI": true,
+      "features": [
+        0.94,
+        1.4886076354980469,
+        0.38441558837890627,
+        1.1041920471191407,
+        0.6914389942089717
+      ],
+      "score": 0.9999991655349731,
+      "selected": {
+        "B0": true,
+        "B1": true,
+        "M0": true
+      },
+      "rawRGB": [
+        99,
+        153,
+        45
+      ],
+      "correctedRGB": [
+        94,
+        148.8607635498047,
+        38.441558837890625
+      ],
+      "calculation": {
+        "names": [
+          "红通道",
+          "绿通道",
+          "蓝通道",
+          "颜色差",
+          "邻域反差"
+        ],
+        "features": [
+          0.94,
+          1.4886076354980469,
+          0.38441558837890627,
+          1.1041920471191407,
+          0.6914389942089717
+        ],
+        "mean": [
+          0.09836265197342535,
+          0.1640467252990359,
+          0.06108387298063509,
+          0.1304396179501922,
+          0.019674382521747764
+        ],
+        "sd": [
+          0.18157866771515296,
+          0.27900847213263746,
+          0.11940500042971708,
+          0.2129910595197945,
+          0.04669980145868789
+        ],
+        "standardized": [
+          4.635111374133841,
+          4.747385984642537,
+          2.7078574116214447,
+          4.571799545785404,
+          14.384742348026638
+        ],
+        "weights": [
+          0.9763008745695709,
+          1.0039603102457233,
+          0.4582122436979435,
+          1.1970376589886598,
+          -0.050386425267978624
+        ],
+        "contributions": [
+          4.5252632882942345,
+          4.76618710599792,
+          1.240773420193168,
+          5.472616225652378,
+          -0.7247957453179715
+        ],
+        "intercept": -1.2790591709056482,
+        "sum": 14.000985123914083,
+        "score": 0.9999991692907264
+      }
+    },
+    "quality": [],
+    "saturated": 0,
+    "reference": [
+      85.0000000000001,
+      85.0000000000001,
+      85.0000000000001
+    ],
+    "run": {
+      "runId": "s17-fluorescence-review-r1-v1",
+      "config": {
+        "exposure": 1,
+        "threshold": 0.35,
+        "excitation": "fixed"
+      },
+      "metrics": {
+        "methods": {
+          "B0": {
+            "tp": 2027,
+            "fp": 0,
+            "fn": 1445,
+            "tn": 61628,
+            "IoU": 0.5838133640552995,
+            "Dice": 0.7372249499909075,
+            "recall": 0.5838133640552995,
+            "precision": 1,
+            "areaError_pp": 9.90947743793718,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "B1": {
+            "tp": 1914,
+            "fp": 0,
+            "fn": 1558,
+            "tn": 61628,
+            "IoU": 0.5512672811059908,
+            "Dice": 0.7107315261789825,
+            "recall": 0.5512672811059908,
+            "precision": 1,
+            "areaError_pp": 10.684405431353722,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "M0": {
+            "tp": 3472,
+            "fp": 0,
+            "fn": 0,
+            "tn": 61628,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1,
+            "areaError_pp": 0,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          }
+        },
+        "foreground": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "fixedEvaluationPixels": 65100,
+        "truthSummary": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212,
+          "intensity": 52.75201894500772,
+          "grade": 1
+        }
+      },
+      "method": "reference_calibration + trained_pixel_logistic_regression",
+      "summary": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212,
+        "intensity": 52.75201894500772,
+        "grade": 1
+      },
+      "counts": {
+        "trainingPixels": 4970,
+        "positivePixels": 920
+      },
+      "stepCount": 6,
+      "split": {
+        "train": [
+          "IMG-TRAIN-P1",
+          "IMG-TRAIN-P2",
+          "IMG-TRAIN-P3",
+          "IMG-TRAIN-P4",
+          "IMG-TRAIN-P5",
+          "IMG-TRAIN-P6",
+          "IMG-TRAIN-P7",
+          "IMG-TRAIN-P8",
+          "IMG-TRAIN-P9",
+          "IMG-TRAIN-P10",
+          "IMG-TRAIN-P11",
+          "IMG-TRAIN-P12"
+        ],
+        "validation": [
+          "IMG-VALID-P1",
+          "IMG-VALID-P2",
+          "IMG-VALID-P3",
+          "IMG-VALID-P4"
+        ],
+        "test": [
+          "DEMO-017"
+        ]
+      }
+    },
+    "reviews": []
+  },
+  "steps": [
+    "<div class=\"fx-card\"><p class=\"m3-caption\">当前样品的实际产物 · s17-fluorescence-review-r1-v1</p><p>样品 <strong>DEMO-017-P1</strong>，白光／UV 配对号 DEMO-017-WLUV1；两张图都是 320 × 240 像素。当前对应点为 (59, 39)。</p></div>",
+    "<div class=\"fx-card\"><p class=\"m3-caption\">当前样品的实际产物 · s17-fluorescence-review-r1-v1</p><p>当前曝光 1.0 倍；参照片 RGB 为 85.0 / 85.0 / 85.0，暗场为 5.0 / 6.0 / 8.0；可见范围内发生通道饱和的像素为 <strong>0</strong> 个。</p><p>参照片与样品未触发饱和质控。</p></div>",
+    "<div class=\"fx-card\"><p class=\"m3-caption\">当前样品的实际产物 · s17-fluorescence-review-r1-v1</p><p>当前选点 (59, 39) 属于可见范围，学习显示得分为 <strong>1.000</strong>，阈值为 0.35。五项特征为 红通道 0.940；绿通道 1.489；蓝通道 0.384；颜色差 1.104；邻域反差 0.691。</p></div>",
+    "<div class=\"fx-card\"><p class=\"m3-caption\">当前样品的实际产物 · s17-fluorescence-review-r1-v1</p><p>多特征学习实际选中 <strong>3,472</strong> 个显示像素。可运行示范中查看半透明掩膜及轮廓，点击图像回查具体像素。</p></div>",
+    "<div class=\"fx-card\"><p class=\"m3-caption\">当前样品的实际产物 · s17-fluorescence-review-r1-v1</p><div class=\"scroll\"><table><thead><tr><th>方法</th><th>显示像素数</th><th>共同可见像素数</th><th>显示面积比例</th></tr></thead><tbody><tr><td>原始亮度阈值</td><td>2027</td><td>14582</td><td>13.9%</td></tr><tr><td>参照校正阈值</td><td>1914</td><td>14582</td><td>13.1%</td></tr><tr><td>多特征学习</td><td>3472</td><td>14582</td><td>23.8%</td></tr></tbody></table></div></div>",
+    "<div class=\"fx-card\"><p class=\"m3-caption\">当前样品的实际产物 · s17-fluorescence-review-r1-v1</p><p>当前样品 DEMO-017-P1，1.0 倍曝光。多特征学习的显示面积为 <strong>3472 ÷ 14582 = 23.8%</strong>。</p><p>这句话描述图上的可见范围。来源核查再对照矿物、钻井液及其他观察；保存结果会连同原图、拍摄条件与独立评价一起保留。</p></div>"
+  ]
+}

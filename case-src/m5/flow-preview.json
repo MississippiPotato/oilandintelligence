@@ -1,0 +1,1210 @@
+{
+  "capturedAt": "2026-10-28T16:56:23.921Z",
+  "producer": "Actual Chrome default S17Inspect.flowHTML; static preview, not a browser acceptance report",
+  "caseId": "s17-evidence-report",
+  "sources": [
+    {
+      "path": "shared/math.js",
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    },
+    {
+      "path": "case-src/m5/data.js",
+      "sha256": "8c1872f47baacb7d64d2ddb75bb38d5ab829ba5d9d471b66f99f7d1d4e8ff70f"
+    },
+    {
+      "path": "case-src/m5/engine.js",
+      "sha256": "40cb2f3d9a426d52643db5b88ab2051f9b4036fded49e262c5d2ef8e608cc52b"
+    },
+    {
+      "path": "case-src/m5/enhance-core.js",
+      "sha256": "c1e54559f50f4e10aa6634f2f70d05996352361df09b92b3dec3fc8014085389"
+    },
+    {
+      "path": "case-src/m5/fixtures.js",
+      "sha256": "7bf2a5c0ecdff06992c340399e47f0ba4963a8ee351bb69f16ec4c3654c2122e"
+    },
+    {
+      "path": "shared/lab.js",
+      "sha256": "5a483c9d484de8b52e7a5a11b3ea8f41883d78c5daf4d0596a0ab8fca523b074"
+    },
+    {
+      "path": "case-src/m5/exhibit.js",
+      "sha256": "9ab302cd6795f38c9c84e645193dfe612f19c1548b48aeccfef41d11054c3533"
+    }
+  ],
+  "snapshot": {
+    "id": "s17-evidence-report",
+    "status": "ready",
+    "revision": 1,
+    "selected": 2,
+    "selectedClaim": "sentence-2",
+    "stage": 0,
+    "rawText": "1200—1210 m MD：岩屑以砂岩为主。\n1210—1220 m MD：气测总气升高至3.2归一化单位。\n1220—1230 m MD：未见明显荧光。\n30—60 s：接单根停泵。\n1230—1240 m MD：建议复核当前解释候选。\n交班记录已经整理。",
+    "inputMode": "builtin",
+    "run": {
+      "runId": "s17-evidence-report-r1-v1",
+      "config": {
+        "method": "model",
+        "alpha": 0.5,
+        "margin": 0,
+        "sourceMode": "built_in_gold",
+        "trainingCorrections": {}
+      },
+      "metrics": {
+        "model": {
+          "matrix": [
+            [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 36,
+          "accepted": 36,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              6,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 36,
+          "accepted": 36,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "fields": {
+          "fieldPrecision": 1,
+          "fieldRecall": 1,
+          "fieldF1": 1,
+          "exactRecords": 6,
+          "totalRecords": 6,
+          "byField": {
+            "depthRangeMD_m": {
+              "correct": 6,
+              "total": 6
+            },
+            "timeRange_s": {
+              "correct": 6,
+              "total": 6
+            },
+            "gasValue": {
+              "correct": 6,
+              "total": 6
+            },
+            "gasUnit": {
+              "correct": 6,
+              "total": 6
+            },
+            "fluorescence": {
+              "correct": 6,
+              "total": 6
+            },
+            "rock": {
+              "correct": 6,
+              "total": 6
+            },
+            "operation": {
+              "correct": 6,
+              "total": 6
+            },
+            "negation": {
+              "correct": 6,
+              "total": 6
+            }
+          },
+          "chapterCoverage": 1,
+          "factCoverage": 1,
+          "scope": "active built-in gold text facts; exact quotations preserve extracted facts; imported evidence and edits excluded"
+        },
+        "grounding": {
+          "supported": 6,
+          "total": 6,
+          "unsupported": 0,
+          "unsupportedRate": 0,
+          "scope": "built-in gold fields + original quote template only; not arbitrary semantic entailment"
+        },
+        "expectedConflicts": 0,
+        "detectedConflicts": 0
+      },
+      "method": "character_multinomial_NB + rule_extraction + constrained_quote_template",
+      "counts": {
+        "clauses": 6,
+        "claims": 6,
+        "confirmed": 0,
+        "conflicts": 0
+      },
+      "summary": {
+        "selectedSection": "荧光",
+        "selectedQuote": "1220—1230 m MD：未见明显荧光"
+      },
+      "stepCount": 5
+    },
+    "facts": [
+      {
+        "category": 0,
+        "fields": {
+          "depthRangeMD_m": [
+            1200,
+            1210
+          ],
+          "timeRange_s": null,
+          "negation": false,
+          "uncertainty": false,
+          "rock": "砂岩"
+        },
+        "flags": [],
+        "rawQuote": "1200—1210 m MD：岩屑以砂岩为主",
+        "sourceSpanStart": 0,
+        "sourceSpanEnd": 22,
+        "factId": "fact-0",
+        "index": 0,
+        "prediction": {
+          "label": 0,
+          "proposedLabel": 0,
+          "scores": [
+            -72.59595905228572,
+            -107.66075168217498,
+            -105.27748610696688,
+            -112.98432216494521,
+            -115.9024808538249,
+            -111.8872276152453
+          ],
+          "gap": 32.681527054681155,
+          "knownFraction": 0.6521739130434783,
+          "reasons": [],
+          "contributions": [
+            {
+              "token": "岩",
+              "count": 2,
+              "contribution": 4.240596447890694
+            },
+            {
+              "token": "砂",
+              "count": 1,
+              "contribution": 3.7118785189794417
+            },
+            {
+              "token": "砂岩",
+              "count": 1,
+              "contribution": 3.7118785189794417
+            },
+            {
+              "token": "为",
+              "count": 1,
+              "contribution": 3.468256436321691
+            },
+            {
+              "token": "屑以",
+              "count": 1,
+              "contribution": 2.809010807437428
+            },
+            {
+              "token": "以",
+              "count": 1,
+              "contribution": 2.809010807437428
+            },
+            {
+              "token": "岩为",
+              "count": 1,
+              "contribution": 2.809010807437428
+            },
+            {
+              "token": "为主",
+              "count": 1,
+              "contribution": 2.809010807437428
+            },
+            {
+              "token": "主",
+              "count": 1,
+              "contribution": 2.809010807437428
+            },
+            {
+              "token": "以砂",
+              "count": 1,
+              "contribution": 2.0468707553905308
+            }
+          ]
+        },
+        "baseline": 0,
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1200,
+              1210
+            ],
+            "start": 0,
+            "end": 14,
+            "quote": "1200—1210 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "category": 1,
+        "fields": {
+          "depthRangeMD_m": [
+            1210,
+            1220
+          ],
+          "timeRange_s": null,
+          "negation": false,
+          "uncertainty": false,
+          "gasValue": 3.2,
+          "gasUnit": "归一化单位"
+        },
+        "flags": [],
+        "rawQuote": "1210—1220 m MD：气测总气升高至3.2归一化单位",
+        "sourceSpanStart": 24,
+        "sourceSpanEnd": 54,
+        "factId": "fact-1",
+        "index": 1,
+        "prediction": {
+          "label": 1,
+          "proposedLabel": 1,
+          "scores": [
+            -204.8380924940431,
+            -113.80749360032169,
+            -207.5640288650938,
+            -200.34361236670713,
+            -195.69961152820932,
+            -199.42199209183866
+          ],
+          "gap": 81.89211792788763,
+          "knownFraction": 0.7714285714285715,
+          "reasons": [],
+          "contributions": [
+            {
+              "token": "数",
+              "count": 3,
+              "contribution": 12.657629060984373
+            },
+            {
+              "token": "气",
+              "count": 2,
+              "contribution": 9.00789249843363
+            },
+            {
+              "token": "总",
+              "count": 1,
+              "contribution": 3.8196096983390255
+            },
+            {
+              "token": "数归",
+              "count": 1,
+              "contribution": 3.8196096983390255
+            },
+            {
+              "token": "归",
+              "count": 1,
+              "contribution": 3.8196096983390255
+            },
+            {
+              "token": "归一",
+              "count": 1,
+              "contribution": 3.8196096983390255
+            },
+            {
+              "token": "一化",
+              "count": 1,
+              "contribution": 3.8196096983390255
+            },
+            {
+              "token": "化",
+              "count": 1,
+              "contribution": 3.8196096983390255
+            },
+            {
+              "token": "化单",
+              "count": 1,
+              "contribution": 3.8196096983390255
+            },
+            {
+              "token": "总气",
+              "count": 1,
+              "contribution": 3.537758546198038
+            }
+          ]
+        },
+        "baseline": 1,
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1210,
+              1220
+            ],
+            "start": 24,
+            "end": 38,
+            "quote": "1210—1220 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "category": 2,
+        "fields": {
+          "depthRangeMD_m": [
+            1220,
+            1230
+          ],
+          "timeRange_s": null,
+          "negation": true,
+          "uncertainty": false,
+          "fluorescence": "荧光"
+        },
+        "flags": [],
+        "rawQuote": "1220—1230 m MD：未见明显荧光",
+        "sourceSpanStart": 56,
+        "sourceSpanEnd": 77,
+        "factId": "fact-2",
+        "index": 2,
+        "prediction": {
+          "label": 2,
+          "proposedLabel": 2,
+          "scores": [
+            -96.84675850229603,
+            -91.99910569190433,
+            -65.14171702075234,
+            -100.50562397980484,
+            -100.68771800254532,
+            -99.55480870339824
+          ],
+          "gap": 26.857388671151995,
+          "knownFraction": 0.6190476190476191,
+          "reasons": [],
+          "contributions": [
+            {
+              "token": "数",
+              "count": 2,
+              "contribution": -8.46604684832969
+            },
+            {
+              "token": "光",
+              "count": 1,
+              "contribution": 4.4723077093667865
+            },
+            {
+              "token": "荧",
+              "count": 1,
+              "contribution": 4.252679100160021
+            },
+            {
+              "token": "荧光",
+              "count": 1,
+              "contribution": 4.252679100160021
+            },
+            {
+              "token": "见",
+              "count": 1,
+              "contribution": 3.5769236623119447
+            },
+            {
+              "token": "未",
+              "count": 1,
+              "contribution": 2.9176780334276815
+            },
+            {
+              "token": "未见",
+              "count": 1,
+              "contribution": 2.9176780334276815
+            },
+            {
+              "token": "见明",
+              "count": 1,
+              "contribution": 2.9176780334276815
+            },
+            {
+              "token": "明",
+              "count": 1,
+              "contribution": 2.9176780334276815
+            },
+            {
+              "token": "明显",
+              "count": 1,
+              "contribution": 2.9176780334276815
+            }
+          ]
+        },
+        "baseline": 2,
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1220,
+              1230
+            ],
+            "start": 56,
+            "end": 70,
+            "quote": "1220—1230 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "category": 3,
+        "fields": {
+          "depthRangeMD_m": null,
+          "timeRange_s": [
+            30,
+            60
+          ],
+          "negation": false,
+          "uncertainty": false,
+          "operation": "接单根"
+        },
+        "flags": [],
+        "rawQuote": "30—60 s：接单根停泵",
+        "sourceSpanStart": 79,
+        "sourceSpanEnd": 92,
+        "factId": "fact-3",
+        "index": 3,
+        "prediction": {
+          "label": 3,
+          "proposedLabel": 3,
+          "scores": [
+            -84.51433959044897,
+            -75.00245863490134,
+            -85.62490626013634,
+            -53.574374381502906,
+            -82.76490495016354,
+            -84.51433959044897
+          ],
+          "gap": 21.42808425339844,
+          "knownFraction": 0.7333333333333333,
+          "reasons": [],
+          "contributions": [
+            {
+              "token": "数",
+              "count": 2,
+              "contribution": -8.410404908952582
+            },
+            {
+              "token": "接",
+              "count": 1,
+              "contribution": 3.9986489177075875
+            },
+            {
+              "token": "接单",
+              "count": 1,
+              "contribution": 3.9986489177075875
+            },
+            {
+              "token": "单根",
+              "count": 1,
+              "contribution": 3.9986489177075875
+            },
+            {
+              "token": "根",
+              "count": 1,
+              "contribution": 3.9986489177075875
+            },
+            {
+              "token": "停",
+              "count": 1,
+              "contribution": 3.9986489177075875
+            },
+            {
+              "token": "泵",
+              "count": 1,
+              "contribution": 3.9986489177075875
+            },
+            {
+              "token": "根停",
+              "count": 1,
+              "contribution": 2.945499003116235
+            },
+            {
+              "token": "停泵",
+              "count": 1,
+              "contribution": 2.945499003116235
+            },
+            {
+              "token": "单",
+              "count": 1,
+              "contribution": -0.04440235012696281
+            }
+          ]
+        },
+        "baseline": 3,
+        "rangeSources": [
+          {
+            "field": "timeRange_s",
+            "name": "时段",
+            "unit": "s",
+            "values": [
+              30,
+              60
+            ],
+            "start": 79,
+            "end": 86,
+            "quote": "30—60 s",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "category": 4,
+        "fields": {
+          "depthRangeMD_m": [
+            1230,
+            1240
+          ],
+          "timeRange_s": null,
+          "negation": false,
+          "uncertainty": true
+        },
+        "flags": [],
+        "rawQuote": "1230—1240 m MD：建议复核当前解释候选",
+        "sourceSpanStart": 94,
+        "sourceSpanEnd": 119,
+        "factId": "fact-4",
+        "index": 4,
+        "prediction": {
+          "label": 4,
+          "proposedLabel": 4,
+          "scores": [
+            -159.7166851551953,
+            -157.3537398540891,
+            -153.71270728492814,
+            -158.54456732367296,
+            -103.10745501217193,
+            -159.7166851551953
+          ],
+          "gap": 50.60525227275622,
+          "knownFraction": 0.7241379310344828,
+          "reasons": [],
+          "contributions": [
+            {
+              "token": "建",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "建议",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "议",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "当",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "当前",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "前",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "解",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "解释",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "释",
+              "count": 1,
+              "contribution": 3.3811095671565274
+            },
+            {
+              "token": "议复",
+              "count": 1,
+              "contribution": 2.7218639382722634
+            }
+          ]
+        },
+        "baseline": 4,
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1230,
+              1240
+            ],
+            "start": 94,
+            "end": 108,
+            "quote": "1230—1240 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "category": 5,
+        "fields": {
+          "depthRangeMD_m": null,
+          "timeRange_s": null,
+          "negation": false,
+          "uncertainty": false
+        },
+        "flags": [],
+        "rawQuote": "交班记录已经整理",
+        "sourceSpanStart": 121,
+        "sourceSpanEnd": 129,
+        "factId": "fact-5",
+        "index": 5,
+        "prediction": {
+          "label": 5,
+          "proposedLabel": 5,
+          "scores": [
+            -111.8872276152453,
+            -111.12995379295118,
+            -116.1096869113757,
+            -107.56822176274079,
+            -107.77833025051828,
+            -69.78291260833815
+          ],
+          "gap": 37.78530915440264,
+          "knownFraction": 1,
+          "reasons": [],
+          "contributions": [
+            {
+              "token": "班",
+              "count": 1,
+              "contribution": 4.335819513687979
+            },
+            {
+              "token": "已",
+              "count": 1,
+              "contribution": 3.4404354666331374
+            },
+            {
+              "token": "交",
+              "count": 1,
+              "contribution": 2.781189837748874
+            },
+            {
+              "token": "交班",
+              "count": 1,
+              "contribution": 2.781189837748874
+            },
+            {
+              "token": "班记",
+              "count": 1,
+              "contribution": 2.781189837748874
+            },
+            {
+              "token": "录已",
+              "count": 1,
+              "contribution": 2.781189837748874
+            },
+            {
+              "token": "已经",
+              "count": 1,
+              "contribution": 2.781189837748874
+            },
+            {
+              "token": "经",
+              "count": 1,
+              "contribution": 2.781189837748874
+            },
+            {
+              "token": "经整",
+              "count": 1,
+              "contribution": 2.781189837748874
+            },
+            {
+              "token": "整",
+              "count": 1,
+              "contribution": 2.781189837748874
+            }
+          ]
+        },
+        "baseline": 5,
+        "rangeSources": []
+      }
+    ],
+    "claims": [
+      {
+        "claimId": "sentence-0",
+        "revision": 1,
+        "kind": "observation",
+        "statement": "岩性记录（1200–1210 m MD）：“1200—1210 m MD：岩屑以砂岩为主”",
+        "factIds": [
+          "fact-0"
+        ],
+        "sourceRefs": [
+          {
+            "sourceRecordId": "s17-user-record",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "text_span",
+              "start": 0,
+              "end": 22
+            }
+          }
+        ],
+        "reviewStatus": "unreviewed",
+        "traceabilityStatus": "linked",
+        "supportStatus": "rule_checked",
+        "reviewHistory": [],
+        "originalStatement": "岩性记录（1200–1210 m MD）：“1200—1210 m MD：岩屑以砂岩为主”"
+      },
+      {
+        "claimId": "sentence-1",
+        "revision": 1,
+        "kind": "observation",
+        "statement": "气测记录（1210–1220 m MD）：“1210—1220 m MD：气测总气升高至3.2归一化单位”",
+        "factIds": [
+          "fact-1"
+        ],
+        "sourceRefs": [
+          {
+            "sourceRecordId": "s17-user-record",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "text_span",
+              "start": 24,
+              "end": 54
+            }
+          }
+        ],
+        "reviewStatus": "unreviewed",
+        "traceabilityStatus": "linked",
+        "supportStatus": "rule_checked",
+        "reviewHistory": [],
+        "originalStatement": "气测记录（1210–1220 m MD）：“1210—1220 m MD：气测总气升高至3.2归一化单位”"
+      },
+      {
+        "claimId": "sentence-2",
+        "revision": 1,
+        "kind": "observation",
+        "statement": "荧光记录（1220–1230 m MD）：“1220—1230 m MD：未见明显荧光”",
+        "factIds": [
+          "fact-2"
+        ],
+        "sourceRefs": [
+          {
+            "sourceRecordId": "s17-user-record",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "text_span",
+              "start": 56,
+              "end": 77
+            }
+          }
+        ],
+        "reviewStatus": "unreviewed",
+        "traceabilityStatus": "linked",
+        "supportStatus": "rule_checked",
+        "reviewHistory": [],
+        "originalStatement": "荧光记录（1220–1230 m MD）：“1220—1230 m MD：未见明显荧光”"
+      },
+      {
+        "claimId": "sentence-3",
+        "revision": 1,
+        "kind": "observation",
+        "statement": "工况记录（30–60 s）：“30—60 s：接单根停泵”",
+        "factIds": [
+          "fact-3"
+        ],
+        "sourceRefs": [
+          {
+            "sourceRecordId": "s17-user-record",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "text_span",
+              "start": 79,
+              "end": 92
+            }
+          }
+        ],
+        "reviewStatus": "unreviewed",
+        "traceabilityStatus": "linked",
+        "supportStatus": "rule_checked",
+        "reviewHistory": [],
+        "originalStatement": "工况记录（30–60 s）：“30—60 s：接单根停泵”"
+      },
+      {
+        "claimId": "sentence-4",
+        "revision": 1,
+        "kind": "observation",
+        "statement": "复核建议记录（1230–1240 m MD）：“1230—1240 m MD：建议复核当前解释候选”",
+        "factIds": [
+          "fact-4"
+        ],
+        "sourceRefs": [
+          {
+            "sourceRecordId": "s17-user-record",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "text_span",
+              "start": 94,
+              "end": 119
+            }
+          }
+        ],
+        "reviewStatus": "unreviewed",
+        "traceabilityStatus": "linked",
+        "supportStatus": "rule_checked",
+        "reviewHistory": [],
+        "originalStatement": "复核建议记录（1230–1240 m MD）：“1230—1240 m MD：建议复核当前解释候选”"
+      },
+      {
+        "claimId": "sentence-5",
+        "revision": 1,
+        "kind": "observation",
+        "statement": "其他记录（范围未提供）：“交班记录已经整理”",
+        "factIds": [
+          "fact-5"
+        ],
+        "sourceRefs": [
+          {
+            "sourceRecordId": "s17-user-record",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "text_span",
+              "start": 121,
+              "end": 129
+            }
+          }
+        ],
+        "reviewStatus": "unreviewed",
+        "traceabilityStatus": "linked",
+        "supportStatus": "rule_checked",
+        "reviewHistory": [],
+        "originalStatement": "其他记录（范围未提供）：“交班记录已经整理”"
+      }
+    ],
+    "reviews": [
+      {
+        "claimId": "sentence-0",
+        "reviewStatus": "unreviewed",
+        "reviewHistory": []
+      },
+      {
+        "claimId": "sentence-1",
+        "reviewStatus": "unreviewed",
+        "reviewHistory": []
+      },
+      {
+        "claimId": "sentence-2",
+        "reviewStatus": "unreviewed",
+        "reviewHistory": []
+      },
+      {
+        "claimId": "sentence-3",
+        "reviewStatus": "unreviewed",
+        "reviewHistory": []
+      },
+      {
+        "claimId": "sentence-4",
+        "reviewStatus": "unreviewed",
+        "reviewHistory": []
+      },
+      {
+        "claimId": "sentence-5",
+        "reviewStatus": "unreviewed",
+        "reviewHistory": []
+      }
+    ],
+    "reportRevisionHistory": [],
+    "sourceOffsets": [
+      {
+        "start": 0,
+        "end": 22,
+        "quote": "1200—1210 m MD：岩屑以砂岩为主",
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1200,
+              1210
+            ],
+            "start": 0,
+            "end": 14,
+            "quote": "1200—1210 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "start": 24,
+        "end": 54,
+        "quote": "1210—1220 m MD：气测总气升高至3.2归一化单位",
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1210,
+              1220
+            ],
+            "start": 24,
+            "end": 38,
+            "quote": "1210—1220 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "start": 56,
+        "end": 77,
+        "quote": "1220—1230 m MD：未见明显荧光",
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1220,
+              1230
+            ],
+            "start": 56,
+            "end": 70,
+            "quote": "1220—1230 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "start": 79,
+        "end": 92,
+        "quote": "30—60 s：接单根停泵",
+        "rangeSources": [
+          {
+            "field": "timeRange_s",
+            "name": "时段",
+            "unit": "s",
+            "values": [
+              30,
+              60
+            ],
+            "start": 79,
+            "end": 86,
+            "quote": "30—60 s",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "start": 94,
+        "end": 119,
+        "quote": "1230—1240 m MD：建议复核当前解释候选",
+        "rangeSources": [
+          {
+            "field": "depthRangeMD_m",
+            "name": "井段",
+            "unit": "m MD",
+            "values": [
+              1230,
+              1240
+            ],
+            "start": 94,
+            "end": 108,
+            "quote": "1230—1240 m MD",
+            "inherited": false
+          }
+        ]
+      },
+      {
+        "start": 121,
+        "end": 129,
+        "quote": "交班记录已经整理",
+        "rangeSources": []
+      }
+    ],
+    "fields": {
+      "depthRangeMD_m": [
+        1220,
+        1230
+      ],
+      "timeRange_s": null,
+      "negation": true,
+      "uncertainty": false,
+      "fluorescence": "荧光"
+    },
+    "exampleChange": null,
+    "notice": "已更新：6条子句、6句报告。"
+  },
+  "steps": [
+    "<div class=\"m5-flow-facts\" data-m5-flow=\"0\"><p><b>当前输入</b>当前版本的 130 个字符。</p><p><b>实际动作</b>保存来源修订 1，保持原文字符不变。</p><div class=\"m5-paper\"><h3>收集原始记录的实际产物</h3><div class=\"m5-quote\">1200—1210 m MD：岩屑以砂岩为主。\n1210—1220 m MD：气测总气升高至3.2归一化单位。\n1220—1230 m MD：未见明显荧光。\n30—60 s：接单根停泵。\n1230—1240 m MD：建议复核当前解释候选。\n交班记录已经整理。</div></div></div>",
+    "<div class=\"m5-flow-facts\" data-m5-flow=\"1\"><p><b>当前输入</b>选中子句：1220—1230 m MD：未见明显荧光</p><p><b>实际动作</b>按原文位置切分，规则识别该子句的范围、数值、单位与否定。</p><div class=\"m5-paper\"><h3>分句与字段抽取的实际产物</h3><div class=\"m5-quote\">1200—1210 m MD：岩屑以砂岩为主。\n1210—1220 m MD：气测总气升高至3.2归一化单位。\n<mark class=\"m5-selection\" data-m5-active-source>1220—1230 m MD：未见明显荧光</mark>。\n30—60 s：接单根停泵。\n1230—1240 m MD：建议复核当前解释候选。\n交班记录已经整理。</div><div class=\"m5-fields\"><div class=\"m5-field\"><small>井段（沿井眼深度）</small><b>1220—1230 m MD</b></div><div class=\"m5-field\"><small>时段</small><b>原文未提供</b></div><div class=\"m5-field\"><small>数值与单位</small><b>该句未给气测数值</b></div><div class=\"m5-field\"><small>观察的肯定／否定</small><b>否定：未见／未检出</b></div></div><p class=\"m5-small\">当前观察位于原文第57—77个字符，已在图中高亮。</p></div></div>",
+    "<div class=\"m5-flow-facts\" data-m5-flow=\"2\"><p><b>当前输入</b>同一子句：1220—1230 m MD：未见明显荧光</p><p><b>实际动作</b>取 21 个单字／相邻双字片段，运行固定训练库NB与关键词基线。</p><div class=\"m5-paper\"><h3>文本分类分流的实际产物</h3><div class=\"m5-score\"><svg viewBox=\"0 0 600 275\" role=\"img\" aria-label=\"当前子句六类相对对数分数，最高类为零，向左越长表示与最高类差距越大\"><text x=\"18\" y=\"22\" fill=\"#5d6570\" font-size=\"16\">当前子句 · 相对最高类的对数分数</text><line x1=\"430\" y1=\"36\" x2=\"430\" y2=\"244\" stroke=\"#918a80\"/><text x=\"18\" y=\"65\" fill=\"#343941\" font-size=\"18\">岩性</text><rect x=\"162.41680690508622\" y=\"48\" width=\"267.5831930949138\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"162.41680690508622\" cy=\"59.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"65\" fill=\"#343941\" font-size=\"17\">-31.71</text><text x=\"18\" y=\"99\" fill=\"#343941\" font-size=\"18\">气测</text><rect x=\"203.3298717492135\" y=\"82\" width=\"226.6701282507865\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"203.3298717492135\" cy=\"93.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"99\" fill=\"#343941\" font-size=\"17\">-26.86</text><text x=\"18\" y=\"133\" fill=\"#343941\" font-size=\"18\">荧光</text><rect x=\"430\" y=\"116\" width=\"2\" height=\"23\" rx=\"5\" fill=\"#b8242a\"/><circle cx=\"430\" cy=\"127.5\" r=\"4\" fill=\"#b8242a\"/><text x=\"446\" y=\"133\" fill=\"#343941\" font-size=\"17\">0.00</text><text x=\"18\" y=\"167\" fill=\"#343941\" font-size=\"18\">工况</text><rect x=\"131.53683129784775\" y=\"150\" width=\"298.46316870215225\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"131.53683129784775\" cy=\"161.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"167\" fill=\"#343941\" font-size=\"17\">-35.36</text><text x=\"18\" y=\"201\" fill=\"#343941\" font-size=\"18\">复核建议</text><rect x=\"130\" y=\"184\" width=\"300\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"130\" cy=\"195.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"201\" fill=\"#343941\" font-size=\"17\">-35.55</text><text x=\"18\" y=\"235\" fill=\"#343941\" font-size=\"18\">其他</text><rect x=\"139.5614915983998\" y=\"218\" width=\"290.4385084016002\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"139.5614915983998\" cy=\"229.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"235\" fill=\"#343941\" font-size=\"17\">-34.41</text><text x=\"430\" y=\"267\" text-anchor=\"end\" fill=\"#5d6570\" font-size=\"16\">0 = 最高类；分数差不是概率</text></svg></div><p>当前候选：荧光；关键词基线：荧光。</p></div></div>",
+    "<div class=\"m5-flow-facts\" data-m5-flow=\"3\"><p><b>当前输入</b>当前栏目“荧光”与原文字段。</p><p><b>实际动作</b>保留原文引述，将当前句子绑定到当前来源版本及文字位置。</p><div class=\"m5-paper\"><h3>组装有来源的报告的实际产物</h3><div class=\"m5-quote\">荧光记录（1220–1230 m MD）：“1220—1230 m MD：未见明显荧光”</div><p class=\"m5-small\">对应原文：1220—1230 m MD：未见明显荧光</p></div></div>",
+    "<div class=\"m5-flow-facts\" data-m5-flow=\"4\"><p><b>当前输入</b>当前报告第 3 句及其原文。</p><p><b>实际动作</b>逐项核对范围、数值、单位与否定。原文变化后，旧确认撤销。</p><div class=\"m5-paper\"><h3>逐句核查与修改的实际产物</h3><p><b>待核对</b> · 当前修订 1</p><div class=\"m5-quote\">荧光记录（1220–1230 m MD）：“1220—1230 m MD：未见明显荧光”</div><p class=\"m5-small\">本句 0 条历史；本次报告已核对 0/6 句。</p></div></div>"
+  ]
+}

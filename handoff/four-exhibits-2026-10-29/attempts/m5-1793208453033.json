@@ -1,0 +1,178 @@
+{
+  "checkedAt": "2026-10-28T17:18:41.180Z",
+  "caseId": "s17-evidence-report",
+  "scene": "m5",
+  "scope": "Actual Chrome:1440px and390px, offline file, enhanced portal, teacher original directory import/refresh/rerun/save",
+  "checks": [
+    {
+      "name": "Offline file actually computes default before interaction",
+      "passed": true
+    },
+    {
+      "name": "Desktop macro occupies320to400px height",
+      "passed": true,
+      "detail": {
+        "x": 175,
+        "y": 431.65625,
+        "width": 1090,
+        "height": 363.328125
+      }
+    },
+    {
+      "name": "Body18px and captions16px",
+      "passed": true
+    },
+    {
+      "name": "Entrance1 locates corresponding knowledge by mouse",
+      "passed": true,
+      "detail": {
+        "top": 159.96875
+      }
+    },
+    {
+      "name": "Entrance1 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance2 locates corresponding knowledge by keyboard",
+      "passed": true,
+      "detail": {
+        "top": 160.03125
+      }
+    },
+    {
+      "name": "Entrance2 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance3 locates corresponding knowledge by mouse",
+      "passed": true,
+      "detail": {
+        "top": 160.453125
+      }
+    },
+    {
+      "name": "Entrance3 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance4 locates corresponding knowledge by keyboard",
+      "passed": true,
+      "detail": {
+        "top": 160.46875
+      }
+    },
+    {
+      "name": "Entrance4 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Workflow shows current actual final product",
+      "passed": true
+    },
+    {
+      "name": "Reader can confirm current sentence",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-evidence-report-r1-v1",
+        "after": "s17-evidence-report-r2-v2"
+      }
+    },
+    {
+      "name": "Negation edit actually recomputes and invalidates current confirmation",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-evidence-report-r2-v2",
+        "after": "s17-evidence-report-r3-v3"
+      }
+    },
+    {
+      "name": "Gas value button preserves unit and updates number",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-evidence-report-r3-v3",
+        "after": "s17-evidence-report-r4-v4"
+      }
+    },
+    {
+      "name": "Range edit changes actual extracted scope",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-evidence-report-r5-v5",
+        "after": "s17-evidence-report-r6-v6"
+      }
+    },
+    {
+      "name": "Inherited interval retains both actual source references",
+      "passed": true
+    },
+    {
+      "name": "Click report locates observation and range in source",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [],
+  "screenshots": [
+    "handoff/four-exhibits-2026-10-29/m5-desktop-map.png",
+    "handoff/four-exhibits-2026-10-29/m5-desktop-workflow.png"
+  ],
+  "default": {
+    "runId": "s17-evidence-report-r1-v1",
+    "selected": 2,
+    "counts": {
+      "clauses": 6,
+      "claims": 6,
+      "confirmed": 0,
+      "conflicts": 0
+    },
+    "stepCount": 5
+  },
+  "exception": "Click report locates observation and range in source",
+  "passed": 21,
+  "failed": 1,
+  "runtimeFiles": [
+    {
+      "path": "dist/cases/s17-evidence-report/case.json",
+      "bytes": 249428,
+      "sha256": "805efe3ac5994f8a4f30a63a919b5d1d758f657ed2370177c4af4445de6ab1b5"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/README.txt",
+      "bytes": 1353,
+      "sha256": "cbb818f7123cda0edf81c4b5a7eb7544724bd3d11f49c47804196eebf7b84867"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/index.html",
+      "bytes": 228679,
+      "sha256": "565c86d363441d6622e0f4e0f7673ecb21db422bbfdcc942146f753ee26da483"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.css",
+      "bytes": 26844,
+      "sha256": "6d1358bbc4a15639223baaedeae773c4528c4f49b276565e0ee2f3cafb9330fd"
+    },
+    {
+      "path": "dist/cases/s17-evidence-report/demo/demo.js",
+      "bytes": 290259,
+      "sha256": "6f9fe5aedb490e4303d7a476490fc6b1bb7d09b9a794dd6c5fde3ea650543a10"
+    }
+  ]
+}

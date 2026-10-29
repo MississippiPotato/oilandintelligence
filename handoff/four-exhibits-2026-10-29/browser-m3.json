@@ -1,0 +1,294 @@
+{
+  "checkedAt": "2026-10-28T17:15:24.257Z",
+  "caseId": "s17-fluorescence-review",
+  "scene": "m3",
+  "scope": "Actual Chrome:1440px and390px, offline file, enhanced portal, teacher original directory import/refresh/rerun/save",
+  "checks": [
+    {
+      "name": "Offline file actually computes default before interaction",
+      "passed": true
+    },
+    {
+      "name": "Desktop macro occupies320to400px height",
+      "passed": true,
+      "detail": {
+        "x": 175,
+        "y": 431.65625,
+        "width": 1090,
+        "height": 363.328125
+      }
+    },
+    {
+      "name": "Body18px and captions16px",
+      "passed": true
+    },
+    {
+      "name": "Entrance1 locates corresponding knowledge by mouse",
+      "passed": true,
+      "detail": {
+        "top": 159.96875
+      }
+    },
+    {
+      "name": "Entrance1 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance2 locates corresponding knowledge by keyboard",
+      "passed": true,
+      "detail": {
+        "top": 159.953125
+      }
+    },
+    {
+      "name": "Entrance2 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance3 locates corresponding knowledge by mouse",
+      "passed": true,
+      "detail": {
+        "top": 160.484375
+      }
+    },
+    {
+      "name": "Entrance3 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Entrance4 locates corresponding knowledge by keyboard",
+      "passed": true,
+      "detail": {
+        "top": 160.4375
+      }
+    },
+    {
+      "name": "Entrance4 highlights only its region",
+      "passed": true
+    },
+    {
+      "name": "Workflow shows current actual final product",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "Same white image identity and denominator persist under exposure",
+      "passed": true
+    },
+    {
+      "name": "Saturation is visible and raw threshold actually changes",
+      "passed": true,
+      "detail": {
+        "B0": {
+          "count": 3475,
+          "denominator": 14582,
+          "area": 0.23830750240021945
+        },
+        "B1": {
+          "count": 2084,
+          "denominator": 14582,
+          "area": 0.14291592374159923
+        },
+        "M0": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212
+        }
+      }
+    },
+    {
+      "name": "Current B0 UI and saved main result agree",
+      "passed": true
+    },
+    {
+      "name": "Current B1 UI and saved main result agree",
+      "passed": true
+    },
+    {
+      "name": "Current M0 UI and saved main result agree",
+      "passed": true
+    },
+    {
+      "name": "Score view identifies learning method and real threshold",
+      "passed": true
+    },
+    {
+      "name": "390px shows complete image and4text entrances",
+      "passed": true
+    },
+    {
+      "name": "390px background has no page overflow",
+      "passed": true
+    },
+    {
+      "name": "390px lab stage1 contains horizontal content",
+      "passed": true
+    },
+    {
+      "name": "390px lab stage2 contains horizontal content",
+      "passed": true
+    },
+    {
+      "name": "390px lab stage3 contains horizontal content",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal uses new chapter navigation",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal actual default workflow is readable and navigable",
+      "passed": true
+    },
+    {
+      "name": "Enhanced portal sandbox computes new case",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "Exposure calculation uses2x",
+      "passed": true
+    },
+    {
+      "name": "Actual selected baseline is shown",
+      "passed": true
+    },
+    {
+      "name": "Unchanged teacher AddCase accepts complete original5file folder",
+      "passed": true
+    },
+    {
+      "name": "Teacher static background has image and clear static label",
+      "passed": true
+    },
+    {
+      "name": "Teacher workflow includes every step actual static product",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "Exposure calculation uses2x",
+      "passed": true
+    },
+    {
+      "name": "Actual selected baseline is shown",
+      "passed": true
+    },
+    {
+      "name": "Teacher refresh preserves imported case and computes default again",
+      "passed": true
+    },
+    {
+      "name": "Condition triggers actual new calculation",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "Exposure calculation uses2x",
+      "passed": true
+    },
+    {
+      "name": "Actual selected baseline is shown",
+      "passed": true
+    },
+    {
+      "name": "No runtimeJS exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No external runtime network request needed",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m3-offline-evidence.json",
+      "suggested": "s17-m3-s17-fluorescence-review-r2-v2.json"
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m3-teacher-before-refresh-evidence.json",
+      "suggested": "s17-m3-s17-fluorescence-review-r2-v2.json"
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m3-teacher-after-refresh-evidence.json",
+      "suggested": "s17-m3-s17-fluorescence-review-r2-v2.json"
+    }
+  ],
+  "screenshots": [
+    "handoff/four-exhibits-2026-10-29/m3-desktop-map.png",
+    "handoff/four-exhibits-2026-10-29/m3-desktop-workflow.png",
+    "handoff/four-exhibits-2026-10-29/m3-mask-score-comparison.png",
+    "handoff/four-exhibits-2026-10-29/m3-desktop-lab.png",
+    "handoff/four-exhibits-2026-10-29/m3-mobile-background.png",
+    "handoff/four-exhibits-2026-10-29/m3-mobile-lab.png",
+    "handoff/four-exhibits-2026-10-29/m3-enhanced-background.png",
+    "handoff/four-exhibits-2026-10-29/m3-teacher-preview.png",
+    "handoff/four-exhibits-2026-10-29/m3-teacher-after-refresh.png"
+  ],
+  "default": {
+    "runId": "s17-fluorescence-review-r1-v1",
+    "selected": 12539,
+    "counts": {
+      "trainingPixels": 4970,
+      "positivePixels": 920
+    },
+    "stepCount": 6
+  },
+  "passed": 42,
+  "failed": 0,
+  "runtimeFiles": [
+    {
+      "path": "dist/cases/s17-fluorescence-review/case.json",
+      "bytes": 451417,
+      "sha256": "c05db0899e6ee00c76d9f2937f2c1086f7d1dd38d65c7b2de46164c7a7d8f361"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/README.txt",
+      "bytes": 1399,
+      "sha256": "5f2304c1d2cb31ea32026c1039588b98d8ff23ba34568f61b3a3433f8d0a676b"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/index.html",
+      "bytes": 438118,
+      "sha256": "d4a68ab3b2108b56387c6795f9d8842e0f82e560665aebd4c29297afbdc96365"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.css",
+      "bytes": 26844,
+      "sha256": "6d1358bbc4a15639223baaedeae773c4528c4f49b276565e0ee2f3cafb9330fd"
+    },
+    {
+      "path": "dist/cases/s17-fluorescence-review/demo/demo.js",
+      "bytes": 202183,
+      "sha256": "fa3c3a71108bad0fdaa32c94d59f504622db397b8b23eeb0eef6190ac5ea54f2"
+    }
+  ]
+}

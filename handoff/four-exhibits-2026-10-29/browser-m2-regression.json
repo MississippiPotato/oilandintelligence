@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-29T01:46:49.693Z",
+  "scope": "One enhanced-portal m2 regression only; original firstbreak sample on enhanced portal",
+  "checks": [
+    {
+      "name": "Existing m2 enhanced-portal chapters still mount",
+      "passed": true
+    },
+    {
+      "name": "Existing m2 workflow still reaches evidence",
+      "passed": true
+    },
+    {
+      "name": "Unchanged m2 runtime computes default in portal sandbox",
+      "passed": true,
+      "detail": {
+        "train": 224,
+        "valid": 64
+      }
+    },
+    {
+      "name": "Teacher firstbreak package still imports unchanged on enhanced portal",
+      "passed": true
+    },
+    {
+      "name": "Regression has no browserJS exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "handoff/four-exhibits-2026-10-29/m2-portal-regression.png"
+  ],
+  "passed": 5,
+  "failed": 0,
+  "runtimeFiles": [
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "bytes": 500294,
+      "sha256": "d96c5f13daca6b8a5698a3fd76a2f4867b0836526ac2e71d2cfd539e08e1efd6"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "bytes": 1649,
+      "sha256": "283b387521d616faa4231472fc4832776683e0a3fffec477508dcb7743336bc5"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "bytes": 487047,
+      "sha256": "6d0eefe561d0bd442d5332c3f9f9259437b06d9739d5256f8e1a1df477df230d"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "bytes": 31117,
+      "sha256": "54b9ce82eeeedcd37f5c3d8f0912cc465747ef3666a397664f01f7835efd0882"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "bytes": 614817,
+      "sha256": "87ad05243b70d7f215393c1666417b29d2e57d1c96151b2b9e110e281568391e"
+    }
+  ]
+}

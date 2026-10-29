@@ -5,16 +5,19 @@
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build.mjs && node tools/build-expansion.mjs --require-all",
-    "test": "node checks/verify-m2-exhibit.mjs && node checks/verify.mjs --no-write && node checks/verify-mandatory.mjs --no-write && node checks/verify-enhancements.mjs --no-write && node checks/verify-expansion-source.mjs --require-all --no-write && node checks/verify-study.mjs --no-write && node checks/full-coverage-review.mjs --no-write",
-    "verify-delivery": "node checks/verify-m2-delivery.mjs",
-    "verify-guide": "node checks/verify-m2-delivery.mjs",
-    "package": "node checks/verify-m2-delivery.mjs && node tools/package-m2-exhibit.mjs",
+    "build": "node tools/build.mjs",
+    "test": "node checks/verify-four-exhibits.mjs && node checks/run-four-calculations.mjs",
+    "verify-delivery": "node checks/verify-four-delivery.mjs",
+    "verify-guide": "node checks/verify-four-delivery.mjs",
+    "package": "node checks/verify-four-delivery.mjs --skip-packages && node tools/package-four-exhibits.mjs && node checks/verify-four-delivery.mjs",
     "serve": "node tools/serve.mjs",
-    "accept": "node tools/accept-m2-exhibit.mjs",
+    "accept": "node tools/accept-four-exhibits.mjs",
     "build:m2": "node tools/build.mjs --m2-only",
-    "verify:m2": "node checks/verify-m2-exhibit.mjs",
-    "accept:m2": "node checks/browser-m2-exhibit.mjs",
-    "package:m2": "node tools/package-m2-exhibit.mjs"
+    "verify:m2": "node checks/verify.mjs --no-write",
+    "accept:m2": "node checks/browser-m2-four-smoke.mjs",
+    "package:m2": "node tools/package-m2-exhibit.mjs",
+    "build:four": "node tools/build.mjs",
+    "capture:four-flow": "node tools/capture-four-flow.mjs",
+    "accept:four": "node checks/browser-four-exhibits.mjs --open && node checks/browser-four-exhibits.mjs && node checks/browser-m2-four-smoke.mjs"
   }
 }

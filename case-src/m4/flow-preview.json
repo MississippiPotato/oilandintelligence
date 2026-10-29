@@ -1,0 +1,124 @@
+{
+  "capturedAt": "2026-10-28T16:56:22.258Z",
+  "producer": "Actual Chrome default S17Inspect.flowHTML; static preview, not a browser acceptance report",
+  "caseId": "s17-drilltime-boundaries",
+  "sources": [
+    {
+      "path": "shared/math.js",
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    },
+    {
+      "path": "case-src/m4/engine.js",
+      "sha256": "678b5f19103888f580997e3fc34ab34b67f03d8acb264894b73cff439d0eecbc"
+    },
+    {
+      "path": "case-src/m4/real-data.js",
+      "sha256": "e4b3e55f4be5555233e88df40d3a8f5c2e00d380438bb35e78dd3439e0bef483"
+    },
+    {
+      "path": "shared/lab.js",
+      "sha256": "5a483c9d484de8b52e7a5a11b3ea8f41883d78c5daf4d0596a0ab8fca523b074"
+    },
+    {
+      "path": "case-src/m4/exhibit.js",
+      "sha256": "fbc22e59833b20b5cada573433e885dfc4ac09662a2b80e698ed00d959796e25"
+    }
+  ],
+  "snapshot": {
+    "id": "s17-drilltime-boundaries",
+    "status": "ready",
+    "revision": 1,
+    "selected": 160,
+    "selectedDepth": 1240,
+    "preset": "operation",
+    "normalize": true,
+    "thickness": 1,
+    "thinSampling": null,
+    "stage": 0,
+    "boundaries": [],
+    "baselineBoundaries": [
+      1239.5
+    ],
+    "selectedrow": {
+      "depthMD_m": 1240,
+      "active": true,
+      "ROP_m_h": 29.731954709261476,
+      "drillTime_min_m": 2.0180307883124167,
+      "activeDrillingTime_min": 0.5045076970781041,
+      "WOB_kN": 27,
+      "RPM": 155,
+      "flow_m3_s": 0.025,
+      "torque_kNm": 7.298367051845417,
+      "qualityFlags": [],
+      "relativeResponse": 0.016391301905352762,
+      "predictedROP": 29.24858164278264,
+      "responseFeatures": [
+        0.016391301905352762,
+        0.07295881480677113
+      ],
+      "group": 1
+    },
+    "run": {
+      "runId": "s17-drilltime-boundaries-r1-v1",
+      "config": {
+        "k": 3,
+        "penalty": 0.2,
+        "minLength": 2,
+        "normalize": true,
+        "tolerance": 1
+      },
+      "metrics": {
+        "model": {
+          "pairs": [],
+          "precision": null,
+          "recall": null,
+          "F1": null,
+          "misses": [],
+          "extras": [],
+          "MAE_m": null,
+          "predCount": 0,
+          "truthCount": 0
+        },
+        "baseline": {
+          "pairs": [],
+          "precision": 0,
+          "recall": null,
+          "F1": 0,
+          "misses": [],
+          "extras": [
+            0
+          ],
+          "MAE_m": null,
+          "predCount": 1,
+          "truthCount": 0
+        },
+        "falseOperationBoundaries": {
+          "model": 0,
+          "baseline": 1
+        },
+        "thinMisses": null,
+        "tolerance_m": 1
+      },
+      "method": "independent_ridge_calibration + training_kmeans + DP_continuity",
+      "summary": {
+        "boundaries": [],
+        "outOfDomain": 0,
+        "validRows": 316
+      },
+      "counts": {
+        "rows": 321,
+        "valid": 316
+      },
+      "stepCount": 6
+    },
+    "reviews": []
+  },
+  "steps": [
+    "<div class=\"fx-card\"><h3>有效记录与单位</h3><div class=\"fx-grid\"><p><strong>输入</strong><br>逐深度钻进记录及单位</p><p><strong>实际动作</strong><br>保留有效钻进点，钻时由60÷ROP换算；停钻保留缺口。</p><p><strong>产物</strong><br>有效点列表、单位明确的钻速与钻时。</p></div><div class=\"fx-chart\"><table><thead><tr><th>当前深度</th><th>有效记录</th><th>ROP</th><th>钻时</th></tr></thead><tbody><tr><td>1240.00 m MD</td><td>有效钻进</td><td>29.73 m/h</td><td>2.02 min/m</td></tr></tbody></table></div><p>本轮 321 条记录，316 条有效；缺口保留。</p></div>",
+    "<div class=\"fx-card\"><h3>工况标定</h3><div class=\"fx-grid\"><p><strong>输入</strong><br>独立同响应标定样本中的钻压、转速、排量与钻速</p><p><strong>实际动作</strong><br>拟合工况与log钻速的关系，在当前深度估计钻速。</p><p><strong>产物</strong><br>当前点的工况估计钻速。</p></div><p>当前 WOB 27.0 kN、RPM 155、排量 0.025 m³/s。独立标定给出的估计钻速：<strong>29.25 m/h</strong>。</p></div>",
+    "<div class=\"fx-card\"><h3>相对响应</h3><div class=\"fx-grid\"><p><strong>输入</strong><br>同一点实际钻速、工况估计与扭矩</p><p><strong>实际动作</strong><br>计算相对钻速及扣除工况项的扭矩响应。</p><p><strong>产物</strong><br>用于比较的两维响应。</p></div><div class=\"fx-chart\"><table><thead><tr><th>当前项</th><th>数值</th></tr></thead><tbody><tr><td>实际 log ROP</td><td>3.3922</td></tr><tr><td>工况估计 log ROP</td><td>3.3758</td></tr><tr><td>当前校正</td><td>开启：扣除变化工况</td></tr><tr><td>用于分组的相对响应</td><td>0.0164</td></tr><tr><td>扭矩辅助响应</td><td>0.0730</td></tr></tbody></table></div><p>固定教学扭矩变换：(T−4−0.12×WOB)÷0.8；两项随后按训练井尺度缩放。</p></div>",
+    "<div class=\"fx-card\"><h3>相似响应分组</h3><div class=\"fx-grid\"><p><strong>输入</strong><br>当前两维响应及训练井形成的组中心</p><p><strong>实际动作</strong><br>按训练井尺度标准化后比较各组距离。</p><p><strong>产物</strong><br>各组距离与相似程度。</p></div><div class=\"fx-chart\"><table><thead><tr><th>响应组</th><th>当前点实际距离</th></tr></thead><tbody><tr><td>组A</td><td>1.559</td></tr><tr><td>组B</td><td>0.196</td></tr><tr><td>组C</td><td>1.873</td></tr></tbody></table></div></div>",
+    "<div class=\"fx-card\"><h3>连续分段</h3><div class=\"fx-grid\"><p><strong>输入</strong><br>沿深度排列的组距离</p><p><strong>实际动作</strong><br>综合逐点距离与段间切换代价，合并过短片段。</p><p><strong>产物</strong><br>响应条带与候选界面。</p></div><p>本轮实际输出 0 个候选界面。</p><div class=\"m4-bands\"><span class=\"m4-band\">组B　1200.00–1228.50 m</span><span class=\"m4-band\">组B　1230.00–1280.00 m</span></div></div>",
+    "<div class=\"fx-card\"><h3>候选界面核查</h3><div class=\"fx-grid\"><p><strong>输入</strong><br>原始基线、模型界面与同深度工况</p><p><strong>实际动作</strong><br>回到原曲线核查跳变，区分操作改变和需要进一步检查的响应。</p><p><strong>产物</strong><br>带原始深度来源的候选位置。</p></div><div class=\"fx-chart\"><table><thead><tr><th>方法</th><th>候选深度 / m MD</th></tr></thead><tbody><tr><td>原始基线</td><td>1239.500</td></tr><tr><td>模型</td><td>无</td></tr></tbody></table></div><p>先对照同深度的钻压与转速；再结合岩屑或测井核查。当前组号保持响应组含义。</p></div>"
+  ]
+}

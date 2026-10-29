@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-28T17:31:32.462Z",
+  "scope": "One enhanced-portal m2 regression only; original firstbreak sample on enhanced portal",
+  "checks": [],
+  "errors": [],
+  "screenshots": [],
+  "exception": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.m2-map-index button').nth(1)\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" data-m2-map=\"1\" aria-pressed=\"false\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <span class=\"imp-name\" title=\"demo/demo.css\">demo/demo.css</span> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div class=\"mdl-f\">…</div> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <span class=\"imp-name\" title=\"demo/demo.css\">demo/demo.css</span> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"mdl-h\">…</div> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"mdl-f\">…</div> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <span class=\"imp-name\" title=\"demo/demo.css\">demo/demo.css</span> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"mdl-h\">…</div> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"mdl-h\">…</div> from <div class=\"mdl\" id=\"import-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+  "passed": 0,
+  "failed": 1,
+  "runtimeFiles": [
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "bytes": 500294,
+      "sha256": "d96c5f13daca6b8a5698a3fd76a2f4867b0836526ac2e71d2cfd539e08e1efd6"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "bytes": 1649,
+      "sha256": "283b387521d616faa4231472fc4832776683e0a3fffec477508dcb7743336bc5"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "bytes": 487047,
+      "sha256": "6d0eefe561d0bd442d5332c3f9f9259437b06d9739d5256f8e1a1df477df230d"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "bytes": 31117,
+      "sha256": "54b9ce82eeeedcd37f5c3d8f0912cc465747ef3666a397664f01f7835efd0882"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "bytes": 614817,
+      "sha256": "87ad05243b70d7f215393c1666417b29d2e57d1c96151b2b9e110e281568391e"
+    }
+  ]
+}

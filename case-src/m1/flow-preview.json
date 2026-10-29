@@ -1,0 +1,368 @@
+{
+  "capturedAt": "2026-10-28T16:56:16.805Z",
+  "producer": "Actual Chrome default S17Inspect.flowHTML; static preview, not a browser acceptance report",
+  "caseId": "s17-cuttings-lithology",
+  "sources": [
+    {
+      "path": "shared/math.js",
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    },
+    {
+      "path": "case-src/m1/images.js",
+      "sha256": "2aceee1aaf81e849b13dc959a977e2491269f110533bd55083bf543998f273bf"
+    },
+    {
+      "path": "case-src/m1/engine.js",
+      "sha256": "abd18b858e38bba96beec6ad9333f1d44b49eee3ed3e7b5fb841acce6203b63e"
+    },
+    {
+      "path": "case-src/m1/real-data.js",
+      "sha256": "62aec841553991e46c32fe95ca11b3af1bcc1098b1e404a2b32b27b25b8f6a72"
+    },
+    {
+      "path": "shared/lab.js",
+      "sha256": "5a483c9d484de8b52e7a5a11b3ea8f41883d78c5daf4d0596a0ab8fca523b074"
+    },
+    {
+      "path": "case-src/m1/exhibit.js",
+      "sha256": "083cb9dd5e434eab9cc392877cd12cfa2ee0f0b4f1d39348e54bc777d5511a75"
+    }
+  ],
+  "snapshot": {
+    "id": "s17-cuttings-lithology",
+    "status": "ready",
+    "revision": 1,
+    "selected": 1,
+    "stage": 0,
+    "anchor": {
+      "x": 56,
+      "y": 55,
+      "pixel": 17656,
+      "originalBBox": [
+        31,
+        38,
+        80,
+        73
+      ],
+      "selectionRevision": 1,
+      "arrangement": "original_teaching_tray"
+    },
+    "tracking": {
+      "state": "present",
+      "identityStatus": "same_layout_observation",
+      "contributors": 1,
+      "retainedPixels": 1054,
+      "referenceArea": 1054
+    },
+    "run": {
+      "runId": "s17-cuttings-lithology-r1-v1",
+      "config": {
+        "k": 3,
+        "support": 0.55,
+        "distance": 1.15,
+        "rules": {
+          "red": 0.095,
+          "light": 0.52
+        },
+        "mode": "full",
+        "calibrate": true,
+        "light": 1,
+        "coating": 0,
+        "preset": "default",
+        "arrangement": "original_teaching_tray"
+      },
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 2,
+            "IoU": 1
+          },
+          {
+            "pred": 1,
+            "truth": 0,
+            "IoU": 1
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "IoU": 1
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "IoU": 1
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "IoU": 1
+          },
+          {
+            "pred": 5,
+            "truth": 7,
+            "IoU": 1
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "IoU": 1
+          },
+          {
+            "pred": 7,
+            "truth": 5,
+            "IoU": 1
+          },
+          {
+            "pred": 8,
+            "truth": 10,
+            "IoU": 1
+          },
+          {
+            "pred": 9,
+            "truth": 8,
+            "IoU": 1
+          },
+          {
+            "pred": 10,
+            "truth": 11,
+            "IoU": 1
+          },
+          {
+            "pred": 11,
+            "truth": 9,
+            "IoU": 1
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "merged": [],
+        "model": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              7,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              5,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 0,
+              "f1": 0
+            },
+            {
+              "recall": 0.7142857142857143,
+              "f1": 0.7142857142857143
+            }
+          ],
+          "macroF1": 0.5714285714285715,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 4,
+          "coverage": 1,
+          "acceptedError": 0.3333333333333333
+        },
+        "segmentation": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "trueVisiblePixels": 14582,
+        "areaError_pp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "method": "visible_pixel_components + standardized_weighted_kNN",
+      "counts": {
+        "detected": 12,
+        "train": 288,
+        "validation": 96,
+        "visiblePixels": 14582
+      },
+      "stepCount": 6,
+      "summary": {
+        "count": {
+          "weights": [
+            3,
+            2,
+            7,
+            0
+          ],
+          "denominator": 12,
+          "fractions": [
+            0.25,
+            0.16666666666666666,
+            0.5833333333333334,
+            0
+          ],
+          "unit": "particles"
+        },
+        "area": {
+          "weights": [
+            3759,
+            2107,
+            8716,
+            0
+          ],
+          "denominator": 14582,
+          "fractions": [
+            0.2577835687834316,
+            0.1444932108078453,
+            0.597723220408723,
+            0
+          ],
+          "unit": "visible_pixels"
+        },
+        "baselineCount": {
+          "weights": [
+            3,
+            2,
+            7,
+            0
+          ],
+          "denominator": 12,
+          "fractions": [
+            0.25,
+            0.16666666666666666,
+            0.5833333333333334,
+            0
+          ],
+          "unit": "particles"
+        },
+        "baselineArea": {
+          "weights": [
+            3759,
+            2192,
+            8631,
+            0
+          ],
+          "denominator": 14582,
+          "fractions": [
+            0.2577835687834316,
+            0.15032231518310246,
+            0.5918941160334659,
+            0
+          ],
+          "unit": "visible_pixels"
+        }
+      },
+      "selectedResult": {
+        "index": 1,
+        "label": 2,
+        "baseline": 1,
+        "support": 1,
+        "area": 1054,
+        "features": [
+          0.5458644938051096,
+          0.5105703761580513,
+          0.4595899840011897,
+          0.030145318464109762,
+          0.030145318464109734,
+          0.030145318464109755,
+          0.003906129380886202,
+          0.0034323509843058888,
+          0,
+          0,
+          0.4087948959115607,
+          1.4,
+          0,
+          0.38235294117647056,
+          0.6176470588235294,
+          0
+        ],
+        "neighbors": [
+          {
+            "group": "IMG-TRAIN-P21",
+            "label": 2,
+            "distance": 0.22498220918677975
+          },
+          {
+            "group": "IMG-TRAIN-P16",
+            "label": 2,
+            "distance": 0.2524996143369048
+          },
+          {
+            "group": "IMG-TRAIN-P11",
+            "label": 2,
+            "distance": 0.2774090885763289
+          }
+        ]
+      }
+    },
+    "reviews": []
+  },
+  "steps": [
+    "<div data-m1-flow=\"0\"><p>基础样品记录 <b>DEMO-017-P1</b>，本次拍摄记录 <b>DEMO-017-WLUV1</b>。当前是原始教学盘，图像为320×240像素；照明 1.00倍，教学覆盖强度 0.0%。</p><p><b>当前教学盘的区域 2</b> · 固定图像位置 (56, 55) · 轮廓内 1054 像素。三个视角始终跟随这个位置；照明和附着可在本盘内比较。</p></div>",
+    "<div data-m1-flow=\"1\"><p>灰片范围 x=6–18、y=5–16；RGB表示红绿蓝三个通道，每个通道值为0–255。原图测得均值 <b>210.0 / 210.0 / 210.0</b>。</p><p>三个校正增益：1.000 / 1.000 / 1.000；目标颜色210 / 210 / 210。例如红通道按210÷210.0调整。未触发参考片曝光提示。</p></div>",
+    "<div data-m1-flow=\"2\"><div style=\"max-width:400px\"><svg viewBox=\"0 0 340 260\" role=\"img\" aria-label=\"当前实际检出轮廓的包围范围\"><rect x=\"10\" y=\"10\" width=\"320\" height=\"240\" rx=\"10\" fill=\"#F1ECE4\"/><rect x=\"183\" y=\"44\" width=\"52\" height=\"45\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"186\" y=\"58\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">1</text><rect x=\"41\" y=\"48\" width=\"49\" height=\"35\" rx=\"3\" fill=\"rgba(184,36,42,.18)\" stroke=\"#B8242A\"/><text x=\"44\" y=\"62\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">2</text><rect x=\"114\" y=\"49\" width=\"49\" height=\"35\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"117\" y=\"63\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">3</text><rect x=\"258\" y=\"51\" width=\"55\" height=\"33\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"261\" y=\"65\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">4</text><rect x=\"37\" y=\"109\" width=\"55\" height=\"45\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"40\" y=\"123\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">5</text><rect x=\"259\" y=\"109\" width=\"53\" height=\"50\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"262\" y=\"123\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">6</text><rect x=\"184\" y=\"112\" width=\"57\" height=\"37\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"187\" y=\"126\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">7</text><rect x=\"115\" y=\"116\" width=\"42\" height=\"32\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"118\" y=\"130\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">8</text><rect x=\"188\" y=\"175\" width=\"52\" height=\"42\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"191\" y=\"189\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">9</text><rect x=\"42\" y=\"178\" width=\"39\" height=\"41\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"45\" y=\"192\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">10</text><rect x=\"259\" y=\"180\" width=\"49\" height=\"37\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"262\" y=\"194\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">11</text><rect x=\"111\" y=\"181\" width=\"45\" height=\"42\" rx=\"3\" fill=\"rgba(104,127,148,.1)\" stroke=\"#687F94\"/><text x=\"114\" y=\"195\" font-family=\"system-ui\" font-size=\"12\" fill=\"#39434A\">12</text></svg></div><p>上图方框用于定位各轮廓的包围范围；实际面积按轮廓内像素计算。当前连通域 <b>12</b> 个，总可见面积 <b>14582</b> 像素。<b>当前教学盘的区域 2</b> · 固定图像位置 (56, 55) · 轮廓内 1054 像素。三个视角始终跟随这个位置；照明和附着可在本盘内比较。</p></div>",
+    "<div data-m1-flow=\"3\"><div style=\"overflow-x:auto\"><table><thead><tr><th>当前对象的特征</th><th>数值</th><th>对应认识</th></tr></thead><tbody><tr><td>平均红 / 绿 / 蓝</td><td>0.546 / 0.511 / 0.460</td><td>颜色：通道值除以255</td></tr><tr><td>水平 / 垂直明暗变化</td><td>0.004 / 0.003</td><td>纹理：相邻像素亮度差</td></tr><tr><td>紧致度</td><td>0.409</td><td>形状：面积与轮廓长度的关系</td></tr><tr><td>可见面积（汇总量）</td><td>1054 像素</td><td>用于整盘比例，不进入16维分类距离</td></tr></tbody></table></div></div>",
+    "<div data-m1-flow=\"4\"><p>同一轮廓：颜色规则给 <b>泥岩教学外观</b>；完整特征近邻给 <b>灰岩教学外观</b>，支持度 100.0%。k=3，即3个参考颗粒参与投票；距离越小，特征越相似。</p><div style=\"overflow-x:auto\"><table><thead><tr><th>实际近邻</th><th>候选外观</th><th>距离</th></tr></thead><tbody><tr><td>IMG-TRAIN-P21</td><td>灰岩教学外观</td><td>0.225</td></tr><tr><td>IMG-TRAIN-P16</td><td>灰岩教学外观</td><td>0.252</td></tr><tr><td>IMG-TRAIN-P11</td><td>灰岩教学外观</td><td>0.277</td></tr></tbody></table></div></div>",
+    "<div data-m1-flow=\"5\"><article class=\"fx-card\"><h4>多特征近邻</h4><p><b>颗粒数</b> · 分母 12 粒</p><div class=\"m1-stack\" role=\"img\" aria-label=\"颗粒数，分母12粒；砂岩外观3粒，泥岩外观2粒，灰岩外观7粒，待复核0粒\"><span style=\"width:25%;background:#B8242A\" title=\"砂岩教学外观 3/12 粒，25.0%\"></span><span style=\"width:16.666666666666664%;background:#687F94\" title=\"泥岩教学外观 2/12 粒，16.7%\"></span><span style=\"width:58.333333333333336%;background:#B78B45\" title=\"灰岩教学外观 7/12 粒，58.3%\"></span><span style=\"width:0%;background:#AAA7A3\" title=\"待复核 0/12 粒，0.0%\"></span></div><div class=\"m1-legend\"><span><i class=\"m1-dot\" style=\"background:#B8242A\"></i>砂岩外观 <b>3/12</b> 25.0%</span><span><i class=\"m1-dot\" style=\"background:#687F94\"></i>泥岩外观 <b>2/12</b> 16.7%</span><span><i class=\"m1-dot\" style=\"background:#B78B45\"></i>灰岩外观 <b>7/12</b> 58.3%</span><span><i class=\"m1-dot\" style=\"background:#AAA7A3\"></i>待复核 <b>0/12</b> 0.0%</span></div><p><b>可见面积</b> · 分母 14582 像素</p><div class=\"m1-stack\" role=\"img\" aria-label=\"可见面积，分母14582像素；砂岩外观3759像素，泥岩外观2107像素，灰岩外观8716像素，待复核0像素\"><span style=\"width:25.77835687834316%;background:#B8242A\" title=\"砂岩教学外观 3759/14582 像素，25.8%\"></span><span style=\"width:14.44932108078453%;background:#687F94\" title=\"泥岩教学外观 2107/14582 像素，14.4%\"></span><span style=\"width:59.772322040872304%;background:#B78B45\" title=\"灰岩教学外观 8716/14582 像素，59.8%\"></span><span style=\"width:0%;background:#AAA7A3\" title=\"待复核 0/14582 像素，0.0%\"></span></div><div class=\"m1-legend\"><span><i class=\"m1-dot\" style=\"background:#B8242A\"></i>砂岩外观 <b>3759/14582</b> 25.8%</span><span><i class=\"m1-dot\" style=\"background:#687F94\"></i>泥岩外观 <b>2107/14582</b> 14.4%</span><span><i class=\"m1-dot\" style=\"background:#B78B45\"></i>灰岩外观 <b>8716/14582</b> 59.8%</span><span><i class=\"m1-dot\" style=\"background:#AAA7A3\"></i>待复核 <b>0/14582</b> 0.0%</span></div></article></div>"
+  ]
+}

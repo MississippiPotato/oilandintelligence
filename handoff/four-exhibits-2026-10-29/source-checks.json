@@ -1,0 +1,152 @@
+{
+  "checkedAt": "2026-10-29T01:56:15.970Z",
+  "scope": "Source/content/hash checks only. Runtime/numeric checks and actual Chrome report are separate evidence layers.",
+  "checks": [
+    {
+      "name": "Frozen57 cases /285 runtime files are byte identical, including currentm2",
+      "passed": true,
+      "detail": {
+        "cases": 57,
+        "files": 285,
+        "m2Version": "1.7.1"
+      }
+    },
+    {
+      "name": "63 protected originals/materials and homepage content/styles stay identical",
+      "passed": true,
+      "detail": {
+        "protected": 63,
+        "homepage": 15
+      }
+    },
+    {
+      "name": "Existing engines /data generation /original public data unchanged",
+      "passed": true,
+      "detail": {
+        "engineFiles": 11,
+        "publicDataFiles": 30
+      }
+    },
+    {
+      "name": "m1 knowledge is sourced and has three learning outcomes /four units",
+      "passed": true,
+      "detail": {
+        "chapters": 4,
+        "steps": 6
+      }
+    },
+    {
+      "name": "m1 self contained five-file v1.7.1 contract and parseable ordinaryJS",
+      "passed": true,
+      "detail": {
+        "bytes": 1202332,
+        "files": 5
+      }
+    },
+    {
+      "name": "m1 four macro regions use distinct selected assets and actual bound workflow preview",
+      "passed": true,
+      "detail": {
+        "composition": "b",
+        "previewRun": "s17-cuttings-lithology-r1-v1"
+      }
+    },
+    {
+      "name": "m3 knowledge is sourced and has three learning outcomes /four units",
+      "passed": true,
+      "detail": {
+        "chapters": 4,
+        "steps": 6
+      }
+    },
+    {
+      "name": "m3 self contained five-file v1.7.1 contract and parseable ordinaryJS",
+      "passed": true,
+      "detail": {
+        "bytes": 1119961,
+        "files": 5
+      }
+    },
+    {
+      "name": "m3 four macro regions use distinct selected assets and actual bound workflow preview",
+      "passed": true,
+      "detail": {
+        "composition": "a",
+        "previewRun": "s17-fluorescence-review-r1-v1"
+      }
+    },
+    {
+      "name": "m4 knowledge is sourced and has three learning outcomes /four units",
+      "passed": true,
+      "detail": {
+        "chapters": 4,
+        "steps": 6
+      }
+    },
+    {
+      "name": "m4 self contained five-file v1.7.1 contract and parseable ordinaryJS",
+      "passed": true,
+      "detail": {
+        "bytes": 1006621,
+        "files": 5
+      }
+    },
+    {
+      "name": "m4 four macro regions use distinct selected assets and actual bound workflow preview",
+      "passed": true,
+      "detail": {
+        "composition": "b",
+        "previewRun": "s17-drilltime-boundaries-r1-v1"
+      }
+    },
+    {
+      "name": "m5 knowledge is sourced and has three learning outcomes /four units",
+      "passed": true,
+      "detail": {
+        "chapters": 4,
+        "steps": 5
+      }
+    },
+    {
+      "name": "m5 self contained five-file v1.7.1 contract and parseable ordinaryJS",
+      "passed": true,
+      "detail": {
+        "bytes": 796563,
+        "files": 5
+      }
+    },
+    {
+      "name": "m5 four macro regions use distinct selected assets and actual bound workflow preview",
+      "passed": true,
+      "detail": {
+        "composition": "b",
+        "previewRun": "s17-evidence-report-r1-v1"
+      }
+    },
+    {
+      "name": "All4 selected scrolls differ byte for byte",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "Current four-case locks and current5 suite identify correct runtime bytes",
+      "passed": true,
+      "detail": {
+        "m1": "1.7.1",
+        "m2": "1.7.1",
+        "m3": "1.7.1",
+        "m4": "1.7.1",
+        "m5": "1.7.1"
+      }
+    },
+    {
+      "name": "Current lessons remove engineering panels while keeping save and inspector APIs",
+      "passed": true,
+      "detail": {
+        "removedControls": 7
+      }
+    }
+  ],
+  "passed": 18,
+  "failed": 0
+}

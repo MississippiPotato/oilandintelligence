@@ -1,0 +1,208 @@
+{
+  "completedAt": "2026-10-29T02:02:30.842Z",
+  "scope": "m1,m3,m4,m5 teaching redesign; m2 enhanced-portal regression only",
+  "caseVersions": {
+    "m1": "1.7.1",
+    "m2": "1.7.1",
+    "m3": "1.7.1",
+    "m4": "1.7.1",
+    "m5": "1.7.1"
+  },
+  "portalVersion": "1.9.2-preview",
+  "otherCasesUnchanged": 57,
+  "otherRuntimeFilesUnchanged": 285,
+  "protectedFilesUnchanged": 63,
+  "engineFilesUnchanged": 11,
+  "publicDataFilesUnchanged": 30,
+  "homepageFilesUnchanged": 15,
+  "homepageReference": "0fa9d31",
+  "portalChanges": "Four-case version routing and scoped lecture/workflow mounting; original importer and homepage unchanged",
+  "knowledge": [
+    "case-src/m1/knowledge.md",
+    "case-src/m3/knowledge.md",
+    "case-src/m4/knowledge.md",
+    "case-src/m5/knowledge.md"
+  ],
+  "independentReviews": [
+    "handoff/four-exhibits-2026-10-29/review-m1.md",
+    "handoff/four-exhibits-2026-10-29/review-m3.md",
+    "handoff/four-exhibits-2026-10-29/review-m4.md",
+    "handoff/four-exhibits-2026-10-29/review-m5.md"
+  ],
+  "imagegen": {
+    "tool": "built-in image_gen",
+    "calls": 8,
+    "variantsPerCase": 2,
+    "selected": [
+      {
+        "scene": "m1",
+        "composition": "b",
+        "asset": "case-src/m1/assets/scroll-selected.jpg",
+        "prompts": "case-src/m1/assets/prompts.json"
+      },
+      {
+        "scene": "m3",
+        "composition": "a",
+        "asset": "case-src/m3/assets/scroll-selected.jpg",
+        "prompts": "case-src/m3/assets/prompts.json"
+      },
+      {
+        "scene": "m4",
+        "composition": "b",
+        "asset": "case-src/m4/assets/scroll-selected.jpg",
+        "prompts": "case-src/m4/assets/prompts.json"
+      },
+      {
+        "scene": "m5",
+        "composition": "b",
+        "asset": "case-src/m5/assets/scroll-selected.jpg",
+        "prompts": "case-src/m5/assets/prompts.json"
+      }
+    ]
+  },
+  "sourceAndContent": {
+    "passed": 18,
+    "failed": 0,
+    "browserProof": false
+  },
+  "numericAndProtocol": {
+    "passed": 37,
+    "failed": 0,
+    "browserProof": false
+  },
+  "browser": {
+    "executed": true,
+    "fourCases": 4,
+    "fourCaseChecks": 169,
+    "m2AndOriginalSampleSmokeChecks": 5,
+    "passed": 174,
+    "failed": 0,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "paths": [
+      "offline file:// in network-offline Chrome",
+      "enhanced portal background/workflow and sandbox demo",
+      "teacher original folder import/static preview/demo",
+      "teacher original refresh/rerun/actual save"
+    ],
+    "actualDownloads": 12
+  },
+  "actualEvidenceDownloads": [
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m1-offline-evidence.json",
+      "caseId": "s17-cuttings-lithology",
+      "claims": 11,
+      "sources": 1,
+      "sha256": "b49d1315b684e25871c44582e7b20417add9b0d16e26744aa716c9a806e67a3c",
+      "bytes": 49361
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m1-teacher-before-refresh-evidence.json",
+      "caseId": "s17-cuttings-lithology",
+      "claims": 12,
+      "sources": 1,
+      "sha256": "f22dc7359f4798a74be595b279d427800b033e2531d1bd1e3a5929377e77475d",
+      "bytes": 60173
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m1-teacher-after-refresh-evidence.json",
+      "caseId": "s17-cuttings-lithology",
+      "claims": 12,
+      "sources": 1,
+      "sha256": "f22dc7359f4798a74be595b279d427800b033e2531d1bd1e3a5929377e77475d",
+      "bytes": 60173
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m3-offline-evidence.json",
+      "caseId": "s17-fluorescence-review",
+      "claims": 1,
+      "sources": 1,
+      "sha256": "649abad0d936542037b0477db963e2e37fba9616793500d64a3397ba5b477cf3",
+      "bytes": 90916
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m3-teacher-before-refresh-evidence.json",
+      "caseId": "s17-fluorescence-review",
+      "claims": 1,
+      "sources": 1,
+      "sha256": "e1adef0caf64ffd020b2142ca763b656016283e0b965907199a08c11aa9b6be8",
+      "bytes": 87223
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m3-teacher-after-refresh-evidence.json",
+      "caseId": "s17-fluorescence-review",
+      "claims": 1,
+      "sources": 1,
+      "sha256": "e1adef0caf64ffd020b2142ca763b656016283e0b965907199a08c11aa9b6be8",
+      "bytes": 87223
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m4-offline-evidence.json",
+      "caseId": "s17-drilltime-boundaries",
+      "claims": 2,
+      "sources": 1,
+      "sha256": "8756318c40959708efa8feee33c6a021f2a032e3badf4ea07d89a48cb449a8f5",
+      "bytes": 132369
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m4-teacher-before-refresh-evidence.json",
+      "caseId": "s17-drilltime-boundaries",
+      "claims": 2,
+      "sources": 1,
+      "sha256": "ad8b057e3063982d03753b2facbf518aaff06172830a47baa2447fbe5c8c74f4",
+      "bytes": 132369
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m4-teacher-after-refresh-evidence.json",
+      "caseId": "s17-drilltime-boundaries",
+      "claims": 2,
+      "sources": 1,
+      "sha256": "ad8b057e3063982d03753b2facbf518aaff06172830a47baa2447fbe5c8c74f4",
+      "bytes": 132369
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m5-offline-evidence.json",
+      "caseId": "s17-evidence-report",
+      "claims": 2,
+      "sources": 6,
+      "sha256": "4dea07bf21b258879643a51beb33f1a8bd93527bd564128b5104507b777d8771",
+      "bytes": 56584
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m5-teacher-before-refresh-evidence.json",
+      "caseId": "s17-evidence-report",
+      "claims": 6,
+      "sources": 2,
+      "sha256": "f7e8519f8647affcd0b00c1b8e0609b3da02b81e1f77d44dad351a6caddc7fd8",
+      "bytes": 29310
+    },
+    {
+      "path": "handoff/four-exhibits-2026-10-29/m5-teacher-after-refresh-evidence.json",
+      "caseId": "s17-evidence-report",
+      "claims": 6,
+      "sources": 2,
+      "sha256": "f7e8519f8647affcd0b00c1b8e0609b3da02b81e1f77d44dad351a6caddc7fd8",
+      "bytes": 29310
+    }
+  ],
+  "notVerified": [
+    "Other56 cases were not rerun in a browser; their280 runtime files are unchanged",
+    "m2 full acceptance was not repeated; its5 runtime files are unchanged",
+    "All parameter combinations",
+    "Physical mobile devices, Firefox and WebKit",
+    "Online assistant model, microphone and speech services",
+    "Labeled field-performance experiments; controlled teaching observations remain separate from public real examples"
+  ],
+  "historicalAcceptance": {
+    "m2": "handoff/m2-clarity-2026-10-28/acceptance.html",
+    "all61": "handoff/teaching-audit-2026-10-24/acceptance.html"
+  }
+}

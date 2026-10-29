@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-29T01:49:54.757Z",
+  "scope": "Reuse unchanged gas, image, fluorescence, drilling, report numeric/protocol checks; no browser evidence, no all61 rerun",
+  "checks": [
+    {
+      "script": "checks/verify.mjs",
+      "noHistoricalReportWrites": true,
+      "elapsedSeconds": 1.336,
+      "exitCode": 0,
+      "result": {
+        "passed": 14,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "script": "checks/verify-mandatory.mjs",
+      "noHistoricalReportWrites": true,
+      "elapsedSeconds": 60.771,
+      "exitCode": 0,
+      "result": {
+        "passed": 14,
+        "failed": 0,
+        "failures": []
+      }
+    },
+    {
+      "script": "checks/verify-enhancements.mjs",
+      "noHistoricalReportWrites": true,
+      "elapsedSeconds": 0.475,
+      "exitCode": 0,
+      "result": {
+        "passed": 9,
+        "failed": 0,
+        "failures": []
+      }
+    }
+  ],
+  "passed": 37,
+  "failed": 0
+}
