@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-10-29T18:12:39.698Z",
+  "kind": "actual_Chrome_original_teacher_directory_import_all_five",
+  "checks": [
+    {
+      "name": "m1 original teacher directory importer accepts current five-file case",
+      "passed": true
+    },
+    {
+      "name": "m1 original background includes scene and four knowledge units",
+      "passed": true
+    },
+    {
+      "name": "m1 original flow includes each calculated preview",
+      "passed": true
+    },
+    {
+      "name": "m1 original sandbox runs actual computation again",
+      "passed": true
+    },
+    {
+      "name": "m1 imported case persists on refresh and reruns",
+      "passed": true
+    },
+    {
+      "name": "m2 original teacher directory importer accepts current five-file case",
+      "passed": true
+    },
+    {
+      "name": "m2 original background includes scene and four knowledge units",
+      "passed": true
+    },
+    {
+      "name": "m2 original flow includes each calculated preview",
+      "passed": true
+    },
+    {
+      "name": "m2 original sandbox runs actual computation again",
+      "passed": true
+    },
+    {
+      "name": "m2 imported case persists on refresh and reruns",
+      "passed": true
+    },
+    {
+      "name": "m3 original teacher directory importer accepts current five-file case",
+      "passed": true
+    },
+    {
+      "name": "m3 original background includes scene and four knowledge units",
+      "passed": true
+    },
+    {
+      "name": "m3 original flow includes each calculated preview",
+      "passed": true
+    },
+    {
+      "name": "m3 original sandbox runs actual computation again",
+      "passed": true
+    },
+    {
+      "name": "m3 completed original import protocol",
+      "passed": false,
+      "detail": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#case-demo-root iframe').contentFrame().locator('#run')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"run\" type=\"button\">重新计算</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m  - element was detached from the DOM, retrying\u001b[22m\n"
+    },
+    {
+      "name": "m4 original teacher directory importer accepts current five-file case",
+      "passed": true
+    },
+    {
+      "name": "m4 original background includes scene and four knowledge units",
+      "passed": true
+    },
+    {
+      "name": "m4 original flow includes each calculated preview",
+      "passed": true
+    },
+    {
+      "name": "m4 original sandbox runs actual computation again",
+      "passed": true
+    },
+    {
+      "name": "m4 imported case persists on refresh and reruns",
+      "passed": true
+    },
+    {
+      "name": "m5 original teacher directory importer accepts current five-file case",
+      "passed": true
+    },
+    {
+      "name": "m5 original background includes scene and four knowledge units",
+      "passed": true
+    },
+    {
+      "name": "m5 original flow includes each calculated preview",
+      "passed": true
+    },
+    {
+      "name": "m5 original sandbox runs actual computation again",
+      "passed": true
+    },
+    {
+      "name": "m5 imported case persists on refresh and reruns",
+      "passed": true
+    },
+    {
+      "name": "No uncaught original import browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "downloads": [
+    "downloads/m1-teacher-refresh.json",
+    "downloads/m2-teacher-refresh.json",
+    "downloads/m4-teacher-refresh.json",
+    "downloads/m5-teacher-refresh.json"
+  ],
+  "screenshots": [
+    "m1-teacher-refresh.png",
+    "m2-teacher-refresh.png",
+    "m4-teacher-refresh.png",
+    "m5-teacher-refresh.png"
+  ],
+  "passed": 25,
+  "failed": 1
+}

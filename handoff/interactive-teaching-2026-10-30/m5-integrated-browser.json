@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-10-30 Asia/Singapore",
+  "browser": "Chrome via tools/pw.mjs session m5integrated",
+  "mode": "actual HTTP build, no script injection",
+  "url": "http://127.0.0.1:8755/dist/cases/s17-evidence-report/demo/index.html",
+  "initialBuild": {
+    "htmlSha256": "8f52542ec6690ae1ff095c5d1b58392ef5ed15209cec1e67eaf48159201aa681",
+    "jsSha256": "2cbcf55758c0788555236a712a88547eab63b0aa786c2b78056a918a7591a64f",
+    "includesLaterBridgeText": false
+  },
+  "sourceAfterBridge": {
+    "exhibitSha256": "571f9bf214e3fec251224c1b9867cf62af5ca6b7bf5c7bcbc1dffea8a1bd64e1",
+    "knowledgeSha256": "014f539f9afcdfbb7c0fafcc28acaec783ceb18b1f107e391f0847226f72591f"
+  },
+  "checks": [
+    {
+      "name": "background 1220-1230 interval and candidate view",
+      "result": "pass",
+      "evidence": "35 active drilling points; one fluorescence record; 1226.88 m candidate; missing cuttings and gas"
+    },
+    {
+      "name": "confirm fluorescence then toggle negation",
+      "result": "pass",
+      "evidence": "confirmed 1/6 to 0/6; report and original change from 未见 to 见; prior report revision retained"
+    },
+    {
+      "name": "click gas report to highlight source",
+      "result": "pass",
+      "evidence": "1210—1220 m MD：气测总气升高至3.2归一化单位"
+    },
+    {
+      "name": "change fluorescence depth while 1220-1230 selected",
+      "result": "pass",
+      "evidence": "raw text and report move to 1230—1240; old interval fluorescence coverage becomes absent"
+    },
+    {
+      "name": "edit compound sentence and inherited depth source",
+      "result": "pass",
+      "evidence": "two extracted clauses; gas claim links to current quote and inherited 1210—1220 m MD span"
+    },
+    {
+      "name": "W1 learning navigation",
+      "result": "pass",
+      "evidence": "clicked actual link; W1 default independent teaching interface 1222.0 m, M5 default candidate 1226.88 m; no automatic evidence transfer claimed"
+    },
+    {
+      "name": "evidence interface",
+      "result": "pass",
+      "evidence": "schema 1.0; caseVersion 1.9.0; 3 default text records; M4 120 points and 115 active; 4 snapshot sources and current text source"
+    },
+    {
+      "name": "viewport",
+      "result": "observed",
+      "evidence": "desktop 1440/1440 px; mobile document 391 px vs viewport 390 px; chart internal horizontal scrolling; screenshots in output/playwright/m5-integrated-{desktop,mobile}.png"
+    }
+  ],
+  "conceptAudit": {
+    "sourceFiles": 56,
+    "staticUnits": 112,
+    "loadErrors": 0,
+    "staticUnitsWithTechnicalNegations": 10,
+    "staticUnitsMentioningApiEngineOrSeed": 41,
+    "sourceRegexHits": 23,
+    "sourceFilesWithHits": 19,
+    "countsArePatternMatchesNotJudgedDefects": true,
+    "browserSample": "C3 workflow step 3 confirmed CaseEngine.predict and evaluation-label text",
+    "details": "m5-integrated-browser.md"
+  },
+  "finalRebuiltPage": {
+    "status": "pending_parent_rebuild"
+  },
+  "notVerified": [
+    "file:// standalone after final build",
+    "original teacher portal import refresh rerun",
+    "actual saved JSON download after final build",
+    "browser execution of all 112 concept units"
+  ]
+}

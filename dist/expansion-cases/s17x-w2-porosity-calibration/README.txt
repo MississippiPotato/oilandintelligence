@@ -6,6 +6,6 @@ SLB｜Defining porosity: https://www.slb.com/resource-library/oilfield-review/de
 US EPA｜Gamma-gamma density logging: https://www.epa.gov/environmental-geophysics/gamma-gamma-density-logging
 数据为固定种子的教学构造，不包含外部自动加载资源。预测输入与评价真值分开；详细分母见页面结果。
 
-当前教学版：1.1.1。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+当前教学版：1.2.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
 比较任务：只用密度道：比较误差随GR和中子响应的分布，检查互补信息被移除后的变化。
 减少标定点：查看独立点上的误差与预测分散程度。

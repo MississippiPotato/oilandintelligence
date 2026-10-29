@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-29T18:35:51.244Z",
+  "kind": "final_layout_check_before_shared_border_fix",
+  "generic": {
+    "passed": 81,
+    "failed": 0
+  },
+  "supplemental": {
+    "pr1": "Native sync, page width, local scroll, rendered font and SVG ratio assertions passed before the later pr3 failure; updated pr1 screenshot was written.",
+    "pr3": "Native sync, selected allocation, infeasible equal baseline, page width and local scroll passed; rendered-font assertion failed."
+  },
+  "observed": {
+    "scene": "pr3",
+    "boxSizing": "border-box",
+    "borderPx": 1,
+    "paddingPx": 0,
+    "outerWidth": 720,
+    "outerHeight": 331.078125,
+    "contentWidth": 718,
+    "contentHeight": 329.078125,
+    "viewBoxWidth": 720,
+    "viewBoxHeight": 330,
+    "screenCTMScale": 0.9972064393939394,
+    "computedFontPx": 16,
+    "renderedFontPx": 15.95530303030303,
+    "maxHeight": "none"
+  },
+  "resolution": "Parent applying scoped SVG box-sizing:content-box;border:0;padding:0, then rebuilding. A current pr3 DOM geometry verification will supersede this observation."
+}

@@ -1,0 +1,430 @@
+{
+  "checkedAt": "2026-10-29T17:59:19.061Z",
+  "kind": "actual_Chrome_five_desktop_and_live_changes",
+  "checks": [
+    {
+      "name": "m1 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-cuttings-lithology-r1-v1"
+      }
+    },
+    {
+      "name": "m1 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m1 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m1 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m1 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m1 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 8,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 57,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.02998, 0, 0, 0, 0, 1.02998, 0, 0, 0, 0, 1, 0, 0, -11.9933, 35.9798, 1)",
+        "opacity": "0.68",
+        "scrollY": 208,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m1 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 208,
+        "after": 208
+      }
+    },
+    {
+      "name": "m1 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m1 reading entry keeps the heading below navigation",
+      "passed": false,
+      "detail": {
+        "y": 285.515625,
+        "title": "先找到轮廓，再把外观变成可比较的数值"
+      }
+    },
+    {
+      "name": "m1 completed desktop protocol",
+      "passed": false,
+      "detail": "m1 reading entry keeps the heading below navigation"
+    },
+    {
+      "name": "m2 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "m2-v1-r1"
+      }
+    },
+    {
+      "name": "m2 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m2 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m2 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m2 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m2 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 14.200000017881393,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 62,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 466,
+        "width": 1172,
+        "height": 391
+      }
+    },
+    {
+      "name": "m2 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 466,
+        "after": 466
+      }
+    },
+    {
+      "name": "m2 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m2 reading entry keeps the heading below navigation",
+      "passed": false,
+      "detail": {
+        "y": 317.125,
+        "title": "先看组分，再补上那一刻在做什么"
+      }
+    },
+    {
+      "name": "m2 completed desktop protocol",
+      "passed": false,
+      "detail": "m2 reading entry keeps the heading below navigation"
+    },
+    {
+      "name": "m3 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-fluorescence-review-r1-v1"
+      }
+    },
+    {
+      "name": "m3 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m3 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m3 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m3 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m3 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 6.0999999940395355,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 62,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 208,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m3 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 208,
+        "after": 208
+      }
+    },
+    {
+      "name": "m3 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m3 reading entry keeps the heading below navigation",
+      "passed": false,
+      "detail": {
+        "y": 299.40625,
+        "title": "更亮，是显示变多，还是拍得更亮？"
+      }
+    },
+    {
+      "name": "m3 completed desktop protocol",
+      "passed": false,
+      "detail": "m3 reading entry keeps the heading below navigation"
+    },
+    {
+      "name": "m4 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-drilltime-boundaries-r1-v1"
+      }
+    },
+    {
+      "name": "m4 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m4 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m4 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m4 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m4 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 8.199999988079071,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 53,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 208,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m4 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 208,
+        "after": 208
+      }
+    },
+    {
+      "name": "m4 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m4 reading entry keeps the heading below navigation",
+      "passed": false,
+      "detail": {
+        "y": 475.296875,
+        "title": "先解释工况，再比较剩下的响应"
+      }
+    },
+    {
+      "name": "m4 completed desktop protocol",
+      "passed": false,
+      "detail": "m4 reading entry keeps the heading below navigation"
+    },
+    {
+      "name": "m5 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-evidence-report-r1-v1"
+      }
+    },
+    {
+      "name": "m5 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m5 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 6.899999976158142,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 13,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 238,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m5 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 238,
+        "after": 238
+      }
+    },
+    {
+      "name": "m5 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m5 reading entry keeps the heading below navigation",
+      "passed": false,
+      "detail": {
+        "y": 405.171875,
+        "title": "分类找栏目，抽取保留原话里的事实"
+      }
+    },
+    {
+      "name": "m5 completed desktop protocol",
+      "passed": false,
+      "detail": "m5 reading entry keeps the heading below navigation"
+    },
+    {
+      "name": "No uncaught browser script errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "m1-scroll-desktop.png",
+    "m2-scroll-desktop.png",
+    "m3-scroll-desktop.png",
+    "m4-scroll-desktop.png",
+    "m5-scroll-desktop.png"
+  ],
+  "downloads": [],
+  "passed": 38,
+  "failed": 10
+}

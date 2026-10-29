@@ -44,6 +44,6 @@ Servicio Geologico Mexicano: https://www.sgm.gob.mx/Gobmx/en/About_SGM/Remote_se
 执行 node expansion-src/g1/checks.mjs，计算与源码契约记录见 check-results.json。
 作者未执行浏览器/教师门户接入验收；由主任务对统一构建产物实际执行并另记证据。
 
-当前教学版：1.1.1。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+当前教学版：1.2.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
 比较任务：只留红光：对照候选类别与基线，检查丢掉近红外和短波红外后哪些地物更难区分。
 加深阴影：查看阴影区域的待复核点、误分分布与整体准确率。

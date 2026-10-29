@@ -1,0 +1,1306 @@
+{
+  "checkedAt": "2026-10-29T18:02:51.018Z",
+  "browser": "Chrome via tools/pw.mjs",
+  "session": "concept-theme",
+  "base": "http://127.0.0.1:8755/",
+  "scope": "HTTP desktop1440 and mobile390 theme/navigation/assistant smoke",
+  "rows": [
+    {
+      "id": "home",
+      "url": "http://127.0.0.1:8755/portal/index.html#/",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "井见 · 石油智能化可视实验室",
+        "hash": "#/",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 0,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 0,
+        "difficultyHeadingCount": 0,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 1358,
+            "y": 916,
+            "width": 62,
+            "height": 64
+          },
+          "style": {
+            "background": "rgba(255, 252, 247, 0.91)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": null,
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-home-1440.png",
+      "notApplicable": [
+        "oneThreePartNav",
+        "oneContext",
+        "oneDifficultySection"
+      ]
+    },
+    {
+      "id": "stage",
+      "url": "http://127.0.0.1:8755/portal/index.html#/stage/mudlogging",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "录井 · 井见",
+        "hash": "#/stage/mudlogging",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 0,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 0,
+        "difficultyHeadingCount": 0,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 1270,
+            "y": 833,
+            "width": 144,
+            "height": 151
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": null,
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-stage-1440.png",
+      "notApplicable": [
+        "oneThreePartNav",
+        "oneContext",
+        "oneDifficultySection"
+      ]
+    },
+    {
+      "id": "method",
+      "url": "http://127.0.0.1:8755/portal/index.html#/method/ts",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "时序预测 · 井见",
+        "hash": "#/method/ts",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 0,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 0,
+        "difficultyHeadingCount": 0,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 1270,
+            "y": 833,
+            "width": 144,
+            "height": 151
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": null,
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-method-1440.png",
+      "notApplicable": [
+        "oneThreePartNav",
+        "oneContext",
+        "oneDifficultySection"
+      ]
+    },
+    {
+      "id": "w1-new",
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/w1?case=s17x-w1-log-boundaries&tab=bg",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "测井曲线智能分层 · 井见",
+        "hash": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "变点检测",
+          "序列分割",
+          "1D 卷积网络",
+          "地质规则后处理"
+        ],
+        "sameScene": [
+          {
+            "text": "测井曲线智能分层：识别持续改变的地层响应当前v1.2.0",
+            "href": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg"
+          },
+          {
+            "text": "测井曲线智能分层老师原样例 →",
+            "href": "#/scene/w1?case=welllog-layer&tab=bg"
+          }
+        ],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 1270,
+            "y": 833,
+            "width": 144,
+            "height": 151
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-w1-new-1440.png",
+      "notApplicable": []
+    },
+    {
+      "id": "w1-teacher",
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/w1?case=welllog-layer&tab=bg",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "测井曲线智能分层 · 井见",
+        "hash": "#/scene/w1?case=welllog-layer&tab=bg",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [
+          {
+            "text": "测井曲线智能分层当前老师原样例",
+            "href": "#/scene/w1?case=welllog-layer&tab=bg"
+          },
+          {
+            "text": "测井曲线智能分层：识别持续改变的地层响应v1.2.0 →",
+            "href": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg"
+          }
+        ],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 1270,
+            "y": 833,
+            "width": 144,
+            "height": 151
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-w1-teacher-1440.png",
+      "notApplicable": []
+    },
+    {
+      "id": "m5",
+      "url": "http://127.0.0.1:8755/dist/cases/s17-evidence-report/demo/index.html#background",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "井见 · 综合录井解释与井段交接",
+        "hash": "#background",
+        "version": "1.9.0",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": null,
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 1,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "信息抽取",
+          "模板化生成",
+          "检索增强生成"
+        ],
+        "sameScene": [
+          {
+            "text": "综合录井解释与井段交接当前v1.9.0",
+            "href": "#background"
+          }
+        ],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 1358,
+            "y": 916,
+            "width": 62,
+            "height": 64
+          },
+          "style": {
+            "background": "rgba(255, 252, 247, 0.91)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(159, 40, 46)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "warmPaper": true
+      },
+      "screenshot": "output/playwright/navigation-m5-1440.png",
+      "notApplicable": [
+        "portal brand mark check on standalone page"
+      ]
+    },
+    {
+      "id": "g1-background",
+      "url": "http://127.0.0.1:8755/dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html#background",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "hash": "#background",
+        "version": "1.2.0",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "brand": null,
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 1,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "语义分割",
+          "弱监督学习",
+          "多光谱特征融合"
+        ],
+        "sameScene": [
+          {
+            "text": "地质剖面遥感解译：从多波段像素读懂地表单元当前v1.2.0",
+            "href": "#background"
+          }
+        ],
+        "newSameStageCount": 1,
+        "assistant": {
+          "rect": {
+            "x": 1270,
+            "y": 833,
+            "width": 144,
+            "height": 151
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "warmPaper": true
+      },
+      "screenshot": "output/playwright/navigation-g1-background-1440.png",
+      "notApplicable": [
+        "portal brand mark check on standalone page"
+      ]
+    },
+    {
+      "id": "g1-workflow",
+      "url": "http://127.0.0.1:8755/dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html#workflow",
+      "width": 1440,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "hash": "#workflow",
+        "version": "1.2.0",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "scrollWidth": 1440,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "brand": null,
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 1,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "语义分割",
+          "弱监督学习",
+          "多光谱特征融合"
+        ],
+        "sameScene": [
+          {
+            "text": "地质剖面遥感解译：从多波段像素读懂地表单元当前v1.2.0",
+            "href": "#background"
+          }
+        ],
+        "newSameStageCount": 1,
+        "assistant": {
+          "rect": {
+            "x": 1270,
+            "y": 833,
+            "width": 144,
+            "height": 151
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(148, 30, 37)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "warmPaper": true
+      },
+      "screenshot": "output/playwright/navigation-g1-workflow-1440.png",
+      "notApplicable": [
+        "portal brand mark check on standalone page"
+      ]
+    },
+    {
+      "id": "home",
+      "url": "http://127.0.0.1:8755/portal/index.html#/",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "井见 · 石油智能化可视实验室",
+        "hash": "#/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 0,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 0,
+        "difficultyHeadingCount": 0,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 316,
+            "y": 766,
+            "width": 62,
+            "height": 64
+          },
+          "style": {
+            "background": "rgba(255, 252, 247, 0.91)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": null,
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-home-390.png",
+      "notApplicable": [
+        "oneThreePartNav",
+        "oneContext",
+        "oneDifficultySection"
+      ]
+    },
+    {
+      "id": "stage",
+      "url": "http://127.0.0.1:8755/portal/index.html#/stage/mudlogging",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "录井 · 井见",
+        "hash": "#/stage/mudlogging",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 0,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 0,
+        "difficultyHeadingCount": 0,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 268,
+            "y": 717,
+            "width": 110,
+            "height": 115
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": null,
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-stage-390.png",
+      "notApplicable": [
+        "oneThreePartNav",
+        "oneContext",
+        "oneDifficultySection"
+      ]
+    },
+    {
+      "id": "method",
+      "url": "http://127.0.0.1:8755/portal/index.html#/method/ts",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "时序预测 · 井见",
+        "hash": "#/method/ts",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 0,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 0,
+        "difficultyHeadingCount": 0,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 268,
+            "y": 717,
+            "width": 110,
+            "height": 115
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": null,
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-method-390.png",
+      "notApplicable": [
+        "oneThreePartNav",
+        "oneContext",
+        "oneDifficultySection"
+      ]
+    },
+    {
+      "id": "w1-new",
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/w1?case=s17x-w1-log-boundaries&tab=bg",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": false,
+        "warmPaper": true,
+        "brandRed": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "测井曲线智能分层 · 井见",
+        "hash": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 415,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "变点检测",
+          "序列分割",
+          "1D 卷积网络",
+          "地质规则后处理"
+        ],
+        "sameScene": [
+          {
+            "text": "测井曲线智能分层：识别持续改变的地层响应当前v1.2.0",
+            "href": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg"
+          },
+          {
+            "text": "测井曲线智能分层老师原样例 →",
+            "href": "#/scene/w1?case=welllog-layer&tab=bg"
+          }
+        ],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 268,
+            "y": 717,
+            "width": 110,
+            "height": 115
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-w1-new-390.png",
+      "notApplicable": []
+    },
+    {
+      "id": "w1-teacher",
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/w1?case=welllog-layer&tab=bg",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "brandRed": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "测井曲线智能分层 · 井见",
+        "hash": "#/scene/w1?case=welllog-layer&tab=bg",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 0,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "",
+        "references": [],
+        "sameScene": [
+          {
+            "text": "测井曲线智能分层当前老师原样例",
+            "href": "#/scene/w1?case=welllog-layer&tab=bg"
+          },
+          {
+            "text": "测井曲线智能分层：识别持续改变的地层响应v1.2.0 →",
+            "href": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg"
+          }
+        ],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 268,
+            "y": 717,
+            "width": 110,
+            "height": 115
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "warmPaper": true,
+        "registeredW1CaseVersion": "1.2.0"
+      },
+      "screenshot": "output/playwright/navigation-w1-teacher-390.png",
+      "notApplicable": []
+    },
+    {
+      "id": "m5",
+      "url": "http://127.0.0.1:8755/dist/cases/s17-evidence-report/demo/index.html#background",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "井见 · 综合录井解释与井段交接",
+        "hash": "#background",
+        "version": "1.9.0",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "brand": null,
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 1,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "信息抽取",
+          "模板化生成",
+          "检索增强生成"
+        ],
+        "sameScene": [
+          {
+            "text": "综合录井解释与井段交接当前v1.9.0",
+            "href": "#background"
+          }
+        ],
+        "newSameStageCount": 0,
+        "assistant": {
+          "rect": {
+            "x": 316,
+            "y": 766,
+            "width": 62,
+            "height": 64
+          },
+          "style": {
+            "background": "rgba(255, 252, 247, 0.91)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(159, 40, 46)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Segoe UI\", system-ui, sans-serif"
+        },
+        "warmPaper": true
+      },
+      "screenshot": "output/playwright/navigation-m5-390.png",
+      "notApplicable": [
+        "portal brand mark check on standalone page"
+      ]
+    },
+    {
+      "id": "g1-background",
+      "url": "http://127.0.0.1:8755/dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html#background",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "hash": "#background",
+        "version": "1.2.0",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "brand": null,
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 1,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "语义分割",
+          "弱监督学习",
+          "多光谱特征融合"
+        ],
+        "sameScene": [
+          {
+            "text": "地质剖面遥感解译：从多波段像素读懂地表单元当前v1.2.0",
+            "href": "#background"
+          }
+        ],
+        "newSameStageCount": 1,
+        "assistant": {
+          "rect": {
+            "x": 268,
+            "y": 717,
+            "width": 110,
+            "height": 115
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(184, 36, 42)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "warmPaper": true
+      },
+      "screenshot": "output/playwright/navigation-g1-background-390.png",
+      "notApplicable": [
+        "portal brand mark check on standalone page"
+      ]
+    },
+    {
+      "id": "g1-workflow",
+      "url": "http://127.0.0.1:8755/dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html#workflow",
+      "width": 390,
+      "checks": {
+        "noPageOverflow": true,
+        "warmPaper": true,
+        "oneThreePartNav": true,
+        "oneContext": true,
+        "oneDifficultySection": true,
+        "assistantButtonVisible": true,
+        "assistantWithinViewport": true
+      },
+      "metrics": {
+        "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+        "hash": "#workflow",
+        "version": "1.2.0",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollWidth": 390,
+        "body": {
+          "background": "rgb(247, 244, 239)",
+          "color": "rgb(41, 45, 52)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "brand": null,
+        "nativeNavCount": 3,
+        "extraReadingRouteCount": 0,
+        "breadcrumbCount": 1,
+        "contextCount": 1,
+        "difficultyHeadingCount": 1,
+        "difficulty": "技术难度 · 中",
+        "references": [
+          "语义分割",
+          "弱监督学习",
+          "多光谱特征融合"
+        ],
+        "sameScene": [
+          {
+            "text": "地质剖面遥感解译：从多波段像素读懂地表单元当前v1.2.0",
+            "href": "#background"
+          }
+        ],
+        "newSameStageCount": 1,
+        "assistant": {
+          "rect": {
+            "x": 268,
+            "y": 717,
+            "width": 110,
+            "height": 115
+          },
+          "style": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(48, 44, 44)",
+            "font": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif"
+          }
+        },
+        "selectedNav": {
+          "background": "rgb(148, 30, 37)",
+          "color": "rgb(255, 255, 255)",
+          "font": "\"Microsoft YaHei\", \"PingFang SC\", system-ui, sans-serif"
+        },
+        "warmPaper": true
+      },
+      "screenshot": "output/playwright/navigation-g1-workflow-390.png",
+      "notApplicable": [
+        "portal brand mark check on standalone page"
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "name": "new W1 context opens teacher implementation",
+      "passed": true,
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/w1?case=welllog-layer&tab=bg"
+    },
+    {
+      "name": "teacher W1 context opens new implementation",
+      "passed": true,
+      "url": "http://127.0.0.1:8755/portal/index.html#/scene/w1?case=s17x-w1-log-boundaries&tab=bg"
+    },
+    {
+      "name": "reference method index opens real TS route",
+      "passed": true,
+      "url": "http://127.0.0.1:8755/portal/index.html#/method/ts"
+    },
+    {
+      "name": "M5 continuation opens W1 sibling package",
+      "passed": true,
+      "url": "http://127.0.0.1:8755/dist/expansion-cases/s17x-w1-log-boundaries/demo/index.html#background"
+    },
+    {
+      "name": "standalone breadcrumb opens real welllog portal stage",
+      "passed": true,
+      "url": "http://127.0.0.1:8755/portal/index.html#/stage/welllog"
+    },
+    {
+      "name": "assistant opens and keeps usable send button at 1440",
+      "passed": true,
+      "sendButton": {
+        "x": 1366,
+        "y": 886,
+        "width": 44,
+        "height": 44
+      },
+      "noPageOverflow": true,
+      "screenshot": "output/playwright/navigation-assistant-open-1440.png"
+    },
+    {
+      "name": "assistant collapses at 1440",
+      "passed": true
+    },
+    {
+      "name": "assistant opens and keeps usable send button at 390",
+      "passed": true,
+      "sendButton": {
+        "x": 324,
+        "y": 734,
+        "width": 44,
+        "height": 44
+      },
+      "noPageOverflow": true,
+      "screenshot": "output/playwright/navigation-assistant-open-390.png"
+    },
+    {
+      "name": "assistant collapses at 390",
+      "passed": true
+    }
+  ],
+  "pageErrors": [
+    "TypeError: Failed to execute 'getAttribLocation' on 'WebGL2RenderingContext': parameter 1 is not of type 'WebGLProgram'."
+  ],
+  "httpErrors": [],
+  "screenshots": [
+    "output/playwright/navigation-home-1440.png",
+    "output/playwright/navigation-stage-1440.png",
+    "output/playwright/navigation-method-1440.png",
+    "output/playwright/navigation-w1-new-1440.png",
+    "output/playwright/navigation-w1-teacher-1440.png",
+    "output/playwright/navigation-m5-1440.png",
+    "output/playwright/navigation-g1-background-1440.png",
+    "output/playwright/navigation-g1-workflow-1440.png",
+    "output/playwright/navigation-home-390.png",
+    "output/playwright/navigation-stage-390.png",
+    "output/playwright/navigation-method-390.png",
+    "output/playwright/navigation-w1-new-390.png",
+    "output/playwright/navigation-w1-teacher-390.png",
+    "output/playwright/navigation-m5-390.png",
+    "output/playwright/navigation-g1-background-390.png",
+    "output/playwright/navigation-g1-workflow-390.png",
+    "output/playwright/navigation-assistant-open-1440.png",
+    "output/playwright/navigation-assistant-open-390.png",
+    "output/playwright/navigation-w1-new-390-fixed.png"
+  ],
+  "sourceFixes": [
+    "portal context does not repeat the native same-stage related list",
+    "existing teacher difficulty section is retained once",
+    "case-switch selected chip uses course red"
+  ],
+  "fileProtocolTested": false,
+  "all61BrowserAcceptanceClaimed": false,
+  "totalChecks": 113,
+  "failed": [
+    {
+      "id": "w1-new",
+      "width": 390,
+      "name": "noPageOverflow"
+    }
+  ],
+  "passed": 112,
+  "initialHarness": {
+    "rawBooleanChecks": 128,
+    "actualInteractions": 9,
+    "notApplicableConditionalBooleans": 24,
+    "note": "N/A conditions removed below; they are not counted as passing checks."
+  },
+  "status": "initial_http_sample_complete_targeted_overflow_fix_verified_latest_bundle_recheck_pending",
+  "initialFailurePreserved": true,
+  "followUp": [
+    {
+      "checkedAt": "2026-10-29T18:04:04Z",
+      "id": "w1-new",
+      "width": 390,
+      "name": "noPageOverflow after long case-switch title wraps",
+      "passed": true,
+      "measurements": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "selectedButtonWidth": 328,
+        "selectedButtonRight": 359,
+        "nativeTabs": 3,
+        "extraReadingRoutes": 0
+      },
+      "screenshot": "output/playwright/navigation-w1-new-390-fixed.png"
+    },
+    {
+      "checkedAt": "2026-10-29T18:00:21Z",
+      "id": "w1-teacher",
+      "name": "teacher native difficulty section retained without repetition",
+      "passed": true,
+      "measurements": {
+        "difficultyHeadingCount": 1,
+        "contextHeading": "继续阅读场景与案例",
+        "sameSceneLinks": 2
+      }
+    },
+    {
+      "checkedAt": "2026-10-29T17:59:04Z",
+      "id": "w1-new",
+      "name": "portal same-stage list de-duplicated and selected implementation red",
+      "passed": true,
+      "measurements": {
+        "contextSameStageLists": 0,
+        "nativeRelatedGroups": [
+          "同环节 · 测井",
+          "同方法 · 时序预测"
+        ],
+        "selectedBackground": "rgb(184, 36, 42)"
+      }
+    }
+  ],
+  "effectiveInitialSampleAfterTargetedFix": {
+    "checks": 113,
+    "passed": 113,
+    "failed": 0,
+    "reason": "The only failed applicable check was independently repeated after its CSS fix. Latest bundled header/scroll changes are excluded from this claim."
+  },
+  "latestSourceChangesPendingRebuiltBundleRecheck": [
+    {
+      "file": "shared/course-theme.css",
+      "change": "Remove global html scroll-padding-top:118px; preserve per-chapter scroll margins",
+      "evidenceBoundary": "Latest source changed; an old embedded bundle still measured118px before the requested final rebuild."
+    },
+    {
+      "file": "shared/course-theme.css",
+      "change": "Set standalone expansion header paragraph to readable #625F66 on its new white background",
+      "evidenceBoundary": "Low contrast observed in actual G1 screenshot; source fixed; final assembled CSS awaits root build and visual recheck."
+    }
+  ],
+  "finalSourceHashes": {
+    "shared/course-theme.css": "d7c8d7fa0710c1a8cf3d63e181637a3cbe8916c64c316a45395031032237335b",
+    "shared/course-compass.css": "f5730404c96ff6c037e238208869b14035cc39224737b4cbe66344f4f9a1e257",
+    "shared/course-compass.js": "9e9f1de36ad21810a902ce33b1cc5daaf946a805d063789ed3cab181ef22259f",
+    "tools/course-compass.mjs": "5ddcb1f4ba592559791ea46e54cf67ee44243ed5b313650c253680fc94752726"
+  },
+  "browserClosed": true,
+  "closedReason": "Parent requested browser resource pause and sequential final rechecks.",
+  "consoleBoundary": {
+    "observedError": "TypeError: Failed to execute 'getAttribLocation' on 'WebGL2RenderingContext': parameter 1 is not of type 'WebGLProgram'.",
+    "source": "portal/assets/vendor/pixi-live2d-0.4.0.min.js",
+    "consoleLog": ".playwright-cli/console-2026-10-29T18-00-39-949Z.log",
+    "observedAssociatedWarnings": "WebGL: CONTEXT_LOST_WEBGL: loseContext: context lost",
+    "assistantOpenCollapseAnd44pxControlsPassed": true,
+    "diagnosis": "not established by this theme audit",
+    "vendorModified": false,
+    "errorsSuppressed": false
+  },
+  "finalIntegratedFollowUp": {
+    "record": "browser-navigation.json",
+    "passed": 22,
+    "failed": 0,
+    "scope": "Latest build: coherent UI, W1, G1 header, M5 interval, local Live2D and compact assistant; initial matrix retained."
+  }
+}

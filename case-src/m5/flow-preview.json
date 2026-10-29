@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-29T16:35:16.115Z",
+  "capturedAt": "2026-10-29T18:10:24.829Z",
   "producer": "Actual Chrome default S17Inspect.flowHTML; static preview, not a browser acceptance report",
   "caseId": "s17-evidence-report",
   "sources": [
@@ -29,7 +29,7 @@
     },
     {
       "path": "case-src/m5/exhibit.js",
-      "sha256": "141ad5c38f61c0a1e434cb56a03a7e3d38b82c6c816fb60ce14c523544ab20de"
+      "sha256": "571f9bf214e3fec251224c1b9867cf62af5ca6b7bf5c7bcbc1dffea8a1bd64e1"
     }
   ],
   "snapshot": {
@@ -39,6 +39,217 @@
     "selected": 2,
     "selectedClaim": "sentence-2",
     "stage": 0,
+    "intervalIndex": 0,
+    "perspective": "observe",
+    "handover": {
+      "intervalMD_m": [
+        1200,
+        1230
+      ],
+      "intervalConvention": "左闭右开；最后一段包含1280 m，文本范围需有正长度重叠；汇总范围中的记录各自保留自己的范围",
+      "textClaimIds": [
+        "sentence-0",
+        "sentence-1",
+        "sentence-2"
+      ],
+      "textRecordCount": 3,
+      "textWithoutDepthCount": 2,
+      "differences": [],
+      "gasReference": {
+        "kind": "model_inference",
+        "claimId": "s17-mudgas-context-0",
+        "sourceRefs": [
+          {
+            "sourceRecordId": "fixture-m2-gas",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "time_range",
+              "timeRange_s": [
+                1470,
+                1790
+              ]
+            }
+          },
+          {
+            "sourceRecordId": "fixture-m2-gas",
+            "sourceVersion": 1,
+            "selector": {
+              "type": "time_range",
+              "timeRange_s": [
+                1050,
+                1620
+              ]
+            }
+          }
+        ],
+        "sourceTime_s": 1050,
+        "sourceDepthMD_m": 1205.8802919085292,
+        "eventTimeRange_s": [
+          1470,
+          1790
+        ],
+        "method": "weighted_knn",
+        "reviewStatus": "unreviewed"
+      },
+      "drillingObservation": {
+        "sourceRef": {
+          "sourceRecordId": "fixture-m4-response",
+          "sourceVersion": 1,
+          "selector": {
+            "type": "depth_range",
+            "depthRangeMD_m": [
+              1200,
+              1230
+            ]
+          }
+        },
+        "pointCount": 120,
+        "activePointCount": 115,
+        "meanDrillTime_min_m": 4.342516402030747,
+        "minDrillTime_min_m": 2.923433753835295,
+        "maxDrillTime_min_m": 4.535579946977232,
+        "meanWOB_kN": 17,
+        "meanRPM": 100
+      },
+      "drillingCandidates": [
+        {
+          "claimId": "s17-drilltime-boundaries-0",
+          "statement": "1226.88 m MD附近出现教学候选响应界面，尚不能命名真实地层。",
+          "kind": "model_inference",
+          "sourceRefs": [
+            {
+              "sourceRecordId": "fixture-m4-response",
+              "sourceVersion": 1,
+              "selector": {
+                "type": "depth_range",
+                "depthRangeMD_m": [
+                  1226.375,
+                  1227.375
+                ]
+              }
+            }
+          ],
+          "reviewStatus": "unreviewed"
+        }
+      ],
+      "samplePair": {
+        "identity": {
+          "wellId": "DEMO-017",
+          "parentSampleId": "DEMO-017-P1",
+          "sampleId": "DEMO-017-S1",
+          "capturePairId": "DEMO-017-WLUV1",
+          "splitGroupId": "DEMO-017-P1"
+        },
+        "sources": [
+          {
+            "sourceRecordId": "fixture-m1-white",
+            "sourceVersion": 1
+          },
+          {
+            "sourceRecordId": "fixture-m3-WLUV",
+            "sourceVersion": 1
+          }
+        ],
+        "claims": [
+          {
+            "claimId": "s17-cuttings-lithology-0",
+            "statement": "教学岩屑样品已生成三类外观候选，计数与二维面积分开，仍需复核。",
+            "kind": "model_inference",
+            "value": [
+              0.2577835687834316,
+              0.1444932108078453,
+              0.597723220408723,
+              0
+            ],
+            "unit": "visible_area_fraction",
+            "sourceRefs": [
+              {
+                "sourceRecordId": "fixture-m1-white",
+                "sourceVersion": 1,
+                "selector": {
+                  "type": "image_region",
+                  "bbox": [
+                    20,
+                    23,
+                    315,
+                    235
+                  ]
+                }
+              }
+            ],
+            "reviewStatus": "unreviewed"
+          },
+          {
+            "claimId": "s17-fluorescence-review-0",
+            "statement": "教学荧光显示面积候选为23.8%，来源未确定，不等于含油饱和度。",
+            "kind": "model_inference",
+            "value": 0.23810176930462212,
+            "unit": "visible_area_fraction",
+            "sourceRefs": [
+              {
+                "sourceRecordId": "fixture-m3-WLUV",
+                "sourceVersion": 1,
+                "selector": {
+                  "type": "image_region",
+                  "bbox": [
+                    20,
+                    23,
+                    315,
+                    235
+                  ]
+                }
+              }
+            ],
+            "reviewStatus": "unreviewed"
+          }
+        ],
+        "depthStatus": "not_provided_in_snapshots"
+      },
+      "upstreamPackages": [
+        {
+          "caseId": "s17-cuttings-lithology",
+          "caseVersion": "1.3.0",
+          "runId": "built-default-snapshot-v1",
+          "wellId": "DEMO-017",
+          "datasetId": "s17-synthetic-v1",
+          "dataNature": "synthetic_teaching",
+          "method": "visible_pixel_components + weighted_kNN"
+        },
+        {
+          "caseId": "s17-mudgas-context",
+          "caseVersion": "1.3.0",
+          "runId": "built-default-snapshot-v1",
+          "wellId": "DEMO-017",
+          "datasetId": "s17-synthetic-v1",
+          "dataNature": "synthetic_teaching",
+          "method": "shared_detector + standardized_weighted_knn"
+        },
+        {
+          "caseId": "s17-fluorescence-review",
+          "caseVersion": "1.3.0",
+          "runId": "built-default-snapshot-v1",
+          "wellId": "DEMO-017",
+          "datasetId": "s17-synthetic-v1",
+          "dataNature": "synthetic_teaching",
+          "method": "reference_correction + logistic_regression"
+        },
+        {
+          "caseId": "s17-drilltime-boundaries",
+          "caseVersion": "1.3.0",
+          "runId": "built-default-snapshot-v1",
+          "wellId": "DEMO-017",
+          "datasetId": "s17-synthetic-v1",
+          "dataNature": "synthetic_teaching",
+          "method": "independent_ridge + kmeans + continuity"
+        }
+      ],
+      "nextChecks": [
+        "核对气峰回查所用泵量、来源时段与接单根记录；参考位置仍需复核。",
+        "将这段钻时与工况及候选界面带给测井解释人员，沿深度对照伽马、电阻率等已有或后续曲线。"
+      ],
+      "status": "teaching_handover_needs_review",
+      "provenance": "上游为构建期快照；文本与快照独立，样品深度和跨源对应未补造。"
+    },
     "rawText": "1200—1210 m MD：岩屑以砂岩为主。\n1210—1220 m MD：气测总气升高至3.2归一化单位。\n1220—1230 m MD：未见明显荧光。\n30—60 s：接单根停泵。\n1230—1240 m MD：建议复核当前解释候选。\n交班记录已经整理。",
     "inputMode": "builtin",
     "run": {
@@ -1201,10 +1412,10 @@
     "notice": "已更新：6条子句、6句报告。"
   },
   "steps": [
-    "<div class=\"m5-flow-facts\" data-m5-flow=\"0\"><p><b>当前输入</b>当前版本的 130 个字符。</p><p><b>实际动作</b>保存来源修订 1，保持原文字符不变。</p><div class=\"m5-paper\"><h3>收集原始记录的实际产物</h3><div class=\"m5-quote\">1200—1210 m MD：岩屑以砂岩为主。\n1210—1220 m MD：气测总气升高至3.2归一化单位。\n1220—1230 m MD：未见明显荧光。\n30—60 s：接单根停泵。\n1230—1240 m MD：建议复核当前解释候选。\n交班记录已经整理。</div></div></div>",
+    "<div class=\"m5-flow-facts\" data-m5-flow=\"0\"><p><b>当前输入</b>所选 1200—1230 m MD，当前原文与前例构建期快照。</p><p><b>实际动作</b>按文字范围与逐深度数据筛选；气峰只按已保存的模型参考点定位，缺深度样品不归段。</p><div class=\"m5-paper\"><h3>对齐井段与检查覆盖的实际产物</h3><p>该段 3 条文字记录；岩屑 1 条，气测 1 条，荧光 1 条；钻时有 115 个有效点。</p><p>气峰参考点位于本段；M1/M3样品身份相同但没有井段。</p></div></div>",
     "<div class=\"m5-flow-facts\" data-m5-flow=\"1\"><p><b>当前输入</b>选中子句：1220—1230 m MD：未见明显荧光</p><p><b>实际动作</b>按原文位置切分，规则识别该子句的范围、数值、单位与否定。</p><div class=\"m5-paper\"><h3>分句与字段抽取的实际产物</h3><div class=\"m5-quote\">1200—1210 m MD：岩屑以砂岩为主。\n1210—1220 m MD：气测总气升高至3.2归一化单位。\n<mark class=\"m5-selection\" data-m5-active-source>1220—1230 m MD：未见明显荧光</mark>。\n30—60 s：接单根停泵。\n1230—1240 m MD：建议复核当前解释候选。\n交班记录已经整理。</div><div class=\"m5-fields\"><div class=\"m5-field\"><small>井段（沿井眼深度）</small><b>1220—1230 m MD</b></div><div class=\"m5-field\"><small>时段</small><b>原文未提供</b></div><div class=\"m5-field\"><small>数值与单位</small><b>该句未给气测数值</b></div><div class=\"m5-field\"><small>观察的肯定／否定</small><b>否定：未见／未检出</b></div></div><p class=\"m5-small\">当前观察位于原文第57—77个字符，已在图中高亮。</p></div></div>",
     "<div class=\"m5-flow-facts\" data-m5-flow=\"2\"><p><b>当前输入</b>同一子句：1220—1230 m MD：未见明显荧光</p><p><b>实际动作</b>取 21 个单字／相邻双字片段，运行固定训练库NB与关键词基线。</p><div class=\"m5-paper\"><h3>文本分类分流的实际产物</h3><div class=\"m5-score\"><svg viewBox=\"0 0 600 275\" role=\"img\" aria-label=\"当前子句六类相对对数分数，最高类为零，向左越长表示与最高类差距越大\"><text x=\"18\" y=\"22\" fill=\"#5d6570\" font-size=\"16\">当前子句 · 相对最高类的对数分数</text><line x1=\"430\" y1=\"36\" x2=\"430\" y2=\"244\" stroke=\"#918a80\"/><text x=\"18\" y=\"65\" fill=\"#343941\" font-size=\"18\">岩性</text><rect x=\"162.41680690508622\" y=\"48\" width=\"267.5831930949138\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"162.41680690508622\" cy=\"59.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"65\" fill=\"#343941\" font-size=\"17\">-31.71</text><text x=\"18\" y=\"99\" fill=\"#343941\" font-size=\"18\">气测</text><rect x=\"203.3298717492135\" y=\"82\" width=\"226.6701282507865\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"203.3298717492135\" cy=\"93.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"99\" fill=\"#343941\" font-size=\"17\">-26.86</text><text x=\"18\" y=\"133\" fill=\"#343941\" font-size=\"18\">荧光</text><rect x=\"430\" y=\"116\" width=\"2\" height=\"23\" rx=\"5\" fill=\"#b8242a\"/><circle cx=\"430\" cy=\"127.5\" r=\"4\" fill=\"#b8242a\"/><text x=\"446\" y=\"133\" fill=\"#343941\" font-size=\"17\">0.00</text><text x=\"18\" y=\"167\" fill=\"#343941\" font-size=\"18\">工况</text><rect x=\"131.53683129784775\" y=\"150\" width=\"298.46316870215225\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"131.53683129784775\" cy=\"161.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"167\" fill=\"#343941\" font-size=\"17\">-35.36</text><text x=\"18\" y=\"201\" fill=\"#343941\" font-size=\"18\">复核建议</text><rect x=\"130\" y=\"184\" width=\"300\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"130\" cy=\"195.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"201\" fill=\"#343941\" font-size=\"17\">-35.55</text><text x=\"18\" y=\"235\" fill=\"#343941\" font-size=\"18\">其他</text><rect x=\"139.5614915983998\" y=\"218\" width=\"290.4385084016002\" height=\"23\" rx=\"5\" fill=\"#9aabb9\"/><circle cx=\"139.5614915983998\" cy=\"229.5\" r=\"4\" fill=\"#6a7e90\"/><text x=\"446\" y=\"235\" fill=\"#343941\" font-size=\"17\">-34.41</text><text x=\"430\" y=\"267\" text-anchor=\"end\" fill=\"#5d6570\" font-size=\"16\">0 = 最高类；其余为相对对数分差</text></svg></div><p>当前候选：荧光；关键词基线：荧光。</p></div></div>",
     "<div class=\"m5-flow-facts\" data-m5-flow=\"3\"><p><b>当前输入</b>当前栏目“荧光”与原文字段。</p><p><b>实际动作</b>保留原文引述，将当前句子绑定到当前来源版本及文字位置。</p><div class=\"m5-paper\"><h3>组装有来源的报告的实际产物</h3><div class=\"m5-quote\">荧光记录（1220–1230 m MD）：“1220—1230 m MD：未见明显荧光”</div><p class=\"m5-small\">对应原文：1220—1230 m MD：未见明显荧光</p></div></div>",
-    "<div class=\"m5-flow-facts\" data-m5-flow=\"4\"><p><b>当前输入</b>当前报告第 3 句及其原文。</p><p><b>实际动作</b>逐项核对范围、数值、单位与否定。原文变化后，旧确认撤销。</p><div class=\"m5-paper\"><h3>逐句核查与修改的实际产物</h3><p><b>待核对</b> · 当前修订 1</p><div class=\"m5-quote\">荧光记录（1220–1230 m MD）：“1220—1230 m MD：未见明显荧光”</div><p class=\"m5-small\">本句 0 条历史；本次报告已核对 0/6 句。</p></div></div>"
+    "<div class=\"m5-flow-facts\" data-m5-flow=\"4\"><p><b>当前输入</b>当前报告第 3 句及 1200—1230 m MD 的资料。</p><p><b>实际动作</b>逐项核对范围、数值、单位与否定，保留选段缺项和下一步问题。</p><div class=\"m5-paper\"><h3>逐句核查与交接的实际产物</h3><p><b>待核对</b> · 当前修订 1</p><div class=\"m5-quote\">荧光记录（1220–1230 m MD）：“1220—1230 m MD：未见明显荧光”</div><p class=\"m5-small\">本句 0 条历史；本次报告已核对 0/6 句。</p><h4>下一步核查</h4><ul><li>核对气峰回查所用泵量、来源时段与接单根记录；参考位置仍需复核。</li><li>将这段钻时与工况及候选界面带给测井解释人员，沿深度对照伽马、电阻率等已有或后续曲线。</li></ul></div></div>"
   ]
 }

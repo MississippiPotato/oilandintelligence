@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-10-29T18:17:14.793Z",
+  "kind": "actual_Chrome_enhanced_portal_three_five_cases_and_original_sample",
+  "checks": [
+    {
+      "name": "m1 enhanced portal binds current scene navigation",
+      "passed": true
+    },
+    {
+      "name": "m1 enhanced reading reaches knowledge text",
+      "passed": true
+    },
+    {
+      "name": "m1 enhanced flow shows full actual default products",
+      "passed": true
+    },
+    {
+      "name": "m1 completed enhanced portal protocol",
+      "passed": false,
+      "detail": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#case-demo-root iframe').contentFrame().locator('#export')\u001b[22m\n"
+    },
+    {
+      "name": "m2 enhanced portal binds current scene navigation",
+      "passed": true
+    },
+    {
+      "name": "m2 enhanced reading reaches knowledge text",
+      "passed": true
+    },
+    {
+      "name": "m2 enhanced flow shows full actual default products",
+      "passed": true
+    },
+    {
+      "name": "m2 completed enhanced portal protocol",
+      "passed": false,
+      "detail": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#case-demo-root iframe').contentFrame().locator('#export')\u001b[22m\n"
+    },
+    {
+      "name": "m5 enhanced portal binds current scene navigation",
+      "passed": true
+    },
+    {
+      "name": "m5 enhanced reading reaches knowledge text",
+      "passed": true
+    },
+    {
+      "name": "m5 enhanced flow shows full actual default products",
+      "passed": true
+    },
+    {
+      "name": "m5 completed enhanced portal protocol",
+      "passed": false,
+      "detail": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#case-demo-root iframe').contentFrame().locator('#export')\u001b[22m\n"
+    },
+    {
+      "name": "Unmodified teacher firstbreak sample imports and computes in enhanced portal",
+      "passed": true
+    },
+    {
+      "name": "No uncaught enhanced portal errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [],
+  "passed": 11,
+  "failed": 3
+}

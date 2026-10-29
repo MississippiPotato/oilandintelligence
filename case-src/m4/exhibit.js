@@ -1,5 +1,5 @@
 (function(g){'use strict';
-const C=g.M4Core,ID='s17-drilltime-boundaries',VERSION='1.8.0',red='#B8242A',blue='#627C94',gold='#AA8246',ink='#343B43',muted='#747B80',groups=['#8D9EAF','#C6AC7C','#9D929B','#B9C1CA'];
+const C=g.M4Core,ID='s17-drilltime-boundaries',VERSION='1.9.0',red='#B8242A',blue='#627C94',gold='#AA8246',ink='#343B43',muted='#747B80',groups=['#8D9EAF','#C6AC7C','#9D929B','#B9C1CA'];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),fmt=(v,n=2)=>v==null?'—':Number(v).toFixed(n),mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
 let library;function lib(){return library||(library=C.train());}
 function compute(preset='operation',normalize=true,thickness=1){const L=lib(),config={...L.chosen,normalize,tolerance:1},data=C.generate(17,{preset,noise:.025,thickness}),inference=C.infer(data.observations,L,config),metrics=C.evaluate(inference,data.evaluationTruth,1);return{data,inference,metrics,config,method:'independent_ridge_calibration + training_kmeans + DP_continuity',split:L.groups,seed:17,dataVersion:'s17-response-v1'};}

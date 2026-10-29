@@ -1,0 +1,864 @@
+{
+  "checkedAt": "2026-10-29T18:24:24.874Z",
+  "kind": "final_Chrome_390px_native_SVG_CaseInspect_sync",
+  "cases": [
+    {
+      "scene": "t3",
+      "completed": true,
+      "main": {
+        "status": "computed",
+        "params": {
+          "demand": 420,
+          "head": 38,
+          "price": 0.7
+        },
+        "best": {
+          "n": 3,
+          "s": 0.88,
+          "H": 38.528,
+          "eta": 0.802072,
+          "power": 46.730220728313675,
+          "feasible": true
+        }
+      },
+      "imported": {
+        "demand": 420,
+        "best": {
+          "n": 3,
+          "s": 0.88,
+          "q": 140,
+          "H": 38.528,
+          "eta": 0.802072,
+          "power": 46.730220728313675,
+          "flowOK": true,
+          "headOK": true,
+          "feasible": true
+        },
+        "source": "CaseInspect本轮任务参数；按原公式重新枚举153候选"
+      },
+      "layouts": {
+        "workflow": {
+          "viewport": 390,
+          "pageWidth": 390,
+          "clientWidth": 390,
+          "paragraphFont": "18px",
+          "captionFont": "16px",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "BUTTON",
+              "height": 44.390625,
+              "left": 44,
+              "right": 204
+            },
+            {
+              "tag": "BUTTON",
+              "height": 44.390625,
+              "left": 217,
+              "right": 313
+            }
+          ],
+          "graphics": [
+            {
+              "width": 760,
+              "height": 478,
+              "viewBox": {
+                "width": 760,
+                "height": 478
+              },
+              "ratioX": 1,
+              "ratioY": 1,
+              "ctm": {
+                "a": 1,
+                "b": 0,
+                "c": 0,
+                "d": 1
+              },
+              "minEffectiveTextX": 16,
+              "minEffectiveTextY": 16,
+              "scroll": {
+                "tag": "DIV",
+                "classes": "ct-chart",
+                "graphicHost": false,
+                "clientWidth": 302,
+                "scrollWidth": 760,
+                "before": 0,
+                "after": 220,
+                "overflowX": "auto"
+              }
+            }
+          ]
+        },
+        "background": {
+          "viewport": 390,
+          "pageWidth": 390,
+          "clientWidth": 390,
+          "paragraphFont": "18px",
+          "captionFont": "16px",
+          "controls": [
+            {
+              "tag": "SELECT",
+              "height": 44,
+              "left": 156,
+              "right": 208
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "BUTTON",
+              "height": 44.390625,
+              "left": 44,
+              "right": 140
+            }
+          ],
+          "graphics": [
+            {
+              "width": 760,
+              "height": 446,
+              "viewBox": {
+                "width": 760,
+                "height": 446
+              },
+              "ratioX": 1,
+              "ratioY": 1,
+              "ctm": {
+                "a": 1,
+                "b": 0,
+                "c": 0,
+                "d": 1
+              },
+              "minEffectiveTextX": 16,
+              "minEffectiveTextY": 16,
+              "scroll": {
+                "tag": "DIV",
+                "classes": "xl-diagram",
+                "graphicHost": false,
+                "clientWidth": 302,
+                "scrollWidth": 760,
+                "before": 0,
+                "after": 220,
+                "overflowX": "auto"
+              }
+            }
+          ]
+        }
+      },
+      "capture": {
+        "width": 390,
+        "height": 1772,
+        "screenshot": "handoff/interactive-teaching-2026-10-30/transport-t3-390px.png"
+      }
+    },
+    {
+      "scene": "t5",
+      "completed": true,
+      "main": {
+        "status": "computed",
+        "params": {
+          "level": 9,
+          "fog": 1,
+          "radarBias": 2
+        },
+        "visual": 9.030751454400994,
+        "radar": 11
+      },
+      "imported": {
+        "rows": [
+          {
+            "index": 1,
+            "label": "主示范当前帧",
+            "visual": 9.030751454400994,
+            "radar": 11,
+            "difference": 1.9692485455990063,
+            "magnitude": 1.9692485455990063,
+            "strength": 119.13485912906006,
+            "row": 9.595560601430162,
+            "consistent": false
+          }
+        ],
+        "source": "CaseInspect本轮32×100像素与独立雷达读数"
+      },
+      "layouts": {
+        "workflow": {
+          "viewport": 390,
+          "pageWidth": 390,
+          "clientWidth": 390,
+          "paragraphFont": "18px",
+          "captionFont": "16px",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "BUTTON",
+              "height": 44.390625,
+              "left": 44,
+              "right": 220
+            },
+            {
+              "tag": "BUTTON",
+              "height": 44.390625,
+              "left": 233,
+              "right": 329
+            }
+          ],
+          "graphics": [
+            {
+              "width": 760,
+              "height": 718,
+              "viewBox": {
+                "width": 760,
+                "height": 718
+              },
+              "ratioX": 1,
+              "ratioY": 1,
+              "ctm": {
+                "a": 1,
+                "b": 0,
+                "c": 0,
+                "d": 1
+              },
+              "minEffectiveTextX": 16,
+              "minEffectiveTextY": 16,
+              "scroll": {
+                "tag": "DIV",
+                "classes": "ct-chart",
+                "graphicHost": false,
+                "clientWidth": 302,
+                "scrollWidth": 760,
+                "before": 0,
+                "after": 220,
+                "overflowX": "auto"
+              }
+            }
+          ]
+        },
+        "background": {
+          "viewport": 390,
+          "pageWidth": 390,
+          "clientWidth": 390,
+          "paragraphFont": "18px",
+          "captionFont": "16px",
+          "controls": [
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "INPUT",
+              "height": 44,
+              "left": 46,
+              "right": 348
+            },
+            {
+              "tag": "BUTTON",
+              "height": 44.390625,
+              "left": 44,
+              "right": 140
+            }
+          ],
+          "graphics": [
+            {
+              "width": 760,
+              "height": 526,
+              "viewBox": {
+                "width": 760,
+                "height": 526
+              },
+              "ratioX": 1,
+              "ratioY": 1,
+              "ctm": {
+                "a": 1,
+                "b": 0,
+                "c": 0,
+                "d": 1
+              },
+              "minEffectiveTextX": 16,
+              "minEffectiveTextY": 16,
+              "scroll": {
+                "tag": "DIV",
+                "classes": "xl-diagram",
+                "graphicHost": false,
+                "clientWidth": 302,
+                "scrollWidth": 760,
+                "before": 0,
+                "after": 220,
+                "overflowX": "auto"
+              }
+            }
+          ]
+        }
+      },
+      "capture": {
+        "width": 390,
+        "height": 2138,
+        "screenshot": "handoff/interactive-teaching-2026-10-30/transport-t5-390px.png"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "t3 actual main synchronization changes local state",
+      "passed": true,
+      "detail": {
+        "source": "CaseInspect本轮任务参数；按原公式重新枚举153候选",
+        "main": {
+          "status": "computed",
+          "params": {
+            "demand": 420,
+            "head": 38,
+            "price": 0.7
+          },
+          "best": {
+            "n": 3,
+            "s": 0.88,
+            "H": 38.528,
+            "eta": 0.802072,
+            "power": 46.730220728313675,
+            "feasible": true
+          }
+        }
+      }
+    },
+    {
+      "name": "t3 actual main demand and optimum exactly reproduced",
+      "passed": true,
+      "detail": {
+        "demand": 420,
+        "best": {
+          "n": 3,
+          "s": 0.88,
+          "q": 140,
+          "H": 38.528,
+          "eta": 0.802072,
+          "power": 46.730220728313675,
+          "flowOK": true,
+          "headOK": true,
+          "feasible": true
+        },
+        "candidates": 153
+      }
+    },
+    {
+      "name": "t3/workflow390px no page overflow",
+      "passed": true,
+      "detail": {
+        "pageWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "t3/workflow real local scroll ancestor moves",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "DIV",
+          "classes": "ct-chart",
+          "graphicHost": false,
+          "clientWidth": 302,
+          "scrollWidth": 760,
+          "before": 0,
+          "after": 220,
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "t3/workflow native SVG aspect and effective text at least16px",
+      "passed": true,
+      "detail": [
+        {
+          "width": 760,
+          "height": 478,
+          "viewBox": {
+            "width": 760,
+            "height": 478
+          },
+          "ratioX": 1,
+          "ratioY": 1,
+          "ctm": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "minEffectiveTextX": 16,
+          "minEffectiveTextY": 16,
+          "scroll": {
+            "tag": "DIV",
+            "classes": "ct-chart",
+            "graphicHost": false,
+            "clientWidth": 302,
+            "scrollWidth": 760,
+            "before": 0,
+            "after": 220,
+            "overflowX": "auto"
+          }
+        }
+      ]
+    },
+    {
+      "name": "t3/workflow18px paragraphs and16px captions",
+      "passed": true,
+      "detail": {
+        "paragraph": "18px",
+        "caption": "16px"
+      }
+    },
+    {
+      "name": "t3/workflow44px controls within viewport",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "BUTTON",
+          "height": 44.390625,
+          "left": 44,
+          "right": 204
+        },
+        {
+          "tag": "BUTTON",
+          "height": 44.390625,
+          "left": 217,
+          "right": 313
+        }
+      ]
+    },
+    {
+      "name": "t3/background390px no page overflow",
+      "passed": true,
+      "detail": {
+        "pageWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "t3/background real local scroll ancestor moves",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "DIV",
+          "classes": "xl-diagram",
+          "graphicHost": false,
+          "clientWidth": 302,
+          "scrollWidth": 760,
+          "before": 0,
+          "after": 220,
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "t3/background native SVG aspect and effective text at least16px",
+      "passed": true,
+      "detail": [
+        {
+          "width": 760,
+          "height": 446,
+          "viewBox": {
+            "width": 760,
+            "height": 446
+          },
+          "ratioX": 1,
+          "ratioY": 1,
+          "ctm": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "minEffectiveTextX": 16,
+          "minEffectiveTextY": 16,
+          "scroll": {
+            "tag": "DIV",
+            "classes": "xl-diagram",
+            "graphicHost": false,
+            "clientWidth": 302,
+            "scrollWidth": 760,
+            "before": 0,
+            "after": 220,
+            "overflowX": "auto"
+          }
+        }
+      ]
+    },
+    {
+      "name": "t3/background18px paragraphs and16px captions",
+      "passed": true,
+      "detail": {
+        "paragraph": "18px",
+        "caption": "16px"
+      }
+    },
+    {
+      "name": "t3/background44px controls within viewport",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "SELECT",
+          "height": 44,
+          "left": 156,
+          "right": 208
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "BUTTON",
+          "height": 44.390625,
+          "left": 44,
+          "right": 140
+        }
+      ]
+    },
+    {
+      "name": "t3 no uncaught final mobile error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "t5 actual main synchronization changes local state",
+      "passed": true,
+      "detail": {
+        "source": "CaseInspect本轮32×100像素与独立雷达读数",
+        "main": {
+          "status": "computed",
+          "params": {
+            "level": 9,
+            "fog": 1,
+            "radarBias": 2
+          },
+          "visual": 9.030751454400994,
+          "radar": 11
+        }
+      }
+    },
+    {
+      "name": "t5 actual pixel matrix independently reproduces visual and radar",
+      "passed": true,
+      "detail": {
+        "index": 1,
+        "label": "主示范当前帧",
+        "visual": 9.030751454400994,
+        "radar": 11,
+        "difference": 1.9692485455990063,
+        "magnitude": 1.9692485455990063,
+        "strength": 119.13485912906006,
+        "row": 9.595560601430162,
+        "consistent": false
+      }
+    },
+    {
+      "name": "t5 radar shift changes radar only",
+      "passed": true,
+      "detail": {
+        "index": 1,
+        "label": "主示范当前帧",
+        "visual": 9.030751454400994,
+        "radar": 13,
+        "difference": 3.9692485455990063,
+        "magnitude": 3.9692485455990063,
+        "strength": 119.13485912906006,
+        "row": 9.595560601430162,
+        "consistent": false
+      }
+    },
+    {
+      "name": "t5 reset restores eighteen local pairs after imported frame",
+      "passed": true,
+      "detail": {
+        "count": 18,
+        "source": "沿用本例image/predict计算；局部18帧高度覆盖2～8.5m，雷达链另加小幅扰动"
+      }
+    },
+    {
+      "name": "t5/workflow390px no page overflow",
+      "passed": true,
+      "detail": {
+        "pageWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "t5/workflow real local scroll ancestor moves",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "DIV",
+          "classes": "ct-chart",
+          "graphicHost": false,
+          "clientWidth": 302,
+          "scrollWidth": 760,
+          "before": 0,
+          "after": 220,
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "t5/workflow native SVG aspect and effective text at least16px",
+      "passed": true,
+      "detail": [
+        {
+          "width": 760,
+          "height": 718,
+          "viewBox": {
+            "width": 760,
+            "height": 718
+          },
+          "ratioX": 1,
+          "ratioY": 1,
+          "ctm": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "minEffectiveTextX": 16,
+          "minEffectiveTextY": 16,
+          "scroll": {
+            "tag": "DIV",
+            "classes": "ct-chart",
+            "graphicHost": false,
+            "clientWidth": 302,
+            "scrollWidth": 760,
+            "before": 0,
+            "after": 220,
+            "overflowX": "auto"
+          }
+        }
+      ]
+    },
+    {
+      "name": "t5/workflow18px paragraphs and16px captions",
+      "passed": true,
+      "detail": {
+        "paragraph": "18px",
+        "caption": "16px"
+      }
+    },
+    {
+      "name": "t5/workflow44px controls within viewport",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "BUTTON",
+          "height": 44.390625,
+          "left": 44,
+          "right": 220
+        },
+        {
+          "tag": "BUTTON",
+          "height": 44.390625,
+          "left": 233,
+          "right": 329
+        }
+      ]
+    },
+    {
+      "name": "t5/background390px no page overflow",
+      "passed": true,
+      "detail": {
+        "pageWidth": 390,
+        "clientWidth": 390
+      }
+    },
+    {
+      "name": "t5/background real local scroll ancestor moves",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "DIV",
+          "classes": "xl-diagram",
+          "graphicHost": false,
+          "clientWidth": 302,
+          "scrollWidth": 760,
+          "before": 0,
+          "after": 220,
+          "overflowX": "auto"
+        }
+      ]
+    },
+    {
+      "name": "t5/background native SVG aspect and effective text at least16px",
+      "passed": true,
+      "detail": [
+        {
+          "width": 760,
+          "height": 526,
+          "viewBox": {
+            "width": 760,
+            "height": 526
+          },
+          "ratioX": 1,
+          "ratioY": 1,
+          "ctm": {
+            "a": 1,
+            "b": 0,
+            "c": 0,
+            "d": 1
+          },
+          "minEffectiveTextX": 16,
+          "minEffectiveTextY": 16,
+          "scroll": {
+            "tag": "DIV",
+            "classes": "xl-diagram",
+            "graphicHost": false,
+            "clientWidth": 302,
+            "scrollWidth": 760,
+            "before": 0,
+            "after": 220,
+            "overflowX": "auto"
+          }
+        }
+      ]
+    },
+    {
+      "name": "t5/background18px paragraphs and16px captions",
+      "passed": true,
+      "detail": {
+        "paragraph": "18px",
+        "caption": "16px"
+      }
+    },
+    {
+      "name": "t5/background44px controls within viewport",
+      "passed": true,
+      "detail": [
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "INPUT",
+          "height": 44,
+          "left": 46,
+          "right": 348
+        },
+        {
+          "tag": "BUTTON",
+          "height": 44.390625,
+          "left": 44,
+          "right": 140
+        }
+      ]
+    },
+    {
+      "name": "t5 no uncaught final mobile error",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "handoff/interactive-teaching-2026-10-30/transport-t3-390px.png",
+    "handoff/interactive-teaching-2026-10-30/transport-t5-390px.png"
+  ],
+  "passed": 28,
+  "failed": 0,
+  "status": "historical_attempt_before_shared_css_fix",
+  "supersededBy": "browser-integrated-transport.json",
+  "countedInCurrentAcceptance": false
+}

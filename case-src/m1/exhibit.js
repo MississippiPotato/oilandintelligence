@@ -68,7 +68,7 @@
   function mount(host) {
     const $ = id => host.querySelector('#' + id);
     const doc = host.ownerDocument;
-    const state = {id:'s17-cuttings-lithology',version:'1.8.0',status:'not_run',revision:1,count:0,stage:0,selected:null,anchor:null,tracking:null,run:null};
+    const state = {id:'s17-cuttings-lithology',version:'1.9.0',status:'not_run',revision:1,count:0,stage:0,selected:null,anchor:null,tracking:null,run:null};
     let pending = null;
     const getOptions = () => ({light:Number($('m1-light').value),coating:Number($('m1-coating').value),yellow:0,merge:$('m1-preset').value==='merged',occlude:$('m1-preset').value==='occluded'});
     function setStatus(status,message) {

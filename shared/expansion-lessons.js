@@ -5,6 +5,7 @@
  const ready=()=>['ready','done','complete','completed'].includes(snapshot()?.status)&&!!$('export')&&!$('export').disabled;
  function readable(root,selector,kind){root.querySelectorAll(selector).forEach(el=>{if(el.parentElement?.classList.contains(kind))return;const box=document.createElement('div');box.className=kind;el.before(box);box.append(el);const hint=document.createElement('span');hint.className='xl-diagram-hint';hint.textContent='左右滑动查看完整坐标与标注';box.append(hint);});}
  function mountReading(root){
+  g.S17ConceptHost?.mount(root);
   readable(root,'.xl-knowledge svg,.xl-method-step svg','xl-diagram');
   root.querySelectorAll('[data-xl-chapter]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();root.querySelector('#xl-chapter-'+a.dataset.xlChapter)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}));
   const buttons=[...root.querySelectorAll('[data-xl-step]')],panels=[...root.querySelectorAll('[data-xl-panel]')];

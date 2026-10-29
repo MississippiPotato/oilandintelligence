@@ -11,9 +11,10 @@ const lessons=[
  ['气测解释','追踪一个气峰，判断它与井下作业有什么关系。'],
  ['荧光判读','对照白光和紫外照片，分清发光区域与含义。'],
  ['钻时分段','对照钻进速度和操作条件，寻找变化的井段。'],
- ['报告生成','把原始记录整理成报告，逐句检查依据。']
+ ['综合解释与交接','把不同观察放回井段，整理记录并提出下一步核查问题。']
 ];
 function render(){
+ document.querySelectorAll('.s17-footer p').forEach(line=>{if(line.textContent.includes('门户1.9.2-preview'))line.textContent=line.textContent.replace('门户1.9.2-preview','门户1.11.0-preview');});
  const route=location.hash.split('?')[0],isHome=!route||route==='#/';
  document.body.classList.toggle('s17-overview-active',isHome);
  document.body.classList.toggle('s17-lesson-reading',/^#\/scene\/m[1-5]$/.test(route));

@@ -1,0 +1,606 @@
+{
+  "checkedAt": "2026-10-29T18:23:38.958Z",
+  "kind": "actual_Chrome_five_desktop_and_live_changes",
+  "checks": [
+    {
+      "name": "m1 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-cuttings-lithology-r1-v1"
+      }
+    },
+    {
+      "name": "m1 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m1 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m1 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m1 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m1 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 5.700000017881393,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 126,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 267,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m1 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 267,
+        "after": 267
+      }
+    },
+    {
+      "name": "m1 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m1 reading entry keeps the heading below navigation",
+      "passed": true,
+      "detail": {
+        "y": 227.515625,
+        "title": "先找到轮廓，再把外观变成可比较的数值"
+      }
+    },
+    {
+      "name": "m1 all actual steps present without a button wall",
+      "passed": true
+    },
+    {
+      "name": "m1 changing illumination recalculates the selected location",
+      "passed": true,
+      "detail": {
+        "light": 0.65,
+        "anchor": {
+          "x": 56,
+          "y": 55,
+          "pixel": 17656,
+          "originalBBox": [
+            31,
+            38,
+            80,
+            73
+          ],
+          "selectionRevision": 1,
+          "arrangement": "original_teaching_tray"
+        },
+        "tracking": {
+          "state": "present",
+          "identityStatus": "same_layout_observation",
+          "contributors": 1,
+          "retainedPixels": 1054,
+          "referenceArea": 1054
+        }
+      }
+    },
+    {
+      "name": "m1 actual save produces JSON",
+      "passed": true
+    },
+    {
+      "name": "m2 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "m2-v1-r1"
+      }
+    },
+    {
+      "name": "m2 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m2 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m2 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m2 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m2 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 2.5,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 69,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 525,
+        "width": 1172,
+        "height": 391
+      }
+    },
+    {
+      "name": "m2 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 525,
+        "after": 525
+      }
+    },
+    {
+      "name": "m2 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m2 reading entry keeps the heading below navigation",
+      "passed": true,
+      "detail": {
+        "y": 223.125,
+        "title": "先看组分，再补上那一刻在做什么"
+      }
+    },
+    {
+      "name": "m2 all actual steps present without a button wall",
+      "passed": true
+    },
+    {
+      "name": "m2 background volume drives the same live engine and changes source time",
+      "passed": true,
+      "detail": {
+        "before": 1050,
+        "after": 810
+      }
+    },
+    {
+      "name": "m2 context changes actual neighbors while retaining identical gas input",
+      "passed": true,
+      "detail": {
+        "gasSignature": "fnv1a32-ab4391ca",
+        "before": 2,
+        "after": 1
+      }
+    },
+    {
+      "name": "m2 actual save produces JSON",
+      "passed": true
+    },
+    {
+      "name": "m3 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-fluorescence-review-r1-v1"
+      }
+    },
+    {
+      "name": "m3 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m3 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m3 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m3 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m3 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 3.5,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 127,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 267,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m3 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 267,
+        "after": 267
+      }
+    },
+    {
+      "name": "m3 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m3 reading entry keeps the heading below navigation",
+      "passed": true,
+      "detail": {
+        "y": 233.40625,
+        "title": "更亮，是显示变多，还是拍得更亮？"
+      }
+    },
+    {
+      "name": "m3 all actual steps present without a button wall",
+      "passed": true
+    },
+    {
+      "name": "m3 same paired sample recalculates actual masks after exposure",
+      "passed": true,
+      "detail": {
+        "before": {
+          "B0": {
+            "count": 2027,
+            "denominator": 14582,
+            "area": 0.13900699492525032
+          },
+          "B1": {
+            "count": 1914,
+            "denominator": 14582,
+            "area": 0.1312577149910849
+          },
+          "M0": {
+            "count": 3472,
+            "denominator": 14582,
+            "area": 0.23810176930462212
+          }
+        },
+        "after": {
+          "B0": {
+            "count": 2379,
+            "denominator": 14582,
+            "area": 0.16314634480866821
+          },
+          "B1": {
+            "count": 1914,
+            "denominator": 14582,
+            "area": 0.1312577149910849
+          },
+          "M0": {
+            "count": 3472,
+            "denominator": 14582,
+            "area": 0.23810176930462212
+          }
+        }
+      }
+    },
+    {
+      "name": "m3 actual save produces JSON",
+      "passed": true
+    },
+    {
+      "name": "m4 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-drilltime-boundaries-r1-v1"
+      }
+    },
+    {
+      "name": "m4 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m4 new background graph mounted",
+      "passed": true
+    },
+    {
+      "name": "m4 new background control actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "m4 new background graph resets",
+      "passed": true
+    },
+    {
+      "name": "m4 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 2.7000000178813934,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 71,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 267,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m4 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 267,
+        "after": 267
+      }
+    },
+    {
+      "name": "m4 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m4 reading entry keeps the heading below navigation",
+      "passed": true,
+      "detail": {
+        "y": 228.84375,
+        "title": "先解释工况，再比较剩下的响应"
+      }
+    },
+    {
+      "name": "m4 all actual steps present without a button wall",
+      "passed": true
+    },
+    {
+      "name": "m4 calibration changes response while raw ROP stays the same",
+      "passed": true,
+      "detail": {
+        "before": {
+          "depthMD_m": 1240,
+          "active": true,
+          "ROP_m_h": 29.731954709261476,
+          "drillTime_min_m": 2.0180307883124167,
+          "activeDrillingTime_min": 0.5045076970781041,
+          "WOB_kN": 27,
+          "RPM": 155,
+          "flow_m3_s": 0.025,
+          "torque_kNm": 7.298367051845417,
+          "qualityFlags": [],
+          "relativeResponse": 0.016391301905352762,
+          "predictedROP": 29.24858164278264,
+          "responseFeatures": [
+            0.016391301905352762,
+            0.07295881480677113
+          ],
+          "group": 1
+        },
+        "after": {
+          "depthMD_m": 1240,
+          "active": true,
+          "ROP_m_h": 29.731954709261476,
+          "drillTime_min_m": 2.0180307883124167,
+          "activeDrillingTime_min": 0.5045076970781041,
+          "WOB_kN": 27,
+          "RPM": 155,
+          "flow_m3_s": 0.025,
+          "torque_kNm": 7.298367051845417,
+          "qualityFlags": [],
+          "relativeResponse": 0.2922716643594945,
+          "predictedROP": 29.24858164278264,
+          "responseFeatures": [
+            0.2922716643594945,
+            0.07295881480677113
+          ],
+          "group": 1
+        }
+      }
+    },
+    {
+      "name": "m4 actual save produces JSON",
+      "passed": true
+    },
+    {
+      "name": "m5 default real calculation",
+      "passed": true,
+      "detail": {
+        "runId": "s17-evidence-report-r1-v1"
+      }
+    },
+    {
+      "name": "m5 all three teaching sections readable continuously",
+      "passed": true,
+      "detail": [
+        {
+          "id": "background",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "workflow",
+          "hidden": false,
+          "display": "block"
+        },
+        {
+          "id": "lab",
+          "hidden": false,
+          "display": "block"
+        }
+      ]
+    },
+    {
+      "name": "m5 clipped selected region visibly lifts with an intermediate animation",
+      "passed": true,
+      "detail": {
+        "from": "none",
+        "midway": {
+          "time": 2.699999988079071,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "frames": 70,
+        "current": "1",
+        "selected": 1,
+        "transform": "matrix3d(1.03, 0, 0, 0, 0, 1.03, 0, 0, 0, 0, 1, 0, 0, -12, 36, 1)",
+        "opacity": "0.68",
+        "scrollY": 356,
+        "width": 1168,
+        "height": 389
+      }
+    },
+    {
+      "name": "m5 selecting the scene stays in place",
+      "passed": true,
+      "detail": {
+        "before": 356,
+        "after": 356
+      }
+    },
+    {
+      "name": "m5 keyboard changes the scene region",
+      "passed": true
+    },
+    {
+      "name": "m5 reading entry keeps the heading below navigation",
+      "passed": true,
+      "detail": {
+        "y": 227.359375,
+        "title": "分类找栏目，抽取保留原话里的事实"
+      }
+    },
+    {
+      "name": "m5 all actual steps present without a button wall",
+      "passed": true
+    },
+    {
+      "name": "m5 edits are extracted again with exact source spans and no inherited accuracy",
+      "passed": true,
+      "detail": {
+        "runId": "s17-evidence-report-r2-v2",
+        "fields": {
+          "depthRangeMD_m": [
+            1210,
+            1220
+          ],
+          "timeRange_s": null,
+          "negation": false,
+          "uncertainty": false,
+          "gasValue": 5.1,
+          "gasUnit": "归一化单位"
+        }
+      }
+    },
+    {
+      "name": "m5 report sentence selects its source",
+      "passed": true
+    },
+    {
+      "name": "m5 actual save produces JSON",
+      "passed": true
+    },
+    {
+      "name": "No uncaught browser script errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "m1-scroll-desktop.png",
+    "m1-workflow-desktop.png",
+    "m2-scroll-desktop.png",
+    "m2-workflow-desktop.png",
+    "m3-scroll-desktop.png",
+    "m3-workflow-desktop.png",
+    "m4-scroll-desktop.png",
+    "m4-workflow-desktop.png",
+    "m5-scroll-desktop.png",
+    "m5-workflow-desktop.png"
+  ],
+  "downloads": [
+    "downloads/m1-desktop.json",
+    "downloads/m2-desktop.json",
+    "downloads/m3-desktop.json",
+    "downloads/m4-desktop.json",
+    "downloads/m5-desktop.json"
+  ],
+  "passed": 60,
+  "failed": 0
+}

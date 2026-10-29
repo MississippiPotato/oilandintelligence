@@ -5,6 +5,6 @@
 SLB｜Fracture and fault characterization: https://www.slb.com/products-and-services/innovating-in-oil-and-gas/reservoir-characterization/interpretation-and-analysis/interpretation-and-design/fracture-and-fault-characterization
 数据为固定种子的教学构造，不包含外部自动加载资源。预测输入与评价真值分开；详细分母见页面结果。
 
-当前教学版：1.1.1。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+当前教学版：1.2.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
 比较任务：减弱裂缝对比度：沿曲线寻找漏掉的像素，再比较模型与暗色阈值。
 提高分割阈值：查看掩膜收缩的位置及重叠指标，分清更少噪点与更多漏检。

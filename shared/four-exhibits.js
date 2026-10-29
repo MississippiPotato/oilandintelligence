@@ -3,7 +3,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 let currentAPI=null,refreshFlow=null;
 function notify(message){const n=document.getElementById('status');if(n)n.textContent=message;}
 function changed(){refreshFlow?.();const b=document.getElementById('export');if(b&&currentAPI)b.disabled=currentAPI.snapshot().status!=='ready';}
-function readingMount(root){root.querySelectorAll('[data-fx-scene]').forEach(box=>{
+function readingMount(root){g.S17ConceptHost?.mount(root);root.querySelectorAll('[data-fx-scene]').forEach(box=>{
  if(box.dataset.fxMounted)return;box.dataset.fxMounted='true';
  const scene=box.dataset.fxScene,L=g[scene.toUpperCase()+'Exhibit'];
  box.querySelectorAll('[data-fx-map]').forEach(b=>{b.disabled=false;b.addEventListener('click',()=>{

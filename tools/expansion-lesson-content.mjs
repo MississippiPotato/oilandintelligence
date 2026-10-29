@@ -1,24 +1,28 @@
 import {read} from './expansion-lesson-contract.mjs';
 import {profiles} from './expansion-lesson-profiles.mjs';
+import {conceptFor,conceptCSS,appendConcept} from './concept-content.mjs';
+import {courseContext,courseStyles} from './course-compass.mjs';
 export const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const text=s=>String(s||'').replace(/<svg\b[\s\S]*?<\/svg>/gi,'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
 // Only release metadata is rewritten in the assembled copy. Original engine/app sources stay byte identical.
 export function versionedScript(code,version){return code.replace(/(\bcaseVersion\s*:\s*)(['"])\d+\.\d+\.\d+\2/g,(_,prefix)=>prefix+JSON.stringify(version)).replace(/(["']version["']\s*:\s*)(['"])\d+\.\d+\.\d+\2/g,(_,prefix)=>prefix+JSON.stringify(version));}
-export function lessonContent(manifest){
+export function lessonContent(manifest,{mode='standalone'}={}){
  const p=profiles[manifest.sceneId];if(!p)throw new Error('Missing editorial profile '+manifest.sceneId);
- const style='<style>'+read('shared/expansion-lessons.css')+'</style>';
- const sections=manifest.tabs.background.sections.map((s,i)=>({...s,html:(i===0?style:'')+'<div class="xl-knowledge">'+(p.reading[i]?'<p class="xl-read"><b>看图时留意</b>'+esc(p.reading[i])+'</p>':'')+(s.html||s.body||'')+'</div>'}));
+ const style='<style>'+read('shared/expansion-lessons.css')+'\n'+conceptCSS()+'\n'+courseStyles()+'</style>';
+ const enriched=appendConcept(manifest.tabs.background.sections,conceptFor(manifest.sceneId),'background');
+ const sections=enriched.map((s,i)=>({...s,html:(i===0?style:'')+'<div class="xl-knowledge">'+(p.reading[i]?'<p class="xl-read"><b>看图时留意</b>'+esc(p.reading[i])+'</p>':'')+(s.html||s.body||'')+'</div>'}));
+ const context=courseContext(manifest.sceneId,manifest,{mode});sections.at(-1).html+=context.html;
  const opening='<div class="xl-opening"><span class="xl-kicker">认识问题 · 再看方法</span><h2>'+esc(p.insight)+'</h2><p>从'+esc(p.object)+'出发，把专业含义、图中位置和计算结果连起来。</p><div class="xl-reading-path">'+sections.slice(0,3).map((s,i)=>'<a href="#xl-chapter-'+i+'" data-xl-chapter="'+i+'"><span>0'+(i+1)+'</span>'+esc(s.title.replace(/^图\s*B\d+[｜|]\s*/,''))+'</a>').join('')+'</div></div>';
  const background=opening+sections.map((s,i)=>'<article class="xl-chapter" id="xl-chapter-'+i+'"><span class="xl-kicker">'+String(i+1).padStart(2,'0')+' / '+esc(i<3?'专业知识':'继续阅读')+'</span><h2>'+esc(s.title.replace(/^图\s*B\d+[｜|]\s*/,''))+'</h2>'+s.html+'</article>').join('')+'<div class="xl-next"><button type="button" data-xl-tab="workflow">这些观测怎样进入方法 →</button></div>';
- return{...p,sections,opening,background};
+ return{...p,sections,opening,background,courseContext:context};
 }
 export function workflowContent(manifest,chart){
- const w=manifest.tabs.workflow,steps=w.steps,source=w.metrics?.html||'';
+ const w=manifest.tabs.workflow,steps=w.steps,source=w.metrics?.html||'',concept=conceptFor(manifest.sceneId);
  const figures=[...source.matchAll(/<figure\b[\s\S]*?<\/figure>/gi)].map(x=>x[0]);
  const svgs=[...source.matchAll(/<svg\b[\s\S]*?<\/svg>/gi)].map(x=>'<figure>'+x[0]+'</figure>');
  const tables=[...source.matchAll(/<div\b[^>]*class=["'][^"']*table-scroll[^"']*["'][^>]*>\s*<table\b[\s\S]*?<\/table>\s*<\/div>/gi)].map(x=>x[0]);
  const illustrations=figures.length>=steps.length?figures:svgs.length>=steps.length?svgs:tables;
- const body=steps.map((s,i)=>'<article class="xl-method-step" id="xl-method-'+i+'" data-xl-panel="'+i+'"><div class="xl-step-heading"><span class="xl-kicker">'+String(i+1).padStart(2,'0')+' / '+steps.length+'</span><h3>'+esc(s.name)+'</h3></div><div class="xl-action-copy"><b>输入与动作</b><p>'+s.do+'</p></div>'+(illustrations[i]||'')+'<div class="xl-products"><div><b>得到什么</b><p>'+s.effect+'</p></div><div><b>理解这一步</b><p>'+s.trap+'</p></div></div></article>').join('');
+ const body=steps.map((s,i)=>'<article class="xl-method-step" id="xl-method-'+i+'" data-xl-panel="'+i+'"><div class="xl-step-heading"><span class="xl-kicker">'+String(i+1).padStart(2,'0')+' / '+steps.length+'</span><h3>'+esc(s.name)+'</h3></div><div class="xl-action-copy"><b>输入与动作</b><p>'+s.do+'</p></div>'+(illustrations[i]||'')+(i===concept?.workflowAfter?concept.workflowHTML:'')+'<div class="xl-products"><div><b>得到什么</b><p>'+s.effect+'</p></div><div><b>理解这一步</b><p>'+s.trap+'</p></div></div></article>').join('');
  return '<div class="xl-method"><div class="xl-opening"><span class="xl-kicker">沿着资料走一遍</span><h2>'+esc(w.title||manifest.title)+'</h2><p>图中的分支对应方法和基线；下面每一步都说明输入、动作与产物，进入演示后可改变条件查看实际数值。</p></div>'+chart+'<div class="xl-step-nav" role="tablist" aria-label="方法步骤">'+steps.map((s,i)=>'<button type="button" role="tab" aria-selected="'+(i===0)+'" aria-controls="xl-method-'+i+'" data-xl-step="'+i+'">'+String(i+1).padStart(2,'0')+' '+esc(s.name)+'</button>').join('')+'</div>'+body+'<div class="xl-next"><button type="button" data-xl-tab="lab">用当前数据检验这条流程 →</button></div></div>';
 }
 export function knowledgeMarkdown(m,p){

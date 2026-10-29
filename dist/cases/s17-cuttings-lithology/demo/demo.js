@@ -1,4 +1,10 @@
-window.S17Page={"sceneId":"m1","caseVersion":"1.8.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
+window.S17Page={"sceneId":"m1","caseVersion":"1.9.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
+(function(g){'use strict';if(g.S17ConceptHost)return;
+function keepScale(host){host.querySelectorAll('svg[viewBox]').forEach(svg=>{const width=svg.viewBox.baseVal.width;if(width>0){const requested=parseFloat(svg.style.minWidth)||0;svg.style.minWidth=Math.max(width,requested)+'px';svg.style.height='auto';svg.style.maxHeight='none';}});}
+function mount(root){for(const [scene,definition]of Object.entries(g.S17Concepts||{})){if(!root.querySelector('[data-concept-scene="'+scene+'"]'))continue;definition.mount(root);root.querySelectorAll('[data-concept-scene="'+scene+'"]').forEach(host=>{keepScale(host);if(host.dataset.ctScaleBound)return;host.dataset.ctScaleBound='true';new MutationObserver(()=>keepScale(host)).observe(host,{childList:true,subtree:true});});}}
+g.S17ConceptHost={mount};
+})(globalThis);
+
 (function(g){'use strict';
 const mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0,quantile=(a,q)=>{const s=a.slice().sort((x,y)=>x-y);return s.length?s[Math.floor((s.length-1)*q)]:0;};
 function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
@@ -147,7 +153,7 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
   function mount(host) {
     const $ = id => host.querySelector('#' + id);
     const doc = host.ownerDocument;
-    const state = {id:'s17-cuttings-lithology',version:'1.8.0',status:'not_run',revision:1,count:0,stage:0,selected:null,anchor:null,tracking:null,run:null};
+    const state = {id:'s17-cuttings-lithology',version:'1.9.0',status:'not_run',revision:1,count:0,stage:0,selected:null,anchor:null,tracking:null,run:null};
     let pending = null;
     const getOptions = () => ({light:Number($('m1-light').value),coating:Number($('m1-coating').value),yellow:0,merge:$('m1-preset').value==='merged',occlude:$('m1-preset').value==='occluded'});
     function setStatus(status,message) {
@@ -280,6 +286,78 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
   g.M1Exhibit={title:'岩屑识别：先看清一粒，再说清一盘',lede:'岩性候选应当能回到可见的颗粒和相似样品；统计一盘岩屑时，还必须说清分母。',chapters,steps,labHTML,mount,readingMount};
 })(globalThis);
 
+(function (g) {
+  'use strict';
+  const scene = 'm1';
+  // M1Core.segment(M1Core.calibrated(S17Images.sample(17, {}, 1).observations.white, calibration, true)).
+  // These are connected-component pixel areas, not geological grain sizes or field measurements.
+  const particles = [1453, 1054, 1054, 1138, 1503, 1662, 1257, 850, 1346, 967, 1130, 1168]
+    .map((area, index) => ({ id: index + 1, area, diameter: Math.sqrt(4 * area / Math.PI) }));
+  const totalArea = particles.reduce((sum, p) => sum + p.area, 0);
+  const fmt = (v, digits = 1) => Number(v).toFixed(digits);
+  function calculate(cutoff) {
+    const kept = particles.filter(p => p.diameter >= cutoff), area = kept.reduce((sum, p) => sum + p.area, 0);
+    return { cutoff_px: cutoff, retainedCount: kept.length, totalCount: particles.length, retainedPixels: area, totalPixels: totalArea,
+      countFraction: kept.length / particles.length, areaFraction: area / totalArea, retainedIds: kept.map(p => p.id) };
+  }
+  function chart(cutoff) {
+    const value = calculate(cutoff), x = v => 66 + (v - 30) / 18 * 526, y = v => 260 - 196 * v;
+    const sorted = particles.slice().sort((a, b) => a.diameter - b.diameter);
+    function steps(key) {
+      let remaining = key === 'count' ? particles.length : totalArea, d = 'M66 ' + y(1);
+      for (const p of sorted) {
+        d += 'H' + x(p.diameter).toFixed(2); remaining -= key === 'count' ? 1 : p.area;
+        d += 'V' + y(remaining / (key === 'count' ? particles.length : totalArea)).toFixed(2);
+      }
+      return d + 'H592';
+    }
+    return '<svg viewBox="0 0 660 370" role="img" aria-label="同一批检出轮廓在不同像素直径下限的累计保留数量与面积，金色虚线为当前下限" style="display:block;width:100%;min-width:660px;max-width:760px;height:auto">'
+      + '<text x="66" y="24" font-size="18" fill="#343941">报告下限提高时，留下了多少？</text>'
+      + [0, .25, .5, .75, 1].map(v => '<path d="M66 ' + y(v) + 'H592" stroke="#ded8cf"/><text x="12" y="' + (y(v) + 5) + '" font-size="16" fill="#62636a">' + fmt(v * 100, 0) + '%</text>').join('')
+      + [30, 33, 36, 39, 42, 45, 48].map(v => '<text x="' + x(v) + '" y="285" text-anchor="middle" font-size="16" fill="#62636a">' + v + '</text>').join('')
+      + '<path d="' + steps('area') + '" fill="none" stroke="#B8242A" stroke-width="3"/>'
+      + '<path d="' + steps('count') + '" fill="none" stroke="#55768B" stroke-width="3" stroke-dasharray="7 4"/>'
+      + '<path d="M' + x(cutoff).toFixed(2) + ' 48V326" stroke="#B08A4A" stroke-width="2" stroke-dasharray="4 4"/>'
+      + '<circle cx="' + x(cutoff).toFixed(2) + '" cy="' + y(value.areaFraction).toFixed(2) + '" r="5" fill="#B8242A"/>'
+      + '<circle cx="' + x(cutoff).toFixed(2) + '" cy="' + y(value.countFraction).toFixed(2) + '" r="5" fill="#55768B"/>'
+      + sorted.map((p, i) => '<circle cx="' + x(p.diameter).toFixed(2) + '" cy="' + (i && p.diameter - sorted[i - 1].diameter < .35 ? 319 : 306) + '" r="' + (Math.sqrt(p.area) / 8).toFixed(2) + '" fill="' + (p.diameter >= cutoff ? '#B8242A' : '#b6b0a7') + '"><title>轮廓' + p.id + '：' + p.area + '像素，等效直径' + fmt(p.diameter, 2) + 'px</title></circle>').join('')
+      + '<text x="66" y="340" font-size="16" fill="#343941">等效圆直径 / px　下方圆点：原12个检出轮廓</text>'
+      + '<path d="M66 360h28" stroke="#B8242A" stroke-width="3"/><text x="103" y="365" font-size="16" fill="#343941">可见面积保留比例</text>'
+      + '<path d="M340 360h28" stroke="#55768B" stroke-width="3" stroke-dasharray="7 4"/><text x="377" y="365" font-size="16" fill="#343941">颗粒数保留比例</text></svg>';
+  }
+  function readout(cutoff) {
+    const v = calculate(cutoff);
+    return '<strong>下限 ' + fmt(cutoff) + ' px：</strong>保留 ' + v.retainedCount + '/' + v.totalCount + ' 个轮廓（' + fmt(v.countFraction * 100) + '%），保留 ' + v.retainedPixels.toLocaleString('en-US') + '/' + v.totalPixels.toLocaleString('en-US') + ' 个可见像素（' + fmt(v.areaFraction * 100) + '%）。<br>'
+      + (v.retainedCount === v.totalCount ? '所有原始轮廓均保留。' : v.retainedCount === 0 ? '没有轮廓达到下限；这里仍以原盘为分母，所以两种保留比例均为0。' : '较大轮廓贡献的像素更多，因此数量与面积留下的份额不同。')
+      + ' 原盘分母始终为12个轮廓、14,582个可见像素；没有把被排除部分删掉再凑成100%。';
+  }
+  const style = '<style>[data-concept-scene="m1"]{font-size:18px;line-height:1.75;min-width:0}[data-concept-scene="m1"] .ct-chart{overflow-x:auto;max-width:100%}[data-concept-scene="m1"] .ct-controls{display:flex;align-items:center;flex-wrap:wrap;gap:16px}[data-concept-scene="m1"] label,[data-concept-scene="m1"] button,[data-concept-scene="m1"] figcaption{font-size:16px}[data-concept-scene="m1"] figure{margin:16px 0}[data-concept-scene="m1"] input{max-width:100%;accent-color:#B8242A}[data-concept-scene="m1"] .ct-readout{background:#F7F4EF;padding:14px;border-left:4px solid #B8242A}</style>';
+  const backgroundHTML = '<section class="ct-widget" data-concept-scene="m1" data-concept-part="background">' + style
+    + '<h3>小颗粒少报几粒，整盘就少了同样多的面积吗？</h3><p>把本例默认教学盘的12个实际检出轮廓固定下来，试设一个<strong>报告下限</strong>。每个轮廓的等效圆直径由它的可见面积计算：d＝2√(面积÷π)。面积按像素计，直径便以像素 px 计；缺少毫米标尺时，不能把它当作岩石内部砂粒的毫米粒度。</p>'
+    + '<div class="ct-controls"><label>只保留等效直径至少 <output data-ct-cutoff-label>38.0 px</output> 的轮廓 <input disabled data-ct-cutoff type="range" min="30" max="48" step="0.5" value="38" aria-label="报告轮廓的等效直径下限，像素"></label><button disabled type="button" data-ct-reset>复位</button></div>'
+    + '<figure><div class="ct-chart" data-ct-graphic>' + chart(38) + '</div><figcaption>两条线都除以原盘总量。蓝灰虚线每少一粒下降相同份额；朱红实线按该轮廓像素面积下降。拖到30 px可看全部保留，拖到48 px可看全部排除。</figcaption></figure><p class="ct-readout" data-ct-result>' + readout(38) + '</p>'
+    + '<p style="font-size:16px">数据：既有合成教学盘 DEMO-017-P1，种子17、默认白光条件，经原 M1Core 校正与连通域分割所得面积。本单元只研究报告口径，不改变主演示。专业背景沿用 <a href="https://glossary.slb.com/terms/c/cuttings" target="_blank" rel="noopener">SLB cuttings</a> 对岩屑尺寸、外观与采样的说明；像素下限是本地教学计算。</p></section>';
+  function mount(root) {
+    root.querySelectorAll('[data-concept-scene="' + scene + '"]').forEach(host => {
+      if (host.dataset.ctReady) return;
+      host.dataset.ctReady = 'true';
+      host.querySelectorAll('input,select,button').forEach(el => { el.disabled = false; });
+      const slider = host.querySelector('[data-ct-cutoff]');
+      function draw() {
+        const cutoff = Number(slider.value);
+        host.querySelector('[data-ct-cutoff-label]').textContent = fmt(cutoff) + ' px';
+        host.querySelector('[data-ct-graphic]').innerHTML = chart(cutoff);
+        host.querySelector('[data-ct-result]').innerHTML = readout(cutoff);
+        host.dataset.ctState = JSON.stringify({ source: 'fixed_default_teaching_tray', input: { cutoff_px: cutoff }, ...calculate(cutoff) });
+      }
+      slider.addEventListener('input', draw); slider.addEventListener('change', draw);
+      host.querySelector('[data-ct-reset]').addEventListener('click', () => { slider.value = 38; draw(); });
+      draw();
+    });
+  }
+  (g.S17Concepts || (g.S17Concepts = {}))[scene] = { backgroundAfter: 3, workflowAfter: 0, backgroundHTML, workflowHTML: '', mount };
+})(globalThis);
+
 (function(g){'use strict';if(g.S17Scroll)return;
 function activate(figure,index){if(!figure)return;const i=Math.max(0,Math.min(3,Number(index)));figure.dataset.scrollCurrent=String(i);figure.querySelectorAll('[data-scroll-layer],[data-scroll-outline]').forEach(n=>n.classList.toggle('is-current',Number(n.dataset.scrollLayer??n.dataset.scrollOutline)===i));figure.querySelectorAll('[data-scroll-select]').forEach(n=>n.setAttribute('aria-pressed',String(Number(n.dataset.scrollSelect)===i)));figure.querySelector('[data-scroll-title]').textContent=figure.querySelector('.scroll-menu [data-scroll-select="'+i+'"]').textContent.replace(/^\s*0[1-4]\s*/,'');}
 function bind(root){root.querySelectorAll('[data-scroll-scene]').forEach(figure=>{if(figure.dataset.scrollBound)return;figure.dataset.scrollBound='true';figure.querySelectorAll('button').forEach(b=>b.disabled=false);figure.addEventListener('click',e=>{const b=e.target.closest('[data-scroll-select],[data-scroll-read]');if(!b)return;if(b.hasAttribute('data-scroll-select')){activate(figure,b.dataset.scrollSelect);figure.dispatchEvent(new CustomEvent('s17-scroll-select',{bubbles:true,detail:{scene:figure.dataset.scrollScene,index:Number(b.dataset.scrollSelect)}}));}else {const inner=root.querySelector('#'+figure.dataset.scrollScene+'-knowledge-'+figure.dataset.scrollCurrent);const target=figure.dataset.scrollScene==='m2'?inner?.closest('.m2-background-chapter')||inner:inner;target?.scrollIntoView({block:'start',behavior:g.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});}});figure.querySelector('.scroll-menu').addEventListener('keydown',e=>{const b=e.target.closest('[data-scroll-select]');if(!b||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const i=e.key==='Home'?0:e.key==='End'?3:(Number(b.dataset.scrollSelect)+(e.key==='ArrowRight'?1:3))%4;activate(figure,i);figure.querySelector('.scroll-menu [data-scroll-select="'+i+'"]').focus();});activate(figure,0);});}
@@ -292,7 +370,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 let currentAPI=null,refreshFlow=null;
 function notify(message){const n=document.getElementById('status');if(n)n.textContent=message;}
 function changed(){refreshFlow?.();const b=document.getElementById('export');if(b&&currentAPI)b.disabled=currentAPI.snapshot().status!=='ready';}
-function readingMount(root){root.querySelectorAll('[data-fx-scene]').forEach(box=>{
+function readingMount(root){g.S17ConceptHost?.mount(root);root.querySelectorAll('[data-fx-scene]').forEach(box=>{
  if(box.dataset.fxMounted)return;box.dataset.fxMounted='true';
  const scene=box.dataset.fxScene,L=g[scene.toUpperCase()+'Exhibit'];
  box.querySelectorAll('[data-fx-map]').forEach(b=>{b.disabled=false;b.addEventListener('click',()=>{
@@ -320,6 +398,157 @@ g.S17Exhibit={notify,changed,readingMount,start};
 })(globalThis);
 
 S17Exhibit.start("m1");
+window.S17CompassPage={"model":{"scene":{"id":"m1","name":"岩屑岩性自动识别","stageId":"mudlogging","stageName":"录井","diff":"高","diffWhy":"类间差异小（泥岩/页岩、粉砂岩/细砂岩）、样本不均衡，混样与污染带来标签噪声。","refs":["细粒度图像分类","小样本学习","类别不均衡处理"]},"current":{"id":"s17-cuttings-lithology","title":"岩屑识别：先看清一粒，再说清一盘","version":"1.9.0"},"methods":[{"id":"cv","name":"计算机视觉","abbr":"CV"}],"sameScene":[{"id":"s17-cuttings-lithology","sceneId":"m1","title":"岩屑识别：先看清一粒，再说清一盘","version":"1.9.0","directory":"cases","origin":""}],"sameStage":[{"id":"m2","name":"气测异常智能解释","stageId":"mudlogging","stageName":"录井","caseId":"s17-mudgas-context","directory":"cases"},{"id":"m3","name":"荧光图像智能判读","stageId":"mudlogging","stageName":"录井","caseId":"s17-fluorescence-review","directory":"cases"},{"id":"m4","name":"钻时曲线地层划分","stageId":"mudlogging","stageName":"录井","caseId":"s17-drilltime-boundaries","directory":"cases"},{"id":"m5","name":"录井报告自动生成","stageId":"mudlogging","stageName":"录井","caseId":"s17-evidence-report","directory":"cases"}],"crossStages":[{"id":"welllog","name":"测井","sameStage":false},{"id":"drilling","name":"钻井","sameStage":false}],"next":{"id":"m2","name":"气测异常智能解释","stageId":"mudlogging","stageName":"录井","caseId":"s17-mudgas-context","directory":"cases"},"authoredNext":false,"nextLabel":"同环节继续读","provenance":"老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节"},"options":{"mode":"standalone","portalHref":"../../../../portal/index.html","collectionPrefix":"../../../"}};
+/* Original ATLAS metadata in a small, offline course compass. No model or data mutation. */
+(function (g) {
+  'use strict';
+  if (g.S17Compass) {
+    if (g.S17CompassPage) g.S17Compass.configure(g.S17CompassPage);
+    return;
+  }
+  var d = g.document, config = null, timer = null, observer = null;
+  var parts = [{id:'background', tab:'bg', no:'01', name:'专业背景'}, {id:'workflow', tab:'flow', no:'02', name:'案例流程'}, {id:'lab', tab:'demo', no:'03', name:'可运行示范'}];
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]; }); }
+  function byId(atlas, id) { return atlas && atlas.index && atlas.index.byScene && atlas.index.byScene[id] || null; }
+  function stages(atlas) { return atlas && atlas.stages || []; }
+  function catalogRows(catalog) { return Array.isArray(catalog) ? catalog : catalog && catalog.cases || []; }
+  function unique(rows) { var seen = {}; return rows.filter(function (r) { if (!r || !r.id || seen[r.id]) return false; seen[r.id] = true; return true; }); }
+  function normalCase(row) { return {id:row.id, sceneId:row.sceneId || row.scene, title:row.title || row.name || row.id, version:row.version || '', directory:row.directory || '', origin:row.origin || ''}; }
+  function sceneRow(sc, catalog) {
+    var found = catalog.filter(function (c) { return c.sceneId === sc.id && c.directory; })[0];
+    return {id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName, caseId:found && found.id || '', directory:found && found.directory || ''};
+  }
+  function model(scene, manifest, atlas, catalog, options) {
+    options = options || {}; manifest = manifest || {};
+    var sc = typeof scene === 'string' ? byId(atlas, scene) : scene;
+    if (!sc || !sc.id) throw new Error('Unknown course scene: ' + String(scene));
+    var rows = unique(catalogRows(catalog).map(normalCase));
+    if (manifest.id) {
+      var existing = rows.filter(function (r) { return r.id === manifest.id; })[0];
+      var current = normalCase(Object.assign({}, existing || {}, manifest, {sceneId:sc.id}));
+      rows = rows.filter(function (r) { return r.id !== current.id; });
+      rows.unshift(current);
+    }
+    var stage = stages(atlas).filter(function (s) { return s.id === sc.stageId; })[0];
+    var siblings = stage ? stage.scenes : (atlas.allScenes || []).filter(function (s) { return s.stageId === sc.stageId; });
+    var sameStage = siblings.filter(function (s) { return s.id !== sc.id; }).map(function (s) { return sceneRow(s, rows); });
+    var index = siblings.findIndex(function (s) { return s.id === sc.id; });
+    var next = options.nextScene === null ? null : byId(atlas, options.nextScene) || siblings[index + 1] || siblings[0];
+    if (next && next.id === sc.id) next = null;
+    var cross = (sc.cross || []).map(function (name) {
+      var target = stages(atlas).filter(function (s) { return s.name === name || s.id === name; })[0];
+      return target ? {id:target.id, name:target.name, sameStage:target.id === sc.stageId} : {id:'', name:name};
+    });
+    return {
+      scene:{id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName || stage && stage.name || '', diff:sc.diff || '', diffWhy:sc.diffWhy || '', refs:(sc.refs || []).slice()},
+      current:{id:manifest.id || '', title:manifest.title || sc.name, version:manifest.version || ''},
+      methods:(sc.methods || []).map(function (key) { var m = atlas.methods[key]; return {id:key, name:m && m.name || key, abbr:m && m.abbr || key.toUpperCase()}; }),
+      sameScene:rows.filter(function (r) { return r.sceneId === sc.id; }), sameStage:sameStage,
+      crossStages:cross, next:next ? sceneRow(next, rows) : null,
+      authoredNext:Object.prototype.hasOwnProperty.call(options, 'nextScene'),
+      nextLabel:options.nextLabel || (next && next.stageId === sc.stageId ? '同环节继续读' : '继续阅读相关场景'),
+      provenance:'老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节'
+    };
+  }
+  function portalHref(route, options) { return options.mode === 'portal' ? route : (options.portalHref || '../../../../portal/index.html') + route; }
+  function caseHref(row, m, options) {
+    if (options.mode === 'portal') return '#/scene/' + encodeURIComponent(row.sceneId || row.id) + (row.sceneId ? '?case=' + encodeURIComponent(row.id) + '&tab=bg' : '');
+    if (row.id === m.current.id && row.sceneId === m.scene.id) return '#background';
+    if (row.directory === 'cases' || row.directory === 'expansion-cases') return (options.collectionPrefix || '../../../') + row.directory + '/' + encodeURIComponent(row.id) + '/demo/index.html#background';
+    return portalHref('#/scene/' + encodeURIComponent(row.sceneId || row.id) + (row.sceneId ? '?case=' + encodeURIComponent(row.id) + '&tab=bg' : ''), options);
+  }
+  function sceneHref(row, m, options) { return row.caseId ? caseHref({id:row.caseId, sceneId:row.id, directory:row.directory}, m, options) : portalHref('#/scene/' + encodeURIComponent(row.id), options); }
+  function partHref(part, m, options) { return options.mode === 'portal' ? '#/scene/' + encodeURIComponent(m.scene.id) + (m.current.id ? '?case=' + encodeURIComponent(m.current.id) + '&tab=' : '?tab=') + part.tab : '#' + part.id; }
+  function navigation(m, options) {
+    options = options || {};
+    var breadcrumb = '<nav class="course-wayfinding" aria-label="课程位置"><a href="' + esc(portalHref('#/', options)) + '">← 课程总览</a><span aria-hidden="true">/</span><a href="' + esc(portalHref('#/stage/' + encodeURIComponent(m.scene.stageId), options)) + '">' + esc(m.scene.stageName) + '环节</a><span class="course-current">' + esc(m.scene.id.toUpperCase()) + ' · ' + esc(m.scene.name) + '</span></nav>';
+    if (!options.includeReading) return breadcrumb;
+    return breadcrumb + '<nav class="course-reading-route" aria-label="阅读路径"><span>阅读路径</span>' + parts.map(function (p, i) { return (i ? '<span class="course-route-arrow" aria-hidden="true">→</span>' : '') + '<a href="' + esc(partHref(p, m, options)) + '" data-course-part="' + p.id + '"' + (!i ? ' aria-current="step"' : '') + '><small>' + p.no + '</small>' + p.name + '</a>'; }).join('') + '</nav>';
+  }
+  function sameSceneHTML(m, options) {
+    if (!m.sameScene.length) return '<p>本场景的案例可从门户进入。</p>';
+    return '<ul class="course-links">' + m.sameScene.map(function (row) {
+      var current = row.id === m.current.id;
+      return '<li><a href="' + esc(caseHref(row, m, options)) + '"' + (current ? ' aria-current="page"' : '') + '><span>' + esc(row.title) + (current ? '<span class="course-current-tag">当前</span>' : '') + '</span><small>' + esc(row.origin || (row.version ? 'v' + row.version : '查看')) + (current ? '' : ' →') + '</small></a></li>';
+    }).join('') + '</ul>';
+  }
+  function render(m, options) {
+    options = options || {};
+    var includeDifficulty = options.includeDifficulty !== false;
+    var sameStage = '<ul class="course-links">' + m.sameStage.map(function (s) { return '<li><a href="' + esc(sceneHref(s, m, options)) + '"><span>' + esc(s.name) + '</span><small>' + esc(s.id.toUpperCase()) + ' →</small></a></li>'; }).join('') + '</ul>';
+    var cross = m.crossStages.length ? '<div class="course-cross"><h3>原地图标注的交叉环节</h3><div class="course-pills">' + m.crossStages.map(function (s) { return s.id ? '<a class="course-pill" href="' + esc(portalHref('#/stage/' + encodeURIComponent(s.id), options)) + '">' + esc(s.name) + (s.sameStage ? ' · 本环节' : ' →') + '</a>' : '<span class="course-pill">' + esc(s.name) + '</span>'; }).join('') + '</div></div>' : '';
+    return '<section class="course-context" data-course-context="' + esc(m.scene.id) + '" data-course-mode="' + esc(options.mode || 'standalone') + '"' + (m.authoredNext ? ' data-course-next-scene="' + esc(m.next && m.next.id || '') + '" data-course-next-label="' + esc(m.nextLabel) + '"' : '') + ' aria-labelledby="course-context-' + esc(m.scene.id) + '"><header><span class="course-eyebrow">放回作业链，继续看场景</span><h2 id="course-context-' + esc(m.scene.id) + '">' + (includeDifficulty ? '技术难度与参考方向' : '继续阅读场景与案例') + '</h2></header>' +
+      (includeDifficulty ? '<div class="course-context-grid"><div class="course-context-cell"><div class="course-difficulty-line"><span class="course-difficulty" data-difficulty="' + esc(m.scene.diff) + '">技术难度 · ' + esc(m.scene.diff || '未标注') + '</span><span class="course-difficulty-caption">原场景的技术判断</span></div>' + (m.scene.diffWhy ? '<p>' + esc(m.scene.diffWhy) + '</p>' : '') + '</div><div class="course-context-cell"><h3>可以继续查阅的方法方向</h3><div class="course-pills">' + m.scene.refs.map(function (ref) { return '<span class="course-pill">' + esc(ref) + '</span>'; }).join('') + '</div><div class="course-method-links">' + m.methods.map(function (method) { return '<a href="' + esc(portalHref('#/method/' + encodeURIComponent(method.id), options)) + '">' + esc(method.abbr) + ' · ' + esc(method.name) + '方法索引 →</a>'; }).join('') + '</div></div></div>' : '') +
+      '<div class="course-related"><div class="course-context-cell course-same-scene"><h3>同场景的案例' + (m.sameScene.length > 1 ? ' · ' + m.sameScene.length + '种实现' : '') + '</h3><div data-course-same-scene>' + sameSceneHTML(m, options) + '</div></div>' + (options.mode === 'portal' ? '' : '<div class="course-context-cell course-same-stage"><h3>同环节的其他场景 · ' + esc(m.scene.stageName) + '</h3>' + sameStage + '</div>') + cross + '</div>' +
+      '<div class="course-next">' + (m.next ? '<a href="' + esc(sceneHref(m.next, m, options)) + '">' + esc(m.nextLabel) + '：' + esc(m.next.name) + ' →</a>' : '') + '<a href="' + esc(portalHref('#/stage/' + encodeURIComponent(m.scene.stageId), options)) + '">查看整个' + esc(m.scene.stageName) + '环节</a><a href="' + esc(portalHref('#/', options)) + '">返回课程总览</a></div><p class="course-provenance">' + esc(m.provenance) + '</p></section>';
+  }
+  function activePart() { if (!g.location) return 'background'; var match = g.location.hash.match(/[?&]tab=(bg|flow|demo)/); return match ? {bg:'background', flow:'workflow', demo:'lab'}[match[1]] : parts.some(function (p) { return '#' + p.id === g.location.hash; }) ? g.location.hash.slice(1) : 'background'; }
+  function updatePath() { if (!d) return; var part = activePart(); d.querySelectorAll('[data-course-part]').forEach(function (a) { if (a.dataset.coursePart === part) a.setAttribute('aria-current', 'step'); else a.removeAttribute('aria-current'); }); }
+  function runtimeCatalog() {
+    var rows = [], course = g.S17Course && g.S17Course.cases || [], expansion = g.S17Expansion && g.S17Expansion.cases || [];
+    course.forEach(function (row) { rows.push(Object.assign({}, row, {sceneId:row.sceneId || row.scene, directory:'cases'})); });
+    expansion.forEach(function (row) { rows.push(Object.assign({}, row, {directory:'expansion-cases'})); });
+    return (g.Cases && g.Cases.list ? g.Cases.list() : []).map(function (row) { var known = rows.filter(function (r) { return r.id === row.id; })[0] || {}; return Object.assign({}, known, row, {origin:row.id === 'welllog-layer' ? '老师原样例' : ''}); });
+  }
+  function portalMount() {
+    if (!d || !g.ATLAS || !g.Cases || !g.location) return false;
+    var match = g.location.hash.match(/^#\/scene\/([^?&/]+)/);
+    if (!match) return false;
+    var sc = byId(g.ATLAS, decodeURIComponent(match[1])), main = d.querySelector('#view main');
+    if (!sc || !main) return false;
+    var entries = g.Cases.bySceneAll(sc.id), search = g.location.hash.indexOf('?') >= 0 ? new URLSearchParams(g.location.hash.split('?')[1]) : null;
+    var current = entries.filter(function (c) { return search && c.id === search.get('case'); })[0] || entries[0];
+    var background = main.querySelector('[data-panel="bg"]');
+    if (!current || !background) return false;
+    var stamp = sc.id + '|' + current.id + '|' + entries.map(function (c) { return c.id + ':' + c.version + ':' + c.title; }).join('|');
+    if (main.__courseCompassStamp === stamp && background.querySelector('[data-course-context]')) return true;
+    main.__courseCompassStamp = stamp;
+    var authored = background.querySelector('[data-course-next-scene]');
+    var continuation = authored ? {nextScene:authored.dataset.courseNextScene || null, nextLabel:authored.dataset.courseNextLabel} : g.S17CompassContinuations && g.S17CompassContinuations[sc.id] || {};
+    var prior = background.querySelectorAll('[data-course-context]');
+    prior.forEach(function (el) { el.remove(); });
+    var existingDifficulty = Array.from(background.querySelectorAll('h2,h3')).some(function (heading) { return heading.textContent.trim() === '技术难度与参考方向'; });
+    var m = model(sc, current, g.ATLAS, runtimeCatalog(), continuation), options = {mode:'portal', includeDifficulty:!existingDifficulty};
+    background.insertAdjacentHTML('beforeend', render(m, options));
+    updatePath();
+    return true;
+  }
+  function standaloneMount() {
+    if (!d || !config || !config.model) return;
+    var m = config.model, opts = config.options || {mode:'standalone'};
+    var background = d.getElementById('background');
+    if (background && !background.querySelector('[data-course-context]')) background.insertAdjacentHTML('beforeend', render(m, opts));
+    if (!d.querySelector('.course-wayfinding')) {
+      var host = d.querySelector('.fx-main') || d.querySelector('.m2-exhibit main') || d.querySelector('body.xl-lesson>header') || d.querySelector('body>header') || d.querySelector('main');
+      var nativeNavigation = d.querySelector('.fx-parts [data-fx-part], .m2-tabs [data-part], nav [data-tab="background"]');
+      if (host) host.insertAdjacentHTML('afterbegin', navigation(m, Object.assign({}, opts, {includeReading:!nativeNavigation})));
+    }
+    updatePath();
+  }
+  function mount() { if (!d) return; if (!portalMount()) standaloneMount(); }
+  function schedule() { if (timer) g.clearTimeout(timer); timer = g.setTimeout(function () { timer = null; mount(); }, 35); }
+  function configure(value) { config = value; if (d) schedule(); }
+  g.S17Compass = {model:model, render:render, navigation:navigation, sameSceneHTML:sameSceneHTML, configure:configure, mount:mount};
+  if (!d) return;
+  if (g.S17CompassPage) configure(g.S17CompassPage);
+  d.addEventListener('click', function (event) {
+    var link = event.target.closest('[data-course-part]');
+    if (!link || portalMount()) return;
+    var part = link.dataset.coursePart;
+    var native = d.querySelector('[data-fx-part="' + part + '"]') || d.querySelector('[data-part="' + part + '"]') || d.querySelector('nav [data-tab="' + part + '"]');
+    if (native) { event.preventDefault(); native.click(); }
+    else { var target = d.getElementById(part); if (target) { target.hidden = false; target.scrollIntoView({block:'start'}); } }
+    updatePath();
+  });
+  g.addEventListener('hashchange', schedule);
+  function ready() {
+    mount();
+    var view = d.getElementById('view');
+    if (view && g.MutationObserver) { observer = new g.MutationObserver(schedule); observer.observe(view, {childList:true, subtree:true}); }
+  }
+  if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', ready, {once:true}); else ready();
+})(typeof window !== 'undefined' ? window : globalThis);
+
 
 /* S17_OPTIONAL_ASSISTANT_START: isolated from case inference and evaluation */
 (function(){function startAssistant(){
@@ -346,7 +575,7 @@ const catalog=[
 {id:'m2',caseId:'s17-mudgas-context',name:'气测异常',terms:['气测','气峰','迟到','停泵'],intro:'看地面气峰怎样结合累计泵量和工况解释。可以改体积、停泵或上下文，比较候选解释。气峰不直接代表油气层。'},
 {id:'m3',caseId:'s17-fluorescence-review',name:'荧光判读',terms:['荧光','紫外','uv','曝光'],intro:'对比同一样品的白光/UV教学图，改变曝光并查看显示区域。荧光存在与油气来源是两个判断；矿物也会发光。'},
 {id:'m4',caseId:'s17-drilltime-boundaries',name:'钻时分段',terms:['钻时','钻速','分层','分段','工况'],intro:'对比工况变化与响应变化，观察平滑怎样吞掉薄层。曲线上标记的是候选响应界面；公开钻进数据没有地层真值精度。'},
-{id:'m5',caseId:'s17-evidence-report',name:'证据报告',terms:['报告','证据','导出','否定'],intro:'查看短记录怎样变成有来源的报告。点击句子回到证据，改写后重新复核，也能下载工作区、报告HTML和证据JSON。'}];
+{id:'m5',caseId:'s17-evidence-report',name:'综合解释与交接',terms:['报告','综合解释','井段','交接','证据','否定'],intro:'把岩屑、气测、荧光和钻时放回井段，检查资料覆盖和待核查问题。点击报告句子回到原文，修改后重新计算，保存当前记录，并继续学习测井分层。'}];
 for(const c of g.S17Expansion?.cases??[])catalog.push({id:c.sceneId,caseId:c.id,name:c.name,terms:[c.name,c.stageName,c.sceneId],intro:c.summary,directory:'expansion-cases'});
 if(standalone&&!catalog.some(c=>c.id===pageInfo.sceneId))catalog.push({id:pageInfo.sceneId,caseId:pageInfo.caseId,name:pageInfo.name??pageInfo.title??document.title,terms:[pageInfo.sceneId,pageInfo.name??''],intro:pageInfo.summary??'这里可以依次查看专业背景、逐步流程与交互演示。',directory:pageInfo.directory??'cases'});
 const root=document.createElement('aside');root.id='s17-assistant';root.dataset.speaking='false';

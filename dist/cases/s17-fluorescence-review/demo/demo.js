@@ -1,4 +1,10 @@
-window.S17Page={"sceneId":"m3","caseVersion":"1.8.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
+window.S17Page={"sceneId":"m3","caseVersion":"1.9.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
+(function(g){'use strict';if(g.S17ConceptHost)return;
+function keepScale(host){host.querySelectorAll('svg[viewBox]').forEach(svg=>{const width=svg.viewBox.baseVal.width;if(width>0){const requested=parseFloat(svg.style.minWidth)||0;svg.style.minWidth=Math.max(width,requested)+'px';svg.style.height='auto';svg.style.maxHeight='none';}});}
+function mount(root){for(const [scene,definition]of Object.entries(g.S17Concepts||{})){if(!root.querySelector('[data-concept-scene="'+scene+'"]'))continue;definition.mount(root);root.querySelectorAll('[data-concept-scene="'+scene+'"]').forEach(host=>{keepScale(host);if(host.dataset.ctScaleBound)return;host.dataset.ctScaleBound='true';new MutationObserver(()=>keepScale(host)).observe(host,{childList:true,subtree:true});});}}
+g.S17ConceptHost={mount};
+})(globalThis);
+
 (function(g){'use strict';
 const mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0,quantile=(a,q)=>{const s=a.slice().sort((x,y)=>x-y);return s.length?s[Math.floor((s.length-1)*q)]:0;};
 function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
@@ -132,9 +138,9 @@ $('[data-m3-methods]').innerHTML=Object.entries(run.inference.summaries).map(([k
 $('[data-m3-pixel]').innerHTML=`<strong>回查选中像素 (${s.x}, ${s.y})</strong><br>${s.inROI?`它位于白光可见范围内。学习显示得分 <strong>${fmt(s.score,3)}</strong>，划分界限为 ${run.config.threshold}。<br>${Object.entries(s.selected).map(([k,v])=>methodNames[k]+'：'+(v?'选入显示':'未选入')).join('；')}。<br>原始平均亮度 ${fmt(s.rawRGB.reduce((a,b)=>a+b,0)/3)}，校正后平均亮度 ${fmt(s.correctedRGB.reduce((a,b)=>a+b,0)/3)}；两个亮度阈值方法分别以 45 为界。<div class="m3-feature-table"><table><thead><tr><th>实际输入特征</th><th>红通道</th><th>绿通道</th><th>蓝通道</th><th>颜色差</th><th>邻域反差</th></tr></thead><tbody><tr><th>校正并缩放后</th>${s.features.map(v=>`<td>${fmt(v,3)}</td>`).join('')}</tr></tbody></table></div><span class="m3-caption">颜色差是三通道最大值与最小值之差；邻域反差比较该像素与相邻像素的亮度。先按训练均值与标准差统一尺度，再按学习到的权重合成显示得分；得分达到 ${run.config.threshold} 才选入显示。</span><details class="m3-calculation"><summary>这个像素的显示得分怎样算出？</summary><p>标准化值 =（当前特征 − 训练均值）÷ 训练标准差；每项贡献 = 标准化值 × 学到的权重。</p><div class="m3-feature-table">${U.table(['特征','标准化值','权重','贡献'],s.calculation.names.map((n,i)=>[n,fmt(s.calculation.standardized[i],3),fmt(s.calculation.weights[i],3),fmt(s.calculation.contributions[i],3)]))}</div><p>五项贡献之和，再加基础项 ${fmt(s.calculation.intercept,3)}，得到 <strong>${fmt(s.calculation.sum,3)}</strong>。<br>映射后得分 = 1 ÷ [1 + exp(−${fmt(s.calculation.sum,3)})] = <strong>${fmt(s.calculation.score,3)}</strong>；与界限 ${run.config.threshold} 比较，${s.selected.M0?'选入':'未选入'}学习法显示。</p><p>此处逐项读取当前训练模型；显示数值已四舍五入，实际计算使用完整精度。</p></details>`:'它位于可见岩屑范围外，不参加得分与显示面积计数。请点击一个颗粒内部继续观察。'}`;
 $('[data-m3-claim]').innerHTML=`<strong>当前可以写下的观察</strong><br>在 ${esc(run.data.observations.identity.parentSampleId)} 的本次固定激发、${fmt(run.config.exposure)} 倍曝光图像中，${methodNames[method]}检出 ${q.count.toLocaleString()} 个显示像素，占 ${q.denominator.toLocaleString()} 个可见岩屑像素的 <strong>${pct(q.area)}</strong>。${p.quality.length?'本次拍摄存在质控提醒，需连同条件一起记录。':''}<br><span class="m3-caption">下一步来源核对：这些位置对应什么矿物？钻井液中有无发光添加物？还需要哪些观察？</span>`;paint();g.S17Exhibit?.changed?.();}
 function recalculate(){status='running';report('正在计算配对图像的显示范围…');if(!lib)lib=C.train();revision++;const exposure=Number($('[data-m3-exposure]').value),data=g.S17Images.sample(17,{exposure},1),inference=C.infer(data.observations,lib.model,lib.threshold),metrics=C.evaluate(inference,data.evaluationTruth);run={data,library:lib,inference,metrics,config:{exposure,threshold:lib.threshold,excitation:'fixed'},seed:17,method:'reference_calibration + trained_pixel_logistic_regression',split:lib.groups,dataVersion:'s17-paired-images-v1',revision,runId:'s17-fluorescence-review-r'+(++count)+'-v'+revision};if(point==null){point=inference.prepared.indices.find(i=>inference.scores[i]>.6)??inference.prepared.indices[0]??0;}status='ready';render();report('当前样品已计算 · 曝光 '+fmt(exposure)+' 倍，三种方法共用 '+inference.summaries.M0.denominator+' 个可见岩屑像素。');return snapshot();}
-function snapshot(){const pixelCounts=run?Object.fromEntries(Object.entries(run.inference.summaries).map(([k,v])=>[k,{count:v.count,denominator:v.denominator,area:v.area}])):null;return{id:'s17-fluorescence-review',version:'1.8.0',status,revision,selected:point,activeStage:stage,identity:run?{...run.data.observations.identity}:null,exposure:run?.config.exposure,method,pixelCounts,selectedPixel:selected(),quality:run?.inference.prepared.quality??[],saturated:run?.inference.prepared.saturated??0,reference:run?.inference.prepared.reference??[],run:run?{runId:run.runId,config:run.config,metrics:run.metrics,method:run.method,summary:run.inference.summaries[method],counts:{trainingPixels:lib.trainPixels,positivePixels:lib.positivePixels},stepCount:6,split:lib.groups}:null,reviews:[]};}
+function snapshot(){const pixelCounts=run?Object.fromEntries(Object.entries(run.inference.summaries).map(([k,v])=>[k,{count:v.count,denominator:v.denominator,area:v.area}])):null;return{id:'s17-fluorescence-review',version:'1.9.0',status,revision,selected:point,activeStage:stage,identity:run?{...run.data.observations.identity}:null,exposure:run?.config.exposure,method,pixelCounts,selectedPixel:selected(),quality:run?.inference.prepared.quality??[],saturated:run?.inference.prepared.saturated??0,reference:run?.inference.prepared.reference??[],run:run?{runId:run.runId,config:run.config,metrics:run.metrics,method:run.method,summary:run.inference.summaries[method],counts:{trainingPixels:lib.trainPixels,positivePixels:lib.positivePixels},stepCount:6,split:lib.groups}:null,reviews:[]};}
 function rawURL(im){const c=document.createElement('canvas');c.width=im.width;c.height=im.height;c.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(im.pixels),im.width,im.height),0,0);return c.toDataURL();}
-function evidence(){if(status!=='ready')throw Error('请先完成当前输入的计算');const id=run.data.observations.identity.parentSampleId,source=U.source(id+'-WLUV',revision,'image_region',{kind:'observation',identity:run.data.observations.identity,whiteDataURL:rawURL(run.data.observations.white),UVDataURL:rawURL(run.data.observations.uv),conditions:run.config,quality:run.inference.prepared.quality,width:320,height:240}),q=run.inference.summaries[method],claim=U.claim(id+'-fluorescence',`教学样品在${methodNames[method]}下的荧光显示面积候选为${pct(q.area)}，来源仍待核查。`,source.sourceRecordId,revision,{type:'image_region',bbox:[20,23,315,235]},{value:q.area,unit:'visible_area_fraction',uncertainty:'来源未确定；饱和时强度信息不可恢复',method:{name:method==='M0'?run.method:method==='B0'?'raw_UV_mean_threshold':'reference_calibrated_mean_threshold',selectedMethod:method,threshold:method==='M0'?run.config.threshold:45,grade:q.grade,gradeIsTeachingRule:true},reviewHistory:[]});return U.envelope('s17-fluorescence-review','1.8.0',run,{sources:[source],claims:[claim],metrics:run.metrics,summary:{...q,method,methodName:methodNames[method]},comparison:Object.fromEntries(Object.entries(run.inference.summaries).map(([k,v])=>[k,{...v,method:k,methodName:methodNames[k],threshold:k==='M0'?run.config.threshold:45}])),manualCorrection:null,reviewHistory:[],display:{activeStage:stage,method,view,selectedPixel:selected(),pixelCounts:snapshot().pixelCounts},limitations:['教学合成配对图像，固定激发条件。','显示范围与来源解释分开；二维面积是可见表面占比。','饱和通道丢失的强弱细节不能恢复。']});}
+function evidence(){if(status!=='ready')throw Error('请先完成当前输入的计算');const id=run.data.observations.identity.parentSampleId,source=U.source(id+'-WLUV',revision,'image_region',{kind:'observation',identity:run.data.observations.identity,whiteDataURL:rawURL(run.data.observations.white),UVDataURL:rawURL(run.data.observations.uv),conditions:run.config,quality:run.inference.prepared.quality,width:320,height:240}),q=run.inference.summaries[method],claim=U.claim(id+'-fluorescence',`教学样品在${methodNames[method]}下的荧光显示面积候选为${pct(q.area)}，来源仍待核查。`,source.sourceRecordId,revision,{type:'image_region',bbox:[20,23,315,235]},{value:q.area,unit:'visible_area_fraction',uncertainty:'来源未确定；饱和时强度信息不可恢复',method:{name:method==='M0'?run.method:method==='B0'?'raw_UV_mean_threshold':'reference_calibrated_mean_threshold',selectedMethod:method,threshold:method==='M0'?run.config.threshold:45,grade:q.grade,gradeIsTeachingRule:true},reviewHistory:[]});return U.envelope('s17-fluorescence-review','1.9.0',run,{sources:[source],claims:[claim],metrics:run.metrics,summary:{...q,method,methodName:methodNames[method]},comparison:Object.fromEntries(Object.entries(run.inference.summaries).map(([k,v])=>[k,{...v,method:k,methodName:methodNames[k],threshold:k==='M0'?run.config.threshold:45}])),manualCorrection:null,reviewHistory:[],display:{activeStage:stage,method,view,selectedPixel:selected(),pixelCounts:snapshot().pixelCounts},limitations:['教学合成配对图像，固定激发条件。','显示范围与来源解释分开；二维面积是可见表面占比。','饱和通道丢失的强弱细节不能恢复。']});}
 function flowImage(kind){
  const prepared=run.inference.prepared,source=kind==='white'?run.data.observations.white:run.data.observations.uv;
  const pixels=new Uint8ClampedArray(source.pixels),mask=run.inference.masks[method];
@@ -179,6 +185,77 @@ recalculate();return{recalculate,reset,snapshot,evidence,flowHTML};}
 g.M3Exhibit={title:'荧光显示：看清哪里发光，再量有多大',lede:'先把白光与紫外对上同一份样品，再分清曝光影响，用共同分母比较三种显示分割。',chapters,steps,labHTML,mount,readingMount};
 })(globalThis);
 
+(function (g) {
+  'use strict';
+  const scene = 'm3', width = 320, height = 240, alphabet = '_ABCDEFGHIJKLMNOPQRST';
+  // Exact 0.05 score-bin membership of every pixel in the existing default M3Core inference.
+  // '_' is outside the white-light ROI; A..T are bins [0,.05)..[.95,1]. RLE lengths are base36.
+  const packed = /* M3_CONCEPT_SCORE_BANDS */ '_8jm,B4,_8q,B2,C1,B4,_8o,B2,C1,B7,_8m,B3,A1,B6,_51,B1,_3j,B5,C1,B6,_4x,T1,A1,B4,_1j,B4,_1t,B7,C1,B3,C1,B2,_4g,L5,_9,T4,B3,C1,B1,_1g,C1,B7,_1r,Bf,_4,B4,C2,B1,_42,L7,N1,S1,_6,T5,B6,_1f,Ba,_7,P1,L6,_19,B2,C1,B3,C1,B4,A1,C1,B5,A1,B3,A1,B2,C1,B1,A1,B1,_1l,B6,_29,L8,N1,S1,T3,_1,T7,A1,B1,C1,B4,_1d,Bc,_4,B1,T1,Q1,L7,_17,B3,C2,B5,C1,B8,C1,B7,C4,_1i,B6,C1,B2,_27,L9,N1,S1,Tc,A1,C1,B6,_1a,B1,A1,B3,A1,B1,A1,B2,A1,B4,C1,B1,T2,Q1,L9,_13,B2,C1,B3,A1,B6,C1,B5,C1,B3,C1,B2,C1,B7,_1g,Bb,_24,Lb,N1,S1,Tc,B3,C1,B5,_17,C1,B1,C1,B1,C2,B3,C1,B3,C1,B4,T3,Q1,La,_11,C1,B1,C1,B1,C1,B3,A1,B2,C2,Ba,C1,B3,C3,B7,_1d,B1,C1,B3,C2,B2,C1,B1,C1,B1,_22,C1,Lb,N1,S1,Tc,A1,B3,C2,B1,C3,_15,B3,C1,B7,C1,B6,T4,Q1,Lb,_10,B2,C1,B2,C1,B2,A1,B2,C1,B7,A1,B2,C1,B5,A1,B1,C1,B2,C1,B2,C1,B2,_1a,B4,C2,B1,A1,B3,C1,B3,_20,B2,Lb,N1,S1,Tb,A1,B4,C1,B6,_13,B1,C1,B1,C1,Ba,A2,B2,T5,Q1,Ld,_y,B5,C1,B1,C1,B2,C1,Be,C1,B6,C1,B3,C1,B3,_17,A1,B5,C1,B2,C1,B7,C1,B1,_1y,B2,Lb,N1,S1,Tb,C1,B2,C1,B4,C2,B2,_13,B2,C1,B8,C1,B4,C1,A1,T5,Q1,Ld,_x,B8,A1,B2,C2,B6,C1,B1,C1,B1,A1,B4,C1,B4,C1,B1,C1,B3,C1,B2,_11,Ba,C1,B1,C1,Bh,_1s,C1,B1,C1,La,N1,S1,Tb,B5,C1,B1,C1,B4,_13,B3,C1,B2,C2,B7,C1,B1,T6,Q1,Le,_w,C1,B6,T3,B2,C1,B8,C1,B3,C1,B1,C1,B6,C1,B2,A1,C3,B2,_y,B2,C1,B2,C1,B2,C1,B9,C1,B1,C2,B2,C3,B7,_1q,B2,A1,La,N1,S1,Ta,B3,C1,B4,C2,B2,_14,C2,Ba,A1,B4,T6,Q1,Ld,_w,B1,C1,B1,A1,B2,T7,A1,B1,C2,B5,A1,B2,C1,B1,C1,B3,C1,B1,A1,B1,C2,B2,C1,B4,_x,B3,C1,Bf,C1,B1,C1,B4,C1,B9,_1q,B3,L9,N1,S1,Ta,Bc,_14,Be,A1,B1,T7,Q1,Ld,_v,B1,C1,B3,Tb,B8,C1,B9,C1,B2,C1,B6,_w,Bb,C1,B2,A1,C1,Bn,A1,_1o,B3,L9,N1,S1,T9,A1,B6,C1,B1,C1,B4,_13,B4,A1,C2,B2,A1,B1,C1,B2,C1,B1,T7,Q1,Lc,_t,B5,C1,B1,Td,B3,C1,B1,C1,Bh,A1,B2,A1,_u,B4,C1,Ba,C1,B5,A1,B2,C2,B3,C1,Ba,C3,B2,_1m,B1,C1,B1,L8,N1,S1,T8,Ba,C1,B5,_11,Bd,A1,B2,A1,T7,Q1,Lb,_s,C1,A1,B6,Te,S1,B9,C1,B2,A1,B4,C1,B3,A1,B3,_s,C1,B4,C1,B2,A1,B7,C1,B2,C1,B1,A1,B1,C1,B1,C1,B4,A1,B1,A1,B9,C1,B1,C1,B4,C1,_1k,B4,L7,N1,S1,T8,B5,C1,Bb,C1,_y,P1,B4,C1,B1,A1,C1,B8,A1,T7,Q1,Lb,_r,B4,C1,B2,A1,Tf,S1,N1,B3,C1,Ba,C1,B3,C1,B2,A1,B1,_r,B7,C1,B3,C1,B2,C1,B8,C1,B2,C1,B4,C1,B1,C1,B1,A1,B9,C2,B2,A1,B4,_1h,B6,L6,N1,S1,T7,B7,C1,B4,C1,B1,C2,B5,_u,L2,P1,B7,C1,B2,C1,B6,T7,Q1,Lb,_q,B2,C1,B5,Tg,S1,N1,L1,B2,C2,Bb,C1,B5,_r,Bh,C2,B1,C2,B1,A1,B4,C1,B4,C1,B3,C1,B2,C1,B1,C2,B5,C1,B1,C1,B1,C1,B1,_1f,C1,B6,C2,L5,N1,S1,T6,B5,C1,B3,A1,B3,C1,B3,A1,B4,C1,_r,L4,P1,B2,A1,Bb,C1,B2,T7,Q1,Ld,_o,B1,C1,B6,Tg,S1,N1,L1,B9,A1,B4,A1,B4,C1,_s,B3,C1,B4,C1,B2,C1,Bd,C1,B4,C1,B6,A3,C1,B7,C1,B2,C1,B3,_1e,B2,C1,B8,L4,N1,S1,T5,B1,C1,B7,C1,Bd,C1,B1,_p,L5,B1,A1,C1,B1,A1,C1,B6,C1,B6,T6,Q1,Le,_n,B7,Th,S1,N1,L2,C1,B3,A1,B4,C1,B8,_u,Bc,C1,B2,C2,B7,C1,B2,C1,B5,C1,B6,C1,B3,C1,B2,C1,B2,C1,B3,_1d,C1,B3,C2,B3,A1,B3,L3,N1,S1,T3,B4,C2,B2,C1,B5,C2,B6,C1,B4,_o,L6,A1,B1,A1,B3,C1,B1,C1,B1,C1,B8,T6,Q1,Lg,_l,B4,C1,A1,Ti,S1,N1,L3,B3,C3,B1,C1,B4,C1,B4,_v,B1,C1,B2,C1,B2,C2,B8,C1,Bf,C1,Bh,_1e,B6,C1,B3,C1,B3,C1,B1,L1,N1,S1,T2,B1,C1,B2,C1,B8,C3,B8,C1,B2,C1,_o,L5,A1,Ba,A1,B8,T6,Q1,Lf,C1,B1,_l,B3,A1,B1,Ti,S1,N1,L3,B4,C1,B1,A1,C1,B9,_x,B6,C1,B6,C1,B4,C1,Bd,A1,B3,C1,B5,A1,B4,_1g,B5,C1,B6,A1,B1,C1,B4,A2,B2,C1,B5,C2,B1,C2,B6,C1,B1,C1,B4,_r,L4,B4,C1,B1,C1,B3,C2,B1,C1,B3,C1,B1,C1,B1,T5,Q1,Lf,B2,_m,B4,Ti,S1,N1,L3,B5,C1,Bc,_y,Bb,C1,B2,C1,B6,C1,B9,C1,Bb,_1i,B8,C1,B2,C1,B6,A1,B3,C2,B2,C1,Bi,_v,L1,C1,B2,C1,B2,C1,B7,C2,B7,T4,Q1,Le,B3,_o,B1,Tj,S1,N1,L4,B3,C2,B1,C1,B6,C1,B1,C1,B1,L1,_z,B7,C1,B3,A1,B3,C2,B2,C1,B1,C1,B5,C1,B4,C1,B7,_1k,B4,C1,B4,C2,B2,A1,B3,C1,B3,C1,Bk,_z,B2,A2,B8,C1,B9,T4,Q1,Ld,B1,A1,B1,C1,_q,Ti,S1,N1,L4,B3,C1,B1,C1,B1,C1,B3,C1,B5,L2,_y,B1,C1,B1,C1,B3,C1,Ba,C1,B1,C1,B1,A1,B5,C1,B3,C1,B1,C1,B3,C1,_1n,B6,C1,B1,C1,Ba,C1,B9,A1,B2,A1,B1,C1,B1,C1,B1,_13,B2,C1,B5,A1,B5,C1,B6,T3,Q1,Lc,B4,_t,Tg,S1,N1,L4,B3,C1,A1,B5,C1,B6,L3,_x,C1,B2,A1,C1,B3,C1,B5,C1,B4,C2,B1,C2,B5,C1,B1,C1,B5,C1,B2,_1o,B1,C1,B7,A1,C1,B2,C1,B4,A1,C1,B5,C1,B2,C1,B3,C1,B2,_16,B3,A1,Bg,T2,Q1,Lc,B2,_w,Tf,S1,N1,L4,B5,C2,B6,C1,B2,C1,L3,_x,B2,C1,B2,C2,B6,A1,C1,B9,C1,B7,C1,B1,C1,B5,_1q,A1,B4,C1,B1,C2,B4,A1,B3,A1,B1,A1,Bc,_18,C1,B6,C4,B9,T1,Q1,Lb,_z,Tf,S1,N1,L4,A1,Bg,L4,_v,B4,A2,B4,C2,B8,A1,C1,Bh,C1,B2,_1q,C3,B4,C2,B5,C1,B9,A1,B5,_19,B8,A1,B4,C1,B1,C1,B3,C1,B1,P1,L9,B1,_10,Tf,S1,N1,L4,B7,C1,B4,C1,B2,C1,B1,L4,_v,B2,A1,B6,C1,B1,C2,B1,C2,B5,C1,B7,C1,B2,C1,B1,C1,B7,_1s,B1,C1,B7,C1,A1,C1,B8,C2,B3,_1e,B7,C1,B1,C1,B2,C1,B7,C1,L7,_12,Tf,S1,N1,L3,B8,A1,B8,C1,A1,L2,_w,C1,B9,C2,B4,C1,B4,C1,B5,C3,B3,C1,B3,C1,B2,C1,B1,_20,B1,C1,B1,C1,B1,C1,B6,C2,B1,_1j,B3,A1,Be,C1,B1,L2,B1,A1,_13,Tf,S1,N1,L3,B3,C1,B4,C3,B8,L2,_x,B6,C1,B6,C1,B9,C1,B8,A1,B4,C1,B2,_22,B2,C2,B2,C2,B1,A1,C1,B2,_1m,B5,A1,C2,A1,B5,_1c,Te,S1,N1,L2,B9,C1,B2,C1,B5,C1,B1,_10,Bc,C1,B1,C2,B1,C1,B8,A1,B1,C1,B1,C1,B1,C1,B5,_24,B3,C2,B2,C1,B3,_1o,B1,A1,C2,B1,A1,B6,_1d,Te,S1,N1,L1,B1,C3,B3,A1,B3,A1,B3,C1,B4,_13,B8,A1,B5,C1,B2,A1,B6,A1,B3,C2,B4,_27,B3,A2,B4,_1q,B4,C1,B5,_1f,Td,S1,N1,L1,A1,B2,C1,B7,C1,B6,_16,B3,C1,B1,C1,B4,C1,A1,B1,C1,B1,_2,B3,C2,B4,C2,B1,A1,B2,_29,B1,C1,B2,C1,B2,_1r,B1,A1,B5,A1,B1,_1i,Tb,S1,N1,B2,A1,B7,C1,B3,C1,B3,_18,B3,C1,B2,C1,B2,C2,B1,_6,Bc,_2b,B3,C2,_1t,B1,C1,B5,_1k,Ta,S1,B5,C2,B5,C1,B5,_1b,C1,B7,_a,B4,C1,B3,_4d,B4,_1m,T9,B5,_5,B3,C1,B4,_1e,B1,C1,B1,_h,B1,_67,T7,B3,C1,B1,_8k,T6,A1,C1,B1,C1,B1,_8m,T3,B2,C2,B1,C1,_8o,B7,_8q,B3,C1,A1,_52q,B2,_64,C1,B3,_2k,B1,C1,B4,_60,B5,C2,_2i,B7,C1,_5y,C1,B5,C1,B2,_2g,B1,C1,B3,C1,B2,C1,B1,_3z,B2,_1v,B4,C1,B4,C2,_2e,A1,B1,A1,B5,C1,B3,_3v,B7,_1t,B1,A1,B3,C1,B1,C2,B2,_2d,B1,C1,B8,C1,B2,_3u,B5,C1,B3,_1r,B5,C2,B1,C1,B4,_2b,C1,B2,C1,B2,C1,B2,C1,B1,C1,B1,C1,B1,_3s,B5,C1,B1,C1,B3,_1e,C1,B3,_7,B4,C2,B8,_23,B2,_5,B3,C2,A1,B1,C2,B5,C1,B2,_1l,B5,_20,Ba,A1,B2,_1b,B2,C2,B5,C1,_1,C1,B6,C1,B8,C1,_1z,Bc,A1,C1,B1,C1,B6,A1,B6,_1i,B1,C1,B2,C1,B2,_1y,B3,C1,Bb,_19,B5,C1,B7,C1,B2,C1,A1,B2,C1,B2,C1,B7,_1w,B6,C1,B1,C2,B2,C1,B2,C1,B5,C2,B9,_1f,B2,C1,B6,_1m,B9,C1,B5,C2,B3,A1,B6,_17,B1,C1,B3,C1,Bd,C1,Bd,_1u,Bg,C2,B5,C2,B3,A1,B1,C1,B4,_1d,B1,A1,B2,C1,A1,B4,_1j,B6,C1,B9,C1,B1,C1,Bb,C1,B1,_13,B1,C1,B7,C3,B3,C2,B1,C1,B5,C1,B8,C1,B1,_1r,B2,C1,B2,A1,Bb,C3,B1,C2,B4,A1,B1,A1,B2,C2,B3,_1c,L1,C1,B1,C1,B8,_3,B3,T3,_18,B3,C1,B2,C1,B3,C1,B7,C1,B3,C1,B2,C1,B1,C2,B1,C1,B3,C1,_z,C2,Bb,C1,B1,C1,B1,C1,Be,C1,B1,C1,B3,_1o,B5,C1,B8,C1,Bg,C1,B3,C1,B4,_19,L3,B1,C2,B1,C1,B8,C1,B1,C1,B1,T4,_15,C1,B4,C1,B2,C1,B4,A1,B3,A1,B9,C1,B1,C1,B6,C1,B1,_x,B3,C1,B3,C1,B5,C1,B1,C1,B1,C1,B4,C1,B4,C1,Ba,C1,B1,_1l,A1,B6,A1,B5,A1,B7,C1,B1,C1,B8,C2,B4,A1,C1,B3,_16,L5,B1,C1,Ba,A1,B4,T6,_10,B2,C1,Be,C1,B2,C1,B1,A1,B2,C1,B3,C1,B8,C1,B3,_u,B3,C1,B2,C1,B2,C1,B1,C1,B1,C1,B2,C3,B7,C1,B1,C1,B5,C1,B1,C1,B2,C2,B1,_1k,B5,C1,B8,C1,B8,C1,B1,C1,B4,C1,Bd,_15,L6,B1,C2,B2,C1,B2,C2,B3,A1,B3,T7,_x,B7,C2,B1,C1,B1,A1,B7,C1,B2,A1,B1,C1,B3,A1,B1,A1,C2,B4,C1,B4,A1,_t,B1,C1,A1,B5,C1,B7,C1,B8,C1,B1,A1,B3,C1,B9,C1,B1,_1j,B8,S1,T5,A1,C1,B6,C1,B6,C1,Be,C1,B1,_14,L5,B7,C1,Bb,T8,_u,B8,C2,B2,C1,B1,C1,B4,A1,B3,A1,B3,C1,B1,T4,Be,_r,B5,C1,B8,C1,B2,C1,B8,C1,B2,C3,B1,C1,B7,C3,_1i,B2,C1,B3,L1,P1,T7,A1,B2,C1,B5,A1,B3,C1,B4,C1,B2,C1,B2,C1,B2,C1,B5,_12,L5,B1,C1,Bh,T8,Q1,_s,B3,C1,B2,A1,B8,C2,Bb,T8,B2,C1,B1,C1,B9,_p,Bc,A1,B1,C1,B5,C1,B5,C1,B1,C1,B1,C2,B4,C1,B4,A1,B2,_1i,B5,L2,P1,T9,B9,A1,B6,C2,Bc,L4,_y,L5,B2,A1,Bc,C1,B5,T7,Q1,L1,_s,B7,C1,B8,C1,B2,A1,C1,B4,Tb,Bc,C2,B1,A1,_m,C2,B5,C1,B3,A1,Bd,C1,B7,C1,B2,C2,B1,A1,B4,C1,_1h,B1,C2,B1,L3,P1,Ta,B2,C1,B5,A1,B1,C1,B5,C1,B4,C1,B6,L7,_v,L6,B4,C1,A1,B3,C1,B5,C2,B4,T7,Q1,L1,_s,B7,C1,B2,A1,Bd,Td,B7,C1,B6,C3,_k,B5,C1,B2,C1,B3,A1,B1,C1,B1,A1,Bo,C1,B4,_1h,B2,L4,P1,Tb,B2,C3,B6,A1,B9,A1,B1,C2,B1,L9,_r,L8,Bf,C1,B7,T6,Q1,_u,Bb,C1,B4,C1,B1,C1,B1,C1,B1,Tf,A1,B3,C1,B1,C1,B1,A1,C1,B7,_k,B2,A1,B3,C1,B4,A1,C1,B1,A1,Bb,A1,B5,C1,B5,A1,B3,C1,B4,_1g,L5,P1,Tb,Bn,C1,B1,La,_p,L9,B3,C1,B2,C1,B4,C1,B3,C1,B1,C1,B2,C1,B4,T5,_x,Bc,C1,B2,C1,B3,Th,A1,B9,C1,B1,C3,B2,_k,B4,C1,B3,C1,B6,C1,B2,C2,B2,C1,B5,C1,B4,A2,B1,C1,B1,A1,B3,C1,B4,C1,_1f,L4,P1,Tc,A1,B1,C1,B5,A1,B9,A1,B4,Lc,_n,L9,B1,C1,B3,A1,B5,C1,B9,C1,B5,T3,_z,C1,B2,C1,Be,Ti,B7,C1,B1,C1,B1,A1,B3,_m,B9,C1,B7,C1,Bg,C1,B3,A1,B4,C1,B1,C1,B2,C1,_1e,L3,P1,Td,A1,B4,C1,B6,A1,B2,C2,B5,Lb,_o,L9,B6,C2,B1,C1,B4,C1,A1,B8,C1,B3,T1,_12,B3,C2,B3,C1,B3,C1,B2,Tk,C1,B2,C1,B2,C1,B2,C1,B4,_m,C1,B3,C1,B9,C1,B6,C1,B3,C1,B7,C1,B6,C1,B4,C1,B4,_1e,L2,P1,Te,A1,B8,C1,B6,C1,B3,Lc,_o,L7,B1,C1,B1,C1,B2,A1,B6,C1,B1,C1,B2,A2,C1,B6,C1,B1,C1,_13,Be,Tl,B1,C1,B5,C1,B2,A1,B1,_p,C1,Bd,C1,B3,A1,B6,C1,B3,C1,B2,C3,B4,C2,B1,C1,B6,_1f,L1,P1,Te,B3,C1,B3,C1,B3,C2,B1,C1,B4,Lc,_q,L5,B8,A1,B1,A1,C1,B5,C1,B7,C1,B6,_12,B1,C1,B6,C1,B1,C1,B2,A1,Tl,S1,B3,C1,B2,C2,B1,_s,B4,C1,B2,A1,C1,B1,C1,Bh,C2,B8,C1,A1,B1,C2,B5,_1f,L1,P1,Tf,Ba,C1,B7,La,_t,L3,B8,C2,B4,C1,Bc,C1,B4,C2,_10,Be,Tm,S1,B1,C1,B4,_v,Bb,C1,B6,C1,B5,C1,B3,C2,B1,A1,Bb,C1,B1,A1,B1,C1,_1f,L1,P1,Tf,B6,C2,B1,C2,B1,A1,B5,L8,_x,B6,C1,B5,C1,Ba,C1,B6,C1,B5,_y,C1,B8,C1,B1,A1,B3,Tm,S1,N1,C1,B1,C1,B1,_w,Ba,C1,B5,C2,B7,C1,B1,A1,B4,C1,Bf,_1e,L2,P1,Tf,B3,C1,B2,C1,B9,C1,L7,_11,C1,B1,C2,B2,C1,B3,C1,B8,C1,B3,C1,B2,C1,B4,C1,B1,A1,B1,_w,B4,C2,Ba,Tm,S1,O1,C1,B1,C1,_w,B4,C2,B7,C1,Be,C2,B7,C1,A1,B1,C2,B5,C1,_1e,L3,P1,Tf,A2,B4,C1,B3,C1,B4,C1,B1,L6,_13,C1,B1,C1,B2,A1,B6,C1,B9,C1,B2,C1,B8,_v,B1,C1,B5,A1,B1,A1,B4,C2,Tn,S1,O1,B3,_v,B3,A1,B8,C2,A1,Bb,C1,B6,A1,B2,C2,B9,C1,_1f,L3,P1,Tf,Be,C1,B1,A1,L5,_14,B6,C1,B1,A1,B7,C2,Bg,_v,B1,A1,B3,C1,B1,C1,B8,Tn,S1,O1,B2,C1,_u,B3,C1,B4,C2,B6,C1,B3,A1,C1,B5,C1,Bc,C1,B1,C2,B2,C1,_1g,L4,P1,Tf,B9,C1,B7,L5,_14,B2,A1,B5,C1,B8,C1,B2,C1,B1,C1,Bb,_w,B2,C1,B3,C1,B3,C1,B4,Tn,S1,O1,B3,_u,B1,C1,B4,C2,B3,A1,C1,B5,C1,B1,C2,Bc,C1,B5,C1,B4,_1i,L4,P1,Tf,B1,C1,B8,C1,B2,C1,B1,A1,B2,L4,_15,B2,C1,B1,C1,B6,C1,B7,C2,B8,C1,B1,_z,B3,A1,B1,C2,B6,A1,Tn,S1,O1,B3,_t,C1,B8,C1,B4,C1,Bc,A1,B6,C1,B5,A1,B3,_1k,L4,P1,Tf,B8,A2,B1,C1,B2,C1,B3,L4,_16,Bk,C5,B4,_11,C1,B4,C1,B8,Tm,S1,N1,B2,_u,C1,B6,A1,Bf,C1,Bd,C2,B3,C1,_1l,L4,P1,Te,B6,A1,B1,A1,Ba,L4,_17,Bc,C1,B1,C1,B3,C1,B1,C1,B5,_15,B1,C2,B2,C1,B4,C1,B1,Tm,S1,B1,_v,B5,C2,B1,C1,Be,C1,B6,C1,B6,C1,B6,_1m,L3,P1,Te,B5,C1,B2,C2,B6,C1,B3,L3,_19,B1,C1,B5,C1,B2,C1,Bc,_18,C1,B7,C1,B1,A1,Tl,S1,_w,B2,C1,B6,C1,B1,C1,B2,C1,B4,C1,B1,C1,B6,A1,Bf,_1n,L2,P1,Td,A2,Bb,C1,B1,C2,B4,L3,_19,A1,B5,C1,B4,_6,B3,C1,_1b,B2,C1,B7,T1,_4,Tf,_z,B1,C1,B1,C1,B1,C1,B2,C1,B9,C1,B4,C2,B3,C1,B1,A1,B1,C2,B1,C1,B2,C2,B2,_1p,L1,P1,Tc,A2,B1,C1,B1,C1,B3,C1,B2,C1,B3,A1,B2,C1,B3,L1,_1b,B9,_1o,C1,B1,C1,A1,B2,_9,Td,_z,B1,C1,B4,C1,Be,C1,B1,C1,Bb,A1,B2,A1,B2,C1,_1q,P1,S1,Tb,B6,A1,C1,A1,C1,B7,C1,B2,A1,C2,_1d,B7,_25,Tb,_11,B3,C1,B3,A1,B1,C1,B2,C3,B2,A1,C2,B3,C1,B1,C1,B1,C1,B5,C3,B5,_1s,Ta,A1,B7,C1,B7,C1,B5,_1g,B5,_27,T9,_14,B3,C1,B4,A1,B1,C1,B5,C2,B1,C1,B5,C1,B5,C1,B2,C1,B4,_1t,T8,A1,C1,B2,_2,Bf,C1,_3w,T4,_17,B9,C1,B5,A1,B1,A1,B1,C1,B2,C1,B5,C1,B5,C1,B2,_1v,T6,B3,_6,B9,A1,B3,_5a,C1,B4,A1,C1,B3,C1,B4,C1,Bc,C1,B5,_1y,T3,B1,_a,B1,C1,B2,C1,B7,_5b,C1,B1,C1,B1,C1,B1,C1,B2,C1,B3,C1,B3,C1,B8,C1,B3,C1,_2f,B1,C1,B1,C1,B1,A1,C1,A1,B2,_5d,Bg,A1,C1,B5,A1,B5,_2h,C1,B4,A1,B1,C1,_5f,C2,B1,C1,B3,_5,B3,A1,Bb,_2k,B2,C2,B1,_5t,B4,C1,B4,C1,B1,C1,B1,_8k,B1,C1,Ba,_8l,C1,B3,C1,A1,B4,_8n,B1,C1,B7,_8o,B1,C1,B3,C1,B1,_8r,B3,_44y,T5,_8q,T7,_8o,T9,_4i,B3,_41,Tb,_4g,B2,C1,B2,_3z,Tc,_4f,B2,C1,B1,C1,B1,_3y,Te,_1v,B1,C3,_2e,B8,_1l,B4,_27,Tg,_1c,B7,_9,B2,C1,B5,_2b,T2,B7,_1k,B3,C1,B3,_a,B4,_1i,B5,Tm,_19,B2,C1,B3,C1,B1,A1,_7,B4,C1,B1,C2,B1,A1,_2a,T3,B1,C1,B1,C1,B3,_1i,C1,B8,_7,B7,_1g,B3,C1,B1,Tn,Q1,L1,_16,B8,C1,B3,_3,B9,C1,B3,_21,T5,_1,T5,B8,_1h,B4,C1,B5,_5,C2,B5,A1,B1,_1d,A1,B2,C1,B3,Tn,R1,L1,C2,_13,B1,C1,B1,C2,B4,A1,Bd,A1,B5,C1,_1z,Tc,B1,C2,B2,C1,B3,_1f,B3,C1,B6,C1,B2,_1,B1,A1,B1,C1,B8,_1b,B8,Tn,R1,L1,B3,_11,Bd,C1,B3,C1,Ba,C1,B3,_1x,Te,B3,C1,B3,A1,C1,B1,_1c,B2,A1,Bf,C1,B9,_18,C2,B8,Tn,R1,L1,B1,C2,_z,C2,B9,C1,Bc,C1,B4,A1,C1,B2,C1,B1,_1v,Tf,B5,C1,B5,_1a,B1,C1,B4,C1,B9,C1,B3,C1,B5,C1,B3,_15,B5,C2,B4,A1,Tn,R1,L1,B4,_y,Bj,C1,B1,C2,B5,C1,B3,C1,B1,A1,B1,_1s,L1,Q1,Tf,B1,C1,B2,C1,B4,C1,B1,_19,B2,C1,B2,A1,B2,C1,Bc,C1,Ba,_13,B9,C1,B3,A1,Tm,R1,L1,B3,C1,B1,_w,B4,C1,B7,A1,Bd,C1,B2,C1,B2,C1,B3,C1,B1,_1q,L2,Q1,Tf,B2,C1,B1,C1,B4,C1,B1,_18,C1,B3,C1,A1,Bi,C2,B3,C1,B4,_11,B1,C1,B2,C3,B6,C1,B1,Tm,R1,B5,C1,B2,_u,B2,C1,B3,C2,Ba,A1,B7,C1,B4,C2,B4,C1,_1p,L3,Q1,Te,B4,A1,B5,C1,B2,_17,B9,C3,B4,C1,B1,C1,B2,C1,Ba,C1,B1,_11,B7,A1,C1,B6,Tm,Q1,A1,B9,_s,B3,C1,B3,C2,Bg,C1,Bb,_1p,L4,Q1,Te,B2,C3,B5,C1,A1,B1,_17,B1,C1,B2,C1,B5,C1,B3,A1,Bg,C1,B3,_10,B5,C1,B3,C2,B3,C1,B1,Tl,Bb,C1,B1,_r,B5,C2,B3,C1,B3,C1,B6,C1,B1,C1,Bb,C1,_1p,L4,Q1,Te,B2,C1,B7,C2,B2,A1,_15,C1,B3,C1,B5,A1,B3,C1,B2,C1,B1,C1,B3,A1,B3,C1,B1,L5,_11,B3,C1,B1,A1,B5,C1,B3,C1,B1,Tj,B3,C2,B1,C1,B3,C1,A1,B3,_q,C1,B3,A1,C1,Be,A1,B3,C1,B3,A1,B1,C1,B3,C2,_1p,L4,Q1,Td,B7,C1,B5,C1,B3,_14,B1,C1,B1,C1,B4,C1,B1,C1,Bd,C1,B1,C1,L7,_12,B1,C1,B4,C2,B2,C1,B3,C1,B1,Tj,B4,C1,B2,C1,B7,C1,_q,B2,A1,B8,C1,B8,C2,B4,C1,B7,_1r,L3,Q1,Td,B3,C2,B1,C1,B8,C1,B3,_12,B2,C2,B1,C1,B1,A1,B5,C1,B5,C1,B6,P1,L7,_13,B4,C1,B9,C1,A1,Th,A1,B1,A1,Bb,C1,B2,_q,B9,C1,B2,A1,C2,B1,C1,B1,C2,B2,C1,B2,C1,B7,C1,B1,_1q,L3,Q1,Tc,A1,B4,C2,B4,C2,B8,_12,B2,A1,C1,B1,C2,B5,C1,B2,C1,B5,C1,B2,T1,P1,L6,_15,Bg,Tf,B5,C2,B7,A1,B3,_p,B3,C1,Bi,C1,Be,_1q,L2,Q1,Tb,B1,C2,B1,C1,B2,C1,B1,C1,B3,C1,A1,B8,_11,B2,C1,B9,C1,B2,C1,B4,C2,B1,T2,P1,L6,_17,B1,C1,B3,A1,B9,Td,A1,Bd,C1,B3,_p,B8,A1,Bc,C1,B2,C1,B3,C2,B1,C1,B1,C2,B5,_1p,L1,Q1,Ta,B3,C1,B1,C1,B3,C1,B1,C1,B1,C1,B2,A1,B7,_10,C1,B1,A2,B5,C1,B3,C1,B3,C1,B1,C1,B3,T3,P1,L6,_18,B9,C1,B4,A1,Tb,B5,C1,Ba,A1,B1,_o,B7,C1,Bb,C1,B2,C1,B1,A1,B3,C1,B7,C1,B1,C1,B5,_1o,Q1,T9,B1,C1,B1,C1,B3,C1,B2,C1,B2,C1,B1,C1,A1,B4,A1,B1,C1,B1,_z,B6,A1,C1,B1,A1,B1,A1,C1,B7,C1,B2,T4,P1,L6,_18,B9,C1,B5,A1,T9,B1,C2,Ba,A1,B3,_o,B2,C1,B4,C1,Bd,C1,B6,A1,B3,C1,B5,C1,B5,C1,B2,_1o,T8,A1,B2,C2,B4,A1,C3,Bc,_y,L3,B4,C1,B5,C1,B2,C2,B6,A1,T4,P1,L7,_17,C1,B6,C1,B2,C1,B7,T5,A1,Ba,A1,B2,C1,B2,_p,C1,B1,C1,Ba,A1,Bg,C1,B2,C1,B3,C1,B9,C1,B1,_1m,Q1,T7,Bc,C1,Bc,_y,L5,B6,C1,B4,C1,B2,C1,B1,C1,B3,T5,P1,L8,_15,B4,C1,B8,C1,B2,C2,B1,C1,B8,C1,B1,C1,B4,C1,B3,_r,B2,A1,B3,C1,B4,A1,B6,C2,B5,C2,B4,C1,B2,A1,C1,B3,A1,B6,C1,A1,B1,_1m,Q1,T6,B7,C1,B6,C2,A1,B5,C1,B2,_y,L6,Bh,C1,B1,T6,P1,L9,_13,Bb,C1,A1,B2,C1,B2,C1,B8,C1,B9,C1,B1,_s,B2,C1,Bd,C1,Ba,C1,Bd,C1,B2,C1,B1,C1,B2,_1l,C1,B3,T1,Bb,C1,B1,C1,B2,C1,B1,C1,B7,_z,L7,Q1,Bb,A1,B6,T6,P1,La,_12,B1,C1,B9,C1,B3,C1,Bf,C1,B2,C1,B2,C1,B1,_s,B2,C2,B1,C1,B8,C1,B5,A1,B3,A1,B2,A1,B9,C4,B4,C1,B2,_1m,B2,C2,A1,B2,A1,Ba,C1,B2,C1,A1,B3,A1,B1,C1,B1,_10,L7,Q1,B3,C1,B4,C1,B3,C1,B2,C1,B1,A1,T6,P1,Lb,_10,B4,C2,B5,C1,B3,A1,B5,C1,B3,C1,B3,C1,B2,C1,B2,C1,B1,C1,B2,_t,B2,A1,B7,C1,B3,A1,B2,C1,B3,C1,B1,C1,Bl,_1n,B2,C4,B2,C1,B1,C1,B1,C1,Be,C1,B1,C1,_11,L7,Q1,B2,C1,B2,C1,B4,A1,B6,T7,P1,Lc,_z,B3,A1,B8,C1,B6,C1,Bf,A1,B3,C1,_v,B7,C1,Bk,C1,Bc,_1p,Bb,A1,B5,C1,Bc,_11,L7,Q1,Ba,C1,B4,C1,B1,T7,P1,Lc,_z,B5,C4,Bc,A1,Bd,C1,B5,_w,B3,C1,B7,C1,B6,C2,B6,C1,B1,C1,B4,A1,B1,C1,B1,_1r,B8,A1,B2,C3,B4,C2,B2,C3,B5,_12,L6,Q1,C1,B5,C1,B5,C1,B1,C1,B2,T7,P1,Lc,_z,B3,C1,B8,C2,B9,A1,B1,C4,B8,C1,B2,_z,C1,B2,C1,B7,C1,B4,C1,B5,C1,B2,C1,B6,A1,B1,_1s,B4,A1,B5,C1,B9,C1,B2,C1,B3,C1,B2,_13,L5,Q1,Bc,A1,C1,B3,T7,P1,Lb,_11,Bb,C1,B2,C1,A1,B8,C1,B2,C1,B6,C1,B4,_10,B9,C1,B8,C1,B3,C2,B6,C1,B1,_1t,B2,A1,B5,C2,B6,C2,Bc,_15,L3,Q1,B1,C1,B2,C1,B2,C1,B6,A1,B3,T6,P1,La,_13,B8,C1,B7,C1,B3,C1,B5,C1,B4,C1,B1,A1,B3,_12,B4,C2,B8,A1,B6,A1,B8,_1v,B2,C1,B5,C1,B3,C1,B1,C1,B2,C1,B1,C1,B4,C1,B3,C1,_17,L1,Q1,B2,C1,B1,C1,Bd,T6,P1,L8,_17,B1,C1,A1,B2,C1,B2,C1,B3,A1,B1,C1,B1,A1,B2,A2,B8,A1,B2,C1,B1,_15,C2,B1,C1,Bg,C1,B5,_1y,B8,C4,A1,B1,A1,B1,C1,B1,C1,B4,C1,B3,_19,B1,C1,B2,C2,B2,A1,B2,C1,B7,T6,P1,L7,_19,B3,C2,B3,C1,B5,C1,B5,C1,B1,C1,B5,C1,A1,B2,_1b,B2,C1,Ba,C1,B1,C1,B1,_23,B6,C1,B4,A1,B2,C2,B6,C3,_1b,C2,Bb,C1,B5,T5,P1,L5,_1c,Bb,C1,B1,_1,B6,C2,B2,C1,B5,_1e,B6,A1,B3,A1,B2,_26,B9,A1,B9,A1,B3,_1d,B2,C1,B6,C1,B8,T5,P1,L4,_1e,B9,C1,_5,B1,C1,B1,C3,B7,_1g,B1,C2,B2,C1,B3,C1,B1,_28,C1,B2,A1,C1,B1,C1,B1,_2,B1,C1,B2,C1,B5,C1,_1e,B3,C1,Bf,T4,P1,L3,_1h,C1,B4,_9,B4,A1,B4,A1,B1,_1h,B8,C1,B2,_29,B2,A1,B2,_5,B5,C1,B1,C1,B1,C1,_1g,A1,Be,C1,B2,T3,P1,L2,_1x,B9,_1j,B5,A1,B1,C1,B1,_2l,B8,_1l,B5,C1,B5,C1,A1,B1,_25,C1,B4,C1,_1l,B5,C1,B1,_2n,C1,B5,_1n,C1,B1,C1,B5,C1,B3,_28,B3,_1o,B2,C1,B1,_2p,B5,_1n,B3,C1,B4,C1,B2,_6v,B1,_1q,B9,C1,_8m,B4,C1,B2,C1,B1,_8o,B5,C1,B1,_8q,B2,C1,B2,_8s,B3,_6tg,';
+  const bands = new Uint8Array(width * height);
+  let cursor = 0;
+  for (const run of packed.split(',')) if (run) { const n = parseInt(run.slice(1), 36); bands.fill(alphabet.indexOf(run[0]), cursor, cursor + n); cursor += n; }
+  const bins = Array(20).fill(0);
+  for (const band of bands) if (band) bins[band - 1]++;
+  const denominator = bins.reduce((sum, n) => sum + n, 0), fmt = (v, n = 2) => Number(v).toFixed(n);
+  function calculate(threshold) {
+    const boundary = Math.round(threshold * 20), count = bins.slice(boundary).reduce((sum, n) => sum + n, 0);
+    return { threshold, thresholdBinBoundary: boundary, count, denominator, areaFraction: count / denominator, excludedCount: denominator - count,
+      scoreBinWidth: .05, scoreBinCounts: bins.slice(), selectedBinIndices: bins.map((_, i) => i).filter(i => i >= boundary) };
+  }
+  function maskPath(test) {
+    let path = '';
+    for (let y = 0; y < height; y++) for (let x = 0; x < width;) {
+      if (!test(bands[y * width + x])) { x++; continue; }
+      const start = x; while (x < width && test(bands[y * width + x])) x++;
+      path += 'M' + start + ' ' + (y + .5) + 'h' + (x - start);
+    }
+    return path;
+  }
+  const roiPath = maskPath(v => v > 0);
+  function chart(threshold) {
+    const v = calculate(threshold), x = n => 62 + n * 280, y = n => 266 - n / 10000 * 195;
+    return '<svg viewBox="0 0 750 370" role="img" aria-label="固定教学样品的逐像素显示得分分布、当前阈值和同一坐标上的显示掩膜" style="display:block;width:100%;min-width:750px;max-width:850px;height:auto">'
+      + '<text x="62" y="25" font-size="18" fill="#343941">全部可见岩屑像素的得分分布</text>'
+      + [0, 5000, 10000].map(n => '<path d="M62 ' + y(n) + 'H342" stroke="#ded8cf"/><text x="51" y="' + (y(n) + 5) + '" font-size="16" text-anchor="end" fill="#62636a">' + n.toLocaleString('en-US') + '</text>').join('')
+      + bins.map((n, i) => '<rect x="' + (x(i / 20) + 1).toFixed(2) + '" y="' + y(n).toFixed(2) + '" width="12" height="' + (266 - y(n)).toFixed(2) + '" fill="' + (i >= v.thresholdBinBoundary ? '#B8242A' : '#a8bac5') + '"><title>得分' + fmt(i / 20) + '–' + fmt((i + 1) / 20) + '：' + n + '像素</title></rect>').join('')
+      + '<path d="M' + x(threshold).toFixed(2) + ' 52V275" stroke="#B08A4A" stroke-width="2" stroke-dasharray="5 4"/>'
+      + '<text x="' + Math.min(260, x(threshold) + 8).toFixed(2) + '" y="53" font-size="16" fill="#8A682E">阈值 ' + fmt(threshold) + '</text>'
+      + [0, .25, .5, .75, 1].map(n => '<text x="' + x(n) + '" y="293" font-size="16" text-anchor="middle" fill="#62636a">' + fmt(n, n === 0 || n === 1 ? 0 : 2) + '</text>').join('')
+      + '<text x="62" y="321" font-size="16" fill="#62636a">显示得分（无单位）</text><text x="62" y="345" font-size="16" fill="#62636a">纵轴：像素数；每箱宽0.05</text>'
+      + '<text x="390" y="25" font-size="18" fill="#343941">阈值选入了哪些像素？</text>'
+      + '<g transform="translate(390 52)"><rect width="320" height="240" fill="#eee9e1"/><path d="' + roiPath + '" fill="none" stroke="#a8bac5" stroke-width="1" shape-rendering="crispEdges"/><path d="' + maskPath(band => band > v.thresholdBinBoundary) + '" fill="none" stroke="#B8242A" stroke-width="1" shape-rendering="crispEdges"/><rect width="320" height="240" fill="none" stroke="#c5bbae"/></g>'
+      + '<text x="390" y="321" font-size="16" fill="#343941">320×240原图坐标 · 灰蓝为全部ROI</text>'
+      + '<text x="390" y="345" font-size="16" fill="#B8242A">朱红：' + v.count.toLocaleString('en-US') + '像素，' + fmt(v.areaFraction * 100, 1) + '%</text></svg>';
+  }
+  function readout(threshold) {
+    const v = calculate(threshold);
+    return '<strong>得分≥' + fmt(threshold) + '：</strong>选入 ' + v.count.toLocaleString('en-US') + ' 个像素 ÷ 固定 ' + v.denominator.toLocaleString('en-US') + ' 个可见岩屑像素＝<strong>' + fmt(v.areaFraction * 100, 1) + '%</strong>。其余 ' + v.excludedCount.toLocaleString('en-US') + ' 个ROI像素仍留在分母内。托盘背景始终不参与判断和面积分母。';
+  }
+  const style = '<style>[data-concept-scene="m3"]{font-size:18px;line-height:1.75;min-width:0}[data-concept-scene="m3"] .ct-controls{display:flex;flex-wrap:wrap;align-items:center;gap:16px}[data-concept-scene="m3"] label,[data-concept-scene="m3"] button,[data-concept-scene="m3"] figcaption{font-size:16px}[data-concept-scene="m3"] .ct-chart{overflow-x:auto;max-width:100%}[data-concept-scene="m3"] input{accent-color:#B8242A;max-width:100%}[data-concept-scene="m3"] figure{margin:16px 0}[data-concept-scene="m3"] .ct-readout{background:#F7F4EF;padding:14px;border-left:4px solid #B8242A}</style>';
+  const backgroundHTML = '<section class="ct-widget" data-concept-scene="m3" data-concept-part="background">' + style
+    + '<h3>一条阈值线，怎样变成一片显示面积？</h3><p>固定同一份教学样品、曝光1.0与已经训练的模型。先把每个可见岩屑像素的<strong>显示得分</strong>排成分布，再问：得分至少多高才选入显示？金色竖线右侧的像素会在右图变成朱红；白光确定的可见范围ROI始终不变。</p>'
+    + '<div class="ct-controls"><label>试设显示阈值 <output data-ct-threshold-label>0.35</output> <input disabled type="range" min="5" max="95" step="5" value="35" data-ct-threshold aria-label="显示得分阈值，百分之一为单位"></label><button disabled type="button" data-ct-reset>复位到0.35</button></div>'
+    + '<figure><div class="ct-chart" data-ct-graphic>' + chart(.35) + '</div><figcaption>分布统计了全部14,582个ROI像素，每箱宽0.05，阈值只在箱边界移动；掩膜保留逐像素坐标。若跨过的得分箱为空，阈值变了，计数也可以暂时不变。</figcaption></figure><p class="ct-readout" data-ct-result>' + readout(.35) + '</p>'
+    + '<p>向左移阈值，会把较低得分的像素也选入；向右移则缩小范围。这是<strong>分割口径的敏感性实验</strong>。0.35来自原有独立验证样品的选择；在当前图上随意调到“看起来好看”不能代替验证。得分与二维显示面积均不能直接解释为含油概率或含油饱和度。</p>'
+    + '<p style="font-size:16px">数据：原M3Core.train()及infer()在S17Images种子17、DEMO-017-P1、曝光1.0的教学观测上所得Float32逐像素得分。此处保存每个像素的精确分箱归属，箱边界计数与原得分比较一致，不读取评价真值。荧光来源解释沿用 <a href="https://www.slb.com/-/media/files/oilfield-review/or2012spr03-mudlog" target="_blank" rel="noopener">SLB录井资料</a>；得分、阈值与像素计数为本地教学算法定义。</p></section>';
+  function mount(root) {
+    root.querySelectorAll('[data-concept-scene="' + scene + '"]').forEach(host => {
+      if (host.dataset.ctReady) return;
+      host.dataset.ctReady = 'true'; host.querySelectorAll('input,select,button').forEach(el => { el.disabled = false; });
+      const threshold = host.querySelector('[data-ct-threshold]');
+      function draw() {
+        const t = Number(threshold.value) / 100;
+        host.querySelector('[data-ct-threshold-label]').textContent = fmt(t); host.querySelector('[data-ct-graphic]').innerHTML = chart(t);
+        host.querySelector('[data-ct-result]').innerHTML = readout(t);
+        host.dataset.ctState = JSON.stringify({ source: 'fixed_default_M3Core_score_bins', input: { threshold: t, exposure: 1 }, ...calculate(t) });
+      }
+      threshold.addEventListener('input', draw); threshold.addEventListener('change', draw);
+      host.querySelector('[data-ct-reset]').addEventListener('click', () => { threshold.value = 35; draw(); }); draw();
+    });
+  }
+  (g.S17Concepts || (g.S17Concepts = {}))[scene] = { backgroundAfter: 3, workflowAfter: 0, backgroundHTML, workflowHTML: '', mount };
+})(globalThis);
+
 (function(g){'use strict';if(g.S17Scroll)return;
 function activate(figure,index){if(!figure)return;const i=Math.max(0,Math.min(3,Number(index)));figure.dataset.scrollCurrent=String(i);figure.querySelectorAll('[data-scroll-layer],[data-scroll-outline]').forEach(n=>n.classList.toggle('is-current',Number(n.dataset.scrollLayer??n.dataset.scrollOutline)===i));figure.querySelectorAll('[data-scroll-select]').forEach(n=>n.setAttribute('aria-pressed',String(Number(n.dataset.scrollSelect)===i)));figure.querySelector('[data-scroll-title]').textContent=figure.querySelector('.scroll-menu [data-scroll-select="'+i+'"]').textContent.replace(/^\s*0[1-4]\s*/,'');}
 function bind(root){root.querySelectorAll('[data-scroll-scene]').forEach(figure=>{if(figure.dataset.scrollBound)return;figure.dataset.scrollBound='true';figure.querySelectorAll('button').forEach(b=>b.disabled=false);figure.addEventListener('click',e=>{const b=e.target.closest('[data-scroll-select],[data-scroll-read]');if(!b)return;if(b.hasAttribute('data-scroll-select')){activate(figure,b.dataset.scrollSelect);figure.dispatchEvent(new CustomEvent('s17-scroll-select',{bubbles:true,detail:{scene:figure.dataset.scrollScene,index:Number(b.dataset.scrollSelect)}}));}else {const inner=root.querySelector('#'+figure.dataset.scrollScene+'-knowledge-'+figure.dataset.scrollCurrent);const target=figure.dataset.scrollScene==='m2'?inner?.closest('.m2-background-chapter')||inner:inner;target?.scrollIntoView({block:'start',behavior:g.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});}});figure.querySelector('.scroll-menu').addEventListener('keydown',e=>{const b=e.target.closest('[data-scroll-select]');if(!b||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const i=e.key==='Home'?0:e.key==='End'?3:(Number(b.dataset.scrollSelect)+(e.key==='ArrowRight'?1:3))%4;activate(figure,i);figure.querySelector('.scroll-menu [data-scroll-select="'+i+'"]').focus();});activate(figure,0);});}
@@ -191,7 +268,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 let currentAPI=null,refreshFlow=null;
 function notify(message){const n=document.getElementById('status');if(n)n.textContent=message;}
 function changed(){refreshFlow?.();const b=document.getElementById('export');if(b&&currentAPI)b.disabled=currentAPI.snapshot().status!=='ready';}
-function readingMount(root){root.querySelectorAll('[data-fx-scene]').forEach(box=>{
+function readingMount(root){g.S17ConceptHost?.mount(root);root.querySelectorAll('[data-fx-scene]').forEach(box=>{
  if(box.dataset.fxMounted)return;box.dataset.fxMounted='true';
  const scene=box.dataset.fxScene,L=g[scene.toUpperCase()+'Exhibit'];
  box.querySelectorAll('[data-fx-map]').forEach(b=>{b.disabled=false;b.addEventListener('click',()=>{
@@ -219,6 +296,157 @@ g.S17Exhibit={notify,changed,readingMount,start};
 })(globalThis);
 
 S17Exhibit.start("m3");
+window.S17CompassPage={"model":{"scene":{"id":"m3","name":"荧光图像智能判读","stageId":"mudlogging","stageName":"录井","diff":"中","diffWhy":"成像条件难统一（灯源、距离、相机），跨井迁移需要强标准化。","refs":["图像分类","颜色特征工程","成像标准化"]},"current":{"id":"s17-fluorescence-review","title":"荧光显示：看清哪里发光，再量有多大","version":"1.9.0"},"methods":[{"id":"cv","name":"计算机视觉","abbr":"CV"}],"sameScene":[{"id":"s17-fluorescence-review","sceneId":"m3","title":"荧光显示：看清哪里发光，再量有多大","version":"1.9.0","directory":"cases","origin":""}],"sameStage":[{"id":"m1","name":"岩屑岩性自动识别","stageId":"mudlogging","stageName":"录井","caseId":"s17-cuttings-lithology","directory":"cases"},{"id":"m2","name":"气测异常智能解释","stageId":"mudlogging","stageName":"录井","caseId":"s17-mudgas-context","directory":"cases"},{"id":"m4","name":"钻时曲线地层划分","stageId":"mudlogging","stageName":"录井","caseId":"s17-drilltime-boundaries","directory":"cases"},{"id":"m5","name":"录井报告自动生成","stageId":"mudlogging","stageName":"录井","caseId":"s17-evidence-report","directory":"cases"}],"crossStages":[{"id":"welllog","name":"测井","sameStage":false}],"next":{"id":"m4","name":"钻时曲线地层划分","stageId":"mudlogging","stageName":"录井","caseId":"s17-drilltime-boundaries","directory":"cases"},"authoredNext":false,"nextLabel":"同环节继续读","provenance":"老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节"},"options":{"mode":"standalone","portalHref":"../../../../portal/index.html","collectionPrefix":"../../../"}};
+/* Original ATLAS metadata in a small, offline course compass. No model or data mutation. */
+(function (g) {
+  'use strict';
+  if (g.S17Compass) {
+    if (g.S17CompassPage) g.S17Compass.configure(g.S17CompassPage);
+    return;
+  }
+  var d = g.document, config = null, timer = null, observer = null;
+  var parts = [{id:'background', tab:'bg', no:'01', name:'专业背景'}, {id:'workflow', tab:'flow', no:'02', name:'案例流程'}, {id:'lab', tab:'demo', no:'03', name:'可运行示范'}];
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]; }); }
+  function byId(atlas, id) { return atlas && atlas.index && atlas.index.byScene && atlas.index.byScene[id] || null; }
+  function stages(atlas) { return atlas && atlas.stages || []; }
+  function catalogRows(catalog) { return Array.isArray(catalog) ? catalog : catalog && catalog.cases || []; }
+  function unique(rows) { var seen = {}; return rows.filter(function (r) { if (!r || !r.id || seen[r.id]) return false; seen[r.id] = true; return true; }); }
+  function normalCase(row) { return {id:row.id, sceneId:row.sceneId || row.scene, title:row.title || row.name || row.id, version:row.version || '', directory:row.directory || '', origin:row.origin || ''}; }
+  function sceneRow(sc, catalog) {
+    var found = catalog.filter(function (c) { return c.sceneId === sc.id && c.directory; })[0];
+    return {id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName, caseId:found && found.id || '', directory:found && found.directory || ''};
+  }
+  function model(scene, manifest, atlas, catalog, options) {
+    options = options || {}; manifest = manifest || {};
+    var sc = typeof scene === 'string' ? byId(atlas, scene) : scene;
+    if (!sc || !sc.id) throw new Error('Unknown course scene: ' + String(scene));
+    var rows = unique(catalogRows(catalog).map(normalCase));
+    if (manifest.id) {
+      var existing = rows.filter(function (r) { return r.id === manifest.id; })[0];
+      var current = normalCase(Object.assign({}, existing || {}, manifest, {sceneId:sc.id}));
+      rows = rows.filter(function (r) { return r.id !== current.id; });
+      rows.unshift(current);
+    }
+    var stage = stages(atlas).filter(function (s) { return s.id === sc.stageId; })[0];
+    var siblings = stage ? stage.scenes : (atlas.allScenes || []).filter(function (s) { return s.stageId === sc.stageId; });
+    var sameStage = siblings.filter(function (s) { return s.id !== sc.id; }).map(function (s) { return sceneRow(s, rows); });
+    var index = siblings.findIndex(function (s) { return s.id === sc.id; });
+    var next = options.nextScene === null ? null : byId(atlas, options.nextScene) || siblings[index + 1] || siblings[0];
+    if (next && next.id === sc.id) next = null;
+    var cross = (sc.cross || []).map(function (name) {
+      var target = stages(atlas).filter(function (s) { return s.name === name || s.id === name; })[0];
+      return target ? {id:target.id, name:target.name, sameStage:target.id === sc.stageId} : {id:'', name:name};
+    });
+    return {
+      scene:{id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName || stage && stage.name || '', diff:sc.diff || '', diffWhy:sc.diffWhy || '', refs:(sc.refs || []).slice()},
+      current:{id:manifest.id || '', title:manifest.title || sc.name, version:manifest.version || ''},
+      methods:(sc.methods || []).map(function (key) { var m = atlas.methods[key]; return {id:key, name:m && m.name || key, abbr:m && m.abbr || key.toUpperCase()}; }),
+      sameScene:rows.filter(function (r) { return r.sceneId === sc.id; }), sameStage:sameStage,
+      crossStages:cross, next:next ? sceneRow(next, rows) : null,
+      authoredNext:Object.prototype.hasOwnProperty.call(options, 'nextScene'),
+      nextLabel:options.nextLabel || (next && next.stageId === sc.stageId ? '同环节继续读' : '继续阅读相关场景'),
+      provenance:'老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节'
+    };
+  }
+  function portalHref(route, options) { return options.mode === 'portal' ? route : (options.portalHref || '../../../../portal/index.html') + route; }
+  function caseHref(row, m, options) {
+    if (options.mode === 'portal') return '#/scene/' + encodeURIComponent(row.sceneId || row.id) + (row.sceneId ? '?case=' + encodeURIComponent(row.id) + '&tab=bg' : '');
+    if (row.id === m.current.id && row.sceneId === m.scene.id) return '#background';
+    if (row.directory === 'cases' || row.directory === 'expansion-cases') return (options.collectionPrefix || '../../../') + row.directory + '/' + encodeURIComponent(row.id) + '/demo/index.html#background';
+    return portalHref('#/scene/' + encodeURIComponent(row.sceneId || row.id) + (row.sceneId ? '?case=' + encodeURIComponent(row.id) + '&tab=bg' : ''), options);
+  }
+  function sceneHref(row, m, options) { return row.caseId ? caseHref({id:row.caseId, sceneId:row.id, directory:row.directory}, m, options) : portalHref('#/scene/' + encodeURIComponent(row.id), options); }
+  function partHref(part, m, options) { return options.mode === 'portal' ? '#/scene/' + encodeURIComponent(m.scene.id) + (m.current.id ? '?case=' + encodeURIComponent(m.current.id) + '&tab=' : '?tab=') + part.tab : '#' + part.id; }
+  function navigation(m, options) {
+    options = options || {};
+    var breadcrumb = '<nav class="course-wayfinding" aria-label="课程位置"><a href="' + esc(portalHref('#/', options)) + '">← 课程总览</a><span aria-hidden="true">/</span><a href="' + esc(portalHref('#/stage/' + encodeURIComponent(m.scene.stageId), options)) + '">' + esc(m.scene.stageName) + '环节</a><span class="course-current">' + esc(m.scene.id.toUpperCase()) + ' · ' + esc(m.scene.name) + '</span></nav>';
+    if (!options.includeReading) return breadcrumb;
+    return breadcrumb + '<nav class="course-reading-route" aria-label="阅读路径"><span>阅读路径</span>' + parts.map(function (p, i) { return (i ? '<span class="course-route-arrow" aria-hidden="true">→</span>' : '') + '<a href="' + esc(partHref(p, m, options)) + '" data-course-part="' + p.id + '"' + (!i ? ' aria-current="step"' : '') + '><small>' + p.no + '</small>' + p.name + '</a>'; }).join('') + '</nav>';
+  }
+  function sameSceneHTML(m, options) {
+    if (!m.sameScene.length) return '<p>本场景的案例可从门户进入。</p>';
+    return '<ul class="course-links">' + m.sameScene.map(function (row) {
+      var current = row.id === m.current.id;
+      return '<li><a href="' + esc(caseHref(row, m, options)) + '"' + (current ? ' aria-current="page"' : '') + '><span>' + esc(row.title) + (current ? '<span class="course-current-tag">当前</span>' : '') + '</span><small>' + esc(row.origin || (row.version ? 'v' + row.version : '查看')) + (current ? '' : ' →') + '</small></a></li>';
+    }).join('') + '</ul>';
+  }
+  function render(m, options) {
+    options = options || {};
+    var includeDifficulty = options.includeDifficulty !== false;
+    var sameStage = '<ul class="course-links">' + m.sameStage.map(function (s) { return '<li><a href="' + esc(sceneHref(s, m, options)) + '"><span>' + esc(s.name) + '</span><small>' + esc(s.id.toUpperCase()) + ' →</small></a></li>'; }).join('') + '</ul>';
+    var cross = m.crossStages.length ? '<div class="course-cross"><h3>原地图标注的交叉环节</h3><div class="course-pills">' + m.crossStages.map(function (s) { return s.id ? '<a class="course-pill" href="' + esc(portalHref('#/stage/' + encodeURIComponent(s.id), options)) + '">' + esc(s.name) + (s.sameStage ? ' · 本环节' : ' →') + '</a>' : '<span class="course-pill">' + esc(s.name) + '</span>'; }).join('') + '</div></div>' : '';
+    return '<section class="course-context" data-course-context="' + esc(m.scene.id) + '" data-course-mode="' + esc(options.mode || 'standalone') + '"' + (m.authoredNext ? ' data-course-next-scene="' + esc(m.next && m.next.id || '') + '" data-course-next-label="' + esc(m.nextLabel) + '"' : '') + ' aria-labelledby="course-context-' + esc(m.scene.id) + '"><header><span class="course-eyebrow">放回作业链，继续看场景</span><h2 id="course-context-' + esc(m.scene.id) + '">' + (includeDifficulty ? '技术难度与参考方向' : '继续阅读场景与案例') + '</h2></header>' +
+      (includeDifficulty ? '<div class="course-context-grid"><div class="course-context-cell"><div class="course-difficulty-line"><span class="course-difficulty" data-difficulty="' + esc(m.scene.diff) + '">技术难度 · ' + esc(m.scene.diff || '未标注') + '</span><span class="course-difficulty-caption">原场景的技术判断</span></div>' + (m.scene.diffWhy ? '<p>' + esc(m.scene.diffWhy) + '</p>' : '') + '</div><div class="course-context-cell"><h3>可以继续查阅的方法方向</h3><div class="course-pills">' + m.scene.refs.map(function (ref) { return '<span class="course-pill">' + esc(ref) + '</span>'; }).join('') + '</div><div class="course-method-links">' + m.methods.map(function (method) { return '<a href="' + esc(portalHref('#/method/' + encodeURIComponent(method.id), options)) + '">' + esc(method.abbr) + ' · ' + esc(method.name) + '方法索引 →</a>'; }).join('') + '</div></div></div>' : '') +
+      '<div class="course-related"><div class="course-context-cell course-same-scene"><h3>同场景的案例' + (m.sameScene.length > 1 ? ' · ' + m.sameScene.length + '种实现' : '') + '</h3><div data-course-same-scene>' + sameSceneHTML(m, options) + '</div></div>' + (options.mode === 'portal' ? '' : '<div class="course-context-cell course-same-stage"><h3>同环节的其他场景 · ' + esc(m.scene.stageName) + '</h3>' + sameStage + '</div>') + cross + '</div>' +
+      '<div class="course-next">' + (m.next ? '<a href="' + esc(sceneHref(m.next, m, options)) + '">' + esc(m.nextLabel) + '：' + esc(m.next.name) + ' →</a>' : '') + '<a href="' + esc(portalHref('#/stage/' + encodeURIComponent(m.scene.stageId), options)) + '">查看整个' + esc(m.scene.stageName) + '环节</a><a href="' + esc(portalHref('#/', options)) + '">返回课程总览</a></div><p class="course-provenance">' + esc(m.provenance) + '</p></section>';
+  }
+  function activePart() { if (!g.location) return 'background'; var match = g.location.hash.match(/[?&]tab=(bg|flow|demo)/); return match ? {bg:'background', flow:'workflow', demo:'lab'}[match[1]] : parts.some(function (p) { return '#' + p.id === g.location.hash; }) ? g.location.hash.slice(1) : 'background'; }
+  function updatePath() { if (!d) return; var part = activePart(); d.querySelectorAll('[data-course-part]').forEach(function (a) { if (a.dataset.coursePart === part) a.setAttribute('aria-current', 'step'); else a.removeAttribute('aria-current'); }); }
+  function runtimeCatalog() {
+    var rows = [], course = g.S17Course && g.S17Course.cases || [], expansion = g.S17Expansion && g.S17Expansion.cases || [];
+    course.forEach(function (row) { rows.push(Object.assign({}, row, {sceneId:row.sceneId || row.scene, directory:'cases'})); });
+    expansion.forEach(function (row) { rows.push(Object.assign({}, row, {directory:'expansion-cases'})); });
+    return (g.Cases && g.Cases.list ? g.Cases.list() : []).map(function (row) { var known = rows.filter(function (r) { return r.id === row.id; })[0] || {}; return Object.assign({}, known, row, {origin:row.id === 'welllog-layer' ? '老师原样例' : ''}); });
+  }
+  function portalMount() {
+    if (!d || !g.ATLAS || !g.Cases || !g.location) return false;
+    var match = g.location.hash.match(/^#\/scene\/([^?&/]+)/);
+    if (!match) return false;
+    var sc = byId(g.ATLAS, decodeURIComponent(match[1])), main = d.querySelector('#view main');
+    if (!sc || !main) return false;
+    var entries = g.Cases.bySceneAll(sc.id), search = g.location.hash.indexOf('?') >= 0 ? new URLSearchParams(g.location.hash.split('?')[1]) : null;
+    var current = entries.filter(function (c) { return search && c.id === search.get('case'); })[0] || entries[0];
+    var background = main.querySelector('[data-panel="bg"]');
+    if (!current || !background) return false;
+    var stamp = sc.id + '|' + current.id + '|' + entries.map(function (c) { return c.id + ':' + c.version + ':' + c.title; }).join('|');
+    if (main.__courseCompassStamp === stamp && background.querySelector('[data-course-context]')) return true;
+    main.__courseCompassStamp = stamp;
+    var authored = background.querySelector('[data-course-next-scene]');
+    var continuation = authored ? {nextScene:authored.dataset.courseNextScene || null, nextLabel:authored.dataset.courseNextLabel} : g.S17CompassContinuations && g.S17CompassContinuations[sc.id] || {};
+    var prior = background.querySelectorAll('[data-course-context]');
+    prior.forEach(function (el) { el.remove(); });
+    var existingDifficulty = Array.from(background.querySelectorAll('h2,h3')).some(function (heading) { return heading.textContent.trim() === '技术难度与参考方向'; });
+    var m = model(sc, current, g.ATLAS, runtimeCatalog(), continuation), options = {mode:'portal', includeDifficulty:!existingDifficulty};
+    background.insertAdjacentHTML('beforeend', render(m, options));
+    updatePath();
+    return true;
+  }
+  function standaloneMount() {
+    if (!d || !config || !config.model) return;
+    var m = config.model, opts = config.options || {mode:'standalone'};
+    var background = d.getElementById('background');
+    if (background && !background.querySelector('[data-course-context]')) background.insertAdjacentHTML('beforeend', render(m, opts));
+    if (!d.querySelector('.course-wayfinding')) {
+      var host = d.querySelector('.fx-main') || d.querySelector('.m2-exhibit main') || d.querySelector('body.xl-lesson>header') || d.querySelector('body>header') || d.querySelector('main');
+      var nativeNavigation = d.querySelector('.fx-parts [data-fx-part], .m2-tabs [data-part], nav [data-tab="background"]');
+      if (host) host.insertAdjacentHTML('afterbegin', navigation(m, Object.assign({}, opts, {includeReading:!nativeNavigation})));
+    }
+    updatePath();
+  }
+  function mount() { if (!d) return; if (!portalMount()) standaloneMount(); }
+  function schedule() { if (timer) g.clearTimeout(timer); timer = g.setTimeout(function () { timer = null; mount(); }, 35); }
+  function configure(value) { config = value; if (d) schedule(); }
+  g.S17Compass = {model:model, render:render, navigation:navigation, sameSceneHTML:sameSceneHTML, configure:configure, mount:mount};
+  if (!d) return;
+  if (g.S17CompassPage) configure(g.S17CompassPage);
+  d.addEventListener('click', function (event) {
+    var link = event.target.closest('[data-course-part]');
+    if (!link || portalMount()) return;
+    var part = link.dataset.coursePart;
+    var native = d.querySelector('[data-fx-part="' + part + '"]') || d.querySelector('[data-part="' + part + '"]') || d.querySelector('nav [data-tab="' + part + '"]');
+    if (native) { event.preventDefault(); native.click(); }
+    else { var target = d.getElementById(part); if (target) { target.hidden = false; target.scrollIntoView({block:'start'}); } }
+    updatePath();
+  });
+  g.addEventListener('hashchange', schedule);
+  function ready() {
+    mount();
+    var view = d.getElementById('view');
+    if (view && g.MutationObserver) { observer = new g.MutationObserver(schedule); observer.observe(view, {childList:true, subtree:true}); }
+  }
+  if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', ready, {once:true}); else ready();
+})(typeof window !== 'undefined' ? window : globalThis);
+
 
 /* S17_OPTIONAL_ASSISTANT_START: isolated from case inference and evaluation */
 (function(){function startAssistant(){
@@ -245,7 +473,7 @@ const catalog=[
 {id:'m2',caseId:'s17-mudgas-context',name:'气测异常',terms:['气测','气峰','迟到','停泵'],intro:'看地面气峰怎样结合累计泵量和工况解释。可以改体积、停泵或上下文，比较候选解释。气峰不直接代表油气层。'},
 {id:'m3',caseId:'s17-fluorescence-review',name:'荧光判读',terms:['荧光','紫外','uv','曝光'],intro:'对比同一样品的白光/UV教学图，改变曝光并查看显示区域。荧光存在与油气来源是两个判断；矿物也会发光。'},
 {id:'m4',caseId:'s17-drilltime-boundaries',name:'钻时分段',terms:['钻时','钻速','分层','分段','工况'],intro:'对比工况变化与响应变化，观察平滑怎样吞掉薄层。曲线上标记的是候选响应界面；公开钻进数据没有地层真值精度。'},
-{id:'m5',caseId:'s17-evidence-report',name:'证据报告',terms:['报告','证据','导出','否定'],intro:'查看短记录怎样变成有来源的报告。点击句子回到证据，改写后重新复核，也能下载工作区、报告HTML和证据JSON。'}];
+{id:'m5',caseId:'s17-evidence-report',name:'综合解释与交接',terms:['报告','综合解释','井段','交接','证据','否定'],intro:'把岩屑、气测、荧光和钻时放回井段，检查资料覆盖和待核查问题。点击报告句子回到原文，修改后重新计算，保存当前记录，并继续学习测井分层。'}];
 for(const c of g.S17Expansion?.cases??[])catalog.push({id:c.sceneId,caseId:c.id,name:c.name,terms:[c.name,c.stageName,c.sceneId],intro:c.summary,directory:'expansion-cases'});
 if(standalone&&!catalog.some(c=>c.id===pageInfo.sceneId))catalog.push({id:pageInfo.sceneId,caseId:pageInfo.caseId,name:pageInfo.name??pageInfo.title??document.title,terms:[pageInfo.sceneId,pageInfo.name??''],intro:pageInfo.summary??'这里可以依次查看专业背景、逐步流程与交互演示。',directory:pageInfo.directory??'cases'});
 const root=document.createElement('aside');root.id='s17-assistant';root.dataset.speaking='false';

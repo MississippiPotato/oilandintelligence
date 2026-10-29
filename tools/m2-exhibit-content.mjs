@@ -1,13 +1,16 @@
 import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';
 import {scrollScene} from './scroll-scene.mjs';
 import {flowDiagram} from './lesson-flow-diagrams.mjs';
+import {conceptFor,conceptCSS,appendConcept,conceptScripts,conceptHostRuntime} from './concept-content.mjs';
+import {courseContext,courseStyles} from './course-compass.mjs';
 export const M2_VERSION='1.7.1';
 export const M2_REPORT_DIR='handoff/m2-clarity-2026-10-28';
 const root=path.resolve(import.meta.dirname,'..');
 export const M2_READING_FILES=['engine.js','data.js','real-data.js','figures.js','presentation.js','reading.js'];
-let cached;
-export function loadM2Content(){if(cached)return cached;const ctx=vm.createContext({});for(const f of M2_READING_FILES)vm.runInContext(fs.readFileSync(path.join(root,'case-src/m2',f),'utf8'),ctx,{filename:f});ctx.M2FlowOverview=flowDiagram('m2');const uri='data:image/jpeg;base64,'+fs.readFileSync(path.join(root,'case-src/m2/assets/scroll-selected.jpg')).toString('base64'),content=makeM2Content(ctx,uri);content.sections[0].html='<style>'+['case-src/m2/exhibit.css','shared/scroll-exhibit.css','shared/continuous-lessons.css','shared/lesson-assistant-entry.css'].map(p=>fs.readFileSync(path.join(root,p),'utf8')).join('\n')+'</style>'+content.sections[0].html;cached=content;return cached;}
-export function m2ReadingRuntime(){return 'globalThis.M2FlowOverview='+JSON.stringify(flowDiagram('m2'))+';\n'+fs.readFileSync(path.join(root,'shared/scroll-exhibit.js'),'utf8')+'\n'+M2_READING_FILES.map(f=>fs.readFileSync(path.join(root,'case-src/m2',f),'utf8')).join('\n');}
+const cache=new Map();let base;
+export function m2ExhibitCSS(){return ['case-src/m2/exhibit.css','shared/scroll-exhibit.css','shared/continuous-lessons.css'].map(p=>fs.readFileSync(path.join(root,p),'utf8')).join('\n')+'\n'+conceptCSS()+'\n'+courseStyles()+'\n'+fs.readFileSync(path.join(root,'shared/lesson-assistant-entry.css'),'utf8');}
+export function loadM2Content({mode='standalone',version='1.9.0'}={}){const key=mode+version;if(cache.has(key))return cache.get(key);if(!base){const ctx=vm.createContext({});for(const f of M2_READING_FILES)vm.runInContext(fs.readFileSync(path.join(root,'case-src/m2',f),'utf8'),ctx,{filename:f});ctx.M2FlowOverview=flowDiagram('m2');const uri='data:image/jpeg;base64,'+fs.readFileSync(path.join(root,'case-src/m2/assets/scroll-selected.jpg')).toString('base64');base=makeM2Content(ctx,uri);}const content=structuredClone(base),concept=conceptFor('m2');if(concept)content.sections=appendConcept(content.sections,concept,'background');const context=courseContext('m2',{id:'s17-mudgas-context',sceneId:'m2',title:'气测异常智能解释：一个气峰的证据之旅',version},{mode});content.sections.at(-1).html+=context.html;content.sections[0].html='<style>'+m2ExhibitCSS()+'</style>'+content.sections[0].html;content.courseContext=context;cache.set(key,content);return content;}
+export function m2ReadingRuntime(){return conceptHostRuntime()+'\n'+conceptScripts(['m2'])+'\n'+'globalThis.M2FlowOverview='+JSON.stringify(flowDiagram('m2'))+';\n'+fs.readFileSync(path.join(root,'shared/scroll-exhibit.js'),'utf8')+'\n'+M2_READING_FILES.map(f=>fs.readFileSync(path.join(root,'case-src/m2',f),'utf8')).join('\n');}
 export function makeM2Content(ctx,scrollURI){
  const P=ctx.M2Presentation,F=ctx.M2Figures,r=P.calculate(),v=r.results[0],rows=r.dataset.observations.rows,chart=P.chart,guide=P.guide;
  const refs='<a href="https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging" target="_blank" rel="noopener">SLB：录井与采集链</a> · <a href="https://publications.iodp.org/proceedings/358/102/358_102.html" target="_blank" rel="noopener">IODP358：地面泥浆气方法</a>';

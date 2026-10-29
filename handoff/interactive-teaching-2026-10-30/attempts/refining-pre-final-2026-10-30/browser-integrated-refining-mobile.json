@@ -1,0 +1,796 @@
+{
+  "kind": "actual_built_HTTP_390px_and_real_CaseInspect_sync",
+  "checkedAt": "2026-10-29T18:05:37.063Z",
+  "checks": [
+    {
+      "name": "r3 final built version",
+      "passed": true
+    },
+    {
+      "name": "r3 native run complete with changed inputs",
+      "passed": true,
+      "detail": {
+        "scene": "r3",
+        "status": "complete",
+        "params": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3
+        }
+      }
+    },
+    {
+      "name": "r3 actual CaseInspect sync changes state",
+      "passed": true,
+      "detail": {
+        "source": "CaseInspect当前正常模型；当前控件独立重算观测",
+        "inputs": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3,
+          "hour": 60
+        }
+      }
+    },
+    {
+      "name": "r3 synced native inputs and fitted observation agree",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "inputs": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3,
+            "hour": 60
+          },
+          "score": 1.1506399905712916,
+          "rms": 4.022291447712575,
+          "firstAlarm": 60
+        },
+        "expected": {
+          "params": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3
+          },
+          "threshold": 0.65,
+          "score": 1.1506399905712916,
+          "rms": 4.022291447712575,
+          "firstAlarm": 60
+        }
+      }
+    },
+    {
+      "name": "r3 390px no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332,
+        "ctState": {
+          "inputs": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3,
+            "hour": 60
+          },
+          "threshold": 0.65,
+          "selectedObservation": {
+            "hour": 60,
+            "load": 1,
+            "rms": 4.022291447712575,
+            "temperature": 68.85310767764226,
+            "kurtosis": 3.1909905931456013,
+            "expected": {
+              "rms": 3.2129368370667413,
+              "temperature": 67.02328575967937,
+              "kurtosis": 3.2714137214951275
+            },
+            "score": 1.1506399905712916,
+            "streak": 3,
+            "flag": true
+          },
+          "firstAlarm": 60,
+          "flagHours": 31,
+          "spectrum": [
+            {
+              "hz": 0,
+              "amplitude": 0.001047909348272022
+            },
+            {
+              "hz": 4,
+              "amplitude": 0.005784793567617183
+            },
+            {
+              "hz": 8,
+              "amplitude": 0.013921968302246955
+            },
+            {
+              "hz": 12,
+              "amplitude": 0.006166796720279334
+            },
+            {
+              "hz": 16,
+              "amplitude": 0.0037676281456769808
+            },
+            {
+              "hz": 20,
+              "amplitude": 0.003276424218866898
+            },
+            {
+              "hz": 24,
+              "amplitude": 0.006435517177197683
+            },
+            {
+              "hz": 28,
+              "amplitude": 0.012872086529937841
+            },
+            {
+              "hz": 32,
+              "amplitude": 2.0083378687438698
+            },
+            {
+              "hz": 36,
+              "amplitude": 0.015307315349560046
+            },
+            {
+              "hz": 40,
+              "amplitude": 0.002351148282196723
+            },
+            {
+              "hz": 44,
+              "amplitude": 0.013135078580366362
+            },
+            {
+              "hz": 48,
+              "amplitude": 0.012863723659059623
+            },
+            {
+              "hz": 52,
+              "amplitude": 0.0018116040706527283
+            },
+            {
+              "hz": 56,
+              "amplitude": 0.009160176467958768
+            },
+            {
+              "hz": 60,
+              "amplitude": 0.003274541500223662
+            },
+            {
+              "hz": 64,
+              "amplitude": 0.009453177410582199
+            },
+            {
+              "hz": 68,
+              "amplitude": 0.006859729686217501
+            },
+            {
+              "hz": 72,
+              "amplitude": 0.00777282361981982
+            },
+            {
+              "hz": 76,
+              "amplitude": 0.014819193476407925
+            },
+            {
+              "hz": 80,
+              "amplitude": 0.012887951639045539
+            },
+            {
+              "hz": 84,
+              "amplitude": 0.017186499045189877
+            },
+            {
+              "hz": 88,
+              "amplitude": 0.004398832562130309
+            },
+            {
+              "hz": 92,
+              "amplitude": 0.0017997393188215383
+            },
+            {
+              "hz": 96,
+              "amplitude": 0.0030471100446783474
+            },
+            {
+              "hz": 100,
+              "amplitude": 0.5616915029156464
+            },
+            {
+              "hz": 104,
+              "amplitude": 0.005102944393634528
+            },
+            {
+              "hz": 108,
+              "amplitude": 0.005649007368565536
+            },
+            {
+              "hz": 112,
+              "amplitude": 0.01037527403601645
+            },
+            {
+              "hz": 116,
+              "amplitude": 0.0022658360849252975
+            },
+            {
+              "hz": 120,
+              "amplitude": 0.010109553549166327
+            },
+            {
+              "hz": 124,
+              "amplitude": 0.012666154542609144
+            },
+            {
+              "hz": 128,
+              "amplitude": 0.010757159700110323
+            },
+            {
+              "hz": 132,
+              "amplitude": 0.01603417236644169
+            },
+            {
+              "hz": 136,
+              "amplitude": 0.006452615625159193
+            },
+            {
+              "hz": 140,
+              "amplitude": 0.004052975885175805
+            },
+            {
+              "hz": 144,
+              "amplitude": 0.008083917234040299
+            },
+            {
+              "hz": 148,
+              "amplitude": 0.008391046704934508
+            },
+            {
+              "hz": 152,
+              "amplitude": 0.007871926487438013
+            },
+            {
+              "hz": 156,
+              "amplitude": 0.009208725380909867
+            },
+            {
+              "hz": 160,
+              "amplitude": 0.008400577136164282
+            },
+            {
+              "hz": 164,
+              "amplitude": 0.008608475499234557
+            },
+            {
+              "hz": 168,
+              "amplitude": 0.004284296273953288
+            },
+            {
+              "hz": 172,
+              "amplitude": 0.003548884061496217
+            },
+            {
+              "hz": 176,
+              "amplitude": 0.005963201688602504
+            },
+            {
+              "hz": 180,
+              "amplitude": 0.0015312017098399015
+            },
+            {
+              "hz": 184,
+              "amplitude": 0.0039179639307725216
+            },
+            {
+              "hz": 188,
+              "amplitude": 0.004384660883920555
+            },
+            {
+              "hz": 192,
+              "amplitude": 0.005847373655843083
+            }
+          ],
+          "modelSource": "CaseInspect当前正常模型；当前控件独立重算观测"
+        },
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 700
+          }
+        ]
+      }
+    },
+    {
+      "name": "r3 390px chart scrolls locally",
+      "passed": true,
+      "detail": {
+        "before": 0,
+        "after": 120,
+        "max": 398
+      }
+    },
+    {
+      "name": "r3 no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r5 final built version",
+      "passed": true
+    },
+    {
+      "name": "r5 native run complete with changed inputs",
+      "passed": true,
+      "detail": {
+        "scene": "r5",
+        "status": "complete",
+        "params": {
+          "seed": 1705,
+          "delay": 40,
+          "alignment": false,
+          "scenario": "normal"
+        }
+      }
+    },
+    {
+      "name": "r5 actual CaseInspect sync changes state",
+      "passed": true,
+      "detail": {
+        "source": "现有R5Core按当前演示参数重新标定（仅取模型）",
+        "inputs": {
+          "now": 24,
+          "delay": 40,
+          "alignment": false
+        }
+      }
+    },
+    {
+      "name": "r5 synced delay alignment prediction and available lab agree",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "inputs": {
+            "now": 24,
+            "delay": 40,
+            "alignment": false
+          },
+          "source": 984,
+          "predicted": 819.0537428661565,
+          "lab": {
+            "sampleMinute": 941,
+            "releaseMinute": 981,
+            "density": 818.2277985748941
+          }
+        },
+        "expected": {
+          "params": {
+            "seed": 1705,
+            "delay": 40,
+            "alignment": false,
+            "scenario": "normal"
+          },
+          "sourceMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "lastLabSample": 941,
+          "lastLabRelease": 981,
+          "lastLab": 818.2277985748941
+        }
+      }
+    },
+    {
+      "name": "r5 390px no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332,
+        "ctState": {
+          "inputs": {
+            "now": 24,
+            "delay": 40,
+            "alignment": false
+          },
+          "processFeatures": [
+            333.2057060347062,
+            2.4300111053081075,
+            99.33549786380445,
+            2.8006877628584053
+          ],
+          "processSourceMinute": 984,
+          "qualityMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "latestAvailableLab": {
+            "sampleMinute": 941,
+            "releaseMinute": 981,
+            "density": 818.2277985748941
+          },
+          "unreleasedTakenCount": 4,
+          "currentBatchAvailableCount": 0,
+          "lambda": 0.01,
+          "modelSource": "现有R5Core按当前演示参数重新标定（仅取模型）"
+        },
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 700
+          }
+        ]
+      }
+    },
+    {
+      "name": "r5 390px chart scrolls locally",
+      "passed": true,
+      "detail": {
+        "before": 0,
+        "after": 120,
+        "max": 398
+      }
+    },
+    {
+      "name": "r5 no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "pages": [
+    {
+      "scene": "r3",
+      "part": "workflow",
+      "version": "1.2.0",
+      "native": {
+        "scene": "r3",
+        "status": "complete",
+        "params": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3
+        }
+      },
+      "expected": {
+        "params": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3
+        },
+        "threshold": 0.65,
+        "score": 1.1506399905712916,
+        "rms": 4.022291447712575,
+        "firstAlarm": 60
+      },
+      "metrics": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332,
+        "ctState": {
+          "inputs": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3,
+            "hour": 60
+          },
+          "threshold": 0.65,
+          "selectedObservation": {
+            "hour": 60,
+            "load": 1,
+            "rms": 4.022291447712575,
+            "temperature": 68.85310767764226,
+            "kurtosis": 3.1909905931456013,
+            "expected": {
+              "rms": 3.2129368370667413,
+              "temperature": 67.02328575967937,
+              "kurtosis": 3.2714137214951275
+            },
+            "score": 1.1506399905712916,
+            "streak": 3,
+            "flag": true
+          },
+          "firstAlarm": 60,
+          "flagHours": 31,
+          "spectrum": [
+            {
+              "hz": 0,
+              "amplitude": 0.001047909348272022
+            },
+            {
+              "hz": 4,
+              "amplitude": 0.005784793567617183
+            },
+            {
+              "hz": 8,
+              "amplitude": 0.013921968302246955
+            },
+            {
+              "hz": 12,
+              "amplitude": 0.006166796720279334
+            },
+            {
+              "hz": 16,
+              "amplitude": 0.0037676281456769808
+            },
+            {
+              "hz": 20,
+              "amplitude": 0.003276424218866898
+            },
+            {
+              "hz": 24,
+              "amplitude": 0.006435517177197683
+            },
+            {
+              "hz": 28,
+              "amplitude": 0.012872086529937841
+            },
+            {
+              "hz": 32,
+              "amplitude": 2.0083378687438698
+            },
+            {
+              "hz": 36,
+              "amplitude": 0.015307315349560046
+            },
+            {
+              "hz": 40,
+              "amplitude": 0.002351148282196723
+            },
+            {
+              "hz": 44,
+              "amplitude": 0.013135078580366362
+            },
+            {
+              "hz": 48,
+              "amplitude": 0.012863723659059623
+            },
+            {
+              "hz": 52,
+              "amplitude": 0.0018116040706527283
+            },
+            {
+              "hz": 56,
+              "amplitude": 0.009160176467958768
+            },
+            {
+              "hz": 60,
+              "amplitude": 0.003274541500223662
+            },
+            {
+              "hz": 64,
+              "amplitude": 0.009453177410582199
+            },
+            {
+              "hz": 68,
+              "amplitude": 0.006859729686217501
+            },
+            {
+              "hz": 72,
+              "amplitude": 0.00777282361981982
+            },
+            {
+              "hz": 76,
+              "amplitude": 0.014819193476407925
+            },
+            {
+              "hz": 80,
+              "amplitude": 0.012887951639045539
+            },
+            {
+              "hz": 84,
+              "amplitude": 0.017186499045189877
+            },
+            {
+              "hz": 88,
+              "amplitude": 0.004398832562130309
+            },
+            {
+              "hz": 92,
+              "amplitude": 0.0017997393188215383
+            },
+            {
+              "hz": 96,
+              "amplitude": 0.0030471100446783474
+            },
+            {
+              "hz": 100,
+              "amplitude": 0.5616915029156464
+            },
+            {
+              "hz": 104,
+              "amplitude": 0.005102944393634528
+            },
+            {
+              "hz": 108,
+              "amplitude": 0.005649007368565536
+            },
+            {
+              "hz": 112,
+              "amplitude": 0.01037527403601645
+            },
+            {
+              "hz": 116,
+              "amplitude": 0.0022658360849252975
+            },
+            {
+              "hz": 120,
+              "amplitude": 0.010109553549166327
+            },
+            {
+              "hz": 124,
+              "amplitude": 0.012666154542609144
+            },
+            {
+              "hz": 128,
+              "amplitude": 0.010757159700110323
+            },
+            {
+              "hz": 132,
+              "amplitude": 0.01603417236644169
+            },
+            {
+              "hz": 136,
+              "amplitude": 0.006452615625159193
+            },
+            {
+              "hz": 140,
+              "amplitude": 0.004052975885175805
+            },
+            {
+              "hz": 144,
+              "amplitude": 0.008083917234040299
+            },
+            {
+              "hz": 148,
+              "amplitude": 0.008391046704934508
+            },
+            {
+              "hz": 152,
+              "amplitude": 0.007871926487438013
+            },
+            {
+              "hz": 156,
+              "amplitude": 0.009208725380909867
+            },
+            {
+              "hz": 160,
+              "amplitude": 0.008400577136164282
+            },
+            {
+              "hz": 164,
+              "amplitude": 0.008608475499234557
+            },
+            {
+              "hz": 168,
+              "amplitude": 0.004284296273953288
+            },
+            {
+              "hz": 172,
+              "amplitude": 0.003548884061496217
+            },
+            {
+              "hz": 176,
+              "amplitude": 0.005963201688602504
+            },
+            {
+              "hz": 180,
+              "amplitude": 0.0015312017098399015
+            },
+            {
+              "hz": 184,
+              "amplitude": 0.0039179639307725216
+            },
+            {
+              "hz": 188,
+              "amplitude": 0.004384660883920555
+            },
+            {
+              "hz": 192,
+              "amplitude": 0.005847373655843083
+            }
+          ],
+          "modelSource": "CaseInspect当前正常模型；当前控件独立重算观测"
+        },
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 700
+          }
+        ]
+      },
+      "completed": true
+    },
+    {
+      "scene": "r5",
+      "part": "background",
+      "version": "1.2.0",
+      "native": {
+        "scene": "r5",
+        "status": "complete",
+        "params": {
+          "seed": 1705,
+          "delay": 40,
+          "alignment": false,
+          "scenario": "normal"
+        }
+      },
+      "expected": {
+        "params": {
+          "seed": 1705,
+          "delay": 40,
+          "alignment": false,
+          "scenario": "normal"
+        },
+        "sourceMinute": 984,
+        "predictedDensity": 819.0537428661565,
+        "lastLabSample": 941,
+        "lastLabRelease": 981,
+        "lastLab": 818.2277985748941
+      },
+      "metrics": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332,
+        "ctState": {
+          "inputs": {
+            "now": 24,
+            "delay": 40,
+            "alignment": false
+          },
+          "processFeatures": [
+            333.2057060347062,
+            2.4300111053081075,
+            99.33549786380445,
+            2.8006877628584053
+          ],
+          "processSourceMinute": 984,
+          "qualityMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "latestAvailableLab": {
+            "sampleMinute": 941,
+            "releaseMinute": 981,
+            "density": 818.2277985748941
+          },
+          "unreleasedTakenCount": 4,
+          "currentBatchAvailableCount": 0,
+          "lambda": 0.01,
+          "modelSource": "现有R5Core按当前演示参数重新标定（仅取模型）"
+        },
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 700
+          }
+        ]
+      },
+      "completed": true
+    }
+  ],
+  "screenshots": [
+    "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+    "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png"
+  ],
+  "errors": [],
+  "passed": 14,
+  "failed": 0,
+  "currentSourceVerification": {
+    "status": "pending_after_svg_layout_source_and_shared_css_correction",
+    "protocolResultsDescribeEarlierBuiltState": true,
+    "browserSession": "course-refine",
+    "browserSessionClosed": true,
+    "reason": "Manual screenshot review found inherited max-height compressed SVG geometry; source and shared CSS corrected; final rebuild retest awaiting root scheduling."
+  },
+  "visualReview": {
+    "status": "issue_found_source_corrected_retest_pending",
+    "issue": "Inherited shared SVG max-height caused 700px wide charts to render at 240px high, shrinking viewBox text and producing whitespace.",
+    "measuredR5Svg": {
+      "width": 700,
+      "height": 240,
+      "viewBox": "0 0 760 538"
+    },
+    "screenshotsAreDiagnosticUntilRetest": true
+  }
+}

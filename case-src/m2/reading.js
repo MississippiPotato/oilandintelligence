@@ -1,7 +1,7 @@
 (function(g){'use strict';
 const P=g.M2Presentation,F=g.M2Figures;
 function flowStep(root,index){const flow=root.closest('[data-m2-flow]')||root.querySelector('[data-m2-flow]');flow?.querySelector('#m2-flow-panel-'+index)?.scrollIntoView({block:'start',behavior:g.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});}
-function mount(root=document,{openLab,onTeachingInput,onTeachingContext}={}){g.S17Scroll?.bind(root);root.querySelectorAll('[data-lesson-step]').forEach(n=>{n.tabIndex=0;n.setAttribute('aria-disabled','false');});if(!root.querySelector('[data-m2-reading],[data-m2-flow]'))return;
+function mount(root=document,{openLab,onTeachingInput,onTeachingContext}={}){g.S17ConceptHost?.mount(root);g.S17Scroll?.bind(root);root.querySelectorAll('[data-lesson-step]').forEach(n=>{n.tabIndex=0;n.setAttribute('aria-disabled','false');});if(!root.querySelector('[data-m2-reading],[data-m2-flow]'))return;
 root.querySelectorAll('[data-m2-map],[data-m2-bg-volume],[data-m2-bg-pause],[data-m2-bg-log],[data-m2-open-lab]').forEach(b=>b.disabled=false);root.querySelectorAll('.m2-static-help').forEach(e=>e.hidden=true);root.querySelectorAll('[data-m2-interactive-help]').forEach(e=>e.hidden=false);
 const setRegion=i=>{root.querySelectorAll('[data-m2-region]').forEach(e=>e.classList.toggle('is-current',+e.dataset.m2Region===i));root.querySelectorAll('[data-m2-map]').forEach(e=>e.setAttribute('aria-pressed',String(+e.dataset.m2Map===i)));};
 if(root.dataset.m2ReadingBound)return;root.dataset.m2ReadingBound='true';

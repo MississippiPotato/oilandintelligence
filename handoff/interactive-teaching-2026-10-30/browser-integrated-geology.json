@@ -1,0 +1,1923 @@
+{
+  "checkedAt": "2026-10-29T18:19:26.782Z",
+  "kind": "actual_Chrome_built_expansion_background_and_method",
+  "session": "course-geo",
+  "cases": [
+    {
+      "scene": "g1",
+      "id": "s17x-g1-remote-lithology",
+      "version": "1.2.0",
+      "completed": true
+    },
+    {
+      "scene": "g2",
+      "id": "s17x-g2-geochemical-anomaly",
+      "version": "1.2.0",
+      "completed": true
+    },
+    {
+      "scene": "g3",
+      "id": "s17x-g3-map-elements",
+      "version": "1.2.0",
+      "completed": true
+    },
+    {
+      "scene": "g4",
+      "id": "s17x-g4-fracture-survey",
+      "version": "1.2.0",
+      "completed": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "g1 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "g1/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "x": 36,
+          "y": 24,
+          "shadow": 0.26,
+          "view": "composite",
+          "bands": [
+            0.08528606438095902,
+            0.512743723041032,
+            0.18967780177891852
+          ],
+          "ground_m": [
+            1080,
+            690
+          ]
+        }
+      }
+    },
+    {
+      "name": "g1/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "36",
+          "min": "0",
+          "max": "71"
+        },
+        "beforeGraphic": "243d6cb2",
+        "afterGraphic": "183cd730",
+        "afterState": {
+          "x": 71,
+          "y": 24,
+          "shadow": 0.26,
+          "view": "composite",
+          "bands": [
+            0.2632788178645448,
+            0.31066303001017875,
+            0.29570223167973936
+          ],
+          "ground_m": [
+            2130,
+            690
+          ]
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g1/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g1/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "x": 36,
+          "y": 24,
+          "mode": "full",
+          "rank": 1,
+          "source": "固定教学图幅-2027",
+          "features": [
+            0.08528606438095902,
+            0.512743723041032,
+            0.18967780177891852,
+            0.7030209169068299,
+            -0.45347580050134156,
+            0.03730872239518725
+          ],
+          "z": [
+            -1.498748412546432,
+            0.9238145912202499,
+            -1.2417442002406511,
+            1.976057005985813,
+            -1.5928487570742667,
+            -0.20946540928760873
+          ],
+          "neighbor": {
+            "groupId": "图幅-111",
+            "pixel": 1898,
+            "label": 3
+          },
+          "squaredDifferences": [
+            0.000043655063958685185,
+            0.01660286081342105,
+            0.01764655951881482,
+            0.0015684214085817825,
+            0.007509577271231594,
+            0.026153052238930736
+          ],
+          "distance": 0.10764457434456746,
+          "trainingPixels": 576
+        }
+      }
+    },
+    {
+      "name": "g1/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "36",
+          "min": "0",
+          "max": "71"
+        },
+        "beforeGraphic": "af241cf1",
+        "afterGraphic": "9b98e983",
+        "afterState": {
+          "x": 71,
+          "y": 24,
+          "mode": "full",
+          "rank": 1,
+          "source": "固定教学图幅-2027",
+          "features": [
+            0.2632788178645448,
+            0.31066303001017875,
+            0.29570223167973936,
+            0.08114542966579703,
+            -0.024272617651132155,
+            0.04748977574618614
+          ],
+          "z": [
+            -0.08614363022761364,
+            -0.7606174969260626,
+            -0.29976643802820246,
+            -0.45620768940604284,
+            0.3167380749821407,
+            0.1202451038324711
+          ],
+          "neighbor": {
+            "groupId": "图幅-143",
+            "pixel": 2366,
+            "label": 1
+          },
+          "squaredDifferences": [
+            0.016904598630516247,
+            0.006804891169403094,
+            0.022062882058268514,
+            0.03296282565611179,
+            0.0026703202088655333,
+            0.0013576878023637445
+          ],
+          "distance": 0.11744729706378156,
+          "trainingPixels": 576
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g1/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g1 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "g1 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "g2 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "g2/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "angle": 45,
+          "radius": 2,
+          "concentrations_ppm": [
+            3.687552214277946,
+            0.42868719654019455
+          ],
+          "jointDistance2D": 1.7564124990617973,
+          "C1z": 1.4142135623730954,
+          "correlation": 0.29660279470695544,
+          "backgroundCount": 260
+        }
+      }
+    },
+    {
+      "name": "g2/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "45",
+          "min": "0",
+          "max": "180"
+        },
+        "beforeGraphic": "56005ef9",
+        "afterGraphic": "4e74b8ac",
+        "afterState": {
+          "angle": 180,
+          "radius": 2,
+          "concentrations_ppm": [
+            1.7734445855891308,
+            0.36871254565722617
+          ],
+          "jointDistance2D": 2.0942387915397265,
+          "C1z": -2,
+          "correlation": 0.29660279470695544,
+          "backgroundCount": 260
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g2/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g2/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "threshold": 3.3,
+          "selected": 1,
+          "source": "固定种子733、甲烷背景波动1.8的教学样品",
+          "coordinates_km": [
+            5.201439019292593,
+            6.115414185449481
+          ],
+          "concentrations_ppm": [
+            3.6445204935967923,
+            0.432240214610938,
+            0.15995858624693937
+          ],
+          "jointDistance3D": 1.9015124255391134,
+          "C1z": 1.3374574373988233,
+          "selectedIsCandidate": false,
+          "candidates": 17,
+          "denominator": 180,
+          "scoresChecksum": 392.8556703482965
+        }
+      }
+    },
+    {
+      "name": "g2/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "3.3",
+          "min": "0.8",
+          "max": "8"
+        },
+        "beforeGraphic": "a521390e",
+        "afterGraphic": "1b4b8ca4",
+        "afterState": {
+          "threshold": 8,
+          "selected": 1,
+          "source": "固定种子733、甲烷背景波动1.8的教学样品",
+          "coordinates_km": [
+            5.201439019292593,
+            6.115414185449481
+          ],
+          "concentrations_ppm": [
+            3.6445204935967923,
+            0.432240214610938,
+            0.15995858624693937
+          ],
+          "jointDistance3D": 1.9015124255391134,
+          "C1z": 1.3374574373988233,
+          "selectedIsCandidate": false,
+          "candidates": 12,
+          "denominator": 180,
+          "scoresChecksum": 392.8556703482965
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g2/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g2 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "g2 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "g3 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "g3/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "strike": 35,
+          "dip": 35,
+          "dipDirection": 125,
+          "strikeVector": [
+            0.573576436351046,
+            -0.8191520442889918
+          ],
+          "dipVector": [
+            0.8191520442889918,
+            0.573576436351046
+          ],
+          "horizontal_m": 3.276608177155967,
+          "vertical_m": 2.294305745404184
+        }
+      }
+    },
+    {
+      "name": "g3/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "35",
+          "min": "0",
+          "max": "175"
+        },
+        "beforeGraphic": "ed846536",
+        "afterGraphic": "cbba57a9",
+        "afterState": {
+          "strike": 175,
+          "dip": 35,
+          "dipDirection": 265,
+          "strikeVector": [
+            0.08715574274765864,
+            0.9961946980917455
+          ],
+          "dipVector": [
+            -0.9961946980917455,
+            0.08715574274765864
+          ],
+          "horizontal_m": 3.276608177155967,
+          "vertical_m": 2.294305745404184
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g3/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g3/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "tile": 1,
+          "source": "固定种子901的教学图块",
+          "templateClass": 0,
+          "shift": 0,
+          "observation": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mismatches": 39,
+          "distance": 0.15234375,
+          "distances": [
+            {
+              "label": 0,
+              "shift": -1,
+              "mismatches": 35
+            },
+            {
+              "label": 0,
+              "shift": 0,
+              "mismatches": 39
+            },
+            {
+              "label": 0,
+              "shift": 1,
+              "mismatches": 41
+            },
+            {
+              "label": 1,
+              "shift": -1,
+              "mismatches": 13
+            },
+            {
+              "label": 1,
+              "shift": 0,
+              "mismatches": 35
+            },
+            {
+              "label": 1,
+              "shift": 1,
+              "mismatches": 39
+            },
+            {
+              "label": 2,
+              "shift": -1,
+              "mismatches": 54
+            },
+            {
+              "label": 2,
+              "shift": 0,
+              "mismatches": 50
+            },
+            {
+              "label": 2,
+              "shift": 1,
+              "mismatches": 54
+            }
+          ],
+          "prediction": 1,
+          "bestShift": -1,
+          "bestDistance": 0.05078125,
+          "margin": 0.0859375,
+          "legend": [
+            {
+              "code": "J2s",
+              "description": "中侏罗统砂岩",
+              "valid": true
+            },
+            {
+              "code": "K1m",
+              "description": "下白垩统泥岩",
+              "valid": true
+            },
+            {
+              "code": "待复核",
+              "description": "未分隔文字需要核查",
+              "valid": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "g3/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "1",
+          "min": "1",
+          "max": "30"
+        },
+        "beforeGraphic": "930ddc3c",
+        "afterGraphic": "741b3226",
+        "afterState": {
+          "tile": 30,
+          "source": "固定种子901的教学图块",
+          "templateClass": 0,
+          "shift": 0,
+          "observation": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "mismatches": 46,
+          "distance": 0.1796875,
+          "distances": [
+            {
+              "label": 0,
+              "shift": -1,
+              "mismatches": 48
+            },
+            {
+              "label": 0,
+              "shift": 0,
+              "mismatches": 46
+            },
+            {
+              "label": 0,
+              "shift": 1,
+              "mismatches": 50
+            },
+            {
+              "label": 1,
+              "shift": -1,
+              "mismatches": 44
+            },
+            {
+              "label": 1,
+              "shift": 0,
+              "mismatches": 38
+            },
+            {
+              "label": 1,
+              "shift": 1,
+              "mismatches": 48
+            },
+            {
+              "label": 2,
+              "shift": -1,
+              "mismatches": 5
+            },
+            {
+              "label": 2,
+              "shift": 0,
+              "mismatches": 33
+            },
+            {
+              "label": 2,
+              "shift": 1,
+              "mismatches": 37
+            }
+          ],
+          "prediction": 2,
+          "bestShift": -1,
+          "bestDistance": 0.01953125,
+          "margin": 0.12890625,
+          "legend": [
+            {
+              "code": "J2s",
+              "description": "中侏罗统砂岩",
+              "valid": true
+            },
+            {
+              "code": "K1m",
+              "description": "下白垩统泥岩",
+              "valid": true
+            },
+            {
+              "code": "待复核",
+              "description": "未分隔文字需要核查",
+              "valid": false
+            }
+          ]
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g3/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g3 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "g3 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "g4 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "g4/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "width_m": 12,
+          "scan_m": 4,
+          "area_m2": 96,
+          "totalLength_m": 41.371640289219975,
+          "crossings": 3,
+          "P10": 0.25,
+          "P21": 0.4309545863460414,
+          "traceLengths_m": [
+            {
+              "id": "L1",
+              "length": 8.716685559803684,
+              "crosses": true
+            },
+            {
+              "id": "L2",
+              "length": 8.716685559803684,
+              "crosses": true
+            },
+            {
+              "id": "L3",
+              "length": 12.663715492463353,
+              "crosses": true
+            },
+            {
+              "id": "L4",
+              "length": 11.274553677149255,
+              "crosses": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "g4/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "12",
+          "min": "4",
+          "max": "12"
+        },
+        "beforeGraphic": "2a92a84b",
+        "afterGraphic": "e4da944a",
+        "afterState": {
+          "width_m": 4,
+          "scan_m": 4,
+          "area_m2": 32,
+          "totalLength_m": 18.991804095258583,
+          "crossings": 2,
+          "P10": 0.5,
+          "P21": 0.5934938779768307,
+          "traceLengths_m": [
+            {
+              "id": "L1",
+              "length": 1.7616963556476029,
+              "crosses": false
+            },
+            {
+              "id": "L2",
+              "length": 8.716685559803684,
+              "crosses": true
+            },
+            {
+              "id": "L3",
+              "length": 4.256711089903648,
+              "crosses": true
+            },
+            {
+              "id": "L4",
+              "length": 4.256711089903648,
+              "crosses": false
+            }
+          ]
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g4/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g4/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "source": "固定种子1704的原例教学灰度",
+          "threshold": 0.4,
+          "theta": 25,
+          "minVotes": 35,
+          "view": "mask",
+          "maskPixels": 530,
+          "denominator": 9600,
+          "peakRho_px": 72,
+          "peakVotes": 115,
+          "selectedLineCount": 5,
+          "lines": [
+            {
+              "theta": 110,
+              "rho": 14,
+              "votes": 164,
+              "length_m": 12.663715492463353
+            },
+            {
+              "theta": 110,
+              "rho": 38,
+              "votes": 149,
+              "length_m": 11.274553677149257
+            },
+            {
+              "theta": 25,
+              "rho": 72,
+              "votes": 115,
+              "length_m": 8.716685559803684
+            },
+            {
+              "theta": 25,
+              "rho": 42,
+              "votes": 60,
+              "length_m": 8.716685559803684
+            },
+            {
+              "theta": 115,
+              "rho": 28,
+              "votes": 35,
+              "length_m": 11.382711686643983
+            }
+          ],
+          "observationChecksum": 6649.761305074781
+        }
+      }
+    },
+    {
+      "name": "g4/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "0.4",
+          "min": "0.1",
+          "max": "0.75"
+        },
+        "beforeGraphic": "703640df",
+        "afterGraphic": "c9d941af",
+        "afterState": {
+          "source": "固定种子1704的原例教学灰度",
+          "threshold": 0.75,
+          "theta": 25,
+          "minVotes": 35,
+          "view": "mask",
+          "maskPixels": 7299,
+          "denominator": 9600,
+          "peakRho_px": 72,
+          "peakVotes": 161,
+          "selectedLineCount": 8,
+          "lines": [
+            {
+              "theta": 110,
+              "rho": 14,
+              "votes": 228,
+              "length_m": 12.663715492463353
+            },
+            {
+              "theta": 60,
+              "rho": 70,
+              "votes": 224,
+              "length_m": 13.375128869403575
+            },
+            {
+              "theta": 120,
+              "rho": 8,
+              "votes": 219,
+              "length_m": 13.740936406713093
+            },
+            {
+              "theta": 65,
+              "rho": 64,
+              "votes": 214,
+              "length_m": 13.130197235653652
+            },
+            {
+              "theta": 125,
+              "rho": -4,
+              "votes": 210,
+              "length_m": 0.09735429712608652
+            },
+            {
+              "theta": 110,
+              "rho": 38,
+              "votes": 209,
+              "length_m": 11.274553677149257
+            },
+            {
+              "theta": 120,
+              "rho": 2,
+              "votes": 209,
+              "length_m": 13.740936406713093
+            },
+            {
+              "theta": 65,
+              "rho": 54,
+              "votes": 207,
+              "length_m": 13.130197235653652
+            }
+          ],
+          "observationChecksum": 6649.761305074781
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "g4/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "g4 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "g4 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "g1 all four display modes exist in actual select",
+      "passed": true,
+      "detail": [
+        {
+          "value": "composite",
+          "label": "SWIR / NIR / 红光伪彩色"
+        },
+        {
+          "value": "0",
+          "label": "红光灰度"
+        },
+        {
+          "value": "1",
+          "label": "近红外灰度"
+        },
+        {
+          "value": "2",
+          "label": "短波红外灰度"
+        }
+      ]
+    },
+    {
+      "name": "g1 actual composite map uses correct band palette",
+      "passed": true,
+      "detail": {
+        "mode": "composite",
+        "stateView": "composite",
+        "actualFill": "rgb(200,164,140)",
+        "expectedFill": "rgb(200,164,140)",
+        "graphicHash": "243d6cb2",
+        "bands": [
+          0.08528606438095902,
+          0.512743723041032,
+          0.18967780177891852
+        ]
+      }
+    },
+    {
+      "name": "g1 actual 0 map uses correct band palette",
+      "passed": true,
+      "detail": {
+        "mode": "0",
+        "stateView": "0",
+        "actualFill": "rgb(166,166,166)",
+        "expectedFill": "rgb(166,166,166)",
+        "graphicHash": "cb9972f8",
+        "bands": [
+          0.08528606438095902,
+          0.512743723041032,
+          0.18967780177891852
+        ]
+      }
+    },
+    {
+      "name": "g1 actual 1 map uses correct band palette",
+      "passed": true,
+      "detail": {
+        "mode": "1",
+        "stateView": "1",
+        "actualFill": "rgb(194,194,194)",
+        "expectedFill": "rgb(194,194,194)",
+        "graphicHash": "845adaea",
+        "bands": [
+          0.08528606438095902,
+          0.512743723041032,
+          0.18967780177891852
+        ]
+      }
+    },
+    {
+      "name": "g1 actual 2 map uses correct band palette",
+      "passed": true,
+      "detail": {
+        "mode": "2",
+        "stateView": "2",
+        "actualFill": "rgb(238,238,238)",
+        "expectedFill": "rgb(238,238,238)",
+        "graphicHash": "6bb32700",
+        "bands": [
+          0.08528606438095902,
+          0.512743723041032,
+          0.18967780177891852
+        ]
+      }
+    },
+    {
+      "name": "g1 four modes produce four different actual maps",
+      "passed": true,
+      "detail": [
+        {
+          "mode": "composite",
+          "hash": "243d6cb2"
+        },
+        {
+          "mode": "0",
+          "hash": "cb9972f8"
+        },
+        {
+          "mode": "1",
+          "hash": "845adaea"
+        },
+        {
+          "mode": "2",
+          "hash": "6bb32700"
+        }
+      ]
+    },
+    {
+      "name": "g1 background 390px page has no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "client": 390,
+        "scrollWidth": 390,
+        "viewport": 390,
+        "scrollX": 0
+      }
+    },
+    {
+      "name": "g1 background SVG physical 16px and viewBox ratio preserved",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 345,
+        "viewBoxWidth": 760,
+        "viewBoxHeight": 345,
+        "a": 1,
+        "font16ScreenPx": 16,
+        "ratioError": 0
+      }
+    },
+    {
+      "name": "g1 background chart actually scrolls locally",
+      "passed": true,
+      "detail": {
+        "clientWidth": 302,
+        "scrollWidth": 760,
+        "scrollLeft": 406,
+        "tag": "ct-chart"
+      }
+    },
+    {
+      "name": "g1 sync button imports changed current CaseInspect observations and selected pixel",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "shadow": 0.65,
+          "x": 36,
+          "y": 24,
+          "features": [
+            0.047361016538209205,
+            0.3203641209387652,
+            0.12184875826678798,
+            0.722755986599377,
+            -0.4389865300181823,
+            0.027411390848432006
+          ],
+          "distance": 0.26216941527895393,
+          "pixel": 1904,
+          "groupId": "图幅-159"
+        },
+        "state": {
+          "x": 36,
+          "y": 24,
+          "mode": "full",
+          "rank": 1,
+          "source": "已读取 图幅-2027 的当前演示观测",
+          "features": [
+            0.047361016538209205,
+            0.3203641209387652,
+            0.12184875826678798,
+            0.722755986599377,
+            -0.4389865300181823,
+            0.027411390848432006
+          ],
+          "z": [
+            -1.7997331599804272,
+            -0.6797546069336909,
+            -1.8443737138379965,
+            2.0532443437392875,
+            -1.5283839040016352,
+            -0.5299876725836808
+          ],
+          "neighbor": {
+            "groupId": "图幅-159",
+            "pixel": 1904,
+            "label": 3
+          },
+          "squaredDifferences": [
+            0.0016997120384828635,
+            0.2723338778002007,
+            0.10997180871926643,
+            0.005448197064184297,
+            0.022433340984857577,
+            0.0005098772392598756
+          ],
+          "distance": 0.26216941527895393,
+          "trainingPixels": 576
+        }
+      }
+    },
+    {
+      "name": "g1 imported observation nearest provenance and distance match original engine",
+      "passed": true,
+      "detail": {
+        "distance": 0.26216941527895393,
+        "engineDistance": 0.26216941527895393,
+        "neighbor": {
+          "groupId": "图幅-159",
+          "pixel": 1904,
+          "label": 3
+        }
+      }
+    },
+    {
+      "name": "g1 workflow 390px page has no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "client": 390,
+        "width": 390,
+        "scrollX": 0
+      }
+    },
+    {
+      "name": "g1 workflow SVG physical 16px and viewBox ratio preserved",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 376,
+        "viewBoxWidth": 760,
+        "viewBoxHeight": 376,
+        "a": 1,
+        "font16ScreenPx": 16,
+        "ratioError": 0
+      }
+    },
+    {
+      "name": "g1 workflow chart scroll remains local",
+      "passed": true,
+      "detail": {
+        "client": 302,
+        "width": 760,
+        "left": 120
+      }
+    },
+    {
+      "name": "g4 background 390px page has no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "client": 390,
+        "width": 390,
+        "scrollX": 0
+      }
+    },
+    {
+      "name": "g4 background SVG physical 16px and viewBox ratio preserved",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 420,
+        "viewBoxWidth": 760,
+        "viewBoxHeight": 420,
+        "a": 1,
+        "font16ScreenPx": 16,
+        "ratioError": 0
+      }
+    },
+    {
+      "name": "g4 background chart scroll remains local",
+      "passed": true,
+      "detail": {
+        "client": 302,
+        "width": 760,
+        "left": 430
+      }
+    },
+    {
+      "name": "g4 low-contrast sync imports actual changed observations",
+      "passed": true,
+      "detail": {
+        "source": "已读取当前演示灰度（噪声0.12、对比度0.25）",
+        "contrast": 0.25,
+        "checksum": 6782.26130507478,
+        "engineChecksum": 6782.26130507478
+      }
+    },
+    {
+      "name": "g4 low-contrast zero mask and zero lines preserved exactly",
+      "passed": true,
+      "detail": {
+        "mask": 0,
+        "engineMask": 0,
+        "lines": 0,
+        "engineLines": 0
+      }
+    },
+    {
+      "name": "g4 threshold adjustment changes visible mask while imported gray stays fixed",
+      "passed": true,
+      "detail": {
+        "threshold": 0.55,
+        "checksum": 6782.26130507478,
+        "maskBefore": 0,
+        "maskAfter": 530
+      }
+    },
+    {
+      "name": "g4 adjusted imported observation extraction matches original engine",
+      "passed": true,
+      "detail": {
+        "mask": 530,
+        "engineMask": 530,
+        "lines": [
+          {
+            "theta": 110,
+            "rho": 14,
+            "votes": 164,
+            "length_m": 12.663715492463353
+          },
+          {
+            "theta": 110,
+            "rho": 38,
+            "votes": 149,
+            "length_m": 11.274553677149257
+          },
+          {
+            "theta": 25,
+            "rho": 72,
+            "votes": 115,
+            "length_m": 8.716685559803684
+          },
+          {
+            "theta": 25,
+            "rho": 42,
+            "votes": 60,
+            "length_m": 8.716685559803684
+          },
+          {
+            "theta": 115,
+            "rho": 28,
+            "votes": 35,
+            "length_m": 11.382711686643983
+          }
+        ],
+        "engineLines": [
+          {
+            "theta": 110,
+            "rho": 14,
+            "votes": 164,
+            "length_m": 12.663715492463353
+          },
+          {
+            "theta": 110,
+            "rho": 38,
+            "votes": 149,
+            "length_m": 11.274553677149257
+          },
+          {
+            "theta": 25,
+            "rho": 72,
+            "votes": 115,
+            "length_m": 8.716685559803684
+          },
+          {
+            "theta": 25,
+            "rho": 42,
+            "votes": 60,
+            "length_m": 8.716685559803684
+          },
+          {
+            "theta": 115,
+            "rho": 28,
+            "votes": 35,
+            "length_m": 11.382711686643983
+          }
+        ]
+      }
+    },
+    {
+      "name": "g4 workflow 390px page has no horizontal overflow",
+      "passed": true,
+      "detail": {
+        "client": 390,
+        "width": 390,
+        "scrollX": 0
+      }
+    },
+    {
+      "name": "g4 workflow SVG physical 16px and viewBox ratio preserved",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 405,
+        "viewBoxWidth": 760,
+        "viewBoxHeight": 405,
+        "a": 1,
+        "font16ScreenPx": 16,
+        "ratioError": 0
+      }
+    },
+    {
+      "name": "g4 workflow chart scroll remains local",
+      "passed": true,
+      "detail": {
+        "client": 302,
+        "width": 760,
+        "left": 430
+      }
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "handoff/interactive-teaching-2026-10-30/geology-g1-390.png",
+    "handoff/interactive-teaching-2026-10-30/geology-g4-390.png"
+  ],
+  "passed": 60,
+  "failed": 0,
+  "attempts": [
+    {
+      "kind": "initial_built_http_protocol",
+      "checkedAt": "2026-10-29T17:59:27.977Z",
+      "cases": [
+        {
+          "scene": "g1",
+          "id": "s17x-g1-remote-lithology",
+          "version": "1.2.0",
+          "completed": true
+        },
+        {
+          "scene": "g2",
+          "id": "s17x-g2-geochemical-anomaly",
+          "version": "1.2.0",
+          "completed": true
+        },
+        {
+          "scene": "g3",
+          "id": "s17x-g3-map-elements",
+          "version": "1.2.0",
+          "completed": true
+        },
+        {
+          "scene": "g4",
+          "id": "s17x-g4-fracture-survey",
+          "version": "1.2.0",
+          "completed": true
+        }
+      ],
+      "passed": 36,
+      "failed": 0,
+      "errors": [],
+      "failedChecks": [],
+      "issues": [
+        {
+          "scene": "g1",
+          "code": "red_option_missing_after_generic_protocol",
+          "observed": "The red-band entry was text because its opening option tag was malformed as </option value=\"0\">. The generic protocol exercised x and did not expose this.",
+          "sourceFix": "Corrected to </option><option value=\"0\"> in expansion-src/g1/concept.js.",
+          "status": "resolved_in_final_build",
+          "verifiedBy": "All four actual select options and map palettes verified"
+        }
+      ]
+    },
+    {
+      "kind": "initial_g4_390_and_sync",
+      "checks": [
+        {
+          "name": "g4 390px page has no horizontal overflow",
+          "passed": true,
+          "detail": {
+            "viewport": 390,
+            "client": 390,
+            "scrollWidth": 390,
+            "scrollX": 0
+          }
+        },
+        {
+          "name": "g4 chart actually scrolls locally",
+          "passed": true,
+          "detail": {
+            "clientWidth": 302,
+            "scrollWidth": 700,
+            "scrollLeft": 120,
+            "overflowX": "auto"
+          }
+        },
+        {
+          "name": "g4 imports changed CaseInspect observations",
+          "passed": true,
+          "detail": {
+            "source": "已读取当前演示灰度（噪声0.12、对比度0.25）",
+            "engineContrast": 0.25,
+            "checksum": 6782.26130507478,
+            "engineChecksum": 6782.26130507478
+          }
+        },
+        {
+          "name": "g4 imported mask and extracted count match actual engine",
+          "passed": true,
+          "detail": {
+            "mask": 0,
+            "engineMask": 0,
+            "lines": 0,
+            "engineLines": 0
+          }
+        }
+      ],
+      "errors": [],
+      "issues": [
+        {
+          "code": "expanded_assistant_overlay_in_initial_screenshot",
+          "status": "superseded",
+          "detail": "Replaced after final compact-assistant and SVG style build."
+        }
+      ]
+    },
+    {
+      "kind": "verification_harness_correction",
+      "harnessErrors": [
+        "ReferenceError: S17Lesson is not defined"
+      ],
+      "pageErrors": [],
+      "detail": "One navigation helper read S17Lesson in the Node Playwright context. Subsequent helpers use page.evaluate. This was a helper error, not a built-page error.",
+      "status": "corrected"
+    }
+  ],
+  "checkedAtFinal": "2026-10-29T18:25:17.324Z",
+  "sessionClosed": true,
+  "visualQA": {
+    "inspected": true,
+    "method": "view_image on both final screenshots",
+    "detail": "390px viewport element captures at documented local scroll positions. Compact corner launcher remains visible; no expanded assistant panel covers the unit."
+  },
+  "coverage": {
+    "genericScenes": [
+      "g1",
+      "g2",
+      "g3",
+      "g4"
+    ],
+    "genericChecks": 36,
+    "supplementalScenes": [
+      "g1",
+      "g4"
+    ],
+    "supplementalChecks": 24,
+    "viewportWidth": 390,
+    "fileOffline": false,
+    "originalPortalImportRefresh": false
+  }
+}

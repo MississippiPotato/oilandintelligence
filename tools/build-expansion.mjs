@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url';
 import { assistantJS, assistantCSS } from './assistant-bundle.mjs';
 import { flowOverview, flowRuntime } from './case-flowcharts.mjs';
 import { lessonContent, workflowContent, versionedScript } from './expansion-lesson-content.mjs';
+import {conceptCSS,conceptScripts,conceptHostRuntime} from './concept-content.mjs';
+import {courseStyles} from './course-compass.mjs';
 
 export const root = path.resolve(import.meta.dirname, '..');
 export const reportDir = 'handoff/observation-design-2026-10-24';
@@ -168,10 +170,10 @@ export function buildExpansions({ requireAll = false, destination = reportDir, l
     const chart = flowOverview(p.sceneId, authoredFlow);
     let lesson = null;
     if (lessons) {
-      lesson = lessonContent(p);
+      lesson = lessonContent(p);const portalLesson=lessonContent(p,{mode:'portal'});
       const flow = workflowContent(p, chart);
       builtManifest.tabs.background.lede = lesson.insight;
-      builtManifest.tabs.background.sections = lesson.sections;
+      builtManifest.tabs.background.sections = portalLesson.sections;
       builtManifest.tabs.background.lessonOpening = lesson.opening;
       builtManifest.tabs.workflow.lessonHTML = flow;
       builtManifest.tabs.workflow.metrics.html = '<style>' + read('shared/expansion-lessons.css') + '</style>' + flow;
@@ -183,9 +185,10 @@ export function buildExpansions({ requireAll = false, destination = reportDir, l
       'case.json': JSON.stringify(builtManifest, null, 2) + '\n',
       'README.txt': (lesson?read(item.source+'/README.txt').replace('改变参数后旧结果标记失效，重新运行后才可导出。','改变参数后自动重算；重算完成前旧结果不能导出。'):read(item.source+'/README.txt')) + (lesson ? '\n当前教学版：'+p.version+'。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。\n比较任务：'+lesson.tasks.map(t=>t.label+'：'+t.look).join('\n')+'\n' : ''),
       'demo/index.html': lessons?read(item.source+'/demo.html').replace(/参数改变后需重新运行/g,'参数改变后自动重新计算').replace(/\bv\d+\.\d+\.\d+\b/g,'v'+p.version):read(item.source+'/demo.html'),
-      'demo/demo.css': read(item.source + '/demo.css') + '\n' + cssAssistant + (lessons ? '\n' + read('shared/expansion-lessons.css') : ''),
-      'demo/demo.js': config + (lesson?versionedScript(read(item.source+'/engine.js'),p.version):read(item.source+'/engine.js')) + '\n;\n' + (lesson?versionedScript(read(item.source+'/app.js'),p.version):read(item.source+'/app.js')) + chartMount + (lesson ? '\nwindow.S17Lesson=' + JSON.stringify(lesson) + ';\n' + read('shared/expansion-lessons.js') : '') + '\n' + jsAssistant
+      'demo/demo.css': read(item.source + '/demo.css') + '\n' + cssAssistant + (lessons ? '\n' + read('shared/expansion-lessons.css')+'\n'+conceptCSS()+'\n'+courseStyles()+'\n'+read('shared/lesson-assistant-entry.css') : ''),
+      'demo/demo.js': config + (lesson?versionedScript(read(item.source+'/engine.js'),p.version):read(item.source+'/engine.js')) + '\n;\n' + (lesson?versionedScript(read(item.source+'/app.js'),p.version):read(item.source+'/app.js')) + chartMount + (lesson ? '\nwindow.S17Lesson=' + JSON.stringify(lesson) + ';\n'+conceptScripts([p.sceneId])+'\n'+conceptHostRuntime()+'\n' + read('shared/expansion-lessons.js')+'\n'+lesson.courseContext.runtime : '') + '\n' + jsAssistant
     };
+    if(!/rel=["']icon["']/i.test(files['demo/index.html']))files['demo/index.html']=files['demo/index.html'].replace(/<head>/i,'<head><link rel="icon" href="data:,">');
     new vm.Script(files['demo/demo.js'], { filename: out + '/demo/demo.js' });
     for (const [name, content] of Object.entries(files)) fs.writeFileSync(path.join(root, out, name), content);
     const outputs = packageNames.map(n => ({ ...fileRecord(out + '/' + n), relative: n }));
@@ -195,7 +198,7 @@ export function buildExpansions({ requireAll = false, destination = reportDir, l
     records.push({ ...item, manifest: builtManifest, output: out, caseId: p.id, version: p.version, bytes, files: outputs });
   }
   const plugin = 'portal/assets/s17-expansion-cases.js';
-  fs.writeFileSync(path.join(root, plugin), pluginSource(records, reportDir) + (lessons ? '\n' + read('shared/expansion-lessons.js') : ''));
+  fs.writeFileSync(path.join(root, plugin), pluginSource(records, reportDir) + (lessons ? '\n'+conceptScripts(records.map(r=>r.sceneId))+'\n'+conceptHostRuntime()+'\n' + read('shared/expansion-lessons.js') : ''));
   const lock = { schemaVersion: 1, createdAt: new Date().toISOString(), expectedCount: targets.length,
     actualCount: records.length, complete: records.length === targets.length, totalBytes: records.reduce((sum, r) => sum + r.bytes, 0),
     browserVerifiedByThisBuild: false, assistantReadabilityIncluded: false, assistantSources, lessonRevision:lessons,

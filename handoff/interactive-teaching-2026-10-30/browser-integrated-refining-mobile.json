@@ -1,0 +1,751 @@
+{
+  "kind": "actual_final_built_HTTP_390px_real_CaseInspect_sync_and_SVG_geometry",
+  "checkedAt": "2026-10-29T18:28:35.23Z",
+  "finalSourceRetest": true,
+  "checks": [
+    {
+      "name": "r3 final built version",
+      "passed": true
+    },
+    {
+      "name": "r3 native run complete with changed inputs",
+      "passed": true,
+      "detail": {
+        "scene": "r3",
+        "status": "complete",
+        "params": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3
+        }
+      }
+    },
+    {
+      "name": "r3 actual CaseInspect sync changes state",
+      "passed": true,
+      "detail": {
+        "source": "CaseInspect当前正常模型；当前控件独立重算观测",
+        "inputs": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3,
+          "hour": 60
+        }
+      }
+    },
+    {
+      "name": "r3 synced native inputs and fitted observation agree",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "inputs": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3,
+            "hour": 60
+          },
+          "score": 1.1506399905712916,
+          "rms": 4.022291447712575,
+          "firstAlarm": 60
+        },
+        "expected": {
+          "params": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3
+          },
+          "threshold": 0.65,
+          "score": 1.1506399905712916,
+          "rms": 4.022291447712575,
+          "firstAlarm": 60
+        }
+      }
+    },
+    {
+      "name": "r3 390px no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332
+      }
+    },
+    {
+      "name": "r3 390px chart scrolls locally",
+      "passed": true,
+      "detail": {
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 760
+          }
+        ],
+        "proof": {
+          "before": 0,
+          "after": 120,
+          "max": 458
+        }
+      }
+    },
+    {
+      "name": "r3 SVG preserves viewBox aspect ratio without height clamp",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 610,
+        "viewBox": {
+          "width": 760,
+          "height": 610
+        },
+        "renderRatio": 1.2459016393442623,
+        "viewBoxRatio": 1.2459016393442623,
+        "maxHeight": "none"
+      }
+    },
+    {
+      "name": "r3 SVG effective label font is at least16px",
+      "passed": true,
+      "detail": {
+        "minEffectiveFontPx": 16,
+        "textCount": 24,
+        "textSamples": [
+          {
+            "text": "关系偏离分数 / 无量纲；阈值由45条正常验证记录确定",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0.0",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0.8",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "r3 rendered source wording is reader facing",
+      "passed": true
+    },
+    {
+      "name": "r3 no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r5 final built version",
+      "passed": true
+    },
+    {
+      "name": "r5 native run complete with changed inputs",
+      "passed": true,
+      "detail": {
+        "scene": "r5",
+        "status": "complete",
+        "params": {
+          "seed": 1705,
+          "delay": 40,
+          "alignment": false,
+          "scenario": "normal"
+        }
+      }
+    },
+    {
+      "name": "r5 actual CaseInspect sync changes state",
+      "passed": true,
+      "detail": {
+        "source": "现有R5Core按当前演示参数重新标定（仅取模型）",
+        "inputs": {
+          "now": 24,
+          "delay": 40,
+          "alignment": false
+        }
+      }
+    },
+    {
+      "name": "r5 synced delay alignment prediction and available lab agree",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "inputs": {
+            "now": 24,
+            "delay": 40,
+            "alignment": false
+          },
+          "source": 984,
+          "predicted": 819.0537428661565,
+          "lab": {
+            "sampleMinute": 941,
+            "releaseMinute": 981,
+            "density": 818.2277985748941
+          }
+        },
+        "expected": {
+          "params": {
+            "seed": 1705,
+            "delay": 40,
+            "alignment": false,
+            "scenario": "normal"
+          },
+          "sourceMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "lastLabSample": 941,
+          "lastLabRelease": 981,
+          "lastLab": 818.2277985748941
+        }
+      }
+    },
+    {
+      "name": "r5 390px no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332
+      }
+    },
+    {
+      "name": "r5 390px chart scrolls locally",
+      "passed": true,
+      "detail": {
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 760
+          }
+        ],
+        "proof": {
+          "before": 0,
+          "after": 120,
+          "max": 458
+        }
+      }
+    },
+    {
+      "name": "r5 SVG preserves viewBox aspect ratio without height clamp",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 538,
+        "viewBox": {
+          "width": 760,
+          "height": 538
+        },
+        "renderRatio": 1.412639405204461,
+        "viewBoxRatio": 1.412639405204461,
+        "maxHeight": "none"
+      }
+    },
+    {
+      "name": "r5 SVG effective label font is at least16px",
+      "passed": true,
+      "detail": {
+        "minEffectiveFontPx": 16,
+        "textCount": 14,
+        "textSamples": [
+          {
+            "text": "BATCH-17：过程来源、质量时刻与化验到达各保留自己的时间",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "-30",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "r5 rendered source wording is reader facing",
+      "passed": true
+    },
+    {
+      "name": "r5 no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "scene": "r3",
+      "id": "s17x-r3-maintenance-trend",
+      "part": "workflow",
+      "version": "1.2.0",
+      "native": {
+        "scene": "r3",
+        "status": "complete",
+        "params": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3
+        }
+      },
+      "expected": {
+        "params": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3
+        },
+        "threshold": 0.65,
+        "score": 1.1506399905712916,
+        "rms": 4.022291447712575,
+        "firstAlarm": 60
+      },
+      "metrics": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332,
+        "svg": {
+          "width": 760,
+          "height": 610,
+          "viewBox": {
+            "width": 760,
+            "height": 610
+          },
+          "renderRatio": 1.2459016393442623,
+          "viewBoxRatio": 1.2459016393442623,
+          "maxHeight": "none"
+        },
+        "textCount": 24,
+        "minEffectiveFontPx": 16,
+        "maxScaleMismatch": 0,
+        "textSamples": [
+          {
+            "text": "关系偏离分数 / 无量纲；阈值由45条正常验证记录确定",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0.0",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0.8",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          }
+        ],
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 760
+          }
+        ]
+      },
+      "completed": true
+    },
+    {
+      "scene": "r5",
+      "id": "s17x-r5-quality-softsensor",
+      "part": "background",
+      "version": "1.2.0",
+      "native": {
+        "scene": "r5",
+        "status": "complete",
+        "params": {
+          "seed": 1705,
+          "delay": 40,
+          "alignment": false,
+          "scenario": "normal"
+        }
+      },
+      "expected": {
+        "params": {
+          "seed": 1705,
+          "delay": 40,
+          "alignment": false,
+          "scenario": "normal"
+        },
+        "sourceMinute": 984,
+        "predictedDensity": 819.0537428661565,
+        "lastLabSample": 941,
+        "lastLabRelease": 981,
+        "lastLab": 818.2277985748941
+      },
+      "metrics": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332,
+        "svg": {
+          "width": 760,
+          "height": 538,
+          "viewBox": {
+            "width": 760,
+            "height": 538
+          },
+          "renderRatio": 1.412639405204461,
+          "viewBoxRatio": 1.412639405204461,
+          "maxHeight": "none"
+        },
+        "textCount": 14,
+        "minEffectiveFontPx": 16,
+        "maxScaleMismatch": 0,
+        "textSamples": [
+          {
+            "text": "BATCH-17：过程来源、质量时刻与化验到达各保留自己的时间",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "-30",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          }
+        ],
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 760
+          }
+        ]
+      },
+      "completed": true
+    }
+  ],
+  "screenshots": [
+    "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+    "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png"
+  ],
+  "errors": [],
+  "passed": 20,
+  "failed": 0,
+  "screenshotFocus": {
+    "checkedAt": "2026-10-29T18:29:27.888Z",
+    "screenshots": [
+      {
+        "scene": "r3",
+        "part": "workflow",
+        "path": "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+        "scroll": {
+          "left": 240,
+          "clientWidth": 302,
+          "scrollWidth": 760
+        },
+        "reason": "Focus selected60h and100Hz region",
+        "state": {
+          "inputs": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3,
+            "hour": 60
+          },
+          "threshold": 0.65,
+          "selectedObservation": {
+            "hour": 60,
+            "load": 1,
+            "rms": 4.022291447712575,
+            "temperature": 68.85310767764226,
+            "kurtosis": 3.1909905931456013,
+            "expected": {
+              "rms": 3.2129368370667413,
+              "temperature": 67.02328575967937,
+              "kurtosis": 3.2714137214951275
+            },
+            "score": 1.1506399905712916,
+            "streak": 3,
+            "flag": true
+          },
+          "firstAlarm": 60,
+          "flagHours": 31,
+          "spectrum": [
+            {
+              "hz": 0,
+              "amplitude": 0.001047909348272022
+            },
+            {
+              "hz": 4,
+              "amplitude": 0.005784793567617183
+            },
+            {
+              "hz": 8,
+              "amplitude": 0.013921968302246955
+            },
+            {
+              "hz": 12,
+              "amplitude": 0.006166796720279334
+            },
+            {
+              "hz": 16,
+              "amplitude": 0.0037676281456769808
+            },
+            {
+              "hz": 20,
+              "amplitude": 0.003276424218866898
+            },
+            {
+              "hz": 24,
+              "amplitude": 0.006435517177197683
+            },
+            {
+              "hz": 28,
+              "amplitude": 0.012872086529937841
+            },
+            {
+              "hz": 32,
+              "amplitude": 2.0083378687438698
+            },
+            {
+              "hz": 36,
+              "amplitude": 0.015307315349560046
+            },
+            {
+              "hz": 40,
+              "amplitude": 0.002351148282196723
+            },
+            {
+              "hz": 44,
+              "amplitude": 0.013135078580366362
+            },
+            {
+              "hz": 48,
+              "amplitude": 0.012863723659059623
+            },
+            {
+              "hz": 52,
+              "amplitude": 0.0018116040706527283
+            },
+            {
+              "hz": 56,
+              "amplitude": 0.009160176467958768
+            },
+            {
+              "hz": 60,
+              "amplitude": 0.003274541500223662
+            },
+            {
+              "hz": 64,
+              "amplitude": 0.009453177410582199
+            },
+            {
+              "hz": 68,
+              "amplitude": 0.006859729686217501
+            },
+            {
+              "hz": 72,
+              "amplitude": 0.00777282361981982
+            },
+            {
+              "hz": 76,
+              "amplitude": 0.014819193476407925
+            },
+            {
+              "hz": 80,
+              "amplitude": 0.012887951639045539
+            },
+            {
+              "hz": 84,
+              "amplitude": 0.017186499045189877
+            },
+            {
+              "hz": 88,
+              "amplitude": 0.004398832562130309
+            },
+            {
+              "hz": 92,
+              "amplitude": 0.0017997393188215383
+            },
+            {
+              "hz": 96,
+              "amplitude": 0.0030471100446783474
+            },
+            {
+              "hz": 100,
+              "amplitude": 0.5616915029156464
+            },
+            {
+              "hz": 104,
+              "amplitude": 0.005102944393634528
+            },
+            {
+              "hz": 108,
+              "amplitude": 0.005649007368565536
+            },
+            {
+              "hz": 112,
+              "amplitude": 0.01037527403601645
+            },
+            {
+              "hz": 116,
+              "amplitude": 0.0022658360849252975
+            },
+            {
+              "hz": 120,
+              "amplitude": 0.010109553549166327
+            },
+            {
+              "hz": 124,
+              "amplitude": 0.012666154542609144
+            },
+            {
+              "hz": 128,
+              "amplitude": 0.010757159700110323
+            },
+            {
+              "hz": 132,
+              "amplitude": 0.01603417236644169
+            },
+            {
+              "hz": 136,
+              "amplitude": 0.006452615625159193
+            },
+            {
+              "hz": 140,
+              "amplitude": 0.004052975885175805
+            },
+            {
+              "hz": 144,
+              "amplitude": 0.008083917234040299
+            },
+            {
+              "hz": 148,
+              "amplitude": 0.008391046704934508
+            },
+            {
+              "hz": 152,
+              "amplitude": 0.007871926487438013
+            },
+            {
+              "hz": 156,
+              "amplitude": 0.009208725380909867
+            },
+            {
+              "hz": 160,
+              "amplitude": 0.008400577136164282
+            },
+            {
+              "hz": 164,
+              "amplitude": 0.008608475499234557
+            },
+            {
+              "hz": 168,
+              "amplitude": 0.004284296273953288
+            },
+            {
+              "hz": 172,
+              "amplitude": 0.003548884061496217
+            },
+            {
+              "hz": 176,
+              "amplitude": 0.005963201688602504
+            },
+            {
+              "hz": 180,
+              "amplitude": 0.0015312017098399015
+            },
+            {
+              "hz": 184,
+              "amplitude": 0.0039179639307725216
+            },
+            {
+              "hz": 188,
+              "amplitude": 0.004384660883920555
+            },
+            {
+              "hz": 192,
+              "amplitude": 0.005847373655843083
+            }
+          ],
+          "modelSource": "CaseInspect当前正常模型；当前控件独立重算观测"
+        }
+      },
+      {
+        "scene": "r5",
+        "part": "background",
+        "path": "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png",
+        "scroll": {
+          "left": 260,
+          "clientWidth": 302,
+          "scrollWidth": 760
+        },
+        "reason": "Focus current24min and sample-release lanes",
+        "state": {
+          "inputs": {
+            "now": 24,
+            "delay": 40,
+            "alignment": false
+          },
+          "processFeatures": [
+            333.2057060347062,
+            2.4300111053081075,
+            99.33549786380445,
+            2.8006877628584053
+          ],
+          "processSourceMinute": 984,
+          "qualityMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "latestAvailableLab": {
+            "sampleMinute": 941,
+            "releaseMinute": 981,
+            "density": 818.2277985748941
+          },
+          "unreleasedTakenCount": 4,
+          "currentBatchAvailableCount": 0,
+          "lambda": 0.01,
+          "modelSource": "现有R5Core按当前演示参数重新标定（仅取模型）"
+        }
+      }
+    ]
+  },
+  "visualReview": {
+    "status": "reviewed_final_screenshots",
+    "reviewed": true,
+    "notes": [
+      "Final r3/r5 screenshots were opened and inspected after replacement.",
+      "Inherited height compression and miniature graph whitespace are gone; labels render at16 effective CSS pixels.",
+      "Screenshots intentionally retain local horizontal scroll focused on selected60h/100Hz and current24min sample-release lanes."
+    ],
+    "screenshots": [
+      "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+      "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png"
+    ]
+  },
+  "browserSessionClosed": true
+}

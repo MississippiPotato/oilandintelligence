@@ -2,14 +2,22 @@ import fs from 'node:fs';import path from 'node:path';import vm from 'node:vm';
 import {ROOT,FOUR,read,sha} from './four-exhibit-contract.mjs';
 import {scrollScene} from './scroll-scene.mjs';
 import {flowDiagram} from './lesson-flow-diagrams.mjs';
-export const FOUR_CSS=()=>read('shared/four-exhibits.css')+'\n'+read('shared/scroll-exhibit.css')+'\n'+read('shared/continuous-lessons.css')+'\n'+read('shared/lesson-assistant-entry.css');
+import {conceptFor,conceptCSS,conceptHostRuntime} from './concept-content.mjs';
+import {courseContext,courseStyles} from './course-compass.mjs';
+export const FOUR_CSS=()=>read('shared/four-exhibits.css')+'\n'+read('shared/scroll-exhibit.css')+'\n'+read('shared/continuous-lessons.css')+'\n'+conceptCSS()+'\n'+courseStyles()+'\n'+read('shared/lesson-assistant-entry.css');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export function caseFiles(c){return c.files.concat(['exhibit-data.js','exhibit.js'].map(f=>'case-src/'+c.scene+'/'+f).filter(f=>fs.existsSync(path.join(ROOT,f))));}
+export function caseFiles(c){return c.files.concat(['exhibit-data.js','exhibit.js','concept.js'].map(f=>'case-src/'+c.scene+'/'+f).filter(f=>fs.existsSync(path.join(ROOT,f))));}
 export function sourceIdentity(c){return caseFiles(c).map(p=>({path:p,sha256:sha(p)}));}
-export function fourRuntime(){const files=[...new Set(FOUR.flatMap(caseFiles))];return read('shared/scroll-exhibit.js')+'\n'+files.map(p=>read(p)).join('\n')+'\n'+read('shared/four-exhibits.js');}
+export function fourRuntime(){const files=[...new Set(FOUR.flatMap(caseFiles))];return conceptHostRuntime()+'\n'+read('shared/scroll-exhibit.js')+'\n'+files.map(p=>read(p)).join('\n')+'\n'+read('shared/four-exhibits.js');}
 export function loadLesson(c){const ctx=vm.createContext({console});for(const f of caseFiles(c))vm.runInContext(read(f),ctx,{filename:f});return ctx[c.global];}
 export function mapHTML(c){return scrollScene(c.scene,c.mapLabels);}
 export function chapterNav(){return '';}
 export function flowPreview(c,L){const file='case-src/'+c.scene+'/flow-preview.json';let preview=null;if(fs.existsSync(path.join(ROOT,file))){preview=JSON.parse(read(file));if(JSON.stringify(preview.sources)!==JSON.stringify(sourceIdentity(c))&&!process.argv.includes('--allow-stale-preview'))throw Error('Flow preview is stale: '+c.scene+'; run npm run capture:four-flow after building with --allow-stale-preview.');}return preview?.steps??L.steps.map(s=>'<p>打开可运行示范，自动计算当前对象后，这里将显示'+esc(s.output)+'。</p>');}
 export function flowMarkup(c,L,previews){return `<div class="fx-exhibit lesson-method" data-scene="${c.scene}" data-fx-flow-root>${flowDiagram(c.scene)}${L.steps.map((s,i)=>`<section class="lesson-method-step" data-fx-step-panel="${i}" id="${c.scene}-flow-${i}"><header><span class="lesson-step-number">${String(i+1).padStart(2,'0')}</span><div><h3>${esc(s.name)}</h3><p>${esc(s.action)}</p></div></header>${previews[i]}</section>`).join('')}</div>`;}
-export function loadFourContent(c){const L=loadLesson(c),map=mapHTML(c),sections=L.chapters.map((s,i)=>({no:i+1,en:s.en,title:s.title,html:(i===0?'<style>'+FOUR_CSS()+'</style>':'')+`<div class="fx-exhibit" data-scene="${c.scene}">${i===0?map:''}<section id="${c.scene}-knowledge-${i}" class="fx-chapter">${s.html}</section></div>`})),previews=flowPreview(c,L),backgroundHTML=`<div class="fx-exhibit" data-scene="${c.scene}" data-fx-scene="${c.scene}">${map}${L.chapters.map((s,i)=>`<article class="fx-card fx-chapter" id="${c.scene}-knowledge-${i}"><header><span class="fx-kicker">0${i+1} / ${esc(s.en)}</span><h2>${esc(s.title)}</h2></header>${s.html}</article>`).join('')}</div>`;return{title:L.title,question:L.title,lede:L.lede,sections,flow:L.steps.map(s=>[s.name,s.action,s.output]),backgroundHTML,workflowHTML:flowMarkup(c,L,previews),staticWorkflowHTML:flowMarkup(c,L,previews)};}
+export function loadFourContent(c,{mode='standalone',version='1.9.0'}={}){
+ const L=loadLesson(c),map=mapHTML(c),concept=conceptFor(c.scene),context=courseContext(c.scene,{id:c.id,sceneId:c.scene,title:L.title,version},{mode,...(c.scene==='m5'?{nextScene:'w1',nextLabel:'接着看测井分层'}:{})});
+ const chapters=L.chapters.map((s,i)=>({...s,html:s.html+(concept?.backgroundAfter===i?concept.backgroundHTML:'')}));
+ const sections=chapters.map((s,i)=>({no:i+1,en:s.en,title:s.title,html:(i===0?'<style>'+FOUR_CSS()+'</style>':'')+`<div class="fx-exhibit" data-scene="${c.scene}">${i===0?map:''}<section id="${c.scene}-knowledge-${i}" class="fx-chapter">${s.html}</section>${i===chapters.length-1?context.html:''}</div>`}));
+ const previews=flowPreview(c,L),backgroundHTML=`<div class="fx-exhibit" data-scene="${c.scene}" data-fx-scene="${c.scene}">${map}${chapters.map((s,i)=>`<article class="fx-card fx-chapter" id="${c.scene}-knowledge-${i}"><header><span class="fx-kicker">0${i+1} / ${esc(s.en)}</span><h2>${esc(s.title)}</h2></header>${s.html}</article>`).join('')}${context.html}</div>`;
+ return{title:L.title,question:L.title,lede:L.lede,sections,flow:L.steps.map(s=>[s.name,s.action,s.output]),backgroundHTML,workflowHTML:flowMarkup(c,L,previews),staticWorkflowHTML:flowMarkup(c,L,previews),courseContext:context};
+}

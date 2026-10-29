@@ -1,4 +1,10 @@
-window.S17Page={"sceneId":"m4","caseVersion":"1.8.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
+window.S17Page={"sceneId":"m4","caseVersion":"1.9.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
+(function(g){'use strict';if(g.S17ConceptHost)return;
+function keepScale(host){host.querySelectorAll('svg[viewBox]').forEach(svg=>{const width=svg.viewBox.baseVal.width;if(width>0){const requested=parseFloat(svg.style.minWidth)||0;svg.style.minWidth=Math.max(width,requested)+'px';svg.style.height='auto';svg.style.maxHeight='none';}});}
+function mount(root){for(const [scene,definition]of Object.entries(g.S17Concepts||{})){if(!root.querySelector('[data-concept-scene="'+scene+'"]'))continue;definition.mount(root);root.querySelectorAll('[data-concept-scene="'+scene+'"]').forEach(host=>{keepScale(host);if(host.dataset.ctScaleBound)return;host.dataset.ctScaleBound='true';new MutationObserver(()=>keepScale(host)).observe(host,{childList:true,subtree:true});});}}
+g.S17ConceptHost={mount};
+})(globalThis);
+
 (function(g){'use strict';
 const mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0,quantile=(a,q)=>{const s=a.slice().sort((x,y)=>x-y);return s.length?s[Math.floor((s.length-1)*q)]:0;};
 function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
@@ -66,7 +72,7 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
 })(globalThis);
 
 (function(g){'use strict';
-const C=g.M4Core,ID='s17-drilltime-boundaries',VERSION='1.8.0',red='#B8242A',blue='#627C94',gold='#AA8246',ink='#343B43',muted='#747B80',groups=['#8D9EAF','#C6AC7C','#9D929B','#B9C1CA'];
+const C=g.M4Core,ID='s17-drilltime-boundaries',VERSION='1.9.0',red='#B8242A',blue='#627C94',gold='#AA8246',ink='#343B43',muted='#747B80',groups=['#8D9EAF','#C6AC7C','#9D929B','#B9C1CA'];
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),fmt=(v,n=2)=>v==null?'—':Number(v).toFixed(n),mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
 let library;function lib(){return library||(library=C.train());}
 function compute(preset='operation',normalize=true,thickness=1){const L=lib(),config={...L.chosen,normalize,tolerance:1},data=C.generate(17,{preset,noise:.025,thickness}),inference=C.infer(data.observations,L,config),metrics=C.evaluate(inference,data.evaluationTruth,1);return{data,inference,metrics,config,method:'independent_ridge_calibration + training_kmeans + DP_continuity',split:L.groups,seed:17,dataVersion:'s17-response-v1'};}
@@ -168,6 +174,66 @@ function readingMount(root){root.querySelectorAll('[data-m4-real]').forEach(host
 g.M4Exhibit={title:'钻时分段：钻得变快，先看是谁变了',lede:'沿同一深度比较钻速、操作与相对响应，再判断哪里值得进一步核查。',chapters,steps,labHTML,mount,readingMount};
 })(globalThis);
 
+(function (g) {
+  'use strict';
+  const scene = 'm4', lengthMD = 100, fmt = (v, n = 2) => Number(v).toFixed(n);
+  function calculate(angle, rop) {
+    const radians = angle * Math.PI / 180, vertical = lengthMD * Math.cos(radians), horizontal = lengthMD * Math.sin(radians);
+    return { angleFromVertical_deg: angle, lengthMD_m: lengthMD, ROP_m_h: rop, TVDincrement_m: vertical,
+      horizontalIncrement_m: horizontal, drillTime_min_per_mMD: 60 / rop, segmentTime_min: lengthMD / rop * 60,
+      verticalSpeed_m_h: rop * Math.cos(radians), timePerVerticalMetre_min: 60 / (rop * Math.cos(radians)) };
+  }
+  function chart(angle, rop) {
+    const v = calculate(angle, rop), x0 = 72, y0 = 64, scale = 2.2, ex = x0 + v.horizontalIncrement_m * scale, ey = y0 + v.TVDincrement_m * scale;
+    const rx = r => 441 + (r - 5) / 55 * 245, ry = t => 284 - t / 12 * 220;
+    const curve = Array.from({ length: 111 }, (_, i) => { const r = 5 + i * .5; return (i ? 'L' : 'M') + rx(r).toFixed(2) + ' ' + ry(60 / r).toFixed(2); }).join('');
+    return '<svg viewBox="0 0 750 360" role="img" aria-label="理想直线井段沿轨迹长度与垂直进尺的投影，以及钻速与每米钻时的倒数关系" style="display:block;width:100%;min-width:750px;max-width:850px;height:auto">'
+      + '<text x="72" y="25" font-size="18" fill="#343941">一段100 m MD的直线井段</text>'
+      + [0, 25, 50, 75, 100].map(t => '<path d="M72 ' + (64 + t * scale) + 'H292M' + (72 + t * scale) + ' 64V284" stroke="#e1dbd3"/><text x="44" y="' + (69 + t * scale) + '" text-anchor="end" font-size="16" fill="#62636a">' + t + '</text><text x="' + (72 + t * scale) + '" y="309" text-anchor="middle" font-size="16" fill="#62636a">' + t + '</text>').join('')
+      + '<path d="M72 64L' + ex.toFixed(2) + ' ' + ey.toFixed(2) + '" stroke="#B8242A" stroke-width="5"/>'
+      + '<path d="M60 64V' + ey.toFixed(2) + '" stroke="#55768B" stroke-width="3"/>'
+      + '<path d="M72 ' + ey.toFixed(2) + 'H' + ex.toFixed(2) + '" stroke="#B08A4A" stroke-width="3" stroke-dasharray="5 4"/>'
+      + '<circle cx="' + ex.toFixed(2) + '" cy="' + ey.toFixed(2) + '" r="6" fill="#B8242A"/><text x="' + Math.min(280, ex + 10).toFixed(2) + '" y="' + Math.max(53, ey - 12).toFixed(2) + '" font-size="16" fill="#B8242A">井段末端</text>'
+      + '<text x="72" y="48" font-size="16" fill="#343941">倾角 ' + angle + '°（从竖直方向量）</text>'
+      + '<text x="130" y="338" font-size="16" fill="#62636a">水平位移 / m</text><text x="18" y="205" transform="rotate(-90 18 205)" font-size="16" fill="#55768B">垂直进尺 / m</text>'
+      + '<text x="441" y="25" font-size="18" fill="#343941">沿MD推进1 m，需要多久？</text>'
+      + [0, 3, 6, 9, 12].map(t => '<path d="M441 ' + ry(t) + 'H686" stroke="#e1dbd3"/><text x="428" y="' + (ry(t) + 5) + '" text-anchor="end" font-size="16" fill="#62636a">' + t + '</text>').join('')
+      + [5, 20, 40, 60].map(r => '<text x="' + rx(r) + '" y="309" text-anchor="middle" font-size="16" fill="#62636a">' + r + '</text>').join('')
+      + '<path d="' + curve + '" fill="none" stroke="#55768B" stroke-width="3"/>'
+      + '<path d="M' + rx(rop).toFixed(2) + ' 284V' + ry(v.drillTime_min_per_mMD).toFixed(2) + 'H441" fill="none" stroke="#B8242A" stroke-dasharray="4 4"/>'
+      + '<circle cx="' + rx(rop).toFixed(2) + '" cy="' + ry(v.drillTime_min_per_mMD).toFixed(2) + '" r="6" fill="#B8242A"/>'
+      + '<text x="453" y="50" font-size="16" fill="#B8242A">当前：' + fmt(60 / rop) + ' min/m MD</text>'
+      + '<text x="500" y="338" font-size="16" fill="#62636a">钻速 ROP / m/h</text><text x="390" y="215" transform="rotate(-90 390 215)" font-size="16" fill="#62636a">钻时 / min/m MD</text></svg>';
+  }
+  function readout(angle, rop) {
+    const v = calculate(angle, rop);
+    return '<strong>沿井眼推进100 m：</strong>垂直进尺 ' + fmt(v.TVDincrement_m) + ' m，水平位移 ' + fmt(v.horizontalIncrement_m) + ' m。以 ' + fmt(rop, 0) + ' m/h 连续钻进，需要 ' + fmt(v.segmentTime_min, 1) + ' min；每米MD钻时为 ' + fmt(v.drillTime_min_per_mMD) + ' min/m。<br>此时每小时增加垂深 ' + fmt(v.verticalSpeed_m_h) + ' m；若换成“每增加1 m垂深需要多久”，则为 ' + fmt(v.timePerVerticalMetre_min) + ' min。改变倾角后这两个“每米”可能差很多，必须读清分母。';
+  }
+  const style = '<style>[data-concept-scene="m4"]{font-size:18px;line-height:1.75;min-width:0}[data-concept-scene="m4"] .ct-controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap}[data-concept-scene="m4"] label,[data-concept-scene="m4"] button,[data-concept-scene="m4"] figcaption{font-size:16px}[data-concept-scene="m4"] .ct-chart{max-width:100%;overflow-x:auto}[data-concept-scene="m4"] figure{margin:16px 0}[data-concept-scene="m4"] input{accent-color:#B8242A;max-width:100%}[data-concept-scene="m4"] .ct-readout{background:#F7F4EF;padding:14px;border-left:4px solid #B8242A}</style>';
+  const backgroundHTML = '<section class="ct-widget" data-concept-scene="m4" data-concept-part="background">' + style
+    + '<h3>斜着钻100米，向地下加深了多少？</h3><p><strong>MD</strong>沿井眼轨迹量取，<strong>TVD</strong>沿竖直方向量取。先拿一段理想直线井段做量尺：它的MD固定为100 m。倾角从竖直方向量，0°为竖直，角度越大越斜。垂直进尺＝100×cos(倾角)，水平位移＝100×sin(倾角)。</p>'
+    + '<div class="ct-controls"><label>倾角 <output data-ct-angle-label>45°</output> <input disabled type="range" min="0" max="75" value="45" step="5" data-ct-angle aria-label="从竖直方向量取的井段倾角，度"></label><label>钻速 <output data-ct-rop-label>20 m/h</output> <input disabled type="range" min="5" max="60" step="1" value="20" data-ct-rop aria-label="沿MD的钻速，米每小时"></label><button disabled type="button" data-ct-reset>复位</button></div>'
+    + '<figure><div class="ct-chart" data-ct-graphic>' + chart(45, 20) + '</div><figcaption>左图两轴使用同一米制比例：朱红为100 m沿井眼长度，蓝灰为垂直进尺，赭金虚线为水平位移。右图由钻时＝60÷ROP逐点计算；倾角变化时，给定ROP对应的“每米MD钻时”保持不变。</figcaption></figure><p class="ct-readout" data-ct-result>' + readout(45, 20) + '</p>'
+    + '<p>试把倾角从0°调到60°，保持钻速20 m/h。沿井眼100 m仍需300分钟，垂直进尺却从100 m变为50 m。再只提高钻速，观察两种进尺的耗时如何一起缩短。</p>'
+    + '<p style="font-size:16px">这是恒速、恒倾角、连续钻进的几何教学计算，表示相对井段起点的垂深增量，不是下方USROP井的实测轨迹或总井深；停钻不参与60÷ROP的有限值换算。术语沿用 <a href="https://glossary.slb.com/en/terms/m/measured_depth" target="_blank" rel="noopener">SLB measured depth</a> 与 <a href="https://glossary.slb.com/en/terms/r/rate_of_penetration" target="_blank" rel="noopener">SLB rate of penetration</a>。</p></section>';
+  function mount(root) {
+    root.querySelectorAll('[data-concept-scene="' + scene + '"]').forEach(host => {
+      if (host.dataset.ctReady) return;
+      host.dataset.ctReady = 'true'; host.querySelectorAll('input,select,button').forEach(el => { el.disabled = false; });
+      const angle = host.querySelector('[data-ct-angle]'), rop = host.querySelector('[data-ct-rop]');
+      function draw() {
+        const a = Number(angle.value), r = Number(rop.value);
+        host.querySelector('[data-ct-angle-label]').textContent = a + '°'; host.querySelector('[data-ct-rop-label]').textContent = r + ' m/h';
+        host.querySelector('[data-ct-graphic]').innerHTML = chart(a, r); host.querySelector('[data-ct-result]').innerHTML = readout(a, r);
+        host.dataset.ctState = JSON.stringify({ source: 'ideal_straight_segment_unit_calculation', input: { angleFromVertical_deg: a, ROP_m_h: r }, ...calculate(a, r) });
+      }
+      host.addEventListener('input', draw); host.addEventListener('change', draw);
+      host.querySelector('[data-ct-reset]').addEventListener('click', () => { angle.value = 45; rop.value = 20; draw(); }); draw();
+    });
+  }
+  (g.S17Concepts || (g.S17Concepts = {}))[scene] = { backgroundAfter: 0, workflowAfter: 0, backgroundHTML, workflowHTML: '', mount };
+})(globalThis);
+
 (function(g){'use strict';if(g.S17Scroll)return;
 function activate(figure,index){if(!figure)return;const i=Math.max(0,Math.min(3,Number(index)));figure.dataset.scrollCurrent=String(i);figure.querySelectorAll('[data-scroll-layer],[data-scroll-outline]').forEach(n=>n.classList.toggle('is-current',Number(n.dataset.scrollLayer??n.dataset.scrollOutline)===i));figure.querySelectorAll('[data-scroll-select]').forEach(n=>n.setAttribute('aria-pressed',String(Number(n.dataset.scrollSelect)===i)));figure.querySelector('[data-scroll-title]').textContent=figure.querySelector('.scroll-menu [data-scroll-select="'+i+'"]').textContent.replace(/^\s*0[1-4]\s*/,'');}
 function bind(root){root.querySelectorAll('[data-scroll-scene]').forEach(figure=>{if(figure.dataset.scrollBound)return;figure.dataset.scrollBound='true';figure.querySelectorAll('button').forEach(b=>b.disabled=false);figure.addEventListener('click',e=>{const b=e.target.closest('[data-scroll-select],[data-scroll-read]');if(!b)return;if(b.hasAttribute('data-scroll-select')){activate(figure,b.dataset.scrollSelect);figure.dispatchEvent(new CustomEvent('s17-scroll-select',{bubbles:true,detail:{scene:figure.dataset.scrollScene,index:Number(b.dataset.scrollSelect)}}));}else {const inner=root.querySelector('#'+figure.dataset.scrollScene+'-knowledge-'+figure.dataset.scrollCurrent);const target=figure.dataset.scrollScene==='m2'?inner?.closest('.m2-background-chapter')||inner:inner;target?.scrollIntoView({block:'start',behavior:g.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});}});figure.querySelector('.scroll-menu').addEventListener('keydown',e=>{const b=e.target.closest('[data-scroll-select]');if(!b||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const i=e.key==='Home'?0:e.key==='End'?3:(Number(b.dataset.scrollSelect)+(e.key==='ArrowRight'?1:3))%4;activate(figure,i);figure.querySelector('.scroll-menu [data-scroll-select="'+i+'"]').focus();});activate(figure,0);});}
@@ -180,7 +246,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 let currentAPI=null,refreshFlow=null;
 function notify(message){const n=document.getElementById('status');if(n)n.textContent=message;}
 function changed(){refreshFlow?.();const b=document.getElementById('export');if(b&&currentAPI)b.disabled=currentAPI.snapshot().status!=='ready';}
-function readingMount(root){root.querySelectorAll('[data-fx-scene]').forEach(box=>{
+function readingMount(root){g.S17ConceptHost?.mount(root);root.querySelectorAll('[data-fx-scene]').forEach(box=>{
  if(box.dataset.fxMounted)return;box.dataset.fxMounted='true';
  const scene=box.dataset.fxScene,L=g[scene.toUpperCase()+'Exhibit'];
  box.querySelectorAll('[data-fx-map]').forEach(b=>{b.disabled=false;b.addEventListener('click',()=>{
@@ -208,6 +274,157 @@ g.S17Exhibit={notify,changed,readingMount,start};
 })(globalThis);
 
 S17Exhibit.start("m4");
+window.S17CompassPage={"model":{"scene":{"id":"m4","name":"钻时曲线地层划分","stageId":"mudlogging","stageName":"录井","diff":"中","diffWhy":"单曲线信息量有限，需多源融合；迟到时间校正不准则标签本身有系统误差。","refs":["变点检测","多源融合","迟到时间校正"]},"current":{"id":"s17-drilltime-boundaries","title":"钻时分段：钻得变快，先看是谁变了","version":"1.9.0"},"methods":[{"id":"ts","name":"时序预测","abbr":"TS"}],"sameScene":[{"id":"s17-drilltime-boundaries","sceneId":"m4","title":"钻时分段：钻得变快，先看是谁变了","version":"1.9.0","directory":"cases","origin":""}],"sameStage":[{"id":"m1","name":"岩屑岩性自动识别","stageId":"mudlogging","stageName":"录井","caseId":"s17-cuttings-lithology","directory":"cases"},{"id":"m2","name":"气测异常智能解释","stageId":"mudlogging","stageName":"录井","caseId":"s17-mudgas-context","directory":"cases"},{"id":"m3","name":"荧光图像智能判读","stageId":"mudlogging","stageName":"录井","caseId":"s17-fluorescence-review","directory":"cases"},{"id":"m5","name":"录井报告自动生成","stageId":"mudlogging","stageName":"录井","caseId":"s17-evidence-report","directory":"cases"}],"crossStages":[{"id":"drilling","name":"钻井","sameStage":false},{"id":"welllog","name":"测井","sameStage":false}],"next":{"id":"m5","name":"录井报告自动生成","stageId":"mudlogging","stageName":"录井","caseId":"s17-evidence-report","directory":"cases"},"authoredNext":false,"nextLabel":"同环节继续读","provenance":"老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节"},"options":{"mode":"standalone","portalHref":"../../../../portal/index.html","collectionPrefix":"../../../"}};
+/* Original ATLAS metadata in a small, offline course compass. No model or data mutation. */
+(function (g) {
+  'use strict';
+  if (g.S17Compass) {
+    if (g.S17CompassPage) g.S17Compass.configure(g.S17CompassPage);
+    return;
+  }
+  var d = g.document, config = null, timer = null, observer = null;
+  var parts = [{id:'background', tab:'bg', no:'01', name:'专业背景'}, {id:'workflow', tab:'flow', no:'02', name:'案例流程'}, {id:'lab', tab:'demo', no:'03', name:'可运行示范'}];
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]; }); }
+  function byId(atlas, id) { return atlas && atlas.index && atlas.index.byScene && atlas.index.byScene[id] || null; }
+  function stages(atlas) { return atlas && atlas.stages || []; }
+  function catalogRows(catalog) { return Array.isArray(catalog) ? catalog : catalog && catalog.cases || []; }
+  function unique(rows) { var seen = {}; return rows.filter(function (r) { if (!r || !r.id || seen[r.id]) return false; seen[r.id] = true; return true; }); }
+  function normalCase(row) { return {id:row.id, sceneId:row.sceneId || row.scene, title:row.title || row.name || row.id, version:row.version || '', directory:row.directory || '', origin:row.origin || ''}; }
+  function sceneRow(sc, catalog) {
+    var found = catalog.filter(function (c) { return c.sceneId === sc.id && c.directory; })[0];
+    return {id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName, caseId:found && found.id || '', directory:found && found.directory || ''};
+  }
+  function model(scene, manifest, atlas, catalog, options) {
+    options = options || {}; manifest = manifest || {};
+    var sc = typeof scene === 'string' ? byId(atlas, scene) : scene;
+    if (!sc || !sc.id) throw new Error('Unknown course scene: ' + String(scene));
+    var rows = unique(catalogRows(catalog).map(normalCase));
+    if (manifest.id) {
+      var existing = rows.filter(function (r) { return r.id === manifest.id; })[0];
+      var current = normalCase(Object.assign({}, existing || {}, manifest, {sceneId:sc.id}));
+      rows = rows.filter(function (r) { return r.id !== current.id; });
+      rows.unshift(current);
+    }
+    var stage = stages(atlas).filter(function (s) { return s.id === sc.stageId; })[0];
+    var siblings = stage ? stage.scenes : (atlas.allScenes || []).filter(function (s) { return s.stageId === sc.stageId; });
+    var sameStage = siblings.filter(function (s) { return s.id !== sc.id; }).map(function (s) { return sceneRow(s, rows); });
+    var index = siblings.findIndex(function (s) { return s.id === sc.id; });
+    var next = options.nextScene === null ? null : byId(atlas, options.nextScene) || siblings[index + 1] || siblings[0];
+    if (next && next.id === sc.id) next = null;
+    var cross = (sc.cross || []).map(function (name) {
+      var target = stages(atlas).filter(function (s) { return s.name === name || s.id === name; })[0];
+      return target ? {id:target.id, name:target.name, sameStage:target.id === sc.stageId} : {id:'', name:name};
+    });
+    return {
+      scene:{id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName || stage && stage.name || '', diff:sc.diff || '', diffWhy:sc.diffWhy || '', refs:(sc.refs || []).slice()},
+      current:{id:manifest.id || '', title:manifest.title || sc.name, version:manifest.version || ''},
+      methods:(sc.methods || []).map(function (key) { var m = atlas.methods[key]; return {id:key, name:m && m.name || key, abbr:m && m.abbr || key.toUpperCase()}; }),
+      sameScene:rows.filter(function (r) { return r.sceneId === sc.id; }), sameStage:sameStage,
+      crossStages:cross, next:next ? sceneRow(next, rows) : null,
+      authoredNext:Object.prototype.hasOwnProperty.call(options, 'nextScene'),
+      nextLabel:options.nextLabel || (next && next.stageId === sc.stageId ? '同环节继续读' : '继续阅读相关场景'),
+      provenance:'老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节'
+    };
+  }
+  function portalHref(route, options) { return options.mode === 'portal' ? route : (options.portalHref || '../../../../portal/index.html') + route; }
+  function caseHref(row, m, options) {
+    if (options.mode === 'portal') return '#/scene/' + encodeURIComponent(row.sceneId || row.id) + (row.sceneId ? '?case=' + encodeURIComponent(row.id) + '&tab=bg' : '');
+    if (row.id === m.current.id && row.sceneId === m.scene.id) return '#background';
+    if (row.directory === 'cases' || row.directory === 'expansion-cases') return (options.collectionPrefix || '../../../') + row.directory + '/' + encodeURIComponent(row.id) + '/demo/index.html#background';
+    return portalHref('#/scene/' + encodeURIComponent(row.sceneId || row.id) + (row.sceneId ? '?case=' + encodeURIComponent(row.id) + '&tab=bg' : ''), options);
+  }
+  function sceneHref(row, m, options) { return row.caseId ? caseHref({id:row.caseId, sceneId:row.id, directory:row.directory}, m, options) : portalHref('#/scene/' + encodeURIComponent(row.id), options); }
+  function partHref(part, m, options) { return options.mode === 'portal' ? '#/scene/' + encodeURIComponent(m.scene.id) + (m.current.id ? '?case=' + encodeURIComponent(m.current.id) + '&tab=' : '?tab=') + part.tab : '#' + part.id; }
+  function navigation(m, options) {
+    options = options || {};
+    var breadcrumb = '<nav class="course-wayfinding" aria-label="课程位置"><a href="' + esc(portalHref('#/', options)) + '">← 课程总览</a><span aria-hidden="true">/</span><a href="' + esc(portalHref('#/stage/' + encodeURIComponent(m.scene.stageId), options)) + '">' + esc(m.scene.stageName) + '环节</a><span class="course-current">' + esc(m.scene.id.toUpperCase()) + ' · ' + esc(m.scene.name) + '</span></nav>';
+    if (!options.includeReading) return breadcrumb;
+    return breadcrumb + '<nav class="course-reading-route" aria-label="阅读路径"><span>阅读路径</span>' + parts.map(function (p, i) { return (i ? '<span class="course-route-arrow" aria-hidden="true">→</span>' : '') + '<a href="' + esc(partHref(p, m, options)) + '" data-course-part="' + p.id + '"' + (!i ? ' aria-current="step"' : '') + '><small>' + p.no + '</small>' + p.name + '</a>'; }).join('') + '</nav>';
+  }
+  function sameSceneHTML(m, options) {
+    if (!m.sameScene.length) return '<p>本场景的案例可从门户进入。</p>';
+    return '<ul class="course-links">' + m.sameScene.map(function (row) {
+      var current = row.id === m.current.id;
+      return '<li><a href="' + esc(caseHref(row, m, options)) + '"' + (current ? ' aria-current="page"' : '') + '><span>' + esc(row.title) + (current ? '<span class="course-current-tag">当前</span>' : '') + '</span><small>' + esc(row.origin || (row.version ? 'v' + row.version : '查看')) + (current ? '' : ' →') + '</small></a></li>';
+    }).join('') + '</ul>';
+  }
+  function render(m, options) {
+    options = options || {};
+    var includeDifficulty = options.includeDifficulty !== false;
+    var sameStage = '<ul class="course-links">' + m.sameStage.map(function (s) { return '<li><a href="' + esc(sceneHref(s, m, options)) + '"><span>' + esc(s.name) + '</span><small>' + esc(s.id.toUpperCase()) + ' →</small></a></li>'; }).join('') + '</ul>';
+    var cross = m.crossStages.length ? '<div class="course-cross"><h3>原地图标注的交叉环节</h3><div class="course-pills">' + m.crossStages.map(function (s) { return s.id ? '<a class="course-pill" href="' + esc(portalHref('#/stage/' + encodeURIComponent(s.id), options)) + '">' + esc(s.name) + (s.sameStage ? ' · 本环节' : ' →') + '</a>' : '<span class="course-pill">' + esc(s.name) + '</span>'; }).join('') + '</div></div>' : '';
+    return '<section class="course-context" data-course-context="' + esc(m.scene.id) + '" data-course-mode="' + esc(options.mode || 'standalone') + '"' + (m.authoredNext ? ' data-course-next-scene="' + esc(m.next && m.next.id || '') + '" data-course-next-label="' + esc(m.nextLabel) + '"' : '') + ' aria-labelledby="course-context-' + esc(m.scene.id) + '"><header><span class="course-eyebrow">放回作业链，继续看场景</span><h2 id="course-context-' + esc(m.scene.id) + '">' + (includeDifficulty ? '技术难度与参考方向' : '继续阅读场景与案例') + '</h2></header>' +
+      (includeDifficulty ? '<div class="course-context-grid"><div class="course-context-cell"><div class="course-difficulty-line"><span class="course-difficulty" data-difficulty="' + esc(m.scene.diff) + '">技术难度 · ' + esc(m.scene.diff || '未标注') + '</span><span class="course-difficulty-caption">原场景的技术判断</span></div>' + (m.scene.diffWhy ? '<p>' + esc(m.scene.diffWhy) + '</p>' : '') + '</div><div class="course-context-cell"><h3>可以继续查阅的方法方向</h3><div class="course-pills">' + m.scene.refs.map(function (ref) { return '<span class="course-pill">' + esc(ref) + '</span>'; }).join('') + '</div><div class="course-method-links">' + m.methods.map(function (method) { return '<a href="' + esc(portalHref('#/method/' + encodeURIComponent(method.id), options)) + '">' + esc(method.abbr) + ' · ' + esc(method.name) + '方法索引 →</a>'; }).join('') + '</div></div></div>' : '') +
+      '<div class="course-related"><div class="course-context-cell course-same-scene"><h3>同场景的案例' + (m.sameScene.length > 1 ? ' · ' + m.sameScene.length + '种实现' : '') + '</h3><div data-course-same-scene>' + sameSceneHTML(m, options) + '</div></div>' + (options.mode === 'portal' ? '' : '<div class="course-context-cell course-same-stage"><h3>同环节的其他场景 · ' + esc(m.scene.stageName) + '</h3>' + sameStage + '</div>') + cross + '</div>' +
+      '<div class="course-next">' + (m.next ? '<a href="' + esc(sceneHref(m.next, m, options)) + '">' + esc(m.nextLabel) + '：' + esc(m.next.name) + ' →</a>' : '') + '<a href="' + esc(portalHref('#/stage/' + encodeURIComponent(m.scene.stageId), options)) + '">查看整个' + esc(m.scene.stageName) + '环节</a><a href="' + esc(portalHref('#/', options)) + '">返回课程总览</a></div><p class="course-provenance">' + esc(m.provenance) + '</p></section>';
+  }
+  function activePart() { if (!g.location) return 'background'; var match = g.location.hash.match(/[?&]tab=(bg|flow|demo)/); return match ? {bg:'background', flow:'workflow', demo:'lab'}[match[1]] : parts.some(function (p) { return '#' + p.id === g.location.hash; }) ? g.location.hash.slice(1) : 'background'; }
+  function updatePath() { if (!d) return; var part = activePart(); d.querySelectorAll('[data-course-part]').forEach(function (a) { if (a.dataset.coursePart === part) a.setAttribute('aria-current', 'step'); else a.removeAttribute('aria-current'); }); }
+  function runtimeCatalog() {
+    var rows = [], course = g.S17Course && g.S17Course.cases || [], expansion = g.S17Expansion && g.S17Expansion.cases || [];
+    course.forEach(function (row) { rows.push(Object.assign({}, row, {sceneId:row.sceneId || row.scene, directory:'cases'})); });
+    expansion.forEach(function (row) { rows.push(Object.assign({}, row, {directory:'expansion-cases'})); });
+    return (g.Cases && g.Cases.list ? g.Cases.list() : []).map(function (row) { var known = rows.filter(function (r) { return r.id === row.id; })[0] || {}; return Object.assign({}, known, row, {origin:row.id === 'welllog-layer' ? '老师原样例' : ''}); });
+  }
+  function portalMount() {
+    if (!d || !g.ATLAS || !g.Cases || !g.location) return false;
+    var match = g.location.hash.match(/^#\/scene\/([^?&/]+)/);
+    if (!match) return false;
+    var sc = byId(g.ATLAS, decodeURIComponent(match[1])), main = d.querySelector('#view main');
+    if (!sc || !main) return false;
+    var entries = g.Cases.bySceneAll(sc.id), search = g.location.hash.indexOf('?') >= 0 ? new URLSearchParams(g.location.hash.split('?')[1]) : null;
+    var current = entries.filter(function (c) { return search && c.id === search.get('case'); })[0] || entries[0];
+    var background = main.querySelector('[data-panel="bg"]');
+    if (!current || !background) return false;
+    var stamp = sc.id + '|' + current.id + '|' + entries.map(function (c) { return c.id + ':' + c.version + ':' + c.title; }).join('|');
+    if (main.__courseCompassStamp === stamp && background.querySelector('[data-course-context]')) return true;
+    main.__courseCompassStamp = stamp;
+    var authored = background.querySelector('[data-course-next-scene]');
+    var continuation = authored ? {nextScene:authored.dataset.courseNextScene || null, nextLabel:authored.dataset.courseNextLabel} : g.S17CompassContinuations && g.S17CompassContinuations[sc.id] || {};
+    var prior = background.querySelectorAll('[data-course-context]');
+    prior.forEach(function (el) { el.remove(); });
+    var existingDifficulty = Array.from(background.querySelectorAll('h2,h3')).some(function (heading) { return heading.textContent.trim() === '技术难度与参考方向'; });
+    var m = model(sc, current, g.ATLAS, runtimeCatalog(), continuation), options = {mode:'portal', includeDifficulty:!existingDifficulty};
+    background.insertAdjacentHTML('beforeend', render(m, options));
+    updatePath();
+    return true;
+  }
+  function standaloneMount() {
+    if (!d || !config || !config.model) return;
+    var m = config.model, opts = config.options || {mode:'standalone'};
+    var background = d.getElementById('background');
+    if (background && !background.querySelector('[data-course-context]')) background.insertAdjacentHTML('beforeend', render(m, opts));
+    if (!d.querySelector('.course-wayfinding')) {
+      var host = d.querySelector('.fx-main') || d.querySelector('.m2-exhibit main') || d.querySelector('body.xl-lesson>header') || d.querySelector('body>header') || d.querySelector('main');
+      var nativeNavigation = d.querySelector('.fx-parts [data-fx-part], .m2-tabs [data-part], nav [data-tab="background"]');
+      if (host) host.insertAdjacentHTML('afterbegin', navigation(m, Object.assign({}, opts, {includeReading:!nativeNavigation})));
+    }
+    updatePath();
+  }
+  function mount() { if (!d) return; if (!portalMount()) standaloneMount(); }
+  function schedule() { if (timer) g.clearTimeout(timer); timer = g.setTimeout(function () { timer = null; mount(); }, 35); }
+  function configure(value) { config = value; if (d) schedule(); }
+  g.S17Compass = {model:model, render:render, navigation:navigation, sameSceneHTML:sameSceneHTML, configure:configure, mount:mount};
+  if (!d) return;
+  if (g.S17CompassPage) configure(g.S17CompassPage);
+  d.addEventListener('click', function (event) {
+    var link = event.target.closest('[data-course-part]');
+    if (!link || portalMount()) return;
+    var part = link.dataset.coursePart;
+    var native = d.querySelector('[data-fx-part="' + part + '"]') || d.querySelector('[data-part="' + part + '"]') || d.querySelector('nav [data-tab="' + part + '"]');
+    if (native) { event.preventDefault(); native.click(); }
+    else { var target = d.getElementById(part); if (target) { target.hidden = false; target.scrollIntoView({block:'start'}); } }
+    updatePath();
+  });
+  g.addEventListener('hashchange', schedule);
+  function ready() {
+    mount();
+    var view = d.getElementById('view');
+    if (view && g.MutationObserver) { observer = new g.MutationObserver(schedule); observer.observe(view, {childList:true, subtree:true}); }
+  }
+  if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', ready, {once:true}); else ready();
+})(typeof window !== 'undefined' ? window : globalThis);
+
 
 /* S17_OPTIONAL_ASSISTANT_START: isolated from case inference and evaluation */
 (function(){function startAssistant(){
@@ -234,7 +451,7 @@ const catalog=[
 {id:'m2',caseId:'s17-mudgas-context',name:'气测异常',terms:['气测','气峰','迟到','停泵'],intro:'看地面气峰怎样结合累计泵量和工况解释。可以改体积、停泵或上下文，比较候选解释。气峰不直接代表油气层。'},
 {id:'m3',caseId:'s17-fluorescence-review',name:'荧光判读',terms:['荧光','紫外','uv','曝光'],intro:'对比同一样品的白光/UV教学图，改变曝光并查看显示区域。荧光存在与油气来源是两个判断；矿物也会发光。'},
 {id:'m4',caseId:'s17-drilltime-boundaries',name:'钻时分段',terms:['钻时','钻速','分层','分段','工况'],intro:'对比工况变化与响应变化，观察平滑怎样吞掉薄层。曲线上标记的是候选响应界面；公开钻进数据没有地层真值精度。'},
-{id:'m5',caseId:'s17-evidence-report',name:'证据报告',terms:['报告','证据','导出','否定'],intro:'查看短记录怎样变成有来源的报告。点击句子回到证据，改写后重新复核，也能下载工作区、报告HTML和证据JSON。'}];
+{id:'m5',caseId:'s17-evidence-report',name:'综合解释与交接',terms:['报告','综合解释','井段','交接','证据','否定'],intro:'把岩屑、气测、荧光和钻时放回井段，检查资料覆盖和待核查问题。点击报告句子回到原文，修改后重新计算，保存当前记录，并继续学习测井分层。'}];
 for(const c of g.S17Expansion?.cases??[])catalog.push({id:c.sceneId,caseId:c.id,name:c.name,terms:[c.name,c.stageName,c.sceneId],intro:c.summary,directory:'expansion-cases'});
 if(standalone&&!catalog.some(c=>c.id===pageInfo.sceneId))catalog.push({id:pageInfo.sceneId,caseId:pageInfo.caseId,name:pageInfo.name??pageInfo.title??document.title,terms:[pageInfo.sceneId,pageInfo.name??''],intro:pageInfo.summary??'这里可以依次查看专业背景、逐步流程与交互演示。',directory:pageInfo.directory??'cases'});
 const root=document.createElement('aside');root.id='s17-assistant';root.dataset.speaking='false';

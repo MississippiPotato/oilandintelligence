@@ -1,0 +1,133 @@
+/* Course chrome only. Method, lithology, prediction and status colours keep their meaning. */
+:root {
+  --course-red: #B8242A;
+  --course-red-dark: #941E25;
+  --course-red-soft: #F8E9E6;
+  --course-paper: #F7F4EF;
+  --course-surface: #FFFDFA;
+  --course-ink: #292D34;
+  --course-muted: #68686F;
+  --course-line: #E2D9D0;
+  --course-font: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Segoe UI", system-ui, sans-serif;
+  --sans: var(--course-font);
+  --paper: var(--course-paper);
+  --paper-2: #F1ECE5;
+  --paper-3: #EAE2D9;
+  --card-soft: var(--course-surface);
+  --line: var(--course-line);
+  --line-2: #D9CDC2;
+  --line-3: #BFB0A3;
+  --ink: var(--course-ink);
+  --ink-2: #5E5C61;
+  --ink-3: #77727A;
+  /* jade is the original shell's primary UI token, not its CV/category or success token. */
+  --jade: var(--course-red);
+  --jade-d: var(--course-red-dark);
+  --jade-l: var(--course-red-soft);
+}
+body { background: var(--course-paper); color: var(--course-ink); font-family: var(--course-font); }
+body::before { background: radial-gradient(1000px 580px at 8% -16%, #F1E7DF 0%, transparent 68%), var(--course-paper); }
+body::after { opacity: .22; }
+::selection { background: #B8242A28; color: var(--course-ink); }
+button, input, select, textarea { font-family: inherit; }
+button, a, input, select, textarea, summary { -webkit-tap-highlight-color: #B8242A18; }
+:focus-visible { outline: 3px solid #B8242A88; outline-offset: 4px; }
+input[type="range"], input[type="checkbox"], input[type="radio"] { accent-color: var(--course-red); }
+
+/* Portal header, navigation and the original shell. */
+.hdr, .s17-overview-active .hdr { background: #F7F4EFF2; border-color: var(--course-line); }
+.brand-mark, .s17-overview-active .brand-mark { background: var(--course-red); box-shadow: 0 3px 12px #B8242A18; }
+.hdr .brand-txt b { color: var(--course-ink); }
+.hdr .nav a { font-size: 15px; }
+.hdr .nav a:hover { color: var(--course-red-dark); background: var(--course-red-soft); }
+.hdr .nav a.on { color: var(--course-red); }
+.hdr .nav a.on::after { background: var(--course-red); }
+.hdr .nav-add, .s17-overview-active .nav-add { background: var(--course-red); border-color: var(--course-red); color: #FFF; font-size: 14px; }
+.hdr .nav-add:hover, .btn.primary:hover { background: var(--course-red-dark); border-color: var(--course-red-dark); box-shadow: 0 4px 12px #B8242A28; }
+.btn { font-family: var(--course-font); }
+.btn.primary { background: var(--course-red); border-color: var(--course-red); }
+.sec-num, .hero-flag, .imp-flow b, .imp-ic { border-color: #B8242A35; }
+.hero h1 em, .hero-rule, .hero-stats::before { background-image: none; }
+.hero h1 em { color: var(--course-red-dark); }
+.hero-rule { background: var(--course-red); }
+.scene-row:hover .sr-name .arrow, .crumb a:hover, .rel-item:hover .nm { color: var(--course-red); }
+.tabs, .filters { background: #F7F4EFF5; }
+.s17-case-page #tabs { background: #F7F4EFF5; border-color: var(--course-line); }
+.s17-case-page #tabs .tab { font-family: var(--course-font); font-size: 16px; }
+.s17-case-page #tabs .tab.on, .xl-parent #tabs .tab.on, .fx-exhibit-parent #tabs button.on { background: var(--course-red); color: #FFF; border-color: var(--course-red); }
+.s17-case-page #tabs .tab.on .num { color: #FFE2E0; }
+.case-switch .chip.on { background: var(--course-red); border-color: var(--course-red); color: #FFF; }
+.case-switch { min-width: 0; }
+.case-switch .chip { min-width: 0; max-width: 100%; white-space: normal; overflow-wrap: anywhere; text-align: left; line-height: 1.65; }
+.sec4 .sn, .sr-content .sn, .sr-eyebrow, .sr-toc button span { color: var(--course-red); }
+.sec4 .sn span, .sr-content .sn span { color: var(--course-muted); }
+.sr-toc { background: #F0E8E1; border-color: var(--course-red); }
+.sr-toc :is(h2,p), .sr-toc button { color: var(--course-ink); }
+.sr-toc button:hover, .sr-toc button[aria-current="true"], .sr-toc button[aria-selected="true"] { background: var(--course-surface); color: var(--course-red-dark); }
+.sr-toc .sr-next-part { color: var(--course-red); border-color: var(--course-line); }
+.sr-lede, .sr-demo-bar, .sr-role, .sr-step-facts>div { background: #F0E9E2; color: #62575A; border-color: var(--course-line); }
+.sr-step, .sr-context, .sr-content .figure { background: var(--course-surface); border-color: var(--course-line); }
+.sr-context summary { color: var(--course-red-dark); }
+.sr-do, .sr-flow-intro p, .sr-demo-bar p, .sr-step-facts p, .sr-step-facts b { color: #625C61; }
+.sr-zoom, .sr-step-actions button, .sr-demo-bar button { background: var(--course-surface); color: var(--course-red-dark); border-color: #DCCAC3; }
+.sr-step-actions button:last-child, #s17-reader-dialog>button { background: var(--course-red); border-color: var(--course-red); color: #FFF; }
+#s17-reader-dialog { color: var(--course-ink); background: var(--course-surface); border-color: var(--course-line); }
+.s17-case-origin { color: var(--course-muted); border-color: var(--course-line); }
+
+/* Legacy portal support: these are navigation surfaces, never SVG/chart marks. */
+.s17-home, .s17-field, .sc-catalog, .s17-footer { color: var(--course-ink); }
+.s17-home :is(.s17-kicker,.s17-open), .s17-home a, .sc-heading h2, .s17-path b, .s17-scope b { color: var(--course-red-dark); }
+.s17-home .s17-primary, .s17-field .s17-primary { color: #FFF; background: var(--course-red); }
+.s17-home .s17-primary:hover, .s17-field .s17-primary:hover { background: var(--course-red-dark); }
+.s17-home :is(.s17-story,.s17-bottom), .s17-scope, .s17-footer, .s17-field-note, .s17-field-lag, .s17-field-caveat { background: #F0EAE2; border-color: var(--course-line); }
+.s17-home :is(h1,h1 span), .s17-hero .s17-lead, .s17-home .s17-lead { color: var(--course-ink); }
+.s17-home :is(.s17-offline,.s17-try,.s17-method,.s17-card p,.s17-section-head p,.s17-bottom p,.s17-instructions), .s17-footer :is(p,a,small) { color: var(--course-muted); }
+.s17-card, .s17-reference-row>article { background: var(--course-surface); border-color: var(--course-line); }
+.s17-home .s17-card { --case-accent: var(--course-red); border-top-color: var(--course-red); }
+.s17-card-top>span { color: var(--course-red-dark); }
+.s17-home :is(.s17-card button,.s17-guide button), .s17-reference-row button { background: var(--course-surface); color: var(--course-red-dark); border-color: #DCCAC3; }
+.sc-browser { background: var(--course-surface); border-color: var(--course-line); }
+.sc-stages button, .sc-methods button, .s17-field-picks button { color: #665C60; border-color: var(--course-line); background: var(--course-surface); }
+.sc-stages button[aria-pressed="true"], .sc-methods button[aria-pressed="true"], .s17-field-picks button[aria-pressed="true"] { color: #FFF; background: var(--course-red); border-color: var(--course-red); }
+.sc-stages button[aria-pressed="true"] :is(small,b) { color: #FFE2E0; }
+.sc-reset, .sc-result a, .sc-result-open, .s17-reference-row a { color: var(--course-red); }
+.sc-result, .sc-tools input { border-color: var(--course-line); color: var(--course-ink); }
+.s17-field :is(.s17-field-head p,.s17-field-note p,.s17-field-note>span,.s17-field-sources), .s17-field-sources summary { color: var(--course-muted); }
+
+/* All standalone lesson families share font, paper, navigation and button feedback. */
+.fx-exhibit, .m2-exhibit, .xl-lesson, .xl-parent { --fx-red: var(--course-red); --m2-red: var(--course-red); --xl-red: var(--course-red); --fx-paper: var(--course-paper); --m2-paper: var(--course-paper); --xl-paper: var(--course-paper); font-family: var(--course-font); }
+.fx-exhibit .fx-main, .m2-exhibit main, .xl-lesson>main { color: var(--course-ink); }
+.fx-exhibit .fx-brand, .m2-exhibit .m2-brand { color: var(--course-red); }
+.fx-exhibit button:focus-visible, .m2-exhibit button:focus-visible, .xl-lesson :focus-visible, .xl-parent :focus-visible { outline: 3px solid #B8242A88; outline-offset: 4px; }
+.xl-lesson>header, .xl-lesson>footer { background: var(--course-surface); border-color: var(--course-line); color: var(--course-ink); }
+.xl-lesson>header p { color: #625F66; }
+.xl-lesson :is(h1,h2,h3) { color: var(--course-ink); }
+.xl-lesson :is(.controls,.control-grid,.note,.data-note) { background: #F0EAE3; color: #625C61; border-color: var(--course-line); }
+.xl-lesson :is(.intro,figcaption,footer,small,.fine,.tag) { color: var(--course-muted); }
+.xl-lesson button { border-color: #DCCFC6; }
+.xl-lesson button:not(:disabled):hover { background: #F9EAE6; border-color: var(--course-red); }
+.xl-lesson :is(button.primary,button.active,#run,button[aria-pressed="true"],button[aria-selected="true"]) { background: var(--course-red); border-color: var(--course-red); color: #FFF; }
+.xl-lesson :is(button.primary,button.active,#run,button[aria-pressed="true"],button[aria-selected="true"]):not(:disabled):hover { background: var(--course-red-dark); color: #FFF; }
+.xl-lesson input { accent-color: var(--course-red); }
+.xl-lesson :is(select,textarea,input[type="number"]) { border-color: #DCCFC6; }
+.xl-lesson a, .xl-parent .xl-kicker, .xl-lesson .xl-kicker, .xl-reading-path span { color: var(--course-red); }
+.xl-lesson .cards b { color: var(--course-ink); }
+.xl-lesson #status:not([data-state]), .xl-lesson #status[data-state="idle"], .xl-lesson #status[data-state="running"] { border-left-color: var(--course-red); background: #F5EAE4; color: #62575B; }
+.xl-lesson #status:is([data-state="ready"],[data-state="complete"]) { border-color: #3F856050; border-left-color: #3F8560; background: #EAF2EA; color: #396649; }
+.xl-lesson #status[data-state="stale"] { border-color: #D6B779; border-left-color: #A97A1C; background: #F9EFD7; color: #8A661E; }
+.xl-lesson #status[data-state="error"] { border-color: #D8ABA5; border-left-color: #B05A51; background: #F9E9E5; color: #934A43; }
+.lesson-step-number { color: var(--course-red-dark); background: #F3E2DB; }
+
+/* Keep semantic distinctions explicit even where old chrome used the jade token. */
+.badge-ready { color: var(--ok, #3F8560); background: var(--ok-bg, #E7F3EA); border-color: #3F856040; }
+.badge-ready::before { background: var(--ok, #3F8560); }
+.dtag[data-d="低"] { color: var(--ok, #3F8560); }
+
+@media (max-width: 700px) {
+  .hdr .nav a { font-size: 14px; padding: 8px 10px; }
+  .s17-case-page #tabs .tab { font-size: 15px; padding: 11px 5px; }
+  .s17-case-page #tabs .tab .num { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

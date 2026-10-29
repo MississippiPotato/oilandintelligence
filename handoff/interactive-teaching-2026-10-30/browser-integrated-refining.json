@@ -1,0 +1,2539 @@
+{
+  "checkedAt": "2026-10-29T18:27:17.849Z",
+  "kind": "actual_final_Chrome_built_expansion_background_method_and_mobile_live_sync",
+  "session": "course-refine",
+  "cases": [
+    {
+      "scene": "r1",
+      "id": "s17x-r1-distillation-optimization",
+      "version": "1.2.0",
+      "completed": true
+    },
+    {
+      "scene": "r2",
+      "id": "s17x-r2-fcc-product-yields",
+      "version": "1.2.0",
+      "completed": true
+    },
+    {
+      "scene": "r3",
+      "id": "s17x-r3-maintenance-trend",
+      "version": "1.2.0",
+      "completed": true,
+      "mobile": {
+        "part": "workflow",
+        "version": "1.2.0",
+        "native": {
+          "scene": "r3",
+          "status": "complete",
+          "params": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3
+          }
+        },
+        "expected": {
+          "params": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3
+          },
+          "threshold": 0.65,
+          "score": 1.1506399905712916,
+          "rms": 4.022291447712575,
+          "firstAlarm": 60
+        },
+        "metrics": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "hostWidth": 332,
+          "svg": {
+            "width": 760,
+            "height": 610,
+            "viewBox": {
+              "width": 760,
+              "height": 610
+            },
+            "renderRatio": 1.2459016393442623,
+            "viewBoxRatio": 1.2459016393442623,
+            "maxHeight": "none"
+          },
+          "textCount": 24,
+          "minEffectiveFontPx": 16,
+          "maxScaleMismatch": 0,
+          "textSamples": [
+            {
+              "text": "关系偏离分数 / 无量纲；阈值由45条正常验证记录确定",
+              "fontCssPx": 16,
+              "scaleX": 1,
+              "scaleY": 1,
+              "effectiveFontPx": 16
+            },
+            {
+              "text": "0.0",
+              "fontCssPx": 16,
+              "scaleX": 1,
+              "scaleY": 1,
+              "effectiveFontPx": 16
+            },
+            {
+              "text": "0.8",
+              "fontCssPx": 16,
+              "scaleX": 1,
+              "scaleY": 1,
+              "effectiveFontPx": 16
+            }
+          ],
+          "scrollables": [
+            {
+              "className": "ct-chart",
+              "clientWidth": 302,
+              "scrollWidth": 760
+            }
+          ]
+        },
+        "completed": true
+      }
+    },
+    {
+      "scene": "r4",
+      "id": "s17x-r4-lab-audit",
+      "version": "1.2.0",
+      "completed": true
+    },
+    {
+      "scene": "r5",
+      "id": "s17x-r5-quality-softsensor",
+      "version": "1.2.0",
+      "completed": true,
+      "mobile": {
+        "part": "background",
+        "version": "1.2.0",
+        "native": {
+          "scene": "r5",
+          "status": "complete",
+          "params": {
+            "seed": 1705,
+            "delay": 40,
+            "alignment": false,
+            "scenario": "normal"
+          }
+        },
+        "expected": {
+          "params": {
+            "seed": 1705,
+            "delay": 40,
+            "alignment": false,
+            "scenario": "normal"
+          },
+          "sourceMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "lastLabSample": 941,
+          "lastLabRelease": 981,
+          "lastLab": 818.2277985748941
+        },
+        "metrics": {
+          "viewport": 390,
+          "documentWidth": 390,
+          "bodyWidth": 390,
+          "hostWidth": 332,
+          "svg": {
+            "width": 760,
+            "height": 538,
+            "viewBox": {
+              "width": 760,
+              "height": 538
+            },
+            "renderRatio": 1.412639405204461,
+            "viewBoxRatio": 1.412639405204461,
+            "maxHeight": "none"
+          },
+          "textCount": 14,
+          "minEffectiveFontPx": 16,
+          "maxScaleMismatch": 0,
+          "textSamples": [
+            {
+              "text": "BATCH-17：过程来源、质量时刻与化验到达各保留自己的时间",
+              "fontCssPx": 16,
+              "scaleX": 1,
+              "scaleY": 1,
+              "effectiveFontPx": 16
+            },
+            {
+              "text": "-30",
+              "fontCssPx": 16,
+              "scaleX": 1,
+              "scaleY": 1,
+              "effectiveFontPx": 16
+            },
+            {
+              "text": "0",
+              "fontCssPx": 16,
+              "scaleX": 1,
+              "scaleY": 1,
+              "effectiveFontPx": 16
+            }
+          ],
+          "scrollables": [
+            {
+              "className": "ct-chart",
+              "clientWidth": 302,
+              "scrollWidth": 760
+            }
+          ]
+        },
+        "completed": true
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "r1 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "r1/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "temperature": 365,
+            "reflux": 2,
+            "pressure": 8
+          },
+          "outputs": [
+            65.99851851692785,
+            1.599980932667391,
+            341.9983033447982
+          ],
+          "baselineOutputs": [
+            65.99851851692785,
+            1.599980932667391,
+            341.9983033447982
+          ],
+          "modelSource": "本例112条固定训练工况重新拟合"
+        }
+      }
+    },
+    {
+      "name": "r1/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "365",
+          "min": "350",
+          "max": "380"
+        },
+        "beforeGraphic": "b9b267e3",
+        "afterGraphic": "9877da0c",
+        "afterState": {
+          "inputs": {
+            "temperature": 380,
+            "reflux": 2,
+            "pressure": 8
+          },
+          "outputs": [
+            69.0052065482181,
+            1.790169204032666,
+            347.0059958489974
+          ],
+          "baselineOutputs": [
+            65.99851851692785,
+            1.599980932667391,
+            341.9983033447982
+          ],
+          "modelSource": "本例112条固定训练工况重新拟合"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r1/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r1/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "pressure": 8,
+            "energyLimit": 1.85,
+            "endpointLimit": 348
+          },
+          "candidateCount": 961,
+          "feasibleCount": 759,
+          "chosen": {
+            "x": {
+              "temperature": 376,
+              "reflux": 2.28,
+              "pressure": 8
+            },
+            "y": [
+              69.97812007240611,
+              1.8409635903055157,
+              342.86604464447646
+            ],
+            "ok": true
+          },
+          "baseline": {
+            "x": {
+              "temperature": 365,
+              "reflux": 2,
+              "pressure": 8
+            },
+            "y": [
+              65.99851851692785,
+              1.599980932667391,
+              341.9983033447982
+            ],
+            "ok": true
+          },
+          "modelSource": "本例112条固定训练工况重新拟合"
+        }
+      }
+    },
+    {
+      "name": "r1/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "8",
+          "min": "5",
+          "max": "11"
+        },
+        "beforeGraphic": "27e1ad8e",
+        "afterGraphic": "f99b7f21",
+        "afterState": {
+          "inputs": {
+            "pressure": 11,
+            "energyLimit": 1.85,
+            "endpointLimit": 348
+          },
+          "candidateCount": 961,
+          "feasibleCount": 740,
+          "chosen": {
+            "x": {
+              "temperature": 378,
+              "reflux": 2.48,
+              "pressure": 11
+            },
+            "y": [
+              69.00447484517869,
+              1.840882957557551,
+              343.53028655628884
+            ],
+            "ok": true
+          },
+          "baseline": {
+            "x": {
+              "temperature": 365,
+              "reflux": 2,
+              "pressure": 11
+            },
+            "y": [
+              63.99737216894635,
+              1.4803631716416157,
+              343.9969689667734
+            ],
+            "ok": true
+          },
+          "modelSource": "本例112条固定训练工况重新拟合"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r1/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r1 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "r1 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r2 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "r2/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "temperature": 525,
+            "ratio": 6,
+            "density": 920
+          },
+          "productMassPer100kg": [
+            4.000170355033899,
+            16.00380153954857,
+            46.00786894614509,
+            19.998627995224798,
+            7.993494818806098,
+            5.996036345241556
+          ],
+          "total": 100,
+          "temperatureScan": [
+            {
+              "temperature": 500,
+              "gasoline": 42.732886425634184,
+              "dryGas": 3.0467812178450933,
+              "slurry": 10.704852692148206
+            },
+            {
+              "temperature": 502,
+              "gasoline": 43.07033185130464,
+              "dryGas": 3.1020720826534554,
+              "slurry": 10.47667284543617
+            },
+            {
+              "temperature": 504,
+              "gasoline": 43.394656090187326,
+              "dryGas": 3.16101168940386,
+              "slurry": 10.250453210349296
+            },
+            {
+              "temperature": 506,
+              "gasoline": 43.705859142282264,
+              "dryGas": 3.223600038096307,
+              "slurry": 10.02619378688758
+            },
+            {
+              "temperature": 508,
+              "gasoline": 44.00394100758947,
+              "dryGas": 3.289837128730796,
+              "slurry": 9.803894575051025
+            },
+            {
+              "temperature": 510,
+              "gasoline": 44.2889016861089,
+              "dryGas": 3.3597229613073263,
+              "slurry": 9.583555574839629
+            },
+            {
+              "temperature": 512,
+              "gasoline": 44.560741177840576,
+              "dryGas": 3.4332575358258994,
+              "slurry": 9.36517678625339
+            },
+            {
+              "temperature": 514,
+              "gasoline": 44.81945948278451,
+              "dryGas": 3.5104408522865143,
+              "slurry": 9.14875820929231
+            },
+            {
+              "temperature": 516,
+              "gasoline": 45.0650566009407,
+              "dryGas": 3.5912729106891716,
+              "slurry": 8.934299843956392
+            },
+            {
+              "temperature": 518,
+              "gasoline": 45.29753253230912,
+              "dryGas": 3.6757537110338703,
+              "slurry": 8.72180169024563
+            },
+            {
+              "temperature": 520,
+              "gasoline": 45.516887276889804,
+              "dryGas": 3.7638832533206115,
+              "slurry": 8.51126374816003
+            },
+            {
+              "temperature": 522,
+              "gasoline": 45.72312083468272,
+              "dryGas": 3.855661537549395,
+              "slurry": 8.302686017699584
+            },
+            {
+              "temperature": 524,
+              "gasoline": 45.9162332056879,
+              "dryGas": 3.95108856372022,
+              "slurry": 8.096068498864303
+            },
+            {
+              "temperature": 526,
+              "gasoline": 46.09622438990533,
+              "dryGas": 4.050164331833088,
+              "slurry": 7.891411191654179
+            },
+            {
+              "temperature": 528,
+              "gasoline": 46.263094387334995,
+              "dryGas": 4.1528888418879975,
+              "slurry": 7.688714096069215
+            },
+            {
+              "temperature": 530,
+              "gasoline": 46.41684319797692,
+              "dryGas": 4.259262093884949,
+              "slurry": 7.48797721210941
+            },
+            {
+              "temperature": 532,
+              "gasoline": 46.55747082183109,
+              "dryGas": 4.369284087823942,
+              "slurry": 7.289200539774764
+            },
+            {
+              "temperature": 534,
+              "gasoline": 46.68497725889749,
+              "dryGas": 4.482954823704977,
+              "slurry": 7.092384079065277
+            },
+            {
+              "temperature": 536,
+              "gasoline": 46.799362509176156,
+              "dryGas": 4.600274301528056,
+              "slurry": 6.89752782998095
+            },
+            {
+              "temperature": 538,
+              "gasoline": 46.90062657266708,
+              "dryGas": 4.721242521293178,
+              "slurry": 6.7046317925217815
+            },
+            {
+              "temperature": 540,
+              "gasoline": 46.98876944937023,
+              "dryGas": 4.845859483000339,
+              "slurry": 6.513695966687773
+            },
+            {
+              "temperature": 542,
+              "gasoline": 47.06379113928564,
+              "dryGas": 4.974125186649541,
+              "slurry": 6.324720352478921
+            },
+            {
+              "temperature": 544,
+              "gasoline": 47.1256916424133,
+              "dryGas": 5.106039632240788,
+              "slurry": 6.137704949895231
+            },
+            {
+              "temperature": 546,
+              "gasoline": 47.1744709587532,
+              "dryGas": 5.241602819774075,
+              "slurry": 5.9526497589366985
+            },
+            {
+              "temperature": 548,
+              "gasoline": 47.21012908830535,
+              "dryGas": 5.380814749249405,
+              "slurry": 5.769554779603327
+            },
+            {
+              "temperature": 550,
+              "gasoline": 47.23266603106974,
+              "dryGas": 5.523675420666776,
+              "slurry": 5.588420011895112
+            }
+          ],
+          "modelSource": "本例126条固定训练批次重新拟合"
+        }
+      }
+    },
+    {
+      "name": "r2/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "525",
+          "min": "500",
+          "max": "550"
+        },
+        "beforeGraphic": "3e5458e4",
+        "afterGraphic": "1362ee88",
+        "afterState": {
+          "inputs": {
+            "temperature": 550,
+            "ratio": 6,
+            "density": 920
+          },
+          "productMassPer100kg": [
+            5.523675420666776,
+            17.929617126867125,
+            47.23266603106974,
+            16.958774303125246,
+            5.588420011895112,
+            6.76684710637599
+          ],
+          "total": 99.99999999999999,
+          "temperatureScan": [
+            {
+              "temperature": 500,
+              "gasoline": 42.732886425634184,
+              "dryGas": 3.0467812178450933,
+              "slurry": 10.704852692148206
+            },
+            {
+              "temperature": 502,
+              "gasoline": 43.07033185130464,
+              "dryGas": 3.1020720826534554,
+              "slurry": 10.47667284543617
+            },
+            {
+              "temperature": 504,
+              "gasoline": 43.394656090187326,
+              "dryGas": 3.16101168940386,
+              "slurry": 10.250453210349296
+            },
+            {
+              "temperature": 506,
+              "gasoline": 43.705859142282264,
+              "dryGas": 3.223600038096307,
+              "slurry": 10.02619378688758
+            },
+            {
+              "temperature": 508,
+              "gasoline": 44.00394100758947,
+              "dryGas": 3.289837128730796,
+              "slurry": 9.803894575051025
+            },
+            {
+              "temperature": 510,
+              "gasoline": 44.2889016861089,
+              "dryGas": 3.3597229613073263,
+              "slurry": 9.583555574839629
+            },
+            {
+              "temperature": 512,
+              "gasoline": 44.560741177840576,
+              "dryGas": 3.4332575358258994,
+              "slurry": 9.36517678625339
+            },
+            {
+              "temperature": 514,
+              "gasoline": 44.81945948278451,
+              "dryGas": 3.5104408522865143,
+              "slurry": 9.14875820929231
+            },
+            {
+              "temperature": 516,
+              "gasoline": 45.0650566009407,
+              "dryGas": 3.5912729106891716,
+              "slurry": 8.934299843956392
+            },
+            {
+              "temperature": 518,
+              "gasoline": 45.29753253230912,
+              "dryGas": 3.6757537110338703,
+              "slurry": 8.72180169024563
+            },
+            {
+              "temperature": 520,
+              "gasoline": 45.516887276889804,
+              "dryGas": 3.7638832533206115,
+              "slurry": 8.51126374816003
+            },
+            {
+              "temperature": 522,
+              "gasoline": 45.72312083468272,
+              "dryGas": 3.855661537549395,
+              "slurry": 8.302686017699584
+            },
+            {
+              "temperature": 524,
+              "gasoline": 45.9162332056879,
+              "dryGas": 3.95108856372022,
+              "slurry": 8.096068498864303
+            },
+            {
+              "temperature": 526,
+              "gasoline": 46.09622438990533,
+              "dryGas": 4.050164331833088,
+              "slurry": 7.891411191654179
+            },
+            {
+              "temperature": 528,
+              "gasoline": 46.263094387334995,
+              "dryGas": 4.1528888418879975,
+              "slurry": 7.688714096069215
+            },
+            {
+              "temperature": 530,
+              "gasoline": 46.41684319797692,
+              "dryGas": 4.259262093884949,
+              "slurry": 7.48797721210941
+            },
+            {
+              "temperature": 532,
+              "gasoline": 46.55747082183109,
+              "dryGas": 4.369284087823942,
+              "slurry": 7.289200539774764
+            },
+            {
+              "temperature": 534,
+              "gasoline": 46.68497725889749,
+              "dryGas": 4.482954823704977,
+              "slurry": 7.092384079065277
+            },
+            {
+              "temperature": 536,
+              "gasoline": 46.799362509176156,
+              "dryGas": 4.600274301528056,
+              "slurry": 6.89752782998095
+            },
+            {
+              "temperature": 538,
+              "gasoline": 46.90062657266708,
+              "dryGas": 4.721242521293178,
+              "slurry": 6.7046317925217815
+            },
+            {
+              "temperature": 540,
+              "gasoline": 46.98876944937023,
+              "dryGas": 4.845859483000339,
+              "slurry": 6.513695966687773
+            },
+            {
+              "temperature": 542,
+              "gasoline": 47.06379113928564,
+              "dryGas": 4.974125186649541,
+              "slurry": 6.324720352478921
+            },
+            {
+              "temperature": 544,
+              "gasoline": 47.1256916424133,
+              "dryGas": 5.106039632240788,
+              "slurry": 6.137704949895231
+            },
+            {
+              "temperature": 546,
+              "gasoline": 47.1744709587532,
+              "dryGas": 5.241602819774075,
+              "slurry": 5.9526497589366985
+            },
+            {
+              "temperature": 548,
+              "gasoline": 47.21012908830535,
+              "dryGas": 5.380814749249405,
+              "slurry": 5.769554779603327
+            },
+            {
+              "temperature": 550,
+              "gasoline": 47.23266603106974,
+              "dryGas": 5.523675420666776,
+              "slurry": 5.588420011895112
+            }
+          ],
+          "modelSource": "本例126条固定训练批次重新拟合"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r2/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r2/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "temperature": 525,
+            "ratio": 6,
+            "density": 920,
+            "component": 4,
+            "offset": -10
+          },
+          "rawFitted": [
+            4.000170355033895,
+            16.00380153954855,
+            46.007868946145045,
+            19.998627995224776,
+            7.99349481880609,
+            5.99603634524155
+          ],
+          "rawWithLocalOffset": [
+            4.000170355033895,
+            16.00380153954855,
+            46.007868946145045,
+            19.998627995224776,
+            -2.0065051811939103,
+            5.99603634524155
+          ],
+          "clipped": [
+            4.000170355033895,
+            16.00380153954855,
+            46.007868946145045,
+            19.998627995224776,
+            0,
+            5.99603634524155
+          ],
+          "clippedSum": 92.00650518119382,
+          "normalizationFactor": 1.0868796701175,
+          "composition": [
+            4.347703835893044,
+            17.39420653793047,
+            50.0050174229953,
+            21.736102198252507,
+            0,
+            6.516970004928678
+          ],
+          "closedSum": 100,
+          "modelSource": "本例126条固定训练批次重新拟合"
+        }
+      }
+    },
+    {
+      "name": "r2/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "525",
+          "min": "500",
+          "max": "550"
+        },
+        "beforeGraphic": "ecc1eb8e",
+        "afterGraphic": "d01a4b16",
+        "afterState": {
+          "inputs": {
+            "temperature": 550,
+            "ratio": 6,
+            "density": 920,
+            "component": 4,
+            "offset": -10
+          },
+          "rawFitted": [
+            5.523675420666774,
+            17.929617126867118,
+            47.23266603106972,
+            16.95877430312524,
+            5.58842001189511,
+            6.766847106375987
+          ],
+          "rawWithLocalOffset": [
+            5.523675420666774,
+            17.929617126867118,
+            47.23266603106972,
+            16.95877430312524,
+            -4.41157998810489,
+            6.766847106375987
+          ],
+          "clipped": [
+            5.523675420666774,
+            17.929617126867118,
+            47.23266603106972,
+            16.95877430312524,
+            0,
+            6.766847106375987
+          ],
+          "clippedSum": 94.41157998810485,
+          "normalizationFactor": 1.0591921034750107,
+          "composition": [
+            5.850633387729255,
+            18.99090887910796,
+            50.02846688618142,
+            17.962599826485178,
+            0,
+            7.167391020496172
+          ],
+          "closedSum": 99.99999999999997,
+          "modelSource": "本例126条固定训练批次重新拟合"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r2/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r2 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "r2 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r3 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "r3/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "load": 80,
+            "residual": 0.8
+          },
+          "expected": {
+            "rms": 2.7926179278377488,
+            "temperature": 62.20659535567903,
+            "kurtosis": 3.2107218203149923
+          },
+          "observedRMS": 3.5926179278377486,
+          "residualRMS": 0.8,
+          "normalTrainingCount": 90,
+          "modelSource": "本例固定正常训练与验证记录"
+        }
+      }
+    },
+    {
+      "name": "r3/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "80",
+          "min": "35",
+          "max": "95"
+        },
+        "beforeGraphic": "53af8e82",
+        "afterGraphic": "d9910f2a",
+        "afterState": {
+          "inputs": {
+            "load": 95,
+            "residual": 0.8
+          },
+          "expected": {
+            "rms": 3.107857109759493,
+            "temperature": 65.81911315867929,
+            "kurtosis": 3.2562407462000937
+          },
+          "observedRMS": 3.907857109759493,
+          "residualRMS": 0.8,
+          "normalTrainingCount": 90,
+          "modelSource": "本例固定正常训练与验证记录"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r3/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r3/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "load": 80,
+            "severity": 1,
+            "noise": 1,
+            "hour": 60
+          },
+          "threshold": 0.65,
+          "selectedObservation": {
+            "hour": 60,
+            "load": 0.9313199967484636,
+            "rms": 3.952369142409298,
+            "temperature": 67.61938248117721,
+            "kurtosis": 3.5656601969023165,
+            "expected": {
+              "rms": 3.068599316804094,
+              "temperature": 65.36923419663744,
+              "kurtosis": 3.2505721216431596
+            },
+            "score": 1.7687445081944384,
+            "streak": 14,
+            "flag": true
+          },
+          "firstAlarm": 49,
+          "flagHours": 47,
+          "spectrum": [
+            {
+              "hz": 0,
+              "amplitude": 0.001047909348272237
+            },
+            {
+              "hz": 4,
+              "amplitude": 0.005784793567617132
+            },
+            {
+              "hz": 8,
+              "amplitude": 0.013921968302246991
+            },
+            {
+              "hz": 12,
+              "amplitude": 0.0061667967202794815
+            },
+            {
+              "hz": 16,
+              "amplitude": 0.003767628145676963
+            },
+            {
+              "hz": 20,
+              "amplitude": 0.0032764242188667515
+            },
+            {
+              "hz": 24,
+              "amplitude": 0.006435517177197761
+            },
+            {
+              "hz": 28,
+              "amplitude": 0.012872086529937717
+            },
+            {
+              "hz": 32,
+              "amplitude": 1.939658528753662
+            },
+            {
+              "hz": 36,
+              "amplitude": 0.015307315349559907
+            },
+            {
+              "hz": 40,
+              "amplitude": 0.002351148282196726
+            },
+            {
+              "hz": 44,
+              "amplitude": 0.013135078580366409
+            },
+            {
+              "hz": 48,
+              "amplitude": 0.012863723659059639
+            },
+            {
+              "hz": 52,
+              "amplitude": 0.0018116040706528125
+            },
+            {
+              "hz": 56,
+              "amplitude": 0.009160176467958712
+            },
+            {
+              "hz": 60,
+              "amplitude": 0.003274541500223606
+            },
+            {
+              "hz": 64,
+              "amplitude": 0.009453177410582181
+            },
+            {
+              "hz": 68,
+              "amplitude": 0.006859729686217522
+            },
+            {
+              "hz": 72,
+              "amplitude": 0.007772823619819812
+            },
+            {
+              "hz": 76,
+              "amplitude": 0.014819193476407895
+            },
+            {
+              "hz": 80,
+              "amplitude": 0.012887951639045481
+            },
+            {
+              "hz": 84,
+              "amplitude": 0.017186499045189943
+            },
+            {
+              "hz": 88,
+              "amplitude": 0.004398832562130326
+            },
+            {
+              "hz": 92,
+              "amplitude": 0.00179973931882152
+            },
+            {
+              "hz": 96,
+              "amplitude": 0.0030471100446783934
+            },
+            {
+              "hz": 100,
+              "amplitude": 0.6137707148138323
+            },
+            {
+              "hz": 104,
+              "amplitude": 0.005102944393634456
+            },
+            {
+              "hz": 108,
+              "amplitude": 0.005649007368565591
+            },
+            {
+              "hz": 112,
+              "amplitude": 0.010375274036016367
+            },
+            {
+              "hz": 116,
+              "amplitude": 0.0022658360849252598
+            },
+            {
+              "hz": 120,
+              "amplitude": 0.010109553549166345
+            },
+            {
+              "hz": 124,
+              "amplitude": 0.012666154542609153
+            },
+            {
+              "hz": 128,
+              "amplitude": 0.010757159700110376
+            },
+            {
+              "hz": 132,
+              "amplitude": 0.016034172366441647
+            },
+            {
+              "hz": 136,
+              "amplitude": 0.0064526156251591285
+            },
+            {
+              "hz": 140,
+              "amplitude": 0.004052975885175867
+            },
+            {
+              "hz": 144,
+              "amplitude": 0.008083917234040295
+            },
+            {
+              "hz": 148,
+              "amplitude": 0.00839104670493445
+            },
+            {
+              "hz": 152,
+              "amplitude": 0.007871926487438046
+            },
+            {
+              "hz": 156,
+              "amplitude": 0.009208725380909838
+            },
+            {
+              "hz": 160,
+              "amplitude": 0.008400577136164296
+            },
+            {
+              "hz": 164,
+              "amplitude": 0.008608475499234615
+            },
+            {
+              "hz": 168,
+              "amplitude": 0.00428429627395332
+            },
+            {
+              "hz": 172,
+              "amplitude": 0.003548884061496207
+            },
+            {
+              "hz": 176,
+              "amplitude": 0.005963201688602523
+            },
+            {
+              "hz": 180,
+              "amplitude": 0.0015312017098399234
+            },
+            {
+              "hz": 184,
+              "amplitude": 0.003917963930772493
+            },
+            {
+              "hz": 188,
+              "amplitude": 0.004384660883920531
+            },
+            {
+              "hz": 192,
+              "amplitude": 0.005847373655843014
+            }
+          ],
+          "modelSource": "本例固定正常训练与验证记录"
+        }
+      }
+    },
+    {
+      "name": "r3/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "80",
+          "min": "35",
+          "max": "95"
+        },
+        "beforeGraphic": "218aa433",
+        "afterGraphic": "45c6c827",
+        "afterState": {
+          "inputs": {
+            "load": 95,
+            "severity": 1,
+            "noise": 1,
+            "hour": 60
+          },
+          "threshold": 0.65,
+          "selectedObservation": {
+            "hour": 60,
+            "load": 1,
+            "rms": 4.096597149237525,
+            "temperature": 69.26770255921409,
+            "kurtosis": 3.5828301977152006,
+            "expected": {
+              "rms": 3.2129368370667413,
+              "temperature": 67.02328575967937,
+              "kurtosis": 3.2714137214951275
+            },
+            "score": 1.7630910436578369,
+            "streak": 14,
+            "flag": true
+          },
+          "firstAlarm": 49,
+          "flagHours": 47,
+          "spectrum": [
+            {
+              "hz": 0,
+              "amplitude": 0.0010479093482721712
+            },
+            {
+              "hz": 4,
+              "amplitude": 0.005784793567617219
+            },
+            {
+              "hz": 8,
+              "amplitude": 0.013921968302247019
+            },
+            {
+              "hz": 12,
+              "amplitude": 0.006166796720279461
+            },
+            {
+              "hz": 16,
+              "amplitude": 0.0037676281456769625
+            },
+            {
+              "hz": 20,
+              "amplitude": 0.003276424218866765
+            },
+            {
+              "hz": 24,
+              "amplitude": 0.006435517177197807
+            },
+            {
+              "hz": 28,
+              "amplitude": 0.01287208652993742
+            },
+            {
+              "hz": 32,
+              "amplitude": 2.00833786874387
+            },
+            {
+              "hz": 36,
+              "amplitude": 0.015307315349560058
+            },
+            {
+              "hz": 40,
+              "amplitude": 0.002351148282196578
+            },
+            {
+              "hz": 44,
+              "amplitude": 0.013135078580366395
+            },
+            {
+              "hz": 48,
+              "amplitude": 0.01286372365905949
+            },
+            {
+              "hz": 52,
+              "amplitude": 0.0018116040706527773
+            },
+            {
+              "hz": 56,
+              "amplitude": 0.009160176467958707
+            },
+            {
+              "hz": 60,
+              "amplitude": 0.0032745415002236153
+            },
+            {
+              "hz": 64,
+              "amplitude": 0.009453177410582207
+            },
+            {
+              "hz": 68,
+              "amplitude": 0.006859729686217505
+            },
+            {
+              "hz": 72,
+              "amplitude": 0.00777282361981984
+            },
+            {
+              "hz": 76,
+              "amplitude": 0.014819193476407925
+            },
+            {
+              "hz": 80,
+              "amplitude": 0.012887951639045516
+            },
+            {
+              "hz": 84,
+              "amplitude": 0.01718649904518991
+            },
+            {
+              "hz": 88,
+              "amplitude": 0.004398832562130323
+            },
+            {
+              "hz": 92,
+              "amplitude": 0.0017997393188216254
+            },
+            {
+              "hz": 96,
+              "amplitude": 0.0030471100446784155
+            },
+            {
+              "hz": 100,
+              "amplitude": 0.6136940708167716
+            },
+            {
+              "hz": 104,
+              "amplitude": 0.005102944393634568
+            },
+            {
+              "hz": 108,
+              "amplitude": 0.005649007368565578
+            },
+            {
+              "hz": 112,
+              "amplitude": 0.010375274036016388
+            },
+            {
+              "hz": 116,
+              "amplitude": 0.0022658360849252277
+            },
+            {
+              "hz": 120,
+              "amplitude": 0.010109553549166298
+            },
+            {
+              "hz": 124,
+              "amplitude": 0.012666154542609127
+            },
+            {
+              "hz": 128,
+              "amplitude": 0.0107571597001104
+            },
+            {
+              "hz": 132,
+              "amplitude": 0.01603417236644171
+            },
+            {
+              "hz": 136,
+              "amplitude": 0.006452615625159145
+            },
+            {
+              "hz": 140,
+              "amplitude": 0.004052975885175835
+            },
+            {
+              "hz": 144,
+              "amplitude": 0.008083917234040299
+            },
+            {
+              "hz": 148,
+              "amplitude": 0.008391046704934443
+            },
+            {
+              "hz": 152,
+              "amplitude": 0.007871926487438024
+            },
+            {
+              "hz": 156,
+              "amplitude": 0.009208725380909832
+            },
+            {
+              "hz": 160,
+              "amplitude": 0.008400577136164298
+            },
+            {
+              "hz": 164,
+              "amplitude": 0.008608475499234563
+            },
+            {
+              "hz": 168,
+              "amplitude": 0.00428429627395325
+            },
+            {
+              "hz": 172,
+              "amplitude": 0.003548884061496197
+            },
+            {
+              "hz": 176,
+              "amplitude": 0.005963201688602539
+            },
+            {
+              "hz": 180,
+              "amplitude": 0.0015312017098399271
+            },
+            {
+              "hz": 184,
+              "amplitude": 0.003917963930772551
+            },
+            {
+              "hz": 188,
+              "amplitude": 0.004384660883920558
+            },
+            {
+              "hz": 192,
+              "amplitude": 0.005847373655843056
+            }
+          ],
+          "modelSource": "本例固定正常训练与验证记录"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r3/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r3 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "r3 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r4 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "r4/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "raw": 0.84,
+            "unit": "kg/L"
+          },
+          "conversionFactor": 1000,
+          "normalizedDensity": 840,
+          "range": [
+            780,
+            900
+          ],
+          "rangePass": true,
+          "massAtOneLitreKg": 0.84,
+          "modelSource": "本例80条正常训练＋30条正常验证"
+        }
+      }
+    },
+    {
+      "name": "r4/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "number",
+          "value": "0.840",
+          "min": "0.0001",
+          "max": "999999"
+        },
+        "beforeGraphic": "c9b67172",
+        "afterGraphic": "2ed9d4d0",
+        "afterState": {
+          "inputs": {
+            "raw": 999999,
+            "unit": "kg/L"
+          },
+          "conversionFactor": 1000,
+          "normalizedDensity": 999999000,
+          "range": [
+            780,
+            900
+          ],
+          "rangePass": false,
+          "massAtOneLitreKg": 999999,
+          "modelSource": "本例80条正常训练＋30条正常验证"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r4/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r4/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "density": 840,
+            "sulfur": 1,
+            "viscosity": 8.2,
+            "sensitivity": 3
+          },
+          "modelCoefficients": [
+            3.933627833261344,
+            1.800692849972492,
+            1.345639814088726
+          ],
+          "expectedViscosity": 5.2792676473500695,
+          "residual": 2.92073235264993,
+          "validationRMSE": 0.1086865111001658,
+          "relationshipThreshold": 0.3260595333004974,
+          "rulePass": true,
+          "relationshipFlag": true,
+          "modelSource": "本例80条正常训练＋30条正常验证"
+        }
+      }
+    },
+    {
+      "name": "r4/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "840",
+          "min": "805",
+          "max": "875"
+        },
+        "beforeGraphic": "b7fdb7d6",
+        "afterGraphic": "ebf5e817",
+        "afterState": {
+          "inputs": {
+            "density": 875,
+            "sulfur": 1,
+            "viscosity": 8.2,
+            "sensitivity": 3
+          },
+          "modelCoefficients": [
+            3.933627833261344,
+            1.800692849972492,
+            1.345639814088726
+          ],
+          "expectedViscosity": 7.079960497322562,
+          "residual": 1.1200395026774377,
+          "validationRMSE": 0.1086865111001658,
+          "relationshipThreshold": 0.3260595333004974,
+          "rulePass": true,
+          "relationshipFlag": true,
+          "modelSource": "本例80条正常训练＋30条正常验证"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r4/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r4 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "r4 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r5 current built version",
+      "passed": true,
+      "detail": "1.2.0"
+    },
+    {
+      "name": "r5/background mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "now": 24,
+            "delay": 15,
+            "alignment": true
+          },
+          "processFeatures": [
+            323.45323947442665,
+            2.43424063055693,
+            98.0064965097409,
+            2.7706223138127855
+          ],
+          "processSourceMinute": 981,
+          "qualityMinute": 984,
+          "predictedDensity": 820.9623598598791,
+          "latestAvailableLab": {
+            "sampleMinute": 966,
+            "releaseMinute": 981,
+            "density": 820.9051237417868
+          },
+          "unreleasedTakenCount": 3,
+          "currentBatchAvailableCount": 1,
+          "lambda": 0.1,
+          "modelSource": "本例固定12训练、4验证批次的已到达化验"
+        }
+      }
+    },
+    {
+      "name": "r5/background control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "24",
+          "min": "6",
+          "max": "41"
+        },
+        "beforeGraphic": "b326c4d9",
+        "afterGraphic": "4185a942",
+        "afterState": {
+          "inputs": {
+            "now": 41,
+            "delay": 15,
+            "alignment": true
+          },
+          "processFeatures": [
+            340.92239755515254,
+            2.2772095094398637,
+            100.60966142938996,
+            2.6365329833430193
+          ],
+          "processSourceMinute": 998,
+          "qualityMinute": 1001,
+          "predictedDensity": 817.3070655343606,
+          "latestAvailableLab": {
+            "sampleMinute": 986,
+            "releaseMinute": 1001,
+            "density": 819.5591166510025
+          },
+          "unreleasedTakenCount": 3,
+          "currentBatchAvailableCount": 5,
+          "lambda": 0.1,
+          "modelSource": "本例固定12训练、4验证批次的已到达化验"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r5/background reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r5/workflow mounted complete graphic",
+      "passed": true,
+      "detail": {
+        "svg": 1,
+        "state": {
+          "inputs": {
+            "temperatureZ": 1,
+            "pressureZ": 0.5,
+            "flowZ": -0.5,
+            "refluxZ": 0.5
+          },
+          "standardizedInputs": [
+            1,
+            0.5,
+            -0.5,
+            0.5
+          ],
+          "processInputs": [
+            336.62566262725056,
+            2.3904599478408057,
+            93.4506735518283,
+            2.6690531560048405
+          ],
+          "trainMeans": [
+            329.57445882214046,
+            2.3503807468317404,
+            95.47830907715053,
+            2.59909403921051
+          ],
+          "trainScales": [
+            7.0512038051101245,
+            0.08015840201813115,
+            4.055271050644458,
+            0.13991823358866123
+          ],
+          "coefficients": [
+            819.4131622690373,
+            -1.4306429824592843,
+            0.3890807260644442,
+            0.5076472674606358,
+            -0.3395730937640561
+          ],
+          "contributions": [
+            -1.4306429824592843,
+            0.1945403630322221,
+            -0.2538236337303179,
+            -0.16978654688202804
+          ],
+          "cumulativeDensity": [
+            819.4131622690373,
+            817.982519286578,
+            818.1770596496103,
+            817.92323601588,
+            817.7534494689979
+          ],
+          "predictedDensity": 817.7534494689979,
+          "lambda": 0.1,
+          "trainLabelCount": 96,
+          "outOfRange": false,
+          "modelSource": "本例固定12训练、4验证批次的已到达化验"
+        }
+      }
+    },
+    {
+      "name": "r5/workflow control changes actual computed state and visible result",
+      "passed": true,
+      "detail": {
+        "kind": {
+          "tag": "INPUT",
+          "type": "range",
+          "value": "1",
+          "min": "-3",
+          "max": "3"
+        },
+        "beforeGraphic": "6415d351",
+        "afterGraphic": "3b62c3ed",
+        "afterState": {
+          "inputs": {
+            "temperatureZ": 3,
+            "pressureZ": 0.5,
+            "flowZ": -0.5,
+            "refluxZ": 0.5
+          },
+          "standardizedInputs": [
+            3,
+            0.5,
+            -0.5,
+            0.5
+          ],
+          "processInputs": [
+            350.72807023747083,
+            2.3904599478408057,
+            93.4506735518283,
+            2.6690531560048405
+          ],
+          "trainMeans": [
+            329.57445882214046,
+            2.3503807468317404,
+            95.47830907715053,
+            2.59909403921051
+          ],
+          "trainScales": [
+            7.0512038051101245,
+            0.08015840201813115,
+            4.055271050644458,
+            0.13991823358866123
+          ],
+          "coefficients": [
+            819.4131622690373,
+            -1.4306429824592843,
+            0.3890807260644442,
+            0.5076472674606358,
+            -0.3395730937640561
+          ],
+          "contributions": [
+            -4.291928947377853,
+            0.1945403630322221,
+            -0.2538236337303179,
+            -0.16978654688202804
+          ],
+          "cumulativeDensity": [
+            819.4131622690373,
+            815.1212333216595,
+            815.3157736846917,
+            815.0619500509614,
+            814.8921635040793
+          ],
+          "predictedDensity": 814.8921635040793,
+          "lambda": 0.1,
+          "trainLabelCount": 96,
+          "outOfRange": false,
+          "modelSource": "本例固定12训练、4验证批次的已到达化验"
+        },
+        "graphChanged": true,
+        "textChanged": true
+      }
+    },
+    {
+      "name": "r5/workflow reset restores state",
+      "passed": true,
+      "detail": {
+        "graphicRestored": true
+      }
+    },
+    {
+      "name": "r5 one technical context and no duplicate reading route",
+      "passed": true
+    },
+    {
+      "name": "r5 no uncaught built-page error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r3 final built version",
+      "passed": true
+    },
+    {
+      "name": "r3 native run complete with changed inputs",
+      "passed": true,
+      "detail": {
+        "scene": "r3",
+        "status": "complete",
+        "params": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3
+        }
+      }
+    },
+    {
+      "name": "r3 actual CaseInspect sync changes state",
+      "passed": true,
+      "detail": {
+        "source": "CaseInspect当前正常模型；当前控件独立重算观测",
+        "inputs": {
+          "load": 95,
+          "severity": 0.5,
+          "noise": 3,
+          "hour": 60
+        }
+      }
+    },
+    {
+      "name": "r3 synced native inputs and fitted observation agree",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "inputs": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3,
+            "hour": 60
+          },
+          "score": 1.1506399905712916,
+          "rms": 4.022291447712575,
+          "firstAlarm": 60
+        },
+        "expected": {
+          "params": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3
+          },
+          "threshold": 0.65,
+          "score": 1.1506399905712916,
+          "rms": 4.022291447712575,
+          "firstAlarm": 60
+        }
+      }
+    },
+    {
+      "name": "r3 390px no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332
+      }
+    },
+    {
+      "name": "r3 390px chart scrolls locally",
+      "passed": true,
+      "detail": {
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 760
+          }
+        ],
+        "proof": {
+          "before": 0,
+          "after": 120,
+          "max": 458
+        }
+      }
+    },
+    {
+      "name": "r3 SVG preserves viewBox aspect ratio without height clamp",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 610,
+        "viewBox": {
+          "width": 760,
+          "height": 610
+        },
+        "renderRatio": 1.2459016393442623,
+        "viewBoxRatio": 1.2459016393442623,
+        "maxHeight": "none"
+      }
+    },
+    {
+      "name": "r3 SVG effective label font is at least16px",
+      "passed": true,
+      "detail": {
+        "minEffectiveFontPx": 16,
+        "textCount": 24,
+        "textSamples": [
+          {
+            "text": "关系偏离分数 / 无量纲；阈值由45条正常验证记录确定",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0.0",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0.8",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "r3 rendered source wording is reader facing",
+      "passed": true
+    },
+    {
+      "name": "r3 no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "r5 final built version",
+      "passed": true
+    },
+    {
+      "name": "r5 native run complete with changed inputs",
+      "passed": true,
+      "detail": {
+        "scene": "r5",
+        "status": "complete",
+        "params": {
+          "seed": 1705,
+          "delay": 40,
+          "alignment": false,
+          "scenario": "normal"
+        }
+      }
+    },
+    {
+      "name": "r5 actual CaseInspect sync changes state",
+      "passed": true,
+      "detail": {
+        "source": "现有R5Core按当前演示参数重新标定（仅取模型）",
+        "inputs": {
+          "now": 24,
+          "delay": 40,
+          "alignment": false
+        }
+      }
+    },
+    {
+      "name": "r5 synced delay alignment prediction and available lab agree",
+      "passed": true,
+      "detail": {
+        "actual": {
+          "inputs": {
+            "now": 24,
+            "delay": 40,
+            "alignment": false
+          },
+          "source": 984,
+          "predicted": 819.0537428661565,
+          "lab": {
+            "sampleMinute": 941,
+            "releaseMinute": 981,
+            "density": 818.2277985748941
+          }
+        },
+        "expected": {
+          "params": {
+            "seed": 1705,
+            "delay": 40,
+            "alignment": false,
+            "scenario": "normal"
+          },
+          "sourceMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "lastLabSample": 941,
+          "lastLabRelease": 981,
+          "lastLab": 818.2277985748941
+        }
+      }
+    },
+    {
+      "name": "r5 390px no whole-page horizontal overflow",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "documentWidth": 390,
+        "bodyWidth": 390,
+        "hostWidth": 332
+      }
+    },
+    {
+      "name": "r5 390px chart scrolls locally",
+      "passed": true,
+      "detail": {
+        "scrollables": [
+          {
+            "className": "ct-chart",
+            "clientWidth": 302,
+            "scrollWidth": 760
+          }
+        ],
+        "proof": {
+          "before": 0,
+          "after": 120,
+          "max": 458
+        }
+      }
+    },
+    {
+      "name": "r5 SVG preserves viewBox aspect ratio without height clamp",
+      "passed": true,
+      "detail": {
+        "width": 760,
+        "height": 538,
+        "viewBox": {
+          "width": 760,
+          "height": 538
+        },
+        "renderRatio": 1.412639405204461,
+        "viewBoxRatio": 1.412639405204461,
+        "maxHeight": "none"
+      }
+    },
+    {
+      "name": "r5 SVG effective label font is at least16px",
+      "passed": true,
+      "detail": {
+        "minEffectiveFontPx": 16,
+        "textCount": 14,
+        "textSamples": [
+          {
+            "text": "BATCH-17：过程来源、质量时刻与化验到达各保留自己的时间",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "-30",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          },
+          {
+            "text": "0",
+            "fontCssPx": 16,
+            "scaleX": 1,
+            "scaleY": 1,
+            "effectiveFontPx": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "r5 rendered source wording is reader facing",
+      "passed": true
+    },
+    {
+      "name": "r5 no uncaught browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+    "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png"
+  ],
+  "passed": 65,
+  "failed": 0,
+  "completedAt": "2026-10-29T18:30:27.802793+00:00",
+  "protocols": {
+    "desktop": {
+      "passed": 45,
+      "failed": 0,
+      "caseCount": 5
+    },
+    "mobileLiveSyncGeometry": {
+      "passed": 20,
+      "failed": 0,
+      "caseCount": 2
+    }
+  },
+  "mobileReport": "handoff/interactive-teaching-2026-10-30/browser-integrated-refining-mobile.json",
+  "visualReview": {
+    "status": "reviewed_final_screenshots",
+    "reviewed": true,
+    "notes": [
+      "Final r3/r5 screenshots were opened and inspected after replacement.",
+      "Inherited height compression and miniature graph whitespace are gone; labels render at16 effective CSS pixels.",
+      "Screenshots intentionally retain local horizontal scroll focused on selected60h/100Hz and current24min sample-release lanes."
+    ],
+    "screenshots": [
+      "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+      "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png"
+    ]
+  },
+  "screenshotFocus": {
+    "checkedAt": "2026-10-29T18:29:27.888Z",
+    "screenshots": [
+      {
+        "scene": "r3",
+        "part": "workflow",
+        "path": "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+        "scroll": {
+          "left": 240,
+          "clientWidth": 302,
+          "scrollWidth": 760
+        },
+        "reason": "Focus selected60h and100Hz region",
+        "state": {
+          "inputs": {
+            "load": 95,
+            "severity": 0.5,
+            "noise": 3,
+            "hour": 60
+          },
+          "threshold": 0.65,
+          "selectedObservation": {
+            "hour": 60,
+            "load": 1,
+            "rms": 4.022291447712575,
+            "temperature": 68.85310767764226,
+            "kurtosis": 3.1909905931456013,
+            "expected": {
+              "rms": 3.2129368370667413,
+              "temperature": 67.02328575967937,
+              "kurtosis": 3.2714137214951275
+            },
+            "score": 1.1506399905712916,
+            "streak": 3,
+            "flag": true
+          },
+          "firstAlarm": 60,
+          "flagHours": 31,
+          "spectrum": [
+            {
+              "hz": 0,
+              "amplitude": 0.001047909348272022
+            },
+            {
+              "hz": 4,
+              "amplitude": 0.005784793567617183
+            },
+            {
+              "hz": 8,
+              "amplitude": 0.013921968302246955
+            },
+            {
+              "hz": 12,
+              "amplitude": 0.006166796720279334
+            },
+            {
+              "hz": 16,
+              "amplitude": 0.0037676281456769808
+            },
+            {
+              "hz": 20,
+              "amplitude": 0.003276424218866898
+            },
+            {
+              "hz": 24,
+              "amplitude": 0.006435517177197683
+            },
+            {
+              "hz": 28,
+              "amplitude": 0.012872086529937841
+            },
+            {
+              "hz": 32,
+              "amplitude": 2.0083378687438698
+            },
+            {
+              "hz": 36,
+              "amplitude": 0.015307315349560046
+            },
+            {
+              "hz": 40,
+              "amplitude": 0.002351148282196723
+            },
+            {
+              "hz": 44,
+              "amplitude": 0.013135078580366362
+            },
+            {
+              "hz": 48,
+              "amplitude": 0.012863723659059623
+            },
+            {
+              "hz": 52,
+              "amplitude": 0.0018116040706527283
+            },
+            {
+              "hz": 56,
+              "amplitude": 0.009160176467958768
+            },
+            {
+              "hz": 60,
+              "amplitude": 0.003274541500223662
+            },
+            {
+              "hz": 64,
+              "amplitude": 0.009453177410582199
+            },
+            {
+              "hz": 68,
+              "amplitude": 0.006859729686217501
+            },
+            {
+              "hz": 72,
+              "amplitude": 0.00777282361981982
+            },
+            {
+              "hz": 76,
+              "amplitude": 0.014819193476407925
+            },
+            {
+              "hz": 80,
+              "amplitude": 0.012887951639045539
+            },
+            {
+              "hz": 84,
+              "amplitude": 0.017186499045189877
+            },
+            {
+              "hz": 88,
+              "amplitude": 0.004398832562130309
+            },
+            {
+              "hz": 92,
+              "amplitude": 0.0017997393188215383
+            },
+            {
+              "hz": 96,
+              "amplitude": 0.0030471100446783474
+            },
+            {
+              "hz": 100,
+              "amplitude": 0.5616915029156464
+            },
+            {
+              "hz": 104,
+              "amplitude": 0.005102944393634528
+            },
+            {
+              "hz": 108,
+              "amplitude": 0.005649007368565536
+            },
+            {
+              "hz": 112,
+              "amplitude": 0.01037527403601645
+            },
+            {
+              "hz": 116,
+              "amplitude": 0.0022658360849252975
+            },
+            {
+              "hz": 120,
+              "amplitude": 0.010109553549166327
+            },
+            {
+              "hz": 124,
+              "amplitude": 0.012666154542609144
+            },
+            {
+              "hz": 128,
+              "amplitude": 0.010757159700110323
+            },
+            {
+              "hz": 132,
+              "amplitude": 0.01603417236644169
+            },
+            {
+              "hz": 136,
+              "amplitude": 0.006452615625159193
+            },
+            {
+              "hz": 140,
+              "amplitude": 0.004052975885175805
+            },
+            {
+              "hz": 144,
+              "amplitude": 0.008083917234040299
+            },
+            {
+              "hz": 148,
+              "amplitude": 0.008391046704934508
+            },
+            {
+              "hz": 152,
+              "amplitude": 0.007871926487438013
+            },
+            {
+              "hz": 156,
+              "amplitude": 0.009208725380909867
+            },
+            {
+              "hz": 160,
+              "amplitude": 0.008400577136164282
+            },
+            {
+              "hz": 164,
+              "amplitude": 0.008608475499234557
+            },
+            {
+              "hz": 168,
+              "amplitude": 0.004284296273953288
+            },
+            {
+              "hz": 172,
+              "amplitude": 0.003548884061496217
+            },
+            {
+              "hz": 176,
+              "amplitude": 0.005963201688602504
+            },
+            {
+              "hz": 180,
+              "amplitude": 0.0015312017098399015
+            },
+            {
+              "hz": 184,
+              "amplitude": 0.0039179639307725216
+            },
+            {
+              "hz": 188,
+              "amplitude": 0.004384660883920555
+            },
+            {
+              "hz": 192,
+              "amplitude": 0.005847373655843083
+            }
+          ],
+          "modelSource": "CaseInspect当前正常模型；当前控件独立重算观测"
+        }
+      },
+      {
+        "scene": "r5",
+        "part": "background",
+        "path": "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png",
+        "scroll": {
+          "left": 260,
+          "clientWidth": 302,
+          "scrollWidth": 760
+        },
+        "reason": "Focus current24min and sample-release lanes",
+        "state": {
+          "inputs": {
+            "now": 24,
+            "delay": 40,
+            "alignment": false
+          },
+          "processFeatures": [
+            333.2057060347062,
+            2.4300111053081075,
+            99.33549786380445,
+            2.8006877628584053
+          ],
+          "processSourceMinute": 984,
+          "qualityMinute": 984,
+          "predictedDensity": 819.0537428661565,
+          "latestAvailableLab": {
+            "sampleMinute": 941,
+            "releaseMinute": 981,
+            "density": 818.2277985748941
+          },
+          "unreleasedTakenCount": 4,
+          "currentBatchAvailableCount": 0,
+          "lambda": 0.01,
+          "modelSource": "现有R5Core按当前演示参数重新标定（仅取模型）"
+        }
+      }
+    ]
+  },
+  "currentSourceVerification": {
+    "status": "verified_on_final_build",
+    "sourceChangesDuringRetest": false,
+    "browserSession": "course-refine",
+    "browserSessionClosed": true
+  },
+  "attempts": {
+    "directory": "handoff/interactive-teaching-2026-10-30/attempts/refining-pre-final-2026-10-30",
+    "preserved": [
+      "browser-integrated-refining.json",
+      "browser-integrated-refining-mobile.json",
+      "r3-390px-workflow-live-sync.png",
+      "r5-390px-background-live-sync.png"
+    ],
+    "reason": "Earlier protocol checks and diagnostic screenshots before SVG height correction; not current acceptance."
+  },
+  "testedSourceFiles": [
+    {
+      "path": "expansion-src/r1/concept.js",
+      "bytes": 10896,
+      "sha256": "7552ee82e64a75b4cb58773258b895f6e7e83f84252dd905826b343f2a112ea5"
+    },
+    {
+      "path": "expansion-src/r2/concept.js",
+      "bytes": 11164,
+      "sha256": "90d14ab48de59e19d5d554e8abf101071d42c2d6d1fdb08988944d06a8a5c5d1"
+    },
+    {
+      "path": "expansion-src/r3/concept.js",
+      "bytes": 12651,
+      "sha256": "b08ac57d447a6c186d38f0d63012c835216d0ebc4563d1f93d0c064663548910"
+    },
+    {
+      "path": "expansion-src/r4/concept.js",
+      "bytes": 11823,
+      "sha256": "b60aa75d3ab8b436e3fdd4d6cc2ee3fcd751d4a991846221db4c2b0aff79dd74"
+    },
+    {
+      "path": "expansion-src/r5/concept.js",
+      "bytes": 15521,
+      "sha256": "0d1bf86628f580443f55297c3e1868969345df512c996da979f5f72f5e897330"
+    }
+  ],
+  "builtRuntimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.js",
+      "bytes": 368906,
+      "sha256": "b0836a0f520c8404ea01216eee00459c54e00cbf82c20cc4ef4ad0e6b48925e6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.css",
+      "bytes": 48750,
+      "sha256": "efea6ab385cc63ef1df4f0f227c4ce31fad234adeb423069dd1abd8c91be293d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.js",
+      "bytes": 274482,
+      "sha256": "182980494869a034bcfb68e203c2c4624b8ffbf2f804ccdf97395ac6b1ed9e32"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.css",
+      "bytes": 48750,
+      "sha256": "efea6ab385cc63ef1df4f0f227c4ce31fad234adeb423069dd1abd8c91be293d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.js",
+      "bytes": 302970,
+      "sha256": "2d80f6c9e344b18c5de26d4dd5cbbbf1336e91aeecd22ab56a896b0600539aa5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.css",
+      "bytes": 49682,
+      "sha256": "2136bc45c2be4faaf23c6966f2f34b67abbf499497e1a89c652e89529ae835e0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js",
+      "bytes": 260354,
+      "sha256": "475d4cfcaf2887fa0f009609fdc95a2559b9e520d5c9b846f784d2bea541e4db"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css",
+      "bytes": 49682,
+      "sha256": "2136bc45c2be4faaf23c6966f2f34b67abbf499497e1a89c652e89529ae835e0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+      "bytes": 301049,
+      "sha256": "cb84d986a9ac8b8fefe02003a2f41b841013d67bbffc43e610cba3da288060c6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+      "bytes": 52457,
+      "sha256": "a8b1a2f937da5564f4f86cedcd389302cc891e767fce0e4cf491b7074ae3965d"
+    }
+  ],
+  "screenshotFiles": [
+    {
+      "path": "handoff/interactive-teaching-2026-10-30/r3-390px-workflow-live-sync.png",
+      "bytes": 95578,
+      "sha256": "bb2c9936686d9d40549e23eded22257d60770d5e6ec41f41fb224b23fb773f38"
+    },
+    {
+      "path": "handoff/interactive-teaching-2026-10-30/r5-390px-background-live-sync.png",
+      "bytes": 92126,
+      "sha256": "dd72de86dd35737eefb5b789edfc5c2bc450770bc3c527c122864e85febaae3f"
+    }
+  ]
+}
