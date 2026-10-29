@@ -5,19 +5,21 @@
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build.mjs",
-    "test": "node checks/verify-four-exhibits.mjs && node checks/run-four-calculations.mjs",
-    "verify-delivery": "node checks/verify-four-delivery.mjs",
-    "verify-guide": "node checks/verify-four-delivery.mjs",
-    "package": "node checks/verify-four-delivery.mjs --skip-packages && node tools/package-four-exhibits.mjs && node checks/verify-four-delivery.mjs",
+    "build": "node tools/build-expansion-lessons.mjs",
+    "test": "node checks/verify-expansion-lessons.mjs",
+    "verify-delivery": "node checks/verify-expansion-lesson-delivery.mjs",
+    "verify-guide": "node checks/verify-expansion-lesson-delivery.mjs",
+    "package": "node checks/verify-expansion-lesson-delivery.mjs --skip-packages && node tools/package-expansion-lessons.mjs && node checks/verify-expansion-lesson-delivery.mjs",
     "serve": "node tools/serve.mjs",
-    "accept": "node tools/accept-four-exhibits.mjs",
+    "accept": "node tools/accept-expansion-lessons.mjs",
     "build:m2": "node tools/build.mjs --m2-only",
     "verify:m2": "node checks/verify.mjs --no-write",
     "accept:m2": "node checks/browser-m2-four-smoke.mjs",
     "package:m2": "node tools/package-m2-exhibit.mjs",
     "build:four": "node tools/build.mjs",
     "capture:four-flow": "node tools/capture-four-flow.mjs",
-    "accept:four": "node checks/browser-four-exhibits.mjs --open && node checks/browser-four-exhibits.mjs && node checks/browser-m2-four-smoke.mjs"
+    "accept:four": "node checks/browser-four-exhibits.mjs --open && node checks/browser-four-exhibits.mjs && node checks/browser-m2-four-smoke.mjs",
+    "accept:browser": "node tools/run-expansion-lesson-browser.mjs",
+    "build:expansion": "node tools/build-expansion-lessons.mjs"
   }
 }

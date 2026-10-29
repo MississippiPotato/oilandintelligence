@@ -1,0 +1,224 @@
+{
+  "checkedAt": "2026-10-29T04:20:36.448Z",
+  "phase": "offline",
+  "checks": [
+    {
+      "name": "w3 offline background and default actual computation",
+      "passed": true
+    },
+    {
+      "name": "w3 slider automatically recomputes without run click",
+      "passed": true,
+      "detail": {
+        "before": {
+          "status": "ready",
+          "computations": 0,
+          "params": {
+            "noise": 1,
+            "contrast": 0.4,
+            "threshold": 0.2,
+            "dark": 0.45
+          },
+          "task": -1
+        },
+        "after": {
+          "status": "ready",
+          "computations": 1,
+          "params": {
+            "noise": 2.4,
+            "contrast": 0.4,
+            "threshold": 0.2,
+            "dark": 0.45
+          },
+          "task": -1
+        }
+      }
+    },
+    {
+      "name": "w3390px background stays within viewport",
+      "passed": true
+    },
+    {
+      "name": "w3390px method keeps chart scroll local",
+      "passed": true
+    },
+    {
+      "name": "w3390px demo stays within viewport",
+      "passed": true
+    },
+    {
+      "name": "e3 offline background and default actual computation",
+      "passed": true
+    },
+    {
+      "name": "e3390px background stays within viewport",
+      "passed": true
+    },
+    {
+      "name": "e3390px method keeps chart scroll local",
+      "passed": true
+    },
+    {
+      "name": "e3390px demo stays within viewport",
+      "passed": true
+    },
+    {
+      "name": "r4 offline background and default actual computation",
+      "passed": true
+    },
+    {
+      "name": "r4 slider automatically recomputes without run click",
+      "passed": true,
+      "detail": {
+        "before": {
+          "status": "complete",
+          "computations": 0,
+          "params": {
+            "mode": "mixed",
+            "sensitivity": 3,
+            "text": "样品 L001; 密度=824.4 kg/m3; 硫=1.341 %; 黏度=4.81 mm2/s\n样品 L002; 密度=838.5 kg/m3; 硫=0.523 %; 黏度=4.36 mm2/s\n样品 L003; 密度=849.8 kg/m3; 硫=1.113 %; 黏度=5.98 mm2/s\n样品 L004; 密度=0.8155 kg/L; 硫=0.741 %; 黏度=3.78 mm2/s\n样品 L005; 密度=849.1 kg/m3; 硫=0.660 %; 黏度=5.18 mm2/s\n样品 L006; 密度=870.6 kg/m3; 硫=0.317 %; 黏度=5.96 mm2/s\n样品 L007; 密度=869.8 kg/m3; 硫=0.792 %; 黏度=6.70 mm2/s\n样品 L008; 密度=871.7 kg/m3; 硫=0.266 %; 黏度=6.11 mm2/s\n样品 L009; 密度=0.8252 kg/m3; 硫=0.991 %; 黏度=4.65 mm2/s\n样品 L010; 密度=862.7 kg/m3; 硫=0.580 %; 黏度=6.02 mm2/s\n样品 L011; 密度=843.5 kg/m3; 硫=1.421 %; 黏度=6.06 mm2/s\n样品 L012; 密度=825.2 kg/m3; 硫=1.592 %; 黏度=5.34 mm2/s\n样品 L013; 密度=872.0 kg/m3; 硫=0.382 %; 黏度=8.98 mm2/s\n样品 L014; 密度=874.6 kg/m3; 硫=1.524 %; 黏度=7.61 mm2/s\n样品 L015; 密度=816.8 kg/m3; 硫=0.903 %; 黏度=4.02 mm2/s\n样品 L016; 密度=824.6 kg/m3; 硫=0.897 %; 黏度=4.39 mm2/s\n样品 L017; 密度=843.2 kg/m3; 硫=-0.5 %; 黏度=4.61 mm2/s\n样品 L018; 密度=853.1 kg/m3; 硫=0.296 %; 黏度=4.85 mm2/s\n样品 L019; 密度=811.1 kg/m3; 硫=0.590 %; 黏度=3.16 mm2/s\n样品 L020; 密度=854.2 kg/m3; 硫=0.511 %; 黏度=7.97 mm2/s\n样品 L021; 密度=807.6 kg/m3; 硫=1.183 %; 黏度=3.85 mm2/s\n样品 L022; 密度=842.1 kg/m3; 硫=1.191 %; 黏度=5.73 mm2/s\n样品 L023; 密度=861.3 kg/m3; 硫=1.441 %; 黏度=缺失 mm2/s\n样品 L024; 密度=855.0 kg/m3; 硫=0.169 %; 黏度=5.02 mm2/s\n样品 L025; 密度=807.5 kg/m3; 硫=0.925 %; 黏度=3.57 mm2/s\n样品 L026; 密度=825.1 kg/m3; 硫=0.757 %; 黏度=6.92 mm2/s\n样品 L027; 密度=842.5 kg/m3; 硫=0.513 %; 黏度=4.94 mm2/s\n样品 L028; 密度=855.3 kg/m3; 硫=0.251 %; 黏度=5.03 mm2/s\n样品 L029; 密度=850.2 kg/m3; 硫=0.616 %; 黏度=5.30 mm2/s\n样品 L030; 密度=838.8 kg/m3; 硫=1.283 %; 黏度=5.43 mm2/s"
+          },
+          "task": -1
+        },
+        "after": {
+          "status": "complete",
+          "computations": 1,
+          "params": {
+            "mode": "mixed",
+            "sensitivity": 6,
+            "text": "样品 L001; 密度=824.4 kg/m3; 硫=1.341 %; 黏度=4.81 mm2/s\n样品 L002; 密度=838.5 kg/m3; 硫=0.523 %; 黏度=4.36 mm2/s\n样品 L003; 密度=849.8 kg/m3; 硫=1.113 %; 黏度=5.98 mm2/s\n样品 L004; 密度=0.8155 kg/L; 硫=0.741 %; 黏度=3.78 mm2/s\n样品 L005; 密度=849.1 kg/m3; 硫=0.660 %; 黏度=5.18 mm2/s\n样品 L006; 密度=870.6 kg/m3; 硫=0.317 %; 黏度=5.96 mm2/s\n样品 L007; 密度=869.8 kg/m3; 硫=0.792 %; 黏度=6.70 mm2/s\n样品 L008; 密度=871.7 kg/m3; 硫=0.266 %; 黏度=6.11 mm2/s\n样品 L009; 密度=0.8252 kg/m3; 硫=0.991 %; 黏度=4.65 mm2/s\n样品 L010; 密度=862.7 kg/m3; 硫=0.580 %; 黏度=6.02 mm2/s\n样品 L011; 密度=843.5 kg/m3; 硫=1.421 %; 黏度=6.06 mm2/s\n样品 L012; 密度=825.2 kg/m3; 硫=1.592 %; 黏度=5.34 mm2/s\n样品 L013; 密度=872.0 kg/m3; 硫=0.382 %; 黏度=8.98 mm2/s\n样品 L014; 密度=874.6 kg/m3; 硫=1.524 %; 黏度=7.61 mm2/s\n样品 L015; 密度=816.8 kg/m3; 硫=0.903 %; 黏度=4.02 mm2/s\n样品 L016; 密度=824.6 kg/m3; 硫=0.897 %; 黏度=4.39 mm2/s\n样品 L017; 密度=843.2 kg/m3; 硫=-0.5 %; 黏度=4.61 mm2/s\n样品 L018; 密度=853.1 kg/m3; 硫=0.296 %; 黏度=4.85 mm2/s\n样品 L019; 密度=811.1 kg/m3; 硫=0.590 %; 黏度=3.16 mm2/s\n样品 L020; 密度=854.2 kg/m3; 硫=0.511 %; 黏度=7.97 mm2/s\n样品 L021; 密度=807.6 kg/m3; 硫=1.183 %; 黏度=3.85 mm2/s\n样品 L022; 密度=842.1 kg/m3; 硫=1.191 %; 黏度=5.73 mm2/s\n样品 L023; 密度=861.3 kg/m3; 硫=1.441 %; 黏度=缺失 mm2/s\n样品 L024; 密度=855.0 kg/m3; 硫=0.169 %; 黏度=5.02 mm2/s\n样品 L025; 密度=807.5 kg/m3; 硫=0.925 %; 黏度=3.57 mm2/s\n样品 L026; 密度=825.1 kg/m3; 硫=0.757 %; 黏度=6.92 mm2/s\n样品 L027; 密度=842.5 kg/m3; 硫=0.513 %; 黏度=4.94 mm2/s\n样品 L028; 密度=855.3 kg/m3; 硫=0.251 %; 黏度=5.03 mm2/s\n样品 L029; 密度=850.2 kg/m3; 硫=0.616 %; 黏度=5.30 mm2/s\n样品 L030; 密度=838.8 kg/m3; 硫=1.283 %; 黏度=5.43 mm2/s"
+          },
+          "task": -1
+        }
+      }
+    },
+    {
+      "name": "r4390px background stays within viewport",
+      "passed": true
+    },
+    {
+      "name": "r4390px method keeps chart scroll local",
+      "passed": true
+    },
+    {
+      "name": "r4390px demo stays within viewport",
+      "passed": true
+    },
+    {
+      "name": "No browser JavaScript exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No automatic external runtime resources",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [
+    {
+      "path": "handoff/expansion-lessons-2026-10-29/w3-offline-saved.json",
+      "suggested": "s17x-w3-borehole-fractures-calculation.json"
+    },
+    {
+      "path": "handoff/expansion-lessons-2026-10-29/e3-offline-saved.json",
+      "suggested": "e3-result.json"
+    },
+    {
+      "path": "handoff/expansion-lessons-2026-10-29/r4-offline-saved.json",
+      "suggested": "r4-lab-audit-evidence.json"
+    }
+  ],
+  "screenshots": [
+    "handoff/expansion-lessons-2026-10-29/w3-offline-background.png",
+    "handoff/expansion-lessons-2026-10-29/w3-mobile-background.png",
+    "handoff/expansion-lessons-2026-10-29/w3-mobile-lab.png",
+    "handoff/expansion-lessons-2026-10-29/e3-offline-background.png",
+    "handoff/expansion-lessons-2026-10-29/e3-mobile-background.png",
+    "handoff/expansion-lessons-2026-10-29/e3-mobile-lab.png",
+    "handoff/expansion-lessons-2026-10-29/r4-offline-background.png",
+    "handoff/expansion-lessons-2026-10-29/r4-mobile-background.png",
+    "handoff/expansion-lessons-2026-10-29/r4-mobile-lab.png"
+  ],
+  "passed": 16,
+  "failed": 0,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+      "bytes": 57823,
+      "sha256": "830a3a00153bdf252bff56e28050b382d7b858bc2db31e3d302e967f190c2001"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+      "bytes": 1065,
+      "sha256": "7991ce54937e08f36f78267cb000a03fd9483dd789d7242ffad5d548301cf961"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+      "bytes": 18741,
+      "sha256": "d72ef4e47fb2b004b865850b6ecc6fc96b290a002aaa5912d9604994ba58321b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+      "bytes": 30028,
+      "sha256": "314e5a71500c2ad32f653a07f1eb5b4f14f6067eae1a502eda26309a867c1aa9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+      "bytes": 133477,
+      "sha256": "182aaa22e5fe2cbfc28a58a7d0c763e80f64dfd94b00792d219e8dea744e56e4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+      "bytes": 57573,
+      "sha256": "5fdf4f24c16919065a79686d806b9e2281fe6e3e40e778b8b7a6acea284be4b2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+      "bytes": 875,
+      "sha256": "5e6f275fe335d869177175d8e2fd90b753b381743672217cd90215ea13a56e34"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+      "bytes": 11461,
+      "sha256": "7a29f90ca970ae9f135d7ca543f1f924eb84b1658be07b92474c906631ecf5e3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+      "bytes": 29430,
+      "sha256": "423984de25bd29f6bcd348ead11890844db6345bfb87aac4c8b8b7c1bfcf62d6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+      "bytes": 111767,
+      "sha256": "b6ffc98ff81cbc935c60db1eae6acbcc8cd9b003154554e41a12b2799861aa3f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/case.json",
+      "bytes": 58231,
+      "sha256": "e4cebc511492164e20880f29c37cadbf2cdb47240c7918a1f13d5cd1e15a7df1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/README.txt",
+      "bytes": 1035,
+      "sha256": "1a611b18653a668515e956eb5b8169b224aeb1f40ebf26ae517bea5b12f59552"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/index.html",
+      "bytes": 3260,
+      "sha256": "24c1e266862db0b6d953b2a8adb72a0793ecc686e7faf2d755a5d533ffdf3037"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css",
+      "bytes": 29955,
+      "sha256": "0b1b84075cf1116d499a61b090b370a011be1f20caa88c0724b8e038d8ee30b6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js",
+      "bytes": 129930,
+      "sha256": "0bc2042fe0fdcd6762e60eff7805ab499bfc75c4a0b7be6dee3a65c3c355f532"
+    }
+  ]
+}

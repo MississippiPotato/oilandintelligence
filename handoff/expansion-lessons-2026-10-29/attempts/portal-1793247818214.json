@@ -1,0 +1,166 @@
+{
+  "checkedAt": "2026-10-29T04:21:09.142Z",
+  "phase": "portal",
+  "checks": [
+    {
+      "name": "s5 enhanced chapter navigation locates knowledge",
+      "passed": true
+    },
+    {
+      "name": "s5 enhanced method changes actual step panel",
+      "passed": true
+    },
+    {
+      "name": "s5 enhanced sandbox computes authored task",
+      "passed": true
+    },
+    {
+      "name": "t2 enhanced chapter navigation locates knowledge",
+      "passed": true
+    },
+    {
+      "name": "t2 enhanced method changes actual step panel",
+      "passed": true
+    },
+    {
+      "name": "t2 enhanced sandbox computes authored task",
+      "passed": true
+    },
+    {
+      "name": "r4 enhanced chapter navigation locates knowledge",
+      "passed": true
+    },
+    {
+      "name": "r4 enhanced method changes actual step panel",
+      "passed": true
+    },
+    {
+      "name": "r4 enhanced sandbox computes authored task",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [],
+  "screenshots": [
+    "handoff/expansion-lessons-2026-10-29/s5-enhanced-demo.png",
+    "handoff/expansion-lessons-2026-10-29/t2-enhanced-demo.png",
+    "handoff/expansion-lessons-2026-10-29/r4-enhanced-demo.png"
+  ],
+  "exception": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.m2-map-index button').nth(1)\u001b[22m\n",
+  "diagnostic": "\n/\n作业链\n/\n录井\n/\n气测异常智能解释\n环节 04 · 录井\nTS\n时序预测\n未接入案例\n气测异常智能解释\n\n气测录井连续测量钻井液返出气体中的总烃与组分，是发现油气显示最快的手段，解释员据峰值形态与组分比判断油气层。\n\n难度 中\nM2\n01\nPROBLEM\n业务问题\n\n气测曲线受钻井液密度、脱气效率、接单根气影响大，峰值形态千变万化，人工解释一致性差；薄油气层常被背景气掩盖。\n\n02\nINTERVENTION\nAI 介入点\n\n用时序模型识别气测异常段并判别流体性质（油 / 气 / 水层），替代人工分段与形态判读。\n\n03\nDATA\n数据条件\n数据类型\t规模 / 规格\t标注要求\n气测全烃与组分\t1—5 m 一点，单井数千点\t异常段解释标签 200—500 段\n钻井液与工况参数\t密度、排量、钻时\t用于校正\n试油 / 生产验证\t层段与产能\t作为真值\n04\nDIFFICULTY\n技术难度与参考方向\n难度 中\n异常段样本少，且\"真值\"只能靠试油验证，标签成本高。\n序列分类\n↗\n基线校正\n↗\n弱标签学习\n↗\n案例待接入\n本案例成品已提供，此浏览器尚未导入\n\n提供气峰与工况的关联解释候选，保留证据不足。独立成品包含专业背景、逐步方法与交互演示。通过下方原入口选择完整案例文件夹，添加后即可在门户查看三部分。\n\n先看独立成品 →\n\n＋ 为这个场景添加案例\n看已接入的案例\n看接入说明\nRELATED\n相关场景\n同环节 · 录井\n岩屑岩性自动识别\n→\n荧光图像智能判读\n→\n钻时曲线地层划分\n→\n录井报告自动生成\n→\n同方法 · 时序预测\n初至波自动拾取\n物探 →\n钻速预测与参数优化\n钻井 →\n井下复杂事故前兆预警\n钻井 →\n钻具失效预测\n钻井 →\n← 返回录井环节\n返回总览\n井见\n\n跟着一口教学井，把观察变成可以回查的判断。\n\n学号17 · 录井必做5例 + 全阶段56例 · 门户1.9.2-preview\n返回首页\n完整作业链\n案例库 · 本浏览器57个已接入\n添加案例指南\n老师原站\n原地图 13阶段 / 61场景 · 纯前端 · 离线可运行\n收起角色\n井见助手\n聊聊你正在看的案例",
+  "passed": 9,
+  "failed": 1,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/case.json",
+      "bytes": 58038,
+      "sha256": "95cd1a5969fee795373047ab15b61aba1bcc54d84303ceb9ea2fe95bb9a6eb2f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/README.txt",
+      "bytes": 1024,
+      "sha256": "00f63a3a173e75ac0e9e5ff1b99456d8e5dc4d4dafe88cc0397fa507fb654e08"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html",
+      "bytes": 11122,
+      "sha256": "f52c9c86d6f8df11f23fbb3d78f8fa5ac670cc1a313aa449d3e35249032fdc9f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css",
+      "bytes": 29255,
+      "sha256": "ea79d10230fee4f14065be336d20210a1e5d2b8c78a5b1ded64a8ff343084cf6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js",
+      "bytes": 117487,
+      "sha256": "cc1ca8ed66eaf695eb1fbb4bac41460e247aeed8bc1400215b578f84921febc0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/case.json",
+      "bytes": 57024,
+      "sha256": "1137106fbbfbc06552500b73019ad238e497619cbf25f8490408f016739e4e69"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/README.txt",
+      "bytes": 775,
+      "sha256": "dcedd61493e631cc7030600f7a6bd87a503cff2307c76891d1906ebb8567293d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html",
+      "bytes": 2336,
+      "sha256": "715037ae13521bfb46b11b63b04914b4e19e4bb6bfb4e14caff4838beeffa8ec"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.css",
+      "bytes": 28862,
+      "sha256": "59bc8abaf436bfe7bee923adfb8091d0675e30b51c8e46167f200f872ad456ed"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.js",
+      "bytes": 128685,
+      "sha256": "450da6548bbedc886696f09e4bb01c7116c8dcf0dabef29ae319923929971256"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/case.json",
+      "bytes": 58231,
+      "sha256": "e4cebc511492164e20880f29c37cadbf2cdb47240c7918a1f13d5cd1e15a7df1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/README.txt",
+      "bytes": 1035,
+      "sha256": "1a611b18653a668515e956eb5b8169b224aeb1f40ebf26ae517bea5b12f59552"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/index.html",
+      "bytes": 3260,
+      "sha256": "24c1e266862db0b6d953b2a8adb72a0793ecc686e7faf2d755a5d533ffdf3037"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css",
+      "bytes": 29955,
+      "sha256": "0b1b84075cf1116d499a61b090b370a011be1f20caa88c0724b8e038d8ee30b6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js",
+      "bytes": 129930,
+      "sha256": "0bc2042fe0fdcd6762e60eff7805ab499bfc75c4a0b7be6dee3a65c3c355f532"
+    },
+    {
+      "path": "portal/assets/s17-reader.js",
+      "bytes": 11019,
+      "sha256": "38aa33ee6b68c7041a79e3802458891f1776b77156514890e465635b3a6ec794"
+    },
+    {
+      "path": "portal/assets/s17-expansion-cases.js",
+      "bytes": 3489014,
+      "sha256": "2a5ca60be1d7982e2203414144dbd59201d600f20e073ffc3024bc75bbe464b8"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/case.json",
+      "bytes": 500294,
+      "sha256": "d96c5f13daca6b8a5698a3fd76a2f4867b0836526ac2e71d2cfd539e08e1efd6"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/README.txt",
+      "bytes": 1649,
+      "sha256": "283b387521d616faa4231472fc4832776683e0a3fffec477508dcb7743336bc5"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/index.html",
+      "bytes": 487047,
+      "sha256": "6d0eefe561d0bd442d5332c3f9f9259437b06d9739d5256f8e1a1df477df230d"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+      "bytes": 31117,
+      "sha256": "54b9ce82eeeedcd37f5c3d8f0912cc465747ef3666a397664f01f7835efd0882"
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "bytes": 614817,
+      "sha256": "87ad05243b70d7f215393c1666417b29d2e57d1c96151b2b9e110e281568391e"
+    }
+  ]
+}

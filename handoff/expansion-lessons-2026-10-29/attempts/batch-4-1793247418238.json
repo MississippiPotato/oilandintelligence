@@ -1,0 +1,2292 @@
+{
+  "checkedAt": "2026-10-29T04:15:35.699Z",
+  "scope": "Actual Chrome desktop default / both authored tasks / workflow navigation for seven-case batch; not complete original-import/offline acceptance of every case",
+  "cases": [
+    {
+      "scene": "p2",
+      "id": "s17x-p2-perforation-shape",
+      "output": "dist/expansion-cases/s17x-p2-perforation-shape",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "strength": 80,
+              "porosity": 15,
+              "confinement": 14
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "b9d67f3d",
+            "chartCount": 3,
+            "metrics": {
+              "lengthCoefficients": [
+                51.86757208662155,
+                -17.876375970298252,
+                8.465638859165798,
+                -6.001683926210981,
+                6.180648010482261,
+                -1.005151186993227,
+                0.4672291046859652
+              ],
+              "cleanCoefficients": [
+                80.14710365385932,
+                9.401754427132662,
+                -15.335426643698746,
+                -8.277329209669215,
+                0.5216199675800643,
+                -0.7148781197142137,
+                0.31210609878249573
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "strength": 120,
+              "porosity": 15,
+              "confinement": 14
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "934c7d16",
+            "chartCount": 3,
+            "metrics": {
+              "lengthCoefficients": [
+                51.86757208662155,
+                -17.876375970298252,
+                8.465638859165798,
+                -6.001683926210981,
+                6.180648010482261,
+                -1.005151186993227,
+                0.4672291046859652
+              ],
+              "cleanCoefficients": [
+                80.14710365385932,
+                9.401754427132662,
+                -15.335426643698746,
+                -8.277329209669215,
+                0.5216199675800643,
+                -0.7148781197142137,
+                0.31210609878249573
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "b9d67f3d",
+            "after": "934c7d16"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "strength": 80,
+              "porosity": 15,
+              "confinement": 25
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "a56de13d",
+            "chartCount": 3,
+            "metrics": {
+              "lengthCoefficients": [
+                51.86757208662155,
+                -17.876375970298252,
+                8.465638859165798,
+                -6.001683926210981,
+                6.180648010482261,
+                -1.005151186993227,
+                0.4672291046859652
+              ],
+              "cleanCoefficients": [
+                80.14710365385932,
+                9.401754427132662,
+                -15.335426643698746,
+                -8.277329209669215,
+                0.5216199675800643,
+                -0.7148781197142137,
+                0.31210609878249573
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "b9d67f3d",
+            "after": "a56de13d"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "strength": 120,
+            "porosity": 15,
+            "confinement": 14
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "934c7d16",
+          "chartCount": 3,
+          "metrics": {
+            "lengthCoefficients": [
+              51.86757208662155,
+              -17.876375970298252,
+              8.465638859165798,
+              -6.001683926210981,
+              6.180648010482261,
+              -1.005151186993227,
+              0.4672291046859652
+            ],
+            "cleanCoefficients": [
+              80.14710365385932,
+              9.401754427132662,
+              -15.335426643698746,
+              -8.277329209669215,
+              0.5216199675800643,
+              -0.7148781197142137,
+              0.31210609878249573
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "strength": 80,
+            "porosity": 15,
+            "confinement": 25
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "a56de13d",
+          "chartCount": 3,
+          "metrics": {
+            "lengthCoefficients": [
+              51.86757208662155,
+              -17.876375970298252,
+              8.465638859165798,
+              -6.001683926210981,
+              6.180648010482261,
+              -1.005151186993227,
+              0.4672291046859652
+            ],
+            "cleanCoefficients": [
+              80.14710365385932,
+              9.401754427132662,
+              -15.335426643698746,
+              -8.277329209669215,
+              0.5216199675800643,
+              -0.7148781197142137,
+              0.31210609878249573
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "strength": 80,
+          "porosity": 15,
+          "confinement": 14
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "b9d67f3d",
+        "chartCount": 3,
+        "metrics": {
+          "lengthCoefficients": [
+            51.86757208662155,
+            -17.876375970298252,
+            8.465638859165798,
+            -6.001683926210981,
+            6.180648010482261,
+            -1.005151186993227,
+            0.4672291046859652
+          ],
+          "cleanCoefficients": [
+            80.14710365385932,
+            9.401754427132662,
+            -15.335426643698746,
+            -8.277329209669215,
+            0.5216199675800643,
+            -0.7148781197142137,
+            0.31210609878249573
+          ]
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "p3",
+      "id": "s17x-p3-perforation-catalog",
+      "output": "dist/expansion-cases/s17x-p3-perforation-catalog",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "size": "窄",
+              "temp": "2",
+              "rock": "硬",
+              "priority": 0.65,
+              "missing": "no"
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "26e127e7",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "size": "窄",
+              "temp": "2",
+              "rock": "硬",
+              "priority": 0.65,
+              "missing": "no"
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "26e127e7",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": false,
+          "detail": {
+            "default": "26e127e7",
+            "after": "26e127e7"
+          }
+        }
+      ],
+      "tasks": [],
+      "default": {
+        "status": "ready",
+        "params": {
+          "size": "窄",
+          "temp": "2",
+          "rock": "硬",
+          "priority": 0.65,
+          "missing": "no"
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "26e127e7",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "exception": "Task0 changes data graphics",
+      "diagnostic": "\n\n当前条件已计算 · 图表可点选，修改条件后自动更新\n改变条件，把知识放进一次计算\n\n数据在当前页面本地生成。调整任意条件后点击运行，图表和评价一起更新；可导出本次条件和结果。\n\n可通过通道等级\n窄\n中\n宽\n所需环境等级\n1\n2\n3\n材料适用类别\n中软\n硬\n深度偏好权重\n0.65\n目录项 B 等级缺失\n关闭\n开启\n运行并比较\n恢复默认\n计算完成。图表和对照来自当前输入；修改教学条件后会自动重新计算。\n当前可行候选\n2 / 6\n\n知识约束违反\n0 项\n\n18组需求中有候选的选中结果核查；无候选不算违规\n\n仅按尺寸基线违反\n15 / 18\n\n18 组独立需求枚举\n\n目录需求覆盖\n83.33 %\n\n无候选时如实显示无解\n\n本轮可比较的候选为 B、F，综合属性得分最高为虚构项 B。这些分数是目录演示评分，具体依据见逐项关系表。\n\n目录属性匹配得分：灰色表示未通过硬约束\nA 排除\n64.95\nB 可行\n63.56\nD 排除\n63.01\nC 排除\n62.44\nF 可行\n57.73\nE 排除\n54.95\n0.0\n16.2\n32.5\n48.7\n65.0\n偏好评分 / 教学分\n\n只有可行项参与推荐；灰色项即使分高也不会进入候选。\n\n深度与流通取舍：每点一个目录项\n44.2\n55\n58.1\n63\n72.0\n72\n85.9\n80\n99.8\n88\n流通指数 / 无量纲\n深度指数 / 无量纲\n\n金点通过全部约束，灰点为排除项；悬停看A–F身份与原因。偏好只重排可行项。\n\n计算依据与评价边界\n\n六条虚构目录记录，数值是无量纲教学属性，不对应真实型号或作业参数。18 组需求用于枚举核查约束，覆盖率分母为 18。推理规则公开，不声称训练了神经网络；输出保留每条约束的证据路径。\n\n逐条记录与比较结果\n虚构项\t通道等级\t温度等级\t材料\t得分\t匹配证据\nA\t窄\t1\t中软\t64.95\t温度等级不足；材料适用类别不符\nB\t窄\t2\t硬\t63.56\t尺寸、温度、材料均满足\nD\t中\t3\t硬\t63.01\t目录尺寸大于通道等级\nC\t中\t2\t中软\t62.44\t目录尺寸大于通道等级；材料适用类别不符\nF\t窄\t3\t硬\t57.73\t尺寸、温度、材料均满足\nE\t宽\t3\t中软\t54.95\t目录尺寸大于通道等级；材料适用类别不符\n保存当前计算 JSON ↓\n井见 · p3 · 默认演示纯前端 / 数据与图形随包离线运行\n井见助手",
+      "passed": 5,
+      "failed": 1
+    },
+    {
+      "scene": "p4",
+      "id": "s17x-p4-perforation-effect",
+      "output": "dist/expansion-cases/s17x-p4-perforation-effect",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "drawdown": 8,
+              "water": 40,
+              "effect": 8
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "26d33f29",
+            "chartCount": 3,
+            "metrics": {
+              "beta": [
+                18.11291345845041,
+                56.12360268133036,
+                -26.186307598199406,
+                -14.518455473669002
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "drawdown": 12,
+              "water": 40,
+              "effect": 8
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "c98ea6b5",
+            "chartCount": 3,
+            "metrics": {
+              "beta": [
+                18.11291345845041,
+                56.12360268133036,
+                -26.186307598199406,
+                -14.518455473669002
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "26d33f29",
+            "after": "c98ea6b5"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "drawdown": 8,
+              "water": 65,
+              "effect": 8
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "ed5fb4a7",
+            "chartCount": 3,
+            "metrics": {
+              "beta": [
+                18.11291345845041,
+                56.12360268133036,
+                -26.186307598199406,
+                -14.518455473669002
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "26d33f29",
+            "after": "ed5fb4a7"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "drawdown": 12,
+            "water": 40,
+            "effect": 8
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "c98ea6b5",
+          "chartCount": 3,
+          "metrics": {
+            "beta": [
+              18.11291345845041,
+              56.12360268133036,
+              -26.186307598199406,
+              -14.518455473669002
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "drawdown": 8,
+            "water": 65,
+            "effect": 8
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "ed5fb4a7",
+          "chartCount": 3,
+          "metrics": {
+            "beta": [
+              18.11291345845041,
+              56.12360268133036,
+              -26.186307598199406,
+              -14.518455473669002
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "drawdown": 8,
+          "water": 40,
+          "effect": 8
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "26d33f29",
+        "chartCount": 3,
+        "metrics": {
+          "beta": [
+            18.11291345845041,
+            56.12360268133036,
+            -26.186307598199406,
+            -14.518455473669002
+          ]
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "pr1",
+      "id": "s17x-pr1-pump-card",
+      "output": "dist/expansion-cases/s17x-pr1-pump-card",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "done",
+            "params": {
+              "condition": 2,
+              "noise": 0.015,
+              "offset": 0,
+              "support": 0.6
+            },
+            "runId": "pr1-1",
+            "task": -1,
+            "chartHash": "9e05f665",
+            "chartCount": 8,
+            "metrics": {
+              "model": {
+                "matrix": [
+                  [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    24,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    24,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "充满泵",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "供液不足形",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "气影响形",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  }
+                ],
+                "recalls": [
+                  1,
+                  1,
+                  1
+                ],
+                "macroF1": 1,
+                "count": 72,
+                "accepted": 72,
+                "correct": 72,
+                "rejected": 0,
+                "coverage": 1,
+                "acceptedError": 0,
+                "accuracy": 1
+              },
+              "baseline": {
+                "matrix": [
+                  [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    14,
+                    10,
+                    0
+                  ],
+                  [
+                    0,
+                    2,
+                    22,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "充满泵",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "供液不足形",
+                    "actual": 24,
+                    "predicted": 16,
+                    "TP": 14,
+                    "recall": 0.5833333333333334,
+                    "F1": 0.7
+                  },
+                  {
+                    "name": "气影响形",
+                    "actual": 24,
+                    "predicted": 32,
+                    "TP": 22,
+                    "recall": 0.9166666666666666,
+                    "F1": 0.7857142857142857
+                  }
+                ],
+                "recalls": [
+                  1,
+                  0.5833333333333334,
+                  0.9166666666666666
+                ],
+                "macroF1": 0.8285714285714286,
+                "count": 72,
+                "accepted": 72,
+                "correct": 60,
+                "rejected": 0,
+                "coverage": 1,
+                "acceptedError": 0.16666666666666666,
+                "accuracy": 0.8333333333333334
+              },
+              "current": {
+                "label": 2,
+                "support": 1,
+                "distance": 0.09971589653961878,
+                "reasons": []
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "done",
+            "params": {
+              "condition": 3,
+              "noise": 0.015,
+              "offset": 0,
+              "support": 0.6
+            },
+            "runId": "pr1-2",
+            "task": 0,
+            "chartHash": "91a0760c",
+            "chartCount": 8,
+            "metrics": {
+              "model": {
+                "matrix": [
+                  [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    24,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    24,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "充满泵",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "供液不足形",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "气影响形",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  }
+                ],
+                "recalls": [
+                  1,
+                  1,
+                  1
+                ],
+                "macroF1": 1,
+                "count": 72,
+                "accepted": 72,
+                "correct": 72,
+                "rejected": 0,
+                "coverage": 1,
+                "acceptedError": 0,
+                "accuracy": 1
+              },
+              "baseline": {
+                "matrix": [
+                  [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    14,
+                    10,
+                    0
+                  ],
+                  [
+                    0,
+                    2,
+                    22,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "充满泵",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "供液不足形",
+                    "actual": 24,
+                    "predicted": 16,
+                    "TP": 14,
+                    "recall": 0.5833333333333334,
+                    "F1": 0.7
+                  },
+                  {
+                    "name": "气影响形",
+                    "actual": 24,
+                    "predicted": 32,
+                    "TP": 22,
+                    "recall": 0.9166666666666666,
+                    "F1": 0.7857142857142857
+                  }
+                ],
+                "recalls": [
+                  1,
+                  0.5833333333333334,
+                  0.9166666666666666
+                ],
+                "macroF1": 0.8285714285714286,
+                "count": 72,
+                "accepted": 72,
+                "correct": 60,
+                "rejected": 0,
+                "coverage": 1,
+                "acceptedError": 0.16666666666666666,
+                "accuracy": 0.8333333333333334
+              },
+              "current": {
+                "label": null,
+                "support": 1,
+                "distance": 0.4749591502159706,
+                "reasons": [
+                  "形状超出验证近邻范围"
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "9e05f665",
+            "after": "91a0760c"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "done",
+            "params": {
+              "condition": 2,
+              "noise": 0.015,
+              "offset": 16,
+              "support": 0.6
+            },
+            "runId": "pr1-3",
+            "task": 1,
+            "chartHash": "c8376561",
+            "chartCount": 8,
+            "metrics": {
+              "model": {
+                "matrix": [
+                  [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    24,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    24,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "充满泵",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "供液不足形",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "气影响形",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  }
+                ],
+                "recalls": [
+                  1,
+                  1,
+                  1
+                ],
+                "macroF1": 1,
+                "count": 72,
+                "accepted": 72,
+                "correct": 72,
+                "rejected": 0,
+                "coverage": 1,
+                "acceptedError": 0,
+                "accuracy": 1
+              },
+              "baseline": {
+                "matrix": [
+                  [
+                    24,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    14,
+                    10,
+                    0
+                  ],
+                  [
+                    0,
+                    2,
+                    22,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "充满泵",
+                    "actual": 24,
+                    "predicted": 24,
+                    "TP": 24,
+                    "recall": 1,
+                    "F1": 1
+                  },
+                  {
+                    "name": "供液不足形",
+                    "actual": 24,
+                    "predicted": 16,
+                    "TP": 14,
+                    "recall": 0.5833333333333334,
+                    "F1": 0.7
+                  },
+                  {
+                    "name": "气影响形",
+                    "actual": 24,
+                    "predicted": 32,
+                    "TP": 22,
+                    "recall": 0.9166666666666666,
+                    "F1": 0.7857142857142857
+                  }
+                ],
+                "recalls": [
+                  1,
+                  0.5833333333333334,
+                  0.9166666666666666
+                ],
+                "macroF1": 0.8285714285714286,
+                "count": 72,
+                "accepted": 72,
+                "correct": 60,
+                "rejected": 0,
+                "coverage": 1,
+                "acceptedError": 0.16666666666666666,
+                "accuracy": 0.8333333333333334
+              },
+              "current": {
+                "label": 2,
+                "support": 1,
+                "distance": 0.09971589653961896,
+                "reasons": []
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "9e05f665",
+            "after": "c8376561"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "done",
+          "params": {
+            "condition": 3,
+            "noise": 0.015,
+            "offset": 0,
+            "support": 0.6
+          },
+          "runId": "pr1-2",
+          "task": 0,
+          "chartHash": "91a0760c",
+          "chartCount": 8,
+          "metrics": {
+            "model": {
+              "matrix": [
+                [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  24,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  24,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "充满泵",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "供液不足形",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "气影响形",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                }
+              ],
+              "recalls": [
+                1,
+                1,
+                1
+              ],
+              "macroF1": 1,
+              "count": 72,
+              "accepted": 72,
+              "correct": 72,
+              "rejected": 0,
+              "coverage": 1,
+              "acceptedError": 0,
+              "accuracy": 1
+            },
+            "baseline": {
+              "matrix": [
+                [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  14,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  22,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "充满泵",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "供液不足形",
+                  "actual": 24,
+                  "predicted": 16,
+                  "TP": 14,
+                  "recall": 0.5833333333333334,
+                  "F1": 0.7
+                },
+                {
+                  "name": "气影响形",
+                  "actual": 24,
+                  "predicted": 32,
+                  "TP": 22,
+                  "recall": 0.9166666666666666,
+                  "F1": 0.7857142857142857
+                }
+              ],
+              "recalls": [
+                1,
+                0.5833333333333334,
+                0.9166666666666666
+              ],
+              "macroF1": 0.8285714285714286,
+              "count": 72,
+              "accepted": 72,
+              "correct": 60,
+              "rejected": 0,
+              "coverage": 1,
+              "acceptedError": 0.16666666666666666,
+              "accuracy": 0.8333333333333334
+            },
+            "current": {
+              "label": null,
+              "support": 1,
+              "distance": 0.4749591502159706,
+              "reasons": [
+                "形状超出验证近邻范围"
+              ]
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "done",
+          "params": {
+            "condition": 2,
+            "noise": 0.015,
+            "offset": 16,
+            "support": 0.6
+          },
+          "runId": "pr1-3",
+          "task": 1,
+          "chartHash": "c8376561",
+          "chartCount": 8,
+          "metrics": {
+            "model": {
+              "matrix": [
+                [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  24,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  24,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "充满泵",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "供液不足形",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "气影响形",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                }
+              ],
+              "recalls": [
+                1,
+                1,
+                1
+              ],
+              "macroF1": 1,
+              "count": 72,
+              "accepted": 72,
+              "correct": 72,
+              "rejected": 0,
+              "coverage": 1,
+              "acceptedError": 0,
+              "accuracy": 1
+            },
+            "baseline": {
+              "matrix": [
+                [
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  14,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  2,
+                  22,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "充满泵",
+                  "actual": 24,
+                  "predicted": 24,
+                  "TP": 24,
+                  "recall": 1,
+                  "F1": 1
+                },
+                {
+                  "name": "供液不足形",
+                  "actual": 24,
+                  "predicted": 16,
+                  "TP": 14,
+                  "recall": 0.5833333333333334,
+                  "F1": 0.7
+                },
+                {
+                  "name": "气影响形",
+                  "actual": 24,
+                  "predicted": 32,
+                  "TP": 22,
+                  "recall": 0.9166666666666666,
+                  "F1": 0.7857142857142857
+                }
+              ],
+              "recalls": [
+                1,
+                0.5833333333333334,
+                0.9166666666666666
+              ],
+              "macroF1": 0.8285714285714286,
+              "count": 72,
+              "accepted": 72,
+              "correct": 60,
+              "rejected": 0,
+              "coverage": 1,
+              "acceptedError": 0.16666666666666666,
+              "accuracy": 0.8333333333333334
+            },
+            "current": {
+              "label": 2,
+              "support": 1,
+              "distance": 0.09971589653961896,
+              "reasons": []
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "done",
+        "params": {
+          "condition": 2,
+          "noise": 0.015,
+          "offset": 0,
+          "support": 0.6
+        },
+        "runId": "pr1-1",
+        "task": -1,
+        "chartHash": "9e05f665",
+        "chartCount": 8,
+        "metrics": {
+          "model": {
+            "matrix": [
+              [
+                24,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                24,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                24,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "name": "充满泵",
+                "actual": 24,
+                "predicted": 24,
+                "TP": 24,
+                "recall": 1,
+                "F1": 1
+              },
+              {
+                "name": "供液不足形",
+                "actual": 24,
+                "predicted": 24,
+                "TP": 24,
+                "recall": 1,
+                "F1": 1
+              },
+              {
+                "name": "气影响形",
+                "actual": 24,
+                "predicted": 24,
+                "TP": 24,
+                "recall": 1,
+                "F1": 1
+              }
+            ],
+            "recalls": [
+              1,
+              1,
+              1
+            ],
+            "macroF1": 1,
+            "count": 72,
+            "accepted": 72,
+            "correct": 72,
+            "rejected": 0,
+            "coverage": 1,
+            "acceptedError": 0,
+            "accuracy": 1
+          },
+          "baseline": {
+            "matrix": [
+              [
+                24,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                14,
+                10,
+                0
+              ],
+              [
+                0,
+                2,
+                22,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "name": "充满泵",
+                "actual": 24,
+                "predicted": 24,
+                "TP": 24,
+                "recall": 1,
+                "F1": 1
+              },
+              {
+                "name": "供液不足形",
+                "actual": 24,
+                "predicted": 16,
+                "TP": 14,
+                "recall": 0.5833333333333334,
+                "F1": 0.7
+              },
+              {
+                "name": "气影响形",
+                "actual": 24,
+                "predicted": 32,
+                "TP": 22,
+                "recall": 0.9166666666666666,
+                "F1": 0.7857142857142857
+              }
+            ],
+            "recalls": [
+              1,
+              0.5833333333333334,
+              0.9166666666666666
+            ],
+            "macroF1": 0.8285714285714286,
+            "count": 72,
+            "accepted": 72,
+            "correct": 60,
+            "rejected": 0,
+            "coverage": 1,
+            "acceptedError": 0.16666666666666666,
+            "accuracy": 0.8333333333333334
+          },
+          "current": {
+            "label": 2,
+            "support": 1,
+            "distance": 0.09971589653961878,
+            "reasons": []
+          }
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "pr2",
+      "id": "s17x-pr2-production-forecast",
+      "output": "dist/expansion-cases/s17x-pr2-production-forecast",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "cut": 110,
+              "horizon": 21,
+              "intervention": "no"
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "742c0265",
+            "chartCount": 2,
+            "metrics": {
+              "beta": [
+                9.209212980222334,
+                50.24837842201349,
+                45.26450940648469,
+                -3.9129491115573694,
+                -7.443072765197761
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "cut": 110,
+              "horizon": 35,
+              "intervention": "no"
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "42442ec1",
+            "chartCount": 2,
+            "metrics": {
+              "beta": [
+                9.209212980222334,
+                50.24837842201349,
+                45.26450940648469,
+                -3.9129491115573694,
+                -7.443072765197761
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "742c0265",
+            "after": "42442ec1"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "cut": 110,
+              "horizon": 21,
+              "intervention": "yes"
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "5a554694",
+            "chartCount": 2,
+            "metrics": {
+              "beta": [
+                9.209212980222334,
+                50.24837842201349,
+                45.26450940648469,
+                -3.9129491115573694,
+                -7.443072765197761
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "742c0265",
+            "after": "5a554694"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "cut": 110,
+            "horizon": 35,
+            "intervention": "no"
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "42442ec1",
+          "chartCount": 2,
+          "metrics": {
+            "beta": [
+              9.209212980222334,
+              50.24837842201349,
+              45.26450940648469,
+              -3.9129491115573694,
+              -7.443072765197761
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "cut": 110,
+            "horizon": 21,
+            "intervention": "yes"
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "5a554694",
+          "chartCount": 2,
+          "metrics": {
+            "beta": [
+              9.209212980222334,
+              50.24837842201349,
+              45.26450940648469,
+              -3.9129491115573694,
+              -7.443072765197761
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "cut": 110,
+          "horizon": 21,
+          "intervention": "no"
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "742c0265",
+        "chartCount": 2,
+        "metrics": {
+          "beta": [
+            9.209212980222334,
+            50.24837842201349,
+            45.26450940648469,
+            -3.9129491115573694,
+            -7.443072765197761
+          ]
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "screenshot": "handoff/expansion-lessons-2026-10-29/pr2-desktop-results.png",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "pr3",
+      "id": "s17x-pr3-water-allocation",
+      "output": "dist/expansion-cases/s17x-pr3-water-allocation",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "total": 180,
+              "capA": 100,
+              "capB": 110,
+              "capC": 120
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "bcbab347",
+            "chartCount": 3,
+            "metrics": {
+              "coefficients": [
+                [
+                  0.023439819401334105,
+                  90.41879735304285,
+                  -34.41842845933214
+                ],
+                [
+                  0.2764162365443781,
+                  71.33904950215151,
+                  -19.7134306009512
+                ],
+                [
+                  0.07274516157984623,
+                  49.917856579677554,
+                  -8.096398900307735
+                ]
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "total": 180,
+              "capA": 50,
+              "capB": 110,
+              "capC": 120
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "ffd442df",
+            "chartCount": 3,
+            "metrics": {
+              "coefficients": [
+                [
+                  0.023439819401334105,
+                  90.41879735304285,
+                  -34.41842845933214
+                ],
+                [
+                  0.2764162365443781,
+                  71.33904950215151,
+                  -19.7134306009512
+                ],
+                [
+                  0.07274516157984623,
+                  49.917856579677554,
+                  -8.096398900307735
+                ]
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "bcbab347",
+            "after": "ffd442df"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "total": 240,
+              "capA": 100,
+              "capB": 110,
+              "capC": 120
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "154ab87f",
+            "chartCount": 3,
+            "metrics": {
+              "coefficients": [
+                [
+                  0.023439819401334105,
+                  90.41879735304285,
+                  -34.41842845933214
+                ],
+                [
+                  0.2764162365443781,
+                  71.33904950215151,
+                  -19.7134306009512
+                ],
+                [
+                  0.07274516157984623,
+                  49.917856579677554,
+                  -8.096398900307735
+                ]
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "bcbab347",
+            "after": "154ab87f"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "total": 180,
+            "capA": 50,
+            "capB": 110,
+            "capC": 120
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "ffd442df",
+          "chartCount": 3,
+          "metrics": {
+            "coefficients": [
+              [
+                0.023439819401334105,
+                90.41879735304285,
+                -34.41842845933214
+              ],
+              [
+                0.2764162365443781,
+                71.33904950215151,
+                -19.7134306009512
+              ],
+              [
+                0.07274516157984623,
+                49.917856579677554,
+                -8.096398900307735
+              ]
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "total": 240,
+            "capA": 100,
+            "capB": 110,
+            "capC": 120
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "154ab87f",
+          "chartCount": 3,
+          "metrics": {
+            "coefficients": [
+              [
+                0.023439819401334105,
+                90.41879735304285,
+                -34.41842845933214
+              ],
+              [
+                0.2764162365443781,
+                71.33904950215151,
+                -19.7134306009512
+              ],
+              [
+                0.07274516157984623,
+                49.917856579677554,
+                -8.096398900307735
+              ]
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "total": 180,
+          "capA": 100,
+          "capB": 110,
+          "capC": 120
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "bcbab347",
+        "chartCount": 3,
+        "metrics": {
+          "coefficients": [
+            [
+              0.023439819401334105,
+              90.41879735304285,
+              -34.41842845933214
+            ],
+            [
+              0.2764162365443781,
+              71.33904950215151,
+              -19.7134306009512
+            ],
+            [
+              0.07274516157984623,
+              49.917856579677554,
+              -8.096398900307735
+            ]
+          ]
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "pr4",
+      "id": "s17x-pr4-esp-warning",
+      "output": "dist/expansion-cases/s17x-pr4-esp-warning",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "load": 65,
+              "noise": 3,
+              "threshold": 4,
+              "currentLimit": 48
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "ab55f57",
+            "chartCount": 4,
+            "metrics": {
+              "beta": [
+                45.70244435783665,
+                22.04292993214771,
+                25.58367706430306
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "load": 85,
+              "noise": 3,
+              "threshold": 4,
+              "currentLimit": 48
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "4ee4dde5",
+            "chartCount": 4,
+            "metrics": {
+              "beta": [
+                45.70244435783665,
+                22.04292993214771,
+                25.58367706430306
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "ab55f57",
+            "after": "4ee4dde5"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "load": 65,
+              "noise": 3,
+              "threshold": 6,
+              "currentLimit": 48
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "9c9e4a03",
+            "chartCount": 4,
+            "metrics": {
+              "beta": [
+                45.70244435783665,
+                22.04292993214771,
+                25.58367706430306
+              ]
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "ab55f57",
+            "after": "9c9e4a03"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "load": 85,
+            "noise": 3,
+            "threshold": 4,
+            "currentLimit": 48
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "4ee4dde5",
+          "chartCount": 4,
+          "metrics": {
+            "beta": [
+              45.70244435783665,
+              22.04292993214771,
+              25.58367706430306
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "load": 65,
+            "noise": 3,
+            "threshold": 6,
+            "currentLimit": 48
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "9c9e4a03",
+          "chartCount": 4,
+          "metrics": {
+            "beta": [
+              45.70244435783665,
+              22.04292993214771,
+              25.58367706430306
+            ]
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "load": 65,
+          "noise": 3,
+          "threshold": 4,
+          "currentLimit": 48
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "ab55f57",
+        "chartCount": 4,
+        "metrics": {
+          "beta": [
+            45.70244435783665,
+            22.04292993214771,
+            25.58367706430306
+          ]
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "errors": [],
+  "failed": 1,
+  "passed": 59,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/case.json",
+      "bytes": 65614,
+      "sha256": "3c16f16fdcd085eaf63746d5b10873e972c6e6a1a7c753dae7cb75ebdb1393ce"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/README.txt",
+      "bytes": 1342,
+      "sha256": "25be23b36f4f4d9fde95e4be215f17a2293be947202d956b8e05ecf9e825aaa8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/index.html",
+      "bytes": 17196,
+      "sha256": "7529cbbbd3e4828d65921165f7b5a2bf62df431cdd0aa55ded12db5f11d81d06"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.css",
+      "bytes": 31321,
+      "sha256": "70f7c05137b3a0cfcb6e6ef8b486bba94b5d075e3ac2e0f72240578a4b9533ae"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.js",
+      "bytes": 122990,
+      "sha256": "f4d67ec98b5c1886046aef0173392f9d0a78c1c2a48c9e50c1f62ee5b9a4dc61"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/case.json",
+      "bytes": 65728,
+      "sha256": "d538103b3fab04153ecaf029edac31e5d55ebc5054b2c10084d464748e9314b5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/README.txt",
+      "bytes": 1354,
+      "sha256": "2d4ea213db2e327e76c935f8f31f702f2754e8b89d829c5e16ce1eb764af27e1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/index.html",
+      "bytes": 17663,
+      "sha256": "df61670c2e23941b01623492758dbd87fd11607861d56c7d86cbc514ddff72af"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.css",
+      "bytes": 31321,
+      "sha256": "70f7c05137b3a0cfcb6e6ef8b486bba94b5d075e3ac2e0f72240578a4b9533ae"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.js",
+      "bytes": 124115,
+      "sha256": "9e4f66649a1f2186b475f8dac21de58eee17f53fce70ba46049b9cf091fa2f08"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/case.json",
+      "bytes": 64951,
+      "sha256": "7009e27b7a7a41a4f5c002c1bd587efbeb43155b6ba7f9c98b983bb78cb133c6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/README.txt",
+      "bytes": 1411,
+      "sha256": "cf7700ac876c4b5cba17b3c12f5dd9d0561a4385527a25ab33a98969314d7dcd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/index.html",
+      "bytes": 17064,
+      "sha256": "5fc5072a019a361481e4ec3bc930feb6639555c21572e9f0b20f8b12c7cfe08d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.css",
+      "bytes": 31321,
+      "sha256": "70f7c05137b3a0cfcb6e6ef8b486bba94b5d075e3ac2e0f72240578a4b9533ae"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.js",
+      "bytes": 123297,
+      "sha256": "ffb8bc5d3c77db85c06ca92cc7c0f927cb9124b54ffdcaca050659973612ee74"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/case.json",
+      "bytes": 76044,
+      "sha256": "1feeff0b9ec51f0f6408da287361a7ac32d8bb7c4ac259a1da04b95f4da09280"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/README.txt",
+      "bytes": 3791,
+      "sha256": "1d3cb4c0f3b3361afbc7b6c26f8c2fac4b3d016f29d7c03ad83b8126adbb11b8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/index.html",
+      "bytes": 4637,
+      "sha256": "826c81c543579b0992569581763225110402a577ec99c6a3c53bc37eb2d507ed"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.css",
+      "bytes": 35185,
+      "sha256": "1bdc1c9a808ae8b9a0dab2af29fb8bc5013c340e84dc00bec8a3cba7ab397064"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.js",
+      "bytes": 172294,
+      "sha256": "bdfb432b9c76094cb9ac01738c28ba881f7643eb8784fa3afe98593a805d3a3f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/case.json",
+      "bytes": 64515,
+      "sha256": "b054711cf250a44ef7c6408aececcd0b908e9a7defb47652805fb0ad02e197f3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/README.txt",
+      "bytes": 1349,
+      "sha256": "0654cddaf9eef84e0bd15efd9946d58f75e2a92808d2f0aa586177027bd01c1a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html",
+      "bytes": 16964,
+      "sha256": "864e0c9c61e42957c45d4717bc0748e47e7372de0e617d722fab926b567d15fe"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css",
+      "bytes": 31321,
+      "sha256": "70f7c05137b3a0cfcb6e6ef8b486bba94b5d075e3ac2e0f72240578a4b9533ae"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js",
+      "bytes": 123296,
+      "sha256": "31fe66f12c6b4c8f2271d2ce869c312186478b1e925515b5e302c5559e2e923d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/case.json",
+      "bytes": 65319,
+      "sha256": "04c3b9b2f5e12f05622abc60883d2ab7cd8a0f732b7d321de55affd597933ef6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/README.txt",
+      "bytes": 1391,
+      "sha256": "5fb8f5864e5d2ac2782f6784ee1d6732a7057c6b18a935e750c65fad4cfe585a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/index.html",
+      "bytes": 17480,
+      "sha256": "7d02b938ff78fa69aebd06127081e8c2297af223fd0c52ed42bb7d3343d6b44c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.css",
+      "bytes": 31321,
+      "sha256": "70f7c05137b3a0cfcb6e6ef8b486bba94b5d075e3ac2e0f72240578a4b9533ae"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.js",
+      "bytes": 124195,
+      "sha256": "6318f8bf940a5bef91000ef7354034a4fa36f5000cbac561179b661eac11c2fa"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/case.json",
+      "bytes": 65504,
+      "sha256": "43668537b4fdb50a0f14ae38e8bde5422ddf134face293724a380094edc30db4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/README.txt",
+      "bytes": 1372,
+      "sha256": "388c8adbab533866ef1d86daff298f4920dce3e4eb92a0c8c6ed80f0c6a29aa5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/index.html",
+      "bytes": 17311,
+      "sha256": "0de08aa534a200fc29f142363459327eba51a3cb1404e9a16b482fda469ac168"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.css",
+      "bytes": 31321,
+      "sha256": "70f7c05137b3a0cfcb6e6ef8b486bba94b5d075e3ac2e0f72240578a4b9533ae"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.js",
+      "bytes": 124126,
+      "sha256": "d2b4741e82c3477d157b648f6fb5726e788d987546913bfff4a397d1426779ab"
+    }
+  ]
+}

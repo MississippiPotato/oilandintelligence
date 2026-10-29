@@ -14,3 +14,7 @@
 SLB：储层工程与递减分析 https://www.slb.com/resource-library/oilfield-review/defining-series/defining-reservoir-engineering
 
 验证边界：源文件生成不等于浏览器验收；实际浏览器记录由汇总交付另附。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：延长预测期：沿未来区间看误差如何展开，而不是只读一个平均误差。
+加入未来干预：比较固定历史模型与干预后的实际曲线，定位预测失配时段。

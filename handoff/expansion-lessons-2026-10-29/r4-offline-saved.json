@@ -1,0 +1,661 @@
+{
+  "sceneId": "r4",
+  "params": {
+    "mode": "mixed",
+    "sensitivity": 6
+  },
+  "dataNature": "虚构馏分样品，固定种子；密度kg/m³、硫质量分数%、40°C运动黏度mm²/s。范围与关系仅为本课程生成器设定。",
+  "model": {
+    "coeff": [
+      3.933627833261344,
+      1.800692849972492,
+      1.345639814088726
+    ],
+    "n": 80
+  },
+  "threshold": 0.6521190666009948,
+  "validationRMSE": 0.1086865111001658,
+  "prediction": [
+    {
+      "id": "L001",
+      "line": "样品 L001; 密度=824.4 kg/m3; 硫=1.341 %; 黏度=4.81 mm2/s",
+      "density": 824.4,
+      "sulfur": 1.341,
+      "viscosity": 4.81,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 4.935536296538014,
+      "residual": -0.12553629653801401,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L002",
+      "line": "样品 L002; 密度=838.5 kg/m3; 硫=0.523 %; 黏度=4.36 mm2/s",
+      "density": 838.5,
+      "sulfur": 0.523,
+      "viscosity": 4.36,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 4.560224905316641,
+      "residual": -0.20022490531664072,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L003",
+      "line": "样品 L003; 密度=849.8 kg/m3; 硫=1.113 %; 黏度=5.98 mm2/s",
+      "density": 849.8,
+      "sulfur": 1.113,
+      "viscosity": 5.98,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.935518944334392,
+      "residual": 0.04448105566560834,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L004",
+      "line": "样品 L004; 密度=0.8155 kg/L; 硫=0.741 %; 黏度=3.78 mm2/s",
+      "density": 815.5,
+      "sulfur": 0.741,
+      "viscosity": 3.78,
+      "originalUnit": "kg/L",
+      "converted": true,
+      "parseIssue": false,
+      "expected": 3.670261940520346,
+      "residual": 0.10973805947965376,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L005",
+      "line": "样品 L005; 密度=849.1 kg/m3; 硫=0.660 %; 黏度=5.18 mm2/s",
+      "density": 849.1,
+      "sulfur": 0.66,
+      "viscosity": 5.18,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.289930251552752,
+      "residual": -0.10993025155275227,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L006",
+      "line": "样品 L006; 密度=870.6 kg/m3; 硫=0.317 %; 黏度=5.96 mm2/s",
+      "density": 870.6,
+      "sulfur": 0.317,
+      "viscosity": 5.96,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.934515688874851,
+      "residual": 0.02548431112514926,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L007",
+      "line": "样品 L007; 密度=869.8 kg/m3; 硫=0.792 %; 黏度=6.70 mm2/s",
+      "density": 869.8,
+      "sulfur": 0.792,
+      "viscosity": 6.7,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 6.532535906853334,
+      "residual": 0.16746409314666622,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L008",
+      "line": "样品 L008; 密度=871.7 kg/m3; 硫=0.266 %; 黏度=6.11 mm2/s",
+      "density": 871.7,
+      "sulfur": 0.266,
+      "viscosity": 6.11,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.922481262212604,
+      "residual": 0.18751873778739636,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L009",
+      "line": "样品 L009; 密度=0.8252 kg/m3; 硫=0.991 %; 黏度=4.65 mm2/s",
+      "density": 0.8252,
+      "sulfur": 0.991,
+      "viscosity": 4.65,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": -37.9070163177509,
+      "residual": 42.5570163177509,
+      "ruleFlag": true,
+      "flag": true,
+      "reasons": [
+        "密度超出演示范围780–900 kg/m³"
+      ]
+    },
+    {
+      "id": "L010",
+      "line": "样品 L010; 密度=862.7 kg/m3; 硫=0.580 %; 黏度=6.02 mm2/s",
+      "density": 862.7,
+      "sulfur": 0.58,
+      "viscosity": 6.02,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.881976859557823,
+      "residual": 0.13802314044217656,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L011",
+      "line": "样品 L011; 密度=843.5 kg/m3; 硫=1.421 %; 黏度=6.06 mm2/s",
+      "density": 843.5,
+      "sulfur": 1.421,
+      "viscosity": 6.06,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 6.025851294078673,
+      "residual": 0.034148705921326794,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L012",
+      "line": "样品 L012; 密度=825.2 kg/m3; 硫=1.592 %; 黏度=5.34 mm2/s",
+      "density": 825.2,
+      "sulfur": 1.592,
+      "viscosity": 5.34,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.314450583587945,
+      "residual": 0.02554941641205488,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L013",
+      "line": "样品 L013; 密度=872.0 kg/m3; 硫=0.382 %; 黏度=8.98 mm2/s",
+      "density": 872,
+      "sulfur": 0.382,
+      "viscosity": 8.98,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 6.094009990789515,
+      "residual": 2.8859900092104853,
+      "ruleFlag": false,
+      "flag": true,
+      "reasons": [
+        "密度与硫含量不能解释当前黏度"
+      ]
+    },
+    {
+      "id": "L014",
+      "line": "样品 L014; 密度=874.6 kg/m3; 硫=1.524 %; 黏度=7.61 mm2/s",
+      "density": 874.6,
+      "sulfur": 1.524,
+      "viscosity": 7.61,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 7.764496413048227,
+      "residual": -0.1544964130482267,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L015",
+      "line": "样品 L015; 密度=816.8 kg/m3; 硫=0.903 %; 黏度=4.02 mm2/s",
+      "density": 816.8,
+      "sulfur": 0.903,
+      "viscosity": 4.02,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 3.9551384676874095,
+      "residual": 0.06486153231259006,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L016",
+      "line": "样品 L016; 密度=824.6 kg/m3; 硫=0.897 %; 黏度=4.39 mm2/s",
+      "density": 824.6,
+      "sulfur": 0.897,
+      "viscosity": 4.39,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 4.348361892511036,
+      "residual": 0.04163810748896335,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L017",
+      "line": "样品 L017; 密度=843.2 kg/m3; 硫=-0.5 %; 黏度=4.61 mm2/s",
+      "density": 843.2,
+      "sulfur": -0.5,
+      "viscosity": 4.61,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 3.425442701071611,
+      "residual": 1.1845572989283895,
+      "ruleFlag": true,
+      "flag": true,
+      "reasons": [
+        "硫质量分数超出0–3%"
+      ]
+    },
+    {
+      "id": "L018",
+      "line": "样品 L018; 密度=853.1 kg/m3; 硫=0.296 %; 黏度=4.85 mm2/s",
+      "density": 853.1,
+      "sulfur": 0.296,
+      "viscosity": 4.85,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.005910827792741,
+      "residual": -0.15591082779274146,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L019",
+      "line": "样品 L019; 密度=811.1 kg/m3; 硫=0.590 %; 黏度=3.16 mm2/s",
+      "density": 811.1,
+      "sulfur": 0.59,
+      "viscosity": 3.16,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 3.2406975131678353,
+      "residual": -0.08069751316783513,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L020",
+      "line": "样品 L020; 密度=854.2 kg/m3; 硫=0.511 %; 黏度=7.97 mm2/s",
+      "density": 854.2,
+      "sulfur": 0.511,
+      "viscosity": 7.97,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.351816591678096,
+      "residual": 2.6181834083219035,
+      "ruleFlag": false,
+      "flag": true,
+      "reasons": [
+        "密度与硫含量不能解释当前黏度"
+      ]
+    },
+    {
+      "id": "L021",
+      "line": "样品 L021; 密度=807.6 kg/m3; 硫=1.183 %; 黏度=3.85 mm2/s",
+      "density": 807.6,
+      "sulfur": 1.183,
+      "viscosity": 3.85,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 3.8585926379252014,
+      "residual": -0.008592637925201263,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L022",
+      "line": "样品 L022; 密度=842.1 kg/m3; 硫=1.191 %; 黏度=5.73 mm2/s",
+      "density": 842.1,
+      "sulfur": 1.191,
+      "viscosity": 5.73,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.6443264228393675,
+      "residual": 0.08567357716063295,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L023",
+      "line": "样品 L023; 密度=861.3 kg/m3; 硫=1.441 %; 黏度=缺失 mm2/s",
+      "density": 861.3,
+      "sulfur": 1.441,
+      "viscosity": null,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": true,
+      "expected": null,
+      "residual": null,
+      "ruleFlag": true,
+      "flag": true,
+      "reasons": [
+        "字段缺失或格式未识别"
+      ]
+    },
+    {
+      "id": "L024",
+      "line": "样品 L024; 密度=855.0 kg/m3; 硫=0.169 %; 黏度=5.02 mm2/s",
+      "density": 855,
+      "sulfur": 0.169,
+      "viscosity": 5.02,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 4.932766468973407,
+      "residual": 0.08723353102659281,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L025",
+      "line": "样品 L025; 密度=807.5 kg/m3; 硫=0.925 %; 黏度=3.57 mm2/s",
+      "density": 807.5,
+      "sulfur": 0.925,
+      "viscosity": 3.57,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 3.5062727291761018,
+      "residual": 0.06372727082389806,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L026",
+      "line": "样品 L026; 密度=825.1 kg/m3; 硫=0.757 %; 黏度=6.92 mm2/s",
+      "density": 825.1,
+      "sulfur": 0.757,
+      "viscosity": 6.92,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 4.18569650210965,
+      "residual": 2.73430349789035,
+      "ruleFlag": false,
+      "flag": true,
+      "reasons": [
+        "密度与硫含量不能解释当前黏度"
+      ]
+    },
+    {
+      "id": "L027",
+      "line": "样品 L027; 密度=842.5 kg/m3; 硫=0.513 %; 黏度=4.94 mm2/s",
+      "density": 842.5,
+      "sulfur": 0.513,
+      "viscosity": 4.94,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 4.7525619757440385,
+      "residual": 0.1874380242559619,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L028",
+      "line": "样品 L028; 密度=855.3 kg/m3; 硫=0.251 %; 黏度=5.03 mm2/s",
+      "density": 855.3,
+      "sulfur": 0.251,
+      "viscosity": 5.03,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.058543443871301,
+      "residual": -0.02854344387130059,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L029",
+      "line": "样品 L029; 密度=850.2 kg/m3; 硫=0.616 %; 黏度=5.30 mm2/s",
+      "density": 850.2,
+      "sulfur": 0.616,
+      "viscosity": 5.3,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.287315303589128,
+      "residual": 0.01268469641087222,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    },
+    {
+      "id": "L030",
+      "line": "样品 L030; 密度=838.8 kg/m3; 硫=1.283 %; 黏度=5.43 mm2/s",
+      "density": 838.8,
+      "sulfur": 1.283,
+      "viscosity": 5.43,
+      "originalUnit": "kg/m3",
+      "converted": false,
+      "parseIssue": false,
+      "expected": 5.5983456741666915,
+      "residual": -0.16834567416669177,
+      "ruleFlag": false,
+      "flag": false,
+      "reasons": []
+    }
+  ],
+  "evaluationTruth": [
+    {
+      "id": "L001",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L002",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L003",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L004",
+      "type": "合法单位换算",
+      "abnormal": false
+    },
+    {
+      "id": "L005",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L006",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L007",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L008",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L009",
+      "type": "单位错配",
+      "abnormal": true
+    },
+    {
+      "id": "L010",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L011",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L012",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L013",
+      "type": "关系冲突",
+      "abnormal": true
+    },
+    {
+      "id": "L014",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L015",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L016",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L017",
+      "type": "负数",
+      "abnormal": true
+    },
+    {
+      "id": "L018",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L019",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L020",
+      "type": "关系冲突",
+      "abnormal": true
+    },
+    {
+      "id": "L021",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L022",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L023",
+      "type": "缺失",
+      "abnormal": true
+    },
+    {
+      "id": "L024",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L025",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L026",
+      "type": "关系冲突",
+      "abnormal": true
+    },
+    {
+      "id": "L027",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L028",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L029",
+      "type": "正常",
+      "abnormal": false
+    },
+    {
+      "id": "L030",
+      "type": "正常",
+      "abnormal": false
+    }
+  ],
+  "metrics": {
+    "model": {
+      "n": 30,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 24,
+      "precision": 1,
+      "recall": 1
+    },
+    "baseline": {
+      "n": 30,
+      "tp": 3,
+      "fp": 0,
+      "fn": 3,
+      "tn": 24,
+      "precision": 1,
+      "recall": 0.5
+    }
+  },
+  "evaluationAvailable": true,
+  "split": {
+    "train": 80,
+    "validation": 30,
+    "test": 30,
+    "truthUsedByPrediction": false
+  }
+}

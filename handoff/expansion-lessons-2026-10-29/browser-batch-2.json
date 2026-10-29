@@ -1,0 +1,2750 @@
+{
+  "checkedAt": "2026-10-29T04:14:58.336Z",
+  "scope": "Actual Chrome desktop default / both authored tasks / workflow navigation for seven-case batch; not complete original-import/offline acceptance of every case",
+  "cases": [
+    {
+      "scene": "w1",
+      "id": "s17x-w1-log-boundaries",
+      "output": "dist/expansion-cases/s17x-w1-log-boundaries",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 1,
+              "window": 5,
+              "gap": 12,
+              "threshold": 0.15,
+              "gradient": 32
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "5a9e5895",
+            "chartCount": 3,
+            "metrics": [
+              {
+                "label": "多曲线边界 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "单点梯度基线 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "边界误差 MAE",
+                "value": 0,
+                "unit": "m / 3个匹配边界"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 1,
+              "window": 11,
+              "gap": 12,
+              "threshold": 0.15,
+              "gradient": 32
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "cbce6de",
+            "chartCount": 3,
+            "metrics": [
+              {
+                "label": "多曲线边界 F1",
+                "value": 0.5,
+                "unit": ""
+              },
+              {
+                "label": "单点梯度基线 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "边界误差 MAE",
+                "value": 0,
+                "unit": "m / 1个匹配边界"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "5a9e5895",
+            "after": "cbce6de"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 1,
+              "window": 5,
+              "gap": 12,
+              "threshold": 0.3,
+              "gradient": 32
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "c223fc37",
+            "chartCount": 3,
+            "metrics": [
+              {
+                "label": "多曲线边界 F1",
+                "value": 0,
+                "unit": ""
+              },
+              {
+                "label": "单点梯度基线 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "边界误差 MAE",
+                "value": null,
+                "unit": "m / 0个匹配边界"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "5a9e5895",
+            "after": "c223fc37"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "noise": 1,
+            "window": 11,
+            "gap": 12,
+            "threshold": 0.15,
+            "gradient": 32
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "cbce6de",
+          "chartCount": 3,
+          "metrics": [
+            {
+              "label": "多曲线边界 F1",
+              "value": 0.5,
+              "unit": ""
+            },
+            {
+              "label": "单点梯度基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "边界误差 MAE",
+              "value": 0,
+              "unit": "m / 1个匹配边界"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "noise": 1,
+            "window": 5,
+            "gap": 12,
+            "threshold": 0.3,
+            "gradient": 32
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "c223fc37",
+          "chartCount": 3,
+          "metrics": [
+            {
+              "label": "多曲线边界 F1",
+              "value": 0,
+              "unit": ""
+            },
+            {
+              "label": "单点梯度基线 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "边界误差 MAE",
+              "value": null,
+              "unit": "m / 0个匹配边界"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "noise": 1,
+          "window": 5,
+          "gap": 12,
+          "threshold": 0.15,
+          "gradient": 32
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "5a9e5895",
+        "chartCount": 3,
+        "metrics": [
+          {
+            "label": "多曲线边界 F1",
+            "value": 1,
+            "unit": ""
+          },
+          {
+            "label": "单点梯度基线 F1",
+            "value": 1,
+            "unit": ""
+          },
+          {
+            "label": "边界误差 MAE",
+            "value": 0,
+            "unit": "m / 3个匹配边界"
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "w2",
+      "id": "s17x-w2-porosity-calibration",
+      "output": "dist/expansion-cases/s17x-w2-porosity-calibration",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "count": 90,
+              "noise": 1,
+              "mode": "all"
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "8a8211ee",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "多曲线孔隙度 RMSE",
+                "value": 0.4530796590618517,
+                "unit": "百分点"
+              },
+              {
+                "label": "密度公式 RMSE",
+                "value": 4.68268784089037,
+                "unit": "百分点"
+              },
+              {
+                "label": "独立测试岩心点",
+                "value": 120,
+                "unit": "点"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "count": 90,
+              "noise": 1,
+              "mode": "density"
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "513bc122",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "单RHOB学习回归 RMSE",
+                "value": 2.195523210268921,
+                "unit": "百分点"
+              },
+              {
+                "label": "密度公式 RMSE",
+                "value": 4.68268784089037,
+                "unit": "百分点"
+              },
+              {
+                "label": "独立测试岩心点",
+                "value": 120,
+                "unit": "点"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "8a8211ee",
+            "after": "513bc122"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "count": 30,
+              "noise": 1,
+              "mode": "all"
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "57438f76",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "多曲线孔隙度 RMSE",
+                "value": 0.6139731845275056,
+                "unit": "百分点"
+              },
+              {
+                "label": "密度公式 RMSE",
+                "value": 4.68268784089037,
+                "unit": "百分点"
+              },
+              {
+                "label": "独立测试岩心点",
+                "value": 120,
+                "unit": "点"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "8a8211ee",
+            "after": "57438f76"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "count": 90,
+            "noise": 1,
+            "mode": "density"
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "513bc122",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "单RHOB学习回归 RMSE",
+              "value": 2.195523210268921,
+              "unit": "百分点"
+            },
+            {
+              "label": "密度公式 RMSE",
+              "value": 4.68268784089037,
+              "unit": "百分点"
+            },
+            {
+              "label": "独立测试岩心点",
+              "value": 120,
+              "unit": "点"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "count": 30,
+            "noise": 1,
+            "mode": "all"
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "57438f76",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "多曲线孔隙度 RMSE",
+              "value": 0.6139731845275056,
+              "unit": "百分点"
+            },
+            {
+              "label": "密度公式 RMSE",
+              "value": 4.68268784089037,
+              "unit": "百分点"
+            },
+            {
+              "label": "独立测试岩心点",
+              "value": 120,
+              "unit": "点"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "count": 90,
+          "noise": 1,
+          "mode": "all"
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "8a8211ee",
+        "chartCount": 2,
+        "metrics": [
+          {
+            "label": "多曲线孔隙度 RMSE",
+            "value": 0.4530796590618517,
+            "unit": "百分点"
+          },
+          {
+            "label": "密度公式 RMSE",
+            "value": 4.68268784089037,
+            "unit": "百分点"
+          },
+          {
+            "label": "独立测试岩心点",
+            "value": 120,
+            "unit": "点"
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "w3",
+      "id": "s17x-w3-borehole-fractures",
+      "output": "dist/expansion-cases/s17x-w3-borehole-fractures",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 1,
+              "contrast": 0.4,
+              "threshold": 0.2,
+              "dark": 0.45
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "7109af53",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "局部特征分割 Dice",
+                "value": 0.7647058823529411,
+                "unit": ""
+              },
+              {
+                "label": "灰度阈值 Dice",
+                "value": 0.6688206785137318,
+                "unit": ""
+              },
+              {
+                "label": "模型 IoU",
+                "value": 0.6190476190476191,
+                "unit": ""
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 1,
+              "contrast": 0.2,
+              "threshold": 0.2,
+              "dark": 0.45
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "5f873a12",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "局部特征分割 Dice",
+                "value": 0.14977973568281938,
+                "unit": ""
+              },
+              {
+                "label": "灰度阈值 Dice",
+                "value": 0.44528301886792454,
+                "unit": ""
+              },
+              {
+                "label": "模型 IoU",
+                "value": 0.08095238095238096,
+                "unit": ""
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "7109af53",
+            "after": "5f873a12"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 1,
+              "contrast": 0.4,
+              "threshold": 0.4,
+              "dark": 0.45
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "56527efd",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "局部特征分割 Dice",
+                "value": 0.09090909090909091,
+                "unit": ""
+              },
+              {
+                "label": "灰度阈值 Dice",
+                "value": 0.6688206785137318,
+                "unit": ""
+              },
+              {
+                "label": "模型 IoU",
+                "value": 0.047619047619047616,
+                "unit": ""
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "7109af53",
+            "after": "56527efd"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "noise": 1,
+            "contrast": 0.2,
+            "threshold": 0.2,
+            "dark": 0.45
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "5f873a12",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "局部特征分割 Dice",
+              "value": 0.14977973568281938,
+              "unit": ""
+            },
+            {
+              "label": "灰度阈值 Dice",
+              "value": 0.44528301886792454,
+              "unit": ""
+            },
+            {
+              "label": "模型 IoU",
+              "value": 0.08095238095238096,
+              "unit": ""
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "noise": 1,
+            "contrast": 0.4,
+            "threshold": 0.4,
+            "dark": 0.45
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "56527efd",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "局部特征分割 Dice",
+              "value": 0.09090909090909091,
+              "unit": ""
+            },
+            {
+              "label": "灰度阈值 Dice",
+              "value": 0.6688206785137318,
+              "unit": ""
+            },
+            {
+              "label": "模型 IoU",
+              "value": 0.047619047619047616,
+              "unit": ""
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "noise": 1,
+          "contrast": 0.4,
+          "threshold": 0.2,
+          "dark": 0.45
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "7109af53",
+        "chartCount": 2,
+        "metrics": [
+          {
+            "label": "局部特征分割 Dice",
+            "value": 0.7647058823529411,
+            "unit": ""
+          },
+          {
+            "label": "灰度阈值 Dice",
+            "value": 0.6688206785137318,
+            "unit": ""
+          },
+          {
+            "label": "模型 IoU",
+            "value": 0.6190476190476191,
+            "unit": ""
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "screenshot": "handoff/expansion-lessons-2026-10-29/w3-desktop-results.png",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "w4",
+      "id": "s17x-w4-log-lithology",
+      "output": "dist/expansion-cases/s17x-w4-log-lithology",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "preset": "default",
+              "noise": 1,
+              "support": 0.6,
+              "mode": "all",
+              "k": "auto",
+              "reject": true
+            },
+            "runId": "w4-mvt15bgz-0001",
+            "task": -1,
+            "chartHash": "4c52e938",
+            "chartCount": 2,
+            "metrics": {
+              "model": {
+                "n": 320,
+                "accuracy": 0.965625,
+                "macroF1": 0.9616014607556188,
+                "coverage": 1,
+                "accepted": 320,
+                "acceptedError": 0.034375,
+                "confusion": [
+                  [
+                    78,
+                    0,
+                    11,
+                    0
+                  ],
+                  [
+                    0,
+                    125,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    106,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "砂岩",
+                    "tp": 78,
+                    "fn": 11,
+                    "fp": 0,
+                    "recall": 0.8764044943820225,
+                    "precision": 1,
+                    "f1": 0.9341317365269461
+                  },
+                  {
+                    "name": "泥岩",
+                    "tp": 125,
+                    "fn": 0,
+                    "fp": 0,
+                    "recall": 1,
+                    "precision": 1,
+                    "f1": 1
+                  },
+                  {
+                    "name": "灰岩",
+                    "tp": 106,
+                    "fn": 0,
+                    "fp": 11,
+                    "recall": 1,
+                    "precision": 0.905982905982906,
+                    "f1": 0.9506726457399103
+                  }
+                ]
+              },
+              "baseline": {
+                "n": 320,
+                "accuracy": 0.8125,
+                "macroF1": 0.7939560439560439,
+                "coverage": 1,
+                "accepted": 320,
+                "acceptedError": 0.1875,
+                "confusion": [
+                  [
+                    61,
+                    0,
+                    28,
+                    0
+                  ],
+                  [
+                    0,
+                    125,
+                    0,
+                    0
+                  ],
+                  [
+                    32,
+                    0,
+                    74,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "砂岩",
+                    "tp": 61,
+                    "fn": 28,
+                    "fp": 32,
+                    "recall": 0.6853932584269663,
+                    "precision": 0.6559139784946236,
+                    "f1": 0.6703296703296703
+                  },
+                  {
+                    "name": "泥岩",
+                    "tp": 125,
+                    "fn": 0,
+                    "fp": 0,
+                    "recall": 1,
+                    "precision": 1,
+                    "f1": 1
+                  },
+                  {
+                    "name": "灰岩",
+                    "tp": 74,
+                    "fn": 32,
+                    "fp": 28,
+                    "recall": 0.6981132075471698,
+                    "precision": 0.7254901960784313,
+                    "f1": 0.7115384615384616
+                  }
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "preset": "default",
+              "noise": 1,
+              "support": 0.6,
+              "mode": "gr",
+              "k": "auto",
+              "reject": true
+            },
+            "runId": "w4-mvt15bgz-0002",
+            "task": 0,
+            "chartHash": "66ac5248",
+            "chartCount": 2,
+            "metrics": {
+              "model": {
+                "n": 320,
+                "accuracy": 0.8125,
+                "macroF1": 0.7948232323232324,
+                "coverage": 1,
+                "accepted": 320,
+                "acceptedError": 0.1875,
+                "confusion": [
+                  [
+                    66,
+                    0,
+                    23,
+                    0
+                  ],
+                  [
+                    0,
+                    125,
+                    0,
+                    0
+                  ],
+                  [
+                    37,
+                    0,
+                    69,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "砂岩",
+                    "tp": 66,
+                    "fn": 23,
+                    "fp": 37,
+                    "recall": 0.7415730337078652,
+                    "precision": 0.6407766990291263,
+                    "f1": 0.6875
+                  },
+                  {
+                    "name": "泥岩",
+                    "tp": 125,
+                    "fn": 0,
+                    "fp": 0,
+                    "recall": 1,
+                    "precision": 1,
+                    "f1": 1
+                  },
+                  {
+                    "name": "灰岩",
+                    "tp": 69,
+                    "fn": 37,
+                    "fp": 23,
+                    "recall": 0.6509433962264151,
+                    "precision": 0.75,
+                    "f1": 0.696969696969697
+                  }
+                ]
+              },
+              "baseline": {
+                "n": 320,
+                "accuracy": 0.8125,
+                "macroF1": 0.7939560439560439,
+                "coverage": 1,
+                "accepted": 320,
+                "acceptedError": 0.1875,
+                "confusion": [
+                  [
+                    61,
+                    0,
+                    28,
+                    0
+                  ],
+                  [
+                    0,
+                    125,
+                    0,
+                    0
+                  ],
+                  [
+                    32,
+                    0,
+                    74,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "砂岩",
+                    "tp": 61,
+                    "fn": 28,
+                    "fp": 32,
+                    "recall": 0.6853932584269663,
+                    "precision": 0.6559139784946236,
+                    "f1": 0.6703296703296703
+                  },
+                  {
+                    "name": "泥岩",
+                    "tp": 125,
+                    "fn": 0,
+                    "fp": 0,
+                    "recall": 1,
+                    "precision": 1,
+                    "f1": 1
+                  },
+                  {
+                    "name": "灰岩",
+                    "tp": 74,
+                    "fn": 32,
+                    "fp": 28,
+                    "recall": 0.6981132075471698,
+                    "precision": 0.7254901960784313,
+                    "f1": 0.7115384615384616
+                  }
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "4c52e938",
+            "after": "66ac5248"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "preset": "gas",
+              "noise": 1,
+              "support": 0.6,
+              "mode": "all",
+              "k": "auto",
+              "reject": true
+            },
+            "runId": "w4-mvt15bgz-0003",
+            "task": 1,
+            "chartHash": "5beb517a",
+            "chartCount": 2,
+            "metrics": {
+              "model": {
+                "n": 320,
+                "accuracy": 0.721875,
+                "macroF1": 0.6666666666666666,
+                "coverage": 0.721875,
+                "accepted": 231,
+                "acceptedError": 0,
+                "confusion": [
+                  [
+                    0,
+                    0,
+                    0,
+                    89
+                  ],
+                  [
+                    0,
+                    125,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    106,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "砂岩",
+                    "tp": 0,
+                    "fn": 89,
+                    "fp": 0,
+                    "recall": 0,
+                    "precision": null,
+                    "f1": 0
+                  },
+                  {
+                    "name": "泥岩",
+                    "tp": 125,
+                    "fn": 0,
+                    "fp": 0,
+                    "recall": 1,
+                    "precision": 1,
+                    "f1": 1
+                  },
+                  {
+                    "name": "灰岩",
+                    "tp": 106,
+                    "fn": 0,
+                    "fp": 0,
+                    "recall": 1,
+                    "precision": 1,
+                    "f1": 1
+                  }
+                ]
+              },
+              "baseline": {
+                "n": 320,
+                "accuracy": 0.8125,
+                "macroF1": 0.7939560439560439,
+                "coverage": 1,
+                "accepted": 320,
+                "acceptedError": 0.1875,
+                "confusion": [
+                  [
+                    61,
+                    0,
+                    28,
+                    0
+                  ],
+                  [
+                    0,
+                    125,
+                    0,
+                    0
+                  ],
+                  [
+                    32,
+                    0,
+                    74,
+                    0
+                  ]
+                ],
+                "perClass": [
+                  {
+                    "name": "砂岩",
+                    "tp": 61,
+                    "fn": 28,
+                    "fp": 32,
+                    "recall": 0.6853932584269663,
+                    "precision": 0.6559139784946236,
+                    "f1": 0.6703296703296703
+                  },
+                  {
+                    "name": "泥岩",
+                    "tp": 125,
+                    "fn": 0,
+                    "fp": 0,
+                    "recall": 1,
+                    "precision": 1,
+                    "f1": 1
+                  },
+                  {
+                    "name": "灰岩",
+                    "tp": 74,
+                    "fn": 32,
+                    "fp": 28,
+                    "recall": 0.6981132075471698,
+                    "precision": 0.7254901960784313,
+                    "f1": 0.7115384615384616
+                  }
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "4c52e938",
+            "after": "5beb517a"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "preset": "default",
+            "noise": 1,
+            "support": 0.6,
+            "mode": "gr",
+            "k": "auto",
+            "reject": true
+          },
+          "runId": "w4-mvt15bgz-0002",
+          "task": 0,
+          "chartHash": "66ac5248",
+          "chartCount": 2,
+          "metrics": {
+            "model": {
+              "n": 320,
+              "accuracy": 0.8125,
+              "macroF1": 0.7948232323232324,
+              "coverage": 1,
+              "accepted": 320,
+              "acceptedError": 0.1875,
+              "confusion": [
+                [
+                  66,
+                  0,
+                  23,
+                  0
+                ],
+                [
+                  0,
+                  125,
+                  0,
+                  0
+                ],
+                [
+                  37,
+                  0,
+                  69,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "砂岩",
+                  "tp": 66,
+                  "fn": 23,
+                  "fp": 37,
+                  "recall": 0.7415730337078652,
+                  "precision": 0.6407766990291263,
+                  "f1": 0.6875
+                },
+                {
+                  "name": "泥岩",
+                  "tp": 125,
+                  "fn": 0,
+                  "fp": 0,
+                  "recall": 1,
+                  "precision": 1,
+                  "f1": 1
+                },
+                {
+                  "name": "灰岩",
+                  "tp": 69,
+                  "fn": 37,
+                  "fp": 23,
+                  "recall": 0.6509433962264151,
+                  "precision": 0.75,
+                  "f1": 0.696969696969697
+                }
+              ]
+            },
+            "baseline": {
+              "n": 320,
+              "accuracy": 0.8125,
+              "macroF1": 0.7939560439560439,
+              "coverage": 1,
+              "accepted": 320,
+              "acceptedError": 0.1875,
+              "confusion": [
+                [
+                  61,
+                  0,
+                  28,
+                  0
+                ],
+                [
+                  0,
+                  125,
+                  0,
+                  0
+                ],
+                [
+                  32,
+                  0,
+                  74,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "砂岩",
+                  "tp": 61,
+                  "fn": 28,
+                  "fp": 32,
+                  "recall": 0.6853932584269663,
+                  "precision": 0.6559139784946236,
+                  "f1": 0.6703296703296703
+                },
+                {
+                  "name": "泥岩",
+                  "tp": 125,
+                  "fn": 0,
+                  "fp": 0,
+                  "recall": 1,
+                  "precision": 1,
+                  "f1": 1
+                },
+                {
+                  "name": "灰岩",
+                  "tp": 74,
+                  "fn": 32,
+                  "fp": 28,
+                  "recall": 0.6981132075471698,
+                  "precision": 0.7254901960784313,
+                  "f1": 0.7115384615384616
+                }
+              ]
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "preset": "gas",
+            "noise": 1,
+            "support": 0.6,
+            "mode": "all",
+            "k": "auto",
+            "reject": true
+          },
+          "runId": "w4-mvt15bgz-0003",
+          "task": 1,
+          "chartHash": "5beb517a",
+          "chartCount": 2,
+          "metrics": {
+            "model": {
+              "n": 320,
+              "accuracy": 0.721875,
+              "macroF1": 0.6666666666666666,
+              "coverage": 0.721875,
+              "accepted": 231,
+              "acceptedError": 0,
+              "confusion": [
+                [
+                  0,
+                  0,
+                  0,
+                  89
+                ],
+                [
+                  0,
+                  125,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  106,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "砂岩",
+                  "tp": 0,
+                  "fn": 89,
+                  "fp": 0,
+                  "recall": 0,
+                  "precision": null,
+                  "f1": 0
+                },
+                {
+                  "name": "泥岩",
+                  "tp": 125,
+                  "fn": 0,
+                  "fp": 0,
+                  "recall": 1,
+                  "precision": 1,
+                  "f1": 1
+                },
+                {
+                  "name": "灰岩",
+                  "tp": 106,
+                  "fn": 0,
+                  "fp": 0,
+                  "recall": 1,
+                  "precision": 1,
+                  "f1": 1
+                }
+              ]
+            },
+            "baseline": {
+              "n": 320,
+              "accuracy": 0.8125,
+              "macroF1": 0.7939560439560439,
+              "coverage": 1,
+              "accepted": 320,
+              "acceptedError": 0.1875,
+              "confusion": [
+                [
+                  61,
+                  0,
+                  28,
+                  0
+                ],
+                [
+                  0,
+                  125,
+                  0,
+                  0
+                ],
+                [
+                  32,
+                  0,
+                  74,
+                  0
+                ]
+              ],
+              "perClass": [
+                {
+                  "name": "砂岩",
+                  "tp": 61,
+                  "fn": 28,
+                  "fp": 32,
+                  "recall": 0.6853932584269663,
+                  "precision": 0.6559139784946236,
+                  "f1": 0.6703296703296703
+                },
+                {
+                  "name": "泥岩",
+                  "tp": 125,
+                  "fn": 0,
+                  "fp": 0,
+                  "recall": 1,
+                  "precision": 1,
+                  "f1": 1
+                },
+                {
+                  "name": "灰岩",
+                  "tp": 74,
+                  "fn": 32,
+                  "fp": 28,
+                  "recall": 0.6981132075471698,
+                  "precision": 0.7254901960784313,
+                  "f1": 0.7115384615384616
+                }
+              ]
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "preset": "default",
+          "noise": 1,
+          "support": 0.6,
+          "mode": "all",
+          "k": "auto",
+          "reject": true
+        },
+        "runId": "w4-mvt15bgz-0001",
+        "task": -1,
+        "chartHash": "4c52e938",
+        "chartCount": 2,
+        "metrics": {
+          "model": {
+            "n": 320,
+            "accuracy": 0.965625,
+            "macroF1": 0.9616014607556188,
+            "coverage": 1,
+            "accepted": 320,
+            "acceptedError": 0.034375,
+            "confusion": [
+              [
+                78,
+                0,
+                11,
+                0
+              ],
+              [
+                0,
+                125,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                106,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "name": "砂岩",
+                "tp": 78,
+                "fn": 11,
+                "fp": 0,
+                "recall": 0.8764044943820225,
+                "precision": 1,
+                "f1": 0.9341317365269461
+              },
+              {
+                "name": "泥岩",
+                "tp": 125,
+                "fn": 0,
+                "fp": 0,
+                "recall": 1,
+                "precision": 1,
+                "f1": 1
+              },
+              {
+                "name": "灰岩",
+                "tp": 106,
+                "fn": 0,
+                "fp": 11,
+                "recall": 1,
+                "precision": 0.905982905982906,
+                "f1": 0.9506726457399103
+              }
+            ]
+          },
+          "baseline": {
+            "n": 320,
+            "accuracy": 0.8125,
+            "macroF1": 0.7939560439560439,
+            "coverage": 1,
+            "accepted": 320,
+            "acceptedError": 0.1875,
+            "confusion": [
+              [
+                61,
+                0,
+                28,
+                0
+              ],
+              [
+                0,
+                125,
+                0,
+                0
+              ],
+              [
+                32,
+                0,
+                74,
+                0
+              ]
+            ],
+            "perClass": [
+              {
+                "name": "砂岩",
+                "tp": 61,
+                "fn": 28,
+                "fp": 32,
+                "recall": 0.6853932584269663,
+                "precision": 0.6559139784946236,
+                "f1": 0.6703296703296703
+              },
+              {
+                "name": "泥岩",
+                "tp": 125,
+                "fn": 0,
+                "fp": 0,
+                "recall": 1,
+                "precision": 1,
+                "f1": 1
+              },
+              {
+                "name": "灰岩",
+                "tp": 74,
+                "fn": 32,
+                "fp": 28,
+                "recall": 0.6981132075471698,
+                "precision": 0.7254901960784313,
+                "f1": 0.7115384615384616
+              }
+            ]
+          }
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "w5",
+      "id": "s17x-w5-curve-repair",
+      "output": "dist/expansion-cases/s17x-w5-curve-repair",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "start": 100,
+              "length": 38,
+              "noise": 1,
+              "k": 9,
+              "mode": "all"
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "b6322657",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "近邻修复 RMSE",
+                "value": 0.03187827554475034,
+                "unit": "g/cm³"
+              },
+              {
+                "label": "线性插值 RMSE",
+                "value": 0.039097091519122135,
+                "unit": "g/cm³"
+              },
+              {
+                "label": "仅遮蔽区评价点",
+                "value": 38,
+                "unit": "点"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "start": 100,
+              "length": 45,
+              "noise": 1,
+              "k": 9,
+              "mode": "all"
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "d241ed95",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "近邻修复 RMSE",
+                "value": 0.0325202047563462,
+                "unit": "g/cm³"
+              },
+              {
+                "label": "线性插值 RMSE",
+                "value": 0.060865945510642325,
+                "unit": "g/cm³"
+              },
+              {
+                "label": "仅遮蔽区评价点",
+                "value": 45,
+                "unit": "点"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "b6322657",
+            "after": "d241ed95"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "start": 100,
+              "length": 38,
+              "noise": 1,
+              "k": 9,
+              "mode": "gr"
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "523d75d7",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "近邻修复 RMSE",
+                "value": 0.04826317547642915,
+                "unit": "g/cm³"
+              },
+              {
+                "label": "线性插值 RMSE",
+                "value": 0.039097091519122135,
+                "unit": "g/cm³"
+              },
+              {
+                "label": "仅遮蔽区评价点",
+                "value": 38,
+                "unit": "点"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "b6322657",
+            "after": "523d75d7"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "start": 100,
+            "length": 45,
+            "noise": 1,
+            "k": 9,
+            "mode": "all"
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "d241ed95",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "近邻修复 RMSE",
+              "value": 0.0325202047563462,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "线性插值 RMSE",
+              "value": 0.060865945510642325,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "仅遮蔽区评价点",
+              "value": 45,
+              "unit": "点"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "start": 100,
+            "length": 38,
+            "noise": 1,
+            "k": 9,
+            "mode": "gr"
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "523d75d7",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "近邻修复 RMSE",
+              "value": 0.04826317547642915,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "线性插值 RMSE",
+              "value": 0.039097091519122135,
+              "unit": "g/cm³"
+            },
+            {
+              "label": "仅遮蔽区评价点",
+              "value": 38,
+              "unit": "点"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "start": 100,
+          "length": 38,
+          "noise": 1,
+          "k": 9,
+          "mode": "all"
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "b6322657",
+        "chartCount": 2,
+        "metrics": [
+          {
+            "label": "近邻修复 RMSE",
+            "value": 0.03187827554475034,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "线性插值 RMSE",
+            "value": 0.039097091519122135,
+            "unit": "g/cm³"
+          },
+          {
+            "label": "仅遮蔽区评价点",
+            "value": 38,
+            "unit": "点"
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "c1",
+      "id": "s17x-c1-cement-quality",
+      "output": "dist/expansion-cases/s17x-c1-cement-quality",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 0.035,
+              "eccentric": 0,
+              "micro": 0,
+              "reject": 0.6,
+              "thresholdShift": 0
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "6029b7cc",
+            "chartCount": 3,
+            "metrics": {
+              "model": {
+                "total": 192,
+                "correct": 180,
+                "accepted": 187,
+                "rejected": 5,
+                "macroF1": 0.9498812648418947,
+                "coverage": 0.9739583333333334,
+                "acceptedError": 0.03743315508021394,
+                "recalls": [
+                  0.9375,
+                  0.90625,
+                  0.96875
+                ],
+                "confusion": [
+                  [
+                    60,
+                    4,
+                    0,
+                    0
+                  ],
+                  [
+                    3,
+                    58,
+                    0,
+                    3
+                  ],
+                  [
+                    0,
+                    0,
+                    62,
+                    2
+                  ]
+                ]
+              },
+              "baseline": {
+                "total": 192,
+                "correct": 130,
+                "accepted": 192,
+                "rejected": 0,
+                "macroF1": 0.6746594064700964,
+                "coverage": 1,
+                "acceptedError": 0.32291666666666663,
+                "recalls": [
+                  0.859375,
+                  0.71875,
+                  0.453125
+                ],
+                "confusion": [
+                  [
+                    55,
+                    9,
+                    0,
+                    0
+                  ],
+                  [
+                    18,
+                    46,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    35,
+                    29,
+                    0
+                  ]
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 0.035,
+              "eccentric": 0,
+              "micro": 1.2,
+              "reject": 0.6,
+              "thresholdShift": 0
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "cd26b0f4",
+            "chartCount": 3,
+            "metrics": {
+              "model": {
+                "total": 192,
+                "correct": 176,
+                "accepted": 186,
+                "rejected": 6,
+                "macroF1": 0.9304910026221501,
+                "coverage": 0.96875,
+                "acceptedError": 0.053763440860215006,
+                "recalls": [
+                  0.9375,
+                  0.84375,
+                  0.96875
+                ],
+                "confusion": [
+                  [
+                    60,
+                    4,
+                    0,
+                    0
+                  ],
+                  [
+                    2,
+                    54,
+                    4,
+                    4
+                  ],
+                  [
+                    0,
+                    0,
+                    62,
+                    2
+                  ]
+                ]
+              },
+              "baseline": {
+                "total": 192,
+                "correct": 131,
+                "accepted": 192,
+                "rejected": 0,
+                "macroF1": 0.6829776780079695,
+                "coverage": 1,
+                "acceptedError": 0.31770833333333337,
+                "recalls": [
+                  0.859375,
+                  0.609375,
+                  0.578125
+                ],
+                "confusion": [
+                  [
+                    55,
+                    9,
+                    0,
+                    0
+                  ],
+                  [
+                    14,
+                    39,
+                    11,
+                    0
+                  ],
+                  [
+                    0,
+                    27,
+                    37,
+                    0
+                  ]
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "6029b7cc",
+            "after": "cd26b0f4"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 0.035,
+              "eccentric": 0,
+              "micro": 0,
+              "reject": 0.85,
+              "thresholdShift": 0
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "e4a6517f",
+            "chartCount": 3,
+            "metrics": {
+              "model": {
+                "total": 192,
+                "correct": 169,
+                "accepted": 173,
+                "rejected": 19,
+                "macroF1": 0.9259333915653206,
+                "coverage": 0.9010416666666666,
+                "acceptedError": 0.023121387283236983,
+                "recalls": [
+                  0.90625,
+                  0.84375,
+                  0.890625
+                ],
+                "confusion": [
+                  [
+                    58,
+                    3,
+                    0,
+                    3
+                  ],
+                  [
+                    1,
+                    54,
+                    0,
+                    9
+                  ],
+                  [
+                    0,
+                    0,
+                    57,
+                    7
+                  ]
+                ]
+              },
+              "baseline": {
+                "total": 192,
+                "correct": 130,
+                "accepted": 192,
+                "rejected": 0,
+                "macroF1": 0.6746594064700964,
+                "coverage": 1,
+                "acceptedError": 0.32291666666666663,
+                "recalls": [
+                  0.859375,
+                  0.71875,
+                  0.453125
+                ],
+                "confusion": [
+                  [
+                    55,
+                    9,
+                    0,
+                    0
+                  ],
+                  [
+                    18,
+                    46,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    35,
+                    29,
+                    0
+                  ]
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "6029b7cc",
+            "after": "e4a6517f"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "noise": 0.035,
+            "eccentric": 0,
+            "micro": 1.2,
+            "reject": 0.6,
+            "thresholdShift": 0
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "cd26b0f4",
+          "chartCount": 3,
+          "metrics": {
+            "model": {
+              "total": 192,
+              "correct": 176,
+              "accepted": 186,
+              "rejected": 6,
+              "macroF1": 0.9304910026221501,
+              "coverage": 0.96875,
+              "acceptedError": 0.053763440860215006,
+              "recalls": [
+                0.9375,
+                0.84375,
+                0.96875
+              ],
+              "confusion": [
+                [
+                  60,
+                  4,
+                  0,
+                  0
+                ],
+                [
+                  2,
+                  54,
+                  4,
+                  4
+                ],
+                [
+                  0,
+                  0,
+                  62,
+                  2
+                ]
+              ]
+            },
+            "baseline": {
+              "total": 192,
+              "correct": 131,
+              "accepted": 192,
+              "rejected": 0,
+              "macroF1": 0.6829776780079695,
+              "coverage": 1,
+              "acceptedError": 0.31770833333333337,
+              "recalls": [
+                0.859375,
+                0.609375,
+                0.578125
+              ],
+              "confusion": [
+                [
+                  55,
+                  9,
+                  0,
+                  0
+                ],
+                [
+                  14,
+                  39,
+                  11,
+                  0
+                ],
+                [
+                  0,
+                  27,
+                  37,
+                  0
+                ]
+              ]
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "noise": 0.035,
+            "eccentric": 0,
+            "micro": 0,
+            "reject": 0.85,
+            "thresholdShift": 0
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "e4a6517f",
+          "chartCount": 3,
+          "metrics": {
+            "model": {
+              "total": 192,
+              "correct": 169,
+              "accepted": 173,
+              "rejected": 19,
+              "macroF1": 0.9259333915653206,
+              "coverage": 0.9010416666666666,
+              "acceptedError": 0.023121387283236983,
+              "recalls": [
+                0.90625,
+                0.84375,
+                0.890625
+              ],
+              "confusion": [
+                [
+                  58,
+                  3,
+                  0,
+                  3
+                ],
+                [
+                  1,
+                  54,
+                  0,
+                  9
+                ],
+                [
+                  0,
+                  0,
+                  57,
+                  7
+                ]
+              ]
+            },
+            "baseline": {
+              "total": 192,
+              "correct": 130,
+              "accepted": 192,
+              "rejected": 0,
+              "macroF1": 0.6746594064700964,
+              "coverage": 1,
+              "acceptedError": 0.32291666666666663,
+              "recalls": [
+                0.859375,
+                0.71875,
+                0.453125
+              ],
+              "confusion": [
+                [
+                  55,
+                  9,
+                  0,
+                  0
+                ],
+                [
+                  18,
+                  46,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  35,
+                  29,
+                  0
+                ]
+              ]
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "noise": 0.035,
+          "eccentric": 0,
+          "micro": 0,
+          "reject": 0.6,
+          "thresholdShift": 0
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "6029b7cc",
+        "chartCount": 3,
+        "metrics": {
+          "model": {
+            "total": 192,
+            "correct": 180,
+            "accepted": 187,
+            "rejected": 5,
+            "macroF1": 0.9498812648418947,
+            "coverage": 0.9739583333333334,
+            "acceptedError": 0.03743315508021394,
+            "recalls": [
+              0.9375,
+              0.90625,
+              0.96875
+            ],
+            "confusion": [
+              [
+                60,
+                4,
+                0,
+                0
+              ],
+              [
+                3,
+                58,
+                0,
+                3
+              ],
+              [
+                0,
+                0,
+                62,
+                2
+              ]
+            ]
+          },
+          "baseline": {
+            "total": 192,
+            "correct": 130,
+            "accepted": 192,
+            "rejected": 0,
+            "macroF1": 0.6746594064700964,
+            "coverage": 1,
+            "acceptedError": 0.32291666666666663,
+            "recalls": [
+              0.859375,
+              0.71875,
+              0.453125
+            ],
+            "confusion": [
+              [
+                55,
+                9,
+                0,
+                0
+              ],
+              [
+                18,
+                46,
+                0,
+                0
+              ],
+              [
+                0,
+                35,
+                29,
+                0
+              ]
+            ]
+          }
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "c2",
+      "id": "s17x-c2-cement-displacement",
+      "output": "dist/expansion-cases/s17x-c2-cement-displacement",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "ecc": 0.35,
+              "pressureLimit": 54,
+              "qmax": 2.4
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "8574a2f1",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "ecc": 0.35,
+              "pressureLimit": 45,
+              "qmax": 2.4
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "3a07b39c",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "8574a2f1",
+            "after": "3a07b39c"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "ecc": 0.65,
+              "pressureLimit": 54,
+              "qmax": 2.4
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "70ede4e7",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "8574a2f1",
+            "after": "70ede4e7"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "complete",
+          "params": {
+            "ecc": 0.35,
+            "pressureLimit": 45,
+            "qmax": 2.4
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "3a07b39c",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "complete",
+          "params": {
+            "ecc": 0.65,
+            "pressureLimit": 54,
+            "qmax": 2.4
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "70ede4e7",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "complete",
+        "params": {
+          "ecc": 0.35,
+          "pressureLimit": 54,
+          "qmax": 2.4
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "8574a2f1",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "errors": [],
+  "failed": 0,
+  "passed": 63,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/case.json",
+      "bytes": 50667,
+      "sha256": "3c62f31b84150dc0aabe53cf3caa205ff6b4a31864bf9499a781e600e7593094"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/README.txt",
+      "bytes": 1032,
+      "sha256": "c1a81a4ff70284652a62efb28cc80cb66628627d1ab306dec2f1b3a1c15e8896"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/index.html",
+      "bytes": 12311,
+      "sha256": "3254e64cd77f5cc3d81204bc802794488f241ad7a8a0c12cb146c7d4ad11dc4c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.css",
+      "bytes": 29948,
+      "sha256": "c2b2a329671497564fa5593480c9bb9c92de4d1d2d1bb27549be6d2e3631670f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.js",
+      "bytes": 120027,
+      "sha256": "7f768e2513a72065beea75f07875f6bd1f40fb464be81f9e78ce1ea5ca2dc67b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/case.json",
+      "bytes": 56495,
+      "sha256": "e4dee58316aae0aa4191d4ad7bdb25aabf0aa747e89c45abf83864e646bb04bf"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/README.txt",
+      "bytes": 1069,
+      "sha256": "2c8c68637d38aceae4bfb4e029b0d45dc4905910bc9a8b727c2d06c77e8f9cb7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/index.html",
+      "bytes": 16802,
+      "sha256": "98c6f3f7c04cce2adb383724202b5cc0640c827b5360863b2664e9a126595fb6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.css",
+      "bytes": 29948,
+      "sha256": "c2b2a329671497564fa5593480c9bb9c92de4d1d2d1bb27549be6d2e3631670f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.js",
+      "bytes": 130206,
+      "sha256": "c1ab3fea5e025e15ce292d44d578e12ab1d2a362dd65adf5491a1ad02840a5b2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+      "bytes": 57823,
+      "sha256": "830a3a00153bdf252bff56e28050b382d7b858bc2db31e3d302e967f190c2001"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+      "bytes": 1065,
+      "sha256": "7991ce54937e08f36f78267cb000a03fd9483dd789d7242ffad5d548301cf961"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+      "bytes": 18741,
+      "sha256": "d72ef4e47fb2b004b865850b6ecc6fc96b290a002aaa5912d9604994ba58321b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+      "bytes": 30028,
+      "sha256": "314e5a71500c2ad32f653a07f1eb5b4f14f6067eae1a502eda26309a867c1aa9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+      "bytes": 133477,
+      "sha256": "182aaa22e5fe2cbfc28a58a7d0c763e80f64dfd94b00792d219e8dea744e56e4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/case.json",
+      "bytes": 72923,
+      "sha256": "8591b09b79d22169d88b224e4774957cae64840f9f77dc0a71c994c7068d9d02"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/README.txt",
+      "bytes": 2612,
+      "sha256": "e1c70a895c7f6f1dbf416ba2a51be7ea3b54699aafe896a566a1bb0182b1852b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/index.html",
+      "bytes": 23710,
+      "sha256": "759f69b193864a704f8501bdd2367c95e91c150bbd6711df71a6e0c23e8994a4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.css",
+      "bytes": 36446,
+      "sha256": "49a9d5f9513b8a3bbef2d2710c51c727899208200c34972a8b0e40777c0b1a17"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.js",
+      "bytes": 141512,
+      "sha256": "cff8fd7bd1f38c2d6a24d95938c756203492b307c98a0f75451165f33b126998"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/case.json",
+      "bytes": 50902,
+      "sha256": "6f76597df2ccc8ac5965e0439a7c43c5aa96875014500ec25ed93ddf708d2617"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/README.txt",
+      "bytes": 1064,
+      "sha256": "12166327bc69195b25f521b02fdd3d813b097da4e14b70dd343d38935d2f58a0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/index.html",
+      "bytes": 12096,
+      "sha256": "a9e064ce13e068d03824f11976e674d06522a2f39fbc574b08212e5d915ca6d0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css",
+      "bytes": 29948,
+      "sha256": "c2b2a329671497564fa5593480c9bb9c92de4d1d2d1bb27549be6d2e3631670f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js",
+      "bytes": 119155,
+      "sha256": "406acaeed8d9e7ee2516a16760c0b00a21d2443108537c1243ad7f6defa827c3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/case.json",
+      "bytes": 113317,
+      "sha256": "6e8eaa8d6f96bd8b9319d953eeba320cc208953a2a02f1cf00a1a8392ae6c995"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/README.txt",
+      "bytes": 1556,
+      "sha256": "859b298ce1aa92a50e06c694c3ff057afff11b333990d77429ef8993f958d529"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/index.html",
+      "bytes": 7135,
+      "sha256": "76799e324f8162a50ed22492e644914b392f611404ad57512c215513928cb5ad"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.css",
+      "bytes": 35787,
+      "sha256": "46bbe55ec55a3f389c75125f7ee6e48b0efd0dbdbdfb15ce361929ea6ffeaa67"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js",
+      "bytes": 276166,
+      "sha256": "e67ee7a1b6ae327905dcda929b4f4cf342e01b5faa3873a20ec023203fa1f7a7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/case.json",
+      "bytes": 60103,
+      "sha256": "ef5f275749d6e791f04c83ac43c6bce5b9ac4c5ea4798b5b90f1901c6b1f6dc7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/README.txt",
+      "bytes": 1184,
+      "sha256": "9be08baa410450b08e4fa82d45c8112d5071f0754554e299cdcf159700c75bff"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/index.html",
+      "bytes": 2504,
+      "sha256": "92a50404ca28d14523f44bc6294eaf853a4d915f85b108c0f004e7fec9ac6bfb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.css",
+      "bytes": 29553,
+      "sha256": "fd72e3a29da63aea231ed4aa7948c5f663cd71c693f4ab2053629129c13d39fd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.js",
+      "bytes": 129242,
+      "sha256": "8fad4116b380601483307880488d52b294e3ad5e6a96d2b80883b680fd0ccd2b"
+    }
+  ]
+}

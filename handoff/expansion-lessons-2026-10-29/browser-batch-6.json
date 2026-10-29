@@ -1,0 +1,1734 @@
+{
+  "checkedAt": "2026-10-29T04:20:08.461Z",
+  "scope": "Actual Chrome desktop default / both authored tasks / workflow navigation for seven-case batch; not complete original-import/offline acceptance of every case",
+  "cases": [
+    {
+      "scene": "e2",
+      "id": "s17x-e2-fracture-geometry",
+      "output": "dist/expansion-cases/s17x-e2-fracture-geometry",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "volume": 700,
+              "stress": 5,
+              "barrier": 0.5
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "646af15e",
+            "resultTextHash": "b0bd8ea2",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "volume": 700,
+              "stress": 5,
+              "barrier": 0.85
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "cd64bc4a",
+            "resultTextHash": "28bfca3e",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "646af15e",
+            "afterChart": "cd64bc4a",
+            "defaultText": "b0bd8ea2",
+            "afterText": "28bfca3e"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "volume": 1000,
+              "stress": 5,
+              "barrier": 0.5
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "e4c8809d",
+            "resultTextHash": "2ad11c70",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "646af15e",
+            "afterChart": "e4c8809d",
+            "defaultText": "b0bd8ea2",
+            "afterText": "2ad11c70"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "completed",
+          "params": {
+            "volume": 700,
+            "stress": 5,
+            "barrier": 0.85
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "cd64bc4a",
+          "resultTextHash": "28bfca3e",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "completed",
+          "params": {
+            "volume": 1000,
+            "stress": 5,
+            "barrier": 0.5
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "e4c8809d",
+          "resultTextHash": "2ad11c70",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "completed",
+        "params": {
+          "volume": 700,
+          "stress": 5,
+          "barrier": 0.5
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "646af15e",
+        "resultTextHash": "b0bd8ea2",
+        "chartCount": 1,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "e3",
+      "id": "s17x-e3-chemical-mixture",
+      "output": "dist/expansion-cases/s17x-e3-chemical-mixture",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "salinity": 30,
+              "budget": 5
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "16d4aa93",
+            "resultTextHash": "8189572b",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "salinity": 60,
+              "budget": 5
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "b37d212f",
+            "resultTextHash": "675895f6",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "16d4aa93",
+            "afterChart": "b37d212f",
+            "defaultText": "8189572b",
+            "afterText": "675895f6"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "salinity": 30,
+              "budget": 3
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "7d93888b",
+            "resultTextHash": "bafb61ca",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "16d4aa93",
+            "afterChart": "7d93888b",
+            "defaultText": "8189572b",
+            "afterText": "bafb61ca"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "completed",
+          "params": {
+            "salinity": 60,
+            "budget": 5
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "b37d212f",
+          "resultTextHash": "675895f6",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "completed",
+          "params": {
+            "salinity": 30,
+            "budget": 3
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "7d93888b",
+          "resultTextHash": "bafb61ca",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "completed",
+        "params": {
+          "salinity": 30,
+          "budget": 5
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "16d4aa93",
+        "resultTextHash": "8189572b",
+        "chartCount": 1,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "e4",
+      "id": "s17x-e4-steam-cycle",
+      "output": "dist/expansion-cases/s17x-e4-steam-cycle",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "steamMax": 1500,
+              "price": 0.05,
+              "temperature": 45
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "1958f9de",
+            "resultTextHash": "1921c15e",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "steamMax": 900,
+              "price": 0.05,
+              "temperature": 45
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "d1eff253",
+            "resultTextHash": "11a5c2a9",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "1958f9de",
+            "afterChart": "d1eff253",
+            "defaultText": "1921c15e",
+            "afterText": "11a5c2a9"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "steamMax": 1500,
+              "price": 0.08,
+              "temperature": 45
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "14c7c17a",
+            "resultTextHash": "29bf1551",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "1958f9de",
+            "afterChart": "14c7c17a",
+            "defaultText": "1921c15e",
+            "afterText": "29bf1551"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "completed",
+          "params": {
+            "steamMax": 900,
+            "price": 0.05,
+            "temperature": 45
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "d1eff253",
+          "resultTextHash": "11a5c2a9",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "completed",
+          "params": {
+            "steamMax": 1500,
+            "price": 0.08,
+            "temperature": 45
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "14c7c17a",
+          "resultTextHash": "29bf1551",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "completed",
+        "params": {
+          "steamMax": 1500,
+          "price": 0.05,
+          "temperature": 45
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "1958f9de",
+        "resultTextHash": "1921c15e",
+        "chartCount": 1,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "e5",
+      "id": "s17x-e5-microbial-activity",
+      "output": "dist/expansion-cases/s17x-e5-microbial-activity",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "temperature": 45,
+              "salinity": 35,
+              "neighbors": 7
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "24cbe40d",
+            "resultTextHash": "993c72d6",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "temperature": 45,
+              "salinity": 65,
+              "neighbors": 7
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "3b538f8e",
+            "resultTextHash": "7df48a23",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "24cbe40d",
+            "afterChart": "3b538f8e",
+            "defaultText": "993c72d6",
+            "afterText": "7df48a23"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "completed",
+            "params": {
+              "temperature": 45,
+              "salinity": 35,
+              "neighbors": 15
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "82e1cb3",
+            "resultTextHash": "6b59607d",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "24cbe40d",
+            "afterChart": "82e1cb3",
+            "defaultText": "993c72d6",
+            "afterText": "6b59607d"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "completed",
+          "params": {
+            "temperature": 45,
+            "salinity": 65,
+            "neighbors": 7
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "3b538f8e",
+          "resultTextHash": "7df48a23",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "completed",
+          "params": {
+            "temperature": 45,
+            "salinity": 35,
+            "neighbors": 15
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "82e1cb3",
+          "resultTextHash": "6b59607d",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "completed",
+        "params": {
+          "temperature": 45,
+          "salinity": 35,
+          "neighbors": 7
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "24cbe40d",
+        "resultTextHash": "993c72d6",
+        "chartCount": 1,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "t1",
+      "id": "s17x-t1-pipeline-leak",
+      "output": "dist/expansion-cases/s17x-t1-pipeline-leak",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "scenario": "normal",
+              "severity": 7,
+              "noise": 1,
+              "sensitivity": 1,
+              "flowThreshold": 5,
+              "seed": 1701
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "841b3ff5",
+            "resultTextHash": "e00d73b6",
+            "chartCount": 4,
+            "metrics": {
+              "model": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "truthCount": 3,
+                "candidateCount": 3,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "delay_min": 2,
+                "falseEventsPerHour": 0,
+                "normalMinutes": 510,
+                "pairs": [
+                  {
+                    "pred": 0,
+                    "truth": 0,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 1,
+                    "truth": 1,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 2,
+                    "truth": 2,
+                    "delay_min": 2
+                  }
+                ]
+              },
+              "baseline": {
+                "tp": 3,
+                "fp": 0,
+                "fn": 0,
+                "truthCount": 3,
+                "candidateCount": 3,
+                "precision": 1,
+                "recall": 1,
+                "f1": 1,
+                "delay_min": 2,
+                "falseEventsPerHour": 0,
+                "normalMinutes": 510,
+                "pairs": [
+                  {
+                    "pred": 0,
+                    "truth": 0,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 1,
+                    "truth": 1,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 2,
+                    "truth": 2,
+                    "delay_min": 2
+                  }
+                ]
+              },
+              "pressure": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 0,
+                "truthCount": 3,
+                "candidateCount": 4,
+                "precision": 0.75,
+                "recall": 1,
+                "f1": 0.8571428571428571,
+                "delay_min": 3,
+                "falseEventsPerHour": 0.11764705882352941,
+                "normalMinutes": 510,
+                "pairs": [
+                  {
+                    "pred": 0,
+                    "truth": 0,
+                    "delay_min": 5
+                  },
+                  {
+                    "pred": 1,
+                    "truth": 1,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 3,
+                    "truth": 2,
+                    "delay_min": 2
+                  }
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "scenario": "no-event",
+              "severity": 7,
+              "noise": 1,
+              "sensitivity": 1,
+              "flowThreshold": 5,
+              "seed": 1701
+            },
+            "runId": 3,
+            "task": 0,
+            "chartHash": "289d9d54",
+            "resultTextHash": "acf82896",
+            "chartCount": 4,
+            "metrics": {
+              "model": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "truthCount": 0,
+                "candidateCount": 0,
+                "precision": null,
+                "recall": null,
+                "f1": null,
+                "delay_min": null,
+                "falseEventsPerHour": 0,
+                "normalMinutes": 576,
+                "pairs": []
+              },
+              "baseline": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 0,
+                "truthCount": 0,
+                "candidateCount": 0,
+                "precision": null,
+                "recall": null,
+                "f1": null,
+                "delay_min": null,
+                "falseEventsPerHour": 0,
+                "normalMinutes": 576,
+                "pairs": []
+              },
+              "pressure": {
+                "tp": 0,
+                "fp": 1,
+                "fn": 0,
+                "truthCount": 0,
+                "candidateCount": 1,
+                "precision": 0,
+                "recall": null,
+                "f1": 0,
+                "delay_min": null,
+                "falseEventsPerHour": 0.10416666666666667,
+                "normalMinutes": 576,
+                "pairs": []
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "841b3ff5",
+            "afterChart": "289d9d54",
+            "defaultText": "e00d73b6",
+            "afterText": "acf82896"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "scenario": "drift",
+              "severity": 7,
+              "noise": 1,
+              "sensitivity": 1,
+              "flowThreshold": 5,
+              "seed": 1701
+            },
+            "runId": 5,
+            "task": 1,
+            "chartHash": "4bc92570",
+            "resultTextHash": "7e23d2b5",
+            "chartCount": 4,
+            "metrics": {
+              "model": {
+                "tp": 3,
+                "fp": 3,
+                "fn": 0,
+                "truthCount": 3,
+                "candidateCount": 6,
+                "precision": 0.5,
+                "recall": 1,
+                "f1": 0.6666666666666666,
+                "delay_min": 2,
+                "falseEventsPerHour": 0.35294117647058826,
+                "normalMinutes": 510,
+                "pairs": [
+                  {
+                    "pred": 0,
+                    "truth": 0,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 2,
+                    "truth": 1,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 4,
+                    "truth": 2,
+                    "delay_min": 2
+                  }
+                ]
+              },
+              "baseline": {
+                "tp": 3,
+                "fp": 4,
+                "fn": 0,
+                "truthCount": 3,
+                "candidateCount": 7,
+                "precision": 0.42857142857142855,
+                "recall": 1,
+                "f1": 0.6,
+                "delay_min": 2,
+                "falseEventsPerHour": 0.47058823529411764,
+                "normalMinutes": 510,
+                "pairs": [
+                  {
+                    "pred": 0,
+                    "truth": 0,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 2,
+                    "truth": 1,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 4,
+                    "truth": 2,
+                    "delay_min": 2
+                  }
+                ]
+              },
+              "pressure": {
+                "tp": 3,
+                "fp": 1,
+                "fn": 0,
+                "truthCount": 3,
+                "candidateCount": 4,
+                "precision": 0.75,
+                "recall": 1,
+                "f1": 0.8571428571428571,
+                "delay_min": 3,
+                "falseEventsPerHour": 0.11764705882352941,
+                "normalMinutes": 510,
+                "pairs": [
+                  {
+                    "pred": 0,
+                    "truth": 0,
+                    "delay_min": 5
+                  },
+                  {
+                    "pred": 1,
+                    "truth": 1,
+                    "delay_min": 2
+                  },
+                  {
+                    "pred": 3,
+                    "truth": 2,
+                    "delay_min": 2
+                  }
+                ]
+              }
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "841b3ff5",
+            "afterChart": "4bc92570",
+            "defaultText": "e00d73b6",
+            "afterText": "7e23d2b5"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "complete",
+          "params": {
+            "scenario": "no-event",
+            "severity": 7,
+            "noise": 1,
+            "sensitivity": 1,
+            "flowThreshold": 5,
+            "seed": 1701
+          },
+          "runId": 3,
+          "task": 0,
+          "chartHash": "289d9d54",
+          "resultTextHash": "acf82896",
+          "chartCount": 4,
+          "metrics": {
+            "model": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "truthCount": 0,
+              "candidateCount": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null,
+              "delay_min": null,
+              "falseEventsPerHour": 0,
+              "normalMinutes": 576,
+              "pairs": []
+            },
+            "baseline": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "truthCount": 0,
+              "candidateCount": 0,
+              "precision": null,
+              "recall": null,
+              "f1": null,
+              "delay_min": null,
+              "falseEventsPerHour": 0,
+              "normalMinutes": 576,
+              "pairs": []
+            },
+            "pressure": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 0,
+              "truthCount": 0,
+              "candidateCount": 1,
+              "precision": 0,
+              "recall": null,
+              "f1": 0,
+              "delay_min": null,
+              "falseEventsPerHour": 0.10416666666666667,
+              "normalMinutes": 576,
+              "pairs": []
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "complete",
+          "params": {
+            "scenario": "drift",
+            "severity": 7,
+            "noise": 1,
+            "sensitivity": 1,
+            "flowThreshold": 5,
+            "seed": 1701
+          },
+          "runId": 5,
+          "task": 1,
+          "chartHash": "4bc92570",
+          "resultTextHash": "7e23d2b5",
+          "chartCount": 4,
+          "metrics": {
+            "model": {
+              "tp": 3,
+              "fp": 3,
+              "fn": 0,
+              "truthCount": 3,
+              "candidateCount": 6,
+              "precision": 0.5,
+              "recall": 1,
+              "f1": 0.6666666666666666,
+              "delay_min": 2,
+              "falseEventsPerHour": 0.35294117647058826,
+              "normalMinutes": 510,
+              "pairs": [
+                {
+                  "pred": 0,
+                  "truth": 0,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 2,
+                  "truth": 1,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 4,
+                  "truth": 2,
+                  "delay_min": 2
+                }
+              ]
+            },
+            "baseline": {
+              "tp": 3,
+              "fp": 4,
+              "fn": 0,
+              "truthCount": 3,
+              "candidateCount": 7,
+              "precision": 0.42857142857142855,
+              "recall": 1,
+              "f1": 0.6,
+              "delay_min": 2,
+              "falseEventsPerHour": 0.47058823529411764,
+              "normalMinutes": 510,
+              "pairs": [
+                {
+                  "pred": 0,
+                  "truth": 0,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 2,
+                  "truth": 1,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 4,
+                  "truth": 2,
+                  "delay_min": 2
+                }
+              ]
+            },
+            "pressure": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 0,
+              "truthCount": 3,
+              "candidateCount": 4,
+              "precision": 0.75,
+              "recall": 1,
+              "f1": 0.8571428571428571,
+              "delay_min": 3,
+              "falseEventsPerHour": 0.11764705882352941,
+              "normalMinutes": 510,
+              "pairs": [
+                {
+                  "pred": 0,
+                  "truth": 0,
+                  "delay_min": 5
+                },
+                {
+                  "pred": 1,
+                  "truth": 1,
+                  "delay_min": 2
+                },
+                {
+                  "pred": 3,
+                  "truth": 2,
+                  "delay_min": 2
+                }
+              ]
+            }
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "complete",
+        "params": {
+          "scenario": "normal",
+          "severity": 7,
+          "noise": 1,
+          "sensitivity": 1,
+          "flowThreshold": 5,
+          "seed": 1701
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "841b3ff5",
+        "resultTextHash": "e00d73b6",
+        "chartCount": 4,
+        "metrics": {
+          "model": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "truthCount": 3,
+            "candidateCount": 3,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1,
+            "delay_min": 2,
+            "falseEventsPerHour": 0,
+            "normalMinutes": 510,
+            "pairs": [
+              {
+                "pred": 0,
+                "truth": 0,
+                "delay_min": 2
+              },
+              {
+                "pred": 1,
+                "truth": 1,
+                "delay_min": 2
+              },
+              {
+                "pred": 2,
+                "truth": 2,
+                "delay_min": 2
+              }
+            ]
+          },
+          "baseline": {
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "truthCount": 3,
+            "candidateCount": 3,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1,
+            "delay_min": 2,
+            "falseEventsPerHour": 0,
+            "normalMinutes": 510,
+            "pairs": [
+              {
+                "pred": 0,
+                "truth": 0,
+                "delay_min": 2
+              },
+              {
+                "pred": 1,
+                "truth": 1,
+                "delay_min": 2
+              },
+              {
+                "pred": 2,
+                "truth": 2,
+                "delay_min": 2
+              }
+            ]
+          },
+          "pressure": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "truthCount": 3,
+            "candidateCount": 4,
+            "precision": 0.75,
+            "recall": 1,
+            "f1": 0.8571428571428571,
+            "delay_min": 3,
+            "falseEventsPerHour": 0.11764705882352941,
+            "normalMinutes": 510,
+            "pairs": [
+              {
+                "pred": 0,
+                "truth": 0,
+                "delay_min": 5
+              },
+              {
+                "pred": 1,
+                "truth": 1,
+                "delay_min": 2
+              },
+              {
+                "pred": 3,
+                "truth": 2,
+                "delay_min": 2
+              }
+            ]
+          }
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "t2",
+      "id": "s17x-t2-corrosion-growth",
+      "output": "dist/expansion-cases/s17x-t2-corrosion-growth",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "shift": 7,
+              "noise": 1,
+              "years": 3
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "6b602edf",
+            "resultTextHash": "341a47bd",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "shift": 14,
+              "noise": 1,
+              "years": 3
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "348f324",
+            "resultTextHash": "100eb6ca",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "6b602edf",
+            "afterChart": "348f324",
+            "defaultText": "341a47bd",
+            "afterText": "100eb6ca"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "shift": 7,
+              "noise": 2,
+              "years": 3
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "3fd7ab95",
+            "resultTextHash": "aae1e495",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "6b602edf",
+            "afterChart": "3fd7ab95",
+            "defaultText": "341a47bd",
+            "afterText": "aae1e495"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "shift": 14,
+            "noise": 1,
+            "years": 3
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "348f324",
+          "resultTextHash": "100eb6ca",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "shift": 7,
+            "noise": 2,
+            "years": 3
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "3fd7ab95",
+          "resultTextHash": "aae1e495",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "shift": 7,
+          "noise": 1,
+          "years": 3
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "6b602edf",
+        "resultTextHash": "341a47bd",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "screenshot": "handoff/expansion-lessons-2026-10-29/t2-desktop-results.png",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "t3",
+      "id": "s17x-t3-gathering-pump-optimization",
+      "output": "dist/expansion-cases/s17x-t3-gathering-pump-optimization",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "demand": 280,
+              "head": 38,
+              "price": 0.7
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "241d592d",
+            "resultTextHash": "c193a748",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "demand": 350,
+              "head": 38,
+              "price": 0.7
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "9b74772f",
+            "resultTextHash": "f5e1aad0",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "241d592d",
+            "afterChart": "9b74772f",
+            "defaultText": "c193a748",
+            "afterText": "f5e1aad0"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "demand": 280,
+              "head": 48,
+              "price": 0.7
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "f63f9b64",
+            "resultTextHash": "91e03ee0",
+            "chartCount": 1,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes plotted data or computed result table",
+          "passed": true,
+          "detail": {
+            "defaultChart": "241d592d",
+            "afterChart": "f63f9b64",
+            "defaultText": "c193a748",
+            "afterText": "91e03ee0"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "demand": 350,
+            "head": 38,
+            "price": 0.7
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "9b74772f",
+          "resultTextHash": "f5e1aad0",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "demand": 280,
+            "head": 48,
+            "price": 0.7
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "f63f9b64",
+          "resultTextHash": "91e03ee0",
+          "chartCount": 1,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "demand": 280,
+          "head": 38,
+          "price": 0.7
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "241d592d",
+        "resultTextHash": "c193a748",
+        "chartCount": 1,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "errors": [],
+  "failed": 0,
+  "passed": 63,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/case.json",
+      "bytes": 57155,
+      "sha256": "557f3e7675646e7275a204474fa18a2b818984842eb7d49fdf01eb65224c5f6b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/README.txt",
+      "bytes": 821,
+      "sha256": "26bee6cdd9f8e39c8d62679819d82fa54ce75d33ae7ace6313398899f3a42bc3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/index.html",
+      "bytes": 11628,
+      "sha256": "e2522f58e902009f875f852a5afbe8a96de8e9b3f206cf1334b2b9eb2d68e3ef"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.css",
+      "bytes": 29430,
+      "sha256": "423984de25bd29f6bcd348ead11890844db6345bfb87aac4c8b8b7c1bfcf62d6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.js",
+      "bytes": 111887,
+      "sha256": "c7d89696f54f860d876709e50f74594565ed1c76cb2353ec5f20022ecad829a6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+      "bytes": 57573,
+      "sha256": "5fdf4f24c16919065a79686d806b9e2281fe6e3e40e778b8b7a6acea284be4b2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+      "bytes": 875,
+      "sha256": "5e6f275fe335d869177175d8e2fd90b753b381743672217cd90215ea13a56e34"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+      "bytes": 11461,
+      "sha256": "7a29f90ca970ae9f135d7ca543f1f924eb84b1658be07b92474c906631ecf5e3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+      "bytes": 29430,
+      "sha256": "423984de25bd29f6bcd348ead11890844db6345bfb87aac4c8b8b7c1bfcf62d6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+      "bytes": 111767,
+      "sha256": "b6ffc98ff81cbc935c60db1eae6acbcc8cd9b003154554e41a12b2799861aa3f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/case.json",
+      "bytes": 57715,
+      "sha256": "eae0a48a3480457e08233dfc53603d9d77cae2591a185c5fb0af0f6b4d3ffaa7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/README.txt",
+      "bytes": 837,
+      "sha256": "cc2d7523ea729af68a14067349591f25599a614d9e4a0cd1ed9636bf552e5486"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/index.html",
+      "bytes": 11917,
+      "sha256": "b65198dc2a5ec45b31a75a663a29afa6359f9c76406f8c79fe57a6262efdc8b7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.css",
+      "bytes": 29430,
+      "sha256": "423984de25bd29f6bcd348ead11890844db6345bfb87aac4c8b8b7c1bfcf62d6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.js",
+      "bytes": 113041,
+      "sha256": "3c002823bac9f475cf0c7c356febee18ba4c0c92b03ef490741e76c65b02d5cd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/case.json",
+      "bytes": 57599,
+      "sha256": "1ec4e495f1e207f8cf36cb157141fcb551b550cdd517d50a73529db16a7c10e9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/README.txt",
+      "bytes": 841,
+      "sha256": "0ba9f6d3e67d3ab8c1dac45062884b8db99c9e959235cd74c1d4a1fe387d94f5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/index.html",
+      "bytes": 11823,
+      "sha256": "df7fb43553dda7f5e552f85442800d5ff02ffe217f4aa910aaae1906ee485e4d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.css",
+      "bytes": 29430,
+      "sha256": "423984de25bd29f6bcd348ead11890844db6345bfb87aac4c8b8b7c1bfcf62d6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.js",
+      "bytes": 112309,
+      "sha256": "0a948530aeba551d1b454188848805aa654a611bc43f46c4f3a16377482806f0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/case.json",
+      "bytes": 72480,
+      "sha256": "8b481c1c7ebc13dd722cf30b6313617e43a132e60a73c2fd864c422e7d3e08a6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/README.txt",
+      "bytes": 3839,
+      "sha256": "f40eea81df96823d1d046d20872f6f50f5e3562d22ce3254d69a796ac688ada2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/index.html",
+      "bytes": 4967,
+      "sha256": "ec31fb5f8b245e5166b7ec469fbfabe307533e1ea37bf8756b93b79910d73f5d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.css",
+      "bytes": 32730,
+      "sha256": "4ff2db2d2cfd10fa180eb4d866d7f39fdc687ef9a72f5f81ec34b4d2bfe6e03d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.js",
+      "bytes": 163669,
+      "sha256": "eee52c5f0d091db582c21c8b369a99010fbb62ed6d161b1960556ce061afd952"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/case.json",
+      "bytes": 57024,
+      "sha256": "1137106fbbfbc06552500b73019ad238e497619cbf25f8490408f016739e4e69"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/README.txt",
+      "bytes": 775,
+      "sha256": "dcedd61493e631cc7030600f7a6bd87a503cff2307c76891d1906ebb8567293d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html",
+      "bytes": 2336,
+      "sha256": "715037ae13521bfb46b11b63b04914b4e19e4bb6bfb4e14caff4838beeffa8ec"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.css",
+      "bytes": 28862,
+      "sha256": "59bc8abaf436bfe7bee923adfb8091d0675e30b51c8e46167f200f872ad456ed"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.js",
+      "bytes": 128685,
+      "sha256": "450da6548bbedc886696f09e4bb01c7116c8dcf0dabef29ae319923929971256"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/case.json",
+      "bytes": 56840,
+      "sha256": "941b4f35d6c4a9b83ff8430d584d7bd08f265372605ba83e3f27d99bfe353a81"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/README.txt",
+      "bytes": 720,
+      "sha256": "280ccb8763f556d239bf1f5c0ec3aa689f474f5c2ef5932150b593d2033f581d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/index.html",
+      "bytes": 2327,
+      "sha256": "e861dc03514c105fa5cc422b3b9cba5666711bcb0d3ef600058f120d6c12edef"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.css",
+      "bytes": 28862,
+      "sha256": "59bc8abaf436bfe7bee923adfb8091d0675e30b51c8e46167f200f872ad456ed"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.js",
+      "bytes": 127479,
+      "sha256": "fac884e4f3b89b3d019082712859d93e88aceb9f899c7f73eca355a8a849c1bd"
+    }
+  ]
+}

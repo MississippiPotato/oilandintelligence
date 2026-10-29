@@ -1,0 +1,124 @@
+{
+  "checkedAt": "2026-10-29T03:58:33.066Z",
+  "phase": "original",
+  "checks": [
+    {
+      "name": "g1 original Add Case imports current five-file directory",
+      "passed": true
+    },
+    {
+      "name": "g1 original background preserves concept graphics",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [],
+  "screenshots": [],
+  "exception": "g1 original background preserves concept graphics",
+  "diagnostic": "\n·\n\t\n5\n\n04录井\t\n2\n\t\n2\n\t\n1\n\t\n·\n\t\n·\n\t\n5\n\n05测井\t\n1\n\t\n4\n\t\n·\n\t\n1\n\t\n·\n\t\n5\n\n06固井\t\n1\n\t\n1\n\t\n·\n\t\n3\n\t\n·\n\t\n4\n\n07完井\t\n·\n\t\n·\n\t\n·\n\t\n4\n\t\n1\n\t\n4\n\n08射孔\t\n·\n\t\n1\n\t\n·\n\t\n3\n\t\n1\n\t\n4\n\n09采油\t\n1\n\t\n3\n\t\n·\n\t\n1\n\t\n·\n\t\n5\n\n10修井\t\n1\n\t\n2\n\t\n1\n\t\n·\n\t\n2\n\t\n5\n\n11增采\t\n1\n\t\n2\n\t\n·\n\t\n4\n\t\n·\n\t\n5\n\n12运输\t\n2\n\t\n3\n\t\n·\n\t\n1\n\t\n·\n\t\n5\n\n13加工\t\n·\n\t\n3\n\t\n1\n\t\n3\n\t\n·\n\t\n5\n\n合计\t16\t26\t4\t25\t4\t61\n04\nSYSTEM\n接入指南 →\n这个系统由三层组成\n\n新增一个案例，只动第二层的一个文件，外加 index.html 里一行 script 标签。\n\n01 · DATA LAYER · assets/data.js\n场景元数据\n\n13 个环节、61 个场景的名称、方法标签、难度、数据条件。这一层不含任何案例实现，只是一张可检索的表。\n\n02 · CASE LAYER · assets/cases/*.js\n案例插件\n\n每个案例一个文件，调用 Cases.register() 声明自己绑定的场景、三块内容与可选的 demo 挂载函数。互不引用、可单独删除。\n\n03 · SHELL · assets/core/*\n外壳与组件\n\n路由、导航、检索路径、标签/表格/四段式等组件，以及设计令牌。所有案例共用同一套版式，改一次全站生效。\n\n查看案例库与校验结果 →\n看怎么添加下一个案例\n关于\n\n石油勘探开发的智能化可能性地图\n\nv1.0 · 更新于 2026-10\n\n地图\n总览\n作业链\n按方法反查\n系统\n案例库（1 个已接入）\n接入新案例\n参与\n\n发现问题或想补一个场景？\n\natlas@example.com\n场景数据：61 个 · 环节：13 个\n纯静态 · 无后端 · 可离线运行\n✓\n已添加「地质剖面遥感解译：从多波段像素读懂地表单元」\n正在打开场景页…",
+  "passed": 1,
+  "failed": 1,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/case.json",
+      "bytes": 66684,
+      "sha256": "5bf5ed78de5f3552549e385cf2568f6a934eb0a6d86eeb72f39e7f356849abe0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
+      "bytes": 3563,
+      "sha256": "d7daf2bc42c3f416c051e9623d2d69c30a87f228f93dc194bb6c1a109a86bcb1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html",
+      "bytes": 23215,
+      "sha256": "1e63212a813f6e936c28fece4c2ca09cbd6a11ba6a67d743f47e5a45747247c1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.css",
+      "bytes": 35736,
+      "sha256": "d193f4529305015b6303461c94f85aca7ae648dc9cbd84fb59819fb7a701f5c6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js",
+      "bytes": 136442,
+      "sha256": "9b1490e98069e64d12ded248be06ced3e5264920c1506258d16f703a975d146d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+      "bytes": 58622,
+      "sha256": "5bd6c6c1daacec80f2abb705c19739926234639dc20a19865ae86ab0a720264d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+      "bytes": 1152,
+      "sha256": "0d49b593ca0b1fecfdb950af3e8b38750310aca2ada24913cbc5ebcb548b0f51"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+      "bytes": 2452,
+      "sha256": "c3d48d67a4d34665d6181f0766ad8292820f0d7e731bc67a5b6b3eed66225df9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+      "bytes": 29332,
+      "sha256": "81ce99dbd2f055c26920793b72caab19def1dcf9d01ed084b7abe85491072290"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+      "bytes": 125908,
+      "sha256": "af7082a6f94fba5c02b05df9d68884d80dfe618e1e42cce1cc6e475f0a1d85d5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/case.json",
+      "bytes": 58152,
+      "sha256": "6cc49c672b04b15d568868620d5615ce120709c5cfd37bc0c770036dbe60ae70"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/README.txt",
+      "bytes": 822,
+      "sha256": "3ae430cac4f58c2b8b02f2a078e2f4f924209cb3a4ded9a7301eb9a1f02abe00"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/index.html",
+      "bytes": 12890,
+      "sha256": "239f4488a54d16cda5eed56f9638a742f162ddadf552b7718d456206344c6ae9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.css",
+      "bytes": 29209,
+      "sha256": "cc4d6d445d80febac581a407d29e06ce701c1f88180956cb3076d858e8c2ae29"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.js",
+      "bytes": 113100,
+      "sha256": "794616eaece088f995bec24ab4e16dae618b441f7917ae0f258ddb3251753fb5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
+      "bytes": 72584,
+      "sha256": "ab362cd5c3611645a08353d1089dd6f7ade0fb205ee8c52b630f864ec8c0ed99"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+      "bytes": 4268,
+      "sha256": "4c929a5bf336016766f6211e70f5461971b8caaf9f668fec26c7bcb522cf660c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html",
+      "bytes": 5202,
+      "sha256": "654c39dba284cc3cd8963e18c9e2c678c3787b39bba5508cafb4fa35b90e1857"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+      "bytes": 32509,
+      "sha256": "b9a80a157ea2cc0a0b8691377675dd15e2cbb8ce1ab3bdb212c81e09e5ed052a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+      "bytes": 165229,
+      "sha256": "88775368294de9aed41a101b7c996e1db7afca25824058cf76717e6c89fee04b"
+    }
+  ]
+}

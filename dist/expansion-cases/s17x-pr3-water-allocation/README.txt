@@ -15,3 +15,7 @@ SLB：waterflood https://glossary.slb.com/en/terms/w/waterflood
 SLB：储层工程与注采剖面 https://www.slb.com/resource-library/oilfield-review/defining-series/defining-reservoir-engineering
 
 验证边界：源文件生成不等于浏览器验收；实际浏览器记录由汇总交付另附。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：收紧A井能力：核对分配总量和每井上限，查看水量向哪里转移。
+增加总注水量：检查收益增长和容量余量，避免只看总量不看可实施性。

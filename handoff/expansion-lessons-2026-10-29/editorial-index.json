@@ -1,0 +1,2184 @@
+{
+  "createdAt": "2026-10-29T04:14:20.563Z",
+  "scope": "56case-specific reading profiles, existing professional content/diagrams, two tasks per case. No new raster images or engine/controller edits.",
+  "cases": [
+    {
+      "scene": "g1",
+      "id": "s17x-g1-remote-lithology",
+      "title": "地质剖面遥感解译：从多波段像素读懂地表单元",
+      "insight": "露头的颜色同时受岩石、植被和阴影影响；多波段的价值，要在同一位置与单红光判断比较。",
+      "object": "一处露头像素",
+      "reading": [
+        "先对照露头、覆盖物与像素的关系，分清画面颜色和地下岩性。",
+        "比较同一地物在红光、近红外和短波红外中的响应，波段是不同测量通道。",
+        "在候选图上选同一个位置，读特征、近邻和单红光基线。"
+      ],
+      "parameters": [
+        "noise",
+        "shadow",
+        "cover",
+        "feature-mode"
+      ],
+      "tasks": [
+        {
+          "label": "只留红光",
+          "values": {
+            "feature-mode": "red"
+          },
+          "look": "对照候选类别与基线，检查丢掉近红外和短波红外后哪些地物更难区分。"
+        },
+        {
+          "label": "加深阴影",
+          "values": {
+            "shadow": 0.65
+          },
+          "look": "查看阴影区域的待复核点与误分分布，别只看整体准确率。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/g1/knowledge.md",
+        "bytes": 4323,
+        "sha256": "7b9cda7ab2394e5d0b62cfa6fecd415abac1e9993da09a2ded78ad0df3e059ed"
+      }
+    },
+    {
+      "scene": "g2",
+      "id": "s17x-g2-geochemical-anomaly",
+      "title": "油气地球化学异常：从单点高值到联合背景偏离",
+      "insight": "异常是偏离当地多组分背景的程度；甲烷单点升高还需要回到组分与位置一起解释。",
+      "object": "一个土壤气采样点",
+      "reading": [
+        "将坐标与C1、C2、C3三项浓度连起来，先认清一条记录。",
+        "沿背景椭圆长轴和横穿椭圆比较，理解联合距离为何考虑共同变化。",
+        "地图负责定位，交会图负责解释关系；C3也参与计算。"
+      ],
+      "parameters": [
+        "organic",
+        "threshold"
+      ],
+      "tasks": [
+        {
+          "label": "放宽异常筛选",
+          "values": {
+            "threshold": 1.8
+          },
+          "look": "观察候选点增加或不变；同一点的浓度和联合距离不应随阈值改变。"
+        },
+        {
+          "label": "增大甲烷背景波动",
+          "values": {
+            "organic": 3.5
+          },
+          "look": "比较联合背景与只看C1的基线，查看误报和召回如何权衡。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/g2/knowledge.md",
+        "bytes": 5514,
+        "sha256": "99ad9b43d69801d2294c15fa7f8fbed0f7974f6d2c74bd49092930f9a50c9222"
+      }
+    },
+    {
+      "scene": "g3",
+      "id": "s17x-g3-map-elements",
+      "title": "地质图要素提取：把符号与图例变成可检索记录",
+      "insight": "地质图既有色块又有符号和文字；先读懂图例，再把识别结果放回原图定位。",
+      "object": "一个地质图块",
+      "reading": [
+        "逐一分清地层填色、界线与符号，颜色不是唯一信息。",
+        "对照图块与模板，查看相似度来自形状还是颜色。",
+        "从识别清单回到图上位置，保留图例和要素之间的对应。"
+      ],
+      "parameters": [
+        "noise",
+        "seed",
+        "legend"
+      ],
+      "tasks": [
+        {
+          "label": "增加图件噪声",
+          "values": {
+            "noise": 0.12
+          },
+          "look": "选择一个图块，比较模板得分与识别位置，观察哪些要素更容易混淆。"
+        },
+        {
+          "label": "更换图件实例",
+          "values": {
+            "seed": 1107
+          },
+          "look": "查看新图上的要素与结果，检查方法是否只记住了原来的排列。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/g3/knowledge.md",
+        "bytes": 3962,
+        "sha256": "e1456b13c63749adde7748ec67fce50bc895eb4ea7a1d028ffd86c459cbdca0b"
+      }
+    },
+    {
+      "scene": "g4",
+      "id": "s17x-g4-fracture-survey",
+      "title": "露头裂缝统计：从暗色迹线到方向与裂缝强度",
+      "insight": "裂缝条数和裂缝总长度回答不同问题；统计之前，要先说明观察窗口与检出的线段。",
+      "object": "一个露头观察窗口",
+      "reading": [
+        "从岩体裂缝到图像线段，区分地质对象与检测结果。",
+        "看清扫描线和面积窗口，P10与P21的分母不同。",
+        "对照检出线和图像边缘，判断是漏掉弱裂缝还是接入了噪声。"
+      ],
+      "parameters": [
+        "threshold",
+        "votes",
+        "noise",
+        "contrast"
+      ],
+      "tasks": [
+        {
+          "label": "提高检线门槛",
+          "values": {
+            "votes": 55
+          },
+          "look": "比较检出条数、长度与统计值，留意短弱裂缝是否消失。"
+        },
+        {
+          "label": "降低裂缝对比度",
+          "values": {
+            "contrast": 0.25
+          },
+          "look": "沿同一观察窗口看漏检位置，再对照条数与长度两种统计。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/g4/knowledge.md",
+        "bytes": 3978,
+        "sha256": "a68cd308676a3530f71ebc584db81ae365227d66ebfe21ab4301dc11da73dce4"
+      }
+    },
+    {
+      "scene": "s1",
+      "id": "s17x-s1-seismic-fault",
+      "title": "地震断层自动解释：沿波形不连续性寻找错断",
+      "insight": "断层解释寻找反射的错断关系；不连续也可能来自噪声或缺道，需要逐位置比较。",
+      "object": "地震剖面上的一个位置",
+      "reading": [
+        "沿同一反射层跨过错动位置，观察断距怎样改变反射连续性。",
+        "从小窗内的振幅与结构属性理解候选得分，而不是凭颜色判定。",
+        "分开调节断距、噪声和缺道，对照模型与不连续性阈值图。"
+      ],
+      "parameters": [
+        "throw",
+        "noise",
+        "gap",
+        "threshold"
+      ],
+      "tasks": [
+        {
+          "label": "取消断距",
+          "values": {
+            "throw": 0
+          },
+          "look": "检查无错断时是否仍到处产生候选；读误报位置。"
+        },
+        {
+          "label": "提高观测噪声",
+          "values": {
+            "noise": 0.3
+          },
+          "look": "选一个候选位置，对照原剖面、概率和阈值基线。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/s1/knowledge.md",
+        "bytes": 4234,
+        "sha256": "143c8571142d1dfafa1b2a83c6fedea67ec4641672c04c77b78d8406789ddc0d"
+      }
+    },
+    {
+      "scene": "s2",
+      "id": "s17x-s2-seismic-facies",
+      "title": "地震相智能分类：从反射纹理认识沉积线索",
+      "insight": "地震相描述一段反射的结构与连续性；振幅相近的窗口也可能属于不同结构。",
+      "object": "一个地震小窗",
+      "reading": [
+        "先读反射连续、杂乱与空白的含义，再认类别色标。",
+        "比较同一色标下的小窗，避免把自动缩放造成的亮暗当作差异。",
+        "沿选中窗查看振幅、连续性等属性及实际近邻。"
+      ],
+      "parameters": [
+        "noise",
+        "k"
+      ],
+      "tasks": [
+        {
+          "label": "增加噪声",
+          "values": {
+            "noise": 0.6
+          },
+          "look": "查看小窗结构与近邻类别是否更混杂，并对照单属性基线。"
+        },
+        {
+          "label": "扩大近邻数",
+          "values": {
+            "k": "31"
+          },
+          "look": "比较局部分类边界和支持度；更多邻居不保证每个窗都更好。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/s2/knowledge.md",
+        "bytes": 5365,
+        "sha256": "10d892e9da9cbacb84348b8dd17bb68e3021ca3af0b46f25cf81562438df7b7d"
+      }
+    },
+    {
+      "scene": "s3",
+      "id": "s17x-s3-first-arrival",
+      "title": "初至波自动拾取：把第一段有效能量定位到时间轴",
+      "insight": "初至是最早可辨认的到达；弱起跳和噪声尖峰要求同时检查触发时间与波形。",
+      "object": "炮集中的一条道",
+      "reading": [
+        "在同一时间轴找到最早起跳，分清初至与后面较大的峰。",
+        "对照噪声触发与弱信号漏拾的例子，理解阈值的两面作用。",
+        "将候选点放回波形，再读时间误差与未拾取数。"
+      ],
+      "parameters": [
+        "noise",
+        "weak",
+        "threshold"
+      ],
+      "tasks": [
+        {
+          "label": "减弱初至信号",
+          "values": {
+            "weak": 0.25
+          },
+          "look": "选择一条弱道，看模型和幅度阈值各自拾到哪里。"
+        },
+        {
+          "label": "提高触发门槛",
+          "values": {
+            "threshold": 0.8
+          },
+          "look": "检查早触发是否减少，同时留意漏拾增加。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/s3/knowledge.md",
+        "bytes": 5200,
+        "sha256": "d25de0ca6fd9fd1d0272ba045350cca073988fe6bccfe3a83b923818da60b62c"
+      }
+    },
+    {
+      "scene": "s4",
+      "id": "s17x-s4-reservoir-inversion",
+      "title": "储层参数反演：用井震关系估计孔隙度",
+      "insight": "地震属性到孔隙度的映射需要井震标定；相同阻抗可能对应不同的孔隙度。",
+      "object": "留出井上的一个井段",
+      "reading": [
+        "孔隙度是空隙体积分数，阻抗是弹性响应；先分清两个量。",
+        "查看相同阻抗的不同点，理解第二属性为何能补充信息。",
+        "沿共同深度轴比较预测与井上参考，找出误差集中的井段。"
+      ],
+      "parameters": [
+        "noise",
+        "lambda"
+      ],
+      "tasks": [
+        {
+          "label": "增强正则约束",
+          "values": {
+            "lambda": "100"
+          },
+          "look": "比较预测曲线是否更平缓，以及细部误差是否增大。"
+        },
+        {
+          "label": "增加属性噪声",
+          "values": {
+            "noise": 0.6
+          },
+          "look": "看同一口留出井的误差分布，区分拟合复杂度与输入质量。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/s4/knowledge.md",
+        "bytes": 5494,
+        "sha256": "8a719bf91230d590ba3d583615d62f0d9eef0e695945bc75ccf23d32dbeba8b5"
+      }
+    },
+    {
+      "scene": "s5",
+      "id": "s17x-s5-seismic-denoise",
+      "title": "地震资料噪声压制：降低干扰，也检查反射是否保真",
+      "insight": "去噪既要降低干扰，也要保留反射；被移除的差值图与处理后波形同样需要看。",
+      "object": "炮集中的一条反射道",
+      "reading": [
+        "在振幅—时间图里分清反射、随机干扰与相干干扰。",
+        "邻域模型从带噪观测估计中心采样，对照滑动平均的平滑作用。",
+        "将原始、处理后和被移除的部分放在同一时间位置比较。"
+      ],
+      "parameters": [
+        "noise",
+        "type"
+      ],
+      "tasks": [
+        {
+          "label": "换成相干干扰",
+          "values": {
+            "type": "coherent"
+          },
+          "look": "检查差值图里是否出现反射结构，并与随机噪声下的结果比较。"
+        },
+        {
+          "label": "增强随机噪声",
+          "values": {
+            "type": "random",
+            "noise": 0.5
+          },
+          "look": "选同一条道，比较峰谷保留、残差和RMSE，而不只看波形是否平滑。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/s5/knowledge.md",
+        "bytes": 5398,
+        "sha256": "a7456bea58caa65b25f6095808bfcc77e95fdb10c50d3beb580395cb089bcfa4"
+      }
+    },
+    {
+      "scene": "d1",
+      "id": "s17x-d1-rop-optimization",
+      "title": "钻速预测与参数优化：从响应面到可行候选",
+      "insight": "钻得更快需要同时满足泵压、扭矩和参数边界；预测高值要与可行区域一起看。",
+      "object": "一组钻压、转速和排量",
+      "reading": [
+        "将钻压、转速和循环排量对应到钻头作用，各参数有不同作用。",
+        "在深度—时间关系上理解钻速单位，避免混淆钻速与钻时。",
+        "在响应面上分清高钻速区域和满足约束的候选。"
+      ],
+      "parameters": [
+        "wob",
+        "rpm",
+        "flow",
+        "ucs",
+        "maxPressure",
+        "maxTorque",
+        "noise"
+      ],
+      "tasks": [
+        {
+          "label": "收紧泵压上限",
+          "values": {
+            "maxPressure": 15
+          },
+          "look": "查看可行点和推荐参数怎样改变，同时检查约束余量。"
+        },
+        {
+          "label": "提高岩石强度",
+          "values": {
+            "ucs": 100
+          },
+          "look": "对照当前预测与留出误差，留意输入是否进入外推区域。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/d1/knowledge.md",
+        "bytes": 4232,
+        "sha256": "a7b2939f4dae603e47a005afc5b26f5d0a216cb307bdee27557ad85abab808d7"
+      }
+    },
+    {
+      "scene": "d2",
+      "id": "s17x-d2-drilling-precursor",
+      "title": "井下复杂工况预警：先解释正常泵压，再找持续偏离",
+      "insight": "泵压随正常工况变化；先预测正常响应，再看持续偏离，能帮助区分负荷变化与异常。",
+      "object": "一段泵压监测记录",
+      "reading": [
+        "把循环流动、排量和泵压联系起来，先说明压力变化的来源。",
+        "比较实测压力与正常关系预测，残差是二者之差。",
+        "把报警放回时间轴，对照事件起点和误报时段。"
+      ],
+      "parameters": [
+        "drift",
+        "noise",
+        "threshold",
+        "absolute"
+      ],
+      "tasks": [
+        {
+          "label": "减弱异常幅度",
+          "values": {
+            "drift": 0.6
+          },
+          "look": "查看残差与固定压力阈值各自何时触发，读漏报与提前量。"
+        },
+        {
+          "label": "提高告警门槛",
+          "values": {
+            "threshold": 0.7
+          },
+          "look": "观察告警区间缩短或消失，并核对是否延后发现异常。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/d2/knowledge.md",
+        "bytes": 2988,
+        "sha256": "27fb18a709588f524d2d1bab3b2f3e0fbecdf5793874121371b20b6ec8cffbd8"
+      }
+    },
+    {
+      "scene": "d3",
+      "id": "s17x-d3-trajectory-control",
+      "title": "井眼轨迹控制：学到转向响应后怎样接近目标",
+      "insight": "轨迹控制要在到达目标与转弯幅度之间权衡；动作响应和轨迹结果应同时展示。",
+      "object": "一次井眼轨迹控制",
+      "reading": [
+        "在剖面上区分沿井眼的测深、垂直深度与横向位移。",
+        "查看相邻轨迹段的转向，理解狗腿变化为何受限。",
+        "把每次控制动作与下一段轨迹变化对应起来。"
+      ],
+      "parameters": [
+        "targetX",
+        "targetZ",
+        "gain",
+        "limit"
+      ],
+      "tasks": [
+        {
+          "label": "收紧转向幅度",
+          "values": {
+            "limit": 3
+          },
+          "look": "比较到靶误差与轨迹弯曲，检查更平滑是否同时更接近目标。"
+        },
+        {
+          "label": "移动横向目标",
+          "values": {
+            "targetX": 240
+          },
+          "look": "沿轨迹看动作怎样逐段累积，而不是只读终点距离。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/d3/knowledge.md",
+        "bytes": 2821,
+        "sha256": "7a629c488ebbba74eed06b9f1d5f103b08f96b3269ae2d7a2d44bb8272b3138e"
+      }
+    },
+    {
+      "scene": "d4",
+      "id": "s17x-d4-tool-condition",
+      "title": "钻具状态识别：振动变大还是频带变了",
+      "insight": "振动强度相似的钻具状态，频率组成可能不同；时域与频域需要对照。",
+      "object": "一段钻具振动窗口",
+      "reading": [
+        "先认识振幅随时间的变化，RMS表示整体强度。",
+        "比较谱峰位置和能量分布，频谱保留了强度以外的信息。",
+        "选同一个窗口查看特征、模型类别和仅RMS基线。"
+      ],
+      "parameters": [
+        "load",
+        "noise",
+        "threshold",
+        "rms"
+      ],
+      "tasks": [
+        {
+          "label": "改变负荷",
+          "values": {
+            "load": 1.6
+          },
+          "look": "查看RMS随负荷变化后，频域特征与分类是否仍能区分状态。"
+        },
+        {
+          "label": "提高噪声",
+          "values": {
+            "noise": 2
+          },
+          "look": "在同一窗口比较时域与频域信息，检查支持度和误判。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/d4/knowledge.md",
+        "bytes": 2880,
+        "sha256": "ac68ef15d30f5babad0f866214f9092b2cd711e436d736898ad6721c1b2d2085"
+      }
+    },
+    {
+      "scene": "d5",
+      "id": "s17x-d5-mud-rheology",
+      "title": "钻井液性能调控：温度变化下寻找可行塑性黏度",
+      "insight": "钻井液性能取决于配方和温度；配方搜索应建立在已检验的性能预测上。",
+      "object": "一个钻井液配方候选",
+      "reading": [
+        "把流动与携屑需求对应到流变响应，而不是只追求更稀或更稠。",
+        "在剪切速率—应力图上读斜率，理解PV的含义。",
+        "先比较独立样本的预测误差，再查看满足目标范围的配方。"
+      ],
+      "parameters": [
+        "temp",
+        "target",
+        "min",
+        "max",
+        "noise"
+      ],
+      "tasks": [
+        {
+          "label": "升高温度",
+          "values": {
+            "temp": 100
+          },
+          "look": "比较性能预测与可行配方集合，检查温度改变后目标是否仍能达到。"
+        },
+        {
+          "label": "提高目标PV",
+          "values": {
+            "target": 36
+          },
+          "look": "查看推荐配方和预测值怎样变化，并对照允许区间。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/d5/knowledge.md",
+        "bytes": 2948,
+        "sha256": "cf9be5e8d6c2602ba4a121dca338337a849b6ee9e1ba561857cf38de4bd571f6"
+      }
+    },
+    {
+      "scene": "w1",
+      "id": "s17x-w1-log-boundaries",
+      "title": "测井曲线智能分层：识别持续改变的地层响应",
+      "insight": "分层寻找一段曲线关系的持续改变；单点尖峰和真正界面要用邻域比较。",
+      "object": "一个候选层界面",
+      "reading": [
+        "在共同深度轴读GR等测井响应，深度向下增加。",
+        "比较界面两侧窗口，区分局部噪点与连续响应改变。",
+        "将候选界面与参考一对一匹配，避免重复命中。"
+      ],
+      "parameters": [
+        "noise",
+        "window",
+        "gap",
+        "threshold",
+        "gradient"
+      ],
+      "tasks": [
+        {
+          "label": "增大比较窗口",
+          "values": {
+            "window": 11
+          },
+          "look": "观察噪点候选与薄层边界怎样变化，留意邻近界面是否合并。"
+        },
+        {
+          "label": "提高边界门槛",
+          "values": {
+            "threshold": 0.3
+          },
+          "look": "比较候选数量与漏检；阈值改变判断，不改变原始曲线。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/w1/knowledge.md",
+        "bytes": 3067,
+        "sha256": "d6ff798fb9349fb8726fc492d34081597c47632e3d9dd9b76bf4de68079f73cc"
+      }
+    },
+    {
+      "scene": "w2",
+      "id": "s17x-w2-porosity-calibration",
+      "title": "储层参数智能解释：用岩心标定孔隙度",
+      "insight": "孔隙度解释需要岩石与流体假设；多道标定应与单密度方法在独立点上比较。",
+      "object": "一个孔隙度解释点",
+      "reading": [
+        "将空隙体积与总体积对应，先理解孔隙度的分母。",
+        "密度法把骨架与流体密度作为假设，看假设怎样影响估计。",
+        "对照标定点与留出点，分清模型学习和误差检查。"
+      ],
+      "parameters": [
+        "count",
+        "noise",
+        "mode"
+      ],
+      "tasks": [
+        {
+          "label": "只用密度道",
+          "values": {
+            "mode": "density"
+          },
+          "look": "比较误差随GR和中子响应的分布，检查互补信息被移除后的变化。"
+        },
+        {
+          "label": "减少标定点",
+          "values": {
+            "count": 30
+          },
+          "look": "查看独立点上的误差和预测分散程度，不能用训练拟合代替检验。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/w2/knowledge.md",
+        "bytes": 3015,
+        "sha256": "b40c88c92b46e0c31745714dafd1780ec4e0b803dc0cf7a732e9e5702251fbd6"
+      }
+    },
+    {
+      "scene": "w3",
+      "id": "s17x-w3-borehole-fractures",
+      "title": "成像测井裂缝识别：从井壁展开图分出窄曲线",
+      "insight": "井壁成像是圆柱面的展开图；倾斜裂缝展开成曲线，需要在像素层面识别。",
+      "object": "一条井壁展开曲线",
+      "reading": [
+        "将井筒圆周与展开横轴对应，同一深度横向覆盖一周。",
+        "观察倾斜平面与井壁的交线，解释起伏曲线从哪里来。",
+        "比较像素得分、分割掩膜和原图中的弱裂缝。"
+      ],
+      "parameters": [
+        "noise",
+        "contrast",
+        "threshold",
+        "dark"
+      ],
+      "tasks": [
+        {
+          "label": "减弱裂缝对比度",
+          "values": {
+            "contrast": 0.2
+          },
+          "look": "沿曲线寻找漏掉的像素，再比较模型与暗色阈值。"
+        },
+        {
+          "label": "提高分割阈值",
+          "values": {
+            "threshold": 0.4
+          },
+          "look": "查看掩膜收缩的位置及重叠指标，分清更少噪点与更多漏检。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/w3/knowledge.md",
+        "bytes": 3003,
+        "sha256": "e3af1faed21a640c7a5808eec14b1fb6dcaac1ecbb5bfa0cdb7f778f2f45823b"
+      }
+    },
+    {
+      "scene": "w4",
+      "id": "s17x-w4-log-lithology",
+      "title": "测井岩性识别：多道曲线与可解释近邻",
+      "insight": "岩性解释利用多道响应互补；流体与井眼也会改变曲线，所以要保留近邻依据。",
+      "object": "一口留出井的一个深度点",
+      "reading": [
+        "测井记录连续响应，与岩屑的离散样品分别观察。",
+        "共同深度轴上对照GR、电阻率、密度与中子，不把单道直接等同岩性。",
+        "比较正常与含气、扰动条件，查看同一点近邻与待复核结果。"
+      ],
+      "parameters": [
+        "preset",
+        "mode",
+        "k",
+        "noise",
+        "support"
+      ],
+      "tasks": [
+        {
+          "label": "只看GR",
+          "values": {
+            "mode": "gr"
+          },
+          "look": "检查砂岩与灰岩等类别的混淆，并与多道输入对照。"
+        },
+        {
+          "label": "含气砂岩情景",
+          "values": {
+            "preset": "gas"
+          },
+          "look": "对照密度与中子响应变化，以及候选和支持度怎样改变。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/w4/knowledge.md",
+        "bytes": 4238,
+        "sha256": "09ec402dde32892c553f6177bed241f117a4217c6e36b7aaec69db40897ac955"
+      }
+    },
+    {
+      "scene": "w5",
+      "id": "s17x-w5-curve-repair",
+      "title": "测井曲线修复：用可见曲线重建密度缺口",
+      "insight": "缺测曲线的修复值来自其他观测关系；要把原始测量、缺口和估计值明确区分。",
+      "object": "一段缺测井段",
+      "reading": [
+        "先读GR、电阻率等曲线各测量什么，再讨论互补关系。",
+        "比较缺口端点与内部地层变化，理解直线插值为何可能遗漏变化。",
+        "用独立留出井段检查修复，并始终标出缺口范围。"
+      ],
+      "parameters": [
+        "start",
+        "length",
+        "noise",
+        "k",
+        "mode"
+      ],
+      "tasks": [
+        {
+          "label": "延长缺口",
+          "values": {
+            "length": 45
+          },
+          "look": "查看修复曲线与端点插值在缺口中段的差异及误差分布。"
+        },
+        {
+          "label": "只留GR依据",
+          "values": {
+            "mode": "gr"
+          },
+          "look": "比较缺口内预测，观察移除电阻率信息后是否损失局部变化。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/w5/knowledge.md",
+        "bytes": 3093,
+        "sha256": "d66cd0e593abc5d78bf3ee90913d908a42e46743653da73ac592498d8af59614"
+      }
+    },
+    {
+      "scene": "c1",
+      "id": "s17x-c1-cement-quality",
+      "title": "固井质量智能评价",
+      "insight": "声波胶结评价要把套管早到波与后到波放在一起；高声幅可能有多种原因。",
+      "object": "一口井的一个深度窗",
+      "reading": [
+        "沿套管—水泥环—地层读传播路径，先明白胶结改变了什么。",
+        "CBL保留声幅，VDL保留波列；在同一深度交叉查看。",
+        "比较偏心与微环空情景，观察多证据候选和待复核门槛。"
+      ],
+      "parameters": [
+        "preset",
+        "noise",
+        "eccentric",
+        "micro",
+        "reject",
+        "thresholdShift"
+      ],
+      "tasks": [
+        {
+          "label": "加入微环空",
+          "values": {
+            "preset": "micro"
+          },
+          "look": "对照早到声幅与后到波变化，检查单声幅判断是否足够。"
+        },
+        {
+          "label": "提高复核门槛",
+          "values": {
+            "reject": 0.85
+          },
+          "look": "查看候选支持度与待复核井段，区分没有把握和较差胶结。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/c1/knowledge.md",
+        "bytes": 4178,
+        "sha256": "7295fe13755e3cfcb56e07fb7bad5a4cdb0724b347c48739b3281732baeb822c"
+      }
+    },
+    {
+      "scene": "c2",
+      "id": "s17x-c2-cement-displacement",
+      "title": "注水泥参数优化",
+      "insight": "注水泥需要把钻井液置换出去；提高排量的收益必须与压力边界一起比较。",
+      "object": "一个排量—密度候选",
+      "reading": [
+        "沿环空路径看置换的对象，分清灌入与有效置换。",
+        "对照排量、密度和压力，理解收益与约束来自不同响应。",
+        "在可行区域内比较置换效果，而不是直接选最高预测点。"
+      ],
+      "parameters": [
+        "ecc",
+        "pressureLimit",
+        "qmax"
+      ],
+      "tasks": [
+        {
+          "label": "收紧压力上限",
+          "values": {
+            "pressureLimit": 45
+          },
+          "look": "查看可行候选减少的位置，比较最优点与压力余量。"
+        },
+        {
+          "label": "增加套管偏心",
+          "values": {
+            "ecc": 0.65
+          },
+          "look": "对照预测置换效果和推荐参数，追查窄侧流动的影响。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/c2/knowledge.md",
+        "bytes": 4089,
+        "sha256": "8b8f83b239ee30d813d956a524c50ee45df3b16ad98e82523007dd7a57325a81"
+      }
+    },
+    {
+      "scene": "c3",
+      "id": "s17x-c3-cement-loss-risk",
+      "title": "固井漏失风险预测",
+      "insight": "漏失风险分数与报警阈值分开计算；同一批井段可因门槛不同产生不同警报。",
+      "object": "一个注水泥监测时段",
+      "reading": [
+        "把预期流道与地层流失路径区分，理解进返量为何提供线索。",
+        "比较连续风险分数与二值报警，阈值只决定如何筛选。",
+        "按井留出检查模型，避免同井相邻样本混入评价。"
+      ],
+      "parameters": [
+        "threshold",
+        "shift",
+        "fracture"
+      ],
+      "tasks": [
+        {
+          "label": "提高告警阈值",
+          "values": {
+            "threshold": 0.75
+          },
+          "look": "观察分数不随门槛改变，检查误报减少是否伴随漏报增加。"
+        },
+        {
+          "label": "增加测量偏移",
+          "values": {
+            "shift": 1
+          },
+          "look": "查看独立井上的分数与误报分布，评估标定变化的影响。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/c3/knowledge.md",
+        "bytes": 3876,
+        "sha256": "e7d8a9bd5317e412cf6a400f774ee870828cf27a6f170777bd987ba95143898c"
+      }
+    },
+    {
+      "scene": "c4",
+      "id": "s17x-c4-casing-standoff",
+      "title": "套管居中度智能评估",
+      "insight": "居中度由窄侧间隙决定；扶正器处看似居中，并不代表跨距中间也居中。",
+      "object": "一段扶正器跨距",
+      "reading": [
+        "在截面上读窄侧与名义间隙，明确比值的分母。",
+        "沿深度看扶正器之间的变形，区分支撑点与最窄位置。",
+        "对照候选布置和间隙曲线，检查受限条件下最薄弱处。"
+      ],
+      "parameters": [
+        "ecc",
+        "load",
+        "spacing"
+      ],
+      "tasks": [
+        {
+          "label": "拉大支撑间距",
+          "values": {
+            "spacing": 18
+          },
+          "look": "查看跨距中部的间隙与最低居中度，不只检查扶正器位置。"
+        },
+        {
+          "label": "增加侧向载荷",
+          "values": {
+            "load": 2
+          },
+          "look": "对照变形曲线和候选布置，检查最窄位置是否移动。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/c4/knowledge.md",
+        "bytes": 3996,
+        "sha256": "17800fad89b44ba6e170d8804a962d6a6b53101b0b8680ba1d00be619b233067"
+      }
+    },
+    {
+      "scene": "co1",
+      "id": "s17x-co1-completion-choice",
+      "title": "完井方式智能优选",
+      "insight": "完井方式对应不同的出砂、控水与成本需求；排序前先检查方案能否适用。",
+      "object": "一口井的完井候选",
+      "reading": [
+        "把裸眼、套管射孔和防砂构型对应到井下问题。",
+        "分开看出砂和出水两条约束，避免把需求压成单一分数。",
+        "先筛不适用方案，再比较预测收益与费用。"
+      ],
+      "parameters": [
+        "preset",
+        "budget",
+        "costWeight",
+        "strength",
+        "sand",
+        "hetero",
+        "water",
+        "logK",
+        "temperature"
+      ],
+      "tasks": [
+        {
+          "label": "预算不足情景",
+          "values": {
+            "preset": "budget"
+          },
+          "look": "查看没有可行方案时的输出，别把排名第一误认为可实施。"
+        },
+        {
+          "label": "出砂与控水并存",
+          "values": {
+            "preset": "conflict"
+          },
+          "look": "逐条读方案被保留或排除的原因，再看模型排序。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/co1/knowledge.md",
+        "bytes": 4051,
+        "sha256": "7bec7fdb1343be9dc819d7ba8fab93c33eea45beab71e2686e33cc67330e3e4d"
+      }
+    },
+    {
+      "scene": "co2",
+      "id": "s17x-co2-completion-zone-design",
+      "title": "射孔参数智能设计",
+      "insight": "射孔层段组合要同时考虑产出与含水；组合方案还必须满足压差和预算约束。",
+      "object": "一个层段组合",
+      "reading": [
+        "从套管内外连通认识射孔的对象，分清层段与单孔参数。",
+        "对照各层压差和含水，理解为什么不能随意合并。",
+        "在约束下搜索组合，读出每项约束为何保留或排除。"
+      ],
+      "parameters": [
+        "budget",
+        "waterLimit",
+        "isolation"
+      ],
+      "tasks": [
+        {
+          "label": "降低允许含水",
+          "values": {
+            "waterLimit": 0.25
+          },
+          "look": "查看可选层段与组合变化，比较产油收益和含水代价。"
+        },
+        {
+          "label": "收紧作业预算",
+          "values": {
+            "budget": 30
+          },
+          "look": "核对推荐组合的成本与可行性，留意是否出现无可行解。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/co2/knowledge.md",
+        "bytes": 3554,
+        "sha256": "ddace4f296e251f8b013d3c6da2a9cd94dbb7e3377abd0ca7eb294a8d5ec172e"
+      }
+    },
+    {
+      "scene": "co3",
+      "id": "s17x-co3-tubing-stress",
+      "title": "完井管柱受力智能分析",
+      "insight": "管柱受力有轴向、环向等不同方向；应沿深度组合载荷并寻找最不利位置。",
+      "object": "一个管柱深度点",
+      "reading": [
+        "先看力、压差和温度分别怎样作用于管柱。",
+        "区分不同方向应力与等效应力，不能简单相加。",
+        "沿共同深度轴检查极值和载荷转移的位置。"
+      ],
+      "parameters": [
+        "force",
+        "temperature",
+        "pressure",
+        "anchor"
+      ],
+      "tasks": [
+        {
+          "label": "增加温差",
+          "values": {
+            "temperature": 90
+          },
+          "look": "查看约束条件下轴向响应与等效应力峰的位置。"
+        },
+        {
+          "label": "提高压差",
+          "values": {
+            "pressure": 25
+          },
+          "look": "对照环向响应及最不利井段，分清不同载荷来源。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/co3/knowledge.md",
+        "bytes": 3963,
+        "sha256": "8ab047e4e6a7f885b0438afc4acaead3fa21a86aea1ece06cdb5cc8cadd1b51b"
+      }
+    },
+    {
+      "scene": "co4",
+      "id": "s17x-co4-sliding-sleeve-control",
+      "title": "智能完井滑套控制策略",
+      "insight": "滑套改变各层进流通道；控制效果需要把产油、产水和切换代价一起看。",
+      "object": "一组随时间执行的滑套动作",
+      "reading": [
+        "从层段到进流通道看滑套作用，关闭通道会同时改变液量组成。",
+        "在相同时间边界比较产液、产油和产水。",
+        "把动作顺序、切换次数和约束对应到累计结果。"
+      ],
+      "parameters": [
+        "penalty",
+        "capacity",
+        "changes"
+      ],
+      "tasks": [
+        {
+          "label": "提高切换代价",
+          "values": {
+            "penalty": 1.2
+          },
+          "look": "比较动作次数与累计收益，观察少操作带来的取舍。"
+        },
+        {
+          "label": "收紧处理能力",
+          "values": {
+            "capacity": 110
+          },
+          "look": "查看控制如何分配各层通道，以及产油与产水的变化。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/co4/knowledge.md",
+        "bytes": 4103,
+        "sha256": "fcd82cdffa8d21d23e5c86583c217dda52c3c1a697c3e23e673dddff9e9cf499"
+      }
+    },
+    {
+      "scene": "p1",
+      "id": "s17x-p1-perforation-design",
+      "title": "射孔参数优化：从试验响应到受约束候选",
+      "insight": "射孔设计建立储层与井筒的流动通道；穿深、孔密和相位需要在预算与干扰下共同比较。",
+      "object": "一个孔密—相位方案",
+      "reading": [
+        "沿储层—孔道—井筒路径理解射孔的目的。",
+        "分别看穿深、孔密与相位控制的几何关系。",
+        "把收益面、成本与拥挤约束放在一起，定位可行候选。"
+      ],
+      "parameters": [
+        "preset",
+        "permeability",
+        "damage",
+        "anisotropy",
+        "budget",
+        "maxCrowding",
+        "costWeight"
+      ],
+      "tasks": [
+        {
+          "label": "收紧预算情景",
+          "values": {
+            "preset": "budget"
+          },
+          "look": "查看候选被排除的原因及是否仍有可行方案。"
+        },
+        {
+          "label": "增加近井损害",
+          "values": {
+            "damage": 28
+          },
+          "look": "比较推荐孔道方案与预测收益，留意约束是否同时满足。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/p1/knowledge.md",
+        "bytes": 5103,
+        "sha256": "24f8070bc9ea85c797c74e26209c4f561abc3ef440e491f75ab0aa5a03470cb0"
+      }
+    },
+    {
+      "scene": "p2",
+      "id": "s17x-p2-perforation-shape",
+      "title": "射孔孔道形态预测：材料变化如何影响通道？",
+      "insight": "孔道形态依赖岩石与围压条件；同一试验设置不能只用一个固定平均值解释。",
+      "object": "一组孔道试验条件",
+      "reading": [
+        "在剖面上找到孔道连接位置，分清孔口和穿透距离。",
+        "对照强度、孔隙度与围压，理解试验条件如何变化。",
+        "用条件预测与固定均值在同一留出样本上比较。"
+      ],
+      "parameters": [
+        "strength",
+        "porosity",
+        "confinement"
+      ],
+      "tasks": [
+        {
+          "label": "提高岩石强度",
+          "values": {
+            "strength": 120
+          },
+          "look": "比较孔道形态预测与基线，读穿深等输出的变化。"
+        },
+        {
+          "label": "提高围压",
+          "values": {
+            "confinement": 25
+          },
+          "look": "查看同一岩石条件下的预测变化，检查独立试验误差。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/p2/knowledge.md",
+        "bytes": 4503,
+        "sha256": "a8557f87db969e6357e5dd22161972180bf96e254480c9cff76988b3f5f1601b"
+      }
+    },
+    {
+      "scene": "p3",
+      "id": "s17x-p3-perforation-catalog",
+      "title": "射孔弹型智能选型：把目录条件变成证据链",
+      "insight": "弹型选择先满足通径、温度和岩石条件，再讨论穿深与偏好；缺失条件应保留待查。",
+      "object": "一个弹型候选",
+      "reading": [
+        "把井筒通径与工具尺寸对应，先看能不能下入。",
+        "沿属性与规则关系追查候选依据，区分事实和推理。",
+        "将硬约束与偏好权重分开，解释为什么高分项也可能被排除。"
+      ],
+      "parameters": [
+        "size",
+        "temp",
+        "rock",
+        "priority",
+        "missing"
+      ],
+      "tasks": [
+        {
+          "label": "通径改窄",
+          "values": {
+            "size": "窄"
+          },
+          "look": "查看哪些弹型因尺寸被排除，排序不能覆盖硬约束。"
+        },
+        {
+          "label": "缺失关键条件",
+          "values": {
+            "missing": "yes"
+          },
+          "look": "检查候选依据和待补信息，不能把未知条件默认为满足。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/p3/knowledge.md",
+        "bytes": 4479,
+        "sha256": "0d625dc7a5500a4941eb06c6f44af1c3535cf6266e951773802c0b72e1ede69b"
+      }
+    },
+    {
+      "scene": "p4",
+      "id": "s17x-p4-perforation-effect",
+      "title": "射孔效果智能评估：把工况变化与效果分开",
+      "insight": "射孔前后产量还受压差和含水变化影响；先建立稳定工况参照，再看剩余增量。",
+      "object": "一组射孔前后记录",
+      "reading": [
+        "对照前后生产条件，说明为什么产量差不直接等于作业效果。",
+        "把稳定工况关系作为参照，分清观测量与校正值。",
+        "比较校正后的剩余增量与独立参考，保留其计算来源。"
+      ],
+      "parameters": [
+        "drawdown",
+        "water",
+        "effect"
+      ],
+      "tasks": [
+        {
+          "label": "增加生产压差",
+          "values": {
+            "drawdown": 12
+          },
+          "look": "比较原始产量增幅与工况校正后增量，分清压差贡献。"
+        },
+        {
+          "label": "提高含水",
+          "values": {
+            "water": 65
+          },
+          "look": "对照产液与有效增油，查看校正怎样改变效果判断。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/p4/knowledge.md",
+        "bytes": 4341,
+        "sha256": "8151ef486e86e6bb90923d36d7655e8103c078b55ed729ebe009b57bbffc6c9b"
+      }
+    },
+    {
+      "scene": "pr1",
+      "id": "s17x-pr1-pump-card",
+      "title": "抽油机井工况诊断：从井下泵功图读形状",
+      "insight": "示功图把一个抽汲周期的载荷与位移配对；形状信息能区分面积相近的泵况。",
+      "object": "一个抽油泵周期",
+      "reading": [
+        "沿杆柱到井下柱塞看一个泵循环，先认清位移和载荷坐标。",
+        "对照充满、供液不足与气影响的卸载形状。",
+        "把形状近邻与面积基线用于同一个周期，并检查支持度。"
+      ],
+      "parameters": [
+        "condition",
+        "noise",
+        "offset",
+        "support",
+        "preset"
+      ],
+      "tasks": [
+        {
+          "label": "查看混合形状",
+          "values": {
+            "condition": "3"
+          },
+          "look": "读近邻是否分散、支持度是否降低，保留需要补充资料的情况。"
+        },
+        {
+          "label": "加入零点偏移",
+          "values": {
+            "offset": 16
+          },
+          "look": "比较形状候选与仅面积判断，检查坐标平移的影响。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/pr1/knowledge.md",
+        "bytes": 5499,
+        "sha256": "2476be22452e59df953111a3fac368c4cbc368ae003d47716a4faa867e602327"
+      }
+    },
+    {
+      "scene": "pr2",
+      "id": "s17x-pr2-production-forecast",
+      "title": "产量智能预测：用过去推向未来的一小段",
+      "insight": "产量预测必须沿时间向前；已有趋势、近期波动与未来干预要分开解释。",
+      "object": "一个预测起点后的产量序列",
+      "reading": [
+        "在时间轴区分长期递减、短期波动和作业变化。",
+        "明确训练截止点与预测区间，未来观测不能流回训练。",
+        "把学习预测、递减基线与后来观测放在同一日期比较。"
+      ],
+      "parameters": [
+        "cut",
+        "horizon",
+        "intervention"
+      ],
+      "tasks": [
+        {
+          "label": "延长预测期",
+          "values": {
+            "horizon": 35
+          },
+          "look": "沿未来区间看误差如何展开，而不是只读一个平均误差。"
+        },
+        {
+          "label": "加入未来干预",
+          "values": {
+            "intervention": "yes"
+          },
+          "look": "比较固定历史模型与干预后的实际曲线，定位预测失配时段。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/pr2/knowledge.md",
+        "bytes": 4673,
+        "sha256": "37b1cb0affb165f8df7c392303d063889cc8c8ab689d42561e4108c903f516d8"
+      }
+    },
+    {
+      "scene": "pr3",
+      "id": "s17x-pr3-water-allocation",
+      "title": "智能注水调配：有限水量怎样分给三层？",
+      "insight": "注水分配需要守住总量和各井能力；边际响应不同，平均分水未必最合适。",
+      "object": "一组注水井配额",
+      "reading": [
+        "从注入井、储层层段到采出井看连通关系。",
+        "比较各井的响应与边际收益，解释同一方水的作用可能不同。",
+        "在总量与单井上限内比较优化分配和平均分配。"
+      ],
+      "parameters": [
+        "total",
+        "capA",
+        "capB",
+        "capC"
+      ],
+      "tasks": [
+        {
+          "label": "收紧A井能力",
+          "values": {
+            "capA": 50
+          },
+          "look": "核对分配总量和每井上限，查看水量向哪里转移。"
+        },
+        {
+          "label": "增加总注水量",
+          "values": {
+            "total": 240
+          },
+          "look": "检查收益增长和容量余量，避免只看总量不看可实施性。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/pr3/knowledge.md",
+        "bytes": 4397,
+        "sha256": "870d1aac7ee7ade53dc170e23257d047d5af9c27f6ce7a6ca7a7b95d6d1c6b99"
+      }
+    },
+    {
+      "scene": "pr4",
+      "id": "s17x-pr4-esp-warning",
+      "title": "电潜泵故障预警：先解释负荷，再找额外偏离",
+      "insight": "电潜泵电流随负荷正常变化；告警更应关注偏离正常关系的持续趋势。",
+      "object": "一段电潜泵运行记录",
+      "reading": [
+        "沿井下泵与地面测量认清电流、负荷等信号来源。",
+        "比较正常关系预测与实测电流，残差表示未被工况解释的部分。",
+        "将告警区间与噪声点分开，回查对应时间段。"
+      ],
+      "parameters": [
+        "load",
+        "noise",
+        "threshold",
+        "currentLimit"
+      ],
+      "tasks": [
+        {
+          "label": "提高正常负荷",
+          "values": {
+            "load": 85
+          },
+          "look": "比较固定电流门槛与残差告警，观察正常增载是否被误判。"
+        },
+        {
+          "label": "收紧残差门槛",
+          "values": {
+            "threshold": 6
+          },
+          "look": "检查告警起点和持续区间，权衡延迟与误报。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/pr4/knowledge.md",
+        "bytes": 4370,
+        "sha256": "cbc8c757e19bed0f12390dd243de41be1e2a29c50b0dae6d2fc53ae2d91be663"
+      }
+    },
+    {
+      "scene": "pr5",
+      "id": "s17x-pr5-wax-risk",
+      "title": "结蜡 / 结垢预测：先把结蜡机理讲清楚",
+      "insight": "结蜡风险取决于温差、含蜡量与流动条件；多条件分类应与单一温度规则对照。",
+      "object": "一个生产条件样本",
+      "reading": [
+        "在管壁位置看蜡沉积及通道变化，区分结蜡和结垢。",
+        "比较壁温、含蜡量和流速的共同作用，不把一个温度当作全部依据。",
+        "在相同测试样本上看候选、误报与漏报。"
+      ],
+      "parameters": [
+        "wall",
+        "wat",
+        "wax",
+        "velocity",
+        "threshold"
+      ],
+      "tasks": [
+        {
+          "label": "降低管壁温度",
+          "values": {
+            "wall": 28
+          },
+          "look": "对照温差与风险分数，查看温度基线和联合方法是否一致。"
+        },
+        {
+          "label": "减少含蜡量",
+          "values": {
+            "wax": 4
+          },
+          "look": "保持其他条件，比较单温度规则与联合候选的差异。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/pr5/knowledge.md",
+        "bytes": 4787,
+        "sha256": "0c44181aeda0ed74655399f836e9a23f05105a19a1d5eb34f33385066636c487"
+      }
+    },
+    {
+      "scene": "wo1",
+      "id": "s17x-wo1-workover-retrieval",
+      "title": "修井作业方案智能推荐：从井史找到有出处的候选",
+      "insight": "修井检索要分清历史怀疑与本次观测；相似工单提供来源，当前条件决定能否推荐。",
+      "object": "一份当前井况记录",
+      "reading": [
+        "把压力、出砂和设备线索对应到井筒部位。",
+        "区分历史叙述、否定和当前观察，避免按关键词直接定方案。",
+        "先读检索来源，再核对条件门槛和待补资料。"
+      ],
+      "parameters": [
+        "preset",
+        "pressureLoss_MPa",
+        "sand_g_L",
+        "currentVariation_pct",
+        "depositIndex",
+        "annulusPressure_MPa",
+        "integrityStatus"
+      ],
+      "tasks": [
+        {
+          "label": "删除关键观测",
+          "values": {
+            "preset": "missing"
+          },
+          "look": "查看缺失信息与候选变化，检索相似不等于条件满足。"
+        },
+        {
+          "label": "出现完整性疑点",
+          "values": {
+            "preset": "conflict"
+          },
+          "look": "逐项读约束与排除原因，核对是否转入优先检查。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/wo1/knowledge.md",
+        "bytes": 3614,
+        "sha256": "e194f5d9f1f9bc38077d5927717eacf8ba86bbe8745333ae212af3cb93a40282"
+      }
+    },
+    {
+      "scene": "wo2",
+      "id": "s17x-wo2-fishing-tools",
+      "title": "落物打捞工具智能选型",
+      "insight": "打捞工具必须与落物形状和可用通径匹配；候选依据应能回查到尺寸和载荷。",
+      "object": "一个落物与工具匹配",
+      "reading": [
+        "分清内捞、外捞及井筒通径，先认清可接触位置。",
+        "沿属性关系查看工具适用范围，数值条件是匹配依据。",
+        "对照可行候选与被排除项，再核对拉力余量。"
+      ],
+      "parameters": [
+        "fish",
+        "bore",
+        "clearance",
+        "pull"
+      ],
+      "tasks": [
+        {
+          "label": "缩小可用通径",
+          "values": {
+            "clearance": 100
+          },
+          "look": "查看工具尺寸限制怎样改变候选，而不只看匹配分数。"
+        },
+        {
+          "label": "提高所需拉力",
+          "values": {
+            "pull": 120
+          },
+          "look": "核对承载能力与排除原因，追查当前候选的约束依据。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/wo2/knowledge.md",
+        "bytes": 3704,
+        "sha256": "37e25b00425799a47906127e06d19690355c068fa837046d3a19896820c80319"
+      }
+    },
+    {
+      "scene": "wo3",
+      "id": "s17x-wo3-casing-damage",
+      "title": "套管损伤智能识别",
+      "insight": "套管展开图里的整体偏心与局部损伤形态不同；先校正背景，再定位局部异常。",
+      "object": "一处套管展开图位置",
+      "reading": [
+        "把圆周角与深度对应到展开图两轴。",
+        "比较大范围偏心变化与局部半径异常，区分背景和目标。",
+        "在同一图上对照候选掩膜、原始响应与重叠评价。"
+      ],
+      "parameters": [
+        "ecc",
+        "depth",
+        "noise",
+        "threshold"
+      ],
+      "tasks": [
+        {
+          "label": "增加偏心",
+          "values": {
+            "ecc": 4
+          },
+          "look": "比较背景校正前后的异常区域，观察是否出现整条误报带。"
+        },
+        {
+          "label": "减小径向缺陷幅度",
+          "values": {
+            "depth": 1.4
+          },
+          "look": "查看局部损伤像素的漏检，并与原始阈值基线对照。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/wo3/knowledge.md",
+        "bytes": 3979,
+        "sha256": "4a073da993a789cb3d59058b58a872ee5e271872ffaaa4074c7bb123cd52de39"
+      }
+    },
+    {
+      "scene": "wo4",
+      "id": "s17x-wo4-workover-warning",
+      "title": "修井作业风险预警",
+      "insight": "修井钩载随动作变化；用速度解释正常载荷后，再检查持续异常与事件时间。",
+      "object": "一段修井动作记录",
+      "reading": [
+        "把上提、下放等动作与钩载放在同一时间轴。",
+        "对照正常关系预测和残差，解释为什么固定载荷阈值容易受速度影响。",
+        "将连续报警与事件起点对应，分别读召回和误报。"
+      ],
+      "parameters": [
+        "speed",
+        "drift",
+        "event",
+        "threshold"
+      ],
+      "tasks": [
+        {
+          "label": "提高动作速度",
+          "values": {
+            "speed": 1.5
+          },
+          "look": "比较正常增载与异常残差，查看固定阈值是否产生额外误报。"
+        },
+        {
+          "label": "加入传感器漂移",
+          "values": {
+            "drift": 3
+          },
+          "look": "对照残差趋势和报警时段，区分突发事件与持续偏移。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/wo4/knowledge.md",
+        "bytes": 3674,
+        "sha256": "49cb2f874ee3f77ba3daa86330f897a246f6e1475f3bae6f6290b5a37fe2628e"
+      }
+    },
+    {
+      "scene": "wo5",
+      "id": "s17x-wo5-maintenance-interval",
+      "title": "修井周期预测",
+      "insight": "修井周期是两次检修之间的间隔；运行条件提供预测依据，误差反映估计的分散。",
+      "object": "一组运行条件下的间隔估计",
+      "reading": [
+        "在时间线上明确起算点、检修点和间隔单位。",
+        "对照负荷、出砂和启停等运行条件，读相似样本。",
+        "比较预测间隔与简单基线，查看独立样本误差。"
+      ],
+      "parameters": [
+        "load",
+        "sand",
+        "stops"
+      ],
+      "tasks": [
+        {
+          "label": "增加出砂",
+          "values": {
+            "sand": 2.5
+          },
+          "look": "对照相似记录和间隔预测，检查建议如何随工况变化。"
+        },
+        {
+          "label": "增加启停次数",
+          "values": {
+            "stops": 6
+          },
+          "look": "查看预测与基线差异，同时读误差范围而不是单一日期。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/wo5/knowledge.md",
+        "bytes": 3731,
+        "sha256": "ed03ef150c3e13eb158839c7bf5ae418ef651e8a28cab9de3bec3d27de290556"
+      }
+    },
+    {
+      "scene": "e1",
+      "id": "s17x-e1-fracture-optimization",
+      "title": "压裂参数智能优化：在资源边界里比较候选",
+      "insight": "压裂参数要平衡增油、成本与资源边界；高收益点只有满足约束才成为候选。",
+      "object": "一个压裂参数组合",
+      "reading": [
+        "分清压裂液造缝与支撑剂保持通道的作用。",
+        "比较响应曲面的弯曲与地层差异，理解收益并非线性增加。",
+        "在相同图上看增油、费用和可行区域，追查推荐原因。"
+      ],
+      "parameters": [
+        "preset",
+        "permeability_mD",
+        "brittleness",
+        "budget_10k",
+        "pressureMax_MPa",
+        "waterMax_m3",
+        "sandMax_t",
+        "costWeight_t_per_10k"
+      ],
+      "tasks": [
+        {
+          "label": "资源紧张情景",
+          "values": {
+            "preset": "tight"
+          },
+          "look": "查看预算与用水同时收紧后，推荐点怎样移动。"
+        },
+        {
+          "label": "无可行方案情景",
+          "values": {
+            "preset": "impossible"
+          },
+          "look": "核对没有候选的具体限制，区分无解和计算失败。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/e1/knowledge.md",
+        "bytes": 3222,
+        "sha256": "98081c2123f34fb16ded4add6f5f0e9be36fadb635cacafcc04ba9b182d5132e"
+      }
+    },
+    {
+      "scene": "e2",
+      "id": "s17x-e2-fracture-geometry",
+      "title": "压裂裂缝形态预测",
+      "insight": "裂缝半长与高度是不同方向的尺度；地层约束会改变注入体积的分配。",
+      "object": "一个压裂裂缝轮廓",
+      "reading": [
+        "在二维投影中分别读半长与高度，不把投影当成全部三维形态。",
+        "对照应力差与隔层条件，解释不同方向的延伸。",
+        "把回归预测的尺度放回轮廓，并与固定比例基线比较。"
+      ],
+      "parameters": [
+        "volume",
+        "stress",
+        "barrier"
+      ],
+      "tasks": [
+        {
+          "label": "增强隔层约束",
+          "values": {
+            "barrier": 0.85
+          },
+          "look": "观察高度与半长怎样重新分配，核对轮廓与数值是否一致。"
+        },
+        {
+          "label": "增加注入体积",
+          "values": {
+            "volume": 1000
+          },
+          "look": "比较两个方向尺度的变化，不只看轮廓是否变大。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/e2/knowledge.md",
+        "bytes": 3887,
+        "sha256": "9fe86de6355083e182d1b8b2eb55f5d0849bb862bd83f61090c8f069bb3415ab"
+      }
+    },
+    {
+      "scene": "e3",
+      "id": "s17x-e3-chemical-mixture",
+      "title": "化学驱配方智能筛选",
+      "insight": "化学驱配方的效果依赖环境；先检查性能代理，再在盐度与预算条件下筛配方。",
+      "object": "一个化学驱配方点",
+      "reading": [
+        "从驱替路径认识配方改善流动的作用。",
+        "在配方空间比较性能与环境条件，坐标是配比而不是装饰。",
+        "先读留出误差，再看满足预算的可行配方。"
+      ],
+      "parameters": [
+        "salinity",
+        "budget"
+      ],
+      "tasks": [
+        {
+          "label": "提高盐度",
+          "values": {
+            "salinity": 60
+          },
+          "look": "比较性能面和推荐配方，查看环境变化如何改变可行区域。"
+        },
+        {
+          "label": "收紧配方预算",
+          "values": {
+            "budget": 3
+          },
+          "look": "核对成本边界和性能取舍，检查是否还有可行点。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/e3/knowledge.md",
+        "bytes": 3976,
+        "sha256": "0402d13dcdbb0970317e294100a49e450adc13fe57841072bfc4ad3c52b72551"
+      }
+    },
+    {
+      "scene": "e4",
+      "id": "s17x-e4-steam-cycle",
+      "title": "蒸汽吞吐注采参数优化",
+      "insight": "蒸汽吞吐把注汽、焖井和采油分成阶段；比较效果需要采用相同的热量与时间边界。",
+      "object": "一个吞吐周期方案",
+      "reading": [
+        "沿时间顺序区分三个阶段，各阶段的作用不同。",
+        "把采油量与热投入放在同一周期边界比较。",
+        "先固定预测关系，再在蒸汽上限和费用下搜索候选。"
+      ],
+      "parameters": [
+        "steamMax",
+        "price",
+        "temperature"
+      ],
+      "tasks": [
+        {
+          "label": "限制蒸汽总量",
+          "values": {
+            "steamMax": 900
+          },
+          "look": "比较候选周期与预测产油，检查约束如何改变取舍。"
+        },
+        {
+          "label": "提高蒸汽费用",
+          "values": {
+            "price": 0.08
+          },
+          "look": "查看经济目标与产油目标的差别，别只选择预测产油最高点。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/e4/knowledge.md",
+        "bytes": 3862,
+        "sha256": "c749db263feb73bf95dfe36fa256197d9cbedb920bd5730e43f4bd39782ff5bf"
+      }
+    },
+    {
+      "scene": "e5",
+      "id": "s17x-e5-microbial-activity",
+      "title": "微生物采油菌群活性预测",
+      "insight": "菌群活性取决于实验环境；相似实验支持的是活性估计，不能直接跳到采油效果。",
+      "object": "一组培养条件",
+      "reading": [
+        "把实验活性与采油研究的问题相连，分清测量对象与最终效果。",
+        "在温度—盐度面上读活性区域，两个变量共同变化。",
+        "对照近邻条件与活性，检查预测支持来自哪里。"
+      ],
+      "parameters": [
+        "temperature",
+        "salinity",
+        "neighbors"
+      ],
+      "tasks": [
+        {
+          "label": "提高盐度",
+          "values": {
+            "salinity": 65
+          },
+          "look": "查看相似实验与活性预测如何变化，留意样本稀疏区域。"
+        },
+        {
+          "label": "扩大近邻范围",
+          "values": {
+            "neighbors": 15
+          },
+          "look": "比较局部响应是否被平滑，并核对独立实验误差。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/e5/knowledge.md",
+        "bytes": 4067,
+        "sha256": "b4bcece6a1f211ba9a8ff8c25c808e773668f6a6d87af75ad5244d43cab2a76f"
+      }
+    },
+    {
+      "scene": "t1",
+      "id": "s17x-t1-pipeline-leak",
+      "title": "管道泄漏智能检测：从正常关系到事件核查",
+      "insight": "管道泄漏检测先解释负荷变化，再看进出口平衡的持续偏离；漂移与损失需要区分。",
+      "object": "一次管输监测过程",
+      "reading": [
+        "把进出口流量、压力与测点位置对应起来。",
+        "在同一时间轴比较正常负荷变化和损失响应。",
+        "查看正常关系残差、阈值报警及参考事件的先后。"
+      ],
+      "parameters": [
+        "scenario",
+        "severity",
+        "noise",
+        "sensitivity"
+      ],
+      "tasks": [
+        {
+          "label": "没有损失事件",
+          "values": {
+            "scenario": "no-event"
+          },
+          "look": "检查正常负荷变化中是否误报，不能只测含事件的情况。"
+        },
+        {
+          "label": "出口传感器漂移",
+          "values": {
+            "scenario": "drift"
+          },
+          "look": "对照流量差和残差趋势，查看与损失事件是否容易混淆。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/t1/knowledge.md",
+        "bytes": 3713,
+        "sha256": "25680af89e7f503eddaadee72bfb0f3acc67237690879ea71d82bec248de9116"
+      }
+    },
+    {
+      "scene": "t2",
+      "id": "s17x-t2-corrosion-growth",
+      "title": "管道腐蚀评估：先找对缺陷，再谈增长",
+      "insight": "腐蚀增长比较的是两次同一位置的壁损；先对齐再相减，才能解释增长率。",
+      "object": "两次内检测中的同一段管壁",
+      "reading": [
+        "内检测记录壁厚损失，先认清里程与损失单位。",
+        "对照两次曲线的特征位置，解释里程偏移如何造成假增长。",
+        "查看对齐后差值和年增长率，同时保留测量误差。"
+      ],
+      "parameters": [
+        "shift",
+        "noise",
+        "years"
+      ],
+      "tasks": [
+        {
+          "label": "增大里程偏移",
+          "values": {
+            "shift": 14
+          },
+          "look": "比较对齐前后差值，寻找由错位造成的正负成对变化。"
+        },
+        {
+          "label": "增加测量噪声",
+          "values": {
+            "noise": 2
+          },
+          "look": "查看局部增长率是否更分散，不能把每个尖峰都解释成加速腐蚀。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/t2/knowledge.md",
+        "bytes": 4355,
+        "sha256": "d83073e962d7769cd269ac749ffc6b50adefcdfdd28a3c905ca6c71bacc5a8ee"
+      }
+    },
+    {
+      "scene": "t3",
+      "id": "s17x-t3-gathering-pump-optimization",
+      "title": "集输工况优化：同样输量怎样少用电",
+      "insight": "集输优化先满足输量与扬程，再比较能耗费用；每个图点都应能回查到设备方案。",
+      "object": "一个泵组运行方案",
+      "reading": [
+        "沿集输路径把泵与系统阻力联系起来。",
+        "比较并联与调速对工作点的影响，分清流量和扬程。",
+        "先筛能力与约束，再比较可行候选费用。"
+      ],
+      "parameters": [
+        "demand",
+        "head",
+        "price"
+      ],
+      "tasks": [
+        {
+          "label": "提高需求输量",
+          "values": {
+            "demand": 350
+          },
+          "look": "查看可行泵组与工作点变化，核对能力是否满足。"
+        },
+        {
+          "label": "提高所需扬程",
+          "values": {
+            "head": 48
+          },
+          "look": "比较能耗与最优方案，检查低费用点是否仍可行。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/t3/knowledge.md",
+        "bytes": 3717,
+        "sha256": "26eaf924b0f2d95938790b8f7d0f4c4d823d18c0a05fe71cef975222289a0497"
+      }
+    },
+    {
+      "scene": "t4",
+      "id": "s17x-t4-meter-drift-calibration",
+      "title": "油气计量校正：分清读数变化与仪表偏移",
+      "insight": "计量校正用独立参照识别系统偏差；旧系数在新漂移下需要重新检查。",
+      "object": "一条计量观测",
+      "reading": [
+        "区分随机波动与系统偏差，理解长期累计偏差的含义。",
+        "把标定观测与独立参照配对，读回归线和简单基线。",
+        "在留出记录上看校正残差，再检查新增漂移。"
+      ],
+      "parameters": [
+        "gain",
+        "noise",
+        "drift"
+      ],
+      "tasks": [
+        {
+          "label": "加入新漂移",
+          "values": {
+            "drift": 5
+          },
+          "look": "比较校正后残差与原标定，旧系数不会自动消除新偏移。"
+        },
+        {
+          "label": "增强测量噪声",
+          "values": {
+            "noise": 5
+          },
+          "look": "查看散点与残差分散，区分校正系统偏差和消除随机噪声。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/t4/knowledge.md",
+        "bytes": 3684,
+        "sha256": "fa36da381636485dd88348187a1f4b94e16d084d40dd167172a35ca1fdc6f496"
+      }
+    },
+    {
+      "scene": "t5",
+      "id": "s17x-t5-tank-level-crosscheck",
+      "title": "储罐液位监控：图像读数怎样与雷达互相核对",
+      "insight": "液位估计要先有高度标尺；视觉和雷达有不同误差，融合需要比较各自观测。",
+      "object": "一帧液面图像与雷达读数",
+      "reading": [
+        "在罐体标尺上读高度，液位与储量不是同一个量。",
+        "从像素行到高度刻度，追查视觉输出怎样算出。",
+        "对照雾化和雷达偏差，再看多帧误差与融合。"
+      ],
+      "parameters": [
+        "level",
+        "fog",
+        "radarBias"
+      ],
+      "tasks": [
+        {
+          "label": "增加雾化",
+          "values": {
+            "fog": 2
+          },
+          "look": "检查图像边界和视觉高度，比较雷达与融合结果。"
+        },
+        {
+          "label": "加入雷达偏差",
+          "values": {
+            "radarBias": 1
+          },
+          "look": "核对雷达、视觉和融合三项估计，观察误差是否被互相掩盖。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/t5/knowledge.md",
+        "bytes": 3706,
+        "sha256": "c4935b126f0446ae35dc947d072fe0fb76cc5e35aaa0f5f8872c28184ec89c78"
+      }
+    },
+    {
+      "scene": "r1",
+      "id": "s17x-r1-distillation-optimization",
+      "title": "常减压操作优化：收率、质量与能耗的边界",
+      "insight": "常减压优化需要同时考虑馏分收率、能耗与终馏点；不能只追求更高温度或收率。",
+      "object": "一个蒸馏操作点",
+      "reading": [
+        "沿塔内分离认识不同馏分，分清分离与裂化。",
+        "把收率、能耗与质量指标对应到操作目标。",
+        "在候选图上先看约束边界，再比较代理预测的收益。"
+      ],
+      "parameters": [
+        "pressure",
+        "energyLimit",
+        "endpointLimit"
+      ],
+      "tasks": [
+        {
+          "label": "收紧能耗上限",
+          "values": {
+            "energyLimit": 1.6
+          },
+          "look": "查看高收益点被排除的位置和新的可行候选。"
+        },
+        {
+          "label": "收紧质量边界",
+          "values": {
+            "endpointLimit": 340
+          },
+          "look": "对照终馏点约束与收率代价，读推荐点的数值依据。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/r1/knowledge.md",
+        "bytes": 4353,
+        "sha256": "33a18a8f66352e0d0109965fc870dc9f97875b932d9aea9d2c51b9868a4fa822"
+      }
+    },
+    {
+      "scene": "r2",
+      "id": "s17x-r2-fcc-product-yields",
+      "title": "催化裂化产物预测：一百公斤原料去了哪里",
+      "insight": "催化裂化改变分子并分配产品；预测产品收率前后都要核对同一份质量账。",
+      "object": "一个原料批次的产品分布",
+      "reading": [
+        "对照蒸馏与裂化，说明产品变化来自分离还是反应。",
+        "将各产品放进共同质量分母，先核对总和。",
+        "比较温度、剂油比和密度条件下的分布及留出批次误差。"
+      ],
+      "parameters": [
+        "temperature",
+        "ratio",
+        "density"
+      ],
+      "tasks": [
+        {
+          "label": "提高反应温度",
+          "values": {
+            "temperature": 545
+          },
+          "look": "比较各产品份额怎样重新分配，并核对质量总和。"
+        },
+        {
+          "label": "改变原料密度",
+          "values": {
+            "density": 960
+          },
+          "look": "查看同一操作条件下的预测分布及固定均值基线。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/r2/knowledge.md",
+        "bytes": 4567,
+        "sha256": "f822a39f78bbba3256c5ec1a3a751f2b00dc09ffee6c6acebb2cddc5065b0b4a"
+      }
+    },
+    {
+      "scene": "r3",
+      "id": "s17x-r3-maintenance-trend",
+      "title": "炼化设备预测性维护：先解释负荷，再追踪退化",
+      "insight": "设备维护要读持续偏离和频率结构；单次振动升高也可能来自正常负荷变化。",
+      "object": "一个机泵监测时段",
+      "reading": [
+        "把机泵运行与振动、温度等监测量对应。",
+        "RMS看总体强度，频谱看能量位置，两种视角互补。",
+        "将正常关系残差与时间趋势结合，定位需要检查的时段。"
+      ],
+      "parameters": [
+        "load",
+        "severity",
+        "noise"
+      ],
+      "tasks": [
+        {
+          "label": "提高正常负荷",
+          "values": {
+            "load": 95
+          },
+          "look": "对照振动强度与异常残差，检查固定阈值是否误报。"
+        },
+        {
+          "label": "减弱故障响应",
+          "values": {
+            "severity": 0.5
+          },
+          "look": "查看趋势、频谱与告警起点，关注弱信号是否被忽略。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/r3/knowledge.md",
+        "bytes": 4864,
+        "sha256": "ab438b4cfdb13aba5e74da1b1e6a132d538dc940ff1edce8ee80542facce7128"
+      }
+    },
+    {
+      "scene": "r4",
+      "id": "s17x-r4-lab-audit",
+      "title": "化验数据智能审核：从原文单位到指标关系",
+      "insight": "化验审核先统一单位，再检查跨指标关系；每列都在范围内也可能彼此矛盾。",
+      "object": "一行原始化验记录",
+      "reading": [
+        "把化验指标与操作判断相连，先保留原值和原单位。",
+        "对照单位换算前后数值，避免把量纲差异当异常。",
+        "检查同行指标关系与缺失信息，区分规则问题与联合异常。"
+      ],
+      "parameters": [
+        "mode",
+        "sensitivity",
+        "source-text"
+      ],
+      "tasks": [
+        {
+          "label": "只看单位问题",
+          "values": {
+            "mode": "unit"
+          },
+          "look": "逐行核对原单位、换算值和审核依据，检查正常值是否被误报。"
+        },
+        {
+          "label": "只看关系冲突",
+          "values": {
+            "mode": "relationship"
+          },
+          "look": "选择一行单列未越界的记录，追查联合关系为何触发。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/r4/knowledge.md",
+        "bytes": 4420,
+        "sha256": "d9064f1a65375c45a1f779614111c2e948350d0d62932afaa18f9c77fd42c5e2"
+      }
+    },
+    {
+      "scene": "r5",
+      "id": "s17x-r5-quality-softsensor",
+      "title": "产品质量在线软测量：化验到来之前",
+      "insight": "软测量用过程量估计质量；化验对应较早的物料批次，配对时刻必须先对齐。",
+      "object": "一个过程批次与其化验结果",
+      "reading": [
+        "把在线过程测量与延迟化验放在生产流程中对应。",
+        "沿时间轴连接取样与出结果时刻，分清记录时间与来源批次。",
+        "先看对齐关系，再比较学习预测、简单基线和留出误差。"
+      ],
+      "parameters": [
+        "scenario",
+        "delay",
+        "alignment"
+      ],
+      "tasks": [
+        {
+          "label": "延长化验滞后",
+          "values": {
+            "delay": 30
+          },
+          "look": "比较配对箭头与预测误差；对齐开关改变的是样本对应关系。"
+        },
+        {
+          "label": "温度传感器漂移",
+          "values": {
+            "scenario": "drift"
+          },
+          "look": "查看过程量与预测残差，留意已有模型对新偏差的响应。"
+        }
+      ],
+      "knowledge": {
+        "path": "expansion-src/r5/knowledge.md",
+        "bytes": 3754,
+        "sha256": "7c6e5b2f8cafac20e08d26f1690530607e80ae0bb1b8ddf76bc8c0994f4fd2ce"
+      }
+    }
+  ]
+}

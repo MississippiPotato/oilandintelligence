@@ -15,3 +15,7 @@ SLB：perforation https://glossary.slb.com/en/terms/p/perforation
 OSHA：perforated completion https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-p
 
 验证边界：源文件生成不等于浏览器验收；实际浏览器记录由汇总交付另附。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：通径改窄：查看哪些弹型因尺寸被排除，排序不能覆盖硬约束。
+缺失关键条件：检查候选依据和待补信息，不能把未知条件默认为满足。

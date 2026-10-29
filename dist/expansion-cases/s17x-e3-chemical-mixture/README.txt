@@ -6,3 +6,7 @@
 专业概念参考：https://www.sodir.no/en/facts/production/improved-oil-recovery-ior/enhanced-oil-recovery-EOR/water-based-methods/
 测试参考仅在模型拟合及评价层使用；当前自由查询没有虚构真值。
 每个输入改变都会使旧结果过期，重新运行后才能导出。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：提高盐度：比较性能面和推荐配方，查看环境变化如何改变可行区域。
+收紧配方预算：核对成本边界和性能取舍，检查是否还有可行点。

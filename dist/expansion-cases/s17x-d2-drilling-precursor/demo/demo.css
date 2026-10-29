@@ -60,3 +60,89 @@ html.mdl-open #s17-assistant{visibility:hidden;pointer-events:none}@keyframes s1
 @media(prefers-reduced-motion:reduce){#s17-assistant *{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
 
 #s17-assistant[data-expanded=true] .s17-agent-log{padding-left:32px;padding-right:32px}#s17-assistant[data-expanded=true] .s17-agent-form{padding-left:30px;padding-right:30px}
+
+/* Applied only to the56 expansion lessons; data-category colors are preserved. */
+.xl-lesson,.xl-parent{--xl-red:#b8242a;--xl-paper:#f7f4ef;--xl-ink:#292d34;--xl-muted:#66717d;--xl-line:#e6dfd7;color:var(--xl-ink);font-size:18px;line-height:1.85}
+body.xl-lesson{margin:0;background:var(--xl-paper);font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif}
+.xl-lesson>header{max-width:1180px;margin:28px auto 0;padding:32px 38px 20px;background:#fff;border:1px solid var(--xl-line);border-radius:24px;box-shadow:0 8px 30px #3b282608}
+.xl-lesson>header h1{color:#292d34;font-size:clamp(25px,2.6vw,36px);line-height:1.5;max-width:1000px;margin:12px 0}
+.xl-lesson>main{max-width:1180px;margin:24px auto 70px;padding:0 0 25px;min-width:0}
+.xl-lesson>header nav{position:static;display:flex;gap:8px;flex-wrap:wrap;background:transparent;border:0;padding:14px 0 0;margin:14px 0 0}
+.xl-lesson>nav{max-width:1180px;margin:18px auto;padding:0 10px;display:flex;gap:8px;flex-wrap:wrap;background:transparent;border:0;position:static}
+.xl-lesson>nav button[aria-selected="true"]{background:var(--xl-red);border-color:var(--xl-red);color:white}
+.xl-lesson>header nav button,.xl-lesson button,.xl-parent button{font:inherit;line-height:1.5;min-height:44px;cursor:pointer}
+.xl-lesson button,.xl-parent .xl-step-nav button,.xl-parent .xl-next button{background:#fff;color:#4d4343;border:1px solid #ddd5d0;border-radius:13px;padding:10px 17px;transition:background .15s,border-color .15s,box-shadow .15s}
+.xl-lesson button:hover,.xl-parent .xl-step-nav button:hover{border-color:var(--xl-red);background:#fff8f5}
+.xl-lesson button.primary,.xl-lesson button.active,.xl-lesson header nav button[aria-pressed="true"],.xl-lesson header nav button[aria-selected="true"],.xl-step-nav button[aria-selected="true"],.xl-parent .xl-next button{background:var(--xl-red);color:white;border-color:var(--xl-red)}
+.xl-lesson button:disabled{opacity:.45;cursor:default}
+.xl-lesson :focus-visible,.xl-parent :focus-visible{outline:3px solid #b8242a88;outline-offset:4px}
+.xl-lesson input,.xl-lesson select,.xl-lesson textarea{font:inherit;min-width:0;max-width:100%;accent-color:var(--xl-red);border-radius:9px}
+.xl-lesson input[type=range]{width:100%}.xl-lesson label{font-size:17px;color:#45434a}
+.xl-lesson p{max-width:100%;overflow-wrap:anywhere}
+.xl-lesson .intro,.xl-lesson .note,.xl-lesson .small,.xl-lesson .data-note,.xl-lesson .legend,.xl-lesson figcaption,.xl-parent figcaption,.xl-parent .note{font-size:16px;line-height:1.8;color:#64707a}
+.xl-lesson .source-badge,.xl-kicker{font-size:13px;letter-spacing:.1em;color:var(--xl-red);font-weight:700;text-transform:uppercase}
+.xl-lesson .brand,.xl-lesson .eyebrow,.xl-lesson .tag,.xl-lesson .kicker,.xl-lesson output,.xl-lesson>header a{color:var(--xl-red)}
+.xl-parent #tabs .tab.on{background:var(--xl-red);border-color:var(--xl-red);color:#fff}
+.xl-lesson h2,.xl-parent .xl-opening h2{font-size:25px;line-height:1.55;color:#292d34;margin:12px 0 20px}
+.xl-lesson h3{font-size:21px;color:#333842;line-height:1.55}
+.xl-lesson .card,.xl-lesson .panel,.xl-lesson .reading-block,.xl-lesson .plot-grid>article,.xl-chapter,.xl-opening,.xl-method-step,.xl-lab-guide{background:#fff;border:1px solid var(--xl-line);border-radius:20px;box-shadow:0 5px 22px #382b2105;padding:26px 30px;margin:20px 0}
+.xl-opening{padding:28px 32px;background:linear-gradient(120deg,#fff 60%,#fff3ed)}
+.xl-opening h2{max-width:960px;font-size:27px;font-weight:650;line-height:1.65}
+.xl-opening>p{margin-bottom:0;color:var(--xl-muted)}
+.xl-reading-path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 2px}
+.xl-reading-path a{display:flex;align-items:flex-start;gap:10px;padding:14px 16px;background:#fff;border:1px solid #ece3dd;border-radius:14px;color:#4d4343;text-decoration:none;line-height:1.6;font-size:16px}
+.xl-reading-path a span{font-size:13px;color:var(--xl-red);font-weight:750}
+.xl-read{padding:13px 17px;border-left:3px solid var(--xl-red);background:#fbf6f1;color:#5d4f49;font-size:16px;line-height:1.8;border-radius:0 10px 10px 0}
+.xl-read b{display:block;color:var(--xl-red);font-size:13px;letter-spacing:.05em;margin-bottom:4px}
+.xl-chapter{scroll-margin-top:22px}
+.xl-knowledge>p{margin:20px 0}.xl-knowledge>p.xl-read{margin:0 0 22px}
+.xl-knowledge figure{margin:24px 0}.xl-knowledge svg,.xl-method-step svg{display:block;width:100%;max-width:900px;max-height:280px;height:auto;margin:18px auto}
+.xl-knowledge img{max-width:100%;height:auto;border-radius:12px}
+.xl-diagram,.xl-data-plot{max-width:100%;min-width:0;overflow:auto}.xl-diagram-hint{display:none}
+.xl-method>.case-flow-overview,.xl-parent .case-flow-overview{margin:20px 0;background:#fff;border:1px solid var(--xl-line);border-radius:20px;padding:20px;box-shadow:none}
+.xl-method .case-flow-overview svg{max-height:300px;width:100%;height:auto}
+.xl-step-nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 14px}
+.xl-step-nav button{font-size:16px;border-radius:12px;padding:10px 13px}
+.xl-step-heading{display:flex;align-items:center;gap:18px;margin-bottom:18px}.xl-step-heading h3{margin:0;font-size:24px}
+.xl-action-copy>b,.xl-products b{font-size:14px;color:var(--xl-red)}.xl-action-copy p{margin:7px 0 24px}
+.xl-products{display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid var(--xl-line);padding-top:18px;margin-top:22px}
+.xl-products p{font-size:17px;margin:7px 0}.xl-next{display:flex;justify-content:flex-end;margin:22px 0}
+.xl-lab-guide{border-top:3px solid var(--xl-red);padding:22px 28px}
+.xl-lab-guide h2{margin:4px 0 10px;font-size:23px}.xl-lab-guide>p{margin:8px 0 16px;color:#645f61;font-size:17px}
+.xl-task-actions{display:flex;gap:10px;flex-wrap:wrap}.xl-task-actions button{font-size:16px}
+.xl-task-actions button[aria-pressed="true"]{background:#fbebeb;border-color:#c27b7e;color:#9c2026}
+.xl-task-look{padding-top:14px;border-top:1px solid var(--xl-line);margin-top:18px!important;font-size:17px;color:#3d4650!important;min-height:1.8em}
+.xl-update{font-size:14px;color:#7d6c67;display:block;margin-top:10px}
+.xl-lesson #status{font-size:16px;border-radius:12px;background:#fff7f2;border:1px solid #edd8ce;color:#754b45;padding:12px 16px}
+.xl-lesson .controls,.xl-lesson .controlgrid,.xl-lesson .control-grid{gap:18px}
+.xl-lesson .toolbar{border-radius:18px;background:#fff9f5;border:1px solid var(--xl-line);padding:18px}
+.xl-lesson .charts{gap:24px}.xl-lesson .charts figure{min-width:0;border:1px solid #eee8e2;background:#fff;border-radius:16px;padding:16px;margin:0}
+.xl-lesson .charts canvas{display:block;width:100%;height:auto;max-width:100%}
+.xl-lesson .metric strong,.xl-lesson .metrics strong{color:#a52a31}.xl-lesson .metric>div{border-radius:13px;background:#faf6f1;border:1px solid #e8ded5;color:#514b4b}
+.xl-lesson table{font-size:16px}.xl-lesson th{background:#f5eee8;color:#54474a}.xl-lesson td,.xl-lesson th{padding:11px 13px;border-color:#e9e2da}
+.xl-lesson a{color:#a32c34}.xl-lesson .scroll,.xl-lesson .table-wrap,.xl-lesson .table-scroll{max-width:100%;overflow:auto}
+.xl-fold{margin:18px 0;background:#fcfaf7;border:1px solid #e7ded7;border-radius:15px;padding:14px 18px}
+.xl-fold>summary{cursor:pointer;font-size:16px;color:#665658;line-height:1.8}.xl-fold[open]>summary{margin-bottom:18px}
+.xl-fold>*:not(summary){box-shadow:none}.xl-save{display:flex;justify-content:flex-end;padding:20px 0;margin-top:20px}
+.xl-save button{font-size:15px;color:#7a6264;background:transparent;padding:8px 13px;min-height:38px}
+.xl-lesson .learning-task,.xl-lesson #lab>.reading-block:first-child{display:none}
+.xl-parent .sr-eyebrow,.xl-parent .sr-toc button[aria-current="true"]{color:var(--xl-red)}
+.xl-parent .sr-demo-bar{background:#fff9f5;border-color:#e5d6cd}.xl-parent .sr-demo-bar strong{color:#332f36}
+.xl-parent .sr-lede,.xl-parent .sr-toc{background:#fff9f5;border-color:#e5d6cd}
+.xl-lesson [hidden],.xl-parent [hidden]{display:none!important}
+@media(max-width:760px){
+ .xl-lesson>header{margin:10px 10px 0;padding:22px 20px 16px;border-radius:19px}.xl-lesson>main{margin:14px 10px 60px;padding:0}
+ .xl-lesson>header nav{gap:6px}.xl-lesson>header nav button{font-size:16px;padding:10px}
+ .xl-chapter,.xl-opening,.xl-method-step,.xl-lab-guide,.xl-lesson .card,.xl-lesson .panel,.xl-lesson .plot-grid>article,.xl-lesson .reading-block{padding:20px 18px;border-radius:17px}
+ .xl-opening h2{font-size:23px}.xl-reading-path{grid-template-columns:1fr}.xl-products{grid-template-columns:1fr}
+ .xl-lesson .charts,.xl-lesson .maps,.xl-lesson .split,.xl-lesson .workspace,.xl-lesson .two-columns,.xl-lesson .plot-grid,.xl-lesson .analysis{grid-template-columns:minmax(0,1fr)!important;gap:18px}
+ .xl-lesson .controls,.xl-lesson .controlgrid,.xl-lesson .control-grid,.xl-lesson .condition-grid{grid-template-columns:minmax(0,1fr)!important}
+ .xl-lesson .metric,.xl-lesson .metrics,.xl-lesson .strip{grid-template-columns:repeat(2,minmax(0,1fr));flex-wrap:wrap}
+ .xl-step-heading{display:block}.xl-step-heading h3{margin-top:8px}.xl-step-nav{gap:6px}.xl-step-nav button{font-size:15px;padding:9px 11px}
+ .xl-lesson .charts figure{padding:7px}.xl-lesson .chart,.xl-lesson .plot,.xl-lesson .chart-shell,.xl-lesson .svg-frame{max-width:100%;overflow:auto}
+ .xl-knowledge svg,.xl-method-step svg{max-height:240px}.xl-method .case-flow-overview{padding:10px;overflow:auto}.xl-method .case-flow-overview svg{min-width:650px}
+ .xl-diagram svg{min-width:680px;max-height:none}.xl-data-plot>svg,.xl-data-plot>canvas{min-width:760px;max-width:none!important;width:760px!important;height:auto}
+ .xl-diagram-hint{display:block;position:sticky;left:0;font-size:14px;color:#867476;line-height:1.8;padding:6px 0 2px}
+ .xl-lesson .action-row,.xl-lesson .actions,.xl-lesson .bottom-actions{flex-wrap:wrap}.xl-lesson .view-tools{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.xl-lesson *,.xl-parent *{scroll-behavior:auto!important;transition:none!important}}

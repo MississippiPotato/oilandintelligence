@@ -17,3 +17,7 @@ https://investorcenter.slb.com/static-files/41a10f14-81ca-442f-83f6-05dae85b6f67
 验证状态：计算检查见 calculation-checks.json，是 Node 计算验证；原门户导入、刷新、离线文件与浏览器界面由主验收流程另行记录，未在此冒充已通过。
 
 最终包结构：case.json、README.txt、demo/index.html、demo/demo.css、demo/demo.js。开发源码 engine.js 与 app.js 由统一构建器串联为普通 IIFE demo.js。无 CDN、运行时 fetch、后端和远程模型要求。通过老师“添加案例”选择完整单例文件夹。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：收紧泵压上限：查看可行点和推荐参数怎样改变，同时检查约束余量。
+提高岩石强度：对照当前预测与留出误差，留意输入是否进入外推区域。

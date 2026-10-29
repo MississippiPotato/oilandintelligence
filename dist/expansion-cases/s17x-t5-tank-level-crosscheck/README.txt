@@ -3,3 +3,7 @@
 数据：固定种子教学夹具，无网络请求。算法、基线与指标由 engine.js 计算。
 专业来源：https://www.endress.com/en/support-overview/learning-center/radar-level-measurement-explained
 改变参数后结果标记过期，重新计算再导出。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：增加雾化：检查图像边界和视觉高度，比较雷达与融合结果。
+加入雷达偏差：核对雷达、视觉和融合三项估计，观察误差是否被互相掩盖。

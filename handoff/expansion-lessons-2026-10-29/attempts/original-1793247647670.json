@@ -1,0 +1,187 @@
+{
+  "checkedAt": "2026-10-29T04:07:09.555Z",
+  "phase": "original",
+  "checks": [
+    {
+      "name": "g1 original Add Case imports current five-file directory",
+      "passed": true
+    },
+    {
+      "name": "g1 original background preserves concept graphics",
+      "passed": true
+    },
+    {
+      "name": "g1 original static workflow contains connected overview and explained products",
+      "passed": true
+    },
+    {
+      "name": "g1 real teacher sandbox computes task",
+      "passed": true
+    },
+    {
+      "name": "g1 original refresh restores package and reruns another task",
+      "passed": true
+    },
+    {
+      "name": "c4 original Add Case imports current five-file directory",
+      "passed": true
+    },
+    {
+      "name": "c4 original background preserves concept graphics",
+      "passed": true
+    },
+    {
+      "name": "c4 original static workflow contains connected overview and explained products",
+      "passed": true
+    },
+    {
+      "name": "c4 real teacher sandbox computes task",
+      "passed": true
+    },
+    {
+      "name": "c4 original refresh restores package and reruns another task",
+      "passed": true
+    },
+    {
+      "name": "wo3 original Add Case imports current five-file directory",
+      "passed": true
+    },
+    {
+      "name": "wo3 original background preserves concept graphics",
+      "passed": true
+    },
+    {
+      "name": "wo3 original static workflow contains connected overview and explained products",
+      "passed": true
+    },
+    {
+      "name": "wo3 real teacher sandbox computes task",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [
+    {
+      "path": "handoff/expansion-lessons-2026-10-29/g1-teacher-after-refresh.json",
+      "suggested": "s17x-g1-remote-lithology-run-3.json"
+    },
+    {
+      "path": "handoff/expansion-lessons-2026-10-29/c4-teacher-after-refresh.json",
+      "suggested": "c4-evidence.json"
+    }
+  ],
+  "screenshots": [
+    "handoff/expansion-lessons-2026-10-29/g1-teacher-workflow.png",
+    "handoff/expansion-lessons-2026-10-29/g1-teacher-after-refresh.png",
+    "handoff/expansion-lessons-2026-10-29/c4-teacher-workflow.png",
+    "handoff/expansion-lessons-2026-10-29/c4-teacher-after-refresh.png",
+    "handoff/expansion-lessons-2026-10-29/wo3-teacher-workflow.png"
+  ],
+  "exception": "locator.evaluate: Error: ready timeout\n    at eval (eval at evaluate (:301:30), <anonymous>:1:262)",
+  "diagnostic": "智能化可能性地图\nPETRO × AI ATLAS\n总览\n作业链\n案例库\n接入指南\n管理\n＋ 添加案例\n总览\n/\n作业链\n/\n修井\n/\n套管损伤智能识别\n环节 10 · 修井\nCV\n计算机视觉\n案例 s17x-wo3-casing-damage · v1.1.0\n套管损伤智能识别\n\n套管变形、腐蚀、穿孔会破坏井筒完整性，多臂井径与超声成像测井是主要检测手段，解释需逐段判读。\n\n难度 中\n待扩展\nWO3\n01\n专业背景\n02\n案例流程\n03\n可运行示范\nRELATED\n相关场景\n同环节 · 修井\n修井作业方案智能推荐\n→\n落物打捞工具智能选型\n→\n修井作业风险预警\n→\n修井周期预测\n→\n同方法 · 计算机视觉\n地质剖面遥感解译\n地质勘察 →\n地质图件要素智能提取\n地质勘察 →\n露头裂缝自动统计\n地质勘察 →\n地震断层自动解释\n物探 →\n← 返回修井环节\n返回总览\n关于\n\n石油勘探开发的智能化可能性地图\n\nv1.0 · 更新于 2026-10\n\n地图\n总览\n作业链\n按方法反查\n系统\n案例库（4 个已接入）\n接入新案例\n参与\n\n发现问题或想补一个场景？\n\natlas@example.com\n场景数据：61 个 · 环节：13 个\n纯静态 · 无后端 · 可离线运行",
+  "passed": 14,
+  "failed": 1,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/case.json",
+      "bytes": 67130,
+      "sha256": "39dc99d2dfaab0917e2ee7e639799eec83f754e5130a9beb807e4dee623db74e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
+      "bytes": 3563,
+      "sha256": "d7daf2bc42c3f416c051e9623d2d69c30a87f228f93dc194bb6c1a109a86bcb1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html",
+      "bytes": 23215,
+      "sha256": "1e63212a813f6e936c28fece4c2ca09cbd6a11ba6a67d743f47e5a45747247c1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.css",
+      "bytes": 35957,
+      "sha256": "5d68886f737aad941a330228b7bf2b51f0e0bbb79a5d3d6c7f4cae89cdefd0db"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js",
+      "bytes": 136888,
+      "sha256": "3a75545be59185f4e9bea4f275d0268728e97e80310870bffd6c5b9e595a345c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+      "bytes": 59068,
+      "sha256": "31cbf8ce57cab84f7654c45192a9fea80c9fe44340121624ed0208d0338b582f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+      "bytes": 1152,
+      "sha256": "0d49b593ca0b1fecfdb950af3e8b38750310aca2ada24913cbc5ebcb548b0f51"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+      "bytes": 2452,
+      "sha256": "5e2357b307519daa8ea264abf8f952155f5fb01a0e3d5d9cfd90458c58749579"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+      "bytes": 29553,
+      "sha256": "fd72e3a29da63aea231ed4aa7948c5f663cd71c693f4ab2053629129c13d39fd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+      "bytes": 126354,
+      "sha256": "4f68712424653d855600f249a1890dbedc28e99584647655ad5ebd56c47e3671"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/case.json",
+      "bytes": 58598,
+      "sha256": "e2a083f50a4964534a67291f9912f4b5245b96f9592a886f52449f2576d6db06"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/README.txt",
+      "bytes": 822,
+      "sha256": "3ae430cac4f58c2b8b02f2a078e2f4f924209cb3a4ded9a7301eb9a1f02abe00"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/index.html",
+      "bytes": 12890,
+      "sha256": "239f4488a54d16cda5eed56f9638a742f162ddadf552b7718d456206344c6ae9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.css",
+      "bytes": 29430,
+      "sha256": "423984de25bd29f6bcd348ead11890844db6345bfb87aac4c8b8b7c1bfcf62d6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.js",
+      "bytes": 113546,
+      "sha256": "f3343328f64365e9b1b8306a96f726b08e7514e91368a6d6e9187078394109de"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
+      "bytes": 73030,
+      "sha256": "6595ae5774811b2e6656b9c971df453df8d22af45fa11e19f42b2b6bc481d7d6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+      "bytes": 4268,
+      "sha256": "4c929a5bf336016766f6211e70f5461971b8caaf9f668fec26c7bcb522cf660c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html",
+      "bytes": 5202,
+      "sha256": "117ad92fb6d5ef93b4ea4601dc58400ce4c7a04314bfb5bbc89b62bf1eff025a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+      "bytes": 32730,
+      "sha256": "4ff2db2d2cfd10fa180eb4d866d7f39fdc687ef9a72f5f81ec34b4d2bfe6e03d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+      "bytes": 165675,
+      "sha256": "87ff9bfaba87465950220bc3a8fc6507fa1705e5724a66f3494b642803d63fc1"
+    }
+  ]
+}

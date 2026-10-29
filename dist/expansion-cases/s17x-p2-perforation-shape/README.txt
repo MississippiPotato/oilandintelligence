@@ -15,3 +15,7 @@ SLB：perforation https://glossary.slb.com/en/terms/p/perforation
 OSHA：P 术语表 https://www.osha.gov/etools/oil-and-gas/glossary-of-terms-p
 
 验证边界：源文件生成不等于浏览器验收；实际浏览器记录由汇总交付另附。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：提高岩石强度：比较孔道形态预测与基线，读穿深等输出的变化。
+提高围压：查看同一岩石条件下的预测变化，检查独立试验误差。

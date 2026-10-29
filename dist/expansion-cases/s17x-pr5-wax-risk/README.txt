@@ -15,3 +15,7 @@ SLB：Olga wax 机理说明 https://www.slb.com/products-and-services/delivering
 SLB：流体成分与析蜡温度测试 https://www.slb.com/products-and-services/innovating-in-oil-and-gas/reservoir-characterization/rock-and-fluid-analysis/fluid-analysis/composition-analysis
 
 验证边界：源文件生成不等于浏览器验收；实际浏览器记录由汇总交付另附。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：降低管壁温度：对照温差与风险分数，查看温度基线和联合方法是否一致。
+减少含蜡量：保持其他条件，比较单温度规则与联合候选的差异。

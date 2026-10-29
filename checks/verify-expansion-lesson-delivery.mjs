@@ -1,0 +1,7 @@
+import assert from'node:assert/strict';import{REPORT,read,write,record}from'../tools/expansion-lesson-contract.mjs';
+const accepted=JSON.parse(read(REPORT+'/accepted-files.json')),c=JSON.parse(read(REPORT+'/completion.json'));
+for(const f of accepted.files)assert.deepEqual(record(f.path),f,f.path);
+assert.equal(c.source.failed,0);assert.equal(c.browser.failed,0);assert.equal(c.browser.desktopSmokeCases,56);assert.equal(c.browser.authoredTaskRuns,112);assert.equal(c.browser.originalImportRefreshCases,4);assert.equal(c.downloads.length,7);
+for(const name of c.browser.reports){const r=JSON.parse(read(name));assert.equal(r.failed,0);for(const f of r.runtimeFiles)assert.deepEqual(record(f.path),f);}
+let packages=0;if(!process.argv.includes('--skip-packages')){const p=JSON.parse(read(REPORT+'/package-lock.json'));assert.equal(p.crcAndEveryMemberSHA256Verified,true);assert.equal(p.packages.length,3);for(const a of p.packages){const {members,scope,entries,...f}=a;assert.deepEqual(record(a.path),f);for(const e of entries){const {entry,...x}=e;assert.deepEqual(record(e.path),x);}}packages=3;}
+const result={checkedAt:new Date().toISOString(),kind:'Saved-browser-evidence and current-artifact consistency; not new browser execution',status:'passed',filesMatched:accepted.files.length,desktopSmokeCases:56,authoredTaskRuns:112,originalImportRefreshCases:4,offlineSamples:3,downloads:7,packages,fullAll56PathAcceptanceClaimed:false};write(REPORT+'/delivery-verification.json',result);console.log(JSON.stringify(result,null,2));

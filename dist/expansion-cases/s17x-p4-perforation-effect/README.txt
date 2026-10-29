@@ -15,3 +15,7 @@ SLB：productivity index https://glossary.slb.com/en/Terms/p/productivity_index_
 SLB：储层工程工作 https://www.slb.com/resource-library/oilfield-review/defining-series/defining-reservoir-engineering
 
 验证边界：源文件生成不等于浏览器验收；实际浏览器记录由汇总交付另附。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：增加生产压差：比较原始产量增幅与工况校正后增量，分清压差贡献。
+提高含水：对照产液与有效增油，查看校正怎样改变效果判断。

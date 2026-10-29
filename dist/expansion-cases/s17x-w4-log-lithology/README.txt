@@ -19,3 +19,7 @@ https://www.epa.gov/environmental-geophysics/gamma-gamma-density-logging
 验证状态：计算检查见 calculation-checks.json，是 Node 计算验证；原门户导入、刷新、离线文件与浏览器界面由主验收流程另行记录，未在此冒充已通过。
 
 最终包结构：case.json、README.txt、demo/index.html、demo/demo.css、demo/demo.js。开发源码 engine.js 与 app.js 由统一构建器串联为普通 IIFE demo.js。无 CDN、运行时 fetch、后端和远程模型要求。通过老师“添加案例”选择完整单例文件夹。
+
+当前教学版：1.1.0。专业内容和已有图表沿用，增加逐例读图提示、默认计算与自动更新。
+比较任务：只看GR：检查砂岩与灰岩等类别的混淆，并与多道输入对照。
+含气砂岩情景：对照密度与中子响应变化，以及候选和支持度怎样改变。

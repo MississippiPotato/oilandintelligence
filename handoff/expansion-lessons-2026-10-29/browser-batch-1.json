@@ -1,0 +1,1808 @@
+{
+  "checkedAt": "2026-10-29T04:14:44.135Z",
+  "scope": "Actual Chrome desktop default / both authored tasks / workflow navigation for seven-case batch; not complete original-import/offline acceptance of every case",
+  "cases": [
+    {
+      "scene": "s4",
+      "id": "s17x-s4-reservoir-inversion",
+      "output": "dist/expansion-cases/s17x-s4-reservoir-inversion",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 0.25,
+              "lambda": 1
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "36146352",
+            "chartCount": 2,
+            "metrics": {
+              "mae": 0.4267025564259907,
+              "rmse": 0.501517266464643,
+              "r2": 0.9912079104184945,
+              "n": 64
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 0.25,
+              "lambda": 100
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "d6f4c315",
+            "chartCount": 2,
+            "metrics": {
+              "mae": 2.407186297370102,
+              "rmse": 2.705935377441643,
+              "r2": 0.7440499808821108,
+              "n": 64
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "36146352",
+            "after": "d6f4c315"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "noise": 0.6,
+              "lambda": 1
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "ab15d1a1",
+            "chartCount": 2,
+            "metrics": {
+              "mae": 1.0294429762861215,
+              "rmse": 1.2071244040779734,
+              "r2": 0.9490640529913689,
+              "n": 64
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "36146352",
+            "after": "ab15d1a1"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "noise": 0.25,
+            "lambda": 100
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "d6f4c315",
+          "chartCount": 2,
+          "metrics": {
+            "mae": 2.407186297370102,
+            "rmse": 2.705935377441643,
+            "r2": 0.7440499808821108,
+            "n": 64
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "noise": 0.6,
+            "lambda": 1
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "ab15d1a1",
+          "chartCount": 2,
+          "metrics": {
+            "mae": 1.0294429762861215,
+            "rmse": 1.2071244040779734,
+            "r2": 0.9490640529913689,
+            "n": 64
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "noise": 0.25,
+          "lambda": 1
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "36146352",
+        "chartCount": 2,
+        "metrics": {
+          "mae": 0.4267025564259907,
+          "rmse": 0.501517266464643,
+          "r2": 0.9912079104184945,
+          "n": 64
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "s5",
+      "id": "s17x-s5-seismic-denoise",
+      "output": "dist/expansion-cases/s17x-s5-seismic-denoise",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "seed": 1901,
+              "noise": 0.24,
+              "type": "random"
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "210f1c28",
+            "chartCount": 3,
+            "metrics": {
+              "rmse": 0.05887919898942644,
+              "snr": 11.174988560192261,
+              "n": 1920
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "seed": 1901,
+              "noise": 0.24,
+              "type": "coherent"
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "9900ca11",
+            "chartCount": 3,
+            "metrics": {
+              "rmse": 0.13455762318448672,
+              "snr": 3.996060278549329,
+              "n": 1920
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "210f1c28",
+            "after": "9900ca11"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "seed": 1901,
+              "noise": 0.5,
+              "type": "random"
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "8f4cab75",
+            "chartCount": 3,
+            "metrics": {
+              "rmse": 0.11669272866799142,
+              "snr": 5.233350517596806,
+              "n": 1920
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "210f1c28",
+            "after": "8f4cab75"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "seed": 1901,
+            "noise": 0.24,
+            "type": "coherent"
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "9900ca11",
+          "chartCount": 3,
+          "metrics": {
+            "rmse": 0.13455762318448672,
+            "snr": 3.996060278549329,
+            "n": 1920
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "seed": 1901,
+            "noise": 0.5,
+            "type": "random"
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "8f4cab75",
+          "chartCount": 3,
+          "metrics": {
+            "rmse": 0.11669272866799142,
+            "snr": 5.233350517596806,
+            "n": 1920
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "seed": 1901,
+          "noise": 0.24,
+          "type": "random"
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "210f1c28",
+        "chartCount": 3,
+        "metrics": {
+          "rmse": 0.05887919898942644,
+          "snr": 11.174988560192261,
+          "n": 1920
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "screenshot": "handoff/expansion-lessons-2026-10-29/s5-desktop-results.png",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "d1",
+      "id": "s17x-d1-rop-optimization",
+      "output": "dist/expansion-cases/s17x-d1-rop-optimization",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "preset": "default",
+              "constrain": true,
+              "wob": 90,
+              "rpm": 120,
+              "flow": 26,
+              "ucs": 60,
+              "noise": 2,
+              "maxWob": 125,
+              "maxRpm": 170,
+              "maxFlow": 32,
+              "maxPressure": 19.5,
+              "maxTorque": 9
+            },
+            "runId": "d1-mvt14uvb-0001",
+            "task": -1,
+            "chartHash": "81082b0a",
+            "chartCount": 4,
+            "metrics": {
+              "model": {
+                "n": 128,
+                "mae": 1.9624040748572056,
+                "rmse": 2.4272191421216918,
+                "bias": 0.9465490001269504
+              },
+              "baseline": {
+                "n": 128,
+                "mae": 5.405732935300523,
+                "rmse": 6.634852065423579,
+                "bias": 0.7670855040351896
+              },
+              "outsideCount": 2
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "preset": "default",
+              "constrain": true,
+              "wob": 90,
+              "rpm": 120,
+              "flow": 26,
+              "ucs": 60,
+              "noise": 2,
+              "maxWob": 125,
+              "maxRpm": 170,
+              "maxFlow": 32,
+              "maxPressure": 15,
+              "maxTorque": 9
+            },
+            "runId": "d1-mvt14uvb-0002",
+            "task": 0,
+            "chartHash": "e2ab223b",
+            "chartCount": 4,
+            "metrics": {
+              "model": {
+                "n": 128,
+                "mae": 1.9624040748572056,
+                "rmse": 2.4272191421216918,
+                "bias": 0.9465490001269504
+              },
+              "baseline": {
+                "n": 128,
+                "mae": 5.405732935300523,
+                "rmse": 6.634852065423579,
+                "bias": 0.7670855040351896
+              },
+              "outsideCount": 2
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "81082b0a",
+            "after": "e2ab223b"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "preset": "default",
+              "constrain": true,
+              "wob": 90,
+              "rpm": 120,
+              "flow": 26,
+              "ucs": 100,
+              "noise": 2,
+              "maxWob": 125,
+              "maxRpm": 170,
+              "maxFlow": 32,
+              "maxPressure": 19.5,
+              "maxTorque": 9
+            },
+            "runId": "d1-mvt14uvb-0003",
+            "task": 1,
+            "chartHash": "760b3765",
+            "chartCount": 4,
+            "metrics": {
+              "model": {
+                "n": 128,
+                "mae": 1.9624040748572056,
+                "rmse": 2.4272191421216918,
+                "bias": 0.9465490001269504
+              },
+              "baseline": {
+                "n": 128,
+                "mae": 5.405732935300523,
+                "rmse": 6.634852065423579,
+                "bias": 0.7670855040351896
+              },
+              "outsideCount": 2
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "81082b0a",
+            "after": "760b3765"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "preset": "default",
+            "constrain": true,
+            "wob": 90,
+            "rpm": 120,
+            "flow": 26,
+            "ucs": 60,
+            "noise": 2,
+            "maxWob": 125,
+            "maxRpm": 170,
+            "maxFlow": 32,
+            "maxPressure": 15,
+            "maxTorque": 9
+          },
+          "runId": "d1-mvt14uvb-0002",
+          "task": 0,
+          "chartHash": "e2ab223b",
+          "chartCount": 4,
+          "metrics": {
+            "model": {
+              "n": 128,
+              "mae": 1.9624040748572056,
+              "rmse": 2.4272191421216918,
+              "bias": 0.9465490001269504
+            },
+            "baseline": {
+              "n": 128,
+              "mae": 5.405732935300523,
+              "rmse": 6.634852065423579,
+              "bias": 0.7670855040351896
+            },
+            "outsideCount": 2
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "preset": "default",
+            "constrain": true,
+            "wob": 90,
+            "rpm": 120,
+            "flow": 26,
+            "ucs": 100,
+            "noise": 2,
+            "maxWob": 125,
+            "maxRpm": 170,
+            "maxFlow": 32,
+            "maxPressure": 19.5,
+            "maxTorque": 9
+          },
+          "runId": "d1-mvt14uvb-0003",
+          "task": 1,
+          "chartHash": "760b3765",
+          "chartCount": 4,
+          "metrics": {
+            "model": {
+              "n": 128,
+              "mae": 1.9624040748572056,
+              "rmse": 2.4272191421216918,
+              "bias": 0.9465490001269504
+            },
+            "baseline": {
+              "n": 128,
+              "mae": 5.405732935300523,
+              "rmse": 6.634852065423579,
+              "bias": 0.7670855040351896
+            },
+            "outsideCount": 2
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "preset": "default",
+          "constrain": true,
+          "wob": 90,
+          "rpm": 120,
+          "flow": 26,
+          "ucs": 60,
+          "noise": 2,
+          "maxWob": 125,
+          "maxRpm": 170,
+          "maxFlow": 32,
+          "maxPressure": 19.5,
+          "maxTorque": 9
+        },
+        "runId": "d1-mvt14uvb-0001",
+        "task": -1,
+        "chartHash": "81082b0a",
+        "chartCount": 4,
+        "metrics": {
+          "model": {
+            "n": 128,
+            "mae": 1.9624040748572056,
+            "rmse": 2.4272191421216918,
+            "bias": 0.9465490001269504
+          },
+          "baseline": {
+            "n": 128,
+            "mae": 5.405732935300523,
+            "rmse": 6.634852065423579,
+            "bias": 0.7670855040351896
+          },
+          "outsideCount": 2
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "d2",
+      "id": "s17x-d2-drilling-precursor",
+      "output": "dist/expansion-cases/s17x-d2-drilling-precursor",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "drift": 1.4,
+              "noise": 1,
+              "threshold": 0.45,
+              "absolute": 11
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "72f51cc4",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "事件是否检出",
+                "value": "检出",
+                "unit": ""
+              },
+              {
+                "label": "相对145min事件提前",
+                "value": 6,
+                "unit": "min"
+              },
+              {
+                "label": "正常段告警窗",
+                "value": 3,
+                "unit": "/170"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "drift": 0.6,
+              "noise": 1,
+              "threshold": 0.45,
+              "absolute": 11
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "6623057e",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "事件是否检出",
+                "value": "检出",
+                "unit": ""
+              },
+              {
+                "label": "相对145min事件提前",
+                "value": -13,
+                "unit": "min"
+              },
+              {
+                "label": "正常段告警窗",
+                "value": 1,
+                "unit": "/170"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "72f51cc4",
+            "after": "6623057e"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "drift": 1.4,
+              "noise": 1,
+              "threshold": 0.7,
+              "absolute": 11
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "c1fff328",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "事件是否检出",
+                "value": "检出",
+                "unit": ""
+              },
+              {
+                "label": "相对145min事件提前",
+                "value": -2,
+                "unit": "min"
+              },
+              {
+                "label": "正常段告警窗",
+                "value": 2,
+                "unit": "/170"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "72f51cc4",
+            "after": "c1fff328"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "drift": 0.6,
+            "noise": 1,
+            "threshold": 0.45,
+            "absolute": 11
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "6623057e",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "事件是否检出",
+              "value": "检出",
+              "unit": ""
+            },
+            {
+              "label": "相对145min事件提前",
+              "value": -13,
+              "unit": "min"
+            },
+            {
+              "label": "正常段告警窗",
+              "value": 1,
+              "unit": "/170"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "drift": 1.4,
+            "noise": 1,
+            "threshold": 0.7,
+            "absolute": 11
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "c1fff328",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "事件是否检出",
+              "value": "检出",
+              "unit": ""
+            },
+            {
+              "label": "相对145min事件提前",
+              "value": -2,
+              "unit": "min"
+            },
+            {
+              "label": "正常段告警窗",
+              "value": 2,
+              "unit": "/170"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "drift": 1.4,
+          "noise": 1,
+          "threshold": 0.45,
+          "absolute": 11
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "72f51cc4",
+        "chartCount": 2,
+        "metrics": [
+          {
+            "label": "事件是否检出",
+            "value": "检出",
+            "unit": ""
+          },
+          {
+            "label": "相对145min事件提前",
+            "value": 6,
+            "unit": "min"
+          },
+          {
+            "label": "正常段告警窗",
+            "value": 3,
+            "unit": "/170"
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "d3",
+      "id": "s17x-d3-trajectory-control",
+      "output": "dist/expansion-cases/s17x-d3-trajectory-control",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "targetX": 180,
+              "targetZ": 550,
+              "gain": 0.75,
+              "limit": 7
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "c9203427",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "学习响应路径末端偏差",
+                "value": 24.107513430334613,
+                "unit": "m"
+              },
+              {
+                "label": "单位增益基线偏差",
+                "value": 52.817763542138955,
+                "unit": "m"
+              },
+              {
+                "label": "转角约束超限步",
+                "value": 0,
+                "unit": "/60"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "targetX": 180,
+              "targetZ": 550,
+              "gain": 0.75,
+              "limit": 3
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "8aa160c6",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "学习响应路径末端偏差",
+                "value": 22.11975919630488,
+                "unit": "m"
+              },
+              {
+                "label": "单位增益基线偏差",
+                "value": 50.252830725990705,
+                "unit": "m"
+              },
+              {
+                "label": "转角约束超限步",
+                "value": 0,
+                "unit": "/60"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "c9203427",
+            "after": "8aa160c6"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "targetX": 240,
+              "targetZ": 550,
+              "gain": 0.75,
+              "limit": 7
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "12d5d1a2",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "学习响应路径末端偏差",
+                "value": 21.692948708192024,
+                "unit": "m"
+              },
+              {
+                "label": "单位增益基线偏差",
+                "value": 62.097317671220694,
+                "unit": "m"
+              },
+              {
+                "label": "转角约束超限步",
+                "value": 0,
+                "unit": "/60"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "c9203427",
+            "after": "12d5d1a2"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "targetX": 180,
+            "targetZ": 550,
+            "gain": 0.75,
+            "limit": 3
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "8aa160c6",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "学习响应路径末端偏差",
+              "value": 22.11975919630488,
+              "unit": "m"
+            },
+            {
+              "label": "单位增益基线偏差",
+              "value": 50.252830725990705,
+              "unit": "m"
+            },
+            {
+              "label": "转角约束超限步",
+              "value": 0,
+              "unit": "/60"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "targetX": 240,
+            "targetZ": 550,
+            "gain": 0.75,
+            "limit": 7
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "12d5d1a2",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "学习响应路径末端偏差",
+              "value": 21.692948708192024,
+              "unit": "m"
+            },
+            {
+              "label": "单位增益基线偏差",
+              "value": 62.097317671220694,
+              "unit": "m"
+            },
+            {
+              "label": "转角约束超限步",
+              "value": 0,
+              "unit": "/60"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "targetX": 180,
+          "targetZ": 550,
+          "gain": 0.75,
+          "limit": 7
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "c9203427",
+        "chartCount": 2,
+        "metrics": [
+          {
+            "label": "学习响应路径末端偏差",
+            "value": 24.107513430334613,
+            "unit": "m"
+          },
+          {
+            "label": "单位增益基线偏差",
+            "value": 52.817763542138955,
+            "unit": "m"
+          },
+          {
+            "label": "转角约束超限步",
+            "value": 0,
+            "unit": "/60"
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "d4",
+      "id": "s17x-d4-tool-condition",
+      "output": "dist/expansion-cases/s17x-d4-tool-condition",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "load": 1.1,
+              "noise": 1,
+              "threshold": 0.5,
+              "rms": 0.85,
+              "cursor": 63
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "f4c064fb",
+            "chartCount": 3,
+            "metrics": [
+              {
+                "label": "频带模型 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "RMS基线 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "模型漏报",
+                "value": 0,
+                "unit": "/40个退化窗"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "load": 1.6,
+              "noise": 1,
+              "threshold": 0.5,
+              "rms": 0.85,
+              "cursor": 63
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "5eee9d67",
+            "chartCount": 3,
+            "metrics": [
+              {
+                "label": "频带模型 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "RMS基线 F1",
+                "value": 0.6153846153846154,
+                "unit": ""
+              },
+              {
+                "label": "模型漏报",
+                "value": 0,
+                "unit": "/40个退化窗"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "f4c064fb",
+            "after": "5eee9d67"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "load": 1.1,
+              "noise": 2,
+              "threshold": 0.5,
+              "rms": 0.85,
+              "cursor": 63
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "3d9a5c8a",
+            "chartCount": 3,
+            "metrics": [
+              {
+                "label": "频带模型 F1",
+                "value": 1,
+                "unit": ""
+              },
+              {
+                "label": "RMS基线 F1",
+                "value": 0.963855421686747,
+                "unit": ""
+              },
+              {
+                "label": "模型漏报",
+                "value": 0,
+                "unit": "/40个退化窗"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "f4c064fb",
+            "after": "3d9a5c8a"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "load": 1.6,
+            "noise": 1,
+            "threshold": 0.5,
+            "rms": 0.85,
+            "cursor": 63
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "5eee9d67",
+          "chartCount": 3,
+          "metrics": [
+            {
+              "label": "频带模型 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "RMS基线 F1",
+              "value": 0.6153846153846154,
+              "unit": ""
+            },
+            {
+              "label": "模型漏报",
+              "value": 0,
+              "unit": "/40个退化窗"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "load": 1.1,
+            "noise": 2,
+            "threshold": 0.5,
+            "rms": 0.85,
+            "cursor": 63
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "3d9a5c8a",
+          "chartCount": 3,
+          "metrics": [
+            {
+              "label": "频带模型 F1",
+              "value": 1,
+              "unit": ""
+            },
+            {
+              "label": "RMS基线 F1",
+              "value": 0.963855421686747,
+              "unit": ""
+            },
+            {
+              "label": "模型漏报",
+              "value": 0,
+              "unit": "/40个退化窗"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "load": 1.1,
+          "noise": 1,
+          "threshold": 0.5,
+          "rms": 0.85,
+          "cursor": 63
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "f4c064fb",
+        "chartCount": 3,
+        "metrics": [
+          {
+            "label": "频带模型 F1",
+            "value": 1,
+            "unit": ""
+          },
+          {
+            "label": "RMS基线 F1",
+            "value": 1,
+            "unit": ""
+          },
+          {
+            "label": "模型漏报",
+            "value": 0,
+            "unit": "/40个退化窗"
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "d5",
+      "id": "s17x-d5-mud-rheology",
+      "output": "dist/expansion-cases/s17x-d5-mud-rheology",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "temp": 75,
+              "target": 30,
+              "min": 15,
+              "max": 45,
+              "noise": 1
+            },
+            "runId": 0,
+            "task": -1,
+            "chartHash": "1d469a55",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "留出批次 PV RMSE",
+                "value": 0.5391085328861015,
+                "unit": "mPa·s"
+              },
+              {
+                "label": "线性经验基线 RMSE",
+                "value": 3.0950323586553035,
+                "unit": "mPa·s"
+              },
+              {
+                "label": "可行配方候选",
+                "value": "306/375",
+                "unit": "个"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "temp": 100,
+              "target": 30,
+              "min": 15,
+              "max": 45,
+              "noise": 1
+            },
+            "runId": 1,
+            "task": 0,
+            "chartHash": "d3cc9d08",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "留出批次 PV RMSE",
+                "value": 0.5391085328861015,
+                "unit": "mPa·s"
+              },
+              {
+                "label": "线性经验基线 RMSE",
+                "value": 3.0950323586553035,
+                "unit": "mPa·s"
+              },
+              {
+                "label": "可行配方候选",
+                "value": "299/375",
+                "unit": "个"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "1d469a55",
+            "after": "d3cc9d08"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "temp": 75,
+              "target": 36,
+              "min": 15,
+              "max": 45,
+              "noise": 1
+            },
+            "runId": 2,
+            "task": 1,
+            "chartHash": "6ffbef81",
+            "chartCount": 2,
+            "metrics": [
+              {
+                "label": "留出批次 PV RMSE",
+                "value": 0.5391085328861015,
+                "unit": "mPa·s"
+              },
+              {
+                "label": "线性经验基线 RMSE",
+                "value": 3.0950323586553035,
+                "unit": "mPa·s"
+              },
+              {
+                "label": "可行配方候选",
+                "value": "306/375",
+                "unit": "个"
+              }
+            ],
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "1d469a55",
+            "after": "6ffbef81"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "temp": 100,
+            "target": 30,
+            "min": 15,
+            "max": 45,
+            "noise": 1
+          },
+          "runId": 1,
+          "task": 0,
+          "chartHash": "d3cc9d08",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "留出批次 PV RMSE",
+              "value": 0.5391085328861015,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "线性经验基线 RMSE",
+              "value": 3.0950323586553035,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "可行配方候选",
+              "value": "299/375",
+              "unit": "个"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "temp": 75,
+            "target": 36,
+            "min": 15,
+            "max": 45,
+            "noise": 1
+          },
+          "runId": 2,
+          "task": 1,
+          "chartHash": "6ffbef81",
+          "chartCount": 2,
+          "metrics": [
+            {
+              "label": "留出批次 PV RMSE",
+              "value": 0.5391085328861015,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "线性经验基线 RMSE",
+              "value": 3.0950323586553035,
+              "unit": "mPa·s"
+            },
+            {
+              "label": "可行配方候选",
+              "value": "306/375",
+              "unit": "个"
+            }
+          ],
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "temp": 75,
+          "target": 30,
+          "min": 15,
+          "max": 45,
+          "noise": 1
+        },
+        "runId": 0,
+        "task": -1,
+        "chartHash": "1d469a55",
+        "chartCount": 2,
+        "metrics": [
+          {
+            "label": "留出批次 PV RMSE",
+            "value": 0.5391085328861015,
+            "unit": "mPa·s"
+          },
+          {
+            "label": "线性经验基线 RMSE",
+            "value": 3.0950323586553035,
+            "unit": "mPa·s"
+          },
+          {
+            "label": "可行配方候选",
+            "value": "306/375",
+            "unit": "个"
+          }
+        ],
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "errors": [],
+  "failed": 0,
+  "passed": 63,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/case.json",
+      "bytes": 68597,
+      "sha256": "c81cb84b7aac2cd4b2123d4cc6869ae4973547eed9fb149898ff8f88926f255a"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/README.txt",
+      "bytes": 1200,
+      "sha256": "6896882c384d42a89c71c3f9e847541a285fbb4c17fc0acbdf11691e44f92a54"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/index.html",
+      "bytes": 19668,
+      "sha256": "38aa98ae56c0dd95a70b82a6f3b27c423cf8d3ca5b14c40e271f0b72c1205cc7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.css",
+      "bytes": 30204,
+      "sha256": "2e5d9f124ed770ef8ee537de01cdc4ff870ce2eb1c47b9b9a4f28c4ffbd3fb42"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.js",
+      "bytes": 124434,
+      "sha256": "f2aeeb317a926168530e5b438d58a045b427436234badb6661c1171f0d45235f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/case.json",
+      "bytes": 58038,
+      "sha256": "95cd1a5969fee795373047ab15b61aba1bcc54d84303ceb9ea2fe95bb9a6eb2f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/README.txt",
+      "bytes": 1024,
+      "sha256": "00f63a3a173e75ac0e9e5ff1b99456d8e5dc4d4dafe88cc0397fa507fb654e08"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html",
+      "bytes": 11122,
+      "sha256": "f52c9c86d6f8df11f23fbb3d78f8fa5ac670cc1a313aa449d3e35249032fdc9f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css",
+      "bytes": 29255,
+      "sha256": "ea79d10230fee4f14065be336d20210a1e5d2b8c78a5b1ded64a8ff343084cf6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js",
+      "bytes": 117487,
+      "sha256": "cc1ca8ed66eaf695eb1fbb4bac41460e247aeed8bc1400215b578f84921febc0"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/case.json",
+      "bytes": 78764,
+      "sha256": "530ff7af5d518d45305bbc701bf6765806ed86db74b78a85448a799c259990b6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/README.txt",
+      "bytes": 2606,
+      "sha256": "c70cb323013bea68d9fcfe57d411315d63206b5eedeb6a6e37a63503531d25cb"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/index.html",
+      "bytes": 28201,
+      "sha256": "85a4903c1cc4f0969ade67956f3a91f52324825fadc6ec64af22577fb8142f34"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.css",
+      "bytes": 36446,
+      "sha256": "49a9d5f9513b8a3bbef2d2710c51c727899208200c34972a8b0e40777c0b1a17"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.js",
+      "bytes": 153257,
+      "sha256": "43ec2e6a729a3fe238218726d971da8046492d1a894e5cbc68606e64d2eac00c"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/case.json",
+      "bytes": 50745,
+      "sha256": "36a38a4a5d39adf1aa2cabc12a41f6fb58b769992086009083edefb2ee1f19b1"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/README.txt",
+      "bytes": 941,
+      "sha256": "cf364c6582c3d8aa43b412b4900ffd58669c1cbbf5a9e74fb4a9497038335cfd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/index.html",
+      "bytes": 12035,
+      "sha256": "3a6a36231c53e6f7a40a4cc2650473cae1c8aa1b6411778d98e34abdae93bebc"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.css",
+      "bytes": 29948,
+      "sha256": "c2b2a329671497564fa5593480c9bb9c92de4d1d2d1bb27549be6d2e3631670f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.js",
+      "bytes": 119592,
+      "sha256": "20501b7463b2b5eb6ad35b1e9839b7913977b4dc937ce3c6f7fe0038c6463aa4"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/case.json",
+      "bytes": 49437,
+      "sha256": "0800ce43f4d8e1273448d61abb29b0a9c5e9ffbf4de4b76b72ed3fd044aa04c9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/README.txt",
+      "bytes": 891,
+      "sha256": "a15162f96e6afd5d141f195e239cbd17f11dbd0a16474f4104b9782e8bec8882"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/index.html",
+      "bytes": 10867,
+      "sha256": "ecb430c4f399d8cf98b02566d6e9750c32ff015e4c36aa8cf38ad90bcb9c2a46"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.css",
+      "bytes": 29948,
+      "sha256": "c2b2a329671497564fa5593480c9bb9c92de4d1d2d1bb27549be6d2e3631670f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.js",
+      "bytes": 116735,
+      "sha256": "8e0d86a314ceba9a6aeaa6c149467a4e48ec6943af72ed8aa2c86c207fe016dc"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/case.json",
+      "bytes": 51561,
+      "sha256": "3ffd47da41cc1905aff6a80c53ff30634b4379b6aa5b5efcda53b7365a80370e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/README.txt",
+      "bytes": 1048,
+      "sha256": "00a3f07f0728b316f16d02d140860e5e68ea4c3ffb815d4ee5b1736c906143c7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/index.html",
+      "bytes": 13104,
+      "sha256": "8e2f21e4cd32a87007569245757020aae5c9f1935820df748623f58535f3f940"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.css",
+      "bytes": 29948,
+      "sha256": "c2b2a329671497564fa5593480c9bb9c92de4d1d2d1bb27549be6d2e3631670f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.js",
+      "bytes": 120690,
+      "sha256": "06f74a673c5c26f1a31a554229fda3279f57dd91824edcadb574cf519155796d"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/case.json",
+      "bytes": 50348,
+      "sha256": "5f8b84b3e2e25a93443ba1cbeb3bb282657480a62f03d7585c47aed0bca135f6"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/README.txt",
+      "bytes": 1006,
+      "sha256": "478c713ca051026aa5c5fb0235061ba29c7e6b1e0966eff62e43c2615c65e0e7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/index.html",
+      "bytes": 11936,
+      "sha256": "d3295beb9945858db8c7ac7c0e7abc9ce7c7e2ffc3721b39dcc88cd968a78f21"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.css",
+      "bytes": 29948,
+      "sha256": "c2b2a329671497564fa5593480c9bb9c92de4d1d2d1bb27549be6d2e3631670f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.js",
+      "bytes": 119002,
+      "sha256": "354e35edd3be18306dcf6212a3540dba6b31962d12876541d3c499a4ea712036"
+    }
+  ]
+}

@@ -1,53 +1,58 @@
 # 井见 · 石油智能化可视实验室
 
-门户保留 **13阶段、61场景**，门户版本保持 **1.9.2-preview**。学号17对应第4阶段录井，五个录井案例当前均为 **1.7.1**。
+现有13阶段、61个自制案例。本轮按录井试点的教学原则，**轻量改进其余56例**，案例包版本统一为1.1.0；录井m1–m5继续使用1.7.1成品。门户包版本仍为1.9.2-preview，首页内容与样式保持原样。
 
-**2026-10-29本轮重做m1、m3、m4、m5**的专业背景、案例流程和可运行示范：先核对知识稿，分别组织照片、曲线、像素与原文交互，再做四幅不同的纸本微缩画卷。m2沿用已完成成品；首页、其他56例、老师原站和四例原有计算引擎／原始数据保持不变。老师firstbreak原样例单独保留，不计入61个自制案例。
+- [打开门户](portal/index.html) · [本地服务入口](http://127.0.0.1:8755/portal/index.html)
+- [本轮实际截图与分层验收](handoff/expansion-lessons-2026-10-29/acceptance.html)
+- [56例成品目录合集](dist/s17-expansion-56-lessons-1.1.0.zip)
+- [包含当前录井五例的61例合集](dist/s17-all-61-lessons-2026-10-29.zip)
+- [56份知识稿、逐例提示、截图与验收记录](dist/s17-expansion-lessons-2026-10-29-review.zip)
+- [老师原站只读兼容副本](portal-original/index.html)
 
-- [本轮完成、截图与分层验收](handoff/four-exhibits-2026-10-29/acceptance.html)
-- [打开门户](portal/index.html) · [老师原站只读副本](portal-original/index.html)
-- [当前五例合集1.7.1](dist/s17-mudlogging-cases-only-1.7.1.zip)
-- [知识稿、画卷、提示词及审阅记录交付包](dist/s17-four-exhibits-1.7.1-review.zip)
-- [m2此前完整验收，保留原日期与范围](handoff/m2-clarity-2026-10-28/acceptance.html)
-- [此前61例教学审阅](handoff/teaching-audit-2026-10-24/acceptance.html) · [其他56例原包](dist/s17-expansion-56-cases-1.9.2-preview.zip)
+## 这轮怎样改
 
-## 五例怎样讲
+专业背景沿用各例已有的知识、来源和图，补充一句核心认识与三条具体读图提示；从专业对象讲到观测，再联系方法。地震去噪看反射是否被保留，腐蚀评估看两次检测是否对齐，化验审核分开单位与跨指标关系，没有把56例换成同一幅流程画卷。
 
-| 案例与直接入口 | 围绕的对象 | 主要图表和实际操作 |
-| --- | --- | --- |
-| [m1 岩屑](dist/cases/s17-cuttings-lithology/demo/index.html#background) | 一盘样品与选中的图像位置 | 真实岩芯照片、像素轮廓、实际近邻、计数和面积；调照明与附着，轮廓丢失时保留锚点。重排教学盘明确不确认原颗粒身份。 |
-| [m2 气测](dist/cases/s17-mudgas-context/demo/index.html#background) | 同一个气峰 | 到达／来源双时钟、共时轴组分、真实近邻；累计体积归位后切换工况。当前运行文件原样保留。 |
-| [m3 荧光](dist/cases/s17-fluorescence-review/demo/index.html#background) | 同一组白光／UV样品 | 真实方解石配对照片、参照校正、实际掩膜与像素计数；改曝光并比较原始阈值、校正阈值、学习方法。 |
-| [m4 钻时](dist/cases/s17-drilltime-boundaries/demo/index.html#background) | 共同深度的观测与候选段 | USROP实测读图、钻速与操作共轴、校正响应和候选界面；切工况／薄层、调厚度与游标，显示真实采样点数。 |
-| [m5 报告](dist/cases/s17-evidence-report/demo/index.html#background) | 一段原文与可逐句回查的报告 | 字段、分类分差、原文标记及来源；改“未见／见”、数值和井段，重算后撤销旧核对。继承的范围另有原文引用。 |
+案例流程保留每例自己的分支流程、步骤图或手算表，逐步显示输入、动作与产物。演示默认完成真实计算，每例提供两个与现有控件直接相连的比较任务，共112项；相关条件变化后自动重算，复位可恢复默认结果。图表、近邻、约束和基线继续来自原引擎。原计算源码与控制器保留，组装时只同步发布版本字段。
 
-四例知识稿：[m1](case-src/m1/knowledge.md)、[m3](case-src/m3/knowledge.md)、[m4](case-src/m4/knowledge.md)、[m5](case-src/m5/knowledge.md)。每份包括三个学习结果、四个知识单元、图与操作、首次术语及专业来源。
+界面采用朱红与暖白、18px正文、圆角和留白，保留原图、物性及类别的色标。窄屏在图内横向滚动，避免将坐标与标注缩成小字。本轮没有生成新图片，也没有增加在线模型或聊天系统。
 
-四幅开场画卷桌面绘图区320–400px，区域半透明高亮、标签外置；窄屏保留完整画面和四个文字入口。正文18px、说明至少16px，以朱红、暖白、蓝灰与赭金组织。画卷只作场景定位，数据图来自实际观测与计算。每例两种构图和选择理由记录在各自assets/prompts.json，最终资产随包嵌入。
+| 示例 | 专业问题与实际比较 |
+| --- | --- |
+| [g2 地球化学异常](dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/index.html#background) | 地图位置与组分关系互相对应；调整联合阈值和背景波动，查看候选与误报。 |
+| [s5 地震去噪](dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html#background) | 同一条道看带噪、处理后与移除量；改相干干扰，检查反射保真。 |
+| [w3 成像测井](dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html#background) | 从井壁展开图理解曲线；调对比度和阈值，对照实际掩膜。 |
+| [c4 套管居中度](dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html#background) | 将截面窄侧间隙与跨距曲线联系；改支撑间距和载荷，看最差位置。 |
+| [t2 腐蚀评估](dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html#background) | 两次内检测先对齐，再算增长；查看里程错位和测量噪声。 |
+| [r4 化验审核](dist/expansion-cases/s17x-r4-lab-audit/demo/index.html#background) | 从带单位的原始化验行回查规则与关系；可编辑文本并实际重算。 |
 
-## 启动与导入
+全部逐例知识稿位于`expansion-src/<场景ID>/knowledge.md`，读图与操作说明集中记录在[逐例编辑清单](handoff/expansion-lessons-2026-10-29/editorial-index.json)。知识稿沿用已有来源，本轮未进行新的外部专家审稿。
 
-运行 `npm run serve`，打开 [本地门户](http://127.0.0.1:8755/portal/index.html)。这是静态文件服务，计算仍在浏览器内。四例也可直接双击各自demo/index.html离线运行。
+## 运行与老师原站导入
 
-录井五例在dist/cases/，其他56例在dist/expansion-cases/。ZIP先解压，通过老师原站“添加案例”一次选择一个完整案例目录，其中有case.json、README.txt以及demo/index.html、demo.css、demo.js，共5文件。合集应逐例导入。老师原站背景与流程提供静态预览，完整交互在“可运行示范”内；增强门户同时支持画卷章节导航和讲解交互。
+执行`npm run serve`后打开本地门户。服务只提供静态文件，计算在浏览器内执行；各例也可以直接双击`demo/index.html`离线运行。录井五例在`dist/cases/`，其他56例在`dist/expansion-cases/`。
 
-增强门户用IndexedDB保存导入包，老师原站保留原localStorage逻辑。重复导入同ID时，按原入口提示先移除浏览器中的旧导入记录，磁盘成品不变。本轮通过原入口实际导入四例，并在刷新后再次操作、下载结果；增强门户另运行了m2回归和未修改的firstbreak原样例。
+ZIP先解压，点击老师原站“添加案例”，**一次选择一个完整案例目录**：`case.json`、`README.txt`、`demo/index.html`、`demo/demo.css`、`demo/demo.js`，共5个文件。合集需逐例导入。老师原站显示静态背景和流程预览，完整交互在可运行示范内；增强门户支持讲解导航与步骤切换。
 
-首页助手沿用现有窄面板和服务配置。本轮没有新接在线模型或语音服务，案例默认计算不依赖网络。
+增强门户沿用IndexedDB，原站保留原localStorage与重复ID逻辑。浏览器已有旧导入时，按原入口提示移除旧记录后导入新包；增强门户案例入口也按单例版本判断。其他同学的案例和原firstbreak样例沿用原导入契约。
 
-## 构建、验证与交付
+## 构建和验证
 
-- `npm run build`：构建本轮四例及门户讲解包，更新当前五例清单；不重新构建m2和其他56例。
-- `npm test`：本轮源码、文件哈希、五文件结构和已有数值／协议检查；不会覆盖此前日期的验收记录。
-- `npm run accept:four`：打开专用Chrome测试会话，实际运行四例离线、窄屏、增强门户、老师原站导入／刷新／重算／保存，然后做一次m2门户回归。
-- `npm run accept`：核对实际浏览器报告与当前运行文件，生成本轮分层汇总；此命令本身不操作浏览器。
-- `npm run verify-delivery`：核对交付哈希、保存结果协议和已有浏览器证据的一致性。
-- `npm run package`：生成四个独立成品包、包含当前m2的五例合集，以及知识稿／画卷／提示词／截图／审阅记录包。逐成员SHA256与ZIP CRC另行检查。
+- `npm run build`：只构建本轮56例和门户注册包，不重建录井五例，不覆盖旧日期验收目录。
+- `npm test`：源码、知识组织、控件范围／步长、哈希及老师原导入契约检查；不算浏览器验收。
+- `npm run accept:browser`：专用Chrome会话，运行56例桌面轻量检查，再抽样检查离线、窄屏、原站导入／刷新／保存、增强门户，并回归m2和原firstbreak样例。
+- `npm run accept`：将实际浏览器报告与当前文件核对，生成本轮汇总；这个命令本身不操作浏览器。
+- `npm run package`：生成56例合集、当前61例合集和知识／截图记录包，校验ZIP CRC及逐成员SHA256。
+- `npm run verify-delivery`：核对最终文件、包和已保存浏览器证据的一致性。
 
-修改讲解后若默认流程预览过期，先 `npm run build -- --allow-stale-preview` 生成开发稿；打开专用浏览器会话并运行 `npm run capture:four-flow`，从实际默认计算提取逐步产物，再正式构建和验收。正式构建会拒绝与源码哈希不匹配的静态预览。
+此前录井构建入口保留为`build:four`和`build:m2`。历史验收工具绑定各自日期的文件快照；本轮默认命令使用新的56例范围。
 
-本轮证据分开记录：**18项源码／内容／哈希检查、37项数值／协议检查、169项四例真实Chrome检查、5项m2与原样例门户回归**。四例共实际保存12份JSON，另经既有证据协议验证；每例有独立新手审阅和修订复核。截图、操作记录、失败尝试及当前成品哈希均在本轮验收目录内。
+本轮逐例检查桌面默认计算、两项任务、流程键盘切换与复位；完整离线／原站／窄屏路径采用抽样，不写成全56例全路径通过。具体结果、下载文件与未验收范围见本轮记录。当前录井25个运行文件及对应源码、原站、公共观测、首页和原计算源码均有哈希保护。
 
-m2和其他56例合计57例、285个运行文件逐字节一致；63个原站／材料保护文件以及既有引擎、真实数据一致。历史m2与61例验收保留原日期和范围。本轮没有重新逐例运行其他56例，也未验证全部参数组合、实体手机、Firefox／WebKit或在线助手服务。
+## 已完成的录井五例
 
-数据及许可：[公开资料审计](handoff/real-data-source-audit.md)、[岩芯与曲线署名](data/real/ATTRIBUTION.txt)、[白光／UV署名](data/real/CALCITE-ATTRIBUTION.txt)。真实照片和实测曲线用于专业观察；默认方法演示继续使用现有可控教学数据，预测只接收观测，评价答案单独使用。
+[m1岩屑](dist/cases/s17-cuttings-lithology/demo/index.html#background)、[m2气测](dist/cases/s17-mudgas-context/demo/index.html#background)、[m3荧光](dist/cases/s17-fluorescence-review/demo/index.html#background)、[m4钻时](dist/cases/s17-drilltime-boundaries/demo/index.html#background)、[m5报告](dist/cases/s17-evidence-report/demo/index.html#background)保持1.7.1。
+
+此前[四例重做记录](handoff/four-exhibits-2026-10-29/acceptance.html)、[m2讲解记录](handoff/m2-clarity-2026-10-28/acceptance.html)、[61例教学审阅](handoff/teaching-audit-2026-10-24/acceptance.html)保留原日期和原范围，记录当时版本的验收。
+
+真实照片与曲线署名见[公开资料审计](handoff/real-data-source-audit.md)、[岩芯与曲线署名](data/real/ATTRIBUTION.txt)、[白光／UV署名](data/real/CALCITE-ATTRIBUTION.txt)。默认方法演示继续使用可控教学数据，预测只接收观测，评价答案单独使用。

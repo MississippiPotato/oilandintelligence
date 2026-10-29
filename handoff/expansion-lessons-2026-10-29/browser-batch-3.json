@@ -1,0 +1,1521 @@
+{
+  "checkedAt": "2026-10-29T04:15:21.678Z",
+  "scope": "Actual Chrome desktop default / both authored tasks / workflow navigation for seven-case batch; not complete original-import/offline acceptance of every case",
+  "cases": [
+    {
+      "scene": "c3",
+      "id": "s17x-c3-cement-loss-risk",
+      "output": "dist/expansion-cases/s17x-c3-cement-loss-risk",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "threshold": 0.5,
+              "shift": 0,
+              "fracture": 0
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "8371f55b",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "threshold": 0.75,
+              "shift": 0,
+              "fracture": 0
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "ac5268f",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "8371f55b",
+            "after": "ac5268f"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "threshold": 0.5,
+              "shift": 1,
+              "fracture": 0
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "567adc38",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "8371f55b",
+            "after": "567adc38"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "complete",
+          "params": {
+            "threshold": 0.75,
+            "shift": 0,
+            "fracture": 0
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "ac5268f",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "complete",
+          "params": {
+            "threshold": 0.5,
+            "shift": 1,
+            "fracture": 0
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "567adc38",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "complete",
+        "params": {
+          "threshold": 0.5,
+          "shift": 0,
+          "fracture": 0
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "8371f55b",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "c4",
+      "id": "s17x-c4-casing-standoff",
+      "output": "dist/expansion-cases/s17x-c4-casing-standoff",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "ecc": 12,
+              "load": 1.3,
+              "spacing": 12
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "754c1915",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "ecc": 12,
+              "load": 1.3,
+              "spacing": 18
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "88d335c2",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "754c1915",
+            "after": "88d335c2"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "ecc": 12,
+              "load": 2,
+              "spacing": 12
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "b6091655",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "754c1915",
+            "after": "b6091655"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "complete",
+          "params": {
+            "ecc": 12,
+            "load": 1.3,
+            "spacing": 18
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "88d335c2",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "complete",
+          "params": {
+            "ecc": 12,
+            "load": 2,
+            "spacing": 12
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "b6091655",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "complete",
+        "params": {
+          "ecc": 12,
+          "load": 1.3,
+          "spacing": 12
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "754c1915",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "screenshot": "handoff/expansion-lessons-2026-10-29/c4-desktop-results.png",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "co1",
+      "id": "s17x-co1-completion-choice",
+      "output": "dist/expansion-cases/s17x-co1-completion-choice",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "budget": 90,
+              "costWeight": 0.22,
+              "queryId": "TE-001",
+              "queryX": [
+                0.6951370144588872,
+                0.7710069122025743,
+                0.4929951655678451,
+                0.48021528166718785,
+                2.4348035863600668,
+                125.03530151792802
+              ]
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "80a23f0",
+            "chartCount": 2,
+            "metrics": {
+              "total": 32,
+              "feasibleWellCount": 32,
+              "model": {
+                "recommended": 32,
+                "matched": 31,
+                "violations": 0,
+                "coverage": 1,
+                "top1Agreement": 0.96875,
+                "regret": 0.0294595160361395,
+                "regretTotal": 0.942704513156464
+              },
+              "baseline": {
+                "recommended": 21,
+                "matched": 18,
+                "violations": 0,
+                "excludedRaw": 11,
+                "coverage": 0.65625,
+                "top1Agreement": 0.8571428571428571,
+                "regret": 0.15760121616378747,
+                "regretTotal": 3.309625539439537
+              },
+              "surrogateMAE": 2.8058105435190632,
+              "surrogateDenominator": 128
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "budget": 30,
+              "costWeight": 0.22,
+              "queryId": "CUSTOM",
+              "queryX": [
+                0.55,
+                0.9,
+                0.8,
+                0.9,
+                2.4,
+                120
+              ]
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "74915e34",
+            "chartCount": 2,
+            "metrics": {
+              "total": 32,
+              "feasibleWellCount": 9,
+              "model": {
+                "recommended": 9,
+                "matched": 9,
+                "violations": 0,
+                "coverage": 0.28125,
+                "top1Agreement": 1,
+                "regret": 0,
+                "regretTotal": 0
+              },
+              "baseline": {
+                "recommended": 6,
+                "matched": 6,
+                "violations": 0,
+                "excludedRaw": 3,
+                "coverage": 0.1875,
+                "top1Agreement": 1,
+                "regret": 0,
+                "regretTotal": 0
+              },
+              "surrogateMAE": 2.8058105435190632,
+              "surrogateDenominator": 128
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "80a23f0",
+            "after": "74915e34"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "ready",
+            "params": {
+              "budget": 90,
+              "costWeight": 0.22,
+              "queryId": "CUSTOM",
+              "queryX": [
+                0.55,
+                0.9,
+                0.8,
+                0.9,
+                2.4,
+                120
+              ]
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "486bfc4e",
+            "chartCount": 2,
+            "metrics": {
+              "total": 32,
+              "feasibleWellCount": 32,
+              "model": {
+                "recommended": 32,
+                "matched": 31,
+                "violations": 0,
+                "coverage": 1,
+                "top1Agreement": 0.96875,
+                "regret": 0.0294595160361395,
+                "regretTotal": 0.942704513156464
+              },
+              "baseline": {
+                "recommended": 21,
+                "matched": 18,
+                "violations": 0,
+                "excludedRaw": 11,
+                "coverage": 0.65625,
+                "top1Agreement": 0.8571428571428571,
+                "regret": 0.15760121616378747,
+                "regretTotal": 3.309625539439537
+              },
+              "surrogateMAE": 2.8058105435190632,
+              "surrogateDenominator": 128
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "80a23f0",
+            "after": "486bfc4e"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "ready",
+          "params": {
+            "budget": 30,
+            "costWeight": 0.22,
+            "queryId": "CUSTOM",
+            "queryX": [
+              0.55,
+              0.9,
+              0.8,
+              0.9,
+              2.4,
+              120
+            ]
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "74915e34",
+          "chartCount": 2,
+          "metrics": {
+            "total": 32,
+            "feasibleWellCount": 9,
+            "model": {
+              "recommended": 9,
+              "matched": 9,
+              "violations": 0,
+              "coverage": 0.28125,
+              "top1Agreement": 1,
+              "regret": 0,
+              "regretTotal": 0
+            },
+            "baseline": {
+              "recommended": 6,
+              "matched": 6,
+              "violations": 0,
+              "excludedRaw": 3,
+              "coverage": 0.1875,
+              "top1Agreement": 1,
+              "regret": 0,
+              "regretTotal": 0
+            },
+            "surrogateMAE": 2.8058105435190632,
+            "surrogateDenominator": 128
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "ready",
+          "params": {
+            "budget": 90,
+            "costWeight": 0.22,
+            "queryId": "CUSTOM",
+            "queryX": [
+              0.55,
+              0.9,
+              0.8,
+              0.9,
+              2.4,
+              120
+            ]
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "486bfc4e",
+          "chartCount": 2,
+          "metrics": {
+            "total": 32,
+            "feasibleWellCount": 32,
+            "model": {
+              "recommended": 32,
+              "matched": 31,
+              "violations": 0,
+              "coverage": 1,
+              "top1Agreement": 0.96875,
+              "regret": 0.0294595160361395,
+              "regretTotal": 0.942704513156464
+            },
+            "baseline": {
+              "recommended": 21,
+              "matched": 18,
+              "violations": 0,
+              "excludedRaw": 11,
+              "coverage": 0.65625,
+              "top1Agreement": 0.8571428571428571,
+              "regret": 0.15760121616378747,
+              "regretTotal": 3.309625539439537
+            },
+            "surrogateMAE": 2.8058105435190632,
+            "surrogateDenominator": 128
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "ready",
+        "params": {
+          "budget": 90,
+          "costWeight": 0.22,
+          "queryId": "TE-001",
+          "queryX": [
+            0.6951370144588872,
+            0.7710069122025743,
+            0.4929951655678451,
+            0.48021528166718785,
+            2.4348035863600668,
+            125.03530151792802
+          ]
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "80a23f0",
+        "chartCount": 2,
+        "metrics": {
+          "total": 32,
+          "feasibleWellCount": 32,
+          "model": {
+            "recommended": 32,
+            "matched": 31,
+            "violations": 0,
+            "coverage": 1,
+            "top1Agreement": 0.96875,
+            "regret": 0.0294595160361395,
+            "regretTotal": 0.942704513156464
+          },
+          "baseline": {
+            "recommended": 21,
+            "matched": 18,
+            "violations": 0,
+            "excludedRaw": 11,
+            "coverage": 0.65625,
+            "top1Agreement": 0.8571428571428571,
+            "regret": 0.15760121616378747,
+            "regretTotal": 3.309625539439537
+          },
+          "surrogateMAE": 2.8058105435190632,
+          "surrogateDenominator": 128
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "co2",
+      "id": "s17x-co2-completion-zone-design",
+      "output": "dist/expansion-cases/s17x-co2-completion-zone-design",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "budget": 42,
+              "waterLimit": 0.4,
+              "isolation": 1
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "c6cab4f8",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "budget": 42,
+              "waterLimit": 0.25,
+              "isolation": 1
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "25de5a94",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "c6cab4f8",
+            "after": "25de5a94"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "budget": 30,
+              "waterLimit": 0.4,
+              "isolation": 1
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "fc7c0214",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "c6cab4f8",
+            "after": "fc7c0214"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "complete",
+          "params": {
+            "budget": 42,
+            "waterLimit": 0.25,
+            "isolation": 1
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "25de5a94",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "complete",
+          "params": {
+            "budget": 30,
+            "waterLimit": 0.4,
+            "isolation": 1
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "fc7c0214",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "complete",
+        "params": {
+          "budget": 42,
+          "waterLimit": 0.4,
+          "isolation": 1
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "c6cab4f8",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "co3",
+      "id": "s17x-co3-tubing-stress",
+      "output": "dist/expansion-cases/s17x-co3-tubing-stress",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "force": 1100,
+              "temperature": 60,
+              "pressure": 18,
+              "anchor": 1
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "a9998ba1",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "force": 1100,
+              "temperature": 90,
+              "pressure": 18,
+              "anchor": 1
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "c152c57d",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "a9998ba1",
+            "after": "c152c57d"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "force": 1100,
+              "temperature": 60,
+              "pressure": 25,
+              "anchor": 1
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "2c5e6ec3",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "a9998ba1",
+            "after": "2c5e6ec3"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "complete",
+          "params": {
+            "force": 1100,
+            "temperature": 90,
+            "pressure": 18,
+            "anchor": 1
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "c152c57d",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "complete",
+          "params": {
+            "force": 1100,
+            "temperature": 60,
+            "pressure": 25,
+            "anchor": 1
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "2c5e6ec3",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "complete",
+        "params": {
+          "force": 1100,
+          "temperature": 60,
+          "pressure": 18,
+          "anchor": 1
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "a9998ba1",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "co4",
+      "id": "s17x-co4-sliding-sleeve-control",
+      "output": "dist/expansion-cases/s17x-co4-sliding-sleeve-control",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "penalty": 0.6,
+              "capacity": 150,
+              "changes": 1
+            },
+            "runId": 1,
+            "task": -1,
+            "chartHash": "c39c65ad",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "penalty": 1.2,
+              "capacity": 150,
+              "changes": 1
+            },
+            "runId": 2,
+            "task": 0,
+            "chartHash": "b7390bf9",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "c39c65ad",
+            "after": "b7390bf9"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "complete",
+            "params": {
+              "penalty": 0.6,
+              "capacity": 110,
+              "changes": 1
+            },
+            "runId": 3,
+            "task": 1,
+            "chartHash": "33ddfeb7",
+            "chartCount": 2,
+            "metrics": null,
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "c39c65ad",
+            "after": "33ddfeb7"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "complete",
+          "params": {
+            "penalty": 1.2,
+            "capacity": 150,
+            "changes": 1
+          },
+          "runId": 2,
+          "task": 0,
+          "chartHash": "b7390bf9",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "complete",
+          "params": {
+            "penalty": 0.6,
+            "capacity": 110,
+            "changes": 1
+          },
+          "runId": 3,
+          "task": 1,
+          "chartHash": "33ddfeb7",
+          "chartCount": 2,
+          "metrics": null,
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "complete",
+        "params": {
+          "penalty": 0.6,
+          "capacity": 150,
+          "changes": 1
+        },
+        "runId": 1,
+        "task": -1,
+        "chartHash": "c39c65ad",
+        "chartCount": 2,
+        "metrics": null,
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "screenshot": "handoff/expansion-lessons-2026-10-29/co4-desktop-results.png",
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "scene": "p1",
+      "id": "s17x-p1-perforation-design",
+      "output": "dist/expansion-cases/s17x-p1-perforation-design",
+      "checks": [
+        {
+          "name": "Default performs actual computation and has data graphics",
+          "passed": true,
+          "detail": {
+            "status": "done",
+            "params": {
+              "permeability": 60,
+              "damage": 18,
+              "anisotropy": 1.8,
+              "budget": 60,
+              "clearance": 5,
+              "maxCrowding": 2.5,
+              "costWeight": 0.35
+            },
+            "runId": "p1-1",
+            "task": -1,
+            "chartHash": "2bbddb45",
+            "chartCount": 4,
+            "metrics": {
+              "regression": {
+                "count": 240,
+                "RMSE": 0.7756006846026144,
+                "MAE": 0.6390126340461805
+              },
+              "regressionBaseline": {
+                "count": 240,
+                "RMSE": 6.580739481917284,
+                "MAE": 5.403172688552595
+              },
+              "feasibleCount": 274,
+              "candidateCount": 440,
+              "feasibleRate": 0.6227272727272727,
+              "gainVsFeasibleFixed": 2.7071388647417507,
+              "objectiveGap": 0.08819231751745349
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Background has three scene-specific read points",
+          "passed": true
+        },
+        {
+          "name": "Connected workflow and distinct step panels render",
+          "passed": true
+        },
+        {
+          "name": "Keyboard actually changes method step",
+          "passed": true
+        },
+        {
+          "name": "Task0 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "done",
+            "params": {
+              "permeability": 60,
+              "damage": 32,
+              "anisotropy": 1.8,
+              "budget": 8,
+              "clearance": 5,
+              "maxCrowding": 2.5,
+              "costWeight": 0.35
+            },
+            "runId": "p1-2",
+            "task": 0,
+            "chartHash": "4c366ae7",
+            "chartCount": 4,
+            "metrics": {
+              "regression": {
+                "count": 240,
+                "RMSE": 0.7756006846026144,
+                "MAE": 0.6390126340461805
+              },
+              "regressionBaseline": {
+                "count": 240,
+                "RMSE": 6.580739481917284,
+                "MAE": 5.403172688552595
+              },
+              "feasibleCount": 0,
+              "candidateCount": 440,
+              "feasibleRate": 0,
+              "gainVsFeasibleFixed": null,
+              "objectiveGap": null
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task0 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "2bbddb45",
+            "after": "4c366ae7"
+          }
+        },
+        {
+          "name": "Task1 reaches real controls and completes calculation",
+          "passed": true,
+          "detail": {
+            "status": "done",
+            "params": {
+              "permeability": 60,
+              "damage": 28,
+              "anisotropy": 1.8,
+              "budget": 60,
+              "clearance": 5,
+              "maxCrowding": 2.5,
+              "costWeight": 0.35
+            },
+            "runId": "p1-3",
+            "task": 1,
+            "chartHash": "f3cb70c3",
+            "chartCount": 4,
+            "metrics": {
+              "regression": {
+                "count": 240,
+                "RMSE": 0.7756006846026144,
+                "MAE": 0.6390126340461805
+              },
+              "regressionBaseline": {
+                "count": 240,
+                "RMSE": 6.580739481917284,
+                "MAE": 5.403172688552595
+              },
+              "feasibleCount": 186,
+              "candidateCount": 440,
+              "feasibleRate": 0.42272727272727273,
+              "gainVsFeasibleFixed": 3.421138399326054,
+              "objectiveGap": 0.1801074709699435
+            },
+            "screen": 1440,
+            "scroll": 1440
+          }
+        },
+        {
+          "name": "Task1 changes data graphics",
+          "passed": true,
+          "detail": {
+            "default": "2bbddb45",
+            "after": "f3cb70c3"
+          }
+        },
+        {
+          "name": "Default reset restores actual chart output",
+          "passed": true
+        }
+      ],
+      "tasks": [
+        {
+          "status": "done",
+          "params": {
+            "permeability": 60,
+            "damage": 32,
+            "anisotropy": 1.8,
+            "budget": 8,
+            "clearance": 5,
+            "maxCrowding": 2.5,
+            "costWeight": 0.35
+          },
+          "runId": "p1-2",
+          "task": 0,
+          "chartHash": "4c366ae7",
+          "chartCount": 4,
+          "metrics": {
+            "regression": {
+              "count": 240,
+              "RMSE": 0.7756006846026144,
+              "MAE": 0.6390126340461805
+            },
+            "regressionBaseline": {
+              "count": 240,
+              "RMSE": 6.580739481917284,
+              "MAE": 5.403172688552595
+            },
+            "feasibleCount": 0,
+            "candidateCount": 440,
+            "feasibleRate": 0,
+            "gainVsFeasibleFixed": null,
+            "objectiveGap": null
+          },
+          "screen": 1440,
+          "scroll": 1440
+        },
+        {
+          "status": "done",
+          "params": {
+            "permeability": 60,
+            "damage": 28,
+            "anisotropy": 1.8,
+            "budget": 60,
+            "clearance": 5,
+            "maxCrowding": 2.5,
+            "costWeight": 0.35
+          },
+          "runId": "p1-3",
+          "task": 1,
+          "chartHash": "f3cb70c3",
+          "chartCount": 4,
+          "metrics": {
+            "regression": {
+              "count": 240,
+              "RMSE": 0.7756006846026144,
+              "MAE": 0.6390126340461805
+            },
+            "regressionBaseline": {
+              "count": 240,
+              "RMSE": 6.580739481917284,
+              "MAE": 5.403172688552595
+            },
+            "feasibleCount": 186,
+            "candidateCount": 440,
+            "feasibleRate": 0.42272727272727273,
+            "gainVsFeasibleFixed": 3.421138399326054,
+            "objectiveGap": 0.1801074709699435
+          },
+          "screen": 1440,
+          "scroll": 1440
+        }
+      ],
+      "default": {
+        "status": "done",
+        "params": {
+          "permeability": 60,
+          "damage": 18,
+          "anisotropy": 1.8,
+          "budget": 60,
+          "clearance": 5,
+          "maxCrowding": 2.5,
+          "costWeight": 0.35
+        },
+        "runId": "p1-1",
+        "task": -1,
+        "chartHash": "2bbddb45",
+        "chartCount": 4,
+        "metrics": {
+          "regression": {
+            "count": 240,
+            "RMSE": 0.7756006846026144,
+            "MAE": 0.6390126340461805
+          },
+          "regressionBaseline": {
+            "count": 240,
+            "RMSE": 6.580739481917284,
+            "MAE": 5.403172688552595
+          },
+          "feasibleCount": 274,
+          "candidateCount": 440,
+          "feasibleRate": 0.6227272727272727,
+          "gainVsFeasibleFixed": 2.7071388647417507,
+          "objectiveGap": 0.08819231751745349
+        },
+        "screen": 1440,
+        "scroll": 1440
+      },
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "errors": [],
+  "failed": 0,
+  "passed": 63,
+  "runtimeFiles": [
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/case.json",
+      "bytes": 59591,
+      "sha256": "2a4fb529b11ec50800e9543c221d19e05f38d366faffd56cb5a3f2e7cbef947e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/README.txt",
+      "bytes": 1181,
+      "sha256": "aec4816f03d25fb24a2b9bd875fb5674aed6e17ff20527c9e726d21b486d035e"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/index.html",
+      "bytes": 2509,
+      "sha256": "2ca3a5df7846f235941d45f76726eae4cdd61122125faca4f5414f675b9c349f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.css",
+      "bytes": 29553,
+      "sha256": "fd72e3a29da63aea231ed4aa7948c5f663cd71c693f4ab2053629129c13d39fd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.js",
+      "bytes": 127496,
+      "sha256": "9409ccb7174273b0583481edbe0f994d8e47d2b8e3ed99b81c79581d36945949"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+      "bytes": 59068,
+      "sha256": "31cbf8ce57cab84f7654c45192a9fea80c9fe44340121624ed0208d0338b582f"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+      "bytes": 1152,
+      "sha256": "0d49b593ca0b1fecfdb950af3e8b38750310aca2ada24913cbc5ebcb548b0f51"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+      "bytes": 2452,
+      "sha256": "5e2357b307519daa8ea264abf8f952155f5fb01a0e3d5d9cfd90458c58749579"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+      "bytes": 29553,
+      "sha256": "fd72e3a29da63aea231ed4aa7948c5f663cd71c693f4ab2053629129c13d39fd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+      "bytes": 126402,
+      "sha256": "fb44b69d92476c01b32baa39ea8a633048fbc5b6a0a5954af10f3f0b1195fcd2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/case.json",
+      "bytes": 76550,
+      "sha256": "1a734ebe4060737c084590bc0aa14380a141c237f23e8e8bcfb185eb482bf5f5"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/README.txt",
+      "bytes": 1560,
+      "sha256": "a2de4a6175e804aba00c111107ea7f798c9a4e320a3e9ae676082d2ead053cdd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/index.html",
+      "bytes": 7323,
+      "sha256": "97ec890c58e92188c04d3ea469f533538395d190467c4807bb333e1a947a3a9b"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.css",
+      "bytes": 35787,
+      "sha256": "46bbe55ec55a3f389c75125f7ee6e48b0efd0dbdbdfb15ce361929ea6ffeaa67"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js",
+      "bytes": 164569,
+      "sha256": "caa9f0a842898477319cf68d21c62913357b42761713977bbc609665b6abc005"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/case.json",
+      "bytes": 60159,
+      "sha256": "427fc3594f9286ffa464240846392e2e44d26a07e243fbb2dd601770242b8f25"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/README.txt",
+      "bytes": 1205,
+      "sha256": "c48377400bcbe27f38835617d530e0a76ac64bb602aca9d0a36b097f46e9fdf9"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/index.html",
+      "bytes": 2568,
+      "sha256": "8d930a743ea85c82a182db9847a3cc1fafee78e00931bc06cc452bd1aff236fe"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.css",
+      "bytes": 29553,
+      "sha256": "fd72e3a29da63aea231ed4aa7948c5f663cd71c693f4ab2053629129c13d39fd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.js",
+      "bytes": 128735,
+      "sha256": "add9bf3b2aedc6640f4feddacdffbe956511e34d055607a3a912d1feac7a9b94"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/case.json",
+      "bytes": 58860,
+      "sha256": "b677f5ed578b0db745ed447fc9ca7765b0612c4cde0b012246f64c6e2ef077e2"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/README.txt",
+      "bytes": 1171,
+      "sha256": "6464f997d8f9843c231edeaae2e2de82eb4be8a0588b73ba1cd31000a8f0ef52"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/index.html",
+      "bytes": 2722,
+      "sha256": "d8ae9a9358350c9add28275f5a8e11d9830efefb7f422119ea79cea438a402fa"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.css",
+      "bytes": 29553,
+      "sha256": "fd72e3a29da63aea231ed4aa7948c5f663cd71c693f4ab2053629129c13d39fd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.js",
+      "bytes": 126653,
+      "sha256": "d3f82c9ee8df616f98e392898c5b860bdd92a2268e32aa72b533a8bb09c9c5a7"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/case.json",
+      "bytes": 68377,
+      "sha256": "a03ee4104089ad42b546e8c24dd79b14ee020f4991f07ff9270eea63af450060"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/README.txt",
+      "bytes": 1212,
+      "sha256": "02d98de81a3ff69cddaad8c56ae33fb03d76411532c228182ba22ec17d1fd3b3"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/index.html",
+      "bytes": 2566,
+      "sha256": "fc669f5fb558da00b466dd1fb6378854ec773bf0c3d8987938ca45bb114c5979"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.css",
+      "bytes": 29553,
+      "sha256": "fd72e3a29da63aea231ed4aa7948c5f663cd71c693f4ab2053629129c13d39fd"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.js",
+      "bytes": 138433,
+      "sha256": "6bd4ce55733c27e79876444b2db8d7e4d5b77966812982efac8dffc01159af56"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/case.json",
+      "bytes": 80016,
+      "sha256": "81d608272b5b67c7a57f295ba3419e2e2bc8f738015cac5e9bf8506b62b316da"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/README.txt",
+      "bytes": 3432,
+      "sha256": "e53efde31220463b405bad8e3e6049124bd5b8d95c07b180ff0be376ae7bded8"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/index.html",
+      "bytes": 4929,
+      "sha256": "379ac2cd18f4d564073061ebf4a9c608141af9919f2c0ac33f9a7bc3212c5c71"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.css",
+      "bytes": 35185,
+      "sha256": "1bdc1c9a808ae8b9a0dab2af29fb8bc5013c340e84dc00bec8a3cba7ab397064"
+    },
+    {
+      "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.js",
+      "bytes": 176395,
+      "sha256": "0f06b2d2c16c61969fcc9717b4037a9594cc53eb8c0db67b43dbd4e044421033"
+    }
+  ]
+}
