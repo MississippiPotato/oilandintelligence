@@ -5,9 +5,10 @@ import {execFileSync} from 'node:child_process';
 import {assistantJS} from './assistant-bundle.mjs';
 const root=path.resolve(import.meta.dirname,'..');process.chdir(root);
 const args=Object.fromEntries(process.argv.slice(2).map(v=>v.replace(/^--/,'').split('=')));
-const base=args.base??'554d236',report=args.report??'handoff/assistant-stream-2026-10-30',revision=args.revision??'0.7.0';
+const base=args.base??'46a0b2b',report=args.report??'handoff/assistant-manual-2026-10-30',revision=args.revision??'0.7.1';
 const avatarLoaderSourceRef=args['avatar-loader-ref']??null;
 const compiledAssistant=assistantJS({avatarLoader:avatarLoaderSourceRef?execFileSync('git',['show',avatarLoaderSourceRef+':portal/assets/s17-live2d-loader.js'],{encoding:'utf8'}):undefined});
+const scopedPaths=args.scope?new Set(JSON.parse(fs.readFileSync(args.scope,'utf8')).cases.map(c=>c.path)):null;
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const read=p=>fs.readFileSync(p,'utf8');
 fs.mkdirSync(report,{recursive:true});
@@ -21,7 +22,7 @@ const initial=fs.existsSync(report+'/initial-runtime-lock.json')?JSON.parse(read
 const legacyTail="\n/* Fit the bubble inside the character stage, including useful navigation. */\n#s17-assistant #s17-agent-excerpt{-webkit-line-clamp:4}\n#s17-assistant .s17-agent-reply:has(.s17-agent-actions a) #s17-agent-excerpt{-webkit-line-clamp:2}\n@media(max-width:760px){#s17-assistant #s17-agent-excerpt{-webkit-line-clamp:3}#s17-assistant .s17-agent-reply:has(.s17-agent-actions a) #s17-agent-excerpt{-webkit-line-clamp:1}}\n";
 const records=[];
 for(const dir of ['dist/cases','dist/expansion-cases'])for(const folder of fs.readdirSync(dir)){
- const dest=dir+'/'+folder;if(!fs.statSync(dest).isDirectory())continue;
+ const dest=dir+'/'+folder;if(scopedPaths&&!scopedPaths.has(dest))continue;if(!fs.statSync(dest).isDirectory())continue;
  const jsPath=dest+'/demo/demo.js',cssPath=dest+'/demo/demo.css';if(!fs.existsSync(jsPath))continue;
  const beforeStaticFiles=Object.fromEntries(['case.json','README.txt','demo/index.html'].map(p=>[p,sha(fs.readFileSync(dest+'/'+p))]));
  const beforeJS=read(jsPath),beforeCSS=read(cssPath),marker=beforeJS.indexOf('/* S17_OPTIONAL_ASSISTANT_START');if(marker<0)throw Error(dest+' assistant boundary missing');

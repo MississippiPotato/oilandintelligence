@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-30T03:13:20.175Z",
+  "checks": [
+    {
+      "name": "Compact key entry opens from visible connection button",
+      "passed": true
+    },
+    {
+      "name": "Empty key gets inline feedback",
+      "passed": true
+    },
+    {
+      "name": "Connect clears field and configures only page memory",
+      "passed": true
+    },
+    {
+      "name": "Manual adapter sends streaming payload with entered key",
+      "passed": true,
+      "detail": [
+        {
+          "stream": true,
+          "model": "doubao-seed-2-0-mini-260428",
+          "roles": [
+            "system",
+            "user"
+          ],
+          "hasSampleAuthorization": true
+        }
+      ]
+    },
+    {
+      "name": "SSE output reaches current conversation",
+      "passed": true
+    },
+    {
+      "name": "Actual browser CORS reaches provider authentication response",
+      "passed": false,
+      "detail": {
+        "error": "Failed to fetch"
+      }
+    }
+  ],
+  "realPaidModelCallRepeated": false,
+  "directNetwork": {
+    "error": "Failed to fetch"
+  },
+  "exception": "Actual browser CORS reaches provider authentication response"
+}

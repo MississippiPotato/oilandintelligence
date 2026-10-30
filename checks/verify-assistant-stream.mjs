@@ -10,4 +10,4 @@ result=await window.S17ResponseStream.read(response(frame({type:'response.output
 result=await window.S17ResponseStream.read(Response.json({output:[{type:'message',content:[{type:'output_text',text:'JSON'}]}]}));assert.equal(result.deltas,0);checks.push('Non-stream JSON response remains compatible');
 const files=['s17-assistant','s17-media','s17-volcengine','s17-assistant-config','s17-response-stream','s17-live2d'];for(const f of files)new vm.Script(fs.readFileSync('portal/assets/'+f+'.js','utf8'));
 checks.push('Changed client scripts parse');
-fs.mkdirSync('handoff/assistant-stream-2026-10-30',{recursive:true});fs.writeFileSync('handoff/assistant-stream-2026-10-30/source-checks.json',JSON.stringify({checkedAt:new Date().toISOString(),checks,browserAcceptanceClaimed:false},null,2));console.log(JSON.stringify({checks},null,2));
+const report=process.argv[2]??'handoff/assistant-stream-2026-10-30';fs.mkdirSync(report,{recursive:true});fs.writeFileSync(report+'/source-checks.json',JSON.stringify({checkedAt:new Date().toISOString(),checks,browserAcceptanceClaimed:false},null,2));console.log(JSON.stringify({checks},null,2));

@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-30T03:16:09.482Z",
+  "checks": [
+    {
+      "name": "Compact key entry opens from visible connection button",
+      "passed": true
+    },
+    {
+      "name": "Empty key gets inline feedback",
+      "passed": true
+    },
+    {
+      "name": "Connect clears field and configures only page memory",
+      "passed": true
+    },
+    {
+      "name": "Manual adapter sends streaming payload with entered key",
+      "passed": true,
+      "detail": [
+        {
+          "stream": true,
+          "model": "doubao-seed-2-0-mini-260428",
+          "roles": [
+            "system",
+            "user",
+            "assistant",
+            "user"
+          ],
+          "hasSampleAuthorization": true
+        }
+      ]
+    },
+    {
+      "name": "SSE output reaches current conversation",
+      "passed": true
+    },
+    {
+      "name": "Key absent from history and Web Storage",
+      "passed": true
+    },
+    {
+      "name": "Disconnect clears credential",
+      "passed": true
+    },
+    {
+      "name": "Refresh requires entering key again",
+      "passed": true
+    },
+    {
+      "name": "Mobile key panel fits viewport",
+      "passed": true,
+      "detail": {
+        "panel": {
+          "x": 12,
+          "y": 376.40625,
+          "width": 366,
+          "height": 276.59375
+        }
+      }
+    },
+    {
+      "name": "Connection footer does not overflow",
+      "passed": true,
+      "detail": {
+        "scroll": 314,
+        "width": 314
+      }
+    }
+  ],
+  "realPaidModelCallRepeated": false,
+  "directNetwork": {
+    "error": "Failed to fetch"
+  },
+  "validKeyDirectCallVerified": false
+}
