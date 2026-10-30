@@ -1,0 +1,456 @@
+{
+  "checkedAt": "2026-10-30T03:25:03.241Z",
+  "conditionsMatched": true,
+  "before": {
+    "complete": true,
+    "snapshot": {
+      "frozenAt": "2026-10-30T02:39:54.531Z",
+      "entrySHA256": "d2eced24811dd6949c7202e3775bccbad3ffa5825ca7e9cc36cb8e0695b75d9b",
+      "files": 106,
+      "totalBytes": 23374309,
+      "bootstrapRawJavaScriptBytes": 18436693,
+      "indexBytes": 5279
+    },
+    "summary": {
+      "completedRuns": 5,
+      "measurementCompleteRuns": 5,
+      "successfulRuns": 0,
+      "entryHashes": [
+        "d2eced24811dd6949c7202e3775bccbad3ffa5825ca7e9cc36cb8e0695b75d9b"
+      ],
+      "metrics": {
+        "lcpMs": {
+          "n": 5,
+          "median": 42556,
+          "min": 41724,
+          "max": 44628,
+          "values": [
+            44628,
+            41844,
+            43384,
+            41724,
+            42556
+          ]
+        },
+        "domContentLoadedMs": {
+          "n": 5,
+          "median": 41904.5,
+          "min": 41719.90000000596,
+          "max": 45067.5,
+          "values": [
+            45067.5,
+            41728.19999998808,
+            41904.5,
+            41719.90000000596,
+            42550.79999998212
+          ]
+        },
+        "titleUsableMs": {
+          "n": 5,
+          "median": 41158.79999998212,
+          "min": 40823.19999998808,
+          "max": 43726.90000000596,
+          "values": [
+            43726.90000000596,
+            40887.69999998808,
+            41158.79999998212,
+            40823.19999998808,
+            41609.79999998212
+          ]
+        },
+        "directoryUsableMs": {
+          "n": 5,
+          "median": 41159.5,
+          "min": 40823.59999999404,
+          "max": 43727.69999998808,
+          "values": [
+            43727.69999998808,
+            40888.29999998212,
+            41159.5,
+            40823.59999999404,
+            41610.69999998808
+          ]
+        },
+        "headerSearchUsableMs": {
+          "n": 0,
+          "median": null,
+          "min": null,
+          "max": null,
+          "values": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      },
+      "headerSearchLatencyMs": {
+        "n": 0,
+        "median": null,
+        "max": null,
+        "values": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "network": {
+        "requestCount": {
+          "median": 54,
+          "values": [
+            54,
+            54,
+            54,
+            54,
+            54
+          ]
+        },
+        "encodedWireBytes": {
+          "median": 19174956,
+          "values": [
+            19174956,
+            19174956,
+            19174956,
+            19174956,
+            19174956
+          ]
+        },
+        "encodedBodyBytes": {
+          "median": 19160863,
+          "values": [
+            19160863,
+            19160863,
+            19160863,
+            19160863,
+            19160863
+          ]
+        },
+        "decodedBodyBytes": {
+          "median": 19160863,
+          "values": [
+            19160863,
+            19160863,
+            19160863,
+            19160863,
+            19160863
+          ]
+        },
+        "decodedJSBodyBytes": {
+          "median": 18436693,
+          "values": [
+            18436693,
+            18436693,
+            18436693,
+            18436693,
+            18436693
+          ]
+        },
+        "cachedResponses": {
+          "median": 0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "failures": [
+        {
+          "iteration": 1,
+          "url": "https://jingjian-assistant-relay.richcreek513.chatgpt.site/api/assistant/status",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "iteration": 2,
+          "url": "https://jingjian-assistant-relay.richcreek513.chatgpt.site/api/assistant/status",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "iteration": 3,
+          "url": "https://jingjian-assistant-relay.richcreek513.chatgpt.site/api/assistant/status",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "iteration": 4,
+          "url": "https://jingjian-assistant-relay.richcreek513.chatgpt.site/api/assistant/status",
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "iteration": 5,
+          "url": "https://jingjian-assistant-relay.richcreek513.chatgpt.site/api/assistant/status",
+          "error": "net::ERR_FAILED"
+        }
+      ],
+      "longTasks": [
+        {
+          "iteration": 1,
+          "count": 15,
+          "totalDurationMs": 8596,
+          "maxDurationMs": 2052
+        },
+        {
+          "iteration": 2,
+          "count": 12,
+          "totalDurationMs": 4620,
+          "maxDurationMs": 1477
+        },
+        {
+          "iteration": 3,
+          "count": 13,
+          "totalDurationMs": 5198,
+          "maxDurationMs": 1484
+        },
+        {
+          "iteration": 4,
+          "count": 12,
+          "totalDurationMs": 4945,
+          "maxDurationMs": 1494
+        },
+        {
+          "iteration": 5,
+          "count": 13,
+          "totalDurationMs": 5620,
+          "maxDurationMs": 1995
+        }
+      ]
+    }
+  },
+  "after": {
+    "complete": true,
+    "snapshot": {
+      "frozenAt": "2026-10-30T03:24:09.008Z",
+      "entrySHA256": "1a3a88d000cba2505a2cc96e0367ee5e776477b0b437223fe4a87e9dfb426b60",
+      "files": 193,
+      "totalBytes": 44603224,
+      "bootstrapRawJavaScriptBytes": 625831,
+      "indexBytes": 5723
+    },
+    "summary": {
+      "completedRuns": 5,
+      "measurementCompleteRuns": 5,
+      "successfulRuns": 5,
+      "entryHashes": [
+        "1a3a88d000cba2505a2cc96e0367ee5e776477b0b437223fe4a87e9dfb426b60"
+      ],
+      "metrics": {
+        "lcpMs": {
+          "n": 5,
+          "median": 2472,
+          "min": 2448,
+          "max": 3656,
+          "values": [
+            3656,
+            2448,
+            2472,
+            2472,
+            2488
+          ]
+        },
+        "domContentLoadedMs": {
+          "n": 5,
+          "median": 2461.199999988079,
+          "min": 2444.9000000059605,
+          "max": 3442.2000000178814,
+          "values": [
+            3442.2000000178814,
+            2444.9000000059605,
+            2467.300000011921,
+            2461.199999988079,
+            2456.4000000059605
+          ]
+        },
+        "titleUsableMs": {
+          "n": 5,
+          "median": 2408,
+          "min": 2385.300000011921,
+          "max": 3222.0999999940395,
+          "values": [
+            3222.0999999940395,
+            2385.300000011921,
+            2406.4000000059605,
+            2414.899999976158,
+            2408
+          ]
+        },
+        "directoryUsableMs": {
+          "n": 5,
+          "median": 2408.5999999940395,
+          "min": 2386,
+          "max": 3222.800000011921,
+          "values": [
+            3222.800000011921,
+            2386,
+            2406.5999999940395,
+            2415.2999999821186,
+            2408.5999999940395
+          ]
+        },
+        "headerSearchUsableMs": {
+          "n": 5,
+          "median": 2538.2999999821186,
+          "min": 2515.699999988079,
+          "max": 4458.5999999940395,
+          "values": [
+            4458.5999999940395,
+            2523.0999999940395,
+            2557.4000000059605,
+            2538.2999999821186,
+            2515.699999988079
+          ]
+        }
+      },
+      "headerSearchLatencyMs": {
+        "n": 5,
+        "median": 51.10000002384186,
+        "max": 227.40000000596046,
+        "values": [
+          227.40000000596046,
+          49.599999994039536,
+          51.10000002384186,
+          37.099999994039536,
+          57.20000001788139
+        ]
+      },
+      "headerSearchDOMRenderMs": {
+        "n": 5,
+        "median": 22.400000005960464,
+        "max": 29.299999982118607,
+        "values": [
+          23.900000005960464,
+          19.5,
+          22.400000005960464,
+          12.899999976158142,
+          29.299999982118607
+        ]
+      },
+      "headerSearchOpenLatencyMs": {
+        "n": 5,
+        "median": 320.2000000178814,
+        "max": 1149.8999999761581,
+        "values": [
+          1149.8999999761581,
+          320.2000000178814,
+          327.59999999403954,
+          294.5,
+          297.19999998807907
+        ]
+      },
+      "network": {
+        "requestCount": {
+          "median": 55,
+          "values": [
+            55,
+            55,
+            55,
+            55,
+            55
+          ]
+        },
+        "encodedWireBytes": {
+          "median": 1513629,
+          "values": [
+            1513629,
+            1513629,
+            1513629,
+            1513629,
+            1513629
+          ]
+        },
+        "encodedBodyBytes": {
+          "median": 1499113,
+          "values": [
+            1499113,
+            1499113,
+            1499113,
+            1499113,
+            1499113
+          ]
+        },
+        "decodedBodyBytes": {
+          "median": 1499113,
+          "values": [
+            1499113,
+            1499113,
+            1499113,
+            1499113,
+            1499113
+          ]
+        },
+        "decodedJSBodyBytes": {
+          "median": 625831,
+          "values": [
+            625831,
+            625831,
+            625831,
+            625831,
+            625831
+          ]
+        },
+        "cachedResponses": {
+          "median": 0,
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "failures": [],
+      "longTasks": [
+        {
+          "iteration": 1,
+          "count": 4,
+          "totalDurationMs": 2116,
+          "maxDurationMs": 985
+        },
+        {
+          "iteration": 2,
+          "count": 2,
+          "totalDurationMs": 140,
+          "maxDurationMs": 72
+        },
+        {
+          "iteration": 3,
+          "count": 2,
+          "totalDurationMs": 143,
+          "maxDurationMs": 76
+        },
+        {
+          "iteration": 4,
+          "count": 2,
+          "totalDurationMs": 139,
+          "maxDurationMs": 71
+        },
+        {
+          "iteration": 5,
+          "count": 2,
+          "totalDurationMs": 104,
+          "maxDurationMs": 53
+        }
+      ],
+      "targets": {
+        "fiveMeasurementsComplete": true,
+        "lcpMedianAtMost2500": true,
+        "lcpMaxAtMost3500": false,
+        "zeroFirstScreenBody3DLive2DRequests": true,
+        "bootstrapJSAtMost650KiB": true,
+        "observedJSAtMost650KiB": true,
+        "indexAtMost256KiB": true,
+        "searchAtMost50ms": false
+      }
+    }
+  },
+  "caveats": [
+    "LCP is the final candidate after the load event plus a fixed 2000 ms observation window, before any catalog or search input.",
+    "Usability timestamps are the first animation frame containing the real visible control with application prerequisites; functionality is independently exercised after the first-screen metrics are captured.",
+    "Local identity/no-store HTTP transport is matched across phases; these are not a CDN or production-host benchmark.",
+    "CDP wire encodedDataLength includes protocol headers; Resource Timing encodedBodySize and decodedBodySize are also recorded separately."
+  ]
+}

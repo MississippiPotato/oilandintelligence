@@ -395,7 +395,7 @@ const catalog=[
 {id:'m2',caseId:'s17-mudgas-context',name:'气测异常',terms:['气测','气峰','迟到','停泵'],intro:'看地面气峰怎样结合累计泵量和工况解释。可以改体积、停泵或上下文，比较候选解释。气峰不直接代表油气层。'},
 {id:'m3',caseId:'s17-fluorescence-review',name:'荧光判读',terms:['荧光','紫外','uv','曝光'],intro:'对比同一样品的白光/UV教学图，改变曝光并查看显示区域。荧光存在与油气来源是两个判断；矿物也会发光。'},
 {id:'m4',caseId:'s17-drilltime-boundaries',name:'钻时分段',terms:['钻时','钻速','分层','分段','工况'],intro:'对比工况变化与响应变化，观察平滑怎样吞掉薄层。曲线上标记的是候选响应界面；公开钻进数据没有地层真值精度。'},
-{id:'m5',caseId:'s17-evidence-report',name:'综合解释与交接',terms:['报告','综合解释','井段','交接','证据','否定'],intro:'把岩屑、气测、荧光和钻时放回井段，检查资料覆盖和待核查问题。点击报告句子回到原文，修改后重新计算，保存当前记录，并继续学习测井分层。'}];
+{id:'m5',caseId:'s17-evidence-report',name:'录井报告自动生成',terms:['报告','综合解释','井段','交接','证据','否定'],intro:'把岩屑、气测、荧光和钻时放回井段，检查资料覆盖和待核查问题。点击报告句子回到原文，修改后重新计算，保存当前记录，并继续学习测井分层。'}];
 for(const c of g.S17Expansion?.cases??[])catalog.push({id:c.sceneId,caseId:c.id,name:c.name,terms:[c.name,c.stageName,c.sceneId],intro:c.summary,directory:'expansion-cases'});
 if(standalone&&!catalog.some(c=>c.id===pageInfo.sceneId))catalog.push({id:pageInfo.sceneId,caseId:pageInfo.caseId,name:pageInfo.name??pageInfo.title??document.title,terms:[pageInfo.sceneId,pageInfo.name??''],intro:pageInfo.summary??'这里可以依次查看专业背景、逐步流程与交互演示。',directory:pageInfo.directory??'cases'});
 const root=document.createElement('aside');root.id='s17-assistant';root.dataset.speaking='false';

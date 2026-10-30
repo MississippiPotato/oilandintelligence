@@ -144,7 +144,7 @@ export function pluginSource(records, destination = reportDir) {
 `;
 }
 
-export function buildExpansions({ requireAll = false, destination = reportDir, lessons = false } = {}) {
+export function buildExpansions({ requireAll = false, destination = reportDir, lessons = false, emitPortalPlugin = true } = {}) {
   const reportDir = destination;
   fs.mkdirSync(path.join(root, reportDir), { recursive: true });
   preserveBaseline(reportDir);
@@ -198,7 +198,7 @@ export function buildExpansions({ requireAll = false, destination = reportDir, l
     records.push({ ...item, manifest: builtManifest, output: out, caseId: p.id, version: p.version, bytes, files: outputs });
   }
   const plugin = 'portal/assets/s17-expansion-cases.js';
-  fs.writeFileSync(path.join(root, plugin), pluginSource(records, reportDir) + (lessons ? '\n'+conceptScripts(records.map(r=>r.sceneId))+'\n'+conceptHostRuntime()+'\n' + read('shared/expansion-lessons.js') : ''));
+  if (emitPortalPlugin) fs.writeFileSync(path.join(root, plugin), pluginSource(records, reportDir) + (lessons ? '\n'+conceptScripts(records.map(r=>r.sceneId))+'\n'+conceptHostRuntime()+'\n' + read('shared/expansion-lessons.js') : ''));
   const lock = { schemaVersion: 1, createdAt: new Date().toISOString(), expectedCount: targets.length,
     actualCount: records.length, complete: records.length === targets.length, totalBytes: records.reduce((sum, r) => sum + r.bytes, 0),
     browserVerifiedByThisBuild: false, assistantReadabilityIncluded: false, assistantSources, lessonRevision:lessons,

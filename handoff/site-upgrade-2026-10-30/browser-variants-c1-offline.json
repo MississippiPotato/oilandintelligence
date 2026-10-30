@@ -1,0 +1,189 @@
+{
+  "checkedAt": "2026-10-30T03:25:01.362Z",
+  "caseId": "s17x-c1-cement-woc-strength",
+  "scene": "c1",
+  "phase": "offline",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "offline actual URL",
+      "passed": true,
+      "detail": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-c1-cement-woc-strength/demo/index.html"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 1011
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "offline default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-c1-cement-woc-strength",
+        "status": "ready",
+        "params": {
+          "temperature": 50,
+          "program": "ramp",
+          "target": 10,
+          "cursor": 24
+        },
+        "inferenceHash": "510ebaae",
+        "graphicHash": "54e2ea9",
+        "svgCount": 2,
+        "finite": true
+      }
+    },
+    {
+      "name": "offline real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "ramp",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "510ebaae",
+          "graphicHash": "54e2ea9",
+          "svgCount": 2,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "constant",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "d1716d71",
+          "graphicHash": "ebc459d2",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "offline actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "54e2ea9",
+        "after": "ebc459d2"
+      }
+    },
+    {
+      "name": "offline actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-c1-offline-download.json"
+    },
+    {
+      "name": "offline reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "ramp",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "510ebaae",
+          "graphicHash": "54e2ea9",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-c1-cement-woc-strength",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-offline-download.json",
+        "caseId": "s17x-c1-cement-woc-strength",
+        "bytes": 117312
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-offline-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "c19c6b3261964a2149fe07f9f5fe49bbbb790f8fb124deb038ba3a528de5b6fe",
+      "caseId": "s17x-c1-cement-woc-strength"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-c1-offline.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "ramp",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "510ebaae",
+      "graphicHash": "54e2ea9",
+      "svgCount": 2,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "constant",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "d1716d71",
+      "graphicHash": "ebc459d2",
+      "svgCount": 2,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "ramp",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "510ebaae",
+      "graphicHash": "54e2ea9",
+      "svgCount": 2,
+      "finite": true
+    }
+  },
+  "passed": 11,
+  "failed": 0
+}

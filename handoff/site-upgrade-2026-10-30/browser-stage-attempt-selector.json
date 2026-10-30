@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-30T03:38:26.778Z",
+  "kind": "actual_Chrome_3D_transport_lifecycle",
+  "checks": [
+    {
+      "name": "Local Three r180 scene renders in desktop Chrome",
+      "passed": true
+    },
+    {
+      "name": "3D protocol completes",
+      "passed": false,
+      "detail": "locator.selectOption: Error: strict mode violation: locator('[data-ms-scenario]') resolved to 2 elements:\n    1) <section class=\"ms-stage\" data-ms-raf=\"false\" data-ms-flow=\"0.025\" data-ms-time=\"120.000\" data-ms-visible=\"true\" data-ms-version=\"1.0.0\" data-ms-phase=\"annulus\" data-ms-playing=\"false\" data-ms-renderer=\"ready\" id=\"s17-mudlogging-stage\" data-ms-scenario=\"normal\" aria-labelledby=\"ms-title\" data-ms-transport-progress=\"0.00000000\" data-ms-state=\"{\"mounted\":true,\"mode\":\"normal\",\"time_s\":120,\"sourceTime_s\":120,\"sourceDepthMD_m\":1200.7199999999993,\"arrivalTime_s\":600,\"sourceReplay_s\":120,\"lag_s\":480,\"flow_m3_…>…</section> aka getByRole('region', { name: '地面的记录，来自更早的井底。' })\n    2) <select aria-label=\"泵送情景\" data-ms-scenario=\"\">…</select> aka getByLabel('泵送情景')\n\nCall log:\n\u001b[2m  - waiting for locator('[data-ms-scenario]')\u001b[22m\n\n    at evalmachine.<anonymous>:14:44\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "pageErrors": [],
+  "states": {},
+  "screenshots": [],
+  "failure": "locator.selectOption: Error: strict mode violation: locator('[data-ms-scenario]') resolved to 2 elements:\n    1) <section class=\"ms-stage\" data-ms-raf=\"false\" data-ms-flow=\"0.025\" data-ms-time=\"120.000\" data-ms-visible=\"true\" data-ms-version=\"1.0.0\" data-ms-phase=\"annulus\" data-ms-playing=\"false\" data-ms-renderer=\"ready\" id=\"s17-mudlogging-stage\" data-ms-scenario=\"normal\" aria-labelledby=\"ms-title\" data-ms-transport-progress=\"0.00000000\" data-ms-state=\"{\"mounted\":true,\"mode\":\"normal\",\"time_s\":120,\"sourceTime_s\":120,\"sourceDepthMD_m\":1200.7199999999993,\"arrivalTime_s\":600,\"sourceReplay_s\":120,\"lag_s\":480,\"flow_m3_…>…</section> aka getByRole('region', { name: '地面的记录，来自更早的井底。' })\n    2) <select aria-label=\"泵送情景\" data-ms-scenario=\"\">…</select> aka getByLabel('泵送情景')\n\nCall log:\n\u001b[2m  - waiting for locator('[data-ms-scenario]')\u001b[22m\n",
+  "passed": 1,
+  "failed": 1
+}

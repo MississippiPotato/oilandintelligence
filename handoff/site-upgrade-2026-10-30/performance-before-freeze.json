@@ -1,0 +1,703 @@
+{
+  "phase": "before",
+  "frozenAt": "2026-10-30T02:39:54.531Z",
+  "root": "G:\\可视化导论\\5\\output\\performance\\before",
+  "entry": "portal/index.html",
+  "entrySHA256": "d2eced24811dd6949c7202e3775bccbad3ffa5825ca7e9cc36cb8e0695b75d9b",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 449,
+      "sha256": "26a0e120b572a039a585fa425ade35d213d4a8f61b242827163ab996fb7943bf"
+    },
+    {
+      "path": "portal/index.html",
+      "bytes": 5279,
+      "sha256": "d2eced24811dd6949c7202e3775bccbad3ffa5825ca7e9cc36cb8e0695b75d9b"
+    },
+    {
+      "path": "portal/.workbuddy/memory/2026-10-22.md",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    {
+      "path": "portal/.workbuddy/memory/MEMORY.md",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    {
+      "path": "portal/assets/cases/welllog-layer.case.js",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    {
+      "path": "portal/assets/cases/welllog-layer.demo.js",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    {
+      "path": "portal/assets/cases/_template.case.js",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    {
+      "path": "portal/assets/cases/_template.case.json",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    {
+      "path": "portal/assets/core/admin.js",
+      "bytes": 24972,
+      "sha256": "7299a1be09022687d2e2a97a8e57eee883345191f33c1408dd5456ddc8b0b6f9"
+    },
+    {
+      "path": "portal/assets/core/case-demo-host.js",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    {
+      "path": "portal/assets/core/case-upload.js",
+      "bytes": 75367,
+      "sha256": "9ada6dba2cd484dfeb19ac5a425ed131e1bb83bb2f61c708abaa76b48bbad39f"
+    },
+    {
+      "path": "portal/assets/core/kit.js",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    {
+      "path": "portal/assets/core/layout.css",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    {
+      "path": "portal/assets/core/registry.js",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    {
+      "path": "portal/assets/core/shell.js",
+      "bytes": 63840,
+      "sha256": "614e13d90a3e128c07d5f121e75b3c8a16b9a7792917ef0cec564e0ee2f6ae77"
+    },
+    {
+      "path": "portal/assets/core/tokens.css",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    {
+      "path": "portal/assets/core/ui.css",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    {
+      "path": "portal/assets/data.js",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    {
+      "path": "portal/assets/live2d/ATTRIBUTION.txt",
+      "bytes": 1480,
+      "sha256": "664f7d2ff66b60e815146eda605c64798abce887d19e0df275d88ab0b5676651"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.4096/texture_00.png",
+      "bytes": 791443,
+      "sha256": "6f2ffda5f3efaaa4507bd9c5bf93b1a6582be1733598d0e14d5a269592ee1d10"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.moc3",
+      "bytes": 350016,
+      "sha256": "9b8017464a582c41dfb231ed750577efd16f93368a13699dd0b80457d8c87711"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.model3.json",
+      "bytes": 4372,
+      "sha256": "963acfcd664a792f4a3a22bbb9352ad4e2e40b4bb075e2ec8e6c1571784ac7d6"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/Diana.physics3.json",
+      "bytes": 12705,
+      "sha256": "0e05640f203252bedc0ac077e11cf175ed5a2cccf0a0d1194d63dc424d9c32e5"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_idle.motion3.json",
+      "bytes": 5993,
+      "sha256": "40b455a122ab312d0dfa467ce244eca220c072e2256bea2f5bc6d7d8848d3aff"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_tap03.motion3.json",
+      "bytes": 45497,
+      "sha256": "502152ee20663175ff2fca6e1eeacfc8c794ffb4ba559d8b94f2ba5073894450"
+    },
+    {
+      "path": "portal/assets/live2d/Diana/motions/Diana_tap07.motion3.json",
+      "bytes": 54088,
+      "sha256": "b38c864bba26c9dcd42c7e520a0723a95735859cdcdb4d97d827ff84e3b1e1a7"
+    },
+    {
+      "path": "portal/assets/petroleum-dawn-v1.png",
+      "bytes": 2651693,
+      "sha256": "29a868236fe8a74d6642b9cee0f59d8ac463cdc847299cea1aacca3a003891a4"
+    },
+    {
+      "path": "portal/assets/petroleum-dawn-v1.txt",
+      "bytes": 1682,
+      "sha256": "8cd7d210091aee6db9a1433815f6ed78b98d5ac7f11d2e41c612f37bb30655ee"
+    },
+    {
+      "path": "portal/assets/s17-assistant-config.js",
+      "bytes": 196,
+      "sha256": "f23db68e7a7a5d2ed4b20914b23259b607e6eaaa85311248b7000e1c7925be6c"
+    },
+    {
+      "path": "portal/assets/s17-assistant-history.js",
+      "bytes": 3357,
+      "sha256": "669ed7dc6d7ed9d31732445b413c5a701787ece6a50897f589b91526f3fcb59a"
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "bytes": 18685,
+      "sha256": "61e995726966401f9141166f9fec5dd07d4551c55811d7b7ad5f5ab656eaa432"
+    },
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "bytes": 31324,
+      "sha256": "4dbad259b137fe1f0cd6b93d9357a9088aff34dcce25abface1c10ef8e278db1"
+    },
+    {
+      "path": "portal/assets/s17-catalog.css",
+      "bytes": 6305,
+      "sha256": "9a14f53ce436b40e78612b0d1d028bfab8affa59590e250c0a28d1aedd790a6b"
+    },
+    {
+      "path": "portal/assets/s17-catalog.js",
+      "bytes": 4787,
+      "sha256": "5dac1c148633ac5b1b9cfffb6f433944f6b4e5ecfc6437800502e76e910073db"
+    },
+    {
+      "path": "portal/assets/s17-course.js",
+      "bytes": 2217,
+      "sha256": "493133f20d98085acbf7867562daf8c79700a2314bd200509b93850489f3fec9"
+    },
+    {
+      "path": "portal/assets/s17-expansion-cases.js",
+      "bytes": 10056369,
+      "sha256": "22cbcdfe0474dc641079de6cedd4f38887616072d6fdc2b7c7fad9dc47ef12fd"
+    },
+    {
+      "path": "portal/assets/s17-expansion-gallery.css",
+      "bytes": 6168,
+      "sha256": "90d55f1078a874c73e17d5f66b48516af7d165959f4776a44a7b3f91708edc03"
+    },
+    {
+      "path": "portal/assets/s17-expansion-gallery.js",
+      "bytes": 10020,
+      "sha256": "538295e4ea066a9da192744d9566b1f5d74e03a9512ced94ec989389785165b8"
+    },
+    {
+      "path": "portal/assets/s17-field-atlas.css",
+      "bytes": 4900,
+      "sha256": "e837896bd7f2911e142aefc0c1689b7bce8a3d9a3c91cf4ab24bbfec4c842ed2"
+    },
+    {
+      "path": "portal/assets/s17-field-atlas.js",
+      "bytes": 13181,
+      "sha256": "c78a04afe9d3a6e1032d0e872e2c2f9b364b85023e1cb9e4f8423acdba50d563"
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "bytes": 7383,
+      "sha256": "c732c83c06fe387fb5ea72d89835f895cdeb450d98a7ca6dafbdcb258e8db591"
+    },
+    {
+      "path": "portal/assets/s17-live2d-data.js",
+      "bytes": 1681022,
+      "sha256": "9caef4af1ab325f3a72a14032ba61c0bdf2501a0ac0bf4f396ea6ea89d9ae596"
+    },
+    {
+      "path": "portal/assets/s17-live2d-loader.js",
+      "bytes": 955,
+      "sha256": "2c4d6f5d1221fd09208cba5119d77991ed98cf87fde3c6e2b19f1f7fe5a4162a"
+    },
+    {
+      "path": "portal/assets/s17-live2d.js",
+      "bytes": 3632,
+      "sha256": "43da66b0027a565c27b8ba1fd71f7f05bff22d3aa3eebc3c2d9d486f8941547c"
+    },
+    {
+      "path": "portal/assets/s17-log-data.js",
+      "bytes": 12875,
+      "sha256": "5db929b5991547d1676bce82c54b97218fd8be25240cd04fd2043ff4351b0aad"
+    },
+    {
+      "path": "portal/assets/s17-log-preview.css",
+      "bytes": 3491,
+      "sha256": "4820214b0e1416ef5110eea5557bfbe00759a745451bf7641d4194be56e40348"
+    },
+    {
+      "path": "portal/assets/s17-log-preview.js",
+      "bytes": 5584,
+      "sha256": "abe334144cd5db44b2f195a3e4cd54c78a89d7b3cc214330d25b9c4aa99c826c"
+    },
+    {
+      "path": "portal/assets/s17-media.js",
+      "bytes": 8759,
+      "sha256": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150"
+    },
+    {
+      "path": "portal/assets/s17-mudlogging-knowledge.js",
+      "bytes": 5461384,
+      "sha256": "221c848ef53539fd3fba0a4cd8d62259721f831ee1b3da99bf080a614ffbe7ef"
+    },
+    {
+      "path": "portal/assets/s17-overview.css",
+      "bytes": 12304,
+      "sha256": "52e4bc5a9be9718867118f617aa8f5a7cebfdb11c2d887f7dbd72f3ce87fe056"
+    },
+    {
+      "path": "portal/assets/s17-reader.css",
+      "bytes": 9382,
+      "sha256": "c7e730882a8262161affaa1274f750030f2a02b74b84b414d06e4509b9c2c428"
+    },
+    {
+      "path": "portal/assets/s17-reader.js",
+      "bytes": 11048,
+      "sha256": "212f6b26e905273b14b20f7079a21a1040344bb64761204bb3d76db64f2ddf62"
+    },
+    {
+      "path": "portal/assets/s17-response-stream.js",
+      "bytes": 1613,
+      "sha256": "bb30893e05332baaadd49257d73b8bcaf8fb723b2978608b9098bbe15573c418"
+    },
+    {
+      "path": "portal/assets/s17-study.css",
+      "bytes": 7390,
+      "sha256": "6c42e8d432b3b005b2c3a24d9b3a5ec55d02365ed121d1c62a44c175d183a949"
+    },
+    {
+      "path": "portal/assets/s17-visual-polish.css",
+      "bytes": 8599,
+      "sha256": "4f0568140adcbbab105d7458dd24e8c3c7e08c4a464bf16989bc4624ad3c699b"
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "bytes": 2457,
+      "sha256": "cbcbe547c8a27ece1109aaeed4a989d3ebe0daf84f58216060a5acfab32d5e1c"
+    },
+    {
+      "path": "portal/assets/s17.css",
+      "bytes": 7557,
+      "sha256": "9c7d1e0e65ff32cdf79bb3f50b7a86c0f9cd46248f33f941c3599e72b471ff61"
+    },
+    {
+      "path": "portal/assets/themes/theme-geology-v1.webp",
+      "bytes": 147572,
+      "sha256": "74c0bf3f2d15aa98ef89190863ba1b9847bf0853118f1daf96b058698bf2771a"
+    },
+    {
+      "path": "portal/assets/themes/theme-production-v1.webp",
+      "bytes": 129494,
+      "sha256": "81bad966e16561280b9b84db030094cd0fbd511d390f6674679cb446f86540ab"
+    },
+    {
+      "path": "portal/assets/themes/theme-refining-v1.webp",
+      "bytes": 145644,
+      "sha256": "f9e37de012db6a7f420e295746a52c3d6c584563ddea3aab063680f6907e5a8d"
+    },
+    {
+      "path": "portal/assets/themes/theme-well-v1.webp",
+      "bytes": 125870,
+      "sha256": "c1ed035fa0a58fc0da0f0f21ac8bb555ef99eb505ee7348577f5a8ce0a858961"
+    },
+    {
+      "path": "portal/assets/vendor/Live2D-Core-LICENSE.txt",
+      "bytes": 520,
+      "sha256": "b81e37048010ef1d336106151201a0323c3309cae44aecdedf57831fe88fa991"
+    },
+    {
+      "path": "portal/assets/vendor/Live2D-Core-RedistributableFiles.txt",
+      "bytes": 205,
+      "sha256": "d16c123688299e1e69a7f5ebc01b3bd75a8d408c024002a7d35b2aae94003f8c"
+    },
+    {
+      "path": "portal/assets/vendor/live2dcubismcore.min.js",
+      "bytes": 207155,
+      "sha256": "25ae938cb4fe282ce189b357bcc97e603d1e1f7ec78bf04150d401c23cdc792f"
+    },
+    {
+      "path": "portal/assets/vendor/pixi-6.5.10.min.js",
+      "bytes": 460333,
+      "sha256": "403f2f2ee8145fa17f60c5c89403056efe2680e5096ec2762036486914ed19c5"
+    },
+    {
+      "path": "portal/assets/vendor/PIXI-LICENSE.txt",
+      "bytes": 1092,
+      "sha256": "536a16e090f0b6c1454a7c0b47ee8414a39a2f1724a154f10ca1edc750a2dcfd"
+    },
+    {
+      "path": "portal/assets/vendor/pixi-live2d-0.4.0.min.js",
+      "bytes": 119922,
+      "sha256": "af1267e6d52759b245766c578d905bfa025b532d5c3cc727c370957c4409e21b"
+    },
+    {
+      "path": "portal/assets/vendor/PIXI-LIVE2D-LICENSE.txt",
+      "bytes": 1061,
+      "sha256": "8ccace668a041e78ed525d091b0b5daf8b623ff447f912616de535415e4f302f"
+    },
+    {
+      "path": "portal/docs/如何添加新案例.md",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/case.json",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/demo/demo.css",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/demo/demo.js",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    {
+      "path": "portal/firstbreak-pick-case/README.txt",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    {
+      "path": "portal/reference/fluorescence-data.js",
+      "bytes": 3455,
+      "sha256": "b52674d3e40ca3f74b8d62e98678ba7f5d5f36dcd681dc8f506a7f35ae675952"
+    },
+    {
+      "path": "portal/reference/fluorescence.html",
+      "bytes": 4786,
+      "sha256": "86038f24700e11759c8942c340517162401ab2da332e32b70bbdaf4f64149ce8"
+    },
+    {
+      "path": "portal/reference/fluorescence.js",
+      "bytes": 774,
+      "sha256": "9108befc6a8a0b0e46d8692bc066634332c1763e99a450b11e30b9f7e3dfc187"
+    },
+    {
+      "path": "portal/reference/reference-assistant.js",
+      "bytes": 133,
+      "sha256": "b140f05816c57d900e649cca10642199b2d641b5206c441878f2c0776c482212"
+    },
+    {
+      "path": "shared/case-flowcharts.js",
+      "bytes": 1746,
+      "sha256": "e6a40c29b54d0cebb091d4e5de1b3806a8486703c4fcfa2e00158c293d828436"
+    },
+    {
+      "path": "shared/concept-host.js",
+      "bytes": 808,
+      "sha256": "6d4a801ed417466e127dcbb72afe3075813333df74bd0d0d12c9d60a2a8e56d8"
+    },
+    {
+      "path": "shared/concept-interactions.css",
+      "bytes": 2499,
+      "sha256": "63091799ed1763d849700d5f3cff44a8d72c8ce6a01b136bc5a67132715f0ede"
+    },
+    {
+      "path": "shared/continuous-lessons.css",
+      "bytes": 7002,
+      "sha256": "f30c053f35ebc251aae0d10d6ba8136abc0c7563d3a12b9958f6026d9bdb6d7d"
+    },
+    {
+      "path": "shared/course-compass.css",
+      "bytes": 6248,
+      "sha256": "f5730404c96ff6c037e238208869b14035cc39224737b4cbe66344f4f9a1e257"
+    },
+    {
+      "path": "shared/course-compass.js",
+      "bytes": 15543,
+      "sha256": "9e9f1de36ad21810a902ce33b1cc5daaf946a805d063789ed3cab181ef22259f"
+    },
+    {
+      "path": "shared/course-theme.css",
+      "bytes": 10420,
+      "sha256": "d7c8d7fa0710c1a8cf3d63e181637a3cbe8916c64c316a45395031032237335b"
+    },
+    {
+      "path": "shared/expansion-lessons.css",
+      "bytes": 9923,
+      "sha256": "e87399076b49b827f5066c072a46ad6f4627a16a63b9063f5f81dbe49d65ad03"
+    },
+    {
+      "path": "shared/expansion-lessons.js",
+      "bytes": 14270,
+      "sha256": "68f8ebb28af3faac1d8cc80d133642128d912e00345087c33fb60cbad5afbf54"
+    },
+    {
+      "path": "shared/four-exhibits.css",
+      "bytes": 9835,
+      "sha256": "315bec905cbb1cffff8d291270897b19a0ef9a140e7c806b86dd73f86cce5eb9"
+    },
+    {
+      "path": "shared/four-exhibits.js",
+      "bytes": 5258,
+      "sha256": "818248a6bf1a236658b50d721a9bae5e54ccbb2ca3114d0495bacac8b0b8f8a9"
+    },
+    {
+      "path": "shared/lab.css",
+      "bytes": 7246,
+      "sha256": "78ce502b025c5e8d403c046298be2b0fc1b4ce1535a6ee8a66f959c61bde1afc"
+    },
+    {
+      "path": "shared/lab.js",
+      "bytes": 7275,
+      "sha256": "5a483c9d484de8b52e7a5a11b3ea8f41883d78c5daf4d0596a0ab8fca523b074"
+    },
+    {
+      "path": "shared/lesson-assistant-entry.css",
+      "bytes": 1052,
+      "sha256": "f020c9f5baf26afc3a139f8a8a1551d13df0a8d5347af1e619327af7c5b68d88"
+    },
+    {
+      "path": "shared/math.js",
+      "bytes": 2126,
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    },
+    {
+      "path": "shared/mudlogging-diagrams.js",
+      "bytes": 19469,
+      "sha256": "5c749c92d805ad3cd8bae1fea85f05c2a80a1c731e219543d663b137f5741250"
+    },
+    {
+      "path": "shared/mudlogging-knowledge.js",
+      "bytes": 32416,
+      "sha256": "be02f0257bb2b465ae8546fb6a8734cbc7b86f6964fb8e3580ffee1b1f1ccb40"
+    },
+    {
+      "path": "shared/mudlogging-reading-interactions.css",
+      "bytes": 5108,
+      "sha256": "199af34946a469d392556d4185ca02ded9b2f3060bbcb54d28eef7cc1129adff"
+    },
+    {
+      "path": "shared/mudlogging-reading-interactions.js",
+      "bytes": 13350,
+      "sha256": "e3610b3e733961b4e60beb336a92c9b77d1e816ee8f9eaef48a2bab25dc05e7d"
+    },
+    {
+      "path": "shared/mudlogging-study.css",
+      "bytes": 7390,
+      "sha256": "6c42e8d432b3b005b2c3a24d9b3a5ec55d02365ed121d1c62a44c175d183a949"
+    },
+    {
+      "path": "shared/mudlogging-study.js",
+      "bytes": 18988,
+      "sha256": "0cff9d0c0577d778dfa438b900d98034c8198a95501d585903303466fb5255ea"
+    },
+    {
+      "path": "shared/readability.css",
+      "bytes": 3530,
+      "sha256": "2978fdae36e84a7568d50ee21b76f20c5f5791137bf4e254bd60818f0fafaf79"
+    },
+    {
+      "path": "shared/scroll-exhibit.css",
+      "bytes": 4796,
+      "sha256": "fbac154dd155cec677a62b0c9f4b3ee3c4af8194b2a48f101abc901a7874b442"
+    },
+    {
+      "path": "shared/scroll-exhibit.js",
+      "bytes": 2585,
+      "sha256": "e5cceafcd949cf1a0c36b85622a1230bc8a08790407491e363d12976ca22dae9"
+    },
+    {
+      "path": "shared/teaching-view.css",
+      "bytes": 4185,
+      "sha256": "89d9bf4bb14b9594e5c02cdc19976f3b54e341ff232928f80dc30f1e74349bee"
+    },
+    {
+      "path": "shared/teaching-view.js",
+      "bytes": 18592,
+      "sha256": "f250c73342fffe5e4758928f2279a769bd5c3901d857b4e3cc8ab2321d70f7b6"
+    },
+    {
+      "path": "shared/teaching.js",
+      "bytes": 5637,
+      "sha256": "71fa5427d7009568a3e9bad23f43b53f332838fb50fd6182e1e1112679d52b82"
+    },
+    {
+      "path": "shared/visual-explorers.css",
+      "bytes": 5785,
+      "sha256": "c809ee878526401c53ab8e988dea566da319a00cb21076830b5b961b8ec2ee8b"
+    },
+    {
+      "path": "shared/visual-explorers.js",
+      "bytes": 17668,
+      "sha256": "b943ed869c9bc95a6cc492c2ebc4603f2c3fbf70cc8931d6dd7ca1a8ef10daa7"
+    }
+  ],
+  "bootstrapScripts": [
+    {
+      "path": "portal/assets/data.js",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    {
+      "path": "portal/assets/core/registry.js",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    {
+      "path": "portal/assets/core/kit.js",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    {
+      "path": "portal/assets/cases/welllog-layer.case.js",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    {
+      "path": "portal/assets/cases/welllog-layer.demo.js",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    {
+      "path": "portal/assets/s17-expansion-cases.js",
+      "bytes": 10056369,
+      "sha256": "22cbcdfe0474dc641079de6cedd4f38887616072d6fdc2b7c7fad9dc47ef12fd"
+    },
+    {
+      "path": "portal/assets/cases/你的案例.case.js",
+      "missing": true
+    },
+    {
+      "path": "portal/assets/core/case-demo-host.js",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    {
+      "path": "portal/assets/core/case-upload.js",
+      "bytes": 75367,
+      "sha256": "9ada6dba2cd484dfeb19ac5a425ed131e1bb83bb2f61c708abaa76b48bbad39f"
+    },
+    {
+      "path": "portal/assets/core/admin.js",
+      "bytes": 24972,
+      "sha256": "7299a1be09022687d2e2a97a8e57eee883345191f33c1408dd5456ddc8b0b6f9"
+    },
+    {
+      "path": "portal/assets/s17-course.js",
+      "bytes": 2217,
+      "sha256": "493133f20d98085acbf7867562daf8c79700a2314bd200509b93850489f3fec9"
+    },
+    {
+      "path": "portal/assets/s17-mudlogging-knowledge.js",
+      "bytes": 5461384,
+      "sha256": "221c848ef53539fd3fba0a4cd8d62259721f831ee1b3da99bf080a614ffbe7ef"
+    },
+    {
+      "path": "portal/assets/s17-reader.js",
+      "bytes": 11048,
+      "sha256": "212f6b26e905273b14b20f7079a21a1040344bb64761204bb3d76db64f2ddf62"
+    },
+    {
+      "path": "portal/assets/core/shell.js",
+      "bytes": 63840,
+      "sha256": "614e13d90a3e128c07d5f121e75b3c8a16b9a7792917ef0cec564e0ee2f6ae77"
+    },
+    {
+      "path": "shared/course-compass.js",
+      "bytes": 15543,
+      "sha256": "9e9f1de36ad21810a902ce33b1cc5daaf946a805d063789ed3cab181ef22259f"
+    },
+    {
+      "path": "portal/assets/s17-field-atlas.js",
+      "bytes": 13181,
+      "sha256": "c78a04afe9d3a6e1032d0e872e2c2f9b364b85023e1cb9e4f8423acdba50d563"
+    },
+    {
+      "path": "portal/assets/s17-catalog.js",
+      "bytes": 4787,
+      "sha256": "5dac1c148633ac5b1b9cfffb6f433944f6b4e5ecfc6437800502e76e910073db"
+    },
+    {
+      "path": "portal/assets/s17-log-data.js",
+      "bytes": 12875,
+      "sha256": "5db929b5991547d1676bce82c54b97218fd8be25240cd04fd2043ff4351b0aad"
+    },
+    {
+      "path": "portal/assets/s17-log-preview.js",
+      "bytes": 5584,
+      "sha256": "abe334144cd5db44b2f195a3e4cd54c78a89d7b3cc214330d25b9c4aa99c826c"
+    },
+    {
+      "path": "portal/assets/s17-expansion-gallery.js",
+      "bytes": 10020,
+      "sha256": "538295e4ea066a9da192744d9566b1f5d74e03a9512ced94ec989389785165b8"
+    },
+    {
+      "path": "portal/assets/s17-home.js",
+      "bytes": 7383,
+      "sha256": "c732c83c06fe387fb5ea72d89835f895cdeb450d98a7ca6dafbdcb258e8db591"
+    },
+    {
+      "path": "portal/assets/s17-assistant-history.js",
+      "bytes": 3357,
+      "sha256": "669ed7dc6d7ed9d31732445b413c5a701787ece6a50897f589b91526f3fcb59a"
+    },
+    {
+      "path": "portal/assets/s17-assistant-config.js",
+      "bytes": 196,
+      "sha256": "f23db68e7a7a5d2ed4b20914b23259b607e6eaaa85311248b7000e1c7925be6c"
+    },
+    {
+      "path": "portal/assets/s17-response-stream.js",
+      "bytes": 1613,
+      "sha256": "bb30893e05332baaadd49257d73b8bcaf8fb723b2978608b9098bbe15573c418"
+    },
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "bytes": 31324,
+      "sha256": "4dbad259b137fe1f0cd6b93d9357a9088aff34dcce25abface1c10ef8e278db1"
+    },
+    {
+      "path": "portal/assets/s17-media.js",
+      "bytes": 8759,
+      "sha256": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150"
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "bytes": 2457,
+      "sha256": "cbcbe547c8a27ece1109aaeed4a989d3ebe0daf84f58216060a5acfab32d5e1c"
+    },
+    {
+      "path": "portal/assets/vendor/pixi-6.5.10.min.js",
+      "bytes": 460333,
+      "sha256": "403f2f2ee8145fa17f60c5c89403056efe2680e5096ec2762036486914ed19c5"
+    },
+    {
+      "path": "portal/assets/vendor/live2dcubismcore.min.js",
+      "bytes": 207155,
+      "sha256": "25ae938cb4fe282ce189b357bcc97e603d1e1f7ec78bf04150d401c23cdc792f"
+    },
+    {
+      "path": "portal/assets/vendor/pixi-live2d-0.4.0.min.js",
+      "bytes": 119922,
+      "sha256": "af1267e6d52759b245766c578d905bfa025b532d5c3cc727c370957c4409e21b"
+    },
+    {
+      "path": "portal/assets/s17-live2d-data.js",
+      "bytes": 1681022,
+      "sha256": "9caef4af1ab325f3a72a14032ba61c0bdf2501a0ac0bf4f396ea6ea89d9ae596"
+    },
+    {
+      "path": "portal/assets/s17-live2d.js",
+      "bytes": 3632,
+      "sha256": "43da66b0027a565c27b8ba1fd71f7f05bff22d3aa3eebc3c2d9d486f8941547c"
+    }
+  ],
+  "bootstrapRawJavaScriptBytes": 18436693,
+  "totalFiles": 106,
+  "totalBytes": 23374309
+}

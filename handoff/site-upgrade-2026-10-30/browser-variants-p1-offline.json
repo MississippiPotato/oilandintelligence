@@ -1,0 +1,203 @@
+{
+  "checkedAt": "2026-10-30T03:23:59.295Z",
+  "caseId": "s17x-p1-perforation-depth-correlation",
+  "scene": "p1",
+  "phase": "offline",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "offline actual URL",
+      "passed": true,
+      "detail": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 2610
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "offline default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "status": "ready",
+        "params": {
+          "scenario": "standard",
+          "noise": 2,
+          "targetThickness": 2,
+          "searchLimit": 12,
+          "thresholdK": 2.3,
+          "seed": 17
+        },
+        "inferenceHash": "9845cbba",
+        "graphicHash": "b91ee130",
+        "svgCount": 5,
+        "finite": true
+      }
+    },
+    {
+      "name": "offline real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "periodic",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "60b579f8",
+          "graphicHash": "89734978",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "offline actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "b91ee130",
+        "after": "89734978"
+      }
+    },
+    {
+      "name": "offline actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-p1-offline-download.json"
+    },
+    {
+      "name": "offline reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-p1-perforation-depth-correlation",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-offline-download.json",
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "bytes": 490627
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-offline-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-p1-offline.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "periodic",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "60b579f8",
+      "graphicHash": "89734978",
+      "svgCount": 5,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    }
+  },
+  "passed": 11,
+  "failed": 0
+}

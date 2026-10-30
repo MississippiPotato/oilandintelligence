@@ -1,0 +1,8 @@
+/* A minimized assistant leaves the four new cases' mobile legends readable. */
+@media(max-width:500px){
+ body:has(#variant-root) #s17-assistant[data-compact=true]{width:44px;max-width:44px;right:10px;bottom:12px}
+ body:has(#variant-root) #s17-assistant[data-compact=true] .s17-agent-stage{width:44px;height:44px}
+ body:has(#variant-root) #s17-assistant[data-compact=true] #s17-agent-compact{width:44px;height:44px;padding:0;border-radius:50%}
+ body:has(#variant-root) #s17-assistant[data-compact=true] #s17-agent-compact:after{display:none}
+ #variant-root .vx-legend{padding-right:52px}
+}

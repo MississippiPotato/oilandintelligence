@@ -1,0 +1,207 @@
+{
+  "checkedAt": "2026-10-30T03:52:58.418Z",
+  "kind": "actual_Chrome_existing_five_plus_two_deferred_path_regression",
+  "checks": [
+    {
+      "name": "m1 background has readable content and data figures",
+      "passed": true
+    },
+    {
+      "name": "m1 background control updates its calculated visual",
+      "passed": true
+    },
+    {
+      "name": "m1 workflow remains illustrated",
+      "passed": true
+    },
+    {
+      "name": "m1 background and flow do not create iframe",
+      "passed": true
+    },
+    {
+      "name": "m1 demo loads and actually reruns through the new deferred path",
+      "passed": true,
+      "detail": {
+        "before": "s17-cuttings-lithology-r1-v1",
+        "after": "s17-cuttings-lithology-r2-v1"
+      }
+    },
+    {
+      "name": "m2 background has readable content and data figures",
+      "passed": true
+    },
+    {
+      "name": "m2 background control updates its calculated visual",
+      "passed": true
+    },
+    {
+      "name": "m2 workflow remains illustrated",
+      "passed": true
+    },
+    {
+      "name": "m2 background and flow do not create iframe",
+      "passed": true
+    },
+    {
+      "name": "m2 demo loads and actually reruns through the new deferred path",
+      "passed": true,
+      "detail": {
+        "before": "m2-v1-r1",
+        "after": "m2-v1-r2"
+      }
+    },
+    {
+      "name": "m3 background has readable content and data figures",
+      "passed": true
+    },
+    {
+      "name": "m3 background control updates its calculated visual",
+      "passed": true
+    },
+    {
+      "name": "m3 workflow remains illustrated",
+      "passed": true
+    },
+    {
+      "name": "m3 background and flow do not create iframe",
+      "passed": true
+    },
+    {
+      "name": "m3 demo loads and actually reruns through the new deferred path",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "m4 background has readable content and data figures",
+      "passed": true
+    },
+    {
+      "name": "m4 background control updates its calculated visual",
+      "passed": true
+    },
+    {
+      "name": "m4 workflow remains illustrated",
+      "passed": true
+    },
+    {
+      "name": "m4 background and flow do not create iframe",
+      "passed": true
+    },
+    {
+      "name": "m4 demo loads and actually reruns through the new deferred path",
+      "passed": true,
+      "detail": {
+        "before": "s17-drilltime-boundaries-r1-v1",
+        "after": "s17-drilltime-boundaries-r2-v2"
+      }
+    },
+    {
+      "name": "m5 background has readable content and data figures",
+      "passed": true
+    },
+    {
+      "name": "m5 workflow remains illustrated",
+      "passed": true
+    },
+    {
+      "name": "m5 background and flow do not create iframe",
+      "passed": true
+    },
+    {
+      "name": "m5 demo loads and actually reruns through the new deferred path",
+      "passed": true,
+      "detail": {
+        "before": "s17-evidence-report-r1-v1",
+        "after": "s17-evidence-report-r2-v2"
+      }
+    },
+    {
+      "name": "g1 background has readable content and data figures",
+      "passed": true
+    },
+    {
+      "name": "g1 workflow remains illustrated",
+      "passed": true
+    },
+    {
+      "name": "g1 background and flow do not create iframe",
+      "passed": true
+    },
+    {
+      "name": "g1 demo loads and actually reruns through the new deferred path",
+      "passed": false,
+      "detail": {
+        "before": 1,
+        "after": 1
+      }
+    },
+    {
+      "name": "g1 full sampled regression",
+      "passed": false,
+      "detail": "g1 demo loads and actually reruns through the new deferred path"
+    },
+    {
+      "name": "r5 background has readable content and data figures",
+      "passed": true
+    },
+    {
+      "name": "r5 workflow remains illustrated",
+      "passed": true
+    },
+    {
+      "name": "r5 background and flow do not create iframe",
+      "passed": true
+    },
+    {
+      "name": "r5 demo loads and actually reruns through the new deferred path",
+      "passed": true,
+      "detail": {
+        "before": 1,
+        "after": 2
+      }
+    },
+    {
+      "name": "No uncaught sampled case errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "cases": [
+    {
+      "scene": "m1",
+      "id": "s17-cuttings-lithology",
+      "status": "ready"
+    },
+    {
+      "scene": "m2",
+      "id": "s17-mudgas-context",
+      "status": "ready"
+    },
+    {
+      "scene": "m3",
+      "id": "s17-fluorescence-review",
+      "status": "ready"
+    },
+    {
+      "scene": "m4",
+      "id": "s17-drilltime-boundaries",
+      "status": "ready"
+    },
+    {
+      "scene": "m5",
+      "id": "s17-evidence-report",
+      "status": "ready"
+    },
+    {
+      "scene": "r5",
+      "id": "s17x-r5-quality-softsensor",
+      "status": "complete"
+    }
+  ],
+  "passed": 32,
+  "failed": 2
+}

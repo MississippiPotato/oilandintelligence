@@ -1,0 +1,217 @@
+{
+  "caseId": "s17x-co3-completion-seal-test",
+  "scope": "source and numerical checks; browser acceptance not run",
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "syntax: engine.js",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "syntax: concept.js",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "syntax: app.js",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "independent calibration/test groups and observation schema",
+      "passed": true,
+      "details": {
+        "calibrationRuns": 6,
+        "testEpisodes": 12,
+        "pulsesPerEpisode": 4
+      }
+    },
+    {
+      "name": "exact unit balance and zero-intercept compliance fit",
+      "passed": true,
+      "details": {
+        "CeffLPerMPa": 0.72,
+        "correctedLeakLPerMin": 0.006000000000000015,
+        "rawBaselineLPerMin": 0.05784000000000009
+      }
+    },
+    {
+      "name": "inference cannot read hidden leak truth",
+      "passed": true,
+      "details": "throwing accessors unread; evaluation truth perturbation leaves inference unchanged"
+    },
+    {
+      "name": "invalid windows, missing T and valve events are rejected",
+      "passed": true,
+      "details": {
+        "beforeClosed": [
+          "窗口内存在未闭阀记录"
+        ],
+        "reversed": [
+          "窗口终点须晚于起点",
+          "窗口少于8个样本"
+        ],
+        "few": [
+          "窗口少于8个样本"
+        ],
+        "valve": [
+          "窗口内存在未闭阀记录"
+        ],
+        "missing": [
+          "窗口内温度或压力缺测"
+        ]
+      }
+    },
+    {
+      "name": "negative estimates, review and denominator are preserved",
+      "passed": true,
+      "details": {
+        "total": 12,
+        "valid": 10,
+        "accepted": 9,
+        "review": 1,
+        "invalid": 2,
+        "decisionCoverage": 0.75,
+        "mae": 0.00011622917416063967,
+        "baselineMAE": 0.013813331589486893,
+        "maeN": 10,
+        "intervalCovered": 9,
+        "intervalDenominator": 10,
+        "confusion": {
+          "below": {
+            "clear": 6,
+            "leak": 0,
+            "review": 0,
+            "invalid": 1
+          },
+          "above": {
+            "clear": 0,
+            "leak": 3,
+            "review": 1,
+            "invalid": 1
+          },
+          "unknown": {
+            "clear": 0,
+            "leak": 0,
+            "review": 0,
+            "invalid": 0
+          }
+        },
+        "rows": [
+          {
+            "id": "SX01",
+            "reference": 0,
+            "referenceClass": "below",
+            "predicted": "未检出超限漏率",
+            "estimate": -0.00003616769493855797,
+            "baseline": 0.013380915336915523
+          },
+          {
+            "id": "SX02",
+            "reference": 0,
+            "referenceClass": "below",
+            "predicted": "未检出超限漏率",
+            "estimate": -0.000049741915801457486,
+            "baseline": -0.01495327812512845
+          },
+          {
+            "id": "SX03",
+            "reference": 0,
+            "referenceClass": "below",
+            "predicted": "未检出超限漏率",
+            "estimate": 0.0001842644697684642,
+            "baseline": 0.021082995606651972
+          },
+          {
+            "id": "SX04",
+            "reference": 0,
+            "referenceClass": "below",
+            "predicted": "未检出超限漏率",
+            "estimate": 0.00000118756268093087,
+            "baseline": -0.017753440238410707
+          },
+          {
+            "id": "SX05",
+            "reference": 0.0056135668477982235,
+            "referenceClass": "below",
+            "predicted": "未检出超限漏率",
+            "estimate": 0.005808215657105625,
+            "baseline": 0.020219307635673547
+          },
+          {
+            "id": "SX06",
+            "reference": 0.006238529416054216,
+            "referenceClass": "below",
+            "predicted": "未检出超限漏率",
+            "estimate": 0.006624612843193172,
+            "baseline": -0.00811656009544203
+          },
+          {
+            "id": "SX07",
+            "reference": 0.010020740291570683,
+            "referenceClass": "above",
+            "predicted": "待复核",
+            "estimate": 0.010054763489231852,
+            "baseline": 0.016354605230665398
+          },
+          {
+            "id": "SX08",
+            "reference": 0.010562806548615836,
+            "referenceClass": "above",
+            "predicted": "疑似失密",
+            "estimate": 0.010593669703936671,
+            "baseline": 0.0038112941768726344
+          },
+          {
+            "id": "SX09",
+            "reference": 0.02176041373044117,
+            "referenceClass": "above",
+            "predicted": "疑似失密",
+            "estimate": 0.021632575209524572,
+            "baseline": 0.03705124899163972
+          },
+          {
+            "id": "SX10",
+            "reference": 0.024196532243691827,
+            "referenceClass": "above",
+            "predicted": "疑似失密",
+            "estimate": 0.024314005231763854,
+            "baseline": 0.0105708885273376
+          },
+          {
+            "id": "SX11",
+            "reference": 0.005553592169955556,
+            "referenceClass": "below",
+            "predicted": "证据不足",
+            "estimate": null,
+            "baseline": null
+          },
+          {
+            "id": "SX12",
+            "reference": 0.02434117598072485,
+            "referenceClass": "above",
+            "predicted": "证据不足",
+            "estimate": null,
+            "baseline": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "determinism and broad finite-value parameter scan",
+      "passed": true,
+      "details": {
+        "combinations": 144
+      }
+    },
+    {
+      "name": "static manifest, identifiers, disabled controls and chart labels",
+      "passed": true,
+      "details": {
+        "staticSVG": 3
+      }
+    }
+  ]
+}

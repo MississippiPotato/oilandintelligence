@@ -1,0 +1,485 @@
+{
+  "checkedAt": "2026-10-30T04:05:01.751Z",
+  "kind": "actual_Chrome_3D_transport_lifecycle",
+  "checks": [
+    {
+      "name": "Local Three r180 scene renders in desktop Chrome",
+      "passed": true
+    },
+    {
+      "name": "Pump stoppage advances time but preserves cumulative volume and transport progress",
+      "passed": true
+    },
+    {
+      "name": "Stopped-pump arrival is computed as 780 s",
+      "passed": true
+    },
+    {
+      "name": "Normal circulation restores 600 s arrival",
+      "passed": true
+    },
+    {
+      "name": "Playback pause freezes viewing time while pump flow remains 0.025 m³/s",
+      "passed": true
+    },
+    {
+      "name": "Camera overview changes the actual scene state",
+      "passed": true
+    },
+    {
+      "name": "Camera return changes the actual scene state",
+      "passed": true
+    },
+    {
+      "name": "Camera surface changes the actual scene state",
+      "passed": true
+    },
+    {
+      "name": "Camera interpret changes the actual scene state",
+      "passed": true
+    },
+    {
+      "name": "Dragging changes the actual camera position",
+      "passed": true
+    },
+    {
+      "name": "Object m1 focuses and links to its original case",
+      "passed": true
+    },
+    {
+      "name": "Object m2 focuses and links to its original case",
+      "passed": true
+    },
+    {
+      "name": "Object m3 focuses and links to its original case",
+      "passed": true
+    },
+    {
+      "name": "Object m4 focuses and links to its original case",
+      "passed": true
+    },
+    {
+      "name": "Object m5 focuses and links to its original case",
+      "passed": true
+    },
+    {
+      "name": "Desktop drawing stays within the 380–420px plan",
+      "passed": true,
+      "detail": 400
+    },
+    {
+      "name": "Explicit two-dimensional view retains computed transport",
+      "passed": true
+    },
+    {
+      "name": "Offscreen scene stops RAF, time and frame accumulation",
+      "passed": true
+    },
+    {
+      "name": "390px scene is 300px tall with no full-page overflow",
+      "passed": true
+    },
+    {
+      "name": "Leaving route releases the renderer and geometries",
+      "passed": true,
+      "detail": {
+        "mounts": 2,
+        "disposals": 2,
+        "scriptsRequested": 1,
+        "scenesCreated": 1,
+        "scenesDisposed": 1,
+        "lastDisposedScene": {
+          "revision": "180",
+          "disposed": true,
+          "active": false,
+          "frameCount": 120,
+          "lastFrameTime": 1793333106720,
+          "camera": "overview",
+          "selectedObject": "m5",
+          "cameraPosition": [
+            12.15799132355482,
+            7.343620322192489,
+            13.499040264113987
+          ],
+          "cameraTarget": [
+            0.2435322610548161,
+            -0.5606061778075117,
+            -0.5658333608860153
+          ],
+          "cameraMoving": false,
+          "width": 320,
+          "height": 298,
+          "pixelRatio": 1,
+          "samplePosition": [
+            -2.411376409188704,
+            0.4113274566866748,
+            0.22593826970970926
+          ],
+          "sampleKind": "material",
+          "drawCalls": 0,
+          "geometries": 184,
+          "materials": 153,
+          "textures": 0,
+          "gpuGeometries": 0,
+          "authoredTextures": 0,
+          "resourceDisposals": {
+            "geometries": 184,
+            "materials": 153,
+            "shadowMaps": 1,
+            "renderer": true,
+            "contextLost": true
+          },
+          "pointerListeners": 0,
+          "resizeObserver": false
+        },
+        "liveComponents": 0,
+        "liveScenes": 0
+      }
+    },
+    {
+      "name": "Re-entering creates exactly one live scene",
+      "passed": false
+    },
+    {
+      "name": "3D protocol completes",
+      "passed": false,
+      "detail": "Error: Re-entering creates exactly one live scene\n    at ok (evalmachine.<anonymous>:7:81)\n    at evalmachine.<anonymous>:41:3\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "pageErrors": [],
+  "states": {
+    "pause300": {
+      "mounted": true,
+      "mode": "pause",
+      "time_s": 300,
+      "sourceTime_s": 120,
+      "sourceDepthMD_m": 1200.7199999999993,
+      "arrivalTime_s": 780,
+      "sourceReplay_s": 120,
+      "lag_s": 660,
+      "flow_m3_s": 0,
+      "cumulativeVolume_m3": 7.5,
+      "transportedVolume_m3": 4.5,
+      "effectiveVolume_m3": 12,
+      "transportProgress": 0.375,
+      "remainingVolume_m3": 7.5,
+      "remainingTransportTime_s": 480,
+      "sourceAge_s": 180,
+      "phaseIndex": 1,
+      "phase": "annulus",
+      "phaseProgress": 0.2727272727272727,
+      "currentDepthMD_m": 1201.7999999999984,
+      "pumpStopped": true,
+      "materialStopped": true,
+      "atSurface": false,
+      "complete": false,
+      "endTime_s": 975,
+      "sampleId": "TEACHING-T17",
+      "dataNature": "controlled_teaching_transport",
+      "transport": {
+        "mode": "pause",
+        "time_s": 300,
+        "sourceTime_s": 120,
+        "sourceDepthMD_m": 1200.7199999999993,
+        "arrivalTime_s": 780,
+        "sourceReplay_s": 120,
+        "lag_s": 660,
+        "flow_m3_s": 0,
+        "cumulativeVolume_m3": 7.5,
+        "transportedVolume_m3": 4.5,
+        "effectiveVolume_m3": 12,
+        "transportProgress": 0.375,
+        "remainingVolume_m3": 7.5,
+        "remainingTransportTime_s": 480,
+        "sourceAge_s": 180,
+        "phaseIndex": 1,
+        "phase": "annulus",
+        "phaseProgress": 0.2727272727272727,
+        "currentDepthMD_m": 1201.7999999999984,
+        "pumpStopped": true,
+        "materialStopped": true,
+        "atSurface": false,
+        "complete": false,
+        "endTime_s": 975,
+        "sampleId": "TEACHING-T17",
+        "dataNature": "controlled_teaching_transport",
+        "route": {
+          "kind": "material",
+          "segment": "return",
+          "fraction": 0.375
+        }
+      },
+      "route": {
+        "kind": "material",
+        "segment": "return",
+        "fraction": 0.375
+      },
+      "selectedObject": "m2",
+      "focusObject": null,
+      "camera": "return",
+      "followCamera": true,
+      "requestedPlaying": false,
+      "playing": false,
+      "inViewport": true,
+      "nearViewport": true,
+      "documentHidden": false,
+      "reducedMotion": true,
+      "view": "3d",
+      "rendererStatus": "ready",
+      "fallbackReason": null,
+      "rafScheduled": false,
+      "scene": {
+        "revision": "180",
+        "disposed": false,
+        "active": true,
+        "frameCount": 3,
+        "lastFrameTime": 1793333102707,
+        "camera": "return",
+        "selectedObject": "m2",
+        "cameraPosition": [
+          3.7,
+          1.1999999999999997,
+          7
+        ],
+        "cameraTarget": [
+          -2.8,
+          -2.1,
+          0.12
+        ],
+        "cameraMoving": false,
+        "width": 818,
+        "height": 398,
+        "pixelRatio": 1,
+        "samplePosition": [
+          -2.829525762398502,
+          -1.863640338936431,
+          0.21568209157276266
+        ],
+        "sampleKind": "material",
+        "drawCalls": 148,
+        "geometries": 184,
+        "materials": 153,
+        "textures": 1,
+        "gpuGeometries": 182,
+        "authoredTextures": 0,
+        "resourceDisposals": {
+          "geometries": 0,
+          "materials": 0,
+          "shadowMaps": 0,
+          "renderer": false,
+          "contextLost": false
+        },
+        "pointerListeners": 8,
+        "resizeObserver": true
+      },
+      "lifecycle": {
+        "mounts": 2,
+        "disposals": 1,
+        "scriptsRequested": 1,
+        "scenesCreated": 1,
+        "scenesDisposed": 0,
+        "lastDisposedScene": null,
+        "liveComponents": 1,
+        "liveScenes": 1
+      }
+    },
+    "pause450": {
+      "mounted": true,
+      "mode": "pause",
+      "time_s": 450,
+      "sourceTime_s": 120,
+      "sourceDepthMD_m": 1200.7199999999993,
+      "arrivalTime_s": 780,
+      "sourceReplay_s": 120,
+      "lag_s": 660,
+      "flow_m3_s": 0,
+      "cumulativeVolume_m3": 7.5,
+      "transportedVolume_m3": 4.5,
+      "effectiveVolume_m3": 12,
+      "transportProgress": 0.375,
+      "remainingVolume_m3": 7.5,
+      "remainingTransportTime_s": 330,
+      "sourceAge_s": 330,
+      "phaseIndex": 1,
+      "phase": "annulus",
+      "phaseProgress": 0.5,
+      "currentDepthMD_m": 1201.7999999999984,
+      "pumpStopped": true,
+      "materialStopped": true,
+      "atSurface": false,
+      "complete": false,
+      "endTime_s": 975,
+      "sampleId": "TEACHING-T17",
+      "dataNature": "controlled_teaching_transport",
+      "transport": {
+        "mode": "pause",
+        "time_s": 450,
+        "sourceTime_s": 120,
+        "sourceDepthMD_m": 1200.7199999999993,
+        "arrivalTime_s": 780,
+        "sourceReplay_s": 120,
+        "lag_s": 660,
+        "flow_m3_s": 0,
+        "cumulativeVolume_m3": 7.5,
+        "transportedVolume_m3": 4.5,
+        "effectiveVolume_m3": 12,
+        "transportProgress": 0.375,
+        "remainingVolume_m3": 7.5,
+        "remainingTransportTime_s": 330,
+        "sourceAge_s": 330,
+        "phaseIndex": 1,
+        "phase": "annulus",
+        "phaseProgress": 0.5,
+        "currentDepthMD_m": 1201.7999999999984,
+        "pumpStopped": true,
+        "materialStopped": true,
+        "atSurface": false,
+        "complete": false,
+        "endTime_s": 975,
+        "sampleId": "TEACHING-T17",
+        "dataNature": "controlled_teaching_transport",
+        "route": {
+          "kind": "material",
+          "segment": "return",
+          "fraction": 0.375
+        }
+      },
+      "route": {
+        "kind": "material",
+        "segment": "return",
+        "fraction": 0.375
+      },
+      "selectedObject": "m2",
+      "focusObject": null,
+      "camera": "return",
+      "followCamera": true,
+      "requestedPlaying": false,
+      "playing": false,
+      "inViewport": true,
+      "nearViewport": true,
+      "documentHidden": false,
+      "reducedMotion": true,
+      "view": "3d",
+      "rendererStatus": "ready",
+      "fallbackReason": null,
+      "rafScheduled": false,
+      "scene": {
+        "revision": "180",
+        "disposed": false,
+        "active": true,
+        "frameCount": 4,
+        "lastFrameTime": 1793333102742,
+        "camera": "return",
+        "selectedObject": "m2",
+        "cameraPosition": [
+          3.7,
+          1.1999999999999997,
+          7
+        ],
+        "cameraTarget": [
+          -2.8,
+          -2.1,
+          0.12
+        ],
+        "cameraMoving": false,
+        "width": 818,
+        "height": 398,
+        "pixelRatio": 1,
+        "samplePosition": [
+          -2.829525762398502,
+          -1.863640338936431,
+          0.21568209157276266
+        ],
+        "sampleKind": "material",
+        "drawCalls": 148,
+        "geometries": 184,
+        "materials": 153,
+        "textures": 1,
+        "gpuGeometries": 182,
+        "authoredTextures": 0,
+        "resourceDisposals": {
+          "geometries": 0,
+          "materials": 0,
+          "shadowMaps": 0,
+          "renderer": false,
+          "contextLost": false
+        },
+        "pointerListeners": 8,
+        "resizeObserver": true
+      },
+      "lifecycle": {
+        "mounts": 2,
+        "disposals": 1,
+        "scriptsRequested": 1,
+        "scenesCreated": 1,
+        "scenesDisposed": 0,
+        "lastDisposedScene": null,
+        "liveComponents": 1,
+        "liveScenes": 1
+      }
+    },
+    "released": {
+      "mounted": false,
+      "lifecycle": {
+        "mounts": 2,
+        "disposals": 2,
+        "scriptsRequested": 1,
+        "scenesCreated": 1,
+        "scenesDisposed": 1,
+        "lastDisposedScene": {
+          "revision": "180",
+          "disposed": true,
+          "active": false,
+          "frameCount": 120,
+          "lastFrameTime": 1793333106720,
+          "camera": "overview",
+          "selectedObject": "m5",
+          "cameraPosition": [
+            12.15799132355482,
+            7.343620322192489,
+            13.499040264113987
+          ],
+          "cameraTarget": [
+            0.2435322610548161,
+            -0.5606061778075117,
+            -0.5658333608860153
+          ],
+          "cameraMoving": false,
+          "width": 320,
+          "height": 298,
+          "pixelRatio": 1,
+          "samplePosition": [
+            -2.411376409188704,
+            0.4113274566866748,
+            0.22593826970970926
+          ],
+          "sampleKind": "material",
+          "drawCalls": 0,
+          "geometries": 184,
+          "materials": 153,
+          "textures": 0,
+          "gpuGeometries": 0,
+          "authoredTextures": 0,
+          "resourceDisposals": {
+            "geometries": 184,
+            "materials": 153,
+            "shadowMaps": 1,
+            "renderer": true,
+            "contextLost": true
+          },
+          "pointerListeners": 0,
+          "resizeObserver": false
+        },
+        "liveComponents": 0,
+        "liveScenes": 0
+      }
+    }
+  },
+  "screenshots": [
+    "output/playwright/site-upgrade-3d-desktop.png",
+    "output/playwright/site-upgrade-3d-mobile.png"
+  ],
+  "failure": "Re-entering creates exactly one live scene",
+  "passed": 20,
+  "failed": 2
+}

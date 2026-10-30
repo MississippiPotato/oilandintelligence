@@ -1,0 +1,1338 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-30T03:53:40.019Z",
+  "kind": "actual_Chrome_four_variant_acceptance",
+  "scope": "Only the four new variants, not all original 61 cases",
+  "browser": {
+    "session": "upgrade-variants",
+    "channel": "chrome",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "headless": true,
+    "contextPagesAtFinish": 1,
+    "desktop": {
+      "width": 1440,
+      "height": 1000
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    },
+    "fileAccessConfig": "checks/playwright-local-file.json",
+    "closed": true,
+    "closeEvidence": "Browser 'upgrade-variants' closed"
+  },
+  "base": "http://127.0.0.1:8755/",
+  "protocol": "checks/site-upgrade-variants-browser.js",
+  "passed": 216,
+  "failed": 0,
+  "errors": [],
+  "externalRequests": [],
+  "cases": [
+    {
+      "scene": "g3",
+      "id": "s17x-g3-closure-spill",
+      "title": "构造闭合与溢出",
+      "param": "saddle",
+      "expected": 65,
+      "operation": "北侧通道闭合高度由34 m调至65 m",
+      "visual": "地图上北侧出口路径、东西剖面和深度向下坐标对应；二维溢出1034.2 m与单剖面1074.5 m明确区分，金色充填面有文字图例。读者能看出一条东西剖面为什么漏掉北侧出口。",
+      "passed": 54,
+      "failed": 0,
+      "paths": [
+        {
+          "phase": "desktop",
+          "checkedAt": "2026-10-30T03:31:34.447Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-desktop.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-g3-desktop.png"
+          ]
+        },
+        {
+          "phase": "mobile",
+          "checkedAt": "2026-10-30T03:32:42.748Z",
+          "passed": 13,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-mobile.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-g3-mobile.png"
+          ]
+        },
+        {
+          "phase": "offline",
+          "checkedAt": "2026-10-30T03:23:25.134Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-offline.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-g3-offline.png"
+          ]
+        },
+        {
+          "phase": "native",
+          "checkedAt": "2026-10-30T03:30:54.276Z",
+          "passed": 19,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-g3-native.png"
+          ]
+        }
+      ],
+      "visualReview": {
+        "viewed": true,
+        "representative": "output/playwright/site-upgrade-variants-g3-desktop.png",
+        "mobile": "output/playwright/site-upgrade-variants-g3-mobile.png",
+        "assessment": "地图上北侧出口路径、东西剖面和深度向下坐标对应；二维溢出1034.2 m与单剖面1074.5 m明确区分，金色充填面有文字图例。读者能看出一条东西剖面为什么漏掉北侧出口。"
+      },
+      "currentBuildFiles": [
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/case.json",
+          "bytes": 143219,
+          "sha256": "b3d233ae9b308c82ea92de9d34a6485bb57dc56cf05e08b7da8f8ce963256b22",
+          "mtime": "2026-10-30T03:48:44.790Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/README.txt",
+          "bytes": 4658,
+          "sha256": "7ab479331281f4f5e8dee29f60f256a4e4624749edd6849c99fb5468fbd0c683",
+          "mtime": "2026-10-30T03:48:44.790Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/index.html",
+          "bytes": 350,
+          "sha256": "b70327bbcbbf8aadc60d33a8ba30c5f91dacc945a6d40addb04bc0b7908c98dc",
+          "mtime": "2026-10-30T03:48:44.791Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.js",
+          "bytes": 312912,
+          "sha256": "dc7b36c1e52ef140fe8a1237b8f79168c0bed579b0a9395a93bfd299112c0cc5",
+          "mtime": "2026-10-30T03:48:44.792Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.css",
+          "bytes": 43299,
+          "sha256": "d33cf18222363ee41a2abeb7a4c61cce14bcf4053d06af35b4e8d04250511fc9",
+          "mtime": "2026-10-30T03:48:44.791Z"
+        }
+      ],
+      "mobileGeometry": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 59,
+            "className": "v-chart",
+            "width": 330,
+            "scrollWidth": 760
+          },
+          {
+            "index": 61,
+            "className": "v-table",
+            "width": 330,
+            "scrollWidth": 620
+          },
+          {
+            "index": 62,
+            "className": "v-chart",
+            "width": 330,
+            "scrollWidth": 760
+          },
+          {
+            "index": 64,
+            "className": "v-table",
+            "width": 330,
+            "scrollWidth": 620
+          }
+        ],
+        "svgs": [
+          {
+            "width": 760,
+            "height": 435,
+            "viewBox": "0 0 760 435",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 760,
+            "height": 320,
+            "viewBox": "0 0 760 320",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      },
+      "nativeSteps": [
+        {
+          "name": "检查带单位的顶面观测\n数据",
+          "action": "读取位置和深度，选择50、100或200 m的规则采样间隔；只用实际采样点做双线性插值。",
+          "product": "预期效果\n得到49×41的重建深度数组，以及保留位置、单位、来源和种子的实际采样记录。"
+        },
+        {
+          "name": "从待查点走向局部浅点\n位置",
+          "action": "在8个相邻格子中逐步选择更浅的位置，直到没有更浅邻居或到达开放边界。",
+          "product": "预期效果\n得到本次局部高点的列、行、深度及走过的格子。两种方法使用同一个高点。"
+        },
+        {
+          "name": "寻找第一次通到外边界的深度\n连通",
+          "action": "候选通道的代价是沿途最大深度，在所有通向开放边界的8邻域路径中取最小代价。",
+          "product": "预期效果\n得到二维临界深度、临界溢出位置、到边界的路径及搜索记录。"
+        },
+        {
+          "name": "量测范围，并对照一条剖面\n量测",
+          "action": "提取严格浅于临界深度且与高点相连的格子，计算高度、面积与几何体积；单剖面只沿一行或一列查找出口。",
+          "product": "预期效果\n输出二维结果与同一观测的单剖面基线，标明基线估计范围是否已在二维图上接到边界。"
+        },
+        {
+          "name": "核对出口深度与闭合范围\n评价",
+          "action": "在相同比例尺、候选起点和2009格上，比较当前重建顶面与完整无噪声顶面的闭合结果。",
+          "product": "预期效果\n计算溢出深度绝对误差、范围交并比（IoU）和体积相对误差；保留零闭合参考与NA。"
+        }
+      ],
+      "changedProduct": {
+        "spillDepth_m": 1062.2505632138914,
+        "closureHeight_m": 62.88350294857378,
+        "area_m2": 1452500,
+        "volume_m3": 33333425.070510954
+      }
+    },
+    {
+      "scene": "p1",
+      "id": "s17x-p1-perforation-depth-correlation",
+      "title": "GR–CCL深度相关",
+      "param": "scenario",
+      "expected": "periodic",
+      "operation": "观测情形改为重复形态 periodic",
+      "visual": "参考GR、当前平移GR、CCL与接箍表共用沿井深度坐标；默认δ=3.4 m与1040–1042 m目标带对应，GR标为相对读数。重复形态经实际计算保留多个候选，不把最高相关强行当唯一答案。",
+      "passed": 54,
+      "failed": 0,
+      "paths": [
+        {
+          "phase": "desktop",
+          "checkedAt": "2026-10-30T03:31:37.665Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-desktop.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-p1-desktop.png"
+          ]
+        },
+        {
+          "phase": "mobile",
+          "checkedAt": "2026-10-30T03:32:51.413Z",
+          "passed": 13,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-mobile.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-p1-mobile.png"
+          ]
+        },
+        {
+          "phase": "offline",
+          "checkedAt": "2026-10-30T03:23:59.295Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-offline.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-p1-offline.png"
+          ]
+        },
+        {
+          "phase": "native",
+          "checkedAt": "2026-10-30T03:31:07.128Z",
+          "passed": 19,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-p1-native.png"
+          ]
+        }
+      ],
+      "visualReview": {
+        "viewed": true,
+        "representative": "output/playwright/site-upgrade-variants-p1-desktop.png",
+        "mobile": "output/playwright/site-upgrade-variants-p1-mobile.png",
+        "assessment": "参考GR、当前平移GR、CCL与接箍表共用沿井深度坐标；默认δ=3.4 m与1040–1042 m目标带对应，GR标为相对读数。重复形态经实际计算保留多个候选，不把最高相关强行当唯一答案。"
+      },
+      "currentBuildFiles": [
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/case.json",
+          "bytes": 210155,
+          "sha256": "e502298c6d476777d18069cf504794f02f579301e3ec87e7953ab63573585d0a",
+          "mtime": "2026-10-30T03:48:45.049Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/README.txt",
+          "bytes": 6925,
+          "sha256": "3f1301426d992947caa728687aa2f9ed49a1413842d7cf1ce651aaf3b24a5087",
+          "mtime": "2026-10-30T03:48:45.049Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html",
+          "bytes": 479,
+          "sha256": "b4a8a8e5c9846c76d95a59ce0ce20de61162bab18d2dbac56f3a8b85e798e342",
+          "mtime": "2026-10-30T03:48:45.050Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.js",
+          "bytes": 341673,
+          "sha256": "697b6c18c6d6a31326d650083fc6700b2ddb4683426796d0a8d309c3568434e8",
+          "mtime": "2026-10-30T03:48:45.051Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.css",
+          "bytes": 46227,
+          "sha256": "6db1d8f739876318559db7f004bcae6bbf73838c02ea3c23a1758cdfe0a97db6",
+          "mtime": "2026-10-30T03:48:45.050Z"
+        }
+      ],
+      "mobileGeometry": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 32,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 34,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 36,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 38,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 39,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 41,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 42,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 43,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 44,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          }
+        ],
+        "svgs": [
+          {
+            "width": 900,
+            "height": 610,
+            "viewBox": "0 0 900 610",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 390,
+            "viewBox": "0 0 900 390",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 352,
+            "viewBox": "0 0 900 352",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 360,
+            "viewBox": "0 0 900 360",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 325,
+            "viewBox": "0 0 900 325",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      },
+      "nativeSteps": [
+        {
+          "name": "先统一资料与深度坐标\n图 S1",
+          "action": "输入：参考GR、套管丈量表、当前工具记录GR–CCL和已给定目标层；动作：核对单位、采样间隔与深度方向，保持参考资料和当前记录分开。",
+          "product": "预期效果\n参考985–1095 m，工具记录1000–1080 m，均按0.1 m网格比较；目标层默认1040–1042 m。"
+        },
+        {
+          "name": "检出成对接箍波瓣\n图 S2",
+          "action": "输入：当前CCL波形；动作：在局部窗口计算均值和标准差，以动态上下阈值寻找符号相反的相邻波瓣，用两瓣中点形成接箍候选。",
+          "product": "预期效果\n候选的记录深度、波瓣幅值、动态阈值曲线；默认全段检出10个候选。"
+        },
+        {
+          "name": "用整组接箍核对候选\n图 S3",
+          "action": "输入：检出接箍、套管丈量表与各偏移下的GR相关；动作：一对一匹配接箍，并核对匹配数量、比例、深度残差和相邻间距。",
+          "product": "预期效果\n每个偏移的匹配数与残差、未匹配点、可能漏检数；可改变阈值、搜索范围和观测情形。"
+        },
+        {
+          "name": "比较独立峰并保留歧义\n图 S4",
+          "action": "输入：GR互相关搜索曲线及接箍核对结果；动作：比较相隔至少2 m的独立峰，仅在相关、接箍和峰间差门槛都通过时接受唯一候选。",
+          "product": "预期效果\n已接受候选、多个待核对位置或资料不足状态；默认搜索241个偏移，重复形态示例保留歧义。"
+        },
+        {
+          "name": "比较落点并记录复核\n图 S5",
+          "action": "输入：校正候选、零偏移基线与实际偏移；动作：计算深度绝对误差、目标覆盖率和区间交并比，查看12个完整独立记录的结果。",
+          "product": "预期效果\n当前落点图、共同接受组的模型/基线比较、接受率与复核记录；可以下载本次JSON。"
+        }
+      ],
+      "changedProduct": {
+        "status": "ambiguous",
+        "accepted": false,
+        "delta": null,
+        "candidateGap": 4.085620730620576e-14,
+        "searchCount": 241
+      }
+    },
+    {
+      "scene": "c1",
+      "id": "s17x-c1-cement-woc-strength",
+      "title": "固井水泥强度与等待时间",
+      "param": "program",
+      "expected": "constant",
+      "operation": "温度程序由逐渐升温改为全程恒温",
+      "visual": "温度与抗压强度图同用自然龄期/h，朱红模型、蓝灰50°C基线、金色目标线和查看时刻竖线各有说明。默认10 MPa交点与19.52 h读数对应；改变完整温度程序后重新求交点，读者可以把温度历史与等待时间联系起来。",
+      "passed": 54,
+      "failed": 0,
+      "paths": [
+        {
+          "phase": "desktop",
+          "checkedAt": "2026-10-30T03:31:41.283Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-desktop.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-c1-desktop.png"
+          ]
+        },
+        {
+          "phase": "mobile",
+          "checkedAt": "2026-10-30T03:37:26.423Z",
+          "passed": 13,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-mobile.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-c1-mobile.png"
+          ]
+        },
+        {
+          "phase": "offline",
+          "checkedAt": "2026-10-30T03:25:01.362Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-offline.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-c1-offline.png"
+          ]
+        },
+        {
+          "phase": "native",
+          "checkedAt": "2026-10-30T03:36:39.425Z",
+          "passed": 19,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-c1-native.png"
+          ]
+        }
+      ],
+      "visualReview": {
+        "viewed": true,
+        "representative": "output/playwright/site-upgrade-variants-c1-desktop.png",
+        "mobile": "output/playwright/site-upgrade-variants-c1-mobile.png",
+        "assessment": "温度与抗压强度图同用自然龄期/h，朱红模型、蓝灰50°C基线、金色目标线和查看时刻竖线各有说明。默认10 MPa交点与19.52 h读数对应；改变完整温度程序后重新求交点，读者可以把温度历史与等待时间联系起来。"
+      },
+      "currentBuildFiles": [
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/case.json",
+          "bytes": 48668,
+          "sha256": "a9695320bf03e25512a295eda405ae9d085eda4dc548ededb6804149a6feceb8",
+          "mtime": "2026-10-30T03:48:44.868Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/README.txt",
+          "bytes": 2700,
+          "sha256": "303b219f4d71e8bbfe07c190770c2e5350d9202eae95710e12c3a10d02bf64b0",
+          "mtime": "2026-10-30T03:48:44.869Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/index.html",
+          "bytes": 486,
+          "sha256": "f42545230d051119c760e1009f8b32805576be4ef94f9fbe88c4b194f08ec603",
+          "mtime": "2026-10-30T03:48:44.869Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.js",
+          "bytes": 156207,
+          "sha256": "6387cf97f26c104c8f5dd3be782edebccc0c402f9b194a356133d0a5aa66869e",
+          "mtime": "2026-10-30T03:48:44.871Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.css",
+          "bytes": 43504,
+          "sha256": "177b1ccc579786c363a3c121126c816388a32d9d23a741433211b80728ba766d",
+          "mtime": "2026-10-30T03:48:44.870Z"
+        }
+      ],
+      "mobileGeometry": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 11,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 12,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 17,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 18,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 20,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          }
+        ],
+        "svgs": [
+          {
+            "width": 880,
+            "height": 300,
+            "viewBox": "0 0 880 300",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 880,
+            "height": 370,
+            "viewBox": "0 0 880 370",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      },
+      "nativeSteps": [
+        {
+          "name": "冻结独立批次\n输入与操作",
+          "action": "输入：12训练批次、4验证批次、8留出批次；动作：整批划分，先规定72个强度点与达到时间指标。",
+          "product": "预期效果\n冻结的数据协议"
+        },
+        {
+          "name": "温度历史积分与拟合\n输入与操作",
+          "action": "输入：时间温度记录和训练压碎强度；动作：Arrhenius梯形积分；把相邻下降读数合并加权平均，拟合不下降的曲线（PAVA单调回归）；验证选择Ea。",
+          "product": "预期效果\n单调强度曲线及验证误差"
+        },
+        {
+          "name": "对新温度程序推断\n输入与操作",
+          "action": "输入：新程序与目标强度；动作：将温度程序转为等效龄期，在拟合曲线上插值并求首次交点。",
+          "product": "预期效果\n预测强度、达到时间或未知/未达到"
+        },
+        {
+          "name": "独立评价与基线比较\n输入与操作",
+          "action": "输入：先前推断与独立留出参考；动作：统计同一分母的MAE、提前和未达标记录。",
+          "product": "预期效果\n含有效分母的成对指标"
+        }
+      ],
+      "changedProduct": {
+        "status": "预测达到目标",
+        "target_MPa": 10,
+        "time_h": 18.063866294352334,
+        "baselineTime_h": 19.57453880907903
+      }
+    },
+    {
+      "scene": "co3",
+      "id": "s17x-co3-completion-seal-test",
+      "title": "验封温漂与漏率",
+      "param": "drift",
+      "expected": 3,
+      "operation": "长期温差设定由−1.5 K调至+3 K",
+      "visual": "压力/MPa和温度/°C共享试验时间/min；红色原始压力与蓝灰温漂补偿压力区分，闭阀5 min与查看20 min写进读数。漏率以L/min及区间列出；默认原始压降基线疑似失密，而温漂补偿未检出超限，图文能够解释判断差别。",
+      "passed": 54,
+      "failed": 0,
+      "paths": [
+        {
+          "phase": "desktop",
+          "checkedAt": "2026-10-30T03:31:44.248Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-desktop.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-co3-desktop.png"
+          ]
+        },
+        {
+          "phase": "mobile",
+          "checkedAt": "2026-10-30T03:37:29.537Z",
+          "passed": 13,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-mobile.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-co3-mobile.png"
+          ]
+        },
+        {
+          "phase": "offline",
+          "checkedAt": "2026-10-30T03:27:32.527Z",
+          "passed": 11,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-offline.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-co3-offline.png"
+          ]
+        },
+        {
+          "phase": "native",
+          "checkedAt": "2026-10-30T03:36:50.061Z",
+          "passed": 19,
+          "failed": 0,
+          "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-native.json",
+          "screenshots": [
+            "output/playwright/site-upgrade-variants-co3-native.png"
+          ]
+        }
+      ],
+      "visualReview": {
+        "viewed": true,
+        "representative": "output/playwright/site-upgrade-variants-co3-desktop.png",
+        "mobile": "output/playwright/site-upgrade-variants-co3-mobile.png",
+        "assessment": "压力/MPa和温度/°C共享试验时间/min；红色原始压力与蓝灰温漂补偿压力区分，闭阀5 min与查看20 min写进读数。漏率以L/min及区间列出；默认原始压降基线疑似失密，而温漂补偿未检出超限，图文能够解释判断差别。"
+      },
+      "currentBuildFiles": [
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/case.json",
+          "bytes": 48665,
+          "sha256": "db5765ba15940159d481838c2a1ec672175cd8ccea8aad3f7bc4a2ff08e6c3cc",
+          "mtime": "2026-10-30T03:48:44.955Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/README.txt",
+          "bytes": 2868,
+          "sha256": "a0f5e415c38f44dd77ebe7180857464f2c743e51aef9a2098bb2603de176919a",
+          "mtime": "2026-10-30T03:48:44.955Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html",
+          "bytes": 483,
+          "sha256": "57fc2f394d018ccc5fc42e1bdbb0650de04493bfc0fe2d660a323e0c83822daf",
+          "mtime": "2026-10-30T03:48:44.955Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.js",
+          "bytes": 157989,
+          "sha256": "0c0fef424b46d15c8f121385b61581cbf83f1273b01702eab58db2b556474b28",
+          "mtime": "2026-10-30T03:48:44.956Z"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.css",
+          "bytes": 43504,
+          "sha256": "177b1ccc579786c363a3c121126c816388a32d9d23a741433211b80728ba766d",
+          "mtime": "2026-10-30T03:48:44.956Z"
+        }
+      ],
+      "mobileGeometry": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 12,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 14,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 18,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 19,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 22,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 23,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          }
+        ],
+        "svgs": [
+          {
+            "width": 880,
+            "height": 350,
+            "viewBox": "0 0 880 350",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 880,
+            "height": 280,
+            "viewBox": "0 0 880 280",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 880,
+            "height": 320,
+            "viewBox": "0 0 880 320",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      },
+      "nativeSteps": [
+        {
+          "name": "校准温漂与体积响应\n输入与操作",
+          "action": "输入：6次无漏温漂试验、4次本次加液校准；动作：校准升温1 K引起的MPa压变（β），以及增压1 MPa需要补入的L体积（Ceff），保留校准离散度。",
+          "product": "预期效果\nMPa/K与L/MPa校准量"
+        },
+        {
+          "name": "选择闭阀保压窗\n输入与操作",
+          "action": "输入：压力、温度与阀门事件；动作：检查全窗闭阀、无缺测、至少8点。",
+          "product": "预期效果\n可解释的有效窗或证据不足"
+        },
+        {
+          "name": "补偿与拟合\n输入与操作",
+          "action": "输入：同窗P、T和独立校准量；动作：Pc=P−βΔT；最小二乘拟合b；Q=−Ceff b。",
+          "product": "预期效果\n补偿漏率、区间与残差"
+        },
+        {
+          "name": "同窗评价与复核\n输入与操作",
+          "action": "输入：固定12次留出试验及独立漏流积分；动作：区间判读；与原始压降基线成对评价。",
+          "product": "预期效果\nMAE、覆盖与含拒判列的混淆表"
+        }
+      ],
+      "changedProduct": {
+        "status": "未检出超限漏率",
+        "estimate_L_per_min": 0.007415156660072248,
+        "low": 0.006965008098460202,
+        "high": 0.007865305221684294,
+        "baseline_L_per_min": -0.02131922765427685
+      }
+    }
+  ],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-desktop-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill",
+      "scene": "g3",
+      "phase": "desktop",
+      "expectedInput": {
+        "saddle": 65
+      },
+      "actualInput": 65,
+      "inferenceHash": "b37dfb26",
+      "expectedBrowserInferenceHash": "b37dfb26",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-mobile-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill",
+      "scene": "g3",
+      "phase": "mobile",
+      "expectedInput": {
+        "saddle": 65
+      },
+      "actualInput": 65,
+      "inferenceHash": "b37dfb26",
+      "expectedBrowserInferenceHash": "b37dfb26",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-offline-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill",
+      "scene": "g3",
+      "phase": "offline",
+      "expectedInput": {
+        "saddle": 65
+      },
+      "actualInput": 65,
+      "inferenceHash": "b37dfb26",
+      "expectedBrowserInferenceHash": "b37dfb26",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill",
+      "scene": "g3",
+      "phase": "native",
+      "expectedInput": {
+        "saddle": 65
+      },
+      "actualInput": 65,
+      "inferenceHash": "b37dfb26",
+      "expectedBrowserInferenceHash": "b37dfb26",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-refresh-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill",
+      "scene": "g3",
+      "phase": "native",
+      "expectedInput": {
+        "saddle": 65
+      },
+      "actualInput": 65,
+      "inferenceHash": "b37dfb26",
+      "expectedBrowserInferenceHash": "b37dfb26",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-desktop-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "scene": "p1",
+      "phase": "desktop",
+      "expectedInput": {
+        "scenario": "periodic"
+      },
+      "actualInput": "periodic",
+      "inferenceHash": "60b579f8",
+      "expectedBrowserInferenceHash": "60b579f8",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-mobile-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "scene": "p1",
+      "phase": "mobile",
+      "expectedInput": {
+        "scenario": "periodic"
+      },
+      "actualInput": "periodic",
+      "inferenceHash": "60b579f8",
+      "expectedBrowserInferenceHash": "60b579f8",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-offline-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "scene": "p1",
+      "phase": "offline",
+      "expectedInput": {
+        "scenario": "periodic"
+      },
+      "actualInput": "periodic",
+      "inferenceHash": "60b579f8",
+      "expectedBrowserInferenceHash": "60b579f8",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "scene": "p1",
+      "phase": "native",
+      "expectedInput": {
+        "scenario": "periodic"
+      },
+      "actualInput": "periodic",
+      "inferenceHash": "60b579f8",
+      "expectedBrowserInferenceHash": "60b579f8",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-refresh-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "scene": "p1",
+      "phase": "native",
+      "expectedInput": {
+        "scenario": "periodic"
+      },
+      "actualInput": "periodic",
+      "inferenceHash": "60b579f8",
+      "expectedBrowserInferenceHash": "60b579f8",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-desktop-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "852c325338f2e2e15f4c842b8891de0b5e76a2822bbb83fcebfe675961ff35a2",
+      "caseId": "s17x-c1-cement-woc-strength",
+      "scene": "c1",
+      "phase": "desktop",
+      "expectedInput": {
+        "program": "constant"
+      },
+      "actualInput": "constant",
+      "inferenceHash": "d1716d71",
+      "expectedBrowserInferenceHash": "d1716d71",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-mobile-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "23470142223116d7e8911138f5ebf27c2b476ac1a4569fa7555c323514d5575c",
+      "caseId": "s17x-c1-cement-woc-strength",
+      "scene": "c1",
+      "phase": "mobile",
+      "expectedInput": {
+        "program": "constant"
+      },
+      "actualInput": "constant",
+      "inferenceHash": "d1716d71",
+      "expectedBrowserInferenceHash": "d1716d71",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-offline-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "c19c6b3261964a2149fe07f9f5fe49bbbb790f8fb124deb038ba3a528de5b6fe",
+      "caseId": "s17x-c1-cement-woc-strength",
+      "scene": "c1",
+      "phase": "offline",
+      "expectedInput": {
+        "program": "constant"
+      },
+      "actualInput": "constant",
+      "inferenceHash": "d1716d71",
+      "expectedBrowserInferenceHash": "d1716d71",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "3a3af839e31523bfdf75b0ba7944fed99ac8d0d101aa586ec4bbf4c860ae7594",
+      "caseId": "s17x-c1-cement-woc-strength",
+      "scene": "c1",
+      "phase": "native",
+      "expectedInput": {
+        "program": "constant"
+      },
+      "actualInput": "constant",
+      "inferenceHash": "d1716d71",
+      "expectedBrowserInferenceHash": "d1716d71",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-refresh-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "934ffb0b4c88968b413324e1bbe6f65467823420e1a655ef82cf8ff212d7c2b0",
+      "caseId": "s17x-c1-cement-woc-strength",
+      "scene": "c1",
+      "phase": "native",
+      "expectedInput": {
+        "program": "constant"
+      },
+      "actualInput": "constant",
+      "inferenceHash": "d1716d71",
+      "expectedBrowserInferenceHash": "d1716d71",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-desktop-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "cb387f5e42420c9e32339b613bd5e113fb352ec6725e8227a3b6e641cbcc3aac",
+      "caseId": "s17x-co3-completion-seal-test",
+      "scene": "co3",
+      "phase": "desktop",
+      "expectedInput": {
+        "drift": 3
+      },
+      "actualInput": 3,
+      "inferenceHash": "4683d581",
+      "expectedBrowserInferenceHash": "4683d581",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-mobile-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "d3ed55b9f282341909d005827d0a5fcf0da6c8e9cd213550a74ae68874947c3c",
+      "caseId": "s17x-co3-completion-seal-test",
+      "scene": "co3",
+      "phase": "mobile",
+      "expectedInput": {
+        "drift": 3
+      },
+      "actualInput": 3,
+      "inferenceHash": "4683d581",
+      "expectedBrowserInferenceHash": "4683d581",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-offline-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "57f737a74cf8780fd270c18c09a15553cc42a7c5a92c790026cc91e8bd8d55c1",
+      "caseId": "s17x-co3-completion-seal-test",
+      "scene": "co3",
+      "phase": "offline",
+      "expectedInput": {
+        "drift": 3
+      },
+      "actualInput": 3,
+      "inferenceHash": "4683d581",
+      "expectedBrowserInferenceHash": "4683d581",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-native-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "6e9ae59d018e0f3342ba2aee696a19f8281cc8d52aa91c9f6107518e637dd6f1",
+      "caseId": "s17x-co3-completion-seal-test",
+      "scene": "co3",
+      "phase": "native",
+      "expectedInput": {
+        "drift": 3
+      },
+      "actualInput": 3,
+      "inferenceHash": "4683d581",
+      "expectedBrowserInferenceHash": "4683d581",
+      "coherent": true
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-native-refresh-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "0fa18c6575274e2254d76db20d1487fe70e8571de9e8faee2b21360944780817",
+      "caseId": "s17x-co3-completion-seal-test",
+      "scene": "co3",
+      "phase": "native",
+      "expectedInput": {
+        "drift": 3
+      },
+      "actualInput": 3,
+      "inferenceHash": "4683d581",
+      "expectedBrowserInferenceHash": "4683d581",
+      "coherent": true
+    }
+  ],
+  "attempts": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-attempt-1793331404658.json",
+      "scene": "c1",
+      "phase": "native",
+      "checkedAt": "2026-10-30T03:25:04.538Z",
+      "passed": 1,
+      "failed": 1,
+      "errors": [
+        "(w.lead || []).map is not a function"
+      ],
+      "exception": "locator.click: Timeout 16000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#tabs [data-tab=\"demo\"]')\u001b[22m\n",
+      "classification": "actual compatibility defect, fixed and rebuilt, final native retest passed"
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-attempt-1793331060261.json",
+      "scene": "g3",
+      "phase": "native",
+      "checkedAt": "2026-10-30T03:28:58.880Z",
+      "passed": 1,
+      "failed": 1,
+      "errors": [],
+      "exception": "locator.click: Timeout 16000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#tabs [data-tab=\"bg\"]')\u001b[22m\n",
+      "classification": "protocol rerun issue: previous same-id import rejected; harness now removes only its own previous import through UI confirmation before reimport"
+    }
+  ],
+  "findings": [
+    {
+      "id": "UI-01",
+      "scope": "shared companion overlay",
+      "severity": "low",
+      "status": "fixed_and_retested",
+      "detail": "390px: the minimized companion launcher can cover part of the c1 blue baseline legend. The SVG remains 16px and locally scrollable; this finding is independent of the successful calculation, reset and export paths.",
+      "evidence": "output/playwright/site-upgrade-variants-c1-mobile-ui01-fixed.png",
+      "originalEvidence": "output/playwright/site-upgrade-variants-c1-mobile.png",
+      "resolution": "Targeted actual Chrome c1 390px retest: 44px icon, 52px legend reserve, no text overlap, real local scrolling, actual assistant expansion. Four demo.css changed; other sixteen files byte-identical."
+    }
+  ],
+  "evidenceBoundaries": [
+    "Source wording review is separate: novice-review.md. This report records actual Chrome interactions and saved downloads.",
+    "The original teacher portal was used through its directory-import UI, including persistence across reload. No teacher-portal source was edited.",
+    "Standalone file URLs were tested with the Chrome context offline. HTTP desktop/mobile and teacher-portal paths were tested separately.",
+    "Representative visual judgments use opened standalone desktop and mobile screenshots. Native element screenshots also contain the original portal sticky navigation overlay.",
+    "The compatibility fix changed c1/co3 manifest fields; their main app and engine stayed unchanged. Native paths were retested on the rebuilt packages.",
+    "UI-01 CSS follow-up retested only c1 at 390px, seven targeted checks. The original 216 functional checks and twenty actual downloads are retained, not rerun."
+  ],
+  "downloadValidation": {
+    "count": 20,
+    "passed": 20,
+    "failed": 0,
+    "bytes": 5232270,
+    "method": "Read each file actually saved by the browser download event; compare caseId, changed input and actual prediction/inference hash against the state recorded in the same Chrome run."
+  },
+  "followups": [
+    {
+      "id": "UI-01",
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-ui01.json",
+      "passed": 7,
+      "failed": 0,
+      "scope": "UI-01 targeted 390px retest only; original 216 checks not rerun",
+      "closed": true
+    }
+  ],
+  "fingerprintComparisonAfterUi01": {
+    "baseline": "browser-variants.json before UI-01 CSS rebuild",
+    "changed": [
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.css",
+        "beforeSha256": "bbb9753fbaa08f1af26eb5496d11e555162e2df747d5824789990692d259cfef",
+        "afterSha256": "d33cf18222363ee41a2abeb7a4c61cce14bcf4053d06af35b4e8d04250511fc9",
+        "beforeBytes": 42708,
+        "afterBytes": 43299
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.css",
+        "beforeSha256": "66b92089a9b31080120a31ca06ec397b74a1e4717bdc10bf432aefc6bcdde805",
+        "afterSha256": "6db1d8f739876318559db7f004bcae6bbf73838c02ea3c23a1758cdfe0a97db6",
+        "beforeBytes": 45636,
+        "afterBytes": 46227
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.css",
+        "beforeSha256": "aca741bf5472f4eaa1a14cbeb475d0d0f79dd952879ee8f28b55d013bb67b285",
+        "afterSha256": "177b1ccc579786c363a3c121126c816388a32d9d23a741433211b80728ba766d",
+        "beforeBytes": 42913,
+        "afterBytes": 43504
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.css",
+        "beforeSha256": "aca741bf5472f4eaa1a14cbeb475d0d0f79dd952879ee8f28b55d013bb67b285",
+        "afterSha256": "177b1ccc579786c363a3c121126c816388a32d9d23a741433211b80728ba766d",
+        "beforeBytes": 42913,
+        "afterBytes": 43504
+      }
+    ],
+    "unchanged": [
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/case.json",
+        "beforeSha256": "b3d233ae9b308c82ea92de9d34a6485bb57dc56cf05e08b7da8f8ce963256b22",
+        "afterSha256": "b3d233ae9b308c82ea92de9d34a6485bb57dc56cf05e08b7da8f8ce963256b22",
+        "beforeBytes": 143219,
+        "afterBytes": 143219
+      },
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/README.txt",
+        "beforeSha256": "7ab479331281f4f5e8dee29f60f256a4e4624749edd6849c99fb5468fbd0c683",
+        "afterSha256": "7ab479331281f4f5e8dee29f60f256a4e4624749edd6849c99fb5468fbd0c683",
+        "beforeBytes": 4658,
+        "afterBytes": 4658
+      },
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/index.html",
+        "beforeSha256": "b70327bbcbbf8aadc60d33a8ba30c5f91dacc945a6d40addb04bc0b7908c98dc",
+        "afterSha256": "b70327bbcbbf8aadc60d33a8ba30c5f91dacc945a6d40addb04bc0b7908c98dc",
+        "beforeBytes": 350,
+        "afterBytes": 350
+      },
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.js",
+        "beforeSha256": "dc7b36c1e52ef140fe8a1237b8f79168c0bed579b0a9395a93bfd299112c0cc5",
+        "afterSha256": "dc7b36c1e52ef140fe8a1237b8f79168c0bed579b0a9395a93bfd299112c0cc5",
+        "beforeBytes": 312912,
+        "afterBytes": 312912
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/case.json",
+        "beforeSha256": "e502298c6d476777d18069cf504794f02f579301e3ec87e7953ab63573585d0a",
+        "afterSha256": "e502298c6d476777d18069cf504794f02f579301e3ec87e7953ab63573585d0a",
+        "beforeBytes": 210155,
+        "afterBytes": 210155
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/README.txt",
+        "beforeSha256": "3f1301426d992947caa728687aa2f9ed49a1413842d7cf1ce651aaf3b24a5087",
+        "afterSha256": "3f1301426d992947caa728687aa2f9ed49a1413842d7cf1ce651aaf3b24a5087",
+        "beforeBytes": 6925,
+        "afterBytes": 6925
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html",
+        "beforeSha256": "b4a8a8e5c9846c76d95a59ce0ce20de61162bab18d2dbac56f3a8b85e798e342",
+        "afterSha256": "b4a8a8e5c9846c76d95a59ce0ce20de61162bab18d2dbac56f3a8b85e798e342",
+        "beforeBytes": 479,
+        "afterBytes": 479
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.js",
+        "beforeSha256": "697b6c18c6d6a31326d650083fc6700b2ddb4683426796d0a8d309c3568434e8",
+        "afterSha256": "697b6c18c6d6a31326d650083fc6700b2ddb4683426796d0a8d309c3568434e8",
+        "beforeBytes": 341673,
+        "afterBytes": 341673
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/case.json",
+        "beforeSha256": "a9695320bf03e25512a295eda405ae9d085eda4dc548ededb6804149a6feceb8",
+        "afterSha256": "a9695320bf03e25512a295eda405ae9d085eda4dc548ededb6804149a6feceb8",
+        "beforeBytes": 48668,
+        "afterBytes": 48668
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/README.txt",
+        "beforeSha256": "303b219f4d71e8bbfe07c190770c2e5350d9202eae95710e12c3a10d02bf64b0",
+        "afterSha256": "303b219f4d71e8bbfe07c190770c2e5350d9202eae95710e12c3a10d02bf64b0",
+        "beforeBytes": 2700,
+        "afterBytes": 2700
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/index.html",
+        "beforeSha256": "f42545230d051119c760e1009f8b32805576be4ef94f9fbe88c4b194f08ec603",
+        "afterSha256": "f42545230d051119c760e1009f8b32805576be4ef94f9fbe88c4b194f08ec603",
+        "beforeBytes": 486,
+        "afterBytes": 486
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.js",
+        "beforeSha256": "6387cf97f26c104c8f5dd3be782edebccc0c402f9b194a356133d0a5aa66869e",
+        "afterSha256": "6387cf97f26c104c8f5dd3be782edebccc0c402f9b194a356133d0a5aa66869e",
+        "beforeBytes": 156207,
+        "afterBytes": 156207
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/case.json",
+        "beforeSha256": "db5765ba15940159d481838c2a1ec672175cd8ccea8aad3f7bc4a2ff08e6c3cc",
+        "afterSha256": "db5765ba15940159d481838c2a1ec672175cd8ccea8aad3f7bc4a2ff08e6c3cc",
+        "beforeBytes": 48665,
+        "afterBytes": 48665
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/README.txt",
+        "beforeSha256": "a0f5e415c38f44dd77ebe7180857464f2c743e51aef9a2098bb2603de176919a",
+        "afterSha256": "a0f5e415c38f44dd77ebe7180857464f2c743e51aef9a2098bb2603de176919a",
+        "beforeBytes": 2868,
+        "afterBytes": 2868
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html",
+        "beforeSha256": "57fc2f394d018ccc5fc42e1bdbb0650de04493bfc0fe2d660a323e0c83822daf",
+        "afterSha256": "57fc2f394d018ccc5fc42e1bdbb0650de04493bfc0fe2d660a323e0c83822daf",
+        "beforeBytes": 483,
+        "afterBytes": 483
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.js",
+        "beforeSha256": "0c0fef424b46d15c8f121385b61581cbf83f1273b01702eab58db2b556474b28",
+        "afterSha256": "0c0fef424b46d15c8f121385b61581cbf83f1273b01702eab58db2b556474b28",
+        "beforeBytes": 157989,
+        "afterBytes": 157989
+      }
+    ],
+    "onlyFourDemoCssChanged": true
+  },
+  "status": "passed"
+}

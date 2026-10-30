@@ -1,0 +1,207 @@
+{
+  "checkedAt": "2026-10-30T03:31:46.999Z",
+  "sanityOnly": true,
+  "officialBenchmark": false,
+  "note": "One unthrottled current-build functionality sanity on the existing 8755 server, after CSS consolidation. Excluded from the fixed before/after five-run performance comparison.",
+  "conditions": {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "throttling": false,
+    "serverPort": 8755,
+    "temporary8766Started": false
+  },
+  "lifecycle": {
+    "session": "upgrade-perf",
+    "browserClosed": true
+  },
+  "entrySHA256": "a66d4e2e1b1dd703131b2df7b124cb31023130ea28c443ad2a279c3c663a6949",
+  "home": {
+    "title": "看懂石油场景，动手体验智能方法。",
+    "homeReady": true,
+    "caseCatalogCount": 65,
+    "registeredCount": 66,
+    "sceneCount": 61,
+    "iframeCount": 0,
+    "css": [
+      "http://127.0.0.1:8755/portal/assets/s17-portal.min.css?v=1.12.0-preview"
+    ]
+  },
+  "directory": {
+    "open": true,
+    "sceneCount": "61",
+    "resultCount": "65",
+    "visibleCount": "12"
+  },
+  "search": {
+    "query": "钻速",
+    "resultRows": 14,
+    "countText": "找到 15 条 · 显示 14 条",
+    "caseCount": 66,
+    "sectionCount": 314,
+    "lastQuery": "钻速"
+  },
+  "firstScreenRequests": [
+    {
+      "url": "http://127.0.0.1:8755/portal/index.html",
+      "resourceType": "document"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/themes/theme-well-v1.webp",
+      "resourceType": "image"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-portal.min.css?v=1.12.0-preview",
+      "resourceType": "stylesheet"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-data.min.js?v=20261022i",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/core/registry.js?v=20261022i",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/core/kit.js?v=20261022i",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-case-loader.js?v=1.12.0-preview",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-case-catalog.js?v=1.12.0-preview",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/core/case-demo-host.js?v=20261022i",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-case-import.min.js?v=20261022i",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-admin.min.js?v=20261022i",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-course.js?v=20261030-concepts",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-reader.js?v=20261030-concepts",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-shell.min.js?v=20261023-reading",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/shared/course-compass.js?v=20261030-concepts",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-field-atlas.js?v=20261023-interactive",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-catalog.js?v=20261030-concepts",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-log-data.js",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-log-preview.js?v=20261024-ui",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-expansion-gallery.js?v=20261024",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-home.js?v=20261030-concepts",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-assistant-history.js?v=20261030-manual",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-assistant-config.js?v=20261030-manual",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-response-stream.js?v=20261030-manual",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-assistant.js?v=20261030-manual",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-media.js?v=20261024-ui",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-volcengine.js?v=20261030-manual",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-search.js?v=1.12.0-preview",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-upgrade-nav.js?v=1.12.0-preview",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-mudlogging-stage.js?v=1.12.0-preview",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/s17-live2d-loader.js?v=1.12.0-preview",
+      "resourceType": "script"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/themes/theme-geology-v1.webp",
+      "resourceType": "image"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/themes/theme-well-v1.webp",
+      "resourceType": "image"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/themes/theme-production-v1.webp",
+      "resourceType": "image"
+    },
+    {
+      "url": "http://127.0.0.1:8755/portal/assets/themes/theme-refining-v1.webp",
+      "resourceType": "image"
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "heavyRequests": {
+    "body": [],
+    "threeD": [],
+    "live2d": []
+  },
+  "checks": {
+    "realTitle": true,
+    "homeReady": true,
+    "caseCounts": true,
+    "noIframe": true,
+    "directoryOpened": true,
+    "searchFunctional": true,
+    "zeroHeavyRequests": true,
+    "noFailures": true,
+    "noPageErrors": true
+  },
+  "passed": true,
+  "finishedAt": "2026-10-30T03:31:55.848Z"
+}

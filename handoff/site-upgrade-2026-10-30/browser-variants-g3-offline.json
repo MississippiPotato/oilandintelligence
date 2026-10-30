@@ -1,0 +1,231 @@
+{
+  "checkedAt": "2026-10-30T03:23:25.134Z",
+  "caseId": "s17x-g3-closure-spill",
+  "scene": "g3",
+  "phase": "offline",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "offline actual URL",
+      "passed": true,
+      "detail": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-g3-closure-spill/demo/index.html#background"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 2143
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "offline default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-g3-closure-spill",
+        "status": "ready",
+        "params": {
+          "scenario": "side",
+          "saddle": 34,
+          "tilt": 0,
+          "noise": 0.8,
+          "sampleStep": 1,
+          "axis": "ew",
+          "fill": 0.65,
+          "seed": 2026,
+          "candidateX": 24,
+          "candidateY": 20
+        },
+        "inferenceHash": "51188c6",
+        "graphicHash": "8f9eaaef",
+        "svgCount": 2,
+        "finite": true
+      }
+    },
+    {
+      "name": "offline real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 65,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "b37dfb26",
+          "graphicHash": "23d671f",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "offline actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "8f9eaaef",
+        "after": "23d671f"
+      }
+    },
+    {
+      "name": "offline actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-g3-offline-download.json"
+    },
+    {
+      "name": "offline reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-g3-closure-spill",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-offline-download.json",
+        "caseId": "s17x-g3-closure-spill",
+        "bytes": 377073
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-offline-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-g3-offline.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 65,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "b37dfb26",
+      "graphicHash": "23d671f",
+      "svgCount": 2,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    }
+  },
+  "passed": 11,
+  "failed": 0
+}

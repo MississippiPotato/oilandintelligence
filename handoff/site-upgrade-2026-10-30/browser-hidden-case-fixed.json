@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-30T03:56:22.896Z",
+  "kind": "actual_Chrome_hidden_case_search_fixed",
+  "checks": [
+    {
+      "name": "Hidden builtin stays unregistered after reload",
+      "passed": true
+    },
+    {
+      "name": "Hidden case and all its chapters absent from search",
+      "passed": true,
+      "actualLinks": 0
+    },
+    {
+      "name": "Hidden case absent from enhanced directory",
+      "passed": true
+    }
+  ],
+  "search": {
+    "open": true,
+    "lastQuery": "GR–CCL",
+    "renderMs": 3.9000000059604645,
+    "computeMs": 3.4000000059604645,
+    "indexMs": 43.70000001788139,
+    "resultCount": 0,
+    "totalMatches": 0,
+    "caseCount": 65,
+    "authoredCaseCount": 64,
+    "teacherCaseCount": 1,
+    "extraImportedCaseCount": 0,
+    "catalogAuthoredCount": 65,
+    "blockedCount": 1,
+    "sectionCount": 313,
+    "importedCount": 0,
+    "caseId": "",
+    "sectionId": "",
+    "kind": "all",
+    "activeIndex": -1,
+    "inputCount": 1,
+    "indexBuilds": 1,
+    "extractedHTMLChars": 0,
+    "groups": {
+      "stages": 0,
+      "cases": 0,
+      "sections": 0,
+      "methods": 0
+    },
+    "lastNavigation": null
+  }
+}

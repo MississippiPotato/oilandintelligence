@@ -1,0 +1,189 @@
+{
+  "caseId": "s17x-p1-perforation-depth-correlation",
+  "scope": "reproducible numerical checks using engine.js; no browser assertions",
+  "dataNature": "synthetic_teaching",
+  "generatedAt": "2026-10-30T04:03:43.689Z",
+  "engineSHA256": "c5333aeb4b23bdd45ff4f264e3e2064b54114aa467e16fdf3d841f3b79b15de8",
+  "passed": 13,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "load the actual case engine",
+      "passed": true,
+      "details": {
+        "engineVersion": "1.0.0",
+        "datasetVersion": "gr-ccl-synthetic-1.0.0",
+        "engineSHA256": "c5333aeb4b23bdd45ff4f264e3e2064b54114aa467e16fdf3d841f3b79b15de8"
+      }
+    },
+    {
+      "name": "default correction and analytical placement fixture",
+      "passed": true,
+      "details": {
+        "delta": 3.4,
+        "actualDelta": 3.37,
+        "absoluteError": 0.029999999999999805,
+        "IoU": 0.970443349753721
+      }
+    },
+    {
+      "name": "inference cannot read truth fields and survives truth poisoning",
+      "passed": true,
+      "details": "throwing truth getters were untouched; changing separate evaluation truth changes only the later score"
+    },
+    {
+      "name": "flat reference and constant measured GR stay unscored",
+      "passed": true,
+      "details": [
+        {
+          "status": "insufficient",
+          "delta": null,
+          "model": null,
+          "baselineError": 3.37
+        },
+        {
+          "status": "insufficient",
+          "delta": null,
+          "model": null,
+          "baselineError": 3.37
+        }
+      ]
+    },
+    {
+      "name": "periodic GR and collar sequences retain multiple candidates",
+      "passed": true,
+      "details": {
+        "status": "ambiguous",
+        "candidateDeltas": [
+          11.4,
+          3.4,
+          -4.6
+        ],
+        "candidateGap": 4.085620730620576e-14
+      }
+    },
+    {
+      "name": "similar CCL interference remains visible as unmatched evidence",
+      "passed": true,
+      "details": {
+        "detected": 9,
+        "matched": 8,
+        "unmatched": [
+          {
+            "candidateIndex": 4,
+            "recordedDepth": 1042.2,
+            "correctedDepth": 1045.6
+          }
+        ]
+      }
+    },
+    {
+      "name": "a wrong collar reference rejects a strong GR-only match",
+      "passed": true,
+      "details": {
+        "status": "insufficient",
+        "bestNCC": 0.982605393194729,
+        "matchedCount": 0
+      }
+    },
+    {
+      "name": "a missing collar is reported rather than supplied from truth",
+      "passed": true,
+      "details": {
+        "detected": 9,
+        "possibleMissing": 1,
+        "delta": 3.4
+      }
+    },
+    {
+      "name": "zero correction is the unchanged-depth baseline",
+      "passed": true,
+      "details": {
+        "delta": 0,
+        "actualDelta": 3.37,
+        "absoluteError": 3.37,
+        "actualInterval": [
+          1043.37,
+          1045.37
+        ],
+        "targetCoverage": 0,
+        "IoU": 0,
+        "intersectionLength": 0
+      }
+    },
+    {
+      "name": "insufficient search range and lost CCL detections produce null results",
+      "passed": true,
+      "details": [
+        {
+          "settings": {
+            "searchLimit": 2
+          },
+          "status": "insufficient",
+          "detected": 10,
+          "searchCount": 41,
+          "model": null
+        },
+        {
+          "settings": {
+            "thresholdK": 3.8
+          },
+          "status": "insufficient",
+          "detected": 0,
+          "searchCount": 241,
+          "model": null
+        }
+      ]
+    },
+    {
+      "name": "target thickness changes overlap, not the inferred correction",
+      "passed": true,
+      "details": {
+        "delta": 3.4,
+        "thinIoU": 0.8867924528302858,
+        "thickIoU": 0.9851116625310308
+      }
+    },
+    {
+      "name": "all independent outcomes and paired evaluation denominators are retained",
+      "passed": true,
+      "details": {
+        "accepted": 9,
+        "ambiguous": 2,
+        "insufficient": 1,
+        "modelAccepted": {
+          "count": 9,
+          "MAE": 0.03177777777777782,
+          "meanIoU": 0.9688488339192595,
+          "meanTargetCoverage": 0.9841111111110953
+        },
+        "baselineSameAccepted": {
+          "count": 9,
+          "MAE": 4.496444444444444,
+          "meanIoU": 0.06560636182901881,
+          "meanTargetCoverage": 0.08249999999999444
+        },
+        "baselineAll": {
+          "count": 12,
+          "MAE": 3.6374166666666667,
+          "meanIoU": 0.1370716803007881,
+          "meanTargetCoverage": 0.17933333333333698
+        },
+        "unscoredRecords": [
+          "GRCCL-1005-periodic",
+          "GRCCL-1006-flat",
+          "GRCCL-1010-periodic"
+        ]
+      }
+    },
+    {
+      "name": "results serialize without nonfinite scores and the engine source is unchanged",
+      "passed": true,
+      "details": {
+        "deterministicDefaultObservation": true,
+        "finiteOutputs": true,
+        "engineUnchanged": true
+      }
+    }
+  ]
+}

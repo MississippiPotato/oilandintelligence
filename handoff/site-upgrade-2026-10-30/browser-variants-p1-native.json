@@ -1,0 +1,423 @@
+{
+  "checkedAt": "2026-10-30T03:31:07.128Z",
+  "caseId": "s17x-p1-perforation-depth-correlation",
+  "scene": "p1",
+  "phase": "native",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "teacher original directory import persisted",
+      "passed": true
+    },
+    {
+      "name": "teacher imported professional background is substantive",
+      "passed": true
+    },
+    {
+      "name": "teacher imported workflow preserves explanatory text",
+      "passed": true
+    },
+    {
+      "name": "teacher imported every step retains action and product",
+      "passed": true,
+      "detail": [
+        {
+          "name": "先统一资料与深度坐标\n图 S1",
+          "action": "输入：参考GR、套管丈量表、当前工具记录GR–CCL和已给定目标层；动作：核对单位、采样间隔与深度方向，保持参考资料和当前记录分开。",
+          "product": "预期效果\n参考985–1095 m，工具记录1000–1080 m，均按0.1 m网格比较；目标层默认1040–1042 m。"
+        },
+        {
+          "name": "检出成对接箍波瓣\n图 S2",
+          "action": "输入：当前CCL波形；动作：在局部窗口计算均值和标准差，以动态上下阈值寻找符号相反的相邻波瓣，用两瓣中点形成接箍候选。",
+          "product": "预期效果\n候选的记录深度、波瓣幅值、动态阈值曲线；默认全段检出10个候选。"
+        },
+        {
+          "name": "用整组接箍核对候选\n图 S3",
+          "action": "输入：检出接箍、套管丈量表与各偏移下的GR相关；动作：一对一匹配接箍，并核对匹配数量、比例、深度残差和相邻间距。",
+          "product": "预期效果\n每个偏移的匹配数与残差、未匹配点、可能漏检数；可改变阈值、搜索范围和观测情形。"
+        },
+        {
+          "name": "比较独立峰并保留歧义\n图 S4",
+          "action": "输入：GR互相关搜索曲线及接箍核对结果；动作：比较相隔至少2 m的独立峰，仅在相关、接箍和峰间差门槛都通过时接受唯一候选。",
+          "product": "预期效果\n已接受候选、多个待核对位置或资料不足状态；默认搜索241个偏移，重复形态示例保留歧义。"
+        },
+        {
+          "name": "比较落点并记录复核\n图 S5",
+          "action": "输入：校正候选、零偏移基线与实际偏移；动作：计算深度绝对误差、目标覆盖率和区间交并比，查看12个完整独立记录的结果。",
+          "product": "预期效果\n当前落点图、共同接受组的模型/基线比较、接受率与复核记录；可以下载本次JSON。"
+        }
+      ]
+    },
+    {
+      "name": "native default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "status": "ready",
+        "params": {
+          "scenario": "standard",
+          "noise": 2,
+          "targetThickness": 2,
+          "searchLimit": 12,
+          "thresholdK": 2.3,
+          "seed": 17
+        },
+        "inferenceHash": "9845cbba",
+        "graphicHash": "b91ee130",
+        "svgCount": 5,
+        "finite": true
+      }
+    },
+    {
+      "name": "native real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "periodic",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "60b579f8",
+          "graphicHash": "89734978",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "b91ee130",
+        "after": "89734978"
+      }
+    },
+    {
+      "name": "native actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-download.json"
+    },
+    {
+      "name": "native reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native-refresh default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "status": "ready",
+        "params": {
+          "scenario": "standard",
+          "noise": 2,
+          "targetThickness": 2,
+          "searchLimit": 12,
+          "thresholdK": 2.3,
+          "seed": 17
+        },
+        "inferenceHash": "9845cbba",
+        "graphicHash": "b91ee130",
+        "svgCount": 5,
+        "finite": true
+      }
+    },
+    {
+      "name": "native-refresh real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "periodic",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "60b579f8",
+          "graphicHash": "89734978",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native-refresh actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "b91ee130",
+        "after": "89734978"
+      }
+    },
+    {
+      "name": "native-refresh actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-refresh-download.json"
+    },
+    {
+      "name": "native-refresh reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "teacher imported package survives refresh and reruns",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-p1-perforation-depth-correlation",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-download.json",
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "bytes": 490627
+      }
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-p1-perforation-depth-correlation",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-refresh-download.json",
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "bytes": 490627
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation"
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-native-refresh-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-p1-native.png"
+  ],
+  "setupActions": [
+    "For a repeated protocol run, the previous import of only this case is removed using the actual case-library UI and its confirmation before the current package is imported."
+  ],
+  "nativeWorkflow": [
+    {
+      "name": "先统一资料与深度坐标\n图 S1",
+      "action": "输入：参考GR、套管丈量表、当前工具记录GR–CCL和已给定目标层；动作：核对单位、采样间隔与深度方向，保持参考资料和当前记录分开。",
+      "product": "预期效果\n参考985–1095 m，工具记录1000–1080 m，均按0.1 m网格比较；目标层默认1040–1042 m。"
+    },
+    {
+      "name": "检出成对接箍波瓣\n图 S2",
+      "action": "输入：当前CCL波形；动作：在局部窗口计算均值和标准差，以动态上下阈值寻找符号相反的相邻波瓣，用两瓣中点形成接箍候选。",
+      "product": "预期效果\n候选的记录深度、波瓣幅值、动态阈值曲线；默认全段检出10个候选。"
+    },
+    {
+      "name": "用整组接箍核对候选\n图 S3",
+      "action": "输入：检出接箍、套管丈量表与各偏移下的GR相关；动作：一对一匹配接箍，并核对匹配数量、比例、深度残差和相邻间距。",
+      "product": "预期效果\n每个偏移的匹配数与残差、未匹配点、可能漏检数；可改变阈值、搜索范围和观测情形。"
+    },
+    {
+      "name": "比较独立峰并保留歧义\n图 S4",
+      "action": "输入：GR互相关搜索曲线及接箍核对结果；动作：比较相隔至少2 m的独立峰，仅在相关、接箍和峰间差门槛都通过时接受唯一候选。",
+      "product": "预期效果\n已接受候选、多个待核对位置或资料不足状态；默认搜索241个偏移，重复形态示例保留歧义。"
+    },
+    {
+      "name": "比较落点并记录复核\n图 S5",
+      "action": "输入：校正候选、零偏移基线与实际偏移；动作：计算深度绝对误差、目标覆盖率和区间交并比，查看12个完整独立记录的结果。",
+      "product": "预期效果\n当前落点图、共同接受组的模型/基线比较、接受率与复核记录；可以下载本次JSON。"
+    }
+  ],
+  "nativeFirst": {
+    "before": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "periodic",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "60b579f8",
+      "graphicHash": "89734978",
+      "svgCount": 5,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    }
+  },
+  "nativeRefresh": {
+    "before": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "periodic",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "60b579f8",
+      "graphicHash": "89734978",
+      "svgCount": 5,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    }
+  },
+  "passed": 19,
+  "failed": 0
+}

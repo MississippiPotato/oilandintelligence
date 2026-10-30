@@ -1,0 +1,210 @@
+{
+  "checkedAt": "2026-10-30T03:31:44.248Z",
+  "caseId": "s17x-co3-completion-seal-test",
+  "scene": "co3",
+  "phase": "desktop",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "desktop actual URL",
+      "passed": true,
+      "detail": "http://127.0.0.1:8755/dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 1102
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "desktop default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-co3-completion-seal-test",
+        "status": "ready",
+        "params": {
+          "scenario": "cool",
+          "drift": -1.5,
+          "volume": 1200,
+          "start": 8,
+          "end": 32,
+          "limit": 0.01,
+          "cursor": 20
+        },
+        "inferenceHash": "71d19dc5",
+        "graphicHash": "5dae9251",
+        "svgCount": 3,
+        "finite": true
+      }
+    },
+    {
+      "name": "desktop real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": -1.5,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "71d19dc5",
+          "graphicHash": "5dae9251",
+          "svgCount": 3,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": 3,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "4683d581",
+          "graphicHash": "a3db82f4",
+          "svgCount": 3,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "desktop actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "5dae9251",
+        "after": "a3db82f4"
+      }
+    },
+    {
+      "name": "desktop actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-co3-desktop-download.json"
+    },
+    {
+      "name": "desktop reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": -1.5,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "71d19dc5",
+          "graphicHash": "5dae9251",
+          "svgCount": 3,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-co3-completion-seal-test",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-desktop-download.json",
+        "caseId": "s17x-co3-completion-seal-test",
+        "bytes": 61442
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-desktop-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "cb387f5e42420c9e32339b613bd5e113fb352ec6725e8227a3b6e641cbcc3aac",
+      "caseId": "s17x-co3-completion-seal-test"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-co3-desktop.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": -1.5,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "71d19dc5",
+      "graphicHash": "5dae9251",
+      "svgCount": 3,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": 3,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "4683d581",
+      "graphicHash": "a3db82f4",
+      "svgCount": 3,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": -1.5,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "71d19dc5",
+      "graphicHash": "5dae9251",
+      "svgCount": 3,
+      "finite": true
+    }
+  },
+  "passed": 11,
+  "failed": 0
+}

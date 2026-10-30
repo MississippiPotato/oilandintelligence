@@ -1,0 +1,215 @@
+{
+  "checkedAt": "2026-10-30T04:20:25.873Z",
+  "kind": "actual_Chrome_extracted_offline_site_smoke",
+  "url": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/output/site-upgrade-offline-check-20261030-121919/portal/index.html",
+  "checks": [
+    {
+      "name": "Extracted offline archive renders its local Three.js r180 scene",
+      "passed": true
+    },
+    {
+      "name": "Packaged scene contains five illustrated material-flow frames",
+      "passed": true
+    },
+    {
+      "name": "Packaged storyboard changes the actual camera and time",
+      "passed": true,
+      "detail": {
+        "mounted": true,
+        "mode": "normal",
+        "time_s": 680,
+        "sourceTime_s": 120,
+        "sourceDepthMD_m": 1200.7199999999993,
+        "arrivalTime_s": 600,
+        "sourceReplay_s": 120,
+        "lag_s": 480,
+        "flow_m3_s": 0.025,
+        "cumulativeVolume_m3": 17,
+        "transportedVolume_m3": 12,
+        "effectiveVolume_m3": 12,
+        "transportProgress": 1,
+        "remainingVolume_m3": 0,
+        "remainingTransportTime_s": 0,
+        "sourceAge_s": 560,
+        "phaseIndex": 3,
+        "phase": "observe",
+        "phaseProgress": 0.3888888888888889,
+        "currentDepthMD_m": 1204.0799999999963,
+        "pumpStopped": false,
+        "materialStopped": false,
+        "atSurface": true,
+        "complete": false,
+        "endTime_s": 795,
+        "sampleId": "TEACHING-T17",
+        "dataNature": "controlled_teaching_transport",
+        "transport": {
+          "mode": "normal",
+          "time_s": 680,
+          "sourceTime_s": 120,
+          "sourceDepthMD_m": 1200.7199999999993,
+          "arrivalTime_s": 600,
+          "sourceReplay_s": 120,
+          "lag_s": 480,
+          "flow_m3_s": 0.025,
+          "cumulativeVolume_m3": 17,
+          "transportedVolume_m3": 12,
+          "effectiveVolume_m3": 12,
+          "transportProgress": 1,
+          "remainingVolume_m3": 0,
+          "remainingTransportTime_s": 0,
+          "sourceAge_s": 560,
+          "phaseIndex": 3,
+          "phase": "observe",
+          "phaseProgress": 0.3888888888888889,
+          "currentDepthMD_m": 1204.0799999999963,
+          "pumpStopped": false,
+          "materialStopped": false,
+          "atSurface": true,
+          "complete": false,
+          "endTime_s": 795,
+          "sampleId": "TEACHING-T17",
+          "dataNature": "controlled_teaching_transport",
+          "route": {
+            "kind": "material",
+            "segment": "observe",
+            "fraction": 0.3888888888888889
+          }
+        },
+        "route": {
+          "kind": "material",
+          "segment": "observe",
+          "fraction": 0.3888888888888889
+        },
+        "selectedObject": "m2",
+        "focusObject": null,
+        "camera": "surface",
+        "followCamera": true,
+        "requestedPlaying": false,
+        "playing": false,
+        "inViewport": true,
+        "nearViewport": true,
+        "documentHidden": false,
+        "reducedMotion": true,
+        "view": "3d",
+        "rendererStatus": "ready",
+        "fallbackReason": null,
+        "rafScheduled": false,
+        "scene": {
+          "revision": "180",
+          "disposed": false,
+          "active": true,
+          "frameCount": 2,
+          "lastFrameTime": 1793334027130,
+          "camera": "surface",
+          "selectedObject": "m2",
+          "cameraPosition": [
+            6.3,
+            4.3,
+            7.5
+          ],
+          "cameraTarget": [
+            1,
+            0.6,
+            0.25
+          ],
+          "cameraMoving": false,
+          "width": 818,
+          "height": 398,
+          "pixelRatio": 1,
+          "samplePosition": [
+            0.7834462730291669,
+            0.8215430250475609,
+            1.2589201511231984
+          ],
+          "sampleKind": "material",
+          "drawCalls": 182,
+          "geometries": 184,
+          "materials": 153,
+          "textures": 1,
+          "gpuGeometries": 182,
+          "authoredTextures": 0,
+          "resourceDisposals": {
+            "geometries": 0,
+            "materials": 0,
+            "shadowMaps": 0,
+            "renderer": false,
+            "contextLost": false
+          },
+          "pointerListeners": 8,
+          "resizeObserver": true
+        },
+        "lifecycle": {
+          "mounts": 3,
+          "disposals": 2,
+          "scriptsRequested": 1,
+          "scenesCreated": 2,
+          "scenesDisposed": 1,
+          "lastDisposedScene": {
+            "revision": "180",
+            "disposed": true,
+            "active": false,
+            "frameCount": 4,
+            "lastFrameTime": 1793333993602,
+            "camera": "return",
+            "selectedObject": "m2",
+            "cameraPosition": [
+              3.7,
+              1.1999999999999997,
+              7
+            ],
+            "cameraTarget": [
+              -2.8,
+              -2.1,
+              0.12
+            ],
+            "cameraMoving": false,
+            "width": 818,
+            "height": 398,
+            "pixelRatio": 1,
+            "samplePosition": [
+              -2.829525762398502,
+              -1.863640338936431,
+              0.21568209157276266
+            ],
+            "sampleKind": "material",
+            "drawCalls": 0,
+            "geometries": 184,
+            "materials": 153,
+            "textures": 0,
+            "gpuGeometries": 0,
+            "authoredTextures": 0,
+            "resourceDisposals": {
+              "geometries": 184,
+              "materials": 153,
+              "shadowMaps": 1,
+              "renderer": true,
+              "contextLost": true
+            },
+            "pointerListeners": 0,
+            "resizeObserver": false
+          },
+          "liveComponents": 1,
+          "liveScenes": 1
+        }
+      }
+    },
+    {
+      "name": "Packaged stopped-pump calculation retains cumulative volume and transport",
+      "passed": true
+    },
+    {
+      "name": "Packaged search loads a new case body through relative file paths",
+      "passed": true
+    },
+    {
+      "name": "Extracted archive smoke completed",
+      "passed": false,
+      "detail": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('nav [data-tab=\"lab\"]')\u001b[22m\n"
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "failure": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('iframe').contentFrame().locator('nav [data-tab=\"lab\"]')\u001b[22m\n",
+  "passed": 5,
+  "failed": 1
+}

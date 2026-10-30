@@ -1,0 +1,385 @@
+{
+  "checkedAt": "2026-10-30T03:36:39.425Z",
+  "caseId": "s17x-c1-cement-woc-strength",
+  "scene": "c1",
+  "phase": "native",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "teacher original directory import persisted",
+      "passed": true
+    },
+    {
+      "name": "teacher imported professional background is substantive",
+      "passed": true
+    },
+    {
+      "name": "teacher imported workflow preserves explanatory text",
+      "passed": true
+    },
+    {
+      "name": "teacher imported every step retains action and product",
+      "passed": true,
+      "detail": [
+        {
+          "name": "冻结独立批次\n输入与操作",
+          "action": "输入：12训练批次、4验证批次、8留出批次；动作：整批划分，先规定72个强度点与达到时间指标。",
+          "product": "预期效果\n冻结的数据协议"
+        },
+        {
+          "name": "温度历史积分与拟合\n输入与操作",
+          "action": "输入：时间温度记录和训练压碎强度；动作：Arrhenius梯形积分；把相邻下降读数合并加权平均，拟合不下降的曲线（PAVA单调回归）；验证选择Ea。",
+          "product": "预期效果\n单调强度曲线及验证误差"
+        },
+        {
+          "name": "对新温度程序推断\n输入与操作",
+          "action": "输入：新程序与目标强度；动作：将温度程序转为等效龄期，在拟合曲线上插值并求首次交点。",
+          "product": "预期效果\n预测强度、达到时间或未知/未达到"
+        },
+        {
+          "name": "独立评价与基线比较\n输入与操作",
+          "action": "输入：先前推断与独立留出参考；动作：统计同一分母的MAE、提前和未达标记录。",
+          "product": "预期效果\n含有效分母的成对指标"
+        }
+      ]
+    },
+    {
+      "name": "native default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-c1-cement-woc-strength",
+        "status": "ready",
+        "params": {
+          "temperature": 50,
+          "program": "ramp",
+          "target": 10,
+          "cursor": 24
+        },
+        "inferenceHash": "510ebaae",
+        "graphicHash": "54e2ea9",
+        "svgCount": 2,
+        "finite": true
+      }
+    },
+    {
+      "name": "native real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "ramp",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "510ebaae",
+          "graphicHash": "54e2ea9",
+          "svgCount": 2,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "constant",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "d1716d71",
+          "graphicHash": "ebc459d2",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "54e2ea9",
+        "after": "ebc459d2"
+      }
+    },
+    {
+      "name": "native actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-download.json"
+    },
+    {
+      "name": "native reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "ramp",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "510ebaae",
+          "graphicHash": "54e2ea9",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native-refresh default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-c1-cement-woc-strength",
+        "status": "ready",
+        "params": {
+          "temperature": 50,
+          "program": "ramp",
+          "target": 10,
+          "cursor": 24
+        },
+        "inferenceHash": "510ebaae",
+        "graphicHash": "54e2ea9",
+        "svgCount": 2,
+        "finite": true
+      }
+    },
+    {
+      "name": "native-refresh real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "ramp",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "510ebaae",
+          "graphicHash": "54e2ea9",
+          "svgCount": 2,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "constant",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "d1716d71",
+          "graphicHash": "ebc459d2",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native-refresh actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "54e2ea9",
+        "after": "ebc459d2"
+      }
+    },
+    {
+      "name": "native-refresh actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-refresh-download.json"
+    },
+    {
+      "name": "native-refresh reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-c1-cement-woc-strength",
+          "status": "ready",
+          "params": {
+            "temperature": 50,
+            "program": "ramp",
+            "target": 10,
+            "cursor": 24
+          },
+          "inferenceHash": "510ebaae",
+          "graphicHash": "54e2ea9",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "teacher imported package survives refresh and reruns",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-c1-cement-woc-strength",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-download.json",
+        "caseId": "s17x-c1-cement-woc-strength",
+        "bytes": 117312
+      }
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-c1-cement-woc-strength",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-refresh-download.json",
+        "caseId": "s17x-c1-cement-woc-strength",
+        "bytes": 117312
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "3a3af839e31523bfdf75b0ba7944fed99ac8d0d101aa586ec4bbf4c860ae7594",
+      "caseId": "s17x-c1-cement-woc-strength"
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-c1-native-refresh-download.json",
+      "suggestedFilename": "s17x-c1-cement-woc-strength-result.json",
+      "bytes": 117312,
+      "sha256": "934ffb0b4c88968b413324e1bbe6f65467823420e1a655ef82cf8ff212d7c2b0",
+      "caseId": "s17x-c1-cement-woc-strength"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-c1-native.png"
+  ],
+  "setupActions": [
+    "For a repeated protocol run, the previous import of only this case is removed using the actual case-library UI and its confirmation before the current package is imported."
+  ],
+  "nativeWorkflow": [
+    {
+      "name": "冻结独立批次\n输入与操作",
+      "action": "输入：12训练批次、4验证批次、8留出批次；动作：整批划分，先规定72个强度点与达到时间指标。",
+      "product": "预期效果\n冻结的数据协议"
+    },
+    {
+      "name": "温度历史积分与拟合\n输入与操作",
+      "action": "输入：时间温度记录和训练压碎强度；动作：Arrhenius梯形积分；把相邻下降读数合并加权平均，拟合不下降的曲线（PAVA单调回归）；验证选择Ea。",
+      "product": "预期效果\n单调强度曲线及验证误差"
+    },
+    {
+      "name": "对新温度程序推断\n输入与操作",
+      "action": "输入：新程序与目标强度；动作：将温度程序转为等效龄期，在拟合曲线上插值并求首次交点。",
+      "product": "预期效果\n预测强度、达到时间或未知/未达到"
+    },
+    {
+      "name": "独立评价与基线比较\n输入与操作",
+      "action": "输入：先前推断与独立留出参考；动作：统计同一分母的MAE、提前和未达标记录。",
+      "product": "预期效果\n含有效分母的成对指标"
+    }
+  ],
+  "nativeFirst": {
+    "before": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "ramp",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "510ebaae",
+      "graphicHash": "54e2ea9",
+      "svgCount": 2,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "constant",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "d1716d71",
+      "graphicHash": "ebc459d2",
+      "svgCount": 2,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "ramp",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "510ebaae",
+      "graphicHash": "54e2ea9",
+      "svgCount": 2,
+      "finite": true
+    }
+  },
+  "nativeRefresh": {
+    "before": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "ramp",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "510ebaae",
+      "graphicHash": "54e2ea9",
+      "svgCount": 2,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "constant",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "d1716d71",
+      "graphicHash": "ebc459d2",
+      "svgCount": 2,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-c1-cement-woc-strength",
+      "status": "ready",
+      "params": {
+        "temperature": 50,
+        "program": "ramp",
+        "target": 10,
+        "cursor": 24
+      },
+      "inferenceHash": "510ebaae",
+      "graphicHash": "54e2ea9",
+      "svgCount": 2,
+      "finite": true
+    }
+  },
+  "passed": 19,
+  "failed": 0
+}

@@ -1,0 +1,150 @@
+{
+  "createdAt": "2026-10-30T04:25:40.485Z",
+  "siteVersion": "1.12.0-preview",
+  "status": "passed_with_explicit_validation_boundaries",
+  "caseCount": 65,
+  "sceneCount": 61,
+  "teacherSampleCount": 1,
+  "source": {
+    "file": "handoff/site-upgrade-2026-10-30/source-checks.json",
+    "passed": 1167,
+    "failed": 0,
+    "protectedFiles": 163,
+    "runtimeFiles": 325,
+    "bootstrapJSBytes": 634244
+  },
+  "browser": {
+    "groups": [
+      {
+        "file": "handoff/site-upgrade-2026-10-30/browser-search.json",
+        "kind": "actual_Chrome_search",
+        "passed": 12,
+        "failed": 0
+      },
+      {
+        "file": "handoff/site-upgrade-2026-10-30/browser-loader.json",
+        "kind": "actual_Chrome_loader_races_retry_and_teacher_module",
+        "passed": 8,
+        "failed": 0
+      },
+      {
+        "file": "handoff/site-upgrade-2026-10-30/browser-regression.json",
+        "kind": "actual_Chrome_existing_five_plus_two_deferred_path_regression",
+        "passed": 33,
+        "failed": 0
+      },
+      {
+        "file": "handoff/site-upgrade-2026-10-30/browser-stage.json",
+        "kind": "actual_Chrome_3D_transport_lifecycle",
+        "passed": 22,
+        "failed": 0
+      },
+      {
+        "file": "handoff/site-upgrade-2026-10-30/browser-offline-stage.json",
+        "kind": "actual_Chrome_offline_portal_3D_search_and_forced_WebGL_fallback",
+        "passed": 7,
+        "failed": 0
+      },
+      {
+        "file": "handoff/site-upgrade-2026-10-30/browser-storyboard.json",
+        "kind": "actual_Chrome_five_SVG_storyboard",
+        "passed": 9,
+        "failed": 0
+      },
+      {
+        "file": "handoff/site-upgrade-2026-10-30/browser-packaged-site.json",
+        "kind": "actual_Chrome_extracted_offline_site_smoke",
+        "passed": 9,
+        "failed": 0
+      }
+    ],
+    "fourCases": {
+      "file": "handoff/site-upgrade-2026-10-30/browser-variants.json",
+      "paths": 16,
+      "passed": 216,
+      "failed": 0,
+      "downloads": {
+        "count": 20,
+        "passed": 20,
+        "failed": 0,
+        "bytes": 5232270,
+        "method": "Read each file actually saved by the browser download event; compare caseId, changed input and actual prediction/inference hash against the state recorded in the same Chrome run."
+      }
+    },
+    "uiFollowup": {
+      "file": "handoff/site-upgrade-2026-10-30/browser-variants-ui01.json",
+      "passed": 7,
+      "failed": 0
+    },
+    "importAndHiddenChecks": [
+      {
+        "name": "Hidden builtin stays unregistered after reload",
+        "passed": true
+      },
+      {
+        "name": "Hidden case and all its chapters absent from search",
+        "passed": true,
+        "actualLinks": 0
+      },
+      {
+        "name": "Hidden case absent from enhanced directory",
+        "passed": true
+      },
+      {
+        "name": "Restore re-registers builtin and all six case/chapter matches",
+        "passed": true,
+        "count": 6
+      },
+      {
+        "name": "Teacher metadata supports real chapter navigation",
+        "passed": true
+      },
+      {
+        "name": "Same ID import replaces builtin without duplicate registration",
+        "passed": true
+      },
+      {
+        "name": "Imported chapter navigation focuses its actual source heading",
+        "passed": true
+      },
+      {
+        "name": "Removing upload restores one builtin after refresh",
+        "passed": true
+      }
+    ],
+    "passed": 331,
+    "failed": 0
+  },
+  "performance": {
+    "fiveRunComparison": "handoff/site-upgrade-2026-10-30/performance-comparison.md",
+    "conclusion": "handoff/site-upgrade-2026-10-30/performance-conclusion.md",
+    "userRelaxedStrictTimingTargets": true,
+    "afterFrozenLCPMedianMs": 2472,
+    "afterFrozenLCPMaxMs": 3656,
+    "afterFrozenSearchFrameMedianMs": 51.1,
+    "afterFrozenSearchFrameMaxMs": 227.4,
+    "finalBuildDiffersFromPerformanceSnapshot": true
+  },
+  "boundaries": [
+    "No full 65-case browser all-path claim: four new cases received 16 paths; old five and two other cases received targeted enhanced-portal regression.",
+    "Source checks, numerical checks, original-portal import, offline file tests and timing measurements are separate evidence.",
+    "The two originally strict timing thresholds remain not met in the frozen five-run experiment. The user explicitly relaxed timing requirements.",
+    "In this automation environment document.hidden stayed false even with a second headed tab. Inactive-tab frame/time values stopped in Chrome, but the visibilitychange branch was not exercised; offscreen stopping and route disposal passed actual browser checks.",
+    "Forced WebGL-unavailable fallback was checked by an explicit getContext failure injection, separate from normal working 3D."
+  ],
+  "knownFixedIssues": [
+    "c1/co3 workflow lead array and original importer field compatibility",
+    "Search and enhanced directory exposed hidden builtins",
+    "Fallback rendered 2D while reporting requested view as 3D",
+    "Mobile minimized assistant overlapped c1 baseline legend",
+    "Chrome blocked local CSS/JS in bundled file iframe; allow-same-origin is added only for shipped catalogue cases on file protocol, leaving HTTP and uploaded-package sandbox unchanged"
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-3d-desktop.png",
+    "output/playwright/site-upgrade-3d-mobile.png",
+    "output/playwright/site-upgrade-search-mobile.png",
+    "output/playwright/site-upgrade-offline-3d.png",
+    "output/playwright/site-upgrade-2d-fallback-mobile.png",
+    "output/playwright/site-upgrade-variants-c1-mobile-ui01-fixed.png"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-30T03:55:03.410Z",
+  "kind": "actual_Chrome_offline_portal_3D_search_and_forced_WebGL_fallback",
+  "checks": [
+    {
+      "name": "Local ordinary-script 3D renders with network offline",
+      "passed": true
+    },
+    {
+      "name": "Offline time chart and transport use the same cumulative calculation",
+      "passed": true
+    },
+    {
+      "name": "Forced unavailable WebGL gives an interactive two-dimensional fallback",
+      "passed": false,
+      "detail": "webgl-unavailable"
+    },
+    {
+      "name": "Offline and fallback protocol completed",
+      "passed": false,
+      "detail": "Error: Forced unavailable WebGL gives an interactive two-dimensional fallback\n    at ok (evalmachine.<anonymous>:7:81)\n    at evalmachine.<anonymous>:23:3\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "backgroundVisibility": {
+    "hidden": false,
+    "playing": true,
+    "raf": true,
+    "note": "Headless browser keeps this page visible; actual background-tab acceptance remains unexercised, separate from the passed offscreen check."
+  },
+  "failure": "Forced unavailable WebGL gives an interactive two-dimensional fallback",
+  "passed": 2,
+  "failed": 2
+}

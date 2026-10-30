@@ -1,0 +1,882 @@
+{
+  "checkedAt": "2026-10-30T03:30:30.742Z",
+  "phase": "after",
+  "entrySHA256": "1a3a88d000cba2505a2cc96e0367ee5e776477b0b437223fe4a87e9dfb426b60",
+  "officialRuns": 5,
+  "officialRunsPreserved": true,
+  "groups": {
+    "HTML": {
+      "count": 1,
+      "encodedBodyBytes": 5723,
+      "decodedBodyBytes": 5723,
+      "sharePercent": 0.3817590802027599
+    },
+    "CSS": {
+      "count": 21,
+      "encodedBodyBytes": 193109,
+      "decodedBodyBytes": 193109,
+      "sharePercent": 12.88155062360209
+    },
+    "WebP": {
+      "count": 5,
+      "encodedBodyBytes": 674450,
+      "decodedBodyBytes": 674450,
+      "sharePercent": 44.989937382972464
+    },
+    "JavaScript": {
+      "count": 28,
+      "encodedBodyBytes": 625831,
+      "decodedBodyBytes": 625831,
+      "sharePercent": 41.746752913222686
+    }
+  },
+  "totalDecodedBodyBytes": 1499113,
+  "topResources": [
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-case-catalog.js?v=1.12.0-preview",
+      "initiator": "script",
+      "bytes": 193718,
+      "startMs": 184.5,
+      "responseEndMs": 2283.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/themes/theme-geology-v1.webp",
+      "initiator": "img",
+      "bytes": 147572,
+      "startMs": 3247.300000011921,
+      "responseEndMs": 4466.5999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/themes/theme-refining-v1.webp",
+      "initiator": "img",
+      "bytes": 145644,
+      "startMs": 3250,
+      "responseEndMs": 4466.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/themes/theme-production-v1.webp",
+      "initiator": "img",
+      "bytes": 129494,
+      "startMs": 3249.9000000059605,
+      "responseEndMs": 4390.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/themes/theme-well-v1.webp",
+      "initiator": "link",
+      "bytes": 125870,
+      "startMs": 176.09999999403954,
+      "responseEndMs": 1860.800000011921
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/themes/theme-well-v1.webp",
+      "initiator": "img",
+      "bytes": 125870,
+      "startMs": 3248.300000011921,
+      "responseEndMs": 4375.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-data.min.js?v=20261022i",
+      "initiator": "script",
+      "bytes": 62896,
+      "startMs": 181,
+      "responseEndMs": 1322.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/core/ui.css?v=20261022i",
+      "initiator": "link",
+      "bytes": 48137,
+      "startMs": 158.5,
+      "responseEndMs": 477.40000000596046
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-case-import.min.js?v=20261022i",
+      "initiator": "script",
+      "bytes": 47624,
+      "startMs": 185.80000001192093,
+      "responseEndMs": 1478
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-shell.min.js?v=20261023-reading",
+      "initiator": "script",
+      "bytes": 47461,
+      "startMs": 189,
+      "responseEndMs": 1845.5999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-search.js?v=1.12.0-preview",
+      "initiator": "script",
+      "bytes": 39496,
+      "startMs": 199.59999999403954,
+      "responseEndMs": 2330.5999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-mudlogging-stage.js?v=1.12.0-preview",
+      "initiator": "script",
+      "bytes": 38950,
+      "startMs": 201.7000000178814,
+      "responseEndMs": 2378
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-assistant.js?v=20261030-manual",
+      "initiator": "script",
+      "bytes": 31471,
+      "startMs": 197.09999999403954,
+      "responseEndMs": 2190.2000000178814
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-assistant.css?v=20261030-manual",
+      "initiator": "link",
+      "bytes": 19654,
+      "startMs": 168.80000001192093,
+      "responseEndMs": 554
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-admin.min.js?v=20261022i",
+      "initiator": "script",
+      "bytes": 16603,
+      "startMs": 186.40000000596046,
+      "responseEndMs": 1245.9000000059605
+    },
+    {
+      "url": "http://127.0.0.1:8766/shared/course-compass.js?v=20261030-concepts",
+      "initiator": "script",
+      "bytes": 15543,
+      "startMs": 190.30000001192093,
+      "responseEndMs": 1583.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/core/case-demo-host.js?v=20261022i",
+      "initiator": "script",
+      "bytes": 14476,
+      "startMs": 185,
+      "responseEndMs": 1153.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-reader.js?v=20261030-concepts",
+      "initiator": "script",
+      "bytes": 13630,
+      "startMs": 188.2000000178814,
+      "responseEndMs": 1492.5999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-field-atlas.js?v=20261023-interactive",
+      "initiator": "script",
+      "bytes": 13181,
+      "startMs": 191.30000001192093,
+      "responseEndMs": 1706.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-log-data.js",
+      "initiator": "script",
+      "bytes": 12875,
+      "startMs": 192.5,
+      "responseEndMs": 1798.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-overview.css?v=20261029-overview",
+      "initiator": "link",
+      "bytes": 12304,
+      "startMs": 170.59999999403954,
+      "responseEndMs": 614.9000000059605
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/core/layout.css?v=20261022i",
+      "initiator": "link",
+      "bytes": 10981,
+      "startMs": 157.7000000178814,
+      "responseEndMs": 369.30000001192093
+    },
+    {
+      "url": "http://127.0.0.1:8766/shared/course-theme.css?v=20261030-concepts",
+      "initiator": "link",
+      "bytes": 10420,
+      "startMs": 174.2000000178814,
+      "responseEndMs": 677.3000000119209
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-expansion-gallery.js?v=20261024",
+      "initiator": "script",
+      "bytes": 10020,
+      "startMs": 193.80000001192093,
+      "responseEndMs": 1877.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-mudlogging-stage.css?v=1.12.0-preview",
+      "initiator": "link",
+      "bytes": 9712,
+      "startMs": 179.80000001192093,
+      "responseEndMs": 754.4000000059605
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-reader.css?v=20261023-reading",
+      "initiator": "link",
+      "bytes": 9382,
+      "startMs": 162.09999999403954,
+      "responseEndMs": 371
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-media.js?v=20261024-ui",
+      "initiator": "script",
+      "bytes": 8759,
+      "startMs": 198.09999999403954,
+      "responseEndMs": 2143.800000011921
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-search.css?v=1.12.0-preview",
+      "initiator": "link",
+      "bytes": 8635,
+      "startMs": 178.2000000178814,
+      "responseEndMs": 724
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-visual-polish.css?v=20261024-ui",
+      "initiator": "link",
+      "bytes": 8599,
+      "startMs": 164.7000000178814,
+      "responseEndMs": 524.5999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-case-loader.js?v=1.12.0-preview",
+      "initiator": "script",
+      "bytes": 8230,
+      "startMs": 183.7000000178814,
+      "responseEndMs": 938.5999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/core/kit.js?v=20261022i",
+      "initiator": "script",
+      "bytes": 8151,
+      "startMs": 182.5,
+      "responseEndMs": 907.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-home.js?v=20261030-concepts",
+      "initiator": "script",
+      "bytes": 7734,
+      "startMs": 194.2000000178814,
+      "responseEndMs": 1940
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17.css?v=20261023-teaching",
+      "initiator": "link",
+      "bytes": 7557,
+      "startMs": 160.09999999403954,
+      "responseEndMs": 369
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-study.css",
+      "initiator": "link",
+      "bytes": 7390,
+      "startMs": 187.40000000596046,
+      "responseEndMs": 785.7000000178814
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/core/registry.js?v=20261022i",
+      "initiator": "script",
+      "bytes": 6485,
+      "startMs": 181.59999999403954,
+      "responseEndMs": 891.8000000119209
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-catalog.css?v=20261023-reading",
+      "initiator": "link",
+      "bytes": 6305,
+      "startMs": 162.90000000596046,
+      "responseEndMs": 468.09999999403954
+    },
+    {
+      "url": "http://127.0.0.1:8766/shared/course-compass.css?v=20261030-concepts",
+      "initiator": "link",
+      "bytes": 6248,
+      "startMs": 175.2000000178814,
+      "responseEndMs": 661.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-catalog.js?v=20261030-concepts",
+      "initiator": "script",
+      "bytes": 6207,
+      "startMs": 192.2000000178814,
+      "responseEndMs": 1674.7000000178814
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/core/tokens.css?v=20261022i",
+      "initiator": "link",
+      "bytes": 6193,
+      "startMs": 154.5,
+      "responseEndMs": 322.80000001192093
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-expansion-gallery.css?v=20261024",
+      "initiator": "link",
+      "bytes": 6168,
+      "startMs": 166.59999999403954,
+      "responseEndMs": 523.4000000059605
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/index.html",
+      "initiator": "navigation",
+      "bytes": 5723,
+      "startMs": 0,
+      "responseEndMs": 123.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-log-preview.js?v=20261024-ui",
+      "initiator": "script",
+      "bytes": 5584,
+      "startMs": 193.40000000596046,
+      "responseEndMs": 1830.300000011921
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-volcengine.js?v=20261030-manual",
+      "initiator": "script",
+      "bytes": 5037,
+      "startMs": 198.80000001192093,
+      "responseEndMs": 2128.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-field-atlas.css?v=20261023-interactive",
+      "initiator": "link",
+      "bytes": 4900,
+      "startMs": 161.2000000178814,
+      "responseEndMs": 336.40000000596046
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-log-preview.css?v=20261024-ui",
+      "initiator": "link",
+      "bytes": 3491,
+      "startMs": 163.40000000596046,
+      "responseEndMs": 463
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-assistant-history.js?v=20261030-manual",
+      "initiator": "script",
+      "bytes": 3357,
+      "startMs": 194.40000000596046,
+      "responseEndMs": 1955.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/shared/concept-interactions.css?v=20261030-concepts",
+      "initiator": "link",
+      "bytes": 2499,
+      "startMs": 172.7000000178814,
+      "responseEndMs": 599.7000000178814
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-live2d-loader.js?v=1.12.0-preview",
+      "initiator": "script",
+      "bytes": 2377,
+      "startMs": 202.5,
+      "responseEndMs": 2268.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-course.js?v=20261030-concepts",
+      "initiator": "script",
+      "bytes": 2217,
+      "startMs": 187,
+      "responseEndMs": 1291.300000011921
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-upgrade.css?v=1.12.0-preview",
+      "initiator": "link",
+      "bytes": 1979,
+      "startMs": 179.09999999403954,
+      "responseEndMs": 724.2000000178814
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-upgrade-nav.js?v=1.12.0-preview",
+      "initiator": "script",
+      "bytes": 1920,
+      "startMs": 200.59999999403954,
+      "responseEndMs": 2128.5
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-response-stream.js?v=20261030-manual",
+      "initiator": "script",
+      "bytes": 1613,
+      "startMs": 195.90000000596046,
+      "responseEndMs": 1987
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-lazy.css?v=1.12.0-preview",
+      "initiator": "link",
+      "bytes": 1503,
+      "startMs": 177.30000001192093,
+      "responseEndMs": 677
+    },
+    {
+      "url": "http://127.0.0.1:8766/shared/lesson-assistant-entry.css?v=20261030-reading",
+      "initiator": "link",
+      "bytes": 1052,
+      "startMs": 172,
+      "responseEndMs": 584.0999999940395
+    },
+    {
+      "url": "http://127.0.0.1:8766/portal/assets/s17-assistant-config.js?v=20261030-manual",
+      "initiator": "script",
+      "bytes": 216,
+      "startMs": 195,
+      "responseEndMs": 1971.5
+    }
+  ],
+  "firstRunLongTasks": {
+    "count": 4,
+    "totalDurationMs": 2116,
+    "maxDurationMs": 985,
+    "entries": [
+      {
+        "startTime": 758.2000000178814,
+        "duration": 185,
+        "name": "self",
+        "attribution": [
+          {
+            "name": "unknown",
+            "containerType": "window",
+            "containerName": "",
+            "containerSrc": ""
+          }
+        ]
+      },
+      {
+        "startTime": 2403.2000000178814,
+        "duration": 847,
+        "name": "self",
+        "attribution": [
+          {
+            "name": "unknown",
+            "containerType": "window",
+            "containerName": "",
+            "containerSrc": ""
+          }
+        ]
+      },
+      {
+        "startTime": 3257.2000000178814,
+        "duration": 99,
+        "name": "self",
+        "attribution": [
+          {
+            "name": "unknown",
+            "containerType": "window",
+            "containerName": "",
+            "containerSrc": ""
+          }
+        ]
+      },
+      {
+        "startTime": 3438.4000000059605,
+        "duration": 985,
+        "name": "self",
+        "attribution": [
+          {
+            "name": "unknown",
+            "containerType": "window",
+            "containerName": "",
+            "containerSrc": ""
+          }
+        ]
+      }
+    ]
+  },
+  "officialSearch": {
+    "inputToDOMMs": {
+      "n": 5,
+      "median": 22.400000005960464,
+      "max": 29.299999982118607,
+      "values": [
+        23.900000005960464,
+        19.5,
+        22.400000005960464,
+        12.899999976158142,
+        29.299999982118607
+      ]
+    },
+    "inputToResultAnimationFrameMs": {
+      "n": 5,
+      "median": 51.10000002384186,
+      "max": 227.40000000596046,
+      "values": [
+        227.40000000596046,
+        49.599999994039536,
+        51.10000002384186,
+        37.099999994039536,
+        57.20000001788139
+      ]
+    },
+    "firstOpenMs": {
+      "n": 5,
+      "median": 320.2000000178814,
+      "max": 1149.8999999761581,
+      "values": [
+        1149.8999999761581,
+        320.2000000178814,
+        327.59999999403954,
+        294.5,
+        297.19999998807907
+      ]
+    }
+  },
+  "diagnostic": {
+    "excludedFromOfficialFive": true,
+    "source": "output/performance/after-diagnostic-raw.json",
+    "recordingAddsOverhead": true,
+    "initialAttempt": {
+      "failed": true,
+      "reason": "Full timeline exceeded the tools/pw.mjs child spawnSync stdout buffer (ENOBUFS). Browser and temporary server closed in finally; the diagnostic was rerun returning only significant trace events."
+    },
+    "captured": {
+      "profileNodes": 416,
+      "samples": 8901,
+      "totalTimelineEvents": 44047,
+      "retainedTimelineEvents": 135
+    },
+    "traceEvents": [
+      {
+        "name": "Layout",
+        "startMs": 807.2599999904633,
+        "durationMs": 148.49,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EvaluateScript",
+        "startMs": 2414.842999994755,
+        "durationMs": 65.887,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 1,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "lineNumber": 1,
+        "scriptId": 0,
+        "url": "http://127.0.0.1:8766/portal/assets/s17-shell.min.js?v=20261023-reading"
+      },
+      {
+        "name": "UpdateLayoutTree",
+        "startMs": 2483.2229999899864,
+        "durationMs": 280.851,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "Layout",
+        "startMs": 2764.2680000066757,
+        "durationMs": 2626.376,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EvaluateScript",
+        "startMs": 5471.303999990225,
+        "durationMs": 77.261,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 1,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "lineNumber": 1,
+        "scriptId": 0,
+        "url": "http://127.0.0.1:8766/portal/assets/s17-home.js?v=20261030-concepts"
+      },
+      {
+        "name": "UpdateLayoutTree",
+        "startMs": 5556.067000001669,
+        "durationMs": 43.637,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "Layout",
+        "startMs": 5599.721000015736,
+        "durationMs": 857.733,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EvaluateScript",
+        "startMs": 6513.192000001669,
+        "durationMs": 136.157,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 1,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "lineNumber": 1,
+        "scriptId": 0,
+        "url": "http://127.0.0.1:8766/portal/assets/s17-assistant.js?v=20261030-manual"
+      },
+      {
+        "name": "Layout",
+        "startMs": 6575.463999986649,
+        "durationMs": 53.797,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EvaluateScript",
+        "startMs": 6835.118999987841,
+        "durationMs": 34.508,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 1,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "lineNumber": 1,
+        "scriptId": 0,
+        "url": "http://127.0.0.1:8766/portal/assets/s17-search.js?v=1.12.0-preview"
+      },
+      {
+        "name": "Layout",
+        "startMs": 6896.356000006199,
+        "durationMs": 167.605,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "UpdateLayoutTree",
+        "startMs": 7182.124000012875,
+        "durationMs": 69.5,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "Layout",
+        "startMs": 7251.641999989748,
+        "durationMs": 933.731,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EvaluateScript",
+        "startMs": 8440.81400001049,
+        "durationMs": 139.649,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "FunctionCall",
+        "startMs": 8632.747999995947,
+        "durationMs": 39.439,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 7010,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "functionName": "A",
+        "isolate": "4509691489250305468",
+        "lineNumber": 2,
+        "sampleTraceId": 6318996045417672,
+        "scriptId": "28",
+        "url": "http://127.0.0.1:8766/portal/assets/s17-shell.min.js?v=20261023-reading"
+      },
+      {
+        "name": "FunctionCall",
+        "startMs": 8673.4280000031,
+        "durationMs": 59.393,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 16,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "functionName": "render",
+        "isolate": "4509691489250305468",
+        "lineNumber": 16,
+        "sampleTraceId": 6318996045417520,
+        "scriptId": "35",
+        "url": "http://127.0.0.1:8766/portal/assets/s17-home.js?v=20261030-concepts"
+      },
+      {
+        "name": "UpdateLayoutTree",
+        "startMs": 8776.678999990225,
+        "durationMs": 38.26,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "Layout",
+        "startMs": 8815.33599999547,
+        "durationMs": 46.3,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "Layout",
+        "startMs": 8943.995000004768,
+        "durationMs": 68.231,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EventDispatch",
+        "startMs": 10941.648999989033,
+        "durationMs": 107.196,
+        "pid": 19548,
+        "tid": 3408,
+        "type": "click"
+      },
+      {
+        "name": "FunctionCall",
+        "startMs": 10965.691000014544,
+        "durationMs": 72.976,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 35,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "functionName": "",
+        "isolate": "4509691489250305468",
+        "lineNumber": 62,
+        "sampleTraceId": 6318996045418442,
+        "scriptId": "35",
+        "url": "http://127.0.0.1:8766/portal/assets/s17-home.js?v=20261030-concepts"
+      },
+      {
+        "name": "Layout",
+        "startMs": 10995.31099998951,
+        "durationMs": 31.451,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EventDispatch",
+        "startMs": 11367.016999989748,
+        "durationMs": 1668.191,
+        "pid": 19548,
+        "tid": 3408,
+        "type": "click"
+      },
+      {
+        "name": "FunctionCall",
+        "startMs": 11367.191000014544,
+        "durationMs": 1658.381,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 635,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "functionName": "",
+        "isolate": "4509691489250305468",
+        "lineNumber": 278,
+        "sampleTraceId": 6318996045417994,
+        "scriptId": "42",
+        "url": "http://127.0.0.1:8766/portal/assets/s17-search.js?v=1.12.0-preview"
+      },
+      {
+        "name": "UpdateLayoutTree",
+        "startMs": 12031.515000015497,
+        "durationMs": 119.999,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "Layout",
+        "startMs": 12151.534999996424,
+        "durationMs": 229.745,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "Layout",
+        "startMs": 12473.152999997139,
+        "durationMs": 541.634,
+        "pid": 19548,
+        "tid": 3408
+      },
+      {
+        "name": "EventDispatch",
+        "startMs": 13182.638000011444,
+        "durationMs": 32.421,
+        "pid": 19548,
+        "tid": 3408,
+        "type": "textInput"
+      },
+      {
+        "name": "EventDispatch",
+        "startMs": 13215.678999990225,
+        "durationMs": 45.762,
+        "pid": 19548,
+        "tid": 3408,
+        "type": "input"
+      },
+      {
+        "name": "FunctionCall",
+        "startMs": 13217.520999997854,
+        "durationMs": 42.687,
+        "pid": 19548,
+        "tid": 3408,
+        "columnNumber": 37,
+        "frame": "C5F4E84E48E5599A5E933FFF13C00200",
+        "functionName": "",
+        "isolate": "4509691489250305468",
+        "lineNumber": 194,
+        "sampleTraceId": 6318996045418584,
+        "scriptId": "42",
+        "url": "http://127.0.0.1:8766/portal/assets/s17-search.js?v=1.12.0-preview"
+      },
+      {
+        "name": "Layout",
+        "startMs": 13272.428999990225,
+        "durationMs": 214.667,
+        "pid": 19548,
+        "tid": 3408
+      }
+    ],
+    "attributionBoundary": "The original official Long Tasks entries expose self/unknown, with no exact JavaScript stack. The separately instrumented cold run identifies duplicate layout and search layout work; its amplified timings do not replace or explain every millisecond of the original first run."
+  },
+  "recommendations": [
+    {
+      "priority": 1,
+      "action": "Avoid generating and laying out the original shell homepage before the overview replaces its main content.",
+      "evidence": "The diagnostic records shell EvaluateScript followed by UpdateLayoutTree and a large Layout before home EvaluateScript, then another Layout after home render. The frozen shell home function generates chain, methods, matrix and system sections that home replaces."
+    },
+    {
+      "priority": 2,
+      "action": "Reduce search layout and compositing work: remove backdrop blur, isolate result/dialog layout and paint as appropriate, and reuse the index until catalog/import changes invalidate it.",
+      "evidence": "All five official input-to-DOM renderMs values are below 30 ms while animation-frame results reach 227.4 ms. The frozen search CSS uses backdrop-filter:blur(5px) and no layout/paint containment. The separate diagnostic has an input FunctionCall followed by a large Layout."
+    }
+  ],
+  "imageOpportunity": {
+    "heroBytes": 125870,
+    "directionCardsBytes": 568580,
+    "allImageTransferBytes": 674450,
+    "directionSharePercent": 37.92776128283858,
+    "note": "All four direction cards are actually requested despite loading=lazy. Two HTTP image requests share the well URL: one preloaded hero and one direction-card image. Prefer smaller existing-asset derivatives for visible cards; do not conceal visible content or loosen cold-cache policy to make a target pass."
+  },
+  "cssOpportunity": {
+    "bytes": 193109,
+    "top": [
+      {
+        "url": "http://127.0.0.1:8766/portal/assets/core/ui.css?v=20261022i",
+        "initiator": "link",
+        "bytes": 48137,
+        "startMs": 158.5,
+        "responseEndMs": 477.40000000596046
+      },
+      {
+        "url": "http://127.0.0.1:8766/portal/assets/s17-assistant.css?v=20261030-manual",
+        "initiator": "link",
+        "bytes": 19654,
+        "startMs": 168.80000001192093,
+        "responseEndMs": 554
+      },
+      {
+        "url": "http://127.0.0.1:8766/portal/assets/s17-overview.css?v=20261029-overview",
+        "initiator": "link",
+        "bytes": 12304,
+        "startMs": 170.59999999403954,
+        "responseEndMs": 614.9000000059605
+      },
+      {
+        "url": "http://127.0.0.1:8766/portal/assets/core/layout.css?v=20261022i",
+        "initiator": "link",
+        "bytes": 10981,
+        "startMs": 157.7000000178814,
+        "responseEndMs": 369.30000001192093
+      },
+      {
+        "url": "http://127.0.0.1:8766/shared/course-theme.css?v=20261030-concepts",
+        "initiator": "link",
+        "bytes": 10420,
+        "startMs": 174.2000000178814,
+        "responseEndMs": 677.3000000119209
+      }
+    ],
+    "note": "CSS contributes about 12.9% of bytes. The larger issue is the amount of layout it applies to transient original-home content; CSS byte removal alone is not established as the primary cause."
+  },
+  "lifecycle": {
+    "browserClosed": true,
+    "server8766Closed": true,
+    "original8755NotModified": true
+  }
+}

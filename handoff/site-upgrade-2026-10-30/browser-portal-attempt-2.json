@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-10-30T03:31:25.272Z",
+  "kind": "actual_Chrome_search_and_deferred_navigation",
+  "checks": [
+    {
+      "name": "Untouched homepage requests no case body, 3D or avatar heavy assets and creates no iframe",
+      "passed": true,
+      "detail": {
+        "heavy": [],
+        "frames": 0,
+        "cases": 65,
+        "teachers": 1
+      }
+    },
+    {
+      "name": "Homepage separates 65 authored implementations and one teacher sample",
+      "passed": true
+    },
+    {
+      "name": "Search input has focus and finds cases and sections",
+      "passed": true
+    },
+    {
+      "name": "Typing a query does not fetch any case body",
+      "passed": true
+    },
+    {
+      "name": "Down key changes active result",
+      "passed": true
+    },
+    {
+      "name": "Escape closes dialog and restores opener focus",
+      "passed": true
+    },
+    {
+      "name": "Knowledge result loads correct case and focuses its actual heading",
+      "passed": true,
+      "detail": {
+        "caseId": "s17-mudgas-context",
+        "sectionId": "s17-mudgas-context:bg:1",
+        "anchor": "learn-s17-mudgas-context-bg-1",
+        "status": "focused",
+        "elapsedMs": 115.59999999403954
+      }
+    },
+    {
+      "name": "Background tab creates no demonstration iframe",
+      "passed": true
+    },
+    {
+      "name": "Refreshing a section deep link restores heading focus",
+      "passed": true
+    },
+    {
+      "name": "Legacy workflow tab remains navigable",
+      "passed": true
+    },
+    {
+      "name": "Protocol completed",
+      "passed": false,
+      "detail": "page.waitForFunction: Timeout 5000ms exceeded.\n    at ready (evalmachine.<anonymous>:8:29)\n    at evalmachine.<anonymous>:30:29\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "pageErrors": [],
+  "screenshots": [],
+  "failure": "page.waitForFunction: Timeout 5000ms exceeded.",
+  "passed": 10,
+  "failed": 1
+}

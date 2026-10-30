@@ -1,0 +1,2243 @@
+{
+  "schemaVersion": "1.0",
+  "caseId": "s17x-co3-completion-seal-test",
+  "sceneId": "co3",
+  "version": "1.0.0",
+  "params": {
+    "scenario": "cool",
+    "drift": 3,
+    "volume": 1200,
+    "start": 8,
+    "end": 32,
+    "limit": 0.01,
+    "cursor": 20
+  },
+  "dataPolicy": "fixed-seed synthetic single-phase liquid teaching tests",
+  "protocol": {
+    "seeds": {
+      "calibration": 42101,
+      "test": 62101,
+      "query": 81203
+    },
+    "splitUnit": "whole independent pressure-test episode",
+    "calibrationRuns": 6,
+    "testEpisodes": 12,
+    "units": {
+      "pressure": "MPa",
+      "temperature": "C",
+      "time": "min",
+      "volume": "L",
+      "leak": "L/min"
+    }
+  },
+  "calibration": {
+    "beta": 0.7237797985516542,
+    "betaSD": 0.005255576824626303,
+    "runs": [
+      {
+        "id": "BC01",
+        "knownLeakLMin": 0,
+        "points": [
+          {
+            "temperature": 40.004019950003645,
+            "pressure": 10.00319065608208
+          },
+          {
+            "temperature": 39.898448199939686,
+            "pressure": 9.930384297483856
+          },
+          {
+            "temperature": 39.831544629213674,
+            "pressure": 9.86551696977482
+          },
+          {
+            "temperature": 39.737320830703645,
+            "pressure": 9.809885235285789
+          },
+          {
+            "temperature": 39.68387406484491,
+            "pressure": 9.758454751196178
+          },
+          {
+            "temperature": 39.60582440359099,
+            "pressure": 9.713578914327996
+          },
+          {
+            "temperature": 39.54917056993801,
+            "pressure": 9.66547843488771
+          },
+          {
+            "temperature": 39.50339759386246,
+            "pressure": 9.632051645925124
+          },
+          {
+            "temperature": 39.44858469705393,
+            "pressure": 9.596237975462065
+          },
+          {
+            "temperature": 39.41265586845782,
+            "pressure": 9.563464225160137
+          },
+          {
+            "temperature": 39.37256104221366,
+            "pressure": 9.534401748729637
+          },
+          {
+            "temperature": 39.33576616594522,
+            "pressure": 9.512299317066885
+          },
+          {
+            "temperature": 39.295551857818566,
+            "pressure": 9.489068721311682
+          },
+          {
+            "temperature": 39.272442231147615,
+            "pressure": 9.471081914839125
+          },
+          {
+            "temperature": 39.2576172408031,
+            "pressure": 9.44579316959731
+          },
+          {
+            "temperature": 39.21825181026467,
+            "pressure": 9.431350564108257
+          },
+          {
+            "temperature": 39.20005020842744,
+            "pressure": 9.412231874342822
+          },
+          {
+            "temperature": 39.183550609156526,
+            "pressure": 9.401563575219207
+          },
+          {
+            "temperature": 39.163924289890915,
+            "pressure": 9.384583041248218
+          },
+          {
+            "temperature": 39.151508416195796,
+            "pressure": 9.376313813720632
+          },
+          {
+            "temperature": 39.14368403903574,
+            "pressure": 9.365451071262877
+          },
+          {
+            "temperature": 39.12845497452479,
+            "pressure": 9.355124778373764
+          },
+          {
+            "temperature": 39.11346541221816,
+            "pressure": 9.347880563623672
+          },
+          {
+            "temperature": 39.102784587012536,
+            "pressure": 9.340397422359233
+          },
+          {
+            "temperature": 39.08767201834485,
+            "pressure": 9.333236850351769
+          },
+          {
+            "temperature": 39.070397475169635,
+            "pressure": 9.326481391068082
+          },
+          {
+            "temperature": 39.07917789937289,
+            "pressure": 9.320432034772793
+          },
+          {
+            "temperature": 39.05653697801211,
+            "pressure": 9.314084003700714
+          },
+          {
+            "temperature": 39.069029871290965,
+            "pressure": 9.311121708376067
+          },
+          {
+            "temperature": 39.05437084158394,
+            "pressure": 9.311514023294796
+          },
+          {
+            "temperature": 39.04337877598923,
+            "pressure": 9.305313483275063
+          },
+          {
+            "temperature": 39.049197768900285,
+            "pressure": 9.30134882092656
+          },
+          {
+            "temperature": 39.032647787976366,
+            "pressure": 9.295974262495095
+          },
+          {
+            "temperature": 39.03541293519252,
+            "pressure": 9.295522335337976
+          },
+          {
+            "temperature": 39.03383733990066,
+            "pressure": 9.29001770674127
+          },
+          {
+            "temperature": 39.033501782484784,
+            "pressure": 9.291020854947067
+          },
+          {
+            "temperature": 39.027027076551654,
+            "pressure": 9.288343656783823
+          },
+          {
+            "temperature": 39.01697265278725,
+            "pressure": 9.284386737273465
+          },
+          {
+            "temperature": 39.032204018739726,
+            "pressure": 9.28321825228096
+          },
+          {
+            "temperature": 39.00858037602228,
+            "pressure": 9.283219346885298
+          },
+          {
+            "temperature": 39.01341977508388,
+            "pressure": 9.278288646306883
+          }
+        ],
+        "beta": 0.728590385628668
+      },
+      {
+        "id": "BC02",
+        "knownLeakLMin": 0,
+        "points": [
+          {
+            "temperature": 39.9952124080034,
+            "pressure": 10.003668826198561
+          },
+          {
+            "temperature": 40.10873641971353,
+            "pressure": 10.081708257175261
+          },
+          {
+            "temperature": 40.20887121820741,
+            "pressure": 10.147959639884949
+          },
+          {
+            "temperature": 40.29807008073438,
+            "pressure": 10.217047002181651
+          },
+          {
+            "temperature": 40.380917583877725,
+            "pressure": 10.275920674597275
+          },
+          {
+            "temperature": 40.44813243597763,
+            "pressure": 10.32939349384177
+          },
+          {
+            "temperature": 40.52337360496233,
+            "pressure": 10.375926015838413
+          },
+          {
+            "temperature": 40.57772833711613,
+            "pressure": 10.419956791354105
+          },
+          {
+            "temperature": 40.63361635673713,
+            "pressure": 10.45631019827373
+          },
+          {
+            "temperature": 40.674967699254566,
+            "pressure": 10.493510799966243
+          },
+          {
+            "temperature": 40.734368162443836,
+            "pressure": 10.525302472173333
+          },
+          {
+            "temperature": 40.7570573893787,
+            "pressure": 10.555907599493793
+          },
+          {
+            "temperature": 40.81217249377938,
+            "pressure": 10.582584719382695
+          },
+          {
+            "temperature": 40.8340188740763,
+            "pressure": 10.604526188292903
+          },
+          {
+            "temperature": 40.86662471190038,
+            "pressure": 10.626797244128664
+          },
+          {
+            "temperature": 40.88750318024627,
+            "pressure": 10.646069594976911
+          },
+          {
+            "temperature": 40.92890058325343,
+            "pressure": 10.663707941294703
+          },
+          {
+            "temperature": 40.94727366036337,
+            "pressure": 10.681451598554549
+          },
+          {
+            "temperature": 40.96727954437141,
+            "pressure": 10.695086177289747
+          },
+          {
+            "temperature": 40.9830511715464,
+            "pressure": 10.709527996142116
+          },
+          {
+            "temperature": 40.99385524834201,
+            "pressure": 10.719505867951248
+          },
+          {
+            "temperature": 41.01669736552926,
+            "pressure": 10.730183525057196
+          },
+          {
+            "temperature": 41.02537778414095,
+            "pressure": 10.739306601680449
+          },
+          {
+            "temperature": 41.032875790942235,
+            "pressure": 10.75117318756191
+          },
+          {
+            "temperature": 41.05187354408537,
+            "pressure": 10.76005050359667
+          },
+          {
+            "temperature": 41.06822330010452,
+            "pressure": 10.767689805128082
+          },
+          {
+            "temperature": 41.06944546443941,
+            "pressure": 10.769777250513158
+          },
+          {
+            "temperature": 41.064357972165496,
+            "pressure": 10.775015315915159
+          },
+          {
+            "temperature": 41.083024146399076,
+            "pressure": 10.783382453908676
+          },
+          {
+            "temperature": 41.073536839199015,
+            "pressure": 10.789665659929167
+          },
+          {
+            "temperature": 41.09853704665685,
+            "pressure": 10.792711177408519
+          },
+          {
+            "temperature": 41.0885303956329,
+            "pressure": 10.797786063114838
+          },
+          {
+            "temperature": 41.10269756961649,
+            "pressure": 10.798917623109103
+          },
+          {
+            "temperature": 41.107042662192534,
+            "pressure": 10.803045212540777
+          },
+          {
+            "temperature": 41.100323877833716,
+            "pressure": 10.803977112650541
+          },
+          {
+            "temperature": 41.11355593045694,
+            "pressure": 10.807139261068818
+          },
+          {
+            "temperature": 41.12022234300933,
+            "pressure": 10.8110169301722
+          },
+          {
+            "temperature": 41.11671428790532,
+            "pressure": 10.812009997838734
+          },
+          {
+            "temperature": 41.11543684209013,
+            "pressure": 10.811393217670744
+          },
+          {
+            "temperature": 41.11834955263428,
+            "pressure": 10.81338224719736
+          },
+          {
+            "temperature": 41.12266191349197,
+            "pressure": 10.817140735500072
+          }
+        ],
+        "beta": 0.7234294595850155
+      },
+      {
+        "id": "BC03",
+        "knownLeakLMin": 0,
+        "points": [
+          {
+            "temperature": 39.99053102438221,
+            "pressure": 10.000749974612273
+          },
+          {
+            "temperature": 39.873682876182386,
+            "pressure": 9.911487455905853
+          },
+          {
+            "temperature": 39.78348580260984,
+            "pressure": 9.831652121643273
+          },
+          {
+            "temperature": 39.66259630942416,
+            "pressure": 9.757443407979244
+          },
+          {
+            "temperature": 39.56951907953394,
+            "pressure": 9.689575988964922
+          },
+          {
+            "temperature": 39.48996315219124,
+            "pressure": 9.630327904746002
+          },
+          {
+            "temperature": 39.4236344692491,
+            "pressure": 9.572113702173066
+          },
+          {
+            "temperature": 39.360712796702586,
+            "pressure": 9.527215402727531
+          },
+          {
+            "temperature": 39.27770676733533,
+            "pressure": 9.475849266141557
+          },
+          {
+            "temperature": 39.225215349547135,
+            "pressure": 9.440516501623652
+          },
+          {
+            "temperature": 39.184272435653945,
+            "pressure": 9.405342665996962
+          },
+          {
+            "temperature": 39.13005315053078,
+            "pressure": 9.370743636337698
+          },
+          {
+            "temperature": 39.09622800017397,
+            "pressure": 9.340556046227631
+          },
+          {
+            "temperature": 39.05891911646941,
+            "pressure": 9.31327501359887
+          },
+          {
+            "temperature": 39.01428885563067,
+            "pressure": 9.287858393995789
+          },
+          {
+            "temperature": 38.99552228580043,
+            "pressure": 9.269392172851115
+          },
+          {
+            "temperature": 38.966661657622986,
+            "pressure": 9.248117833445717
+          },
+          {
+            "temperature": 38.94513186334136,
+            "pressure": 9.226699766562103
+          },
+          {
+            "temperature": 38.90703783257247,
+            "pressure": 9.209565024597
+          },
+          {
+            "temperature": 38.89962181731308,
+            "pressure": 9.20021136168065
+          },
+          {
+            "temperature": 38.876437767957206,
+            "pressure": 9.185558010461913
+          },
+          {
+            "temperature": 38.86460790155865,
+            "pressure": 9.167658378885152
+          },
+          {
+            "temperature": 38.84785990556602,
+            "pressure": 9.15719098597669
+          },
+          {
+            "temperature": 38.825158836567695,
+            "pressure": 9.15490069539462
+          },
+          {
+            "temperature": 38.82499434632713,
+            "pressure": 9.143849650659813
+          },
+          {
+            "temperature": 38.81549335515639,
+            "pressure": 9.133738504344176
+          },
+          {
+            "temperature": 38.790213561886894,
+            "pressure": 9.126779182121997
+          },
+          {
+            "temperature": 38.786375405108686,
+            "pressure": 9.120304136499355
+          },
+          {
+            "temperature": 38.77736005006923,
+            "pressure": 9.112948392217545
+          },
+          {
+            "temperature": 38.77041804611942,
+            "pressure": 9.105359986714836
+          },
+          {
+            "temperature": 38.76078470602329,
+            "pressure": 9.102972671795825
+          },
+          {
+            "temperature": 38.7624095694579,
+            "pressure": 9.098521875313986
+          },
+          {
+            "temperature": 38.751091511771506,
+            "pressure": 9.099090651717143
+          },
+          {
+            "temperature": 38.74581728015768,
+            "pressure": 9.09160897732742
+          },
+          {
+            "temperature": 38.737752281977436,
+            "pressure": 9.084566883986069
+          },
+          {
+            "temperature": 38.7326641216699,
+            "pressure": 9.08321464222839
+          },
+          {
+            "temperature": 38.737989305309824,
+            "pressure": 9.086138860788141
+          },
+          {
+            "temperature": 38.72271181686779,
+            "pressure": 9.083128596048375
+          },
+          {
+            "temperature": 38.740668839658326,
+            "pressure": 9.07687730699339
+          },
+          {
+            "temperature": 38.724138561868145,
+            "pressure": 9.076793188414625
+          },
+          {
+            "temperature": 38.72533927765854,
+            "pressure": 9.076660314370297
+          }
+        ],
+        "beta": 0.7247415667900273
+      },
+      {
+        "id": "BC04",
+        "knownLeakLMin": 0,
+        "points": [
+          {
+            "temperature": 40.00670225708707,
+            "pressure": 10.000436487718693
+          },
+          {
+            "temperature": 40.13453421706582,
+            "pressure": 10.096495512105925
+          },
+          {
+            "temperature": 40.25379902309121,
+            "pressure": 10.191202754353546
+          },
+          {
+            "temperature": 40.37103461116628,
+            "pressure": 10.272748598462005
+          },
+          {
+            "temperature": 40.47896821111129,
+            "pressure": 10.347768088186314
+          },
+          {
+            "temperature": 40.57133991678781,
+            "pressure": 10.413770534151041
+          },
+          {
+            "temperature": 40.664589652964274,
+            "pressure": 10.473718318879142
+          },
+          {
+            "temperature": 40.72976992242838,
+            "pressure": 10.532077585768148
+          },
+          {
+            "temperature": 40.80475313898347,
+            "pressure": 10.582053096061786
+          },
+          {
+            "temperature": 40.86431989137588,
+            "pressure": 10.623656750922482
+          },
+          {
+            "temperature": 40.918648855140106,
+            "pressure": 10.667948160127622
+          },
+          {
+            "temperature": 40.96631859455499,
+            "pressure": 10.702386241816267
+          },
+          {
+            "temperature": 41.0245319490141,
+            "pressure": 10.732744105308067
+          },
+          {
+            "temperature": 41.05766187165418,
+            "pressure": 10.770044116043088
+          },
+          {
+            "temperature": 41.10296179316439,
+            "pressure": 10.792151720899716
+          },
+          {
+            "temperature": 41.12350239609047,
+            "pressure": 10.81781826199457
+          },
+          {
+            "temperature": 41.155644167400546,
+            "pressure": 10.840516777925725
+          },
+          {
+            "temperature": 41.18169049367736,
+            "pressure": 10.857177802259766
+          },
+          {
+            "temperature": 41.21242746537669,
+            "pressure": 10.879700765482552
+          },
+          {
+            "temperature": 41.24027572351564,
+            "pressure": 10.894539990464471
+          },
+          {
+            "temperature": 41.25036454586176,
+            "pressure": 10.90956292044367
+          },
+          {
+            "temperature": 41.27493200741235,
+            "pressure": 10.922110772210747
+          },
+          {
+            "temperature": 41.28617598478858,
+            "pressure": 10.936539903182243
+          },
+          {
+            "temperature": 41.30997955082473,
+            "pressure": 10.947247426269696
+          },
+          {
+            "temperature": 41.32318577014301,
+            "pressure": 10.959156019865505
+          },
+          {
+            "temperature": 41.32817486445731,
+            "pressure": 10.966431848345334
+          },
+          {
+            "temperature": 41.34235784511746,
+            "pressure": 10.973669692741538
+          },
+          {
+            "temperature": 41.35717678609666,
+            "pressure": 10.983260757363768
+          },
+          {
+            "temperature": 41.36752052553107,
+            "pressure": 10.990549993195694
+          },
+          {
+            "temperature": 41.36669090443103,
+            "pressure": 10.993230169181523
+          },
+          {
+            "temperature": 41.370895755927265,
+            "pressure": 11.004545555522089
+          },
+          {
+            "temperature": 41.385645494344914,
+            "pressure": 11.002347412260958
+          },
+          {
+            "temperature": 41.38491782257758,
+            "pressure": 11.014327246934519
+          },
+          {
+            "temperature": 41.396963611484644,
+            "pressure": 11.012415306723733
+          },
+          {
+            "temperature": 41.39763916079666,
+            "pressure": 11.017299792239427
+          },
+          {
+            "temperature": 41.393851261404514,
+            "pressure": 11.022550004438466
+          },
+          {
+            "temperature": 41.41245597550367,
+            "pressure": 11.024377942880115
+          },
+          {
+            "temperature": 41.42477788911687,
+            "pressure": 11.030114453635129
+          },
+          {
+            "temperature": 41.42107443698326,
+            "pressure": 11.028739655801157
+          },
+          {
+            "temperature": 41.42865890450508,
+            "pressure": 11.031945001196648
+          },
+          {
+            "temperature": 41.4306816314826,
+            "pressure": 11.034367344911198
+          }
+        ],
+        "beta": 0.726318337674216
+      },
+      {
+        "id": "BC05",
+        "knownLeakLMin": 0,
+        "points": [
+          {
+            "temperature": 40.00105875228804,
+            "pressure": 10.001093896071586
+          },
+          {
+            "temperature": 39.84466498136292,
+            "pressure": 9.88762465788169
+          },
+          {
+            "temperature": 39.70839831490994,
+            "pressure": 9.788254684008745
+          },
+          {
+            "temperature": 39.59130943628841,
+            "pressure": 9.700638070915248
+          },
+          {
+            "temperature": 39.469256104782,
+            "pressure": 9.615757962588468
+          },
+          {
+            "temperature": 39.37355420717904,
+            "pressure": 9.542375317189334
+          },
+          {
+            "temperature": 39.280243787454204,
+            "pressure": 9.474870963550767
+          },
+          {
+            "temperature": 39.202861850595305,
+            "pressure": 9.419283047853602
+          },
+          {
+            "temperature": 39.12469772093526,
+            "pressure": 9.358224646873635
+          },
+          {
+            "temperature": 39.047890454381644,
+            "pressure": 9.31446913757954
+          },
+          {
+            "temperature": 38.99062092872306,
+            "pressure": 9.268196918127531
+          },
+          {
+            "temperature": 38.93889502599188,
+            "pressure": 9.223803380889517
+          },
+          {
+            "temperature": 38.88122091028902,
+            "pressure": 9.184021556098818
+          },
+          {
+            "temperature": 38.84037971469548,
+            "pressure": 9.152609381100646
+          },
+          {
+            "temperature": 38.79762737024918,
+            "pressure": 9.12266053221881
+          },
+          {
+            "temperature": 38.75466923160884,
+            "pressure": 9.098585613377224
+          },
+          {
+            "temperature": 38.72140164735079,
+            "pressure": 9.074293021300088
+          },
+          {
+            "temperature": 38.6921711164914,
+            "pressure": 9.051466800791703
+          },
+          {
+            "temperature": 38.665904260561746,
+            "pressure": 9.030010617672938
+          },
+          {
+            "temperature": 38.65581969632861,
+            "pressure": 9.012394407737357
+          },
+          {
+            "temperature": 38.621527380603645,
+            "pressure": 8.993389031809386
+          },
+          {
+            "temperature": 38.59569190878507,
+            "pressure": 8.977125946611261
+          },
+          {
+            "temperature": 38.58424230124152,
+            "pressure": 8.965701707273015
+          },
+          {
+            "temperature": 38.55732860804079,
+            "pressure": 8.951037521633783
+          },
+          {
+            "temperature": 38.55056141088259,
+            "pressure": 8.94365179905675
+          },
+          {
+            "temperature": 38.53618487749398,
+            "pressure": 8.933127264698113
+          },
+          {
+            "temperature": 38.517668544401076,
+            "pressure": 8.92270983997382
+          },
+          {
+            "temperature": 38.50018808772354,
+            "pressure": 8.916952101002956
+          },
+          {
+            "temperature": 38.491753586544874,
+            "pressure": 8.903608678232594
+          },
+          {
+            "temperature": 38.48813136504944,
+            "pressure": 8.901404420895766
+          },
+          {
+            "temperature": 38.48438388448599,
+            "pressure": 8.896176119344783
+          },
+          {
+            "temperature": 38.485121612521276,
+            "pressure": 8.891633046609902
+          },
+          {
+            "temperature": 38.46640555620746,
+            "pressure": 8.886818105270228
+          },
+          {
+            "temperature": 38.45764649253301,
+            "pressure": 8.884107252443671
+          },
+          {
+            "temperature": 38.45112429723317,
+            "pressure": 8.878959153907385
+          },
+          {
+            "temperature": 38.449526419674115,
+            "pressure": 8.876040627103334
+          },
+          {
+            "temperature": 38.437584200712685,
+            "pressure": 8.870482249512884
+          },
+          {
+            "temperature": 38.43883469534326,
+            "pressure": 8.866420307116552
+          },
+          {
+            "temperature": 38.423500188175474,
+            "pressure": 8.867345166387345
+          },
+          {
+            "temperature": 38.44256021131936,
+            "pressure": 8.863372603397806
+          },
+          {
+            "temperature": 38.44246486992024,
+            "pressure": 8.862330851092526
+          }
+        ],
+        "beta": 0.7259552722995167
+      },
+      {
+        "id": "BC06",
+        "knownLeakLMin": 0,
+        "points": [
+          {
+            "temperature": 39.99846614716257,
+            "pressure": 10.002410520189276
+          },
+          {
+            "temperature": 40.15981284907263,
+            "pressure": 10.116839229306011
+          },
+          {
+            "temperature": 40.31981396382786,
+            "pressure": 10.22353987838429
+          },
+          {
+            "temperature": 40.45487738006474,
+            "pressure": 10.324826638653567
+          },
+          {
+            "temperature": 40.57348680574396,
+            "pressure": 10.409522719987418
+          },
+          {
+            "temperature": 40.687159219750704,
+            "pressure": 10.495591381874243
+          },
+          {
+            "temperature": 40.78961376197176,
+            "pressure": 10.563517322137004
+          },
+          {
+            "temperature": 40.88874783564047,
+            "pressure": 10.626788552267982
+          },
+          {
+            "temperature": 40.96559291638813,
+            "pressure": 10.68936681699455
+          },
+          {
+            "temperature": 41.04176012252387,
+            "pressure": 10.743319368263975
+          },
+          {
+            "temperature": 41.11584190047711,
+            "pressure": 10.790878250160361
+          },
+          {
+            "temperature": 41.167468425533706,
+            "pressure": 10.830124303138808
+          },
+          {
+            "temperature": 41.223622958322736,
+            "pressure": 10.8750606672224
+          },
+          {
+            "temperature": 41.2657408077713,
+            "pressure": 10.905460714603425
+          },
+          {
+            "temperature": 41.312668634295974,
+            "pressure": 10.93956357391129
+          },
+          {
+            "temperature": 41.3605356301856,
+            "pressure": 10.973801596141882
+          },
+          {
+            "temperature": 41.397087329265865,
+            "pressure": 10.994929320928769
+          },
+          {
+            "temperature": 41.43138258921802,
+            "pressure": 11.02282299775125
+          },
+          {
+            "temperature": 41.45454861501983,
+            "pressure": 11.041098571175038
+          },
+          {
+            "temperature": 41.48692606844223,
+            "pressure": 11.062421562825957
+          },
+          {
+            "temperature": 41.50806766019465,
+            "pressure": 11.081700078420434
+          },
+          {
+            "temperature": 41.53986957700353,
+            "pressure": 11.096711251184393
+          },
+          {
+            "temperature": 41.54548005442844,
+            "pressure": 11.11327377941692
+          },
+          {
+            "temperature": 41.57632199879283,
+            "pressure": 11.124293581638113
+          },
+          {
+            "temperature": 41.582745895995835,
+            "pressure": 11.132851264530089
+          },
+          {
+            "temperature": 41.604882883512424,
+            "pressure": 11.148000423852462
+          },
+          {
+            "temperature": 41.616856532605674,
+            "pressure": 11.156997113218397
+          },
+          {
+            "temperature": 41.63870148657391,
+            "pressure": 11.165244171499474
+          },
+          {
+            "temperature": 41.651535957646516,
+            "pressure": 11.173897418264328
+          },
+          {
+            "temperature": 41.65600212486923,
+            "pressure": 11.179201725188092
+          },
+          {
+            "temperature": 41.66031575638493,
+            "pressure": 11.187587953942797
+          },
+          {
+            "temperature": 41.66899012220861,
+            "pressure": 11.189599723196958
+          },
+          {
+            "temperature": 41.667691623648714,
+            "pressure": 11.19600447655638
+          },
+          {
+            "temperature": 41.688853564046205,
+            "pressure": 11.200459643231458
+          },
+          {
+            "temperature": 41.69358500162907,
+            "pressure": 11.206671748373426
+          },
+          {
+            "temperature": 41.69479636849497,
+            "pressure": 11.213529631843043
+          },
+          {
+            "temperature": 41.7035514045957,
+            "pressure": 11.215445127992203
+          },
+          {
+            "temperature": 41.69426772285365,
+            "pressure": 11.220012656047874
+          },
+          {
+            "temperature": 41.72282007102619,
+            "pressure": 11.221263799197201
+          },
+          {
+            "temperature": 41.71972709958135,
+            "pressure": 11.221251280111334
+          },
+          {
+            "temperature": 41.71368701390565,
+            "pressure": 11.223614657131431
+          }
+        ],
+        "beta": 0.7136437693324822
+      }
+    ],
+    "count": 6
+  },
+  "observation": {
+    "id": "SQ01",
+    "volume": 1200,
+    "points": [
+      {
+        "time": 0,
+        "pressure": 10.003812928891161,
+        "temperature": 40.00465418168329,
+        "valveClosed": false
+      },
+      {
+        "time": 0.5,
+        "pressure": 10.078995521500255,
+        "temperature": 40.11563551392155,
+        "valveClosed": false
+      },
+      {
+        "time": 1,
+        "pressure": 10.157718940347106,
+        "temperature": 40.24272265040123,
+        "valveClosed": false
+      },
+      {
+        "time": 1.5,
+        "pressure": 10.230015889656674,
+        "temperature": 40.36231404146535,
+        "valveClosed": false
+      },
+      {
+        "time": 2,
+        "pressure": 10.306061492627919,
+        "temperature": 40.459244397399836,
+        "valveClosed": false
+      },
+      {
+        "time": 2.5,
+        "pressure": 10.368489397544876,
+        "temperature": 40.55022852148592,
+        "valveClosed": false
+      },
+      {
+        "time": 3,
+        "pressure": 10.437649443074479,
+        "temperature": 40.65574061176875,
+        "valveClosed": false
+      },
+      {
+        "time": 3.5,
+        "pressure": 10.499557979275627,
+        "temperature": 40.7570461611236,
+        "valveClosed": false
+      },
+      {
+        "time": 4,
+        "pressure": 10.559776742665106,
+        "temperature": 40.85255761360136,
+        "valveClosed": false
+      },
+      {
+        "time": 4.5,
+        "pressure": 10.613396083876102,
+        "temperature": 40.944103906013204,
+        "valveClosed": false
+      },
+      {
+        "time": 5,
+        "pressure": 10.67209355932729,
+        "temperature": 41.02235991923871,
+        "valveClosed": true
+      },
+      {
+        "time": 5.5,
+        "pressure": 10.721849637111696,
+        "temperature": 41.09087523210013,
+        "valveClosed": true
+      },
+      {
+        "time": 6,
+        "pressure": 10.772294022172389,
+        "temperature": 41.191751917382874,
+        "valveClosed": true
+      },
+      {
+        "time": 6.5,
+        "pressure": 10.814848373548228,
+        "temperature": 41.24621483455148,
+        "valveClosed": true
+      },
+      {
+        "time": 7,
+        "pressure": 10.862180778911261,
+        "temperature": 41.320198679394395,
+        "valveClosed": true
+      },
+      {
+        "time": 7.5,
+        "pressure": 10.914286412126094,
+        "temperature": 41.38105587079891,
+        "valveClosed": true
+      },
+      {
+        "time": 8,
+        "pressure": 10.950104673176533,
+        "temperature": 41.46843808420378,
+        "valveClosed": true
+      },
+      {
+        "time": 8.5,
+        "pressure": 10.987798402268949,
+        "temperature": 41.524128473699,
+        "valveClosed": true
+      },
+      {
+        "time": 9,
+        "pressure": 11.032344203187229,
+        "temperature": 41.5820874665485,
+        "valveClosed": true
+      },
+      {
+        "time": 9.5,
+        "pressure": 11.06493351220028,
+        "temperature": 41.633332517843996,
+        "valveClosed": true
+      },
+      {
+        "time": 10,
+        "pressure": 11.098725267007266,
+        "temperature": 41.6940606223471,
+        "valveClosed": true
+      },
+      {
+        "time": 10.5,
+        "pressure": 11.132153263292004,
+        "temperature": 41.73834664639889,
+        "valveClosed": true
+      },
+      {
+        "time": 11,
+        "pressure": 11.159754159164693,
+        "temperature": 41.800017284090266,
+        "valveClosed": true
+      },
+      {
+        "time": 11.5,
+        "pressure": 11.191563648807323,
+        "temperature": 41.87250829335758,
+        "valveClosed": true
+      },
+      {
+        "time": 12,
+        "pressure": 11.214939834984865,
+        "temperature": 41.89466305402361,
+        "valveClosed": true
+      },
+      {
+        "time": 12.5,
+        "pressure": 11.244535832956279,
+        "temperature": 41.950457053422156,
+        "valveClosed": true
+      },
+      {
+        "time": 13,
+        "pressure": 11.270908384555236,
+        "temperature": 41.99312174030473,
+        "valveClosed": true
+      },
+      {
+        "time": 13.5,
+        "pressure": 11.297816904860394,
+        "temperature": 42.01353465452114,
+        "valveClosed": true
+      },
+      {
+        "time": 14,
+        "pressure": 11.317174912333082,
+        "temperature": 42.06448422290463,
+        "valveClosed": true
+      },
+      {
+        "time": 14.5,
+        "pressure": 11.333751968702126,
+        "temperature": 42.10614468959503,
+        "valveClosed": true
+      },
+      {
+        "time": 15,
+        "pressure": 11.355752236704369,
+        "temperature": 42.14494545861284,
+        "valveClosed": true
+      },
+      {
+        "time": 15.5,
+        "pressure": 11.378162491855273,
+        "temperature": 42.185120758118096,
+        "valveClosed": true
+      },
+      {
+        "time": 16,
+        "pressure": 11.405854270896258,
+        "temperature": 42.214078817398786,
+        "valveClosed": true
+      },
+      {
+        "time": 16.5,
+        "pressure": 11.417316431415898,
+        "temperature": 42.23170794289775,
+        "valveClosed": true
+      },
+      {
+        "time": 17,
+        "pressure": 11.437026504811403,
+        "temperature": 42.28377166551604,
+        "valveClosed": true
+      },
+      {
+        "time": 17.5,
+        "pressure": 11.446344595301497,
+        "temperature": 42.30011024105299,
+        "valveClosed": true
+      },
+      {
+        "time": 18,
+        "pressure": 11.467866537258779,
+        "temperature": 42.31222568234871,
+        "valveClosed": true
+      },
+      {
+        "time": 18.5,
+        "pressure": 11.48304386173943,
+        "temperature": 42.36509810835987,
+        "valveClosed": true
+      },
+      {
+        "time": 19,
+        "pressure": 11.494434492352285,
+        "temperature": 42.38148908715941,
+        "valveClosed": true
+      },
+      {
+        "time": 19.5,
+        "pressure": 11.50890601176922,
+        "temperature": 42.42408642891418,
+        "valveClosed": true
+      },
+      {
+        "time": 20,
+        "pressure": 11.523140260633879,
+        "temperature": 42.43135758269595,
+        "valveClosed": true
+      },
+      {
+        "time": 20.5,
+        "pressure": 11.535244675950382,
+        "temperature": 42.457255548611606,
+        "valveClosed": true
+      },
+      {
+        "time": 21,
+        "pressure": 11.548606853550567,
+        "temperature": 42.47975742546318,
+        "valveClosed": true
+      },
+      {
+        "time": 21.5,
+        "pressure": 11.549624027729145,
+        "temperature": 42.51770188041363,
+        "valveClosed": true
+      },
+      {
+        "time": 22,
+        "pressure": 11.555351863365107,
+        "temperature": 42.51062153802714,
+        "valveClosed": true
+      },
+      {
+        "time": 22.5,
+        "pressure": 11.572513388117986,
+        "temperature": 42.53759175276349,
+        "valveClosed": true
+      },
+      {
+        "time": 23,
+        "pressure": 11.5814181131474,
+        "temperature": 42.55332094692882,
+        "valveClosed": true
+      },
+      {
+        "time": 23.5,
+        "pressure": 11.590531102935136,
+        "temperature": 42.555086394490424,
+        "valveClosed": true
+      },
+      {
+        "time": 24,
+        "pressure": 11.598522090240964,
+        "temperature": 42.59312721505831,
+        "valveClosed": true
+      },
+      {
+        "time": 24.5,
+        "pressure": 11.606737991390325,
+        "temperature": 42.60142486653042,
+        "valveClosed": true
+      },
+      {
+        "time": 25,
+        "pressure": 11.61635684187037,
+        "temperature": 42.63314087765865,
+        "valveClosed": true
+      },
+      {
+        "time": 25.5,
+        "pressure": 11.615313512729992,
+        "temperature": 42.629628377631335,
+        "valveClosed": true
+      },
+      {
+        "time": 26,
+        "pressure": 11.615314701091604,
+        "temperature": 42.64872670039058,
+        "valveClosed": true
+      },
+      {
+        "time": 26.5,
+        "pressure": 11.627067989115748,
+        "temperature": 42.65557708099948,
+        "valveClosed": true
+      },
+      {
+        "time": 27,
+        "pressure": 11.630715495240725,
+        "temperature": 42.68117801330261,
+        "valveClosed": true
+      },
+      {
+        "time": 27.5,
+        "pressure": 11.639382036516183,
+        "temperature": 42.69094177995217,
+        "valveClosed": true
+      },
+      {
+        "time": 28,
+        "pressure": 11.637113156855708,
+        "temperature": 42.70933802334918,
+        "valveClosed": true
+      },
+      {
+        "time": 28.5,
+        "pressure": 11.640533733421105,
+        "temperature": 42.71147770669908,
+        "valveClosed": true
+      },
+      {
+        "time": 29,
+        "pressure": 11.64935749908508,
+        "temperature": 42.73670864190003,
+        "valveClosed": true
+      },
+      {
+        "time": 29.5,
+        "pressure": 11.647650462232852,
+        "temperature": 42.75304541418488,
+        "valveClosed": true
+      },
+      {
+        "time": 30,
+        "pressure": 11.650607266561593,
+        "temperature": 42.76833414150143,
+        "valveClosed": true
+      },
+      {
+        "time": 30.5,
+        "pressure": 11.655133750239466,
+        "temperature": 42.75752115982027,
+        "valveClosed": true
+      },
+      {
+        "time": 31,
+        "pressure": 11.658527911650761,
+        "temperature": 42.776418356713506,
+        "valveClosed": true
+      },
+      {
+        "time": 31.5,
+        "pressure": 11.659337575117878,
+        "temperature": 42.773162611661995,
+        "valveClosed": true
+      },
+      {
+        "time": 32,
+        "pressure": 11.66164575627802,
+        "temperature": 42.788458621310774,
+        "valveClosed": true
+      },
+      {
+        "time": 32.5,
+        "pressure": 11.663442446000515,
+        "temperature": 42.787610209113936,
+        "valveClosed": true
+      },
+      {
+        "time": 33,
+        "pressure": 11.671033790990391,
+        "temperature": 42.794032904605075,
+        "valveClosed": true
+      },
+      {
+        "time": 33.5,
+        "pressure": 11.660066350642923,
+        "temperature": 42.814766476619255,
+        "valveClosed": true
+      },
+      {
+        "time": 34,
+        "pressure": 11.666751182259235,
+        "temperature": 42.834063475448836,
+        "valveClosed": true
+      },
+      {
+        "time": 34.5,
+        "pressure": 11.669849628084732,
+        "temperature": 42.85228112272338,
+        "valveClosed": true
+      },
+      {
+        "time": 35,
+        "pressure": 11.664621955383636,
+        "temperature": 42.8224338405018,
+        "valveClosed": true
+      },
+      {
+        "time": 35.5,
+        "pressure": 11.662745341558153,
+        "temperature": 42.836591635861495,
+        "valveClosed": true
+      },
+      {
+        "time": 36,
+        "pressure": 11.661484581995818,
+        "temperature": 42.863506507573916,
+        "valveClosed": true
+      },
+      {
+        "time": 36.5,
+        "pressure": 11.666733684535362,
+        "temperature": 42.842013678522555,
+        "valveClosed": true
+      },
+      {
+        "time": 37,
+        "pressure": 11.66375112482874,
+        "temperature": 42.86258958574807,
+        "valveClosed": true
+      },
+      {
+        "time": 37.5,
+        "pressure": 11.659825250892265,
+        "temperature": 42.88749831512298,
+        "valveClosed": true
+      },
+      {
+        "time": 38,
+        "pressure": 11.668768448518218,
+        "temperature": 42.87336998756992,
+        "valveClosed": true
+      },
+      {
+        "time": 38.5,
+        "pressure": 11.660825988314121,
+        "temperature": 42.873695320498726,
+        "valveClosed": true
+      },
+      {
+        "time": 39,
+        "pressure": 11.660470863552826,
+        "temperature": 42.88734270024102,
+        "valveClosed": true
+      },
+      {
+        "time": 39.5,
+        "pressure": 11.65618023055815,
+        "temperature": 42.896217272606954,
+        "valveClosed": true
+      },
+      {
+        "time": 40,
+        "pressure": 11.659910853937903,
+        "temperature": 42.89066289841125,
+        "valveClosed": true
+      }
+    ],
+    "pulses": [
+      {
+        "injectedVolume": 0.1,
+        "pressureIncrement": 0.13794261115983894
+      },
+      {
+        "injectedVolume": 0.2,
+        "pressureIncrement": 0.28049942005353573
+      },
+      {
+        "injectedVolume": 0.3,
+        "pressureIncrement": 0.41525285698568276
+      },
+      {
+        "injectedVolume": 0.4,
+        "pressureIncrement": 0.5567914831859558
+      }
+    ],
+    "valveEvents": [
+      {
+        "time": 5,
+        "state": "closed"
+      }
+    ]
+  },
+  "inference": {
+    "id": "SQ01",
+    "start": 8,
+    "end": 32,
+    "limit": 0.01,
+    "valid": true,
+    "status": "未检出超限漏率",
+    "reasons": [],
+    "estimate": 0.007415156660072248,
+    "low": 0.006965008098460202,
+    "high": 0.007865305221684294,
+    "se": 0.0002296676334755335,
+    "baseline": -0.02131922765427685,
+    "baselineStatus": "未检出超限漏率",
+    "C": {
+      "value": 0.7190891374429131,
+      "se": 0.0018018724592851214,
+      "n": 4
+    },
+    "line": {
+      "slope": -0.01031187411124107,
+      "intercept": 11.031365261392818,
+      "residuals": [
+        0.0012344046736436631,
+        0.0037764919315669,
+        0.011528681736600432,
+        0.01218379490184976,
+        0.007177711520775065,
+        0.013708315294276713,
+        0.00182918649777003,
+        -0.01367291488828512,
+        -0.0011759598669394133,
+        -0.006806594484976142,
+        -0.006157944307537522,
+        0.011132058113838134,
+        -0.0012302656987527305,
+        -0.009650276462829926,
+        -0.010577284188327762,
+        -0.012089162164470396,
+        -0.00020070438049035744,
+        0.003657788292490055,
+        -0.009158871924903,
+        -0.006510375289942,
+        0.011398592062579538,
+        -0.006536140248440098,
+        -0.0018530319135616202,
+        -0.013056670875110615,
+        0.0010708008257596102,
+        -0.0004132713554453604,
+        0.0018184394056949826,
+        -0.019471879320299007,
+        -0.0034634978425421847,
+        -0.0006665326228143809,
+        0.002009656477857391,
+        0.015000788040723828,
+        0.0006145349548067891,
+        0.007980700648850925,
+        -0.00019991996073215335,
+        0.006454964516691364,
+        -0.0022108902654390805,
+        0.009740167717217307,
+        0.000014173272717299401,
+        0.006769834545074738,
+        -0.0036579373997767117,
+        0.0033699166372888056,
+        -0.0009120218401324487,
+        -0.009287347390053213,
+        -0.01224027798297056,
+        0.005268360453452248,
+        0.00014104955979094003,
+        0.008463092580046072,
+        0.004856268013572418
+      ],
+      "residualSD": 0.008037971892070703,
+      "slopeSE": 0.00016239155519628737,
+      "n": 49
+    },
+    "thermalSlope": 0.0520980330468637,
+    "sampleCount": 49,
+    "points": [
+      {
+        "time": 8,
+        "pressure": 10.950104673176533,
+        "temperature": 41.46843808420378,
+        "valveClosed": true,
+        "corrected": 10.950104673176533,
+        "fitted": 10.948870268502889,
+        "residual": 0.0012344046736436631
+      },
+      {
+        "time": 8.5,
+        "pressure": 10.987798402268949,
+        "temperature": 41.524128473699,
+        "valveClosed": true,
+        "corrected": 10.947490823378836,
+        "fitted": 10.943714331447268,
+        "residual": 0.0037764919315669
+      },
+      {
+        "time": 9,
+        "pressure": 11.032344203187229,
+        "temperature": 41.5820874665485,
+        "valveClosed": true,
+        "corrected": 10.950087076128248,
+        "fitted": 10.938558394391649,
+        "residual": 0.011528681736600432
+      },
+      {
+        "time": 9.5,
+        "pressure": 11.06493351220028,
+        "temperature": 41.633332517843996,
+        "valveClosed": true,
+        "corrected": 10.945586252237877,
+        "fitted": 10.933402457336028,
+        "residual": 0.01218379490184976
+      },
+      {
+        "time": 10,
+        "pressure": 11.098725267007266,
+        "temperature": 41.6940606223471,
+        "valveClosed": true,
+        "corrected": 10.935424231801182,
+        "fitted": 10.928246520280407,
+        "residual": 0.007177711520775065
+      },
+      {
+        "time": 10.5,
+        "pressure": 11.132153263292004,
+        "temperature": 41.73834664639889,
+        "valveClosed": true,
+        "corrected": 10.936798898519063,
+        "fitted": 10.923090583224786,
+        "residual": 0.013708315294276713
+      },
+      {
+        "time": 11,
+        "pressure": 11.159754159164693,
+        "temperature": 41.800017284090266,
+        "valveClosed": true,
+        "corrected": 10.919763832666936,
+        "fitted": 10.917934646169165,
+        "residual": 0.00182918649777003
+      },
+      {
+        "time": 11.5,
+        "pressure": 11.191563648807323,
+        "temperature": 41.87250829335758,
+        "valveClosed": true,
+        "corrected": 10.89910579422526,
+        "fitted": 10.912778709113546,
+        "residual": -0.01367291488828512
+      },
+      {
+        "time": 12,
+        "pressure": 11.214939834984865,
+        "temperature": 41.89466305402361,
+        "valveClosed": true,
+        "corrected": 10.906446812190985,
+        "fitted": 10.907622772057925,
+        "residual": -0.0011759598669394133
+      },
+      {
+        "time": 12.5,
+        "pressure": 11.244535832956279,
+        "temperature": 41.950457053422156,
+        "valveClosed": true,
+        "corrected": 10.895660240517328,
+        "fitted": 10.902466835002304,
+        "residual": -0.006806594484976142
+      },
+      {
+        "time": 13,
+        "pressure": 11.270908384555236,
+        "temperature": 41.99312174030473,
+        "valveClosed": true,
+        "corrected": 10.891152953639146,
+        "fitted": 10.897310897946683,
+        "residual": -0.006157944307537522
+      },
+      {
+        "time": 13.5,
+        "pressure": 11.297816904860394,
+        "temperature": 42.01353465452114,
+        "valveClosed": true,
+        "corrected": 10.903287019004901,
+        "fitted": 10.892154960891062,
+        "residual": 0.011132058113838134
+      },
+      {
+        "time": 14,
+        "pressure": 11.317174912333082,
+        "temperature": 42.06448422290463,
+        "valveClosed": true,
+        "corrected": 10.88576875813669,
+        "fitted": 10.886999023835443,
+        "residual": -0.0012302656987527305
+      },
+      {
+        "time": 14.5,
+        "pressure": 11.333751968702126,
+        "temperature": 42.10614468959503,
+        "valveClosed": true,
+        "corrected": 10.872192810316992,
+        "fitted": 10.881843086779822,
+        "residual": -0.009650276462829926
+      },
+      {
+        "time": 15,
+        "pressure": 11.355752236704369,
+        "temperature": 42.14494545861284,
+        "valveClosed": true,
+        "corrected": 10.866109865535874,
+        "fitted": 10.876687149724201,
+        "residual": -0.010577284188327762
+      },
+      {
+        "time": 15.5,
+        "pressure": 11.378162491855273,
+        "temperature": 42.185120758118096,
+        "valveClosed": true,
+        "corrected": 10.85944205050411,
+        "fitted": 10.87153121266858,
+        "residual": -0.012089162164470396
+      },
+      {
+        "time": 16,
+        "pressure": 11.405854270896258,
+        "temperature": 42.214078817398786,
+        "valveClosed": true,
+        "corrected": 10.86617457123247,
+        "fitted": 10.86637527561296,
+        "residual": -0.00020070438049035744
+      },
+      {
+        "time": 16.5,
+        "pressure": 11.417316431415898,
+        "temperature": 42.23170794289775,
+        "valveClosed": true,
+        "corrected": 10.86487712684983,
+        "fitted": 10.86121933855734,
+        "residual": 0.003657788292490055
+      },
+      {
+        "time": 17,
+        "pressure": 11.437026504811403,
+        "temperature": 42.28377166551604,
+        "valveClosed": true,
+        "corrected": 10.846904529576817,
+        "fitted": 10.85606340150172,
+        "residual": -0.009158871924903
+      },
+      {
+        "time": 17.5,
+        "pressure": 11.446344595301497,
+        "temperature": 42.30011024105299,
+        "valveClosed": true,
+        "corrected": 10.844397089156157,
+        "fitted": 10.850907464446099,
+        "residual": -0.006510375289942
+      },
+      {
+        "time": 18,
+        "pressure": 11.467866537258779,
+        "temperature": 42.31222568234871,
+        "valveClosed": true,
+        "corrected": 10.857150119453058,
+        "fitted": 10.845751527390478,
+        "residual": 0.011398592062579538
+      },
+      {
+        "time": 18.5,
+        "pressure": 11.48304386173943,
+        "temperature": 42.36509810835987,
+        "valveClosed": true,
+        "corrected": 10.834059450086418,
+        "fitted": 10.840595590334859,
+        "residual": -0.006536140248440098
+      },
+      {
+        "time": 19,
+        "pressure": 11.494434492352285,
+        "temperature": 42.38148908715941,
+        "valveClosed": true,
+        "corrected": 10.833586621365676,
+        "fitted": 10.835439653279238,
+        "residual": -0.0018530319135616202
+      },
+      {
+        "time": 19.5,
+        "pressure": 11.50890601176922,
+        "temperature": 42.42408642891418,
+        "valveClosed": true,
+        "corrected": 10.817227045348506,
+        "fitted": 10.830283716223617,
+        "residual": -0.013056670875110615
+      },
+      {
+        "time": 20,
+        "pressure": 11.523140260633879,
+        "temperature": 42.43135758269595,
+        "valveClosed": true,
+        "corrected": 10.826198579993756,
+        "fitted": 10.825127779167996,
+        "residual": 0.0010708008257596102
+      },
+      {
+        "time": 20.5,
+        "pressure": 11.535244675950382,
+        "temperature": 42.457255548611606,
+        "valveClosed": true,
+        "corrected": 10.81955857075693,
+        "fitted": 10.819971842112375,
+        "residual": -0.0004132713554453604
+      },
+      {
+        "time": 21,
+        "pressure": 11.548606853550567,
+        "temperature": 42.47975742546318,
+        "valveClosed": true,
+        "corrected": 10.81663434446245,
+        "fitted": 10.814815905056756,
+        "residual": 0.0018184394056949826
+      },
+      {
+        "time": 21.5,
+        "pressure": 11.549624027729145,
+        "temperature": 42.51770188041363,
+        "valveClosed": true,
+        "corrected": 10.790188088680836,
+        "fitted": 10.809659968001135,
+        "residual": -0.019471879320299007
+      },
+      {
+        "time": 22,
+        "pressure": 11.555351863365107,
+        "temperature": 42.51062153802714,
+        "valveClosed": true,
+        "corrected": 10.801040533102972,
+        "fitted": 10.804504030945514,
+        "residual": -0.0034634978425421847
+      },
+      {
+        "time": 22.5,
+        "pressure": 11.572513388117986,
+        "temperature": 42.53759175276349,
+        "valveClosed": true,
+        "corrected": 10.79868156126708,
+        "fitted": 10.799348093889893,
+        "residual": -0.0006665326228143809
+      },
+      {
+        "time": 23,
+        "pressure": 11.5814181131474,
+        "temperature": 42.55332094692882,
+        "valveClosed": true,
+        "corrected": 10.79620181331213,
+        "fitted": 10.794192156834272,
+        "residual": 0.002009656477857391
+      },
+      {
+        "time": 23.5,
+        "pressure": 11.590531102935136,
+        "temperature": 42.555086394490424,
+        "valveClosed": true,
+        "corrected": 10.804037007819376,
+        "fitted": 10.789036219778653,
+        "residual": 0.015000788040723828
+      },
+      {
+        "time": 24,
+        "pressure": 11.598522090240964,
+        "temperature": 42.59312721505831,
+        "valveClosed": true,
+        "corrected": 10.784494817677839,
+        "fitted": 10.783880282723032,
+        "residual": 0.0006145349548067891
+      },
+      {
+        "time": 24.5,
+        "pressure": 11.606737991390325,
+        "temperature": 42.60142486653042,
+        "valveClosed": true,
+        "corrected": 10.786705046316262,
+        "fitted": 10.778724345667412,
+        "residual": 0.007980700648850925
+      },
+      {
+        "time": 25,
+        "pressure": 11.61635684187037,
+        "temperature": 42.63314087765865,
+        "valveClosed": true,
+        "corrected": 10.773368488651059,
+        "fitted": 10.77356840861179,
+        "residual": -0.00019991996073215335
+      },
+      {
+        "time": 25.5,
+        "pressure": 11.615313512729992,
+        "temperature": 42.629628377631335,
+        "valveClosed": true,
+        "corrected": 10.774867436072862,
+        "fitted": 10.76841247155617,
+        "residual": 0.006454964516691364
+      },
+      {
+        "time": 26,
+        "pressure": 11.615314701091604,
+        "temperature": 42.64872670039058,
+        "valveClosed": true,
+        "corrected": 10.76104564423511,
+        "fitted": 10.76325653450055,
+        "residual": -0.0022108902654390805
+      },
+      {
+        "time": 26.5,
+        "pressure": 11.627067989115748,
+        "temperature": 42.65557708099948,
+        "valveClosed": true,
+        "corrected": 10.767840765162147,
+        "fitted": 10.75810059744493,
+        "residual": 0.009740167717217307
+      },
+      {
+        "time": 27,
+        "pressure": 11.630715495240725,
+        "temperature": 42.68117801330261,
+        "valveClosed": true,
+        "corrected": 10.752958833662026,
+        "fitted": 10.752944660389309,
+        "residual": 0.000014173272717299401
+      },
+      {
+        "time": 27.5,
+        "pressure": 11.639382036516183,
+        "temperature": 42.69094177995217,
+        "valveClosed": true,
+        "corrected": 10.754558557878763,
+        "fitted": 10.747788723333688,
+        "residual": 0.006769834545074738
+      },
+      {
+        "time": 28,
+        "pressure": 11.637113156855708,
+        "temperature": 42.70933802334918,
+        "valveClosed": true,
+        "corrected": 10.738974848878291,
+        "fitted": 10.742632786278067,
+        "residual": -0.0036579373997767117
+      },
+      {
+        "time": 28.5,
+        "pressure": 11.640533733421105,
+        "temperature": 42.71147770669908,
+        "valveClosed": true,
+        "corrected": 10.740846765859736,
+        "fitted": 10.737476849222448,
+        "residual": 0.0033699166372888056
+      },
+      {
+        "time": 29,
+        "pressure": 11.64935749908508,
+        "temperature": 42.73670864190003,
+        "valveClosed": true,
+        "corrected": 10.731408890326694,
+        "fitted": 10.732320912166827,
+        "residual": -0.0009120218401324487
+      },
+      {
+        "time": 29.5,
+        "pressure": 11.647650462232852,
+        "temperature": 42.75304541418488,
+        "valveClosed": true,
+        "corrected": 10.717877627721153,
+        "fitted": 10.727164975111206,
+        "residual": -0.009287347390053213
+      },
+      {
+        "time": 30,
+        "pressure": 11.650607266561593,
+        "temperature": 42.76833414150143,
+        "valveClosed": true,
+        "corrected": 10.709768760072615,
+        "fitted": 10.722009038055585,
+        "residual": -0.01224027798297056
+      },
+      {
+        "time": 30.5,
+        "pressure": 11.655133750239466,
+        "temperature": 42.75752115982027,
+        "valveClosed": true,
+        "corrected": 10.722121461453417,
+        "fitted": 10.716853100999964,
+        "residual": 0.005268360453452248
+      },
+      {
+        "time": 31,
+        "pressure": 11.658527911650761,
+        "temperature": 42.776418356713506,
+        "valveClosed": true,
+        "corrected": 10.711838213504135,
+        "fitted": 10.711697163944345,
+        "residual": 0.00014104955979094003
+      },
+      {
+        "time": 31.5,
+        "pressure": 11.659337575117878,
+        "temperature": 42.773162611661995,
+        "valveClosed": true,
+        "corrected": 10.71500431946877,
+        "fitted": 10.706541226888724,
+        "residual": 0.008463092580046072
+      },
+      {
+        "time": 32,
+        "pressure": 11.66164575627802,
+        "temperature": 42.788458621310774,
+        "valveClosed": true,
+        "corrected": 10.706241557846676,
+        "fitted": 10.701385289833103,
+        "residual": 0.004856268013572418
+      }
+    ]
+  },
+  "evaluation": {
+    "current": {
+      "referenceLeak": 0.0065207801458339225
+    },
+    "heldout": {
+      "total": 12,
+      "valid": 10,
+      "accepted": 9,
+      "review": 1,
+      "invalid": 2,
+      "decisionCoverage": 0.75,
+      "mae": 0.00011622917416064444,
+      "baselineMAE": 0.013813331589486888,
+      "maeN": 10,
+      "intervalCovered": 9,
+      "intervalDenominator": 10,
+      "confusion": {
+        "below": {
+          "clear": 6,
+          "leak": 0,
+          "review": 0,
+          "invalid": 1
+        },
+        "above": {
+          "clear": 0,
+          "leak": 3,
+          "review": 1,
+          "invalid": 1
+        },
+        "unknown": {
+          "clear": 0,
+          "leak": 0,
+          "review": 0,
+          "invalid": 0
+        }
+      },
+      "rows": [
+        {
+          "id": "SX01",
+          "reference": 0,
+          "referenceClass": "below",
+          "predicted": "未检出超限漏率",
+          "estimate": -0.000036167694938563334,
+          "baseline": 0.013380915336915523
+        },
+        {
+          "id": "SX02",
+          "reference": 0,
+          "referenceClass": "below",
+          "predicted": "未检出超限漏率",
+          "estimate": -0.000049741915801457486,
+          "baseline": -0.01495327812512845
+        },
+        {
+          "id": "SX03",
+          "reference": 0,
+          "referenceClass": "below",
+          "predicted": "未检出超限漏率",
+          "estimate": 0.00018426446976846304,
+          "baseline": 0.021082995606651972
+        },
+        {
+          "id": "SX04",
+          "reference": 0,
+          "referenceClass": "below",
+          "predicted": "未检出超限漏率",
+          "estimate": 0.0000011875626809829462,
+          "baseline": -0.017753440238410658
+        },
+        {
+          "id": "SX05",
+          "reference": 0.0056135668477982235,
+          "referenceClass": "below",
+          "predicted": "未检出超限漏率",
+          "estimate": 0.005808215657105628,
+          "baseline": 0.020219307635673547
+        },
+        {
+          "id": "SX06",
+          "reference": 0.006238529416054216,
+          "referenceClass": "below",
+          "predicted": "未检出超限漏率",
+          "estimate": 0.006624612843193166,
+          "baseline": -0.00811656009544203
+        },
+        {
+          "id": "SX07",
+          "reference": 0.010020740291570683,
+          "referenceClass": "above",
+          "predicted": "待复核",
+          "estimate": 0.010054763489231854,
+          "baseline": 0.016354605230665398
+        },
+        {
+          "id": "SX08",
+          "reference": 0.010562806548615836,
+          "referenceClass": "above",
+          "predicted": "疑似失密",
+          "estimate": 0.010593669703936671,
+          "baseline": 0.0038112941768726344
+        },
+        {
+          "id": "SX09",
+          "reference": 0.02176041373044117,
+          "referenceClass": "above",
+          "predicted": "疑似失密",
+          "estimate": 0.02163257520952458,
+          "baseline": 0.03705124899163972
+        },
+        {
+          "id": "SX10",
+          "reference": 0.024196532243691827,
+          "referenceClass": "above",
+          "predicted": "疑似失密",
+          "estimate": 0.024314005231763854,
+          "baseline": 0.0105708885273376
+        },
+        {
+          "id": "SX11",
+          "reference": 0.005553592169955556,
+          "referenceClass": "below",
+          "predicted": "证据不足",
+          "estimate": null,
+          "baseline": null
+        },
+        {
+          "id": "SX12",
+          "reference": 0.02434117598072485,
+          "referenceClass": "above",
+          "predicted": "证据不足",
+          "estimate": null,
+          "baseline": null
+        }
+      ]
+    }
+  },
+  "exportedAt": "2026-10-30T03:37:29.890Z",
+  "revision": 3
+}

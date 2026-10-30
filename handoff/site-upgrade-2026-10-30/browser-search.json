@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-30T03:41:20.899Z",
+  "kind": "actual_Chrome_search",
+  "checks": [
+    {
+      "name": "Untouched homepage has no heavy body/avatar/3D request or iframe",
+      "passed": true,
+      "detail": {
+        "heavy": [],
+        "iframes": 0,
+        "authored": 65,
+        "teacher": 1
+      }
+    },
+    {
+      "name": "65 authored cases and one teacher sample are separate",
+      "passed": true
+    },
+    {
+      "name": "Search returns case and knowledge without loading bodies",
+      "passed": true
+    },
+    {
+      "name": "ArrowDown selects next result",
+      "passed": true
+    },
+    {
+      "name": "Esc restores focus to search launcher",
+      "passed": true
+    },
+    {
+      "name": "Knowledge deep link focuses the actual chapter heading",
+      "passed": true
+    },
+    {
+      "name": "Refreshing a deep link restores heading focus",
+      "passed": true
+    },
+    {
+      "name": "Existing workflow tab still navigates",
+      "passed": true
+    },
+    {
+      "name": "Back preserves case and selected workflow tab",
+      "passed": true
+    },
+    {
+      "name": "Forward restores next case route",
+      "passed": true
+    },
+    {
+      "name": "390px header and modal fit without horizontal page scrolling",
+      "passed": true
+    },
+    {
+      "name": "No uncaught search/navigation errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "pageErrors": [],
+  "passed": 12,
+  "failed": 0
+}

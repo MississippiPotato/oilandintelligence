@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-30T03:58:27.421Z",
+  "kind": "actual_headed_Chrome_background_tab_lifecycle",
+  "checks": [
+    {
+      "name": "Moving to another visible browser tab sets document.hidden",
+      "passed": false
+    },
+    {
+      "name": "Background stops RAF and frame/time accumulation",
+      "passed": false
+    },
+    {
+      "name": "Returning resumes from current transport state",
+      "passed": true
+    }
+  ],
+  "states": {
+    "before": {
+      "time": 304.6536000000003,
+      "frames": 1768
+    },
+    "hidden": {
+      "time": 312.21600000000086,
+      "frames": 1809,
+      "playing": true,
+      "raf": true
+    },
+    "later": {
+      "time": 312.21600000000086,
+      "frames": 1809
+    },
+    "resumed": {
+      "time": 317.63040000000103,
+      "frames": 1828
+    }
+  }
+}

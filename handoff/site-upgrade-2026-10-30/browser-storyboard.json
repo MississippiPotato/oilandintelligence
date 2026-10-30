@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-10-30T04:15:53.724Z",
+  "kind": "actual_Chrome_five_SVG_storyboard",
+  "checks": [
+    {
+      "name": "Five distinct illustrated frames supplement the 3D scene",
+      "passed": true
+    },
+    {
+      "name": "Frame 1 changes real time, stage and camera",
+      "passed": true
+    },
+    {
+      "name": "Frame 2 changes real time, stage and camera",
+      "passed": true
+    },
+    {
+      "name": "Frame 3 changes real time, stage and camera",
+      "passed": true
+    },
+    {
+      "name": "Frame 4 changes real time, stage and camera",
+      "passed": true
+    },
+    {
+      "name": "Frame 5 changes real time, stage and camera",
+      "passed": true
+    },
+    {
+      "name": "A storyboard frame works from the keyboard",
+      "passed": true
+    },
+    {
+      "name": "390px strip actually scrolls locally without stretching the page",
+      "passed": true,
+      "detail": {
+        "page": 390,
+        "width": 390,
+        "local": 322,
+        "content": 914,
+        "scrollLeft": 400,
+        "canvasHeight": 300
+      }
+    },
+    {
+      "name": "No uncaught storyboard errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "states": [
+    {
+      "phase": 0,
+      "time_s": 90,
+      "phaseIndex": 0,
+      "camera": "overview",
+      "title": "井底破岩\n岩屑与含气泥浆"
+    },
+    {
+      "phase": 1,
+      "time_s": 336,
+      "phaseIndex": 1,
+      "camera": "return",
+      "title": "环空上返\n携样返出物"
+    },
+    {
+      "phase": 2,
+      "time_s": 620,
+      "phaseIndex": 2,
+      "camera": "surface",
+      "title": "筛分取样\n分出的岩屑样品"
+    },
+    {
+      "phase": 3,
+      "time_s": 680,
+      "phaseIndex": 3,
+      "camera": "surface",
+      "title": "地面检测\n岩屑观察＋气体组分"
+    },
+    {
+      "phase": 4,
+      "time_s": 765,
+      "phaseIndex": 4,
+      "camera": "interpret",
+      "title": "整理记录\n同井段观察记录"
+    }
+  ],
+  "errors": [],
+  "passed": 9,
+  "failed": 0
+}

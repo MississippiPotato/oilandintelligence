@@ -1,0 +1,395 @@
+{
+  "checkedAt": "2026-10-30T03:32:42.748Z",
+  "caseId": "s17x-g3-closure-spill",
+  "scene": "g3",
+  "phase": "mobile",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "mobile actual URL",
+      "passed": true,
+      "detail": "http://127.0.0.1:8755/dist/expansion-cases/s17x-g3-closure-spill/demo/index.html#background"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 2143
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "mobile default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-g3-closure-spill",
+        "status": "ready",
+        "params": {
+          "scenario": "side",
+          "saddle": 34,
+          "tilt": 0,
+          "noise": 0.8,
+          "sampleStep": 1,
+          "axis": "ew",
+          "fill": 0.65,
+          "seed": 2026,
+          "candidateX": 24,
+          "candidateY": 20
+        },
+        "inferenceHash": "51188c6",
+        "graphicHash": "8f9eaaef",
+        "svgCount": 2,
+        "finite": true
+      }
+    },
+    {
+      "name": "mobile real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 65,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "b37dfb26",
+          "graphicHash": "23d671f",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "mobile actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "8f9eaaef",
+        "after": "23d671f"
+      }
+    },
+    {
+      "name": "mobile actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-g3-mobile-download.json"
+    },
+    {
+      "name": "mobile reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "390px entire page does not overflow horizontally",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 59,
+            "className": "v-chart",
+            "width": 330,
+            "scrollWidth": 760
+          },
+          {
+            "index": 61,
+            "className": "v-table",
+            "width": 330,
+            "scrollWidth": 620
+          },
+          {
+            "index": 62,
+            "className": "v-chart",
+            "width": 330,
+            "scrollWidth": 760
+          },
+          {
+            "index": 64,
+            "className": "v-table",
+            "width": 330,
+            "scrollWidth": 620
+          }
+        ],
+        "svgs": [
+          {
+            "width": 760,
+            "height": 435,
+            "viewBox": "0 0 760 435",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 760,
+            "height": 320,
+            "viewBox": "0 0 760 320",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      }
+    },
+    {
+      "name": "390px data diagrams retain actual local horizontal scrolling",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 59,
+            "className": "v-chart",
+            "width": 330,
+            "scrollWidth": 760
+          },
+          {
+            "index": 61,
+            "className": "v-table",
+            "width": 330,
+            "scrollWidth": 620
+          },
+          {
+            "index": 62,
+            "className": "v-chart",
+            "width": 330,
+            "scrollWidth": 760
+          },
+          {
+            "index": 64,
+            "className": "v-table",
+            "width": 330,
+            "scrollWidth": 620
+          }
+        ],
+        "svgs": [
+          {
+            "width": 760,
+            "height": 435,
+            "viewBox": "0 0 760 435",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 760,
+            "height": 320,
+            "viewBox": "0 0 760 320",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-g3-closure-spill",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-mobile-download.json",
+        "caseId": "s17x-g3-closure-spill",
+        "bytes": 377073
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-mobile-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-g3-mobile.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 65,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "b37dfb26",
+      "graphicHash": "23d671f",
+      "svgCount": 2,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    }
+  },
+  "geometry": {
+    "viewport": 390,
+    "docWidth": 390,
+    "bodyWidth": 390,
+    "scrollables": [
+      {
+        "index": 59,
+        "className": "v-chart",
+        "width": 330,
+        "scrollWidth": 760
+      },
+      {
+        "index": 61,
+        "className": "v-table",
+        "width": 330,
+        "scrollWidth": 620
+      },
+      {
+        "index": 62,
+        "className": "v-chart",
+        "width": 330,
+        "scrollWidth": 760
+      },
+      {
+        "index": 64,
+        "className": "v-table",
+        "width": 330,
+        "scrollWidth": 620
+      }
+    ],
+    "svgs": [
+      {
+        "width": 760,
+        "height": 435,
+        "viewBox": "0 0 760 435",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 16
+      },
+      {
+        "width": 760,
+        "height": 320,
+        "viewBox": "0 0 760 320",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 16
+      }
+    ],
+    "actualScroll": {
+      "before": 0,
+      "after": 400,
+      "moved": true
+    }
+  },
+  "passed": 13,
+  "failed": 0
+}

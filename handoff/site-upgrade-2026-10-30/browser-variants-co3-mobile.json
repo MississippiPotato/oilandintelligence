@@ -1,0 +1,431 @@
+{
+  "checkedAt": "2026-10-30T03:37:29.537Z",
+  "caseId": "s17x-co3-completion-seal-test",
+  "scene": "co3",
+  "phase": "mobile",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "mobile actual URL",
+      "passed": true,
+      "detail": "http://127.0.0.1:8755/dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 1102
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "mobile default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-co3-completion-seal-test",
+        "status": "ready",
+        "params": {
+          "scenario": "cool",
+          "drift": -1.5,
+          "volume": 1200,
+          "start": 8,
+          "end": 32,
+          "limit": 0.01,
+          "cursor": 20
+        },
+        "inferenceHash": "71d19dc5",
+        "graphicHash": "5dae9251",
+        "svgCount": 3,
+        "finite": true
+      }
+    },
+    {
+      "name": "mobile real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": -1.5,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "71d19dc5",
+          "graphicHash": "5dae9251",
+          "svgCount": 3,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": 3,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "4683d581",
+          "graphicHash": "a3db82f4",
+          "svgCount": 3,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "mobile actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "5dae9251",
+        "after": "a3db82f4"
+      }
+    },
+    {
+      "name": "mobile actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-co3-mobile-download.json"
+    },
+    {
+      "name": "mobile reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": -1.5,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "71d19dc5",
+          "graphicHash": "5dae9251",
+          "svgCount": 3,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "390px entire page does not overflow horizontally",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 12,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 14,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 18,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 19,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 22,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 23,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          }
+        ],
+        "svgs": [
+          {
+            "width": 880,
+            "height": 350,
+            "viewBox": "0 0 880 350",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 880,
+            "height": 280,
+            "viewBox": "0 0 880 280",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 880,
+            "height": 320,
+            "viewBox": "0 0 880 320",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      }
+    },
+    {
+      "name": "390px data diagrams retain actual local horizontal scrolling",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 12,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 14,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 18,
+            "className": "vx-plot",
+            "width": 332,
+            "scrollWidth": 880
+          },
+          {
+            "index": 19,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 22,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          },
+          {
+            "index": 23,
+            "className": "vx-scroll",
+            "width": 332,
+            "scrollWidth": 720
+          }
+        ],
+        "svgs": [
+          {
+            "width": 880,
+            "height": 350,
+            "viewBox": "0 0 880 350",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 880,
+            "height": 280,
+            "viewBox": "0 0 880 280",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          },
+          {
+            "width": 880,
+            "height": 320,
+            "viewBox": "0 0 880 320",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 16
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-co3-completion-seal-test",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-mobile-download.json",
+        "caseId": "s17x-co3-completion-seal-test",
+        "bytes": 61442
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-mobile-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "d3ed55b9f282341909d005827d0a5fcf0da6c8e9cd213550a74ae68874947c3c",
+      "caseId": "s17x-co3-completion-seal-test"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-co3-mobile.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": -1.5,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "71d19dc5",
+      "graphicHash": "5dae9251",
+      "svgCount": 3,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": 3,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "4683d581",
+      "graphicHash": "a3db82f4",
+      "svgCount": 3,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": -1.5,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "71d19dc5",
+      "graphicHash": "5dae9251",
+      "svgCount": 3,
+      "finite": true
+    }
+  },
+  "geometry": {
+    "viewport": 390,
+    "docWidth": 390,
+    "bodyWidth": 390,
+    "scrollables": [
+      {
+        "index": 12,
+        "className": "vx-plot",
+        "width": 332,
+        "scrollWidth": 880
+      },
+      {
+        "index": 14,
+        "className": "vx-plot",
+        "width": 332,
+        "scrollWidth": 880
+      },
+      {
+        "index": 18,
+        "className": "vx-plot",
+        "width": 332,
+        "scrollWidth": 880
+      },
+      {
+        "index": 19,
+        "className": "vx-scroll",
+        "width": 332,
+        "scrollWidth": 720
+      },
+      {
+        "index": 22,
+        "className": "vx-scroll",
+        "width": 332,
+        "scrollWidth": 720
+      },
+      {
+        "index": 23,
+        "className": "vx-scroll",
+        "width": 332,
+        "scrollWidth": 720
+      }
+    ],
+    "svgs": [
+      {
+        "width": 880,
+        "height": 350,
+        "viewBox": "0 0 880 350",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 16
+      },
+      {
+        "width": 880,
+        "height": 280,
+        "viewBox": "0 0 880 280",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 16
+      },
+      {
+        "width": 880,
+        "height": 320,
+        "viewBox": "0 0 880 320",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 16
+      }
+    ],
+    "actualScroll": {
+      "before": 0,
+      "after": 400,
+      "moved": true
+    }
+  },
+  "passed": 13,
+  "failed": 0
+}

@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-30T04:22:43.771Z",
+  "kind": "actual_Chrome_loader_races_retry_and_teacher_module",
+  "checks": [
+    {
+      "name": "Teacher sample hydrates its stable handle",
+      "passed": true
+    },
+    {
+      "name": "Teacher original module SVG works without iframe conversion",
+      "passed": true
+    },
+    {
+      "name": "Original g3 and its extra case are both reachable",
+      "passed": true
+    },
+    {
+      "name": "Late A body cannot repaint currently selected B",
+      "passed": true
+    },
+    {
+      "name": "A failed request exposes retry",
+      "passed": true
+    },
+    {
+      "name": "Retry succeeds on second actual attempt",
+      "passed": true,
+      "detail": {
+        "id": "s17x-t4-meter-drift-calibration",
+        "version": "1.2.0",
+        "status": "ready",
+        "attempts": 2,
+        "error": null,
+        "registered": true
+      }
+    },
+    {
+      "name": "Three simultaneous ensures issue one request",
+      "passed": true,
+      "detail": {
+        "state": {
+          "id": "s17x-r5-quality-softsensor",
+          "version": "1.2.0",
+          "status": "ready",
+          "attempts": 1,
+          "error": null,
+          "registered": true
+        },
+        "requests": 1
+      }
+    },
+    {
+      "name": "No uncaught loader errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "passed": 8,
+  "failed": 0
+}

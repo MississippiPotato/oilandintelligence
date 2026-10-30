@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-10-30T03:55:39.054Z",
+  "kind": "actual_Chrome_offline_portal_3D_search_and_forced_WebGL_fallback",
+  "checks": [
+    {
+      "name": "Local ordinary-script 3D renders with network offline",
+      "passed": true
+    },
+    {
+      "name": "Offline time chart and transport use the same cumulative calculation",
+      "passed": true
+    },
+    {
+      "name": "Forced unavailable WebGL gives an interactive two-dimensional fallback",
+      "passed": true,
+      "detail": "webgl-unavailable"
+    },
+    {
+      "name": "Fallback controls still compute stopped-pump progress",
+      "passed": true
+    },
+    {
+      "name": "Offline search loads only the chosen case and focuses its chapter",
+      "passed": true
+    },
+    {
+      "name": "Offline portal makes zero HTTP requests",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No uncaught main-page offline errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "httpRequests": [],
+  "backgroundVisibility": {
+    "hidden": false,
+    "playing": true,
+    "raf": true,
+    "note": "Headless browser keeps this page visible; actual background-tab acceptance remains unexercised, separate from the passed offscreen check."
+  },
+  "passed": 7,
+  "failed": 0
+}

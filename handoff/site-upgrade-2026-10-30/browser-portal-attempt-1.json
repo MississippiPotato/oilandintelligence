@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-30T03:29:36.828Z",
+  "kind": "actual_Chrome_search_and_deferred_navigation",
+  "checks": [
+    {
+      "name": "Untouched homepage requests no case body, 3D or avatar heavy assets and creates no iframe",
+      "passed": true,
+      "detail": {
+        "heavy": [],
+        "frames": 0,
+        "cases": 65,
+        "teachers": 1
+      }
+    },
+    {
+      "name": "Homepage separates 65 authored implementations and one teacher sample",
+      "passed": true
+    },
+    {
+      "name": "Search input has focus and finds cases and sections",
+      "passed": true
+    },
+    {
+      "name": "Typing a query does not fetch any case body",
+      "passed": true
+    },
+    {
+      "name": "Down key changes active result",
+      "passed": true
+    },
+    {
+      "name": "Escape closes dialog and restores opener focus",
+      "passed": true
+    },
+    {
+      "name": "Knowledge result loads correct case and focuses the actual section",
+      "passed": false,
+      "detail": {
+        "caseId": "s17-mudgas-context",
+        "sectionId": "s17-mudgas-context:bg:1",
+        "anchor": "learn-s17-mudgas-context-bg-1",
+        "status": "focused",
+        "elapsedMs": 329.09999999403954
+      }
+    },
+    {
+      "name": "Protocol completed",
+      "passed": false,
+      "detail": "Error: Knowledge result loads correct case and focuses the actual section\n    at ok (evalmachine.<anonymous>:7:122)\n    at evalmachine.<anonymous>:24:3\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "pageErrors": [],
+  "screenshots": [],
+  "failure": "Knowledge result loads correct case and focuses the actual section",
+  "passed": 6,
+  "failed": 2
+}

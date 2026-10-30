@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-30T03:25:04.538Z",
+  "caseId": "s17x-c1-cement-woc-strength",
+  "scene": "c1",
+  "phase": "native",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "teacher original directory import persisted",
+      "passed": true
+    },
+    {
+      "name": "complete c1/native path",
+      "passed": false,
+      "detail": "locator.click: Timeout 16000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#tabs [data-tab=\"demo\"]')\u001b[22m\n"
+    }
+  ],
+  "errors": [
+    "(w.lead || []).map is not a function"
+  ],
+  "externalRequests": [],
+  "downloads": [],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-c1-native-failure.png"
+  ],
+  "exception": "locator.click: Timeout 16000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#tabs [data-tab=\"demo\"]')\u001b[22m\n",
+  "passed": 1,
+  "failed": 1
+}

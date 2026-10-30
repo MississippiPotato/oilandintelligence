@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-30T04:15:32.004Z",
+  "kind": "actual_Chrome_five_SVG_storyboard",
+  "checks": [
+    {
+      "name": "Five distinct illustrated frames supplement the 3D scene",
+      "passed": false
+    },
+    {
+      "name": "Storyboard protocol completes",
+      "passed": false,
+      "detail": "Error: Five distinct illustrated frames supplement the 3D scene\n    at ok (evalmachine.<anonymous>:6:81)\n    at evalmachine.<anonymous>:10:3\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "states": [],
+  "errors": [],
+  "failure": "Five distinct illustrated frames supplement the 3D scene",
+  "passed": 0,
+  "failed": 2
+}

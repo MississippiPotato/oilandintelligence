@@ -1,0 +1,479 @@
+{
+  "checkedAt": "2026-10-30T03:30:54.276Z",
+  "caseId": "s17x-g3-closure-spill",
+  "scene": "g3",
+  "phase": "native",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "teacher original directory import persisted",
+      "passed": true
+    },
+    {
+      "name": "teacher imported professional background is substantive",
+      "passed": true
+    },
+    {
+      "name": "teacher imported workflow preserves explanatory text",
+      "passed": true
+    },
+    {
+      "name": "teacher imported every step retains action and product",
+      "passed": true,
+      "detail": [
+        {
+          "name": "检查带单位的顶面观测\n数据",
+          "action": "读取位置和深度，选择50、100或200 m的规则采样间隔；只用实际采样点做双线性插值。",
+          "product": "预期效果\n得到49×41的重建深度数组，以及保留位置、单位、来源和种子的实际采样记录。"
+        },
+        {
+          "name": "从待查点走向局部浅点\n位置",
+          "action": "在8个相邻格子中逐步选择更浅的位置，直到没有更浅邻居或到达开放边界。",
+          "product": "预期效果\n得到本次局部高点的列、行、深度及走过的格子。两种方法使用同一个高点。"
+        },
+        {
+          "name": "寻找第一次通到外边界的深度\n连通",
+          "action": "候选通道的代价是沿途最大深度，在所有通向开放边界的8邻域路径中取最小代价。",
+          "product": "预期效果\n得到二维临界深度、临界溢出位置、到边界的路径及搜索记录。"
+        },
+        {
+          "name": "量测范围，并对照一条剖面\n量测",
+          "action": "提取严格浅于临界深度且与高点相连的格子，计算高度、面积与几何体积；单剖面只沿一行或一列查找出口。",
+          "product": "预期效果\n输出二维结果与同一观测的单剖面基线，标明基线估计范围是否已在二维图上接到边界。"
+        },
+        {
+          "name": "核对出口深度与闭合范围\n评价",
+          "action": "在相同比例尺、候选起点和2009格上，比较当前重建顶面与完整无噪声顶面的闭合结果。",
+          "product": "预期效果\n计算溢出深度绝对误差、范围交并比（IoU）和体积相对误差；保留零闭合参考与NA。"
+        }
+      ]
+    },
+    {
+      "name": "native default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-g3-closure-spill",
+        "status": "ready",
+        "params": {
+          "scenario": "side",
+          "saddle": 34,
+          "tilt": 0,
+          "noise": 0.8,
+          "sampleStep": 1,
+          "axis": "ew",
+          "fill": 0.65,
+          "seed": 2026,
+          "candidateX": 24,
+          "candidateY": 20
+        },
+        "inferenceHash": "51188c6",
+        "graphicHash": "8f9eaaef",
+        "svgCount": 2,
+        "finite": true
+      }
+    },
+    {
+      "name": "native real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 65,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "b37dfb26",
+          "graphicHash": "23d671f",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "8f9eaaef",
+        "after": "23d671f"
+      }
+    },
+    {
+      "name": "native actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-download.json"
+    },
+    {
+      "name": "native reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native-refresh default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-g3-closure-spill",
+        "status": "ready",
+        "params": {
+          "scenario": "side",
+          "saddle": 34,
+          "tilt": 0,
+          "noise": 0.8,
+          "sampleStep": 1,
+          "axis": "ew",
+          "fill": 0.65,
+          "seed": 2026,
+          "candidateX": 24,
+          "candidateY": 20
+        },
+        "inferenceHash": "51188c6",
+        "graphicHash": "8f9eaaef",
+        "svgCount": 2,
+        "finite": true
+      }
+    },
+    {
+      "name": "native-refresh real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 65,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "b37dfb26",
+          "graphicHash": "23d671f",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "native-refresh actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "8f9eaaef",
+        "after": "23d671f"
+      }
+    },
+    {
+      "name": "native-refresh actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-refresh-download.json"
+    },
+    {
+      "name": "native-refresh reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-g3-closure-spill",
+          "status": "ready",
+          "params": {
+            "scenario": "side",
+            "saddle": 34,
+            "tilt": 0,
+            "noise": 0.8,
+            "sampleStep": 1,
+            "axis": "ew",
+            "fill": 0.65,
+            "seed": 2026,
+            "candidateX": 24,
+            "candidateY": 20
+          },
+          "inferenceHash": "51188c6",
+          "graphicHash": "8f9eaaef",
+          "svgCount": 2,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "teacher imported package survives refresh and reruns",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-g3-closure-spill",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-download.json",
+        "caseId": "s17x-g3-closure-spill",
+        "bytes": 377073
+      }
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-g3-closure-spill",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-refresh-download.json",
+        "caseId": "s17x-g3-closure-spill",
+        "bytes": 377073
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill"
+    },
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-g3-native-refresh-download.json",
+      "suggestedFilename": "s17x-g3-closure-spill-run-2.json",
+      "bytes": 377073,
+      "sha256": "0c59f5b9b99b4f1c20d73d4c8e8fc5bc68a478f5affa882da0de2b1aa54cdac6",
+      "caseId": "s17x-g3-closure-spill"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-g3-native.png"
+  ],
+  "setupActions": [
+    "For a repeated protocol run, the previous import of only this case is removed using the actual case-library UI and its confirmation before the current package is imported."
+  ],
+  "nativeWorkflow": [
+    {
+      "name": "检查带单位的顶面观测\n数据",
+      "action": "读取位置和深度，选择50、100或200 m的规则采样间隔；只用实际采样点做双线性插值。",
+      "product": "预期效果\n得到49×41的重建深度数组，以及保留位置、单位、来源和种子的实际采样记录。"
+    },
+    {
+      "name": "从待查点走向局部浅点\n位置",
+      "action": "在8个相邻格子中逐步选择更浅的位置，直到没有更浅邻居或到达开放边界。",
+      "product": "预期效果\n得到本次局部高点的列、行、深度及走过的格子。两种方法使用同一个高点。"
+    },
+    {
+      "name": "寻找第一次通到外边界的深度\n连通",
+      "action": "候选通道的代价是沿途最大深度，在所有通向开放边界的8邻域路径中取最小代价。",
+      "product": "预期效果\n得到二维临界深度、临界溢出位置、到边界的路径及搜索记录。"
+    },
+    {
+      "name": "量测范围，并对照一条剖面\n量测",
+      "action": "提取严格浅于临界深度且与高点相连的格子，计算高度、面积与几何体积；单剖面只沿一行或一列查找出口。",
+      "product": "预期效果\n输出二维结果与同一观测的单剖面基线，标明基线估计范围是否已在二维图上接到边界。"
+    },
+    {
+      "name": "核对出口深度与闭合范围\n评价",
+      "action": "在相同比例尺、候选起点和2009格上，比较当前重建顶面与完整无噪声顶面的闭合结果。",
+      "product": "预期效果\n计算溢出深度绝对误差、范围交并比（IoU）和体积相对误差；保留零闭合参考与NA。"
+    }
+  ],
+  "nativeFirst": {
+    "before": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 65,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "b37dfb26",
+      "graphicHash": "23d671f",
+      "svgCount": 2,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    }
+  },
+  "nativeRefresh": {
+    "before": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 65,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "b37dfb26",
+      "graphicHash": "23d671f",
+      "svgCount": 2,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-g3-closure-spill",
+      "status": "ready",
+      "params": {
+        "scenario": "side",
+        "saddle": 34,
+        "tilt": 0,
+        "noise": 0.8,
+        "sampleStep": 1,
+        "axis": "ew",
+        "fill": 0.65,
+        "seed": 2026,
+        "candidateX": 24,
+        "candidateY": 20
+      },
+      "inferenceHash": "51188c6",
+      "graphicHash": "8f9eaaef",
+      "svgCount": 2,
+      "finite": true
+    }
+  },
+  "passed": 19,
+  "failed": 0
+}

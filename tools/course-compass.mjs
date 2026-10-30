@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { FOUR } from './four-exhibit-contract.mjs';
+import { VARIANTS } from './site-upgrade-contract.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const read = relative => fs.readFileSync(path.join(root, relative), 'utf8');
@@ -40,6 +41,12 @@ export function courseCatalog() {
   for (const row of [...FOUR, {scene:'m2', id:'s17-mudgas-context'}]) {
     if (!fs.existsSync(path.join(root, 'case-src', row.scene))) continue;
     rows.push({id:row.id, sceneId:row.scene, title:atlas.index.byScene[row.scene].name, directory:'cases'});
+  }
+  for (const entry of VARIANTS) {
+    const file=path.join(root,entry.source,'case.json');
+    if(!fs.existsSync(file))continue;
+    const manifest=JSON.parse(fs.readFileSync(file,'utf8'));
+    rows.push({id:manifest.id,sceneId:manifest.sceneId,title:manifest.title,version:manifest.version,directory:'expansion-cases',primary:false});
   }
   const registered = [];
   const context = vm.createContext({window:{}, Cases:{register:value=>registered.push(value)}});

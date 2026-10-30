@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-30T03:59:03.034Z",
+  "kind": "actual_Chrome_background_with_automation_focus_emulation_disabled",
+  "checks": [
+    {
+      "name": "Inactive tab reports browser visibility hidden",
+      "passed": false
+    },
+    {
+      "name": "Visibility handler stops RAF and transport",
+      "passed": false
+    },
+    {
+      "name": "Active tab resumes without catch-up jump",
+      "passed": true
+    }
+  ],
+  "states": {
+    "hidden": false,
+    "raf": true,
+    "playing": true,
+    "hiddenTime": 306.8327999999998,
+    "laterTime": 306.8327999999998,
+    "activeTime": 311.66399999999965,
+    "hiddenFrames": 116,
+    "laterFrames": 116
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-30T03:43:41.431Z",
+  "kind": "actual_Chrome_loader_races_retry_and_teacher_module",
+  "checks": [
+    {
+      "name": "Teacher sample hydrates its stable handle",
+      "passed": true
+    },
+    {
+      "name": "Teacher original module SVG works without iframe conversion",
+      "passed": true
+    },
+    {
+      "name": "Original g3 and its extra case are both reachable",
+      "passed": true
+    },
+    {
+      "name": "Late A body cannot repaint currently selected B",
+      "passed": true
+    },
+    {
+      "name": "A failed request exposes retry",
+      "passed": false
+    },
+    {
+      "name": "Loader protocol completed",
+      "passed": false,
+      "detail": "Error: A failed request exposes retry\n    at ok (evalmachine.<anonymous>:7:81)\n    at evalmachine.<anonymous>:24:3\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "errors": [],
+  "failure": "A failed request exposes retry",
+  "passed": 4,
+  "failed": 2
+}

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-30T03:28:58.880Z",
+  "caseId": "s17x-g3-closure-spill",
+  "scene": "g3",
+  "phase": "native",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "teacher original directory import persisted",
+      "passed": true
+    },
+    {
+      "name": "complete g3/native path",
+      "passed": false,
+      "detail": "locator.click: Timeout 16000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#tabs [data-tab=\"bg\"]')\u001b[22m\n"
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-g3-native-failure.png"
+  ],
+  "exception": "locator.click: Timeout 16000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#tabs [data-tab=\"bg\"]')\u001b[22m\n",
+  "passed": 1,
+  "failed": 1
+}

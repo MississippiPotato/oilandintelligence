@@ -1,0 +1,56 @@
+{
+  "createdAt": "2026-10-30T04:22:31.300Z",
+  "threeRevision": 180,
+  "esbuildVersion": "0.27.3",
+  "engine": {
+    "path": "case-src/m2/engine.js",
+    "sha256": "6d8c814e2349b582907d8a7cd3545e705a7a4254f2b5252b4c4d3afffaf2ab3d",
+    "copiedUnchanged": true
+  },
+  "vendor": {
+    "module": {
+      "path": "portal/assets/vendor/three-r180/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    "core": {
+      "path": "portal/assets/vendor/three-r180/three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    }
+  },
+  "output": {
+    "light": {
+      "path": "portal/assets/s17-mudlogging-stage.js",
+      "bytes": 43974,
+      "sha256": "947ec4965a8c5595066c17280668f5f9e8efb55ba23c55456aeaeda4dbb3207c"
+    },
+    "scene": {
+      "path": "portal/assets/s17-mudlogging-3d.js",
+      "bytes": 551031,
+      "sha256": "377439f70ee519961eb439c4a36e2201a296a4f311ee5ba95ab9dca3518b9ae4"
+    },
+    "css": {
+      "path": "portal/assets/s17-mudlogging-stage.css",
+      "bytes": 10435,
+      "sha256": "6ef57c2b833fdbddfc2286a229fa37952ef2b6574453a6406edd6d8dd5fa7539"
+    }
+  },
+  "bundleInputs": {
+    "light": [
+      "case-src/mudlogging-stage/transport.js",
+      "case-src/mudlogging-stage/source.js"
+    ],
+    "scene": [
+      "portal/assets/vendor/three-r180/three.core.js",
+      "portal/assets/vendor/three-r180/three.module.js",
+      "case-src/mudlogging-stage/transport.js",
+      "case-src/mudlogging-stage/scene.js"
+    ]
+  },
+  "loading": {
+    "sceneEagerlyReferencedByLight": false,
+    "ordinaryScript": true,
+    "relativeToCurrentScript": true,
+    "nearViewportObserverRequired": true
+  },
+  "browserAcceptanceClaimed": false
+}

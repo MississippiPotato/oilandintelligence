@@ -1,0 +1,520 @@
+{
+  "checkedAt": "2026-10-30T03:32:51.413Z",
+  "caseId": "s17x-p1-perforation-depth-correlation",
+  "scene": "p1",
+  "phase": "mobile",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "mobile actual URL",
+      "passed": true,
+      "detail": "http://127.0.0.1:8755/dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 2610
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "mobile default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "status": "ready",
+        "params": {
+          "scenario": "standard",
+          "noise": 2,
+          "targetThickness": 2,
+          "searchLimit": 12,
+          "thresholdK": 2.3,
+          "seed": 17
+        },
+        "inferenceHash": "9845cbba",
+        "graphicHash": "b91ee130",
+        "svgCount": 5,
+        "finite": true
+      }
+    },
+    {
+      "name": "mobile real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "periodic",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "60b579f8",
+          "graphicHash": "89734978",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "mobile actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "b91ee130",
+        "after": "89734978"
+      }
+    },
+    {
+      "name": "mobile actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-p1-mobile-download.json"
+    },
+    {
+      "name": "mobile reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-p1-perforation-depth-correlation",
+          "status": "ready",
+          "params": {
+            "scenario": "standard",
+            "noise": 2,
+            "targetThickness": 2,
+            "searchLimit": 12,
+            "thresholdK": 2.3,
+            "seed": 17
+          },
+          "inferenceHash": "9845cbba",
+          "graphicHash": "b91ee130",
+          "svgCount": 5,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "390px entire page does not overflow horizontally",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 32,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 34,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 36,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 38,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 39,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 41,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 42,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 43,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 44,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          }
+        ],
+        "svgs": [
+          {
+            "width": 900,
+            "height": 610,
+            "viewBox": "0 0 900 610",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 390,
+            "viewBox": "0 0 900 390",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 352,
+            "viewBox": "0 0 900 352",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 360,
+            "viewBox": "0 0 900 360",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 325,
+            "viewBox": "0 0 900 325",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      }
+    },
+    {
+      "name": "390px data diagrams retain actual local horizontal scrolling",
+      "passed": true,
+      "detail": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollables": [
+          {
+            "index": 32,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 34,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 36,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 38,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 39,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 41,
+            "className": "plot-scroll",
+            "width": 356,
+            "scrollWidth": 900
+          },
+          {
+            "index": 42,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 43,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          },
+          {
+            "index": 44,
+            "className": "table-wrap",
+            "width": 358,
+            "scrollWidth": 640
+          }
+        ],
+        "svgs": [
+          {
+            "width": 900,
+            "height": 610,
+            "viewBox": "0 0 900 610",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 390,
+            "viewBox": "0 0 900 390",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 352,
+            "viewBox": "0 0 900 352",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 360,
+            "viewBox": "0 0 900 360",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          },
+          {
+            "width": 900,
+            "height": 325,
+            "viewBox": "0 0 900 325",
+            "minActualTextPx": 16,
+            "maxActualTextPx": 20
+          }
+        ],
+        "actualScroll": {
+          "before": 0,
+          "after": 400,
+          "moved": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-p1-perforation-depth-correlation",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-mobile-download.json",
+        "caseId": "s17x-p1-perforation-depth-correlation",
+        "bytes": 490627
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-p1-mobile-download.json",
+      "suggestedFilename": "s17x-p1-perforation-depth-correlation-p1-depth-2.json",
+      "bytes": 490627,
+      "sha256": "b56ba9d0a24f021ca03a8b0ab3709fe5e605cd57b35ba491231c1f72572e2d5f",
+      "caseId": "s17x-p1-perforation-depth-correlation"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-p1-mobile.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "periodic",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "60b579f8",
+      "graphicHash": "89734978",
+      "svgCount": 5,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-p1-perforation-depth-correlation",
+      "status": "ready",
+      "params": {
+        "scenario": "standard",
+        "noise": 2,
+        "targetThickness": 2,
+        "searchLimit": 12,
+        "thresholdK": 2.3,
+        "seed": 17
+      },
+      "inferenceHash": "9845cbba",
+      "graphicHash": "b91ee130",
+      "svgCount": 5,
+      "finite": true
+    }
+  },
+  "geometry": {
+    "viewport": 390,
+    "docWidth": 390,
+    "bodyWidth": 390,
+    "scrollables": [
+      {
+        "index": 32,
+        "className": "plot-scroll",
+        "width": 356,
+        "scrollWidth": 900
+      },
+      {
+        "index": 34,
+        "className": "plot-scroll",
+        "width": 356,
+        "scrollWidth": 900
+      },
+      {
+        "index": 36,
+        "className": "plot-scroll",
+        "width": 356,
+        "scrollWidth": 900
+      },
+      {
+        "index": 38,
+        "className": "plot-scroll",
+        "width": 356,
+        "scrollWidth": 900
+      },
+      {
+        "index": 39,
+        "className": "table-wrap",
+        "width": 358,
+        "scrollWidth": 640
+      },
+      {
+        "index": 41,
+        "className": "plot-scroll",
+        "width": 356,
+        "scrollWidth": 900
+      },
+      {
+        "index": 42,
+        "className": "table-wrap",
+        "width": 358,
+        "scrollWidth": 640
+      },
+      {
+        "index": 43,
+        "className": "table-wrap",
+        "width": 358,
+        "scrollWidth": 640
+      },
+      {
+        "index": 44,
+        "className": "table-wrap",
+        "width": 358,
+        "scrollWidth": 640
+      }
+    ],
+    "svgs": [
+      {
+        "width": 900,
+        "height": 610,
+        "viewBox": "0 0 900 610",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 20
+      },
+      {
+        "width": 900,
+        "height": 390,
+        "viewBox": "0 0 900 390",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 20
+      },
+      {
+        "width": 900,
+        "height": 352,
+        "viewBox": "0 0 900 352",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 20
+      },
+      {
+        "width": 900,
+        "height": 360,
+        "viewBox": "0 0 900 360",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 20
+      },
+      {
+        "width": 900,
+        "height": 325,
+        "viewBox": "0 0 900 325",
+        "minActualTextPx": 16,
+        "maxActualTextPx": 20
+      }
+    ],
+    "actualScroll": {
+      "before": 0,
+      "after": 400,
+      "moved": true
+    }
+  },
+  "passed": 13,
+  "failed": 0
+}

@@ -1,0 +1,131 @@
+{
+  "caseId": "s17x-g3-closure-spill",
+  "type": "source_and_numerical_checks",
+  "browserAcceptanceClaimed": false,
+  "passed": 16,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "syntax:engine.js",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "syntax:concept.js",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "syntax:app.js",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "manual 3×3: area, height and geometric volume",
+      "passed": true,
+      "evidence": {
+        "spill_m": 3,
+        "area_m2": 2500,
+        "volume_m3": 5000
+      }
+    },
+    {
+      "name": "manual north gate: independent threshold oracle and section baseline",
+      "passed": true,
+      "evidence": {
+        "model_m": 3,
+        "ew_m": 20,
+        "ns_m": 3
+      }
+    },
+    {
+      "name": "plateau and open boundary keep zero closure",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "independent oracle: 120 seeded small grids and arbitrary starts",
+      "passed": true,
+      "evidence": {
+        "grids": 120,
+        "connectivity": "8-neighbor",
+        "oracle": "enumerated threshold BFS"
+      }
+    },
+    {
+      "name": "noiseless side gate and closed dome have independently expected depths",
+      "passed": true,
+      "evidence": {
+        "side": 1034,
+        "closed": 1074.6080114444562,
+        "sideVolume_m3": 7929787.614390338
+      }
+    },
+    {
+      "name": "axis changes baseline, keeps observation and 2D prediction fixed",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "50/100/200 m sampling: exact sample reproduction and shared coordinate noise",
+      "passed": true,
+      "evidence": {
+        "samples": [
+          2009,
+          525,
+          143
+        ],
+        "reconstructedCells": 2009
+      }
+    },
+    {
+      "name": "inference reads only observations; poisoned truth is never accessed",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "open slope: zero reference, empty IoU=1, relative volume error=NA",
+      "passed": true,
+      "evidence": {
+        "spillAbsoluteError_m": 0,
+        "maskIoU": 1,
+        "volumeAbsoluteError_m3": 0,
+        "volumeRelativeError": null,
+        "referenceEmpty": true,
+        "evaluatedCells": 2009
+      }
+    },
+    {
+      "name": "fill volume conservation, monotone contact, cap and excess",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "noise and coarse sampling produce finite actual metrics, preserve denominators",
+      "passed": true,
+      "evidence": {
+        "runs": 18,
+        "extrema": [
+          0,
+          49.02080771606427
+        ]
+      }
+    },
+    {
+      "name": "concept mount: real graph/state changes, threshold boundary, reset and actual observation read",
+      "passed": true,
+      "evidence": {
+        "sourceRuntime": "Node VM / minimal event host; not a browser acceptance",
+        "backgroundChanges": true,
+        "workflowChanges": true,
+        "reset": true,
+        "observedRead": true
+      }
+    },
+    {
+      "name": "manifest and static default visuals are original-scene compatible",
+      "passed": true,
+      "evidence": null
+    }
+  ]
+}

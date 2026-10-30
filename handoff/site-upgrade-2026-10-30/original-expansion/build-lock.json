@@ -1,0 +1,4711 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-30T04:22:27.247Z",
+  "expectedCount": 56,
+  "actualCount": 56,
+  "complete": true,
+  "totalBytes": 30619142,
+  "browserVerifiedByThisBuild": false,
+  "assistantReadabilityIncluded": false,
+  "assistantSources": [
+    {
+      "path": "portal/assets/s17-assistant.js",
+      "bytes": 31471,
+      "sha256": "afa99283c2ade9d48b00ceadaa0071367eed3ea0099723d549332e97a7fb2035"
+    },
+    {
+      "path": "portal/assets/s17-assistant.css",
+      "bytes": 19654,
+      "sha256": "7bc84797284755d1c2f27514ffa9f5d2de6bdd5c4547f879acb50343eeed68cd"
+    },
+    {
+      "path": "portal/assets/s17-media.js",
+      "bytes": 8759,
+      "sha256": "07284fa508ad984c098d0db4b86f68a1c8a325472ecaac49631d25de238b4150"
+    },
+    {
+      "path": "portal/assets/s17-volcengine.js",
+      "bytes": 5037,
+      "sha256": "2554e916e18790997f455d9b5eca632d4ca00cca1da4686e18bee4f0a0c24339"
+    },
+    {
+      "path": "tools/assistant-bundle.mjs",
+      "bytes": 1348,
+      "sha256": "3a595fc06528a91300233dfb8697892e1a9921fc879c323c0a36ca5a2ebaff62"
+    }
+  ],
+  "lessonRevision": true,
+  "cases": [
+    {
+      "sceneId": "g1",
+      "stageId": "geology",
+      "source": "expansion-src/g1",
+      "status": "built_unverified",
+      "sceneName": "地质剖面遥感解译",
+      "stageName": "地质勘察",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/g1/case.json",
+          "bytes": 18170,
+          "sha256": "edd86a7eb575a6840fb72eebdbe782dde5f7b206930275892ce95aa1f09b81da"
+        },
+        {
+          "path": "expansion-src/g1/engine.js",
+          "bytes": 8850,
+          "sha256": "2871b43ce69c5117d9020aa0321640dc25f168bbd4995690942e5412d3cf645a"
+        },
+        {
+          "path": "expansion-src/g1/app.js",
+          "bytes": 17424,
+          "sha256": "0101ab40f8cef2ce7e02c904d3b8526e284a7ffa1a50c58c9127b423583da72d"
+        },
+        {
+          "path": "expansion-src/g1/demo.html",
+          "bytes": 23077,
+          "sha256": "2fafe2383640b5519f9f88845d6831c0537bd045e040e1df5d80ba6bcb397ef9"
+        },
+        {
+          "path": "expansion-src/g1/demo.css",
+          "bytes": 9024,
+          "sha256": "881f829377977e784de24fc714613ff0e1710e534b9e320bebbba03a2682939f"
+        },
+        {
+          "path": "expansion-src/g1/README.txt",
+          "bytes": 3221,
+          "sha256": "833b0963bd6457e8f0acf715848fb6894b8d066502dda0d6b4bbe8eb3ab546b1"
+        },
+        {
+          "path": "expansion-src/g1/flow.json",
+          "bytes": 957,
+          "sha256": "f22c539ce491e855ee7f75aacdfce42677553f327b1806c27a6a7d1b0bedc091"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-g1-remote-lithology",
+      "caseId": "s17x-g1-remote-lithology",
+      "version": "1.2.0",
+      "bytes": 656029,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/case.json",
+          "bytes": 167683,
+          "sha256": "0e5b76289feb5fead2c8ff15d189126eb47bcc5a1089f59c40e61724950ab034",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
+          "bytes": 3554,
+          "sha256": "23036e099a276cb24999009b817bfef4dffb534cdb6dccaf48c0e4727b50b3db",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html",
+          "bytes": 23108,
+          "sha256": "9f0dc304e2d9bafee42d89957d17bb5a5fc58f03c7ac1a3adfb409f10feef72c",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.css",
+          "bytes": 58827,
+          "sha256": "6895cb8e1ae361d467412cac184c8c19f8b44df1b988472e13e05253616a1471",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js",
+          "bytes": 402857,
+          "sha256": "14ac28337cd32b086a6881d66ac64860b253323709cde45e009e22174a9f5cb2",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "g2",
+      "stageId": "geology",
+      "source": "expansion-src/g2",
+      "status": "built_unverified",
+      "sceneName": "油气地球化学异常识别",
+      "stageName": "地质勘察",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/g2/case.json",
+          "bytes": 12752,
+          "sha256": "9a0a268dae3b8ce18e3c36d0bfcbb6e2b2e731434f1ae8b1b08a21a0045391bb"
+        },
+        {
+          "path": "expansion-src/g2/engine.js",
+          "bytes": 2362,
+          "sha256": "3b0b6d9573a6bd643e773c2c55628c857ed6bbbbccf1148b4748ec772f1a8b49"
+        },
+        {
+          "path": "expansion-src/g2/app.js",
+          "bytes": 8296,
+          "sha256": "1ee9597c32005994f3c19c56033da50895e2c3feaba028989e4908407d9193e6"
+        },
+        {
+          "path": "expansion-src/g2/demo.html",
+          "bytes": 9869,
+          "sha256": "c43f3ce211f0a6497f10d0db5b46e8337fe83d2d27e49ae41f806a831e09fb6f"
+        },
+        {
+          "path": "expansion-src/g2/demo.css",
+          "bytes": 2322,
+          "sha256": "f783871db785bc66317fe80c0c2ca2c11036c4f94e9c552aaace6b84e961fefa"
+        },
+        {
+          "path": "expansion-src/g2/README.txt",
+          "bytes": 666,
+          "sha256": "20c5dcf8f8732f197cca8e2ea295a13930a354f279e832752e253db24f4b2f12"
+        },
+        {
+          "path": "expansion-src/g2/flow.json",
+          "bytes": 918,
+          "sha256": "3625374a89e9944472456a73f1fc55ecfa99949367e7b21785c29290127c6ca7"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-g2-geochemical-anomaly",
+      "caseId": "s17x-g2-geochemical-anomaly",
+      "version": "1.2.0",
+      "bytes": 595566,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/case.json",
+          "bytes": 183071,
+          "sha256": "9a82d81ebe825baef96ad62417140cb9cde32f3cc817f5fb6e7dbf2e77290abe",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/README.txt",
+          "bytes": 1019,
+          "sha256": "812b2e0c5173b7d2cb65118fd78bafca6144b843541cf9d2dac81e2a39917bcd",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/index.html",
+          "bytes": 9903,
+          "sha256": "6d13c5c48cced561436fbb89e84ef4b0836c5aae30f26483abc23f9895eccde3",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.css",
+          "bytes": 52125,
+          "sha256": "c704fe660e900a5ef871054b2e4a3a28cf0bdf4e7d2c4b0acfc448c89d1cb3e2",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.js",
+          "bytes": 349448,
+          "sha256": "645786ab954a82b67356ed433b967e68858cc3ca69388e9b9da48c00a7f3b758",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "g3",
+      "stageId": "geology",
+      "source": "expansion-src/g3",
+      "status": "built_unverified",
+      "sceneName": "地质图件要素智能提取",
+      "stageName": "地质勘察",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/g3/case.json",
+          "bytes": 15744,
+          "sha256": "d8b8fe1cd3a2f3e557407ff25f2e9bd7c10da80bb8213e7204f4194d81be8406"
+        },
+        {
+          "path": "expansion-src/g3/engine.js",
+          "bytes": 2688,
+          "sha256": "09fbc2719e3a6cff90972b69ce7d9400a78acbcde3519dfbd713fabde7677403"
+        },
+        {
+          "path": "expansion-src/g3/app.js",
+          "bytes": 4242,
+          "sha256": "97cf727b3b5a876ec7b8a54e8e5a75e5b26dffac2fd5deae7963a0ab541166be"
+        },
+        {
+          "path": "expansion-src/g3/demo.html",
+          "bytes": 16547,
+          "sha256": "f537418b8863e7caf3191f37d55fd8c94b6d4a8902d6299df6cb5b13463021a0"
+        },
+        {
+          "path": "expansion-src/g3/demo.css",
+          "bytes": 2088,
+          "sha256": "4aa1b32f7c63ce255afa9ddb3153261f6bd374a5ebd0bb5f8bc705d9f1b9d24f"
+        },
+        {
+          "path": "expansion-src/g3/README.txt",
+          "bytes": 539,
+          "sha256": "f1fbf2df0901c2781ef983e00bb44e5d2aa1f33b0c29b7d2b15634e1446cd126"
+        },
+        {
+          "path": "expansion-src/g3/flow.json",
+          "bytes": 875,
+          "sha256": "12769fb9c8d9cd3c801a383d8ef47999b3bbaf39b4ed82e4af889689b3b43f9a"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-g3-map-elements",
+      "caseId": "s17x-g3-map-elements",
+      "version": "1.2.0",
+      "bytes": 769140,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/case.json",
+          "bytes": 325469,
+          "sha256": "0d068c5c02126b988ad6e6b9ba5b83f590f5051a454ba3fe0f6a8d7bf89f5e10",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/README.txt",
+          "bytes": 845,
+          "sha256": "13bd129831733df4aa2ee0ed605a60b9d8c5d7b296c60a9abb45009c3ad6d3d3",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/demo/index.html",
+          "bytes": 16578,
+          "sha256": "6908d78e76bacc87fd2d69aee8fae2c69c174f58288faa664a95763369e5de6f",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/demo/demo.css",
+          "bytes": 51891,
+          "sha256": "a73cffe3c9b4b16df8033487d009a9329222855cde1b29a20bb9b2ee402d411f",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/demo/demo.js",
+          "bytes": 374357,
+          "sha256": "6cb62dde9d3cb3085e532e51f228d8203a48dbf81e9210688a96a2cb8863a079",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "g4",
+      "stageId": "geology",
+      "source": "expansion-src/g4",
+      "status": "built_unverified",
+      "sceneName": "露头裂缝自动统计",
+      "stageName": "地质勘察",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/g4/case.json",
+          "bytes": 10093,
+          "sha256": "c2847afb66086e3c6b4b9aa0f9004341a6fc93aefa7fa0a9e764898ea82ae0e1"
+        },
+        {
+          "path": "expansion-src/g4/engine.js",
+          "bytes": 3240,
+          "sha256": "a88c8be223a461a969be409ff4a34a4f23d6fdb7829f4d12e34cf065cf9f1a4a"
+        },
+        {
+          "path": "expansion-src/g4/app.js",
+          "bytes": 5746,
+          "sha256": "0d4d1a17571ff0a864c828193bad9202d1d6ea06777e032502571fac78e17a22"
+        },
+        {
+          "path": "expansion-src/g4/demo.html",
+          "bytes": 12241,
+          "sha256": "937bf4f53fb220d14121f6d2702fb3e495b82acb5d8669ea890b3b341407877f"
+        },
+        {
+          "path": "expansion-src/g4/demo.css",
+          "bytes": 2088,
+          "sha256": "4aa1b32f7c63ce255afa9ddb3153261f6bd374a5ebd0bb5f8bc705d9f1b9d24f"
+        },
+        {
+          "path": "expansion-src/g4/README.txt",
+          "bytes": 612,
+          "sha256": "317fabfd45b4d909d3f448bcc33ad3d086a3901c0d0658d987c5631977a4d300"
+        },
+        {
+          "path": "expansion-src/g4/flow.json",
+          "bytes": 873,
+          "sha256": "a6a263761b1f30c783879e1cf4863449c4b377a295d2094cd0fdae030d109d50"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-g4-fracture-survey",
+      "caseId": "s17x-g4-fracture-survey",
+      "version": "1.2.0",
+      "bytes": 470580,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/case.json",
+          "bytes": 134404,
+          "sha256": "c408839b990bfb328ddffec6ba8137b68f3b56e88255986302772f619a4f5b44",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/README.txt",
+          "bytes": 948,
+          "sha256": "1db97f665b89de79e55a07cfb66ca9d585de92a777c489539592b449c2399fba",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/index.html",
+          "bytes": 12272,
+          "sha256": "577c9db30697a02e334a388248162c0b9ea457f1ed48153935fd700e79aeb4d2",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.css",
+          "bytes": 51891,
+          "sha256": "a73cffe3c9b4b16df8033487d009a9329222855cde1b29a20bb9b2ee402d411f",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.js",
+          "bytes": 271065,
+          "sha256": "9034510c2a570f3ad0c33611bf335116649699ff9f4490823092d96c5401faaf",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "s1",
+      "stageId": "seismic",
+      "source": "expansion-src/s1",
+      "status": "built_unverified",
+      "sceneName": "地震断层自动解释",
+      "stageName": "物探",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/s1/case.json",
+          "bytes": 18565,
+          "sha256": "634862792ca066301a5ad0ebfdef427567ea4805a866efc77d835d79c0ae2b75"
+        },
+        {
+          "path": "expansion-src/s1/engine.js",
+          "bytes": 10997,
+          "sha256": "327661a57fbdeeecf63779c9114f20bd3224a7b3ce7e52b714838a7794548d34"
+        },
+        {
+          "path": "expansion-src/s1/app.js",
+          "bytes": 21164,
+          "sha256": "97f1498e7f2a07a8b23da3bdc63190fa0bd4977c08d572d052624f366b5c914e"
+        },
+        {
+          "path": "expansion-src/s1/demo.html",
+          "bytes": 23954,
+          "sha256": "f6c3870a2f49f21e1bf1864bc7437e6da4dfd8294eeee7f97e22f5cee724f94e"
+        },
+        {
+          "path": "expansion-src/s1/demo.css",
+          "bytes": 9024,
+          "sha256": "881f829377977e784de24fc714613ff0e1710e534b9e320bebbba03a2682939f"
+        },
+        {
+          "path": "expansion-src/s1/README.txt",
+          "bytes": 3744,
+          "sha256": "bf3d9c3d22d151c08fb23e3d03ac2ab8607ad795b20c830ca71715760130a35b"
+        },
+        {
+          "path": "expansion-src/s1/flow.json",
+          "bytes": 975,
+          "sha256": "911063982a242fc9a16848aaa434f06a890f37f78572c38c1be48db91b8b6154"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-s1-seismic-fault",
+      "caseId": "s17x-s1-seismic-fault",
+      "version": "1.2.0",
+      "bytes": 2012656,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/case.json",
+          "bytes": 1134594,
+          "sha256": "0fce3f8827cf311e4957cba23ae833489d68023fc4629f9e3bc6a7094c909bd2",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/README.txt",
+          "bytes": 4056,
+          "sha256": "73e37c66a5b8fd4b847cf099399369fb718a7d8d8795e84c39a858b68e51d1bc",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/index.html",
+          "bytes": 23985,
+          "sha256": "34f1600a2bef489820c6dd50d37a644d20438fee75e45eb445a3a91701cb2f7f",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.css",
+          "bytes": 58827,
+          "sha256": "6895cb8e1ae361d467412cac184c8c19f8b44df1b988472e13e05253616a1471",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.js",
+          "bytes": 791194,
+          "sha256": "40317e61c7779373a73f377757279ae71e530613ea256096fff718b43908ffd4",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "s2",
+      "stageId": "seismic",
+      "source": "expansion-src/s2",
+      "status": "built_unverified",
+      "sceneName": "地震相智能分类",
+      "stageName": "物探",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/s2/case.json",
+          "bytes": 30540,
+          "sha256": "f2ec3dc7bf8cbf59a40346d583f964d869fb2af56470a2412914810c67aa15dc"
+        },
+        {
+          "path": "expansion-src/s2/engine.js",
+          "bytes": 2909,
+          "sha256": "036e775f9648d0180591f0581d16808db60f4b7ace580a24b92c455d27e947d9"
+        },
+        {
+          "path": "expansion-src/s2/app.js",
+          "bytes": 7204,
+          "sha256": "8ef20ddda9aa4bfc1d312470d696b8983e1d8ef3bd42555aea4afe4f1169f624"
+        },
+        {
+          "path": "expansion-src/s2/demo.html",
+          "bytes": 29218,
+          "sha256": "823c634fcb9d873b1e8512147b0a598a464a6c3e2f9f69f2c2a6651c0dc101f7"
+        },
+        {
+          "path": "expansion-src/s2/demo.css",
+          "bytes": 3271,
+          "sha256": "53dab8ec86725bf5717b89a0bc2f34ed64732b66d3cba0014bf6b597b71c6cb1"
+        },
+        {
+          "path": "expansion-src/s2/README.txt",
+          "bytes": 879,
+          "sha256": "4a0868ac91444bf8e8a04869f9b73c08b5743ff8a93cbe6950d184c2aed5275d"
+        },
+        {
+          "path": "expansion-src/s2/flow.json",
+          "bytes": 864,
+          "sha256": "0825f32a250c1b6ec2b9b467e19ed759f14ddea4523baca969a7145fbf1bd087"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-s2-seismic-facies",
+      "caseId": "s17x-s2-seismic-facies",
+      "version": "1.2.0",
+      "bytes": 967498,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/case.json",
+          "bytes": 339285,
+          "sha256": "aff80b9f9b01d6c04c1cf91f673a5fe39b336e22f53be35927cf836788485c93",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/README.txt",
+          "bytes": 1195,
+          "sha256": "fd48d32f97c9c441f724481e8cbfdd454a48106d66fef6ab927c3392e0ac0d3c",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/index.html",
+          "bytes": 29249,
+          "sha256": "ecc61471fc4d35c39b697476eb84cfcda88cfda257a75a1a95738a35ab536218",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.css",
+          "bytes": 53074,
+          "sha256": "8648bc38774c1817dda91512b1b7777dac77f86f69330c88628acca4a8d29be2",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.js",
+          "bytes": 544695,
+          "sha256": "900abd7e035920f0ed03cf5fb57f4af16df3ffb8708e47b1213cb1f81a2896da",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "s3",
+      "stageId": "seismic",
+      "source": "expansion-src/s3",
+      "status": "built_unverified",
+      "sceneName": "初至波自动拾取",
+      "stageName": "物探",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/s3/case.json",
+          "bytes": 12790,
+          "sha256": "9cbf61c83393348bef4af585ebeea22f1c55de83b0f352cd45464355ac948f7c"
+        },
+        {
+          "path": "expansion-src/s3/engine.js",
+          "bytes": 3195,
+          "sha256": "370fe40ddd6df644db62a93703f1e39e8ae9b41940d98ae305c78653f6433bda"
+        },
+        {
+          "path": "expansion-src/s3/app.js",
+          "bytes": 8424,
+          "sha256": "5a3d55e5ee36ebe4807514a9de6ae88016a555ec4eb8d96d5367d8ae4590499d"
+        },
+        {
+          "path": "expansion-src/s3/demo.html",
+          "bytes": 10235,
+          "sha256": "ad2fbe29e723fc5e0c3997ca33f58b24652f060796174d2760290d78123789b6"
+        },
+        {
+          "path": "expansion-src/s3/demo.css",
+          "bytes": 2322,
+          "sha256": "f783871db785bc66317fe80c0c2ca2c11036c4f94e9c552aaace6b84e961fefa"
+        },
+        {
+          "path": "expansion-src/s3/README.txt",
+          "bytes": 669,
+          "sha256": "45b2f6e04c5fe507e6dd4a34047e84b305c1696408ff64fe6868d1960236b29e"
+        },
+        {
+          "path": "expansion-src/s3/flow.json",
+          "bytes": 910,
+          "sha256": "1a0ad403af44edcd5c42e8db10d83f808c46b115b7b5c0c7a4de44b34dc5aa62"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-s3-first-arrival",
+      "caseId": "s17x-s3-first-arrival",
+      "version": "1.2.0",
+      "bytes": 531992,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/case.json",
+          "bytes": 137642,
+          "sha256": "17ae0892c3aaa3069bfbda98ec22f89fdf25db3e2049b399470e29bb7ba3a556",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/README.txt",
+          "bytes": 972,
+          "sha256": "b57d0dda3fadfa6640614c847082a2bf01961b5c36b58cd7b15e638400b995aa",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/index.html",
+          "bytes": 10269,
+          "sha256": "c85a46a41af3f9442a2632a60e0ae7baf0aa85764757aa95338537be48aa639f",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.css",
+          "bytes": 52125,
+          "sha256": "c704fe660e900a5ef871054b2e4a3a28cf0bdf4e7d2c4b0acfc448c89d1cb3e2",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.js",
+          "bytes": 330984,
+          "sha256": "8b95fc9b90ce5784da12f0ea5fc10915afd172a44ca9f135be27f7f459547580",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "s4",
+      "stageId": "seismic",
+      "source": "expansion-src/s4",
+      "status": "built_unverified",
+      "sceneName": "储层参数反演",
+      "stageName": "物探",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/s4/case.json",
+          "bytes": 20853,
+          "sha256": "a4e8a67369b99b7dbc449db1f9295094c98ee106cb3a78179137b17a464ee25c"
+        },
+        {
+          "path": "expansion-src/s4/engine.js",
+          "bytes": 2470,
+          "sha256": "f48ca843c025e08cc9670f116e19e5095d6a68a9ee501ce915e566c443adc181"
+        },
+        {
+          "path": "expansion-src/s4/app.js",
+          "bytes": 6677,
+          "sha256": "c91ccf2a10209ed0580835e272184185ad94c9fac17977d4d27f3d6f55cceeda"
+        },
+        {
+          "path": "expansion-src/s4/demo.html",
+          "bytes": 19428,
+          "sha256": "a8ed8a5b240fc66abcc71841a7d3371e0a7a40203255f8abb324bf15e9c42b82"
+        },
+        {
+          "path": "expansion-src/s4/demo.css",
+          "bytes": 3271,
+          "sha256": "53dab8ec86725bf5717b89a0bc2f34ed64732b66d3cba0014bf6b597b71c6cb1"
+        },
+        {
+          "path": "expansion-src/s4/README.txt",
+          "bytes": 873,
+          "sha256": "c80990d2fc197cf55d5760a472fc42ef657a9241db3e8353e0349131fdae79f9"
+        },
+        {
+          "path": "expansion-src/s4/flow.json",
+          "bytes": 874,
+          "sha256": "bc7b618ce705b3113845ce06011cb0be97d825dee8065696738af94abc866efc"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-s4-reservoir-inversion",
+      "caseId": "s17x-s4-reservoir-inversion",
+      "version": "1.2.0",
+      "bytes": 456588,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/case.json",
+          "bytes": 111017,
+          "sha256": "c0de57d357bc78d674a936f107ec9035d656dab43bd0a3094bd4a810ae208827",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/README.txt",
+          "bytes": 1200,
+          "sha256": "9f3ab23131f6af665e713ba0439a3a21f122c7a161bf10084014eecce314f84b",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/index.html",
+          "bytes": 19459,
+          "sha256": "89c6ee6f64c8594fcd149881b2d9c9015dcd9775e2e0081cb1eb388b63bdac7a",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.css",
+          "bytes": 53074,
+          "sha256": "8648bc38774c1817dda91512b1b7777dac77f86f69330c88628acca4a8d29be2",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.js",
+          "bytes": 271838,
+          "sha256": "4acd476fb0a08599456a506ad76ad9c3d74a1cbcf3daa46bf40741e5d0fe32d9",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "s5",
+      "stageId": "seismic",
+      "source": "expansion-src/s5",
+      "status": "built_unverified",
+      "sceneName": "地震资料噪声压制",
+      "stageName": "物探",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/s5/case.json",
+          "bytes": 14020,
+          "sha256": "465df6690868744178e175a59e23e4773bc7cea1ef1ff8ccd1f3e5406ff774e0"
+        },
+        {
+          "path": "expansion-src/s5/engine.js",
+          "bytes": 2425,
+          "sha256": "fea0265d8805515505e01795c3ba56494e62711139f61d061fae143b7e783a8f"
+        },
+        {
+          "path": "expansion-src/s5/app.js",
+          "bytes": 8233,
+          "sha256": "5242509fd2a2cbe3ebea23ae6e9b85f25db83b9ca39d932e2d2e7ea1259a96ae"
+        },
+        {
+          "path": "expansion-src/s5/demo.html",
+          "bytes": 11116,
+          "sha256": "1133213ef57dfe36d478e8511ad7afdbfa9e4327d79fcd6f03892893b3fd3133"
+        },
+        {
+          "path": "expansion-src/s5/demo.css",
+          "bytes": 2322,
+          "sha256": "f783871db785bc66317fe80c0c2ca2c11036c4f94e9c552aaace6b84e961fefa"
+        },
+        {
+          "path": "expansion-src/s5/README.txt",
+          "bytes": 672,
+          "sha256": "1ab6af30c6e8188bfa3c8fc988fb08fe9684cd72f909fa64f58ebb1fd0c2acd5"
+        },
+        {
+          "path": "expansion-src/s5/flow.json",
+          "bytes": 909,
+          "sha256": "b64bcfd0f50228dc6864283d500e2f6412fd19eee28de5743174b23f81521e66"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-s5-seismic-denoise",
+      "caseId": "s17x-s5-seismic-denoise",
+      "version": "1.2.0",
+      "bytes": 428909,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/case.json",
+          "bytes": 100355,
+          "sha256": "1413ddcf7396bc301632c3ce4bc85f4f401027a941733f3d18d4bea8306bffbb",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/README.txt",
+          "bytes": 1024,
+          "sha256": "fe5aa7f4d9f2cc05f90e75b28615fc17f9d275fb1067a98e67ab90942b9a04d0",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html",
+          "bytes": 11150,
+          "sha256": "b64346196eced8f1e0c8eba9852afa2956fb015011db903eece80281d294cc7e",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css",
+          "bytes": 52125,
+          "sha256": "c704fe660e900a5ef871054b2e4a3a28cf0bdf4e7d2c4b0acfc448c89d1cb3e2",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js",
+          "bytes": 264255,
+          "sha256": "269f3204608fde7dfcaf52f8a2f2b2e7354253bf5fb6d4a3739f60232863e877",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "d1",
+      "stageId": "drilling",
+      "source": "expansion-src/d1",
+      "status": "built_unverified",
+      "sceneName": "钻速预测与参数优化",
+      "stageName": "钻井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/d1/case.json",
+          "bytes": 27256,
+          "sha256": "60cac24abf4600726e0a946ddab94157e21831fa2d205665353071114d9c8176"
+        },
+        {
+          "path": "expansion-src/d1/engine.js",
+          "bytes": 7869,
+          "sha256": "f07d0a75657b38e883bcaf18ad6919c0292ed4a97a56658aa7544b667f3ff140"
+        },
+        {
+          "path": "expansion-src/d1/app.js",
+          "bytes": 18682,
+          "sha256": "35b0c44c8c1edfdb1aa6410a7b5ca87aa9dd989e871644892c58bd0230fded89"
+        },
+        {
+          "path": "expansion-src/d1/demo.html",
+          "bytes": 28231,
+          "sha256": "9dad384cc92a3eb6270db35e92dff1f17b2547c0eca497b5d5cef896ba63a140"
+        },
+        {
+          "path": "expansion-src/d1/demo.css",
+          "bytes": 9513,
+          "sha256": "68a46787a592d1ba25651c579098b3a9b6bd49b3106a2e0d43437268e4220e9c"
+        },
+        {
+          "path": "expansion-src/d1/README.txt",
+          "bytes": 2279,
+          "sha256": "ce6eb2daa21048761e63abeeccfa9895e428fe01fbe23e801926cf3f4d98dd6f"
+        },
+        {
+          "path": "expansion-src/d1/flow.json",
+          "bytes": 1002,
+          "sha256": "85907f03c589626dc2eda0552b4bb4aac5d17f21e8d923a3c45280c3059a0d4d"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-d1-rop-optimization",
+      "caseId": "s17x-d1-rop-optimization",
+      "version": "1.2.0",
+      "bytes": 602751,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/case.json",
+          "bytes": 185670,
+          "sha256": "fbf16683bcf56b689981db47ae703b281c627a807eab400b5951577b1157887c",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/README.txt",
+          "bytes": 2606,
+          "sha256": "88ac2e23e14395c06e554e15bdb7aeb7bc921f07f02090c8c350d7c5fac8971c",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/index.html",
+          "bytes": 28262,
+          "sha256": "046b6929b4e65bcddabf42d8c9a1b0b417028bb2dc49ba7c778104ad2a37746f",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.css",
+          "bytes": 59316,
+          "sha256": "5c3a10b8400ef1fcb2e5439b0cecd1da2c5bddb2f3523b1642c747f956a57c17",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.js",
+          "bytes": 326897,
+          "sha256": "43064bebfd41507dd78f683eb1e056d6ec059db2002e71c2aa1d23fd7ef84395",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "d2",
+      "stageId": "drilling",
+      "source": "expansion-src/d2",
+      "status": "built_unverified",
+      "sceneName": "井下复杂事故前兆预警",
+      "stageName": "钻井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/d2/case.json",
+          "bytes": 11793,
+          "sha256": "7348582c978e38dab77136d0495289d8b83dbb548572494fa3bfef7c3772a25a"
+        },
+        {
+          "path": "expansion-src/d2/engine.js",
+          "bytes": 4595,
+          "sha256": "e7ac56647f7f9c604aa591ac2216b6c3371e4bad71285fb973656afcb3846980"
+        },
+        {
+          "path": "expansion-src/d2/app.js",
+          "bytes": 12401,
+          "sha256": "0bc442082b4836eb598ac8915bcbb41c3d09d73c79c4207c106c8f1663af6630"
+        },
+        {
+          "path": "expansion-src/d2/demo.html",
+          "bytes": 12051,
+          "sha256": "356cd733f27978690035326ac0e39c80507526d890b9056f8d487f6c9d291dae"
+        },
+        {
+          "path": "expansion-src/d2/demo.css",
+          "bytes": 3015,
+          "sha256": "5920127fb817e0168a5847cf138e7ab995668351c77144e02fd0e6b0495df09a"
+        },
+        {
+          "path": "expansion-src/d2/README.txt",
+          "bytes": 611,
+          "sha256": "ab9c3dfbbd1561204332c08c5b4efcff77edcaedc564b0c0feed33d5c67cbf27"
+        },
+        {
+          "path": "expansion-src/d2/flow.json",
+          "bytes": 1003,
+          "sha256": "85c77db78035757f81eb4e23834a5db2131268494f8e1ca7615c399270b790f1"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-d2-drilling-precursor",
+      "caseId": "s17x-d2-drilling-precursor",
+      "version": "1.2.0",
+      "bytes": 464555,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/case.json",
+          "bytes": 122803,
+          "sha256": "74358125136cd0af6e6ff0bb9d152697d3780093c93a4db8181192a9cf44254d",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/README.txt",
+          "bytes": 941,
+          "sha256": "4c1386a8bacb57b3d5b1ba5f1bb7a3d755b8999f67fe5250c3cbd004683578be",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/index.html",
+          "bytes": 12082,
+          "sha256": "1038ed68e5aa0fb7896a7e1be5167cd234d68a44797540a0383ff27bfdfafe7b",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.css",
+          "bytes": 52818,
+          "sha256": "65850914aa3ea288669bc52e5aedb061fa30402fc28f12054db4d2c91015adde",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.js",
+          "bytes": 275911,
+          "sha256": "c0a9f6889d29615aa784dbbab09de97680f731928a8f4e874a19c73cfee02610",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "d3",
+      "stageId": "drilling",
+      "source": "expansion-src/d3",
+      "status": "built_unverified",
+      "sceneName": "井眼轨迹智能控制",
+      "stageName": "钻井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/d3/case.json",
+          "bytes": 10694,
+          "sha256": "ae15c7bb1b54e3bd43dfeb47c241b3232fa9e080f61f2ac7c91e8fcb49698642"
+        },
+        {
+          "path": "expansion-src/d3/engine.js",
+          "bytes": 4889,
+          "sha256": "51b080bf7039be6768b33591c3ae7177164f2619b80060d1725d23ef8e0c122c"
+        },
+        {
+          "path": "expansion-src/d3/app.js",
+          "bytes": 11794,
+          "sha256": "3f2c485d4676b45617932bfe5283b445aba0e18b008cd47f3175793ff9f67491"
+        },
+        {
+          "path": "expansion-src/d3/demo.html",
+          "bytes": 10882,
+          "sha256": "cc3b4914651bdbfdbaf7a50f78103508fe6012a2d67e0ff2a7fda7f41b9739f1"
+        },
+        {
+          "path": "expansion-src/d3/demo.css",
+          "bytes": 3015,
+          "sha256": "5920127fb817e0168a5847cf138e7ab995668351c77144e02fd0e6b0495df09a"
+        },
+        {
+          "path": "expansion-src/d3/README.txt",
+          "bytes": 561,
+          "sha256": "732d71aa93806a1655322b7e60b326d7e85a9738270f07dca5c4a256116da816"
+        },
+        {
+          "path": "expansion-src/d3/flow.json",
+          "bytes": 996,
+          "sha256": "72211f82f927206514711e84c3898852873cb8d8ab958a875a4fb056f94e6324"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-d3-trajectory-control",
+      "caseId": "s17x-d3-trajectory-control",
+      "version": "1.2.0",
+      "bytes": 425499,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/case.json",
+          "bytes": 100625,
+          "sha256": "c88334935f905d7cc4952b1a722cd686b4bfada4b44bf7c8f4417889a95fdf3c",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/README.txt",
+          "bytes": 891,
+          "sha256": "3bd72878c4a9daf5cb935e1748be189db3c624a0628b244b282f4951ca45e0e2",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/index.html",
+          "bytes": 10913,
+          "sha256": "96290bca4249beba3dd9d7e5a0fb68c2489599c9d5e4e1391c2beea1dcdec0cb",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.css",
+          "bytes": 52818,
+          "sha256": "65850914aa3ea288669bc52e5aedb061fa30402fc28f12054db4d2c91015adde",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.js",
+          "bytes": 260252,
+          "sha256": "a370b8496477dd936d8ee6dda280557423b36cd5646ad7cf9accea3a615d294c",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "d4",
+      "stageId": "drilling",
+      "source": "expansion-src/d4",
+      "status": "built_unverified",
+      "sceneName": "钻具失效预测",
+      "stageName": "钻井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/d4/case.json",
+          "bytes": 12823,
+          "sha256": "dea1d61ff3b9efd6f6f24bca12422c4b909112b1631826e424707b7a37aea244"
+        },
+        {
+          "path": "expansion-src/d4/engine.js",
+          "bytes": 4369,
+          "sha256": "286b0c63ca7bd541b1eb20d966f0bc572958fa617ece6a1ec1edfcbe9dfdac69"
+        },
+        {
+          "path": "expansion-src/d4/app.js",
+          "bytes": 12002,
+          "sha256": "0c5d39675b053455728fd64c676eb8caeabbfeb214243f2558c069aa70419ba9"
+        },
+        {
+          "path": "expansion-src/d4/demo.html",
+          "bytes": 13120,
+          "sha256": "452cc51ff0727cb90533e70d243aa4ff0a0a944ddf51e42060e2daf3f466fda6"
+        },
+        {
+          "path": "expansion-src/d4/demo.css",
+          "bytes": 3015,
+          "sha256": "5920127fb817e0168a5847cf138e7ab995668351c77144e02fd0e6b0495df09a"
+        },
+        {
+          "path": "expansion-src/d4/README.txt",
+          "bytes": 730,
+          "sha256": "257d28a4facec22b4ee0314312464ec9e30bf7d567267620ddba4ca7cb8100d0"
+        },
+        {
+          "path": "expansion-src/d4/flow.json",
+          "bytes": 958,
+          "sha256": "70a57cb8b6ede1c42d9c4d38ca7144b6d07eceb8249d6a23cbf0f6ac55b32be3"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-d4-tool-condition",
+      "caseId": "s17x-d4-tool-condition",
+      "version": "1.2.0",
+      "bytes": 451231,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/case.json",
+          "bytes": 108668,
+          "sha256": "3c2f23b0db9802f864170d683716ed52124c4a8ac84fa1976e589a019735395f",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/README.txt",
+          "bytes": 1048,
+          "sha256": "bbc2f50417b9f803f09b1d79ee154dc733d46cd4bb9a7427bc9ae61439e2c3a1",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/index.html",
+          "bytes": 13151,
+          "sha256": "31da01a5cdfb4dddfe9b5052e8166921a627911c8450d98327486493540d19bd",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.css",
+          "bytes": 52818,
+          "sha256": "65850914aa3ea288669bc52e5aedb061fa30402fc28f12054db4d2c91015adde",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.js",
+          "bytes": 275546,
+          "sha256": "43cef23b6cfbec57a3aedd22e16d55573218a1c715b576ecd993c4708ddd7130",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "d5",
+      "stageId": "drilling",
+      "source": "expansion-src/d5",
+      "status": "built_unverified",
+      "sceneName": "钻井液性能智能调控",
+      "stageName": "钻井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/d5/case.json",
+          "bytes": 11636,
+          "sha256": "f63a25b51616ce82a4c4cc86ed8ccfd44bfe88372c33fb4e448d86c3ddbdb9f3"
+        },
+        {
+          "path": "expansion-src/d5/engine.js",
+          "bytes": 4764,
+          "sha256": "480bb30a57ad7c70eba61957f157efdab170428f4ae541b145336179753f1e3d"
+        },
+        {
+          "path": "expansion-src/d5/app.js",
+          "bytes": 11942,
+          "sha256": "6f3f43e01b65aab88c273a25faa4e6af0a21e78924eca85456417628bac6c315"
+        },
+        {
+          "path": "expansion-src/d5/demo.html",
+          "bytes": 11897,
+          "sha256": "f07f7f0bff283504d86312f0dfa2f510ed517984389904773cf44f890b3d46e7"
+        },
+        {
+          "path": "expansion-src/d5/demo.css",
+          "bytes": 3015,
+          "sha256": "5920127fb817e0168a5847cf138e7ab995668351c77144e02fd0e6b0495df09a"
+        },
+        {
+          "path": "expansion-src/d5/README.txt",
+          "bytes": 677,
+          "sha256": "73d07921fcd51362177db8a5a4b521d0c44262bc7f14810a2b0595506fc20caf"
+        },
+        {
+          "path": "expansion-src/d5/flow.json",
+          "bytes": 975,
+          "sha256": "a2a81957e5f89c276c743ea66b300e85b65cfee2ac176585874d3e76d13d11c4"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-d5-mud-rheology",
+      "caseId": "s17x-d5-mud-rheology",
+      "version": "1.2.0",
+      "bytes": 528354,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/case.json",
+          "bytes": 168793,
+          "sha256": "cd8427cfe30d0c06c7be03a60b06b58198d54839e064c8ec02e9da6b98bd43b6",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/README.txt",
+          "bytes": 1006,
+          "sha256": "b05a27edb2970b62b2dceef2a6006726dbaf5282d016b188c710b444fcab6c0d",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/index.html",
+          "bytes": 11928,
+          "sha256": "99959b1adbbdf29099a7667d16689da435859a7e53d88681558483e76aa1aad9",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.css",
+          "bytes": 52818,
+          "sha256": "65850914aa3ea288669bc52e5aedb061fa30402fc28f12054db4d2c91015adde",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.js",
+          "bytes": 293809,
+          "sha256": "aac36d83849b1a75141ded76e8ca8086b4a8859ada5f685fc43b546458825cd4",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "w1",
+      "stageId": "welllog",
+      "source": "expansion-src/w1",
+      "status": "built_unverified",
+      "sceneName": "测井曲线智能分层",
+      "stageName": "测井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/w1/case.json",
+          "bytes": 11824,
+          "sha256": "5ee1fbc9594bb9ece1f1c8f208ba9679dff621d9cd677197e8340c9178a895de"
+        },
+        {
+          "path": "expansion-src/w1/engine.js",
+          "bytes": 5331,
+          "sha256": "4184d95238140819ad552197c7154e1779cad0c7858d4de4a8c85a45ba3df637"
+        },
+        {
+          "path": "expansion-src/w1/app.js",
+          "bytes": 12180,
+          "sha256": "1fce0aacf6d9bca38c784cb095c3ccc4dfcba82c57160a28f5b4204a16ccfd71"
+        },
+        {
+          "path": "expansion-src/w1/demo.html",
+          "bytes": 12323,
+          "sha256": "7951234453e9f5564da8f4bb30e94d66be4996ba66117280c7890e00c64e600b"
+        },
+        {
+          "path": "expansion-src/w1/demo.css",
+          "bytes": 3015,
+          "sha256": "5920127fb817e0168a5847cf138e7ab995668351c77144e02fd0e6b0495df09a"
+        },
+        {
+          "path": "expansion-src/w1/README.txt",
+          "bytes": 696,
+          "sha256": "c31d3d97b0fe1e6e3e1e3f0aada91692d9fe00339d26156310265b2c0467256e"
+        },
+        {
+          "path": "expansion-src/w1/flow.json",
+          "bytes": 983,
+          "sha256": "6a143737b2ce43a5c2418e744e2fd144eb6835caf7017aeee8c0db1627c3d0fb"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-w1-log-boundaries",
+      "caseId": "s17x-w1-log-boundaries",
+      "version": "1.2.0",
+      "bytes": 446670,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/case.json",
+          "bytes": 109855,
+          "sha256": "dcadbd35b0e1cd7a83682ccf7f98fced2583c694b4fb4975361c2d2dd08ea53f",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/README.txt",
+          "bytes": 1032,
+          "sha256": "85c252fd6e5226c24fddc3ff8b7323bee37ac454e78c359082580f5100651729",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/index.html",
+          "bytes": 12354,
+          "sha256": "e7a5c53c83b9628db6102270ce0f0134a4414bc6b78d0d30e3da88a6858d1e82",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.css",
+          "bytes": 52818,
+          "sha256": "65850914aa3ea288669bc52e5aedb061fa30402fc28f12054db4d2c91015adde",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.js",
+          "bytes": 270611,
+          "sha256": "b20e531f0a8b3cba3e90fea745633f1aa1062976acea055b97b459385cdbb7fc",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "w2",
+      "stageId": "welllog",
+      "source": "expansion-src/w2",
+      "status": "built_unverified",
+      "sceneName": "储层参数智能解释",
+      "stageName": "测井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/w2/case.json",
+          "bytes": 17604,
+          "sha256": "eb6c8110db4f1e5a83e4b94c84b87b543d2efb2d3faa102a9c1aca01fa47cd57"
+        },
+        {
+          "path": "expansion-src/w2/engine.js",
+          "bytes": 3938,
+          "sha256": "5639cae79722b3ddb109a9d8bf52a21c9a3b5b6c18c87633c27a06e2b3276198"
+        },
+        {
+          "path": "expansion-src/w2/app.js",
+          "bytes": 12013,
+          "sha256": "1b7912798f98b2d3c24e6779565dac59e17dc58bcf75094adbc05cdaf6b918d2"
+        },
+        {
+          "path": "expansion-src/w2/demo.html",
+          "bytes": 16687,
+          "sha256": "cc72a1490103429caf13749e627821cafeb5e3dfa1a1c9128ee6cb7d673dfed8"
+        },
+        {
+          "path": "expansion-src/w2/demo.css",
+          "bytes": 3015,
+          "sha256": "5920127fb817e0168a5847cf138e7ab995668351c77144e02fd0e6b0495df09a"
+        },
+        {
+          "path": "expansion-src/w2/README.txt",
+          "bytes": 722,
+          "sha256": "4f590db0571d54782fa75d28511622693a5d50b378c926d861811c2847da1f00"
+        },
+        {
+          "path": "expansion-src/w2/flow.json",
+          "bytes": 972,
+          "sha256": "f1acfb4d684c087fdba4d04781f60650d42093f263d9dc0b7bc66c26c186d3d1"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-w2-porosity-calibration",
+      "caseId": "s17x-w2-porosity-calibration",
+      "version": "1.2.0",
+      "bytes": 446742,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/case.json",
+          "bytes": 104887,
+          "sha256": "8ee34746cb4ff20f4e2e7514cd980ed02f450a5afda6a1af713c201623a9ad30",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/README.txt",
+          "bytes": 1033,
+          "sha256": "b1aee030a04b89ccd66422ac1f26f4eaaa4d39b611a283d78585df932c08a85f",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/index.html",
+          "bytes": 16718,
+          "sha256": "db599bb7ebd8e8089334097091fb39831d932eb5aa20cd90ea2ca121a9dd493e",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.css",
+          "bytes": 52818,
+          "sha256": "65850914aa3ea288669bc52e5aedb061fa30402fc28f12054db4d2c91015adde",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.js",
+          "bytes": 271286,
+          "sha256": "e54891c3726c8b20bf1164c3de0c955001a40ebfbbd131bc064525d14818c9cf",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "w3",
+      "stageId": "welllog",
+      "source": "expansion-src/w3",
+      "status": "built_unverified",
+      "sceneName": "成像测井裂缝识别",
+      "stageName": "测井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/w3/case.json",
+          "bytes": 18920,
+          "sha256": "e746104548fef9c77d0155ef3b7018a67fd3626dbdd974fb718650462d6f9fc3"
+        },
+        {
+          "path": "expansion-src/w3/engine.js",
+          "bytes": 4360,
+          "sha256": "1ede55858199acaecbd6a3cacc540fa0ecfd5b40f12469e5739f18cceae5a13d"
+        },
+        {
+          "path": "expansion-src/w3/app.js",
+          "bytes": 12628,
+          "sha256": "354a9892b44c5bc43166f4538a1615de2d2f4246b004b27b5198d31ecb167296"
+        },
+        {
+          "path": "expansion-src/w3/demo.html",
+          "bytes": 18723,
+          "sha256": "04427730500c405ad5cfd25e345c93d3f525f77e4e5529678abdc39329119b03"
+        },
+        {
+          "path": "expansion-src/w3/demo.css",
+          "bytes": 3095,
+          "sha256": "36dec946b820943186dc0c4261d86ffe6994c3efc3b5f3f0c9a7483589a34570"
+        },
+        {
+          "path": "expansion-src/w3/README.txt",
+          "bytes": 735,
+          "sha256": "75b23bdfe7a62be98f5494193f7045c6da3cab747f76d18e3e78bd4908797dac"
+        },
+        {
+          "path": "expansion-src/w3/flow.json",
+          "bytes": 985,
+          "sha256": "e13531d7d113aec1a92ab7dbb42e33afeba1d9507b9906b966739bba1a4f9d8c"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-w3-borehole-fractures",
+      "caseId": "s17x-w3-borehole-fractures",
+      "version": "1.2.0",
+      "bytes": 999678,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+          "bytes": 463879,
+          "sha256": "802f2f0c49dbb077a789d5e88f1f292e8a272dab693f5aae1455a2cd466974a7",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+          "bytes": 1065,
+          "sha256": "450378e032abfff32b58d316c0965196fb252dbccd839d32ac55ad05be1d297d",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+          "bytes": 18754,
+          "sha256": "8a9d202fc19e3c368a5f4e3d8e690ce5ea9d3d5f84bdde95839bea4f730ef7aa",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+          "bytes": 52898,
+          "sha256": "149f02308f9938f790bdc901ab99e1a398c03e3c0a2f1c600315dba761bc31f4",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+          "bytes": 463082,
+          "sha256": "8a2117ddc7a77e121f248c36c6d6777ff0a0cccd9871f670c1fd7891039528c6",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "w4",
+      "stageId": "welllog",
+      "source": "expansion-src/w4",
+      "status": "built_unverified",
+      "sceneName": "岩性识别",
+      "stageName": "测井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/w4/case.json",
+          "bytes": 21856,
+          "sha256": "7c8b3383b808df19c00b07b5ae89fef35c319c31b7b7d8cc591392b0b0a25336"
+        },
+        {
+          "path": "expansion-src/w4/engine.js",
+          "bytes": 7062,
+          "sha256": "bf31a834975e7b32092c905581163ec0093adc134d1fbbe99de3050bdfcdf413"
+        },
+        {
+          "path": "expansion-src/w4/app.js",
+          "bytes": 17689,
+          "sha256": "19769a30f7ab3dd7f431bc61d5c6aaa52cf3ca2e5ff0c02eec3719f46cacc522"
+        },
+        {
+          "path": "expansion-src/w4/demo.html",
+          "bytes": 23674,
+          "sha256": "f3da553339c3b7557e7d4c376861ca16c88f2fbd858c8b5bbeeb9ce6e80acec4"
+        },
+        {
+          "path": "expansion-src/w4/demo.css",
+          "bytes": 9513,
+          "sha256": "68a46787a592d1ba25651c579098b3a9b6bd49b3106a2e0d43437268e4220e9c"
+        },
+        {
+          "path": "expansion-src/w4/README.txt",
+          "bytes": 2298,
+          "sha256": "976a86410bdea076ef03887a3e0f3b9ef88f13c186a04078c2b592962dc91704"
+        },
+        {
+          "path": "expansion-src/w4/flow.json",
+          "bytes": 1029,
+          "sha256": "a640e10d704a1efdcf1fe351a6ea3ebb10f04bbb28ebb3af6c9a80dd466fe6f9"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-w4-log-lithology",
+      "caseId": "s17x-w4-log-lithology",
+      "version": "1.2.0",
+      "bytes": 537196,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/case.json",
+          "bytes": 140013,
+          "sha256": "c79a91dd51224e76d884661da8a1be019823ca8b40f17c7f057da4d59f3d060d",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/README.txt",
+          "bytes": 2612,
+          "sha256": "2427b256e6555f49516874ed33ea40f9e38fb0d7ba7b1c31c126c40ffe8cecc1",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/index.html",
+          "bytes": 23705,
+          "sha256": "d730dba203f12df80643c1e43032e934bc93e8b2c177deb6693a7b1fd02bdda9",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.css",
+          "bytes": 59316,
+          "sha256": "5c3a10b8400ef1fcb2e5439b0cecd1da2c5bddb2f3523b1642c747f956a57c17",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.js",
+          "bytes": 311550,
+          "sha256": "77d9c79f35feed824d4e14624d39a16b0c8fde9eac1daea3b28f897fa1122572",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "w5",
+      "stageId": "welllog",
+      "source": "expansion-src/w5",
+      "status": "built_unverified",
+      "sceneName": "测井数据修复",
+      "stageName": "测井",
+      "errors": [],
+      "warnings": [
+        "manually check every workflow step has its own diagram"
+      ],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/w5/case.json",
+          "bytes": 11869,
+          "sha256": "7e82506e009b4c72e4a4e245c27fd4d8dfc8384bd6dbb7d205cfe0681995651f"
+        },
+        {
+          "path": "expansion-src/w5/engine.js",
+          "bytes": 4410,
+          "sha256": "884623bcd5921949d50fb9cd89fce0bc170b2f145c70a53b51f90ce7e358f064"
+        },
+        {
+          "path": "expansion-src/w5/app.js",
+          "bytes": 12311,
+          "sha256": "9e7759c7767d58b4a85ccb9a051f80743d62ee8c34f31c6d5b8954ed8ec48ea7"
+        },
+        {
+          "path": "expansion-src/w5/demo.html",
+          "bytes": 12079,
+          "sha256": "cd0e3d6a8cdaddf042980dd920a8261ed21372da07423312ff6afbdd27dd26bc"
+        },
+        {
+          "path": "expansion-src/w5/demo.css",
+          "bytes": 3015,
+          "sha256": "5920127fb817e0168a5847cf138e7ab995668351c77144e02fd0e6b0495df09a"
+        },
+        {
+          "path": "expansion-src/w5/README.txt",
+          "bytes": 738,
+          "sha256": "1f1c811f846c37a9ea8f2956cceaf22642c173bc3a46a9fd26f82f5f9131bd61"
+        },
+        {
+          "path": "expansion-src/w5/flow.json",
+          "bytes": 1003,
+          "sha256": "2efb8677f04238b3a9d4ee72fd38c7a36038bd1485dbe827d5329feb219f7da4"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-w5-curve-repair",
+      "caseId": "s17x-w5-curve-repair",
+      "version": "1.2.0",
+      "bytes": 581448,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/case.json",
+          "bytes": 194382,
+          "sha256": "2a285d6649783ba7390f6de004c03a7e74a1b1f5b6e52cbc4c4960b9782e927a",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/README.txt",
+          "bytes": 1064,
+          "sha256": "73b8cac9934b7667daf0bdc4bef9bb9645f9e7712993b2a95feb3d37446c0218",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/index.html",
+          "bytes": 12110,
+          "sha256": "85f5a957c67553f7892b0e567aef11dfc0d8dd769a59c8e14eb71567e2e04542",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css",
+          "bytes": 52818,
+          "sha256": "65850914aa3ea288669bc52e5aedb061fa30402fc28f12054db4d2c91015adde",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js",
+          "bytes": 321074,
+          "sha256": "695cd04ed3ce7877cfee12b95a3535f4ac7dbe319f9ad7ab3706f2516b4fe3e0",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "c1",
+      "stageId": "cementing",
+      "source": "expansion-src/c1",
+      "status": "built_unverified",
+      "sceneName": "固井质量智能评价",
+      "stageName": "固井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/c1/case.json",
+          "bytes": 60504,
+          "sha256": "dcb6ed8d79fc46cbe253b4013ee24b892b723fd6b67084f7371be07972dd06c3"
+        },
+        {
+          "path": "expansion-src/c1/engine.js",
+          "bytes": 6760,
+          "sha256": "99ca73bfc6b95097b843c655cec44aebb0eaae14b3469ce2b65d2bb03dffd7ee"
+        },
+        {
+          "path": "expansion-src/c1/app.js",
+          "bytes": 75431,
+          "sha256": "eaa998a63cebee6bb90d8f2a1ce78e2e64ac1058d0d0895057226515a1bd79ed"
+        },
+        {
+          "path": "expansion-src/c1/demo.html",
+          "bytes": 7135,
+          "sha256": "d7c290c13c6511efe76ac28c228a7138e11f66fd8bb09655c65d54711822742b"
+        },
+        {
+          "path": "expansion-src/c1/demo.css",
+          "bytes": 8854,
+          "sha256": "bc95b03c70697ec7873a9b32e235473bf3a8270a5fd8d00441fa7cd5bf636c42"
+        },
+        {
+          "path": "expansion-src/c1/README.txt",
+          "bytes": 1226,
+          "sha256": "cbb0466ee6527e5bd666716e2e995482f71f5cf8b198550dc7525592b57b22a0"
+        },
+        {
+          "path": "expansion-src/c1/flow.json",
+          "bytes": 891,
+          "sha256": "f12eae0b2a4f637891680d7dbbfb350f9ecd8fea8f5deb06d4dba9fd2beced2d"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-c1-cement-quality",
+      "caseId": "s17x-c1-cement-quality",
+      "version": "1.2.0",
+      "bytes": 623664,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/case.json",
+          "bytes": 149406,
+          "sha256": "5ab7aad096171fdd6a4348f07767201befb56f4a4f35e0973e654a1757d55bb8",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/README.txt",
+          "bytes": 1556,
+          "sha256": "9173cdb80d87f0fb5915d877aabbec408a7a5c6ea4be88ebcd0d81d1bb7827fe",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/index.html",
+          "bytes": 7166,
+          "sha256": "ab60d4f74a89d153080a87006afb17f071ea6e7a75f1c1d2e17e7094bbeddd1b",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.css",
+          "bytes": 58657,
+          "sha256": "4ecb135c3fce713dc6bdb2f348166df7eee3c52af0842a74eb38afef05c6544c",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js",
+          "bytes": 406879,
+          "sha256": "adbcc93f26942ca7572166bab6488c3456a67c83d1f80e4fbfe79e7d7fb14c98",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "c2",
+      "stageId": "cementing",
+      "source": "expansion-src/c2",
+      "status": "built_unverified",
+      "sceneName": "注水泥参数优化",
+      "stageName": "固井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/c2/case.json",
+          "bytes": 15205,
+          "sha256": "32ff2d595b78afd6f931fa1e4637c416f610c3f460fd88deccd46ad9f9d8331e"
+        },
+        {
+          "path": "expansion-src/c2/engine.js",
+          "bytes": 5947,
+          "sha256": "4e86511b54470e652943058382dc9fd7acccb82e84ac6a34c331337c59aa88b5"
+        },
+        {
+          "path": "expansion-src/c2/app.js",
+          "bytes": 19538,
+          "sha256": "130b39a6222d1257103f462f32c739556cd27d607fc7b57143b262b81ae1af7e"
+        },
+        {
+          "path": "expansion-src/c2/demo.html",
+          "bytes": 2504,
+          "sha256": "038f97e94c0c372d74bc76f4287b0f4872a8e97a1052006a58bd88f3a3b6e08b"
+        },
+        {
+          "path": "expansion-src/c2/demo.css",
+          "bytes": 2620,
+          "sha256": "36cc373309746b9538ca30b24c1485292f0e81c5edfd97324244bd6c499d2ea2"
+        },
+        {
+          "path": "expansion-src/c2/README.txt",
+          "bytes": 863,
+          "sha256": "1125d320bcae028d4c643cce9f17886cc1cd34777c34fbf46cfb527fd68f6713"
+        },
+        {
+          "path": "expansion-src/c2/flow.json",
+          "bytes": 906,
+          "sha256": "c95e61d5fb81dc92e43dbfd8227ec482361dc9327f3a939d08e2d24f42a9d75f"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-c2-cement-displacement",
+      "caseId": "s17x-c2-cement-displacement",
+      "version": "1.2.0",
+      "bytes": 561956,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/case.json",
+          "bytes": 200982,
+          "sha256": "c03c2ab750c4f6dbe469951c63e081c3c2a4b0f8039129857082eb8c8950f891",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/README.txt",
+          "bytes": 1184,
+          "sha256": "ee6b3c6ee54a1862f970375907d55b24f8465480a94361a6a4eb9cc506f8e2d0",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/index.html",
+          "bytes": 2535,
+          "sha256": "e6b617205941a831751e220069ffe8379138381e5ca72283dd45eff0fdc98507",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.css",
+          "bytes": 52423,
+          "sha256": "f5711e893a3f8dd19ccd95616510e4955cdde9dee61398a4d876eae3fb0ddd40",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.js",
+          "bytes": 304832,
+          "sha256": "27cc2df3b571f8f113cbb68deaa5ad6f676f18115abb048257f5fc29fe074001",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "c3",
+      "stageId": "cementing",
+      "source": "expansion-src/c3",
+      "status": "built_unverified",
+      "sceneName": "固井漏失风险预测",
+      "stageName": "固井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/c3/case.json",
+          "bytes": 14950,
+          "sha256": "e8dd76b13ecd1777190da3a18e53c3eefed63362294f80fd9404e3262c8b6d52"
+        },
+        {
+          "path": "expansion-src/c3/engine.js",
+          "bytes": 5846,
+          "sha256": "70c6c89d9fa037e5d98b4866bc98d522300cece14ebf9874c850b2abdd68c95c"
+        },
+        {
+          "path": "expansion-src/c3/app.js",
+          "bytes": 19292,
+          "sha256": "3101a75ec9407dc8236abbb62e1053da9c4eeefcf7c31c39ebcba1f981cbb08f"
+        },
+        {
+          "path": "expansion-src/c3/demo.html",
+          "bytes": 2509,
+          "sha256": "e52a01c45d2821291fd39d069cb156bde8e3046ee7051bee4c4eacf1a2b4096e"
+        },
+        {
+          "path": "expansion-src/c3/demo.css",
+          "bytes": 2620,
+          "sha256": "36cc373309746b9538ca30b24c1485292f0e81c5edfd97324244bd6c499d2ea2"
+        },
+        {
+          "path": "expansion-src/c3/README.txt",
+          "bytes": 848,
+          "sha256": "0ed93ab6ec92e002c314e446063c3bb1b6dbd2e977941bf1b8c3e14b8cc83edb"
+        },
+        {
+          "path": "expansion-src/c3/flow.json",
+          "bytes": 918,
+          "sha256": "8404d5cdd6b73a6fa1f670fc8905ca1f47afea0b789a2ac42776a5ef5175cda1"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-c3-cement-loss-risk",
+      "caseId": "s17x-c3-cement-loss-risk",
+      "version": "1.2.0",
+      "bytes": 413965,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/case.json",
+          "bytes": 98820,
+          "sha256": "4433574ed8d1b5c2f053c5044ccddab3f31b7289d54ac9ecf0cffeb5ba20c8f8",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/README.txt",
+          "bytes": 1181,
+          "sha256": "8aecdebfbfd618efe3f62ae82f048590ee42beb0ab6f65c0d2961d34cade0cf3",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/index.html",
+          "bytes": 2540,
+          "sha256": "364f39b41670eb6ed67ba490a96c273d7423c463c3a0a281c1d72d833d70adcd",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.css",
+          "bytes": 52423,
+          "sha256": "f5711e893a3f8dd19ccd95616510e4955cdde9dee61398a4d876eae3fb0ddd40",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.js",
+          "bytes": 259001,
+          "sha256": "c74891f12e36c932a6bda772ecc30f63fa3a58e0384051549a72312cd54ae6fc",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "c4",
+      "stageId": "cementing",
+      "source": "expansion-src/c4",
+      "status": "built_unverified",
+      "sceneName": "套管居中度智能评估",
+      "stageName": "固井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/c4/case.json",
+          "bytes": 14225,
+          "sha256": "e5d27e80e3a952fe3be5f90c98a0aeab209a96eb4ab1707e9a1f56ae9ba25e38"
+        },
+        {
+          "path": "expansion-src/c4/engine.js",
+          "bytes": 5565,
+          "sha256": "1d840af42116b788b617aedda33c68b8b2aad54592d61f5bfa509666a7769991"
+        },
+        {
+          "path": "expansion-src/c4/app.js",
+          "bytes": 18543,
+          "sha256": "2bea39af3bc72feb38e2042dc7ef07e7069e577af0c27d5c254e68ec5dd32eb7"
+        },
+        {
+          "path": "expansion-src/c4/demo.html",
+          "bytes": 2452,
+          "sha256": "c3d48d67a4d34665d6181f0766ad8292820f0d7e731bc67a5b6b3eed66225df9"
+        },
+        {
+          "path": "expansion-src/c4/demo.css",
+          "bytes": 2620,
+          "sha256": "36cc373309746b9538ca30b24c1485292f0e81c5edfd97324244bd6c499d2ea2"
+        },
+        {
+          "path": "expansion-src/c4/README.txt",
+          "bytes": 825,
+          "sha256": "81f50567206f7ff4ce9a55a52405f121b5f9738bf1cb948d35688fbf241c338e"
+        },
+        {
+          "path": "expansion-src/c4/flow.json",
+          "bytes": 918,
+          "sha256": "7138b33ba884fdb0801f16e82c9866194842e45f866dbd61fa7641835bb9303f"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-c4-casing-standoff",
+      "caseId": "s17x-c4-casing-standoff",
+      "version": "1.2.0",
+      "bytes": 402793,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+          "bytes": 96621,
+          "sha256": "078f273e56902f87fbf0004cadc664775d10d68408d10ee82f541a1cd5f70283",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+          "bytes": 1152,
+          "sha256": "88fbcccb087c5b1904a4fcc32ef30472f28e854f435dddda9ebf258784229228",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+          "bytes": 2483,
+          "sha256": "4258b6b5d9dfee32ffa2535b0ae3b045130bc13dab2dccfd2fc0f7a6b9c9e7ca",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+          "bytes": 52423,
+          "sha256": "f5711e893a3f8dd19ccd95616510e4955cdde9dee61398a4d876eae3fb0ddd40",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+          "bytes": 250114,
+          "sha256": "406b65897e47e3b12b819e40a6f07176e819fba61d6bd9dd2b360f8089998c15",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "co1",
+      "stageId": "completion",
+      "source": "expansion-src/co1",
+      "status": "built_unverified",
+      "sceneName": "完井方式智能优选",
+      "stageName": "完井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/co1/case.json",
+          "bytes": 23188,
+          "sha256": "c315fe0bdeac887cb00263232b132f01f7f8b2801a4230f0d18b4e49369dcbc0"
+        },
+        {
+          "path": "expansion-src/co1/engine.js",
+          "bytes": 7722,
+          "sha256": "79186b1d27e92a238d5eeab15b35a5d42e3f1d85144a587938ba70eb41b0eb5f"
+        },
+        {
+          "path": "expansion-src/co1/app.js",
+          "bytes": 38046,
+          "sha256": "ab1544c3b1b5c05419551a75e479dc9fa33e84039c6bd4da0b2d9e0175c5c877"
+        },
+        {
+          "path": "expansion-src/co1/demo.html",
+          "bytes": 7323,
+          "sha256": "d1e248a50d8ee98cb051e0499215008e818325997a2b77e74e409361bcfa9b60"
+        },
+        {
+          "path": "expansion-src/co1/demo.css",
+          "bytes": 8854,
+          "sha256": "bc95b03c70697ec7873a9b32e235473bf3a8270a5fd8d00441fa7cd5bf636c42"
+        },
+        {
+          "path": "expansion-src/co1/README.txt",
+          "bytes": 1233,
+          "sha256": "e91948d3f6a2d58e84afb2cc891d0edf63ab85f69bf83b24367a45c14ab915cf"
+        },
+        {
+          "path": "expansion-src/co1/flow.json",
+          "bytes": 954,
+          "sha256": "f911836779b5a7cbfdba96dc59331f67b508627ada7ee6af122b7df1e20f44d2"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-co1-completion-choice",
+      "caseId": "s17x-co1-completion-choice",
+      "version": "1.2.0",
+      "bytes": 477124,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/case.json",
+          "bytes": 115091,
+          "sha256": "c6ebd69e9a4f97c816a41a7831d2f94b9374d9694a3acc7872f46e0e1c882802",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/README.txt",
+          "bytes": 1548,
+          "sha256": "54293e6ef43d9756b9396af532e5bb0f0a2e2c6f2f9e81f8b5d77ebac5aa2763",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/index.html",
+          "bytes": 7354,
+          "sha256": "125a2d9711203595c2b6f19514185be82f4ccbe5ed858658066419887b0f7f43",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.css",
+          "bytes": 58657,
+          "sha256": "4ecb135c3fce713dc6bdb2f348166df7eee3c52af0842a74eb38afef05c6544c",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js",
+          "bytes": 294474,
+          "sha256": "53f36ebab77a98593a132aa79847a8f10b037c25b3c5147f4bc18af4d705a5a4",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "co2",
+      "stageId": "completion",
+      "source": "expansion-src/co2",
+      "status": "built_unverified",
+      "sceneName": "射孔参数智能设计",
+      "stageName": "完井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/co2/case.json",
+          "bytes": 15166,
+          "sha256": "d13da612cd08d496efbd820cb4cb5735181c17f9e4c52670665642725221980a"
+        },
+        {
+          "path": "expansion-src/co2/engine.js",
+          "bytes": 6817,
+          "sha256": "e18b519b41963c77dc5536a8750b867ac3268ae787b248eb2a49343408ef1be0"
+        },
+        {
+          "path": "expansion-src/co2/app.js",
+          "bytes": 19526,
+          "sha256": "300735774d5d9eaead791fe6350cd53e1946a31536d39783aa3c036bb0737b09"
+        },
+        {
+          "path": "expansion-src/co2/demo.html",
+          "bytes": 2568,
+          "sha256": "db0d58b36037d71bce558ff06364cf21aafb3994449d6db596adf975414e14c6"
+        },
+        {
+          "path": "expansion-src/co2/demo.css",
+          "bytes": 2620,
+          "sha256": "36cc373309746b9538ca30b24c1485292f0e81c5edfd97324244bd6c499d2ea2"
+        },
+        {
+          "path": "expansion-src/co2/README.txt",
+          "bytes": 878,
+          "sha256": "3ca58006653385755a16ba6f3b2a91d86d2aae92ee4c3d2855dd45a6f7e95c8e"
+        },
+        {
+          "path": "expansion-src/co2/flow.json",
+          "bytes": 882,
+          "sha256": "3c6e2f60ea3bd404783dd1fb3be200b176b918593b1c9eeacbeb830289dd22fe"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-co2-completion-zone-design",
+      "caseId": "s17x-co2-completion-zone-design",
+      "version": "1.2.0",
+      "bytes": 449148,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/case.json",
+          "bytes": 123452,
+          "sha256": "f77ed89797b23d14c5ca4406fd80ac9e2ceb00fb7e5a9c4c79058be61041b052",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/README.txt",
+          "bytes": 1205,
+          "sha256": "7d36fa954efb03bcd3c101f4417f651ec6dc8fabea12ea3bef53bbd82936c7ad",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/index.html",
+          "bytes": 2599,
+          "sha256": "b31f8e5b75036f9ddb52b9283b5c8e6dfc535d4c839178423c1ee6e0eb5414df",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.css",
+          "bytes": 52423,
+          "sha256": "f5711e893a3f8dd19ccd95616510e4955cdde9dee61398a4d876eae3fb0ddd40",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.js",
+          "bytes": 269469,
+          "sha256": "a6cdf14b5d5cab4ecbf7f411f26ffb28728a5291ae825d2893cdc79f2056fe90",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "co3",
+      "stageId": "completion",
+      "source": "expansion-src/co3",
+      "status": "built_unverified",
+      "sceneName": "完井管柱受力智能分析",
+      "stageName": "完井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/co3/case.json",
+          "bytes": 14328,
+          "sha256": "042bf3b44e0e17ca2fba670e0dbc16f610027c146debfe03a71c6b47a97221ac"
+        },
+        {
+          "path": "expansion-src/co3/engine.js",
+          "bytes": 5619,
+          "sha256": "a67145c7e60fdebf54bd46205d2cb6d71ca1ffbe1159ff11d3e9243ccad784dc"
+        },
+        {
+          "path": "expansion-src/co3/app.js",
+          "bytes": 18784,
+          "sha256": "ae3068e2b89f455fa9b9b515afa855f51a0168e38ccacdace1dfae26229d106d"
+        },
+        {
+          "path": "expansion-src/co3/demo.html",
+          "bytes": 2722,
+          "sha256": "9af8792ff429baa83b19d0a578418f39e84bab4fe004c68f1ccdb4a956fed6b4"
+        },
+        {
+          "path": "expansion-src/co3/demo.css",
+          "bytes": 2620,
+          "sha256": "36cc373309746b9538ca30b24c1485292f0e81c5edfd97324244bd6c499d2ea2"
+        },
+        {
+          "path": "expansion-src/co3/README.txt",
+          "bytes": 874,
+          "sha256": "2fec7a5036a088424242791bc3a080209f3acf2033bbba002c667ac6edbf25ff"
+        },
+        {
+          "path": "expansion-src/co3/flow.json",
+          "bytes": 921,
+          "sha256": "2da6290b013e07c3d990820f5924969a2394994dbf9082f4599cc1dfe68dbaa9"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-co3-tubing-stress",
+      "caseId": "s17x-co3-tubing-stress",
+      "version": "1.2.0",
+      "bytes": 411898,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/case.json",
+          "bytes": 100149,
+          "sha256": "a9a526546dece26dd090764ca31ae0665e7dcadfaa1d73933004efd55e9da649",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/README.txt",
+          "bytes": 1171,
+          "sha256": "ce190ca87456aca16f43e1bc7eaf5db6cfef7bca4797127d67fad729ccb62cd6",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/index.html",
+          "bytes": 2753,
+          "sha256": "3e8b802e0a9496f2cd90c59555c63ba9f7ecb836941cba2f11fe610943cbd5f6",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.css",
+          "bytes": 52423,
+          "sha256": "f5711e893a3f8dd19ccd95616510e4955cdde9dee61398a4d876eae3fb0ddd40",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.js",
+          "bytes": 255402,
+          "sha256": "75b562e4d51fa53cdbda1d47cc6e0ad0f99c595c9e6b293cbb76fc3db619ebe6",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "co4",
+      "stageId": "completion",
+      "source": "expansion-src/co4",
+      "status": "built_unverified",
+      "sceneName": "智能完井滑套控制策略",
+      "stageName": "完井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/co4/case.json",
+          "bytes": 20684,
+          "sha256": "0d728460609303d6901d42d021a74a3a8b265e97d7df2734176ff44e4bc92af1"
+        },
+        {
+          "path": "expansion-src/co4/engine.js",
+          "bytes": 7434,
+          "sha256": "25e3e0235ae8d6633546c7375ce9c0e228407149ca5e1ff77550e581b8a3293e"
+        },
+        {
+          "path": "expansion-src/co4/app.js",
+          "bytes": 25032,
+          "sha256": "1e188361b4f687ea454e199b3a73491e32fdeb9e50492b218da343dd1a06ee90"
+        },
+        {
+          "path": "expansion-src/co4/demo.html",
+          "bytes": 2566,
+          "sha256": "90f1d35c4b1849816b5de1fccbbf7142aea70fa011677616bada4f6ceb81fa2b"
+        },
+        {
+          "path": "expansion-src/co4/demo.css",
+          "bytes": 2620,
+          "sha256": "36cc373309746b9538ca30b24c1485292f0e81c5edfd97324244bd6c499d2ea2"
+        },
+        {
+          "path": "expansion-src/co4/README.txt",
+          "bytes": 891,
+          "sha256": "9ba5d804f627c2094bffc19b926024ed5ca9d03654b06d5e1f9087cde1633be4"
+        },
+        {
+          "path": "expansion-src/co4/flow.json",
+          "bytes": 924,
+          "sha256": "2d1e763caf1c96780ceea50f7d7d8f076d1faed73014eccf6f8d55c81dd51403"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-co4-sliding-sleeve-control",
+      "caseId": "s17x-co4-sliding-sleeve-control",
+      "version": "1.2.0",
+      "bytes": 452741,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/case.json",
+          "bytes": 121823,
+          "sha256": "e14be229a3d719ef210a39003fdf9e10d71fcdd5042cfc78f3769f0581a2d01d",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/README.txt",
+          "bytes": 1212,
+          "sha256": "c8312cf335bcd374bf591a8e2bacc58a49a8c06846650ee616da89acf85a382d",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/index.html",
+          "bytes": 2597,
+          "sha256": "3569dc3ab3de102f351c666412135194b3eb810d003f070ae807342f71b6f7b7",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.css",
+          "bytes": 52423,
+          "sha256": "f5711e893a3f8dd19ccd95616510e4955cdde9dee61398a4d876eae3fb0ddd40",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.js",
+          "bytes": 274686,
+          "sha256": "40cfdd04551f3301c9e8aa61f6fbb3d08f598b0d1d1b4d1415bb2d947612060d",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "p1",
+      "stageId": "perforation",
+      "source": "expansion-src/p1",
+      "status": "built_unverified",
+      "sceneName": "射孔参数优化",
+      "stageName": "射孔",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/p1/case.json",
+          "bytes": 25789,
+          "sha256": "bbf2f5cd0bfc84018843f6de476bf37ad7c87d452bb035cfb16e1ef2a48405df"
+        },
+        {
+          "path": "expansion-src/p1/engine.js",
+          "bytes": 9176,
+          "sha256": "ab52b30e40416b5740c1a9b0fb1f4fec436be32451eabfcc5b3693b06bac3165"
+        },
+        {
+          "path": "expansion-src/p1/app.js",
+          "bytes": 46033,
+          "sha256": "1285ac4003c51f0b50c67463035bd6194b2eb2a9eae3317a214752de5b621410"
+        },
+        {
+          "path": "expansion-src/p1/demo.html",
+          "bytes": 4929,
+          "sha256": "379ac2cd18f4d564073061ebf4a9c608141af9919f2c0ac33f9a7bc3212c5c71"
+        },
+        {
+          "path": "expansion-src/p1/demo.css",
+          "bytes": 8252,
+          "sha256": "b12add7afb64d1f6f3085a5741ad714b1b9283ef6e3b81d4ef4d6db3de488326"
+        },
+        {
+          "path": "expansion-src/p1/README.txt",
+          "bytes": 3117,
+          "sha256": "af0eaacfbe248b0ae011023a5f063a77c28649bf3dbb40d068b37be22d96e593"
+        },
+        {
+          "path": "expansion-src/p1/flow.json",
+          "bytes": 924,
+          "sha256": "c247101ed486f3a8da46e242f212781854d75eb8130c9eed133336baf535bbbc"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-p1-perforation-design",
+      "caseId": "s17x-p1-perforation-design",
+      "version": "1.2.0",
+      "bytes": 537824,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/case.json",
+          "bytes": 146973,
+          "sha256": "0ecdbcf89cb69f308450591bf80a63ad672afed12234650098fcdc57c24e509a",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/README.txt",
+          "bytes": 3432,
+          "sha256": "6e6f0c35a9fac25fa5e63f9e91f3f61ebeb709e2c9417abe0ab2ae9202034959",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/index.html",
+          "bytes": 4960,
+          "sha256": "99e0caf13dbb75640c25470497abd2be41d439d66be1ac6481266b709c0c701b",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.css",
+          "bytes": 58055,
+          "sha256": "573733ecdbd920bade2e1ed7370fee48ca62de8658c216f83fbfed547f36863b",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.js",
+          "bytes": 324404,
+          "sha256": "bb456aba2b20fed635b331113db5007f357b3c6430926119a5f11b21165a69d3",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "p2",
+      "stageId": "perforation",
+      "source": "expansion-src/p2",
+      "status": "built_unverified",
+      "sceneName": "射孔孔道形态预测",
+      "stageName": "射孔",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/p2/case.json",
+          "bytes": 17329,
+          "sha256": "f04168857413a024c452682b4c2be4cc421219544388f6a802c5e9f74b4e7fce"
+        },
+        {
+          "path": "expansion-src/p2/engine.js",
+          "bytes": 4698,
+          "sha256": "dad278ceecf6da6a88d3e59180423908161d819a8b09e307ad2229b672957812"
+        },
+        {
+          "path": "expansion-src/p2/app.js",
+          "bytes": 8511,
+          "sha256": "27d92b928823806d8ebe1af0adecc64b90d729100d1501c3840fc04def5594db"
+        },
+        {
+          "path": "expansion-src/p2/demo.html",
+          "bytes": 16961,
+          "sha256": "b8450ce83dc43304f962dd38f7a705af5f2030eda3622e4910b17cc5eefdc85c"
+        },
+        {
+          "path": "expansion-src/p2/demo.css",
+          "bytes": 4388,
+          "sha256": "09093205212e70869583ca55c8e28a4a0d98320f800deca1431437607560e4cb"
+        },
+        {
+          "path": "expansion-src/p2/README.txt",
+          "bytes": 1030,
+          "sha256": "085a7f8d0720ead7314e03a43509d7d02d5d4dcf354a1ecc1d44a76873ecea85"
+        },
+        {
+          "path": "expansion-src/p2/flow.json",
+          "bytes": 934,
+          "sha256": "636c2faac5bb758d025540a96aa71e3bf8aea406a722b39410ae4f155c4b081d"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-p2-perforation-shape",
+      "caseId": "s17x-p2-perforation-shape",
+      "version": "1.2.0",
+      "bytes": 430739,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/case.json",
+          "bytes": 104357,
+          "sha256": "61c2b050c85d772dc138cc1372963a02cfc4401f96ee510c8f68f17392d601dc",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/README.txt",
+          "bytes": 1342,
+          "sha256": "2f359365aacf8c9bc05268f8c2e3631790cae23cbf1900bda3f8c6d866543b6b",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/index.html",
+          "bytes": 16992,
+          "sha256": "28ec62439723e5674e745f29a2742ecedb76731417379b4bc5c8d889da55616e",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.css",
+          "bytes": 54191,
+          "sha256": "eaf74cd9307976c201b3d9af0e0ee5a404264552d54e83e9d989b972a021cecf",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.js",
+          "bytes": 253857,
+          "sha256": "90785e58032f6d5738225c3ac0e62cc9374f6670830335baf2edc3a7944c86c5",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "p3",
+      "stageId": "perforation",
+      "source": "expansion-src/p3",
+      "status": "built_unverified",
+      "sceneName": "射孔弹型智能选型",
+      "stageName": "射孔",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/p3/case.json",
+          "bytes": 17419,
+          "sha256": "e4836dd854e2205501d371fd1adbf9556960d55471d4f4c38278130f0cacb9f6"
+        },
+        {
+          "path": "expansion-src/p3/engine.js",
+          "bytes": 5094,
+          "sha256": "80d12f92601e8d2384e2fe7c3fef53b1d86287f15f00e04c54f54397aa87f43c"
+        },
+        {
+          "path": "expansion-src/p3/app.js",
+          "bytes": 8890,
+          "sha256": "84c61d2337fbcbb6dd0652d7843c8ca34cdd4e7f8a2678e4bcf49911c060da75"
+        },
+        {
+          "path": "expansion-src/p3/demo.html",
+          "bytes": 17360,
+          "sha256": "52241e271926f219ea95b200c6b460a714968b7f38e4a465214d5c17528ac43c"
+        },
+        {
+          "path": "expansion-src/p3/demo.css",
+          "bytes": 4388,
+          "sha256": "09093205212e70869583ca55c8e28a4a0d98320f800deca1431437607560e4cb"
+        },
+        {
+          "path": "expansion-src/p3/README.txt",
+          "bytes": 1036,
+          "sha256": "4a967410a7e63b77888a04631cc8b9e1ec74c933cfe30d94e3ce003341d5bbc1"
+        },
+        {
+          "path": "expansion-src/p3/flow.json",
+          "bytes": 936,
+          "sha256": "1f701c636606ed0a77ae72e8f3a59d90f611475d24459094019c51fba21939d5"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-p3-perforation-catalog",
+      "caseId": "s17x-p3-perforation-catalog",
+      "version": "1.2.0",
+      "bytes": 440249,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/case.json",
+          "bytes": 107180,
+          "sha256": "53fa677a3d09a5cf020fd4f35747127b22046b3ebe6d61c35544efbbdb806b83",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/README.txt",
+          "bytes": 1345,
+          "sha256": "238c85035e1a7b18f44ed4c41df25a7e106cae228f14c295d9405f29f32807fd",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/index.html",
+          "bytes": 17391,
+          "sha256": "0a29eccbe54e88fc5765bd181fceac4b5f97f57f709ac7c11594b15f815c4ee5",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.css",
+          "bytes": 54191,
+          "sha256": "eaf74cd9307976c201b3d9af0e0ee5a404264552d54e83e9d989b972a021cecf",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.js",
+          "bytes": 260142,
+          "sha256": "86d117e068aeda091d6d80a6721386ae3d19ed9e7cd99f3d05eaecccf4981427",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "p4",
+      "stageId": "perforation",
+      "source": "expansion-src/p4",
+      "status": "built_unverified",
+      "sceneName": "射孔效果智能评估",
+      "stageName": "射孔",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/p4/case.json",
+          "bytes": 17319,
+          "sha256": "6a707452cf4ee14771715b2524a46e8f704fd88019d634295446dfc90c67664e"
+        },
+        {
+          "path": "expansion-src/p4/engine.js",
+          "bytes": 5026,
+          "sha256": "ec74468161f081c8bcdd1713d98d6c0f4a9d1d4bf4f7d9139aa48f1a963407fb"
+        },
+        {
+          "path": "expansion-src/p4/app.js",
+          "bytes": 8536,
+          "sha256": "1de5092a6ada1d12c1cb4a01ae2f707eb555ff9100567ea98fb81d14e5ee0e4f"
+        },
+        {
+          "path": "expansion-src/p4/demo.html",
+          "bytes": 16979,
+          "sha256": "cc6bf4d0e55df51734382e42c7ccae21f4d59e3170218bee79989448300aedf0"
+        },
+        {
+          "path": "expansion-src/p4/demo.css",
+          "bytes": 4388,
+          "sha256": "09093205212e70869583ca55c8e28a4a0d98320f800deca1431437607560e4cb"
+        },
+        {
+          "path": "expansion-src/p4/README.txt",
+          "bytes": 1096,
+          "sha256": "99089445b44b0578213e6ec171915432d76752ac7056b7efcafae209794433f1"
+        },
+        {
+          "path": "expansion-src/p4/flow.json",
+          "bytes": 940,
+          "sha256": "3f69202cc29868218b68cc20f2d973c21f5459e5d24b72a9ee1a721f5a957991"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-p4-perforation-effect",
+      "caseId": "s17x-p4-perforation-effect",
+      "version": "1.2.0",
+      "bytes": 431157,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/case.json",
+          "bytes": 102614,
+          "sha256": "919f3e78bb0666cd4b45972bfdf61a2d9bd54b30f2e3a1155ca5ab968e0aaf4f",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/README.txt",
+          "bytes": 1411,
+          "sha256": "86031616661f1baa0fc853844d9c9cd8df5f264aa4fe117d1f88afcccdb87302",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/index.html",
+          "bytes": 17010,
+          "sha256": "4b6789c812f585d86c22c12b89bd1335149049635f4c56a84b2de4d26db36bb7",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.css",
+          "bytes": 54191,
+          "sha256": "eaf74cd9307976c201b3d9af0e0ee5a404264552d54e83e9d989b972a021cecf",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.js",
+          "bytes": 255931,
+          "sha256": "7de182cc677b8ccf66f74ced7175bd4aaebc8aae544f7bee7302eedbe5e82031",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "pr1",
+      "stageId": "production",
+      "source": "expansion-src/pr1",
+      "status": "built_unverified",
+      "sceneName": "抽油机井工况诊断",
+      "stageName": "采油",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/pr1/case.json",
+          "bytes": 23743,
+          "sha256": "1b014ccd80b10fd17dab0b02200df9a1ce87abbaed4a6625b044b96caab2637c"
+        },
+        {
+          "path": "expansion-src/pr1/engine.js",
+          "bytes": 10161,
+          "sha256": "c4dd054259663e0956e6aa8d63e62a3d3d4475c702842f6fe6d5da8c20ae30af"
+        },
+        {
+          "path": "expansion-src/pr1/app.js",
+          "bytes": 43254,
+          "sha256": "0d95a60d3f69c97de37508789fcae3a353d2127f515c9b5f26dd496a170b245d"
+        },
+        {
+          "path": "expansion-src/pr1/demo.html",
+          "bytes": 4642,
+          "sha256": "c98a586b766d86d257c66c25b39ce768ed880e23e22926fe1cd876039f9592e3"
+        },
+        {
+          "path": "expansion-src/pr1/demo.css",
+          "bytes": 8252,
+          "sha256": "b12add7afb64d1f6f3085a5741ad714b1b9283ef6e3b81d4ef4d6db3de488326"
+        },
+        {
+          "path": "expansion-src/pr1/README.txt",
+          "bytes": 3458,
+          "sha256": "121b114a0ecc35140f868207a53262fd97ac4f4713a73bb899a348838c08b22f"
+        },
+        {
+          "path": "expansion-src/pr1/flow.json",
+          "bytes": 933,
+          "sha256": "e4353a319611100efe2f5424dd058cc800690bd4f911f61b6021275874e17932"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-pr1-pump-card",
+      "caseId": "s17x-pr1-pump-card",
+      "version": "1.2.0",
+      "bytes": 505183,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/case.json",
+          "bytes": 122968,
+          "sha256": "f3b8c9ef80dcafbd02733f8f89f93c4791f477720a0ca43f3e2bd9005da32a09",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/README.txt",
+          "bytes": 3791,
+          "sha256": "368ca57fbd8147e7579a087d759606bd6f93a58416a80fff77aa6b675f3c5a4d",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/index.html",
+          "bytes": 4673,
+          "sha256": "67ba86a4f1da2fb5516d42bc26e980999fc00880a130385b336a5241c4684f41",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.css",
+          "bytes": 58055,
+          "sha256": "573733ecdbd920bade2e1ed7370fee48ca62de8658c216f83fbfed547f36863b",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.js",
+          "bytes": 315696,
+          "sha256": "f15937f7900769620f4521934c8c7376295e90b95478d0cb9e8ade02c992961c",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "pr2",
+      "stageId": "production",
+      "source": "expansion-src/pr2",
+      "status": "built_unverified",
+      "sceneName": "产量智能预测",
+      "stageName": "采油",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/pr2/case.json",
+          "bytes": 17024,
+          "sha256": "49afb18ff96b59c5122cb84054d79d6789e5c136f820edec314e1c318f428d9e"
+        },
+        {
+          "path": "expansion-src/pr2/engine.js",
+          "bytes": 5140,
+          "sha256": "3e1e4566394fd8a261e0e31029d3b311946c8b05279957a7b82840b40942e979"
+        },
+        {
+          "path": "expansion-src/pr2/app.js",
+          "bytes": 8549,
+          "sha256": "279695e7c15d5410c7b12ba3302a1413fdece984886192cca91c9929af26b9c9"
+        },
+        {
+          "path": "expansion-src/pr2/demo.html",
+          "bytes": 16777,
+          "sha256": "2cdef6ad3dff6a6c3815f9b8b533dcfc488e4ea100d9d7e74f680ee5b4ae7dfc"
+        },
+        {
+          "path": "expansion-src/pr2/demo.css",
+          "bytes": 4388,
+          "sha256": "09093205212e70869583ca55c8e28a4a0d98320f800deca1431437607560e4cb"
+        },
+        {
+          "path": "expansion-src/pr2/README.txt",
+          "bytes": 1016,
+          "sha256": "93829f34cf7083d81192abcc8f3a346bcb70c8788d72f4651ada8b0cd1cbefc9"
+        },
+        {
+          "path": "expansion-src/pr2/flow.json",
+          "bytes": 926,
+          "sha256": "0344c68271303ae6067ce456ed442d044885e6fcac0b8cb9d3934b5bd3f83980"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-pr2-production-forecast",
+      "caseId": "s17x-pr2-production-forecast",
+      "version": "1.2.0",
+      "bytes": 436783,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/case.json",
+          "bytes": 104881,
+          "sha256": "3b638fd20be15e96ec2df5cc819d98731e6c8a3e0c55e5844a87279a4629d996",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/README.txt",
+          "bytes": 1334,
+          "sha256": "89efce8667725b76c028c7be5ef5b8353ac1633c4979098f76519061a381deec",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html",
+          "bytes": 16808,
+          "sha256": "41beb78340b7ac8b4ea978bad09705ad4e0324183d41170e1256dc2bddfe81a4",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css",
+          "bytes": 54191,
+          "sha256": "eaf74cd9307976c201b3d9af0e0ee5a404264552d54e83e9d989b972a021cecf",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js",
+          "bytes": 259569,
+          "sha256": "a8ad5fdeea2b61fad4a88c9f6c5e2fc1399b5067a9d307aa84878d58e747f562",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "pr3",
+      "stageId": "production",
+      "source": "expansion-src/pr3",
+      "status": "built_unverified",
+      "sceneName": "智能注水调配",
+      "stageName": "采油",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/pr3/case.json",
+          "bytes": 17602,
+          "sha256": "f2d4c80f224646d000dabbb60cad9cf8785d6cbef6948ad6251688e6d20c38eb"
+        },
+        {
+          "path": "expansion-src/pr3/engine.js",
+          "bytes": 5146,
+          "sha256": "6bac45acc802e9740411f97ef8f12691904074feefd165f7240f86bf13f2a9f2"
+        },
+        {
+          "path": "expansion-src/pr3/app.js",
+          "bytes": 8660,
+          "sha256": "dad79f18fafb9879f451e4a86a01c180dae01232da354144780f2b50d0039145"
+        },
+        {
+          "path": "expansion-src/pr3/demo.html",
+          "bytes": 17336,
+          "sha256": "72e5cb2b1da9c6b611c94836f68a30fa24e7e4240bc4fc9abd2cd6dda5459f5a"
+        },
+        {
+          "path": "expansion-src/pr3/demo.css",
+          "bytes": 4388,
+          "sha256": "09093205212e70869583ca55c8e28a4a0d98320f800deca1431437607560e4cb"
+        },
+        {
+          "path": "expansion-src/pr3/README.txt",
+          "bytes": 1072,
+          "sha256": "883d87b13299ce437ef6c5ac3e7c4dd3b706df2b2d4d19f971cf29ba7f96afce"
+        },
+        {
+          "path": "expansion-src/pr3/flow.json",
+          "bytes": 936,
+          "sha256": "26c191639134820457b19e1b7890c88cc51920e6cef68d8e8f49a12b5d3a405f"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-pr3-water-allocation",
+      "caseId": "s17x-pr3-water-allocation",
+      "version": "1.2.0",
+      "bytes": 608849,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/case.json",
+          "bytes": 219008,
+          "sha256": "06fa875fe8d02f593a84c1e4c30ea7d0db7605f9c39f13739262488581ea5ad6",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/README.txt",
+          "bytes": 1391,
+          "sha256": "e89c8a29669e2570e36341effb0ed267220cdd7f56ed8cdb53a6e414f8430ced",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/index.html",
+          "bytes": 17367,
+          "sha256": "dc53da642f835dc6c5df93ad21a637f52c370bd6f4fdf57a7dc8ec7e5d8ea2d6",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.css",
+          "bytes": 54191,
+          "sha256": "eaf74cd9307976c201b3d9af0e0ee5a404264552d54e83e9d989b972a021cecf",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.js",
+          "bytes": 316892,
+          "sha256": "9d246e6e1789f23d02b659b82509613cfaa8ae63faa8290aa64802f3405fb5d5",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "pr4",
+      "stageId": "production",
+      "source": "expansion-src/pr4",
+      "status": "built_unverified",
+      "sceneName": "电潜泵故障预警",
+      "stageName": "采油",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/pr4/case.json",
+          "bytes": 17441,
+          "sha256": "3018c64a663128f91246c0b49aaadc17d96769266a6b5cbe41b272469bc844ad"
+        },
+        {
+          "path": "expansion-src/pr4/engine.js",
+          "bytes": 5865,
+          "sha256": "bd396e5c2712fef04c18f14bfc7014fdb38f78b003fa6d03d76957c04f7fbf83"
+        },
+        {
+          "path": "expansion-src/pr4/app.js",
+          "bytes": 8677,
+          "sha256": "c456bf28813f4186abab2ce523bb41260fc981a4fab5b57200cd25d0d6b7c2d0"
+        },
+        {
+          "path": "expansion-src/pr4/demo.html",
+          "bytes": 17282,
+          "sha256": "fcb41004c5bef92a5e19dc303ec2b65e63fb8b638a3a18da23ca16d28157a986"
+        },
+        {
+          "path": "expansion-src/pr4/demo.css",
+          "bytes": 4388,
+          "sha256": "09093205212e70869583ca55c8e28a4a0d98320f800deca1431437607560e4cb"
+        },
+        {
+          "path": "expansion-src/pr4/README.txt",
+          "bytes": 1054,
+          "sha256": "f115121d41a1b1c729bf54b5a08af904a1253c8b9725b440b030b57a9c87c803"
+        },
+        {
+          "path": "expansion-src/pr4/flow.json",
+          "bytes": 951,
+          "sha256": "dce794fa2d3bd7f20a10bd1cbd43a9ed6e59f3442aa922699de981c33dfcef46"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-pr4-esp-warning",
+      "caseId": "s17x-pr4-esp-warning",
+      "version": "1.2.0",
+      "bytes": 441148,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/case.json",
+          "bytes": 107877,
+          "sha256": "3d91d073f89e68da8bc705ad5be0c8ca0d2de47a52cae2f50998759ac54892fc",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/README.txt",
+          "bytes": 1372,
+          "sha256": "8499239fdf394a9df465fb86384899ed56d1fb830c8a9f8c30498c428945dd85",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/index.html",
+          "bytes": 17313,
+          "sha256": "094d3d3d3b3788c8e79160ab16814e118bc7ca2e20d84c864ffcf3274c0ae788",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.css",
+          "bytes": 54191,
+          "sha256": "eaf74cd9307976c201b3d9af0e0ee5a404264552d54e83e9d989b972a021cecf",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.js",
+          "bytes": 260395,
+          "sha256": "3528fde0563a5218d087ab419af87c01e349fc06b46e83ab9532cbc5ca229ca9",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "pr5",
+      "stageId": "production",
+      "source": "expansion-src/pr5",
+      "status": "built_unverified",
+      "sceneName": "结蜡 / 结垢预测",
+      "stageName": "采油",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/pr5/case.json",
+          "bytes": 17239,
+          "sha256": "35da0d6f3afecf4867b5430c12fd954da1d8406e0d2c375f27a40c848c70c799"
+        },
+        {
+          "path": "expansion-src/pr5/engine.js",
+          "bytes": 5499,
+          "sha256": "fa35f5a0c2243173685f939174d731d7bd43a3588b5e30ccc69c9c4da65a3944"
+        },
+        {
+          "path": "expansion-src/pr5/app.js",
+          "bytes": 8800,
+          "sha256": "1d8f57b3272eaf05dcd50b47e352adbb7f4549c0e024739445d636d0431f8130"
+        },
+        {
+          "path": "expansion-src/pr5/demo.html",
+          "bytes": 17204,
+          "sha256": "d0f5e223c3a169e52922ce919d132cef033cbf0ffd7f97f4fa91df67742117e6"
+        },
+        {
+          "path": "expansion-src/pr5/demo.css",
+          "bytes": 4388,
+          "sha256": "09093205212e70869583ca55c8e28a4a0d98320f800deca1431437607560e4cb"
+        },
+        {
+          "path": "expansion-src/pr5/README.txt",
+          "bytes": 1208,
+          "sha256": "529f655005924999b7f62ac6404d036ac5f52031a32533d261fe4293802f5641"
+        },
+        {
+          "path": "expansion-src/pr5/flow.json",
+          "bytes": 937,
+          "sha256": "b060159825e1ee032462ec1d0ceef6400991e3778b6cbb32aa37d6acfb2bc34d"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-pr5-wax-risk",
+      "caseId": "s17x-pr5-wax-risk",
+      "version": "1.2.0",
+      "bytes": 646074,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/case.json",
+          "bytes": 188834,
+          "sha256": "5b7930d23bd66196ed9cda10b5099b4376c6784f3ace965b6437955c07a65669",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/README.txt",
+          "bytes": 1532,
+          "sha256": "802e938a04c922f10740f00ac5921bd1deb6ec846112a6bd744dd67bf102e542",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/index.html",
+          "bytes": 17235,
+          "sha256": "6ae211d5c8bce820d33a21c5f709d651e245cca072f1e72d2e61ee49a35cdd65",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.css",
+          "bytes": 54191,
+          "sha256": "eaf74cd9307976c201b3d9af0e0ee5a404264552d54e83e9d989b972a021cecf",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.js",
+          "bytes": 384282,
+          "sha256": "0802d65cd7e4c5ae9471c05307adc97798790833e5c918e46deda8523fb60f93",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "wo1",
+      "stageId": "workover",
+      "source": "expansion-src/wo1",
+      "status": "built_unverified",
+      "sceneName": "修井作业方案智能推荐",
+      "stageName": "修井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/wo1/case.json",
+          "bytes": 20184,
+          "sha256": "8269a3df978de48b340c920fc8ca49bdc0bd6e6cf8257b041b02f1529bd55561"
+        },
+        {
+          "path": "expansion-src/wo1/engine.js",
+          "bytes": 15086,
+          "sha256": "97a90fcda1254a28e08f231889a2c530614866e4381854199c8268050c844cb9"
+        },
+        {
+          "path": "expansion-src/wo1/app.js",
+          "bytes": 9399,
+          "sha256": "0a367d62eb37650651a9863024c1bd75eebf511a76a66de195d2a65f65677b54"
+        },
+        {
+          "path": "expansion-src/wo1/demo.html",
+          "bytes": 20459,
+          "sha256": "6355211b7f486b6a38136905dfb5a55ecfe820e3988938600b20427abe1b12ff"
+        },
+        {
+          "path": "expansion-src/wo1/demo.css",
+          "bytes": 8368,
+          "sha256": "1d27c9bc61b54466f04f09c979cefe3d2cbcff5783f19d8d31c3e0c4e03fcf86"
+        },
+        {
+          "path": "expansion-src/wo1/README.txt",
+          "bytes": 1085,
+          "sha256": "2106ccff3af2e234373ec647c333678588a36b8514f777bb072d209de44f5523"
+        },
+        {
+          "path": "expansion-src/wo1/flow.json",
+          "bytes": 852,
+          "sha256": "1268a528ed7258a99f11195970217a2484daac87efdc1716909a53ad181d89d5"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-wo1-workover-retrieval",
+      "caseId": "s17x-wo1-workover-retrieval",
+      "version": "1.2.0",
+      "bytes": 510925,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/case.json",
+          "bytes": 119652,
+          "sha256": "163a0a2033254c335e1047fc0994e6e203bc47ad590c785b93775da4780a61a0",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/README.txt",
+          "bytes": 1394,
+          "sha256": "7473f272f0879e43045f0768c23c71b9e84f115815daa937554bc3103bf9e280",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/index.html",
+          "bytes": 20490,
+          "sha256": "ae7a24b380d67988a3cead598c9c4e46a4a900812e0d929364061fd225ae9e1c",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.css",
+          "bytes": 58171,
+          "sha256": "d5bd952b535aa40944e6f9016967bfe4406ce6af4efd9ff90323ae0670a16c1c",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.js",
+          "bytes": 311218,
+          "sha256": "691302d475b1d2c8b4d783de04358d6835fa63147f25ff893d92cc5aae7a3ce5",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "wo2",
+      "stageId": "workover",
+      "source": "expansion-src/wo2",
+      "status": "built_unverified",
+      "sceneName": "落物打捞工具智能选型",
+      "stageName": "修井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/wo2/case.json",
+          "bytes": 12824,
+          "sha256": "e9955c618221942d484dd54193f0b87a26952486f7eb89b7e0481bec8c7dbf6c"
+        },
+        {
+          "path": "expansion-src/wo2/engine.js",
+          "bytes": 4059,
+          "sha256": "39e3a8630b31e3af29f1bff5f11ee006892561f1087498e97e3d5fbe99a2297b"
+        },
+        {
+          "path": "expansion-src/wo2/app.js",
+          "bytes": 4686,
+          "sha256": "e1c4029d5704861909b7205bbe8655052148332d9812520cd48b4817c2af6344"
+        },
+        {
+          "path": "expansion-src/wo2/demo.html",
+          "bytes": 12392,
+          "sha256": "5cdd5114db101a772879e4a3cf501c4caaf23b438bdd621b5d1ea6a231df68d7"
+        },
+        {
+          "path": "expansion-src/wo2/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/wo2/README.txt",
+          "bytes": 496,
+          "sha256": "74deed34aa3fec679f7a4a79a17c92c116dd4271038e643c8ac17b47c5a36961"
+        },
+        {
+          "path": "expansion-src/wo2/flow.json",
+          "bytes": 876,
+          "sha256": "fbdbb84ad80d56c99016c646af496fcfe17062ea70497b79fd382b643996b493"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-wo2-fishing-tools",
+      "caseId": "s17x-wo2-fishing-tools",
+      "version": "1.2.0",
+      "bytes": 416551,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/case.json",
+          "bytes": 100590,
+          "sha256": "14f56d9882e18f93a14e5d1b5866e44db6d00e679243f858b2e9ef8c5c4b6b79",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/README.txt",
+          "bytes": 820,
+          "sha256": "f69faaa3e73b5c6055f56272d10895bc4daa9adaf7e9e7a5bf094ede95996d11",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/index.html",
+          "bytes": 12423,
+          "sha256": "aaf97005eda43d19518a924b9887fa3f2cc441e3fa10ca45fb886214ffc6ed86",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.js",
+          "bytes": 250418,
+          "sha256": "26a634f37c77f56b51797add35cbf9282df975a6d0c027eed2a97fdd1b9ba85d",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "wo3",
+      "stageId": "workover",
+      "source": "expansion-src/wo3",
+      "status": "built_unverified",
+      "sceneName": "套管损伤智能识别",
+      "stageName": "修井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/wo3/case.json",
+          "bytes": 13314,
+          "sha256": "fe0302b8fa74e96c89d103d28208f91d9aab37245253f0e5c124501f0df57b6e"
+        },
+        {
+          "path": "expansion-src/wo3/engine.js",
+          "bytes": 3700,
+          "sha256": "401e65c0b4c6774f61481ceed568e0a03cb65bd286de324b91670277f66ad5e5"
+        },
+        {
+          "path": "expansion-src/wo3/app.js",
+          "bytes": 5323,
+          "sha256": "5650db9b29d986e43bf3f57e1255e3e54eeeb75641889ab031aacd36837fbb15"
+        },
+        {
+          "path": "expansion-src/wo3/demo.html",
+          "bytes": 12922,
+          "sha256": "d38ff91da80babdb2f55ddb9b2c9af190409661c5d1781fae022a32589e26148"
+        },
+        {
+          "path": "expansion-src/wo3/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/wo3/README.txt",
+          "bytes": 501,
+          "sha256": "38bf941fef157b8b72c3e6ab009dab5b9687cb1d421e058bb1657190afd3b283"
+        },
+        {
+          "path": "expansion-src/wo3/flow.json",
+          "bytes": 867,
+          "sha256": "6bbea423d503c8634e459253512c1114ccb800e936df55730526579876a0d36d"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-wo3-casing-damage",
+      "caseId": "s17x-wo3-casing-damage",
+      "version": "1.2.0",
+      "bytes": 566917,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/case.json",
+          "bytes": 174646,
+          "sha256": "941c3394ba11a334f679c578cfe132553e0c40b16a2f0ec25fe7d13e89ba7d36",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/README.txt",
+          "bytes": 828,
+          "sha256": "03c10c3ea8ec675c53505a579da1bf5a1a4bd1c250b4ec91a7e116fd160f1541",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/index.html",
+          "bytes": 12953,
+          "sha256": "ba7b04090b480f12258530596e06efcf3bcc35eec69d3be6f023b52cd9d609a2",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.js",
+          "bytes": 326190,
+          "sha256": "14e0681946371e0d4fadfe8e7512ccc559b62f59d4ed2e40de04c76b24e41e71",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "wo4",
+      "stageId": "workover",
+      "source": "expansion-src/wo4",
+      "status": "built_unverified",
+      "sceneName": "修井作业风险预警",
+      "stageName": "修井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/wo4/case.json",
+          "bytes": 12144,
+          "sha256": "6eacafa309ad8d647da12671f31bece823196050ef9bfb66adcc11c361ecee46"
+        },
+        {
+          "path": "expansion-src/wo4/engine.js",
+          "bytes": 3886,
+          "sha256": "66e4335122de64645dfc0a7d7058deb2da2c517f4c040354de341383cd7b6b22"
+        },
+        {
+          "path": "expansion-src/wo4/app.js",
+          "bytes": 6083,
+          "sha256": "f6c43cb3af1f213cd70e7c8433ee682799baad87aae0b16df088e57a34eb8912"
+        },
+        {
+          "path": "expansion-src/wo4/demo.html",
+          "bytes": 11804,
+          "sha256": "0efbe8d1f9ec78c8150d0933ca42d6cad741167a58da3a6dffe5707013303038"
+        },
+        {
+          "path": "expansion-src/wo4/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/wo4/README.txt",
+          "bytes": 501,
+          "sha256": "2a5d3c5976694915abc0a7503f797d24f131073ae3908dc6ef1d5207df49cd67"
+        },
+        {
+          "path": "expansion-src/wo4/flow.json",
+          "bytes": 885,
+          "sha256": "e83bc440298ac42efbe4480abacc5440ef72c358d40f5ed37146eaa37830c6fe"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-wo4-workover-warning",
+      "caseId": "s17x-wo4-workover-warning",
+      "version": "1.2.0",
+      "bytes": 447403,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/case.json",
+          "bytes": 113478,
+          "sha256": "4f85e15df18b3499ff18169d2cca6fc455f56f7510194534c1c1fcc1c2a5d581",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/README.txt",
+          "bytes": 837,
+          "sha256": "3b406a92ab4aac5a5552536811980918da09f2e9237cc6bbd5494a7b5edbb6ce",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/index.html",
+          "bytes": 11835,
+          "sha256": "00c84a63721ae89eb401a91d24c32cd7b9044fc94d3befd43dd82c995abcc7a3",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.js",
+          "bytes": 268953,
+          "sha256": "2145750288db19743d4dcc6ae553cc96ff41f0176a41e92e1483f78863965690",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "wo5",
+      "stageId": "workover",
+      "source": "expansion-src/wo5",
+      "status": "built_unverified",
+      "sceneName": "修井周期预测",
+      "stageName": "修井",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/wo5/case.json",
+          "bytes": 12319,
+          "sha256": "8d977cf21ced80930b5923ef14001a3e6a950db07cc56ade52e2958023151e15"
+        },
+        {
+          "path": "expansion-src/wo5/engine.js",
+          "bytes": 3789,
+          "sha256": "4e39974e6ca82a098802a86d14614d97d29ec7e1b0e77237686147201f2dd34f"
+        },
+        {
+          "path": "expansion-src/wo5/app.js",
+          "bytes": 5083,
+          "sha256": "afd31795e5d61054a4372f2bd4515c95863c107909ddacda62320b631e18e088"
+        },
+        {
+          "path": "expansion-src/wo5/demo.html",
+          "bytes": 11829,
+          "sha256": "6ed1367ff6293f783cfb8be8bac13a3b8faeec0e0ddb76771fbe9cbe1dead6b9"
+        },
+        {
+          "path": "expansion-src/wo5/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/wo5/README.txt",
+          "bytes": 495,
+          "sha256": "560513026f7b6d22b101441d03f61f1d9e5ee4475540eb229fe183d8df7d73b2"
+        },
+        {
+          "path": "expansion-src/wo5/flow.json",
+          "bytes": 924,
+          "sha256": "3a73923e6cbf2b699236f24c8364bf624ad3ccbe340e29d616a5bce22a265440"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-wo5-maintenance-interval",
+      "caseId": "s17x-wo5-maintenance-interval",
+      "version": "1.2.0",
+      "bytes": 414890,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/case.json",
+          "bytes": 100465,
+          "sha256": "6d0231d10a9eb447fc6f4b1433f3375daea097c605c1600e75dea401ebc2b1c7",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/README.txt",
+          "bytes": 818,
+          "sha256": "eeff64f6eab07583f12930bfa9c0d306e0eca0eb730a514e23def877655f60c9",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/index.html",
+          "bytes": 11860,
+          "sha256": "7f821fc7e979e54a7cdfd7a2532b3dbe44c4d70f9ab3e58cde8caa8ae3284f55",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.js",
+          "bytes": 249447,
+          "sha256": "2036a743eceae72827511d17a151f39babb51a9489e82506142157570ac2b9dd",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "e1",
+      "stageId": "eor",
+      "source": "expansion-src/e1",
+      "status": "built_unverified",
+      "sceneName": "压裂参数智能优化",
+      "stageName": "增采",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/e1/case.json",
+          "bytes": 24632,
+          "sha256": "900fd9e93b10dabacac9d3017da6bc71fd5f11dddd0a192f874d3be447aabf67"
+        },
+        {
+          "path": "expansion-src/e1/engine.js",
+          "bytes": 11094,
+          "sha256": "3066e7b7e2221fd47d274edb3afb1ba9360ae41f92ed01c7242ab57adf765857"
+        },
+        {
+          "path": "expansion-src/e1/app.js",
+          "bytes": 12626,
+          "sha256": "a7aa346feefd8cc1a0f31670a3ebfce82134ae413f9093dcf8aca23a9beaf308"
+        },
+        {
+          "path": "expansion-src/e1/demo.html",
+          "bytes": 24483,
+          "sha256": "2938cd36389ff6bdcd7816414c766b5f8df8c94c8c7c40253ad52ecb11762e2b"
+        },
+        {
+          "path": "expansion-src/e1/demo.css",
+          "bytes": 8368,
+          "sha256": "1d27c9bc61b54466f04f09c979cefe3d2cbcff5783f19d8d31c3e0c4e03fcf86"
+        },
+        {
+          "path": "expansion-src/e1/README.txt",
+          "bytes": 1077,
+          "sha256": "ee9db756cce9935f6aa3976693799f02a4229ec9fc2dc137fc6e1c00f603ce82"
+        },
+        {
+          "path": "expansion-src/e1/flow.json",
+          "bytes": 915,
+          "sha256": "fbabac36c08d122fded65107857b4110c99ddda1de0735dc2ac90a69cf37a26b"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-e1-fracture-optimization",
+      "caseId": "s17x-e1-fracture-optimization",
+      "version": "1.2.0",
+      "bytes": 666247,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/case.json",
+          "bytes": 218820,
+          "sha256": "db0d45ec22a1bcff7b4f57c9474d6607ea3f4ae5acb9d25b4e661c157c6833b5",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/README.txt",
+          "bytes": 1389,
+          "sha256": "8851c803684857fc4ecd6372623f3cd7f798a07b9ee171a1f00da4937262dd93",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/index.html",
+          "bytes": 24514,
+          "sha256": "2ac4f77cc41113efa46962e8e6dc1291ebc3dfa904fd909b24d08ac264a4af3d",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.css",
+          "bytes": 58171,
+          "sha256": "d5bd952b535aa40944e6f9016967bfe4406ce6af4efd9ff90323ae0670a16c1c",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.js",
+          "bytes": 363353,
+          "sha256": "81cb3606f9eaf002112d434c700f72259d237e66d0fe15cb6da6bf0c42c03838",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "e2",
+      "stageId": "eor",
+      "source": "expansion-src/e2",
+      "status": "built_unverified",
+      "sceneName": "压裂裂缝形态预测",
+      "stageName": "增采",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/e2/case.json",
+          "bytes": 12048,
+          "sha256": "054d22010c1a1a9ba7a18722198940ca45da6afcf87a0fbbb4535d5752a18c92"
+        },
+        {
+          "path": "expansion-src/e2/engine.js",
+          "bytes": 4164,
+          "sha256": "ea6c748df51f4732624593449c6c218611cb57c80070bda5879994e145260b13"
+        },
+        {
+          "path": "expansion-src/e2/app.js",
+          "bytes": 5335,
+          "sha256": "c946daf6a6ac51ef52f4d52a38edbfa23cdde7a37f77627912cab2216dce622c"
+        },
+        {
+          "path": "expansion-src/e2/demo.html",
+          "bytes": 11565,
+          "sha256": "0ad666602e455fe775cd53f0e75387289498b42bd61a97e8374aa29e4001e0d6"
+        },
+        {
+          "path": "expansion-src/e2/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/e2/README.txt",
+          "bytes": 497,
+          "sha256": "b124e37a4c86ac0c205ee6bab75922c755fcba7ed7db7e84f052d2402bd91a61"
+        },
+        {
+          "path": "expansion-src/e2/flow.json",
+          "bytes": 918,
+          "sha256": "fe9215495b8c6b1c8d8db5730bf6fcbd4af017e065cdb69da6d02654aa1ec139"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-e2-fracture-geometry",
+      "caseId": "s17x-e2-fracture-geometry",
+      "version": "1.2.0",
+      "bytes": 407661,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/case.json",
+          "bytes": 95838,
+          "sha256": "00ac09ba2ce9f7b61915da15d0fabba9047088bc88c3c3b8b18a1e4bb5e8e814",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/README.txt",
+          "bytes": 821,
+          "sha256": "64b2d3e1782fb91263230252eade1640bf89ba2008ad4a6746641c784582ad75",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/index.html",
+          "bytes": 11596,
+          "sha256": "21a2d0b58fc75f69aca8b38a9bb17008fa3bd66106b705dd69bf4fdbf01d4855",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.js",
+          "bytes": 247106,
+          "sha256": "630cae6d286923979c49444014dacb51bab551a9a359cb6eb65771d8374acfa8",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "e3",
+      "stageId": "eor",
+      "source": "expansion-src/e3",
+      "status": "built_unverified",
+      "sceneName": "化学驱配方智能筛选",
+      "stageName": "增采",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/e3/case.json",
+          "bytes": 12029,
+          "sha256": "9bab858cbed279ad041fa191a045084a4a350ac772ae40aedfdc00951e531934"
+        },
+        {
+          "path": "expansion-src/e3/engine.js",
+          "bytes": 4176,
+          "sha256": "479da57eef80fe35b2061e287c2a47086adfdb4a107bcf2e04cac54d7e7a068f"
+        },
+        {
+          "path": "expansion-src/e3/app.js",
+          "bytes": 5798,
+          "sha256": "8321efb5858cd862b24ef5f116e115f5d5458a1830d7a38620a5e63d680cddc0"
+        },
+        {
+          "path": "expansion-src/e3/demo.html",
+          "bytes": 11529,
+          "sha256": "2751bd1d81129b8f337497cc9bd74857e411ac0b8b0cc4e002d6ce600467bfb1"
+        },
+        {
+          "path": "expansion-src/e3/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/e3/README.txt",
+          "bytes": 557,
+          "sha256": "39a58f484362448b5d36e498e06010b84a8adbbfcb60b9ab34316dc0d856beb3"
+        },
+        {
+          "path": "expansion-src/e3/flow.json",
+          "bytes": 894,
+          "sha256": "14b796f9a95734631a3bac337c6c2953b04a0fea404fd2dbc312fbe09f787f6f"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-e3-chemical-mixture",
+      "caseId": "s17x-e3-chemical-mixture",
+      "version": "1.2.0",
+      "bytes": 476171,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+          "bytes": 141332,
+          "sha256": "1bfc8f504e85c59a23ddbdc46cdd16f814d632897994f15b9d397cb72621679a",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+          "bytes": 875,
+          "sha256": "01cc6b86a66ec1a718ea65f9be6e758543c5b0e666cd0195165b7b3375a38c18",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+          "bytes": 11560,
+          "sha256": "72649a5dd2634fe8d6e15ef4facf08ba5813cb81b8908430e263238e8eaefcbf",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+          "bytes": 270104,
+          "sha256": "e992f25afd984279c7878a245e305650c5b014a2cbffb2885ef910b03e99505d",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "e4",
+      "stageId": "eor",
+      "source": "expansion-src/e4",
+      "status": "built_unverified",
+      "sceneName": "蒸汽吞吐注采参数优化",
+      "stageName": "增采",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/e4/case.json",
+          "bytes": 12454,
+          "sha256": "04d8cf7cf644b4bcbfa7d6e5e19d71d7328bd1d4700b74ac87dc238d64ecbad6"
+        },
+        {
+          "path": "expansion-src/e4/engine.js",
+          "bytes": 4433,
+          "sha256": "4823daf22161aad7f69be50ca771cf1017afaea8580e8a3c0ac1656f83864252"
+        },
+        {
+          "path": "expansion-src/e4/app.js",
+          "bytes": 5788,
+          "sha256": "576da6d4f3014107a38e10cfad2dd80ff0939e8ad5b8da82c9598e74e228bd4e"
+        },
+        {
+          "path": "expansion-src/e4/demo.html",
+          "bytes": 11970,
+          "sha256": "2c6c2c5af61297aa61431c78a70f38c2f2ce34d1221044e12ce0fac18d1296f8"
+        },
+        {
+          "path": "expansion-src/e4/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/e4/README.txt",
+          "bytes": 507,
+          "sha256": "96a462cc5b8bdd4bd1afb61edca7fd126a88361372b0758b1223c15dd9b12ded"
+        },
+        {
+          "path": "expansion-src/e4/flow.json",
+          "bytes": 953,
+          "sha256": "65e078846ac2772112a90775625eec0f2ac8f49b60a5086f458733aaa4e9130d"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-e4-steam-cycle",
+      "caseId": "s17x-e4-steam-cycle",
+      "version": "1.2.0",
+      "bytes": 465398,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/case.json",
+          "bytes": 130768,
+          "sha256": "beee73653ddaffdff8185194affb3e4e434e677538056209468372a8b57b5130",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/README.txt",
+          "bytes": 858,
+          "sha256": "8b0b79a0bd4ec981d89090687fc5929caed62558bff7d64df09a53cecb7cf5a5",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/index.html",
+          "bytes": 12001,
+          "sha256": "0bd9edf8e29ac6dfbd5a33e5c5c9e43e0bcc7b5a876febb1621bda267ee9997d",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.js",
+          "bytes": 269471,
+          "sha256": "0c175a03eb2e40062c89ec2d2eb64aa07091e0c3608e649b40a539f968371cc2",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "e5",
+      "stageId": "eor",
+      "source": "expansion-src/e5",
+      "status": "built_unverified",
+      "sceneName": "微生物采油菌群活性预测",
+      "stageName": "增采",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/e5/case.json",
+          "bytes": 12328,
+          "sha256": "99cd024c239b62f833a690b12ed22217c3b4ca8d09bce815ee7ed726e7f26870"
+        },
+        {
+          "path": "expansion-src/e5/engine.js",
+          "bytes": 4277,
+          "sha256": "3f55eb3b3c46ed35b895576c89896db2c02bb8a2e9df6685d5a336b18a76b3c1"
+        },
+        {
+          "path": "expansion-src/e5/app.js",
+          "bytes": 5473,
+          "sha256": "9a00c1541049db269bf82e7a5f9655f418b0a1593e53030d152211d2a047b32b"
+        },
+        {
+          "path": "expansion-src/e5/demo.html",
+          "bytes": 11834,
+          "sha256": "3f0faa9387db6ea2e1532ba9b9289aaf0487c5e0482508145eddeec9103e6165"
+        },
+        {
+          "path": "expansion-src/e5/demo.css",
+          "bytes": 2497,
+          "sha256": "4550cb8a2c686c36a8d5b22ed05c3449f77de4e0a1c4b61ab73af52c5699b986"
+        },
+        {
+          "path": "expansion-src/e5/README.txt",
+          "bytes": 526,
+          "sha256": "552a9843eff2a56ebb256bac055c16a40dde9f00a1300f85ef22099f687d4246"
+        },
+        {
+          "path": "expansion-src/e5/flow.json",
+          "bytes": 933,
+          "sha256": "7d3083412f09c1be8c6fcc91adbe36283d9b1bb54413c4fee0637fc8434da00b"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-e5-microbial-activity",
+      "caseId": "s17x-e5-microbial-activity",
+      "version": "1.2.0",
+      "bytes": 591011,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/case.json",
+          "bytes": 166835,
+          "sha256": "e128bb0f963a6b2051b238bbabff5dc038cbf35408cb46c1d722b3728557d33d",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/README.txt",
+          "bytes": 841,
+          "sha256": "09349db7a9c90a06d04a37c6ce462c70118a31fb22432853dae3e73dd8d599aa",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/index.html",
+          "bytes": 11865,
+          "sha256": "f3f0c1c78136ebaa1247cadc12c2b20c24750fc04740f132a0f9e09eb3c34bf3",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.css",
+          "bytes": 52300,
+          "sha256": "b71b5d3295f8f8f98bf1fd5a92159941f00c7fce275fc3b5c37c28bfe2f6b075",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.js",
+          "bytes": 359170,
+          "sha256": "07e6b277367a8262f593dd7fcaf8cc67ba12d7fa1255025e5835f58eccc886e4",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "t1",
+      "stageId": "transport",
+      "source": "expansion-src/t1",
+      "status": "built_unverified",
+      "sceneName": "管道泄漏智能检测",
+      "stageName": "运输",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/t1/case.json",
+          "bytes": 21283,
+          "sha256": "13a062e0e0dbce272da06954ba733512d7a4f86d1403238b5025d70b36baa8c2"
+        },
+        {
+          "path": "expansion-src/t1/engine.js",
+          "bytes": 7064,
+          "sha256": "560c14bf56a1d7cdc9b00965765a321bcaea1895a0a056f019f542d376ff5441"
+        },
+        {
+          "path": "expansion-src/t1/app.js",
+          "bytes": 42574,
+          "sha256": "00b86795e9dad3e2d499998678f3a80b4a699ee1c178bf733cc4dc4552efbe82"
+        },
+        {
+          "path": "expansion-src/t1/demo.html",
+          "bytes": 4967,
+          "sha256": "8363fd6bcba5df29887d7f173d1016370c5c84c223ec09bf256f626e6c2492ad"
+        },
+        {
+          "path": "expansion-src/t1/demo.css",
+          "bytes": 5797,
+          "sha256": "8061d866ea8350b3a1f19b92c59399594781be6c428f2948600317668ad56155"
+        },
+        {
+          "path": "expansion-src/t1/README.txt",
+          "bytes": 3506,
+          "sha256": "cc3c2c3e5d3667891ec4ada3e005e82d05a2d82c64095a92f268821044b80aab"
+        },
+        {
+          "path": "expansion-src/t1/flow.json",
+          "bytes": 879,
+          "sha256": "c9c99175e54e504ab970658e4e60a8e7014f49705233b67c4570932e6ca73627"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-t1-pipeline-leak",
+      "caseId": "s17x-t1-pipeline-leak",
+      "version": "1.2.0",
+      "bytes": 487655,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/case.json",
+          "bytes": 117849,
+          "sha256": "3459cde2d7412cf1e305cb2696c110871ec6d0857dce1d6628fc5c283471b11f",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/README.txt",
+          "bytes": 3830,
+          "sha256": "2295ae3cef07049ddbbeae5c73caed3a167b801f127c66dac247bcd57340f9bc",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/index.html",
+          "bytes": 4998,
+          "sha256": "f1b92d8970b7b461adbb6f6c7263516e701f7241c6612a74e5392092d81f85b8",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.css",
+          "bytes": 55600,
+          "sha256": "3e96ee9344426ea26cbc5316916146aa8631c5aceac383565c0823d297b4759c",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.js",
+          "bytes": 305378,
+          "sha256": "3b529eb5e1d344770948e65b70381329967ff232c2a83ade99e92008b0cbae92",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "t2",
+      "stageId": "transport",
+      "source": "expansion-src/t2",
+      "status": "built_unverified",
+      "sceneName": "管道腐蚀智能评估",
+      "stageName": "运输",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/t2/case.json",
+          "bytes": 12042,
+          "sha256": "829bb775cf81682e6ea5ea73a0a13e834ecbb0c38d18ce166bf5e109cfde2345"
+        },
+        {
+          "path": "expansion-src/t2/engine.js",
+          "bytes": 3469,
+          "sha256": "8afa7b179784b254f3673ae419afcce99c0067db03dbf215d6aa9bee9eba370e"
+        },
+        {
+          "path": "expansion-src/t2/app.js",
+          "bytes": 22125,
+          "sha256": "946aa5bc615ca851df2516567e87fb1c704100cdb3f1e1a8d63ae1339f284570"
+        },
+        {
+          "path": "expansion-src/t2/demo.html",
+          "bytes": 2336,
+          "sha256": "1267a1e841d91593c87042ed54dbae0f82888d5f95dadd50be92be26e8f1cfdf"
+        },
+        {
+          "path": "expansion-src/t2/demo.css",
+          "bytes": 1929,
+          "sha256": "c97acd19b1ad1597280a1a0acb95384f280642e8bb306f9d9a1e80dcb85845b8"
+        },
+        {
+          "path": "expansion-src/t2/README.txt",
+          "bytes": 436,
+          "sha256": "9448e0fe67cdcaf30ea7e5a13283e9a42e9ec7db51be22e64a7b1bed80905f2b"
+        },
+        {
+          "path": "expansion-src/t2/flow.json",
+          "bytes": 912,
+          "sha256": "ba700945f84afc8658df4fa2f208c30420b7af76e1516166106eadfb368abbd9"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-t2-corrosion-growth",
+      "caseId": "s17x-t2-corrosion-growth",
+      "version": "1.2.0",
+      "bytes": 473389,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/case.json",
+          "bytes": 115938,
+          "sha256": "941908b121798cccdb5ff330d144fded7b7119e1305c052f41152e1e6b22db68",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/README.txt",
+          "bytes": 760,
+          "sha256": "fb3e7b750a67bbf18401adb2c608989c00fadb6d0b1e774fb94c1f6f2368a506",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html",
+          "bytes": 2367,
+          "sha256": "05702c644b79befecfe2f766f9828ebb7fa6e6e5fe13252cdd9844fdd01677ce",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.css",
+          "bytes": 51732,
+          "sha256": "4e14068d5fd2fb7e62371c6fd8f428c878232faa38a8171ba2ed0f857edb29e1",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.js",
+          "bytes": 302592,
+          "sha256": "c0903737e61c3c365e56e785606ef12c5396b1f72d5e47562b952661c0fa6dda",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "t3",
+      "stageId": "transport",
+      "source": "expansion-src/t3",
+      "status": "built_unverified",
+      "sceneName": "集输系统工况优化",
+      "stageName": "运输",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/t3/case.json",
+          "bytes": 12072,
+          "sha256": "fbbd9c3654547ca7e9b62cba114c7d3e752b07e4640aba7703dc1bc8aebd9702"
+        },
+        {
+          "path": "expansion-src/t3/engine.js",
+          "bytes": 2366,
+          "sha256": "2d6fb034e70d16732a8c4b863d55b71402a4da18452380b4bb3f42a439704ea7"
+        },
+        {
+          "path": "expansion-src/t3/app.js",
+          "bytes": 22122,
+          "sha256": "43f20e375b99b6a8a3dc593950c9f40c635d69d6921dac0c9135d1eabed76eb6"
+        },
+        {
+          "path": "expansion-src/t3/demo.html",
+          "bytes": 2327,
+          "sha256": "c4be3cf5fcda912760f34b2822121d5893058f4338eab27051c666b61aced0c5"
+        },
+        {
+          "path": "expansion-src/t3/demo.css",
+          "bytes": 1929,
+          "sha256": "c97acd19b1ad1597280a1a0acb95384f280642e8bb306f9d9a1e80dcb85845b8"
+        },
+        {
+          "path": "expansion-src/t3/README.txt",
+          "bytes": 408,
+          "sha256": "c620bf32dc790dc3363f6f5ca901bd6a0604dd7fc18bc1cd41ca0cf044395748"
+        },
+        {
+          "path": "expansion-src/t3/flow.json",
+          "bytes": 921,
+          "sha256": "1bc257b00822198890f1abcf84062d02bc80a7df2d7e85f6e21f6487f9cb9022"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-t3-gathering-pump-optimization",
+      "caseId": "s17x-t3-gathering-pump-optimization",
+      "version": "1.2.0",
+      "bytes": 472719,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/case.json",
+          "bytes": 134414,
+          "sha256": "7019c9acc51b1f6a137f7626f5ac28ab0c6f19bd582b3653b10fbd86cb599cf6",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/README.txt",
+          "bytes": 720,
+          "sha256": "fa0ad8b5df0e38ba0017af945e697e394ab378b215ce7560381e305a1eee99e5",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/index.html",
+          "bytes": 2358,
+          "sha256": "1a27f5d8cbff03a15abe039881ceee6347ebdf8304e3b468f31f2086db84f073",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.css",
+          "bytes": 51732,
+          "sha256": "4e14068d5fd2fb7e62371c6fd8f428c878232faa38a8171ba2ed0f857edb29e1",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.js",
+          "bytes": 283495,
+          "sha256": "50398894fb8851de2f841a1ad97088a8b189a44fc09238812569f6522aa8dcbf",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "t4",
+      "stageId": "transport",
+      "source": "expansion-src/t4",
+      "status": "built_unverified",
+      "sceneName": "油气计量智能校正",
+      "stageName": "运输",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/t4/case.json",
+          "bytes": 11368,
+          "sha256": "6176c5d5a26d314a9b959671c472ea31f3fec03573d8ce36de94101226c08b9a"
+        },
+        {
+          "path": "expansion-src/t4/engine.js",
+          "bytes": 2476,
+          "sha256": "b910e30b4fed91b99e72751fc97cb680339a645a4cdf9bac11bc3e47fd033192"
+        },
+        {
+          "path": "expansion-src/t4/app.js",
+          "bytes": 21420,
+          "sha256": "38f9acfe851e5b440d4666c2ae89bffd2e59a09b4532dc401d82bdfe62047fba"
+        },
+        {
+          "path": "expansion-src/t4/demo.html",
+          "bytes": 2329,
+          "sha256": "97d61e71bfcf22ac683d242291424b7e8b59b0da684df8f685c83434d588809b"
+        },
+        {
+          "path": "expansion-src/t4/demo.css",
+          "bytes": 1929,
+          "sha256": "c97acd19b1ad1597280a1a0acb95384f280642e8bb306f9d9a1e80dcb85845b8"
+        },
+        {
+          "path": "expansion-src/t4/README.txt",
+          "bytes": 467,
+          "sha256": "10aee24620fd2cc87573b1f3ae4950c4670e3efa3d20f66cd919f68bd8cd6f0f"
+        },
+        {
+          "path": "expansion-src/t4/flow.json",
+          "bytes": 939,
+          "sha256": "cef5e57f7732d7303c4e7d3153c8137743d03c7091aa356b4603aab28ee9eda1"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-t4-meter-drift-calibration",
+      "caseId": "s17x-t4-meter-drift-calibration",
+      "version": "1.2.0",
+      "bytes": 439544,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/case.json",
+          "bytes": 107101,
+          "sha256": "b6558c50cb0999b8bf8fc3a5b0f36e92215c761267c31012a727f041b42b1c86",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/README.txt",
+          "bytes": 797,
+          "sha256": "3bd1de6e07711d239b20f66e8bd57149a37e21cb669972b7162223ac8c7bb01a",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/index.html",
+          "bytes": 2360,
+          "sha256": "04cd571f31e828b3a3653c5cb5f4cfa121a7366b87fa62b5e73194659b86a3ca",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.css",
+          "bytes": 51732,
+          "sha256": "4e14068d5fd2fb7e62371c6fd8f428c878232faa38a8171ba2ed0f857edb29e1",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.js",
+          "bytes": 277554,
+          "sha256": "d3dd1583373b9d49e926628c4f3af9d8067fae31aaccf02d19b54ec875145707",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "t5",
+      "stageId": "transport",
+      "source": "expansion-src/t5",
+      "status": "built_unverified",
+      "sceneName": "储罐液位与泄漏智能监控",
+      "stageName": "运输",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/t5/case.json",
+          "bytes": 11407,
+          "sha256": "916820b7abaf1518daf063193ace4994ba6c646a18cd9d42eb8a0c4a48ff5b97"
+        },
+        {
+          "path": "expansion-src/t5/engine.js",
+          "bytes": 2799,
+          "sha256": "1216767f7471f9bebadd1a551609661f6c41d824ff1ad2064e2d8970388e2c7b"
+        },
+        {
+          "path": "expansion-src/t5/app.js",
+          "bytes": 21496,
+          "sha256": "5bb1af7cc78835037b522626b8da16ff5dc6e1c8c92ef6149e316ef9f90bc299"
+        },
+        {
+          "path": "expansion-src/t5/demo.html",
+          "bytes": 2372,
+          "sha256": "37dbb1fc0313abf0be2dffe126c94c8c317e17d94ead92033f5c023e277f6d42"
+        },
+        {
+          "path": "expansion-src/t5/demo.css",
+          "bytes": 1929,
+          "sha256": "c97acd19b1ad1597280a1a0acb95384f280642e8bb306f9d9a1e80dcb85845b8"
+        },
+        {
+          "path": "expansion-src/t5/README.txt",
+          "bytes": 469,
+          "sha256": "b825498d70ffa1ebc9cb99bdb69c14d36d1a250f037c284405b8f3477f6dc056"
+        },
+        {
+          "path": "expansion-src/t5/flow.json",
+          "bytes": 900,
+          "sha256": "32c54deb4d3d15106fed2e18d84240133927672568a66230da0b847fe70172b0"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-t5-tank-level-crosscheck",
+      "caseId": "s17x-t5-tank-level-crosscheck",
+      "version": "1.2.0",
+      "bytes": 535724,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/case.json",
+          "bytes": 141327,
+          "sha256": "3a99af16b618b2c6509f4ecbe29f9ac4f2ed49da5d18d8806704d781654766d8",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/README.txt",
+          "bytes": 790,
+          "sha256": "9d8324b0d2dae90da224634df0bc6eb9f8f195bdd998e7388ffe9a4a5a829daf",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/index.html",
+          "bytes": 2403,
+          "sha256": "5ba2fb2975a9a1f237140f22260d7acd07d1897bce50d74deb33616b06d393ac",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.css",
+          "bytes": 51732,
+          "sha256": "4e14068d5fd2fb7e62371c6fd8f428c878232faa38a8171ba2ed0f857edb29e1",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.js",
+          "bytes": 339472,
+          "sha256": "6d331d0d55f7bd4da95723ee929bd188bdce7ee8ebd516a576cb17051b174c7b",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "r1",
+      "stageId": "refining",
+      "source": "expansion-src/r1",
+      "status": "built_unverified",
+      "sceneName": "常减压装置操作优化",
+      "stageName": "加工",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/r1/case.json",
+          "bytes": 13129,
+          "sha256": "bb2c8177161110599fd074f625790a55cbbf137299ce7883f1449280e5b8bdb9"
+        },
+        {
+          "path": "expansion-src/r1/engine.js",
+          "bytes": 2898,
+          "sha256": "424bc3313b4dec5629604174c404d09bb05fc1b3ddfc3abb2ecf9188c8e3a0fc"
+        },
+        {
+          "path": "expansion-src/r1/app.js",
+          "bytes": 24712,
+          "sha256": "7402c054a01b953195c61d684038e0a24d76a6be4a0c2b0ca774fa4f290de712"
+        },
+        {
+          "path": "expansion-src/r1/demo.html",
+          "bytes": 2959,
+          "sha256": "83ba37da0d70b9abd511cffb974bb0a8dc9c6a22ab4bc226c7544237e14fc4dd"
+        },
+        {
+          "path": "expansion-src/r1/demo.css",
+          "bytes": 2090,
+          "sha256": "a37f02d3451781673f6fe9a973232f7b86f5cc2998eee8f86e80f8f576a26139"
+        },
+        {
+          "path": "expansion-src/r1/README.txt",
+          "bytes": 619,
+          "sha256": "3928259fe6b0197864686179d17463d7cd0bb4d90bea0c45a6a1e963f163a869"
+        },
+        {
+          "path": "expansion-src/r1/flow.json",
+          "bytes": 903,
+          "sha256": "2216c8adb242081f4bf699888a8422357ac0bc5b56a6bb44873f9432c2b5a9ff"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-r1-distillation-optimization",
+      "caseId": "s17x-r1-distillation-optimization",
+      "version": "1.2.0",
+      "bytes": 737159,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/case.json",
+          "bytes": 307798,
+          "sha256": "aadfa2b60ecbc14edfabd92f1d2b5c0c4fe036ebec51343a7b09c2335860bfde",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/README.txt",
+          "bytes": 928,
+          "sha256": "6ea7cc230bc0cabca3e80f3246db50e092575fc9dd6bbf1d5328b5144b0553fc",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/index.html",
+          "bytes": 2990,
+          "sha256": "7091f7b77182754f17d411f8833445901e5c54cf038ac61842604f698b37e00a",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.css",
+          "bytes": 51893,
+          "sha256": "f873cddf177b9a9c2244b6e82f324051d4bf206baa2afea1737889dd7c1624fe",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.js",
+          "bytes": 373550,
+          "sha256": "9bf011ddbd6cb7f292a2c807b71df661c8b0e3c0f0e249e88c59ce75ded9c89d",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "r2",
+      "stageId": "refining",
+      "source": "expansion-src/r2",
+      "status": "built_unverified",
+      "sceneName": "催化裂化产物预测",
+      "stageName": "加工",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/r2/case.json",
+          "bytes": 12947,
+          "sha256": "2b10b62c9c4de9e975c2c94e5f30b429e889579d27da9c5c780ef40d49e8e962"
+        },
+        {
+          "path": "expansion-src/r2/engine.js",
+          "bytes": 2899,
+          "sha256": "a80749b843657964416e2a3b0da63cd85cb62adb5916bc33e520aabe6b0a1304"
+        },
+        {
+          "path": "expansion-src/r2/app.js",
+          "bytes": 23199,
+          "sha256": "c90cc0ad6fc92580b4d9cc374bfc593bf4028099d0a3c2493d0a88c11a72a45f"
+        },
+        {
+          "path": "expansion-src/r2/demo.html",
+          "bytes": 3041,
+          "sha256": "991e077f569954ac5936f8c6e59f44621461255320a3821d16200c21f318e0ea"
+        },
+        {
+          "path": "expansion-src/r2/demo.css",
+          "bytes": 2090,
+          "sha256": "a37f02d3451781673f6fe9a973232f7b86f5cc2998eee8f86e80f8f576a26139"
+        },
+        {
+          "path": "expansion-src/r2/README.txt",
+          "bytes": 619,
+          "sha256": "b4e902a10b9c943d22d630af706a307b4639914f5e56f6d99686d2936ffa2002"
+        },
+        {
+          "path": "expansion-src/r2/flow.json",
+          "bytes": 922,
+          "sha256": "4480a83d13b0168654917ffa25c7200549bac16b6bec36ca317a98cbf802d865"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-r2-fcc-product-yields",
+      "caseId": "s17x-r2-fcc-product-yields",
+      "version": "1.2.0",
+      "bytes": 442310,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/case.json",
+          "bytes": 107288,
+          "sha256": "6a26c1fe42fd64d54612c17d18fa462d187f31f8bc32c6d8c1becd3e5305defd",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/README.txt",
+          "bytes": 931,
+          "sha256": "8b38799cbb9219cad7c7f86593491a990ad864f7cee6bee5a5552ce16cd23982",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/index.html",
+          "bytes": 3072,
+          "sha256": "ae17a6666cc30e538ac6029a5401caad69e715dd4fee39008275bd3646be5234",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.css",
+          "bytes": 51893,
+          "sha256": "f873cddf177b9a9c2244b6e82f324051d4bf206baa2afea1737889dd7c1624fe",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.js",
+          "bytes": 279126,
+          "sha256": "f36132eac81c2cdecc0c3218a450b905c39bedbe05ec8f42c9e66d1296db312c",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "r3",
+      "stageId": "refining",
+      "source": "expansion-src/r3",
+      "status": "built_unverified",
+      "sceneName": "炼化设备预测性维护",
+      "stageName": "加工",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/r3/case.json",
+          "bytes": 13083,
+          "sha256": "ba2963a12d5d1ca0164ce3bbdf2a84e64d8fe3588b1f8678885243ea204c1d27"
+        },
+        {
+          "path": "expansion-src/r3/engine.js",
+          "bytes": 3748,
+          "sha256": "5d1f8345dbdb0a490cc1e904bb7b2b0bbbeff3d13e1ae4c0c56a66e05e9cebb1"
+        },
+        {
+          "path": "expansion-src/r3/app.js",
+          "bytes": 20207,
+          "sha256": "a11eb5b7dc63ede9f220a9ce8a6e3f87a3dea16889b6d27e3c924e7d8c6367e0"
+        },
+        {
+          "path": "expansion-src/r3/demo.html",
+          "bytes": 3165,
+          "sha256": "1eaae897dab1825356819eb6d0316e9c2d5043aae574f47dc4b7fccb22dcf22f"
+        },
+        {
+          "path": "expansion-src/r3/demo.css",
+          "bytes": 3022,
+          "sha256": "4b81a2fe85cbc7c8ec295ca7905ce8046c8940ae011b8124105fd81b659d842c"
+        },
+        {
+          "path": "expansion-src/r3/README.txt",
+          "bytes": 705,
+          "sha256": "044d87e3c476917e0c30016e630877b4050423d05c8a139fe95d9b22d0369dfa"
+        },
+        {
+          "path": "expansion-src/r3/flow.json",
+          "bytes": 903,
+          "sha256": "4cde84eae4eb54dfa52450952062197b6cd71b6e779670bccc03fcef36a67d9a"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-r3-maintenance-trend",
+      "caseId": "s17x-r3-maintenance-trend",
+      "version": "1.2.0",
+      "bytes": 513872,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/case.json",
+          "bytes": 149211,
+          "sha256": "057677f26caaa22fcc48265dcd8ace9a0b9ddc241efd8c902680f91201f2ec8d",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/README.txt",
+          "bytes": 1026,
+          "sha256": "3bd06b4c01f0a848d568c473d91f7116ca0bbe3be0f245dd8c0fc1f2e742c0ec",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/index.html",
+          "bytes": 3196,
+          "sha256": "a10e5e14aa341ee42133dacf6d7580378b6ee48b9fa7ef35d3b0b77c4787f999",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.css",
+          "bytes": 52825,
+          "sha256": "94913b09fdf798e652158211df0973a8c75918d8896a747fe5af485b030c53a2",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.js",
+          "bytes": 307614,
+          "sha256": "26af4398f488f7c71dc69ee7b7fcccdf5962639757183db53319ab39d8900d31",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "r4",
+      "stageId": "refining",
+      "source": "expansion-src/r4",
+      "status": "built_unverified",
+      "sceneName": "化验数据智能审核",
+      "stageName": "加工",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/r4/case.json",
+          "bytes": 13115,
+          "sha256": "d1b6a021067ee6a5588654cb1baf99f77dcfbd883a7b96d4f7de0080dea77ae4"
+        },
+        {
+          "path": "expansion-src/r4/engine.js",
+          "bytes": 4799,
+          "sha256": "1052663476010706da81c21aa1a953d572e4a148f1a955d6ed05766e2646d2cf"
+        },
+        {
+          "path": "expansion-src/r4/app.js",
+          "bytes": 19006,
+          "sha256": "1f2ae685755c5fffcb39fd3311d6075a1ef6f03445546fb7465686a330f2380e"
+        },
+        {
+          "path": "expansion-src/r4/demo.html",
+          "bytes": 3260,
+          "sha256": "24c1e266862db0b6d953b2a8adb72a0793ecc686e7faf2d755a5d533ffdf3037"
+        },
+        {
+          "path": "expansion-src/r4/demo.css",
+          "bytes": 3022,
+          "sha256": "4b81a2fe85cbc7c8ec295ca7905ce8046c8940ae011b8124105fd81b659d842c"
+        },
+        {
+          "path": "expansion-src/r4/README.txt",
+          "bytes": 699,
+          "sha256": "f1b2f26319205b2e7f06b0ba1b8fa86884aa427a76c16e800d5161c03c0e690e"
+        },
+        {
+          "path": "expansion-src/r4/flow.json",
+          "bytes": 921,
+          "sha256": "8563c67a977964d069aced8eb5e2524df671a9dcca24a44ba48583a3fd0796db"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-r4-lab-audit",
+      "caseId": "s17x-r4-lab-audit",
+      "version": "1.2.0",
+      "bytes": 424177,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/case.json",
+          "bytes": 102028,
+          "sha256": "b8f5cb0c1bfb71544470ff1da106460148e5da4f96714cfe1374a9762a0e759a",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/README.txt",
+          "bytes": 1035,
+          "sha256": "16e53d5a0b81ab70eebf592f0d9513ff1849acf4596b6291e03cc8948d828324",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/index.html",
+          "bytes": 3291,
+          "sha256": "306f55e3b750d6513b062a628eb57c289397a7315adc1d05477502157f95d9e6",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css",
+          "bytes": 52825,
+          "sha256": "94913b09fdf798e652158211df0973a8c75918d8896a747fe5af485b030c53a2",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js",
+          "bytes": 264998,
+          "sha256": "dcdb13b093c60e6061cfd52599d56d69aca0e719bf649b541c279ac11576c6ea",
+          "relative": "demo/demo.js"
+        }
+      ]
+    },
+    {
+      "sceneId": "r5",
+      "stageId": "refining",
+      "source": "expansion-src/r5",
+      "status": "built_unverified",
+      "sceneName": "产品质量在线软测量",
+      "stageName": "加工",
+      "errors": [],
+      "warnings": [],
+      "sourceFiles": [
+        {
+          "path": "expansion-src/r5/case.json",
+          "bytes": 21828,
+          "sha256": "bb72c73e008e7bc2dab687ad034c7833f77e2d861e5ca69c6c8e5fffb61fa72a"
+        },
+        {
+          "path": "expansion-src/r5/engine.js",
+          "bytes": 6866,
+          "sha256": "43a3fdc3b9672a6ca537a9f8a2da87b0f3820b88d0c6700b5ac61c9a3aa9f717"
+        },
+        {
+          "path": "expansion-src/r5/app.js",
+          "bytes": 43130,
+          "sha256": "95465dffaa57a575892d34d165a8d5f65ecf6751b5d4d2017548bdd36c1d9420"
+        },
+        {
+          "path": "expansion-src/r5/demo.html",
+          "bytes": 5202,
+          "sha256": "654c39dba284cc3cd8963e18c9e2c678c3787b39bba5508cafb4fa35b90e1857"
+        },
+        {
+          "path": "expansion-src/r5/demo.css",
+          "bytes": 5797,
+          "sha256": "8061d866ea8350b3a1f19b92c59399594781be6c428f2948600317668ad56155"
+        },
+        {
+          "path": "expansion-src/r5/README.txt",
+          "bytes": 3929,
+          "sha256": "bc4c602b2d5f9c9fd9e7dbf5d1b0f2d6d513d20d926913e6070cd82a14cb6bc5"
+        },
+        {
+          "path": "expansion-src/r5/flow.json",
+          "bytes": 924,
+          "sha256": "60c99a7f6809799b523359b7a8e2bf7f1772b9d9034e05c5384dfec93504cd05"
+        }
+      ],
+      "output": "dist/expansion-cases/s17x-r5-quality-softsensor",
+      "caseId": "s17x-r5-quality-softsensor",
+      "version": "1.2.0",
+      "bytes": 485042,
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
+          "bytes": 114248,
+          "sha256": "1902ea71f27fd653c55958de20f1c259d1469e3b81730ab7c63fbb81de62a0b0",
+          "relative": "case.json"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+          "bytes": 4268,
+          "sha256": "a47552d1dfe84d79f9eb667ef3667483e1cdfc8679a025d3ab2d6d845eba3586",
+          "relative": "README.txt"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html",
+          "bytes": 5233,
+          "sha256": "17d62b87706dfc993aafb72d04e7ea765a252e50a8a23aaa7c8e420e90b5ca56",
+          "relative": "demo/index.html"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+          "bytes": 55600,
+          "sha256": "3e96ee9344426ea26cbc5316916146aa8631c5aceac383565c0823d297b4759c",
+          "relative": "demo/demo.css"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+          "bytes": 305693,
+          "sha256": "6ea533aa767b0a4bbb86478a7e465245d5b38551ab59e3b1720271085d594042",
+          "relative": "demo/demo.js"
+        }
+      ]
+    }
+  ],
+  "missing": [],
+  "invalid": [],
+  "plugin": {
+    "path": "portal/assets/s17-expansion-cases.js",
+    "bytes": 10056369,
+    "sha256": "22cbcdfe0474dc641079de6cedd4f38887616072d6fdc2b7c7fad9dc47ef12fd"
+  }
+}

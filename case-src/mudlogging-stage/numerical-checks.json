@@ -1,0 +1,162 @@
+{
+  "createdAt": "2026-10-30T03:57:09.674Z",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "continuous flow: arrival600, source120, lag480, end795",
+      "passed": true
+    },
+    {
+      "name": "pump stop300..480: arrival780, lag660, end975",
+      "passed": true
+    },
+    {
+      "name": "during pump stop: elapsed time changes, volume/progress/depth remain constant",
+      "passed": true
+    },
+    {
+      "name": "left-interval integration: recovery at480 changes Q; advance follows afterward",
+      "passed": true
+    },
+    {
+      "name": "normal and stopped scenarios differ at the same absolute clock",
+      "passed": true
+    },
+    {
+      "name": "five stages and post-detection record semantics follow explicit boundaries",
+      "passed": true
+    },
+    {
+      "name": "all continuous half-second states stay finite and conserve the12m3 transport domain",
+      "passed": true
+    },
+    {
+      "name": "original M2Core negative evidence and earliest-plateau inversion are preserved",
+      "passed": true
+    }
+  ],
+  "engineSHA256": "6d8c814e2349b582907d8a7cd3545e705a7a4254f2b5252b4c4d3afffaf2ab3d",
+  "transportSHA256": "3eaed20a126de6feffcb90bfe99468371a10fd315514bda9240cb4f450f05958",
+  "normal": {
+    "arrivalTime_s": 600,
+    "sourceReplay_s": 120,
+    "state300": {
+      "mode": "normal",
+      "time_s": 300,
+      "sourceTime_s": 120,
+      "sourceDepthMD_m": 1200.7199999999993,
+      "arrivalTime_s": 600,
+      "sourceReplay_s": 120,
+      "lag_s": 480,
+      "flow_m3_s": 0.025,
+      "cumulativeVolume_m3": 7.5,
+      "transportedVolume_m3": 4.5,
+      "effectiveVolume_m3": 12,
+      "transportProgress": 0.375,
+      "remainingVolume_m3": 7.5,
+      "remainingTransportTime_s": 300,
+      "sourceAge_s": 180,
+      "phaseIndex": 1,
+      "phase": "annulus",
+      "phaseProgress": 0.375,
+      "currentDepthMD_m": 1201.7999999999984,
+      "pumpStopped": false,
+      "materialStopped": false,
+      "atSurface": false,
+      "complete": false,
+      "endTime_s": 795,
+      "sampleId": "TEACHING-T17",
+      "dataNature": "controlled_teaching_transport"
+    }
+  },
+  "pause": {
+    "arrivalTime_s": 780,
+    "sourceReplay_s": 120,
+    "state300": {
+      "mode": "pause",
+      "time_s": 300,
+      "sourceTime_s": 120,
+      "sourceDepthMD_m": 1200.7199999999993,
+      "arrivalTime_s": 780,
+      "sourceReplay_s": 120,
+      "lag_s": 660,
+      "flow_m3_s": 0,
+      "cumulativeVolume_m3": 7.5,
+      "transportedVolume_m3": 4.5,
+      "effectiveVolume_m3": 12,
+      "transportProgress": 0.375,
+      "remainingVolume_m3": 7.5,
+      "remainingTransportTime_s": 480,
+      "sourceAge_s": 180,
+      "phaseIndex": 1,
+      "phase": "annulus",
+      "phaseProgress": 0.2727272727272727,
+      "currentDepthMD_m": 1201.7999999999984,
+      "pumpStopped": true,
+      "materialStopped": true,
+      "atSurface": false,
+      "complete": false,
+      "endTime_s": 975,
+      "sampleId": "TEACHING-T17",
+      "dataNature": "controlled_teaching_transport"
+    },
+    "state450": {
+      "mode": "pause",
+      "time_s": 450,
+      "sourceTime_s": 120,
+      "sourceDepthMD_m": 1200.7199999999993,
+      "arrivalTime_s": 780,
+      "sourceReplay_s": 120,
+      "lag_s": 660,
+      "flow_m3_s": 0,
+      "cumulativeVolume_m3": 7.5,
+      "transportedVolume_m3": 4.5,
+      "effectiveVolume_m3": 12,
+      "transportProgress": 0.375,
+      "remainingVolume_m3": 7.5,
+      "remainingTransportTime_s": 330,
+      "sourceAge_s": 330,
+      "phaseIndex": 1,
+      "phase": "annulus",
+      "phaseProgress": 0.5,
+      "currentDepthMD_m": 1201.7999999999984,
+      "pumpStopped": true,
+      "materialStopped": true,
+      "atSurface": false,
+      "complete": false,
+      "endTime_s": 975,
+      "sampleId": "TEACHING-T17",
+      "dataNature": "controlled_teaching_transport"
+    },
+    "state600": {
+      "mode": "pause",
+      "time_s": 600,
+      "sourceTime_s": 120,
+      "sourceDepthMD_m": 1200.7199999999993,
+      "arrivalTime_s": 780,
+      "sourceReplay_s": 120,
+      "lag_s": 660,
+      "flow_m3_s": 0.025,
+      "cumulativeVolume_m3": 10.5,
+      "transportedVolume_m3": 7.5,
+      "effectiveVolume_m3": 12,
+      "transportProgress": 0.625,
+      "remainingVolume_m3": 4.5,
+      "remainingTransportTime_s": 180,
+      "sourceAge_s": 480,
+      "phaseIndex": 1,
+      "phase": "annulus",
+      "phaseProgress": 0.7272727272727273,
+      "currentDepthMD_m": 1202.5199999999977,
+      "pumpStopped": false,
+      "materialStopped": false,
+      "atSurface": false,
+      "complete": false,
+      "endTime_s": 975,
+      "sampleId": "TEACHING-T17",
+      "dataNature": "controlled_teaching_transport"
+    }
+  },
+  "browserAcceptanceClaimed": false
+}

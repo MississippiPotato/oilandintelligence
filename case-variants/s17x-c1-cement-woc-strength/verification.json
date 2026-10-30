@@ -1,0 +1,278 @@
+{
+  "caseId": "s17x-c1-cement-woc-strength",
+  "scope": "source and numerical checks; browser acceptance not run",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "syntax: engine.js",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "syntax: concept.js",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "syntax: app.js",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "fixed whole-batch splits and point counts",
+      "passed": true,
+      "details": {
+        "train": 12,
+        "validation": 4,
+        "test": 8,
+        "testStrengthPoints": 72
+      }
+    },
+    {
+      "name": "Arrhenius reference and constant-temperature integration",
+      "passed": true,
+      "details": {
+        "rate50": 1,
+        "rate25": 0.3920985895460758,
+        "rate80": 2.5818769606469063
+      }
+    },
+    {
+      "name": "all Ea candidate fits are monotone; grid selected only by validation",
+      "passed": true,
+      "details": [
+        {
+          "energy": 20,
+          "mae": 1.4542437038798939,
+          "n": 36
+        },
+        {
+          "energy": 25,
+          "mae": 1.1905758128877433,
+          "n": 36
+        },
+        {
+          "energy": 30,
+          "mae": 0.9423469749540995,
+          "n": 36
+        },
+        {
+          "energy": 35,
+          "mae": 0.962885392613877,
+          "n": 36
+        },
+        {
+          "energy": 40,
+          "mae": 1.0629199350213594,
+          "n": 36
+        },
+        {
+          "energy": 45,
+          "mae": 1.2835536519317305,
+          "n": 36
+        },
+        {
+          "energy": 50,
+          "mae": 1.4749688144420203,
+          "n": 36
+        }
+      ]
+    },
+    {
+      "name": "inference does not read strength truth",
+      "passed": true,
+      "details": "throwing truth accessors were never read; altered evaluation truth leaves prediction unchanged"
+    },
+    {
+      "name": "unsupported temperature and unreachable target stay unknown/null",
+      "passed": true,
+      "details": {
+        "outside": "超出温度校准域，未知",
+        "highTarget": "72 h内未预测达到目标",
+        "highTargetScores": {
+          "strengthMAE": 0.4722474523310982,
+          "strengthN": 72,
+          "strengthTotal": 72,
+          "timeMAE": null,
+          "pairedTimeN": 0,
+          "earlyByOver1h": 0,
+          "falseAttained": 0,
+          "missedAttained": 0,
+          "referenceNotAttained": 8,
+          "totalBatches": 8,
+          "rows": [
+            {
+              "id": "WX01",
+              "predictedTime": null,
+              "referenceTime": null
+            },
+            {
+              "id": "WX02",
+              "predictedTime": null,
+              "referenceTime": null
+            },
+            {
+              "id": "WX03",
+              "predictedTime": null,
+              "referenceTime": null
+            },
+            {
+              "id": "WX04",
+              "predictedTime": null,
+              "referenceTime": null
+            },
+            {
+              "id": "WX05",
+              "predictedTime": null,
+              "referenceTime": null
+            },
+            {
+              "id": "WX06",
+              "predictedTime": null,
+              "referenceTime": null
+            },
+            {
+              "id": "WX07",
+              "predictedTime": null,
+              "referenceTime": null
+            },
+            {
+              "id": "WX08",
+              "predictedTime": null,
+              "referenceTime": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "fixed-seed determinism and paired denominators",
+      "passed": true,
+      "details": {
+        "model": {
+          "strengthMAE": 0.4722474523310982,
+          "strengthN": 72,
+          "strengthTotal": 72,
+          "timeMAE": 1.30401249799618,
+          "pairedTimeN": 8,
+          "earlyByOver1h": 3,
+          "falseAttained": 0,
+          "missedAttained": 0,
+          "referenceNotAttained": 0,
+          "totalBatches": 8,
+          "rows": [
+            {
+              "id": "WX01",
+              "predictedTime": 46.06970485475215,
+              "referenceTime": 51.75804090330394
+            },
+            {
+              "id": "WX02",
+              "predictedTime": 31.812984222277585,
+              "referenceTime": 32.87257161035092
+            },
+            {
+              "id": "WX03",
+              "predictedTime": 23.077149850555053,
+              "referenceTime": 22.77286414892002
+            },
+            {
+              "id": "WX04",
+              "predictedTime": 22.244373197979865,
+              "referenceTime": 22.932621682664454
+            },
+            {
+              "id": "WX05",
+              "predictedTime": 11.007949082953033,
+              "referenceTime": 11.04399781454572
+            },
+            {
+              "id": "WX06",
+              "predictedTime": 10.330139704112831,
+              "referenceTime": 10.364182354872069
+            },
+            {
+              "id": "WX07",
+              "predictedTime": 27.08304331638406,
+              "referenceTime": 29.230300893586733
+            },
+            {
+              "id": "WX08",
+              "predictedTime": 17.887044448636942,
+              "referenceTime": 17.412751047166843
+            }
+          ]
+        },
+        "baseline": {
+          "strengthMAE": 3.4336625646697754,
+          "strengthN": 72,
+          "strengthTotal": 72,
+          "timeMAE": 10.19954880051042,
+          "pairedTimeN": 8,
+          "earlyByOver1h": 5,
+          "falseAttained": 0,
+          "missedAttained": 0,
+          "referenceNotAttained": 0,
+          "totalBatches": 8,
+          "rows": [
+            {
+              "id": "WX01",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 51.75804090330394
+            },
+            {
+              "id": "WX02",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 32.87257161035092
+            },
+            {
+              "id": "WX03",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 22.77286414892002
+            },
+            {
+              "id": "WX04",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 22.932621682664454
+            },
+            {
+              "id": "WX05",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 11.04399781454572
+            },
+            {
+              "id": "WX06",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 10.364182354872069
+            },
+            {
+              "id": "WX07",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 29.230300893586733
+            },
+            {
+              "id": "WX08",
+              "predictedTime": 19.57453880907903,
+              "referenceTime": 17.412751047166843
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "parameter scan keeps JSON numbers finite and valid monotone curves",
+      "passed": true,
+      "details": {
+        "combinations": 80
+      }
+    },
+    {
+      "name": "static manifest, identifiers, initial disabled widgets and chart labels",
+      "passed": true,
+      "details": {
+        "staticSVG": 2
+      }
+    }
+  ]
+}

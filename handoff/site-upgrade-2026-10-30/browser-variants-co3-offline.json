@@ -1,0 +1,210 @@
+{
+  "checkedAt": "2026-10-30T03:27:32.527Z",
+  "caseId": "s17x-co3-completion-seal-test",
+  "scene": "co3",
+  "phase": "offline",
+  "kind": "actual_Chrome_variant_paths",
+  "checks": [
+    {
+      "name": "offline actual URL",
+      "passed": true,
+      "detail": "file:///G:/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AF%BC%E8%AE%BA/5/dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html"
+    },
+    {
+      "name": "professional background renders substantive source content",
+      "passed": true,
+      "detail": {
+        "characters": 1102
+      }
+    },
+    {
+      "name": "workflow has readable input and product content",
+      "passed": true
+    },
+    {
+      "name": "offline default ready with computed graphic",
+      "passed": true,
+      "detail": {
+        "caseId": "s17x-co3-completion-seal-test",
+        "status": "ready",
+        "params": {
+          "scenario": "cool",
+          "drift": -1.5,
+          "volume": 1200,
+          "start": 8,
+          "end": 32,
+          "limit": 0.01,
+          "cursor": 20
+        },
+        "inferenceHash": "71d19dc5",
+        "graphicHash": "5dae9251",
+        "svgCount": 3,
+        "finite": true
+      }
+    },
+    {
+      "name": "offline real control auto recalculates input and inference",
+      "passed": true,
+      "detail": {
+        "before": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": -1.5,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "71d19dc5",
+          "graphicHash": "5dae9251",
+          "svgCount": 3,
+          "finite": true
+        },
+        "changed": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": 3,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "4683d581",
+          "graphicHash": "a3db82f4",
+          "svgCount": 3,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "offline actual graph changes and remains finite",
+      "passed": true,
+      "detail": {
+        "before": "5dae9251",
+        "after": "a3db82f4"
+      }
+    },
+    {
+      "name": "offline actual download saved",
+      "passed": true,
+      "detail": "handoff/site-upgrade-2026-10-30/browser-variants-co3-offline-download.json"
+    },
+    {
+      "name": "offline reset restores actual default inference",
+      "passed": true,
+      "detail": {
+        "restored": {
+          "caseId": "s17x-co3-completion-seal-test",
+          "status": "ready",
+          "params": {
+            "scenario": "cool",
+            "drift": -1.5,
+            "volume": 1200,
+            "start": 8,
+            "end": 32,
+            "limit": 0.01,
+            "cursor": 20
+          },
+          "inferenceHash": "71d19dc5",
+          "graphicHash": "5dae9251",
+          "svgCount": 3,
+          "finite": true
+        }
+      }
+    },
+    {
+      "name": "no uncaught JavaScript error",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no automatic external runtime request",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "saved JSON belongs to actual s17x-co3-completion-seal-test",
+      "passed": true,
+      "detail": {
+        "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-offline-download.json",
+        "caseId": "s17x-co3-completion-seal-test",
+        "bytes": 61442
+      }
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "downloads": [
+    {
+      "path": "handoff/site-upgrade-2026-10-30/browser-variants-co3-offline-download.json",
+      "suggestedFilename": "s17x-co3-completion-seal-test-result.json",
+      "bytes": 61442,
+      "sha256": "57f737a74cf8780fd270c18c09a15553cc42a7c5a92c790026cc91e8bd8d55c1",
+      "caseId": "s17x-co3-completion-seal-test"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-co3-offline.png"
+  ],
+  "run": {
+    "before": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": -1.5,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "71d19dc5",
+      "graphicHash": "5dae9251",
+      "svgCount": 3,
+      "finite": true
+    },
+    "changed": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": 3,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "4683d581",
+      "graphicHash": "a3db82f4",
+      "svgCount": 3,
+      "finite": true
+    },
+    "restored": {
+      "caseId": "s17x-co3-completion-seal-test",
+      "status": "ready",
+      "params": {
+        "scenario": "cool",
+        "drift": -1.5,
+        "volume": 1200,
+        "start": 8,
+        "end": 32,
+        "limit": 0.01,
+        "cursor": 20
+      },
+      "inferenceHash": "71d19dc5",
+      "graphicHash": "5dae9251",
+      "svgCount": 3,
+      "finite": true
+    }
+  },
+  "passed": 11,
+  "failed": 0
+}

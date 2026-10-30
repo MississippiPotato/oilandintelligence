@@ -1,0 +1,170 @@
+{
+  "checkedAt": "2026-10-30T03:51:00.766Z",
+  "caseId": "s17x-c1-cement-woc-strength",
+  "scope": "UI-01 targeted 390px retest only; original 216 checks not rerun",
+  "checks": [
+    {
+      "name": "complete UI-01 targeted path",
+      "passed": false,
+      "detail": "page.waitForFunction: Timeout 5000ms exceeded."
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "output/playwright/site-upgrade-variants-c1-mobile-ui01-failure.png"
+  ],
+  "exception": "page.waitForFunction: Timeout 5000ms exceeded.",
+  "passed": 0,
+  "failed": 1,
+  "fingerprintComparison": {
+    "baseline": "browser-variants.json before UI-01 CSS rebuild",
+    "changed": [
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.css",
+        "beforeSha256": "bbb9753fbaa08f1af26eb5496d11e555162e2df747d5824789990692d259cfef",
+        "afterSha256": "d33cf18222363ee41a2abeb7a4c61cce14bcf4053d06af35b4e8d04250511fc9",
+        "beforeBytes": 42708,
+        "afterBytes": 43299
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.css",
+        "beforeSha256": "66b92089a9b31080120a31ca06ec397b74a1e4717bdc10bf432aefc6bcdde805",
+        "afterSha256": "6db1d8f739876318559db7f004bcae6bbf73838c02ea3c23a1758cdfe0a97db6",
+        "beforeBytes": 45636,
+        "afterBytes": 46227
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.css",
+        "beforeSha256": "aca741bf5472f4eaa1a14cbeb475d0d0f79dd952879ee8f28b55d013bb67b285",
+        "afterSha256": "177b1ccc579786c363a3c121126c816388a32d9d23a741433211b80728ba766d",
+        "beforeBytes": 42913,
+        "afterBytes": 43504
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.css",
+        "beforeSha256": "aca741bf5472f4eaa1a14cbeb475d0d0f79dd952879ee8f28b55d013bb67b285",
+        "afterSha256": "177b1ccc579786c363a3c121126c816388a32d9d23a741433211b80728ba766d",
+        "beforeBytes": 42913,
+        "afterBytes": 43504
+      }
+    ],
+    "unchanged": [
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/case.json",
+        "beforeSha256": "b3d233ae9b308c82ea92de9d34a6485bb57dc56cf05e08b7da8f8ce963256b22",
+        "afterSha256": "b3d233ae9b308c82ea92de9d34a6485bb57dc56cf05e08b7da8f8ce963256b22",
+        "beforeBytes": 143219,
+        "afterBytes": 143219
+      },
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/README.txt",
+        "beforeSha256": "7ab479331281f4f5e8dee29f60f256a4e4624749edd6849c99fb5468fbd0c683",
+        "afterSha256": "7ab479331281f4f5e8dee29f60f256a4e4624749edd6849c99fb5468fbd0c683",
+        "beforeBytes": 4658,
+        "afterBytes": 4658
+      },
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/index.html",
+        "beforeSha256": "b70327bbcbbf8aadc60d33a8ba30c5f91dacc945a6d40addb04bc0b7908c98dc",
+        "afterSha256": "b70327bbcbbf8aadc60d33a8ba30c5f91dacc945a6d40addb04bc0b7908c98dc",
+        "beforeBytes": 350,
+        "afterBytes": 350
+      },
+      {
+        "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.js",
+        "beforeSha256": "dc7b36c1e52ef140fe8a1237b8f79168c0bed579b0a9395a93bfd299112c0cc5",
+        "afterSha256": "dc7b36c1e52ef140fe8a1237b8f79168c0bed579b0a9395a93bfd299112c0cc5",
+        "beforeBytes": 312912,
+        "afterBytes": 312912
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/case.json",
+        "beforeSha256": "e502298c6d476777d18069cf504794f02f579301e3ec87e7953ab63573585d0a",
+        "afterSha256": "e502298c6d476777d18069cf504794f02f579301e3ec87e7953ab63573585d0a",
+        "beforeBytes": 210155,
+        "afterBytes": 210155
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/README.txt",
+        "beforeSha256": "3f1301426d992947caa728687aa2f9ed49a1413842d7cf1ce651aaf3b24a5087",
+        "afterSha256": "3f1301426d992947caa728687aa2f9ed49a1413842d7cf1ce651aaf3b24a5087",
+        "beforeBytes": 6925,
+        "afterBytes": 6925
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html",
+        "beforeSha256": "b4a8a8e5c9846c76d95a59ce0ce20de61162bab18d2dbac56f3a8b85e798e342",
+        "afterSha256": "b4a8a8e5c9846c76d95a59ce0ce20de61162bab18d2dbac56f3a8b85e798e342",
+        "beforeBytes": 479,
+        "afterBytes": 479
+      },
+      {
+        "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.js",
+        "beforeSha256": "697b6c18c6d6a31326d650083fc6700b2ddb4683426796d0a8d309c3568434e8",
+        "afterSha256": "697b6c18c6d6a31326d650083fc6700b2ddb4683426796d0a8d309c3568434e8",
+        "beforeBytes": 341673,
+        "afterBytes": 341673
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/case.json",
+        "beforeSha256": "a9695320bf03e25512a295eda405ae9d085eda4dc548ededb6804149a6feceb8",
+        "afterSha256": "a9695320bf03e25512a295eda405ae9d085eda4dc548ededb6804149a6feceb8",
+        "beforeBytes": 48668,
+        "afterBytes": 48668
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/README.txt",
+        "beforeSha256": "303b219f4d71e8bbfe07c190770c2e5350d9202eae95710e12c3a10d02bf64b0",
+        "afterSha256": "303b219f4d71e8bbfe07c190770c2e5350d9202eae95710e12c3a10d02bf64b0",
+        "beforeBytes": 2700,
+        "afterBytes": 2700
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/index.html",
+        "beforeSha256": "f42545230d051119c760e1009f8b32805576be4ef94f9fbe88c4b194f08ec603",
+        "afterSha256": "f42545230d051119c760e1009f8b32805576be4ef94f9fbe88c4b194f08ec603",
+        "beforeBytes": 486,
+        "afterBytes": 486
+      },
+      {
+        "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.js",
+        "beforeSha256": "6387cf97f26c104c8f5dd3be782edebccc0c402f9b194a356133d0a5aa66869e",
+        "afterSha256": "6387cf97f26c104c8f5dd3be782edebccc0c402f9b194a356133d0a5aa66869e",
+        "beforeBytes": 156207,
+        "afterBytes": 156207
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/case.json",
+        "beforeSha256": "db5765ba15940159d481838c2a1ec672175cd8ccea8aad3f7bc4a2ff08e6c3cc",
+        "afterSha256": "db5765ba15940159d481838c2a1ec672175cd8ccea8aad3f7bc4a2ff08e6c3cc",
+        "beforeBytes": 48665,
+        "afterBytes": 48665
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/README.txt",
+        "beforeSha256": "a0f5e415c38f44dd77ebe7180857464f2c743e51aef9a2098bb2603de176919a",
+        "afterSha256": "a0f5e415c38f44dd77ebe7180857464f2c743e51aef9a2098bb2603de176919a",
+        "beforeBytes": 2868,
+        "afterBytes": 2868
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html",
+        "beforeSha256": "57fc2f394d018ccc5fc42e1bdbb0650de04493bfc0fe2d660a323e0c83822daf",
+        "afterSha256": "57fc2f394d018ccc5fc42e1bdbb0650de04493bfc0fe2d660a323e0c83822daf",
+        "beforeBytes": 483,
+        "afterBytes": 483
+      },
+      {
+        "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.js",
+        "beforeSha256": "0c0fef424b46d15c8f121385b61581cbf83f1273b01702eab58db2b556474b28",
+        "afterSha256": "0c0fef424b46d15c8f121385b61581cbf83f1273b01702eab58db2b556474b28",
+        "beforeBytes": 157989,
+        "afterBytes": 157989
+      }
+    ],
+    "onlyFourDemoCssChanged": true
+  },
+  "status": "failed",
+  "browserSession": "upgrade-variants",
+  "closed": false
+}

@@ -1,17 +1,21 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.11.0-preview",
+  "version": "1.12.0-preview",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build-interactive-course.mjs",
-    "test": "node checks/verify-interactive-course.mjs --source-only",
-    "verify-delivery": "node checks/verify-interactive-course.mjs",
-    "verify-guide": "node checks/verify-interactive-course.mjs",
-    "package": "node checks/verify-interactive-course.mjs && node tools/report-interactive-course.mjs && node tools/package-interactive-course.mjs",
+    "build": "node tools/build-site-upgrade.mjs",
+    "test": "node checks/verify-site-upgrade.mjs",
+    "test:numeric": "node case-src/mudlogging-stage/verify.mjs && node case-variants/s17x-g3-closure-spill/checks.mjs && node case-variants/s17x-c1-cement-woc-strength/verify.mjs && node case-variants/s17x-co3-completion-seal-test/verify.mjs && node case-variants/s17x-p1-perforation-depth-correlation/verify.mjs",
+    "verify-delivery": "node checks/verify-site-upgrade.mjs && node tools/report-site-upgrade.mjs --require-browser",
+    "verify-guide": "node tools/report-site-upgrade.mjs --require-browser",
+    "package": "node checks/verify-site-upgrade.mjs && node tools/report-site-upgrade.mjs --require-browser && node tools/package-site-upgrade.mjs",
     "serve": "node tools/serve.mjs",
-    "accept": "node checks/verify-interactive-course.mjs",
+    "accept": "node tools/report-site-upgrade.mjs --require-browser",
+    "accept:upgrade": "node tools/accept-site-upgrade.mjs",
+    "accept:package": "node tools/check-packaged-site.mjs",
+    "build:previous-interactive": "node tools/build-interactive-course.mjs",
     "build:m2": "node tools/build.mjs --m2-only",
     "verify:m2": "node checks/verify.mjs --no-write",
     "accept:m2": "node checks/browser-m2-four-smoke.mjs",
@@ -19,7 +23,8 @@
     "build:four": "node tools/build.mjs",
     "capture:four-flow": "node tools/capture-four-flow.mjs",
     "accept:four": "node checks/browser-four-exhibits.mjs --open && node checks/browser-four-exhibits.mjs && node checks/browser-m2-four-smoke.mjs",
-    "accept:browser": "node tools/accept-interactive-all.mjs",
+    "accept:browser": "node tools/accept-site-upgrade.mjs",
+    "accept:previous-interactive": "node tools/accept-interactive-all.mjs",
     "build:expansion": "node tools/build-interactive-course.mjs --expansion-only",
     "build:assistant": "node tools/sync-assistant.mjs",
     "verify:assistant": "node checks/verify-assistant-companion.mjs",
@@ -33,5 +38,8 @@
     "build:interactive:draft": "node tools/build-interactive-course.mjs --draft",
     "test:previous-refinement": "node checks/verify-refinement.mjs --source-only",
     "report:interactive": "node tools/report-interactive-course.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.3"
   }
 }
