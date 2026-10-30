@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-30T06:05:43.067Z",
+  "kind": "actual_Chrome_published_GitHub_Pages_smoke",
+  "base": "https://mississippipotato.github.io/oilandintelligence/",
+  "checks": [
+    {
+      "name": "Public root enters the deployed portal with 65 authored cases",
+      "passed": true,
+      "detail": {
+        "url": "https://mississippipotato.github.io/oilandintelligence/portal/index.html?release=1c0cbe3",
+        "cases": 65,
+        "teacher": 1,
+        "heavy": []
+      }
+    },
+    {
+      "name": "Public untouched homepage requests no body, 3D or avatar heavy script",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Public local r180 bundle creates the shared 3D scene",
+      "passed": true
+    },
+    {
+      "name": "Published illustrated phase changes the real camera",
+      "passed": true
+    },
+    {
+      "name": "Published stopped-pump calculation preserves transport pause",
+      "passed": true
+    },
+    {
+      "name": "Public search loads and focuses the selected new-case chapter",
+      "passed": true
+    },
+    {
+      "name": "Public chapter deep link survives refresh",
+      "passed": true
+    },
+    {
+      "name": "Published new-case demo changes its actual inference",
+      "passed": true,
+      "detail": {
+        "sandbox": "allow-scripts allow-forms allow-modals allow-popups allow-downloads"
+      }
+    },
+    {
+      "name": "Published-site smoke completed",
+      "passed": false,
+      "detail": "locator.fill: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#s17-search-input')\u001b[22m\n"
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "failure": "locator.fill: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#s17-search-input')\u001b[22m\n",
+  "passed": 8,
+  "failed": 1
+}

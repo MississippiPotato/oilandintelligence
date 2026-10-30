@@ -1,0 +1,67 @@
+{
+  "checkedAt": "2026-10-30T06:07:19.603Z",
+  "kind": "actual_Chrome_published_GitHub_Pages_smoke",
+  "base": "https://mississippipotato.github.io/oilandintelligence/",
+  "checks": [
+    {
+      "name": "Public root enters the deployed portal with 65 authored cases",
+      "passed": true,
+      "detail": {
+        "url": "https://mississippipotato.github.io/oilandintelligence/portal/index.html?release=1c0cbe3",
+        "cases": 65,
+        "teacher": 1,
+        "heavy": []
+      }
+    },
+    {
+      "name": "Public untouched homepage requests no body, 3D or avatar heavy script",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Public local r180 bundle creates the shared 3D scene",
+      "passed": true
+    },
+    {
+      "name": "Published illustrated phase changes the real camera",
+      "passed": true
+    },
+    {
+      "name": "Published stopped-pump calculation preserves transport pause",
+      "passed": true
+    },
+    {
+      "name": "Public search loads and focuses the selected new-case chapter",
+      "passed": true
+    },
+    {
+      "name": "Public chapter deep link survives refresh",
+      "passed": true
+    },
+    {
+      "name": "Published new-case demo changes its actual inference",
+      "passed": true,
+      "detail": {
+        "sandbox": "allow-scripts allow-forms allow-modals allow-popups allow-downloads"
+      }
+    },
+    {
+      "name": "Public 390px header and search modal fit the viewport",
+      "passed": true
+    },
+    {
+      "name": "Public paths return no failing site resources",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Published interactions have no uncaught script errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "passed": 11,
+  "failed": 0
+}
