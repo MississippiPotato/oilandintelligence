@@ -4,7 +4,10 @@ import crypto from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {assistantJS} from './assistant-bundle.mjs';
 const root=path.resolve(import.meta.dirname,'..');process.chdir(root);
-const base='e538d911ec2269f9286c2090b16ab42fb95b3b3c',report='handoff/assistant-companion-2026-10-29';
+const args=Object.fromEntries(process.argv.slice(2).map(v=>v.replace(/^--/,'').split('=')));
+const base=args.base??'554d236',report=args.report??'handoff/assistant-stream-2026-10-30',revision=args.revision??'0.7.0';
+const avatarLoaderSourceRef=args['avatar-loader-ref']??null;
+const compiledAssistant=assistantJS({avatarLoader:avatarLoaderSourceRef?execFileSync('git',['show',avatarLoaderSourceRef+':portal/assets/s17-live2d-loader.js'],{encoding:'utf8'}):undefined});
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const read=p=>fs.readFileSync(p,'utf8');
 fs.mkdirSync(report,{recursive:true});
@@ -22,7 +25,7 @@ for(const dir of ['dist/cases','dist/expansion-cases'])for(const folder of fs.re
  const jsPath=dest+'/demo/demo.js',cssPath=dest+'/demo/demo.css';if(!fs.existsSync(jsPath))continue;
  const beforeStaticFiles=Object.fromEntries(['case.json','README.txt','demo/index.html'].map(p=>[p,sha(fs.readFileSync(dest+'/'+p))]));
  const beforeJS=read(jsPath),beforeCSS=read(cssPath),marker=beforeJS.indexOf('/* S17_OPTIONAL_ASSISTANT_START');if(marker<0)throw Error(dest+' assistant boundary missing');
- const jsPrefix=beforeJS.slice(0,marker),newJS=jsPrefix+assistantJS().trimStart();let start,end;
+ const jsPrefix=beforeJS.slice(0,marker),newJS=jsPrefix+compiledAssistant.trimStart();let start,end;
  const tagged=beforeCSS.indexOf('/* S17_ASSISTANT_CSS_START');
  if(tagged>=0){start=tagged;end=beforeCSS.indexOf('/* S17_ASSISTANT_CSS_END */',start)+'/* S17_ASSISTANT_CSS_END */'.length;}
  else{const match=variants.find(v=>beforeCSS.includes(v));if(!match)throw Error(dest+' old CSS boundary missing');start=beforeCSS.indexOf(match);end=start+match.length;}
@@ -31,12 +34,12 @@ for(const dir of ['dist/cases','dist/expansion-cases'])for(const folder of fs.re
  if(read(jsPath)!==beforeJS||read(cssPath)!==beforeCSS)throw Error('Case changed during assistant sync; retry without overwriting parallel work: '+dest);
  fs.writeFileSync(jsPath,newJS);fs.writeFileSync(cssPath,newCSS);
  const oldRecord=previous?.cases.find(c=>c.path===dest);
- records.push({path:dest,id:JSON.parse(read(dest+'/case.json')).id,assistantRevision:'0.6.0',calculationPrefixSHA256:sha(jsPrefix),nonAssistantCSSSHA256:sha(cssRest),beforeStaticFiles,calculationPreservedBySync:newJS.slice(0,newJS.indexOf('/* S17_OPTIONAL_ASSISTANT_START'))===jsPrefix,changedSincePreviousLock:!!oldRecord&&oldRecord.calculationPrefixSHA256!==sha(jsPrefix),files:walk(dest).map(p=>({path:p.slice(dest.length+1),bytes:fs.statSync(p).size,sha256:sha(fs.readFileSync(p))}))});
+ records.push({path:dest,id:JSON.parse(read(dest+'/case.json')).id,assistantRevision:revision,calculationPrefixSHA256:sha(jsPrefix),nonAssistantCSSSHA256:sha(cssRest),beforeStaticFiles,calculationPreservedBySync:newJS.slice(0,newJS.indexOf('/* S17_OPTIONAL_ASSISTANT_START'))===jsPrefix,changedSincePreviousLock:!!oldRecord&&oldRecord.calculationPrefixSHA256!==sha(jsPrefix),files:walk(dest).map(p=>({path:p.slice(dest.length+1),bytes:fs.statSync(p).size,sha256:sha(fs.readFileSync(p))}))});
  if(records.at(-1).files.reduce((n,f)=>n+f.bytes,0)>6*1024*1024)throw Error(dest+' exceeds original 6 MiB limit');
 }
 const concurrentSourceChangesDuringSync=[];for(const p of protectedPaths)if(beforeProtected[p]!==sha(fs.readFileSync(p))){if(p.startsWith('portal-original/')||p.startsWith('石油勘探开发智能化案例集/'))throw Error('Protected teacher original changed: '+p);concurrentSourceChangesDuringSync.push(p);}
 const concurrentSourceChanges=initial?Object.keys(beforeProtected).filter(p=>initial.protectedContent[p]&&initial.protectedContent[p]!==beforeProtected[p]):[];
 const concurrentRuntimeChanges=initial?records.filter(c=>initial.cases.find(v=>v.path===c.path)?.calculationPrefixSHA256!==c.calculationPrefixSHA256).map(c=>c.path):[];
-const lock={assistantRevision:'0.6.0',baseCommit:base,builtAt:new Date().toISOString(),cases:records,protectedContent:beforeProtected,concurrentSourceChanges,concurrentRuntimeChanges,concurrentSourceChangesDuringSync,full61AlgorithmAcceptanceClaimed:false};
+const lock={assistantRevision:revision,baseCommit:base,avatarLoaderSourceRef,builtAt:new Date().toISOString(),cases:records,protectedContent:beforeProtected,concurrentSourceChanges,concurrentRuntimeChanges,concurrentSourceChangesDuringSync,full61AlgorithmAcceptanceClaimed:false};
 fs.writeFileSync(report+'/runtime-lock.json',JSON.stringify(lock,null,2));
 console.log(JSON.stringify({cases:records.length,runtimeFiles:records.length*5,protectedFiles:protectedPaths.length,calculationPreservedBySync:records.every(r=>r.calculationPreservedBySync),concurrentSourceChanges:concurrentSourceChanges.length,concurrentRuntimeChanges:concurrentRuntimeChanges.length,report},null,2));

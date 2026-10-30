@@ -1,0 +1,76 @@
+{
+  "testedAt": "2026-10-30T02:48:33.454Z",
+  "checks": [
+    {
+      "name": "getUserMedia → MediaRecorder → local WAV preparation",
+      "passed": true,
+      "detail": {
+        "files": [
+          {
+            "kind": "audio",
+            "name": "麦克风录音.wav",
+            "seconds": 5.22
+          }
+        ],
+        "processing": false,
+        "recording": false
+      }
+    },
+    {
+      "name": "Recorded audio sent and understood by real model",
+      "passed": false,
+      "detail": "我找到对应页面，点击下面进入。"
+    }
+  ],
+  "capture": "Chrome fake audio device supplied with a Chinese speech WAV; not a physical microphone",
+  "physicalMicrophoneVerified": false,
+  "audibleSpeakerVerified": false,
+  "prepared": {
+    "files": [
+      {
+        "kind": "audio",
+        "name": "麦克风录音.wav",
+        "seconds": 5.22
+      }
+    ],
+    "processing": false,
+    "recording": false
+  },
+  "reply": {
+    "role": "assistant",
+    "content": "我找到对应页面，点击下面进入。",
+    "origin": "井见在线助手 · 模型回复",
+    "at": 1793328520953,
+    "page": {
+      "sceneId": null,
+      "title": "看懂石油场景，动手体验智能方法。",
+      "tab": "bg"
+    },
+    "actions": [
+      {
+        "target": "m2"
+      }
+    ]
+  },
+  "provider": {
+    "configured": true,
+    "calls": 1,
+    "lastUsage": {
+      "input_tokens": 3406,
+      "output_tokens": 34,
+      "total_tokens": 3440,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 34
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "lastStreamDeltas": 0,
+    "streaming": true,
+    "transport": "server-proxy",
+    "liveCallVerified": true
+  },
+  "exception": "Recorded audio sent and understood by real model"
+}

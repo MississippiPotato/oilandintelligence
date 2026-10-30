@@ -1,0 +1,113 @@
+{
+  "testedAt": "2026-10-30T02:47:13.141Z",
+  "checks": [
+    {
+      "name": "Compact enlarged layout 1440",
+      "passed": true,
+      "detail": {
+        "root": {
+          "x": 980,
+          "y": 500,
+          "width": 440,
+          "height": 384
+        },
+        "panel": {
+          "x": 1060,
+          "y": 715,
+          "width": 360,
+          "height": 169
+        }
+      }
+    },
+    {
+      "name": "Readable input 1440",
+      "passed": true
+    },
+    {
+      "name": "Compact enlarged layout 1366",
+      "passed": true,
+      "detail": {
+        "root": {
+          "x": 906,
+          "y": 368,
+          "width": 440,
+          "height": 384
+        },
+        "panel": {
+          "x": 986,
+          "y": 583,
+          "width": 360,
+          "height": 169
+        }
+      }
+    },
+    {
+      "name": "Readable input 1366",
+      "passed": true
+    },
+    {
+      "name": "Compact enlarged layout 390",
+      "passed": true,
+      "detail": {
+        "root": {
+          "x": 12,
+          "y": 498,
+          "width": 366,
+          "height": 334
+        },
+        "panel": {
+          "x": 38,
+          "y": 663,
+          "width": 340,
+          "height": 169
+        }
+      }
+    },
+    {
+      "name": "Readable input 390",
+      "passed": true
+    },
+    {
+      "name": "No visitor key/model configuration",
+      "passed": true
+    },
+    {
+      "name": "Same Live2D canvas while preferences open",
+      "passed": true
+    },
+    {
+      "name": "Stop preserves generated partial",
+      "passed": true
+    },
+    {
+      "name": "Late callback does not enter new conversation",
+      "passed": true
+    },
+    {
+      "name": "Full history remains larger than context",
+      "passed": true
+    },
+    {
+      "name": "History scrolls internally",
+      "passed": true
+    },
+    {
+      "name": "History retains Live2D",
+      "passed": true
+    },
+    {
+      "name": "Refresh restores complete history",
+      "passed": true
+    },
+    {
+      "name": "Delete conversation",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "output/playwright/assistant-stream-layout-1440.png",
+    "output/playwright/assistant-stream-layout-1366.png",
+    "output/playwright/assistant-stream-layout-390.png",
+    "output/playwright/assistant-stream-history-mobile.png"
+  ]
+}

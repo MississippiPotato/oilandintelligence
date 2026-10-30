@@ -1,0 +1,18 @@
+async page=>{
+const r={testedAt:new Date().toISOString(),endpoint:'http://127.0.0.1:8756/api/assistant',provider:'doubao-seed-2-0-mini-260428',cloudBrowserReachabilityVerified:false,physicalMicrophoneVerified:false,checks:[],calls:[]};
+const check=(name,passed,detail)=>{r.checks.push({name,passed:!!passed,detail});if(!passed)throw Error(name);};
+const requestMetadata=[];page.on('request',q=>{if(q.url()===r.endpoint){const b=q.postDataJSON();requestMetadata.push({headerNames:Object.keys(q.headers()),roles:b.input.map(m=>m.role),parts:b.input.flatMap(m=>Array.isArray(m.content)?m.content.map(p=>p.type):['text'])});}});
+try{
+await page.goto('http://127.0.0.1:8755/portal/index.html');await page.evaluate(()=>S17Ark.ready);await page.evaluate(url=>S17Ark.configureEndpoint(url),r.endpoint);await page.evaluate(()=>S17Assistant.open(false));
+const send=async(kind,text)=>{await page.locator('#s17-agent-input').fill(text);const t=Date.now();await page.locator('#s17-agent-send').click();await page.waitForFunction(()=>S17Assistant.snapshot().streaming||!S17Assistant.snapshot().busy,null,{timeout:55000});const first=Date.now()-t,during=await page.evaluate(()=>({busy:S17Assistant.snapshot().busy,streaming:S17Assistant.snapshot().streaming,text:S17Assistant.snapshot().draftReply}));if(kind==='text')await page.screenshot({path:'output/playwright/assistant-stream-generating.png'});await page.waitForFunction(()=>!S17Assistant.snapshot().busy,null,{timeout:55000});const state=await page.evaluate(()=>({a:S17Assistant.snapshot(),p:S17Ark.snapshot()}));r.calls.push({kind,firstDeltaMs:first,during,elapsedMs:Date.now()-t,reply:state.a.history.at(-1).content,deltaCount:state.p.lastStreamDeltas,usage:state.p.lastUsage});check(kind+' real model reply',state.a.history.at(-1).origin.includes('模型回复'),r.calls.at(-1).reply);check(kind+' incremental text before completion',during.busy&&during.streaming&&during.text.length>0&&state.p.lastStreamDeltas>1);};
+await page.locator('#s17-agent-new').click();await send('text','请用两句话解释：钻井液为什么会带着气体到地面？');
+await page.locator('#s17-agent-new').click();await page.locator('#s17-media-image-file').setInputFiles('portal/assets/themes/theme-well-v1.webp');await page.waitForFunction(()=>!S17Media.snapshot().processing&&S17Media.snapshot().files.length===1);await send('image','只看本次图片：最显眼的高耸设备是什么？请描述图中的地表环境，不要猜测地下储量。');
+check('Image recognized as drilling rig',/井架|钻井|钻塔/.test(r.calls.at(-1).reply));
+await page.screenshot({path:'output/playwright/assistant-stream-image.png'});
+await page.locator('#s17-agent-new').click();await page.locator('#s17-media-audio-file').setInputFiles('output/playwright/assistant-stream-2026-10-30/voice-test.wav');await page.waitForFunction(()=>!S17Media.snapshot().processing&&S17Media.snapshot().files.length===1);r.audioPrepared=await page.evaluate(()=>S17Media.snapshot());await send('audio','请先复述这段录音里的问题，再用一句话回答。');
+check('Spoken question understood',/井底/.test(r.calls.at(-1).reply)&&/地面/.test(r.calls.at(-1).reply)&&/时间|循环|运移|运输/.test(r.calls.at(-1).reply));
+check('Browser sends no provider authorization/key',requestMetadata.every(v=>!v.headerNames.includes('authorization')),requestMetadata);
+check('Attachments not stored as base64 in local history',await page.evaluate(()=>!JSON.stringify(S17History.list()).includes('base64,')&&!JSON.stringify(S17Assistant.snapshot().history).includes('base64,')));
+await page.evaluate(()=>S17History.flush());await page.reload();await page.waitForFunction(()=>S17History.snapshot().status!=='loading');check('Real audio conversation survives reload',await page.evaluate(()=>S17Assistant.snapshot().history.at(-1).role==='assistant'&&S17Assistant.snapshot().history.length===2));
+}catch(e){r.exception=e.message;}return r;
+}

@@ -1,0 +1,95 @@
+{
+  "testedAt": "2026-10-30T02:50:27.180Z",
+  "checks": [
+    {
+      "name": "getUserMedia → MediaRecorder → local WAV preparation",
+      "passed": true,
+      "detail": {
+        "files": [
+          {
+            "kind": "audio",
+            "name": "麦克风录音.wav",
+            "seconds": 4.62
+          }
+        ],
+        "processing": false,
+        "recording": false
+      }
+    },
+    {
+      "name": "Recorded audio sent and understood by real model",
+      "passed": true,
+      "detail": "这句话的意思是“请用一句话解释，气体从井底到地面为什么会存在”，它是请人对“气体从井底抵达地面的原因”做一句话的说明讲解。"
+    },
+    {
+      "name": "System speech entry and stop complete without exception",
+      "passed": true,
+      "detail": {
+        "support": {
+          "synth": true,
+          "voices": []
+        },
+        "playback": {
+          "queued": false,
+          "speaking": true,
+          "mouth": "true"
+        }
+      }
+    }
+  ],
+  "capture": "Chrome fake audio device supplied with a Chinese speech WAV; not a physical microphone",
+  "physicalMicrophoneVerified": false,
+  "audibleSpeakerVerified": false,
+  "prepared": {
+    "files": [
+      {
+        "kind": "audio",
+        "name": "麦克风录音.wav",
+        "seconds": 4.62
+      }
+    ],
+    "processing": false,
+    "recording": false
+  },
+  "reply": {
+    "role": "assistant",
+    "content": "这句话的意思是“请用一句话解释，气体从井底到地面为什么会存在”，它是请人对“气体从井底抵达地面的原因”做一句话的说明讲解。",
+    "origin": "井见在线助手 · 模型回复",
+    "at": 1793328635107,
+    "page": {
+      "sceneId": null,
+      "title": "看懂石油场景，动手体验智能方法。",
+      "tab": "bg"
+    },
+    "actions": []
+  },
+  "provider": {
+    "configured": true,
+    "calls": 2,
+    "lastUsage": {
+      "input_tokens": 2759,
+      "output_tokens": 40,
+      "total_tokens": 2799,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 30
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "lastStreamDeltas": 40,
+    "streaming": true,
+    "transport": "server-proxy",
+    "liveCallVerified": true
+  },
+  "voiceSupport": {
+    "synth": true,
+    "voices": []
+  },
+  "playback": {
+    "queued": false,
+    "speaking": true,
+    "mouth": "true"
+  }
+}

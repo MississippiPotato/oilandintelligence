@@ -1,0 +1,35 @@
+{
+  "testedAt": "2026-10-30T02:51:32.566Z",
+  "checks": [
+    {
+      "name": "Independent m2 loads enlarged assistant and shared history",
+      "passed": true
+    },
+    {
+      "name": "Local navigation still produces m2 action",
+      "passed": true
+    },
+    {
+      "name": "Offline file retains Live2D, calculation and guide",
+      "passed": true
+    },
+    {
+      "name": "Isolated case uses fallback without breaking demonstration",
+      "passed": true
+    },
+    {
+      "name": "Original teacher directory import retains assistant and default computation",
+      "passed": true
+    },
+    {
+      "name": "Teacher sandbox explains memory storage",
+      "passed": true
+    },
+    {
+      "name": "Teacher refresh runs current assistant again",
+      "passed": true
+    }
+  ],
+  "all61BrowserAcceptanceClaimed": false,
+  "exception": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#case-demo-root iframe').contentFrame().locator('#s17-assistant')\u001b[22m\n"
+}

@@ -1,0 +1,101 @@
+{
+  "testedAt": "2026-10-30T02:52:00.747Z",
+  "checks": [
+    {
+      "name": "getUserMedia → MediaRecorder → local WAV preparation",
+      "passed": true,
+      "detail": {
+        "files": [
+          {
+            "kind": "audio",
+            "name": "麦克风录音.wav",
+            "seconds": 7.56
+          }
+        ],
+        "processing": false,
+        "recording": false
+      }
+    },
+    {
+      "name": "Recorded audio sent and understood by real model",
+      "passed": true,
+      "detail": "请用一句话解释气体从井底到地面为什么需要时间，并且请用一句话说明（补充解释的完整要求）。"
+    }
+  ],
+  "capture": "Chrome fake audio device supplied with a Chinese speech WAV; not a physical microphone",
+  "physicalMicrophoneVerified": false,
+  "audibleSpeakerVerified": false,
+  "prepared": {
+    "files": [
+      {
+        "kind": "audio",
+        "name": "麦克风录音.wav",
+        "seconds": 7.56
+      }
+    ],
+    "processing": false,
+    "recording": false
+  },
+  "reply": {
+    "role": "assistant",
+    "content": "请用一句话解释气体从井底到地面为什么需要时间，并且请用一句话说明（补充解释的完整要求）。",
+    "origin": "井见在线助手 · 模型回复",
+    "at": 1793328730682,
+    "page": {
+      "sceneId": null,
+      "title": "看懂石油场景，动手体验智能方法。",
+      "tab": "bg"
+    },
+    "actions": []
+  },
+  "provider": {
+    "configured": true,
+    "calls": 3,
+    "lastUsage": {
+      "input_tokens": 2855,
+      "output_tokens": 26,
+      "total_tokens": 2881,
+      "input_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 48
+      },
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "lastStreamDeltas": 26,
+    "streaming": true,
+    "transport": "server-proxy",
+    "liveCallVerified": true
+  },
+  "voiceSupport": {
+    "synth": true,
+    "voices": [
+      {
+        "name": "Microsoft Huihui - Chinese (Simplified, PRC)",
+        "lang": "zh-CN"
+      },
+      {
+        "name": "Microsoft Mark - English (United States)",
+        "lang": "en-US"
+      },
+      {
+        "name": "Microsoft Zira - English (United States)",
+        "lang": "en-US"
+      },
+      {
+        "name": "Microsoft David - English (United States)",
+        "lang": "en-US"
+      },
+      {
+        "name": "Microsoft Kangkang - Chinese (Simplified, PRC)",
+        "lang": "zh-CN"
+      },
+      {
+        "name": "Microsoft Yaoyao - Chinese (Simplified, PRC)",
+        "lang": "zh-CN"
+      }
+    ]
+  },
+  "exception": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#s17-agent-read')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" id=\"s17-agent-read\">朗读上一条</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    10 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+}

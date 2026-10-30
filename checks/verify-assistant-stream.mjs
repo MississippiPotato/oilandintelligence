@@ -1,0 +1,13 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const window={};vm.runInNewContext(fs.readFileSync('portal/assets/s17-response-stream.js','utf8'),{window,TextDecoder,Uint8Array});
+const checks=[];const frame=o=>'data: '+JSON.stringify(o)+'\r\n\r\n';
+function response(text){const bytes=new TextEncoder().encode(text);return new Response(new ReadableStream({start(c){for(let i=0;i<bytes.length;i++)c.enqueue(bytes.slice(i,i+1));c.close();}}),{headers:{'Content-Type':'text/event-stream'}});}
+let fragments=[];let result=await window.S17ResponseStream.read(response(': heartbeat\r\n\r\n'+frame({type:'response.output_text.delta',delta:'井底'})+frame({type:'response.output_text.delta',delta:'→地面'})+frame({type:'response.output_item.done',item:{type:'function_call',name:'navigate_page',arguments:'{"target":"m2"}'}})+frame({type:'response.completed',response:{status:'completed'}})),s=>fragments.push(s));
+assert.equal(fragments.join(''),'井底→地面');assert.equal(result.deltas,2);assert.equal(result.body.output[0].name,'navigate_page');checks.push('UTF8/CRLF fragmented at every byte, heartbeat, text and tool events');
+await assert.rejects(()=>window.S17ResponseStream.read(response(frame({type:'response.output_text.delta',delta:'部分'}))),/连接提前结束/);checks.push('Early EOF fails rather than silently accepting truncated answer');
+await assert.rejects(()=>window.S17ResponseStream.read(response(frame({type:'response.failed',response:{error:{message:'sample failure'}}}))),/sample failure/);checks.push('Provider stream error propagated');
+result=await window.S17ResponseStream.read(response(frame({type:'response.output_text.delta',delta:'达到限长'})+frame({type:'response.incomplete',response:{status:'incomplete'}})));assert.equal(result.body.status,'incomplete');assert.equal(result.body.output[0].content[0].text,'达到限长');checks.push('Incomplete response preserves generated text and status');
+result=await window.S17ResponseStream.read(Response.json({output:[{type:'message',content:[{type:'output_text',text:'JSON'}]}]}));assert.equal(result.deltas,0);checks.push('Non-stream JSON response remains compatible');
+const files=['s17-assistant','s17-media','s17-volcengine','s17-assistant-config','s17-response-stream','s17-live2d'];for(const f of files)new vm.Script(fs.readFileSync('portal/assets/'+f+'.js','utf8'));
+checks.push('Changed client scripts parse');
+fs.mkdirSync('handoff/assistant-stream-2026-10-30',{recursive:true});fs.writeFileSync('handoff/assistant-stream-2026-10-30/source-checks.json',JSON.stringify({checkedAt:new Date().toISOString(),checks,browserAcceptanceClaimed:false},null,2));console.log(JSON.stringify({checks},null,2));

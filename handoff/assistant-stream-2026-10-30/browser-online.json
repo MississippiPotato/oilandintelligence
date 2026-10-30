@@ -1,0 +1,191 @@
+{
+  "testedAt": "2026-10-30T02:54:22.973Z",
+  "endpoint": "http://127.0.0.1:8756/api/assistant",
+  "provider": "doubao-seed-2-0-mini-260428",
+  "cloudBrowserReachabilityVerified": false,
+  "physicalMicrophoneVerified": false,
+  "checks": [
+    {
+      "name": "text real model reply",
+      "passed": true,
+      "detail": "钻井液在井下循环时，会与地层中的气体接触，地层孔隙中的气体（来自储层或油气藏）会在钻井液流动过程中混入其中，随着钻井液向地面上返，被携带至地面；在循环的环空通道内，钻井液流动形成的压力环境使得气体不易从钻井液中快速逸散，从而被持续携带至地面。"
+    },
+    {
+      "name": "text incremental text before completion",
+      "passed": true
+    },
+    {
+      "name": "image real model reply",
+      "passed": true,
+      "detail": "最显眼的高耸设备是钻井架（石油钻井井架）。图中的地表环境为干旱的荒漠地带，地面是浅黄褐色的沙质地，分布着稀疏的低矮耐旱灌木和小片裸岩，一条土路从钻井设施旁延伸开去；远处是连绵的低矮山脉，整体地势开阔，天空晴朗、有少量轻薄的白色云块，属于典型的荒漠型野外作业场景。"
+    },
+    {
+      "name": "image incremental text before completion",
+      "passed": true
+    },
+    {
+      "name": "Image recognized as drilling rig",
+      "passed": true
+    },
+    {
+      "name": "audio real model reply",
+      "passed": true,
+      "detail": "请用一句话解释气体从井底到地面为什么需要时间。\n气体从井底到地面需要克服井筒内流体的阻力、自身的重力，同时气体在运移过程中会与井筒内流体发生交换，且受流动速度、井筒温度压力变化等因素影响，因此需要时间。"
+    },
+    {
+      "name": "audio incremental text before completion",
+      "passed": true
+    },
+    {
+      "name": "Spoken question understood",
+      "passed": true
+    },
+    {
+      "name": "Browser sends no provider authorization/key",
+      "passed": true,
+      "detail": [
+        {
+          "headerNames": [
+            "sec-ch-ua-platform",
+            "referer",
+            "user-agent",
+            "sec-ch-ua",
+            "content-type",
+            "sec-ch-ua-mobile"
+          ],
+          "roles": [
+            "user"
+          ],
+          "parts": [
+            "text"
+          ]
+        },
+        {
+          "headerNames": [
+            "sec-ch-ua-platform",
+            "referer",
+            "user-agent",
+            "sec-ch-ua",
+            "content-type",
+            "sec-ch-ua-mobile"
+          ],
+          "roles": [
+            "user"
+          ],
+          "parts": [
+            "input_text",
+            "input_image"
+          ]
+        },
+        {
+          "headerNames": [
+            "sec-ch-ua-platform",
+            "referer",
+            "user-agent",
+            "sec-ch-ua",
+            "content-type",
+            "sec-ch-ua-mobile"
+          ],
+          "roles": [
+            "user"
+          ],
+          "parts": [
+            "input_text",
+            "input_audio"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Attachments not stored as base64 in local history",
+      "passed": true
+    },
+    {
+      "name": "Real audio conversation survives reload",
+      "passed": true
+    }
+  ],
+  "calls": [
+    {
+      "kind": "text",
+      "firstDeltaMs": 1095,
+      "during": {
+        "busy": true,
+        "streaming": true,
+        "text": "钻井"
+      },
+      "elapsedMs": 2153,
+      "reply": "钻井液在井下循环时，会与地层中的气体接触，地层孔隙中的气体（来自储层或油气藏）会在钻井液流动过程中混入其中，随着钻井液向地面上返，被携带至地面；在循环的环空通道内，钻井液流动形成的压力环境使得气体不易从钻井液中快速逸散，从而被持续携带至地面。",
+      "deltaCount": 82,
+      "usage": {
+        "input_tokens": 3408,
+        "output_tokens": 82,
+        "total_tokens": 3490,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "kind": "image",
+      "firstDeltaMs": 2646,
+      "during": {
+        "busy": true,
+        "streaming": true,
+        "text": "最"
+      },
+      "elapsedMs": 3213,
+      "reply": "最显眼的高耸设备是钻井架（石油钻井井架）。图中的地表环境为干旱的荒漠地带，地面是浅黄褐色的沙质地，分布着稀疏的低矮耐旱灌木和小片裸岩，一条土路从钻井设施旁延伸开去；远处是连绵的低矮山脉，整体地势开阔，天空晴朗、有少量轻薄的白色云块，属于典型的荒漠型野外作业场景。",
+      "deltaCount": 86,
+      "usage": {
+        "input_tokens": 4694,
+        "output_tokens": 86,
+        "total_tokens": 4780,
+        "input_tokens_details": {
+          "cached_tokens": 3384
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    },
+    {
+      "kind": "audio",
+      "firstDeltaMs": 900,
+      "during": {
+        "busy": true,
+        "streaming": true,
+        "text": "请"
+      },
+      "elapsedMs": 1611,
+      "reply": "请用一句话解释气体从井底到地面为什么需要时间。\n气体从井底到地面需要克服井筒内流体的阻力、自身的重力，同时气体在运移过程中会与井筒内流体发生交换，且受流动速度、井筒温度压力变化等因素影响，因此需要时间。",
+      "deltaCount": 63,
+      "usage": {
+        "input_tokens": 2727,
+        "output_tokens": 63,
+        "total_tokens": 2790,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 40
+        },
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      }
+    }
+  ],
+  "audioPrepared": {
+    "files": [
+      {
+        "kind": "audio",
+        "name": "voice-test.wav",
+        "seconds": 6.167104166666666
+      }
+    ],
+    "processing": false,
+    "recording": false
+  }
+}

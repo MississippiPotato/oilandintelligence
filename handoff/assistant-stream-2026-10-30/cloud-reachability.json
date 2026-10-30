@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-30T02:55:27.678Z",
+  "endpoint": "https://jingjian-assistant-relay.richcreek513.chatgpt.site/api/assistant/status",
+  "attempts": [
+    {
+      "origin": "http://127.0.0.1:8755",
+      "status": 403,
+      "title": "Attention Required! | Cloudflare",
+      "corsAllowed": false,
+      "edgeBlock": true
+    },
+    {
+      "origin": "https://mississippipotato.github.io",
+      "status": 403,
+      "title": "Attention Required! | Cloudflare",
+      "corsAllowed": false,
+      "edgeBlock": true
+    }
+  ],
+  "publicAccessPolicyConfirmed": true,
+  "platformDeploymentStatus": "succeeded",
+  "visitorModelRequestVerified": false
+}
