@@ -1,0 +1,886 @@
+{
+  "capturedAt": "2026-11-01T14:33:21.202Z",
+  "meaning": "Current pre-revision engines, observations, original portal and original assignment copy. Display sources may change.",
+  "protectedFiles": [
+    {
+      "path": "portal-original/.workbuddy/memory/2026-10-22.md",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    {
+      "path": "portal-original/.workbuddy/memory/MEMORY.md",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    {
+      "path": "portal-original/assets/cases/_template.case.js",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    {
+      "path": "portal-original/assets/cases/_template.case.json",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    {
+      "path": "portal-original/assets/cases/welllog-layer.case.js",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    {
+      "path": "portal-original/assets/cases/welllog-layer.demo.js",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    {
+      "path": "portal-original/assets/core/admin.js",
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13"
+    },
+    {
+      "path": "portal-original/assets/core/case-demo-host.js",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    {
+      "path": "portal-original/assets/core/case-upload.js",
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99"
+    },
+    {
+      "path": "portal-original/assets/core/kit.js",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    {
+      "path": "portal-original/assets/core/layout.css",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    {
+      "path": "portal-original/assets/core/registry.js",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    {
+      "path": "portal-original/assets/core/shell.js",
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18"
+    },
+    {
+      "path": "portal-original/assets/core/tokens.css",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    {
+      "path": "portal-original/assets/core/ui.css",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    {
+      "path": "portal-original/assets/data.js",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    {
+      "path": "portal-original/docs/如何添加新案例.md",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/README.txt",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/case.json",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.css",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.js",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/index.html",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    },
+    {
+      "path": "portal-original/index.html",
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/.workbuddy/memory/2026-10-22.md",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/.workbuddy/memory/MEMORY.md",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/_template.case.js",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/_template.case.json",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/welllog-layer.demo.js",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/admin.js",
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/case-demo-host.js",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/case-upload.js",
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/kit.js",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/layout.css",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/registry.js",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/shell.js",
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/tokens.css",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/ui.css",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/data.js",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/docs/如何添加新案例.md",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/README.txt",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/case.json",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.css",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.js",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/index.html",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/index.html",
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97"
+    },
+    {
+      "path": "data/real/ATTRIBUTION.txt",
+      "bytes": 1570,
+      "sha256": "61b925dcb4d5453065e4678f47aea126630a30fa6952265be1b71e9604fb1326"
+    },
+    {
+      "path": "data/real/CALCITE-ATTRIBUTION.txt",
+      "bytes": 937,
+      "sha256": "858ba40ac0c2e2dab5dee10c70969e987d7bc81e0052a219fbd87f8c7d00d143"
+    },
+    {
+      "path": "data/real/PANGAEA.975497.txt",
+      "bytes": 9640,
+      "sha256": "410bbc9869bf0f592e5d218b8d2f3ede0bffd39226aaae780642ba86fd0a2f2e"
+    },
+    {
+      "path": "data/real/USROP_README.md",
+      "bytes": 581,
+      "sha256": "88864381bfd261a046a54da035a6373e9c8c13df114cad0cc083388f5a45d79a"
+    },
+    {
+      "path": "data/real/calcite-visible-uv.json",
+      "bytes": 3817,
+      "sha256": "8b180e03056ad503e1c454faa529c58bfff6f998d2e524042a8a9331bbf02e7d"
+    },
+    {
+      "path": "data/real/core-six-metadata.json",
+      "bytes": 3680,
+      "sha256": "2259f3a10f5388019479c1059f57f099e7f6e99a216b36b3554b7702ee887619"
+    },
+    {
+      "path": "data/real/images/calcite-longwave.jpg",
+      "bytes": 108345,
+      "sha256": "48e45842389f7b11c5ae153ff00799e2f8377c6f8dbc764d3d99a63de9f44a97"
+    },
+    {
+      "path": "data/real/images/calcite-shortwave.jpg",
+      "bytes": 115652,
+      "sha256": "8bfe6a347ed84496e7a52176a0b256d287ce2ec3d0bf00a6edcb4c9ee5e2924f"
+    },
+    {
+      "path": "data/real/images/calcite-visible.jpg",
+      "bytes": 142997,
+      "sha256": "c11f399dff2ebafd628f16e696f39c3b1c82e4199a9c03201b53509ce6d12914"
+    },
+    {
+      "path": "data/real/images/limestone-1.jpeg",
+      "bytes": 9927,
+      "sha256": "ca575faf9aafcda9b0b854e456e05976f41d972a7895e6116dce963f0a8c338d"
+    },
+    {
+      "path": "data/real/images/limestone-2.jpeg",
+      "bytes": 7932,
+      "sha256": "89893b224c27686b8ad963e362f9e10a575ada4b4f6c6182134797e161a7ba45"
+    },
+    {
+      "path": "data/real/images/sandstone-1.jpeg",
+      "bytes": 9760,
+      "sha256": "6841ccd14dbcaccca68a1d1504a271184a08ce543b227d41e5f253c78f402d22"
+    },
+    {
+      "path": "data/real/images/sandstone-2.jpeg",
+      "bytes": 12844,
+      "sha256": "35732ca860a43d862959fec48976051d4eefa09c313912d24d6ca47f9443d1d1"
+    },
+    {
+      "path": "data/real/images/shale-1.jpeg",
+      "bytes": 8408,
+      "sha256": "bde998211fb35abd25195d93e4ab3b43020231baeaac97f1f39e81b6302f3021"
+    },
+    {
+      "path": "data/real/images/shale-2.jpeg",
+      "bytes": 8723,
+      "sha256": "eb63144b005c70bf3f779da28183c35f18802b42e21e92a6636440d5dacd945f"
+    },
+    {
+      "path": "data/real/pangaea-headspace.json",
+      "bytes": 16210,
+      "sha256": "bb9573798d2bf36279e50bea6858c788763539472e1e30f5d7d045915afe7b50"
+    },
+    {
+      "path": "data/real/usrop-f15-subset.json",
+      "bytes": 124073,
+      "sha256": "1350ac66665248c819fcd89a86fcbb9bd56890ec9e6606f96a337bc9699ccc1d"
+    },
+    {
+      "path": "data/study/calcite-longwave.jpg",
+      "bytes": 19887,
+      "sha256": "af59d416cc900d037f81348a6018a0a043218641962142b46d073a7de8e5ebd4"
+    },
+    {
+      "path": "data/study/calcite-shortwave.jpg",
+      "bytes": 20535,
+      "sha256": "21ca34969bb3dd5fefeb8910f878a0632da122b1765d0a9d3b97c5c01b1e58a9"
+    },
+    {
+      "path": "data/study/calcite-visible.jpg",
+      "bytes": 29852,
+      "sha256": "5b907b729426c374a37183159816bae1a31a9db35041f73628e66485dc6ea0aa"
+    },
+    {
+      "path": "data/study/case-source-assets.json",
+      "bytes": 3248,
+      "sha256": "12542a68955b7e912c2547974ad74364b0674ecace73365ce339e2d8ddf4c0f9"
+    },
+    {
+      "path": "data/study/case-source-generated.json",
+      "bytes": 6231,
+      "sha256": "d59cdcd89623f4906e7e4dbd3a95241f2b20b9c0dfad1b47a62e71a581307972"
+    },
+    {
+      "path": "data/study/case-source-prompts.json",
+      "bytes": 6358,
+      "sha256": "fdf865ca0b72e13cb4c2d59dddbc90f716bfa4052326ee3beb9c0ba4911f1545"
+    },
+    {
+      "path": "data/study/core-features.json",
+      "bytes": 4606,
+      "sha256": "c8beb40dd08d4e453ae513b79c7b62245c6eef04a43c46d16cb8200f6df74b58"
+    },
+    {
+      "path": "data/study/m1-source.webp",
+      "bytes": 51368,
+      "sha256": "5da05be0d047aff6b6a279ce1683a65cf05cb58cb8b9267c08b64728fa301c27"
+    },
+    {
+      "path": "data/study/m2-source.webp",
+      "bytes": 54710,
+      "sha256": "c41d12c36a65f42f0f02f0124d51451fcde355a460c3dbd8b414ca5630e69479"
+    },
+    {
+      "path": "data/study/m3-source.webp",
+      "bytes": 45838,
+      "sha256": "6f438863783ff4510eb365776e9a4f3ae5007e1e36a4008e37435328002fe9bd"
+    },
+    {
+      "path": "data/study/m4-source.webp",
+      "bytes": 54902,
+      "sha256": "04b931f0bf062b3e9798d5282686f08331ee636e008b206b471c49acb6c41b76"
+    },
+    {
+      "path": "data/study/m5-source.webp",
+      "bytes": 55940,
+      "sha256": "5e454da9f2965843adfdf113b61edfc5e57e4b0f9d15c47479861912ccb540b6"
+    },
+    {
+      "path": "data/study/mudlogging-circulation.webp",
+      "bytes": 57786,
+      "sha256": "55ae0c6736c4364a8fe8e327647b4e781dc2e917c9e9d4a4e8169d27711ab2b3"
+    },
+    {
+      "path": "case-src/m1/engine.js",
+      "bytes": 7085,
+      "sha256": "abd18b858e38bba96beec6ad9333f1d44b49eee3ed3e7b5fb841acce6203b63e"
+    },
+    {
+      "path": "case-src/m2/data.js",
+      "bytes": 4592,
+      "sha256": "b763de10f62032f9278ba7f4464565414b4884982d29dad8a7926476f5bb9d46"
+    },
+    {
+      "path": "case-src/m2/engine.js",
+      "bytes": 8710,
+      "sha256": "6d8c814e2349b582907d8a7cd3545e705a7a4254f2b5252b4c4d3afffaf2ab3d"
+    },
+    {
+      "path": "case-src/m3/engine.js",
+      "bytes": 5296,
+      "sha256": "4c6ccc0168ed53dcba48cc28bb6350a7e369cdba2576a283c019ec9836d05148"
+    },
+    {
+      "path": "case-src/m3/exhibit-data.js",
+      "bytes": 95278,
+      "sha256": "e66b78176e1e511fd35d20023af1c43da0f8afde645ceb3a2fb727777cbbb49e"
+    },
+    {
+      "path": "case-src/m4/engine.js",
+      "bytes": 10136,
+      "sha256": "0202c14514f9452779b4ecb177d62d008d2a74204f007e6a745944042a334eda"
+    },
+    {
+      "path": "case-src/m5/data.js",
+      "bytes": 3953,
+      "sha256": "8c1872f47baacb7d64d2ddb75bb38d5ab829ba5d9d471b66f99f7d1d4e8ff70f"
+    },
+    {
+      "path": "case-src/m5/engine.js",
+      "bytes": 17102,
+      "sha256": "58449c01426764fde3a41e753814335c54b7ed21c5604dcd9ccbfd59bf18651a"
+    },
+    {
+      "path": "case-src/m5/fixtures.js",
+      "bytes": 173179,
+      "sha256": "2ad1079a420c20c5812dc346ede0369f5b7b044cbc9b8b178b21dc14d9b4c5f9"
+    },
+    {
+      "path": "expansion-src/c1/engine.js",
+      "bytes": 6760,
+      "sha256": "99ca73bfc6b95097b843c655cec44aebb0eaae14b3469ce2b65d2bb03dffd7ee"
+    },
+    {
+      "path": "expansion-src/c2/engine.js",
+      "bytes": 5947,
+      "sha256": "4e86511b54470e652943058382dc9fd7acccb82e84ac6a34c331337c59aa88b5"
+    },
+    {
+      "path": "expansion-src/c3/engine.js",
+      "bytes": 5846,
+      "sha256": "70c6c89d9fa037e5d98b4866bc98d522300cece14ebf9874c850b2abdd68c95c"
+    },
+    {
+      "path": "expansion-src/c4/engine.js",
+      "bytes": 5565,
+      "sha256": "1d840af42116b788b617aedda33c68b8b2aad54592d61f5bfa509666a7769991"
+    },
+    {
+      "path": "expansion-src/co1/engine.js",
+      "bytes": 7722,
+      "sha256": "79186b1d27e92a238d5eeab15b35a5d42e3f1d85144a587938ba70eb41b0eb5f"
+    },
+    {
+      "path": "expansion-src/co2/engine.js",
+      "bytes": 6817,
+      "sha256": "e18b519b41963c77dc5536a8750b867ac3268ae787b248eb2a49343408ef1be0"
+    },
+    {
+      "path": "expansion-src/co3/engine.js",
+      "bytes": 5619,
+      "sha256": "a67145c7e60fdebf54bd46205d2cb6d71ca1ffbe1159ff11d3e9243ccad784dc"
+    },
+    {
+      "path": "expansion-src/co4/engine.js",
+      "bytes": 7434,
+      "sha256": "25e3e0235ae8d6633546c7375ce9c0e228407149ca5e1ff77550e581b8a3293e"
+    },
+    {
+      "path": "expansion-src/d1/engine.js",
+      "bytes": 7869,
+      "sha256": "f07d0a75657b38e883bcaf18ad6919c0292ed4a97a56658aa7544b667f3ff140"
+    },
+    {
+      "path": "expansion-src/d2/engine-contract.json",
+      "bytes": 1668,
+      "sha256": "9eff69f8fac8ae0487e7114a18f78d208fedacfaffccc47b90929eff6a1a76ac"
+    },
+    {
+      "path": "expansion-src/d2/engine.js",
+      "bytes": 4595,
+      "sha256": "e7ac56647f7f9c604aa591ac2216b6c3371e4bad71285fb973656afcb3846980"
+    },
+    {
+      "path": "expansion-src/d3/engine-contract.json",
+      "bytes": 1771,
+      "sha256": "c03dc62d7f1c59f7e78a390e3da3bb6bc7a338084d47f222c5932acefcdb0ea9"
+    },
+    {
+      "path": "expansion-src/d3/engine.js",
+      "bytes": 4889,
+      "sha256": "51b080bf7039be6768b33591c3ae7177164f2619b80060d1725d23ef8e0c122c"
+    },
+    {
+      "path": "expansion-src/d4/engine-contract.json",
+      "bytes": 1665,
+      "sha256": "ce2671d461030acd69ee7fd6f298623949369c368154def93b2f2caffc48e587"
+    },
+    {
+      "path": "expansion-src/d4/engine.js",
+      "bytes": 4369,
+      "sha256": "286b0c63ca7bd541b1eb20d966f0bc572958fa617ece6a1ec1edfcbe9dfdac69"
+    },
+    {
+      "path": "expansion-src/d5/engine-contract.json",
+      "bytes": 1792,
+      "sha256": "731c43bb579220dd8f9decf206eac07fd496a5fe5c539ae7683a4d1e06fae5c3"
+    },
+    {
+      "path": "expansion-src/d5/engine.js",
+      "bytes": 4764,
+      "sha256": "480bb30a57ad7c70eba61957f157efdab170428f4ae541b145336179753f1e3d"
+    },
+    {
+      "path": "expansion-src/e1/engine.js",
+      "bytes": 11094,
+      "sha256": "3066e7b7e2221fd47d274edb3afb1ba9360ae41f92ed01c7242ab57adf765857"
+    },
+    {
+      "path": "expansion-src/e2/engine-contract.json",
+      "bytes": 593,
+      "sha256": "b1ef47064388354c4e6c53b7ac058e0e68b759aa96c51b1d70131c118ddd5d0d"
+    },
+    {
+      "path": "expansion-src/e2/engine.js",
+      "bytes": 4164,
+      "sha256": "ea6c748df51f4732624593449c6c218611cb57c80070bda5879994e145260b13"
+    },
+    {
+      "path": "expansion-src/e3/engine-contract.json",
+      "bytes": 489,
+      "sha256": "6b66a5e12deb8f9866b52ef852dd68ad88c7e33f77df9a9a5100c89a95246abf"
+    },
+    {
+      "path": "expansion-src/e3/engine.js",
+      "bytes": 4176,
+      "sha256": "479da57eef80fe35b2061e287c2a47086adfdb4a107bcf2e04cac54d7e7a068f"
+    },
+    {
+      "path": "expansion-src/e4/engine-contract.json",
+      "bytes": 565,
+      "sha256": "8ca1fbd23ddafe088b6868b3c34d8ed7a62312aef5e79857b30bb92be8fe511c"
+    },
+    {
+      "path": "expansion-src/e4/engine.js",
+      "bytes": 4433,
+      "sha256": "4823daf22161aad7f69be50ca771cf1017afaea8580e8a3c0ac1656f83864252"
+    },
+    {
+      "path": "expansion-src/e5/engine-contract.json",
+      "bytes": 585,
+      "sha256": "5e2e39f41044da3567a6d7940b42bcf3e7b23534587b6a74762d6c9e1d9bbde8"
+    },
+    {
+      "path": "expansion-src/e5/engine.js",
+      "bytes": 4277,
+      "sha256": "3f55eb3b3c46ed35b895576c89896db2c02bb8a2e9df6685d5a336b18a76b3c1"
+    },
+    {
+      "path": "expansion-src/g1/engine.js",
+      "bytes": 8850,
+      "sha256": "2871b43ce69c5117d9020aa0321640dc25f168bbd4995690942e5412d3cf645a"
+    },
+    {
+      "path": "expansion-src/g2/engine-contract.json",
+      "bytes": 544,
+      "sha256": "221e5959028e09b3d6969aac18e09b7ebd00ceca2016416cdc4fd5b52d262e2d"
+    },
+    {
+      "path": "expansion-src/g2/engine.js",
+      "bytes": 2362,
+      "sha256": "3b0b6d9573a6bd643e773c2c55628c857ed6bbbbccf1148b4748ec772f1a8b49"
+    },
+    {
+      "path": "expansion-src/g3/engine-contract.json",
+      "bytes": 747,
+      "sha256": "59a2a95a6a6893735f7172df476e146c70ac9b6a922f9646efd1552284f6f885"
+    },
+    {
+      "path": "expansion-src/g3/engine.js",
+      "bytes": 2688,
+      "sha256": "09fbc2719e3a6cff90972b69ce7d9400a78acbcde3519dfbd713fabde7677403"
+    },
+    {
+      "path": "expansion-src/g4/engine-contract.json",
+      "bytes": 887,
+      "sha256": "4ac5ce529cca47f748f01aa0405f2ae1e39f1c22ea0e6dbe316fdf15853d3aa2"
+    },
+    {
+      "path": "expansion-src/g4/engine.js",
+      "bytes": 3240,
+      "sha256": "a88c8be223a461a969be409ff4a34a4f23d6fdb7829f4d12e34cf065cf9f1a4a"
+    },
+    {
+      "path": "expansion-src/p1/engine.js",
+      "bytes": 9176,
+      "sha256": "ab52b30e40416b5740c1a9b0fb1f4fec436be32451eabfcc5b3693b06bac3165"
+    },
+    {
+      "path": "expansion-src/p2/engine-contract.json",
+      "bytes": 1006,
+      "sha256": "c95a18a268f4e38e0b419f6d0324e3214c9340aa969d74addd158a6f86ac914b"
+    },
+    {
+      "path": "expansion-src/p2/engine.js",
+      "bytes": 4698,
+      "sha256": "dad278ceecf6da6a88d3e59180423908161d819a8b09e307ad2229b672957812"
+    },
+    {
+      "path": "expansion-src/p3/engine-contract.json",
+      "bytes": 884,
+      "sha256": "5806fb5f3d469b1633a6d464b4bad8409fe77810d1a5f275e65500b0fef3b349"
+    },
+    {
+      "path": "expansion-src/p3/engine.js",
+      "bytes": 5094,
+      "sha256": "80d12f92601e8d2384e2fe7c3fef53b1d86287f15f00e04c54f54397aa87f43c"
+    },
+    {
+      "path": "expansion-src/p4/engine-contract.json",
+      "bytes": 810,
+      "sha256": "c6e5e0813f4b86255ec1ae0a524a7993612c5e1fe0b38a54f07414c7e80beed1"
+    },
+    {
+      "path": "expansion-src/p4/engine.js",
+      "bytes": 5026,
+      "sha256": "ec74468161f081c8bcdd1713d98d6c0f4a9d1d4bf4f7d9139aa48f1a963407fb"
+    },
+    {
+      "path": "expansion-src/pr1/engine.js",
+      "bytes": 10161,
+      "sha256": "c4dd054259663e0956e6aa8d63e62a3d3d4475c702842f6fe6d5da8c20ae30af"
+    },
+    {
+      "path": "expansion-src/pr2/engine-contract.json",
+      "bytes": 770,
+      "sha256": "92b7c9116575d2c8aa380d8b3cd89f436e8130dac33161a480a38464a8115756"
+    },
+    {
+      "path": "expansion-src/pr2/engine.js",
+      "bytes": 5140,
+      "sha256": "3e1e4566394fd8a261e0e31029d3b311946c8b05279957a7b82840b40942e979"
+    },
+    {
+      "path": "expansion-src/pr3/engine-contract.json",
+      "bytes": 900,
+      "sha256": "a1530e895022931f3867d4fe478594d143981d66a86f9c22c62128bea22bd71b"
+    },
+    {
+      "path": "expansion-src/pr3/engine.js",
+      "bytes": 5146,
+      "sha256": "6bac45acc802e9740411f97ef8f12691904074feefd165f7240f86bf13f2a9f2"
+    },
+    {
+      "path": "expansion-src/pr4/engine-contract.json",
+      "bytes": 952,
+      "sha256": "2e47bd46c9b983a86a850310b97bc9196a03e46c33634d74ae2fe758427cd763"
+    },
+    {
+      "path": "expansion-src/pr4/engine.js",
+      "bytes": 5865,
+      "sha256": "bd396e5c2712fef04c18f14bfc7014fdb38f78b003fa6d03d76957c04f7fbf83"
+    },
+    {
+      "path": "expansion-src/pr5/engine-contract.json",
+      "bytes": 959,
+      "sha256": "3a01d8525943590984b255b4d7a56183bf118e8743f67ec1997eaaf3208a6648"
+    },
+    {
+      "path": "expansion-src/pr5/engine.js",
+      "bytes": 5499,
+      "sha256": "fa35f5a0c2243173685f939174d731d7bd43a3588b5e30ccc69c9c4da65a3944"
+    },
+    {
+      "path": "expansion-src/r1/engine.js",
+      "bytes": 2898,
+      "sha256": "424bc3313b4dec5629604174c404d09bb05fc1b3ddfc3abb2ecf9188c8e3a0fc"
+    },
+    {
+      "path": "expansion-src/r2/engine.js",
+      "bytes": 2899,
+      "sha256": "a80749b843657964416e2a3b0da63cd85cb62adb5916bc33e520aabe6b0a1304"
+    },
+    {
+      "path": "expansion-src/r3/engine.js",
+      "bytes": 3748,
+      "sha256": "5d1f8345dbdb0a490cc1e904bb7b2b0bbbeff3d13e1ae4c0c56a66e05e9cebb1"
+    },
+    {
+      "path": "expansion-src/r4/engine.js",
+      "bytes": 4799,
+      "sha256": "1052663476010706da81c21aa1a953d572e4a148f1a955d6ed05766e2646d2cf"
+    },
+    {
+      "path": "expansion-src/r5/engine.js",
+      "bytes": 6866,
+      "sha256": "43a3fdc3b9672a6ca537a9f8a2da87b0f3820b88d0c6700b5ac61c9a3aa9f717"
+    },
+    {
+      "path": "expansion-src/s1/engine.js",
+      "bytes": 10997,
+      "sha256": "327661a57fbdeeecf63779c9114f20bd3224a7b3ce7e52b714838a7794548d34"
+    },
+    {
+      "path": "expansion-src/s2/engine-contract.json",
+      "bytes": 788,
+      "sha256": "64d2de4e38c526eb23c97d5a1dcc6944aff071f9f75501b5e181e1ea182e6007"
+    },
+    {
+      "path": "expansion-src/s2/engine.js",
+      "bytes": 2909,
+      "sha256": "036e775f9648d0180591f0581d16808db60f4b7ace580a24b92c455d27e947d9"
+    },
+    {
+      "path": "expansion-src/s3/engine-contract.json",
+      "bytes": 590,
+      "sha256": "a5387227029af2dffb92eaee6d1ceb3315f951d8424b737ff6cceb85584117c5"
+    },
+    {
+      "path": "expansion-src/s3/engine.js",
+      "bytes": 3195,
+      "sha256": "370fe40ddd6df644db62a93703f1e39e8ae9b41940d98ae305c78653f6433bda"
+    },
+    {
+      "path": "expansion-src/s4/engine-contract.json",
+      "bytes": 820,
+      "sha256": "c0062f8f968fc27335f5cca544bb82103f737cc38cb787efa0008f65058ed13a"
+    },
+    {
+      "path": "expansion-src/s4/engine.js",
+      "bytes": 2470,
+      "sha256": "f48ca843c025e08cc9670f116e19e5095d6a68a9ee501ce915e566c443adc181"
+    },
+    {
+      "path": "expansion-src/s5/engine-contract.json",
+      "bytes": 543,
+      "sha256": "f375308c8ee53646738f332fe3af317dd6266ff873035a889f7458c59ba9a260"
+    },
+    {
+      "path": "expansion-src/s5/engine.js",
+      "bytes": 2425,
+      "sha256": "fea0265d8805515505e01795c3ba56494e62711139f61d061fae143b7e783a8f"
+    },
+    {
+      "path": "expansion-src/t1/engine.js",
+      "bytes": 7064,
+      "sha256": "560c14bf56a1d7cdc9b00965765a321bcaea1895a0a056f019f542d376ff5441"
+    },
+    {
+      "path": "expansion-src/t2/engine.js",
+      "bytes": 3469,
+      "sha256": "8afa7b179784b254f3673ae419afcce99c0067db03dbf215d6aa9bee9eba370e"
+    },
+    {
+      "path": "expansion-src/t3/engine.js",
+      "bytes": 2366,
+      "sha256": "2d6fb034e70d16732a8c4b863d55b71402a4da18452380b4bb3f42a439704ea7"
+    },
+    {
+      "path": "expansion-src/t4/engine.js",
+      "bytes": 2476,
+      "sha256": "b910e30b4fed91b99e72751fc97cb680339a645a4cdf9bac11bc3e47fd033192"
+    },
+    {
+      "path": "expansion-src/t5/engine.js",
+      "bytes": 2799,
+      "sha256": "1216767f7471f9bebadd1a551609661f6c41d824ff1ad2064e2d8970388e2c7b"
+    },
+    {
+      "path": "expansion-src/w1/engine-contract.json",
+      "bytes": 1683,
+      "sha256": "2c6410f1aa473bc34bd8b0407e7101860a8c122badac8894a086001f79a2dcf9"
+    },
+    {
+      "path": "expansion-src/w1/engine.js",
+      "bytes": 5331,
+      "sha256": "4184d95238140819ad552197c7154e1779cad0c7858d4de4a8c85a45ba3df637"
+    },
+    {
+      "path": "expansion-src/w2/engine-contract.json",
+      "bytes": 1762,
+      "sha256": "4e4cc4b8c340812a2a9f402a5f9051160b2c7700bd3aa64a973f1b18b9623df1"
+    },
+    {
+      "path": "expansion-src/w2/engine.js",
+      "bytes": 3938,
+      "sha256": "5639cae79722b3ddb109a9d8bf52a21c9a3b5b6c18c87633c27a06e2b3276198"
+    },
+    {
+      "path": "expansion-src/w3/engine-contract.json",
+      "bytes": 1746,
+      "sha256": "cd875011df3924308fc2643b334a15ff38a315b70380c2cab0786d8d438f8d19"
+    },
+    {
+      "path": "expansion-src/w3/engine.js",
+      "bytes": 4360,
+      "sha256": "1ede55858199acaecbd6a3cacc540fa0ecfd5b40f12469e5739f18cceae5a13d"
+    },
+    {
+      "path": "expansion-src/w4/engine.js",
+      "bytes": 7062,
+      "sha256": "bf31a834975e7b32092c905581163ec0093adc134d1fbbe99de3050bdfcdf413"
+    },
+    {
+      "path": "expansion-src/w5/engine-contract.json",
+      "bytes": 1766,
+      "sha256": "5763f0245bc597d0f8bb40f76bdd49c80370cf6d8173ad20221e8f46119560f6"
+    },
+    {
+      "path": "expansion-src/w5/engine.js",
+      "bytes": 4410,
+      "sha256": "884623bcd5921949d50fb9cd89fce0bc170b2f145c70a53b51f90ce7e358f064"
+    },
+    {
+      "path": "expansion-src/wo1/engine.js",
+      "bytes": 15086,
+      "sha256": "97a90fcda1254a28e08f231889a2c530614866e4381854199c8268050c844cb9"
+    },
+    {
+      "path": "expansion-src/wo2/engine-contract.json",
+      "bytes": 521,
+      "sha256": "508859ed65553ffae29c53d40ac9e446b857990e46b202bed14a814a716db44c"
+    },
+    {
+      "path": "expansion-src/wo2/engine.js",
+      "bytes": 4059,
+      "sha256": "39e3a8630b31e3af29f1bff5f11ee006892561f1087498e97e3d5fbe99a2297b"
+    },
+    {
+      "path": "expansion-src/wo3/engine-contract.json",
+      "bytes": 551,
+      "sha256": "94f8a622b6e97a1d835a4b5c600d3d3f8cbb8f08076ccf90437ba85acd09b507"
+    },
+    {
+      "path": "expansion-src/wo3/engine.js",
+      "bytes": 3700,
+      "sha256": "401e65c0b4c6774f61481ceed568e0a03cb65bd286de324b91670277f66ad5e5"
+    },
+    {
+      "path": "expansion-src/wo4/engine-contract.json",
+      "bytes": 549,
+      "sha256": "2e03049b53e2c9ad5dcafc604194b3a3dfa386f5f487df7e9a96625d993211ca"
+    },
+    {
+      "path": "expansion-src/wo4/engine.js",
+      "bytes": 3886,
+      "sha256": "66e4335122de64645dfc0a7d7058deb2da2c517f4c040354de341383cd7b6b22"
+    },
+    {
+      "path": "expansion-src/wo5/engine-contract.json",
+      "bytes": 537,
+      "sha256": "3278e6ab973489c1a9e3cd4c0d80b43f29c09afc7a7cbf1609abd2571ebf1f1c"
+    },
+    {
+      "path": "expansion-src/wo5/engine.js",
+      "bytes": 3789,
+      "sha256": "4e39974e6ca82a098802a86d14614d97d29ec7e1b0e77237686147201f2dd34f"
+    },
+    {
+      "path": "case-variants/s17x-c1-cement-woc-strength/engine.js",
+      "bytes": 10329,
+      "sha256": "904e871b320feca6c411fae7a60a213a66e777a892d19381f46ba15b22688727"
+    },
+    {
+      "path": "case-variants/s17x-co3-completion-seal-test/engine.js",
+      "bytes": 9670,
+      "sha256": "3302eda91cf7a8de81b0a2655c1a0c4367bd4a68f009583aeaab5f6a3df66d0d"
+    },
+    {
+      "path": "case-variants/s17x-g3-closure-spill/engine.js",
+      "bytes": 10748,
+      "sha256": "3a04d3e94e50df1962a6f16cc54447f7cfb1afec1295bd7f164aed04470ec906"
+    },
+    {
+      "path": "case-variants/s17x-p1-perforation-depth-correlation/engine.js",
+      "bytes": 14715,
+      "sha256": "c5333aeb4b23bdd45ff4f264e3e2064b54114aa467e16fdf3d841f3b79b15de8"
+    },
+    {
+      "path": "shared/math.js",
+      "bytes": 2126,
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    }
+  ]
+}

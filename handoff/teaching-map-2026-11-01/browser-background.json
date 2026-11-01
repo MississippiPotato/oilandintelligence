@@ -1,0 +1,12 @@
+{
+  "kind": "visibility_environment_boundary",
+  "status": "not_exercised",
+  "passed": 0,
+  "failed": 0,
+  "incomplete": 1,
+  "reason": "Both headed and headless automation kept document.hidden=false after switching tabs. No actual hidden event was observed. This is not counted as browser acceptance of background pause. Offscreen stop and route disposal passed separately.",
+  "evidence": [
+    "attempts/background-reading-focus.json",
+    "attempts/background-no-hidden-event.json"
+  ]
+}

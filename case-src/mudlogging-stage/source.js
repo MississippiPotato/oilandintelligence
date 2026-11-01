@@ -13,9 +13,9 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
   const totals = { mounts: 0, disposals: 0, scriptsRequested: 0, scenesCreated: 0, scenesDisposed: 0, lastDisposedScene: null };
   let active = null, loadPromise = null, observer = null, reconcileQueued = false, manuallyDisposed = false;
 
-  function courseHref(id) {
+  function courseHref(id,part="background") {
     const course = g.S17Course, item = course && course.byScene && course.byScene(id);
-    return item && course.href ? course.href(item, 'background') : '#/scene/' + id;
+    return item && course.href ? course.href(item, part) : '#/scene/' + id;
   }
   function onRoute() { return /^#\/stage\/mudlogging(?:\?|$)/.test(g.location.hash); }
   function requestBundle() {
@@ -121,7 +121,7 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
       + '<label class="ms-follow"><input type="checkbox" data-ms-follow checked>随阶段切镜头</label><button type="button" data-ms-view="2d" class="ms-mode">使用二维剖面</button></div>'
       + '<div class="ms-theater"><div class="ms-visual"><div class="ms-viewport" data-ms-viewport><div class="ms-scene" data-ms-canvas hidden></div><div class="ms-diagram" data-ms-diagram tabindex="0" aria-label="二维剖面，可横向滚动">' + diagram(state, 'm2') + '</div></div>'
       + '<p class="ms-view-help" data-ms-view-help>图中位置按累计泵量映射。三维视图接近屏幕时准备；二维剖面可直接操作。</p><div class="ms-legend"><span><i style="background:#467969"></i>钻柱内下行</span><span><i style="background:#B08A4A"></i>携样上返</span><span><i style="background:#55768B"></i>检测 / 记录支路</span></div></div>'
-      + '<aside class="ms-aside"><div class="ms-phase-copy"><span class="ms-eyebrow" data-ms-phase-index>01 / 05</span><h3 data-ms-phase-title></h3><p data-ms-phase-lead></p><p class="ms-small" data-ms-phase-detail></p></div><div class="ms-object-copy"><span class="ms-eyebrow">当前对象</span><h3 data-ms-object-title></h3><p data-ms-object-copy></p><a data-ms-object-link>进入对应案例 →</a></div></aside></div>'
+      + '<aside class="ms-aside"><div class="ms-phase-copy"><span class="ms-eyebrow" data-ms-phase-index>01 / 05</span><h3 data-ms-phase-title></h3><p data-ms-phase-lead></p><p class="ms-small" data-ms-phase-detail></p></div><div class="ms-object-copy"><span class="ms-eyebrow">当前对象</span><h3 data-ms-object-title></h3><p data-ms-object-copy></p><div class="ms-destinations"><a data-ms-object-link>阅读专业背景 →</a><a data-ms-demo-link>直接进入示范 ↗</a></div></div></aside></div>'
       + '<p class="ms-story-heading"><strong>资料形成分镜</strong><span>物质上返 → 两种检测 → 同井段记录</span></p><div class="ms-story-scroll" tabindex="0" aria-label="资料形成分镜，可横向滚动"><nav class="ms-phases" aria-label="点击分镜，把旅程定位到一个阶段">' + PHASES.map((p, i) => '<button type="button" class="ms-story-frame" data-ms-phase="' + i + '" aria-pressed="' + (state.phaseIndex === i) + '" aria-label="' + p.name + '，产物：' + FRAME_PRODUCTS[i] + '，定位到此阶段">' + storyFrame(i) + '<span class="ms-frame-title">' + p.name + '</span><small class="ms-frame-product">' + FRAME_PRODUCTS[i] + '</small>' + (i < PHASES.length - 1 ? '<svg class="ms-frame-arrow" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><path d="M2 7h15m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '') + '</button>').join('') + '</nav></div>'
       + '<div class="ms-playback"><button type="button" class="ms-play" data-ms-play>播放旅程</button><label class="ms-seek">回放时刻 <output data-ms-time-label>120 s</output><input type="range" data-ms-seek min="0" max="' + model.endTime_s + '" step="1" value="120" aria-label="回放时刻，秒"></label><button type="button" data-ms-reset>复位</button><label>泵送情景<select data-ms-scenario aria-label="泵送情景"><option value="normal">持续泵送</option><option value="pause">300–480 s停泵后恢复</option></select></label></div>'
       + '<p class="ms-play-note">“暂停回放”只暂停观看。选择停泵情景，才会使井场排量Q＝0：时间继续走，运移进度保持不变。</p>'
@@ -132,14 +132,16 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
   }
 
   function create(main, options = {}) {
-    const model = createTransport(g.M2Core, 'normal'), initial = model.at(CONFIG.sourceTime_s);
+    let saved=null;try{saved=JSON.parse(g.sessionStorage.getItem('s17-field-position-v1'));}catch{}
+    const query=new URLSearchParams(g.location.hash.split('?')[1]||''),requested=query.get('focus'),focus=OBJECTS.some(o=>o.id===requested)?requested:null;
+    const model=createTransport(g.M2Core,saved?.scenario==='pause'?'pause':'normal'),initial=model.at(saved?.time??CONFIG.sourceTime_s);
     const template = document.createElement('template'); template.innerHTML = markup(model, initial);
     const host = template.content.firstElementChild;
     const pageHead = main.querySelector('.page-head');
     if (pageHead) pageHead.after(host); else main.prepend(host);
     const $ = selector => host.querySelector(selector);
-    const state = { model, time: CONFIG.sourceTime_s, selected: 'm2', focusObject: null, camera: 'overview', follow: true,
-      requestedPlaying: options.autoPlay === false ? false : !reduce.matches, visible: false, near: false,
+    const state = { model, time:initial.time_s,selected:focus||saved?.selected||'m2',focusObject:focus,camera:focus?OBJECTS.find(o=>o.id===focus).camera:requested?'overview':saved?.camera||'overview',follow:focus?false:saved?.follow??true,
+      requestedPlaying:saved?false:options.autoPlay === false ? false : !reduce.matches, visible: false, near: false,
       mode: options.force2D ? '2d' : '3d', rendererStatus: options.force2D ? '2d' : 'waiting', fallbackReason: null,
       disposed: false, scene: null, raf: 0, lastFrame: 0, lastUI: 0, reducedMotion: reduce.matches, lastPhase: initial.phaseIndex };
     const cleanups = [];
@@ -169,7 +171,7 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
       $('[data-ms-phase-lead]').textContent = value.materialStopped ? '井场正在停泵，样品停在环空，时钟仍在向前。' : phase.lead;
       $('[data-ms-phase-detail]').textContent = phase.detail;
       $('[data-ms-object-title]').textContent = object.short + ' · ' + object.place; $('[data-ms-object-copy]').textContent = object.copy;
-      $('[data-ms-object-link]').href = courseHref(object.id); $('[data-ms-object-link]').textContent = '进入' + object.short + '案例 →';
+      $('[data-ms-object-link]').href = courseHref(object.id); $('[data-ms-object-link]').textContent = '阅读'+object.short+'专业背景 →'; $('[data-ms-demo-link]').href=courseHref(object.id,'lab');
       $('[data-ms-metrics]').innerHTML = [
         ['当前排量 Q', fmt(value.flow_m3_s, 3) + ' m³/s', value.pumpStopped ? '井场停泵；累计体积不增加' : '0.025 m³/s＝25 L/s'],
         ['这份观察的上返进度', fmt(value.transportedVolume_m3, 2) + ' / 12 m³', fmt(value.transportProgress * 100, 1) + '%，位置按此进度映射'],
@@ -338,6 +340,7 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
     return { host, main, snapshot, seek, setScenario, setCamera, selectObject, play, pause, reset, setView,
       dispose() {
         if (state.disposed) return;
+        try{g.sessionStorage.setItem('s17-field-position-v1',JSON.stringify({time:state.time,scenario:state.model.mode,selected:state.selected,camera:state.camera,follow:state.follow}));}catch{}
         state.disposed = true; stopFrame(); cleanups.splice(0).forEach(cleanup => cleanup()); releaseScene();
         totals.disposals++; host.remove();
       } };
@@ -348,7 +351,7 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
     reconcileQueued = false;
     if (!onRoute()) { disposeCurrent(); return; }
     if (active && !active.host.isConnected) disposeCurrent();
-    if (active || manuallyDisposed) return;
+    if(active){const f=new URLSearchParams(g.location.hash.split('?')[1]||'').get('focus');if(f&&OBJECTS.some(o=>o.id===f)&&active.snapshot().selectedObject!==f)active.selectObject(f);return;}if(manuallyDisposed)return;
     const main = document.querySelector('#view main') || document.querySelector('main');
     if (main) active = create(main);
   }

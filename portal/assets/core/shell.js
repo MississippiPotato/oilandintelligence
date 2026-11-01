@@ -66,7 +66,7 @@
 
   function footer() {
     var s = Cases.stats();
-    return '<footer class="s17-footer"><div class="wrap"><div><strong>井见</strong><p>跟着一口教学井，把观察变成可以回查的判断。</p><small>学号17 · 录井必做5例 + 全阶段56例 · 门户1.9.2-preview</small></div><div><nav aria-label="页脚导航"><a href="#/">返回首页</a><a href="#/chain">完整作业链</a><a href="#/cases">案例库 · 本浏览器'+s.registered+'个已接入</a><a href="#/guide">添加案例指南</a><a href="../portal-original/index.html">老师原站</a></nav><small>原地图 '+A.stages.length+'阶段 / '+A.allScenes.length+'场景 · 纯前端 · 离线可运行</small></div></div></footer>';
+    return '<footer class="s17-footer"><div class="wrap"><div><strong>井见</strong><p>跟着一口教学井，把观察变成可以回查的判断。</p><small>学号17 · 录井必做5例 + 全阶段56例 · 门户1.9.2-preview</small></div><div><nav aria-label="页脚导航"><a href="#/">返回首页</a><a href="#/chain">完整作业链</a><a href="#/cases">案例库 · 本浏览器'+s.registered+'个已接入</a><a href="#/guide">添加案例指南</a><a href="../portal-original/index.html">老师原站</a><a data-feedback href="https://github.com/MississippiPotato/oilandintelligence/issues/new">反馈与纠错 ↗</a></nav><small>原地图 '+A.stages.length+'阶段 / '+A.allScenes.length+'场景 · 纯前端 · 离线可运行</small></div></div></footer>';
   }
 
   function crumb(items) {
@@ -352,8 +352,9 @@
       '<h1>' + esc(st.name) + '环节的可智能化场景<span class="en">' + esc(st.en) + '</span></h1>' +
       '<p class="blurb">' + esc(st.blurb) + '</p></div>' +
       '<div class="ph-stat">' +
-      '<div><div class="n">' + st.scenes.length + '</div><div class="l">场景</div></div>' +
+      '<div><div class="n">' + st.scenes.length + '</div><div class="l">原场景</div></div>' +
       '<div><div class="n">' + (counts.低 || 0) + '</div><div class="l">低难度</div></div>' +
+      '<div><div class="n">' + (counts.中 || 0) + '</div><div class="l">中难度</div></div>' +
       '<div><div class="n">' + (counts.高 || 0) + '</div><div class="l">高难度</div></div>' +
       '</div></div></div>' +
 
@@ -498,14 +499,14 @@
     var head = '<div class="detail-head">' +
       '<div class="dh-kicker">' +
       '<a class="tag" href="#/stage/' + st.id + '">环节 ' + pad(st.idx) + ' · ' + esc(st.name) + '</a>' +
-      sc.methods.map(function (k) {
+      (c && !c.teacherSample ? c.methods : sc.methods).map(function (k) {
         var ck = (M[k] && (M[k].colorKey || k)) || 'cv';
         return '<span class="mtag" data-m="' + ck + '"><b>' + M[k].abbr + '</b>' + esc(M[k].name) + '</span>';
       }).join('') +
       cBadge + (c ? '<span class="s17-case-origin">' + (c.id === 'welllog-layer' ? '老师原样例' : global.S17Course && global.S17Course.cases.some(function (x) { return x.id === c.id; }) ? '录井案例成品' : '导入案例') + '</span>' : '') +
       '</div>' +
-      '<h1 class="dh-title">' + esc(sc.name) + '</h1>' +
-      '<p class="dh-sub">' + esc(sc.intro) + '</p>' +
+      '<h1 class="dh-title">' + esc(c && !c.teacherSample ? c.title : sc.name) + '</h1>' +
+      '<p class="dh-sub">' + esc(c && !c.teacherSample && global.S17Compass ? global.S17Compass.model(sc,c,A,[],{}).brief.point : sc.intro) + '</p>' +
       '<div class="dh-tags">' + K.dtag(sc.diff) +
       (sc.status === 'ext' && !(c && c.tabs.demo) ? '<span class="badge-wip">待扩展</span>' : '') +
       '<span class="tag"><span class="dot" style="color:var(--ink-4)"></span>' + esc(sc.id.toUpperCase()) + '</span>' +

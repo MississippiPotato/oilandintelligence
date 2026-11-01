@@ -1,3 +1,4 @@
+import {courseContext} from './course-compass.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
@@ -139,7 +140,7 @@ function catalogScript(rows, sections, teacher) {
     'function bySceneAll(id){return extras.filter(function(c){return c.sceneId===id;}).sort(function(a,b){return Number(b.primary)-Number(a.primary);});}' +
     'function byCaseId(id){return extras.filter(function(c){return c.id===id;})[0]||null;}' +
     'function hrefByCaseId(id,tab){var c=byCaseId(id);if(!c)return null;tab=({background:"bg",workflow:"flow",lab:"demo"})[tab]||tab||"bg";' +
-    'var saved=g.Cases&&g.Cases.get(c.id);if(saved&&saved.version!==c.version)return c.standaloneHref+"#"+({bg:"background",flow:"workflow",demo:"lab"}[tab]||"background");' +
+    'var saved=g.Cases&&g.Cases.get(c.id);if(saved&&!saved.imported&&saved.version!==c.version)return c.standaloneHref+"#"+({bg:"background",flow:"workflow",demo:"lab"}[tab]||"background");' +
     'return "#/scene/"+encodeURIComponent(c.sceneId)+"?case="+encodeURIComponent(c.id)+"&tab="+encodeURIComponent(tab);}' +
     'g.S17Expansion={cases:extras,builtCount:extras.length,expectedCount:extras.length,registration:"lazy-catalogue",bySceneAll:bySceneAll,byCaseId:byCaseId,' +
     'byScene:function(id){return bySceneAll(id)[0]||null;},hrefByCaseId:hrefByCaseId,href:function(scene,tab){var c=bySceneAll(scene)[0];return c?hrefByCaseId(c.id,tab):null;}};' +
@@ -161,7 +162,8 @@ export function buildLazyPortal({reportDir, expectedCount=65, write=true, onOutp
       if (ids.has(manifest.id)) throw Error('Duplicate caseId: ' + manifest.id);
       ids.add(manifest.id);
       const primary = !fs.existsSync(path.join(ROOT, 'case-variants', manifest.id));
-      const row = {id:manifest.id, sceneId:manifest.sceneId, title:manifest.title, version:manifest.version,
+      const info=courseContext(scene.id,manifest,{mode:'portal'}).model;
+      const row = {actualMethod:info.actualMethod,diff:info.scene.diff,diffWhy:info.scene.diffWhy,intervention:info.brief.point,id:manifest.id, sceneId:manifest.sceneId, title:manifest.title, version:manifest.version,
         stageId:scene.stageId, stageName:scene.stageName, methods:manifest.methods || scene.methods,
         summary:excerpt(manifest.tabs.background?.lede || scene.intro, 80), directory, primary,
         href:'#/scene/' + scene.id + '?case=' + encodeURIComponent(manifest.id) + '&tab=bg',

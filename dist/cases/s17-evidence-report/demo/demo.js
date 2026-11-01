@@ -1,8 +1,17 @@
-window.S17Page={"sceneId":"m5","caseVersion":"1.9.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
+window.S17Page={"sceneId":"m5","caseVersion":"1.10.0","portalHref":"../../../../portal/index.html","referenceHref":"../../../../portal/reference/fluorescence.html"};
 (function(g){'use strict';if(g.S17ConceptHost)return;
 function keepScale(host){host.querySelectorAll('svg[viewBox]').forEach(svg=>{const width=svg.viewBox.baseVal.width;if(width>0){const requested=parseFloat(svg.style.minWidth)||0;svg.style.minWidth=Math.max(width,requested)+'px';svg.style.height='auto';svg.style.maxHeight='none';}});}
 function mount(root){for(const [scene,definition]of Object.entries(g.S17Concepts||{})){if(!root.querySelector('[data-concept-scene="'+scene+'"]'))continue;definition.mount(root);root.querySelectorAll('[data-concept-scene="'+scene+'"]').forEach(host=>{keepScale(host);if(host.dataset.ctScaleBound)return;host.dataset.ctScaleBound='true';new MutationObserver(()=>keepScale(host)).observe(host,{childList:true,subtree:true});});}}
 g.S17ConceptHost={mount};
+})(globalThis);
+
+(function(g){'use strict';
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),f=(x,n=3)=>Number.isFinite(x)?x.toFixed(n):'—';
+function table(headers,rows){return '<div class="teach-table" tabindex="0"><table><thead><tr>'+headers.map(x=>'<th>'+esc(x)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map(v=>'<td>'+esc(v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div>';}
+function bars(title,rows){const max=Math.max(.001,...rows.map(r=>Math.abs(r[1]))),h=60+rows.length*36;return '<figure class="teach-bars"><svg viewBox="0 0 740 '+h+'" role="img" aria-label="'+esc(title)+'"><text x="8" y="25" font-size="18" fill="#343941">'+esc(title)+'</text><path d="M430 40V'+(h-5)+'" stroke="#b7ada2"/>'+rows.map(([name,v],i)=>{const y=47+i*36,w=Math.abs(v)/max*165;return '<text x="8" y="'+(y+17)+'" font-size="16" fill="#343941">'+esc(name)+'</text><rect x="'+(v<0?430-w:430)+'" y="'+y+'" width="'+w+'" height="22" rx="4" fill="'+(v<0?'#718391':'#b8242a')+'"/><text x="620" y="'+(y+17)+'" font-size="16" fill="#343941">'+(v>=0?'+':'')+f(v)+'</text>';}).join('')+'</svg></figure>';}
+function regression(title,names,x,scaler,coef,label,calibration=false){const mu=scaler.mu||scaler.mean,sd=scaler.sd,z=x.map((v,i)=>(v-mu[i])/sd[i]),terms=z.map((v,i)=>v*coef[i+1]),sum=coef[0]+terms.reduce((a,b)=>a+b,0);return '<section class="teach-calculation" data-teach-sum="'+sum+'"><h3>'+esc(title)+'</h3><p>'+ (calibration?'钻压、转速和排量先除以参考工况，再取自然对数；乘以独立标定的系数后相加，得到当前工况的对数钻速。':'先按训练尺度把输入变成可比较的数，再乘以已学到的系数；各项贡献加上基础项，得到本次预测。')+'</p>'+bars('当前输入对预测的实际贡献',terms.map((v,i)=>[names[i],v]))+table(['特征','当前值',calibration?'零点':'训练均值',calibration?'尺度':'训练标准差',calibration?'对数比值':'标准化值','系数','本次贡献'],x.map((v,i)=>[names[i],f(v),f(mu[i]),f(sd[i]),f(z[i]),f(coef[i+1]),f(terms[i])]))+'<p class="teach-sum">基础项 '+f(coef[0])+' ＋ 各项贡献 '+f(terms.reduce((a,b)=>a+b,0))+' ＝ <strong>'+f(sum)+' '+esc(label)+'</strong></p></section>';}
+function knn(model,x,pred,names){const mu=model.scaler?.mu||model.mu,sd=model.scaler?.sd||model.sd,first=pred.neighbors[0],sample=model.samples[first.index],nx=sample.x||sample.z.map((v,i)=>v*sd[i]+mu[i]),z=x.map((v,i)=>(v-mu[i])/sd[i]),nz=nx.map((v,i)=>(v-mu[i])/sd[i]),sq=z.map((v,i)=>(v-nz[i])**2),d=Math.sqrt(sq.reduce((a,b)=>a+b,0)/sq.length);return '<section class="teach-calculation" data-teach-distance="'+d+'"><h3>同一对象：从特征到最近邻，再到投票</h3><p>先看当前对象与第一近邻的逐项差异。距离使用全部 '+x.length+' 项标准化特征；下表可以回查每一项。</p>'+bars('各特征对距离平方的贡献',sq.map((v,i)=>[names?.[i]||'特征 '+(i+1),v]).sort((a,b)=>b[1]-a[1]).slice(0,6))+'<details><summary>展开全部特征与训练尺度</summary>'+table(['特征','当前值','训练均值','训练标准差','当前z','近邻z','差值平方'],x.map((v,i)=>[names?.[i]||String(i+1),f(v),f(mu[i]),f(sd[i]),f(z[i]),f(nz[i]),f(sq[i])]))+'</details><p class="teach-sum">距离＝√（差值平方和 '+f(sq.reduce((a,b)=>a+b,0))+' ÷ '+sq.length+'）＝<strong>'+f(d)+'</strong></p>'+table(['近邻','类别','实际距离','票重 1/max(0.05,d)'],pred.neighbors.map((n,i)=>[i+1,((model.scaler?g.M1Core?.labels:g.M2Core?.labels)||[])[n.label]??('类别 '+n.label),f(n.distance),f(1/Math.max(.05,n.distance))]))+'<p>把同类近邻的票重相加，再比较最高类。距离解释相似性，投票形成当前候选。</p></section>';}
+g.S17TeachFigures={table,bars,regression,knn,d1Names:['WOB÷100','RPM÷120','Q÷26','UCS÷60','(WOB÷100)²','(RPM÷120)²','(Q÷26)²','WOB÷100 × RPM÷120','WOB÷100 × UCS÷60','Q÷26 × UCS÷60']};
 })(globalThis);
 
 (function(g){'use strict';
@@ -477,7 +486,7 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
     host.innerHTML = labHTML;
     const $ = selector => host.querySelector(selector), $$ = selector => [...host.querySelectorAll(selector)];
     const raw = $('[data-m5-raw]'), store = C.sourceStore();
-    const state = {id: 's17-evidence-report', version: '1.9.0', status: 'not_run', revision: 1, count: 0, selected: 2, stage: 0, intervalIndex: 0, perspective: 'observe', inputMode: 'builtin', run: null, reportHistory: [], pendingHistory: null, exampleChange: null, notice: ''};
+    const state = {id: 's17-evidence-report', version: '1.10.0', status: 'not_run', revision: 1, count: 0, selected: 2, stage: 0, intervalIndex: 0, perspective: 'observe', inputMode: 'builtin', run: null, reportHistory: [], pendingHistory: null, exampleChange: null, notice: ''};
     let timer = null;
     raw.value = defaultFixture.text;
     const notify = text => {state.notice = text; if (g.S17Exhibit && typeof g.S17Exhibit.notify === 'function') g.S17Exhibit.notify(text);};
@@ -593,7 +602,7 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
         if (item) {C.validateEvidence(item); item.sources.forEach(s => store.add(s));}
       }
       const content = {sources: store.list(), claims: r.claims.map(c => ({...c, originalStatement: undefined})), facts: r.inference.facts, handover: intervalExport(r.inference, r.claims, state.intervalIndex), reportRevisionHistory: state.reportHistory, metrics: r.metrics, metricScope: 'original automatic pipeline only; free text has no gold metrics', reportStatus: r.claims.some(c => c.reviewStatus !== 'confirmed') ? 'draft_needs_review' : 'human_reviewed_current_revision', reportStatusScope: '仅指当前文本报告的逐句核对，不覆盖交接中的前例快照与候选解释', limitations: ['本包保存当前教学记录、实际文本计算、井段交接和核对状态。', '前例资料是构建期快照，不是本页重跑；同样品但缺井段的白光／UV材料未分配井段。', 'NB归类、规则抽取和原文引述分别保存；来源定位与语义核对分别记录。', '自由改写没有评价金标，metrics为null。']};
-      const e = g.S17UI && typeof g.S17UI.envelope === 'function' ? g.S17UI.envelope(state.id, '1.9.0', r, content) : {schemaVersion: '1.0', caseId: state.id, caseVersion: '1.9.0', runId: r.runId, datasetId: 's17-synthetic-v1', wellId: 'DEMO-017', dataNature: 'synthetic_teaching', runConfig: {seed: 17, dataVersion: r.dataVersion, splitDescription: r.split, method: r.method, parameters: r.config, inputRevision: r.revision}, ...content};
+      const e = g.S17UI && typeof g.S17UI.envelope === 'function' ? g.S17UI.envelope(state.id, '1.10.0', r, content) : {schemaVersion: '1.0', caseId: state.id, caseVersion: '1.10.0', runId: r.runId, datasetId: 's17-synthetic-v1', wellId: 'DEMO-017', dataNature: 'synthetic_teaching', runConfig: {seed: 17, dataVersion: r.dataVersion, splitDescription: r.split, method: r.method, parameters: r.config, inputRevision: r.revision}, ...content};
       return C.validateEvidence(e);
     }
 
@@ -604,7 +613,7 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
       const actual = [
         [`所选 ${interval}，当前原文与前例构建期快照。`, '按文字范围与逐深度数据筛选；气峰只按已保存的模型参考点定位，缺深度样品不归段。', `<p>该段 ${h.selected.length} 条文字记录；岩屑 ${h.rocks.length} 条，气测 ${h.gasText.length} 条，荧光 ${h.fluorescence.length} 条；钻时有 ${h.active.length} 个有效点。</p><p>气峰参考点${h.gasHere ? '位于本段' : '不在本段或未提供'}；M1/M3样品${h.paired ? '身份相同但没有井段' : '配对信息待补'}。</p>${h.differences.length ? '<p>记录差异：' + h.differences.map(v => esc(v.message)).join(' ') + '</p>' : ''}`],
         [`选中子句：${f.rawQuote}`, '按原文位置切分，规则识别该子句的范围、数值、单位与否定。', `<div class="m5-quote">${sourcePreview(r.text, f)}</div>${inheritanceNote(f)}${fieldItems(f)}<p class="m5-small">当前观察位于原文第${f.sourceSpanStart + 1}—${f.sourceSpanEnd}个字符，已在图中高亮。</p>`],
-        [`同一子句：${f.rawQuote}`, `取 ${C.tokens(f.rawQuote).length} 个单字／相邻双字片段，运行固定训练库NB与关键词基线。`, `${scorePlot(f.prediction)}<p>当前候选：${esc(name(f.category))}；关键词基线：${esc(name(f.baseline))}。</p><p class="m5-small">朴素贝叶斯先统计训练句在各栏目中的词项，再比较当前句的相对分数。数字在分类特征中统一替换成“数”；原文、范围和字段不变。</p>${tokenContributionPlot(f.prediction)}`],
+        [`同一子句：${f.rawQuote}`, `取 ${C.tokens(f.rawQuote).length} 个单字／相邻双字片段，运行固定训练库NB与关键词基线。`, `<p class="teach-result-first">同一句原文分别进入两条路径：词项用于栏目分类；范围、数值、单位和否定按原文位置保留。两路产物再汇入报告句子。</p>${scorePlot(f.prediction)}<p>当前候选：${esc(name(f.category))}；关键词基线：${esc(name(f.baseline))}。</p><p class="m5-small">朴素贝叶斯先统计训练句在各栏目中的词项，再比较当前句的相对分数。数字在分类特征中统一替换成“数”；原文、范围和字段不变。</p>${tokenContributionPlot(f.prediction)}`],
         [`当前栏目“${name(f.category)}”与原文字段。`, '保留原文引述，将当前句子绑定到当前来源版本及文字位置。', `<div class="m5-quote">${esc(c.statement)}</div><p class="m5-small">对应原文：${esc(r.text.slice(f.sourceSpanStart, f.sourceSpanEnd))}</p>${inheritanceNote(f)}`],
         [`当前报告第 ${state.selected + 1} 句及 ${interval} 的资料。`, '逐项核对范围、数值、单位与否定，保留选段缺项和下一步问题。', `<p><b>${esc(labelReview(c))}</b> · 当前修订 ${c.revision}</p><div class="m5-quote">${esc(c.statement)}</div><p class="m5-small">本句 ${c.reviewHistory.length} 条历史；本次报告已核对 ${r.claims.filter(v => v.reviewStatus === 'confirmed').length}/${r.claims.length} 句。</p><h4>下一步核查</h4><ul>${h.questions.map(q => `<li>${esc(q)}</li>`).join('')}</ul>`]
       ][i];
@@ -737,7 +746,7 @@ g.S17Exhibit={notify,changed,readingMount,start};
 })(globalThis);
 
 S17Exhibit.start("m5");
-window.S17CompassPage={"model":{"scene":{"id":"m5","name":"录井报告自动生成","stageId":"mudlogging","stageName":"录井","diff":"中","diffWhy":"技术难度不高，但需要行业语料与术语规范；生成内容的准确性必须可追溯。","refs":["信息抽取","模板化生成","检索增强生成"]},"current":{"id":"s17-evidence-report","title":"录井报告自动生成","version":"1.9.0"},"methods":[{"id":"nlp","name":"自然语言处理","abbr":"NLP"}],"sameScene":[{"id":"s17-evidence-report","sceneId":"m5","title":"录井报告自动生成","version":"1.9.0","directory":"cases","origin":""}],"sameStage":[{"id":"m1","name":"岩屑岩性自动识别","stageId":"mudlogging","stageName":"录井","caseId":"s17-cuttings-lithology","directory":"cases"},{"id":"m2","name":"气测异常智能解释","stageId":"mudlogging","stageName":"录井","caseId":"s17-mudgas-context","directory":"cases"},{"id":"m3","name":"荧光图像智能判读","stageId":"mudlogging","stageName":"录井","caseId":"s17-fluorescence-review","directory":"cases"},{"id":"m4","name":"钻时曲线地层划分","stageId":"mudlogging","stageName":"录井","caseId":"s17-drilltime-boundaries","directory":"cases"}],"crossStages":[{"id":"geology","name":"地质勘察","sameStage":false}],"next":{"id":"w1","name":"测井曲线智能分层","stageId":"welllog","stageName":"测井","caseId":"s17x-w1-log-boundaries","directory":"expansion-cases"},"authoredNext":true,"nextLabel":"接着看测井分层","provenance":"老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节"},"options":{"mode":"standalone","portalHref":"../../../../portal/index.html","collectionPrefix":"../../../"}};
+window.S17CompassPage={"model":{"actualMethod":"字符朴素贝叶斯 · 字段规则抽取","brief":{"problem":"一份报告需 4—8 小时，需在多套数据表之间反复对照；不同工程师的行文与结论口径不一致，审核返工多。","point":"沿井段对照岩屑、气测、荧光和钻时，生成有来处的录井报告与核查问题。","data":[["结构化录井数据","分层、显示、工况记录","无需标注"],["历史报告文本","同区块 100—300 份","标注要素与段落对应关系"],["报告模板与规范","企业标准","作为生成约束"]],"methods":["nlp"]},"scene":{"id":"m5","name":"录井报告自动生成","stageId":"mudlogging","stageName":"录井","diff":"中","diffWhy":"技术难度不高，但需要行业语料与术语规范；生成内容的准确性必须可追溯。","refs":["信息抽取","模板化生成","检索增强生成"]},"current":{"id":"s17-evidence-report","title":"录井报告自动生成","version":"1.10.0"},"methods":[{"id":"nlp","name":"自然语言处理","abbr":"NLP"}],"sameScene":[{"id":"s17-evidence-report","sceneId":"m5","title":"录井报告自动生成","version":"1.10.0","directory":"cases","origin":""}],"sameStage":[{"id":"m1","name":"岩屑岩性自动识别","stageId":"mudlogging","stageName":"录井","caseId":"s17-cuttings-lithology","directory":"cases"},{"id":"m2","name":"气测异常智能解释","stageId":"mudlogging","stageName":"录井","caseId":"s17-mudgas-context","directory":"cases"},{"id":"m3","name":"荧光图像智能判读","stageId":"mudlogging","stageName":"录井","caseId":"s17-fluorescence-review","directory":"cases"},{"id":"m4","name":"钻时曲线地层划分","stageId":"mudlogging","stageName":"录井","caseId":"s17-drilltime-boundaries","directory":"cases"}],"crossStages":[{"id":"geology","name":"地质勘察","sameStage":false}],"next":{"id":"w1","name":"测井曲线智能分层","stageId":"welllog","stageName":"测井","caseId":"s17x-w1-log-boundaries","directory":"expansion-cases"},"authoredNext":true,"nextLabel":"接着看测井分层","provenance":"老师原始场景地图 · 技术难度、难度原因、参考方向与交叉环节"},"options":{"mode":"standalone","portalHref":"../../../../portal/index.html","collectionPrefix":"../../../"}};
 /* Original ATLAS metadata in a small, offline course compass. No model or data mutation. */
 (function (g) {
   'use strict';
@@ -757,6 +766,13 @@ window.S17CompassPage={"model":{"scene":{"id":"m5","name":"录井报告自动生
     var found = catalog.filter(function (c) { return c.sceneId === sc.id && c.directory; })[0];
     return {id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName, caseId:found && found.id || '', directory:found && found.directory || ''};
   }
+  const extensions={
+    's17x-g3-closure-spill':{problem:'一条剖面可能遗漏侧向出口，怎样在整张构造图上找到闭合边界？',point:'对二维顶面网格执行优先队列连通分析，找出溢出点、闭合区域与几何体积。',diff:'中',diffWhy:'需要处理二维连通、边界出口和网格分辨率；剖面判断必须与整图结果对照。',refs:['优先队列连通分析','地形连通与溢出点','网格体积积分'],data:[['储层顶面深度网格','覆盖目标构造及开放边界，保留网格间距与深度单位','核对井震标定、缺测与边界条件'],['构造高点与解释边界','一个待分析高点及其周围完整图幅','人工确认分析对象和开放出口'],['对照剖面与网格检查','同一顶面的交叉剖面、不同网格尺度','独立核查闭合边界与溢出位置']]},
+    's17x-c1-cement-woc-strength':{problem:'同样等待一天，不同温度历史下的水泥试样是否都达到目标强度？',point:'累计温度历史形成等效龄期，用拟合的单调强度关系估计目标强度的达到时刻。',diff:'中',diffWhy:'温度历史、配方与试样批次共同影响强度，需要按完整批次校准和验证。',refs:['等效龄期','单调回归','达到目标时间估计'],data:[['养护温度历史','覆盖拌浆至观察结束的连续时间序列','时间同步并保留温度变化'],['同配方试样强度','多个独立批次、多个龄期的强度读数','记录试验条件、配方和批次身份'],['目标强度与观察窗口','带单位的课程或实验目标及截止时刻','核对目标来源；保留未达到目标的试样']]},
+    's17x-co3-completion-seal-test':{problem:'保压期间压力下降，是温度变化还是受试段存在流失？',point:'用独立校准估计温度响应，补偿压力后拟合保压斜率，比较漏率区间与目标门槛。',diff:'中',diffWhy:'温漂与流失可同时出现，需要独立校准、明确的闭阀窗口和不确定性检查。',refs:['温度补偿','回归与残差','压力测试判读'],data:[['压力与温度记录','覆盖闭阀前后及完整保压窗口','同步时间戳，标记缺测和阀门动作'],['独立温漂校准','多次无漏温度变化试验','保留试验身份和校准范围'],['加液量与增压记录','受试容积的多组配对读数','记录体积与压力单位及试验门槛']]},
+    's17x-p1-perforation-depth-correlation':{problem:'射孔工具的深度尺与参考测井不一致，怎样把目标层对准？',point:'用GR互相关和CCL接箍有序匹配估计深度偏移，并检查漏检和多候选。',diff:'中',diffWhy:'需要统一两把深度尺，并识别重复曲线、接箍漏检与多个匹配候选。',refs:['互相关匹配','有序序列匹配','深度校正'],data:[['参考GR与目标层','覆盖目标层上下的连续测井及目标井段','统一深度基准、采样间距和单位'],['工具GR与CCL','同趟下入的GR曲线和接箍位置','保留测量深度、漏检与噪声信息'],['参考接箍位置','覆盖匹配区间的套管接箍记录','核对接箍顺序与参考深度']]}
+  };
+  const techniques={m1:'连通域分割 · 16维特征 · 加权kNN',m2:'峰检测 · 累计体积归位 · 加权kNN',m3:'曝光校正 · 像素逻辑回归',m4:'对数工况回归 · k均值 · 连续分段',m5:'字符朴素贝叶斯 · 字段规则抽取',d1:'十项多项式岭回归 · 约束网格搜索','s17x-g3-closure-spill':'二维优先队列连通分析 · 网格体积积分','s17x-c1-cement-woc-strength':'等效龄期 · 单调强度关系拟合','s17x-co3-completion-seal-test':'独立温漂校准 · 补偿后回归','s17x-p1-perforation-depth-correlation':'GR互相关 · CCL有序匹配'};
   function model(scene, manifest, atlas, catalog, options) {
     options = options || {}; manifest = manifest || {};
     var sc = typeof scene === 'string' ? byId(atlas, scene) : scene;
@@ -778,10 +794,13 @@ window.S17CompassPage={"model":{"scene":{"id":"m5","name":"录井报告自动生
       var target = stages(atlas).filter(function (s) { return s.name === name || s.id === name; })[0];
       return target ? {id:target.id, name:target.name, sameStage:target.id === sc.stageId} : {id:'', name:name};
     });
+    var own=!manifest.imported&&extensions[manifest.id],actual=Object.assign({},sc,own||{}),methodKeys=manifest.methods&&manifest.methods.length?manifest.methods:sc.methods;
     return {
-      scene:{id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName || stage && stage.name || '', diff:sc.diff || '', diffWhy:sc.diffWhy || '', refs:(sc.refs || []).slice()},
+      actualMethod:techniques[manifest.id]||techniques[sc.id]||(manifest.tabs?.workflow?.steps||[]).map(x=>x.name).slice(1,3).join(' · '),
+      brief:{problem:actual.problem,point:own?own.point:(manifest.tabs?.background?.lede||manifest.lede||actual.point),data:actual.data||[],methods:methodKeys.slice()},
+      scene:{id:sc.id, name:sc.name, stageId:sc.stageId, stageName:sc.stageName || stage && stage.name || '', diff:actual.diff || '', diffWhy:actual.diffWhy || '', refs:(actual.refs || []).slice()},
       current:{id:manifest.id || '', title:manifest.title || sc.name, version:manifest.version || ''},
-      methods:(sc.methods || []).map(function (key) { var m = atlas.methods[key]; return {id:key, name:m && m.name || key, abbr:m && m.abbr || key.toUpperCase()}; }),
+      methods:(methodKeys || []).map(function (key) { var m = atlas.methods[key]; return {id:key, name:m && m.name || key, abbr:m && m.abbr || key.toUpperCase()}; }),
       sameScene:rows.filter(function (r) { return r.sceneId === sc.id; }), sameStage:sameStage,
       crossStages:cross, next:next ? sceneRow(next, rows) : null,
       authoredNext:Object.prototype.hasOwnProperty.call(options, 'nextScene'),
@@ -811,13 +830,21 @@ window.S17CompassPage={"model":{"scene":{"id":"m5","name":"录井报告自动生
       return '<li><a href="' + esc(caseHref(row, m, options)) + '"' + (current ? ' aria-current="page"' : '') + '><span>' + esc(row.title) + (current ? '<span class="course-current-tag">当前</span>' : '') + '</span><small>' + esc(row.origin || (row.version ? 'v' + row.version : '查看')) + (current ? '' : ' →') + '</small></a></li>';
     }).join('') + '</ul>';
   }
+  function brief(m,options){
+    if(m.current.id==='welllog-layer')return '';
+    return '<section class="tb-brief" data-course-brief="'+esc(m.current.id)+'" aria-label="场景速览"><div><span>这次解决什么</span><p>'+esc(m.brief.problem)+'</p></div><div><span>本例实际方法</span><p>'+esc(m.actualMethod||m.methods.map(x=>x.name).join(' · '))+'</p><p>'+esc(m.brief.point)+'</p></div><div><span>输入资料与用途</span><p>'+esc(m.brief.data.map(x=>x[0]).join('、'))+'</p><small>沿原始观测理解计算输出，再把结果放回作业判断。</small></div>'+(/^m[1-5]$/.test(m.scene.id)?'<a class="tb-field-link" href="'+esc(portalHref('#/stage/mudlogging?focus='+m.scene.id,options||{}))+'">在3D井场中定位 '+esc(m.scene.id.toUpperCase())+' ↗</a>':'')+'</section>';
+  }
+  function preparation(m){
+    if(m.current.id==='welllog-layer')return '';
+    return '<section class="tb-preparation" data-course-preparation="'+esc(m.current.id)+'"><header><div><small>开展这个方向</small><h2>你需要准备什么</h2></div><output>0 / '+m.brief.data.length+'</output></header><p>以下是研究与应用的数据准备建议；本页演示使用的观测与样本另随计算保存。</p>'+m.brief.data.map((row,i)=>'<label><input type="checkbox" data-course-check="'+i+'"><span><b>'+esc(row[0])+'</b><span>规模与规格：'+esc(row[1])+'</span><span>标注与质量：'+esc(row[2])+'</span></span></label>').join('')+'</section>';
+  }
   function render(m, options) {
     options = options || {};
     var includeDifficulty = options.includeDifficulty !== false;
     var sameStage = '<ul class="course-links">' + m.sameStage.map(function (s) { return '<li><a href="' + esc(sceneHref(s, m, options)) + '"><span>' + esc(s.name) + '</span><small>' + esc(s.id.toUpperCase()) + ' →</small></a></li>'; }).join('') + '</ul>';
     var cross = m.crossStages.length ? '<div class="course-cross"><h3>原地图标注的交叉环节</h3><div class="course-pills">' + m.crossStages.map(function (s) { return s.id ? '<a class="course-pill" href="' + esc(portalHref('#/stage/' + encodeURIComponent(s.id), options)) + '">' + esc(s.name) + (s.sameStage ? ' · 本环节' : ' →') + '</a>' : '<span class="course-pill">' + esc(s.name) + '</span>'; }).join('') + '</div></div>' : '';
-    return '<section class="course-context" data-course-context="' + esc(m.scene.id) + '" data-course-mode="' + esc(options.mode || 'standalone') + '"' + (m.authoredNext ? ' data-course-next-scene="' + esc(m.next && m.next.id || '') + '" data-course-next-label="' + esc(m.nextLabel) + '"' : '') + ' aria-labelledby="course-context-' + esc(m.scene.id) + '"><header><span class="course-eyebrow">放回作业链，继续看场景</span><h2 id="course-context-' + esc(m.scene.id) + '">' + (includeDifficulty ? '技术难度与参考方向' : '继续阅读场景与案例') + '</h2></header>' +
-      (includeDifficulty ? '<div class="course-context-grid"><div class="course-context-cell"><div class="course-difficulty-line"><span class="course-difficulty" data-difficulty="' + esc(m.scene.diff) + '">技术难度 · ' + esc(m.scene.diff || '未标注') + '</span><span class="course-difficulty-caption">原场景的技术判断</span></div>' + (m.scene.diffWhy ? '<p>' + esc(m.scene.diffWhy) + '</p>' : '') + '</div><div class="course-context-cell"><h3>可以继续查阅的方法方向</h3><div class="course-pills">' + m.scene.refs.map(function (ref) { return '<span class="course-pill">' + esc(ref) + '</span>'; }).join('') + '</div><div class="course-method-links">' + m.methods.map(function (method) { return '<a href="' + esc(portalHref('#/method/' + encodeURIComponent(method.id), options)) + '">' + esc(method.abbr) + ' · ' + esc(method.name) + '方法索引 →</a>'; }).join('') + '</div></div></div>' : '') +
+    return preparation(m)+'<section class="course-context" data-course-context="' + esc(m.scene.id) + '" data-course-mode="' + esc(options.mode || 'standalone') + '"' + (m.authoredNext ? ' data-course-next-scene="' + esc(m.next && m.next.id || '') + '" data-course-next-label="' + esc(m.nextLabel) + '"' : '') + ' aria-labelledby="course-context-' + esc(m.scene.id) + '"><header><span class="course-eyebrow">放回作业链，继续看场景</span><h2 id="course-context-' + esc(m.scene.id) + '">' + (includeDifficulty ? '技术难度与参考方向' : '继续阅读场景与案例') + '</h2></header>' +
+      (includeDifficulty ? '<div class="course-context-grid"><div class="course-context-cell"><div class="course-difficulty-line"><span class="course-difficulty" data-difficulty="' + esc(m.scene.diff) + '">技术难度 · ' + esc(m.scene.diff || '未标注') + '</span><span class="course-difficulty-caption">'+(extensions[m.current.id]?'本例的技术判断':'原场景的技术判断')+'</span></div>' + (m.scene.diffWhy ? '<p>' + esc(m.scene.diffWhy) + '</p>' : '') + '</div><div class="course-context-cell"><h3>可以继续查阅的方法方向</h3><div class="course-pills">' + m.scene.refs.map(function (ref) { var key=/OCR|文本|抽取|语言|报告生成/.test(ref)?'nlp':/优化|控制|强化学习|规划|Pareto/.test(ref)?'opt':/图谱|规则推理|本体/.test(ref)?'kg':/图像|视觉|像素|分割|细粒度|裂缝/.test(ref)?'cv':/时序|序列|预测|回归|变点/.test(ref)?'ts':m.methods[0]?.id||'opt';return '<a class="course-pill" href="'+esc(portalHref('#/method/'+key,options))+'">' + esc(ref) + ' ↗</a>'; }).join('') + '</div><div class="course-method-links">' + m.methods.map(function (method) { return '<a href="' + esc(portalHref('#/method/' + encodeURIComponent(method.id), options)) + '">' + esc(method.abbr) + ' · ' + esc(method.name) + '方法索引 →</a>'; }).join('') + '</div></div></div>' : '') +
       '<div class="course-related"><div class="course-context-cell course-same-scene"><h3>同场景的案例' + (m.sameScene.length > 1 ? ' · ' + m.sameScene.length + '种实现' : '') + '</h3><div data-course-same-scene>' + sameSceneHTML(m, options) + '</div></div>' + (options.mode === 'portal' ? '' : '<div class="course-context-cell course-same-stage"><h3>同环节的其他场景 · ' + esc(m.scene.stageName) + '</h3>' + sameStage + '</div>') + cross + '</div>' +
       '<div class="course-next">' + (m.next ? '<a href="' + esc(sceneHref(m.next, m, options)) + '">' + esc(m.nextLabel) + '：' + esc(m.next.name) + ' →</a>' : '') + '<a href="' + esc(portalHref('#/stage/' + encodeURIComponent(m.scene.stageId), options)) + '">查看整个' + esc(m.scene.stageName) + '环节</a><a href="' + esc(portalHref('#/', options)) + '">返回课程总览</a></div><p class="course-provenance">' + esc(m.provenance) + '</p></section>';
   }
@@ -844,11 +871,12 @@ window.S17CompassPage={"model":{"scene":{"id":"m5","name":"录井报告自动生
     main.__courseCompassStamp = stamp;
     var authored = background.querySelector('[data-course-next-scene]');
     var continuation = authored ? {nextScene:authored.dataset.courseNextScene || null, nextLabel:authored.dataset.courseNextLabel} : g.S17CompassContinuations && g.S17CompassContinuations[sc.id] || {};
-    var prior = background.querySelectorAll('[data-course-context]');
+    var prior = background.querySelectorAll('[data-course-context],[data-course-preparation]');
     prior.forEach(function (el) { el.remove(); });
     var existingDifficulty = Array.from(background.querySelectorAll('h2,h3')).some(function (heading) { return heading.textContent.trim() === '技术难度与参考方向'; });
     var m = model(sc, current, g.ATLAS, runtimeCatalog(), continuation), options = {mode:'portal', includeDifficulty:!existingDifficulty};
     background.insertAdjacentHTML('beforeend', render(m, options));
+    if(!background.querySelector('[data-course-brief]'))background.insertAdjacentHTML('afterbegin',brief(m,options));
     updatePath();
     return true;
   }
@@ -867,9 +895,10 @@ window.S17CompassPage={"model":{"scene":{"id":"m5","name":"录井报告自动生
   function mount() { if (!d) return; if (!portalMount()) standaloneMount(); }
   function schedule() { if (timer) g.clearTimeout(timer); timer = g.setTimeout(function () { timer = null; mount(); }, 35); }
   function configure(value) { config = value; if (d) schedule(); }
-  g.S17Compass = {model:model, render:render, navigation:navigation, sameSceneHTML:sameSceneHTML, configure:configure, mount:mount};
+  g.S17Compass = {model:model, render:render, brief:brief, navigation:navigation, sameSceneHTML:sameSceneHTML, configure:configure, mount:mount};
   if (!d) return;
   if (g.S17CompassPage) configure(g.S17CompassPage);
+  d.addEventListener('change',function(e){if(!e.target.matches('[data-course-check]'))return;var host=e.target.closest('[data-course-preparation]');host.querySelector('output').textContent=host.querySelectorAll('input:checked').length+' / '+host.querySelectorAll('input').length;});
   d.addEventListener('click', function (event) {
     var link = event.target.closest('[data-course-part]');
     if (!link || portalMount()) return;

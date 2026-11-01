@@ -1,0 +1,418 @@
+{
+  "builtAt": "2026-11-01T15:21:46.118Z",
+  "caseCount": 65,
+  "sceneCount": 61,
+  "expansionCount": 60,
+  "sectionCount": 313,
+  "teacherSampleCount": 1,
+  "teacherSectionCount": 5,
+  "teacherBodyBytes": 44141,
+  "catalogueBytes": 213452,
+  "bodyBytes": 18704175,
+  "runtimeCasePackagesRebuilt": false,
+  "browserAcceptanceByBuild": false,
+  "files": [
+    {
+      "path": "portal/assets/case-content/s17-cuttings-lithology.1.10.0.js",
+      "bytes": 1496105,
+      "sha256": "3ad591046ab59eb5d5cbce908b6d8b124dda5623135d70e32af2b8026fc37185",
+      "caseId": "s17-cuttings-lithology"
+    },
+    {
+      "path": "portal/assets/case-content/s17-drilltime-boundaries.1.10.0.js",
+      "bytes": 1225884,
+      "sha256": "e2b09861d202eb5fd755034c915b7b1c4b9601df7c49138e16c4e9d2429634e9",
+      "caseId": "s17-drilltime-boundaries"
+    },
+    {
+      "path": "portal/assets/case-content/s17-evidence-report.1.10.0.js",
+      "bytes": 994039,
+      "sha256": "81cd7893d1ac294fc920b494d275d9fa4f52ab754cf62fedfbd652085ced15c6",
+      "caseId": "s17-evidence-report"
+    },
+    {
+      "path": "portal/assets/case-content/s17-fluorescence-review.1.10.0.js",
+      "bytes": 1519920,
+      "sha256": "78ee0ec6cfe3156611aec10745b6af9255ad63783b07c0c4cc5a115abf37d7e8",
+      "caseId": "s17-fluorescence-review"
+    },
+    {
+      "path": "portal/assets/case-content/s17-mudgas-context.1.10.0.js",
+      "bytes": 804095,
+      "sha256": "79983600dea35455d511b007bac524a3f2f35973dcc1d94ae80b516f81880000",
+      "caseId": "s17-mudgas-context"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-c1-cement-quality.1.2.1.js",
+      "bytes": 190924,
+      "sha256": "9a7d757185af84a3e516012c47069a874af3d302ffdac46ba3082aaabd9d1290",
+      "caseId": "s17x-c1-cement-quality"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-c1-cement-woc-strength.1.0.1.js",
+      "bytes": 109664,
+      "sha256": "5db7635bf86974897564648f72a4149a1acca8fc0a6df7d67f164aa05b0acc61",
+      "caseId": "s17x-c1-cement-woc-strength"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-c2-cement-displacement.1.2.1.js",
+      "bytes": 251828,
+      "sha256": "baf8eb88a30b7a8e4416eee47653b1e7f4403b11e558a1604e1e9f89ea74dce3",
+      "caseId": "s17x-c2-cement-displacement"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-c3-cement-loss-risk.1.2.1.js",
+      "bytes": 136095,
+      "sha256": "abdcc77e2268c7fe82c27c0eaa48b7aa12f062a062a2f47b462f92b3fa2598fb",
+      "caseId": "s17x-c3-cement-loss-risk"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-c4-casing-standoff.1.2.1.js",
+      "bytes": 132940,
+      "sha256": "c7bc1681ec657833c1d97ee568ae8239415f7368b855e9366778a10367b9d1bc",
+      "caseId": "s17x-c4-casing-standoff"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-co1-completion-choice.1.2.1.js",
+      "bytes": 155974,
+      "sha256": "5b03b37bb1f397b725e7480557b81ebe7cf3d1928c389611f0627a7270f4f363",
+      "caseId": "s17x-co1-completion-choice"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-co2-completion-zone-design.1.2.1.js",
+      "bytes": 165353,
+      "sha256": "1d4959ef831942f1bc33790d7209a28089ab6bf64bf30e852e3a2d3bfc3ee428",
+      "caseId": "s17x-co2-completion-zone-design"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-co3-completion-seal-test.1.0.1.js",
+      "bytes": 109789,
+      "sha256": "d8d22678e9ecad16d047b297576ea5f78bf425620ee4be8180641a5cbdbfadcb",
+      "caseId": "s17x-co3-completion-seal-test"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-co3-tubing-stress.1.2.1.js",
+      "bytes": 137534,
+      "sha256": "d685cf5f1cbb3372cefbdf3cbf4379129d3564ee1458ac96e2b4ad86fe51f4d3",
+      "caseId": "s17x-co3-tubing-stress"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-co4-sliding-sleeve-control.1.2.1.js",
+      "bytes": 164482,
+      "sha256": "df7807b230f32a8614b5090cce2099067988519b62eef89b7617537f4d07400c",
+      "caseId": "s17x-co4-sliding-sleeve-control"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-d1-rop-optimization.1.3.0.js",
+      "bytes": 238656,
+      "sha256": "4c6ca519f819a826c5f8950afdcd95134092d9bee33808104310066fae57db4d",
+      "caseId": "s17x-d1-rop-optimization"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-d2-drilling-precursor.1.2.1.js",
+      "bytes": 163025,
+      "sha256": "f39ed989450ac01d31f5e73c36e93807c96078d524b56378d04b98d5a90f6274",
+      "caseId": "s17x-d2-drilling-precursor"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-d3-trajectory-control.1.2.1.js",
+      "bytes": 140751,
+      "sha256": "279a6142ee8a76f09a60578fb50452d0389a93c40d4985870bf98eb6a1ec2205",
+      "caseId": "s17x-d3-trajectory-control"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-d4-tool-condition.1.2.1.js",
+      "bytes": 148266,
+      "sha256": "085e912ffb42d802b305550b1a3155ca581df542e649d662ad9ddaebe97b8df2",
+      "caseId": "s17x-d4-tool-condition"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-d5-mud-rheology.1.2.1.js",
+      "bytes": 211851,
+      "sha256": "03e3777717854a3e662c4ef7bc1b1e91ecc8e78520f164993984ad1a8e4fefee",
+      "caseId": "s17x-d5-mud-rheology"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-e1-fracture-optimization.1.2.1.js",
+      "bytes": 295606,
+      "sha256": "ef5fa6132887094d34c0284c277a7cc890be3568c4b89cd308f2116e3a58b1de",
+      "caseId": "s17x-e1-fracture-optimization"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-e2-fracture-geometry.1.2.1.js",
+      "bytes": 137078,
+      "sha256": "c7f5b73066f4159bc94896332a4b0b94c6dea628821ed4e1b360b659c4a561db",
+      "caseId": "s17x-e2-fracture-geometry"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-e3-chemical-mixture.1.2.1.js",
+      "bytes": 185808,
+      "sha256": "0f4232e6121b8ed153b529b99e142d24cf67bfe4c8f8d9e77f8a2769e5a71ecc",
+      "caseId": "s17x-e3-chemical-mixture"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-e4-steam-cycle.1.2.1.js",
+      "bytes": 175592,
+      "sha256": "fb87b96c620ae5b9c3035c788f30bfc0c3b56bd3a4b5bf0c5054a235f4c35dd0",
+      "caseId": "s17x-e4-steam-cycle"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-e5-microbial-activity.1.2.1.js",
+      "bytes": 217998,
+      "sha256": "629afd7955b46137ccc793c1f02e0dd6d0b3e6312fbebba7d9651bd896b6c9be",
+      "caseId": "s17x-e5-microbial-activity"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-g1-remote-lithology.1.2.1.js",
+      "bytes": 217190,
+      "sha256": "80d12144045f94b01689fb172e644fa7ada996ed5a61d91b81d91ce1afa28f5f",
+      "caseId": "s17x-g1-remote-lithology"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-g2-geochemical-anomaly.1.2.1.js",
+      "bytes": 229527,
+      "sha256": "1cab1e796ebf0313e7a77bd6b769ce93aef77817abec235ffc5237e36906542a",
+      "caseId": "s17x-g2-geochemical-anomaly"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-g3-closure-spill.1.0.1.js",
+      "bytes": 265286,
+      "sha256": "e51e9eb013855c5656bcfcfa58f4ee05f3938cdf830d948aa1f31b0e1788cbab",
+      "caseId": "s17x-g3-closure-spill"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-g3-map-elements.1.2.1.js",
+      "bytes": 379972,
+      "sha256": "c0339d5fccc57d975b0f3cacc0043d941a410f4a537c8a160905d39f03537c30",
+      "caseId": "s17x-g3-map-elements"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-g4-fracture-survey.1.2.1.js",
+      "bytes": 180332,
+      "sha256": "eceb47078c022dd09f6bd7529493f5fa8d2bccdbff49a43e7f2505b75d9e398a",
+      "caseId": "s17x-g4-fracture-survey"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-p1-perforation-depth-correlation.1.0.1.js",
+      "bytes": 287256,
+      "sha256": "bf2347934d0a0d5531869672954ca973f664df13a409d3fda7a6736fb6d605c0",
+      "caseId": "s17x-p1-perforation-depth-correlation"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-p1-perforation-design.1.2.1.js",
+      "bytes": 193269,
+      "sha256": "ee8fd70727bf86441dba152683bfa0bd1e6ee018be37df7e7332e63f804ef556",
+      "caseId": "s17x-p1-perforation-design"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-p2-perforation-shape.1.2.1.js",
+      "bytes": 143834,
+      "sha256": "b9f68abef127d675cfb61a5a6ddb524d24ea3ce30418afdc23a5976a613f08ae",
+      "caseId": "s17x-p2-perforation-shape"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-p3-perforation-catalog.1.2.1.js",
+      "bytes": 148079,
+      "sha256": "a8b6edb97f53a5099a15b55eafbc97fb1c7702284b825f28c9dc8f98a0e75ba2",
+      "caseId": "s17x-p3-perforation-catalog"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-p4-perforation-effect.1.2.1.js",
+      "bytes": 141979,
+      "sha256": "3f88c094be4f55e61124a1e9f539850f160eb46c1f4a66e96c681644b5fa14c5",
+      "caseId": "s17x-p4-perforation-effect"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-pr1-pump-card.1.2.1.js",
+      "bytes": 165377,
+      "sha256": "062b2a1f8b2e7ea5efeeb8eed33a0018ff7dfe6b981824d2c4b6cf917a710fd6",
+      "caseId": "s17x-pr1-pump-card"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-pr2-production-forecast.1.2.1.js",
+      "bytes": 146034,
+      "sha256": "0dd0af406eebc5d37d34edd44297e8fe0c4ddbc0f88ebfc67999998e0d37048e",
+      "caseId": "s17x-pr2-production-forecast"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-pr3-water-allocation.1.2.1.js",
+      "bytes": 266427,
+      "sha256": "240de6b2bdef4aada385c6352d01636427e40064b4e86c96449a8376cb275352",
+      "caseId": "s17x-pr3-water-allocation"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-pr4-esp-warning.1.2.1.js",
+      "bytes": 148247,
+      "sha256": "e5d8347f3653c240df71b9a799870c68af436951b81200aafcbe919beb7cc4e7",
+      "caseId": "s17x-pr4-esp-warning"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-pr5-wax-risk.1.2.1.js",
+      "bytes": 233140,
+      "sha256": "248e45ded9860a058490087c025acc8f37efc379ac39cec7a1c2c607cfcb8a8e",
+      "caseId": "s17x-pr5-wax-risk"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-r1-distillation-optimization.1.2.1.js",
+      "bytes": 356738,
+      "sha256": "1caaefdb2fd157e6eacf2cf08aa2f4b2153100cc044a663d382c6053d5c8cb96",
+      "caseId": "s17x-r1-distillation-optimization"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-r2-fcc-product-yields.1.2.1.js",
+      "bytes": 147279,
+      "sha256": "229450c6f2426c8cf93fd4c974f3b6eb95289a1653427850fa107bbfbf5a2b4b",
+      "caseId": "s17x-r2-fcc-product-yields"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-r3-maintenance-trend.1.2.1.js",
+      "bytes": 192662,
+      "sha256": "1f3236cadedb40f581083f4aaa4016813d2460b5d3c3fe26b6a415d6d68d8396",
+      "caseId": "s17x-r3-maintenance-trend"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-r4-lab-audit.1.2.1.js",
+      "bytes": 142037,
+      "sha256": "dbfcf56da4a898dc098b838345ad3a54c6340b8e58f7547c23c4f1024b36ed38",
+      "caseId": "s17x-r4-lab-audit"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-r5-quality-softsensor.1.2.1.js",
+      "bytes": 159186,
+      "sha256": "c4cb445a78394826e22e73d6ea7c9f0ce671bf2b17d22301d840f2835d6d2a92",
+      "caseId": "s17x-r5-quality-softsensor"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-s1-seismic-fault.1.2.1.js",
+      "bytes": 1237151,
+      "sha256": "a4257e3a4e1902efb484d235c3f5a031bdfc633c8b444b8b08a3aae62a443733",
+      "caseId": "s17x-s1-seismic-fault"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-s2-seismic-facies.1.2.1.js",
+      "bytes": 395927,
+      "sha256": "e52eb3b70c51000986509f505f8d2d2c483f43c49bf1855f33791cda17168d1a",
+      "caseId": "s17x-s2-seismic-facies"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-s3-first-arrival.1.2.1.js",
+      "bytes": 179497,
+      "sha256": "07f2e94f7a3e7e1265fc52b5fec3801d7e9defd819f3adf75490cfe36d1e32f9",
+      "caseId": "s17x-s3-first-arrival"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-s4-reservoir-inversion.1.2.1.js",
+      "bytes": 157323,
+      "sha256": "004da523ddaefc73c4cd9856f231d3a5370d256ea7b02235c040f3dfb50b46e5",
+      "caseId": "s17x-s4-reservoir-inversion"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-s5-seismic-denoise.1.2.1.js",
+      "bytes": 143621,
+      "sha256": "4c509de2648244e17adbcbf2546c3503a5d796d2eb085e655de65453cf2d502d",
+      "caseId": "s17x-s5-seismic-denoise"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-t1-pipeline-leak.1.2.1.js",
+      "bytes": 159336,
+      "sha256": "e73f4040795a7d23d6b4bc4060a9603067f6811f34e66b3ba9de77c7398dc314",
+      "caseId": "s17x-t1-pipeline-leak"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-t2-corrosion-growth.1.2.1.js",
+      "bytes": 159073,
+      "sha256": "953ccb366d8c25273bc089465dc3775043ffd372abf49354d1184f4c6cc90cf8",
+      "caseId": "s17x-t2-corrosion-growth"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-t3-gathering-pump-optimization.1.2.1.js",
+      "bytes": 178292,
+      "sha256": "1786d5f92b5977fb799bd3c5c971d1fed16833fbf483f1347c1b646caba58769",
+      "caseId": "s17x-t3-gathering-pump-optimization"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-t4-meter-drift-calibration.1.2.1.js",
+      "bytes": 150646,
+      "sha256": "4e49a5a147fd7cbb0ec9fe56f5956d5eeb8d988b9101753c8ae72ce564fbb7e7",
+      "caseId": "s17x-t4-meter-drift-calibration"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-t5-tank-level-crosscheck.1.2.1.js",
+      "bytes": 189022,
+      "sha256": "bceab515c632608c85d61ad34a8236201e98260e5d5fe021b99ca1a4f4d707aa",
+      "caseId": "s17x-t5-tank-level-crosscheck"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-w1-log-boundaries.1.2.1.js",
+      "bytes": 150839,
+      "sha256": "1d72624caa17da810be909223cc08f6ae3f14e2a710cb9bbf42538cf590ecfa1",
+      "caseId": "s17x-w1-log-boundaries"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-w2-porosity-calibration.1.2.1.js",
+      "bytes": 146662,
+      "sha256": "79cf81ed35cd57f1fb2ef63940157bf1fda01d02d640facd6908a4f6deba05cc",
+      "caseId": "s17x-w2-porosity-calibration"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-w3-borehole-fractures.1.2.1.js",
+      "bytes": 523230,
+      "sha256": "d86eb547dcb8025e983cd35d5f7933afdd9ddf59805e111b314aa4f6079311d6",
+      "caseId": "s17x-w3-borehole-fractures"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-w4-log-lithology.1.2.1.js",
+      "bytes": 186442,
+      "sha256": "a13f45aceb9b6e886a0043a3ee1f57a8156db03f01b9ff499933cf08a107f506",
+      "caseId": "s17x-w4-log-lithology"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-w5-curve-repair.1.2.1.js",
+      "bytes": 241584,
+      "sha256": "5c9be6e706af34432bb1ed0b7b9df33028e05add5be71f0b95e767cba2dc7583",
+      "caseId": "s17x-w5-curve-repair"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-wo1-workover-retrieval.1.2.1.js",
+      "bytes": 188592,
+      "sha256": "b87108d7d5d6cec02c60bb300b5695f728f1a8ccd9b8698cfde04f453b50a200",
+      "caseId": "s17x-wo1-workover-retrieval"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-wo2-fishing-tools.1.2.1.js",
+      "bytes": 144123,
+      "sha256": "8bb356ea2c5bab40be839a513af19680e018d2f3cdb3f7f6d431716e9b576140",
+      "caseId": "s17x-wo2-fishing-tools"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-wo3-casing-damage.1.2.1.js",
+      "bytes": 218291,
+      "sha256": "c0c949b681f9f6d5933ba6fec105eb4f5fb58db5c7fbc409be1fdb22080eed7e",
+      "caseId": "s17x-wo3-casing-damage"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-wo4-workover-warning.1.2.1.js",
+      "bytes": 157985,
+      "sha256": "c9261750592537ba2600805d5e6772bbbbd953c86b45327f05bb48e5d1d2c849",
+      "caseId": "s17x-wo4-workover-warning"
+    },
+    {
+      "path": "portal/assets/case-content/s17x-wo5-maintenance-interval.1.2.1.js",
+      "bytes": 143431,
+      "sha256": "ea5c21b83e9a28e0ff2d323f31e7d3cd2ad24b86d575fda3f994b27b47430dfb",
+      "caseId": "s17x-wo5-maintenance-interval"
+    },
+    {
+      "path": "portal/assets/case-content/welllog-layer.1.0.0.js",
+      "bytes": 44141,
+      "sha256": "c749f122d8d5be58b4c03223d455ac3971378d85729fa63f1d619ecb73bcec78",
+      "caseId": "welllog-layer",
+      "teacherSample": true
+    },
+    {
+      "path": "portal/assets/s17-case-catalog.js",
+      "bytes": 213452,
+      "sha256": "8b22f2603d5390bdf3e1b71872d3c808b89f7f07ae6eec1d605ef7a04f85c557"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-01T15:16:57.978Z",
+  "kind": "actual_Chrome_uploaded_version_priority_hide_restore_confirm_autoaccepted",
+  "checks": [
+    {
+      "name": "Same-ID upload wins registration with its own version",
+      "passed": true
+    },
+    {
+      "name": "Homepage/3D case helper keeps uploaded version in portal",
+      "passed": true
+    },
+    {
+      "name": "Uploaded priority survives refresh",
+      "passed": true
+    },
+    {
+      "name": "Removing upload restores packaged original",
+      "passed": true
+    },
+    {
+      "name": "Hide removes builtin from directory",
+      "passed": true
+    },
+    {
+      "name": "Restore returns builtin after refresh",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": 0
+}

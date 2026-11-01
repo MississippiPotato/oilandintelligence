@@ -21,10 +21,12 @@ export function buildCaseVariants({reportDir=REPORT}={}) {
     const lessonContext=courseContext(entry.sceneId,manifest,{mode:'standalone'});
     const portalContext=courseContext(entry.sceneId,manifest,{mode:'portal'});
     const built=structuredClone(manifest);
+    built.tabs.background.sections[0].html='<style>'+courseStyles()+'</style>'+portalContext.intro+(built.tabs.background.sections[0].html||'');
     const last=built.tabs.background.sections.at(-1);
     last.html=(last.html??last.body??'')+portalContext.html;
     Object.assign(built.tabs.demo,{mode:'page',html:'demo/index.html',js:'demo/demo.js'});
     const standalone=structuredClone(manifest);
+    standalone.tabs.background.sections[0].html=lessonContext.intro+(standalone.tabs.background.sections[0].html||'');
     standalone.tabs.background.sections.at(-1).html=(standalone.tabs.background.sections.at(-1).html??'')+lessonContext.html;
     const js='window.VariantManifest='+JSON.stringify(standalone).replace(/</g,'\\u003c')+';\nwindow.S17Page='+JSON.stringify({sceneId:entry.sceneId,caseId:entry.caseId,caseVersion:manifest.version,portalHref:'../../../../portal/index.html',referenceHref:'../../../../portal/reference/fluorescence.html'})+';\n'+read(source+'/engine.js')+'\n;\n'+read(source+'/concept.js')+'\n;\n'+conceptHostRuntime()+'\n'+read(source+'/app.js')+'\n;\n'+lessonContext.runtime+'\n'+assistantJS();
     new vm.Script(js,{filename:entry.caseId+'/demo/demo.js'});

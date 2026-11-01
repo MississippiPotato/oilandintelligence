@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-01T15:04:34.598Z",
+  "kind": "actual_Chrome_home_filters_3D_navigation",
+  "checks": [
+    {
+      "name": "13 stage cards in 3 groups and 5 visible method links",
+      "passed": true
+    },
+    {
+      "name": "No case body or heavy 3D loaded on homepage",
+      "passed": true
+    },
+    {
+      "name": "Avatar loads on entry before opening assistant",
+      "passed": true
+    },
+    {
+      "name": "Keyboard focus replays stage miniature",
+      "passed": true
+    },
+    {
+      "name": "390px stage cards form two columns and fit page",
+      "passed": true
+    },
+    {
+      "name": "Stage header includes all three difficulties",
+      "passed": true
+    },
+    {
+      "name": "One combined scene/case list replaces duplicate lists",
+      "passed": true
+    },
+    {
+      "name": "Stage + method + difficulty filter matches 2 scenes/cases",
+      "passed": true
+    },
+    {
+      "name": "Empty filter explains no results",
+      "passed": true
+    },
+    {
+      "name": "Clear filters restores 65 cases /61 scenes",
+      "passed": true
+    },
+    {
+      "name": "Global paths completed",
+      "passed": false,
+      "detail": "locator.selectOption: Error: strict mode violation: locator('[data-ms-scenario]') resolved to 2 elements:\n    1) <section class=\"ms-stage\" data-ms-raf=\"false\" data-ms-flow=\"0.025\" data-ms-time=\"125.268\" data-ms-version=\"1.0.0\" data-ms-phase=\"annulus\" data-ms-visible=\"false\" data-ms-playing=\"false\" data-ms-renderer=\"ready\" id=\"s17-mudlogging-stage\" data-ms-scenario=\"normal\" aria-labelledby=\"ms-title\" data-ms-transport-progress=\"0.01097500\" data-ms-state=\"{\"mounted\":true,\"mode\":\"normal\",\"time_s\":125.26800000000001,\"sourceTime_s\":120,\"sourceDepthMD_m\":1200.7199999999993,\"arrivalTime_s\":600,\"sourceReplay_s\":120,\"lag_…>…</section> aka getByRole('region', { name: '地面的记录，来自更早的井底。' })\n    2) <select aria-label=\"泵送情景\" data-ms-scenario=\"\">…</select> aka getByLabel('泵送情景')\n\nCall log:\n\u001b[2m  - waiting for locator('[data-ms-scenario]')\u001b[22m\n"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "output/playwright/teaching-map-home-desktop.png",
+    "output/playwright/teaching-map-home-mobile.png"
+  ],
+  "failure": "locator.selectOption: Error: strict mode violation: locator('[data-ms-scenario]') resolved to 2 elements:\n    1) <section class=\"ms-stage\" data-ms-raf=\"false\" data-ms-flow=\"0.025\" data-ms-time=\"125.268\" data-ms-version=\"1.0.0\" data-ms-phase=\"annulus\" data-ms-visible=\"false\" data-ms-playing=\"false\" data-ms-renderer=\"ready\" id=\"s17-mudlogging-stage\" data-ms-scenario=\"normal\" aria-labelledby=\"ms-title\" data-ms-transport-progress=\"0.01097500\" data-ms-state=\"{\"mounted\":true,\"mode\":\"normal\",\"time_s\":125.26800000000001,\"sourceTime_s\":120,\"sourceDepthMD_m\":1200.7199999999993,\"arrivalTime_s\":600,\"sourceReplay_s\":120,\"lag_…>…</section> aka getByRole('region', { name: '地面的记录，来自更早的井底。' })\n    2) <select aria-label=\"泵送情景\" data-ms-scenario=\"\">…</select> aka getByLabel('泵送情景')\n\nCall log:\n\u001b[2m  - waiting for locator('[data-ms-scenario]')\u001b[22m\n\n    at evalmachine.<anonymous>:17:145\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)",
+  "passed": 10,
+  "failed": 1
+}

@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-01T15:12:50.622Z",
+  "kind": "numeric_not_browser",
+  "failed": 0,
+  "results": [
+    {
+      "command": "node checks/verify-mudlogging-refinement.mjs",
+      "result": "{\n  \"m4\": \"gap isolation, adjacent boundaries, singleton and empty blocks passed\",\n  \"m5\": \"negative and positive, uncertain, change, ambiguity, units passed\"\n}"
+    },
+    {
+      "command": "node case-src/mudlogging-stage/verify.mjs",
+      "result": "{\"passed\":8,\"failed\":0,\"normalArrival_s\":600,\"stoppedArrival_s\":780,\"browserAcceptanceClaimed\":false}"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
   function text(x,y,s,size=16,more=''){return `<text x="${x}" y="${y}" font-size="${size}" ${more}>${esc(s)}</text>`;}
   function svg(title,body,w=800,h=450){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}">${body}</svg>`;}
   function markStale(){outputs();if(!state.result)return;state.status='stale';$('status').className='status stale';$('status').textContent='参数已改变，当前图表保留上次结果。请运行预测与寻优。';$('export').disabled=true;$('review').disabled=true;$('adopt').disabled=true;$('results').classList.add('result-stale');reviewHistory();}
-  function heatColor(v,a,b){const f=Math.max(0,Math.min(1,(v-a)/(b-a||1))),start=[222,239,225],end=[14,111,104];return '#'+start.map((s,j)=>Math.round(s+(end[j]-s)*f).toString(16).padStart(2,'0')).join('');}
+  function heatColor(v,a,b){const f=Math.max(0,Math.min(1,(v-a)/(b-a||1))),start=[246,232,219],end=[184,36,42];return '#'+start.map((s,j)=>Math.round(s+(end[j]-s)*f).toString(16).padStart(2,'0')).join('');}
   function surface(){
     const r=state.result,p=r.params,cells=r.grid.candidates.filter(c=>c.flow===p.flow),lo=Math.min(...cells.map(c=>c.estimate)),hi=Math.max(...cells.map(c=>c.estimate));
     const x=w=>90+(w-40)/10*46,y=rpm=>55+(200-rpm)/10*24,plane=cells.filter(c=>c.admitted).sort((a,b)=>b.estimate-a.estimate)[0];
@@ -27,7 +27,7 @@
   }
   function margins(o,p){
     const rows=[['WOB',o.wob,p.maxWob,'kN'],['RPM',o.rpm,p.maxRpm,'r/min'],['流量',o.flow,p.maxFlow,'L/s'],['泵压',o.pressure,p.maxPressure,'MPa'],['扭矩',o.torque,p.maxTorque,'kN·m']];
-    let b='';rows.forEach(([name,v,limit,unit],i)=>{const y=35+i*48,ratio=v/limit;b+=text(0,y,name,16)+`<rect x="70" y="${y-16}" width="175" height="16" rx="7" fill="#e6eee7"/><rect x="70" y="${y-16}" width="${Math.min(205,175*ratio)}" height="16" rx="7" fill="${ratio>1?'#cc654f':'#107d76'}"/><path d="M245 ${y-21}V${y+5}" stroke="#17343f" stroke-width="2"/>`+text(270,y,`${fmt(v,1)} / ${limit} ${unit}`,15);});
+    let b='';rows.forEach(([name,v,limit,unit],i)=>{const y=35+i*48,ratio=v/limit;b+=text(0,y,name,16)+`<rect x="70" y="${y-16}" width="175" height="16" rx="7" fill="#e6eee7"/><rect x="70" y="${y-16}" width="${Math.min(205,175*ratio)}" height="16" rx="7" fill="${ratio>1?'#cc654f':'#b8242a'}"/><path d="M245 ${y-21}V${y+5}" stroke="#17343f" stroke-width="2"/>`+text(270,y,`${fmt(v,1)} / ${limit} ${unit}`,15);});
     $('margins').innerHTML=svg('推荐点参数使用量与上限',b,440,265);
   }
   function recommendation(){
@@ -41,15 +41,15 @@
     const r=state.result,truth=r.test.evaluationTruth.rop,max=Math.ceil(Math.max(...truth,...r.predictions.flatMap(p=>[p.model,p.baseline]))/10)*10,xx=v=>70+v/max*540,yy=v=>375-v/max*315;
     let b=`<path d="M70 45V375H620" fill="none" stroke="#9eb7ac" stroke-width="2"/><path d="M70 375L610 60" stroke="#81978f" stroke-width="2" stroke-dasharray="7 5"/>`;
     for(let v=0;v<=max;v+=20)b+=text(xx(v),403,v,16,'text-anchor="middle"')+text(55,yy(v)+5,v,16,'text-anchor="end"');
-    r.predictions.forEach((p,i)=>{b+=`<circle cx="${xx(truth[i])}" cy="${yy(p.baseline)}" r="3.5" fill="#c7954d" opacity=".48"/><circle data-record="${i}" cx="${xx(truth[i])}" cy="${yy(p.model)}" r="${i===state.selected?7:4}" fill="#107d76" opacity=".76" stroke="${i===state.selected?'#17343f':'none'}"><title>测试记录 ${i+1} · 模型 ${fmt(p.model)} / 观测 ${fmt(truth[i])}</title></circle>`;});
-    b+=text(66,25,'预测 ROP / m·h⁻¹',18)+text(290,441,'观测 ROP / m·h⁻¹',18)+text(430,26,'● 模型',16,'fill="#107d76"')+text(530,26,'● 基线',16,'fill="#c7954d"');
+    r.predictions.forEach((p,i)=>{b+=`<circle cx="${xx(truth[i])}" cy="${yy(p.baseline)}" r="3.5" fill="#c7954d" opacity=".48"/><circle data-record="${i}" cx="${xx(truth[i])}" cy="${yy(p.model)}" r="${i===state.selected?7:4}" fill="#b8242a" opacity=".76" stroke="${i===state.selected?'#17343f':'none'}"><title>测试记录 ${i+1} · 模型 ${fmt(p.model)} / 观测 ${fmt(truth[i])}</title></circle>`;});
+    b+=text(66,25,'预测 ROP / m·h⁻¹',18)+text(290,441,'观测 ROP / m·h⁻¹',18)+text(430,26,'● 模型',16,'fill="#b8242a"')+text(530,26,'● 基线',16,'fill="#c7954d"');
     $('prediction-chart').innerHTML=svg('两方法在相同测试记录上的预测与观测散点',b,700,460);
   }
   function residuals(){
     const r=state.result,t=r.test.evaluationTruth.rop,rows=r.predictions.map((p,i)=>({i,e:p.model-t[i],b:p.baseline-t[i]})).sort((a,b)=>Math.abs(b.e)-Math.abs(a.e)).slice(0,8),max=Math.max(4,...rows.flatMap(v=>[Math.abs(v.e),Math.abs(v.b)])),xx=v=>385+v/max*205;
     let b=`<path d="M385 30V330" stroke="#8fa79b" stroke-width="2"/>`;
-    rows.forEach((row,j)=>{const y=57+j*34,o=r.test.observations[row.i];b+=text(0,y+5,`${row.i+1} · ${o.depth.toFixed(1)} m`,16)+`<path data-record="${row.i}" d="M385 ${y}H${xx(row.e)}" stroke="#107d76" stroke-width="13"/><circle cx="${xx(row.b)}" cy="${y}" r="5" fill="#c7954d"/>`+text(625,y+5,fmt(row.e),15);});
-    b+=text(180,354,`−${fmt(max,1)}`,15)+text(382,354,'0',15)+text(560,354,`+${fmt(max,1)}`,15)+text(170,387,'预测 − 观测 / m·h⁻¹；绿条模型，橙点基线',17);
+    rows.forEach((row,j)=>{const y=57+j*34,o=r.test.observations[row.i];b+=text(0,y+5,`${row.i+1} · ${o.depth.toFixed(1)} m`,16)+`<path data-record="${row.i}" d="M385 ${y}H${xx(row.e)}" stroke="#b8242a" stroke-width="13"/><circle cx="${xx(row.b)}" cy="${y}" r="5" fill="#c7954d"/>`+text(625,y+5,fmt(row.e),15);});
+    b+=text(180,354,`−${fmt(max,1)}`,15)+text(382,354,'0',15)+text(560,354,`+${fmt(max,1)}`,15)+text(170,387,'预测 − 观测 / m·h⁻¹；红条模型，橙点基线',17);
     $('residuals').innerHTML=svg('模型最大误差记录及基线误差对照',b,700,400);
   }
   function point(){
@@ -69,7 +69,7 @@
     const metric=(label,value,unit,note)=>`<div class="metric"><span>${label}</span><strong>${value} <small style="display:inline">${unit}</small></strong><small>${note}</small></div>`;
     $('metrics').innerHTML=metric('多变量模型 RMSE',fmt(m.model.rmse),'m/h',`MAE ${fmt(m.model.mae)} m/h`)+metric('单 WOB 基线 RMSE',fmt(m.baseline.rmse),'m/h',`MAE ${fmt(m.baseline.mae)} m/h`)+metric('满足约束',String(r.grid.feasibleCount),`/ ${r.grid.total}`,'逐点真实计算，不隐去越界')+metric('测试记录',String(m.model.n),'点',`${m.outsideCount} 点输入超出训练范围`);
     $('test-row').innerHTML=r.test.observations.map((o,i)=>`<option value="${i}">${i+1} · ${esc(o.wellId)} · ${o.depth.toFixed(1)} m</option>`).join('');
-    surface();recommendation();scatter();residuals();point();learning();reviewHistory();
+    surface();recommendation();var calc=document.getElementById('d1-current-calculation');if(!calc){calc=document.createElement('details');calc.id='d1-current-calculation';calc.className='teach-calculation';$('recommendation').after(calc);}calc.innerHTML='<summary>这次预测怎样得到？展开十项特征与贡献</summary>'+g.S17TeachFigures.regression('当前工况 → 十项特征 → 钻速',g.S17TeachFigures.d1Names,E.features(r.current),r.trained.model.scaler,r.trained.model.coef,'m/h');var strip=document.getElementById('d1-current-result');if(!strip){strip=document.createElement('section');strip.id='d1-current-result';strip.className='teach-result-first';$('lab').prepend(strip);}strip.innerHTML='<h2>当前钻速预测 '+fmt(r.current.estimate)+' m/h</h2><p>推荐：'+(r.recommendation?(r.recommendation.wob+' kN / '+r.recommendation.rpm+' r/min / '+r.recommendation.flow+' L/s，预测 '+fmt(r.recommendation.estimate)+' m/h'):'当前约束下无可行候选')+'。模型 RMSE '+fmt(r.metrics.model.rmse)+' m/h；基线 '+fmt(r.metrics.baseline.rmse)+' m/h。</p>';scatter();residuals();point();learning();reviewHistory();
   }
   function run(){
     $('run').disabled=true;$('status').className='status';$('status').textContent='正在拟合、验证并搜索参数…';

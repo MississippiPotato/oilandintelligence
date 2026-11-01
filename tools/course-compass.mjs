@@ -95,7 +95,7 @@ export function courseContext(scene, manifest = {}, options = {}) {
     links:[...html.matchAll(/href="([^"]+)"/g)].map(match=>match[1].replace(/&amp;/g,'&')),
     browserVerifiedByThisFunction:false
   };
-  return {html, navigation, runtime, metadata};
+  return {html, navigation, runtime, metadata,model:content,intro:api().brief(content,settings)};
 }
 
 /** Helper for existing four-section case manifests: append without inventing a fifth chapter. */

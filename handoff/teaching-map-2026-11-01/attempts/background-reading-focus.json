@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-01T15:21:52.101Z",
+  "kind": "actual_headed_Chrome_background_tab",
+  "checks": [
+    {
+      "name": "Real background tab is hidden and stops replay/RAF",
+      "passed": false,
+      "detail": {
+        "hidden": false,
+        "timeBefore": 135.12480000000014,
+        "timeAfter": 135.12480000000014,
+        "raf": true
+      }
+    },
+    {
+      "name": "Foreground replay resumes",
+      "passed": true
+    }
+  ],
+  "passed": 1,
+  "failed": 1
+}

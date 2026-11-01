@@ -1,0 +1,113 @@
+{
+  "checkedAt": "2026-11-01T15:04:56.281Z",
+  "kind": "actual_Chrome_home_filters_3D_navigation",
+  "checks": [
+    {
+      "name": "13 stage cards in 3 groups and 5 visible method links",
+      "passed": true
+    },
+    {
+      "name": "No case body or heavy 3D loaded on homepage",
+      "passed": true
+    },
+    {
+      "name": "Avatar loads on entry before opening assistant",
+      "passed": true
+    },
+    {
+      "name": "Keyboard focus replays stage miniature",
+      "passed": true
+    },
+    {
+      "name": "390px stage cards form two columns and fit page",
+      "passed": true
+    },
+    {
+      "name": "Stage header includes all three difficulties",
+      "passed": true
+    },
+    {
+      "name": "One combined scene/case list replaces duplicate lists",
+      "passed": true
+    },
+    {
+      "name": "Stage + method + difficulty filter matches 2 scenes/cases",
+      "passed": true
+    },
+    {
+      "name": "Empty filter explains no results",
+      "passed": true
+    },
+    {
+      "name": "Clear filters restores 65 cases /61 scenes",
+      "passed": true
+    },
+    {
+      "name": "Pump stopped: clock advances, cumulative volume and material stay fixed",
+      "passed": true
+    },
+    {
+      "name": "Playback pause preserves time while pump Q stays positive",
+      "passed": true
+    },
+    {
+      "name": "m1 object focuses and links to background and demo",
+      "passed": true
+    },
+    {
+      "name": "m2 object focuses and links to background and demo",
+      "passed": true
+    },
+    {
+      "name": "m3 object focuses and links to background and demo",
+      "passed": true
+    },
+    {
+      "name": "m4 object focuses and links to background and demo",
+      "passed": true
+    },
+    {
+      "name": "m5 object focuses and links to background and demo",
+      "passed": true
+    },
+    {
+      "name": "Leaving stage releases 3D scene",
+      "passed": true
+    },
+    {
+      "name": "Case returns to same 3D object and viewing time",
+      "passed": true,
+      "detail": "surface"
+    },
+    {
+      "name": "390px 3D page fits",
+      "passed": true
+    },
+    {
+      "name": "Original g3 and extension both reachable",
+      "passed": true
+    },
+    {
+      "name": "Extension has its own title and data requirements",
+      "passed": true
+    },
+    {
+      "name": "Method page distinguishes implemented cases and candidates",
+      "passed": true
+    },
+    {
+      "name": "No uncaught global errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "output/playwright/teaching-map-home-desktop.png",
+    "output/playwright/teaching-map-home-mobile.png",
+    "output/playwright/teaching-map-3d-desktop.png",
+    "output/playwright/teaching-map-3d-mobile.png"
+  ],
+  "passed": 24,
+  "failed": 0
+}

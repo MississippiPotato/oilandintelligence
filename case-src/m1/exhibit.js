@@ -69,7 +69,7 @@
   function mount(host) {
     const $ = id => host.querySelector('#' + id);
     const doc = host.ownerDocument;
-    const state = {id:'s17-cuttings-lithology',version:'1.9.0',status:'not_run',revision:1,count:0,stage:0,selected:null,anchor:null,tracking:null,run:null};
+    const state = {id:'s17-cuttings-lithology',version:'1.10.0',status:'not_run',revision:1,count:0,stage:0,selected:null,anchor:null,tracking:null,run:null};
     let pending = null;
     const getOptions = () => ({light:Number($('m1-light').value),coating:Number($('m1-coating').value),yellow:0,merge:$('m1-preset').value==='merged',occlude:$('m1-preset').value==='occluded'});
     function setStatus(status,message) {
@@ -183,7 +183,7 @@
         ()=>p?'<p>颜色规则 <b>'+names[p.baseline]+'</b>；16维特征的加权 kNN 给出 <b>'+names[p.prediction.label]+'</b>，支持度 '+pct(p.prediction.support)+'。k='+r.config.k+'；下图展示训练库中的前三个近邻。距离越小票重越大，下表按全部 k 个近邻汇总。</p><div style="display:flex;gap:12px;flex-wrap:wrap">'+neighborCards()+'</div>'+table(['类别','加权票数'],p.prediction.weights.map((v,i)=>[names[i],fmt(v,3)])):'<p>原锚点没有轮廓，恢复照明或摆盘条件后可继续查看近邻。</p>',
         ()=>proportionsHTML('model')
       ];
-      return '<div data-m1-flow="'+stepIndex+'" data-flow-run="'+esc(r.runId)+'">'+actual[Math.max(0,Math.min(5,Number(stepIndex)||0))]()+'</div>';
+      return '<div data-m1-flow="'+stepIndex+'" data-flow-run="'+esc(r.runId)+'">'+actual[Math.max(0,Math.min(5,Number(stepIndex)||0))]()+((Number(stepIndex)===4&&p)?g.S17TeachFigures.knn(r.library.model,p.x,p.prediction,['红均值','绿均值','蓝均值','红离散','绿离散','蓝离散','水平纹理','垂直纹理','水平边缘','垂直边缘','圆度','长宽比','暗像素占比','次暗占比','次亮占比','亮像素占比']):'')+'</div>';
     }
     function changeStage(stage) {state.stage=stage;host.querySelectorAll('[data-m1-stage]').forEach(button=>{const active=Number(button.dataset.m1Stage)===stage;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});host.querySelectorAll('[data-m1-panel]').forEach(panel=>panel.hidden=Number(panel.dataset.m1Panel)!==stage);}
     function reset() {if(pending)clearTimeout(pending);$('m1-light').value=1;$('m1-coating').value=0;$('m1-preset').value='default';state.revision++;state.anchor=null;state.selected=null;changeStage(0);return recalculate();}

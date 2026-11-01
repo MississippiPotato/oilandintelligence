@@ -337,7 +337,7 @@
     host.innerHTML = labHTML;
     const $ = selector => host.querySelector(selector), $$ = selector => [...host.querySelectorAll(selector)];
     const raw = $('[data-m5-raw]'), store = C.sourceStore();
-    const state = {id: 's17-evidence-report', version: '1.9.0', status: 'not_run', revision: 1, count: 0, selected: 2, stage: 0, intervalIndex: 0, perspective: 'observe', inputMode: 'builtin', run: null, reportHistory: [], pendingHistory: null, exampleChange: null, notice: ''};
+    const state = {id: 's17-evidence-report', version: '1.10.0', status: 'not_run', revision: 1, count: 0, selected: 2, stage: 0, intervalIndex: 0, perspective: 'observe', inputMode: 'builtin', run: null, reportHistory: [], pendingHistory: null, exampleChange: null, notice: ''};
     let timer = null;
     raw.value = defaultFixture.text;
     const notify = text => {state.notice = text; if (g.S17Exhibit && typeof g.S17Exhibit.notify === 'function') g.S17Exhibit.notify(text);};
@@ -453,7 +453,7 @@
         if (item) {C.validateEvidence(item); item.sources.forEach(s => store.add(s));}
       }
       const content = {sources: store.list(), claims: r.claims.map(c => ({...c, originalStatement: undefined})), facts: r.inference.facts, handover: intervalExport(r.inference, r.claims, state.intervalIndex), reportRevisionHistory: state.reportHistory, metrics: r.metrics, metricScope: 'original automatic pipeline only; free text has no gold metrics', reportStatus: r.claims.some(c => c.reviewStatus !== 'confirmed') ? 'draft_needs_review' : 'human_reviewed_current_revision', reportStatusScope: '仅指当前文本报告的逐句核对，不覆盖交接中的前例快照与候选解释', limitations: ['本包保存当前教学记录、实际文本计算、井段交接和核对状态。', '前例资料是构建期快照，不是本页重跑；同样品但缺井段的白光／UV材料未分配井段。', 'NB归类、规则抽取和原文引述分别保存；来源定位与语义核对分别记录。', '自由改写没有评价金标，metrics为null。']};
-      const e = g.S17UI && typeof g.S17UI.envelope === 'function' ? g.S17UI.envelope(state.id, '1.9.0', r, content) : {schemaVersion: '1.0', caseId: state.id, caseVersion: '1.9.0', runId: r.runId, datasetId: 's17-synthetic-v1', wellId: 'DEMO-017', dataNature: 'synthetic_teaching', runConfig: {seed: 17, dataVersion: r.dataVersion, splitDescription: r.split, method: r.method, parameters: r.config, inputRevision: r.revision}, ...content};
+      const e = g.S17UI && typeof g.S17UI.envelope === 'function' ? g.S17UI.envelope(state.id, '1.10.0', r, content) : {schemaVersion: '1.0', caseId: state.id, caseVersion: '1.10.0', runId: r.runId, datasetId: 's17-synthetic-v1', wellId: 'DEMO-017', dataNature: 'synthetic_teaching', runConfig: {seed: 17, dataVersion: r.dataVersion, splitDescription: r.split, method: r.method, parameters: r.config, inputRevision: r.revision}, ...content};
       return C.validateEvidence(e);
     }
 
@@ -464,7 +464,7 @@
       const actual = [
         [`所选 ${interval}，当前原文与前例构建期快照。`, '按文字范围与逐深度数据筛选；气峰只按已保存的模型参考点定位，缺深度样品不归段。', `<p>该段 ${h.selected.length} 条文字记录；岩屑 ${h.rocks.length} 条，气测 ${h.gasText.length} 条，荧光 ${h.fluorescence.length} 条；钻时有 ${h.active.length} 个有效点。</p><p>气峰参考点${h.gasHere ? '位于本段' : '不在本段或未提供'}；M1/M3样品${h.paired ? '身份相同但没有井段' : '配对信息待补'}。</p>${h.differences.length ? '<p>记录差异：' + h.differences.map(v => esc(v.message)).join(' ') + '</p>' : ''}`],
         [`选中子句：${f.rawQuote}`, '按原文位置切分，规则识别该子句的范围、数值、单位与否定。', `<div class="m5-quote">${sourcePreview(r.text, f)}</div>${inheritanceNote(f)}${fieldItems(f)}<p class="m5-small">当前观察位于原文第${f.sourceSpanStart + 1}—${f.sourceSpanEnd}个字符，已在图中高亮。</p>`],
-        [`同一子句：${f.rawQuote}`, `取 ${C.tokens(f.rawQuote).length} 个单字／相邻双字片段，运行固定训练库NB与关键词基线。`, `${scorePlot(f.prediction)}<p>当前候选：${esc(name(f.category))}；关键词基线：${esc(name(f.baseline))}。</p><p class="m5-small">朴素贝叶斯先统计训练句在各栏目中的词项，再比较当前句的相对分数。数字在分类特征中统一替换成“数”；原文、范围和字段不变。</p>${tokenContributionPlot(f.prediction)}`],
+        [`同一子句：${f.rawQuote}`, `取 ${C.tokens(f.rawQuote).length} 个单字／相邻双字片段，运行固定训练库NB与关键词基线。`, `<p class="teach-result-first">同一句原文分别进入两条路径：词项用于栏目分类；范围、数值、单位和否定按原文位置保留。两路产物再汇入报告句子。</p>${scorePlot(f.prediction)}<p>当前候选：${esc(name(f.category))}；关键词基线：${esc(name(f.baseline))}。</p><p class="m5-small">朴素贝叶斯先统计训练句在各栏目中的词项，再比较当前句的相对分数。数字在分类特征中统一替换成“数”；原文、范围和字段不变。</p>${tokenContributionPlot(f.prediction)}`],
         [`当前栏目“${name(f.category)}”与原文字段。`, '保留原文引述，将当前句子绑定到当前来源版本及文字位置。', `<div class="m5-quote">${esc(c.statement)}</div><p class="m5-small">对应原文：${esc(r.text.slice(f.sourceSpanStart, f.sourceSpanEnd))}</p>${inheritanceNote(f)}`],
         [`当前报告第 ${state.selected + 1} 句及 ${interval} 的资料。`, '逐项核对范围、数值、单位与否定，保留选段缺项和下一步问题。', `<p><b>${esc(labelReview(c))}</b> · 当前修订 ${c.revision}</p><div class="m5-quote">${esc(c.statement)}</div><p class="m5-small">本句 ${c.reviewHistory.length} 条历史；本次报告已核对 ${r.claims.filter(v => v.reviewStatus === 'confirmed').length}/${r.claims.length} 句。</p><h4>下一步核查</h4><ul>${h.questions.map(q => `<li>${esc(q)}</li>`).join('')}</ul>`]
       ][i];

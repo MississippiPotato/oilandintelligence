@@ -1,0 +1,354 @@
+{
+  "checkedAt": "2026-11-01T15:13:18.311Z",
+  "kind": "actual_Chrome_six_case_paths",
+  "scene": "m3",
+  "caseId": "s17-fluorescence-review",
+  "checks": [
+    {
+      "name": "Offline default result computed",
+      "passed": true
+    },
+    {
+      "name": "All workflow steps present",
+      "passed": true,
+      "detail": {
+        "count": 6,
+        "expected": 6
+      }
+    },
+    {
+      "name": "Exposure changes actual pixel result with same pair",
+      "passed": true
+    },
+    {
+      "name": "Actual run changed",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "offline-result downloaded",
+      "passed": true
+    },
+    {
+      "name": "390px no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Portal overview and data checklist",
+      "passed": true
+    },
+    {
+      "name": "Checklist is interactive",
+      "passed": true
+    },
+    {
+      "name": "Portal continuous workflow visible",
+      "passed": true
+    },
+    {
+      "name": "Portal embeds only lab",
+      "passed": true
+    },
+    {
+      "name": "Teacher Add Case accepts folder",
+      "passed": true
+    },
+    {
+      "name": "Teacher workflow is substantial",
+      "passed": true
+    },
+    {
+      "name": "Exposure changes actual pixel result with same pair",
+      "passed": true
+    },
+    {
+      "name": "Actual run changed",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "teacher-before-refresh downloaded",
+      "passed": true
+    },
+    {
+      "name": "Exposure changes actual pixel result with same pair",
+      "passed": true
+    },
+    {
+      "name": "Actual run changed",
+      "passed": true,
+      "detail": {
+        "before": "s17-fluorescence-review-r1-v1",
+        "after": "s17-fluorescence-review-r2-v2"
+      }
+    },
+    {
+      "name": "teacher-after-refresh downloaded",
+      "passed": true
+    },
+    {
+      "name": "Teacher import survived refresh and runs again",
+      "passed": true
+    },
+    {
+      "name": "No uncaught JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "downloads": [
+    "handoff/teaching-map-2026-11-01/m3-offline-result.json",
+    "handoff/teaching-map-2026-11-01/m3-teacher-before-refresh.json",
+    "handoff/teaching-map-2026-11-01/m3-teacher-after-refresh.json"
+  ],
+  "screenshots": [
+    "output/playwright/teaching-map-m3-desktop-result.png",
+    "output/playwright/teaching-map-m3-mobile-result.png",
+    "output/playwright/teaching-map-m3-portal-workflow.png",
+    "output/playwright/teaching-map-m3-teacher-refreshed.png"
+  ],
+  "errors": [],
+  "default": {
+    "id": "s17-fluorescence-review",
+    "version": "1.10.0",
+    "status": "ready",
+    "revision": 1,
+    "selected": 12539,
+    "activeStage": 0,
+    "identity": {
+      "wellId": "DEMO-017",
+      "parentSampleId": "DEMO-017-P1",
+      "sampleId": "DEMO-017-S1",
+      "capturePairId": "DEMO-017-WLUV1",
+      "splitGroupId": "DEMO-017-P1"
+    },
+    "exposure": 1,
+    "method": "M0",
+    "pixelCounts": {
+      "B0": {
+        "count": 2027,
+        "denominator": 14582,
+        "area": 0.13900699492525032
+      },
+      "B1": {
+        "count": 1914,
+        "denominator": 14582,
+        "area": 0.1312577149910849
+      },
+      "M0": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212
+      }
+    },
+    "selectedPixel": {
+      "index": 12539,
+      "x": 59,
+      "y": 39,
+      "inROI": true,
+      "features": [
+        0.94,
+        1.4886076354980469,
+        0.38441558837890627,
+        1.1041920471191407,
+        0.6914389942089717
+      ],
+      "score": 0.9999991655349731,
+      "selected": {
+        "B0": true,
+        "B1": true,
+        "M0": true
+      },
+      "rawRGB": [
+        99,
+        153,
+        45
+      ],
+      "correctedRGB": [
+        94,
+        148.8607635498047,
+        38.441558837890625
+      ],
+      "calculation": {
+        "names": [
+          "红通道",
+          "绿通道",
+          "蓝通道",
+          "颜色差",
+          "邻域反差"
+        ],
+        "features": [
+          0.94,
+          1.4886076354980469,
+          0.38441558837890627,
+          1.1041920471191407,
+          0.6914389942089717
+        ],
+        "mean": [
+          0.09836265197342535,
+          0.1640467252990359,
+          0.06108387298063509,
+          0.1304396179501922,
+          0.019674382521747764
+        ],
+        "sd": [
+          0.18157866771515296,
+          0.27900847213263746,
+          0.11940500042971708,
+          0.2129910595197945,
+          0.04669980145868789
+        ],
+        "standardized": [
+          4.635111374133841,
+          4.747385984642537,
+          2.7078574116214447,
+          4.571799545785404,
+          14.384742348026638
+        ],
+        "weights": [
+          0.9763008745695709,
+          1.0039603102457233,
+          0.4582122436979435,
+          1.1970376589886598,
+          -0.050386425267978624
+        ],
+        "contributions": [
+          4.5252632882942345,
+          4.76618710599792,
+          1.240773420193168,
+          5.472616225652378,
+          -0.7247957453179715
+        ],
+        "intercept": -1.2790591709056482,
+        "sum": 14.000985123914083,
+        "score": 0.9999991692907264
+      }
+    },
+    "quality": [],
+    "saturated": 0,
+    "reference": [
+      85.0000000000001,
+      85.0000000000001,
+      85.0000000000001
+    ],
+    "run": {
+      "runId": "s17-fluorescence-review-r1-v1",
+      "config": {
+        "exposure": 1,
+        "threshold": 0.35,
+        "excitation": "fixed"
+      },
+      "metrics": {
+        "methods": {
+          "B0": {
+            "tp": 2027,
+            "fp": 0,
+            "fn": 1445,
+            "tn": 61628,
+            "IoU": 0.5838133640552995,
+            "Dice": 0.7372249499909075,
+            "recall": 0.5838133640552995,
+            "precision": 1,
+            "areaError_pp": 9.90947743793718,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "B1": {
+            "tp": 1914,
+            "fp": 0,
+            "fn": 1558,
+            "tn": 61628,
+            "IoU": 0.5512672811059908,
+            "Dice": 0.7107315261789825,
+            "recall": 0.5512672811059908,
+            "precision": 1,
+            "areaError_pp": 10.684405431353722,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          },
+          "M0": {
+            "tp": 3472,
+            "fp": 0,
+            "fn": 0,
+            "tn": 61628,
+            "IoU": 1,
+            "Dice": 1,
+            "recall": 1,
+            "precision": 1,
+            "areaError_pp": 0,
+            "predictedGrade": 1,
+            "referenceGrade": 1,
+            "gradeError": 0
+          }
+        },
+        "foreground": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "fixedEvaluationPixels": 65100,
+        "truthSummary": {
+          "count": 3472,
+          "denominator": 14582,
+          "area": 0.23810176930462212,
+          "intensity": 52.75201894500772,
+          "grade": 1
+        }
+      },
+      "method": "reference_calibration + trained_pixel_logistic_regression",
+      "summary": {
+        "count": 3472,
+        "denominator": 14582,
+        "area": 0.23810176930462212,
+        "intensity": 52.75201894500772,
+        "grade": 1
+      },
+      "counts": {
+        "trainingPixels": 4970,
+        "positivePixels": 920
+      },
+      "stepCount": 6,
+      "split": {
+        "train": [
+          "IMG-TRAIN-P1",
+          "IMG-TRAIN-P2",
+          "IMG-TRAIN-P3",
+          "IMG-TRAIN-P4",
+          "IMG-TRAIN-P5",
+          "IMG-TRAIN-P6",
+          "IMG-TRAIN-P7",
+          "IMG-TRAIN-P8",
+          "IMG-TRAIN-P9",
+          "IMG-TRAIN-P10",
+          "IMG-TRAIN-P11",
+          "IMG-TRAIN-P12"
+        ],
+        "validation": [
+          "IMG-VALID-P1",
+          "IMG-VALID-P2",
+          "IMG-VALID-P3",
+          "IMG-VALID-P4"
+        ],
+        "test": [
+          "DEMO-017"
+        ]
+      }
+    },
+    "reviews": []
+  },
+  "passed": 20,
+  "failed": 0
+}

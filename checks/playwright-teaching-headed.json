@@ -1,0 +1,16 @@
+{
+  "allowUnrestrictedFileAccess": true,
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "channel": "chrome",
+      "headless": false
+    },
+    "contextOptions": {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  }
+}

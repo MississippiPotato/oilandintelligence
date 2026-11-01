@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-01T15:06:10.929Z",
+  "kind": "actual_Chrome_search",
+  "checks": [
+    {
+      "name": "Untouched homepage has no heavy body/avatar/3D request or iframe",
+      "passed": false,
+      "detail": {
+        "heavy": [
+          "http://127.0.0.1:8755/portal/assets/vendor/pixi-6.5.10.min.js?v=20261101",
+          "http://127.0.0.1:8755/portal/assets/vendor/live2dcubismcore.min.js?v=20261101",
+          "http://127.0.0.1:8755/portal/assets/vendor/pixi-live2d-0.4.0.min.js?v=20261101",
+          "http://127.0.0.1:8755/portal/assets/s17-live2d-data.js?v=20261101"
+        ],
+        "iframes": 0,
+        "authored": 65,
+        "teacher": 1
+      }
+    },
+    {
+      "name": "Search protocol completed",
+      "passed": false,
+      "detail": "Error: Untouched homepage has no heavy body/avatar/3D request or iframe\n    at ok (evalmachine.<anonymous>:7:81)\n    at evalmachine.<anonymous>:12:3\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)"
+    }
+  ],
+  "pageErrors": [],
+  "failure": "Untouched homepage has no heavy body/avatar/3D request or iframe",
+  "passed": 0,
+  "failed": 2
+}

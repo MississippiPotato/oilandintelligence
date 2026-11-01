@@ -1,0 +1,452 @@
+{
+  "checkedAt": "2026-11-01T15:12:38.077Z",
+  "kind": "actual_Chrome_six_case_paths",
+  "scene": "m1",
+  "caseId": "s17-cuttings-lithology",
+  "checks": [
+    {
+      "name": "Offline default result computed",
+      "passed": true
+    },
+    {
+      "name": "All workflow steps present",
+      "passed": true,
+      "detail": {
+        "count": 6,
+        "expected": 6
+      }
+    },
+    {
+      "name": "Shown distance equals actual nearest neighbor",
+      "passed": true
+    },
+    {
+      "name": "Illumination changes current pixels/features",
+      "passed": true
+    },
+    {
+      "name": "Actual run changed",
+      "passed": true,
+      "detail": {
+        "before": "s17-cuttings-lithology-r1-v1",
+        "after": "s17-cuttings-lithology-r2-v2"
+      }
+    },
+    {
+      "name": "offline-result downloaded",
+      "passed": true
+    },
+    {
+      "name": "390px no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Portal overview and data checklist",
+      "passed": true
+    },
+    {
+      "name": "Checklist is interactive",
+      "passed": true
+    },
+    {
+      "name": "Portal continuous workflow visible",
+      "passed": true
+    },
+    {
+      "name": "Portal embeds only lab",
+      "passed": true
+    },
+    {
+      "name": "Teacher Add Case accepts folder",
+      "passed": true
+    },
+    {
+      "name": "Teacher workflow is substantial",
+      "passed": true
+    },
+    {
+      "name": "Illumination changes current pixels/features",
+      "passed": true
+    },
+    {
+      "name": "Actual run changed",
+      "passed": true,
+      "detail": {
+        "before": "s17-cuttings-lithology-r1-v1",
+        "after": "s17-cuttings-lithology-r2-v2"
+      }
+    },
+    {
+      "name": "teacher-before-refresh downloaded",
+      "passed": true
+    },
+    {
+      "name": "Illumination changes current pixels/features",
+      "passed": true
+    },
+    {
+      "name": "Actual run changed",
+      "passed": true,
+      "detail": {
+        "before": "s17-cuttings-lithology-r1-v1",
+        "after": "s17-cuttings-lithology-r2-v2"
+      }
+    },
+    {
+      "name": "teacher-after-refresh downloaded",
+      "passed": true
+    },
+    {
+      "name": "Teacher import survived refresh and runs again",
+      "passed": true
+    },
+    {
+      "name": "No uncaught JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "downloads": [
+    "handoff/teaching-map-2026-11-01/m1-offline-result.json",
+    "handoff/teaching-map-2026-11-01/m1-teacher-before-refresh.json",
+    "handoff/teaching-map-2026-11-01/m1-teacher-after-refresh.json"
+  ],
+  "screenshots": [
+    "output/playwright/teaching-map-m1-desktop-result.png",
+    "output/playwright/teaching-map-m1-mobile-result.png",
+    "output/playwright/teaching-map-m1-portal-workflow.png",
+    "output/playwright/teaching-map-m1-teacher-refreshed.png"
+  ],
+  "errors": [],
+  "default": {
+    "id": "s17-cuttings-lithology",
+    "status": "ready",
+    "revision": 1,
+    "selected": 1,
+    "stage": 0,
+    "anchor": {
+      "x": 56,
+      "y": 55,
+      "pixel": 17656,
+      "originalBBox": [
+        31,
+        38,
+        80,
+        73
+      ],
+      "selectionRevision": 1,
+      "arrangement": "original_teaching_tray"
+    },
+    "tracking": {
+      "state": "present",
+      "identityStatus": "same_layout_observation",
+      "contributors": 1,
+      "retainedPixels": 1054,
+      "referenceArea": 1054
+    },
+    "run": {
+      "runId": "s17-cuttings-lithology-r1-v1",
+      "config": {
+        "k": 3,
+        "support": 0.55,
+        "distance": 1.15,
+        "rules": {
+          "red": 0.095,
+          "light": 0.52
+        },
+        "mode": "full",
+        "calibrate": true,
+        "light": 1,
+        "coating": 0,
+        "preset": "default",
+        "arrangement": "original_teaching_tray"
+      },
+      "metrics": {
+        "pairs": [
+          {
+            "pred": 0,
+            "truth": 2,
+            "IoU": 1
+          },
+          {
+            "pred": 1,
+            "truth": 0,
+            "IoU": 1
+          },
+          {
+            "pred": 2,
+            "truth": 1,
+            "IoU": 1
+          },
+          {
+            "pred": 3,
+            "truth": 3,
+            "IoU": 1
+          },
+          {
+            "pred": 4,
+            "truth": 4,
+            "IoU": 1
+          },
+          {
+            "pred": 5,
+            "truth": 7,
+            "IoU": 1
+          },
+          {
+            "pred": 6,
+            "truth": 6,
+            "IoU": 1
+          },
+          {
+            "pred": 7,
+            "truth": 5,
+            "IoU": 1
+          },
+          {
+            "pred": 8,
+            "truth": 10,
+            "IoU": 1
+          },
+          {
+            "pred": 9,
+            "truth": 8,
+            "IoU": 1
+          },
+          {
+            "pred": 10,
+            "truth": 11,
+            "IoU": 1
+          },
+          {
+            "pred": 11,
+            "truth": 9,
+            "IoU": 1
+          }
+        ],
+        "misses": [],
+        "extras": [],
+        "merged": [],
+        "model": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              7,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 1,
+              "f1": 1
+            }
+          ],
+          "macroF1": 1,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 0,
+          "coverage": 1,
+          "acceptedError": 0
+        },
+        "baseline": {
+          "matrix": [
+            [
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              5,
+              0
+            ]
+          ],
+          "perClass": [
+            {
+              "recall": 1,
+              "f1": 1
+            },
+            {
+              "recall": 0,
+              "f1": 0
+            },
+            {
+              "recall": 0.7142857142857143,
+              "f1": 0.7142857142857143
+            }
+          ],
+          "macroF1": 0.5714285714285715,
+          "total": 12,
+          "accepted": 12,
+          "wrong": 4,
+          "coverage": 1,
+          "acceptedError": 0.3333333333333333
+        },
+        "segmentation": {
+          "tp": 14582,
+          "fp": 0,
+          "fn": 0,
+          "tn": 62218,
+          "IoU": 1,
+          "Dice": 1,
+          "recall": 1,
+          "precision": 1
+        },
+        "trueVisiblePixels": 14582,
+        "areaError_pp": [
+          0,
+          0,
+          0
+        ]
+      },
+      "method": "visible_pixel_components + standardized_weighted_kNN",
+      "counts": {
+        "detected": 12,
+        "train": 288,
+        "validation": 96,
+        "visiblePixels": 14582
+      },
+      "stepCount": 6,
+      "summary": {
+        "count": {
+          "weights": [
+            3,
+            2,
+            7,
+            0
+          ],
+          "denominator": 12,
+          "fractions": [
+            0.25,
+            0.16666666666666666,
+            0.5833333333333334,
+            0
+          ],
+          "unit": "particles"
+        },
+        "area": {
+          "weights": [
+            3759,
+            2107,
+            8716,
+            0
+          ],
+          "denominator": 14582,
+          "fractions": [
+            0.2577835687834316,
+            0.1444932108078453,
+            0.597723220408723,
+            0
+          ],
+          "unit": "visible_pixels"
+        },
+        "baselineCount": {
+          "weights": [
+            3,
+            2,
+            7,
+            0
+          ],
+          "denominator": 12,
+          "fractions": [
+            0.25,
+            0.16666666666666666,
+            0.5833333333333334,
+            0
+          ],
+          "unit": "particles"
+        },
+        "baselineArea": {
+          "weights": [
+            3759,
+            2192,
+            8631,
+            0
+          ],
+          "denominator": 14582,
+          "fractions": [
+            0.2577835687834316,
+            0.15032231518310246,
+            0.5918941160334659,
+            0
+          ],
+          "unit": "visible_pixels"
+        }
+      },
+      "selectedResult": {
+        "index": 1,
+        "label": 2,
+        "baseline": 1,
+        "support": 1,
+        "area": 1054,
+        "features": [
+          0.5458644938051096,
+          0.5105703761580513,
+          0.4595899840011897,
+          0.030145318464109762,
+          0.030145318464109734,
+          0.030145318464109755,
+          0.003906129380886202,
+          0.0034323509843058888,
+          0,
+          0,
+          0.4087948959115607,
+          1.4,
+          0,
+          0.38235294117647056,
+          0.6176470588235294,
+          0
+        ],
+        "neighbors": [
+          {
+            "group": "IMG-TRAIN-P21",
+            "label": 2,
+            "distance": 0.22498220918677975
+          },
+          {
+            "group": "IMG-TRAIN-P16",
+            "label": 2,
+            "distance": 0.2524996143369048
+          },
+          {
+            "group": "IMG-TRAIN-P11",
+            "label": 2,
+            "distance": 0.2774090885763289
+          }
+        ]
+      }
+    },
+    "reviews": []
+  },
+  "passed": 21,
+  "failed": 0
+}

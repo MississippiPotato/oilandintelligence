@@ -67,3 +67,12 @@
 - **[S5]** W3C, [PROV-DM](https://www.w3.org/TR/prov-dm/)：引述、派生与修订的来源关系；本例使用项目既有证据协议，并非完整实现 W3C 格式。
 - **[S6]** SLB, [The Expanding Role of Mud Logging](https://www.slb.com/-/media/files/oilfield-review/or2012spr03-mudlog)：录井资料可与测井、岩芯和测试资料结合，形成更完整的解释。
 - **[S7]** SLB, [Basic Well Log Interpretation](https://www.slb.com/zh-cn/resource-library/oilfield-review/defining-series/defining-log-interpretation)：测井曲线沿深度记录物理响应，自然伽马与电阻率用于辅助岩性和流体解释。
+
+
+## 2026-11-01 教学深化：同一子句的计算路径
+
+**核心认识与对应图。** 原始子句保留位置。否定、数值、单位及范围由字段规则抽取；词项贡献用于文本分类分流。两条路线在报告组装时汇合，报告句子保留回查来源。
+
+**读者操作与应看到的变化。** 改动未见／见、数值或井段后自动重算并撤销旧核对；点击报告句子回到原句。五步连续显示，分类贡献与字段抽取分别解释。
+
+**阅读组织。** 专业背景先认识对象与关键关系；流程完整显示输入、计算和产物，主图读取当前对象；演示先读结果再改变条件。场景速览、数据准备建议、实际方法与原场景候选方向分别呈现。专业来源沿用上文。
