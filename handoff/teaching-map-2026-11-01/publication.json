@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-01T15:46:32.857Z",
+  "implementationCommit": "52ae33bd641c04ed3626f581a6098047ca17fb75",
+  "url": "https://mississippipotato.github.io/oilandintelligence/portal/index.html",
+  "pagesBuild": {
+    "status": "built",
+    "workflowRun": 41322418694,
+    "conclusion": "success"
+  },
+  "onlineBrowser": {
+    "passed": 8,
+    "failed": 0,
+    "record": "browser-online.json"
+  },
+  "assets": {
+    "matched": 15,
+    "total": 15,
+    "failed": 0,
+    "record": "online-assets.json"
+  },
+  "archives": [
+    {
+      "path": "dist/s17-all-65-cases-1.13.0.zip",
+      "status": 200,
+      "contentLength": 12972753,
+      "expected": 12972753,
+      "available": true
+    },
+    {
+      "path": "dist/s17-site-1.13.0-offline.zip",
+      "status": 200,
+      "contentLength": 30864403,
+      "expected": 30864403,
+      "available": true
+    }
+  ],
+  "incomplete": [
+    {
+      "scope": "actual OS background tab visibility",
+      "status": "not_exercised",
+      "record": "browser-background.json"
+    }
+  ]
+}
