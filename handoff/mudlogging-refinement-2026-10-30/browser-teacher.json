@@ -1,0 +1,44 @@
+{
+  "scope": "Original teacher portal directory import, all workflow steps, refresh and change input after refresh",
+  "entries": [
+    {
+      "scene": "m4",
+      "imported": true,
+      "workflowSteps": 6,
+      "refresh": true,
+      "recalculatedAfterRefresh": true,
+      "defaultRun": "s17-drilltime-boundaries-r1-v1"
+    },
+    {
+      "scene": "m5",
+      "imported": true,
+      "workflowSteps": 5,
+      "refresh": true,
+      "recalculatedAfterRefresh": true,
+      "defaultRun": "s17-evidence-report-r1-v1"
+    },
+    {
+      "scene": "m1",
+      "imported": true,
+      "workflowSteps": 6,
+      "refresh": true,
+      "recalculatedAfterRefresh": true,
+      "defaultRun": "s17-cuttings-lithology-r1-v1"
+    },
+    {
+      "scene": "m3",
+      "imported": true,
+      "workflowSteps": 6,
+      "refresh": true,
+      "recalculatedAfterRefresh": true,
+      "defaultRun": "s17-fluorescence-review-r1-v1"
+    }
+  ],
+  "failures": [
+    {
+      "scene": "m2",
+      "error": "TimeoutError: locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#case-demo-root iframe').contentFrame().locator('body') to be visible\u001b[22m\n"
+    }
+  ],
+  "pageErrors": []
+}

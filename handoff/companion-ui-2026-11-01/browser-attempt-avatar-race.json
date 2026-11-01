@@ -1,0 +1,186 @@
+{
+  "checkedAt": "2026-11-01T08:06:53.642Z",
+  "kind": "actual_Chrome_companion_and_reading_navigation",
+  "checks": [
+    {
+      "name": "Live2D is already ready before opening the assistant",
+      "passed": true,
+      "detail": {
+        "state": {
+          "version": "0.8.0",
+          "avatar": "Live2D Diana",
+          "model": null,
+          "requestCount": 0,
+          "successfulCalls": 0,
+          "open": false,
+          "view": "chat",
+          "streaming": false,
+          "draftReply": "",
+          "compact": false,
+          "sessionId": "35786e0b-6cdd-40c8-a3da-6a158b0b3b9d",
+          "storage": {
+            "status": "persistent",
+            "activeId": "35786e0b-6cdd-40c8-a3da-6a158b0b3b9d",
+            "sessions": 0,
+            "messageCount": 0
+          },
+          "busy": false,
+          "parentOwned": false,
+          "media": {
+            "files": [],
+            "processing": false,
+            "recording": false
+          },
+          "context": {
+            "hash": "#/",
+            "title": "看懂石油场景，动手体验智能方法。",
+            "sceneId": null,
+            "tab": "bg",
+            "sceneName": null,
+            "surface": "portal"
+          },
+          "history": []
+        },
+        "entry": {
+          "x": 1246,
+          "y": 796,
+          "width": 174,
+          "height": 186,
+          "top": 796,
+          "right": 1420,
+          "bottom": 982,
+          "left": 1246
+        },
+        "loaded": 4
+      }
+    },
+    {
+      "name": "Desktop character entry is larger than the previous 62px icon",
+      "passed": true
+    },
+    {
+      "name": "Invitation card is absent",
+      "passed": true
+    },
+    {
+      "name": "Opening an empty conversation shows no introductory reply card",
+      "passed": true
+    },
+    {
+      "name": "Compact dialogue is 352px wide and under 210px high when empty",
+      "passed": true,
+      "detail": {
+        "x": 1068,
+        "y": 799,
+        "width": 352,
+        "height": 183
+      }
+    },
+    {
+      "name": "An actual guide reply appears inside the same conversation panel",
+      "passed": true
+    },
+    {
+      "name": "History opens without creating a second large chat window",
+      "passed": true
+    },
+    {
+      "name": "Model connection controls remain accessible",
+      "passed": true
+    },
+    {
+      "name": "390px companion stays inside the viewport",
+      "passed": true,
+      "detail": {
+        "x": 26,
+        "y": 519,
+        "width": 352,
+        "height": 313
+      }
+    },
+    {
+      "name": "Phone character is also larger than the previous icon",
+      "passed": true,
+      "detail": {
+        "x": 242,
+        "y": 684,
+        "width": 136,
+        "height": 148
+      }
+    },
+    {
+      "name": "Explicit minimize still leaves a 44px control",
+      "passed": true
+    },
+    {
+      "name": "g1 embedded demo shows the experiment without a second three-part navigation",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-g1-remote-lithology",
+          "tab": "lab",
+          "height": 2772
+        },
+        "nav": [],
+        "innerHeight": 2772,
+        "docHeight": 2772,
+        "assistantVisible": false,
+        "avatarResources": 1,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "g1 iframe expands to its content instead of an inner vertical scrollbar",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-g1-remote-lithology",
+          "tab": "lab",
+          "height": 2772
+        },
+        "nav": [],
+        "innerHeight": 2772,
+        "docHeight": 2772,
+        "assistantVisible": false,
+        "avatarResources": 1,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "g1 embedded case has no duplicate assistant or avatar download",
+      "passed": false,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-g1-remote-lithology",
+          "tab": "lab",
+          "height": 2772
+        },
+        "nav": [],
+        "innerHeight": 2772,
+        "docHeight": 2772,
+        "assistantVisible": false,
+        "avatarResources": 1,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "Companion interaction protocol completed",
+      "passed": false,
+      "detail": "g1 embedded case has no duplicate assistant or avatar download"
+    }
+  ],
+  "errors": [],
+  "cases": [],
+  "screenshots": [
+    "G:/可视化导论/5/output/playwright/companion-ui-closed-desktop.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-open-desktop.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-open-mobile.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-closed-mobile.png"
+  ],
+  "failure": "g1 embedded case has no duplicate assistant or avatar download",
+  "passed": 13,
+  "failed": 2
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "Explicitly authorized M4 gap correction, M5 extraction correction and refreshed M4 snapshot",
+  "overrides": [
+    {
+      "path": "case-src/m4/engine.js",
+      "previousSha256": "678b5f19103888f580997e3fc34ab34b67f03d8acb264894b73cff439d0eecbc",
+      "currentSha256": "0202c14514f9452779b4ecb177d62d008d2a74204f007e6a745944042a334eda"
+    },
+    {
+      "path": "case-src/m5/engine.js",
+      "previousSha256": "40cb2f3d9a426d52643db5b88ab2051f9b4036fded49e262c5d2ef8e608cc52b",
+      "currentSha256": "58449c01426764fde3a41e753814335c54b7ed21c5604dcd9ccbfd59bf18651a"
+    },
+    {
+      "path": "case-src/m5/fixtures.js",
+      "previousSha256": "7bf2a5c0ecdff06992c340399e47f0ba4963a8ee351bb69f16ec4c3654c2122e",
+      "currentSha256": "2ad1079a420c20c5812dc346ede0369f5b7b044cbc9b8b178b21dc14d9b4c5f9"
+    }
+  ]
+}

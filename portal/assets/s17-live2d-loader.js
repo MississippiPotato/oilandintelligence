@@ -1,9 +1,9 @@
 (function(g){'use strict';
-// The SVG entry is available immediately. Local avatar assets are requested on first open.
+// Start the local character on entry; an embedded case defers to the portal's character.
 if(g.S17EnsureAvatar)return;
 const source=document.currentScript?.src;
 let loading=null,rootObserver=null,documentObserver=null;
-function parentOwns(){return !!g.S17Assistant?.snapshot().parentOwned;}
+function parentOwns(){return !!(g.S17EmbeddedDemo?.snapshot().enabled||g.S17Assistant?.snapshot().parentOwned);}
 function assetBase(){
  if(g.S17Page?.portalHref)return new URL('assets/',new URL(g.S17Page.portalHref,document.baseURI));
  return source?new URL('./',source):new URL('assets/',document.baseURI);
@@ -27,7 +27,7 @@ function ensure(){
   const base=assetBase(),root=document.getElementById('s17-assistant');
   if(root)root.dataset.avatar='loading';
   try{
-   for(const [file,present]of files){if(parentOwns())return null;if(!present())await load(new URL(file,base));}
+   for(const [file,present]of files){if(parentOwns())return null;if(!present()){const url=new URL(file,base);url.searchParams.set('v','20261101');await load(url);}}
    return g.S17Live2D||null;
   }catch(error){if(root&&!parentOwns())root.dataset.avatar='fallback';loading=null;return null;}
  })();return loading;
@@ -38,7 +38,9 @@ function observeRoot(){
  documentObserver?.disconnect();
  rootObserver=new MutationObserver(()=>{if(root.dataset.open==='true')ensure();});
  rootObserver.observe(root,{attributes:true,attributeFilter:['data-open']});
- if(root.dataset.open==='true')ensure();return true;
+ // Let the ownership reply reach sandboxed cases before starting a second model.
+ if(g===g.parent)ensure();else g.setTimeout(()=>{if(!parentOwns())ensure();},400);
+ return true;
 }
 document.addEventListener('click',event=>{
  if(event.target.closest?.('#s17-agent-launcher,#s17-agent-invite,#s17-agent-full,[data-s17-assistant]'))ensure();

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><link rel="icon" href="data:,"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>地质剖面遥感解译：从多波段像素读懂地表单元</title><link rel="stylesheet" href="demo.css"></head><body>
+<html lang="zh-CN"><head><link rel="icon" href="data:,"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>地质剖面遥感解译：从多波段像素读懂地表单元</title><link rel="stylesheet" href="demo.css?v=20261101-companion"></head><body>
 <header><div class="eyebrow">GEOLOGY / G1 / 地质勘察</div><h1>从多波段像素，读懂地表单元</h1><p>一幅影像，三种岩石外观，一片植被。让每个候选解释都能回到观测与训练证据。</p></header>
 <nav class="case-nav" aria-label="案例内容"><button type="button" data-tab="background" aria-selected="true">专业背景</button><button type="button" data-tab="workflow" aria-selected="false">案例流程</button><button type="button" data-tab="lab" aria-selected="false">可运行示范</button></nav>
 <main><section id="background" class="pane"><div class="intro"><h2>先理解：地质信息怎样成为影像？</h2><p>把露头、反射波段和分类地图连成一条证据链。</p></div><article class="lesson"><div><div class="no">B01 / CONCEPT</div><h2>从地质露头，到一个遥感像素</h2><p>地质勘察需要识别地表岩性单元及其接触关系。卫星把地表反射光记录为栅格，帮助安排填图和露头核查路线。</p></div><div><figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" role="img" aria-label="露头岩层、卫星和遥感像素的对应关系"><rect width="760" height="310" fill="#f9fbfb" rx="18"/><g font-family="system-ui,Microsoft YaHei,sans-serif" font-size="19" fill="#183a45">
@@ -48,4 +48,4 @@
 <h3 class="section-heading">每一类分得怎么样？</h3><div id="class-metrics" class="table-wrap"><p class="empty">运行后显示各类TP、FP、FN、IoU与F1。</p></div>
 <p class="explain">IoU = TP / (TP + FP + FN)，F1 = 2TP / (2TP + FP + FN)。整幅3456像素参与评价，待复核仍计入对应类别FN；缺席且无误报的类别显示“不适用”。人工意见不覆盖模型原始结果。</p>
 <details><summary>数据划分、验证选择与混淆矩阵</summary><div id="provenance"><p>训练图幅、验证候选与参数将随本次计算显示。</p></div><div id="confusion" class="table-wrap"></div></details>
-</section><footer>井见 · 地质勘察案例　|　纯前端本地计算　|　同一测试图比较基线与学习方法</footer></main><script src="demo.js"></script></body></html>
+</section><footer>井见 · 地质勘察案例　|　纯前端本地计算　|　同一测试图比较基线与学习方法</footer></main><script src="demo.js?v=20261101-companion"></script></body></html>

@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-11-01T08:31:19.482Z",
+  "kind": "actual_Chrome_offline_and_teacher_import",
+  "checks": [
+    {
+      "name": "Standalone file loads Live2D automatically with networking offline",
+      "passed": true
+    },
+    {
+      "name": "Standalone case retains its three-part navigation",
+      "passed": true
+    },
+    {
+      "name": "Offline standalone input still actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "Offline result is actually downloaded",
+      "passed": true
+    },
+    {
+      "name": "Offline enhanced portal opens the lab without a nested navigation",
+      "passed": true
+    },
+    {
+      "name": "Experiment link opens the outer workflow instead of a hidden inner page",
+      "passed": true
+    },
+    {
+      "name": "Original teacher portal accepts the unchanged five-file contract",
+      "passed": true
+    },
+    {
+      "name": "Original portal still renders workflow content",
+      "passed": true
+    },
+    {
+      "name": "Teacher-hosted original demonstration still runs",
+      "passed": true
+    },
+    {
+      "name": "Original import survives refresh and recalculates after an input change",
+      "passed": true
+    },
+    {
+      "name": "No external network dependency was requested",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "No uncaught offline or import errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [
+    "handoff/companion-ui-2026-11-01/offline-g1-result.json"
+  ],
+  "passed": 12,
+  "failed": 0
+}

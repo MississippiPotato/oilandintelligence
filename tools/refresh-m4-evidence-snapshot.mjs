@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+const root=path.resolve(import.meta.dirname,'..'), ctx=vm.createContext({});
+for(const file of ['shared/math.js','case-src/m4/engine.js','case-src/m5/fixtures.js']) vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ctx,{filename:file});
+const old=ctx.M5EvidenceSnapshots.find(x=>x.caseId==='s17-drilltime-boundaries');
+if(!old)throw Error('The existing M4 snapshot is missing');
+const library=ctx.M4Core.train(), dataset=ctx.M4Core.generate(), config={...library.chosen,normalize:true}, result=ctx.M4Core.infer(dataset.observations,library,config);
+const source={sourceRecordId:'fixture-m4-response',sourceVersion:2,sourceType:'series_segment',content:{kind:'observation',rows:dataset.observations.rows,units:{depth:'m MD',ROP:'m/h',drillTime:'min/m',WOB:'kN',RPM:'rev/min',flow:'m3/s'},modelResult:{kind:'model_inference',method:'independent_ridge + kmeans + continuity',boundaries:result.boundaries,calibrationBeta:library.cal.beta}}};
+const snapshot={...old,caseVersion:'1.9.0',runId:'built-default-snapshot-m4-gap-v2',runConfig:{...old.runConfig,parameters:{...config,method:'independent_ridge + kmeans + continuity'},inputRevision:2},sources:[source],claims:result.boundaries.map((value,i)=>({claimId:'s17-drilltime-boundaries-'+i,revision:1,kind:'model_inference',sourceRefs:[{sourceRecordId:source.sourceRecordId,sourceVersion:2,selector:{type:'depth_range',depthRangeMD_m:[value-.5,value+.5]}}],reviewStatus:'unreviewed',traceabilityStatus:'linked',supportStatus:'unchecked',reviewHistory:[],statement:`${value.toFixed(2)} m MD附近出现教学候选响应界面，尚不能命名真实地层。`,value,unit:'m MD',selector:{type:'depth_range',depthRangeMD_m:[value-.5,value+.5]}})),summary:{boundaries:result.boundaries}};
+const snapshots=ctx.M5EvidenceSnapshots.map(x=>x===old?snapshot:x);
+fs.writeFileSync(path.join(root,'case-src/m5/fixtures.js'),'(function(g){"use strict";g.M5EvidenceSnapshots='+JSON.stringify(snapshots)+';})(globalThis);\n');
+console.log(JSON.stringify({scope:'M4 snapshot only',sourceVersion:2,previous:old.summary.boundaries,current:result.boundaries,validBlocks:result.validBlocks.length}));

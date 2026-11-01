@@ -27,6 +27,8 @@
     "accept:previous-interactive": "node tools/accept-interactive-all.mjs",
     "build:expansion": "node tools/build-interactive-course.mjs --expansion-only",
     "build:assistant": "node tools/sync-assistant.mjs",
+    "build:companion": "node tools/build-companion-ui.mjs",
+    "package:companion": "node tools/package-companion-ui.mjs",
     "verify:assistant": "node checks/verify-assistant-companion.mjs",
     "accept:assistant": "node tools/accept-assistant.mjs",
     "package:assistant": "node checks/verify-assistant-companion.mjs && node tools/package-assistant.mjs",

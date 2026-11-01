@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "scene": "m1",
+      "flowSteps": 6,
+      "flowSvg": 0,
+      "iframe": "http://127.0.0.1:8755/dist/cases/s17-cuttings-lithology/demo/index.html#lab",
+      "summary": "当前智能识别结果：检出 12 粒，可见总面积 14582 像素。选中颗粒：灰岩教学外观，近邻投票支持度 100.0%。 查看近邻和整盘统计 ↓",
+      "interaction": "passed"
+    },
+    {
+      "scene": "m2",
+      "flowSteps": 6,
+      "flowSvg": 5,
+      "iframe": "http://127.0.0.1:8755/dist/cases/s17-mudgas-context/demo/index.html#lab",
+      "summary": "当前智能解释结果：峰A · 接单根关联；近邻支持度 100.0%。来源与工况仍需核查。",
+      "interaction": "passed"
+    },
+    {
+      "scene": "m3",
+      "flowSteps": 6,
+      "flowSvg": 2,
+      "iframe": "http://127.0.0.1:8755/dist/cases/s17-fluorescence-review/demo/index.html#lab",
+      "summary": "当前逻辑回归结果：显示像素 3,472 / 可见岩屑 14,582 = 23.8%。改变曝光或观察条件后会重算。",
+      "interaction": "passed"
+    },
+    {
+      "scene": "m4",
+      "flowSteps": 6,
+      "flowSvg": 3,
+      "iframe": "http://127.0.0.1:8755/dist/cases/s17-drilltime-boundaries/demo/index.html#lab",
+      "summary": "当前智能分段结果：模型 0 个候选界面；原始钻速基线 1 个。有效记录按 2 个独立连续段处理。",
+      "interaction": "passed"
+    },
+    {
+      "scene": "m5",
+      "flowSteps": 5,
+      "flowSvg": 2,
+      "iframe": "http://127.0.0.1:8755/dist/cases/s17-evidence-report/demo/index.html#lab",
+      "summary": "当前智能分流： 荧光；已生成 6 句报告，0 句已人工核对。当前原文：“1220—1230 m MD：未见明显荧光”。",
+      "interaction": "passed"
+    }
+  ],
+  "failures": [],
+  "pageErrors": []
+}

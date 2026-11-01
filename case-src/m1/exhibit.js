@@ -59,7 +59,8 @@
     '<p>先看轮廓，再看依据，最后说明整盘比例。调节照明和附着，比较选中位置；切换“重排教学盘”，再比较同一坐标的摆盘差异。</p>' +
     '<div class="fx-card m1-conditions"><label>照明增益 <output id="m1-light-value" class="m1-readout">1.00倍</output><input id="m1-light" type="range" min="0.4" max="2.2" step="0.05" value="1"></label><label>泥浆附着（教学覆盖强度）<output id="m1-coating-value" class="m1-readout">0%</output><input id="m1-coating" type="range" min="0" max="1" step="0.05" value="0"></label><label>教学盘情景<select id="m1-preset"><option value="default">原始教学盘：正常分散</option><option value="merged">重排教学盘：中排靠拢</option><option value="occluded">原盘局部遮盖</option></select></label></div>' +
     '<nav class="fx-stage-nav fx-toolbar" aria-label="岩屑演示的三个观察阶段"><button type="button" data-m1-stage="0" aria-pressed="true">观察样品</button><button type="button" data-m1-stage="1" aria-pressed="false">轮廓与特征</button><button type="button" data-m1-stage="2" aria-pressed="false">近邻与整盘统计</button></nav>' +
-    '<div id="m1-tracking" class="m1-state" aria-live="polite">正在计算默认样品…</div>' +
+    '<div id="m1-result-summary" class="m1-state" aria-live="polite">正在计算默认样品…</div>' +
+    '<div id="m1-tracking" class="m1-state" aria-live="polite"></div>' +
     '<section data-m1-panel="0"><h3>先看：参考片和岩屑处于同一张图</h3><p>左图是当前观测；右图的轮廓由校正后的实际像素计算。灰片位于左上角。RGB是红绿蓝三个通道，每个通道值为0–255。点击右图中的颗粒，或使用下面的颗粒按钮。</p><div class="m1-canvases"><figure><canvas id="m1-raw" aria-label="当前原始白光样品，包含左上角参考片"></canvas><figcaption>当前白光像素</figcaption></figure><figure><canvas id="m1-outlines" aria-label="校正后的岩屑与计算轮廓，可点击选粒" tabindex="0"></canvas><figcaption>轮廓跟随像素；红色为选中位置的当前轮廓，蓝灰色为其他轮廓</figcaption></figure></div><div id="m1-reference" class="fx-note"></div><h4>选择当前教学盘中的区域</h4><div id="m1-grains" class="m1-grains"></div><p class="fx-note">试一试：先选原盘中排左侧相邻区域，再切换“重排教学盘”，比较相同坐标的新轮廓与原轮廓的空间交叠。照明升到2.2倍时，可观察原位置失去轮廓；降低照明后再回到这个位置。</p></section>' +
     '<section data-m1-panel="1" hidden><h3>当前区域，是怎样被描述的</h3><p>局部图对应当前轮廓，旁边数值只从轮廓内像素计算。泥浆附着会盖住纹理；照明过曝会把不同颜色截断到相同上限。</p><div id="m1-features"></div></section>' +
     '<section data-m1-panel="2" hidden><h3>先查近邻，再读整盘结果</h3><div id="m1-methods"></div><h4>来自实际训练库的前三个近邻</h4><div id="m1-neighbors" class="m1-neighbors"></div><p class="fx-note">距离在标准化后的16维特征空间计算，越小表示这些特征越相似。k是参与投票的参考颗粒数；支持度是距离加权投票的份额，帮助识别近邻分歧。</p><h3>一盘样品，两种口径</h3><p>两条带使用同一组模型候选；颜色规则基线也对同一批轮廓汇总。待复核留在分母中。</p><div id="m1-proportions"></div></section>';
@@ -129,6 +130,7 @@
     function render() {
       if(!state.run)return;
       const run=state.run,r=selected();drawImages();
+      $('m1-result-summary').innerHTML='<b>当前智能识别结果</b>：检出 '+run.inference.results.length+' 粒，可见总面积 '+C.proportions(run.inference.results).denominator+' 像素。'+(r?'选中颗粒：'+names[r.prediction.label]+'，近邻投票支持度 '+pct(r.prediction.support)+'。':'选中位置暂无可识别颗粒。')+' <button type="button" data-m1-stage="2">查看近邻和整盘统计 ↓</button>';
       $('m1-light-value').textContent=fmt(getOptions().light)+'倍';$('m1-coating-value').textContent=pct(getOptions().coating);
       $('m1-tracking').innerHTML=trackingText();
       $('m1-reference').innerHTML='<b>当前参考片：</b>原始 RGB 均值 '+run.inference.image.reference.map(v=>fmt(v,1)).join(' / ')+'，目标为 210 / 210 / 210。'+(run.inference.image.quality.length?'<strong>'+esc(run.inference.image.quality.join('；'))+'。</strong>':'按三通道增益校正后再分割。')+'当前检出 '+run.inference.results.length+' 个轮廓。';
@@ -178,7 +180,7 @@
         ()=>'<p>参考片当前 RGB 均值与目标值逐通道对应，增益由目标值除以当前均值计算。</p>'+referenceChart+'<p>'+esc(r.inference.image.quality.join('；')||'当前参考片读数已用于校正。')+'</p>',
         ()=>'<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">'+canvasFigure('m1-outlines','当前校正图上的实际轮廓',210)+'<p>当前检出 <b>'+r.inference.results.length+'</b> 个连通域，总可见面积 <b>'+C.proportions(r.inference.results).denominator+'</b> 像素。<br>'+trackingText()+'</p></div>',
         ()=>p?'<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">'+canvasFigure('m1-selected-patch','当前选中轮廓的像素局部',150)+'<div style="flex:1 1 320px">'+table(['当前对象的特征','数值','对应认识'],featureRows(p))+'</div></div>':'<p>原锚点没有检出轮廓，本步不产生该对象的特征。</p>',
-        ()=>p?'<p>颜色规则 <b>'+names[p.baseline]+'</b>；多特征近邻 <b>'+names[p.prediction.label]+'</b>，支持度 '+pct(p.prediction.support)+'。k='+r.config.k+'；以下展示实际训练库中的前三个近邻。</p><div style="display:flex;gap:12px;flex-wrap:wrap">'+neighborCards()+'</div>':'<p>原锚点没有轮廓，恢复照明或摆盘条件后可继续查看近邻。</p>',
+        ()=>p?'<p>颜色规则 <b>'+names[p.baseline]+'</b>；16维特征的加权 kNN 给出 <b>'+names[p.prediction.label]+'</b>，支持度 '+pct(p.prediction.support)+'。k='+r.config.k+'；下图展示训练库中的前三个近邻。距离越小票重越大，下表按全部 k 个近邻汇总。</p><div style="display:flex;gap:12px;flex-wrap:wrap">'+neighborCards()+'</div>'+table(['类别','加权票数'],p.prediction.weights.map((v,i)=>[names[i],fmt(v,3)])):'<p>原锚点没有轮廓，恢复照明或摆盘条件后可继续查看近邻。</p>',
         ()=>proportionsHTML('model')
       ];
       return '<div data-m1-flow="'+stepIndex+'" data-flow-run="'+esc(r.runId)+'">'+actual[Math.max(0,Math.min(5,Number(stepIndex)||0))]()+'</div>';

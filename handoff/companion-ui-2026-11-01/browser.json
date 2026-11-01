@@ -1,0 +1,470 @@
+{
+  "checkedAt": "2026-11-01T08:18:53.309Z",
+  "kind": "actual_Chrome_companion_and_reading_navigation",
+  "checks": [
+    {
+      "name": "Live2D is already ready before opening the assistant",
+      "passed": true,
+      "detail": {
+        "state": {
+          "version": "0.8.0",
+          "avatar": "Live2D Diana",
+          "model": null,
+          "requestCount": 0,
+          "successfulCalls": 0,
+          "open": false,
+          "view": "chat",
+          "streaming": false,
+          "draftReply": "",
+          "compact": false,
+          "sessionId": "4a4aa5d7-e8bb-4e8c-b7c4-27679ee0976d",
+          "storage": {
+            "status": "persistent",
+            "activeId": "4a4aa5d7-e8bb-4e8c-b7c4-27679ee0976d",
+            "sessions": 0,
+            "messageCount": 0
+          },
+          "busy": false,
+          "parentOwned": false,
+          "media": {
+            "files": [],
+            "processing": false,
+            "recording": false
+          },
+          "context": {
+            "hash": "#/",
+            "title": "看懂石油场景，动手体验智能方法。",
+            "sceneId": null,
+            "tab": "bg",
+            "sceneName": null,
+            "surface": "portal"
+          },
+          "history": []
+        },
+        "entry": {
+          "x": 1246,
+          "y": 796,
+          "width": 174,
+          "height": 186,
+          "top": 796,
+          "right": 1420,
+          "bottom": 982,
+          "left": 1246
+        },
+        "loaded": 4
+      }
+    },
+    {
+      "name": "Desktop character entry is larger than the previous 62px icon",
+      "passed": true
+    },
+    {
+      "name": "Invitation card is absent",
+      "passed": true
+    },
+    {
+      "name": "Opening an empty conversation shows no introductory reply card",
+      "passed": true
+    },
+    {
+      "name": "Compact dialogue is 352px wide and under 210px high when empty",
+      "passed": true,
+      "detail": {
+        "x": 1068,
+        "y": 799,
+        "width": 352,
+        "height": 183
+      }
+    },
+    {
+      "name": "An actual guide reply appears inside the same conversation panel",
+      "passed": true
+    },
+    {
+      "name": "History opens without creating a second large chat window",
+      "passed": true
+    },
+    {
+      "name": "Model connection controls remain accessible",
+      "passed": true
+    },
+    {
+      "name": "390px companion stays inside the viewport",
+      "passed": true,
+      "detail": {
+        "x": 26,
+        "y": 519,
+        "width": 352,
+        "height": 313
+      }
+    },
+    {
+      "name": "Phone character is also larger than the previous icon",
+      "passed": true,
+      "detail": {
+        "x": 242,
+        "y": 684,
+        "width": 136,
+        "height": 148
+      }
+    },
+    {
+      "name": "Explicit minimize still leaves a 44px control",
+      "passed": true
+    },
+    {
+      "name": "g1 embedded demo shows the experiment without a second three-part navigation",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-g1-remote-lithology",
+          "tab": "lab",
+          "height": 2772
+        },
+        "nav": [],
+        "innerHeight": 2772,
+        "docHeight": 2772,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "g1 iframe expands to its content instead of an inner vertical scrollbar",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-g1-remote-lithology",
+          "tab": "lab",
+          "height": 2772
+        },
+        "nav": [],
+        "innerHeight": 2772,
+        "docHeight": 2772,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "g1 embedded case has no duplicate assistant or avatar download",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-g1-remote-lithology",
+          "tab": "lab",
+          "height": 2772
+        },
+        "nav": [],
+        "innerHeight": 2772,
+        "docHeight": 2772,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "g1 reading page retains the enlarged character",
+      "passed": true
+    },
+    {
+      "name": "First background visit starts at page top",
+      "passed": true
+    },
+    {
+      "name": "First workflow visit starts at page top",
+      "passed": true
+    },
+    {
+      "name": "Returning to background restores its previous reading position",
+      "passed": true,
+      "detail": {
+        "expected": 780,
+        "actual": 780
+      }
+    },
+    {
+      "name": "Returning to workflow restores its separate previous position",
+      "passed": true,
+      "detail": {
+        "expected": 560,
+        "actual": 560
+      }
+    },
+    {
+      "name": "Search shortcut from inside the experiment reaches the portal",
+      "passed": true
+    },
+    {
+      "name": "m1 embedded demo shows the experiment without a second three-part navigation",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "",
+          "tab": "lab",
+          "height": 3666
+        },
+        "nav": [],
+        "innerHeight": 3666,
+        "docHeight": 3666,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "m1 iframe expands to its content instead of an inner vertical scrollbar",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "",
+          "tab": "lab",
+          "height": 3666
+        },
+        "nav": [],
+        "innerHeight": 3666,
+        "docHeight": 3666,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "m1 embedded case has no duplicate assistant or avatar download",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "",
+          "tab": "lab",
+          "height": 3666
+        },
+        "nav": [],
+        "innerHeight": 3666,
+        "docHeight": 3666,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "m1 reading page retains the enlarged character",
+      "passed": true
+    },
+    {
+      "name": "m2 embedded demo shows the experiment without a second three-part navigation",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "",
+          "tab": "lab",
+          "height": 5106
+        },
+        "nav": [],
+        "innerHeight": 5106,
+        "docHeight": 5106,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "m2 iframe expands to its content instead of an inner vertical scrollbar",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "",
+          "tab": "lab",
+          "height": 5106
+        },
+        "nav": [],
+        "innerHeight": 5106,
+        "docHeight": 5106,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "m2 embedded case has no duplicate assistant or avatar download",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "",
+          "tab": "lab",
+          "height": 5106
+        },
+        "nav": [],
+        "innerHeight": 5106,
+        "docHeight": 5106,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "m2 reading page retains the enlarged character",
+      "passed": true
+    },
+    {
+      "name": "co3 embedded demo shows the experiment without a second three-part navigation",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-co3-completion-seal-test",
+          "tab": "demo",
+          "height": 4223
+        },
+        "nav": [],
+        "innerHeight": 4223,
+        "docHeight": 4223,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "co3 iframe expands to its content instead of an inner vertical scrollbar",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-co3-completion-seal-test",
+          "tab": "demo",
+          "height": 4223
+        },
+        "nav": [],
+        "innerHeight": 4223,
+        "docHeight": 4223,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "co3 embedded case has no duplicate assistant or avatar download",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-co3-completion-seal-test",
+          "tab": "demo",
+          "height": 4223
+        },
+        "nav": [],
+        "innerHeight": 4223,
+        "docHeight": 4223,
+        "assistantVisible": false,
+        "avatarResources": 0,
+        "api": "ready"
+      }
+    },
+    {
+      "name": "co3 reading page retains the enlarged character",
+      "passed": true
+    },
+    {
+      "name": "Chapter deep links keep their focused heading instead of being reset to top",
+      "passed": true
+    },
+    {
+      "name": "Phone experiment retains a 136px character",
+      "passed": true
+    },
+    {
+      "name": "390px experiment keeps the outer page within viewport width",
+      "passed": true
+    },
+    {
+      "name": "No uncaught browser script errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "cases": [
+    {
+      "scene": "g1",
+      "id": "s17x-g1-remote-lithology",
+      "mode": {
+        "enabled": true,
+        "caseId": "s17x-g1-remote-lithology",
+        "tab": "lab",
+        "height": 2772
+      },
+      "nav": [],
+      "innerHeight": 2772,
+      "docHeight": 2772,
+      "assistantVisible": false,
+      "avatarResources": 0,
+      "api": "ready"
+    },
+    {
+      "scene": "m1",
+      "id": "s17-cuttings-lithology",
+      "mode": {
+        "enabled": true,
+        "caseId": "",
+        "tab": "lab",
+        "height": 3666
+      },
+      "nav": [],
+      "innerHeight": 3666,
+      "docHeight": 3666,
+      "assistantVisible": false,
+      "avatarResources": 0,
+      "api": "ready"
+    },
+    {
+      "scene": "m2",
+      "id": "s17-mudgas-context",
+      "mode": {
+        "enabled": true,
+        "caseId": "",
+        "tab": "lab",
+        "height": 5106
+      },
+      "nav": [],
+      "innerHeight": 5106,
+      "docHeight": 5106,
+      "assistantVisible": false,
+      "avatarResources": 0,
+      "api": "ready"
+    },
+    {
+      "scene": "co3",
+      "id": "s17x-co3-completion-seal-test",
+      "mode": {
+        "enabled": true,
+        "caseId": "s17x-co3-completion-seal-test",
+        "tab": "demo",
+        "height": 4223
+      },
+      "nav": [],
+      "innerHeight": 4223,
+      "docHeight": 4223,
+      "assistantVisible": false,
+      "avatarResources": 0,
+      "api": "ready"
+    }
+  ],
+  "screenshots": [
+    "G:/可视化导论/5/output/playwright/companion-ui-closed-desktop.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-open-desktop.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-open-mobile.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-closed-mobile.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-g1-experiment.png",
+    "G:/可视化导论/5/output/playwright/companion-ui-m2-experiment-mobile.png"
+  ],
+  "passed": 36,
+  "failed": 0
+}

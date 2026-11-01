@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-01T08:19:58.372Z",
+  "kind": "actual_Chrome_offline_and_teacher_import",
+  "checks": [
+    {
+      "name": "Standalone file loads Live2D automatically with networking offline",
+      "passed": true
+    },
+    {
+      "name": "Standalone case retains its three-part navigation",
+      "passed": true
+    },
+    {
+      "name": "Compatibility path completed",
+      "passed": false,
+      "detail": "locator.fill: Error: Malformed value\nCall log:\n\u001b[2m  - waiting for locator('#shadow')\u001b[22m\n\u001b[2m    - locator resolved to <input min=\"0\" max=\"0.85\" id=\"shadow\" step=\"0.01\" type=\"range\" value=\"0.26\"/>\u001b[22m\n\u001b[2m    - fill(\"0.50\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "downloads": [],
+  "failure": "locator.fill: Error: Malformed value\nCall log:\n\u001b[2m  - waiting for locator('#shadow')\u001b[22m\n\u001b[2m    - locator resolved to <input min=\"0\" max=\"0.85\" id=\"shadow\" step=\"0.01\" type=\"range\" value=\"0.26\"/>\u001b[22m\n\u001b[2m    - fill(\"0.50\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and editable\u001b[22m\n",
+  "passed": 2,
+  "failed": 1
+}

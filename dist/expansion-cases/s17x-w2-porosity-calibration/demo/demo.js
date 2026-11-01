@@ -375,6 +375,62 @@ window.S17CompassPage={"model":{"scene":{"id":"w2","name":"储层参数智能解
 
 
 /* S17_OPTIONAL_ASSISTANT_START: isolated from case inference and evaluation */
+(function(g){
+ 'use strict';
+ if(g===g.parent||g.S17EmbeddedDemo)return;
+ const requested=new URLSearchParams(g.location.search).get('embed')==='demo';
+ let enabled=false,lab=null,lastHeight=0,scheduled=false,resize=null,mutations=null,initialTab='';
+ const caseId=()=>g.S17Page?.caseId||g.CaseInspect?.snapshot?.()?.caseId||'';
+ function sendHeight(){
+  scheduled=false;if(!enabled||!lab)return;
+  const rect=lab.getBoundingClientRect(),height=Math.ceil(Math.max(rect.height,lab.scrollHeight)+Math.max(0,rect.top+g.scrollY)+8);
+  if(Math.abs(height-lastHeight)<3)return;lastHeight=height;
+  g.parent.postMessage({type:'s17-demo-size',caseId:caseId(),height},'*');
+ }
+ function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(sendHeight);}}
+ function enter(){
+  if(enabled)return;
+  const tabs=[...document.querySelectorAll('nav [data-tab], [data-fx-part], [data-part]')];
+  const button=tabs.find(b=>['lab','demo'].includes(b.dataset.tab||b.dataset.fxPart||b.dataset.part));
+  lab=document.getElementById('lab')||document.querySelector('[data-panel="demo"]');
+  if(!lab)return;
+  initialTab=button?.dataset.tab||button?.dataset.fxPart||button?.dataset.part||'lab';
+  button?.click();lab.hidden=false;
+  enabled=true;document.documentElement.dataset.s17Embedded='demo';
+  const style=document.createElement('style');style.dataset.s17EmbedStyle='true';
+  style.textContent='html[data-s17-embedded="demo"],html[data-s17-embedded="demo"] body{margin:0;min-height:0;height:auto;overflow-x:hidden;overflow-y:hidden;background:#f7f4ef}html[data-s17-embedded="demo"] [data-s17-embed-hide]{display:none!important}html[data-s17-embedded="demo"] [data-s17-embed-chain]{margin:0!important;padding:0!important;width:100%!important;max-width:none!important;min-height:0!important;border:0!important;box-shadow:none!important;border-radius:0!important}html[data-s17-embedded="demo"] [data-s17-embedded-lab]{margin:0!important;padding:16px!important;scroll-margin:0;min-height:0!important}html[data-s17-embedded="demo"] #s17-assistant{display:none!important}@media(max-width:600px){html[data-s17-embedded="demo"] [data-s17-embedded-lab]{padding:10px!important}}';
+  document.head.append(style);lab.setAttribute('data-s17-embedded-lab','');
+  let child=lab;
+  for(let parent=child.parentElement;parent&&parent!==document.documentElement;parent=child.parentElement){
+   parent.setAttribute('data-s17-embed-chain','');
+   for(const sibling of parent.children)if(sibling!==child&&!['SCRIPT','STYLE','LINK'].includes(sibling.tagName)){
+    sibling.setAttribute('data-s17-embed-hide','');
+    // Continuous standalone lessons explicitly display their chapters with
+    // !important. A local inline override keeps those rules out of the iframe.
+    sibling.style.setProperty('display','none','important');
+   }
+   child=parent;
+  }
+  const settle=()=>{g.scrollTo({top:0,behavior:'instant'});schedule();};
+  settle();requestAnimationFrame(settle);
+  if(g.ResizeObserver){resize=new ResizeObserver(schedule);resize.observe(lab);}
+  mutations=new MutationObserver(schedule);mutations.observe(lab,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','class','open']});
+  document.addEventListener('load',schedule,true);g.addEventListener('resize',schedule);
+  document.addEventListener('click',event=>{
+   const button=event.target.closest('[data-part],[data-fx-part],[data-tab]');
+   const part=button&&(button.dataset.part||button.dataset.fxPart||button.dataset.tab),tab={background:'bg',workflow:'flow'}[part];
+   if(tab){event.preventDefault();event.stopImmediatePropagation();g.parent.postMessage({type:'s17-demo-tab',caseId:caseId(),tab},'*');}
+  },true);
+  // Keyboard events do not cross a sandbox boundary on their own.
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();g.parent.postMessage({type:'s17-open-search'},'*');}});
+  g.parent.postMessage({type:'s17-demo-ready',caseId:caseId(),mode:'lab-only'},'*');
+ }
+ function ready(){if(requested)enter();}
+ g.addEventListener('message',e=>{if(e.source===g.parent&&e.data?.type==='s17-embed-demo')enter();});
+ g.S17EmbeddedDemo={snapshot:()=>({enabled,caseId:caseId(),tab:initialTab,height:lastHeight})};
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
+})(window);
+
 (function(){function startAssistant(){
 (function(g){'use strict';
 // Only explicit text records enter this store. Credentials and media bytes stay in memory.
@@ -426,6 +482,9 @@ root.innerHTML='<div class="s17-agent-stage"><button id="s17-agent-compact" type
 '<section id="s17-agent-panel" class="s17-agent-panel" aria-label="向井见提问" hidden><h2 id="s17-agent-title" class="s17-sr-only">井见助手</h2><form id="s17-agent-form" class="s17-agent-form"><div class="s17-agent-composer"><textarea id="s17-agent-input" rows="1" maxlength="4000" aria-label="向井见提问" placeholder="问问井见…"></textarea><div class="s17-agent-form-bottom"><div class="s17-agent-quick"><button type="button" data-ag-query="解释当前页" title="读懂本页" aria-label="读懂本页">'+icon('book')+'</button><button type="button" data-ag-query="从哪里开始" title="案例导航" aria-label="案例导航">'+icon('compass')+'</button></div><div class="s17-composer-tools"><div id="s17-agent-attachments"><button id="s17-agent-attach" type="button" aria-label="添加图片或音频" title="添加图片或音频" aria-expanded="false" aria-controls="s17-agent-attachment-menu">'+icon('attach')+'</button><div id="s17-agent-attachment-menu" role="menu" hidden></div></div><span id="s17-agent-microphone"></span><button id="s17-agent-send" type="submit" aria-label="发送消息" title="发送消息">'+icon('send')+'</button></div></div></div></form><div class="s17-agent-dock-tools"><span class="s17-agent-caption"><strong>井见</strong><button type="button" id="s17-agent-badge" title="连接模型" aria-label="配置模型连接">连接</button><span id="s17-agent-mode" class="s17-sr-only">本地导览</span></span><button id="s17-agent-history" type="button" aria-label="历史对话" title="历史对话">'+icon('history')+'<span>历史</span></button><button id="s17-agent-new" type="button" aria-label="新对话" title="新对话">'+icon('plus')+'</button><button id="s17-agent-settings" type="button" aria-label="连接与语音" aria-pressed="false" title="连接与语音">'+icon('settings')+'</button><button id="s17-agent-close" type="button" aria-label="收起对话" title="收起对话">'+icon('close')+'</button></div></section>'+
 '<section id="s17-agent-history-panel" class="s17-agent-sheet" role="dialog" aria-modal="false" aria-labelledby="s17-agent-history-title" hidden><header class="s17-agent-sheet-head"><button id="s17-agent-session-back" type="button" aria-label="返回会话列表">'+icon('back')+'</button><h2 id="s17-agent-history-title">历史对话</h2><button id="s17-agent-sheet-close" type="button" aria-label="关闭对话记录">'+icon('close')+'</button></header><p id="s17-agent-storage" role="status"></p><div id="s17-agent-sessions"></div><div id="s17-agent-context" class="s17-agent-context" hidden></div><div id="s17-agent-log" class="s17-agent-log" role="log" aria-label="当前会话记录"></div></section>'+
 '<details class="s17-agent-options s17-agent-sheet"><summary>返回对话</summary><div class="s17-agent-settings-intro"><h3>连接与语音</h3><p>填写 Key，开始和井见对话。</p></div><p id="s17-agent-model-status">本地导览已就绪。</p><div class="s17-speech-controls"><button type="button" id="s17-agent-read">朗读上一条</button><button type="button" id="s17-agent-stop">停止朗读</button></div><p class="s17-agent-data-note">文字对话保存在本机浏览器。Key 只在当前页面内存使用；附件历史仅保留名称。朗读使用浏览器或系统语音。</p></details><div id="s17-agent-pending" class="s17-agent-pending" role="status" hidden><span class="s17-thinking-dot"></span><span>正在思考</span><button id="s17-agent-cancel" type="button">'+icon('stop')+'停止</button></div><div id="s17-agent-toast" class="s17-agent-toast" role="status" hidden></div>';
+// The character has one compact conversation surface; no invitation card beside it.
+root.querySelector('#s17-agent-invite').remove();
+root.querySelector('#s17-agent-panel').prepend(root.querySelector('#s17-agent-reply'));
 document.body.append(root);
 const $=id=>document.getElementById(id),log=$('s17-agent-log'),store=g.S17History,options=root.querySelector('.s17-agent-options');
 let adapter=null,busy=false,controller=null,lastReply='',requestCount=0,successfulCalls=0,ownerIsParent=false,requestEpoch=0,history=[],historyMode='list',liveReply='',liveNode=null;
@@ -456,7 +515,7 @@ function actionLinks(container,actions,limit=6){container.replaceChildren();for(
 function renderMessage(m){log.querySelector('.s17-agent-welcome')?.remove();const wrap=document.createElement('article');wrap.className='s17-agent-message';wrap.dataset.role=m.role;const label=document.createElement('small');label.className='s17-message-origin';label.textContent=m.role==='user'?'你':m.origin||'井见 · 本地导览';const content=document.createElement('div');content.className='s17-message-content';richText(content,m.content);wrap.append(label,content);if(m.actions?.length){const row=document.createElement('div');row.className='s17-agent-actions';actionLinks(row,m.actions);wrap.append(row);}if(m.role==='assistant'){const copy=document.createElement('button');copy.type='button';copy.className='s17-message-copy';copy.innerHTML=icon('copy')+'<span>复制</span>';copy.onclick=async()=>{try{await navigator.clipboard.writeText(m.content);toast('回复已复制');}catch{toast('可选中文字，使用系统复制');}};wrap.append(copy);}log.append(wrap);log.scrollTop=log.scrollHeight;}
 function clearLive(){liveNode?.remove();liveNode=null;liveReply='';root.dataset.streaming='false';}
 function showLive(delta){liveReply+=delta;root.dataset.streaming='true';if(!liveNode){liveNode=document.createElement('article');liveNode.className='s17-agent-message s17-live-message';const origin=document.createElement('small');origin.className='s17-message-origin';origin.textContent='井见 · 正在回答';const content=document.createElement('div');content.className='s17-message-content';liveNode.append(origin,content);log.append(liveNode);}const follow=log.scrollHeight-log.scrollTop-log.clientHeight<70;liveNode.querySelector('.s17-message-content').textContent=liveReply;if(follow)log.scrollTop=log.scrollHeight;updateBubble();}
-function updateBubble(){const m=[...history].reverse().find(m=>m.role==='assistant');lastReply=m?.content??'';$('s17-agent-excerpt').textContent=busy?(liveReply||'正在想一想，稍等一下…'):lastReply||'你好，我是井见。想了解当前案例，还是找一个新的知识点？';actionLinks($('s17-agent-bubble-actions'),busy?[]:m?.actions??[],1);$('s17-agent-full').hidden=!history.length&&!liveReply;$('s17-agent-reply').hidden=root.dataset.open!=='true';$('s17-agent-reply').setAttribute('aria-busy',String(busy));if(busy&&liveReply)$('s17-agent-excerpt').scrollTop=$('s17-agent-excerpt').scrollHeight;}
+function updateBubble(){const latest=[...history].reverse().find(m=>m.role==='assistant'),m=latest?.content.startsWith('可以先让我介绍当前案例')?null:latest;lastReply=m?.content??'';$('s17-agent-excerpt').textContent=busy?(liveReply||'正在思考…'):lastReply;actionLinks($('s17-agent-bubble-actions'),busy?[]:m?.actions??[],1);$('s17-agent-full').hidden=!history.length&&!liveReply;$('s17-agent-reply').hidden=root.dataset.open!=='true'||(!busy&&!lastReply);$('s17-agent-reply').setAttribute('aria-busy',String(busy));if(busy&&liveReply)$('s17-agent-excerpt').scrollTop=$('s17-agent-excerpt').scrollHeight;}
 function renderConversation(){history=store.current().messages;log.replaceChildren();if(!history.length)welcome();else history.forEach(renderMessage);updateBubble();updateContext();}
 function storageNotice(){const persistent=store.snapshot().status==='persistent';$('s17-agent-storage').textContent=persistent?'已保存在本机浏览器':'本页无法持久保存，离开后不会保留本次对话';root.dataset.storage=persistent?'persistent':'memory';}
 function resetDraft(){g.S17Media?.cancelRecording();g.S17Media?.clear();g.speechSynthesis?.cancel();root.dataset.speaking='false';$('s17-agent-input').value='';$('s17-agent-input').style.height='';syncComposer();}
@@ -469,7 +528,7 @@ const tools=[{name:'navigate_page',description:'提供本站页面导航，仅�
 function setBusy(value){busy=value;g.S17Media?.setBusy(value);$('s17-agent-pending').hidden=!value;$('s17-agent-mode').textContent=value?'正在请求模型':adapter?.name??'本地导览';root.dataset.busy=String(value);updateBubble();syncComposer();}
 function stopRequest(){if(!busy)return;const partial=liveReply;requestEpoch++;controller?.abort();controller=null;clearLive();setBusy(false);append('assistant',partial?partial+'\n\n（已停止生成。）':'已停止本次生成。',[],'井见 · 已停止');}
 async function ask(text){await ready;const media=g.S17Media;if(busy)return;if(media?.snapshot().processing||media?.snapshot().recording){media.notice('请先结束录音或等待附件准备完成。');return;}const parts=media?.parts()??[];if(!text.trim()&&!parts.length)return;if(parts.length&&!adapter){append('assistant','附件已在本地准备好。在线助手暂未接通，请稍后重试；本地导览仍可使用。',[],'连接状态');return;}
-const question=text.trim()||(parts.some(p=>p.type==='input_audio')?'请听取录音并回答其中的问题。':'请解释这张图片中可见的内容。'),names=media?.snapshot().files.map(f=>f.name)??[];append('user',question+(names.length?'\n[本轮附件：'+names.join('、')+'；后续轮次未自动重传]':''));$('s17-agent-input').value='';$('s17-agent-input').style.height='';const local=parts.length?null:guide(question);if(local){append('assistant',local.text,local.actions);syncComposer();return;}if(!adapter){append('assistant','可以先让我介绍当前案例、解释步骤，或者带你定位页面。连接大模型后，我们还可以继续讨论具体问题。',catalog.slice(0,5).map(c=>({target:c.id})));syncComposer();return;}
+const question=text.trim()||(parts.some(p=>p.type==='input_audio')?'请听取录音并回答其中的问题。':'请解释这张图片中可见的内容。'),names=media?.snapshot().files.map(f=>f.name)??[];append('user',question+(names.length?'\n[本轮附件：'+names.join('、')+'；后续轮次未自动重传]':''));$('s17-agent-input').value='';$('s17-agent-input').style.height='';const local=parts.length?null:guide(question);if(local){append('assistant',local.text,local.actions);syncComposer();return;}if(!adapter){append('assistant','请点面板上方的“连接”填写模型 Key，再发送这个问题。',[],'井见 · 连接提示');syncComposer();return;}
 clearLive();const model=adapter,sessionId=store.current().id,token=++requestEpoch,messages=history.slice(-24).map(m=>({role:m.role,content:m.content}));if(parts.length)messages[messages.length-1].content=[{type:'input_text',text:question},...parts];controller=new AbortController();const requestController=controller,signal=requestController.signal,timeout=setTimeout(()=>requestController.abort(),45000);setBusy(true);
 try{requestCount++;const result=await model.reply({messages,context:{page:pageContext(),cases:catalog,scope:'静态教学演示；仅用户本轮明确附上的图片/录音作为多模态输入；历史附件只保留名称。'},tools,signal,onDelta:delta=>{if(token===requestEpoch&&sessionId===store.current().id)showLive(delta);}});if(token!==requestEpoch||sessionId!==store.current().id||model!==adapter)return;if(!result||typeof result.text!=='string'||!result.text.trim())throw Error('模型未返回可显示的文本');successfulCalls++;clearLive();append('assistant',result.text,Array.isArray(result.actions)?result.actions:[],model.name+' · 模型回复');media?.clear();$('s17-agent-badge').textContent='在线';if($('s17-agent-autoread')?.checked&&root.dataset.open==='true')readReply();}
 catch(e){if(token===requestEpoch&&sessionId===store.current().id){const partial=liveReply;clearLive();append('assistant',(partial?partial+'\n\n':'')+'本次请求未完成：'+(e.name==='AbortError'?'已取消或超时':e.message)+'。可以重试。',[],'井见 · 连接状态');}}
@@ -480,7 +539,7 @@ function open(focus=true){if(ownerIsParent)return;root.dataset.compact='false';r
 function close(){stopRequest();attachmentMenu(false);clearSheets();root.dataset.open='false';$('s17-agent-panel').hidden=true;g.S17Media?.cancelRecording();g.speechSynthesis?.cancel();root.dataset.speaking='false';updateBubble();$('s17-agent-launcher').setAttribute('aria-expanded','false');$('s17-agent-launcher').setAttribute('aria-label','打开井见助手');$('s17-agent-launcher').focus({preventScroll:true});}
 async function showHistory(list=true){await ready;open(false);options.open=false;root.dataset.view='history';historyMode=list?'list':'messages';$('s17-agent-settings').setAttribute('aria-pressed','false');$('s17-agent-history-panel').hidden=false;$('s17-agent-sessions').hidden=!list;log.hidden=list;$('s17-agent-context').hidden=list;$('s17-agent-session-back').hidden=list;$('s17-agent-history-title').textContent=list?'历史对话':store.current().title;storageNotice();renderSessions();if(!list)log.scrollTop=log.scrollHeight;$('s17-agent-sheet-close').focus({preventScroll:true});}
 function showSettings(value){if(!value){clearSheets();return;}open(false);$('s17-agent-history-panel').hidden=true;root.dataset.view='settings';options.open=true;options.scrollTop=0;$('s17-agent-settings').setAttribute('aria-pressed','true');options.querySelector('summary').focus({preventScroll:true});}
-$('s17-agent-launcher').onclick=()=>open();$('s17-agent-invite').onclick=()=>open();$('s17-agent-close').onclick=close;
+$('s17-agent-launcher').onclick=()=>root.dataset.open==='true'?close():open();$('s17-agent-close').onclick=close;
 $('s17-agent-compact').onclick=()=>{const mini=root.dataset.compact!=='true';if(mini)close();root.dataset.compact=String(mini);$('s17-agent-compact').setAttribute('aria-pressed',String(mini));$('s17-agent-compact').setAttribute('aria-label',mini?'展开井见助手':'最小化井见助手');$('s17-agent-compact').title=mini?'展开井见助手':'最小化';$('s17-agent-compact').innerHTML=icon(mini?'chat':'minimize');if(!mini)open();};
 $('s17-agent-form').onsubmit=e=>{e.preventDefault();ask($('s17-agent-input').value);};$('s17-agent-input').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();ask(e.currentTarget.value);}};
 $('s17-agent-input').oninput=e=>{e.target.style.height='auto';e.target.style.height=Math.min(108,Math.max(54,e.target.scrollHeight))+'px';syncComposer();};
@@ -496,7 +555,7 @@ g.addEventListener('hashchange',updateContext);
 g.addEventListener('message',e=>{if(e.data?.type==='s17-assistant-probe'&&[...document.querySelectorAll('iframe')].some(f=>f.contentWindow===e.source))e.source.postMessage({type:'s17-assistant-host',present:true},'*');if(g!==g.parent&&e.source===g.parent&&e.data?.type==='s17-assistant-host'&&e.data.present===true){ownerIsParent=true;root.hidden=true;stopRequest();g.S17Media?.cancelRecording();g.S17Live2D?.dispose?.();}});if(g!==g.parent)g.parent.postMessage({type:'s17-assistant-probe'},'*');
 function readReply(){if(!g.speechSynthesis||!g.SpeechSynthesisUtterance){toast('当前浏览器未提供系统朗读');return;}if(!lastReply)return;g.speechSynthesis.cancel();const speech=new SpeechSynthesisUtterance(lastReply);speech.lang='zh-CN';const voice=g.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith('zh'));if(voice)speech.voice=voice;speech.onstart=()=>{root.dataset.speaking='true';};speech.onend=speech.onerror=()=>{root.dataset.speaking='false';};g.speechSynthesis.speak(speech);}$('s17-agent-read').onclick=readReply;$('s17-agent-stop').onclick=()=>{g.speechSynthesis?.cancel();root.dataset.speaking='false';};
 function viewport(){const v=g.visualViewport;root.style.setProperty('--ag-vh',(v?.height??g.innerHeight)+'px');root.style.setProperty('--ag-lift',Math.max(0,g.innerHeight-(v?.height??g.innerHeight)-(v?.offsetTop??0))+'px');}viewport();g.visualViewport?.addEventListener('resize',viewport);g.visualViewport?.addEventListener('scroll',viewport);g.addEventListener('resize',viewport);
-g.S17Assistant={open,close,updateComposer:syncComposer,resolve:destination,context:pageContext,tools,catalog:catalog.map(c=>({...c})),configure:model=>{if(busy)throw Error('请先停止当前请求');if(!model||typeof model.name!=='string'||typeof model.reply!=='function')throw Error('需要模型适配器name与reply');adapter=model;successfulCalls=0;$('s17-agent-badge').textContent='就绪';$('s17-agent-mode').textContent=model.name;},disconnect:()=>{stopRequest();adapter=null;successfulCalls=0;$('s17-agent-badge').textContent='连接';$('s17-agent-mode').textContent='导览';},snapshot:()=>({version:'0.7.1',avatar:g.S17Live2D?.state==='ready'?'Live2D '+g.S17Live2D.model:root.dataset.avatar??'svg_fallback',model:adapter?.name??null,requestCount,successfulCalls,open:root.dataset.open==='true',view:root.dataset.view,streaming:busy&&!!liveReply,draftReply:liveReply,compact:root.dataset.compact==='true',sessionId:store.current().id,storage:store.snapshot(),busy,parentOwned:ownerIsParent,media:g.S17Media?.snapshot()??null,context:pageContext(),history:history.map(v=>({...v}))})};updateContext();syncComposer();
+g.S17Assistant={open,close,updateComposer:syncComposer,resolve:destination,context:pageContext,tools,catalog:catalog.map(c=>({...c})),configure:model=>{if(busy)throw Error('请先停止当前请求');if(!model||typeof model.name!=='string'||typeof model.reply!=='function')throw Error('需要模型适配器name与reply');adapter=model;successfulCalls=0;$('s17-agent-badge').textContent='就绪';$('s17-agent-mode').textContent=model.name;},disconnect:()=>{stopRequest();adapter=null;successfulCalls=0;$('s17-agent-badge').textContent='连接';$('s17-agent-mode').textContent='导览';},snapshot:()=>({version:'0.8.0',avatar:g.S17Live2D?.state==='ready'?'Live2D '+g.S17Live2D.model:root.dataset.avatar??'svg_fallback',model:adapter?.name??null,requestCount,successfulCalls,open:root.dataset.open==='true',view:root.dataset.view,streaming:busy&&!!liveReply,draftReply:liveReply,compact:root.dataset.compact==='true',sessionId:store.current().id,storage:store.snapshot(),busy,parentOwned:ownerIsParent,media:g.S17Media?.snapshot()??null,context:pageContext(),history:history.map(v=>({...v}))})};updateContext();syncComposer();
 })(window);
 
 (function(g){'use strict';
@@ -536,11 +595,11 @@ g.S17Ark={ready:Promise.resolve(false),configureKey:configure,snapshot:()=>({con
 })(window);
 
 (function(g){'use strict';
-// The SVG entry is available immediately. Local avatar assets are requested on first open.
+// Start the local character on entry; an embedded case defers to the portal's character.
 if(g.S17EnsureAvatar)return;
 const source=document.currentScript?.src;
 let loading=null,rootObserver=null,documentObserver=null;
-function parentOwns(){return !!g.S17Assistant?.snapshot().parentOwned;}
+function parentOwns(){return !!(g.S17EmbeddedDemo?.snapshot().enabled||g.S17Assistant?.snapshot().parentOwned);}
 function assetBase(){
  if(g.S17Page?.portalHref)return new URL('assets/',new URL(g.S17Page.portalHref,document.baseURI));
  return source?new URL('./',source):new URL('assets/',document.baseURI);
@@ -564,7 +623,7 @@ function ensure(){
   const base=assetBase(),root=document.getElementById('s17-assistant');
   if(root)root.dataset.avatar='loading';
   try{
-   for(const [file,present]of files){if(parentOwns())return null;if(!present())await load(new URL(file,base));}
+   for(const [file,present]of files){if(parentOwns())return null;if(!present()){const url=new URL(file,base);url.searchParams.set('v','20261101');await load(url);}}
    return g.S17Live2D||null;
   }catch(error){if(root&&!parentOwns())root.dataset.avatar='fallback';loading=null;return null;}
  })();return loading;
@@ -575,7 +634,9 @@ function observeRoot(){
  documentObserver?.disconnect();
  rootObserver=new MutationObserver(()=>{if(root.dataset.open==='true')ensure();});
  rootObserver.observe(root,{attributes:true,attributeFilter:['data-open']});
- if(root.dataset.open==='true')ensure();return true;
+ // Let the ownership reply reach sandboxed cases before starting a second model.
+ if(g===g.parent)ensure();else g.setTimeout(()=>{if(!parentOwns())ensure();},400);
+ return true;
 }
 document.addEventListener('click',event=>{
  if(event.target.closest?.('#s17-agent-launcher,#s17-agent-invite,#s17-agent-full,[data-s17-assistant]'))ensure();

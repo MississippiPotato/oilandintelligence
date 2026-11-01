@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-01T08:23:45.710Z",
+  "checks": [
+    {
+      "name": "Wheel over experiment scrolls the outer page",
+      "passed": true,
+      "detail": {
+        "before": 700,
+        "after": 1150
+      }
+    },
+    {
+      "name": "Demo also restores its previous scroll position",
+      "passed": true,
+      "detail": {
+        "expected": 1150,
+        "actual": 1150
+      }
+    },
+    {
+      "name": "Refresh restores the stored demo position",
+      "passed": true,
+      "detail": {
+        "expected": 1150,
+        "actual": 1150
+      }
+    }
+  ],
+  "passed": 3,
+  "failed": 0
+}

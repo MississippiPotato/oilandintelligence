@@ -274,6 +274,64 @@ html.mdl-open #s17-assistant{visibility:hidden;pointer-events:none}@keyframes s1
 #s17-assistant .s17-key-connect p{font-size:16px;line-height:1.5;margin:10px 0 0}
 #s17-assistant .s17-agent-caption #s17-agent-badge{display:block;min-width:44px;min-height:44px;padding:5px 6px;border-radius:10px;color:var(--ag-accent);font-size:16px}
 #s17-assistant .s17-agent-caption #s17-agent-badge:hover{background:#b8242a09}
+/* One compact dialogue surface, with the character visible before it is opened. */
+#s17-assistant{width:352px;max-width:calc(100vw - 24px);right:20px;bottom:calc(18px + var(--ag-lift));--ag-paper:rgba(255,253,250,.97)}
+body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false]{width:174px;max-width:174px;right:20px;bottom:calc(18px + var(--ag-lift))}
+#s17-assistant .s17-agent-stage{height:158px;width:100%}
+#s17-assistant #s17-agent-launcher{width:152px;height:164px;right:4px;bottom:0;border:0;background:transparent;box-shadow:none;overflow:visible;transition:transform .22s ease}
+body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false] .s17-agent-stage{height:190px}
+body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false] #s17-agent-launcher{width:174px;height:186px;right:0;border:0;background:transparent;box-shadow:none;overflow:visible}
+#s17-assistant #s17-agent-launcher:hover{transform:translateY(-3px)}
+#s17-assistant #s17-agent-compact{top:0;right:0;width:36px;height:36px;background:#fffdfaee;border:1px solid #e8dfd6;opacity:0;transition:opacity .18s ease}
+#s17-assistant:hover #s17-agent-compact,#s17-assistant:focus-within #s17-agent-compact,#s17-assistant[data-compact=true] #s17-agent-compact{opacity:1}
+body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false] #s17-agent-compact{display:grid}
+#s17-assistant .s17-agent-avatar{filter:drop-shadow(0 8px 10px #513b2c14)}
+#s17-assistant .s17-agent-panel{width:100%;margin:0;border:1px solid #e4d9d0;border-radius:24px;background:var(--ag-paper);box-shadow:0 14px 48px #49362818;overflow:visible;backdrop-filter:blur(20px)}
+#s17-assistant .s17-agent-dock-tools{order:-3;margin:0;padding:7px 10px;border:0;border-bottom:1px solid #eee6df;border-radius:23px 23px 0 0;gap:0;background:transparent}
+#s17-assistant .s17-agent-caption{padding:0 4px;gap:5px}
+#s17-assistant .s17-agent-caption strong{font-size:17px;letter-spacing:.03em}
+#s17-assistant .s17-agent-caption #s17-agent-badge{font-size:14px;min-width:44px;padding:4px;color:#a25953}
+#s17-assistant .s17-agent-dock-tools>button,#s17-assistant #s17-agent-history{width:42px;min-width:42px;height:42px;padding:10px;border-radius:12px}
+#s17-assistant #s17-agent-history span{display:none}
+#s17-assistant .s17-agent-dock-tools>button:hover{background:#f4ece5}
+#s17-assistant .s17-agent-reply{order:-2;position:static;left:auto;right:auto;bottom:auto;width:100%;border:0;border-radius:0;padding:13px 16px 0;background:transparent;box-shadow:none;backdrop-filter:none}
+#s17-assistant #s17-agent-excerpt{display:block;font-size:17px;line-height:1.7;max-height:174px;overflow:auto;-webkit-line-clamp:unset;scrollbar-width:thin}
+#s17-assistant #s17-agent-full{font-size:14px;min-height:38px;padding:6px 0;color:#9b5752}
+#s17-assistant #s17-agent-bubble-actions a{white-space:normal;margin-top:8px;font-size:15px;line-height:1.5}
+#s17-assistant .s17-agent-form{order:0;width:100%;padding:0}
+#s17-assistant .s17-agent-composer{padding:9px 12px 11px;border:0;border-radius:0 0 23px 23px;background:transparent;box-shadow:none}
+#s17-assistant #s17-agent-input{font-size:17px;min-height:54px;line-height:1.65;padding:9px 4px}
+#s17-assistant .s17-agent-form-bottom{margin-top:4px}
+#s17-assistant .s17-agent-quick button{color:#8b817a}
+#s17-assistant #s17-agent-send{box-shadow:0 3px 9px #b8242a17}
+#s17-assistant .s17-agent-sheet{position:absolute;right:0;bottom:0;width:100%;height:min(480px,calc(var(--ag-vh) - 24px));max-height:calc(var(--ag-vh) - 24px);margin:0;z-index:4;border-radius:24px;background:#fffdfa;box-shadow:0 14px 48px #49362820}
+#s17-assistant:is([data-view=history],[data-view=settings]){height:auto;width:352px}
+#s17-assistant:is([data-view=history],[data-view=settings]) .s17-agent-stage{visibility:hidden;pointer-events:none}
+#s17-assistant .s17-agent-options[open]{display:block;height:auto;max-height:min(480px,calc(var(--ag-vh) - 24px))}
+#s17-assistant .s17-agent-sheet-head{padding:9px 10px}
+#s17-assistant #s17-agent-storage{font-size:14px;padding:8px 15px}
+#s17-assistant .s17-agent-pending{right:24px;bottom:23px}
+#s17-assistant[data-compact=true]{width:44px;max-width:44px}
+#s17-assistant[data-compact=true] .s17-agent-stage{width:44px;height:44px}
+#s17-assistant[data-compact=true] #s17-agent-compact{width:44px;height:44px;border-radius:50%;padding:10px}
+#s17-assistant[data-compact=true] #s17-agent-compact:after{display:none}
+@media(max-width:760px){
+ #s17-assistant{right:12px;bottom:calc(12px + var(--ag-lift));width:min(352px,calc(100vw - 24px))}
+ body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false]{width:136px;max-width:136px;right:12px;bottom:calc(12px + var(--ag-lift))}
+ body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false] .s17-agent-stage{height:150px}
+ body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false] #s17-agent-launcher{width:136px;height:148px}
+ #s17-assistant .s17-agent-stage{height:130px}
+ #s17-assistant #s17-agent-launcher{width:128px;height:138px;right:2px}
+ #s17-assistant #s17-agent-compact{opacity:1}
+ #s17-assistant .s17-agent-sheet{position:absolute;max-height:calc(var(--ag-vh) - 24px)}
+ #s17-assistant #s17-agent-excerpt{font-size:16px;line-height:1.7;max-height:145px}
+}
+@media(max-height:550px){
+ #s17-assistant[data-open=true] .s17-agent-stage{height:0;visibility:hidden}
+ body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false] .s17-agent-stage{height:112px}
+ body #s17-assistant[data-surface][data-view][data-open=false][data-compact=false] #s17-agent-launcher{width:104px;height:112px}
+ #s17-assistant #s17-agent-excerpt{max-height:90px}
+}
 /* S17_ASSISTANT_CSS_END */
 
 /* A minimized assistant leaves the four new cases' mobile legends readable. */

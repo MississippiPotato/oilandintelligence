@@ -144,7 +144,8 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
     '<p>先看轮廓，再看依据，最后说明整盘比例。调节照明和附着，比较选中位置；切换“重排教学盘”，再比较同一坐标的摆盘差异。</p>' +
     '<div class="fx-card m1-conditions"><label>照明增益 <output id="m1-light-value" class="m1-readout">1.00倍</output><input id="m1-light" type="range" min="0.4" max="2.2" step="0.05" value="1"></label><label>泥浆附着（教学覆盖强度）<output id="m1-coating-value" class="m1-readout">0%</output><input id="m1-coating" type="range" min="0" max="1" step="0.05" value="0"></label><label>教学盘情景<select id="m1-preset"><option value="default">原始教学盘：正常分散</option><option value="merged">重排教学盘：中排靠拢</option><option value="occluded">原盘局部遮盖</option></select></label></div>' +
     '<nav class="fx-stage-nav fx-toolbar" aria-label="岩屑演示的三个观察阶段"><button type="button" data-m1-stage="0" aria-pressed="true">观察样品</button><button type="button" data-m1-stage="1" aria-pressed="false">轮廓与特征</button><button type="button" data-m1-stage="2" aria-pressed="false">近邻与整盘统计</button></nav>' +
-    '<div id="m1-tracking" class="m1-state" aria-live="polite">正在计算默认样品…</div>' +
+    '<div id="m1-result-summary" class="m1-state" aria-live="polite">正在计算默认样品…</div>' +
+    '<div id="m1-tracking" class="m1-state" aria-live="polite"></div>' +
     '<section data-m1-panel="0"><h3>先看：参考片和岩屑处于同一张图</h3><p>左图是当前观测；右图的轮廓由校正后的实际像素计算。灰片位于左上角。RGB是红绿蓝三个通道，每个通道值为0–255。点击右图中的颗粒，或使用下面的颗粒按钮。</p><div class="m1-canvases"><figure><canvas id="m1-raw" aria-label="当前原始白光样品，包含左上角参考片"></canvas><figcaption>当前白光像素</figcaption></figure><figure><canvas id="m1-outlines" aria-label="校正后的岩屑与计算轮廓，可点击选粒" tabindex="0"></canvas><figcaption>轮廓跟随像素；红色为选中位置的当前轮廓，蓝灰色为其他轮廓</figcaption></figure></div><div id="m1-reference" class="fx-note"></div><h4>选择当前教学盘中的区域</h4><div id="m1-grains" class="m1-grains"></div><p class="fx-note">试一试：先选原盘中排左侧相邻区域，再切换“重排教学盘”，比较相同坐标的新轮廓与原轮廓的空间交叠。照明升到2.2倍时，可观察原位置失去轮廓；降低照明后再回到这个位置。</p></section>' +
     '<section data-m1-panel="1" hidden><h3>当前区域，是怎样被描述的</h3><p>局部图对应当前轮廓，旁边数值只从轮廓内像素计算。泥浆附着会盖住纹理；照明过曝会把不同颜色截断到相同上限。</p><div id="m1-features"></div></section>' +
     '<section data-m1-panel="2" hidden><h3>先查近邻，再读整盘结果</h3><div id="m1-methods"></div><h4>来自实际训练库的前三个近邻</h4><div id="m1-neighbors" class="m1-neighbors"></div><p class="fx-note">距离在标准化后的16维特征空间计算，越小表示这些特征越相似。k是参与投票的参考颗粒数；支持度是距离加权投票的份额，帮助识别近邻分歧。</p><h3>一盘样品，两种口径</h3><p>两条带使用同一组模型候选；颜色规则基线也对同一批轮廓汇总。待复核留在分母中。</p><div id="m1-proportions"></div></section>';
@@ -214,6 +215,7 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
     function render() {
       if(!state.run)return;
       const run=state.run,r=selected();drawImages();
+      $('m1-result-summary').innerHTML='<b>当前智能识别结果</b>：检出 '+run.inference.results.length+' 粒，可见总面积 '+C.proportions(run.inference.results).denominator+' 像素。'+(r?'选中颗粒：'+names[r.prediction.label]+'，近邻投票支持度 '+pct(r.prediction.support)+'。':'选中位置暂无可识别颗粒。')+' <button type="button" data-m1-stage="2">查看近邻和整盘统计 ↓</button>';
       $('m1-light-value').textContent=fmt(getOptions().light)+'倍';$('m1-coating-value').textContent=pct(getOptions().coating);
       $('m1-tracking').innerHTML=trackingText();
       $('m1-reference').innerHTML='<b>当前参考片：</b>原始 RGB 均值 '+run.inference.image.reference.map(v=>fmt(v,1)).join(' / ')+'，目标为 210 / 210 / 210。'+(run.inference.image.quality.length?'<strong>'+esc(run.inference.image.quality.join('；'))+'。</strong>':'按三通道增益校正后再分割。')+'当前检出 '+run.inference.results.length+' 个轮廓。';
@@ -263,7 +265,7 @@ g.S17UI={$,esc,fmt,pct,table,canvas,readCanvas,download,matrix,cards,bar,source,
         ()=>'<p>参考片当前 RGB 均值与目标值逐通道对应，增益由目标值除以当前均值计算。</p>'+referenceChart+'<p>'+esc(r.inference.image.quality.join('；')||'当前参考片读数已用于校正。')+'</p>',
         ()=>'<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">'+canvasFigure('m1-outlines','当前校正图上的实际轮廓',210)+'<p>当前检出 <b>'+r.inference.results.length+'</b> 个连通域，总可见面积 <b>'+C.proportions(r.inference.results).denominator+'</b> 像素。<br>'+trackingText()+'</p></div>',
         ()=>p?'<div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">'+canvasFigure('m1-selected-patch','当前选中轮廓的像素局部',150)+'<div style="flex:1 1 320px">'+table(['当前对象的特征','数值','对应认识'],featureRows(p))+'</div></div>':'<p>原锚点没有检出轮廓，本步不产生该对象的特征。</p>',
-        ()=>p?'<p>颜色规则 <b>'+names[p.baseline]+'</b>；多特征近邻 <b>'+names[p.prediction.label]+'</b>，支持度 '+pct(p.prediction.support)+'。k='+r.config.k+'；以下展示实际训练库中的前三个近邻。</p><div style="display:flex;gap:12px;flex-wrap:wrap">'+neighborCards()+'</div>':'<p>原锚点没有轮廓，恢复照明或摆盘条件后可继续查看近邻。</p>',
+        ()=>p?'<p>颜色规则 <b>'+names[p.baseline]+'</b>；16维特征的加权 kNN 给出 <b>'+names[p.prediction.label]+'</b>，支持度 '+pct(p.prediction.support)+'。k='+r.config.k+'；下图展示训练库中的前三个近邻。距离越小票重越大，下表按全部 k 个近邻汇总。</p><div style="display:flex;gap:12px;flex-wrap:wrap">'+neighborCards()+'</div>'+table(['类别','加权票数'],p.prediction.weights.map((v,i)=>[names[i],fmt(v,3)])):'<p>原锚点没有轮廓，恢复照明或摆盘条件后可继续查看近邻。</p>',
         ()=>proportionsHTML('model')
       ];
       return '<div data-m1-flow="'+stepIndex+'" data-flow-run="'+esc(r.runId)+'">'+actual[Math.max(0,Math.min(5,Number(stepIndex)||0))]()+'</div>';
@@ -384,15 +386,16 @@ function readingMount(root){g.S17ConceptHost?.mount(root);root.querySelectorAll(
 }
 function start(scene){document.body.classList.add('s17-lesson-reading');const L=g[scene.toUpperCase()+'Exhibit'];if(!L)throw Error('Missing case lesson '+scene);let api=null,part='background',step=0;const root=document.querySelector('.fx-exhibit');
  const selectPart=name=>{part=['background','workflow','lab'].includes(name)?name:'background';document.querySelectorAll('[data-fx-part-panel]').forEach(p=>p.hidden=false);document.querySelectorAll('[data-fx-part]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.fxPart===part)));if(['http:','https:','file:'].includes(location.protocol))history.replaceState(null,'','#'+part);};
+ const scrollPart=name=>{const target=document.getElementById(name);if(!target)return;if(g.parent!==g)g.scrollTo({top:Math.max(0,target.getBoundingClientRect().top+g.scrollY-95),behavior:'instant'});else target.scrollIntoView({block:'start'});};
  function drawFlow(){if(!api)return;document.getElementById('fx-flow-current').innerHTML=L.steps.map((s,i)=>'<section class="lesson-method-step" id="'+scene+'-method-'+i+'"><header><span class="lesson-step-number">'+String(i+1).padStart(2,'0')+'</span><div><h3>'+esc(s.name)+'</h3><p>'+esc(s.action)+'</p></div></header>'+api.flowHTML(i)+'</section>').join('');}
  refreshFlow=drawFlow;
- document.querySelectorAll('[data-fx-part]').forEach(b=>b.onclick=()=>{selectPart(b.dataset.fxPart);document.getElementById(part)?.scrollIntoView({block:'start'});});document.querySelectorAll('[data-fx-live-step]').forEach(b=>b.onclick=()=>{step=Number(b.dataset.fxLiveStep);drawFlow();});
+ document.querySelectorAll('[data-fx-part]').forEach(b=>b.onclick=()=>{selectPart(b.dataset.fxPart);scrollPart(part);});document.querySelectorAll('[data-fx-live-step]').forEach(b=>b.onclick=()=>{step=Number(b.dataset.fxLiveStep);drawFlow();});
  root.addEventListener('click',e=>{const b=e.target.closest('[data-m1-stage],[data-m5-stage]');if(!b)return;const key=scene==='m1'?'data-m1-panel':'data-m5-stage-panel',value=b.dataset.m1Stage??b.dataset.m5Stage;requestAnimationFrame(()=>root.querySelector('['+key+'="'+value+'"]')?.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}));});
  readingMount(root);selectPart(location.hash.slice(1)||'background');g.S17Scroll.trackSections('data-fx-part');
  const status=document.getElementById('status');status.textContent='正在准备当前样品并执行计算…';document.getElementById('export').disabled=true;
  // Paint the lesson before the existing training calculation starts.
- setTimeout(()=>{try{api=L.mount(document.getElementById('lab-root'));currentAPI=api;g.S17Inspect=api;g[scene.toUpperCase()+'Inspect']=api;changed();drawFlow();document.getElementById('run').onclick=()=>{api.recalculate();changed();};document.getElementById('reset').onclick=()=>{api.reset();changed();};document.getElementById('export').onclick=()=>{try{const value=api.evidence();g.S17UI.download('s17-'+scene+'-'+value.runId+'.json',value);document.getElementById('save-tip').textContent='已保存当前输入和计算结果。';}catch(e){document.getElementById('save-tip').textContent=e.message;}};if(part!=='background')document.getElementById(part)?.scrollIntoView({block:'start'});if(status.textContent.includes('正在准备'))notify('当前结果已计算，可改变一个条件观察变化。');}catch(e){notify('计算失败：'+e.message);console.error(e);}},30);
- g.addEventListener('hashchange',()=>{selectPart(location.hash.slice(1));document.getElementById(part)?.scrollIntoView({block:'start'});});
+ setTimeout(()=>{try{api=L.mount(document.getElementById('lab-root'));currentAPI=api;g.S17Inspect=api;g[scene.toUpperCase()+'Inspect']=api;changed();drawFlow();document.getElementById('run').onclick=()=>{api.recalculate();changed();};document.getElementById('reset').onclick=()=>{api.reset();changed();};document.getElementById('export').onclick=()=>{try{const value=api.evidence();g.S17UI.download('s17-'+scene+'-'+value.runId+'.json',value);document.getElementById('save-tip').textContent='已保存当前输入和计算结果。';}catch(e){document.getElementById('save-tip').textContent=e.message;}};if(part!=='background')scrollPart(part);if(status.textContent.includes('正在准备'))notify('当前结果已计算，可改变一个条件观察变化。');}catch(e){notify('计算失败：'+e.message);console.error(e);}},30);
+ g.addEventListener('hashchange',()=>{selectPart(location.hash.slice(1));scrollPart(part);});
 }
 g.S17Exhibit={notify,changed,readingMount,start};
 })(globalThis);
@@ -551,6 +554,62 @@ window.S17CompassPage={"model":{"scene":{"id":"m1","name":"岩屑岩性自动识
 
 
 /* S17_OPTIONAL_ASSISTANT_START: isolated from case inference and evaluation */
+(function(g){
+ 'use strict';
+ if(g===g.parent||g.S17EmbeddedDemo)return;
+ const requested=new URLSearchParams(g.location.search).get('embed')==='demo';
+ let enabled=false,lab=null,lastHeight=0,scheduled=false,resize=null,mutations=null,initialTab='';
+ const caseId=()=>g.S17Page?.caseId||g.CaseInspect?.snapshot?.()?.caseId||'';
+ function sendHeight(){
+  scheduled=false;if(!enabled||!lab)return;
+  const rect=lab.getBoundingClientRect(),height=Math.ceil(Math.max(rect.height,lab.scrollHeight)+Math.max(0,rect.top+g.scrollY)+8);
+  if(Math.abs(height-lastHeight)<3)return;lastHeight=height;
+  g.parent.postMessage({type:'s17-demo-size',caseId:caseId(),height},'*');
+ }
+ function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(sendHeight);}}
+ function enter(){
+  if(enabled)return;
+  const tabs=[...document.querySelectorAll('nav [data-tab], [data-fx-part], [data-part]')];
+  const button=tabs.find(b=>['lab','demo'].includes(b.dataset.tab||b.dataset.fxPart||b.dataset.part));
+  lab=document.getElementById('lab')||document.querySelector('[data-panel="demo"]');
+  if(!lab)return;
+  initialTab=button?.dataset.tab||button?.dataset.fxPart||button?.dataset.part||'lab';
+  button?.click();lab.hidden=false;
+  enabled=true;document.documentElement.dataset.s17Embedded='demo';
+  const style=document.createElement('style');style.dataset.s17EmbedStyle='true';
+  style.textContent='html[data-s17-embedded="demo"],html[data-s17-embedded="demo"] body{margin:0;min-height:0;height:auto;overflow-x:hidden;overflow-y:hidden;background:#f7f4ef}html[data-s17-embedded="demo"] [data-s17-embed-hide]{display:none!important}html[data-s17-embedded="demo"] [data-s17-embed-chain]{margin:0!important;padding:0!important;width:100%!important;max-width:none!important;min-height:0!important;border:0!important;box-shadow:none!important;border-radius:0!important}html[data-s17-embedded="demo"] [data-s17-embedded-lab]{margin:0!important;padding:16px!important;scroll-margin:0;min-height:0!important}html[data-s17-embedded="demo"] #s17-assistant{display:none!important}@media(max-width:600px){html[data-s17-embedded="demo"] [data-s17-embedded-lab]{padding:10px!important}}';
+  document.head.append(style);lab.setAttribute('data-s17-embedded-lab','');
+  let child=lab;
+  for(let parent=child.parentElement;parent&&parent!==document.documentElement;parent=child.parentElement){
+   parent.setAttribute('data-s17-embed-chain','');
+   for(const sibling of parent.children)if(sibling!==child&&!['SCRIPT','STYLE','LINK'].includes(sibling.tagName)){
+    sibling.setAttribute('data-s17-embed-hide','');
+    // Continuous standalone lessons explicitly display their chapters with
+    // !important. A local inline override keeps those rules out of the iframe.
+    sibling.style.setProperty('display','none','important');
+   }
+   child=parent;
+  }
+  const settle=()=>{g.scrollTo({top:0,behavior:'instant'});schedule();};
+  settle();requestAnimationFrame(settle);
+  if(g.ResizeObserver){resize=new ResizeObserver(schedule);resize.observe(lab);}
+  mutations=new MutationObserver(schedule);mutations.observe(lab,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden','class','open']});
+  document.addEventListener('load',schedule,true);g.addEventListener('resize',schedule);
+  document.addEventListener('click',event=>{
+   const button=event.target.closest('[data-part],[data-fx-part],[data-tab]');
+   const part=button&&(button.dataset.part||button.dataset.fxPart||button.dataset.tab),tab={background:'bg',workflow:'flow'}[part];
+   if(tab){event.preventDefault();event.stopImmediatePropagation();g.parent.postMessage({type:'s17-demo-tab',caseId:caseId(),tab},'*');}
+  },true);
+  // Keyboard events do not cross a sandbox boundary on their own.
+  document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();g.parent.postMessage({type:'s17-open-search'},'*');}});
+  g.parent.postMessage({type:'s17-demo-ready',caseId:caseId(),mode:'lab-only'},'*');
+ }
+ function ready(){if(requested)enter();}
+ g.addEventListener('message',e=>{if(e.source===g.parent&&e.data?.type==='s17-embed-demo')enter();});
+ g.S17EmbeddedDemo={snapshot:()=>({enabled,caseId:caseId(),tab:initialTab,height:lastHeight})};
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
+})(window);
+
 (function(){function startAssistant(){
 (function(g){'use strict';
 // Only explicit text records enter this store. Credentials and media bytes stay in memory.
@@ -602,6 +661,9 @@ root.innerHTML='<div class="s17-agent-stage"><button id="s17-agent-compact" type
 '<section id="s17-agent-panel" class="s17-agent-panel" aria-label="向井见提问" hidden><h2 id="s17-agent-title" class="s17-sr-only">井见助手</h2><form id="s17-agent-form" class="s17-agent-form"><div class="s17-agent-composer"><textarea id="s17-agent-input" rows="1" maxlength="4000" aria-label="向井见提问" placeholder="问问井见…"></textarea><div class="s17-agent-form-bottom"><div class="s17-agent-quick"><button type="button" data-ag-query="解释当前页" title="读懂本页" aria-label="读懂本页">'+icon('book')+'</button><button type="button" data-ag-query="从哪里开始" title="案例导航" aria-label="案例导航">'+icon('compass')+'</button></div><div class="s17-composer-tools"><div id="s17-agent-attachments"><button id="s17-agent-attach" type="button" aria-label="添加图片或音频" title="添加图片或音频" aria-expanded="false" aria-controls="s17-agent-attachment-menu">'+icon('attach')+'</button><div id="s17-agent-attachment-menu" role="menu" hidden></div></div><span id="s17-agent-microphone"></span><button id="s17-agent-send" type="submit" aria-label="发送消息" title="发送消息">'+icon('send')+'</button></div></div></div></form><div class="s17-agent-dock-tools"><span class="s17-agent-caption"><strong>井见</strong><button type="button" id="s17-agent-badge" title="连接模型" aria-label="配置模型连接">连接</button><span id="s17-agent-mode" class="s17-sr-only">本地导览</span></span><button id="s17-agent-history" type="button" aria-label="历史对话" title="历史对话">'+icon('history')+'<span>历史</span></button><button id="s17-agent-new" type="button" aria-label="新对话" title="新对话">'+icon('plus')+'</button><button id="s17-agent-settings" type="button" aria-label="连接与语音" aria-pressed="false" title="连接与语音">'+icon('settings')+'</button><button id="s17-agent-close" type="button" aria-label="收起对话" title="收起对话">'+icon('close')+'</button></div></section>'+
 '<section id="s17-agent-history-panel" class="s17-agent-sheet" role="dialog" aria-modal="false" aria-labelledby="s17-agent-history-title" hidden><header class="s17-agent-sheet-head"><button id="s17-agent-session-back" type="button" aria-label="返回会话列表">'+icon('back')+'</button><h2 id="s17-agent-history-title">历史对话</h2><button id="s17-agent-sheet-close" type="button" aria-label="关闭对话记录">'+icon('close')+'</button></header><p id="s17-agent-storage" role="status"></p><div id="s17-agent-sessions"></div><div id="s17-agent-context" class="s17-agent-context" hidden></div><div id="s17-agent-log" class="s17-agent-log" role="log" aria-label="当前会话记录"></div></section>'+
 '<details class="s17-agent-options s17-agent-sheet"><summary>返回对话</summary><div class="s17-agent-settings-intro"><h3>连接与语音</h3><p>填写 Key，开始和井见对话。</p></div><p id="s17-agent-model-status">本地导览已就绪。</p><div class="s17-speech-controls"><button type="button" id="s17-agent-read">朗读上一条</button><button type="button" id="s17-agent-stop">停止朗读</button></div><p class="s17-agent-data-note">文字对话保存在本机浏览器。Key 只在当前页面内存使用；附件历史仅保留名称。朗读使用浏览器或系统语音。</p></details><div id="s17-agent-pending" class="s17-agent-pending" role="status" hidden><span class="s17-thinking-dot"></span><span>正在思考</span><button id="s17-agent-cancel" type="button">'+icon('stop')+'停止</button></div><div id="s17-agent-toast" class="s17-agent-toast" role="status" hidden></div>';
+// The character has one compact conversation surface; no invitation card beside it.
+root.querySelector('#s17-agent-invite').remove();
+root.querySelector('#s17-agent-panel').prepend(root.querySelector('#s17-agent-reply'));
 document.body.append(root);
 const $=id=>document.getElementById(id),log=$('s17-agent-log'),store=g.S17History,options=root.querySelector('.s17-agent-options');
 let adapter=null,busy=false,controller=null,lastReply='',requestCount=0,successfulCalls=0,ownerIsParent=false,requestEpoch=0,history=[],historyMode='list',liveReply='',liveNode=null;
@@ -632,7 +694,7 @@ function actionLinks(container,actions,limit=6){container.replaceChildren();for(
 function renderMessage(m){log.querySelector('.s17-agent-welcome')?.remove();const wrap=document.createElement('article');wrap.className='s17-agent-message';wrap.dataset.role=m.role;const label=document.createElement('small');label.className='s17-message-origin';label.textContent=m.role==='user'?'你':m.origin||'井见 · 本地导览';const content=document.createElement('div');content.className='s17-message-content';richText(content,m.content);wrap.append(label,content);if(m.actions?.length){const row=document.createElement('div');row.className='s17-agent-actions';actionLinks(row,m.actions);wrap.append(row);}if(m.role==='assistant'){const copy=document.createElement('button');copy.type='button';copy.className='s17-message-copy';copy.innerHTML=icon('copy')+'<span>复制</span>';copy.onclick=async()=>{try{await navigator.clipboard.writeText(m.content);toast('回复已复制');}catch{toast('可选中文字，使用系统复制');}};wrap.append(copy);}log.append(wrap);log.scrollTop=log.scrollHeight;}
 function clearLive(){liveNode?.remove();liveNode=null;liveReply='';root.dataset.streaming='false';}
 function showLive(delta){liveReply+=delta;root.dataset.streaming='true';if(!liveNode){liveNode=document.createElement('article');liveNode.className='s17-agent-message s17-live-message';const origin=document.createElement('small');origin.className='s17-message-origin';origin.textContent='井见 · 正在回答';const content=document.createElement('div');content.className='s17-message-content';liveNode.append(origin,content);log.append(liveNode);}const follow=log.scrollHeight-log.scrollTop-log.clientHeight<70;liveNode.querySelector('.s17-message-content').textContent=liveReply;if(follow)log.scrollTop=log.scrollHeight;updateBubble();}
-function updateBubble(){const m=[...history].reverse().find(m=>m.role==='assistant');lastReply=m?.content??'';$('s17-agent-excerpt').textContent=busy?(liveReply||'正在想一想，稍等一下…'):lastReply||'你好，我是井见。想了解当前案例，还是找一个新的知识点？';actionLinks($('s17-agent-bubble-actions'),busy?[]:m?.actions??[],1);$('s17-agent-full').hidden=!history.length&&!liveReply;$('s17-agent-reply').hidden=root.dataset.open!=='true';$('s17-agent-reply').setAttribute('aria-busy',String(busy));if(busy&&liveReply)$('s17-agent-excerpt').scrollTop=$('s17-agent-excerpt').scrollHeight;}
+function updateBubble(){const latest=[...history].reverse().find(m=>m.role==='assistant'),m=latest?.content.startsWith('可以先让我介绍当前案例')?null:latest;lastReply=m?.content??'';$('s17-agent-excerpt').textContent=busy?(liveReply||'正在思考…'):lastReply;actionLinks($('s17-agent-bubble-actions'),busy?[]:m?.actions??[],1);$('s17-agent-full').hidden=!history.length&&!liveReply;$('s17-agent-reply').hidden=root.dataset.open!=='true'||(!busy&&!lastReply);$('s17-agent-reply').setAttribute('aria-busy',String(busy));if(busy&&liveReply)$('s17-agent-excerpt').scrollTop=$('s17-agent-excerpt').scrollHeight;}
 function renderConversation(){history=store.current().messages;log.replaceChildren();if(!history.length)welcome();else history.forEach(renderMessage);updateBubble();updateContext();}
 function storageNotice(){const persistent=store.snapshot().status==='persistent';$('s17-agent-storage').textContent=persistent?'已保存在本机浏览器':'本页无法持久保存，离开后不会保留本次对话';root.dataset.storage=persistent?'persistent':'memory';}
 function resetDraft(){g.S17Media?.cancelRecording();g.S17Media?.clear();g.speechSynthesis?.cancel();root.dataset.speaking='false';$('s17-agent-input').value='';$('s17-agent-input').style.height='';syncComposer();}
@@ -645,7 +707,7 @@ const tools=[{name:'navigate_page',description:'提供本站页面导航，仅�
 function setBusy(value){busy=value;g.S17Media?.setBusy(value);$('s17-agent-pending').hidden=!value;$('s17-agent-mode').textContent=value?'正在请求模型':adapter?.name??'本地导览';root.dataset.busy=String(value);updateBubble();syncComposer();}
 function stopRequest(){if(!busy)return;const partial=liveReply;requestEpoch++;controller?.abort();controller=null;clearLive();setBusy(false);append('assistant',partial?partial+'\n\n（已停止生成。）':'已停止本次生成。',[],'井见 · 已停止');}
 async function ask(text){await ready;const media=g.S17Media;if(busy)return;if(media?.snapshot().processing||media?.snapshot().recording){media.notice('请先结束录音或等待附件准备完成。');return;}const parts=media?.parts()??[];if(!text.trim()&&!parts.length)return;if(parts.length&&!adapter){append('assistant','附件已在本地准备好。在线助手暂未接通，请稍后重试；本地导览仍可使用。',[],'连接状态');return;}
-const question=text.trim()||(parts.some(p=>p.type==='input_audio')?'请听取录音并回答其中的问题。':'请解释这张图片中可见的内容。'),names=media?.snapshot().files.map(f=>f.name)??[];append('user',question+(names.length?'\n[本轮附件：'+names.join('、')+'；后续轮次未自动重传]':''));$('s17-agent-input').value='';$('s17-agent-input').style.height='';const local=parts.length?null:guide(question);if(local){append('assistant',local.text,local.actions);syncComposer();return;}if(!adapter){append('assistant','可以先让我介绍当前案例、解释步骤，或者带你定位页面。连接大模型后，我们还可以继续讨论具体问题。',catalog.slice(0,5).map(c=>({target:c.id})));syncComposer();return;}
+const question=text.trim()||(parts.some(p=>p.type==='input_audio')?'请听取录音并回答其中的问题。':'请解释这张图片中可见的内容。'),names=media?.snapshot().files.map(f=>f.name)??[];append('user',question+(names.length?'\n[本轮附件：'+names.join('、')+'；后续轮次未自动重传]':''));$('s17-agent-input').value='';$('s17-agent-input').style.height='';const local=parts.length?null:guide(question);if(local){append('assistant',local.text,local.actions);syncComposer();return;}if(!adapter){append('assistant','请点面板上方的“连接”填写模型 Key，再发送这个问题。',[],'井见 · 连接提示');syncComposer();return;}
 clearLive();const model=adapter,sessionId=store.current().id,token=++requestEpoch,messages=history.slice(-24).map(m=>({role:m.role,content:m.content}));if(parts.length)messages[messages.length-1].content=[{type:'input_text',text:question},...parts];controller=new AbortController();const requestController=controller,signal=requestController.signal,timeout=setTimeout(()=>requestController.abort(),45000);setBusy(true);
 try{requestCount++;const result=await model.reply({messages,context:{page:pageContext(),cases:catalog,scope:'静态教学演示；仅用户本轮明确附上的图片/录音作为多模态输入；历史附件只保留名称。'},tools,signal,onDelta:delta=>{if(token===requestEpoch&&sessionId===store.current().id)showLive(delta);}});if(token!==requestEpoch||sessionId!==store.current().id||model!==adapter)return;if(!result||typeof result.text!=='string'||!result.text.trim())throw Error('模型未返回可显示的文本');successfulCalls++;clearLive();append('assistant',result.text,Array.isArray(result.actions)?result.actions:[],model.name+' · 模型回复');media?.clear();$('s17-agent-badge').textContent='在线';if($('s17-agent-autoread')?.checked&&root.dataset.open==='true')readReply();}
 catch(e){if(token===requestEpoch&&sessionId===store.current().id){const partial=liveReply;clearLive();append('assistant',(partial?partial+'\n\n':'')+'本次请求未完成：'+(e.name==='AbortError'?'已取消或超时':e.message)+'。可以重试。',[],'井见 · 连接状态');}}
@@ -656,7 +718,7 @@ function open(focus=true){if(ownerIsParent)return;root.dataset.compact='false';r
 function close(){stopRequest();attachmentMenu(false);clearSheets();root.dataset.open='false';$('s17-agent-panel').hidden=true;g.S17Media?.cancelRecording();g.speechSynthesis?.cancel();root.dataset.speaking='false';updateBubble();$('s17-agent-launcher').setAttribute('aria-expanded','false');$('s17-agent-launcher').setAttribute('aria-label','打开井见助手');$('s17-agent-launcher').focus({preventScroll:true});}
 async function showHistory(list=true){await ready;open(false);options.open=false;root.dataset.view='history';historyMode=list?'list':'messages';$('s17-agent-settings').setAttribute('aria-pressed','false');$('s17-agent-history-panel').hidden=false;$('s17-agent-sessions').hidden=!list;log.hidden=list;$('s17-agent-context').hidden=list;$('s17-agent-session-back').hidden=list;$('s17-agent-history-title').textContent=list?'历史对话':store.current().title;storageNotice();renderSessions();if(!list)log.scrollTop=log.scrollHeight;$('s17-agent-sheet-close').focus({preventScroll:true});}
 function showSettings(value){if(!value){clearSheets();return;}open(false);$('s17-agent-history-panel').hidden=true;root.dataset.view='settings';options.open=true;options.scrollTop=0;$('s17-agent-settings').setAttribute('aria-pressed','true');options.querySelector('summary').focus({preventScroll:true});}
-$('s17-agent-launcher').onclick=()=>open();$('s17-agent-invite').onclick=()=>open();$('s17-agent-close').onclick=close;
+$('s17-agent-launcher').onclick=()=>root.dataset.open==='true'?close():open();$('s17-agent-close').onclick=close;
 $('s17-agent-compact').onclick=()=>{const mini=root.dataset.compact!=='true';if(mini)close();root.dataset.compact=String(mini);$('s17-agent-compact').setAttribute('aria-pressed',String(mini));$('s17-agent-compact').setAttribute('aria-label',mini?'展开井见助手':'最小化井见助手');$('s17-agent-compact').title=mini?'展开井见助手':'最小化';$('s17-agent-compact').innerHTML=icon(mini?'chat':'minimize');if(!mini)open();};
 $('s17-agent-form').onsubmit=e=>{e.preventDefault();ask($('s17-agent-input').value);};$('s17-agent-input').onkeydown=e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();ask(e.currentTarget.value);}};
 $('s17-agent-input').oninput=e=>{e.target.style.height='auto';e.target.style.height=Math.min(108,Math.max(54,e.target.scrollHeight))+'px';syncComposer();};
@@ -672,7 +734,7 @@ g.addEventListener('hashchange',updateContext);
 g.addEventListener('message',e=>{if(e.data?.type==='s17-assistant-probe'&&[...document.querySelectorAll('iframe')].some(f=>f.contentWindow===e.source))e.source.postMessage({type:'s17-assistant-host',present:true},'*');if(g!==g.parent&&e.source===g.parent&&e.data?.type==='s17-assistant-host'&&e.data.present===true){ownerIsParent=true;root.hidden=true;stopRequest();g.S17Media?.cancelRecording();g.S17Live2D?.dispose?.();}});if(g!==g.parent)g.parent.postMessage({type:'s17-assistant-probe'},'*');
 function readReply(){if(!g.speechSynthesis||!g.SpeechSynthesisUtterance){toast('当前浏览器未提供系统朗读');return;}if(!lastReply)return;g.speechSynthesis.cancel();const speech=new SpeechSynthesisUtterance(lastReply);speech.lang='zh-CN';const voice=g.speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith('zh'));if(voice)speech.voice=voice;speech.onstart=()=>{root.dataset.speaking='true';};speech.onend=speech.onerror=()=>{root.dataset.speaking='false';};g.speechSynthesis.speak(speech);}$('s17-agent-read').onclick=readReply;$('s17-agent-stop').onclick=()=>{g.speechSynthesis?.cancel();root.dataset.speaking='false';};
 function viewport(){const v=g.visualViewport;root.style.setProperty('--ag-vh',(v?.height??g.innerHeight)+'px');root.style.setProperty('--ag-lift',Math.max(0,g.innerHeight-(v?.height??g.innerHeight)-(v?.offsetTop??0))+'px');}viewport();g.visualViewport?.addEventListener('resize',viewport);g.visualViewport?.addEventListener('scroll',viewport);g.addEventListener('resize',viewport);
-g.S17Assistant={open,close,updateComposer:syncComposer,resolve:destination,context:pageContext,tools,catalog:catalog.map(c=>({...c})),configure:model=>{if(busy)throw Error('请先停止当前请求');if(!model||typeof model.name!=='string'||typeof model.reply!=='function')throw Error('需要模型适配器name与reply');adapter=model;successfulCalls=0;$('s17-agent-badge').textContent='就绪';$('s17-agent-mode').textContent=model.name;},disconnect:()=>{stopRequest();adapter=null;successfulCalls=0;$('s17-agent-badge').textContent='连接';$('s17-agent-mode').textContent='导览';},snapshot:()=>({version:'0.7.1',avatar:g.S17Live2D?.state==='ready'?'Live2D '+g.S17Live2D.model:root.dataset.avatar??'svg_fallback',model:adapter?.name??null,requestCount,successfulCalls,open:root.dataset.open==='true',view:root.dataset.view,streaming:busy&&!!liveReply,draftReply:liveReply,compact:root.dataset.compact==='true',sessionId:store.current().id,storage:store.snapshot(),busy,parentOwned:ownerIsParent,media:g.S17Media?.snapshot()??null,context:pageContext(),history:history.map(v=>({...v}))})};updateContext();syncComposer();
+g.S17Assistant={open,close,updateComposer:syncComposer,resolve:destination,context:pageContext,tools,catalog:catalog.map(c=>({...c})),configure:model=>{if(busy)throw Error('请先停止当前请求');if(!model||typeof model.name!=='string'||typeof model.reply!=='function')throw Error('需要模型适配器name与reply');adapter=model;successfulCalls=0;$('s17-agent-badge').textContent='就绪';$('s17-agent-mode').textContent=model.name;},disconnect:()=>{stopRequest();adapter=null;successfulCalls=0;$('s17-agent-badge').textContent='连接';$('s17-agent-mode').textContent='导览';},snapshot:()=>({version:'0.8.0',avatar:g.S17Live2D?.state==='ready'?'Live2D '+g.S17Live2D.model:root.dataset.avatar??'svg_fallback',model:adapter?.name??null,requestCount,successfulCalls,open:root.dataset.open==='true',view:root.dataset.view,streaming:busy&&!!liveReply,draftReply:liveReply,compact:root.dataset.compact==='true',sessionId:store.current().id,storage:store.snapshot(),busy,parentOwned:ownerIsParent,media:g.S17Media?.snapshot()??null,context:pageContext(),history:history.map(v=>({...v}))})};updateContext();syncComposer();
 })(window);
 
 (function(g){'use strict';
@@ -712,11 +774,11 @@ g.S17Ark={ready:Promise.resolve(false),configureKey:configure,snapshot:()=>({con
 })(window);
 
 (function(g){'use strict';
-// The SVG entry is available immediately. Local avatar assets are requested on first open.
+// Start the local character on entry; an embedded case defers to the portal's character.
 if(g.S17EnsureAvatar)return;
 const source=document.currentScript?.src;
 let loading=null,rootObserver=null,documentObserver=null;
-function parentOwns(){return !!g.S17Assistant?.snapshot().parentOwned;}
+function parentOwns(){return !!(g.S17EmbeddedDemo?.snapshot().enabled||g.S17Assistant?.snapshot().parentOwned);}
 function assetBase(){
  if(g.S17Page?.portalHref)return new URL('assets/',new URL(g.S17Page.portalHref,document.baseURI));
  return source?new URL('./',source):new URL('assets/',document.baseURI);
@@ -740,7 +802,7 @@ function ensure(){
   const base=assetBase(),root=document.getElementById('s17-assistant');
   if(root)root.dataset.avatar='loading';
   try{
-   for(const [file,present]of files){if(parentOwns())return null;if(!present())await load(new URL(file,base));}
+   for(const [file,present]of files){if(parentOwns())return null;if(!present()){const url=new URL(file,base);url.searchParams.set('v','20261101');await load(url);}}
    return g.S17Live2D||null;
   }catch(error){if(root&&!parentOwns())root.dataset.avatar='fallback';loading=null;return null;}
  })();return loading;
@@ -751,7 +813,9 @@ function observeRoot(){
  documentObserver?.disconnect();
  rootObserver=new MutationObserver(()=>{if(root.dataset.open==='true')ensure();});
  rootObserver.observe(root,{attributes:true,attributeFilter:['data-open']});
- if(root.dataset.open==='true')ensure();return true;
+ // Let the ownership reply reach sandboxed cases before starting a second model.
+ if(g===g.parent)ensure();else g.setTimeout(()=>{if(!parentOwns())ensure();},400);
+ return true;
 }
 document.addEventListener('click',event=>{
  if(event.target.closest?.('#s17-agent-launcher,#s17-agent-invite,#s17-agent-full,[data-s17-assistant]'))ensure();

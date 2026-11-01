@@ -70,10 +70,10 @@
   </style>`;
 
   function fieldMarkup(text) {
-    const pattern = /(?:未见|未发现|未检出|未观察到|无)(?:明显)?(?:的)?(?:荧光|发光|亮斑)|\d+(?:\.\d+)?\s*[—–~\-至]\s*\d+(?:\.\d+)?\s*(?:m\s*MD|m|米|s|秒|min|分钟)|\d+(?:\.\d+)?\s*(?:归一化单位|ppmv|ppm|%)/gi;
+    const pattern = /(?:未见|未发现|未检出|未观察到|未显示|未出现|没有|并无|无|不见)(?:观察到|检测到|发现|出现|见|有)?(?:明显|任何|清晰|可见|的)*(?:荧光|发光|亮斑)|\d+(?:\.\d+)?\s*[—–~\-至]\s*\d+(?:\.\d+)?\s*(?:m\s*MD|m|米|s|秒|min|分钟)|\d+(?:\.\d+)?\s*(?:归一化单位|ppmv|ppm|%)/gi;
     let out = '', at = 0;
     for (const hit of text.matchAll(pattern)) {
-      const kind = /未|无/.test(hit[0]) ? 'negative' : /—|–|~|\-|至/.test(hit[0]) ? 'range' : 'value';
+      const kind = /未|无|没有|不见/.test(hit[0]) ? 'negative' : /—|–|~|\-|至/.test(hit[0]) ? 'range' : 'value';
       out += esc(text.slice(at, hit.index)) + `<mark data-m5-field="${kind}">${esc(hit[0])}</mark>`;
       at = hit.index + hit[0].length;
     }
@@ -84,8 +84,8 @@
     const f = fact.fields, items = [
       ['井段（沿井眼深度）', f.depthRangeMD_m ? f.depthRangeMD_m.join('—') + ' m MD' : '原文未提供'],
       ['时段', f.timeRange_s ? f.timeRange_s.join('—') + ' s' : '原文未提供'],
-      ['数值与单位', f.gasValue != null ? f.gasValue + ' ' + (f.gasUnit || '（未给单位）') : '该句未给气测数值'],
-      ['观察的肯定／否定', f.fluorescence || f.gasValue != null || /气测|总气|总烃/.test(fact.rawQuote) ? (f.negation ? '否定：未见／未检出' : fact.flags.some(v => /否定表达|否定作用域/.test(v)) ? '否定作用范围待核对' : /见(?:明显)?荧光/.test(fact.rawQuote) ? '肯定：见明显荧光' : '未抽出否定词') : '该句没有此类观察']
+      ['数值与单位', f.gasChange ? f.gasChange.start + ' ' + (f.gasChange.startUnit || '（未给单位）') + ' → ' + f.gasChange.end + ' ' + (f.gasChange.endUnit || '（未给单位）') + '（' + f.gasChange.direction + '）' : f.gasValue != null ? f.gasValue + ' ' + (f.gasUnit || '（未给单位）') : fact.flags.some(v => /多个气测数值/.test(v)) ? '多个数值，需人工核对' : '该句未给气测数值'],
+      ['观察的肯定／否定', f.fluorescence || f.gasValue != null || /气测|总气|总烃/.test(fact.rawQuote) ? (f.negation === true ? '否定：未见／未检出' : f.negation == null || fact.flags.some(v => /否定表达|否定作用域|肯定／否定不明确/.test(v)) ? '肯定／否定待核对' : f.fluorescencePolarity === 'positive' ? '肯定：见荧光显示' : '未抽出否定词') : '该句没有此类观察']
     ];
     if (f.rock) items.push(['岩性词', f.rock]);
     if (f.operation) items.push(['操作词', f.operation]);
@@ -97,6 +97,17 @@
     const rows = prediction.scores.map((score, i) => ({i, score, delta: score - max}));
     const scale = 300 / span, zero = 430;
     return `<div class="m5-score"><svg viewBox="0 0 600 275" role="img" aria-label="当前子句六类相对对数分数，最高类为零，向左越长表示与最高类差距越大"><text x="18" y="22" fill="#5d6570" font-size="16">当前子句 · 相对最高类的对数分数</text><line x1="${zero}" y1="36" x2="${zero}" y2="244" stroke="#918a80"/>${rows.map((r, j) => {const y = 48 + j * 34, width = Math.max(0, -r.delta * scale); return `<text x="18" y="${y + 17}" fill="#343941" font-size="18">${esc(name(r.i))}</text><rect x="${zero - width}" y="${y}" width="${Math.max(2, width)}" height="23" rx="5" fill="${r.i === prediction.proposedLabel ? '#b8242a' : '#9aabb9'}"/><circle cx="${zero - width}" cy="${y + 11.5}" r="4" fill="${r.i === prediction.proposedLabel ? '#b8242a' : '#6a7e90'}"/><text x="446" y="${y + 17}" fill="#343941" font-size="17">${fmt(r.delta)}</text>`;}).join('')}<text x="${zero}" y="267" text-anchor="end" fill="#5d6570" font-size="16">0 = 最高类；其余为相对对数分差</text></svg></div>`;
+  }
+
+  function tokenContributionPlot(prediction) {
+    const ranking = prediction.scores.map((score, i) => ({score, i})).sort((a, b) => b.score - a.score);
+    const values = prediction.contributions.slice(0, 6), limit = Math.max(.001, ...values.map(v => Math.abs(v.contribution)));
+    if (!values.length) return '<p>当前词项未在训练词表中找到，无法展示词项贡献。</p>';
+    const bars = values.map((v, i) => {
+      const y = 8 + i * 32, width = Math.abs(v.contribution) / limit * 125, x = v.contribution < 0 ? 235 - width : 235;
+      return `<text x="2" y="${y+16}" font-size="14">${esc(v.token)} × ${v.count}</text><rect x="${x}" y="${y}" width="${width}" height="19" fill="${v.contribution<0?'#718391':'#b8242a'}"/><text x="370" y="${y+16}" font-size="14">${v.contribution>=0?'+':''}${fmt(v.contribution)}</text>`;
+    }).join('');
+    return `<p>下图是词项对“${esc(name(ranking[0].i))}”相对“${esc(name(ranking[1].i))}”分数差的实际贡献，向右支持前者，向左支持后者。只展示绝对贡献最大的六项，分类还包含先验和其余词项。</p><div style="overflow-x:auto"><svg viewBox="0 0 460 ${values.length*32+12}" role="img" aria-label="当前子句的词项对前两类分数差的正负贡献" style="width:100%;min-width:410px;max-width:520px"><path d="M235 3v${values.length*32}" stroke="#62636a"/>${bars}</svg></div>`;
   }
 
   function rangeSources(raw, fact) {
@@ -136,7 +147,7 @@
         const claim = inference.claims[i];
         claim.statement = claim.statement.replace(/【需复核：[^】]*】$/, '') + (f.flags.length ? '【需复核：' + f.flags.join('；') + '】' : '');
         claim.originalStatement = claim.statement;
-        claim.supportStatus = conflictFacts.has(i) ? 'conflict' : f.flags.some(v => /否定表达|否定作用域/.test(v)) ? 'unchecked' : 'rule_checked';
+        claim.supportStatus = conflictFacts.has(i) ? 'conflict' : f.flags.length ? 'unchecked' : 'rule_checked';
       });
     }
     inference.facts.forEach((f, i) => {
@@ -202,6 +213,9 @@
       return !missing && overlaps(fact.fields.depthRangeMD_m, range);
     });
     const by = field => selected.filter(x => x.fact.fields[field] != null);
+    // A gas observation remains present even when its numbers cannot be
+    // uniquely parsed. Keep the original quote visible for human review.
+    const gasText = selected.filter(x => /气测|总气|总烃|C1/i.test(x.fact.rawQuote));
     const gas = upstream('s17-mudgas-context'), gasSource = gas && gas.sources[0];
     const gasResult = gasSource && gasSource.content && gasSource.content.modelResult;
     const gasFeatures = gasResult && gasResult.features, gasDepth = gasFeatures && gasFeatures.sourceDepthMD_m;
@@ -223,16 +237,18 @@
       if (a.fields.gasValue != null && b.fields.gasValue != null && a.fields.gasUnit && a.fields.gasUnit === b.fields.gasUnit && a.fields.gasValue !== b.fields.gasValue) differences.push({kind: 'gas', left: selected[i].index, right: selected[j].index, message: '重叠范围的气测读数不同；核对采样时段、单位和记录来源。'});
       if (a.fields.gasValue != null && b.fields.gasValue != null && a.fields.gasValue !== b.fields.gasValue && (!a.fields.gasUnit || !b.fields.gasUnit)) differences.push({kind: 'gas_unit_missing', left: selected[i].index, right: selected[j].index, message: '重叠范围的气测读数不同且单位不完整；先补全单位，再核对采样时段。'});
       if (a.fields.gasValue != null && b.fields.gasValue != null && a.fields.gasUnit && b.fields.gasUnit && a.fields.gasUnit !== b.fields.gasUnit) differences.push({kind: 'gas_unit_difference', left: selected[i].index, right: selected[j].index, message: '重叠范围的气测记录使用不同单位；先核对计量口径，再比较读数。'});
-      if (a.fields.fluorescence && b.fields.fluorescence && a.fields.negation !== b.fields.negation) differences.push({kind: 'fluorescence', left: selected[i].index, right: selected[j].index, message: '重叠范围的荧光记录肯定／否定不同；核对样品、观察条件与时段。'});
+      if (a.fields.fluorescence && b.fields.fluorescence && a.fields.fluorescencePolarity !== 'unknown' && b.fields.fluorescencePolarity !== 'unknown' && a.fields.negation !== b.fields.negation) differences.push({kind: 'fluorescence', left: selected[i].index, right: selected[j].index, message: '重叠范围的荧光记录肯定／否定不同；核对样品、观察条件与时段。'});
     }
+    const unresolved = selected.filter(({fact}) => fact.flags.some(v => /否定|肯定|多个气测数值|气测单位不同|变化方向/.test(v)));
     const questions = [];
     if (!by('rock').length) questions.push('补充能归到本井段的岩屑观察，并核对采样与迟到记录。');
     if (!by('fluorescence').length) questions.push('补充本井段荧光观察，以及样品身份和观察条件。');
-    if (!by('gasValue').length && !gasHere) questions.push('补充气测记录，并检查循环和气体迟到归位。');
+    if (!gasText.length && !gasHere) questions.push('补充气测记录，并检查循环和气体迟到归位。');
     if (gasHere) questions.push('核对气峰回查所用泵量、来源时段与接单根记录；参考位置仍需复核。');
     if (differences.length) questions.push('把记录间的差异保留到交接，核对单位、时段和样品后再判断。');
+    if (unresolved.length) questions.push('本段存在未能唯一解析的观察或数值，先对照原文人工核查，再判断记录间是否一致。');
     questions.push(active.length ? `将这段钻时与工况${boundaries.length ? '及候选界面' : ''}带给测井解释人员，沿深度对照伽马、电阻率等已有或后续曲线。` : '补充本井段钻时和工况，再与已有或后续测井曲线按深度对照。');
-    return {index, range, selected, rocks: by('rock'), gasText: by('gasValue'), fluorescence: by('fluorescence'), gas, gasSource, gasResult, gasFeatures, gasHere, drilling, drillingSource, rows, active, drillValues, wobValues, rpmValues, boundaries, m1, m3, s1, s3, id1, id3, paired, differences, questions, unlocated: facts.filter(f => !finiteRange(f.fields.depthRangeMD_m)).length};
+    return {index, range, selected, rocks: by('rock'), gasText, fluorescence: by('fluorescence'), gas, gasSource, gasResult, gasFeatures, gasHere, drilling, drillingSource, rows, active, drillValues, wobValues, rpmValues, boundaries, m1, m3, s1, s3, id1, id3, paired, differences, unresolved, questions, unlocated: facts.filter(f => !finiteRange(f.fields.depthRangeMD_m)).length};
   }
 
   function intervalExport(inference, claims, intervalIndex) {
@@ -242,6 +258,7 @@
       textClaimIds: d.selected.map(v => claims[v.index] && claims[v.index].claimId).filter(Boolean),
       textRecordCount: d.selected.length, textWithoutDepthCount: d.unlocated,
       differences: d.differences,
+      unresolvedTextClaimIds: d.unresolved.map(v => claims[v.index] && claims[v.index].claimId).filter(Boolean),
       gasReference: d.gasHere && gasClaim ? {kind: 'model_inference', claimId: gasClaim.claimId, sourceRefs: [...gasClaim.sourceRefs, {...sourceRef(d.gasSource), selector: {type: 'time_range', timeRange_s: [d.gasFeatures.sourceTime_s, d.gasResult.event.time_s]}}], sourceTime_s: d.gasFeatures.sourceTime_s, sourceDepthMD_m: d.gasFeatures.sourceDepthMD_m, eventTimeRange_s: gasClaim.sourceRefs[0].selector.timeRange_s, method: d.gasResult.method, reviewStatus: gasClaim.reviewStatus} : null,
       drillingObservation: d.drillingSource && d.rows.length ? {sourceRef: {...sourceRef(d.drillingSource), selector: {type: 'depth_range', depthRangeMD_m: d.range}}, pointCount: d.rows.length, activePointCount: d.active.length, meanDrillTime_min_m: mean(d.drillValues), minDrillTime_min_m: d.drillValues.length ? Math.min(...d.drillValues) : null, maxDrillTime_min_m: d.drillValues.length ? Math.max(...d.drillValues) : null, meanWOB_kN: mean(d.wobValues), meanRPM: mean(d.rpmValues)} : null,
       drillingCandidates: d.boundaries.map(c => ({claimId: c.claimId, statement: c.statement, kind: c.kind, sourceRefs: c.sourceRefs, reviewStatus: c.reviewStatus})),
@@ -286,7 +303,7 @@
     ];
     const drill = d.rows.length ? `<p>本段 ${d.rows.length} 个深度记录，其中有效钻进 ${d.active.length} 点。${d.active.length ? `钻时均值 ${fmt(mean(d.drillValues))} min/m（范围 ${fmt(Math.min(...d.drillValues))}—${fmt(Math.max(...d.drillValues))}）；钻压均值 ${fmt(mean(d.wobValues))} kN，转速均值 ${fmt(mean(d.rpmValues))} rev/min。` : '当前无可计算钻时的有效点。'}</p><small>${sourceLabel(d.drillingSource)} · 按实际深度行筛选；均值从这些行计算。</small>` : '<p>这份钻时快照没有所选井段的数据。</p>';
     const pair = d.paired ? `<details class="m5-sample-note"><summary>补充：前例白光与 UV 同样品对照</summary><p>M1 与 M3 快照的样品 ${esc(d.id1.sampleId)}、配对 ${esc(d.id1.capturePairId)} 相同；两份来源均未给出样品井段。</p><p>白光候选：${esc(d.m1.claims[0].statement)} UV 候选：${esc(d.m3.claims[0].statement)} 二者可按样品身份比较；需核对迟到与样品深度才能放到上面的井段。</p><small>${sourceLabel(d.s1)}；${sourceLabel(d.s3)}。两项均为构建期计算快照，待核对。</small></details>` : '<details class="m5-sample-note"><summary>补充：前例样品对照</summary><p>样品身份或配对关系尚未提供，先核对样品记录。</p></details>';
-    const issues = d.differences.length ? `<p><b>记录差异：</b>${d.differences.map(v => esc(v.message)).join(' ')}</p>` : '<p>当前所选文字中没有检出同范围、同单位数值或荧光肯定／否定差异。</p>';
+    const issues = (d.differences.length ? `<p><b>记录差异：</b>${d.differences.map(v => esc(v.message)).join(' ')}</p>` : d.unresolved.length ? '' : '<p>当前已解析文字中没有检出同范围、同单位数值或荧光肯定／否定差异。</p>') + (d.unresolved.length ? `<p><b>待核对：</b>${d.unresolved.length} 条观察的否定、数值或单位未能唯一解析，不能据此排除记录差异。</p>` : '');
     let detail;
     if (perspective === 'interpret') {
       const gas = d.gasHere && d.gasResult ? `<p>气峰在地面 ${esc(d.gasResult.event.start_s)}—${esc(d.gasResult.event.end_s)} s 被记录；按累计有效泵量回查，来源时刻约 ${fmt(d.gasFeatures.sourceTime_s, 0)} s，参考深度 ${fmt(d.gasFeatures.sourceDepthMD_m)} m MD。候选：${esc(d.gas.claims[0].statement)}</p><small>${sourceLabel(d.gasSource)} · 这是上游模型结果，当前井段由参考点匹配，待核查。</small>` : '<p>气峰快照的回查参考点不在所选井段，或参考位置未提供。</p>';
@@ -314,7 +331,7 @@
     {name: '逐句核查与交接', input: '当前报告句子、原文与选定井段。', action: '核对范围、数值、单位和否定，保留缺项并提出测井对照问题。', output: '当前核对状态、选段交接与待核查问题。'}
   ];
 
-  const labHTML = styles + `<div class="fx-card"><h2>综合井段资料，生成可回查报告</h2><p>先在下方选择井段，对照现有资料与缺项；再选择一条原文，看它怎样进入报告。改动原文后，井段覆盖和报告会一起更新。</p><nav class="fx-stage-nav m5-sentences" aria-label="报告演示阶段"><button type="button" data-m5-stage="0" aria-pressed="true">读原文</button><button type="button" data-m5-stage="1" aria-pressed="false">看字段与分流</button><button type="button" data-m5-stage="2" aria-pressed="false">核对报告</button></nav><p class="m5-stage-copy" data-m5-stage-copy></p><div class="m5-example-buttons"><button type="button" data-m5-example="negation">改“未见／见”</button><button type="button" data-m5-example="value">改总气3.2／5.1</button><button type="button" data-m5-example="range">改荧光井段</button></div><p class="m5-small" data-m5-input-note>点示例按钮只改一处。修改后自动重新计算。</p></div><div data-m5-lab-handover></div><div class="m5-grid"><section class="fx-card"><h3><label for="m5-exhibit-raw">原始录井记录</label></h3><textarea id="m5-exhibit-raw" data-m5-raw spellcheck="false" aria-describedby="m5-raw-description"></textarea><p id="m5-raw-description" class="m5-small">保留这一个编辑区。井段写为“起点—终点 m MD”；气测数值连同单位输入。</p><div class="m5-sentences" data-m5-clause-list aria-label="选择当前子句"></div><div data-m5-source-card></div></section><section class="fx-card"><div data-m5-stage-panel="0"><h3>先把一条观察读完整</h3><div data-m5-observation></div></div><div data-m5-stage-panel="1" hidden><h3>同一子句的两个产物</h3><div data-m5-fields></div><div data-m5-scores></div><div data-m5-contributions></div></div><div data-m5-stage-panel="2" hidden><h3>报告草稿 · 点击句子回查</h3><div data-m5-report></div><label class="m5-check"><input type="checkbox" data-m5-confirm><span>我已对照原文，核对当前句子的范围、数值、单位和否定。</span></label><p class="m5-small" data-m5-review-note></p></div></section></div>`;
+  const labHTML = styles + `<div class="fx-card"><h2>综合井段资料，生成可回查报告</h2><p>先在下方选择井段，对照现有资料与缺项；再选择一条原文，看它怎样进入报告。改动原文后，井段覆盖和报告会一起更新。</p><div class="m5-field"><div data-m5-result-summary aria-live="polite">正在生成报告…</div><button type="button" data-m5-jump-report>查看分流和报告 ↓</button></div><nav class="fx-stage-nav m5-sentences" aria-label="报告演示阶段"><button type="button" data-m5-stage="0" aria-pressed="true">读原文</button><button type="button" data-m5-stage="1" aria-pressed="false">看字段与分流</button><button type="button" data-m5-stage="2" aria-pressed="false">核对报告</button></nav><p class="m5-stage-copy" data-m5-stage-copy></p><div class="m5-example-buttons"><button type="button" data-m5-example="negation">改“未见／见”</button><button type="button" data-m5-example="value">改总气3.2／5.1</button><button type="button" data-m5-example="range">改荧光井段</button></div><p class="m5-small" data-m5-input-note>点示例按钮只改一处。修改后自动重新计算。</p></div><div data-m5-lab-handover></div><div class="m5-grid"><section class="fx-card"><h3><label for="m5-exhibit-raw">原始录井记录</label></h3><textarea id="m5-exhibit-raw" data-m5-raw spellcheck="false" aria-describedby="m5-raw-description"></textarea><p id="m5-raw-description" class="m5-small">保留这一个编辑区。井段写为“起点—终点 m MD”；气测数值连同单位输入。</p><div class="m5-sentences" data-m5-clause-list aria-label="选择当前子句"></div><div data-m5-source-card></div></section><section class="fx-card"><div data-m5-stage-panel="0"><h3>先把一条观察读完整</h3><div data-m5-observation></div></div><div data-m5-stage-panel="1" hidden><h3>同一子句的两个产物</h3><div data-m5-fields></div><div data-m5-scores></div><div data-m5-contributions></div></div><div data-m5-stage-panel="2" hidden><h3>报告草稿 · 点击句子回查</h3><div data-m5-report></div><label class="m5-check"><input type="checkbox" data-m5-confirm><span>我已对照原文，核对当前句子的范围、数值、单位和否定。</span></label><p class="m5-small" data-m5-review-note></p></div></section></div>`;
 
   function mount(host) {
     host.innerHTML = labHTML;
@@ -343,6 +360,7 @@
     function render() {
       const r = state.run, f = current(), c = currentClaim();
       if (!r || !f || !c) return;
+      $('[data-m5-result-summary]').innerHTML = '<b>当前智能分流：</b> '+esc(name(f.category))+'；已生成 '+r.claims.length+' 句报告，'+r.claims.filter(v=>v.reviewStatus==='confirmed').length+' 句已人工核对。当前原文：“'+esc(f.rawQuote)+'”。';
       $('[data-m5-lab-handover]').innerHTML = handoverHTML(r.inference, state.intervalIndex, state.perspective, true);
       $('[data-m5-clause-list]').innerHTML = r.inference.facts.map((v, i) => `<button type="button" data-m5-select="${i}" aria-pressed="${i === state.selected}">${i + 1} · ${esc(name(v.category))}</button>`).join('');
       const change = state.exampleChange && state.exampleChange.runId === r.runId && state.exampleChange.factIndex === state.selected ? `<p class="fx-note" data-m5-change-feedback>${esc(state.exampleChange.message)}</p>` : '';
@@ -353,7 +371,7 @@
       $('[data-m5-fields]').innerHTML = `<p class="m5-small">字段抽取：从高亮原文里留下的事实</p>${fieldItems(f)}${f.flags.length ? `<p class="fx-note">需要核查：${esc(f.flags.join('；'))}</p>` : ''}`;
       $('[data-m5-scores]').innerHTML = `<h3>这句话先放在哪个栏目？</h3>${scorePlot(f.prediction)}<p><span class="m5-label is-selected">贝叶斯候选：${esc(name(f.category))}</span> <span class="m5-label">关键词基线：${esc(name(f.baseline))}</span></p><p class="m5-small">${f.prediction.reasons.length ? esc(f.prediction.reasons.join('；')) + '。' : ''}分数由当前原文重新计算；最高类为0，其余数值表示与最高类的对数分差。关键词基线只按一组固定关键词归类，供同句比较。</p>`;
       const ranking = f.prediction.scores.map((v, i) => ({v, i})).sort((a, b) => b.v - a.v);
-      $('[data-m5-contributions]').innerHTML = `<h3>哪些文字影响了这次分流？</h3><p class="m5-small">实际字符片段对“${esc(name(ranking[0].i))}”相对“${esc(name(ranking[1].i))}”的贡献；正值支持前者，负值支持后者。</p><div class="m5-fields">${f.prediction.contributions.slice(0, 4).map(v => `<div class="m5-field"><small>“${esc(v.token)}” × ${v.count}</small><b>${v.contribution >= 0 ? '+' : ''}${fmt(v.contribution)}</b></div>`).join('')}</div>`;
+      $('[data-m5-contributions]').innerHTML = `<h3>哪些词项影响了这次分流？</h3><p class="m5-small">预处理后词项对“${esc(name(ranking[0].i))}”相对“${esc(name(ranking[1].i))}”的贡献；正值支持前者，负值支持后者。分类时数字统一替换成“数”，原文与抽取字段不变。</p><div class="m5-fields">${f.prediction.contributions.slice(0, 4).map(v => `<div class="m5-field"><small>“${esc(v.token)}” × ${v.count}</small><b>${v.contribution >= 0 ? '+' : ''}${fmt(v.contribution)}</b></div>`).join('')}</div>`;
       $('[data-m5-report]').innerHTML = `<p class="m5-small">${r.claims.length}句 · 已核对${r.claims.filter(v => v.reviewStatus === 'confirmed').length}句</p><div class="m5-report-list">${r.claims.map((v, i) => `<button type="button" class="m5-report-button" data-m5-report-select="${i}" aria-pressed="${i === state.selected}">${esc(v.statement)}<span>${esc(labelReview(v))} · 点击定位原文</span></button>`).join('')}</div>`;
       $('[data-m5-confirm]').checked = c.reviewStatus === 'confirmed';
       $('[data-m5-confirm]').disabled = state.status !== 'ready';
@@ -446,7 +464,7 @@
       const actual = [
         [`所选 ${interval}，当前原文与前例构建期快照。`, '按文字范围与逐深度数据筛选；气峰只按已保存的模型参考点定位，缺深度样品不归段。', `<p>该段 ${h.selected.length} 条文字记录；岩屑 ${h.rocks.length} 条，气测 ${h.gasText.length} 条，荧光 ${h.fluorescence.length} 条；钻时有 ${h.active.length} 个有效点。</p><p>气峰参考点${h.gasHere ? '位于本段' : '不在本段或未提供'}；M1/M3样品${h.paired ? '身份相同但没有井段' : '配对信息待补'}。</p>${h.differences.length ? '<p>记录差异：' + h.differences.map(v => esc(v.message)).join(' ') + '</p>' : ''}`],
         [`选中子句：${f.rawQuote}`, '按原文位置切分，规则识别该子句的范围、数值、单位与否定。', `<div class="m5-quote">${sourcePreview(r.text, f)}</div>${inheritanceNote(f)}${fieldItems(f)}<p class="m5-small">当前观察位于原文第${f.sourceSpanStart + 1}—${f.sourceSpanEnd}个字符，已在图中高亮。</p>`],
-        [`同一子句：${f.rawQuote}`, `取 ${C.tokens(f.rawQuote).length} 个单字／相邻双字片段，运行固定训练库NB与关键词基线。`, `${scorePlot(f.prediction)}<p>当前候选：${esc(name(f.category))}；关键词基线：${esc(name(f.baseline))}。</p>`],
+        [`同一子句：${f.rawQuote}`, `取 ${C.tokens(f.rawQuote).length} 个单字／相邻双字片段，运行固定训练库NB与关键词基线。`, `${scorePlot(f.prediction)}<p>当前候选：${esc(name(f.category))}；关键词基线：${esc(name(f.baseline))}。</p><p class="m5-small">朴素贝叶斯先统计训练句在各栏目中的词项，再比较当前句的相对分数。数字在分类特征中统一替换成“数”；原文、范围和字段不变。</p>${tokenContributionPlot(f.prediction)}`],
         [`当前栏目“${name(f.category)}”与原文字段。`, '保留原文引述，将当前句子绑定到当前来源版本及文字位置。', `<div class="m5-quote">${esc(c.statement)}</div><p class="m5-small">对应原文：${esc(r.text.slice(f.sourceSpanStart, f.sourceSpanEnd))}</p>${inheritanceNote(f)}`],
         [`当前报告第 ${state.selected + 1} 句及 ${interval} 的资料。`, '逐项核对范围、数值、单位与否定，保留选段缺项和下一步问题。', `<p><b>${esc(labelReview(c))}</b> · 当前修订 ${c.revision}</p><div class="m5-quote">${esc(c.statement)}</div><p class="m5-small">本句 ${c.reviewHistory.length} 条历史；本次报告已核对 ${r.claims.filter(v => v.reviewStatus === 'confirmed').length}/${r.claims.length} 句。</p><h4>下一步核查</h4><ul>${h.questions.map(q => `<li>${esc(q)}</li>`).join('')}</ul>`]
       ][i];
@@ -460,6 +478,8 @@
       changed();
     });
     host.addEventListener('click', event => {
+      const jump = event.target.closest('[data-m5-jump-report]');
+      if (jump) {setStage(1); changed(); $('[data-m5-stage-panel="1"]').scrollIntoView({block: 'start'}); return;}
       const target = event.target.closest('[data-m5-stage],[data-m5-select],[data-m5-report-select],[data-m5-example],[data-m5-interval],[data-m5-perspective],[data-m5-handover-fact]');
       if (!target || !host.contains(target)) return;
       if (target.hasAttribute('data-m5-interval')) {state.intervalIndex = Number(target.dataset.m5Interval); render(); revealIntervalChart(host, state.intervalIndex); host.querySelector(`[data-m5-interval="${state.intervalIndex}"]`).focus({preventScroll: true}); changed(); return;}
