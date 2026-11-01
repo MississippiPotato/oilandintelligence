@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-11-01T08:49:33.860Z",
+  "kind": "actual_Chrome_published_companion",
+  "checks": [
+    {
+      "name": "Published character starts before opening the dialogue",
+      "passed": true
+    },
+    {
+      "name": "Published character has its enlarged entry",
+      "passed": true
+    },
+    {
+      "name": "Published invitation card is absent",
+      "passed": true
+    },
+    {
+      "name": "Published initial dialogue has no introduction bubble",
+      "passed": true
+    },
+    {
+      "name": "Published demonstration goes straight to its experiment",
+      "passed": true,
+      "detail": {
+        "mode": {
+          "enabled": true,
+          "caseId": "s17x-g1-remote-lithology",
+          "tab": "lab",
+          "height": 2772
+        },
+        "nav": 0,
+        "js": [
+          "https://mississippipotato.github.io/oilandintelligence/dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js?v=20261101-companion"
+        ]
+      }
+    },
+    {
+      "name": "Published demonstration uses the new cache version",
+      "passed": true,
+      "detail": [
+        "https://mississippipotato.github.io/oilandintelligence/dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js?v=20261101-companion"
+      ]
+    },
+    {
+      "name": "Published experiment actually recalculates",
+      "passed": true
+    },
+    {
+      "name": "No uncaught errors in the published interaction",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "passed": 8,
+  "failed": 0
+}
