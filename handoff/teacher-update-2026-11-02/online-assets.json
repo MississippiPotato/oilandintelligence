@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-11-02T03:05:04.261Z",
+  "kind": "real_Pages_HTTP_bytes_and_archive_headers",
+  "checks": [
+    {
+      "path": "portal/index.html",
+      "status": 200,
+      "bytes": 4237,
+      "sha256": "f295887a082f9bc07950d75cd531a614ad8c1577454ca1e99e897d72268aab0c",
+      "localSha256": "f295887a082f9bc07950d75cd531a614ad8c1577454ca1e99e897d72268aab0c",
+      "passed": true
+    },
+    {
+      "path": "portal/assets/s17-case-import.min.js",
+      "status": 200,
+      "bytes": 59729,
+      "sha256": "1aa1072ca72aa1262ccf2fb12eb5980953f7e3cfc4940b30fca79f253d687229",
+      "localSha256": "1aa1072ca72aa1262ccf2fb12eb5980953f7e3cfc4940b30fca79f253d687229",
+      "passed": true
+    },
+    {
+      "path": "portal/assets/s17-stage-motion.js",
+      "status": 200,
+      "bytes": 8606,
+      "sha256": "a6c1c82546f4873eb0772ad8adf7e80818afa2420d5344f611f421ba22040939",
+      "localSha256": "a6c1c82546f4873eb0772ad8adf7e80818afa2420d5344f611f421ba22040939",
+      "passed": true
+    },
+    {
+      "path": "portal/assets/s17-portal.min.css",
+      "status": 200,
+      "bytes": 197888,
+      "sha256": "4f09fafd6f183b3bfba0fd40fe959e2561d59c4b7f509531d889e0a50c4801ed",
+      "localSha256": "4f09fafd6f183b3bfba0fd40fe959e2561d59c4b7f509531d889e0a50c4801ed",
+      "passed": true
+    },
+    {
+      "path": "portal/assets/s17-mudlogging-stage.js",
+      "status": 200,
+      "bytes": 44986,
+      "sha256": "85ea607d168d322ecc3d5fa8bb5f12b4e48c3d5e9d7848c79dfc8cc20ba06897",
+      "localSha256": "85ea607d168d322ecc3d5fa8bb5f12b4e48c3d5e9d7848c79dfc8cc20ba06897",
+      "passed": true
+    },
+    {
+      "path": "portal/assets/s17-case-loader.js",
+      "status": 200,
+      "bytes": 9762,
+      "sha256": "d49c8b5a42bcbaeb8606025a60d49961a18a9e17a4ea9c695141334c17b0fe38",
+      "localSha256": "d49c8b5a42bcbaeb8606025a60d49961a18a9e17a4ea9c695141334c17b0fe38",
+      "passed": true
+    },
+    {
+      "path": "portal/assets/s17-case-catalog.js",
+      "status": 200,
+      "bytes": 213452,
+      "sha256": "8b22f2603d5390bdf3e1b71872d3c808b89f7f07ae6eec1d605ef7a04f85c557",
+      "localSha256": "8b22f2603d5390bdf3e1b71872d3c808b89f7f07ae6eec1d605ef7a04f85c557",
+      "passed": true
+    },
+    {
+      "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+      "status": 200,
+      "bytes": 838392,
+      "sha256": "68535299f99be5e036c5fe60783a67e3504a07c16d1a16993b85c4796aadd560",
+      "localSha256": "68535299f99be5e036c5fe60783a67e3504a07c16d1a16993b85c4796aadd560",
+      "passed": true
+    },
+    {
+      "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+      "status": 200,
+      "bytes": 264920,
+      "sha256": "e718f99a7d759dc378aa8a9573420398d6d9c4084c294d48585a7f4d02b15a05",
+      "localSha256": "e718f99a7d759dc378aa8a9573420398d6d9c4084c294d48585a7f4d02b15a05",
+      "passed": true
+    },
+    {
+      "path": "dist/s17-all-65-cases-1.13.1.zip",
+      "status": 200,
+      "contentLength": 14000490,
+      "expectedBytes": 14000490,
+      "passed": true
+    },
+    {
+      "path": "dist/s17-site-1.13.1-offline.zip",
+      "status": 200,
+      "contentLength": 28597038,
+      "expectedBytes": 28597038,
+      "passed": true
+    }
+  ],
+  "passed": 11,
+  "failed": 0
+}
