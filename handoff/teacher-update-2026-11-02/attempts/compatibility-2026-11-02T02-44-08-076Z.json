@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-11-02T02:44:08.076Z",
+  "kind": "actual_Chrome_offline_ZIP_and_original_teacher_directory_import",
+  "checks": [
+    {
+      "name": "ZIP added in disconnected file:// portal",
+      "passed": true
+    },
+    {
+      "name": "Offline ZIP demo opens directly in experiment",
+      "passed": true
+    },
+    {
+      "name": "Offline imported case survives refresh",
+      "passed": true
+    },
+    {
+      "name": "Compatibility protocol completed",
+      "passed": false,
+      "detail": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#imp-ok')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"imp-ok\" class=\"btn primary\">校验并添加</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+    }
+  ],
+  "failure": "locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#imp-ok')\u001b[22m\n\u001b[2m    - locator resolved to <button id=\"imp-ok\" class=\"btn primary\">校验并添加</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n    at evalmachine.<anonymous>:12:327\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)",
+  "passed": 3,
+  "failed": 1
+}

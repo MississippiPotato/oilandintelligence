@@ -1,9 +1,9 @@
 (function(g){
  'use strict';
  if(g===g.parent||g.S17EmbeddedDemo)return;
- const requested=new URLSearchParams(g.location.search).get('embed')==='demo';
- let enabled=false,lab=null,lastHeight=0,scheduled=false,resize=null,mutations=null,initialTab='';
- const caseId=()=>g.S17Page?.caseId||g.CaseInspect?.snapshot?.()?.caseId||'';
+ const requested=new URLSearchParams(g.location.search).get('embed')==='demo'||g.location.href.startsWith('about:srcdoc');
+ let enabled=false,lab=null,lastHeight=0,scheduled=false,resize=null,mutations=null,initialTab='',importedId='';
+ const caseId=()=>importedId||g.S17Page?.caseId||g.CaseInspect?.snapshot?.()?.caseId||'';
  function sendHeight(){
   scheduled=false;if(!enabled||!lab)return;
   const rect=lab.getBoundingClientRect(),height=Math.ceil(Math.max(rect.height,lab.scrollHeight)+Math.max(0,rect.top+g.scrollY)+8);
@@ -49,7 +49,7 @@
   g.parent.postMessage({type:'s17-demo-ready',caseId:caseId(),mode:'lab-only'},'*');
  }
  function ready(){if(requested)enter();}
- g.addEventListener('message',e=>{if(e.source===g.parent&&e.data?.type==='s17-embed-demo')enter();});
+ g.addEventListener('message',e=>{if(e.source===g.parent&&e.data?.type==='s17-embed-demo'){if(typeof e.data.caseId==='string')importedId=e.data.caseId;enter();lastHeight=0;schedule();}});
  g.S17EmbeddedDemo={snapshot:()=>({enabled,caseId:caseId(),tab:initialTab,height:lastHeight})};
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready,{once:true});else ready();
 })(window);

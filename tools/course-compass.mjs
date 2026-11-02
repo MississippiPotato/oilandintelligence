@@ -59,8 +59,8 @@ export function courseCatalog() {
 }
 
 export function courseThemeCSS() { return read('shared/course-theme.css'); }
-export function courseCompassCSS() { return read('shared/course-compass.css'); }
-export function courseCompassRuntime() { return read('shared/course-compass.js'); }
+export function courseCompassCSS() { return read('shared/course-compass.css') + '\n' + read('shared/method-role.css'); }
+export function courseCompassRuntime() { return read('shared/course-compass.js') + '\n' + read('shared/method-role.js'); }
 export function courseStyles() { return courseThemeCSS() + '\n' + courseCompassCSS(); }
 
 /**

@@ -119,8 +119,8 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
       + '<header class="ms-heading"><div><span class="ms-kicker">录井 · 同一份观察的旅程</span><h2 id="ms-title">地面的记录，来自更早的井底。</h2></div><p>先跟随一份教学样品，再进入五种观察。井下与地面共用时钟，发生时刻却不同。</p></header>'
       + '<div class="ms-camera-bar" role="group" aria-label="选择观察镜头">' + [['overview', '全景'], ['return', '携屑返出'], ['surface', '地面检测'], ['interpret', '记录解释']].map(([id, name]) => '<button type="button" data-ms-camera="' + id + '" aria-pressed="' + (id === 'overview') + '">' + name + '</button>').join('')
       + '<label class="ms-follow"><input type="checkbox" data-ms-follow checked>随阶段切镜头</label><button type="button" data-ms-view="2d" class="ms-mode">使用二维剖面</button></div>'
-      + '<div class="ms-theater"><div class="ms-visual"><div class="ms-viewport" data-ms-viewport><div class="ms-scene" data-ms-canvas hidden></div><div class="ms-diagram" data-ms-diagram tabindex="0" aria-label="二维剖面，可横向滚动">' + diagram(state, 'm2') + '</div></div>'
-      + '<p class="ms-view-help" data-ms-view-help>图中位置按累计泵量映射。三维视图接近屏幕时准备；二维剖面可直接操作。</p><div class="ms-legend"><span><i style="background:#467969"></i>钻柱内下行</span><span><i style="background:#B08A4A"></i>携样上返</span><span><i style="background:#55768B"></i>检测 / 记录支路</span></div></div>'
+      + '<div class="ms-theater"><div class="ms-visual"><div class="ms-viewport" data-ms-viewport><div class="ms-scene" data-ms-canvas hidden></div><div class="ms-diagram" data-ms-diagram hidden tabindex="0" aria-label="二维剖面，可横向滚动">' + diagram(state, 'm2') + '</div><div class="ms-loading" data-ms-loading role="status"><span class="ms-loading-orbit" aria-hidden="true"></span><strong>正在展开三维井场</strong><span>从井底返出，到地面观察与记录</span></div></div>'
+      + '<p class="ms-view-help" data-ms-view-help>三维井场正在准备。</p><div class="ms-legend"><span><i style="background:#467969"></i>钻柱内下行</span><span><i style="background:#B08A4A"></i>携样上返</span><span><i style="background:#55768B"></i>检测 / 记录支路</span></div></div>'
       + '<aside class="ms-aside"><div class="ms-phase-copy"><span class="ms-eyebrow" data-ms-phase-index>01 / 05</span><h3 data-ms-phase-title></h3><p data-ms-phase-lead></p><p class="ms-small" data-ms-phase-detail></p></div><div class="ms-object-copy"><span class="ms-eyebrow">当前对象</span><h3 data-ms-object-title></h3><p data-ms-object-copy></p><div class="ms-destinations"><a data-ms-object-link>阅读专业背景 →</a><a data-ms-demo-link>直接进入示范 ↗</a></div></div></aside></div>'
       + '<p class="ms-story-heading"><strong>资料形成分镜</strong><span>物质上返 → 两种检测 → 同井段记录</span></p><div class="ms-story-scroll" tabindex="0" aria-label="资料形成分镜，可横向滚动"><nav class="ms-phases" aria-label="点击分镜，把旅程定位到一个阶段">' + PHASES.map((p, i) => '<button type="button" class="ms-story-frame" data-ms-phase="' + i + '" aria-pressed="' + (state.phaseIndex === i) + '" aria-label="' + p.name + '，产物：' + FRAME_PRODUCTS[i] + '，定位到此阶段">' + storyFrame(i) + '<span class="ms-frame-title">' + p.name + '</span><small class="ms-frame-product">' + FRAME_PRODUCTS[i] + '</small>' + (i < PHASES.length - 1 ? '<svg class="ms-frame-arrow" viewBox="0 0 20 14" aria-hidden="true" focusable="false"><path d="M2 7h15m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>' : '') + '</button>').join('') + '</nav></div>'
       + '<div class="ms-playback"><button type="button" class="ms-play" data-ms-play>播放旅程</button><label class="ms-seek">回放时刻 <output data-ms-time-label>120 s</output><input type="range" data-ms-seek min="0" max="' + model.endTime_s + '" step="1" value="120" aria-label="回放时刻，秒"></label><button type="button" data-ms-reset>复位</button><label>泵送情景<select data-ms-scenario aria-label="泵送情景"><option value="normal">持续泵送</option><option value="pause">300–480 s停泵后恢复</option></select></label></div>'
@@ -181,13 +181,16 @@ import { CONFIG, PHASES, OBJECTS, createTransport, sampleRoute } from './transpo
       $('[data-ms-time-chart]').innerHTML = timeChart(state.model, value);
       $('[data-ms-time-caption]').textContent = '来源时刻已累计泵送3 m³；再推进12 m³后抵达地面。' + (state.model.mode === 'pause' ? '停泵平台使到达从600 s推迟至780 s，增加的180 s恰为本情景停泵时长。' : '连续泵送：12÷0.025＝480 s，上返迟到不是到达时刻600 s本身。') + '两条时间轴都保留同一份观察的身份。';
       const use3D = state.mode === '3d' && state.rendererStatus === 'ready';
-      $('[data-ms-canvas]').hidden = !use3D; $('[data-ms-diagram]').hidden = use3D;
-      if (!use3D || force) $('[data-ms-diagram]').innerHTML = diagram(value, state.selected);
+      const use2D = state.mode === '2d';
+      $('[data-ms-canvas]').hidden = !use3D; $('[data-ms-diagram]').hidden = !use2D;
+      $('[data-ms-loading]').hidden = use3D || use2D;
+      $('[data-ms-viewport]').setAttribute('aria-busy', String(!use3D && !use2D));
+      if (use2D) $('[data-ms-diagram]').innerHTML = diagram(value, state.selected);
       const unavailable3D = ['webgl-unavailable', 'webgl-context-lost', 'intersection-observer-unavailable'].includes(state.fallbackReason);
       $('[data-ms-view]').dataset.msView = state.mode === '3d' ? '2d' : '3d';
       $('[data-ms-view]').disabled = unavailable3D;
       $('[data-ms-view]').textContent = unavailable3D ? '二维剖面 · 当前可用' : state.mode === '3d' ? '使用二维剖面' : '使用三维视图';
-      $('[data-ms-view-help]').textContent = use3D ? '拖动旋转，滚轮或双指缩放；点设备聚焦。键盘方向键旋转，＋／－缩放，Home回全景。' : state.rendererStatus === 'loading' ? '正在准备三维场景；二维剖面和时间计算可继续使用。' : state.fallbackReason ? '当前使用二维剖面，五阶段、时间轴和泵量计算保持可用。' : '二维剖面与三维视图使用同一份运移计算；金色圆点代表教学样品。';
+      $('[data-ms-view-help]').textContent = use3D ? '拖动旋转，滚轮或双指缩放；点设备聚焦。键盘方向键旋转，＋／－缩放，Home回全景。' : !use2D ? '正在加载三维井场，完成后自动展现。' : state.fallbackReason ? '三维视图暂不可用，已切换二维剖面；时间轴和泵量计算可继续操作。' : '二维剖面与三维视图使用同一份运移计算；金色圆点代表教学样品。';
       host.dataset.msTime = fmt(value.time_s, 3); host.dataset.msPhase = value.phase; host.dataset.msScenario = value.mode;
       host.dataset.msFlow = String(value.flow_m3_s); host.dataset.msTransportProgress = fmt(value.transportProgress, 8);
       host.dataset.msRenderer = state.rendererStatus; host.dataset.msVisible = String(state.visible);

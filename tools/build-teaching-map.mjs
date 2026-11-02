@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
-import {transformSync} from 'esbuild';
+import {transformSync,buildSync} from 'esbuild';
 import {ROOT,write,read,walk,record,caseFolders} from './site-upgrade-contract.mjs';
 import {REPORT as CURRENT_REPORT,protectedCheck} from './teaching-map-contract.mjs';
 import {buildFour} from './build-four-exhibits.mjs';
@@ -8,14 +8,15 @@ import {buildM2} from './build-m2-exhibit.mjs';
 import {buildExpansions} from './build-expansion.mjs';
 import {buildCaseVariants} from './build-case-variants.mjs';
 
-const REPORT=CURRENT_REPORT,SITE_VERSION='1.13.0';
+const REPORT=process.env.S17_REPORT_DIR||CURRENT_REPORT,SITE_VERSION=process.env.S17_SITE_VERSION||'1.13.0';
+const UPDATED=process.env.S17_UPDATED||'2026-11-01';
 process.chdir(ROOT);
 fs.mkdirSync(REPORT,{recursive:true});
 if(protectedCheck().length)throw Error('Protected calculation or teacher files changed');
 // Legacy source compilers still create the self-contained five-file exports.
 // Their old eager portal bundles are intentionally not emitted in this release.
-buildFour({version:'1.10.0',reportDir:REPORT,updated:'2026-11-01'});
-buildM2({version:'1.10.0',reportDir:REPORT,updated:'2026-11-01',emitPortalKnowledge:false});
+buildFour({version:'1.10.0',reportDir:REPORT,updated:UPDATED});
+buildM2({version:'1.10.0',reportDir:REPORT,updated:UPDATED,emitPortalKnowledge:false});
 const expanded=buildExpansions({requireAll:true,destination:REPORT+'/original-expansion',lessons:true,emitPortalPlugin:false});
 if(expanded.failed)throw Error('An original expansion source failed');
 buildCaseVariants({reportDir:REPORT});
@@ -29,7 +30,11 @@ html=html.replace(/<script[^>]+src=["'][^"']*s17-stage-motion\.js[^"']*["'][^>]*
 html=html.replace(/(<script[^>]+src=["']assets\/s17-home\.js)/,'<script src="assets/s17-stage-motion.js?v='+SITE_VERSION+'"></script>\n$1');
 // Minify copies of the original framework; its protected source files remain byte-identical.
 const compact=[['assets/data.js','assets/s17-data.min.js'],['assets/core/case-upload.js','assets/s17-case-import.min.js'],['assets/core/shell.js','assets/s17-shell.min.js'],['assets/core/admin.js','assets/s17-admin.min.js']];
-for(const [source,output] of compact){write('portal/'+output,transformSync(read('portal/'+source),{minify:true,charset:'utf8',legalComments:'inline',target:'es2020'}).code);html=html.replaceAll('src="'+source,'src="'+output);}
+for(const [source,output] of compact){
+ if(source==='assets/core/case-upload.js')buildSync({entryPoints:['portal/assets/core/import-entry.js'],outfile:'portal/'+output,bundle:true,format:'iife',platform:'browser',target:'es2020',minify:true,charset:'utf8',legalComments:'inline'});
+ else write('portal/'+output,transformSync(read('portal/'+source),{minify:true,charset:'utf8',legalComments:'inline',target:'es2020'}).code);
+ html=html.replaceAll('src="'+source,'src="'+output);
+}
 if(!html.includes('as="image" href="assets/themes/theme-well-v1.webp"'))html=html.replace('</head>','<link rel="preload" as="image" href="assets/themes/theme-well-v1.webp" fetchpriority="high">\n</head>');
 const eager=['s17-expansion-cases.js','s17-mudlogging-knowledge.js','welllog-layer.case.js','welllog-layer.demo.js','s17-welllog-demo.min.js','pixi-6.5.10.min.js','live2dcubismcore.min.js','pixi-live2d-0.4.0.min.js','s17-live2d-data.js' ,'s17-live2d.js'];
 html=html.replace(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>\s*<\/script>/gi,(tag,src)=>eager.includes(src.split('?')[0].split('/').at(-1))?'':tag);

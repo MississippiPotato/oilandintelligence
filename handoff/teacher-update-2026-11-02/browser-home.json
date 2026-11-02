@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-11-02T02:43:44.428Z",
+  "kind": "actual_Chrome_automatic_miniatures",
+  "checks": [
+    {
+      "name": "Miniature automatically continues beyond first four-second cycle",
+      "passed": true,
+      "detail": {
+        "before": {
+          "playing": true,
+          "visible": true,
+          "animations": [
+            {
+              "time": 2696.502000016533,
+              "iterations": null,
+              "state": "running"
+            },
+            {
+              "time": 2696.502000016533,
+              "iterations": null,
+              "state": "running"
+            },
+            {
+              "time": 2696.502000016533,
+              "iterations": null,
+              "state": "running"
+            }
+          ]
+        },
+        "after": {
+          "playing": true,
+          "visible": true,
+          "animations": [
+            {
+              "time": 7453.402000016533,
+              "iterations": null,
+              "state": "running"
+            },
+            {
+              "time": 7453.402000016533,
+              "iterations": null,
+              "state": "running"
+            },
+            {
+              "time": 7453.402000016533,
+              "iterations": null,
+              "state": "running"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "All thirteen stages have independent SVG scenes",
+      "passed": true
+    },
+    {
+      "name": "Offscreen miniature pauses",
+      "passed": true
+    },
+    {
+      "name": "Reduced-motion keeps readable static miniatures",
+      "passed": true
+    }
+  ],
+  "passed": 4,
+  "failed": 0
+}

@@ -1,0 +1,169 @@
+{
+  "checkedAt": "2026-11-02T02:37:48.402Z",
+  "kind": "actual_Chrome_offline_method_explanations_and_recompute",
+  "checks": [
+    {
+      "name": "m1 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "m1 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": "s17-cuttings-lithology-r1-v1"
+      }
+    },
+    {
+      "name": "m1 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "m2 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "m2 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": "m2-v1-r1"
+      }
+    },
+    {
+      "name": "m2 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "M2 same gas peak recalculates source time",
+      "passed": true
+    },
+    {
+      "name": "m3 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "m3 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": "s17-fluorescence-review-r1-v1"
+      }
+    },
+    {
+      "name": "m3 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "m4 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "m4 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": "s17-drilltime-boundaries-r1-v1"
+      }
+    },
+    {
+      "name": "m4 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "m5 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "m5 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": "s17-evidence-report-r1-v1"
+      }
+    },
+    {
+      "name": "m5 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "M5 changed value reaches current extracted facts",
+      "passed": true
+    },
+    {
+      "name": "d1 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "d1 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": "d1-mvynfwwp-0001"
+      }
+    },
+    {
+      "name": "d1 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "D1 constraint updates calculation",
+      "passed": true
+    },
+    {
+      "name": "g1 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "g1 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": 1
+      }
+    },
+    {
+      "name": "g1 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "s1 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "s1 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "ready",
+        "runId": 1
+      }
+    },
+    {
+      "name": "s1 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "r4 has implemented method, causal explanation and result guide",
+      "passed": true
+    },
+    {
+      "name": "r4 default computation is present",
+      "passed": true,
+      "detail": {
+        "status": "complete"
+      }
+    },
+    {
+      "name": "r4 result link moves focus to actual output area",
+      "passed": true
+    },
+    {
+      "name": "Methods protocol completed",
+      "passed": false,
+      "detail": "page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-method-role]') to be visible\u001b[22m\n"
+    }
+  ],
+  "failure": "page.waitForSelector: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-method-role]') to be visible\u001b[22m\n\n    at evalmachine.<anonymous>:9:104\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)",
+  "passed": 30,
+  "failed": 1
+}

@@ -15,7 +15,7 @@ const lessons=[
 ];
 function render(){
  const authored=window.S17CaseCatalog?.cases,caseCount=authored?.length??A.allScenes.length;
- document.querySelectorAll('.s17-footer p').forEach(line=>{if(line.textContent.includes('门户1.9.2-preview'))line.textContent=line.textContent.replace('门户1.9.2-preview','门户1.13.0');});
+ document.querySelectorAll('.s17-footer p').forEach(line=>{if(line.textContent.includes('门户1.9.2-preview'))line.textContent=line.textContent.replace('门户1.9.2-preview','门户1.13.1');});
  const route=location.hash.split('?')[0],isHome=!route||route==='#/';
  document.body.classList.toggle('s17-overview-active',isHome);
  document.body.classList.toggle('s17-lesson-reading',/^#\/scene\/m[1-5]$/.test(route));

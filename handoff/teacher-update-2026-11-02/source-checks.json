@@ -1,0 +1,836 @@
+{
+  "checkedAt": "2026-11-02T02:57:09.740Z",
+  "kind": "source_contract_and_archive_decoding_only",
+  "checks": [
+    {
+      "name": "65 cases retain 325 five-file contract members",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17-cuttings-lithology",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17-cuttings-lithology",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17-cuttings-lithology",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17-drilltime-boundaries",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17-drilltime-boundaries",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17-drilltime-boundaries",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17-evidence-report",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17-evidence-report",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17-evidence-report",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17-fluorescence-review",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17-fluorescence-review",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17-fluorescence-review",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17-mudgas-context",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17-mudgas-context",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17-mudgas-context",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-c1-cement-quality",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-c1-cement-quality",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-c1-cement-quality",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-c1-cement-woc-strength",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-c1-cement-woc-strength",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-c1-cement-woc-strength",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-c2-cement-displacement",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-c2-cement-displacement",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-c2-cement-displacement",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-c3-cement-loss-risk",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-c3-cement-loss-risk",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-c3-cement-loss-risk",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-c4-casing-standoff",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-c4-casing-standoff",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-c4-casing-standoff",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-co1-completion-choice",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-co1-completion-choice",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-co1-completion-choice",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-co2-completion-zone-design",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-co2-completion-zone-design",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-co2-completion-zone-design",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-co3-completion-seal-test",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-co3-completion-seal-test",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-co3-completion-seal-test",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-co3-tubing-stress",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-co3-tubing-stress",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-co3-tubing-stress",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-co4-sliding-sleeve-control",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-co4-sliding-sleeve-control",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-co4-sliding-sleeve-control",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-d1-rop-optimization",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-d1-rop-optimization",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-d1-rop-optimization",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-d2-drilling-precursor",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-d2-drilling-precursor",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-d2-drilling-precursor",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-d3-trajectory-control",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-d3-trajectory-control",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-d3-trajectory-control",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-d4-tool-condition",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-d4-tool-condition",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-d4-tool-condition",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-d5-mud-rheology",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-d5-mud-rheology",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-d5-mud-rheology",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-e1-fracture-optimization",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-e1-fracture-optimization",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-e1-fracture-optimization",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-e2-fracture-geometry",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-e2-fracture-geometry",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-e2-fracture-geometry",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-e3-chemical-mixture",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-e3-chemical-mixture",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-e3-chemical-mixture",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-e4-steam-cycle",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-e4-steam-cycle",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-e4-steam-cycle",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-e5-microbial-activity",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-e5-microbial-activity",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-e5-microbial-activity",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-g1-remote-lithology",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-g1-remote-lithology",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-g1-remote-lithology",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-g2-geochemical-anomaly",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-g2-geochemical-anomaly",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-g2-geochemical-anomaly",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-g3-closure-spill",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-g3-closure-spill",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-g3-closure-spill",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-g3-map-elements",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-g3-map-elements",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-g3-map-elements",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-g4-fracture-survey",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-g4-fracture-survey",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-g4-fracture-survey",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-p1-perforation-depth-correlation",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-p1-perforation-depth-correlation",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-p1-perforation-depth-correlation",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-p1-perforation-design",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-p1-perforation-design",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-p1-perforation-design",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-p2-perforation-shape",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-p2-perforation-shape",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-p2-perforation-shape",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-p3-perforation-catalog",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-p3-perforation-catalog",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-p3-perforation-catalog",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-p4-perforation-effect",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-p4-perforation-effect",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-p4-perforation-effect",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-pr1-pump-card",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-pr1-pump-card",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-pr1-pump-card",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-pr2-production-forecast",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-pr2-production-forecast",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-pr2-production-forecast",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-pr3-water-allocation",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-pr3-water-allocation",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-pr3-water-allocation",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-pr4-esp-warning",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-pr4-esp-warning",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-pr4-esp-warning",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-pr5-wax-risk",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-pr5-wax-risk",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-pr5-wax-risk",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-r1-distillation-optimization",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-r1-distillation-optimization",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-r1-distillation-optimization",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-r2-fcc-product-yields",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-r2-fcc-product-yields",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-r2-fcc-product-yields",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-r3-maintenance-trend",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-r3-maintenance-trend",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-r3-maintenance-trend",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-r4-lab-audit",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-r4-lab-audit",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-r4-lab-audit",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-r5-quality-softsensor",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-r5-quality-softsensor",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-r5-quality-softsensor",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-s1-seismic-fault",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-s1-seismic-fault",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-s1-seismic-fault",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-s2-seismic-facies",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-s2-seismic-facies",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-s2-seismic-facies",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-s3-first-arrival",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-s3-first-arrival",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-s3-first-arrival",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-s4-reservoir-inversion",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-s4-reservoir-inversion",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-s4-reservoir-inversion",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-s5-seismic-denoise",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-s5-seismic-denoise",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-s5-seismic-denoise",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-t1-pipeline-leak",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-t1-pipeline-leak",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-t1-pipeline-leak",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-t2-corrosion-growth",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-t2-corrosion-growth",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-t2-corrosion-growth",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-t3-gathering-pump-optimization",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-t3-gathering-pump-optimization",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-t3-gathering-pump-optimization",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-t4-meter-drift-calibration",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-t4-meter-drift-calibration",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-t4-meter-drift-calibration",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-t5-tank-level-crosscheck",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-t5-tank-level-crosscheck",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-t5-tank-level-crosscheck",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-w1-log-boundaries",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-w1-log-boundaries",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-w1-log-boundaries",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-w2-porosity-calibration",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-w2-porosity-calibration",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-w2-porosity-calibration",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-w3-borehole-fractures",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-w3-borehole-fractures",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-w3-borehole-fractures",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-w4-log-lithology",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-w4-log-lithology",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-w4-log-lithology",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-w5-curve-repair",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-w5-curve-repair",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-w5-curve-repair",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-wo1-workover-retrieval",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-wo1-workover-retrieval",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-wo1-workover-retrieval",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-wo2-fishing-tools",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-wo2-fishing-tools",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-wo2-fishing-tools",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-wo3-casing-damage",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-wo3-casing-damage",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-wo3-casing-damage",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-wo4-workover-warning",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-wo4-workover-warning",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-wo4-workover-warning",
+      "passed": true
+    },
+    {
+      "name": "Method rationale and result reading: s17x-wo5-maintenance-interval",
+      "passed": true
+    },
+    {
+      "name": "Offline method explanation bundled: s17x-wo5-maintenance-interval",
+      "passed": true
+    },
+    {
+      "name": "Original 6 MiB limit: s17x-wo5-maintenance-interval",
+      "passed": true
+    },
+    {
+      "name": "Teacher portal/calculation/data baseline unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Historical dated reports unchanged",
+      "passed": true
+    },
+    {
+      "name": "Compiled portal assets match scoped build records",
+      "passed": true
+    },
+    {
+      "name": "ZIP decoding single",
+      "passed": true
+    },
+    {
+      "name": "ZIP decoding collection",
+      "passed": true
+    },
+    {
+      "name": "ZIP decoding stored",
+      "passed": true
+    },
+    {
+      "name": "ZIP rejects traversal",
+      "passed": true,
+      "detail": "ZIP内含无效相对路径：../case.json"
+    },
+    {
+      "name": "ZIP rejects missing",
+      "passed": true,
+      "detail": "ZIP中没有找到case.json，请选择包含案例清单的压缩包。"
+    },
+    {
+      "name": "ZIP rejects corrupt",
+      "passed": true,
+      "detail": "文件校验失败：同学甲/遥感案例/case.json，请重新压缩。"
+    },
+    {
+      "name": "Malformed manifest remains a visible invalid case",
+      "passed": true
+    }
+  ],
+  "passed": 206,
+  "failed": 0
+}

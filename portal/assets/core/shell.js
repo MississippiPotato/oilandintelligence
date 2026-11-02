@@ -907,7 +907,7 @@
       '<div class="sec-rail"><span class="sec-num">A</span><span class="kicker">UPLOAD PACKAGE · 推荐</span>' +
       '<span class="r"><span class="tag">不需要改任何文件</span></span></div>' +
       '<h2>上传一个案例包，三步接进去</h2>' +
-      '<p>下载模板（zip，含一个能跑的示范页）→ 改清单、替换演示内容 → 把整个文件夹拖回网站。系统逐项检查格式，通过后当场出现在站点里。</p>' +
+      '<p>下载模板（zip，含一个能跑的示范页）→ 改清单、替换演示内容 → 选择ZIP、文件夹或文件添加。系统逐项检查格式，通过后当场出现在站点里。合集ZIP会识别其中的独立案例，供逐例校验和添加。</p>' +
       '</div>' +
 
       '<div class="upcard">' +
@@ -921,8 +921,8 @@
       '<button class="btn primary" data-import>＋ 打开「添加案例」</button>' +
       '<button class="btn" data-dl-template>↓ 下载案例包模板（.zip）</button>' +
       '</div>' +
-      '<div class="upcard-note">模板解压后就是一个可直接运行的完整包：清单 + 示范页 + 样式 + 脚本，改完整个文件夹拖回去即可。' +
-      '上传的案例保存在本机浏览器（localStorage），换电脑需重新上传；要永久发布给所有人，用下面的方式 B。</div>' +
+      '<div class="upcard-note">模板解压后就是一个可直接运行的完整包：清单 + 示范页 + 样式 + 脚本。修改后可重新压缩为ZIP直接添加，也可选择完整文件夹。' +
+      '上传的案例保存在本机浏览器（IndexedDB，必要时回退本地存储），换电脑可重新导入ZIP；要永久发布给所有人，用下面的方式 B。</div>' +
       '</div>' +
       '<div class="upcard-r">' +
       '<table class="contract"><thead><tr><th>文件 / 字段</th><th>级别</th><th>说明</th></tr></thead><tbody>' +

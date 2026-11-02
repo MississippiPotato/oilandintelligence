@@ -1,0 +1,3165 @@
+{
+  "capturedAt": "2026-11-02T02:26:48.109Z",
+  "baseCommit": "08aa2ac1939fde24f5cd2f4edf566999ddad37ae",
+  "protectedFiles": [
+    {
+      "path": "portal-original/.workbuddy/memory/2026-10-22.md",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    {
+      "path": "portal-original/.workbuddy/memory/MEMORY.md",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    {
+      "path": "portal-original/assets/cases/_template.case.js",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    {
+      "path": "portal-original/assets/cases/_template.case.json",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    {
+      "path": "portal-original/assets/cases/welllog-layer.case.js",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    {
+      "path": "portal-original/assets/cases/welllog-layer.demo.js",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    {
+      "path": "portal-original/assets/core/admin.js",
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13"
+    },
+    {
+      "path": "portal-original/assets/core/case-demo-host.js",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    {
+      "path": "portal-original/assets/core/case-upload.js",
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99"
+    },
+    {
+      "path": "portal-original/assets/core/kit.js",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    {
+      "path": "portal-original/assets/core/layout.css",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    {
+      "path": "portal-original/assets/core/registry.js",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    {
+      "path": "portal-original/assets/core/shell.js",
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18"
+    },
+    {
+      "path": "portal-original/assets/core/tokens.css",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    {
+      "path": "portal-original/assets/core/ui.css",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    {
+      "path": "portal-original/assets/data.js",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    {
+      "path": "portal-original/docs/如何添加新案例.md",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/README.txt",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/case.json",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.css",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/demo.js",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    {
+      "path": "portal-original/firstbreak-pick-case/demo/index.html",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    },
+    {
+      "path": "portal-original/index.html",
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/.workbuddy/memory/2026-10-22.md",
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/.workbuddy/memory/MEMORY.md",
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/_template.case.js",
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/_template.case.json",
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js",
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/cases/welllog-layer.demo.js",
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/admin.js",
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/case-demo-host.js",
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/case-upload.js",
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/kit.js",
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/layout.css",
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/registry.js",
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/shell.js",
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/tokens.css",
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/core/ui.css",
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/assets/data.js",
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/docs/如何添加新案例.md",
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/README.txt",
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/case.json",
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.css",
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.js",
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/firstbreak-pick-case/demo/index.html",
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    },
+    {
+      "path": "石油勘探开发智能化案例集/index.html",
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97"
+    },
+    {
+      "path": "data/real/ATTRIBUTION.txt",
+      "bytes": 1570,
+      "sha256": "61b925dcb4d5453065e4678f47aea126630a30fa6952265be1b71e9604fb1326"
+    },
+    {
+      "path": "data/real/CALCITE-ATTRIBUTION.txt",
+      "bytes": 937,
+      "sha256": "858ba40ac0c2e2dab5dee10c70969e987d7bc81e0052a219fbd87f8c7d00d143"
+    },
+    {
+      "path": "data/real/PANGAEA.975497.txt",
+      "bytes": 9640,
+      "sha256": "410bbc9869bf0f592e5d218b8d2f3ede0bffd39226aaae780642ba86fd0a2f2e"
+    },
+    {
+      "path": "data/real/USROP_README.md",
+      "bytes": 581,
+      "sha256": "88864381bfd261a046a54da035a6373e9c8c13df114cad0cc083388f5a45d79a"
+    },
+    {
+      "path": "data/real/calcite-visible-uv.json",
+      "bytes": 3817,
+      "sha256": "8b180e03056ad503e1c454faa529c58bfff6f998d2e524042a8a9331bbf02e7d"
+    },
+    {
+      "path": "data/real/core-six-metadata.json",
+      "bytes": 3680,
+      "sha256": "2259f3a10f5388019479c1059f57f099e7f6e99a216b36b3554b7702ee887619"
+    },
+    {
+      "path": "data/real/images/calcite-longwave.jpg",
+      "bytes": 108345,
+      "sha256": "48e45842389f7b11c5ae153ff00799e2f8377c6f8dbc764d3d99a63de9f44a97"
+    },
+    {
+      "path": "data/real/images/calcite-shortwave.jpg",
+      "bytes": 115652,
+      "sha256": "8bfe6a347ed84496e7a52176a0b256d287ce2ec3d0bf00a6edcb4c9ee5e2924f"
+    },
+    {
+      "path": "data/real/images/calcite-visible.jpg",
+      "bytes": 142997,
+      "sha256": "c11f399dff2ebafd628f16e696f39c3b1c82e4199a9c03201b53509ce6d12914"
+    },
+    {
+      "path": "data/real/images/limestone-1.jpeg",
+      "bytes": 9927,
+      "sha256": "ca575faf9aafcda9b0b854e456e05976f41d972a7895e6116dce963f0a8c338d"
+    },
+    {
+      "path": "data/real/images/limestone-2.jpeg",
+      "bytes": 7932,
+      "sha256": "89893b224c27686b8ad963e362f9e10a575ada4b4f6c6182134797e161a7ba45"
+    },
+    {
+      "path": "data/real/images/sandstone-1.jpeg",
+      "bytes": 9760,
+      "sha256": "6841ccd14dbcaccca68a1d1504a271184a08ce543b227d41e5f253c78f402d22"
+    },
+    {
+      "path": "data/real/images/sandstone-2.jpeg",
+      "bytes": 12844,
+      "sha256": "35732ca860a43d862959fec48976051d4eefa09c313912d24d6ca47f9443d1d1"
+    },
+    {
+      "path": "data/real/images/shale-1.jpeg",
+      "bytes": 8408,
+      "sha256": "bde998211fb35abd25195d93e4ab3b43020231baeaac97f1f39e81b6302f3021"
+    },
+    {
+      "path": "data/real/images/shale-2.jpeg",
+      "bytes": 8723,
+      "sha256": "eb63144b005c70bf3f779da28183c35f18802b42e21e92a6636440d5dacd945f"
+    },
+    {
+      "path": "data/real/pangaea-headspace.json",
+      "bytes": 16210,
+      "sha256": "bb9573798d2bf36279e50bea6858c788763539472e1e30f5d7d045915afe7b50"
+    },
+    {
+      "path": "data/real/usrop-f15-subset.json",
+      "bytes": 124073,
+      "sha256": "1350ac66665248c819fcd89a86fcbb9bd56890ec9e6606f96a337bc9699ccc1d"
+    },
+    {
+      "path": "data/study/calcite-longwave.jpg",
+      "bytes": 19887,
+      "sha256": "af59d416cc900d037f81348a6018a0a043218641962142b46d073a7de8e5ebd4"
+    },
+    {
+      "path": "data/study/calcite-shortwave.jpg",
+      "bytes": 20535,
+      "sha256": "21ca34969bb3dd5fefeb8910f878a0632da122b1765d0a9d3b97c5c01b1e58a9"
+    },
+    {
+      "path": "data/study/calcite-visible.jpg",
+      "bytes": 29852,
+      "sha256": "5b907b729426c374a37183159816bae1a31a9db35041f73628e66485dc6ea0aa"
+    },
+    {
+      "path": "data/study/case-source-assets.json",
+      "bytes": 3248,
+      "sha256": "12542a68955b7e912c2547974ad74364b0674ecace73365ce339e2d8ddf4c0f9"
+    },
+    {
+      "path": "data/study/case-source-generated.json",
+      "bytes": 6231,
+      "sha256": "d59cdcd89623f4906e7e4dbd3a95241f2b20b9c0dfad1b47a62e71a581307972"
+    },
+    {
+      "path": "data/study/case-source-prompts.json",
+      "bytes": 6358,
+      "sha256": "fdf865ca0b72e13cb4c2d59dddbc90f716bfa4052326ee3beb9c0ba4911f1545"
+    },
+    {
+      "path": "data/study/core-features.json",
+      "bytes": 4606,
+      "sha256": "c8beb40dd08d4e453ae513b79c7b62245c6eef04a43c46d16cb8200f6df74b58"
+    },
+    {
+      "path": "data/study/m1-source.webp",
+      "bytes": 51368,
+      "sha256": "5da05be0d047aff6b6a279ce1683a65cf05cb58cb8b9267c08b64728fa301c27"
+    },
+    {
+      "path": "data/study/m2-source.webp",
+      "bytes": 54710,
+      "sha256": "c41d12c36a65f42f0f02f0124d51451fcde355a460c3dbd8b414ca5630e69479"
+    },
+    {
+      "path": "data/study/m3-source.webp",
+      "bytes": 45838,
+      "sha256": "6f438863783ff4510eb365776e9a4f3ae5007e1e36a4008e37435328002fe9bd"
+    },
+    {
+      "path": "data/study/m4-source.webp",
+      "bytes": 54902,
+      "sha256": "04b931f0bf062b3e9798d5282686f08331ee636e008b206b471c49acb6c41b76"
+    },
+    {
+      "path": "data/study/m5-source.webp",
+      "bytes": 55940,
+      "sha256": "5e454da9f2965843adfdf113b61edfc5e57e4b0f9d15c47479861912ccb540b6"
+    },
+    {
+      "path": "data/study/mudlogging-circulation.webp",
+      "bytes": 57786,
+      "sha256": "55ae0c6736c4364a8fe8e327647b4e781dc2e917c9e9d4a4e8169d27711ab2b3"
+    },
+    {
+      "path": "case-src/m1/engine.js",
+      "bytes": 7085,
+      "sha256": "abd18b858e38bba96beec6ad9333f1d44b49eee3ed3e7b5fb841acce6203b63e"
+    },
+    {
+      "path": "case-src/m2/data.js",
+      "bytes": 4592,
+      "sha256": "b763de10f62032f9278ba7f4464565414b4884982d29dad8a7926476f5bb9d46"
+    },
+    {
+      "path": "case-src/m2/engine.js",
+      "bytes": 8710,
+      "sha256": "6d8c814e2349b582907d8a7cd3545e705a7a4254f2b5252b4c4d3afffaf2ab3d"
+    },
+    {
+      "path": "case-src/m3/engine.js",
+      "bytes": 5296,
+      "sha256": "4c6ccc0168ed53dcba48cc28bb6350a7e369cdba2576a283c019ec9836d05148"
+    },
+    {
+      "path": "case-src/m3/exhibit-data.js",
+      "bytes": 95278,
+      "sha256": "e66b78176e1e511fd35d20023af1c43da0f8afde645ceb3a2fb727777cbbb49e"
+    },
+    {
+      "path": "case-src/m4/engine.js",
+      "bytes": 10136,
+      "sha256": "0202c14514f9452779b4ecb177d62d008d2a74204f007e6a745944042a334eda"
+    },
+    {
+      "path": "case-src/m5/data.js",
+      "bytes": 3953,
+      "sha256": "8c1872f47baacb7d64d2ddb75bb38d5ab829ba5d9d471b66f99f7d1d4e8ff70f"
+    },
+    {
+      "path": "case-src/m5/engine.js",
+      "bytes": 17102,
+      "sha256": "58449c01426764fde3a41e753814335c54b7ed21c5604dcd9ccbfd59bf18651a"
+    },
+    {
+      "path": "case-src/m5/fixtures.js",
+      "bytes": 173179,
+      "sha256": "2ad1079a420c20c5812dc346ede0369f5b7b044cbc9b8b178b21dc14d9b4c5f9"
+    },
+    {
+      "path": "expansion-src/c1/engine.js",
+      "bytes": 6760,
+      "sha256": "99ca73bfc6b95097b843c655cec44aebb0eaae14b3469ce2b65d2bb03dffd7ee"
+    },
+    {
+      "path": "expansion-src/c2/engine.js",
+      "bytes": 5947,
+      "sha256": "4e86511b54470e652943058382dc9fd7acccb82e84ac6a34c331337c59aa88b5"
+    },
+    {
+      "path": "expansion-src/c3/engine.js",
+      "bytes": 5846,
+      "sha256": "70c6c89d9fa037e5d98b4866bc98d522300cece14ebf9874c850b2abdd68c95c"
+    },
+    {
+      "path": "expansion-src/c4/engine.js",
+      "bytes": 5565,
+      "sha256": "1d840af42116b788b617aedda33c68b8b2aad54592d61f5bfa509666a7769991"
+    },
+    {
+      "path": "expansion-src/co1/engine.js",
+      "bytes": 7722,
+      "sha256": "79186b1d27e92a238d5eeab15b35a5d42e3f1d85144a587938ba70eb41b0eb5f"
+    },
+    {
+      "path": "expansion-src/co2/engine.js",
+      "bytes": 6817,
+      "sha256": "e18b519b41963c77dc5536a8750b867ac3268ae787b248eb2a49343408ef1be0"
+    },
+    {
+      "path": "expansion-src/co3/engine.js",
+      "bytes": 5619,
+      "sha256": "a67145c7e60fdebf54bd46205d2cb6d71ca1ffbe1159ff11d3e9243ccad784dc"
+    },
+    {
+      "path": "expansion-src/co4/engine.js",
+      "bytes": 7434,
+      "sha256": "25e3e0235ae8d6633546c7375ce9c0e228407149ca5e1ff77550e581b8a3293e"
+    },
+    {
+      "path": "expansion-src/d1/engine.js",
+      "bytes": 7869,
+      "sha256": "f07d0a75657b38e883bcaf18ad6919c0292ed4a97a56658aa7544b667f3ff140"
+    },
+    {
+      "path": "expansion-src/d2/engine-contract.json",
+      "bytes": 1668,
+      "sha256": "9eff69f8fac8ae0487e7114a18f78d208fedacfaffccc47b90929eff6a1a76ac"
+    },
+    {
+      "path": "expansion-src/d2/engine.js",
+      "bytes": 4595,
+      "sha256": "e7ac56647f7f9c604aa591ac2216b6c3371e4bad71285fb973656afcb3846980"
+    },
+    {
+      "path": "expansion-src/d3/engine-contract.json",
+      "bytes": 1771,
+      "sha256": "c03dc62d7f1c59f7e78a390e3da3bb6bc7a338084d47f222c5932acefcdb0ea9"
+    },
+    {
+      "path": "expansion-src/d3/engine.js",
+      "bytes": 4889,
+      "sha256": "51b080bf7039be6768b33591c3ae7177164f2619b80060d1725d23ef8e0c122c"
+    },
+    {
+      "path": "expansion-src/d4/engine-contract.json",
+      "bytes": 1665,
+      "sha256": "ce2671d461030acd69ee7fd6f298623949369c368154def93b2f2caffc48e587"
+    },
+    {
+      "path": "expansion-src/d4/engine.js",
+      "bytes": 4369,
+      "sha256": "286b0c63ca7bd541b1eb20d966f0bc572958fa617ece6a1ec1edfcbe9dfdac69"
+    },
+    {
+      "path": "expansion-src/d5/engine-contract.json",
+      "bytes": 1792,
+      "sha256": "731c43bb579220dd8f9decf206eac07fd496a5fe5c539ae7683a4d1e06fae5c3"
+    },
+    {
+      "path": "expansion-src/d5/engine.js",
+      "bytes": 4764,
+      "sha256": "480bb30a57ad7c70eba61957f157efdab170428f4ae541b145336179753f1e3d"
+    },
+    {
+      "path": "expansion-src/e1/engine.js",
+      "bytes": 11094,
+      "sha256": "3066e7b7e2221fd47d274edb3afb1ba9360ae41f92ed01c7242ab57adf765857"
+    },
+    {
+      "path": "expansion-src/e2/engine-contract.json",
+      "bytes": 593,
+      "sha256": "b1ef47064388354c4e6c53b7ac058e0e68b759aa96c51b1d70131c118ddd5d0d"
+    },
+    {
+      "path": "expansion-src/e2/engine.js",
+      "bytes": 4164,
+      "sha256": "ea6c748df51f4732624593449c6c218611cb57c80070bda5879994e145260b13"
+    },
+    {
+      "path": "expansion-src/e3/engine-contract.json",
+      "bytes": 489,
+      "sha256": "6b66a5e12deb8f9866b52ef852dd68ad88c7e33f77df9a9a5100c89a95246abf"
+    },
+    {
+      "path": "expansion-src/e3/engine.js",
+      "bytes": 4176,
+      "sha256": "479da57eef80fe35b2061e287c2a47086adfdb4a107bcf2e04cac54d7e7a068f"
+    },
+    {
+      "path": "expansion-src/e4/engine-contract.json",
+      "bytes": 565,
+      "sha256": "8ca1fbd23ddafe088b6868b3c34d8ed7a62312aef5e79857b30bb92be8fe511c"
+    },
+    {
+      "path": "expansion-src/e4/engine.js",
+      "bytes": 4433,
+      "sha256": "4823daf22161aad7f69be50ca771cf1017afaea8580e8a3c0ac1656f83864252"
+    },
+    {
+      "path": "expansion-src/e5/engine-contract.json",
+      "bytes": 585,
+      "sha256": "5e2e39f41044da3567a6d7940b42bcf3e7b23534587b6a74762d6c9e1d9bbde8"
+    },
+    {
+      "path": "expansion-src/e5/engine.js",
+      "bytes": 4277,
+      "sha256": "3f55eb3b3c46ed35b895576c89896db2c02bb8a2e9df6685d5a336b18a76b3c1"
+    },
+    {
+      "path": "expansion-src/g1/engine.js",
+      "bytes": 8850,
+      "sha256": "2871b43ce69c5117d9020aa0321640dc25f168bbd4995690942e5412d3cf645a"
+    },
+    {
+      "path": "expansion-src/g2/engine-contract.json",
+      "bytes": 544,
+      "sha256": "221e5959028e09b3d6969aac18e09b7ebd00ceca2016416cdc4fd5b52d262e2d"
+    },
+    {
+      "path": "expansion-src/g2/engine.js",
+      "bytes": 2362,
+      "sha256": "3b0b6d9573a6bd643e773c2c55628c857ed6bbbbccf1148b4748ec772f1a8b49"
+    },
+    {
+      "path": "expansion-src/g3/engine-contract.json",
+      "bytes": 747,
+      "sha256": "59a2a95a6a6893735f7172df476e146c70ac9b6a922f9646efd1552284f6f885"
+    },
+    {
+      "path": "expansion-src/g3/engine.js",
+      "bytes": 2688,
+      "sha256": "09fbc2719e3a6cff90972b69ce7d9400a78acbcde3519dfbd713fabde7677403"
+    },
+    {
+      "path": "expansion-src/g4/engine-contract.json",
+      "bytes": 887,
+      "sha256": "4ac5ce529cca47f748f01aa0405f2ae1e39f1c22ea0e6dbe316fdf15853d3aa2"
+    },
+    {
+      "path": "expansion-src/g4/engine.js",
+      "bytes": 3240,
+      "sha256": "a88c8be223a461a969be409ff4a34a4f23d6fdb7829f4d12e34cf065cf9f1a4a"
+    },
+    {
+      "path": "expansion-src/p1/engine.js",
+      "bytes": 9176,
+      "sha256": "ab52b30e40416b5740c1a9b0fb1f4fec436be32451eabfcc5b3693b06bac3165"
+    },
+    {
+      "path": "expansion-src/p2/engine-contract.json",
+      "bytes": 1006,
+      "sha256": "c95a18a268f4e38e0b419f6d0324e3214c9340aa969d74addd158a6f86ac914b"
+    },
+    {
+      "path": "expansion-src/p2/engine.js",
+      "bytes": 4698,
+      "sha256": "dad278ceecf6da6a88d3e59180423908161d819a8b09e307ad2229b672957812"
+    },
+    {
+      "path": "expansion-src/p3/engine-contract.json",
+      "bytes": 884,
+      "sha256": "5806fb5f3d469b1633a6d464b4bad8409fe77810d1a5f275e65500b0fef3b349"
+    },
+    {
+      "path": "expansion-src/p3/engine.js",
+      "bytes": 5094,
+      "sha256": "80d12f92601e8d2384e2fe7c3fef53b1d86287f15f00e04c54f54397aa87f43c"
+    },
+    {
+      "path": "expansion-src/p4/engine-contract.json",
+      "bytes": 810,
+      "sha256": "c6e5e0813f4b86255ec1ae0a524a7993612c5e1fe0b38a54f07414c7e80beed1"
+    },
+    {
+      "path": "expansion-src/p4/engine.js",
+      "bytes": 5026,
+      "sha256": "ec74468161f081c8bcdd1713d98d6c0f4a9d1d4bf4f7d9139aa48f1a963407fb"
+    },
+    {
+      "path": "expansion-src/pr1/engine.js",
+      "bytes": 10161,
+      "sha256": "c4dd054259663e0956e6aa8d63e62a3d3d4475c702842f6fe6d5da8c20ae30af"
+    },
+    {
+      "path": "expansion-src/pr2/engine-contract.json",
+      "bytes": 770,
+      "sha256": "92b7c9116575d2c8aa380d8b3cd89f436e8130dac33161a480a38464a8115756"
+    },
+    {
+      "path": "expansion-src/pr2/engine.js",
+      "bytes": 5140,
+      "sha256": "3e1e4566394fd8a261e0e31029d3b311946c8b05279957a7b82840b40942e979"
+    },
+    {
+      "path": "expansion-src/pr3/engine-contract.json",
+      "bytes": 900,
+      "sha256": "a1530e895022931f3867d4fe478594d143981d66a86f9c22c62128bea22bd71b"
+    },
+    {
+      "path": "expansion-src/pr3/engine.js",
+      "bytes": 5146,
+      "sha256": "6bac45acc802e9740411f97ef8f12691904074feefd165f7240f86bf13f2a9f2"
+    },
+    {
+      "path": "expansion-src/pr4/engine-contract.json",
+      "bytes": 952,
+      "sha256": "2e47bd46c9b983a86a850310b97bc9196a03e46c33634d74ae2fe758427cd763"
+    },
+    {
+      "path": "expansion-src/pr4/engine.js",
+      "bytes": 5865,
+      "sha256": "bd396e5c2712fef04c18f14bfc7014fdb38f78b003fa6d03d76957c04f7fbf83"
+    },
+    {
+      "path": "expansion-src/pr5/engine-contract.json",
+      "bytes": 959,
+      "sha256": "3a01d8525943590984b255b4d7a56183bf118e8743f67ec1997eaaf3208a6648"
+    },
+    {
+      "path": "expansion-src/pr5/engine.js",
+      "bytes": 5499,
+      "sha256": "fa35f5a0c2243173685f939174d731d7bd43a3588b5e30ccc69c9c4da65a3944"
+    },
+    {
+      "path": "expansion-src/r1/engine.js",
+      "bytes": 2898,
+      "sha256": "424bc3313b4dec5629604174c404d09bb05fc1b3ddfc3abb2ecf9188c8e3a0fc"
+    },
+    {
+      "path": "expansion-src/r2/engine.js",
+      "bytes": 2899,
+      "sha256": "a80749b843657964416e2a3b0da63cd85cb62adb5916bc33e520aabe6b0a1304"
+    },
+    {
+      "path": "expansion-src/r3/engine.js",
+      "bytes": 3748,
+      "sha256": "5d1f8345dbdb0a490cc1e904bb7b2b0bbbeff3d13e1ae4c0c56a66e05e9cebb1"
+    },
+    {
+      "path": "expansion-src/r4/engine.js",
+      "bytes": 4799,
+      "sha256": "1052663476010706da81c21aa1a953d572e4a148f1a955d6ed05766e2646d2cf"
+    },
+    {
+      "path": "expansion-src/r5/engine.js",
+      "bytes": 6866,
+      "sha256": "43a3fdc3b9672a6ca537a9f8a2da87b0f3820b88d0c6700b5ac61c9a3aa9f717"
+    },
+    {
+      "path": "expansion-src/s1/engine.js",
+      "bytes": 10997,
+      "sha256": "327661a57fbdeeecf63779c9114f20bd3224a7b3ce7e52b714838a7794548d34"
+    },
+    {
+      "path": "expansion-src/s2/engine-contract.json",
+      "bytes": 788,
+      "sha256": "64d2de4e38c526eb23c97d5a1dcc6944aff071f9f75501b5e181e1ea182e6007"
+    },
+    {
+      "path": "expansion-src/s2/engine.js",
+      "bytes": 2909,
+      "sha256": "036e775f9648d0180591f0581d16808db60f4b7ace580a24b92c455d27e947d9"
+    },
+    {
+      "path": "expansion-src/s3/engine-contract.json",
+      "bytes": 590,
+      "sha256": "a5387227029af2dffb92eaee6d1ceb3315f951d8424b737ff6cceb85584117c5"
+    },
+    {
+      "path": "expansion-src/s3/engine.js",
+      "bytes": 3195,
+      "sha256": "370fe40ddd6df644db62a93703f1e39e8ae9b41940d98ae305c78653f6433bda"
+    },
+    {
+      "path": "expansion-src/s4/engine-contract.json",
+      "bytes": 820,
+      "sha256": "c0062f8f968fc27335f5cca544bb82103f737cc38cb787efa0008f65058ed13a"
+    },
+    {
+      "path": "expansion-src/s4/engine.js",
+      "bytes": 2470,
+      "sha256": "f48ca843c025e08cc9670f116e19e5095d6a68a9ee501ce915e566c443adc181"
+    },
+    {
+      "path": "expansion-src/s5/engine-contract.json",
+      "bytes": 543,
+      "sha256": "f375308c8ee53646738f332fe3af317dd6266ff873035a889f7458c59ba9a260"
+    },
+    {
+      "path": "expansion-src/s5/engine.js",
+      "bytes": 2425,
+      "sha256": "fea0265d8805515505e01795c3ba56494e62711139f61d061fae143b7e783a8f"
+    },
+    {
+      "path": "expansion-src/t1/engine.js",
+      "bytes": 7064,
+      "sha256": "560c14bf56a1d7cdc9b00965765a321bcaea1895a0a056f019f542d376ff5441"
+    },
+    {
+      "path": "expansion-src/t2/engine.js",
+      "bytes": 3469,
+      "sha256": "8afa7b179784b254f3673ae419afcce99c0067db03dbf215d6aa9bee9eba370e"
+    },
+    {
+      "path": "expansion-src/t3/engine.js",
+      "bytes": 2366,
+      "sha256": "2d6fb034e70d16732a8c4b863d55b71402a4da18452380b4bb3f42a439704ea7"
+    },
+    {
+      "path": "expansion-src/t4/engine.js",
+      "bytes": 2476,
+      "sha256": "b910e30b4fed91b99e72751fc97cb680339a645a4cdf9bac11bc3e47fd033192"
+    },
+    {
+      "path": "expansion-src/t5/engine.js",
+      "bytes": 2799,
+      "sha256": "1216767f7471f9bebadd1a551609661f6c41d824ff1ad2064e2d8970388e2c7b"
+    },
+    {
+      "path": "expansion-src/w1/engine-contract.json",
+      "bytes": 1683,
+      "sha256": "2c6410f1aa473bc34bd8b0407e7101860a8c122badac8894a086001f79a2dcf9"
+    },
+    {
+      "path": "expansion-src/w1/engine.js",
+      "bytes": 5331,
+      "sha256": "4184d95238140819ad552197c7154e1779cad0c7858d4de4a8c85a45ba3df637"
+    },
+    {
+      "path": "expansion-src/w2/engine-contract.json",
+      "bytes": 1762,
+      "sha256": "4e4cc4b8c340812a2a9f402a5f9051160b2c7700bd3aa64a973f1b18b9623df1"
+    },
+    {
+      "path": "expansion-src/w2/engine.js",
+      "bytes": 3938,
+      "sha256": "5639cae79722b3ddb109a9d8bf52a21c9a3b5b6c18c87633c27a06e2b3276198"
+    },
+    {
+      "path": "expansion-src/w3/engine-contract.json",
+      "bytes": 1746,
+      "sha256": "cd875011df3924308fc2643b334a15ff38a315b70380c2cab0786d8d438f8d19"
+    },
+    {
+      "path": "expansion-src/w3/engine.js",
+      "bytes": 4360,
+      "sha256": "1ede55858199acaecbd6a3cacc540fa0ecfd5b40f12469e5739f18cceae5a13d"
+    },
+    {
+      "path": "expansion-src/w4/engine.js",
+      "bytes": 7062,
+      "sha256": "bf31a834975e7b32092c905581163ec0093adc134d1fbbe99de3050bdfcdf413"
+    },
+    {
+      "path": "expansion-src/w5/engine-contract.json",
+      "bytes": 1766,
+      "sha256": "5763f0245bc597d0f8bb40f76bdd49c80370cf6d8173ad20221e8f46119560f6"
+    },
+    {
+      "path": "expansion-src/w5/engine.js",
+      "bytes": 4410,
+      "sha256": "884623bcd5921949d50fb9cd89fce0bc170b2f145c70a53b51f90ce7e358f064"
+    },
+    {
+      "path": "expansion-src/wo1/engine.js",
+      "bytes": 15086,
+      "sha256": "97a90fcda1254a28e08f231889a2c530614866e4381854199c8268050c844cb9"
+    },
+    {
+      "path": "expansion-src/wo2/engine-contract.json",
+      "bytes": 521,
+      "sha256": "508859ed65553ffae29c53d40ac9e446b857990e46b202bed14a814a716db44c"
+    },
+    {
+      "path": "expansion-src/wo2/engine.js",
+      "bytes": 4059,
+      "sha256": "39e3a8630b31e3af29f1bff5f11ee006892561f1087498e97e3d5fbe99a2297b"
+    },
+    {
+      "path": "expansion-src/wo3/engine-contract.json",
+      "bytes": 551,
+      "sha256": "94f8a622b6e97a1d835a4b5c600d3d3f8cbb8f08076ccf90437ba85acd09b507"
+    },
+    {
+      "path": "expansion-src/wo3/engine.js",
+      "bytes": 3700,
+      "sha256": "401e65c0b4c6774f61481ceed568e0a03cb65bd286de324b91670277f66ad5e5"
+    },
+    {
+      "path": "expansion-src/wo4/engine-contract.json",
+      "bytes": 549,
+      "sha256": "2e03049b53e2c9ad5dcafc604194b3a3dfa386f5f487df7e9a96625d993211ca"
+    },
+    {
+      "path": "expansion-src/wo4/engine.js",
+      "bytes": 3886,
+      "sha256": "66e4335122de64645dfc0a7d7058deb2da2c517f4c040354de341383cd7b6b22"
+    },
+    {
+      "path": "expansion-src/wo5/engine-contract.json",
+      "bytes": 537,
+      "sha256": "3278e6ab973489c1a9e3cd4c0d80b43f29c09afc7a7cbf1609abd2571ebf1f1c"
+    },
+    {
+      "path": "expansion-src/wo5/engine.js",
+      "bytes": 3789,
+      "sha256": "4e39974e6ca82a098802a86d14614d97d29ec7e1b0e77237686147201f2dd34f"
+    },
+    {
+      "path": "case-variants/s17x-c1-cement-woc-strength/engine.js",
+      "bytes": 10329,
+      "sha256": "904e871b320feca6c411fae7a60a213a66e777a892d19381f46ba15b22688727"
+    },
+    {
+      "path": "case-variants/s17x-co3-completion-seal-test/engine.js",
+      "bytes": 9670,
+      "sha256": "3302eda91cf7a8de81b0a2655c1a0c4367bd4a68f009583aeaab5f6a3df66d0d"
+    },
+    {
+      "path": "case-variants/s17x-g3-closure-spill/engine.js",
+      "bytes": 10748,
+      "sha256": "3a04d3e94e50df1962a6f16cc54447f7cfb1afec1295bd7f164aed04470ec906"
+    },
+    {
+      "path": "case-variants/s17x-p1-perforation-depth-correlation/engine.js",
+      "bytes": 14715,
+      "sha256": "c5333aeb4b23bdd45ff4f264e3e2064b54114aa467e16fdf3d841f3b79b15de8"
+    },
+    {
+      "path": "shared/math.js",
+      "bytes": 2126,
+      "sha256": "400824ad31a120a90765db81a9fff0d42437c03df47d71a12963d0bf607f0f1e"
+    }
+  ],
+  "cases": [
+    {
+      "folder": "dist/cases/s17-cuttings-lithology",
+      "files": [
+        {
+          "path": "dist/cases/s17-cuttings-lithology/README.txt",
+          "bytes": 1443,
+          "sha256": "b5e293972dbbfebf570678684116122a93aa16d881cc95330848cd84a8831253"
+        },
+        {
+          "path": "dist/cases/s17-cuttings-lithology/case.json",
+          "bytes": 682909,
+          "sha256": "499fce908eef0dc49510a12bdc4650f99e141bec2a569f03b785a47941e096eb"
+        },
+        {
+          "path": "dist/cases/s17-cuttings-lithology/demo/demo.css",
+          "bytes": 69607,
+          "sha256": "5a842b3a7acb60da644976f7d08ecd3d79464c75fd107b29aa923efc6227bf16"
+        },
+        {
+          "path": "dist/cases/s17-cuttings-lithology/demo/demo.js",
+          "bytes": 246753,
+          "sha256": "521b7c4ca4a17f0d3e59aa5f38a4a72118983432db77247e300bd0f96f1c571a"
+        },
+        {
+          "path": "dist/cases/s17-cuttings-lithology/demo/index.html",
+          "bytes": 507269,
+          "sha256": "6bf0e1de48434c836c46e08830f35f2b38d61ecdee7bd610f6664886a5e3165b"
+        }
+      ]
+    },
+    {
+      "folder": "dist/cases/s17-drilltime-boundaries",
+      "files": [
+        {
+          "path": "dist/cases/s17-drilltime-boundaries/README.txt",
+          "bytes": 1430,
+          "sha256": "0c9f386f0db2bf7b8c78e630bbe0093e5d568a585007e8bfd5ae1b6eb4bba972"
+        },
+        {
+          "path": "dist/cases/s17-drilltime-boundaries/case.json",
+          "bytes": 545683,
+          "sha256": "f07e859eff46ffe350134754b1165ccb7ab968cf7590277ea153afa93a9faf2b"
+        },
+        {
+          "path": "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+          "bytes": 69607,
+          "sha256": "5a842b3a7acb60da644976f7d08ecd3d79464c75fd107b29aa923efc6227bf16"
+        },
+        {
+          "path": "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+          "bytes": 250449,
+          "sha256": "86d3d91a11597b4b8d63127120e03124cc8c7494faabfbc5977891f34b06b55a"
+        },
+        {
+          "path": "dist/cases/s17-drilltime-boundaries/demo/index.html",
+          "bytes": 412342,
+          "sha256": "117e08b0a9dfc0b197de9c20c9f7b6b3d9029da2a3fe28be6d748e85c492bada"
+        }
+      ]
+    },
+    {
+      "folder": "dist/cases/s17-evidence-report",
+      "files": [
+        {
+          "path": "dist/cases/s17-evidence-report/README.txt",
+          "bytes": 1416,
+          "sha256": "c205c2a3af126226ae6006f9dbfccfdab10c63049ba0be74bfbc7ffc7e5599b2"
+        },
+        {
+          "path": "dist/cases/s17-evidence-report/case.json",
+          "bytes": 368261,
+          "sha256": "ecdf4f2c1a80271bae56dfc3bd3b560e5397eda9fac24c604bc71a110c0c7cf1"
+        },
+        {
+          "path": "dist/cases/s17-evidence-report/demo/demo.css",
+          "bytes": 69607,
+          "sha256": "5a842b3a7acb60da644976f7d08ecd3d79464c75fd107b29aa923efc6227bf16"
+        },
+        {
+          "path": "dist/cases/s17-evidence-report/demo/demo.js",
+          "bytes": 374605,
+          "sha256": "d2f9cebb40590a77e7bf63f0deec1bf218b770e00fdb0c096e7fa709cbe09a5f"
+        },
+        {
+          "path": "dist/cases/s17-evidence-report/demo/index.html",
+          "bytes": 275251,
+          "sha256": "072d129df572fafe64ff3ce659684006b6527f38889284c51dd8ce6173d8b830"
+        }
+      ]
+    },
+    {
+      "folder": "dist/cases/s17-fluorescence-review",
+      "files": [
+        {
+          "path": "dist/cases/s17-fluorescence-review/README.txt",
+          "bytes": 1450,
+          "sha256": "3fcee7a35e4a01e5aee36493f019dd76d4c767eb9b170d9a13f6beb111841255"
+        },
+        {
+          "path": "dist/cases/s17-fluorescence-review/case.json",
+          "bytes": 679953,
+          "sha256": "1d2e74ae213977f72137efd281e7132ab2612f79861f2af464007ecc0ffcb593"
+        },
+        {
+          "path": "dist/cases/s17-fluorescence-review/demo/demo.css",
+          "bytes": 69607,
+          "sha256": "5a842b3a7acb60da644976f7d08ecd3d79464c75fd107b29aa923efc6227bf16"
+        },
+        {
+          "path": "dist/cases/s17-fluorescence-review/demo/demo.js",
+          "bytes": 281915,
+          "sha256": "6a34c8614975c9fcae6d1b0221aeaa4b0e2e6482b74107f0b88565a44db57207"
+        },
+        {
+          "path": "dist/cases/s17-fluorescence-review/demo/index.html",
+          "bytes": 470921,
+          "sha256": "89c4ccedfc247a0825fbeeacddb1165472e24e3f75ab848f556b2c81eeabb696"
+        }
+      ]
+    },
+    {
+      "folder": "dist/cases/s17-mudgas-context",
+      "files": [
+        {
+          "path": "dist/cases/s17-mudgas-context/README.txt",
+          "bytes": 1652,
+          "sha256": "c181f5d05cd7d361f5d445a7aabbd5b52cc49769b06e9784cf412dc31b99056e"
+        },
+        {
+          "path": "dist/cases/s17-mudgas-context/case.json",
+          "bytes": 571730,
+          "sha256": "0a1ebae5391fdc6edcf8fdc5e13f1796c36ac0b614f92832d2556fc0221b0f88"
+        },
+        {
+          "path": "dist/cases/s17-mudgas-context/demo/demo.css",
+          "bytes": 74132,
+          "sha256": "e256c868797b9904594dee853c0ff4c2150a53b10bba89ccf55f9a2da1dc4494"
+        },
+        {
+          "path": "dist/cases/s17-mudgas-context/demo/demo.js",
+          "bytes": 800985,
+          "sha256": "c05e36be14669c2029c07c865ff27118bd022b9105634753ef84a361ccdc2cdd"
+        },
+        {
+          "path": "dist/cases/s17-mudgas-context/demo/index.html",
+          "bytes": 520162,
+          "sha256": "301ba91bd0fee9b85b767f158bfcc31cbf1d0123e6936b40a947a5ca702bc20f"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-c1-cement-quality",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/README.txt",
+          "bytes": 1556,
+          "sha256": "8b728e1865d564f0ecc458f2c0bc95fac53de31de8316a8590def11165b2fe5f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/case.json",
+          "bytes": 154544,
+          "sha256": "c520b907e4beefd681f308ed0c08749a6b0c924434194a29bcabf3dd27c593b5"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.css",
+          "bytes": 66750,
+          "sha256": "bf39a62e99575b8a5204606e9413328eca1c1cadba93ba3bc5bce0328ed7f932"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js",
+          "bytes": 442024,
+          "sha256": "562f7dadc1e64b9e28a6635c2dd1daa98520e02bdce392aa9bf87038f83f5572"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-quality/demo/index.html",
+          "bytes": 7184,
+          "sha256": "89a8739f20908bbf75f5fd92ba7bc0674dd2b5fbd4eeaa37780687d71ac6f44b"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-c1-cement-woc-strength",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/README.txt",
+          "bytes": 2700,
+          "sha256": "303b219f4d71e8bbfe07c190770c2e5350d9202eae95710e12c3a10d02bf64b0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/case.json",
+          "bytes": 69441,
+          "sha256": "4376e1c06e53f212c30f14c5e68e0d7b327b833ccb46721960e28cf292bf1cb8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.css",
+          "bytes": 51265,
+          "sha256": "6c417da3e25050ca9a445a5cd571ad02dab0bca587ac16743157efd36696d460"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.js",
+          "bytes": 170453,
+          "sha256": "0ede56aa37a890bf74936e4d8a0ca30ff0a107714bfa46ea92e67259406d69e9"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/index.html",
+          "bytes": 504,
+          "sha256": "8797248e7ae6291876b70ce0e5614b9f602bd82a033a4c107b1baa507220859d"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-c2-cement-displacement",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/README.txt",
+          "bytes": 1184,
+          "sha256": "d9a50d6076c9874a6f87a7e9722345b1b3263244769ddc6d709497eeb0ccb66c"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/case.json",
+          "bytes": 206038,
+          "sha256": "2060a292e303486ea23e420f0771dadb2beedf4f5619da00961fcb8a7d6561a7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.css",
+          "bytes": 60516,
+          "sha256": "51e26f0174a5ed9f6cd73e4a5b053c996fc130a0bc04061fe13b42b6e4a0ba6f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.js",
+          "bytes": 339308,
+          "sha256": "227804c75391a34eee77b2ad80a509ac119c6e4e942a543cf7344a0348ea92df"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c2-cement-displacement/demo/index.html",
+          "bytes": 2553,
+          "sha256": "5a344c4e570b85272e528fa4f184688419b87aec9812794d28c6a9b68b6bae47"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-c3-cement-loss-risk",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/README.txt",
+          "bytes": 1181,
+          "sha256": "3f1cda0290e58de69f43643cbabca2104b63e61014bfbd87f2eb260773a481d6"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/case.json",
+          "bytes": 103936,
+          "sha256": "14e8ea5a1fc5166878db6ff120c054881dbc324838ca6d7a303fc5746020d376"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.css",
+          "bytes": 60516,
+          "sha256": "51e26f0174a5ed9f6cd73e4a5b053c996fc130a0bc04061fe13b42b6e4a0ba6f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.js",
+          "bytes": 293904,
+          "sha256": "ef0b22f5c9d0a9d2663967cc6aa59d966142775726b737a7c4d24d15b6fdaf86"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/index.html",
+          "bytes": 2558,
+          "sha256": "59c2adc520a1cdbf96302e88f343523be8d9d7fdd899f1dd32584d47c2be6ec7"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-c4-casing-standoff",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+          "bytes": 1152,
+          "sha256": "18e7a5c718d4109b28c7f89565765c8f52f4ac30769f89d41d39f1707dde89f5"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+          "bytes": 101687,
+          "sha256": "7124a7f535349c0d30529013e5393ebe36d82d97c9083523203edcbffc9adea5"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+          "bytes": 60516,
+          "sha256": "51e26f0174a5ed9f6cd73e4a5b053c996fc130a0bc04061fe13b42b6e4a0ba6f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+          "bytes": 284675,
+          "sha256": "3fb1974b92e86112fb82f081a939c667f25792df3735243ea19bf593daab9c54"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+          "bytes": 2501,
+          "sha256": "4e27498d332e718932b9f73ebf6682aa904db253517275486b8b7b732199c5d6"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-co1-completion-choice",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/README.txt",
+          "bytes": 1548,
+          "sha256": "2f0ff23476d052ee650af50c28c099322a5c0506c784eab21e8dacf66b03b746"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/case.json",
+          "bytes": 120305,
+          "sha256": "2ffef5648d6c80d4cd1f4cd425dde1e256684b4547a72b82209e77e4d7a66071"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.css",
+          "bytes": 66750,
+          "sha256": "bf39a62e99575b8a5204606e9413328eca1c1cadba93ba3bc5bce0328ed7f932"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js",
+          "bytes": 330103,
+          "sha256": "f40228193c84368483fb78eff0dab9659e007bdd17658445db616aede4ccc897"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co1-completion-choice/demo/index.html",
+          "bytes": 7372,
+          "sha256": "4b35d1524e11616d52a22832fa2d3e135aa64d495b2799f84363895aee4e2eb4"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-co2-completion-zone-design",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/README.txt",
+          "bytes": 1205,
+          "sha256": "2d1c5f3cf6ff594af4238df122c8ba9c1726d5aedd5c49038bd99ede5e15b64f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/case.json",
+          "bytes": 128594,
+          "sha256": "fd91d300934d614cd5465ed235e6ef04dbd10ccebed3b56a263ca4f12c4ec2b0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.css",
+          "bytes": 60516,
+          "sha256": "51e26f0174a5ed9f6cd73e4a5b053c996fc130a0bc04061fe13b42b6e4a0ba6f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.js",
+          "bytes": 304451,
+          "sha256": "5a34a05780f589bc3eddb34a646ef5cdb2f0a311992252a97f3d8c3e78ed4be8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co2-completion-zone-design/demo/index.html",
+          "bytes": 2617,
+          "sha256": "cf5bb9e6f3114471403f404c238a51fffdb824222983bff82e280902fc24b046"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-co3-completion-seal-test",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/README.txt",
+          "bytes": 2868,
+          "sha256": "a0f5e415c38f44dd77ebe7180857464f2c743e51aef9a2098bb2603de176919a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/case.json",
+          "bytes": 69478,
+          "sha256": "6d0e3860fffb0df6f3a4506d0487b0090f50a6ba621cfa47242fbb4c42d04ea2"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.css",
+          "bytes": 51265,
+          "sha256": "6c417da3e25050ca9a445a5cd571ad02dab0bca587ac16743157efd36696d460"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.js",
+          "bytes": 172337,
+          "sha256": "b36608529fe5bcf7d43fa62ddb16c0bea7b2caffe174fdfa3bb20b838a42f1a8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html",
+          "bytes": 501,
+          "sha256": "4adce62ddc275381aac6a8e1d89bf75877103ae0c9d6420ed3d746fa84c7542d"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-co3-tubing-stress",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/README.txt",
+          "bytes": 1171,
+          "sha256": "151218a1bd2ca4899e8a308805db35b3e21c67c1d0ef6f740d1dba4b1ac9154c"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/case.json",
+          "bytes": 105244,
+          "sha256": "f9422f46180325fee5d7b7a0018fb1127a576ea61ccd7e5fe0c2733a687d8333"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.css",
+          "bytes": 60516,
+          "sha256": "51e26f0174a5ed9f6cd73e4a5b053c996fc130a0bc04061fe13b42b6e4a0ba6f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.js",
+          "bytes": 290342,
+          "sha256": "de0dd25663bbc3f76c0e2b1426f4594041e72594ed9774701bd0916888f72181"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co3-tubing-stress/demo/index.html",
+          "bytes": 2771,
+          "sha256": "1588272f1080161f83e84ffdf83affe90d7fef64fc3e8fbaf816e73384c7449d"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-co4-sliding-sleeve-control",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/README.txt",
+          "bytes": 1212,
+          "sha256": "a97a6b7ed2b8a1fea5e493bec74ea4475e8785bb2d811691ab41926dcb1aec40"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/case.json",
+          "bytes": 126949,
+          "sha256": "fe4f3fd638e9567c27a6b4a0fea2e2eabe45d5a7ef9d1e4649439b3b22d72e93"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.css",
+          "bytes": 60516,
+          "sha256": "51e26f0174a5ed9f6cd73e4a5b053c996fc130a0bc04061fe13b42b6e4a0ba6f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.js",
+          "bytes": 309589,
+          "sha256": "1e02b7f57bc1a302e855f23a8a8ccae8f0b33aa04612ca79c5a7767c913ce437"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/index.html",
+          "bytes": 2615,
+          "sha256": "ce7981428605bf7ea8574f5b6cb0e9989235f4806d808ffd2fb9e3d0a47b606d"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-d1-rop-optimization",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/README.txt",
+          "bytes": 2606,
+          "sha256": "2b40b39d2e7eb81c3cb367cde9a81bda898f383342d03452387dace71bad85ad"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/case.json",
+          "bytes": 196954,
+          "sha256": "21e83cf89207b42329f18024475da0a7504287ea41f0784a08e7ec0022a7708f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.css",
+          "bytes": 67409,
+          "sha256": "d104e908a2f844db0981451d2d60e99a8f0f7c1880c961da3c3bdf5c65029e28"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.js",
+          "bytes": 371270,
+          "sha256": "582cfccf70781bed0fedb832a770764a93003d1db195278023a04ff034a75192"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d1-rop-optimization/demo/index.html",
+          "bytes": 28280,
+          "sha256": "9b06b362b4829dde4c71e82d4d7ce6a2cee73631bd84c9be116c753318aa2b1c"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-d2-drilling-precursor",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/README.txt",
+          "bytes": 941,
+          "sha256": "5b9cfc11789059b19a309c87709b8abd5caae183cd85f964c88169cb081ff8dc"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/case.json",
+          "bytes": 127927,
+          "sha256": "9771c5247f916e4e5cbf9a4740a4893e26fa0602fd8a66aa90ed82642b4ea90a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.css",
+          "bytes": 60911,
+          "sha256": "5abbacc2bd07f3c2dd80c5617ae46c61f44af2c1d56c484050320697176a2293"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.js",
+          "bytes": 311110,
+          "sha256": "35ed192189b1992033c2a6f0317ad4fa54142612820de930c110955efba736e7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d2-drilling-precursor/demo/index.html",
+          "bytes": 12100,
+          "sha256": "d262b176c7206725b2714ba6a1d4026e340aac541c48382298c612485b0a67dc"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-d3-trajectory-control",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/README.txt",
+          "bytes": 891,
+          "sha256": "dcde8be76f6b4e9e68f3b43592c8762b6bfcf465de3cca2e729b20d75b3ec59d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/case.json",
+          "bytes": 105695,
+          "sha256": "6f767765846e937825c7cbfbaac5f2004b77af3be96abef9064b3b3aafb625b7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.css",
+          "bytes": 60911,
+          "sha256": "5abbacc2bd07f3c2dd80c5617ae46c61f44af2c1d56c484050320697176a2293"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.js",
+          "bytes": 295045,
+          "sha256": "dfc879d457b0c2e44473ce5c6ac372a2945674c79020865c2b1bdd86a426becc"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d3-trajectory-control/demo/index.html",
+          "bytes": 10931,
+          "sha256": "3cce806825d012042cedb03e6d514267e5637323eb19ba0495f2783ba80579bc"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-d4-tool-condition",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/README.txt",
+          "bytes": 1048,
+          "sha256": "d6b4066cefdc9eee1fbc33ff8876ae815a44079dc4634fab708d9636ce10a1ec"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/case.json",
+          "bytes": 113734,
+          "sha256": "7c1a45f1c18f0237f05b0d49d2ff9a799b0d234bc5d03446a1b174431bfcfc56"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.css",
+          "bytes": 60911,
+          "sha256": "5abbacc2bd07f3c2dd80c5617ae46c61f44af2c1d56c484050320697176a2293"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.js",
+          "bytes": 310301,
+          "sha256": "1682c2394459617c73fed33db0423405e955a4328cb66489c0682aca3b1fd035"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d4-tool-condition/demo/index.html",
+          "bytes": 13169,
+          "sha256": "149ca68e7677b3f72968d061f355f38be2319285f4e29162192a6ccd88f9df93"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-d5-mud-rheology",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/README.txt",
+          "bytes": 1006,
+          "sha256": "26083324c1c0c8cb97db0f597019c4796382eea06fcd0ea4e61c0a94225caef7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/case.json",
+          "bytes": 173902,
+          "sha256": "cb93c43903ef1813a8c2e182f6e739ba4aa144169e15f63121f070cfa366f82e"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.css",
+          "bytes": 60911,
+          "sha256": "5abbacc2bd07f3c2dd80c5617ae46c61f44af2c1d56c484050320697176a2293"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.js",
+          "bytes": 328878,
+          "sha256": "63f87e7ac2383cb6082e0f176f81c8903dee7ff9ab96841f3dafcdd88f096e6d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-d5-mud-rheology/demo/index.html",
+          "bytes": 11946,
+          "sha256": "cd6e93eba5b7bc46a0ec0a0bb557ea933acaa5dec6abed0bc4da8f9d1c729e81"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-e1-fracture-optimization",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/README.txt",
+          "bytes": 1389,
+          "sha256": "4bc32fa9ebcba392c66ccadfd2404a5f0a5da04193f1a82c975cc4a9ae243476"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/case.json",
+          "bytes": 223972,
+          "sha256": "ab11b5e4642bfea32aac2cb44b330825518d11a8473f674036ec4170db3b96ab"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.css",
+          "bytes": 66264,
+          "sha256": "e09ecf79be09e81ef5963f9ed6a350cc4a3f2156658e58ef71c96d462c18ed18"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.js",
+          "bytes": 398618,
+          "sha256": "ea56ddb9c8f9037a12e499a89c34e3c31962960cb2c444f7c20aa372783163ff"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e1-fracture-optimization/demo/index.html",
+          "bytes": 24532,
+          "sha256": "679c8a82f6813efbedb98fff1dd057057566068bd46a622bbd4422ad347514db"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-e2-fracture-geometry",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/README.txt",
+          "bytes": 821,
+          "sha256": "802f24e71788d490bebe8e643db2a557df844c170f3f44374cf5e3a85c52d49b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/case.json",
+          "bytes": 100886,
+          "sha256": "3c867a6de458917cd0da38f34d83963c8a10e526be056d16149767001142e9e5"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.js",
+          "bytes": 281817,
+          "sha256": "503fc25f2dea653afdab2b5fe3d0e82a264735ed28ab53bfb6e0f2775a0968fa"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e2-fracture-geometry/demo/index.html",
+          "bytes": 11614,
+          "sha256": "11df306f59a8930cfaaaaae993e5de5c1e0e79d87c2b0fae3b6e306c616f3626"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-e3-chemical-mixture",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+          "bytes": 875,
+          "sha256": "8dadf97abf4965830a4883d8759427d457961da2238c8409de1bf9219ba75afc"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+          "bytes": 146480,
+          "sha256": "476fa681b2e119fd2df4f0fd8aaa504a9dac0ba00a41a1b477cc65b0967a5218"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+          "bytes": 305268,
+          "sha256": "4524abadd37d64507d3872b98f58b6e0d2152c84140cf720667d27c9a225a82d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+          "bytes": 11578,
+          "sha256": "77cc12fe55cd530e9b460328911b997b6ca602a6f8d62b3e2e8bd947294779c4"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-e4-steam-cycle",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/README.txt",
+          "bytes": 858,
+          "sha256": "ad9415b89cbf356c8068dfc4f6fe757552ff2ff7dd66cee7d1830ad38bf44909"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/case.json",
+          "bytes": 135901,
+          "sha256": "00e71a852c06e9886b48bd522d47337e65a0e16da8c6821f3becc32557550c4b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.js",
+          "bytes": 304651,
+          "sha256": "4fedd5910bb15ba9dcd20c95c7ebb68347751739099c356b65604f478c51a579"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e4-steam-cycle/demo/index.html",
+          "bytes": 12019,
+          "sha256": "33de9c089ad081a677986516e221f86267f40fc71d64d1067561ac6c367c61b9"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-e5-microbial-activity",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/README.txt",
+          "bytes": 841,
+          "sha256": "b913d0dd04cfe489e357d54241a5f40306001651bb32b03e5e1148b54e977052"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/case.json",
+          "bytes": 171974,
+          "sha256": "71a47dd40318d7705b515a49efc9f87934370780208d0a2a31e298c21b418eb7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.js",
+          "bytes": 394285,
+          "sha256": "f3a8c5123cb413b5b59d2c89c469928dcf826ebab12742c896330b76053afc12"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-e5-microbial-activity/demo/index.html",
+          "bytes": 11883,
+          "sha256": "b3945e688cce83a5982e9ff10bc972acc6beb3e5b1583ab3e8f51399e85f3bae"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-g1-remote-lithology",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
+          "bytes": 3554,
+          "sha256": "56beb381f6b96b098ec1c9b91118376f668d706e83a1d59900240788cd180573"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/case.json",
+          "bytes": 172985,
+          "sha256": "6cfe3fc36fd254fb20aefcf9fd1a98b0d372c35ffa33180763079da8c8bde40f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.css",
+          "bytes": 66920,
+          "sha256": "bb2306f6acf4c77e8a825ce23085b27f388a97f3dde53856ba746743e4dc4773"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js",
+          "bytes": 438907,
+          "sha256": "724cc3f1b1bca993fae4fb222e0517e71447126510b3ee0cb99781bfac476fb0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html",
+          "bytes": 23126,
+          "sha256": "634d5d65f1bdadf617c9d591cab1095827653ca32a5e5e1b542306a02bf0c652"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-g2-geochemical-anomaly",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/README.txt",
+          "bytes": 1019,
+          "sha256": "f525deeefec8ee57572ea4c6f552f1206778f97b0a4bf3902162f3ecae07bbbe"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/case.json",
+          "bytes": 188301,
+          "sha256": "26fa854c031b1ae583ae7fab9c94acae4e14e7acbb0beb663f7ac2e09fa31455"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.css",
+          "bytes": 60218,
+          "sha256": "0ff9492819f44824a0b8618a48b53258967c4288b388bf5dd1971e69c57f761f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.js",
+          "bytes": 385093,
+          "sha256": "4b3192f7b5c26fb3b3f899c0f850bfb51603cdd1cb05fafd10b8a53b7979c5d0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/index.html",
+          "bytes": 9921,
+          "sha256": "17475a0a451ec30597557068cfde2354bda1632e4227485291be76ec68221354"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-g3-closure-spill",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/README.txt",
+          "bytes": 4658,
+          "sha256": "7ab479331281f4f5e8dee29f60f256a4e4624749edd6849c99fb5468fbd0c683"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/case.json",
+          "bytes": 164033,
+          "sha256": "6b5a170e3d6e06aba401fb71689cd2358cd5595d123039c68d3cde95b50cbc4a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.css",
+          "bytes": 51060,
+          "sha256": "3e275e57ab5a6e57e9dd1fb721a319bdc901c1ff10d465133b304129414203a7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.js",
+          "bytes": 327260,
+          "sha256": "19c7e9876d62383b2c3959c98ca57376d397d10500c3f34dd35c7e9e1f28d9c5"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-closure-spill/demo/index.html",
+          "bytes": 368,
+          "sha256": "0b1c709b4d942af218c069657e7b54293081ba301a03161a150e60cb1ef7f4bc"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-g3-map-elements",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/README.txt",
+          "bytes": 845,
+          "sha256": "320e21e2f900873abef61385db1d302d346e8160525b8e3a42760ac8447fc0a2"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/case.json",
+          "bytes": 330714,
+          "sha256": "44c89bedeb7c7947b17261456c493f52946c9049efc64b538d3f3db337d6d94d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/demo/demo.css",
+          "bytes": 59984,
+          "sha256": "40e4d18cdf8885ff91cd65f373678c6fec94a4672f7d39f3660ff1a0a221962d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/demo/demo.js",
+          "bytes": 410501,
+          "sha256": "fed9484b96645b55d7711065193019cb39bcabf7364501024c0cb8b18a9c213a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g3-map-elements/demo/index.html",
+          "bytes": 16596,
+          "sha256": "b09559e002813e7135d68d01a532f8cafe750e889165abb5d9110e082a4e440c"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-g4-fracture-survey",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/README.txt",
+          "bytes": 948,
+          "sha256": "c9bc116178e2d3460129926535ca1a133648f9c3d3ca7a741b7272c6454a5f40"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/case.json",
+          "bytes": 139599,
+          "sha256": "4a0e34dd29f9057d0ea6b219fb232f60d058f0cda0623c1f1e877a92d95ebd5a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.css",
+          "bytes": 59984,
+          "sha256": "40e4d18cdf8885ff91cd65f373678c6fec94a4672f7d39f3660ff1a0a221962d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.js",
+          "bytes": 306478,
+          "sha256": "5e25e5376452f35dd6047caa3318f839582559655208674eec18d532087fb1a0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-g4-fracture-survey/demo/index.html",
+          "bytes": 12290,
+          "sha256": "4c1e80e687aa9bad52334d48769bf5670f988c1164cbc26cc55749bd5b124913"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-p1-perforation-depth-correlation",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/README.txt",
+          "bytes": 6925,
+          "sha256": "3f1301426d992947caa728687aa2f9ed49a1413842d7cf1ce651aaf3b24a5087"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/case.json",
+          "bytes": 230942,
+          "sha256": "ea38c731fdd465e732dbb38ef436a892a58684c2630694a25e032e3772070421"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.css",
+          "bytes": 53988,
+          "sha256": "c851e5d59d1a41fcf14ccf461a587f1dda7bd3e2554fb05bc48399a4737bb15a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.js",
+          "bytes": 355963,
+          "sha256": "a860ebd5079d0ffd4b2181274f172d97cb4d6ec92337dcaa2ed05f0d472e76ac"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html",
+          "bytes": 515,
+          "sha256": "e78cdc8f627f9910d3509b19dddd3ba6d1bc6b7153bc0fe3c5231d6f42a039ec"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-p1-perforation-design",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/README.txt",
+          "bytes": 3432,
+          "sha256": "67c244b6bd8b02fbcd223f1b3aa8b5911e57f296ec14f6856ec2d9b13f73ed23"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/case.json",
+          "bytes": 152120,
+          "sha256": "a724ae155549d1ffb80e050bbc30ea07aa1134cf0ee6d47da3410c6373efb367"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.css",
+          "bytes": 66148,
+          "sha256": "5a718444439b773ac9df3268a8422e5d792287a70ad0ed0eb70a0a6e955ebdd1"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.js",
+          "bytes": 359666,
+          "sha256": "d9d09dede3320e21445a277d0b79be11f0d4fae160a7d70778be2db52a73b9c8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p1-perforation-design/demo/index.html",
+          "bytes": 4978,
+          "sha256": "ab1138a6a8fede3329a2a774915b5bc4f385891a74345516f4d5802055ed1ed3"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-p2-perforation-shape",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/README.txt",
+          "bytes": 1342,
+          "sha256": "1d069ccf005d61614860b74d2b2d3725f96a484b99d6db834161ee8b2c73265d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/case.json",
+          "bytes": 109474,
+          "sha256": "89ed22a5c87b0f2e2a636bc494da439a83bdcbf0bafe844a1e7323fccf2c7e90"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.css",
+          "bytes": 62284,
+          "sha256": "3e3690e2aa2673405e1e8251505ca65b2f20f083d4f27db974bd4149d4a512d8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.js",
+          "bytes": 288753,
+          "sha256": "bf6f3f4b0fb40df9d2bff7e0644a0cb80bce3a727fabbf7637b7c6e2c6bf18a0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p2-perforation-shape/demo/index.html",
+          "bytes": 17010,
+          "sha256": "94e5225d4431d548b015e3ec25dac6611c3025cf894914843787927cc8f5fac8"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-p3-perforation-catalog",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/README.txt",
+          "bytes": 1345,
+          "sha256": "af8cbefd45c014e5f6ba9b6f5a209c7eb042f8d447a9128b28f76b72195868dd"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/case.json",
+          "bytes": 112367,
+          "sha256": "60b31f928528422bd8c8edcb9216b412e5782befb112e0b789568c2100f0c496"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.css",
+          "bytes": 62284,
+          "sha256": "3e3690e2aa2673405e1e8251505ca65b2f20f083d4f27db974bd4149d4a512d8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.js",
+          "bytes": 295455,
+          "sha256": "069983a3267a41c5d3445282376f6e31a6d31241c483a2cd031ace4bcf3039b1"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p3-perforation-catalog/demo/index.html",
+          "bytes": 17409,
+          "sha256": "2e731190cada790bcfd180d400ff214545fb07e3d5a745b08ccf919ddd16531b"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-p4-perforation-effect",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/README.txt",
+          "bytes": 1411,
+          "sha256": "8c75c36dd0602cdcd7e5fd8e1d003758941c16b09641fe43f4c2f1c74074fcf1"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/case.json",
+          "bytes": 107714,
+          "sha256": "451d9ce908909432303ca46b51123ff31b2b96f7a6f3fd59490cab2804f2c19b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.css",
+          "bytes": 62284,
+          "sha256": "3e3690e2aa2673405e1e8251505ca65b2f20f083d4f27db974bd4149d4a512d8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.js",
+          "bytes": 290947,
+          "sha256": "216ac97f874a9530e397767cb1a63ad28d5ba9a9760dbf1166c0b8272f18937c"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-p4-perforation-effect/demo/index.html",
+          "bytes": 17028,
+          "sha256": "b6d4a60e705520f01aec24123444b90ed1ba5e352f9c6b73760c6200c8985a2c"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-pr1-pump-card",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/README.txt",
+          "bytes": 3791,
+          "sha256": "e97a426b83a84724ab9449f33eedeaece5fd4e542719cabe34f0288629857989"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/case.json",
+          "bytes": 128175,
+          "sha256": "22beaf4dac6b7fe86b0dd5262ee16b4ecd8142f7081a717e755aa1b009040b5a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.css",
+          "bytes": 66148,
+          "sha256": "5a718444439b773ac9df3268a8422e5d792287a70ad0ed0eb70a0a6e955ebdd1"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.js",
+          "bytes": 351434,
+          "sha256": "6fa1d5727aa22b831ed4fd7e7bdecbbf529180ffabf2ec093d29d788ec84f0d1"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr1-pump-card/demo/index.html",
+          "bytes": 4691,
+          "sha256": "4021b5a4ada004c1c0273195ea5fd311c03ed13ae90e07657658eaf6bc1d2ec2"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-pr2-production-forecast",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/README.txt",
+          "bytes": 1334,
+          "sha256": "7dad645fc91ffe5330f33aca5049ef3d90f1022c85b3d46025cdb0cea9d90741"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/case.json",
+          "bytes": 110069,
+          "sha256": "b1c98700d6445d6634d09212e27b4431fd5babde89c75ecbbb9548adc90b2ee2"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css",
+          "bytes": 62284,
+          "sha256": "3e3690e2aa2673405e1e8251505ca65b2f20f083d4f27db974bd4149d4a512d8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js",
+          "bytes": 295011,
+          "sha256": "12bcc1c9c61ca7ab07bf9e4aa2e79533bc69820b2da2b1174228fd6b767671ae"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html",
+          "bytes": 16826,
+          "sha256": "c527bb9268487ce969543d0aa66700326d128991157498320d539c0094e23ad6"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-pr3-water-allocation",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/README.txt",
+          "bytes": 1391,
+          "sha256": "afb7a5de98c60c1dece39313fc46a4f6e661970a34f956c0f502c6d029a9b7ba"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/case.json",
+          "bytes": 224176,
+          "sha256": "09b1f18a706f8a953143df9df257039b02998ac5d69b404908a30e187c71a38b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.css",
+          "bytes": 62284,
+          "sha256": "3e3690e2aa2673405e1e8251505ca65b2f20f083d4f27db974bd4149d4a512d8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.js",
+          "bytes": 352210,
+          "sha256": "80e7b461b63d10f3cf08afec860263f9c92a4873e0a50566de0d6e5e47440618"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr3-water-allocation/demo/index.html",
+          "bytes": 17385,
+          "sha256": "4332985cafaea4fe2fa2847ebb8080e6b9900aa5662e9bbda8ebd9e1b73427a0"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-pr4-esp-warning",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/README.txt",
+          "bytes": 1372,
+          "sha256": "4ea3bee3d6eaab4b3d33c3a37241f25f45994ce44a4e2d37d3e36aad1871b17a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/case.json",
+          "bytes": 113057,
+          "sha256": "8bec0d95724108aa324dc5b10d04f8ebe21d1836d96bd8f2ea6bc849dc8d51df"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.css",
+          "bytes": 62284,
+          "sha256": "3e3690e2aa2673405e1e8251505ca65b2f20f083d4f27db974bd4149d4a512d8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.js",
+          "bytes": 295868,
+          "sha256": "800ca6129606cc74df1d1eecc7e9ccabe8f3a44099e940b234c30304b2ca0b5c"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr4-esp-warning/demo/index.html",
+          "bytes": 17331,
+          "sha256": "9bc16fcab009cfe28104e5ac92b5ab90733398184d56ad53f9ba9f118396b515"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-pr5-wax-risk",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/README.txt",
+          "bytes": 1532,
+          "sha256": "af621fdb82573746cd4d8cf5ec7bcadc9c5f0365745a95db4aafd42b0665219f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/case.json",
+          "bytes": 193986,
+          "sha256": "e8b070a387786d3dbbaea3751389cbb86feedad255db3230a66d8b18d4adad87"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.css",
+          "bytes": 62284,
+          "sha256": "3e3690e2aa2673405e1e8251505ca65b2f20f083d4f27db974bd4149d4a512d8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.js",
+          "bytes": 419513,
+          "sha256": "764ceebd6daf2519b6e3f822a03caac1354756b643fea9281e6fa858255db0ae"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-pr5-wax-risk/demo/index.html",
+          "bytes": 17253,
+          "sha256": "650172655efd830ed8523ab77e2601173bcec8b1ddd42bf75dbd2fb279cb9911"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-r1-distillation-optimization",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/README.txt",
+          "bytes": 928,
+          "sha256": "fc721ea1285aa8cfbaf1b2df60209d7027d6225d9b7fd27f66642edeaefa8f8f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/case.json",
+          "bytes": 312914,
+          "sha256": "81c595b279469b0d351513ac0dd7200852ad01849f5c39718cdb84a266730ffd"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.css",
+          "bytes": 59986,
+          "sha256": "c31eaa53a5b918125c128d2c3e98200d64eab5b8ac0fc5ec4a8b0f8f1cab00d3"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.js",
+          "bytes": 408588,
+          "sha256": "49e6247aabb8efb4f6e4bedc3528e6916612a770dee5294690dcfc51f60209a6"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r1-distillation-optimization/demo/index.html",
+          "bytes": 3008,
+          "sha256": "967599464e483f191c32dd541ef40f2f36ad6648cab1d06aa008b57602adf992"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-r2-fcc-product-yields",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/README.txt",
+          "bytes": 931,
+          "sha256": "85e6d2a6522afaaa5018139c89a3484f4e5aae1312ca79ae400d5b24f4a731b0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/case.json",
+          "bytes": 112388,
+          "sha256": "462307a5828dc36cd6336b70e90f1569b2377b155448ad074ecda9ea64fe3965"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.css",
+          "bytes": 59986,
+          "sha256": "c31eaa53a5b918125c128d2c3e98200d64eab5b8ac0fc5ec4a8b0f8f1cab00d3"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.js",
+          "bytes": 314164,
+          "sha256": "f80a4803c5f9f1100e982eb62f67f8c9a42378dbc1c4e314aa7e9c9b774cfd70"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/index.html",
+          "bytes": 3090,
+          "sha256": "3fd3302716de4e438fc824bb7f6387c083d3bf00c4fe483d7a046cfc04e46190"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-r3-maintenance-trend",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/README.txt",
+          "bytes": 1026,
+          "sha256": "57608b2f2434479725addfad24743f2314618c81fe27f702ae2fbb85e2403fcd"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/case.json",
+          "bytes": 154265,
+          "sha256": "e46757f27bd58df39c426c1aec90ab7842c06e4504f58c307561d625fd557e97"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.css",
+          "bytes": 60918,
+          "sha256": "4067fc698917aaa3c2ee87cbb7fc7cc085d4f71db34620bae270d572b2812a42"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.js",
+          "bytes": 342318,
+          "sha256": "401269c8523a25e05b1566bbf7363052cd48cc475b08fdc3951a2e589362e2b0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r3-maintenance-trend/demo/index.html",
+          "bytes": 3214,
+          "sha256": "6f20fa2d1cb8d996025f3ecc2252de2610a5e67fa91f2b5ca8cd9128f4d59a7a"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-r4-lab-audit",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/README.txt",
+          "bytes": 1035,
+          "sha256": "3641c2ae6d2629409d263b5434f678855de3802a3f5d3cf0815df83ce27c6f8d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/case.json",
+          "bytes": 107043,
+          "sha256": "7a7c6b041de633df003cadd252054f0e43781bbe456376fbc4156e703a77cf22"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css",
+          "bytes": 60918,
+          "sha256": "4067fc698917aaa3c2ee87cbb7fc7cc085d4f71db34620bae270d572b2812a42"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js",
+          "bytes": 299572,
+          "sha256": "034a0de739494abd17284ad7708b6a58b401b2e7924c1a3b8161e4733532804f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r4-lab-audit/demo/index.html",
+          "bytes": 3309,
+          "sha256": "feb876a7d0f8f79c03ee0c8f34914d4d0968fd4834c969c30b2eb82947c7dcaa"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-r5-quality-softsensor",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+          "bytes": 4268,
+          "sha256": "fd92fafbc46f88cf3e8be145651f950ba8c37ddafae73e9f381e82b19c0269ee"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
+          "bytes": 119422,
+          "sha256": "90aad46afb08357e8a049981fbab4c4091def52adc83a12acbf52191e59d7c79"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+          "bytes": 63693,
+          "sha256": "98d8cd6b96a488c2e94c612696fa383cf0dce40a840d1a1a18ebf845dc8762ec"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+          "bytes": 341087,
+          "sha256": "6bf1cebb1bcb31bc2e8a84bc111de0ff5f8d8e014b0a3ee5fafa560121dc5682"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html",
+          "bytes": 5251,
+          "sha256": "d3a913a546b843c51146105dd73a94255de0df89857d84409032a87e461da701"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-s1-seismic-fault",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/README.txt",
+          "bytes": 4056,
+          "sha256": "bffb299784c98029c50e53fa5f5aa35de05d7e0fe1b6c1516a42ef9644038300"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/case.json",
+          "bytes": 1139832,
+          "sha256": "f256b02be312e9f0fac6652496d1dfafe47fc35990a1734f1d93051f29ee7a8e"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.css",
+          "bytes": 66920,
+          "sha256": "bb2306f6acf4c77e8a825ce23085b27f388a97f3dde53856ba746743e4dc4773"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.js",
+          "bytes": 827053,
+          "sha256": "729826689dd54001eae791cbb40a09fb9e8f4075bd111cf4a299948b47568452"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s1-seismic-fault/demo/index.html",
+          "bytes": 24003,
+          "sha256": "961aa81e5fa908233c2d354b0f85ea29281379754428f88d0963282af664990d"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-s2-seismic-facies",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/README.txt",
+          "bytes": 1195,
+          "sha256": "aafc10f1aefaf6fb4c0811d242087dc3539540a46e3b29789c00bb158cf12237"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/case.json",
+          "bytes": 344469,
+          "sha256": "31c53d3b80164655b176008d37d8dc21de1edc178bf9a2ec4af4f01c3a8a7334"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.css",
+          "bytes": 61167,
+          "sha256": "7c6420197a107a0aa48fd1b59175c88273b7ad1a0e4179a5c1ed859cd9e190b8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.js",
+          "bytes": 580160,
+          "sha256": "dd45dffa4a57467892b4127e486ce51a635095e7065705a2c5416cdab1e8283b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s2-seismic-facies/demo/index.html",
+          "bytes": 29267,
+          "sha256": "aa663149a796d95ced422c4a8364f1cede7bbc695e873c81c9e2ba9170a3a5fa"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-s3-first-arrival",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/README.txt",
+          "bytes": 972,
+          "sha256": "256165a5449c650d19230bc07710849313abc83ac1e86ca1e67b7afce2b01b32"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/case.json",
+          "bytes": 142823,
+          "sha256": "76eeaf158f2dbd5b6f34814f28bf0bb96234fb3c56e161a2a5f83de681effd16"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.css",
+          "bytes": 60218,
+          "sha256": "0ff9492819f44824a0b8618a48b53258967c4288b388bf5dd1971e69c57f761f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.js",
+          "bytes": 366407,
+          "sha256": "5527cc6d1d1854c2da9a4990101c4588999f0cf2b877b2c6a05b9dbbcfa84b39"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s3-first-arrival/demo/index.html",
+          "bytes": 10287,
+          "sha256": "1764866518715534a4245edda56cde69ce0347b6f7a182afba5b3864b7ad3cd5"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-s4-reservoir-inversion",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/README.txt",
+          "bytes": 1200,
+          "sha256": "490ee53ff19b60dbc3d6bb5e42a0ec355e935d5d3b832082f4293ef5846089a9"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/case.json",
+          "bytes": 116128,
+          "sha256": "b0e654c17b07b1eb41baf23848f4ebbcff8e0412a92c193a49875037c52ac57d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.css",
+          "bytes": 61167,
+          "sha256": "7c6420197a107a0aa48fd1b59175c88273b7ad1a0e4179a5c1ed859cd9e190b8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.js",
+          "bytes": 306950,
+          "sha256": "ceab18474877669dbb8c2572e81b0c82fe6568ede3e65ca492f8f598f4d2dba6"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/index.html",
+          "bytes": 19477,
+          "sha256": "6057048aa60b15fb14e42918e8fbb9e0f37f4c785dff52b215d6749f60c569b1"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-s5-seismic-denoise",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/README.txt",
+          "bytes": 1024,
+          "sha256": "4564b90cd1981f795233f39aa5788e2e45d9eef24bf9a88ad4b9e9a21bffdde9"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/case.json",
+          "bytes": 105567,
+          "sha256": "3075bde837b02475876a98293386cf8a32175031e1fb55197dacc7776fbcfde0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css",
+          "bytes": 60218,
+          "sha256": "0ff9492819f44824a0b8618a48b53258967c4288b388bf5dd1971e69c57f761f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js",
+          "bytes": 299806,
+          "sha256": "e191fcda3248a9ea851727d39c6cca5ff609b6ca8fdcfac1dc6ad60a936bd58b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html",
+          "bytes": 11168,
+          "sha256": "1117c351b12462e5eda402dfd554d78a2f9edac7d0519592deaecd69545c1b3d"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-t1-pipeline-leak",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/README.txt",
+          "bytes": 3830,
+          "sha256": "29fac1247bc30e3a0597256508624609ba66965305a1798ada4a4155e720bbf8"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/case.json",
+          "bytes": 123087,
+          "sha256": "362d13d08c5893c75d920558f2af76631e445c0820113b630d63977dddcb2479"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.css",
+          "bytes": 63693,
+          "sha256": "98d8cd6b96a488c2e94c612696fa383cf0dce40a840d1a1a18ebf845dc8762ec"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.js",
+          "bytes": 341187,
+          "sha256": "309942c9d1a82a749d7d5509d843d81f886569f6786123a5c639ba13563679e2"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t1-pipeline-leak/demo/index.html",
+          "bytes": 5016,
+          "sha256": "32216ee1031335fcd0a7e36c32ebc20b9d7bfc02bb677406d2b00ef0e1d51ece"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-t2-corrosion-growth",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/README.txt",
+          "bytes": 760,
+          "sha256": "925620560f7e19708a34e4329f543b22c0a26bc6371c62a09a5bdb9863d309df"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/case.json",
+          "bytes": 121044,
+          "sha256": "9bb40e29a69c2b75385ece7627d46afd3531a7b33efe2eb8d359af8aca46445e"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.css",
+          "bytes": 59825,
+          "sha256": "ae37c8338a14b5c29178a953a368e317400dc9672e7fe18d10ff0a9280542eab"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.js",
+          "bytes": 337662,
+          "sha256": "26dba18de70ab343cd3f3486666a8547c07041c22579f62dc66adc725888614b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html",
+          "bytes": 2385,
+          "sha256": "289444a24a565e55cdef4451c6db048d94c72dc6008397bbedc76b88b1039e21"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-t3-gathering-pump-optimization",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/README.txt",
+          "bytes": 720,
+          "sha256": "0f28ddcafd34e80ea72ec930d84c617f97e6dc2d7c9a2d408d8caa26af7a4693"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/case.json",
+          "bytes": 139524,
+          "sha256": "919da9fe8e3b82f661f87fa50ed9cdc0e7ec79e60bcd2c324858e55d27e8c5d1"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.css",
+          "bytes": 59825,
+          "sha256": "ae37c8338a14b5c29178a953a368e317400dc9672e7fe18d10ff0a9280542eab"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.js",
+          "bytes": 318421,
+          "sha256": "8b40906870e67ed202ad0da2dee91d1ff7b339fe948c22b9380788f9f92f6a6b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/index.html",
+          "bytes": 2376,
+          "sha256": "100d1e75675f615dbccdbbcc010b04016188631c886a4b2e5533c1e04dc4f8a0"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-t4-meter-drift-calibration",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/README.txt",
+          "bytes": 797,
+          "sha256": "e8778df292b08185f7ae286eff368c95029eaa4be5d35a7c923c19fb04064a8c"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/case.json",
+          "bytes": 112161,
+          "sha256": "239cab28d0fe1e0b0057fa6c4d98b928551cafc3602c31740e015d8198f1934e"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.css",
+          "bytes": 59825,
+          "sha256": "ae37c8338a14b5c29178a953a368e317400dc9672e7fe18d10ff0a9280542eab"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.js",
+          "bytes": 312283,
+          "sha256": "9cf02d1e738cb9156cf743710aa7657df7bf4ff55e5a33d33393e10d655a0246"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/index.html",
+          "bytes": 2378,
+          "sha256": "1cfbdef13f574b14d9dfce2d5bdf55a2f35db4acb166d3534d51282237de0323"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-t5-tank-level-crosscheck",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/README.txt",
+          "bytes": 790,
+          "sha256": "d54249bed8ee7316b9e3278eb476e6f7889ec30914575dec1d7acd8fb9600dd9"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/case.json",
+          "bytes": 146413,
+          "sha256": "3428e8a19206197b0eeaea6a6638c9eff5336754c0a233409c6f58fb44b76da0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.css",
+          "bytes": 59825,
+          "sha256": "ae37c8338a14b5c29178a953a368e317400dc9672e7fe18d10ff0a9280542eab"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.js",
+          "bytes": 374347,
+          "sha256": "d1be2a817447dcefaad310c916231607ada87c1b36a03b328d9cbea171f02e25"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/index.html",
+          "bytes": 2421,
+          "sha256": "e098af946406b2e10550e2c0001eb0322ef23b7e12a0a1dec28fad98e019e204"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-w1-log-boundaries",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/README.txt",
+          "bytes": 1032,
+          "sha256": "d4c5271d4715a0cbd266e4db933035757ca215cbb19713409f964cf4d02c9f80"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/case.json",
+          "bytes": 115087,
+          "sha256": "63f778e3f6813df4389686af43545b5ac185dea384a9159fd2a2acc76e34788b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.css",
+          "bytes": 60911,
+          "sha256": "5abbacc2bd07f3c2dd80c5617ae46c61f44af2c1d56c484050320697176a2293"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.js",
+          "bytes": 306688,
+          "sha256": "61b0b5328990d005555cd220c0ea18ae155e6d0e55a3379b0dc2a44ead8b5961"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w1-log-boundaries/demo/index.html",
+          "bytes": 12372,
+          "sha256": "e722c2c543b078aca99628e680852c2e8960493c364359715b2a6e2ecaed4e76"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-w2-porosity-calibration",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/README.txt",
+          "bytes": 1033,
+          "sha256": "6f8faad64e3d7f0501f536506d11b2fa8197ee12819830df93ba4ad38486acfa"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/case.json",
+          "bytes": 109967,
+          "sha256": "267c08efc5f4468ea85ce1a77dfc4d3e93dff235e397735d1130ba172b3cf1bb"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.css",
+          "bytes": 60911,
+          "sha256": "5abbacc2bd07f3c2dd80c5617ae46c61f44af2c1d56c484050320697176a2293"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.js",
+          "bytes": 306164,
+          "sha256": "bdd978855c9c4865c804ad0516e73b26973207c84a038e0b818ed9c89d9a498c"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w2-porosity-calibration/demo/index.html",
+          "bytes": 16736,
+          "sha256": "f79dabbc1010017e75e54a262824945818d36b344521fd94ce3a1d4dd49bbb58"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-w3-borehole-fractures",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+          "bytes": 1065,
+          "sha256": "b541a109394c1932d6ecc350eac5f414fab2e88711c9c45117b887b51b1a5c39"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+          "bytes": 468992,
+          "sha256": "e66ff4b9ba5dd1db6eb7c210a08a3e7a9585224093993af60c17240dadf54881"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+          "bytes": 60991,
+          "sha256": "794fe621f24f57f2b5c52179812f117dcfb3fb228538aabfee6f9b971d7dc241"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+          "bytes": 498098,
+          "sha256": "42888253a9c39f1ebe265cb0fcab04e54896f3dfa07293b08488f5a73e5188fe"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+          "bytes": 18772,
+          "sha256": "74d63ea9b1c5e68ee376e6f89778896b38b37ce0b2ec2efd9261998b3de8762d"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-w4-log-lithology",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/README.txt",
+          "bytes": 2612,
+          "sha256": "0777b6a98cac03946b282d7cfe6e028ff0214e2a5d1e0910b01ba133c107938d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/case.json",
+          "bytes": 145209,
+          "sha256": "c659fc3bc22e52bc2d9e7fd73b3702dd2e4a8600b22066083bf61f40a7b06099"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.css",
+          "bytes": 67409,
+          "sha256": "d104e908a2f844db0981451d2d60e99a8f0f7c1880c961da3c3bdf5c65029e28"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.js",
+          "bytes": 347110,
+          "sha256": "9ba86f558c5367eb55b5cc6262120592d6939ba3d4e2cba094e503b932668b0a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w4-log-lithology/demo/index.html",
+          "bytes": 23723,
+          "sha256": "818588df5f88c1cd7c11a07f8131f71c673e3cfa5b69e56bc54775d621b9cbcb"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-w5-curve-repair",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/README.txt",
+          "bytes": 1064,
+          "sha256": "0d2a3fda938e0e1fbc010a7802cdc61583f6177ae783277b19575c352f54a87f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/case.json",
+          "bytes": 199417,
+          "sha256": "2ff4b748da45b456cf69a1044ae0b44e7346cf7982adfcb111b653505e17d10f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css",
+          "bytes": 60911,
+          "sha256": "5abbacc2bd07f3c2dd80c5617ae46c61f44af2c1d56c484050320697176a2293"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js",
+          "bytes": 355632,
+          "sha256": "43b2ae2c7c82ce9bac91674c550058b372b5e994bd544899bd2693671963757d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-w5-curve-repair/demo/index.html",
+          "bytes": 12128,
+          "sha256": "5115a335a62c65e89b7667321ecb301c8a61f29ccaaa263726ab38f86429c57c"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-wo1-workover-retrieval",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/README.txt",
+          "bytes": 1394,
+          "sha256": "9b65164914e96eced48bf00b95d393e82378ada4642af185e3fa383fbb52f6c0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/case.json",
+          "bytes": 124855,
+          "sha256": "3fa1e562dd47d0fb6ce4c021070ac398d479db66df679c84b9809ebde27c4f1b"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.css",
+          "bytes": 66264,
+          "sha256": "e09ecf79be09e81ef5963f9ed6a350cc4a3f2156658e58ef71c96d462c18ed18"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.js",
+          "bytes": 346896,
+          "sha256": "8fecce681ef2b37dd0470c40159d61b22b008fde31936a86e13cb07f0ba48998"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/index.html",
+          "bytes": 20508,
+          "sha256": "2d999674e16b3ab6541bab67373bd35d330ed608261b9d035fe2f9cefcca757e"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-wo2-fishing-tools",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/README.txt",
+          "bytes": 820,
+          "sha256": "c2599752da42bf40d369ea33f2df9a908b8b4f5ab8c6aacca28b04312e5dab81"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/case.json",
+          "bytes": 105743,
+          "sha256": "77d8a1e930af67b97d5f392dc04a3c53fd23d71243ca531e1613d2b8884fc3f0"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.js",
+          "bytes": 285678,
+          "sha256": "06fd69d3ea0b62c0bb5770bbb666108a51238ed637c9cea4c8b8f06a916ddc94"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo2-fishing-tools/demo/index.html",
+          "bytes": 12441,
+          "sha256": "25c70ad66dbac99dea46a63f03c074eb10ae6dc550d0db15e0226cd833c6f544"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-wo3-casing-damage",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/README.txt",
+          "bytes": 828,
+          "sha256": "d02ff4d5cb93a3045e5d420289415ffb733f235e93a310a5671b7ae2a446509a"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/case.json",
+          "bytes": 179739,
+          "sha256": "8b9812751c8444488e4132fe6131039fcd5f12f3541b305ec75868111b67106d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.js",
+          "bytes": 361128,
+          "sha256": "204207c8f11ed6d583b4c53ae9d23c4ee56758616c4769f4cbaf737be4c316d1"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo3-casing-damage/demo/index.html",
+          "bytes": 12971,
+          "sha256": "8f0bddffcebf74d39202b6571b983e37c2f4f3249c5411df524bca18eb677f38"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-wo4-workover-warning",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/README.txt",
+          "bytes": 837,
+          "sha256": "30b9a9f07c470606b0137b8ab976350bbaca6dd2c491a4eaef477b50487ccb4d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/case.json",
+          "bytes": 118574,
+          "sha256": "0b91c68a3d54bab70dea1863502c8879ee64828419accea1b2b63af9a102a83f"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.js",
+          "bytes": 303896,
+          "sha256": "9322118f6617e622d7074d6645b61c2ad68ae8ed40bda61b233b3f477279b488"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo4-workover-warning/demo/index.html",
+          "bytes": 11853,
+          "sha256": "138a1f967ee1a46691877f1ba03d55cea0334f27cea99c915b76fcef688b782f"
+        }
+      ]
+    },
+    {
+      "folder": "dist/expansion-cases/s17x-wo5-maintenance-interval",
+      "files": [
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/README.txt",
+          "bytes": 818,
+          "sha256": "a7d08a5d0ddce99ba10211c0d30d4e15bd5679d2404f6201e261b73a1b131a68"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/case.json",
+          "bytes": 105603,
+          "sha256": "519befaa2fde8828bdc06f2512856ddce4d59e025e0497eae9fb90b1640d48d7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.css",
+          "bytes": 60393,
+          "sha256": "c0d4cced4fbfb20da98ab5dcfbe0ae41b3d6a0ddaab93b4b77de22daeb70acc7"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.js",
+          "bytes": 284521,
+          "sha256": "89a1d3dcbf23d187c4f30c00d0f143d99622aad75bc723975c1e8976c05e3d2d"
+        },
+        {
+          "path": "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/index.html",
+          "bytes": 11878,
+          "sha256": "5846d6bd7ec103d4979fe691d60c66488cf13f3d28008d7d9720124b1fe9e392"
+        }
+      ]
+    }
+  ],
+  "historicalReports": [
+    {
+      "path": "handoff/teaching-map-2026-11-01/acceptance.json",
+      "bytes": 109794,
+      "sha256": "7b752ba204de9271ca625b60a0f69c9f60b40df3d2a3535595b27c86a811a80b"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/attempts/background-no-hidden-event.json",
+      "bytes": 345,
+      "sha256": "521f06c3a2682a4add047207cd9b5d715f23ad3b54beb2ce7f8a65c1d83d5f80"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/attempts/background-reading-focus.json",
+      "bytes": 477,
+      "sha256": "3e1121858db800ea27ba9b3780ff931e02ab7581abb13f34074ed134903f4e88"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/attempts/global-selector-first.json",
+      "bytes": 4391,
+      "sha256": "114026a4801c9a572d3e00f5754ad8cf918c889e287e2017c5fb5b77bdcf3d51"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/attempts/m2-selector-first.json",
+      "bytes": 37362,
+      "sha256": "7519cd92c3ccf100c8c157117876a1efd2e88e032e5062d0bdd1dd60789a95f4"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/attempts/search-eager-avatar-policy.json",
+      "bytes": 2127,
+      "sha256": "9685acfc8f65324da558bb4fa3fcfb22af97a15b505e62058df760e2c43bcf99"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/before.json",
+      "bytes": 30357,
+      "sha256": "98c736becc844509f315d6622ee1270fe0948102d767d4f20c23ed0bb8675d38"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-background.json",
+      "bytes": 503,
+      "sha256": "48965800ee63dc9f40df32da5cd379b7451af0409fec2126b49b41e8a6749de3"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-d1.json",
+      "bytes": 4025,
+      "sha256": "00d41abfa798f5195639cee3c7b92f141c4ca29c5de8cfb16a16f618ac4c4cde"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-global.json",
+      "bytes": 2797,
+      "sha256": "185dc3ad5e95692e8537ab9c097d927ffa1fdbc59c0e0c723c33c7f402cd3fd9"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-import.json",
+      "bytes": 749,
+      "sha256": "3264e544bfbab8bb9179eab082d86631e9f5c44d8e871ad22cd9b09fa89ef54b"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-loader.json",
+      "bytes": 1411,
+      "sha256": "a29d43557c57410444d55fd7e99de9e303234465d7b1f1308b18306f4ffdcd6a"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m1.json",
+      "bytes": 9660,
+      "sha256": "60db3bc1ab007a7fb822a4e116453dc935b0d8d1920618ece58c58ef1ed3a101"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m2-native.json",
+      "bytes": 1703,
+      "sha256": "40ada2f9df77532fc5a4c76a2bebd0df4cb685f0f5c0b8d5f19fc43cb12ec295"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m2-offline.json",
+      "bytes": 36844,
+      "sha256": "00e7cba44e32dab531e81ea59e19702e80078168c86c2e5eb073cc54d820bfa1"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m2-portal.json",
+      "bytes": 728,
+      "sha256": "e6dac88728a78ba9f75667c29fb9936d35f2dd846f8ca7d61fba4827df6d389e"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m2.json",
+      "bytes": 38583,
+      "sha256": "aafa622b158d93a36592c63bc849e2140a11e2d97da3d84e7b8c0514cd411671"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m3.json",
+      "bytes": 8448,
+      "sha256": "226939f42e96f58643a4333515b0b2ced2977e91341be94f71f6fcd4a676daba"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m4.json",
+      "bytes": 4908,
+      "sha256": "0cdb4fd85561b86e7ae0f3a1332e6dc582be2c6d1265419a6ec5d04483abc33d"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-m5.json",
+      "bytes": 39133,
+      "sha256": "9002d6c7cc83fa77fd5d2225a615751b1168799f1b7a8faeb2e3fa285ccf5ca9"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-offline-stage.json",
+      "bytes": 1278,
+      "sha256": "84d643865b8c632a8b5ca420ddd774cd70697ec65ac74e6d86fb3d81e00f90a0"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-online.json",
+      "bytes": 1130,
+      "sha256": "94957515cf7603a000e1a837b7fa3d48fc98d35801f5aa9a4dfbe490065a4df9"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-packaged-site.json",
+      "bytes": 5622,
+      "sha256": "93d94beece995ea794d33b1a31225a59d2b0e602ef1cd7289e3f0867932ba611"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-samples.json",
+      "bytes": 871,
+      "sha256": "9f7c09d08e823636ef23b59671fae9edbda60cf07a3509dc36fdf6df4040c8f0"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-search.json",
+      "bytes": 1448,
+      "sha256": "123f05fa361d0bae259cc7e10aa9e7c82a337f5a713953d7b92cad1c1f725889"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/browser-stage.json",
+      "bytes": 14412,
+      "sha256": "4e87066b996d70c54c9736332a06c22288f6562ede7b8487f258782f3b24ae8b"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/build-lock.json",
+      "bytes": 87026,
+      "sha256": "7aea034db88f3ec69fcd5e2346a3b93f5bfc978ea45a1e4509faaff88fd81f4d"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/cases-build.json",
+      "bytes": 3714,
+      "sha256": "4867285163f425c5264a6061044a54d4c22c28b720aaadd17a90ef9306fac859"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/d1-offline-result.json",
+      "bytes": 121222,
+      "sha256": "c57c4b6a425ad6e576bb87cb14b8ca0fc8caf54c0f3b00321dadd147040f502c"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/d1-teacher-after-refresh.json",
+      "bytes": 121222,
+      "sha256": "ad75a9a205073c89026a86b818a137cb6315e7be8a34f0e24c4107113558d9c0"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/d1-teacher-before-refresh.json",
+      "bytes": 121222,
+      "sha256": "a40138224fd954bbc4ad8b2789bf4619ad1d2a6f69d946415cf7bfe740a81503"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/lazy-portal-build.json",
+      "bytes": 16523,
+      "sha256": "38c5c54137ff42bc5aaea076b243f3af353332bca3aea7e0c707ed1efcaab7e9"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m1-offline-result.json",
+      "bytes": 60174,
+      "sha256": "9a255e7f8375acd67b1631986d7a5b13f0d65e05b607bcc244887dc642d487aa"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m1-teacher-after-refresh.json",
+      "bytes": 60174,
+      "sha256": "9a255e7f8375acd67b1631986d7a5b13f0d65e05b607bcc244887dc642d487aa"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m1-teacher-before-refresh.json",
+      "bytes": 60174,
+      "sha256": "9a255e7f8375acd67b1631986d7a5b13f0d65e05b607bcc244887dc642d487aa"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m2-build-lock.json",
+      "bytes": 878,
+      "sha256": "8acaedf76b37d2aa8597d50afcc9472a0c851c436bbd79b518edaa76646489d2"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m2-offline-result.json",
+      "bytes": 166499,
+      "sha256": "bbd7b73fd3d433d991b0912822e5f6f78e8f3de8f57643db8002d5244ec0ffc5"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m2-teacher-after-refresh.json",
+      "bytes": 166499,
+      "sha256": "bbd7b73fd3d433d991b0912822e5f6f78e8f3de8f57643db8002d5244ec0ffc5"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m2-teacher-before-refresh.json",
+      "bytes": 166499,
+      "sha256": "bbd7b73fd3d433d991b0912822e5f6f78e8f3de8f57643db8002d5244ec0ffc5"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m3-offline-result.json",
+      "bytes": 87252,
+      "sha256": "067d69d01f5085ce8a6def3fc0f3e81feb723704349753d1c32f26b528a5ad75"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m3-teacher-after-refresh.json",
+      "bytes": 87252,
+      "sha256": "067d69d01f5085ce8a6def3fc0f3e81feb723704349753d1c32f26b528a5ad75"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m3-teacher-before-refresh.json",
+      "bytes": 87252,
+      "sha256": "067d69d01f5085ce8a6def3fc0f3e81feb723704349753d1c32f26b528a5ad75"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m4-offline-result.json",
+      "bytes": 129932,
+      "sha256": "e28d09215754635dd0115585fa71d93c66d562bacd966c18e6bd2731e782bfa8"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m4-teacher-after-refresh.json",
+      "bytes": 129932,
+      "sha256": "e28d09215754635dd0115585fa71d93c66d562bacd966c18e6bd2731e782bfa8"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m4-teacher-before-refresh.json",
+      "bytes": 129932,
+      "sha256": "e28d09215754635dd0115585fa71d93c66d562bacd966c18e6bd2731e782bfa8"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m5-offline-result.json",
+      "bytes": 272175,
+      "sha256": "1b9b7d96aa56f4a3c09e0306f6adeebe074cf8de07b3a9c7f14d41ad2dddb492"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m5-teacher-after-refresh.json",
+      "bytes": 272175,
+      "sha256": "1b9b7d96aa56f4a3c09e0306f6adeebe074cf8de07b3a9c7f14d41ad2dddb492"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/m5-teacher-before-refresh.json",
+      "bytes": 272175,
+      "sha256": "1b9b7d96aa56f4a3c09e0306f6adeebe074cf8de07b3a9c7f14d41ad2dddb492"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/mudlogging-3d-build.json",
+      "bytes": 1753,
+      "sha256": "e109ca7362fce045d8d5ab79beecbbc120dc1972cb7919219bcf6793eb110326"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/numeric-checks.json",
+      "bytes": 585,
+      "sha256": "391b8fc026b2c62e98e6daf4f480e63d364bf674b4bbce11c24792ebc6b3ebb4"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/online-assets.json",
+      "bytes": 3645,
+      "sha256": "ca551bcb9ed05e6cbcc4d674c4c7a0c4959017f90907a249df65a97487e62e8c"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/original-expansion/build-lock.json",
+      "bytes": 169806,
+      "sha256": "d75c3040ba51e7562246c54a802a763f85e653619bd9a737f2e41906a294ce5d"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/original-expansion/contract-before.json",
+      "bytes": 11721,
+      "sha256": "8a3e7bfa8a33433d939b3517b0fefc51f70ba26aa2e9f0938e71d429203f5300"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/original-expansion/coverage.json",
+      "bytes": 26674,
+      "sha256": "0f690126b68f875ba7b9e830006ae774eab87e43b4c7178b847baee009dfb6f4"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/original-expansion/coverage.md",
+      "bytes": 7153,
+      "sha256": "8d96b56e7aa16b316b5350ae63c97116cde5691df14dc33121f57e6000423dcd"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/package-lock.json",
+      "bytes": 2343,
+      "sha256": "2ef1ceaaaa1a5c4734c3c549292af861abab6f5d452182657a7a584351bb20d5"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/protected-data-completion.json",
+      "bytes": 7535,
+      "sha256": "9232b8b650e48171b28d9fbc5e03217ac2bed7f1e9cfbfdb3c673ff0f52f78b9"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/publication.json",
+      "bytes": 1031,
+      "sha256": "0a9f5ace0bd647fea90e1bd11d19000a0c2347360ea21eb57398aa17566dfda1"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/runtime-lock.json",
+      "bytes": 77614,
+      "sha256": "af5a958377b7d209941b2f146f27c650d9abe335e49afdb4edfe680703513532"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/source-checks.json",
+      "bytes": 48613,
+      "sha256": "6e5a72095f35b647299a7d9bf9343afaf1d2e3497f928209f30e1fbf068ce810"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/staged-scope.json",
+      "bytes": 34098,
+      "sha256": "6e2a4cc8c57ccc7fcb31c5e10ab486a7441a49f691283db7bc544e588849d869"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/variants-build.json",
+      "bytes": 6088,
+      "sha256": "bc23bb71bf662608f4dfc9d7a5447469c8fc380b37c279345226a8c14ba12ab6"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/内容审阅.md",
+      "bytes": 2524,
+      "sha256": "15a7d04b10bb653865317715ce1eab6e35c552929212493418832e631d14c927"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/离线使用.txt",
+      "bytes": 532,
+      "sha256": "64a6030b86a11bb90a580eb34a714d7241d9b195fd2b7e4c210056263983bea7"
+    },
+    {
+      "path": "handoff/teaching-map-2026-11-01/验收记录.md",
+      "bytes": 4569,
+      "sha256": "81f7080a1ba77ab52b26b7171660a9cf6bb4e2ab46fe0c3e2e9c21f50ae2a7c3"
+    }
+  ]
+}

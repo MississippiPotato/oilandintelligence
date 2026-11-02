@@ -4,6 +4,7 @@
  if(g.S17CaseLoader)return;
  var states=Object.create(null),handles=Object.create(null),viewTimer=null;
  var script=g.document&&g.document.currentScript;
+ var revision=script&&script.src?new URL(script.src).searchParams.get('v')||'20261101':'20261101';
  var base=script&&script.src?new URL('../',script.src).href:g.document&&new URL('./',g.document.baseURI).href;
  function esc(value){return String(value==null?'':value).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
  function rows(){var catalog=g.S17CaseCatalog;return catalog?(catalog.teacherCases||[]).concat(catalog.cases||[]):[];}
@@ -36,7 +37,7 @@
     // the teacher importer's separate sandbox and are not handled here.
     frame.setAttribute('sandbox','allow-scripts allow-forms allow-modals allow-popups allow-downloads'+(g.location.protocol==='file:'?' allow-same-origin':''));
     frame.setAttribute('referrerpolicy','no-referrer');frame.setAttribute('loading','eager');
-    var url=new URL(row.standaloneHref,g.document.baseURI);url.searchParams.set('embed','demo');url.searchParams.set('rev','20261101');url.hash='lab';
+    var url=new URL(row.standaloneHref,g.document.baseURI);url.searchParams.set('embed','demo');url.searchParams.set('rev',revision);url.hash='lab';
     frame.dataset.s17BundledDemo=row.id;frame.src=url.href;
     frame.style.cssText='display:block;width:100%;border:0;border-radius:16px;background:#f7f4ef;min-height:400px;height:640px';
     root.replaceChildren(frame);
@@ -81,7 +82,7 @@
   s.status='loading';s.error=null;s.attempts++;
   s.promise=new Promise(function(resolve,reject){
    s.resolve=resolve;s.reject=reject;
-   var node=g.document.createElement('script');s.node=node;node.src=new URL(row.contentURL,base).href;node.async=true;
+   var node=g.document.createElement('script');s.node=node;var bodyURL=new URL(row.contentURL,base);bodyURL.searchParams.set('rev',revision);node.src=bodyURL.href;node.async=true;
    node.onload=function(){if(s.status!=='ready')fail(id,row.version,Error('Case script loaded without completing its body'));};
    node.onerror=function(){fail(id,row.version,Error('无法读取本案例文件，请确认课程目录完整后重试。'));};
    s.timer=g.setTimeout(function(){fail(id,row.version,Error('本案例载入超时，请重试。'));},25000);

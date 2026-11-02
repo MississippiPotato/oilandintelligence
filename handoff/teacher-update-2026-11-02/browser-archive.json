@@ -1,0 +1,85 @@
+{
+  "checkedAt": "2026-11-02T02:51:36.653Z",
+  "kind": "actual_Chrome_ZIP_directory_files_import",
+  "checks": [
+    {
+      "name": "ZIP, directory and multiple-file choices coexist",
+      "passed": true
+    },
+    {
+      "name": "Deflated ZIP with Chinese nested folders is recognized",
+      "passed": true,
+      "detail": "1 项警告"
+    },
+    {
+      "name": "ZIP-imported demonstration computes a runnable result",
+      "passed": true
+    },
+    {
+      "name": "Imported demo responds to a condition change",
+      "passed": true
+    },
+    {
+      "name": "ZIP import and run survive refresh",
+      "passed": true
+    },
+    {
+      "name": "Actual result download from ZIP-imported demo",
+      "passed": true
+    },
+    {
+      "name": "Collection identifies two isolated cases",
+      "passed": true
+    },
+    {
+      "name": "Next case loads with its own metadata",
+      "passed": true
+    },
+    {
+      "name": "Both collection cases saved independently after refresh",
+      "passed": true
+    },
+    {
+      "name": "Uncompressed ZIP at archive root is supported",
+      "passed": true
+    },
+    {
+      "name": "Rejects traversal ZIP with no case registration",
+      "passed": true
+    },
+    {
+      "name": "traversal does not enable a stale package",
+      "passed": true
+    },
+    {
+      "name": "Rejects missing ZIP with no case registration",
+      "passed": true
+    },
+    {
+      "name": "missing does not enable a stale package",
+      "passed": true
+    },
+    {
+      "name": "Rejects corrupt ZIP with no case registration",
+      "passed": true
+    },
+    {
+      "name": "corrupt does not enable a stale package",
+      "passed": true
+    },
+    {
+      "name": "Original folder selection still resolves five files",
+      "passed": true
+    },
+    {
+      "name": "Original multi-file selection still resolves five files",
+      "passed": true
+    },
+    {
+      "name": "390px modal exposes ZIP selection",
+      "passed": true
+    }
+  ],
+  "passed": 19,
+  "failed": 0
+}

@@ -1,18 +1,18 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.13.0",
+  "version": "1.13.1",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build-teaching-map.mjs",
-    "test": "node checks/verify-teaching-map.mjs",
+    "build": "node tools/build-teacher-update.mjs",
+    "test": "python -X utf8 tools/make-archive-fixtures.py && node checks/verify-teacher-update.mjs",
     "test:numeric": "node case-src/mudlogging-stage/verify.mjs && node case-variants/s17x-g3-closure-spill/checks.mjs && node case-variants/s17x-c1-cement-woc-strength/verify.mjs && node case-variants/s17x-co3-completion-seal-test/verify.mjs && node case-variants/s17x-p1-perforation-depth-correlation/verify.mjs",
-    "verify-delivery": "node checks/verify-teaching-map.mjs",
+    "verify-delivery": "node checks/verify-teacher-update.mjs",
     "verify-guide": "node tools/report-site-upgrade.mjs --require-browser",
-    "package": "node checks/verify-teaching-map.mjs && node tools/package-teaching-map.mjs",
+    "package": "node checks/verify-teacher-update.mjs && node tools/package-teacher-update.mjs",
     "serve": "node tools/serve.mjs",
-    "accept": "node tools/accept-teaching-map.mjs",
+    "accept": "node tools/accept-teacher-update.mjs",
     "accept:upgrade": "node tools/accept-site-upgrade.mjs",
     "accept:package": "node tools/check-teaching-package.mjs",
     "build:previous-interactive": "node tools/build-interactive-course.mjs",
@@ -23,7 +23,7 @@
     "build:four": "node tools/build.mjs",
     "capture:four-flow": "node tools/capture-four-flow.mjs",
     "accept:four": "node checks/browser-four-exhibits.mjs --open && node checks/browser-four-exhibits.mjs && node checks/browser-m2-four-smoke.mjs",
-    "accept:browser": "node tools/accept-teaching-map.mjs",
+    "accept:browser": "node tools/accept-teacher-update.mjs",
     "accept:previous-interactive": "node tools/accept-interactive-all.mjs",
     "build:expansion": "node tools/build-interactive-course.mjs --expansion-only",
     "build:assistant": "node tools/sync-assistant.mjs",
@@ -41,7 +41,8 @@
     "test:previous-refinement": "node checks/verify-refinement.mjs --source-only",
     "report:interactive": "node tools/report-interactive-course.mjs",
     "build:previous-site": "node tools/build-site-upgrade.mjs",
-    "accept:teaching": "node tools/accept-teaching-map.mjs"
+    "accept:teaching": "node tools/accept-teaching-map.mjs",
+    "build:teacher-update": "node tools/build-teacher-update.mjs"
   },
   "devDependencies": {
     "esbuild": "0.27.3"

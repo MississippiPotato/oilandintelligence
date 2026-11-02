@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-02T02:47:03.139Z",
+  "kind": "actual_Chrome_ZIP_directory_files_import",
+  "checks": [
+    {
+      "name": "ZIP, directory and multiple-file choices coexist",
+      "passed": true
+    },
+    {
+      "name": "Deflated ZIP with Chinese nested folders is recognized",
+      "passed": true,
+      "detail": "1 项警告"
+    },
+    {
+      "name": "Archive protocol completed",
+      "passed": false,
+      "detail": "page.screenshot: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+    }
+  ],
+  "failure": "page.screenshot: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n    at evalmachine.<anonymous>:13:13\n    at async evalmachine.<anonymous>:3:26\n    at async D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:67:7\n    at async waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\utils.js:35:14)\n    at async Tab._raceAgainstModalStates (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:298:12)\n    at async Tab.waitForCompletion (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tab.js:308:5)\n    at async Object.handle (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\tools\\runCode.js:58:5)\n    at async BrowserServerBackend.callTool (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\mcp\\browser\\browserServerBackend.js:64:7)\n    at async connection.onmessage (D:\\Node\\node_cache\\_npx\\31e32ef8478fbf80\\node_modules\\playwright\\lib\\cli\\daemon\\daemon.js:114:28)",
+  "passed": 2,
+  "failed": 1
+}

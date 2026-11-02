@@ -1,16 +1,22 @@
 # 井见 · 石油智能化可视实验室
 
-13个作业阶段、61个老师原场景、65个自制案例，老师自带样例单独统计。当前门户 **1.13.0**；录井M1—M5 **1.10.0**、D1 **1.3.0**、其余55个普通案例 **1.2.1**、四个拓展案例 **1.0.1**。
+13个作业阶段、61个老师原场景、65个自制案例，老师自带样例单独统计。当前门户 **1.13.1**；录井M1—M5 **1.10.0**、D1 **1.3.0**、其余55个普通案例 **1.2.1**、四个拓展案例 **1.0.1**。
 
 - [线上网站](https://mississippipotato.github.io/oilandintelligence/portal/index.html) · [录井3D现场](https://mississippipotato.github.io/oilandintelligence/portal/index.html#/stage/mudlogging?focus=m2)
-- [完整离线网站](dist/s17-site-1.13.0-offline.zip) · [65例合集](dist/s17-all-65-cases-1.13.0.zip)
-- [本轮修改与实际验收](handoff/teaching-map-2026-11-01/验收记录.md) · [老师原站兼容副本](portal-original/index.html)
+- [完整离线网站](dist/s17-site-1.13.1-offline.zip) · [65例合集](dist/s17-all-65-cases-1.13.1.zip)
+- [本轮修改与实际验收](handoff/teacher-update-2026-11-02/验收记录.md) · [老师原站兼容副本](portal-original/index.html)
 
 ## 怎么学习
 
-首页用十三幅动态SVG微缩场景串起作业链，分为勘探与建井、完井与生产、储运与加工。阶段编号、原场景数和案例数分别保留。下方直接进入五类方法，也可以通过阶段、方法、难度与关键词组合查找案例。右上检索支持Ctrl/Cmd+K，命中知识小节后进入对应栏目并定位标题。
+首页用十三幅自动循环播放的SVG微缩场景串起作业链，分为勘探与建井、完井与生产、储运与加工。阶段编号、原场景数和案例数分别保留。下方直接进入五类方法，也可以通过阶段、方法、难度与关键词组合查找案例。右上检索支持Ctrl/Cmd+K，命中知识小节后进入对应栏目并定位标题。
 
 每例保留专业背景、案例流程、可运行示范。场景速览说明业务问题、实际方法、输入与用途；数据准备清单提供研究应用建议。实际演示的数据另随计算保存。背景末尾提供难度理由、参考方法链接、同场景案例与相关环节。四个拓展案例使用自己的准备条件及方法说明。
+
+## 2026-11-02更新
+
+增强门户的“添加案例”新增ZIP入口。可直接读取单例或合集ZIP，无需预先解压；合集按独立清单分开，逐例校验并保存。支持标准ZIP/Deflate，保留文件和文件夹入口。
+
+65例演示增加“本次计算的方法”，逐例说明实际方法、起作用的关系及当前结果的对照位置。原计算引擎、原始数据与评价保持不变。录井专题等待三维资源时显示加载状态，二维仅在主动选择或三维不可用时出现。
 
 ## 录井3D与六例教学深化
 
@@ -40,9 +46,11 @@ npm ci
 npm run build
 npm test
 npm run serve
+# 另一个终端中执行实际浏览器抽查
+npm run accept
 npm run package
 ```
 
-构建入口为tools/build-teaching-map.mjs，验证入口为checks/verify-teaching-map.mjs。六例流程静态预览来自真实Chrome的默认计算；修改四例展示源码后，先用`node tools/build-teaching-map.mjs --allow-stale-preview`构建，再运行`npm run capture:four-flow`捕获，最后正常构建。历史报告及原站副本保留原内容；本轮证据在handoff/teaching-map-2026-11-01。
+本轮构建入口为tools/build-teacher-update.mjs，验证入口为checks/verify-teacher-update.mjs；本轮证据在handoff/teacher-update-2026-11-02。原1.13.0报告保留在handoff/teaching-map-2026-11-01。六例流程静态预览来自此前真实Chrome的默认计算；本轮沿用计算和预览，在示范里增加方法说明。
 
 默认计算、图表及资料不需要在线模型。现有助手保留本地角色和紧凑对话；可选联网连接由读者自行配置，API Key只保存在当前页面内存。

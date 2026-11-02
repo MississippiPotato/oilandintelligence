@@ -59,6 +59,7 @@
     pv: null,         /* 预览弹窗 */
     pvHandle: null
   };
+  var archive = null, archiveIndex = -1, readGeneration = 0;
 
   /* ---------------------------------------------------------
      0. 小工具
@@ -375,6 +376,12 @@
             demo: cfg,
             meta: rec.meta
           }, ctx);
+          // Compatible lessons opt in to lab-only embedding; other students' pages ignore this message.
+          var frame=root.querySelector('iframe');
+          if(frame){
+            frame.dataset.s17BundledDemo=meta.id;
+            frame.addEventListener('load',function(){frame.contentWindow.postMessage({type:'s17-embed-demo',caseId:meta.id},'*');},{once:true});
+          }
         },
         unmount: function () {
           if (handle) { try { handle.destroy(); } catch (e) { } handle = null; }
@@ -964,7 +971,7 @@
       '<div class="mdl-b">' +
       '<ol class="imp-flow">' +
       '<li><b>01</b><span>下载模板，改内容与示范</span></li>' +
-      '<li><b>02</b><span>拖入整个案例文件夹</span></li>' +
+      '<li><b>02</b><span>选择ZIP、文件夹或文件</span></li>' +
       '<li><b>03</b><span>校验通过后添加</span></li>' +
       '</ol>' +
 
@@ -974,14 +981,17 @@
       '<div class="imp-drop" id="imp-drop">' +
       '<input type="file" id="imp-file" multiple hidden>' +
       '<input type="file" id="imp-dir" webkitdirectory directory multiple hidden>' +
+      '<input type="file" id="imp-zip" accept=".zip,application/zip,application/x-zip-compressed" hidden>' +
       '<span class="imp-ic">↑</span>' +
-      '<b>拖入案例文件夹，或点击选择</b>' +
-      '<span class="imp-sub">清单 case.json + 示范页 + 脚本 + 素材，上限 6 MB。推荐把整个文件夹<b>直接拖进虚线框</b>；若点按钮弹出的仍是文件选择框（浏览器不支持选文件夹），可点「选择文件」后 Ctrl+A 全选包内文件</span>' +
+      '<b>拖入ZIP或案例文件夹，或点击选择</b>' +
+      '<span class="imp-sub">ZIP无需解压。支持单例压缩包和多个案例的合集；合集逐例选择、校验并保存。每例解压后上限6 MiB，ZIP上限64 MiB。</span>' +
       '<span class="imp-choose">' +
       '<button class="btn sm" id="imp-pick-files" type="button">选择文件</button>' +
       '<button class="btn sm ghost" id="imp-pick-dir" type="button">选择文件夹</button>' +
+      '<button class="btn sm" id="imp-pick-zip" type="button">选择压缩包 ZIP</button>' +
       '</span>' +
       '</div>' +
+      '<div class="imp-archive" id="imp-archive" hidden><label for="imp-archive-case"><strong id="imp-archive-title"></strong></label><select id="imp-archive-case" aria-label="选择压缩包中的案例"></select><p id="imp-archive-status" role="status"></p></div>' +
 
       '<div class="imp-pack" id="imp-pack" hidden>' +
       '<div class="imp-pack-h">' +
@@ -1125,23 +1135,65 @@
   }
 
   /* ---- 载入一组文件 ---- */
-  function loadFiles(fileList) {
+  function loadFiles(fileList, fromArchive) {
     var files = [].slice.call(fileList || []).filter(function (f) { return f && f.name && f.name !== '.DS_Store'; });
     if (!files.length) return;
-
     if (S.loading) return;
+    if (!fromArchive && files.every(function(f){return /\.zip$/i.test(f.name);})) {
+      if (files.length !== 1) { fail('请一次选择一个ZIP', '一个ZIP可以包含多个案例；文件和压缩包请分开选择。'); return; }
+      return loadArchive(files[0]);
+    }
+    if (!fromArchive) { archive = null; archiveIndex = -1; paintArchive(); }
+    var generation = ++readGeneration;
     S.loading = true;
+    if(archive)q('#imp-archive-case').disabled=true;
     tip('正在读取 ' + files.length + ' 个文件…', '');
 
     Promise.all(files.map(readOne)).then(function (arrs) {
+      if (generation !== readGeneration) return;
       S.loading = false;
       stripRoot(arrs);
       adopt(arrs);
+      paintArchive();
     }).catch(function (e) {
+      if (generation !== readGeneration) return;
       S.loading = false;
       paintResults([{ level: 'error', msg: '读取文件失败', hint: e.message }]);
       tip('读取失败，换一个文件夹再试', 'is-err');
     });
+  }
+
+  function paintArchive() {
+    var box=q('#imp-archive'); box.hidden=!archive;
+    if(!archive)return;
+    q('#imp-archive-title').textContent=archive.filename+' · '+archive.packages.length+' 个案例';
+    q('#imp-archive-case').innerHTML=archive.packages.map(function(p,i){return '<option value="'+i+'"'+(i===archiveIndex?' selected':'')+'>'+esc((p.added?'✓ 已添加 · ':'')+(p.pkg&&p.pkg.title||p.root||'根目录案例'))+'</option>';}).join('');
+    q('#imp-archive-status').textContent='已添加 '+archive.packages.filter(function(p){return p.added;}).length+' / '+archive.packages.length+'。选择一个案例，确认右侧校验后添加；各案例的目录分别保存。';
+    q('#imp-archive-case').disabled=S.loading||S.committing;
+  }
+  function selectArchiveCase(index) {
+    if(!archive||S.loading||S.committing)return;
+    archiveIndex=index;var p=archive.packages[index];
+    ['#imp-title-in','#imp-id','#imp-ver','#imp-date'].forEach(function(id){q(id).value='';});
+    q('#imp-scene').value='';S.pkg=null;S.manifest=null;S.raw=[];S.files=[];
+    paintArchive();
+    if(p.error){fail(p.error,p.root||'ZIP根目录');paintFiles();return;}
+    loadFiles(p.files,true);
+  }
+  async function loadArchive(file) {
+    var generation=++readGeneration;S.loading=true;archive=null;archiveIndex=-1;
+    S.pkg=null;S.manifest=null;S.raw=[];S.files=[];paintFiles();paintArchive();
+    tip('正在本地解压 '+file.name+'…','');q('#imp-ok').disabled=true;
+    try {
+      // Yield once so the reading message is painted before decoding.
+      await new Promise(function(resolve){setTimeout(resolve,30);});
+      var decoded=await global.S17CaseArchive.read(file);
+      if(generation!==readGeneration)return;
+      archive=decoded;S.loading=false;q('#imp-ok').disabled=false;selectArchiveCase(0);
+    } catch(e) {
+      if(generation!==readGeneration)return;
+      S.loading=false;fail('压缩包读取失败',e.message);
+    } finally {if(generation===readGeneration)q('#imp-ok').disabled=false;}
   }
 
   function adopt(arrs) {
@@ -1283,7 +1335,7 @@
 
   /* ---- 提交 ---- */
   function commit() {
-    if (S.committing) return;
+    if (S.committing || S.loading) return;
     var meta = metaNow();
     var list = checkAll(S.pkg, meta, S.files);
     paintResults(list);
@@ -1303,6 +1355,15 @@
       var bl = readBlocklist();
       if (bl.indexOf(meta.id) >= 0) writeBlocklist(bl.filter(function (x) { return x !== meta.id; }));
       registerRecord(rec);
+      if(archive&&archiveIndex>=0){
+        archive.packages[archiveIndex].added=true;
+        var next=archive.packages.findIndex(function(p){return !p.added;});
+        if(next>=0&&archive.packages.length>1){
+          S.committing=false;selectArchiveCase(next);
+          toast('已添加「'+meta.title+'」','继续校验压缩包中的下一个案例');
+          return true;
+        }
+      }
       close();
       toast('已添加「' + meta.title + '」', '已保存到本机，正在打开场景页…');
       var target = '#/scene/' + meta.sceneId;
@@ -1326,7 +1387,11 @@
       if (e.target.closest('[data-close]')) { close(); }
     });
 
-    var drop = q('#imp-drop'), fileIn = q('#imp-file'), dirIn = q('#imp-dir');
+    var drop = q('#imp-drop'), fileIn = q('#imp-file'), dirIn = q('#imp-dir'), zipIn = q('#imp-zip');
+    zipIn.addEventListener('click',function(e){e.stopPropagation();});
+    q('#imp-pick-zip').addEventListener('click',function(e){e.stopPropagation();zipIn.click();});
+    zipIn.addEventListener('change',function(){loadFiles(zipIn.files);zipIn.value='';});
+    q('#imp-archive-case').addEventListener('change',function(){selectArchiveCase(Number(this.value));});
 
     /* 有些环境（国产浏览器兼容模式等）解析 innerHTML 时会丢非标准属性，
        或压根不支持 webkitdirectory —— 弹出的仍是普通文件框。这里补一次属性，
@@ -1468,6 +1533,8 @@
     q('#imp-ok').addEventListener('click', commit);
 
     q('#imp-clear').addEventListener('click', function () {
+      ++readGeneration;S.loading=false;archive=null;archiveIndex=-1;paintArchive();
+      q('#imp-ok').disabled=false;
       S.pkg = null; S.manifest = null; S.files = []; S.raw = [];
       paintFiles();
       paintResults([]);
@@ -1520,9 +1587,12 @@
   }
 
   function reset(opts) {
+    ++readGeneration;S.loading=false;archive=null;archiveIndex=-1;paintArchive();
+    q('#imp-ok').disabled=false;
     S.pkg = null; S.manifest = null; S.files = []; S.raw = [];
     q('#imp-file').value = '';
     q('#imp-dir').value = '';
+    q('#imp-zip').value = '';
     q('#imp-pack').hidden = true;
     q('#imp-title-in').value = '';
     q('#imp-id').value = '';
@@ -1549,6 +1619,7 @@
 
   function close() {
     if (!S.el) return;
+    ++readGeneration;S.loading=false;
     closePreview();
     S.el.hidden = true;
     document.documentElement.classList.remove('mdl-open');

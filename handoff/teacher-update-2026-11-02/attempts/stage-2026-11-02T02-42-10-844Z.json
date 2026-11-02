@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-02T02:42:10.844Z",
+  "kind": "actual_Chrome_default_3D_loading_refresh_fallback",
+  "checks": [
+    {
+      "name": "During 3D loading the 2D preview remains hidden",
+      "passed": true
+    },
+    {
+      "name": "Default view is real Three.js 3D",
+      "passed": true
+    },
+    {
+      "name": "Refresh returns to 3D",
+      "passed": true
+    },
+    {
+      "name": "Explicit 2D view is still available",
+      "passed": true
+    },
+    {
+      "name": "390px 3D fits viewport",
+      "passed": true
+    },
+    {
+      "name": "Failed 3D request enables a working 2D fallback",
+      "passed": true
+    }
+  ],
+  "passed": 6,
+  "failed": 0
+}

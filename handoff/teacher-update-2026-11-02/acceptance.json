@@ -1,0 +1,70 @@
+{
+  "createdAt": "2026-11-02T02:53:37.371Z",
+  "siteVersion": "1.13.1",
+  "source": {
+    "passed": 206,
+    "failed": 0
+  },
+  "numeric": {
+    "passed": 8,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 73,
+    "failed": 0,
+    "protocols": [
+      {
+        "name": "home",
+        "passed": 4,
+        "failed": 0
+      },
+      {
+        "name": "stage",
+        "passed": 6,
+        "failed": 0
+      },
+      {
+        "name": "archive",
+        "passed": 19,
+        "failed": 0
+      },
+      {
+        "name": "methods",
+        "passed": 34,
+        "failed": 0
+      },
+      {
+        "name": "compatibility",
+        "passed": 7,
+        "failed": 0
+      },
+      {
+        "name": "collection",
+        "passed": 3,
+        "failed": 0
+      }
+    ]
+  },
+  "protectedFileCount": 176,
+  "protectedChanged": [],
+  "caseCount": 65,
+  "contractFiles": 325,
+  "browserCaseSample": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5",
+    "d1",
+    "g1",
+    "s1",
+    "r4",
+    "s17x-c1-cement-woc-strength"
+  ],
+  "notRepeated": [
+    "All65fullBrowserPaths",
+    "RealOSBackgroundTabPause"
+  ],
+  "browserFixturesUseAutoAcceptedRemovalConfirmations": true,
+  "originalTeacherModalUsedForcedMouseClickToBypassAutomationStabilityWait": true
+}

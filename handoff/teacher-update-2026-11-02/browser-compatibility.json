@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-11-02T02:50:34.648Z",
+  "kind": "actual_Chrome_offline_ZIP_and_original_teacher_directory_import",
+  "checks": [
+    {
+      "name": "ZIP added in disconnected file:// portal",
+      "passed": true
+    },
+    {
+      "name": "Offline ZIP demo opens directly in experiment",
+      "passed": true
+    },
+    {
+      "name": "Offline imported case survives refresh",
+      "passed": true
+    },
+    {
+      "name": "Original teacher importer runs updated five-file case",
+      "passed": true
+    },
+    {
+      "name": "Original teacher host recalculates M2 source time",
+      "passed": true
+    },
+    {
+      "name": "Original teacher import runs again after refresh",
+      "passed": true
+    },
+    {
+      "name": "Original teacher host actually saves M2 calculation",
+      "passed": true
+    }
+  ],
+  "passed": 7,
+  "failed": 0
+}
