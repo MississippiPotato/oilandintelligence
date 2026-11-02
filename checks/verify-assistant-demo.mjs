@@ -1,0 +1,11 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';import {webcrypto}from'node:crypto';
+const report='handoff/assistant-demo-2026-11-02',window={};vm.runInNewContext(fs.readFileSync('portal/assets/s17-assistant-config.js','utf8'),{window});
+const config=window.S17AssistantConfig,packet=config.demoKey,bytes=s=>new Uint8Array(Buffer.from(s,'base64'));assert.equal(config.mode,'demo-encrypted');assert.equal(bytes(packet.key).length,32);assert.equal(bytes(packet.iv).length,12);
+const key=await webcrypto.subtle.importKey('raw',bytes(packet.key),'AES-GCM',false,['decrypt']),parameters={name:'AES-GCM',iv:bytes(packet.iv),additionalData:new TextEncoder().encode('jingjian-demo-key-v1'),tagLength:128};
+const decoded=await webcrypto.subtle.decrypt(parameters,key,bytes(packet.ciphertext)),plain=new TextDecoder().decode(decoded);assert.ok(plain.length>20);
+const damaged=bytes(packet.ciphertext);damaged[0]^=1;await assert.rejects(()=>webcrypto.subtle.decrypt(parameters,key,damaged));
+const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(dir+'/'+e.name):[dir+'/'+e.name]);
+const paths=[...walk('portal'),...walk('dist/cases'),...walk('dist/expansion-cases'),...walk('tools'),...walk('checks'),...walk(report)].filter(p=>/\.(?:js|mjs|html|json|css|txt|md)$/.test(p));
+const plaintextFiles=paths.filter(p=>fs.readFileSync(p,'utf8').includes(plain));assert.equal(plaintextFiles.length,0,'Plaintext must not enter public source/records');new Uint8Array(decoded).fill(0);
+const out={checkedAt:new Date().toISOString(),algorithm:'AES-256-GCM',ivBytes:12,authenticationTagBits:128,decryptionVerified:true,tamperedCipherRejected:true,plaintextFiles:[],publicTextFilesScanned:paths.length,decryptionKeyIntentionallyPublic:true,onlineProviderAcceptanceClaimed:false};
+fs.writeFileSync(report+'/encryption-checks.json',JSON.stringify(out,null,2));console.log(JSON.stringify(out,null,2));

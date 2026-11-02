@@ -53,4 +53,4 @@ npm run package
 
 本轮构建入口为tools/build-teacher-update.mjs，验证入口为checks/verify-teacher-update.mjs；本轮证据在handoff/teacher-update-2026-11-02。原1.13.0报告保留在handoff/teaching-map-2026-11-01。六例流程静态预览来自此前真实Chrome的默认计算；本轮沿用计算和预览，在示范里增加方法说明。
 
-默认计算、图表及资料不需要在线模型。现有助手保留本地角色和紧凑对话；可选联网连接由读者自行配置，API Key只保存在当前页面内存。
+默认计算、图表及资料不需要在线模型。井见助手保留本地角色、紧凑对话和历史记录；教学展示默认加载加密后的连接配置，在浏览器解密并联网调用 Doubao Seed 2.0 mini，也可在“连接与语音”手动更换 Key。密文与浏览器解密材料一起随站点发布，属于展示用混淆；手动填写的 Key 仅保存在当前页面内存。更换展示 Key 可运行 `node tools/configure-assistant-demo.mjs`，在终端隐藏输入后重新同步构建。

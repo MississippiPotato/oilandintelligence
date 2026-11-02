@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-11-02T11:02:53.321Z",
+  "checks": [
+    {
+      "name": "Automatic browser decryption configures demo source",
+      "passed": true
+    },
+    {
+      "name": "Password field does not display the decrypted key",
+      "passed": true
+    },
+    {
+      "name": "Disconnect clears active key without immediate auto-reconnect",
+      "passed": true
+    },
+    {
+      "name": "Restore demo reconnects without user entering key",
+      "passed": true
+    },
+    {
+      "name": "Manual edit wins a pending automatic decryption",
+      "passed": true
+    },
+    {
+      "name": "Demo can be restored after manual override",
+      "passed": true
+    },
+    {
+      "name": "Refresh auto-configures demo while preserving history",
+      "passed": true
+    },
+    {
+      "name": "Mobile connection panel fits viewport",
+      "passed": true,
+      "detail": {
+        "x": 26,
+        "y": 352,
+        "width": 352,
+        "height": 480
+      }
+    },
+    {
+      "name": "Independent case auto-configures the same demo connection",
+      "passed": true
+    },
+    {
+      "name": "Offline case still computes with bundled configuration",
+      "passed": true
+    }
+  ],
+  "fileDemoSource": "demo"
+}

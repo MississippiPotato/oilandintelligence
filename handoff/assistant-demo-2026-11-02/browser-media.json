@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-11-02T11:04:36.863Z",
+  "checks": [
+    {
+      "name": "image real provider reply",
+      "passed": true
+    },
+    {
+      "name": "Vision recognizes rig",
+      "passed": true
+    },
+    {
+      "name": "audio real provider reply",
+      "passed": true
+    },
+    {
+      "name": "Speech question recognized",
+      "passed": true
+    }
+  ],
+  "calls": [
+    {
+      "kind": "image",
+      "reply": "这张图片里高耸的设备是钻井架，它和配套的钻井设施（包含多个蓝、白色的储罐、设备箱）一同坐落在沙漠地貌中，周边是稀疏的荒漠植被，远处有连绵的山脉，天空分布着少量云朵。",
+      "connection": {
+        "configured": true,
+        "calls": 1,
+        "lastUsage": {
+          "input_tokens": 6498,
+          "output_tokens": 55,
+          "total_tokens": 6553,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "lastStreamDeltas": 55,
+        "streaming": true,
+        "transport": "browser-direct",
+        "keyStorage": "encrypted-demo-config",
+        "credentialSource": "demo",
+        "autoDemo": true,
+        "liveCallVerified": true
+      }
+    },
+    {
+      "kind": "audio",
+      "reply": "请用一句话解释气体从井底到地面为什么需要时间？",
+      "connection": {
+        "configured": true,
+        "calls": 2,
+        "lastUsage": {
+          "input_tokens": 4505,
+          "output_tokens": 13,
+          "total_tokens": 4518,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "audio_tokens": 40
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "lastStreamDeltas": 13,
+        "streaming": true,
+        "transport": "browser-direct",
+        "keyStorage": "encrypted-demo-config",
+        "credentialSource": "demo",
+        "autoDemo": true,
+        "liveCallVerified": true
+      }
+    }
+  ],
+  "physicalMicrophoneVerified": false
+}

@@ -1,2 +1,2 @@
-// Public defaults only. Each visitor enters their own key in page memory.
-window.S17AssistantConfig={mode:'manual',model:'doubao-seed-2-0-mini-260428',endpoint:'https://ark.cn-beijing.volces.com/api/v3/responses'};
+// Teaching demo obfuscation. The included browser key makes this envelope recoverable.
+window.S17AssistantConfig={"mode":"demo-encrypted","model":"doubao-seed-2-0-mini-260428","endpoint":"https://ark.cn-beijing.volces.com/api/v3/responses","demoKey":{"version":1,"algorithm":"AES-GCM","key":"CmiFDV+wo/uGoGB48Q3dN3vEnSgIgAw+140Zd/4ebCU=","iv":"P/6NnP4huns6XmDe","ciphertext":"DL3B0K98t3m/fmdFVACa/U1FnNVAkS5C+msRhLDp1onqlO5meYAUK1GqHaJT8piM8s+oiA=="}};

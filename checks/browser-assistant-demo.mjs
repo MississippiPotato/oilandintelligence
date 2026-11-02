@@ -1,0 +1,3 @@
+import fs from 'node:fs';import {spawnSync}from'node:child_process';
+const phase=process.argv[2]??'ui',code=fs.readFileSync(`checks/assistant-demo-${phase}.browser.txt`,'utf8'),out=spawnSync(process.execPath,['tools/pw.mjs','jingjian-demo','run-code',code],{encoding:'utf8',windowsHide:true,timeout:95000});
+const match=out.stdout?.match(/### Result\s*\n([\s\S]*?)(?:\n###|$)/);if(!match)throw Error(out.stdout+out.stderr);const data=JSON.parse(match[1]);fs.mkdirSync('handoff/assistant-demo-2026-11-02',{recursive:true});fs.writeFileSync(`handoff/assistant-demo-2026-11-02/browser-${phase}.json`,JSON.stringify(data,null,2));console.log(JSON.stringify(data,null,2));if(data.exception||data.checks?.some(c=>!c.passed))process.exitCode=1;
