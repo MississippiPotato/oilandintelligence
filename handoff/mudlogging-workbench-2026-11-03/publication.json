@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-03T06:00:16.903Z",
+  "codeCommit": "df30a91e78ca3b1213cd15ed3b4af5b2575b43c4",
+  "branch": "main",
+  "url": "https://mississippipotato.github.io/oilandintelligence/portal/index.html",
+  "githubPagesBuild": {
+    "status": "built",
+    "commit": "df30a91e78ca3b1213cd15ed3b4af5b2575b43c4",
+    "observedVia": "gh api repos/MississippiPotato/oilandintelligence/pages/builds/latest"
+  },
+  "scope": "Representative actual online checks forM2 andM5 after build; no claim of full65-case online execution.",
+  "passed": 4,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "M2 published1.11.0 manual preview",
+      "pass": true
+    },
+    {
+      "test": "M2 online real calculation and context edit",
+      "pass": true,
+      "observed": {
+        "before": "峰A：接单根关联\n到达 27分00秒 → 来源 17分30秒 · 支持度 100.0%",
+        "after": "峰A：起下钻关联\n到达 27分00秒 → 来源 17分30秒 · 支持度 100.0%"
+      }
+    },
+    {
+      "test": "M5 online five-step lecture and two-branch source diagram",
+      "pass": true
+    },
+    {
+      "test": "M5 online edit recomputes and invalidates review",
+      "pass": true,
+      "observed": "荧光记录（1220–1230 m MD）：“1220—1230 m MD：见明显荧光”\n修订后待重新核对"
+    }
+  ],
+  "screenshots": [
+    "output/playwright/mudlogging-workbench-2026-11-03/github-m2-workbench.jpg",
+    "output/playwright/mudlogging-workbench-2026-11-03/github-m5-workbench.jpg"
+  ]
+}
