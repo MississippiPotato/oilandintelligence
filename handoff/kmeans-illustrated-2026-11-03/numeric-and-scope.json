@@ -1,0 +1,70 @@
+{
+  "at": "2026-11-03T10:29:38.323Z",
+  "evidenceType": "Focused numerical and source-scope checks, not browser acceptance",
+  "checks": [
+    "near: 36 selected reference inputs",
+    "near: every point assigned once",
+    "near: group mean preserves coordinate sums",
+    "near: squared-distance objective never increases",
+    "near: converges to fixed centers",
+    "near: point coordinates stay fixed throughout playback",
+    "near: all rendered steps use finite computed data",
+    "spread: 36 selected reference inputs",
+    "spread: every point assigned once",
+    "spread: group mean preserves coordinate sums",
+    "spread: squared-distance objective never increases",
+    "spread: converges to fixed centers",
+    "spread: point coordinates stay fixed throughout playback",
+    "spread: all rendered steps use finite computed data",
+    "The explanatory subset never replaces production models",
+    "Full playback still has original1896 reference records",
+    "Only M1 and M4 runtime packages changed",
+    "m1 original engine unchanged",
+    "m4 original engine unchanged"
+  ],
+  "examples": [
+    {
+      "initialization": "near",
+      "points": 36,
+      "iterations": 3,
+      "steps": 12,
+      "SSE": [
+        69.89238450146235,
+        7.472540933450778,
+        0.6031098247940831
+      ],
+      "finalGroupCounts": [
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "initialization": "spread",
+      "points": 36,
+      "iterations": 2,
+      "steps": 9,
+      "SSE": [
+        1.379298896491583,
+        0.6031098247940831
+      ],
+      "finalGroupCounts": [
+        12,
+        12,
+        12
+      ]
+    }
+  ],
+  "changedRuntimeFiles": [
+    "dist/cases/s17-cuttings-lithology/README.txt",
+    "dist/cases/s17-cuttings-lithology/case.json",
+    "dist/cases/s17-cuttings-lithology/demo/demo.css",
+    "dist/cases/s17-cuttings-lithology/demo/demo.js",
+    "dist/cases/s17-cuttings-lithology/demo/index.html",
+    "dist/cases/s17-drilltime-boundaries/README.txt",
+    "dist/cases/s17-drilltime-boundaries/case.json",
+    "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+    "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+    "dist/cases/s17-drilltime-boundaries/demo/index.html"
+  ]
+}

@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {buildFour} from './build-four-exhibits.mjs';
+import {buildLazyPortal} from './build-lazy-portal.mjs';
+process.chdir(path.resolve(import.meta.dirname,'..'));
+const reportDir='handoff/kmeans-illustrated-2026-11-03',version='1.13.1';
+fs.mkdirSync(reportDir,{recursive:true});
+const cases=buildFour({version,reportDir,updated:'2026-11-03',onlyScenes:['m1','m4']}),ids=new Set(cases.map(c=>c.caseId)),written=[];
+buildLazyPortal({write:false,expectedCount:65,onOutput:o=>{if(ids.has(o.caseId)||o.path==='portal/assets/s17-case-catalog.js'){fs.writeFileSync(o.path,o.content);written.push(o.path);}}});
+const coursePath='portal/assets/s17-course.js';
+let course=fs.readFileSync(coursePath,'utf8');
+course=course.replace(/function expectedVersion\(c\)\{[^\n]*\}/,"function expectedVersion(c){return ['m1','m4'].includes(c.scene)?'1.13.1':c.scene==='m2'?'1.13.0':'1.12.0';}");
+fs.writeFileSync(coursePath,course);
+const homePath='portal/index.html';let home=fs.readFileSync(homePath,'utf8');
+home=home.replace(/(s17-(?:case-catalog|course)\.js\?v=)[^"']+/g,'$1'+'20261103-kmeans-illustrated');fs.writeFileSync(homePath,home);
+fs.writeFileSync(reportDir+'/build.json',JSON.stringify({at:new Date().toISOString(),version,cases,portalFiles:written,scope:'M1 readable observation-to-decision bridge; M4 illustrated k-means and restored current-well outputs. Other 63 cases not rebuilt.'},null,2));
+console.log(JSON.stringify({cases:cases.map(c=>({id:c.caseId,version:c.version,bytes:c.bytes})),portalFiles:written},null,2));
