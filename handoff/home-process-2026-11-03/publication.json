@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-03T03:48:55.905Z",
+  "codeCommit": "dec7ef87e0b8eb764cffed1be517a9b24d3e0cce",
+  "pushedBranch": "main",
+  "url": "https://mississippipotato.github.io/oilandintelligence/portal/index.html",
+  "onlineObserved": {
+    "canvases": 1,
+    "render": "3d",
+    "scripts": [
+      "https://mississippipotato.github.io/oilandintelligence/portal/assets/s17-process-3d.js?v=20261103-process",
+      "https://mississippipotato.github.io/oilandintelligence/portal/assets/s17-process-atlas.js?v=20261103-process"
+    ],
+    "stageEntries": 13
+  },
+  "checks": [
+    {
+      "test": "new homepage actual 3D canvas",
+      "pass": true
+    },
+    {
+      "test": "thirteen stage entries",
+      "pass": true
+    },
+    {
+      "test": "mudlogging + material view",
+      "pass": true,
+      "observed": "录井 selected,物质流 selected; live card showed drilling-fluid descent and sample return."
+    },
+    {
+      "test": "case link navigates to existing M2",
+      "pass": true,
+      "observed": "#/scene/m2?case=s17-mudgas-context&tab=bg; h1=气测异常智能解释：一个气峰的证据之旅"
+    },
+    {
+      "test": "return home retains one3D canvas",
+      "pass": true
+    },
+    {
+      "test": "no captured live errors",
+      "pass": true,
+      "observed": []
+    }
+  ],
+  "screenshot": "output/playwright/home-process-2026-11-03/github-overview.jpg",
+  "note": "Actual online browser verification. GitHub API initially reported building; later API polling encountered TLS/EOF errors, while the published new page and versioned resources were successfully verified in browser."
+}
