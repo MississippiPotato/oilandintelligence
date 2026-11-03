@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {buildFour} from './build-four-exhibits.mjs';
+import {buildLazyPortal} from './build-lazy-portal.mjs';
+process.chdir(path.resolve(import.meta.dirname,'..'));
+const reportDir='handoff/m4-judgment-2026-11-03',version='1.13.3';fs.mkdirSync(reportDir,{recursive:true});
+const cases=buildFour({version,reportDir,updated:'2026-11-03',onlyScenes:['m4']}),written=[];
+buildLazyPortal({write:false,expectedCount:65,onOutput:o=>{if(o.caseId==='s17-drilltime-boundaries'||o.path==='portal/assets/s17-case-catalog.js'){fs.writeFileSync(o.path,o.content);written.push(o.path);}}});
+const coursePath='portal/assets/s17-course.js';let course=fs.readFileSync(coursePath,'utf8');course=course.replace(/function expectedVersion\(c\)\{[^\n]*\}/,"function expectedVersion(c){return c.scene==='m4'?'1.13.3':c.scene==='m1'?'1.13.1':c.scene==='m2'?'1.13.0':'1.12.0';}");fs.writeFileSync(coursePath,course);
+const homePath='portal/index.html';let home=fs.readFileSync(homePath,'utf8');home=home.replace(/(s17-(?:case-catalog|course)\.js\?v=)[^"']+/g,'$1'+'20261103-m4-judgment');fs.writeFileSync(homePath,home);
+fs.writeFileSync(reportDir+'/build.json',JSON.stringify({at:new Date().toISOString(),version,cases,portalFiles:written,scope:'M4 observation/context/segmentation judgment interaction. Engine and other64 cases preserved.'},null,2));
+process.stdout.write(JSON.stringify({cases:cases.map(c=>({id:c.caseId,version:c.version,bytes:c.bytes})),portalFiles:written},null,2)+'\n');

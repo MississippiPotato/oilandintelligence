@@ -5,7 +5,7 @@ import {flowDiagram} from './lesson-flow-diagrams.mjs';
 import {conceptFor,conceptCSS,conceptHostRuntime} from './concept-content.mjs';
 import {courseContext,courseStyles} from './course-compass.mjs';
 import {workflow111} from './workbench-workflow.mjs';
-export const FOUR_CSS=()=>read('shared/four-exhibits.css')+'\n'+read('shared/scroll-exhibit.css')+'\n'+read('shared/continuous-lessons.css')+'\n'+conceptCSS()+'\n'+courseStyles()+'\n'+read('shared/teaching-figures.css')+'\n'+read('shared/lesson-assistant-entry.css')+'\n'+read('shared/workbench.css')+'\n'+read('shared/m4-kmeans-explainer.css')+'\n'+read('shared/m4-kmeans-cinema.css')+'\n'+read('shared/m1-photo-materials.css');
+export const FOUR_CSS=()=>read('shared/four-exhibits.css')+'\n'+read('shared/scroll-exhibit.css')+'\n'+read('shared/continuous-lessons.css')+'\n'+conceptCSS()+'\n'+courseStyles()+'\n'+read('shared/teaching-figures.css')+'\n'+read('shared/lesson-assistant-entry.css')+'\n'+read('shared/workbench.css')+'\n'+read('shared/m4-kmeans-explainer.css')+'\n'+read('shared/m4-kmeans-cinema.css')+'\n'+read('shared/m4-judgment.css')+'\n'+read('shared/m1-photo-materials.css');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function caseFiles(c){return ['shared/teaching-figures.js'].concat(c.files).concat(['exhibit-data.js','exhibit.js','concept.js'].map(f=>'case-src/'+c.scene+'/'+f).filter(f=>fs.existsSync(path.join(ROOT,f))));}
 export function sourceIdentity(c){return caseFiles(c).map(p=>({path:p,sha256:sha(p)}));}
