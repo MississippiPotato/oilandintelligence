@@ -34,6 +34,7 @@ for(const dir of ['dist/cases','dist/expansion-cases'])for(const folder of fs.re
  const cssRest=beforeCSS.slice(0,start)+'__ASSISTANT_CSS__'+beforeCSS.slice(end),newCSS=beforeCSS.slice(0,start)+css.trimEnd()+beforeCSS.slice(end);
  if(read(jsPath)!==beforeJS||read(cssPath)!==beforeCSS)throw Error('Case changed during assistant sync; retry without overwriting parallel work: '+dest);
  fs.writeFileSync(jsPath,newJS);fs.writeFileSync(cssPath,newCSS);
+ if(args['cache-token']){const htmlPath=dest+'/demo/index.html',html=read(htmlPath);fs.writeFileSync(htmlPath,html.replace(/((?:src|href)=["']demo\.(?:js|css))(?:\?[^"']*)?(["'])/g,'$1?v='+args['cache-token']+'$2'));}
  const oldRecord=previous?.cases.find(c=>c.path===dest);
  records.push({path:dest,id:JSON.parse(read(dest+'/case.json')).id,assistantRevision:revision,calculationPrefixSHA256:sha(jsPrefix),nonAssistantCSSSHA256:sha(cssRest),beforeStaticFiles,calculationPreservedBySync:newJS.slice(0,newJS.indexOf('/* S17_OPTIONAL_ASSISTANT_START'))===jsPrefix,changedSincePreviousLock:!!oldRecord&&oldRecord.calculationPrefixSHA256!==sha(jsPrefix),files:walk(dest).map(p=>({path:p.slice(dest.length+1),bytes:fs.statSync(p).size,sha256:sha(fs.readFileSync(p))}))});
  if(records.at(-1).files.reduce((n,f)=>n+f.bytes,0)>6*1024*1024)throw Error(dest+' exceeds original 6 MiB limit');

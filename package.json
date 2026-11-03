@@ -1,16 +1,16 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.13.1",
+  "version": "1.14.0",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build-mudlogging-workbench.mjs",
-    "test": "node checks/verify-workbench-scope.mjs && node checks/verify-workbench-numeric.mjs",
+    "build": "node tools/build-dynamic-ai.mjs",
+    "test": "node checks/verify-dynamic-ai.mjs",
     "test:numeric": "node case-src/mudlogging-stage/verify.mjs && node case-variants/s17x-g3-closure-spill/checks.mjs && node case-variants/s17x-c1-cement-woc-strength/verify.mjs && node case-variants/s17x-co3-completion-seal-test/verify.mjs && node case-variants/s17x-p1-perforation-depth-correlation/verify.mjs",
-    "verify-delivery": "node checks/verify-workbench-scope.mjs",
+    "verify-delivery": "node checks/verify-dynamic-ai.mjs",
     "verify-guide": "node tools/report-site-upgrade.mjs --require-browser",
-    "package": "node tools/package-workbench.mjs",
+    "package": "node tools/package-dynamic-ai.mjs",
     "serve": "node tools/serve.mjs",
     "accept": "node tools/accept-teacher-update.mjs",
     "accept:upgrade": "node tools/accept-site-upgrade.mjs",
@@ -44,7 +44,9 @@
     "accept:teaching": "node tools/accept-teaching-map.mjs",
     "build:teacher-update": "node tools/build-teacher-update.mjs",
     "build:workbench": "node tools/build-mudlogging-workbench.mjs",
-    "test:workbench": "node checks/verify-workbench-scope.mjs && node checks/verify-workbench-numeric.mjs"
+    "test:workbench": "node checks/verify-workbench-scope.mjs && node checks/verify-workbench-numeric.mjs",
+    "build:dynamic-ai": "node tools/build-dynamic-ai.mjs",
+    "test:dynamic-ai": "node checks/verify-dynamic-ai.mjs"
   },
   "devDependencies": {
     "esbuild": "0.27.3"

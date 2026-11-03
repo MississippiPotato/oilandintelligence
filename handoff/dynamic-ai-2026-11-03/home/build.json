@@ -1,0 +1,29 @@
+{
+  "builtAt": "2026-11-03T08:24:24.393Z",
+  "componentVersion": "1.1.0",
+  "threeRevision": 180,
+  "outputs": [
+    {
+      "path": "portal/assets/s17-process-atlas.js",
+      "bytes": 27123,
+      "sha256": "f274cc748072501ed9604cfdccfea4a98ffe333abae78632f8ab1a28b4914c83"
+    },
+    {
+      "path": "portal/assets/s17-process-3d.js",
+      "bytes": 543412,
+      "sha256": "52d3c4bdd8b644b977e248ce6ed9cb8f4b7c772e8ed781327305a22426dc78b6"
+    },
+    {
+      "path": "portal/assets/s17-process-atlas.css",
+      "bytes": 15736,
+      "sha256": "541912a98b94a8617cf999b76cbf50c7ced9d82d45d28697059ab1992841ac4e"
+    }
+  ],
+  "inputs": [
+    "portal/assets/vendor/three-r180/three.core.js",
+    "portal/assets/vendor/three-r180/three.module.js",
+    "portal-src/home-process/structure.js",
+    "portal-src/home-process/scene.js"
+  ],
+  "browserAcceptanceClaimed": false
+}

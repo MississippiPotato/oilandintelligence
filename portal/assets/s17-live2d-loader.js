@@ -27,7 +27,9 @@ function ensure(){
   const base=assetBase(),root=document.getElementById('s17-assistant');
   if(root)root.dataset.avatar='loading';
   try{
-   for(const [file,present]of files){if(parentOwns())return null;if(!present()){const url=new URL(file,base);url.searchParams.set('v','20261101');await load(url);}}
+   const loadFile=async([file,present])=>{if(parentOwns()||present())return;const url=new URL(file,base);url.searchParams.set('v','20261103-dynamic');await load(url);};
+   await Promise.all([loadFile(files[0]),loadFile(files[1]),loadFile(files[3])]);
+   if(parentOwns())return null;await loadFile(files[2]);await loadFile(files[4]);
    return g.S17Live2D||null;
   }catch(error){if(root&&!parentOwns())root.dataset.avatar='fallback';loading=null;return null;}
  })();return loading;
@@ -39,7 +41,7 @@ function observeRoot(){
  rootObserver=new MutationObserver(()=>{if(root.dataset.open==='true')ensure();});
  rootObserver.observe(root,{attributes:true,attributeFilter:['data-open']});
  // Let the ownership reply reach sandboxed cases before starting a second model.
- if(g===g.parent)ensure();else g.setTimeout(()=>{if(!parentOwns())ensure();},400);
+ if(g===g.parent){if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ensure,{once:true});else ensure();}else g.setTimeout(()=>{if(!parentOwns())ensure();},400);
  return true;
 }
 document.addEventListener('click',event=>{

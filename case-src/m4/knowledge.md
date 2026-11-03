@@ -66,3 +66,8 @@
 **读者操作与应看到的变化。** 切换校正或薄层厚度，共同深度轴保留游标；对照工况估计、实际响应、连续条带与候选界面。分组编号仍表示响应组。
 
 **阅读组织。** 专业背景先认识对象与关键关系；流程完整显示输入、计算和产物，主图读取当前对象；演示先读结果再改变条件。场景速览、数据准备建议、实际方法与原场景候选方向分别呈现。专业来源沿用上文。
+
+
+## 2026-11-03 方法与研究来源对应
+
+USROP论文：Tunkiel, Sui and Wiktorski (2021), Reference dataset for rate of penetration benchmarking. JPSE 196,108069. https://doi.org/10.1016/j.petrol.2020.108069 。原仓 https://github.com/AndrzejTunkiel/USROP ，CC BY-NC-SA4.0。真实曲线用于认识观测；当前可控情景的岭回归标定、k-means和连续分段没有冒用该论文精度。

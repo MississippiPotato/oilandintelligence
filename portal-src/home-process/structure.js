@@ -1,4 +1,5 @@
-export const layerBoundary=(x,i)=>[0,-.8,-2.1,-3.8,-5.2,-6.65][i]+(i?Math.exp(-(((x-4)/10)**2))*(.12+i*.3)+Math.sin(x*.19)*.13:0);
+// A folded porous bed below a continuous seal. Contacts are horizontal within pores.
+export const layerBoundary=(x,i)=>[0,-.85,-2.45,-4.35,-5.9,-8.3][i]+(i?Math.exp(-(((x-4)/10)**2))*(i<2?.25:1.35)+Math.sin(x*.12)*.08:0);
 export const reservoirY=x=>(layerBoundary(x,3)+layerBoundary(x,4))/2;
 export const perforationLevels=x=>[-.24,0,.24].map(d=>reservoirY(x)+d);
 export const wellRadii={cementOuter:.37,casingOuter:.265,tubing:.085};

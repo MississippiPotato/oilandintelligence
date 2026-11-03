@@ -78,3 +78,8 @@ C1、C2、C3分别是甲烷、乙烷、丙烷；气相色谱可以分别测定�
 **读者操作与应看到的变化。** 改变有效体积先观察来源线移动；切换工况保持气测不变，查看实际近邻和候选更新。六步连续阅读，重点展开归位和近邻。
 
 **阅读组织。** 专业背景先认识对象与关键关系；流程完整显示输入、计算和产物，主图读取当前对象；演示先读结果再改变条件。场景速览、数据准备建议、实际方法与原场景候选方向分别呈现。专业来源沿用上文。
+
+
+## 2026-11-03 方法与研究来源对应
+
+延伸文献：Anifowose et al. (2022), Contributions of machine learning to quantitative and real-time mud gas data analysis: A critical review. Applied Computing and Geosciences 16,100095. https://doi.org/10.1016/j.acags.2022.100095 。本轮出版社全文返回403，仅列为延伸研究方向；页面采集知识仍依据已核对的SLB、IODP方法资料。当前完整投票图逐项读取现有M2模型的近邻、距离、票重和拒判原因。

@@ -1,0 +1,185 @@
+{
+  "at": "2026-11-03T08:26:35.832Z",
+  "scope": "Representative browser interactions only. 5 standalone data round trips; M2 enhanced/original; homepage and assistant; narrow M2 DOM check.",
+  "passed": 36,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Explicit assistant M2 command navigates directly",
+      "pass": true
+    },
+    {
+      "name": "M1 initial automatic computation",
+      "pass": true
+    },
+    {
+      "name": "M1 occlusion recalculates and proportions view",
+      "pass": true
+    },
+    {
+      "name": "M3 initial automatic computation",
+      "pass": true
+    },
+    {
+      "name": "M3 baseline mask and explanation agree",
+      "pass": true
+    },
+    {
+      "name": "M4 initial automatic computation",
+      "pass": true
+    },
+    {
+      "name": "M4 correction changes and nearest/final distinction visible",
+      "pass": true
+    },
+    {
+      "name": "M5 initial automatic computation",
+      "pass": true
+    },
+    {
+      "name": "M5 edit recomputes and invalidates old review",
+      "pass": true
+    },
+    {
+      "name": "M5 unknown words display rejection reason",
+      "pass": true
+    },
+    {
+      "name": "M2 default automatically runs with full explanation",
+      "pass": true
+    },
+    {
+      "name": "M2 clicking neighbor shows its actual feature distance",
+      "pass": true
+    },
+    {
+      "name": "M2 threshold 8 yields valid empty state",
+      "pass": true
+    },
+    {
+      "name": "M2 lowering threshold restores original peak automatically",
+      "pass": true
+    },
+    {
+      "name": "M2 context changes candidate with unchanged displayed gas",
+      "pass": true
+    },
+    {
+      "name": "M2 actual downloaded sample imports and automatically recomputes same result",
+      "pass": true
+    },
+    {
+      "name": "M2 actual result download completes",
+      "pass": true
+    },
+    {
+      "name": "m1 downloaded sample import automatically recomputes same result",
+      "pass": true
+    },
+    {
+      "name": "m1 actual result download completes",
+      "pass": true
+    },
+    {
+      "name": "m3 downloaded sample import automatically recomputes same result",
+      "pass": true
+    },
+    {
+      "name": "m3 actual result download completes",
+      "pass": true
+    },
+    {
+      "name": "m4 downloaded sample import automatically recomputes same result",
+      "pass": true
+    },
+    {
+      "name": "m4 actual result download completes",
+      "pass": true
+    },
+    {
+      "name": "m5 downloaded sample import automatically recomputes same result",
+      "pass": true
+    },
+    {
+      "name": "m5 actual result download completes",
+      "pass": true
+    },
+    {
+      "name": "Assistant ambiguous c1 asks for a case choice without navigating",
+      "pass": true
+    },
+    {
+      "name": "Assistant ordinary local question does not navigate",
+      "pass": true
+    },
+    {
+      "name": "Homepage cold refresh automatically loads visible Live2D without a click",
+      "pass": true
+    },
+    {
+      "name": "Homepage starts in operating 3D without flow switches",
+      "pass": true
+    },
+    {
+      "name": "Operating 3D visibly changes between observed frames",
+      "pass": true
+    },
+    {
+      "name": "Paused 3D region stays pixel identical across observations",
+      "pass": true
+    },
+    {
+      "name": "Homepage resume restores operating state",
+      "pass": true
+    },
+    {
+      "name": "M2 actual 390px layout keeps controls compact and current graph readable",
+      "pass": true
+    },
+    {
+      "name": "Teacher original directory import runs M2 automatically",
+      "pass": true
+    },
+    {
+      "name": "Teacher original refresh persists M2 and recomputes context change",
+      "pass": true
+    },
+    {
+      "name": "Loaded standalone M2 recalculates with browser network offline",
+      "pass": true
+    }
+  ],
+  "pending": [
+    "Cold file:// opening not verified in this browser tool",
+    "Teacher original sandbox completed evidence download not verified",
+    "All five large packages persisting together in original localStorage not claimed",
+    "Narrow 390px M2 layout inspected through DOM and content crops; full viewport capture was inconsistent"
+  ],
+  "actualFiles": [
+    {
+      "scene": "m2",
+      "sample": "m2-配套观测 (1).json",
+      "evidence": "s17-mudgas-context-m2-v7-r7.json"
+    },
+    {
+      "scene": "m1",
+      "sample": "m1-配套观测 (1).json",
+      "evidence": "s17-cuttings-lithology-m1-v2-r2 (1).json"
+    },
+    {
+      "scene": "m3",
+      "sample": "m3-配套观测 (1).json",
+      "evidence": "s17-fluorescence-review-m3-v2-r2 (1).json"
+    },
+    {
+      "scene": "m4",
+      "sample": "m4-钻进记录 (1).csv",
+      "evidence": "s17-drilltime-boundaries-m4-v2-r2 (1).json"
+    },
+    {
+      "scene": "m5",
+      "sample": "m5-录井原文 (1).txt",
+      "evidence": "s17-evidence-report-m5-v2-r2 (1).json"
+    }
+  ]
+}

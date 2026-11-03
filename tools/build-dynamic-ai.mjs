@@ -1,0 +1,15 @@
+import fs from 'node:fs';import vm from 'node:vm';import path from 'node:path';
+import {buildFour}from'./build-four-exhibits.mjs';import {buildM2}from'./build-m2-exhibit.mjs';import {buildLazyPortal}from'./build-lazy-portal.mjs';import {buildHomeProcess}from'./build-home-process.mjs';
+process.chdir(path.resolve(import.meta.dirname,'..'));
+const reportDir='handoff/dynamic-ai-2026-11-03',version='1.12.0',portalVersion='1.14.0',ids=new Set(['s17-cuttings-lithology','s17-mudgas-context','s17-fluorescence-review','s17-drilltime-boundaries','s17-evidence-report']);fs.mkdirSync(reportDir,{recursive:true});
+const box={};box.window=box;vm.runInNewContext(fs.readFileSync('portal/assets/s17-case-catalog.js','utf8'),box);
+const nav=box.S17CaseCatalog.cases.map(c=>Object.fromEntries(['id','sceneId','title','stageId','stageName','directory','summary'].map(k=>[k,c[k]])));
+fs.writeFileSync('portal/assets/s17-navigation-catalog.js','/* Lightweight navigation allowlist, no case computation. */\nwindow.S17NavigationCatalog='+JSON.stringify({cases:nav})+';\n');
+const options={version,reportDir,updated:'2026-11-03'},cases=[...buildFour(options),buildM2({...options,emitPortalKnowledge:false})],written=[];
+buildLazyPortal({write:false,expectedCount:65,onOutput:o=>{if(ids.has(o.caseId)||o.path==='portal/assets/s17-case-catalog.js'){fs.writeFileSync(o.path,o.content);written.push(o.path);}}});
+let course=fs.readFileSync('portal/assets/s17-course.js','utf8');course=course.replace(/function expectedVersion\(c\)\{return '[^']+';\}/,"function expectedVersion(c){return '1.12.0';}");fs.writeFileSync('portal/assets/s17-course.js',course);
+buildHomeProcess({reportDir:reportDir+'/home'});
+let html=fs.readFileSync('portal/index.html','utf8');if(!html.includes('s17-navigation-catalog.js'))html=html.replace(/(<script src="assets\/s17-assistant-history)/,'<script src="assets/s17-navigation-catalog.js?v=20261103-dynamic" defer></script>\n$1');html=html.replace(/(s17-(?:case-catalog|course|process-atlas|home|upgrade-nav|assistant|assistant-history|live2d-loader)\.(?:js|css)\?v=)[^"']+/g,'$1'+'20261103-dynamic');fs.writeFileSync('portal/index.html',html);
+const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));pkg.version=portalVersion;pkg.scripts.build='node tools/build-dynamic-ai.mjs';pkg.scripts.test='node checks/verify-dynamic-ai.mjs';pkg.scripts.package='node tools/package-dynamic-ai.mjs';pkg.scripts['verify-delivery']='node checks/verify-dynamic-ai.mjs';pkg.scripts['build:dynamic-ai']=pkg.scripts.build;pkg.scripts['test:dynamic-ai']=pkg.scripts.test;fs.writeFileSync('package.json',JSON.stringify(pkg,null,2)+'\n');
+fs.writeFileSync(reportDir+'/build.json',JSON.stringify({at:new Date().toISOString(),version,portalVersion,cases,portalFiles:written,scope:'Homepage motion/geology, five continuous workbenches, one M2 kNN explanation, shared assistant navigation/automatic avatar'},null,2));
+console.log(JSON.stringify({version,portalVersion,cases:cases.length,portalFiles:written},null,2));

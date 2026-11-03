@@ -76,3 +76,8 @@
 **读者操作与应看到的变化。** 改动未见／见、数值或井段后自动重算并撤销旧核对；点击报告句子回到原句。五步连续显示，分类贡献与字段抽取分别解释。
 
 **阅读组织。** 专业背景先认识对象与关键关系；流程完整显示输入、计算和产物，主图读取当前对象；演示先读结果再改变条件。场景速览、数据准备建议、实际方法与原场景候选方向分别呈现。专业来源沿用上文。
+
+
+## 2026-11-03 方法与研究来源对应
+
+相关研究报告：Guarido, Emery and Innanen (2022), Using natural language processing to convert mud-log chip descriptions to usable data tables. CREWES Research Report, https://www.crewes.org/Documents/ResearchReports/abstract.php?docid=CRR202215 。该报告研究描述抽取及结构化；本例采用项目朴素贝叶斯和规则字段抽取，不继承该报告回归实验的指标。
