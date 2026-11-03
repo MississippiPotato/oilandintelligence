@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+import {buildFour} from './build-four-exhibits.mjs';import {buildM2} from './build-m2-exhibit.mjs';import {buildLazyPortal} from './build-lazy-portal.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');process.chdir(root);
+const reportDir='handoff/mudlogging-workbench-2026-11-03',version='1.11.0',ids=new Set(['s17-cuttings-lithology','s17-mudgas-context','s17-fluorescence-review','s17-drilltime-boundaries','s17-evidence-report']);fs.mkdirSync(reportDir,{recursive:true});
+const options={version,reportDir,updated:'2026-11-03'};
+const four=buildFour(options),m2=buildM2({...options,emitPortalKnowledge:false});
+const written=[];const summary=buildLazyPortal({write:false,expectedCount:65,onOutput:output=>{if(ids.has(output.caseId)||output.path==='portal/assets/s17-case-catalog.js'){fs.writeFileSync(output.path,output.content);written.push(output.path);}}});
+const course='portal/assets/s17-course.js';fs.writeFileSync(course,fs.readFileSync(course,'utf8').replace(/function expectedVersion\(c\)\{return '[^']+';\}/,"function expectedVersion(c){return '1.11.0';}"));
+const index='portal/index.html';fs.writeFileSync(index,fs.readFileSync(index,'utf8').replace(/(s17-(?:case-catalog|course)\.js\?v=)[^"']+/g,'$1'+'20261103-workbench'));
+fs.writeFileSync(reportDir+'/build.json',JSON.stringify({at:new Date().toISOString(),version,scope:'Five mudlogging cases and their portal entries only',cases:[...four,m2],portal:{...summary,written}},null,2));
+console.log(JSON.stringify({version,cases:5,portalFiles:written},null,2));

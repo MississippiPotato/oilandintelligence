@@ -4,7 +4,8 @@ import {scrollScene} from './scroll-scene.mjs';
 import {flowDiagram} from './lesson-flow-diagrams.mjs';
 import {conceptFor,conceptCSS,conceptHostRuntime} from './concept-content.mjs';
 import {courseContext,courseStyles} from './course-compass.mjs';
-export const FOUR_CSS=()=>read('shared/four-exhibits.css')+'\n'+read('shared/scroll-exhibit.css')+'\n'+read('shared/continuous-lessons.css')+'\n'+conceptCSS()+'\n'+courseStyles()+'\n'+read('shared/teaching-figures.css')+'\n'+read('shared/lesson-assistant-entry.css');
+import {workflow111} from './workbench-workflow.mjs';
+export const FOUR_CSS=()=>read('shared/four-exhibits.css')+'\n'+read('shared/scroll-exhibit.css')+'\n'+read('shared/continuous-lessons.css')+'\n'+conceptCSS()+'\n'+courseStyles()+'\n'+read('shared/teaching-figures.css')+'\n'+read('shared/lesson-assistant-entry.css')+'\n'+read('shared/workbench.css');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function caseFiles(c){return ['shared/teaching-figures.js'].concat(c.files).concat(['exhibit-data.js','exhibit.js','concept.js'].map(f=>'case-src/'+c.scene+'/'+f).filter(f=>fs.existsSync(path.join(ROOT,f))));}
 export function sourceIdentity(c){return caseFiles(c).map(p=>({path:p,sha256:sha(p)}));}
@@ -18,6 +19,6 @@ export function loadFourContent(c,{mode='standalone',version='1.9.0'}={}){
  const L=loadLesson(c),map=mapHTML(c),concept=conceptFor(c.scene),context=courseContext(c.scene,{id:c.id,sceneId:c.scene,title:c.catalogTitle??L.title,lede:L.lede,methods:[c.method],version},{mode,...(c.scene==='m5'?{nextScene:'w1',nextLabel:'接着看测井分层'}:{})});
  const chapters=L.chapters.map((s,i)=>({...s,html:s.html+(concept?.backgroundAfter===i?concept.backgroundHTML:'')}));
  const sections=chapters.map((s,i)=>({no:i+1,en:s.en,title:s.title,html:(i===0?'<style>'+FOUR_CSS()+'</style>'+context.intro:'')+`<div class="fx-exhibit" data-scene="${c.scene}">${i===0?map:''}<section id="${c.scene}-knowledge-${i}" class="fx-chapter">${s.html}</section>${i===chapters.length-1?context.html:''}</div>`}));
- const previews=flowPreview(c,L),backgroundHTML=`<div class="fx-exhibit" data-scene="${c.scene}" data-fx-scene="${c.scene}">${context.intro}${map}${chapters.map((s,i)=>`<article class="fx-card fx-chapter" id="${c.scene}-knowledge-${i}"><header><span class="fx-kicker">0${i+1} / ${esc(s.en)}</span><h2>${esc(s.title)}</h2></header>${s.html}</article>`).join('')}${context.html}</div>`;
- return{title:L.title,question:L.title,lede:L.lede,sections,flow:L.steps.map(s=>[s.name,s.action,s.output]),backgroundHTML,workflowHTML:flowMarkup(c,L,previews),staticWorkflowHTML:flowMarkup(c,L,previews),courseContext:context};
+ const wb=Number(version.split('.')[1])>=11?workflow111(c.scene):null,previews=wb?[]:flowPreview(c,L),backgroundHTML=`<div class="fx-exhibit" data-scene="${c.scene}" data-fx-scene="${c.scene}">${context.intro}${map}${chapters.map((s,i)=>`<article class="fx-card fx-chapter" id="${c.scene}-knowledge-${i}"><header><span class="fx-kicker">0${i+1} / ${esc(s.en)}</span><h2>${esc(s.title)}</h2></header>${s.html}</article>`).join('')}${context.html}</div>`;
+ return{title:L.title,question:L.title,lede:L.lede,sections,flow:wb?wb.rows.map(s=>[s.name,s.action,s.output]):L.steps.map(s=>[s.name,s.action,s.output]),backgroundHTML,workflowHTML:wb?wb.html:flowMarkup(c,L,previews),staticWorkflowHTML:wb?wb.html:flowMarkup(c,L,previews),courseContext:context};
 }

@@ -553,5 +553,5 @@
     });
   }
 
-  g.M5Exhibit = {title: '综合录井解释与井段交接', lede: '沿井段对照岩屑、气测、荧光和钻时，生成有来处的录井报告与核查问题。', chapters, steps, labHTML, mount, readingMount};
+  g.M5Exhibit = {title: '综合录井解释与井段交接', lede: '沿井段对照岩屑、气测、荧光和钻时，生成有来处的录井报告与核查问题。', chapters, steps, labHTML, mount, readingMount, handoverHTML, intervalExport, linkFieldSources};
 })(globalThis);

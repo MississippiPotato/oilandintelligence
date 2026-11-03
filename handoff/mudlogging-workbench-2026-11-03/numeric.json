@@ -1,0 +1,210 @@
+{
+  "at": "2026-11-03T05:45:31.734Z",
+  "scope": "Pure adapters and existing engines. This is numerical/source evidence, not browser acceptance.",
+  "passed": 44,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "m1 paired-file observation fingerprint",
+      "pass": true,
+      "observed": {
+        "builtin": "fnv1a-9658b1fb",
+        "imported": "fnv1a-9658b1fb"
+      }
+    },
+    {
+      "name": "m1 paired-file actual predictions",
+      "pass": true
+    },
+    {
+      "name": "m1 imported input has no truth or inherited metrics",
+      "pass": true
+    },
+    {
+      "name": "m1 complete workflow and AI core",
+      "pass": true
+    },
+    {
+      "name": "m1 illumination changes actual pixels and segmentation",
+      "pass": true
+    },
+    {
+      "name": "m1 imported calibration reaches computation",
+      "pass": true
+    },
+    {
+      "name": "m1 malformed file rejected",
+      "pass": true
+    },
+    {
+      "name": "m2 paired-file observation fingerprint",
+      "pass": true,
+      "observed": {
+        "builtin": "fnv1a-107e0767",
+        "imported": "fnv1a-107e0767"
+      }
+    },
+    {
+      "name": "m2 paired-file actual predictions",
+      "pass": true
+    },
+    {
+      "name": "m2 imported input has no truth or inherited metrics",
+      "pass": true
+    },
+    {
+      "name": "m2 complete workflow and AI core",
+      "pass": true
+    },
+    {
+      "name": "m2 context switch keeps all gas values unchanged",
+      "pass": true
+    },
+    {
+      "name": "m2 counterfactual follows current source clock",
+      "pass": true
+    },
+    {
+      "name": "m2 context switch recomputes real neighbors",
+      "pass": true
+    },
+    {
+      "name": "m2 both method paths use same detected peaks",
+      "pass": true
+    },
+    {
+      "name": "m2 volume changes source time",
+      "pass": true
+    },
+    {
+      "name": "m2 no peak is a valid result",
+      "pass": true
+    },
+    {
+      "name": "m2 malformed file rejected",
+      "pass": true
+    },
+    {
+      "name": "m3 paired-file observation fingerprint",
+      "pass": true,
+      "observed": {
+        "builtin": "fnv1a-d10d7c58",
+        "imported": "fnv1a-d10d7c58"
+      }
+    },
+    {
+      "name": "m3 paired-file actual predictions",
+      "pass": true
+    },
+    {
+      "name": "m3 imported input has no truth or inherited metrics",
+      "pass": true
+    },
+    {
+      "name": "m3 complete workflow and AI core",
+      "pass": true
+    },
+    {
+      "name": "m3 exposure changes actual segmentation",
+      "pass": true
+    },
+    {
+      "name": "m3 all methods use one denominator",
+      "pass": true
+    },
+    {
+      "name": "m3 saturation is computed",
+      "pass": true
+    },
+    {
+      "name": "m3 zero foreground retains zero denominator",
+      "pass": true
+    },
+    {
+      "name": "m3 malformed file rejected",
+      "pass": true
+    },
+    {
+      "name": "m4 paired-file observation fingerprint",
+      "pass": true,
+      "observed": {
+        "builtin": "fnv1a-28f5a637",
+        "imported": "fnv1a-28f5a637"
+      }
+    },
+    {
+      "name": "m4 paired-file actual predictions",
+      "pass": true
+    },
+    {
+      "name": "m4 imported input has no truth or inherited metrics",
+      "pass": true
+    },
+    {
+      "name": "m4 complete workflow and AI core",
+      "pass": true
+    },
+    {
+      "name": "m4 correction changes actual response",
+      "pass": true,
+      "observed": {
+        "corrected": 0.016391301905352762,
+        "uncorrected": 0.2922716643594945,
+        "boundariesCorrected": [],
+        "boundariesUncorrected": []
+      }
+    },
+    {
+      "name": "m4 thickness changes actual input sampling",
+      "pass": true
+    },
+    {
+      "name": "m4 no candidate boundary is valid",
+      "pass": true
+    },
+    {
+      "name": "m4 inactive data retains zero valid rows",
+      "pass": true
+    },
+    {
+      "name": "m4 malformed file rejected",
+      "pass": true
+    },
+    {
+      "name": "m5 paired-file observation fingerprint",
+      "pass": true,
+      "observed": {
+        "builtin": "fnv1a-47acfb36",
+        "imported": "fnv1a-47acfb36"
+      }
+    },
+    {
+      "name": "m5 paired-file actual predictions",
+      "pass": true
+    },
+    {
+      "name": "m5 imported input has no truth or inherited metrics",
+      "pass": true
+    },
+    {
+      "name": "m5 complete workflow and AI core",
+      "pass": true
+    },
+    {
+      "name": "m5 negation and value are really re-extracted",
+      "pass": true
+    },
+    {
+      "name": "m5 reports preserve edited quotes",
+      "pass": true
+    },
+    {
+      "name": "m5 source spans point to original text",
+      "pass": true
+    },
+    {
+      "name": "m5 malformed file rejected",
+      "pass": true
+    }
+  ]
+}
