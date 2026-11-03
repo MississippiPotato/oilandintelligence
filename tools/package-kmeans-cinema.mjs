@@ -1,0 +1,6 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import{execFileSync}from'node:child_process';
+const report='handoff/kmeans-cinema-2026-11-03',files=['case.json','README.txt','demo/index.html','demo/demo.css','demo/demo.js'],five=['s17-cuttings-lithology','s17-mudgas-context','s17-fluorescence-review','s17-drilltime-boundaries','s17-evidence-report'];
+const entries=id=>files.map(f=>['dist/cases/'+id+'/'+f,id+'/'+f]),packages=[];
+function zip(file,pairs){const py="import sys,json,zipfile\np=json.loads(sys.stdin.buffer.read().decode('utf8'))\nwith zipfile.ZipFile(sys.argv[1],'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:\n for a,b in p:z.write(a,b)\nwith zipfile.ZipFile(sys.argv[1]) as z:assert z.testzip() is None";execFileSync('python',['-X','utf8','-c',py,file],{input:JSON.stringify(pairs),windowsHide:true});packages.push({path:file,members:pairs.length,bytes:fs.statSync(file).size,sha256:crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')});}
+zip('dist/s17-drilltime-boundaries-1.13.2.zip',entries(five[3]));zip('dist/s17-mudlogging-five-2026-11-03-kmeans-cinema.zip',five.flatMap(entries));
+fs.writeFileSync(report+'/packages.json',JSON.stringify({at:new Date().toISOString(),packages,scope:'M4 1.13.2; other four case runtimes unchanged'},null,2));console.log(JSON.stringify(packages,null,2));

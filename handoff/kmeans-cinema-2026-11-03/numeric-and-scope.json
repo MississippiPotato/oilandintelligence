@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-03T11:30:19.404Z",
+  "evidenceType": "Focused numerical and source checks, separate from browser observations",
+  "checks": [
+    "near conserves24 records",
+    "near means match coordinate sums",
+    "near objective does not increase",
+    "near converges",
+    "near all stages render finite computed data",
+    "spread conserves24 records",
+    "spread means match coordinate sums",
+    "spread objective does not increase",
+    "spread converges",
+    "spread all stages render finite computed data",
+    "Moving one input changes actual group membership",
+    "Practice never mutates the current-well fitted models",
+    "Default playback nominal duration under7seconds",
+    "Fast playback reduces duration",
+    "Full fitted reference view retains1896 points",
+    "Only M4 runtime files changed",
+    "Case computation engine unchanged"
+  ],
+  "examples": [
+    {
+      "initialization": "near",
+      "rounds": 4,
+      "nominalSeconds": 5.95,
+      "groups": [
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "initialization": "spread",
+      "rounds": 2,
+      "nominalSeconds": 3.15,
+      "groups": [
+        8,
+        8,
+        8
+      ]
+    }
+  ],
+  "movedPointFinalCounts": [
+    8,
+    7,
+    9
+  ],
+  "changedRuntimeFiles": [
+    "dist/cases/s17-drilltime-boundaries/README.txt",
+    "dist/cases/s17-drilltime-boundaries/case.json",
+    "dist/cases/s17-drilltime-boundaries/demo/demo.css",
+    "dist/cases/s17-drilltime-boundaries/demo/demo.js",
+    "dist/cases/s17-drilltime-boundaries/demo/index.html"
+  ]
+}

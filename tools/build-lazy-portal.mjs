@@ -167,7 +167,7 @@ export function buildLazyPortal({reportDir, expectedCount=65, write=true, onOutp
         stageId:scene.stageId, stageName:scene.stageName, methods:manifest.methods || scene.methods,
         summary:excerpt(manifest.tabs.background?.lede || scene.intro, 80), directory, primary,
         href:'#/scene/' + scene.id + '?case=' + encodeURIComponent(manifest.id) + '&tab=bg',
-        standaloneHref:'../dist/' + directory + '/' + manifest.id + '/demo/index.html'+(nativeIds.has(manifest.id)&&(manifest.version==='1.11.0'||(['m1','m2','m4'].includes(manifest.sceneId)&&['1.13.0','1.13.1'].includes(manifest.version)))?'?v='+manifest.version:''),
+        standaloneHref:'../dist/' + directory + '/' + manifest.id + '/demo/index.html'+(nativeIds.has(manifest.id)&&(manifest.version==='1.11.0'||(['m1','m2','m4'].includes(manifest.sceneId)&&['1.13.0','1.13.1','1.13.2'].includes(manifest.version)))?'?v='+manifest.version:''),
         contentURL:'assets/case-content/' + manifest.id + '.' + manifest.version + '.js'};
       const reading = nativeIds.has(row.id) ? nativeReading(row, manifest) : null;
       const searchable = caseSections(row, manifest);

@@ -1,16 +1,16 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.14.2",
+  "version": "1.14.3",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build-kmeans-illustrated.mjs",
-    "test": "node checks/verify-kmeans-illustrated.mjs",
+    "build": "node tools/build-kmeans-cinema.mjs",
+    "test": "node checks/verify-kmeans-cinema.mjs",
     "test:numeric": "node case-src/mudlogging-stage/verify.mjs && node case-variants/s17x-g3-closure-spill/checks.mjs && node case-variants/s17x-c1-cement-woc-strength/verify.mjs && node case-variants/s17x-co3-completion-seal-test/verify.mjs && node case-variants/s17x-p1-perforation-depth-correlation/verify.mjs",
-    "verify-delivery": "node checks/verify-kmeans-illustrated.mjs",
+    "verify-delivery": "node checks/verify-kmeans-cinema.mjs",
     "verify-guide": "node tools/report-site-upgrade.mjs --require-browser",
-    "package": "node tools/package-kmeans-illustrated.mjs",
+    "package": "node tools/package-kmeans-cinema.mjs",
     "serve": "node tools/serve.mjs",
     "accept": "node tools/accept-teacher-update.mjs",
     "accept:upgrade": "node tools/accept-site-upgrade.mjs",
@@ -51,7 +51,10 @@
     "test:m4-algorithm": "node checks/verify-m4-algorithm.mjs",
     "build:kmeans-illustrated": "node tools/build-kmeans-illustrated.mjs",
     "package:kmeans-illustrated": "node tools/package-kmeans-illustrated.mjs",
-    "test:kmeans-illustrated": "node checks/verify-kmeans-illustrated.mjs"
+    "test:kmeans-illustrated": "node checks/verify-kmeans-illustrated.mjs",
+    "build:kmeans-cinema": "node tools/build-kmeans-cinema.mjs",
+    "test:kmeans-cinema": "node checks/verify-kmeans-cinema.mjs",
+    "package:kmeans-cinema": "node tools/package-kmeans-cinema.mjs"
   },
   "devDependencies": {
     "esbuild": "0.27.3"

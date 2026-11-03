@@ -6,7 +6,7 @@ const cases=[
  {scene:'m4',id:'s17-drilltime-boundaries',name:'钻时',question:'钻速变了，是工况，还是候选层段？',method:'独立工况标定 · 聚类 · 连续分段',action:'固定地层改变工况，再看平滑如何吞掉薄层',scope:'沿共同深度轴比较相似响应分组与连续井段',icon:'depth',visualTitle:'联动查看钻时曲线'},
  {scene:'m5',id:'s17-evidence-report',name:'录井报告自动生成',question:'把这些观察放回井段，下一步需要核查什么？',method:'字符NB · 字段抽取 · 井段交接',action:'选井段看资料覆盖，核对记录后交给测井',scope:'汇集岩屑、气测、荧光和钻时，形成有来源的井段记录',icon:'report',visualTitle:'井段观察与交接图'}
 ];
-function expectedVersion(c){return ['m1','m4'].includes(c.scene)?'1.13.1':c.scene==='m2'?'1.13.0':'1.12.0';}
+function expectedVersion(c){return c.scene==='m4'?'1.13.2':c.scene==='m1'?'1.13.1':c.scene==='m2'?'1.13.0':'1.12.0';}
 function href(c,tab='background'){const saved=g.Cases?.get(c.id);return saved&&(saved.imported||saved.version===expectedVersion(c))?'#/scene/'+c.scene+'?case='+c.id+'&tab='+({background:'bg',workflow:'flow',demo:'demo',lab:'demo'}[tab]??'bg'):'../dist/cases/'+c.id+'/demo/index.html#'+(tab==='demo'?'lab':tab);}
 g.S17Course={cases,byScene:id=>cases.find(c=>c.scene===id),expectedVersion,href};
 })(window);

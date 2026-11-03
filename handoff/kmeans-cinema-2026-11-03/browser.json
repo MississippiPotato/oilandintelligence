@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-03",
+  "scope": "M4 animation UI only; actual Chromium interactions",
+  "observations": [
+    {"action": "Standard playback", "observed": "Playback reached stable grouping; A/B/C each8 points. Nominal6-second timing comes from player settings, not wall-clock measurement."},
+    {"action": "Select fast playback and play", "observed": "Player showed about3.7seconds and reached stable grouping."},
+    {"action": "Step through assignment and center movement", "observed": "Active two-action indicator, point colors, moving star centers, group counts and mean-location explanation updated."},
+    {"action": "Drag practice point0 to point17 location", "observed": "Recalculation and playback started after release; final A/B/C counts7/8/9."},
+    {"action": "Inspect current well after dragging", "observed": "Current case input fingerprint remained fnv1a-892ff7fd."},
+    {"action": "Open1896-point fit and step", "observed": "Original reference fitting shown; A/B/C counts629/614/653."},
+    {"action": "Return to current-well result", "observed": "At1240m: ROP29.73m/h, drill time2.02min/m, estimatedROP29.25m/h, relative response0.0164, continuous groupB."},
+    {"action": "Inspect final layout", "observed": "SVG height330px in720px viewport after scoped CSS correction; player controls and principal changes visible together when player is in view."}
+  ],
+  "notRepeated": ["Other64 cases", "Mobile browser acceptance", "Offline cold start", "Teacher portal reimport", "Online post-push browser check"]
+}
