@@ -4,9 +4,9 @@
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmt = (value, digits = 2) => value == null || !Number.isFinite(Number(value)) ? '—' : Number(value).toFixed(digits);
   const pct = value => value == null ? '—' : fmt(100 * value, 1) + '%';
-  const names = ['砂岩教学外观', '泥岩教学外观', '灰岩教学外观', '待复核'];
+  const names = ['砂岩外观', '页岩外观', '灰岩外观', '待复核'];
   const colors = ['#B8242A', '#687F94', '#B78B45', '#AAA7A3'];
-  const shortNames = ['砂岩外观', '泥岩外观', '灰岩外观', '待复核'];
+  const shortNames = ['砂岩外观', '页岩外观', '灰岩外观', '待复核'];
   const sourceLink = (label, url) => '<a href="' + url + '" target="_blank" rel="noopener">' + label + '</a>';
   const sourceNote = '<p class="fx-note">专业依据：' + sourceLink('SLB 岩屑与录井介绍', 'https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging') + '。本例将观察线索、图像判断与样品统计逐层连接。</p>';
 
@@ -21,7 +21,7 @@
 
   function staticFeatureFigure() {
     if (!C || !g.S17Images) return '';
-    const sample = g.S17Images.sample(17, {}, 1).observations;
+    const sample = (g.M1PhotoMaterial ? g.M1PhotoMaterial.sample(17) : g.S17Images.sample(17, {}, 1)).observations;
     const im = C.calibrated(sample.white, sample.calibration, true);
     const component = C.segment(im).components[0];
     const [x0,y0,x1,y1] = component.bbox;
@@ -41,8 +41,8 @@
   }
 
   const chapters = [
-    {id:'m1-origin', en:'FROM THE BIT', title:'先知道：这一盘岩屑从哪里来', html:'<p>钻头钻碎地下岩石，产生的碎片叫<b>岩屑</b>。钻井液从钻杆内向下流出，再沿钻杆外侧的井眼空间返到地面，把碎片带回。地面的<b>振动筛</b>分开碎片与液体，录井人员整理样品、适当清洗，再用放大观察辨认岩石。</p><p><b>岩性</b>就是对岩石类型的描述。记录一盘样品中的岩性及其变化，可以帮助了解钻过了什么地层。样品从井底走到地面需要时间，因此地面照片还要保留样品身份，才能连回较早的来源井段。</p><div class="fx-note"><b>这例要解决的问题</b><p>面对一盘颜色相近的碎片，机器怎样逐粒给出可检查的候选？把它们汇总为一盘比例时，应该怎样计算？先看真实岩石，再进入可控的像素实验。</p></div>'+sourceNote},
-    {id:'m1-rocks', en:'READ THE ROCK', title:'看真实岩芯，认识颜色之外的线索', html:'<p><b>岩芯</b>是取出的较完整岩石，能保留结构；岩屑经过破碎和搬运，结构常不完整。下面六张照片来自公开岩芯数据，每张原图块覆盖2×2厘米。先在同类两张之间比较，再比较不同类型。</p><div class="fx-grid m1-photo-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px">'+photoCards()+'</div><p>照片沿用原数据标签：砂岩、页岩和灰岩。<b>页岩</b>常沿薄层劈开；演示中的“泥岩教学外观”指合成盘里的细粒层状纹理分组。观察时，把颗粒、纹理与结构放在一起比较。</p><p class="fx-note">照片：Fatimah Alzubaidi (2021)，岩芯托盘来自 Geological Survey of South Australia；'+sourceLink('Lithology dataset V1','https://data.mendeley.com/datasets/b6rj29mrss/1')+'，CC BY 4.0。</p>'},
+    {id:'m1-origin', en:'FROM THE BIT', title:'先知道：这一盘岩屑从哪里来', html:'<p>钻头钻碎地下岩石，产生的碎片叫<b>岩屑</b>。钻井液从钻杆内向下流出，再沿钻杆外侧的井眼空间返到地面，把碎片带回。地面的<b>振动筛</b>分开碎片与液体，录井人员整理样品、适当清洗，再用放大观察辨认岩石。</p><p><b>岩性</b>就是对岩石类型的描述。记录一盘样品中的岩性及其变化，可以帮助了解钻过了什么地层。样品从井底走到地面需要时间，因此地面照片还要保留样品身份，才能连回较早的来源井段。</p><div class="fx-note"><b>这例要解决的问题</b><p>面对一盘颜色相近的碎片，机器怎样逐粒给出可检查的候选？把它们汇总为一盘比例时，应该怎样计算？先看真实岩石，再进入真实照片纹理构成的拼盘实验。</p></div>'+sourceNote},
+    {id:'m1-rocks', en:'READ THE ROCK', title:'看真实岩芯，认识颜色之外的线索', html:'<p><b>岩芯</b>是取出的较完整岩石，能保留结构；岩屑经过破碎和搬运，结构常不完整。下面六张照片来自公开岩芯数据，每张原图块覆盖2×2厘米。先在同类两张之间比较，再比较不同类型。</p><div class="fx-grid m1-photo-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px">'+photoCards()+'</div><p>照片沿用原数据标签：砂岩、页岩和灰岩。<b>页岩</b>常沿薄层劈开；主演示沿用照片的砂岩、页岩、灰岩标签。纹理来自真实照片，颗粒外形与摆盘是构造的；参考组使用每类照片1，观察组使用照片2。观察时，把颗粒、纹理与结构放在一起比较。</p><p class="fx-note">照片：Fatimah Alzubaidi (2021)，岩芯托盘来自 Geological Survey of South Australia；'+sourceLink('Lithology dataset V1','https://data.mendeley.com/datasets/b6rj29mrss/1')+'，CC BY 4.0。</p>'},
     {id:'m1-pixels', en:'OUTLINE AND TEXTURE', title:'先找到轮廓，再把外观变成可比较的数值', html:'<p><b>分割</b>是找出属于岩屑的像素；相邻的前景像素连成一块，称为<b>连通域</b>，本例把它作为一个检出颗粒。两粒靠拢、泥浆遮盖或严重过曝，都会影响轮廓，因此先检查“圈到了什么”，再问“它像什么”。</p><p><b>RGB</b>表示红、绿、蓝三个颜色通道，每个像素的通道值为0–255。轮廓内的颜色均值、明暗差异、纹理和形状，称为<b>特征</b>。已知颜色的参考片帮助校正照明影响；被遮住或过曝截断的信息仍会丢失。下图在实际局部标出扫描位置，再把轮廓内像素的亮度展开。</p>'+staticFeatureFigure()+'<p><b>k近邻</b>把当前颗粒的特征与有标注的参考颗粒比较；k是选取的参考颗粒个数。<b>距离越小，表示这些特征越相似</b>，再用距离加权形成候选。特征尺度由训练组确定。支持度表示近邻投票中支持这个候选的份额。</p><p>本例16维分类特征包含颜色、纹理和形状；<b>绝对像素面积用于整盘汇总，不进入16维分类距离</b>。演示将实际近邻图片、距离与颜色规则基线放在一起，便于回查依据。</p><p class="fx-note">先在同一盘内调照明和附着，观察选中位置的轮廓与近邻怎样变化；再切换摆盘，比较相同坐标的轮廓形状与交叠。</p>'},
     {id:'m1-summary', en:'TWO DENOMINATORS', title:'最后说明：你统计的是颗粒数，还是可见面积', html:'<p>按<b>颗粒数</b>统计，每个检出颗粒都是一票；按<b>可见面积</b>统计，每个像素都是一票。一粒大岩屑与几粒小岩屑，因此会得到不同的占比。</p>'+exampleProportions()+'<p>主演示同时显示两个分母：全部检出轮廓的数量、这些轮廓覆盖的可见像素之和。<b>待复核仍保留在分母里</b>。轮廓合并时，计数可能减少；可见像素受遮盖时，面积也会改变。</p><p class="fx-note">两条比例带分别回答：这一盘里各类颗粒有多少、各占多大可见面积。读数时连同分子和分母一起比较。</p>'}
   ];

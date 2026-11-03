@@ -1,0 +1,125 @@
+{
+  "at": "2026-11-03T10:00:35.318Z",
+  "evidenceType": "Actual browser UI operations; numerical checks recorded separately",
+  "passed": 21,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "M4 距离与分配",
+      "pass": true,
+      "observed": "实际记录到三中心的距离；629/614/653点分配"
+    },
+    {
+      "name": "M4 均值与移动",
+      "pass": true,
+      "observed": "组B -9.720÷614=-0.0158，-9.107÷614=-0.0148"
+    },
+    {
+      "name": "M4 实际点选择",
+      "pass": true,
+      "observed": "参考点1500变为RESP-TRAIN-4 /1260.25m"
+    },
+    {
+      "name": "M4 自动回放",
+      "pass": true,
+      "observed": "从第1轮移动到第2轮完成"
+    },
+    {
+      "name": "M4 校正联动",
+      "pass": true,
+      "observed": "同1240m坐标从(-0.2095,-0.0427)变为(0.6282,-0.0427)"
+    },
+    {
+      "name": "M4 薄层采样与界面",
+      "pass": true,
+      "observed": "3个严格在区间内部采样点；候选1254.63/1255.38m"
+    },
+    {
+      "name": "M4 实际CSV下载",
+      "pass": true,
+      "observed": "Downloads/m4-钻进记录 (2).csv"
+    },
+    {
+      "name": "M4 实际结果保存",
+      "pass": true,
+      "observed": "Downloads/s17-drilltime-boundaries-m4-v3-r3 (1).json"
+    },
+    {
+      "name": "M4 CSV再导入",
+      "pass": true,
+      "observed": "来源import、ready；2个候选界面"
+    },
+    {
+      "name": "M4 已加载页断网重算",
+      "pass": true,
+      "observed": "CDP offline后完成第5轮，随后恢复联网"
+    },
+    {
+      "name": "M1 原照片回查",
+      "pass": true,
+      "observed": "选中页岩，出现页岩原图和所用局部"
+    },
+    {
+      "name": "M1 实际特征",
+      "pass": true,
+      "observed": "选中页岩水平方向0.0184、垂直0.0114，1195像素"
+    },
+    {
+      "name": "M1 数量/面积",
+      "pass": true,
+      "observed": "默认12轮廓、15095像素；各口径分母显示"
+    },
+    {
+      "name": "M1 附着重算",
+      "pass": true,
+      "observed": "附着0.4后可见像素14791，位置继续跟踪，待复核如实显示"
+    },
+    {
+      "name": "M1 样本下载与导入",
+      "pass": true,
+      "observed": "Downloads/m1-配套观测 (2).json；导入恢复15095像素"
+    },
+    {
+      "name": "M1 实际结果保存",
+      "pass": true,
+      "observed": "Downloads/s17-cuttings-lithology-m1-v2-r2 (2).json"
+    },
+    {
+      "name": "M2 回滚结果",
+      "pass": true,
+      "observed": "默认气峰与来源；紧凑近邻，新增大演算面板不存在"
+    },
+    {
+      "name": "M2 工况交互",
+      "pass": true,
+      "observed": "假设起下钻后峰A候选改为起下钻关联"
+    },
+    {
+      "name": "增强门户M4",
+      "pass": true,
+      "observed": "入口v1.13.0，iframe自动载入并显示实际演算"
+    },
+    {
+      "name": "老师原站添加",
+      "pass": true,
+      "observed": "选择文件多选5文件；0错误、2体积警告，添加成功"
+    },
+    {
+      "name": "老师原站刷新再操作",
+      "pass": true,
+      "observed": "刷新恢复v1.13.0，沙箱下一步进入分组"
+    }
+  ],
+  "limitations": [
+    "Directory-picker API was not accessible through the browser tool; the original portal supported5-file multi-select route was used.",
+    "Cold file:// opening was blocked by the browser tool URL policy. No workaround attempted; not accepted as passed.",
+    "Narrow390 layout was partially inspected before a final overflow/hover style adjustment. Full mobile acceptance and a mobile screenshot were not completed.",
+    "Teacher import exercised the final algorithm implementation before final typography/overflow CSS cleanup; no repeated import after that cleanup.",
+    "No new real-model/voice/image API tests; no all65-case browser rerun.",
+    "At user instruction, stopped additional validation and repeated browser checks."
+  ],
+  "screenshots": [
+    "output/playwright/m4-algorithm-2026-11-03/m4-centers-desktop.jpg",
+    "output/playwright/m4-algorithm-2026-11-03/m1-photo-features-desktop.jpg"
+  ]
+}

@@ -1,0 +1,1876 @@
+{
+  "at": "2026-11-03T09:54:49.844Z",
+  "evidenceType": "Actual numerical computation and source/hash checks. Not browser acceptance.",
+  "protectedRuntimeFiles": 310,
+  "protectedTeacherFiles": 46,
+  "protectedHomepageAssistantFiles": 11,
+  "passed": 466,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "m1 round-trip actual model input",
+      "pass": true
+    },
+    {
+      "name": "m1 import does not inherit evaluation metrics",
+      "pass": true
+    },
+    {
+      "name": "M1 default is real-photo texture composition",
+      "pass": true
+    },
+    {
+      "name": "M1 twelve separated contours",
+      "pass": true,
+      "observed": 12
+    },
+    {
+      "name": "M1 reference and observation source photographs disjoint",
+      "pass": true
+    },
+    {
+      "name": "M1 no invented field-accuracy metric",
+      "pass": true
+    },
+    {
+      "name": "M1 raw source photograph and crop are available",
+      "pass": true
+    },
+    {
+      "name": "M1 imported raw pixels reach same predictions",
+      "pass": true
+    },
+    {
+      "name": "M1 prediction ignores evaluation truth",
+      "pass": true
+    },
+    {
+      "name": "M1 merged changes real contours",
+      "pass": true
+    },
+    {
+      "name": "M1 occluded changes real contours",
+      "pass": true
+    },
+    {
+      "name": "m2 round-trip actual model input",
+      "pass": true
+    },
+    {
+      "name": "m2 import does not inherit evaluation metrics",
+      "pass": true
+    },
+    {
+      "name": "M2 context preserves actual gas",
+      "pass": true
+    },
+    {
+      "name": "M2 actual neighbors still change",
+      "pass": true
+    },
+    {
+      "name": "M2 no-peak state keeps valid training library",
+      "pass": true
+    },
+    {
+      "name": "m4 round-trip actual model input",
+      "pass": true
+    },
+    {
+      "name": "m4 import does not inherit evaluation metrics",
+      "pass": true
+    },
+    {
+      "name": "M4 replay has all1896 training points",
+      "pass": true
+    },
+    {
+      "name": "M4 replay is exact training input, not an illustrative cloud",
+      "pass": true
+    },
+    {
+      "name": "M4 frame SSE 0",
+      "pass": true
+    },
+    {
+      "name": "M4 frame total assigned count 0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 0/0/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 0/0/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 0/1/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 0/1/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 0/2/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 0/2/1",
+      "pass": true
+    },
+    {
+      "name": "M4 distance decomposition 0",
+      "pass": true
+    },
+    {
+      "name": "M4 frame SSE 1",
+      "pass": true
+    },
+    {
+      "name": "M4 frame total assigned count 1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 1/0/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 1/0/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 1/1/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 1/1/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 1/2/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 1/2/1",
+      "pass": true
+    },
+    {
+      "name": "M4 distance decomposition 1",
+      "pass": true
+    },
+    {
+      "name": "M4 frame SSE 2",
+      "pass": true
+    },
+    {
+      "name": "M4 frame total assigned count 2",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 2/0/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 2/0/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 2/1/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 2/1/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 2/2/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 2/2/1",
+      "pass": true
+    },
+    {
+      "name": "M4 distance decomposition 2",
+      "pass": true
+    },
+    {
+      "name": "M4 frame SSE 3",
+      "pass": true
+    },
+    {
+      "name": "M4 frame total assigned count 3",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 3/0/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 3/0/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 3/1/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 3/1/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 3/2/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 3/2/1",
+      "pass": true
+    },
+    {
+      "name": "M4 distance decomposition 3",
+      "pass": true
+    },
+    {
+      "name": "M4 frame SSE 4",
+      "pass": true
+    },
+    {
+      "name": "M4 frame total assigned count 4",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 4/0/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 4/0/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 4/1/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 4/1/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 4/2/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 4/2/1",
+      "pass": true
+    },
+    {
+      "name": "M4 distance decomposition 4",
+      "pass": true
+    },
+    {
+      "name": "M4 frame SSE 5",
+      "pass": true
+    },
+    {
+      "name": "M4 frame total assigned count 5",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 5/0/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 5/0/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 5/1/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 5/1/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 5/2/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 5/2/1",
+      "pass": true
+    },
+    {
+      "name": "M4 distance decomposition 5",
+      "pass": true
+    },
+    {
+      "name": "M4 frame SSE 6",
+      "pass": true
+    },
+    {
+      "name": "M4 frame total assigned count 6",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 6/0/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 6/0/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 6/1/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 6/1/1",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 6/2/0",
+      "pass": true
+    },
+    {
+      "name": "M4 actual mean 6/2/1",
+      "pass": true
+    },
+    {
+      "name": "M4 distance decomposition 6",
+      "pass": true
+    },
+    {
+      "name": "M4 sorted final centers equal actual fitted model",
+      "pass": true
+    },
+    {
+      "name": "M4 SSE never increases",
+      "pass": true
+    },
+    {
+      "name": "M4 selected actual point changes source and distances",
+      "pass": true
+    },
+    {
+      "name": "M4 execution shows sums, means and actual source",
+      "pass": true
+    },
+    {
+      "name": "M4 correction changes actual feature vectors",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-evidence-report/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-evidence-report/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-evidence-report/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-evidence-report/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-evidence-report/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-fluorescence-review/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-fluorescence-review/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-fluorescence-review/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-fluorescence-review/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/cases/s17-fluorescence-review/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/.workbuddy/memory/2026-10-22.md",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/.workbuddy/memory/MEMORY.md",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/cases/welllog-layer.case.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/cases/welllog-layer.demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/cases/_template.case.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/cases/_template.case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/admin.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/case-demo-host.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/case-upload.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/kit.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/layout.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/registry.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/shell.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/tokens.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/core/ui.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/assets/data.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/docs/如何添加新案例.md",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/firstbreak-pick-case/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/firstbreak-pick-case/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/firstbreak-pick-case/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/firstbreak-pick-case/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/firstbreak-pick-case/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal-original/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/.workbuddy/memory/2026-10-22.md",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/.workbuddy/memory/MEMORY.md",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/cases/welllog-layer.demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/cases/_template.case.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/cases/_template.case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/admin.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/case-demo-host.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/case-upload.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/kit.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/layout.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/registry.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/shell.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/tokens.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/core/ui.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/assets/data.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/docs/如何添加新案例.md",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/firstbreak-pick-case/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/firstbreak-pick-case/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/firstbreak-pick-case/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes 石油勘探开发智能化案例集/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-assistant-config.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-assistant-history.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-assistant.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-assistant.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-home.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-live2d-data.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-live2d-loader.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-live2d.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-process-atlas.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes portal/assets/s17-process-atlas.js",
+      "pass": true
+    },
+    {
+      "name": "Homepage only case-catalog/course cache tokens changed",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-quality/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-quality/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-quality/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-quality/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-woc-strength/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-woc-strength/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c1-cement-woc-strength/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c2-cement-displacement/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c2-cement-displacement/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c2-cement-displacement/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c3-cement-loss-risk/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c3-cement-loss-risk/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c3-cement-loss-risk/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c4-casing-standoff/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-c4-casing-standoff/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co1-completion-choice/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co1-completion-choice/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co1-completion-choice/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co1-completion-choice/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co2-completion-zone-design/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co2-completion-zone-design/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co2-completion-zone-design/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-completion-seal-test/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-completion-seal-test/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-tubing-stress/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-tubing-stress/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co3-tubing-stress/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co4-sliding-sleeve-control/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-co4-sliding-sleeve-control/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d1-rop-optimization/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d1-rop-optimization/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d1-rop-optimization/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d2-drilling-precursor/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d2-drilling-precursor/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d2-drilling-precursor/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d3-trajectory-control/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d3-trajectory-control/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d3-trajectory-control/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d4-tool-condition/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d4-tool-condition/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d4-tool-condition/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d4-tool-condition/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d4-tool-condition/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d5-mud-rheology/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d5-mud-rheology/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-d5-mud-rheology/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e1-fracture-optimization/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e1-fracture-optimization/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e1-fracture-optimization/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e2-fracture-geometry/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e2-fracture-geometry/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e2-fracture-geometry/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e3-chemical-mixture/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e3-chemical-mixture/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e4-steam-cycle/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e4-steam-cycle/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e4-steam-cycle/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e5-microbial-activity/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e5-microbial-activity/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-e5-microbial-activity/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g1-remote-lithology/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g1-remote-lithology/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g2-geochemical-anomaly/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g2-geochemical-anomaly/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-closure-spill/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-closure-spill/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-closure-spill/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-closure-spill/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-closure-spill/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-map-elements/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-map-elements/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-map-elements/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-map-elements/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g3-map-elements/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g4-fracture-survey/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g4-fracture-survey/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-g4-fracture-survey/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-depth-correlation/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-depth-correlation/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-design/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-design/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-design/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-design/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p1-perforation-design/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p2-perforation-shape/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p2-perforation-shape/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p2-perforation-shape/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p3-perforation-catalog/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p3-perforation-catalog/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p3-perforation-catalog/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p4-perforation-effect/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p4-perforation-effect/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-p4-perforation-effect/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr1-pump-card/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr1-pump-card/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr1-pump-card/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr1-pump-card/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr1-pump-card/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr2-production-forecast/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr2-production-forecast/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr3-water-allocation/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr3-water-allocation/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr3-water-allocation/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr4-esp-warning/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr4-esp-warning/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr4-esp-warning/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr5-wax-risk/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr5-wax-risk/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-pr5-wax-risk/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r1-distillation-optimization/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r1-distillation-optimization/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r1-distillation-optimization/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r2-fcc-product-yields/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r2-fcc-product-yields/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r2-fcc-product-yields/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r3-maintenance-trend/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r3-maintenance-trend/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r3-maintenance-trend/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r4-lab-audit/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r4-lab-audit/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r4-lab-audit/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r5-quality-softsensor/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-r5-quality-softsensor/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s1-seismic-fault/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s1-seismic-fault/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s1-seismic-fault/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s2-seismic-facies/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s2-seismic-facies/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s2-seismic-facies/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s3-first-arrival/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s3-first-arrival/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s3-first-arrival/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s3-first-arrival/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s3-first-arrival/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s4-reservoir-inversion/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s4-reservoir-inversion/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s4-reservoir-inversion/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s5-seismic-denoise/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-s5-seismic-denoise/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t1-pipeline-leak/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t1-pipeline-leak/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t1-pipeline-leak/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t2-corrosion-growth/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t2-corrosion-growth/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t3-gathering-pump-optimization/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t3-gathering-pump-optimization/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t4-meter-drift-calibration/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t4-meter-drift-calibration/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t5-tank-level-crosscheck/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-t5-tank-level-crosscheck/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w1-log-boundaries/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w1-log-boundaries/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w1-log-boundaries/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w2-porosity-calibration/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w2-porosity-calibration/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w2-porosity-calibration/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w3-borehole-fractures/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w3-borehole-fractures/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w4-log-lithology/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w4-log-lithology/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w4-log-lithology/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w4-log-lithology/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w4-log-lithology/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w5-curve-repair/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w5-curve-repair/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-w5-curve-repair/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo1-workover-retrieval/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo1-workover-retrieval/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo1-workover-retrieval/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo2-fishing-tools/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo2-fishing-tools/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo2-fishing-tools/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo3-casing-damage/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo3-casing-damage/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo3-casing-damage/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo4-workover-warning/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo4-workover-warning/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo4-workover-warning/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo5-maintenance-interval/case.json",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.css",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.js",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo5-maintenance-interval/demo/index.html",
+      "pass": true
+    },
+    {
+      "name": "Protected exact bytes dist/expansion-cases/s17x-wo5-maintenance-interval/README.txt",
+      "pass": true
+    },
+    {
+      "name": "Existing core/generator unchanged case-src/m1/engine.js",
+      "pass": true
+    },
+    {
+      "name": "Existing core/generator unchanged case-src/m1/images.js",
+      "pass": true
+    },
+    {
+      "name": "Existing core/generator unchanged case-src/m2/engine.js",
+      "pass": true
+    },
+    {
+      "name": "Existing core/generator unchanged case-src/m2/data.js",
+      "pass": true
+    },
+    {
+      "name": "Existing core/generator unchanged case-src/m4/engine.js",
+      "pass": true
+    },
+    {
+      "name": "M2 rejected explanatory panel absent from runtime",
+      "pass": true
+    },
+    {
+      "name": "M2 compact neighbor and clock views retained",
+      "pass": true
+    },
+    {
+      "name": "Five-file contract and6MiB s17-cuttings-lithology",
+      "pass": true
+    },
+    {
+      "name": "Five-file contract and6MiB s17-drilltime-boundaries",
+      "pass": true
+    },
+    {
+      "name": "Five-file contract and6MiB s17-mudgas-context",
+      "pass": true
+    }
+  ]
+}

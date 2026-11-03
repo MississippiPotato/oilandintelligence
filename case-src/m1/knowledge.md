@@ -97,3 +97,14 @@
 ## 2026-11-03 方法与研究来源对应
 
 相关论文：Alzubaidi et al. (2021), Automated lithology classification from drill core images using convolutional neural networks. JPSE 197,107933. https://doi.org/10.1016/j.petrol.2020.107933 。论文使用CNN；本例真实照片用于观察，当前教学岩屑分类器为加权kNN。
+
+
+## 2026-11-03 材料修订：从抽象色块到真实照片纹理
+
+默认实验改为照片纹理构造拼盘：使用 Alzubaidi (2021) CC BY 4.0 岩芯图像，在明确构造的轮廓中呈现真实颜色与纹理，选中轮廓能回查原照片与所用局部。它不是岩屑实拍，原照片的2×2 cm标尺也不转用于拼盘的颗粒尺寸。
+
+来源：https://data.mendeley.com/datasets/b6rj29mrss/1 ，DOI 10.17632/b6rj29mrss.1。原研究 Automated lithology classification from drill core images using convolutional neural networks，DOI 10.1016/j.petrol.2020.107933。原论文方法为CNN；本页仍为手工特征与加权kNN，不声称复现论文。
+
+参考库使用每类照片1，演示使用照片2。原六图来自发布者test分区；此处是本地教学材料划分，不是沿用论文的训练/测试实验。9个参考拼盘只是同三张照片的重排与观察条件变化，不是9口独立井。设置固定k=5、支持度门槛0.55、距离门槛5，不使用观察照片答案调参；不显示分类精度。当前照片标签和来源框只用于回查，预测输入仍仅为白光像素、参照值。
+
+读者操作：选中一粒→观察原照片局部→看实际颜色/纹理特征→看近邻图像与候选→比较整盘数量/面积口径。页岩保留来源名称，不改叫泥岩。遇到陌生纹理的待复核保留真实计算结果。

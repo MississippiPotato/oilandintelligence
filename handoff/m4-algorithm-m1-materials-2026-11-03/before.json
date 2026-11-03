@@ -1,0 +1,1543 @@
+{
+  "commit": "d49a018de68dc92a6861543d21a8ecd4deff41d8",
+  "at": "2026-11-03T09:23:14.291Z",
+  "ids": [
+    "s17-cuttings-lithology",
+    "s17-mudgas-context",
+    "s17-drilltime-boundaries"
+  ],
+  "files": {
+    "dist/cases/s17-cuttings-lithology/case.json": {
+      "bytes": 748813,
+      "sha256": "f7382fdc47e0667d944fe9bdac201da10461153f332d88f384d7917cebb4d279"
+    },
+    "dist/cases/s17-cuttings-lithology/demo/demo.css": {
+      "bytes": 100870,
+      "sha256": "0aa388dfb63923bdb0d3081aa543682b9f15f5fe5ce8d7911b6c09909a4efcf5"
+    },
+    "dist/cases/s17-cuttings-lithology/demo/demo.js": {
+      "bytes": 378021,
+      "sha256": "88e425d4c3f73be651c5a1cf8bef5f0faf2c654554fdfa2eeeca54dfb07ca274"
+    },
+    "dist/cases/s17-cuttings-lithology/demo/index.html": {
+      "bytes": 601457,
+      "sha256": "c70b6767e8bf492166c4d65c5fba906f7c5e0f733f92ea9dbc20e2102ab7cce5"
+    },
+    "dist/cases/s17-cuttings-lithology/README.txt": {
+      "bytes": 1513,
+      "sha256": "a61f819543a24e8bd044dbbae89e1cd21773d1a97e04cb0600a752aa8f7539c8"
+    },
+    "dist/cases/s17-drilltime-boundaries/case.json": {
+      "bytes": 702694,
+      "sha256": "9542e2fb0df58adb7c5a041b147b32c9c02ef9f530277adc93d1a8b157f715c7"
+    },
+    "dist/cases/s17-drilltime-boundaries/demo/demo.css": {
+      "bytes": 100870,
+      "sha256": "0aa388dfb63923bdb0d3081aa543682b9f15f5fe5ce8d7911b6c09909a4efcf5"
+    },
+    "dist/cases/s17-drilltime-boundaries/demo/demo.js": {
+      "bytes": 381717,
+      "sha256": "f3b712b7d438528df8d46a6d5202f56138986bc8ddb4231d81a3d48133d7172d"
+    },
+    "dist/cases/s17-drilltime-boundaries/demo/index.html": {
+      "bytes": 543674,
+      "sha256": "db650b74eb8d3f36541741a506516910f35a5e21ffe919ddf890a9cbcf50b4e0"
+    },
+    "dist/cases/s17-drilltime-boundaries/README.txt": {
+      "bytes": 1500,
+      "sha256": "eec816b516009ac8846cabfa9f669e9f5651e74b8a8c17191da433f60ca6139b"
+    },
+    "dist/cases/s17-evidence-report/case.json": {
+      "bytes": 425588,
+      "sha256": "8e2adf2d779ae92ede85531b4b2450a0b81c926e93e76697dcb1121a5e5140b5"
+    },
+    "dist/cases/s17-evidence-report/demo/demo.css": {
+      "bytes": 100870,
+      "sha256": "0aa388dfb63923bdb0d3081aa543682b9f15f5fe5ce8d7911b6c09909a4efcf5"
+    },
+    "dist/cases/s17-evidence-report/demo/demo.js": {
+      "bytes": 505921,
+      "sha256": "e5032d9268f8111d6ff3bb0f14bd62fb05a8b9fe5ac6634731f0e11d799e53ae"
+    },
+    "dist/cases/s17-evidence-report/demo/index.html": {
+      "bytes": 279154,
+      "sha256": "b377f656d1f8a9e41deab06acbde1f313c21bf9644173bd482c8972913c9068d"
+    },
+    "dist/cases/s17-evidence-report/README.txt": {
+      "bytes": 1486,
+      "sha256": "e29e305a98aed5b5898ce03a4720924e34f1bc12fcefb4970f511377b2359ccc"
+    },
+    "dist/cases/s17-fluorescence-review/case.json": {
+      "bytes": 760801,
+      "sha256": "9e14bbbc55dd4b0b5d6df736144c854f73de1670eb40db1ee5bcc15e5056d108"
+    },
+    "dist/cases/s17-fluorescence-review/demo/demo.css": {
+      "bytes": 100870,
+      "sha256": "0aa388dfb63923bdb0d3081aa543682b9f15f5fe5ce8d7911b6c09909a4efcf5"
+    },
+    "dist/cases/s17-fluorescence-review/demo/demo.js": {
+      "bytes": 413183,
+      "sha256": "9a7cb9ef1b370b083246b0babde01749b689c3da70156476b72be83513a9cf57"
+    },
+    "dist/cases/s17-fluorescence-review/demo/index.html": {
+      "bytes": 618340,
+      "sha256": "0791bfb65a4ad9e690c308907d167824b430a5344c3eca37775fe34f7f8ed8f3"
+    },
+    "dist/cases/s17-fluorescence-review/README.txt": {
+      "bytes": 1520,
+      "sha256": "283c59dc4a3323a595ff0ccc9cdbe63e7544d0571dfb37789648b71cabbcb465"
+    },
+    "dist/cases/s17-mudgas-context/case.json": {
+      "bytes": 569152,
+      "sha256": "eea7b2bf421fb95d7f66eb27c7cc26c8bc02e089fd5224d7f03d77cfc8889fab"
+    },
+    "dist/cases/s17-mudgas-context/demo/demo.css": {
+      "bytes": 105395,
+      "sha256": "4bb9793648e0ee5121d86fc942ab8098a894412782e9b32556381e141f022b74"
+    },
+    "dist/cases/s17-mudgas-context/demo/demo.js": {
+      "bytes": 942014,
+      "sha256": "46961391144e0fb2d21d4d9b2c9a920fe21b0756f53fb15508abcdf5fb9a7389"
+    },
+    "dist/cases/s17-mudgas-context/demo/index.html": {
+      "bytes": 483772,
+      "sha256": "10c048cd747a559ea19516bc204e715591849ccc1a6732172e476bc7100a06ed"
+    },
+    "dist/cases/s17-mudgas-context/README.txt": {
+      "bytes": 1631,
+      "sha256": "597424f6b6bf96c5655c607809bf7f12db07699db8808a0461866d2ad68566fb"
+    },
+    "portal-original/.workbuddy/memory/2026-10-22.md": {
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    "portal-original/.workbuddy/memory/MEMORY.md": {
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    "portal-original/assets/cases/welllog-layer.case.js": {
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    "portal-original/assets/cases/welllog-layer.demo.js": {
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    "portal-original/assets/cases/_template.case.js": {
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    "portal-original/assets/cases/_template.case.json": {
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    "portal-original/assets/core/admin.js": {
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13"
+    },
+    "portal-original/assets/core/case-demo-host.js": {
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    "portal-original/assets/core/case-upload.js": {
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99"
+    },
+    "portal-original/assets/core/kit.js": {
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    "portal-original/assets/core/layout.css": {
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    "portal-original/assets/core/registry.js": {
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    "portal-original/assets/core/shell.js": {
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18"
+    },
+    "portal-original/assets/core/tokens.css": {
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    "portal-original/assets/core/ui.css": {
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    "portal-original/assets/data.js": {
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    "portal-original/docs/如何添加新案例.md": {
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    "portal-original/firstbreak-pick-case/case.json": {
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    "portal-original/firstbreak-pick-case/demo/demo.css": {
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    "portal-original/firstbreak-pick-case/demo/demo.js": {
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    "portal-original/firstbreak-pick-case/demo/index.html": {
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    },
+    "portal-original/firstbreak-pick-case/README.txt": {
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    "portal-original/index.html": {
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97"
+    },
+    "石油勘探开发智能化案例集/.workbuddy/memory/2026-10-22.md": {
+      "bytes": 12351,
+      "sha256": "5f09efe3905cc77537fa56d619a07249b631b3feff3579887927cc57d3ee8631"
+    },
+    "石油勘探开发智能化案例集/.workbuddy/memory/MEMORY.md": {
+      "bytes": 1033,
+      "sha256": "c92fec385e387300c125d04cf4ec4733683f1f41d5812dee8a7f2508166dcd8a"
+    },
+    "石油勘探开发智能化案例集/assets/cases/welllog-layer.case.js": {
+      "bytes": 20872,
+      "sha256": "aa77d965f07ac6af4ec60fa66ddb916536f12eded49f1386320d3e55e73a9313"
+    },
+    "石油勘探开发智能化案例集/assets/cases/welllog-layer.demo.js": {
+      "bytes": 22766,
+      "sha256": "cda5c3883fe99ba41eebd12c6e8bb3997e9162d650e58095361367e5e1f8b849"
+    },
+    "石油勘探开发智能化案例集/assets/cases/_template.case.js": {
+      "bytes": 8138,
+      "sha256": "240f7ba5f403f829c28c9568d0140b6c73d1f678e8a6bd04456a6a3becf694a6"
+    },
+    "石油勘探开发智能化案例集/assets/cases/_template.case.json": {
+      "bytes": 5053,
+      "sha256": "199671209a54f00b2e573a60d1912f0257bd004a8201ebfcd4d9de6db43aefc8"
+    },
+    "石油勘探开发智能化案例集/assets/core/admin.js": {
+      "bytes": 24682,
+      "sha256": "25abed50581002bb10740abaa4eb4b79e01f6c716b69907eaa1c385ed2dc7c13"
+    },
+    "石油勘探开发智能化案例集/assets/core/case-demo-host.js": {
+      "bytes": 14476,
+      "sha256": "b714731358d5f5b7c68ded5dfedef1c126683ce7861e38db0ac9375c5ff8cea2"
+    },
+    "石油勘探开发智能化案例集/assets/core/case-upload.js": {
+      "bytes": 66694,
+      "sha256": "7e6591bdbd07d1b1b5dba2140190787c94b4f91217c7d0fd96ccb86807f97a99"
+    },
+    "石油勘探开发智能化案例集/assets/core/kit.js": {
+      "bytes": 8151,
+      "sha256": "617d84843cad0ad45ba52b0a56c17fba116adb9fb55dea85f3506dc23ac6011f"
+    },
+    "石油勘探开发智能化案例集/assets/core/layout.css": {
+      "bytes": 10981,
+      "sha256": "50ebb959e0c3c6d94984a642ab4e2dd00baa856cb24c4f08a082af0f66264c8b"
+    },
+    "石油勘探开发智能化案例集/assets/core/registry.js": {
+      "bytes": 6485,
+      "sha256": "8f05258ab1773f632fcf85b42d0217832955db6db88c4e4cb1da9642c3ddd993"
+    },
+    "石油勘探开发智能化案例集/assets/core/shell.js": {
+      "bytes": 63351,
+      "sha256": "56e19af3531ce99b5b6dfc3a9366426faf649c31f22eb7bbd6380aaf074a5e18"
+    },
+    "石油勘探开发智能化案例集/assets/core/tokens.css": {
+      "bytes": 6193,
+      "sha256": "342cf33930a31b095c9d5dbcc7476b4e562d4b177bbd07a41f2f906d91aadd89"
+    },
+    "石油勘探开发智能化案例集/assets/core/ui.css": {
+      "bytes": 48137,
+      "sha256": "e6f9c9d52285da1daf65e1cd4dedbe8c48a031ac65fc25cac8679e72d893c383"
+    },
+    "石油勘探开发智能化案例集/assets/data.js": {
+      "bytes": 79603,
+      "sha256": "c72429b12a68f11739f297e5fb70ab353e5fb4a377ec0e5522f4da9ddfd478e2"
+    },
+    "石油勘探开发智能化案例集/docs/如何添加新案例.md": {
+      "bytes": 10878,
+      "sha256": "a9d79418c3a2b10646fd67531ddfdb2498144830edbb43ceebe12c08dba1cab9"
+    },
+    "石油勘探开发智能化案例集/firstbreak-pick-case/case.json": {
+      "bytes": 6704,
+      "sha256": "f8f1abc31ac3949fed5ff8dc93e8b8152fd370c11475545f463cc27279de43e7"
+    },
+    "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.css": {
+      "bytes": 1644,
+      "sha256": "c32c7f70a3b1d7338d57ed35b4ad9bc6b533abc5918cf0860d8bf4a99ab25f49"
+    },
+    "石油勘探开发智能化案例集/firstbreak-pick-case/demo/demo.js": {
+      "bytes": 8847,
+      "sha256": "557177fb73470f5ab047c02ce41df78cdf529564effe9d8bffd3fb6d8ccd8ae7"
+    },
+    "石油勘探开发智能化案例集/firstbreak-pick-case/demo/index.html": {
+      "bytes": 1598,
+      "sha256": "e689e7bd35ddaa2dc4be4907322a8b41b18fbc0647b42050f254bead834071a5"
+    },
+    "石油勘探开发智能化案例集/firstbreak-pick-case/README.txt": {
+      "bytes": 1411,
+      "sha256": "848fa6f94869a71a0da5ddc09fff7c54b9bec4465f8f1469502f4ebac0a148a1"
+    },
+    "石油勘探开发智能化案例集/index.html": {
+      "bytes": 2408,
+      "sha256": "2557f9773c68f5a126d4a9ec68b228c408186b70bebfeb9f0009a348da57ed97"
+    },
+    "portal/assets/s17-assistant-config.js": {
+      "bytes": 454,
+      "sha256": "b7da96309294468d582fba308822273b5d88ba4022c29564e1ce37932745a4c7"
+    },
+    "portal/assets/s17-assistant-history.js": {
+      "bytes": 3357,
+      "sha256": "669ed7dc6d7ed9d31732445b413c5a701787ece6a50897f589b91526f3fcb59a"
+    },
+    "portal/assets/s17-assistant.css": {
+      "bytes": 25387,
+      "sha256": "84dbff5e9138580cb7680afd2236ba6e3777b856218d9474b544a7c84c9010ec"
+    },
+    "portal/assets/s17-assistant.js": {
+      "bytes": 35024,
+      "sha256": "32bc17bf6b1a76748aa8e4ab337443893fee638e0c9b186e92d5cea76dea8cf0"
+    },
+    "portal/assets/s17-home.js": {
+      "bytes": 6728,
+      "sha256": "5d5a116bb9ad730557cb9c1b1732a2ffc58143921312422cbd9cfadeb30fa3cc"
+    },
+    "portal/assets/s17-live2d-data.js": {
+      "bytes": 1681022,
+      "sha256": "9caef4af1ab325f3a72a14032ba61c0bdf2501a0ac0bf4f396ea6ea89d9ae596"
+    },
+    "portal/assets/s17-live2d-loader.js": {
+      "bytes": 2870,
+      "sha256": "568c4d295bd4e3a232945df0eb12ba3f6cdee9306f8c9a077971b806a79f679f"
+    },
+    "portal/assets/s17-live2d.js": {
+      "bytes": 3640,
+      "sha256": "7e885a45307adb5eaf9f800d5d4fea7a5caa8ed872f82a9001e9f9b13c8ef77c"
+    },
+    "portal/assets/s17-process-atlas.css": {
+      "bytes": 15736,
+      "sha256": "541912a98b94a8617cf999b76cbf50c7ced9d82d45d28697059ab1992841ac4e"
+    },
+    "portal/assets/s17-process-atlas.js": {
+      "bytes": 27123,
+      "sha256": "f274cc748072501ed9604cfdccfea4a98ffe333abae78632f8ab1a28b4914c83"
+    },
+    "portal/index.html": {
+      "bytes": 4472,
+      "sha256": "caf2b09cb09cca1f6548a5567874c952b0ecd8b994f82d742b944eb6dd560d05"
+    },
+    "index.html": {
+      "bytes": 449,
+      "sha256": "26a0e120b572a039a585fa425ade35d213d4a8f61b242827163ab996fb7943bf"
+    },
+    "dist/expansion-cases/s17x-c1-cement-quality/case.json": {
+      "bytes": 155590,
+      "sha256": "57a94bd683e8c326cfc86ab00dd203d4d717027e77468bf72355561807f50d8a"
+    },
+    "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.css": {
+      "bytes": 67794,
+      "sha256": "4bfb93d3faff7cd6fd4ba44bbca7c713cb007e9820521a79626203611d6fc2dd"
+    },
+    "dist/expansion-cases/s17x-c1-cement-quality/demo/demo.js": {
+      "bytes": 505863,
+      "sha256": "56434ce579ffc1bebf34817b02c7864d2ddaf1341452e256e6cc0bc6b5d5ef01"
+    },
+    "dist/expansion-cases/s17x-c1-cement-quality/demo/index.html": {
+      "bytes": 7204,
+      "sha256": "efa758d672721bf301d8d38ed7bf2de500e940a7c44460a2136cef3e41d347ec"
+    },
+    "dist/expansion-cases/s17x-c1-cement-quality/README.txt": {
+      "bytes": 1556,
+      "sha256": "8b728e1865d564f0ecc458f2c0bc95fac53de31de8316a8590def11165b2fe5f"
+    },
+    "dist/expansion-cases/s17x-c1-cement-woc-strength/case.json": {
+      "bytes": 70487,
+      "sha256": "c089d70f32e9307d72a863a4e82eaaedf051f1a1b9d3cae129c1a335c1b419b0"
+    },
+    "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.css": {
+      "bytes": 52309,
+      "sha256": "31a8f2c50ea4d377a1b6bae43092adf7101256f51bec227a06e96fb4ec516552"
+    },
+    "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/demo.js": {
+      "bytes": 214006,
+      "sha256": "a4153c31dfe1ea9f712d86d9fe66f0e7fa90d1857bf8c35dfc659b1157d9ee90"
+    },
+    "dist/expansion-cases/s17x-c1-cement-woc-strength/demo/index.html": {
+      "bytes": 524,
+      "sha256": "e19b32d19e56008f660f97827f3a960ece6a714334dc4720235e335558f27c0e"
+    },
+    "dist/expansion-cases/s17x-c1-cement-woc-strength/README.txt": {
+      "bytes": 2700,
+      "sha256": "303b219f4d71e8bbfe07c190770c2e5350d9202eae95710e12c3a10d02bf64b0"
+    },
+    "dist/expansion-cases/s17x-c2-cement-displacement/case.json": {
+      "bytes": 207084,
+      "sha256": "700fbc9fdca0ace65fd410e0c4b6cfeae726cca3fafeb256566d81ec94a46dd8"
+    },
+    "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.css": {
+      "bytes": 61560,
+      "sha256": "517583d5a6a11ebc4b25b0ea47f20181c2ee1fdf7d6caacad3a8e9e50f974057"
+    },
+    "dist/expansion-cases/s17x-c2-cement-displacement/demo/demo.js": {
+      "bytes": 403147,
+      "sha256": "881005bb742a720b96185fee98fb0a2f667c91f6d2299d447c6e00c56e494b8a"
+    },
+    "dist/expansion-cases/s17x-c2-cement-displacement/demo/index.html": {
+      "bytes": 2573,
+      "sha256": "bef1f61c416bdeb28c2d75b0a78d8c28b6a7ed5bc74707378c51bdbaf1e8b5ea"
+    },
+    "dist/expansion-cases/s17x-c2-cement-displacement/README.txt": {
+      "bytes": 1184,
+      "sha256": "d9a50d6076c9874a6f87a7e9722345b1b3263244769ddc6d709497eeb0ccb66c"
+    },
+    "dist/expansion-cases/s17x-c3-cement-loss-risk/case.json": {
+      "bytes": 104982,
+      "sha256": "5d23319f88b3a65867414dcb98324192d588e013a21f3c5ed16cec7be059f9f6"
+    },
+    "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.css": {
+      "bytes": 61560,
+      "sha256": "517583d5a6a11ebc4b25b0ea47f20181c2ee1fdf7d6caacad3a8e9e50f974057"
+    },
+    "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/demo.js": {
+      "bytes": 357743,
+      "sha256": "d1fff16e0b6e1346cdd2cbbfa408e78441953130983b61ae7e81d1343f180d88"
+    },
+    "dist/expansion-cases/s17x-c3-cement-loss-risk/demo/index.html": {
+      "bytes": 2578,
+      "sha256": "e244e81cfd0c99b15765932e926fb7ddf8ed8c6e5eb59d7da6e7b0005ba5d22e"
+    },
+    "dist/expansion-cases/s17x-c3-cement-loss-risk/README.txt": {
+      "bytes": 1181,
+      "sha256": "3f1cda0290e58de69f43643cbabca2104b63e61014bfbd87f2eb260773a481d6"
+    },
+    "dist/expansion-cases/s17x-c4-casing-standoff/case.json": {
+      "bytes": 102733,
+      "sha256": "781cd7e20caba4bd856eaff65bbb7c71af572f978b9a343c0718a3e3230fa786"
+    },
+    "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.css": {
+      "bytes": 61560,
+      "sha256": "517583d5a6a11ebc4b25b0ea47f20181c2ee1fdf7d6caacad3a8e9e50f974057"
+    },
+    "dist/expansion-cases/s17x-c4-casing-standoff/demo/demo.js": {
+      "bytes": 348514,
+      "sha256": "4ef82156f21288b75330cf99f716bcc2dd7bcef78729783ac96f78a3e6e140fc"
+    },
+    "dist/expansion-cases/s17x-c4-casing-standoff/demo/index.html": {
+      "bytes": 2521,
+      "sha256": "0d69df9e0a7ba14fb29c4479a48dde423fb5d24db360db39987f15058651b5f1"
+    },
+    "dist/expansion-cases/s17x-c4-casing-standoff/README.txt": {
+      "bytes": 1152,
+      "sha256": "18e7a5c718d4109b28c7f89565765c8f52f4ac30769f89d41d39f1707dde89f5"
+    },
+    "dist/expansion-cases/s17x-co1-completion-choice/case.json": {
+      "bytes": 121351,
+      "sha256": "80da5f5db04857f2f6da1b8bc828dccffed35269ba8a1d77f4ab900941a33aa5"
+    },
+    "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.css": {
+      "bytes": 67794,
+      "sha256": "4bfb93d3faff7cd6fd4ba44bbca7c713cb007e9820521a79626203611d6fc2dd"
+    },
+    "dist/expansion-cases/s17x-co1-completion-choice/demo/demo.js": {
+      "bytes": 393942,
+      "sha256": "80be217e007ce81d539fa47ebe134564978bce178bff9caa9b05671372a982b7"
+    },
+    "dist/expansion-cases/s17x-co1-completion-choice/demo/index.html": {
+      "bytes": 7392,
+      "sha256": "bdf92015cfd0d30325c7c636945c2ee45fadce3bcb33078ec5c3f921059bbb1e"
+    },
+    "dist/expansion-cases/s17x-co1-completion-choice/README.txt": {
+      "bytes": 1548,
+      "sha256": "2f0ff23476d052ee650af50c28c099322a5c0506c784eab21e8dacf66b03b746"
+    },
+    "dist/expansion-cases/s17x-co2-completion-zone-design/case.json": {
+      "bytes": 129640,
+      "sha256": "42d6925339bbf91cc101ba41cfc2ae271b398654c15182d376b9c591f70122ea"
+    },
+    "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.css": {
+      "bytes": 61560,
+      "sha256": "517583d5a6a11ebc4b25b0ea47f20181c2ee1fdf7d6caacad3a8e9e50f974057"
+    },
+    "dist/expansion-cases/s17x-co2-completion-zone-design/demo/demo.js": {
+      "bytes": 368290,
+      "sha256": "34bddabc7f83f08d124a42b386988702f2a0eb65e284993e3493aa7b7de5f785"
+    },
+    "dist/expansion-cases/s17x-co2-completion-zone-design/demo/index.html": {
+      "bytes": 2637,
+      "sha256": "297854a6b9c8dc0891099551a38d405912401ff7a8bfd46748ebfcfac517011f"
+    },
+    "dist/expansion-cases/s17x-co2-completion-zone-design/README.txt": {
+      "bytes": 1205,
+      "sha256": "2d1c5f3cf6ff594af4238df122c8ba9c1726d5aedd5c49038bd99ede5e15b64f"
+    },
+    "dist/expansion-cases/s17x-co3-completion-seal-test/case.json": {
+      "bytes": 70524,
+      "sha256": "3e5bdb7ca37bc5516f1677b10a92c0ec1f2f1b1ed465ca68d778a5f8aae89f9f"
+    },
+    "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.css": {
+      "bytes": 52309,
+      "sha256": "31a8f2c50ea4d377a1b6bae43092adf7101256f51bec227a06e96fb4ec516552"
+    },
+    "dist/expansion-cases/s17x-co3-completion-seal-test/demo/demo.js": {
+      "bytes": 215890,
+      "sha256": "24ff1ab204c5b5d14ea7d4259c1f00a7250a0f3c3bb82edaaece72b1c5357a3f"
+    },
+    "dist/expansion-cases/s17x-co3-completion-seal-test/demo/index.html": {
+      "bytes": 521,
+      "sha256": "4d89de345d559a7cc2c6592e40ab6b69ea4043a370af0bb5a74766fbd1960c95"
+    },
+    "dist/expansion-cases/s17x-co3-completion-seal-test/README.txt": {
+      "bytes": 2868,
+      "sha256": "a0f5e415c38f44dd77ebe7180857464f2c743e51aef9a2098bb2603de176919a"
+    },
+    "dist/expansion-cases/s17x-co3-tubing-stress/case.json": {
+      "bytes": 106290,
+      "sha256": "b78be429d16088e83d552af4a5c7d85992930fa017a7b98974e02a7a23a25ee8"
+    },
+    "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.css": {
+      "bytes": 61560,
+      "sha256": "517583d5a6a11ebc4b25b0ea47f20181c2ee1fdf7d6caacad3a8e9e50f974057"
+    },
+    "dist/expansion-cases/s17x-co3-tubing-stress/demo/demo.js": {
+      "bytes": 354181,
+      "sha256": "21ebe92c4f5594a80d747e8850de66fdf198a07d30f7f7e8fd1a7962f2ce6aaf"
+    },
+    "dist/expansion-cases/s17x-co3-tubing-stress/demo/index.html": {
+      "bytes": 2791,
+      "sha256": "29716cccd87c5a74167257ace340dcee79325c51698e8afde31a366a7e1cad44"
+    },
+    "dist/expansion-cases/s17x-co3-tubing-stress/README.txt": {
+      "bytes": 1171,
+      "sha256": "151218a1bd2ca4899e8a308805db35b3e21c67c1d0ef6f740d1dba4b1ac9154c"
+    },
+    "dist/expansion-cases/s17x-co4-sliding-sleeve-control/case.json": {
+      "bytes": 127995,
+      "sha256": "3179834329543051f5d3c38347faf2c2706dc53e162b534898f5e95051aa0afc"
+    },
+    "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.css": {
+      "bytes": 61560,
+      "sha256": "517583d5a6a11ebc4b25b0ea47f20181c2ee1fdf7d6caacad3a8e9e50f974057"
+    },
+    "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/demo.js": {
+      "bytes": 373428,
+      "sha256": "7fe2ec00859f992bf28e77b664e479ffddd620a4b53f33b1c3612f21756ea301"
+    },
+    "dist/expansion-cases/s17x-co4-sliding-sleeve-control/demo/index.html": {
+      "bytes": 2635,
+      "sha256": "b3830fc5e300457c94218ad200584267c8ed3954c815c8ad1a296b3dac526f5b"
+    },
+    "dist/expansion-cases/s17x-co4-sliding-sleeve-control/README.txt": {
+      "bytes": 1212,
+      "sha256": "a97a6b7ed2b8a1fea5e493bec74ea4475e8785bb2d811691ab41926dcb1aec40"
+    },
+    "dist/expansion-cases/s17x-d1-rop-optimization/case.json": {
+      "bytes": 198000,
+      "sha256": "8f03bad60d584de9717917dfc7495acca31ee5b1bea19db874896256898a8383"
+    },
+    "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.css": {
+      "bytes": 68453,
+      "sha256": "3337b783ff85f42d39b3d255fc14e264c5bfe15a5cd63e01cbd0db3f2e48501c"
+    },
+    "dist/expansion-cases/s17x-d1-rop-optimization/demo/demo.js": {
+      "bytes": 435109,
+      "sha256": "ae2ab7c9be911aa775bb222126fc82402d0380a81ffae09e009c51b8dcd88862"
+    },
+    "dist/expansion-cases/s17x-d1-rop-optimization/demo/index.html": {
+      "bytes": 28300,
+      "sha256": "bb1ec39d6225b20e76bc372fed37163a6d49cb55fc29442023d7792e670e3ef4"
+    },
+    "dist/expansion-cases/s17x-d1-rop-optimization/README.txt": {
+      "bytes": 2606,
+      "sha256": "2b40b39d2e7eb81c3cb367cde9a81bda898f383342d03452387dace71bad85ad"
+    },
+    "dist/expansion-cases/s17x-d2-drilling-precursor/case.json": {
+      "bytes": 128973,
+      "sha256": "2858e5aff7dde06d342aa9b22ac694a9f7fb45b9a8cc34673ae29a76b79168dd"
+    },
+    "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.css": {
+      "bytes": 61955,
+      "sha256": "79162a8b1e28419812ef1d301c107c4ce505fd9c79797b203730963b66632191"
+    },
+    "dist/expansion-cases/s17x-d2-drilling-precursor/demo/demo.js": {
+      "bytes": 374949,
+      "sha256": "aaeab171c596898a5855ef8ad5bae95f708693749b7ee24f863f02aacfd4ec55"
+    },
+    "dist/expansion-cases/s17x-d2-drilling-precursor/demo/index.html": {
+      "bytes": 12120,
+      "sha256": "617845825297558738ac35bd2dd657c18a167fa9fd4587a0e6edb10135a494ca"
+    },
+    "dist/expansion-cases/s17x-d2-drilling-precursor/README.txt": {
+      "bytes": 941,
+      "sha256": "5b9cfc11789059b19a309c87709b8abd5caae183cd85f964c88169cb081ff8dc"
+    },
+    "dist/expansion-cases/s17x-d3-trajectory-control/case.json": {
+      "bytes": 106741,
+      "sha256": "69d1903198ce4e03ebec333e52948422c55f4e8707ac445ae07fa46a15f7976e"
+    },
+    "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.css": {
+      "bytes": 61955,
+      "sha256": "79162a8b1e28419812ef1d301c107c4ce505fd9c79797b203730963b66632191"
+    },
+    "dist/expansion-cases/s17x-d3-trajectory-control/demo/demo.js": {
+      "bytes": 358884,
+      "sha256": "52222f9aab3fe502296ceb8242b0b9696a9edeb7028929310890a81424fe1cc1"
+    },
+    "dist/expansion-cases/s17x-d3-trajectory-control/demo/index.html": {
+      "bytes": 10951,
+      "sha256": "a10bd35bd51614f134deb2d22e330e12193f12e6b5cca27a90532487286410be"
+    },
+    "dist/expansion-cases/s17x-d3-trajectory-control/README.txt": {
+      "bytes": 891,
+      "sha256": "dcde8be76f6b4e9e68f3b43592c8762b6bfcf465de3cca2e729b20d75b3ec59d"
+    },
+    "dist/expansion-cases/s17x-d4-tool-condition/case.json": {
+      "bytes": 114780,
+      "sha256": "cfecb25d848a26776fe0b092a92842aa92d4152204da76cfecdbdda72fe5b383"
+    },
+    "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.css": {
+      "bytes": 61955,
+      "sha256": "79162a8b1e28419812ef1d301c107c4ce505fd9c79797b203730963b66632191"
+    },
+    "dist/expansion-cases/s17x-d4-tool-condition/demo/demo.js": {
+      "bytes": 374140,
+      "sha256": "9870740d9b6b177a19d5e126639c673ab90fe4b48c0e7806610e28ec26b11d23"
+    },
+    "dist/expansion-cases/s17x-d4-tool-condition/demo/index.html": {
+      "bytes": 13189,
+      "sha256": "22eeee6bed8be113e3811315c67db7392542ab850496d232e8344789e9ab58cb"
+    },
+    "dist/expansion-cases/s17x-d4-tool-condition/README.txt": {
+      "bytes": 1048,
+      "sha256": "d6b4066cefdc9eee1fbc33ff8876ae815a44079dc4634fab708d9636ce10a1ec"
+    },
+    "dist/expansion-cases/s17x-d5-mud-rheology/case.json": {
+      "bytes": 174948,
+      "sha256": "5889f9f5575819ff27b6771fbee348b2b5c99b9a38e5d1d651a5a6852e2d70f5"
+    },
+    "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.css": {
+      "bytes": 61955,
+      "sha256": "79162a8b1e28419812ef1d301c107c4ce505fd9c79797b203730963b66632191"
+    },
+    "dist/expansion-cases/s17x-d5-mud-rheology/demo/demo.js": {
+      "bytes": 392717,
+      "sha256": "a40b76ecc11e0c3324a07260ea39f40fa39acc42eafe25f8b101478e01f3d060"
+    },
+    "dist/expansion-cases/s17x-d5-mud-rheology/demo/index.html": {
+      "bytes": 11966,
+      "sha256": "d856bc2b1e4d6c794aeabdc4935f15f079c0f4c683ea6b2352cd92ac344c9200"
+    },
+    "dist/expansion-cases/s17x-d5-mud-rheology/README.txt": {
+      "bytes": 1006,
+      "sha256": "26083324c1c0c8cb97db0f597019c4796382eea06fcd0ea4e61c0a94225caef7"
+    },
+    "dist/expansion-cases/s17x-e1-fracture-optimization/case.json": {
+      "bytes": 225018,
+      "sha256": "bccded6061b0dd83311d0fade729d9a121478dfb72a85228376d47ff51401489"
+    },
+    "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.css": {
+      "bytes": 67308,
+      "sha256": "bc660a0238264771decef58abf5dc6b43215b01b1a0623a41ff18f67b449053c"
+    },
+    "dist/expansion-cases/s17x-e1-fracture-optimization/demo/demo.js": {
+      "bytes": 462457,
+      "sha256": "7a9211470762bf489ff8d52c81a95535d4d9c51affecbed0d0803a37f63634dc"
+    },
+    "dist/expansion-cases/s17x-e1-fracture-optimization/demo/index.html": {
+      "bytes": 24552,
+      "sha256": "c182fac9d70b27e23b9a77f6d962b715a0a79865a1259a21ecbaaef244a5245b"
+    },
+    "dist/expansion-cases/s17x-e1-fracture-optimization/README.txt": {
+      "bytes": 1389,
+      "sha256": "4bc32fa9ebcba392c66ccadfd2404a5f0a5da04193f1a82c975cc4a9ae243476"
+    },
+    "dist/expansion-cases/s17x-e2-fracture-geometry/case.json": {
+      "bytes": 101932,
+      "sha256": "30bc56bf677d3c9d176dd9c741f3659c89c2e09d135a9a4dbf5e60eeb2e988d4"
+    },
+    "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-e2-fracture-geometry/demo/demo.js": {
+      "bytes": 345656,
+      "sha256": "28fcec8ef79d28ba6525f9bbba9e8c578ef058c56359c5990c917df6b3525370"
+    },
+    "dist/expansion-cases/s17x-e2-fracture-geometry/demo/index.html": {
+      "bytes": 11634,
+      "sha256": "0bfcc0614998b6d786c8f654cae32e425d01663fa3ff6e5d22b180a48c60e9cd"
+    },
+    "dist/expansion-cases/s17x-e2-fracture-geometry/README.txt": {
+      "bytes": 821,
+      "sha256": "802f24e71788d490bebe8e643db2a557df844c170f3f44374cf5e3a85c52d49b"
+    },
+    "dist/expansion-cases/s17x-e3-chemical-mixture/case.json": {
+      "bytes": 147526,
+      "sha256": "081b58c2a6d4df2a7a6dd70e6a0e68a6f3245e0827976dad31f12f21caf8ef04"
+    },
+    "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-e3-chemical-mixture/demo/demo.js": {
+      "bytes": 369107,
+      "sha256": "ecba7f7218da00c0865339bae92c2e918d1f5a2ffe6c39b1d309629d8a5bc2ee"
+    },
+    "dist/expansion-cases/s17x-e3-chemical-mixture/demo/index.html": {
+      "bytes": 11598,
+      "sha256": "4840ec1e4885151b24ca9bbf7331153fe10953a63ab6bd589efcc098ce762b35"
+    },
+    "dist/expansion-cases/s17x-e3-chemical-mixture/README.txt": {
+      "bytes": 875,
+      "sha256": "8dadf97abf4965830a4883d8759427d457961da2238c8409de1bf9219ba75afc"
+    },
+    "dist/expansion-cases/s17x-e4-steam-cycle/case.json": {
+      "bytes": 136947,
+      "sha256": "212f02bbcd02d81fcc8bab0932bf3db231e7e23a299a03570381bf7a332b3e76"
+    },
+    "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-e4-steam-cycle/demo/demo.js": {
+      "bytes": 368490,
+      "sha256": "7534a9336f89cd83993fd4362c80d269809067f0157291c5fef7d39609bd0a6b"
+    },
+    "dist/expansion-cases/s17x-e4-steam-cycle/demo/index.html": {
+      "bytes": 12039,
+      "sha256": "2fca48263ea8af63cfbe6cb6985c8b4416f47c9912f01f8562ad03a0e49f7135"
+    },
+    "dist/expansion-cases/s17x-e4-steam-cycle/README.txt": {
+      "bytes": 858,
+      "sha256": "ad9415b89cbf356c8068dfc4f6fe757552ff2ff7dd66cee7d1830ad38bf44909"
+    },
+    "dist/expansion-cases/s17x-e5-microbial-activity/case.json": {
+      "bytes": 173020,
+      "sha256": "9da5881449e81f769744113d126bfcd23b23f5e3dd7154caaa075a773b8a9caf"
+    },
+    "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-e5-microbial-activity/demo/demo.js": {
+      "bytes": 458124,
+      "sha256": "896cbb735a1a8505c6c6b6e238777d082a5110c47a7ede5a82a15e0f97529874"
+    },
+    "dist/expansion-cases/s17x-e5-microbial-activity/demo/index.html": {
+      "bytes": 11903,
+      "sha256": "033b7cd213c22acc8f2a88bc8a792ac1c5211406b0e96150158830271477f026"
+    },
+    "dist/expansion-cases/s17x-e5-microbial-activity/README.txt": {
+      "bytes": 841,
+      "sha256": "b913d0dd04cfe489e357d54241a5f40306001651bb32b03e5e1148b54e977052"
+    },
+    "dist/expansion-cases/s17x-g1-remote-lithology/case.json": {
+      "bytes": 174031,
+      "sha256": "9e5f292de4263f9f575cd080d6bad81ba464f84c1cca0a12e60c7b255e540e61"
+    },
+    "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.css": {
+      "bytes": 67964,
+      "sha256": "f834ea34ce112e3b1b5eca334e7e790bca2b350665ec06d7559984d723c38103"
+    },
+    "dist/expansion-cases/s17x-g1-remote-lithology/demo/demo.js": {
+      "bytes": 502746,
+      "sha256": "06ba2f768bdb76654db8b83ad3f879233d38e79e8a81302486b6afacaa4d03f0"
+    },
+    "dist/expansion-cases/s17x-g1-remote-lithology/demo/index.html": {
+      "bytes": 23146,
+      "sha256": "c6dd09a7246d072a2cafedc373c2d5ee06ba8117702a9bb713efb82c3c587810"
+    },
+    "dist/expansion-cases/s17x-g1-remote-lithology/README.txt": {
+      "bytes": 3554,
+      "sha256": "56beb381f6b96b098ec1c9b91118376f668d706e83a1d59900240788cd180573"
+    },
+    "dist/expansion-cases/s17x-g2-geochemical-anomaly/case.json": {
+      "bytes": 189347,
+      "sha256": "5c7175ad6d7cdf3bbd3ac4eb2224a3e98fa5e5f2d0b221284390d4e48d22fcc3"
+    },
+    "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.css": {
+      "bytes": 61262,
+      "sha256": "1e97180ab5685908a318aed64cbae6339ae2a1fd8b38cf0f484c39d2d9f4f950"
+    },
+    "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/demo.js": {
+      "bytes": 448932,
+      "sha256": "cc871bbb65ca9171324ffadfd66b5bbeb0899fb80bf023966a2f67e9172e9ca2"
+    },
+    "dist/expansion-cases/s17x-g2-geochemical-anomaly/demo/index.html": {
+      "bytes": 9941,
+      "sha256": "c4b29c3d9eba5cf9755411c0d14167e4a29a768ec7561f3fc8068174bb5e694f"
+    },
+    "dist/expansion-cases/s17x-g2-geochemical-anomaly/README.txt": {
+      "bytes": 1019,
+      "sha256": "f525deeefec8ee57572ea4c6f552f1206778f97b0a4bf3902162f3ecae07bbbe"
+    },
+    "dist/expansion-cases/s17x-g3-closure-spill/case.json": {
+      "bytes": 165079,
+      "sha256": "64b4073a6f7a35139f5388091603d36729b8c4329da0d571aef748217669c6b7"
+    },
+    "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.css": {
+      "bytes": 52104,
+      "sha256": "1b8fd75c9e35ce562eb486015b2eff98cd3acbe54d50aee45c779ab8610f1eb5"
+    },
+    "dist/expansion-cases/s17x-g3-closure-spill/demo/demo.js": {
+      "bytes": 370813,
+      "sha256": "3bc545984b13c844e26645b435c306a3a657efe8d2bfd4990dc8dc73f45d1426"
+    },
+    "dist/expansion-cases/s17x-g3-closure-spill/demo/index.html": {
+      "bytes": 388,
+      "sha256": "e5c56268cf68e00bff094a92391833e1d3342d23f9f6ee75d8cb84a67707f677"
+    },
+    "dist/expansion-cases/s17x-g3-closure-spill/README.txt": {
+      "bytes": 4658,
+      "sha256": "7ab479331281f4f5e8dee29f60f256a4e4624749edd6849c99fb5468fbd0c683"
+    },
+    "dist/expansion-cases/s17x-g3-map-elements/case.json": {
+      "bytes": 331760,
+      "sha256": "aa4e8a6b23a7e51b55cda2227c30ced96ba2ca2b8fa9e6c084634341b4e86451"
+    },
+    "dist/expansion-cases/s17x-g3-map-elements/demo/demo.css": {
+      "bytes": 61028,
+      "sha256": "e0c69ca20e87ec2c03863e1613dacef8593704fd7aceee2fb9c66ad2cca851b5"
+    },
+    "dist/expansion-cases/s17x-g3-map-elements/demo/demo.js": {
+      "bytes": 474340,
+      "sha256": "1f4530b8f6801c7bbd32c849d8a47f7a37dc2452b24da93917151dd0f4f2970b"
+    },
+    "dist/expansion-cases/s17x-g3-map-elements/demo/index.html": {
+      "bytes": 16616,
+      "sha256": "ab563c26efa53f3f437c1e004253f04f66827a14aaea54efe8ddea4602dae705"
+    },
+    "dist/expansion-cases/s17x-g3-map-elements/README.txt": {
+      "bytes": 845,
+      "sha256": "320e21e2f900873abef61385db1d302d346e8160525b8e3a42760ac8447fc0a2"
+    },
+    "dist/expansion-cases/s17x-g4-fracture-survey/case.json": {
+      "bytes": 140645,
+      "sha256": "aff30aea16a28e5d29f5aacdcc3568bed823ef16742baf57325b78ada1dafb0b"
+    },
+    "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.css": {
+      "bytes": 61028,
+      "sha256": "e0c69ca20e87ec2c03863e1613dacef8593704fd7aceee2fb9c66ad2cca851b5"
+    },
+    "dist/expansion-cases/s17x-g4-fracture-survey/demo/demo.js": {
+      "bytes": 370317,
+      "sha256": "5ef87fe574dc140df2df61fe24a8767a94037947e32e1bb1cc898a0ac48ae58b"
+    },
+    "dist/expansion-cases/s17x-g4-fracture-survey/demo/index.html": {
+      "bytes": 12310,
+      "sha256": "c842bc8987480cd6709485a338927d91f63fd3d2eefc700dbb560b06776c0fd6"
+    },
+    "dist/expansion-cases/s17x-g4-fracture-survey/README.txt": {
+      "bytes": 948,
+      "sha256": "c9bc116178e2d3460129926535ca1a133648f9c3d3ca7a741b7272c6454a5f40"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-depth-correlation/case.json": {
+      "bytes": 231988,
+      "sha256": "486bd0a69a6b9f592bebb9b7c7b3330d7116e0e9d37bab241c91b0c6e2b9a23f"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.css": {
+      "bytes": 55032,
+      "sha256": "b7e93abc11603d662cdfd8972b5814d89f96576c93c9c9779d9d2d6d44448063"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/demo.js": {
+      "bytes": 399516,
+      "sha256": "fd47b687bb78324be670ada0dec16efcc8663d2c7dfb33f3cf38e773b2afacf7"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-depth-correlation/demo/index.html": {
+      "bytes": 535,
+      "sha256": "53f0a56811e2affa1f31a6ce01c2020910da870b18b2f0b8db7a185f382501c3"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-depth-correlation/README.txt": {
+      "bytes": 6925,
+      "sha256": "3f1301426d992947caa728687aa2f9ed49a1413842d7cf1ce651aaf3b24a5087"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-design/case.json": {
+      "bytes": 153166,
+      "sha256": "a16f34627f551260cde32b030a45694268b5b42848d8298d3d8e8041d712dc2b"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.css": {
+      "bytes": 67192,
+      "sha256": "aa47b9c5fe7c3f4825b63d1eaa385acdde1c4fd569c22cf4e14db383ac07b6da"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-design/demo/demo.js": {
+      "bytes": 423505,
+      "sha256": "0d20b0b010781753edc602b22526de25de4fe46262887d9d58ade75931c2a089"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-design/demo/index.html": {
+      "bytes": 4998,
+      "sha256": "7d35154cabe43535123330fd5e877a044f14cb7c69d04268911335fe726387c6"
+    },
+    "dist/expansion-cases/s17x-p1-perforation-design/README.txt": {
+      "bytes": 3432,
+      "sha256": "67c244b6bd8b02fbcd223f1b3aa8b5911e57f296ec14f6856ec2d9b13f73ed23"
+    },
+    "dist/expansion-cases/s17x-p2-perforation-shape/case.json": {
+      "bytes": 110520,
+      "sha256": "79f6419a2dcd0a67e7506188903b50ef619a4e4fdafcc44d6c0d7c5cc2155f69"
+    },
+    "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.css": {
+      "bytes": 63328,
+      "sha256": "a69321910063c3ae249948eda36bda3c9a01a94d6ef9a6ff3be759601d23adab"
+    },
+    "dist/expansion-cases/s17x-p2-perforation-shape/demo/demo.js": {
+      "bytes": 352592,
+      "sha256": "eb5560b3a2e2e775e3de07a0624f87b42b786c1163acfd38222535562d194a35"
+    },
+    "dist/expansion-cases/s17x-p2-perforation-shape/demo/index.html": {
+      "bytes": 17030,
+      "sha256": "d168c2d0af69840622e2da85f2bf23c9776021ef9252f86c0d133caca9419521"
+    },
+    "dist/expansion-cases/s17x-p2-perforation-shape/README.txt": {
+      "bytes": 1342,
+      "sha256": "1d069ccf005d61614860b74d2b2d3725f96a484b99d6db834161ee8b2c73265d"
+    },
+    "dist/expansion-cases/s17x-p3-perforation-catalog/case.json": {
+      "bytes": 113413,
+      "sha256": "124c161bbb5ced65b082a9710c43c81d7ffc9d82cc20d4338563cb4c8f68ba9d"
+    },
+    "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.css": {
+      "bytes": 63328,
+      "sha256": "a69321910063c3ae249948eda36bda3c9a01a94d6ef9a6ff3be759601d23adab"
+    },
+    "dist/expansion-cases/s17x-p3-perforation-catalog/demo/demo.js": {
+      "bytes": 359294,
+      "sha256": "fb58e963fbc94c1ebb32b06b1a0643baa545b9bd4f94af1d96b61c506f867269"
+    },
+    "dist/expansion-cases/s17x-p3-perforation-catalog/demo/index.html": {
+      "bytes": 17429,
+      "sha256": "9fd46f893376442d8aebad0ea4304b3f360766b802bfed0b8f8d9137402986a3"
+    },
+    "dist/expansion-cases/s17x-p3-perforation-catalog/README.txt": {
+      "bytes": 1345,
+      "sha256": "af8cbefd45c014e5f6ba9b6f5a209c7eb042f8d447a9128b28f76b72195868dd"
+    },
+    "dist/expansion-cases/s17x-p4-perforation-effect/case.json": {
+      "bytes": 108760,
+      "sha256": "ee426bfe4bfbe5cc0a613f79538b6e8d22dd692b6f90bf245a726bff5cbc85d6"
+    },
+    "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.css": {
+      "bytes": 63328,
+      "sha256": "a69321910063c3ae249948eda36bda3c9a01a94d6ef9a6ff3be759601d23adab"
+    },
+    "dist/expansion-cases/s17x-p4-perforation-effect/demo/demo.js": {
+      "bytes": 354786,
+      "sha256": "d93edbc43da96665c0f3bbe4946808df3b12ba678334ab19413f8d6f8a39df05"
+    },
+    "dist/expansion-cases/s17x-p4-perforation-effect/demo/index.html": {
+      "bytes": 17048,
+      "sha256": "c6c931f757d5492bd2cd346ee2cb80be70cc64bcf3c05c49dfa39c263d91a307"
+    },
+    "dist/expansion-cases/s17x-p4-perforation-effect/README.txt": {
+      "bytes": 1411,
+      "sha256": "8c75c36dd0602cdcd7e5fd8e1d003758941c16b09641fe43f4c2f1c74074fcf1"
+    },
+    "dist/expansion-cases/s17x-pr1-pump-card/case.json": {
+      "bytes": 129221,
+      "sha256": "0264b3b96617a058724b000ea7db6a7ad90b09650e72f5c8d785f599556ba572"
+    },
+    "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.css": {
+      "bytes": 67192,
+      "sha256": "aa47b9c5fe7c3f4825b63d1eaa385acdde1c4fd569c22cf4e14db383ac07b6da"
+    },
+    "dist/expansion-cases/s17x-pr1-pump-card/demo/demo.js": {
+      "bytes": 415273,
+      "sha256": "c73336dc68d9daa5227407f9625fb9b0f21c724a822ea143a919a6bb5d9f19c1"
+    },
+    "dist/expansion-cases/s17x-pr1-pump-card/demo/index.html": {
+      "bytes": 4711,
+      "sha256": "5122f9cc9c39cc2e548bdc240f807cc588173e6a2d052c7429d20505ca0c4b1f"
+    },
+    "dist/expansion-cases/s17x-pr1-pump-card/README.txt": {
+      "bytes": 3791,
+      "sha256": "e97a426b83a84724ab9449f33eedeaece5fd4e542719cabe34f0288629857989"
+    },
+    "dist/expansion-cases/s17x-pr2-production-forecast/case.json": {
+      "bytes": 111115,
+      "sha256": "b5e389f3412b43577e16bad911a15033744b34f38c0747f2f6b91790a7980ad6"
+    },
+    "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.css": {
+      "bytes": 63328,
+      "sha256": "a69321910063c3ae249948eda36bda3c9a01a94d6ef9a6ff3be759601d23adab"
+    },
+    "dist/expansion-cases/s17x-pr2-production-forecast/demo/demo.js": {
+      "bytes": 358850,
+      "sha256": "337c1a087bcc3b94b6d1d904b5abc95198e9ab12acaf3cdca0251c9443d5bcf7"
+    },
+    "dist/expansion-cases/s17x-pr2-production-forecast/demo/index.html": {
+      "bytes": 16846,
+      "sha256": "274690b3d396fb5ba2d8c01756d6489cce5e25c30444aac809a0de420320f609"
+    },
+    "dist/expansion-cases/s17x-pr2-production-forecast/README.txt": {
+      "bytes": 1334,
+      "sha256": "7dad645fc91ffe5330f33aca5049ef3d90f1022c85b3d46025cdb0cea9d90741"
+    },
+    "dist/expansion-cases/s17x-pr3-water-allocation/case.json": {
+      "bytes": 225222,
+      "sha256": "b8178ecc82f4043059c6318ac3f918ccf404ad024b88b4967ee4b8ca9ed6e43b"
+    },
+    "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.css": {
+      "bytes": 63328,
+      "sha256": "a69321910063c3ae249948eda36bda3c9a01a94d6ef9a6ff3be759601d23adab"
+    },
+    "dist/expansion-cases/s17x-pr3-water-allocation/demo/demo.js": {
+      "bytes": 416049,
+      "sha256": "21bd013e91be95955802753ceaec3f94d54770b943342ee5deaa67e659185913"
+    },
+    "dist/expansion-cases/s17x-pr3-water-allocation/demo/index.html": {
+      "bytes": 17405,
+      "sha256": "90efbcb342b8365be1649f10812f25d82b998db057cb2020d95331a9de768c0c"
+    },
+    "dist/expansion-cases/s17x-pr3-water-allocation/README.txt": {
+      "bytes": 1391,
+      "sha256": "afb7a5de98c60c1dece39313fc46a4f6e661970a34f956c0f502c6d029a9b7ba"
+    },
+    "dist/expansion-cases/s17x-pr4-esp-warning/case.json": {
+      "bytes": 114103,
+      "sha256": "ac5a93d1abe8980f98b71a6adc58681a0ec456d95a59c9de30154b7fb44aa1eb"
+    },
+    "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.css": {
+      "bytes": 63328,
+      "sha256": "a69321910063c3ae249948eda36bda3c9a01a94d6ef9a6ff3be759601d23adab"
+    },
+    "dist/expansion-cases/s17x-pr4-esp-warning/demo/demo.js": {
+      "bytes": 359707,
+      "sha256": "147d355573ccda732e93a44e45163869a7ec205081a2b35e7a0fece3d5d75b1a"
+    },
+    "dist/expansion-cases/s17x-pr4-esp-warning/demo/index.html": {
+      "bytes": 17351,
+      "sha256": "633b24464aa3d80497811d22f17308bb61e98d6bd6ef59c363bcc84ca89a7494"
+    },
+    "dist/expansion-cases/s17x-pr4-esp-warning/README.txt": {
+      "bytes": 1372,
+      "sha256": "4ea3bee3d6eaab4b3d33c3a37241f25f45994ce44a4e2d37d3e36aad1871b17a"
+    },
+    "dist/expansion-cases/s17x-pr5-wax-risk/case.json": {
+      "bytes": 195032,
+      "sha256": "38dda0b13fbc355df3a46e86eb0c9c6d39f4836d4621ff736b9f67614ddf764a"
+    },
+    "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.css": {
+      "bytes": 63328,
+      "sha256": "a69321910063c3ae249948eda36bda3c9a01a94d6ef9a6ff3be759601d23adab"
+    },
+    "dist/expansion-cases/s17x-pr5-wax-risk/demo/demo.js": {
+      "bytes": 483352,
+      "sha256": "e73ff18698dedd2aa62b7adbd8d12c9b1821c78a9fa3864aa2ea9b6e5c1d4d5c"
+    },
+    "dist/expansion-cases/s17x-pr5-wax-risk/demo/index.html": {
+      "bytes": 17273,
+      "sha256": "c629092cd63b0544bb41a5629f168454eb781c33b91fa3186af8f8fc12dcb5aa"
+    },
+    "dist/expansion-cases/s17x-pr5-wax-risk/README.txt": {
+      "bytes": 1532,
+      "sha256": "af621fdb82573746cd4d8cf5ec7bcadc9c5f0365745a95db4aafd42b0665219f"
+    },
+    "dist/expansion-cases/s17x-r1-distillation-optimization/case.json": {
+      "bytes": 313960,
+      "sha256": "5a0bd39e209c6246e3e9e153c6173b35ea7f05295a7ff23d3e3ddde0229de764"
+    },
+    "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.css": {
+      "bytes": 61030,
+      "sha256": "423761a51df0dd415478fbf94406f94074aac08ece635544cfd07c032b4aaddc"
+    },
+    "dist/expansion-cases/s17x-r1-distillation-optimization/demo/demo.js": {
+      "bytes": 472427,
+      "sha256": "96ef1fb271659f56aea5407188b693c0b7439cea1238b38597c6c2f9b582f6e1"
+    },
+    "dist/expansion-cases/s17x-r1-distillation-optimization/demo/index.html": {
+      "bytes": 3028,
+      "sha256": "eb7c401b3e5134a9291d267c98ab30302f9119dec9d627d974abfa43ce4cbae7"
+    },
+    "dist/expansion-cases/s17x-r1-distillation-optimization/README.txt": {
+      "bytes": 928,
+      "sha256": "fc721ea1285aa8cfbaf1b2df60209d7027d6225d9b7fd27f66642edeaefa8f8f"
+    },
+    "dist/expansion-cases/s17x-r2-fcc-product-yields/case.json": {
+      "bytes": 113434,
+      "sha256": "241fd5985d21c0868e952a85d6d3bd3d2f825bde64fd94c8c1323a74153445cc"
+    },
+    "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.css": {
+      "bytes": 61030,
+      "sha256": "423761a51df0dd415478fbf94406f94074aac08ece635544cfd07c032b4aaddc"
+    },
+    "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/demo.js": {
+      "bytes": 378003,
+      "sha256": "6ebf3c8324b136f0deb9e4b9e8f49d003dd498a7ca68db61f78599d2174e74e7"
+    },
+    "dist/expansion-cases/s17x-r2-fcc-product-yields/demo/index.html": {
+      "bytes": 3110,
+      "sha256": "23064a8bca91ceab6474030c04fef5d2904d8069bec78a1bedf61a426430bebd"
+    },
+    "dist/expansion-cases/s17x-r2-fcc-product-yields/README.txt": {
+      "bytes": 931,
+      "sha256": "85e6d2a6522afaaa5018139c89a3484f4e5aae1312ca79ae400d5b24f4a731b0"
+    },
+    "dist/expansion-cases/s17x-r3-maintenance-trend/case.json": {
+      "bytes": 155311,
+      "sha256": "10b3eb6699911d14c096b76207ee80fc309f6e4ed1f39222287ad7b8e3df053b"
+    },
+    "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.css": {
+      "bytes": 61962,
+      "sha256": "f337bf32e5185c99b7646670a2d2c52b20c81cf673ddcc9147754c46f523fe6e"
+    },
+    "dist/expansion-cases/s17x-r3-maintenance-trend/demo/demo.js": {
+      "bytes": 406157,
+      "sha256": "4c746b40bea9c5aab1211a2294668425bcd1e124eacb53b052b47b03c3e6fe28"
+    },
+    "dist/expansion-cases/s17x-r3-maintenance-trend/demo/index.html": {
+      "bytes": 3234,
+      "sha256": "c1ffd9115f817f5644b2333d21380c852758bee3f7b175946ca45aa8b0bca575"
+    },
+    "dist/expansion-cases/s17x-r3-maintenance-trend/README.txt": {
+      "bytes": 1026,
+      "sha256": "57608b2f2434479725addfad24743f2314618c81fe27f702ae2fbb85e2403fcd"
+    },
+    "dist/expansion-cases/s17x-r4-lab-audit/case.json": {
+      "bytes": 108089,
+      "sha256": "15cbf45df76d856b08053818da36770aff2b8db497c6181453975c41c9cd8c49"
+    },
+    "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.css": {
+      "bytes": 61962,
+      "sha256": "f337bf32e5185c99b7646670a2d2c52b20c81cf673ddcc9147754c46f523fe6e"
+    },
+    "dist/expansion-cases/s17x-r4-lab-audit/demo/demo.js": {
+      "bytes": 363411,
+      "sha256": "3906106ee416605d2a73cb990363f4d10abf4a3d979411df4ead4caf256d69d8"
+    },
+    "dist/expansion-cases/s17x-r4-lab-audit/demo/index.html": {
+      "bytes": 3329,
+      "sha256": "378970f73009a808c349fffa604e6b9045f1a4cff325d0b33efa7b56f49b2c71"
+    },
+    "dist/expansion-cases/s17x-r4-lab-audit/README.txt": {
+      "bytes": 1035,
+      "sha256": "3641c2ae6d2629409d263b5434f678855de3802a3f5d3cf0815df83ce27c6f8d"
+    },
+    "dist/expansion-cases/s17x-r5-quality-softsensor/case.json": {
+      "bytes": 120468,
+      "sha256": "50ec713a87662e2b5ac9ef40296d98e48b57497d770b7c689a21c7fa73a3ef1e"
+    },
+    "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.css": {
+      "bytes": 64737,
+      "sha256": "cec7f0ea80b2f5841b37a87cd5a041facdf45056fce7fd421a553bb0130c8022"
+    },
+    "dist/expansion-cases/s17x-r5-quality-softsensor/demo/demo.js": {
+      "bytes": 404926,
+      "sha256": "5c8c715983b9110d8085e057db40cf85ff7870216e6bc52cd77c265720a97593"
+    },
+    "dist/expansion-cases/s17x-r5-quality-softsensor/demo/index.html": {
+      "bytes": 5271,
+      "sha256": "68cdd75db01a8a65aaeea3ecb50163ebf266a305d08873b3d5bf256e171da10e"
+    },
+    "dist/expansion-cases/s17x-r5-quality-softsensor/README.txt": {
+      "bytes": 4268,
+      "sha256": "fd92fafbc46f88cf3e8be145651f950ba8c37ddafae73e9f381e82b19c0269ee"
+    },
+    "dist/expansion-cases/s17x-s1-seismic-fault/case.json": {
+      "bytes": 1140878,
+      "sha256": "cbe3623b81c1288cafd64ef7b6f8868aeaa3a8c0ffef2948470588dafdedc88a"
+    },
+    "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.css": {
+      "bytes": 67964,
+      "sha256": "f834ea34ce112e3b1b5eca334e7e790bca2b350665ec06d7559984d723c38103"
+    },
+    "dist/expansion-cases/s17x-s1-seismic-fault/demo/demo.js": {
+      "bytes": 890892,
+      "sha256": "121b407230a0c0f70e7f2a1bae6c4bf91bdc4065d366ea38b8f60777a688aa2c"
+    },
+    "dist/expansion-cases/s17x-s1-seismic-fault/demo/index.html": {
+      "bytes": 24023,
+      "sha256": "c3261170d87b5d77bc9d8c2bf76a168153dd3bdd5ff487743d5b973c3b1b4924"
+    },
+    "dist/expansion-cases/s17x-s1-seismic-fault/README.txt": {
+      "bytes": 4056,
+      "sha256": "bffb299784c98029c50e53fa5f5aa35de05d7e0fe1b6c1516a42ef9644038300"
+    },
+    "dist/expansion-cases/s17x-s2-seismic-facies/case.json": {
+      "bytes": 345515,
+      "sha256": "fa0f9573029ee6bf12b14a5740994f37f6952fc2c716881fba9f33f0849f0c49"
+    },
+    "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.css": {
+      "bytes": 62211,
+      "sha256": "05b8770ad40e8e9494b95beae7acbf2f1d0a023be515d10a1f5731624fed08cf"
+    },
+    "dist/expansion-cases/s17x-s2-seismic-facies/demo/demo.js": {
+      "bytes": 643999,
+      "sha256": "e75896c814305c811fe37d42fe820d6455f973c94f689f761b487b6714029981"
+    },
+    "dist/expansion-cases/s17x-s2-seismic-facies/demo/index.html": {
+      "bytes": 29287,
+      "sha256": "3b00bfda66cc77f5b7032c198fd75c11ebf3e16d604495d72e8e863804df29db"
+    },
+    "dist/expansion-cases/s17x-s2-seismic-facies/README.txt": {
+      "bytes": 1195,
+      "sha256": "aafc10f1aefaf6fb4c0811d242087dc3539540a46e3b29789c00bb158cf12237"
+    },
+    "dist/expansion-cases/s17x-s3-first-arrival/case.json": {
+      "bytes": 143869,
+      "sha256": "d270fef94aa1ea293c9f995656daa6dec8d4d4d8687371ffdb7c9fe9f2125027"
+    },
+    "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.css": {
+      "bytes": 61262,
+      "sha256": "1e97180ab5685908a318aed64cbae6339ae2a1fd8b38cf0f484c39d2d9f4f950"
+    },
+    "dist/expansion-cases/s17x-s3-first-arrival/demo/demo.js": {
+      "bytes": 430246,
+      "sha256": "0ada2bf1168506d8723cffccabbd40518163e4a19b29a43409e8629fbb2e4e05"
+    },
+    "dist/expansion-cases/s17x-s3-first-arrival/demo/index.html": {
+      "bytes": 10307,
+      "sha256": "8d99fe9e133df691102a1c7a7d811645ff510a1b2989c14b4badb10c1c07267e"
+    },
+    "dist/expansion-cases/s17x-s3-first-arrival/README.txt": {
+      "bytes": 972,
+      "sha256": "256165a5449c650d19230bc07710849313abc83ac1e86ca1e67b7afce2b01b32"
+    },
+    "dist/expansion-cases/s17x-s4-reservoir-inversion/case.json": {
+      "bytes": 117174,
+      "sha256": "cc70d2557c938d146588625b546cf65c73d458d31f67b781ab114516a2d7b764"
+    },
+    "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.css": {
+      "bytes": 62211,
+      "sha256": "05b8770ad40e8e9494b95beae7acbf2f1d0a023be515d10a1f5731624fed08cf"
+    },
+    "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/demo.js": {
+      "bytes": 370789,
+      "sha256": "6669cb3bbe0731e6db4d9f26d41d315f6a457f7ccbddec79a6a3874762ede618"
+    },
+    "dist/expansion-cases/s17x-s4-reservoir-inversion/demo/index.html": {
+      "bytes": 19497,
+      "sha256": "eda1684e67150cc30066a83d63343d552e7e396e7b4c2e9ded67d2be2e83e894"
+    },
+    "dist/expansion-cases/s17x-s4-reservoir-inversion/README.txt": {
+      "bytes": 1200,
+      "sha256": "490ee53ff19b60dbc3d6bb5e42a0ec355e935d5d3b832082f4293ef5846089a9"
+    },
+    "dist/expansion-cases/s17x-s5-seismic-denoise/case.json": {
+      "bytes": 106613,
+      "sha256": "21e6efcfbb0d3793b723339a9aaaa6d8bb97867af15428d3a5b7160b3418a8ed"
+    },
+    "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.css": {
+      "bytes": 61262,
+      "sha256": "1e97180ab5685908a318aed64cbae6339ae2a1fd8b38cf0f484c39d2d9f4f950"
+    },
+    "dist/expansion-cases/s17x-s5-seismic-denoise/demo/demo.js": {
+      "bytes": 363645,
+      "sha256": "9d85c7449406f01167093b277371234084b5f3503cdee3fdb42396d9fd5254ed"
+    },
+    "dist/expansion-cases/s17x-s5-seismic-denoise/demo/index.html": {
+      "bytes": 11188,
+      "sha256": "d6ebb948e60ec6453621925ceea5476c296684cd51abb8459368bf93d7af1aab"
+    },
+    "dist/expansion-cases/s17x-s5-seismic-denoise/README.txt": {
+      "bytes": 1024,
+      "sha256": "4564b90cd1981f795233f39aa5788e2e45d9eef24bf9a88ad4b9e9a21bffdde9"
+    },
+    "dist/expansion-cases/s17x-t1-pipeline-leak/case.json": {
+      "bytes": 124133,
+      "sha256": "9b8774bf61a9e0ced20687a250ae9ca70e07f7f4eb2829ce525d7cffb73d565e"
+    },
+    "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.css": {
+      "bytes": 64737,
+      "sha256": "cec7f0ea80b2f5841b37a87cd5a041facdf45056fce7fd421a553bb0130c8022"
+    },
+    "dist/expansion-cases/s17x-t1-pipeline-leak/demo/demo.js": {
+      "bytes": 405026,
+      "sha256": "91855a8a03968b453d8ad1bfb636ed81e93ba29c69f95ba1ee4c2f5e54efc164"
+    },
+    "dist/expansion-cases/s17x-t1-pipeline-leak/demo/index.html": {
+      "bytes": 5036,
+      "sha256": "53bf5e2562301038d8ea88827cd70345bd541e520033a22e3badf89467ca29c9"
+    },
+    "dist/expansion-cases/s17x-t1-pipeline-leak/README.txt": {
+      "bytes": 3830,
+      "sha256": "29fac1247bc30e3a0597256508624609ba66965305a1798ada4a4155e720bbf8"
+    },
+    "dist/expansion-cases/s17x-t2-corrosion-growth/case.json": {
+      "bytes": 122090,
+      "sha256": "6f5521e2b12ef2d737a30a737d71cdd129e7718efb0b961285cfa2ee1a2af0be"
+    },
+    "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.css": {
+      "bytes": 60869,
+      "sha256": "276367db149cbd2499ae86b84108c6fb4b22a7d99b262f440bb7a2d389888193"
+    },
+    "dist/expansion-cases/s17x-t2-corrosion-growth/demo/demo.js": {
+      "bytes": 401501,
+      "sha256": "7dfec086f6c24652ddf68f7aadb370c18cc6cefa06b5ffca4702f660d4042557"
+    },
+    "dist/expansion-cases/s17x-t2-corrosion-growth/demo/index.html": {
+      "bytes": 2405,
+      "sha256": "18b20d9a08be63a3c21de70ba387d51f94d90899b701cee38258f0e394b25d8b"
+    },
+    "dist/expansion-cases/s17x-t2-corrosion-growth/README.txt": {
+      "bytes": 760,
+      "sha256": "925620560f7e19708a34e4329f543b22c0a26bc6371c62a09a5bdb9863d309df"
+    },
+    "dist/expansion-cases/s17x-t3-gathering-pump-optimization/case.json": {
+      "bytes": 140570,
+      "sha256": "66c6fdf595bd4f81d523e811765bcf8b4d090a0b84429f32535bb89c0152fb4b"
+    },
+    "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.css": {
+      "bytes": 60869,
+      "sha256": "276367db149cbd2499ae86b84108c6fb4b22a7d99b262f440bb7a2d389888193"
+    },
+    "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/demo.js": {
+      "bytes": 382260,
+      "sha256": "641c3a019ddd4cd0589416d69dc25b261a3ccead4e822723bf7548947786ae37"
+    },
+    "dist/expansion-cases/s17x-t3-gathering-pump-optimization/demo/index.html": {
+      "bytes": 2396,
+      "sha256": "cae20f2a43d1057466bb727a6ba3099de8a1e551039c202b4b6ad69ed4a251cf"
+    },
+    "dist/expansion-cases/s17x-t3-gathering-pump-optimization/README.txt": {
+      "bytes": 720,
+      "sha256": "0f28ddcafd34e80ea72ec930d84c617f97e6dc2d7c9a2d408d8caa26af7a4693"
+    },
+    "dist/expansion-cases/s17x-t4-meter-drift-calibration/case.json": {
+      "bytes": 113207,
+      "sha256": "71bb799b658d404093f562b85ed7676a4f8820f97470460781b604925c30fca7"
+    },
+    "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.css": {
+      "bytes": 60869,
+      "sha256": "276367db149cbd2499ae86b84108c6fb4b22a7d99b262f440bb7a2d389888193"
+    },
+    "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/demo.js": {
+      "bytes": 376122,
+      "sha256": "7f3fefba1049a79997643835446ac1caef2584ca892b8424a7d654c340c42da6"
+    },
+    "dist/expansion-cases/s17x-t4-meter-drift-calibration/demo/index.html": {
+      "bytes": 2398,
+      "sha256": "0b670bc4133f4d2cfa5e98faf66bfd4608805a93c2e67a391137c6c3945bac1d"
+    },
+    "dist/expansion-cases/s17x-t4-meter-drift-calibration/README.txt": {
+      "bytes": 797,
+      "sha256": "e8778df292b08185f7ae286eff368c95029eaa4be5d35a7c923c19fb04064a8c"
+    },
+    "dist/expansion-cases/s17x-t5-tank-level-crosscheck/case.json": {
+      "bytes": 147459,
+      "sha256": "258c282e551397c8b9dbb1da3ab898a7362d20dff85fabb52dcff1fbe447ad15"
+    },
+    "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.css": {
+      "bytes": 60869,
+      "sha256": "276367db149cbd2499ae86b84108c6fb4b22a7d99b262f440bb7a2d389888193"
+    },
+    "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/demo.js": {
+      "bytes": 438186,
+      "sha256": "37ba04872da9becff3537919b26891eb894965992b4db07c4e33cf7976df4714"
+    },
+    "dist/expansion-cases/s17x-t5-tank-level-crosscheck/demo/index.html": {
+      "bytes": 2441,
+      "sha256": "c3d870fdde684d87855cf0d6393147bccba82388ca3ae95b974ed2b624b8f966"
+    },
+    "dist/expansion-cases/s17x-t5-tank-level-crosscheck/README.txt": {
+      "bytes": 790,
+      "sha256": "d54249bed8ee7316b9e3278eb476e6f7889ec30914575dec1d7acd8fb9600dd9"
+    },
+    "dist/expansion-cases/s17x-w1-log-boundaries/case.json": {
+      "bytes": 116133,
+      "sha256": "9ae70df0d013757719e49f0f23fb3903f8dc9b4ef3d8868d40552113fb57758a"
+    },
+    "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.css": {
+      "bytes": 61955,
+      "sha256": "79162a8b1e28419812ef1d301c107c4ce505fd9c79797b203730963b66632191"
+    },
+    "dist/expansion-cases/s17x-w1-log-boundaries/demo/demo.js": {
+      "bytes": 370527,
+      "sha256": "f98d9b955e62fd0ac870ee78f2b393e05057b71399df9cfc408446a5d38cb27c"
+    },
+    "dist/expansion-cases/s17x-w1-log-boundaries/demo/index.html": {
+      "bytes": 12392,
+      "sha256": "90e366a9db4fe8a17cb230c7da11e0eaa2af9eeb2b3579090f6cdf4c46ec3c82"
+    },
+    "dist/expansion-cases/s17x-w1-log-boundaries/README.txt": {
+      "bytes": 1032,
+      "sha256": "d4c5271d4715a0cbd266e4db933035757ca215cbb19713409f964cf4d02c9f80"
+    },
+    "dist/expansion-cases/s17x-w2-porosity-calibration/case.json": {
+      "bytes": 111013,
+      "sha256": "471e583384316bd4d154cce423e1f82525e7c85fa1a5efb834d36d3405a9970f"
+    },
+    "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.css": {
+      "bytes": 61955,
+      "sha256": "79162a8b1e28419812ef1d301c107c4ce505fd9c79797b203730963b66632191"
+    },
+    "dist/expansion-cases/s17x-w2-porosity-calibration/demo/demo.js": {
+      "bytes": 370003,
+      "sha256": "9eb455eb1bc06a4dcd707fc7da9712af2c343db33584eea84c7655890846e6cf"
+    },
+    "dist/expansion-cases/s17x-w2-porosity-calibration/demo/index.html": {
+      "bytes": 16756,
+      "sha256": "38225291b7b258eecbba8e348aaf2634e2daaef367a179780d3f8f5088fbcee6"
+    },
+    "dist/expansion-cases/s17x-w2-porosity-calibration/README.txt": {
+      "bytes": 1033,
+      "sha256": "6f8faad64e3d7f0501f536506d11b2fa8197ee12819830df93ba4ad38486acfa"
+    },
+    "dist/expansion-cases/s17x-w3-borehole-fractures/case.json": {
+      "bytes": 470038,
+      "sha256": "cfa2ef285cadd2a930935fabb7c56092f50951a258932ea9504d0b2e321c3322"
+    },
+    "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.css": {
+      "bytes": 62035,
+      "sha256": "c13294b84af0a450d75e3e04826da18f3c52fb74147be7378401b082dc102fc8"
+    },
+    "dist/expansion-cases/s17x-w3-borehole-fractures/demo/demo.js": {
+      "bytes": 561937,
+      "sha256": "e7211e10cddf58edae8c7baacc2c623dec4e4ce4517b92f2ae6f243d214e427c"
+    },
+    "dist/expansion-cases/s17x-w3-borehole-fractures/demo/index.html": {
+      "bytes": 18792,
+      "sha256": "24b540b16c6679445bd801341a86ef0f6ff4756d72473f27458100570daf3e73"
+    },
+    "dist/expansion-cases/s17x-w3-borehole-fractures/README.txt": {
+      "bytes": 1065,
+      "sha256": "b541a109394c1932d6ecc350eac5f414fab2e88711c9c45117b887b51b1a5c39"
+    },
+    "dist/expansion-cases/s17x-w4-log-lithology/case.json": {
+      "bytes": 146255,
+      "sha256": "a1af3ccb1086f2f8a0c8a0268d31f879c8209efc7a1a8552eea9e0b80686eb52"
+    },
+    "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.css": {
+      "bytes": 68453,
+      "sha256": "3337b783ff85f42d39b3d255fc14e264c5bfe15a5cd63e01cbd0db3f2e48501c"
+    },
+    "dist/expansion-cases/s17x-w4-log-lithology/demo/demo.js": {
+      "bytes": 410949,
+      "sha256": "ad2b5e52148ab5beb0126e571a8f129631549a1bcd2a66d01c6bd81c579ea643"
+    },
+    "dist/expansion-cases/s17x-w4-log-lithology/demo/index.html": {
+      "bytes": 23743,
+      "sha256": "30be14761889b822298dbcdd779ffade3c24de97641804b6e0b1e12f97613e2f"
+    },
+    "dist/expansion-cases/s17x-w4-log-lithology/README.txt": {
+      "bytes": 2612,
+      "sha256": "0777b6a98cac03946b282d7cfe6e028ff0214e2a5d1e0910b01ba133c107938d"
+    },
+    "dist/expansion-cases/s17x-w5-curve-repair/case.json": {
+      "bytes": 200463,
+      "sha256": "83f9ddaceaf38cce4d25ad79761b3692baddfa39dc1dfed7777a966f99365d59"
+    },
+    "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.css": {
+      "bytes": 61955,
+      "sha256": "79162a8b1e28419812ef1d301c107c4ce505fd9c79797b203730963b66632191"
+    },
+    "dist/expansion-cases/s17x-w5-curve-repair/demo/demo.js": {
+      "bytes": 419471,
+      "sha256": "7af97cd430d1ddef19795d545b072c5928e5f4e360cde0562c5ca2dcc6f795dd"
+    },
+    "dist/expansion-cases/s17x-w5-curve-repair/demo/index.html": {
+      "bytes": 12148,
+      "sha256": "844968a61d24578d5c35d9860d59796968b78844ffa35fcf7eddcbbb1a322918"
+    },
+    "dist/expansion-cases/s17x-w5-curve-repair/README.txt": {
+      "bytes": 1064,
+      "sha256": "0d2a3fda938e0e1fbc010a7802cdc61583f6177ae783277b19575c352f54a87f"
+    },
+    "dist/expansion-cases/s17x-wo1-workover-retrieval/case.json": {
+      "bytes": 125901,
+      "sha256": "b39661f3631439e9e6abd977b1401a55e6e40988dc4184fba314adf694aacb5b"
+    },
+    "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.css": {
+      "bytes": 67308,
+      "sha256": "bc660a0238264771decef58abf5dc6b43215b01b1a0623a41ff18f67b449053c"
+    },
+    "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/demo.js": {
+      "bytes": 410735,
+      "sha256": "5f3d4fe65c53857eb7ea2a21c0a487987f5d0dfdd212b793bcc11b39510855c1"
+    },
+    "dist/expansion-cases/s17x-wo1-workover-retrieval/demo/index.html": {
+      "bytes": 20528,
+      "sha256": "0f2f47629431bac5d9f6b943df01e571ed96fdcbd045dabd7b4ee5b927c3b88c"
+    },
+    "dist/expansion-cases/s17x-wo1-workover-retrieval/README.txt": {
+      "bytes": 1394,
+      "sha256": "9b65164914e96eced48bf00b95d393e82378ada4642af185e3fa383fbb52f6c0"
+    },
+    "dist/expansion-cases/s17x-wo2-fishing-tools/case.json": {
+      "bytes": 106789,
+      "sha256": "997e948c73a6e6ff497d26662a26efd6687fcd691c35ddb478a646dc50159814"
+    },
+    "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-wo2-fishing-tools/demo/demo.js": {
+      "bytes": 349517,
+      "sha256": "ebd14fd9b7c388123643a7f69f5c852a497d22a06b3600daabb73573fe127ec5"
+    },
+    "dist/expansion-cases/s17x-wo2-fishing-tools/demo/index.html": {
+      "bytes": 12461,
+      "sha256": "321dafe1d9b62da61e83a1be6fc471478aff0bb083e1f00db442b94eca78b197"
+    },
+    "dist/expansion-cases/s17x-wo2-fishing-tools/README.txt": {
+      "bytes": 820,
+      "sha256": "c2599752da42bf40d369ea33f2df9a908b8b4f5ab8c6aacca28b04312e5dab81"
+    },
+    "dist/expansion-cases/s17x-wo3-casing-damage/case.json": {
+      "bytes": 180785,
+      "sha256": "632c948d2e7df2e3057374b6d46150efd9e40982830ea58f84f707309511396b"
+    },
+    "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-wo3-casing-damage/demo/demo.js": {
+      "bytes": 424967,
+      "sha256": "e5a92c95b8d30ba42d89b5a52d3cda7d951f12b3f21afd14c06ae5a2e3126314"
+    },
+    "dist/expansion-cases/s17x-wo3-casing-damage/demo/index.html": {
+      "bytes": 12991,
+      "sha256": "f2626d1fa4c1881c136eabfbfe3934358a94687b64898dc8f576a8f184c63618"
+    },
+    "dist/expansion-cases/s17x-wo3-casing-damage/README.txt": {
+      "bytes": 828,
+      "sha256": "d02ff4d5cb93a3045e5d420289415ffb733f235e93a310a5671b7ae2a446509a"
+    },
+    "dist/expansion-cases/s17x-wo4-workover-warning/case.json": {
+      "bytes": 119620,
+      "sha256": "4cdb787bcbf9707178026866f3c50d5cc04582b300417a8557354dee78225c11"
+    },
+    "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-wo4-workover-warning/demo/demo.js": {
+      "bytes": 367735,
+      "sha256": "c7eea996bdf18007673f209bb9512307c8ab728e43490d013f56bd4c4e0de4df"
+    },
+    "dist/expansion-cases/s17x-wo4-workover-warning/demo/index.html": {
+      "bytes": 11873,
+      "sha256": "13e0d3778cbc7451d08ac5b7def5752679bfe5d8b36868324f002b644e64b515"
+    },
+    "dist/expansion-cases/s17x-wo4-workover-warning/README.txt": {
+      "bytes": 837,
+      "sha256": "30b9a9f07c470606b0137b8ab976350bbaca6dd2c491a4eaef477b50487ccb4d"
+    },
+    "dist/expansion-cases/s17x-wo5-maintenance-interval/case.json": {
+      "bytes": 106649,
+      "sha256": "55284b92ad25550e2aefafa4227774a173d3fa52d6e03b9fe6ae6fa8ad6681de"
+    },
+    "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.css": {
+      "bytes": 61437,
+      "sha256": "4fc625cfd281fbc4f751c797acf1ede395e9ef0d78bca6a4c4c013c2a4c535e9"
+    },
+    "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/demo.js": {
+      "bytes": 348360,
+      "sha256": "78f231ee1cbcf96cb076bb94b012af6bec1b72a77a929045e1909f91ddf96746"
+    },
+    "dist/expansion-cases/s17x-wo5-maintenance-interval/demo/index.html": {
+      "bytes": 11898,
+      "sha256": "5818696b2cbfd22ec1d7f0bf8decb73604e4f702e866e4cae85c867fd206b44a"
+    },
+    "dist/expansion-cases/s17x-wo5-maintenance-interval/README.txt": {
+      "bytes": 818,
+      "sha256": "a7d08a5d0ddce99ba10211c0d30d4e15bd5679d2404f6201e261b73a1b131a68"
+    }
+  }
+}

@@ -1,16 +1,16 @@
 {
   "name": "s17-mudlogging-lab",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "private": true,
   "type": "module",
   "scripts": {
     "prepare-project": "node tools/prepare.mjs",
-    "build": "node tools/build-dynamic-ai.mjs",
-    "test": "node checks/verify-dynamic-ai.mjs",
+    "build": "node tools/build-m4-algorithm.mjs",
+    "test": "node checks/verify-m4-algorithm.mjs",
     "test:numeric": "node case-src/mudlogging-stage/verify.mjs && node case-variants/s17x-g3-closure-spill/checks.mjs && node case-variants/s17x-c1-cement-woc-strength/verify.mjs && node case-variants/s17x-co3-completion-seal-test/verify.mjs && node case-variants/s17x-p1-perforation-depth-correlation/verify.mjs",
-    "verify-delivery": "node checks/verify-dynamic-ai.mjs",
+    "verify-delivery": "node checks/verify-m4-algorithm.mjs",
     "verify-guide": "node tools/report-site-upgrade.mjs --require-browser",
-    "package": "node tools/package-dynamic-ai.mjs",
+    "package": "node tools/package-m4-algorithm.mjs",
     "serve": "node tools/serve.mjs",
     "accept": "node tools/accept-teacher-update.mjs",
     "accept:upgrade": "node tools/accept-site-upgrade.mjs",
@@ -46,7 +46,9 @@
     "build:workbench": "node tools/build-mudlogging-workbench.mjs",
     "test:workbench": "node checks/verify-workbench-scope.mjs && node checks/verify-workbench-numeric.mjs",
     "build:dynamic-ai": "node tools/build-dynamic-ai.mjs",
-    "test:dynamic-ai": "node checks/verify-dynamic-ai.mjs"
+    "test:dynamic-ai": "node checks/verify-dynamic-ai.mjs",
+    "build:m4-algorithm": "node tools/build-m4-algorithm.mjs",
+    "test:m4-algorithm": "node checks/verify-m4-algorithm.mjs"
   },
   "devDependencies": {
     "esbuild": "0.27.3"
