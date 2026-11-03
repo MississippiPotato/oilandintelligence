@@ -1,0 +1,42 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {layerBoundary,reservoirY,perforationLevels,wellRadii,carriesFlow} from '../portal-src/home-process/structure.js';
+
+process.chdir(path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'));
+const report='handoff/home-process-2026-11-03';
+const read=p=>fs.readFileSync(p,'utf8');
+const knowledge=JSON.parse(read('portal-src/home-process/knowledge.json'));
+const before=JSON.parse(read(report+'/before.json'));
+const checks=[];
+const check=(name,pass,detail)=>checks.push({name,pass:!!pass,...(detail?{detail}: {})});
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const changed=Object.entries(before.protected).filter(([p,hash])=>!fs.existsSync(p)||sha(p)!==hash).map(([p])=>p);
+check('Protected source and runtime files unchanged',!changed.length,{files:Object.keys(before.protected).length,changed});
+const runtime=Object.keys(before.protected).filter(p=>/^dist\/(cases|expansion-cases)\//.test(p));
+check('65 cases retain all five import-contract files',runtime.length===325&&new Set(runtime.map(p=>p.split('/').slice(0,3).join('/'))).size===65,{runtimeFiles:runtime.length});
+const window={};vm.runInNewContext(read('portal/assets/data.js'),{window});vm.runInNewContext(read('portal/assets/s17-case-catalog.js'),{window});
+const stages=knowledge.stages.map(s=>s.id);
+check('Thirteen stage IDs retain original order',JSON.stringify(stages)===JSON.stringify(window.ATLAS.stages.map(s=>s.id)));
+check('Five chapters partition thirteen stages',JSON.stringify(knowledge.chapters.flatMap(c=>c.ids))===JSON.stringify(stages));
+for(const s of knowledge.stages){
+  check('Knowledge and case link: '+s.id,s.data.length>0&&s.explain&&s.method&&s.output&&window.S17CaseCatalog.cases.some(c=>c.stageId===s.id&&c.sceneId===s.caseScene));
+}
+check('Perforation endpoints remain inside the reservoir',perforationLevels(0).every(y=>[-.95,0,.95].every(x=>y+.03>layerBoundary(x,4)&&y+.03<layerBoundary(x,3))));
+check('Production/injection paths follow the reservoir midpoint',[0,8,8.2,9.9,11.1,12].every(x=>reservoirY(x)>layerBoundary(x,4)&&reservoirY(x)<layerBoundary(x,3)));
+check('Cement surrounds casing, casing surrounds tubing',wellRadii.cementOuter>wellRadii.casingOuter&&wellRadii.casingOuter>wellRadii.tubing);
+check('Drilling and mudlogging share circulation',['drilling','mudlogging'].every(id=>carriesFlow(id,'drilling')&&carriesFlow(id,'mudlogging')));
+check('Injection and transport include production response',carriesFlow('eor','production')&&carriesFlow('transport','production')&&!carriesFlow('eor','refining'));
+const scene=read('portal-src/home-process/scene.js'),source=read('portal-src/home-process/source.js'),index=read('portal/index.html');
+check('Rendered geometry uses verified reservoir and well-radius helpers',scene.includes('for(const y of perforationLevels(0))')&&scene.includes('reservoirY(12)')&&scene.includes('wellRadii.cementOuter')&&scene.includes('wellRadii.casingOuter')&&scene.includes('wellRadii.tubing'));
+check('Keyboard, timer and WebGL cleanup implemented',source.includes("e.key==='ArrowRight'")&&source.includes('clearInterval(timer)')&&scene.includes('forceContextLoss()')&&scene.includes('resizeObserver.disconnect()'));
+check('No remote dependencies in the homepage component',!/(?:from|src=|fetch\()[^\n]*https?:\/\//.test(source+scene));
+check('Local lazy-loaded classic-script bundle and cache revision',source.includes('s17-process-3d.js?v=20261103-process')&&index.includes('s17-process-atlas.js?v=20261103-process')&&index.includes('s17-process-atlas.css?v=20261103-process'));
+const build=JSON.parse(read(report+'/build.json'));
+check('Generated outputs match build record',build.outputs.every(f=>sha(f.path)===f.sha256));
+const result={at:new Date().toISOString(),scope:'Homepage component: source, geometry relationships and file integrity. No browser or 65-case execution claim.',baseCommit:before.baseCommit,passed:checks.filter(c=>c.pass).length,failed:checks.filter(c=>!c.pass).length,checks};
+fs.writeFileSync(report+'/source-checks.json',JSON.stringify(result,null,2));
+console.log(JSON.stringify({passed:result.passed,failed:result.failed,protectedFiles:Object.keys(before.protected).length,runtimeFiles:runtime.length,failures:checks.filter(c=>!c.pass)},null,2));
+if(result.failed)process.exitCode=1;

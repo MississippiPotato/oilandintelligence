@@ -1,0 +1,312 @@
+{
+  "at": "2026-11-03T03:43:10.350Z",
+  "browser": "Chromium / in-app browser via CUA",
+  "scope": "Homepage component; representative M2 load and importer dialog. No full65-case execution.",
+  "passed": 37,
+  "failed": 0,
+  "checks": [
+    {
+      "test": "stage geology",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/g1?case=s17x-g1-remote-lithology&tab=bg",
+        "hasData": 3,
+        "heading": "还没有钻井，怎样认识地下？",
+        "id": "geology"
+      }
+    },
+    {
+      "test": "stage seismic",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/s1?case=s17x-s1-seismic-fault&tab=bg",
+        "hasData": 3,
+        "heading": "地面记录，怎样提供地下的信息？",
+        "id": "seismic"
+      }
+    },
+    {
+      "test": "stage drilling",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/d1?case=s17x-d1-rop-optimization&tab=bg",
+        "hasData": 3,
+        "heading": "钻得更快，也要知道为什么。",
+        "id": "drilling"
+      }
+    },
+    {
+      "test": "stage mudlogging",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/m2?case=s17-mudgas-context&tab=bg",
+        "hasData": 3,
+        "heading": "地面的记录，来自更早的井底。",
+        "id": "mudlogging"
+      }
+    },
+    {
+      "test": "stage welllog",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/w1?case=s17x-w1-log-boundaries&tab=bg",
+        "hasData": 3,
+        "heading": "一条井，怎样读出连续地层响应？",
+        "id": "welllog"
+      }
+    },
+    {
+      "test": "stage cementing",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/c1?case=s17x-c1-cement-quality&tab=bg",
+        "hasData": 3,
+        "heading": "怎样把不同层段隔离开？",
+        "id": "cementing"
+      }
+    },
+    {
+      "test": "stage completion",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/co1?case=s17x-co1-completion-choice&tab=bg",
+        "hasData": 3,
+        "heading": "怎样形成可控制的生产通道？",
+        "id": "completion"
+      }
+    },
+    {
+      "test": "stage perforation",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/p1?case=s17x-p1-perforation-design&tab=bg",
+        "hasData": 3,
+        "heading": "井筒怎样与目标储层连通？",
+        "id": "perforation"
+      }
+    },
+    {
+      "test": "stage production",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/pr1?case=s17x-pr1-pump-card&tab=bg",
+        "hasData": 3,
+        "heading": "采出状态，怎样从数据中读出来？",
+        "id": "production"
+      }
+    },
+    {
+      "test": "stage workover",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/wo1?case=s17x-wo1-workover-retrieval&tab=bg",
+        "hasData": 3,
+        "heading": "已有井出了问题，怎样恢复生产？",
+        "id": "workover"
+      }
+    },
+    {
+      "test": "stage eor",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/e1?case=s17x-e1-fracture-optimization&tab=bg",
+        "hasData": 3,
+        "heading": "怎样改善储层中流体的采出？",
+        "id": "eor"
+      }
+    },
+    {
+      "test": "stage transport",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/t1?case=s17x-t1-pipeline-leak&tab=bg",
+        "hasData": 3,
+        "heading": "多处测点，怎样发现同一次变化？",
+        "id": "transport"
+      }
+    },
+    {
+      "test": "stage refining",
+      "pass": true,
+      "observed": {
+        "caseLink": "#/scene/r1?case=s17x-r1-distillation-optimization&tab=bg",
+        "hasData": 3,
+        "heading": "原料变化，怎样影响过程和产品？",
+        "id": "refining"
+      }
+    },
+    {
+      "test": "chapter 0",
+      "pass": true,
+      "observed": {
+        "chapter": "0",
+        "selected": "overview",
+        "text": "用地表线索与地震响应，约束地下构造。"
+      }
+    },
+    {
+      "test": "chapter 1",
+      "pass": true,
+      "observed": {
+        "chapter": "1",
+        "selected": "overview",
+        "text": "钻头进入地层，地面与井下分别获取资料。"
+      }
+    },
+    {
+      "test": "chapter 2",
+      "pass": true,
+      "observed": {
+        "chapter": "2",
+        "selected": "overview",
+        "text": "隔离层段、布置流道，再与目标储层连通。"
+      }
+    },
+    {
+      "test": "chapter 3",
+      "pass": true,
+      "observed": {
+        "chapter": "3",
+        "selected": "overview",
+        "text": "采出、维护与改善驱替，组成生产中的反馈。"
+      }
+    },
+    {
+      "test": "chapter 4",
+      "pass": true,
+      "observed": {
+        "chapter": "4",
+        "selected": "overview",
+        "text": "地面处理与输送，将原料送入加工过程。"
+      }
+    },
+    {
+      "test": "view journey",
+      "pass": true,
+      "observed": {
+        "note": "钻进与取资料互相配合；修井和增采回接生产。",
+        "view": "journey"
+      }
+    },
+    {
+      "test": "view material",
+      "pass": true,
+      "observed": {
+        "note": "蓝灰色：钻井液或注入流；赭金色：携样返出或采出流。",
+        "view": "material"
+      }
+    },
+    {
+      "test": "view data",
+      "pass": true,
+      "observed": {
+        "note": "朱红虚线：从观测对象到资料记录，再进入对应案例。",
+        "view": "data"
+      }
+    },
+    {
+      "test": "2d switch",
+      "pass": true
+    },
+    {
+      "test": "3d switch",
+      "pass": true
+    },
+    {
+      "test": "keyboard next",
+      "pass": true
+    },
+    {
+      "test": "keyboard end",
+      "pass": true
+    },
+    {
+      "test": "tour advances",
+      "pass": true,
+      "observed": "drilling"
+    },
+    {
+      "test": "tour pause",
+      "pass": true
+    },
+    {
+      "test": "m2 background navigation",
+      "pass": true
+    },
+    {
+      "test": "return home one canvas",
+      "pass": true,
+      "observed": "3d"
+    },
+    {
+      "test": "mobile default2d no document overflow",
+      "pass": true,
+      "observed": {
+        "canvases": 0,
+        "documentWidth": 379,
+        "panWidth": 341,
+        "render": "2d",
+        "viewport": 390,
+        "worldWidth": 850
+      },
+      "note": "Document content width may exclude the vertical scrollbar; compare <= viewport."
+    },
+    {
+      "test": "mobile stage selection and pan",
+      "pass": true,
+      "observed": {
+        "pan": 246,
+        "title": "井筒怎样与目标储层连通？"
+      }
+    },
+    {
+      "test": "mobile controls at least44px",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "test": "offline loaded homepage:2d3d and stage",
+      "pass": true,
+      "observed": {
+        "render": "3d",
+        "selected": "perforation",
+        "title": "井筒怎样与目标储层连通？"
+      }
+    },
+    {
+      "test": "m2 demo actual iframe has computed results",
+      "pass": true,
+      "observed": "本次计算的方法\n累计体积归位＋加权kNN\n对照当前结果 ↓\n\n为什么这样算\n累计泵量把地面气峰连回较早的来源时段；组分与工况一起进入近邻距离，使相似气峰能够按不同作业背景比较。\n\n从哪里看出作用\n保持同一气峰，切换工况，查看前三个近邻、支持度和候选解释怎样变化。\n\nLAB / 同一个峰，逐层补齐证据\n先观察，再归位，最后补上工况\n\n默认已经计算并选中峰A。改变条件后自动重算，沿同一个对象继续判断。\n\n重新计算 ↻\n复位\n当前气峰 \n峰A · 27分00秒\n峰B · 53分00秒\n峰C · 78分00秒\n峰D · 103分50秒\n峰E · 130分30秒\n峰F · 156分20秒\n峰G · 181分20秒\n峰H · 207分10秒\n已更新 · 第1次计算 · 8个气峰 · 输入v1\n当前智能解释结果：峰A · 接单根关联；近邻支持度 100.0%。来源与工况仍需核查。\n查看近邻和工况依据 ↓\n观察气峰\n迟到归位\n补充工况\n当前峰A · 27分00秒\n先确认：哪一段发生了变化？\n\n阴影是实际检测的峰窗。总气告诉我们变化发生了，C1—C3帮助看清构成；解释来源时，再补上来源时段与操作记录。\n\n总气与 C1–C3：沿同一时间窗读取\n纵轴均为教学仪器读数；各行独立刻度，不直接比较线高。\n0\n2.5\n5\n总气\n0\n1.25\n2.5\nC1 · 甲烷\n0\n0.25\n0.5\nC2 · 乙烷\n0\n0.13\n0.25\nC3 · 丙烷\n21.0\n23.5\n25.9\n28.4\n30.8\n33.3\n记录时间 / min\n2.15\n相对背景峰高 · 教学读数\n320 s\n实际检测窗口宽度\n475.9\n超背景面积 · 读数×秒\n27分00秒\n地面峰顶到达时刻\n\n只看这段曲线，最需要先补哪条信息？\n\n来源时段与操作记录\n检测时刻的钻头深度\n\n把它连回来源时段 →\n用实际泵送量，连接两只时钟\n\n把有效体积看成要走完的“路程”，把泵每秒送入的液体量看成推进速度。先比较校正前后，再增加停泵段，读累计量平台和来源连线。\n\n按累计体积迟到校正\n有效运移体积\n12.0 m³\n加入停泵示例\n地面到达时刻，与井下来源时刻\n地面到达 tₐ = 27.00 min\n来源 tₛ = 17.50 min · 1205.88 m MD\n0\n2.5\n5\n地面总气 · 教学仪器读数\n0\n12.5\n25\n泵送流量 Q · L/s\n20\n35\n50\n累计泵送体积 C(t) · m³（局部纵轴）\n赭金区：停泵 17.7–19.2 min\n实际作业记录 · 与上方共用时间轴，蓝线为来源候选\n接单根\n起下钻\n15.3\n18.6\n22.0\n25.3\n28.7\n32.1\n记录时间 / min\nC(tₐ) − C(tₛ) = 12.00 m³；当前有效体积 = 12.00 m³\n\n来源候选 17分30秒；最近的接单根记录为 17分40秒—19分10秒。蓝色来源线与区间相差 10 秒。\n\n27分00秒\n到达时刻\n17分30秒\n来源候选时刻\n570 s\n回查时间间隔\n1205.88 m\n归位参考井深 · 沿井眼量取\n\n参考深度对应归位时段的钻头位置。把它与已钻开井段、当时的操作和岩屑记录一起比较。\n\n← 看气峰\n来源时段在做什么？ →\n保持气测不变，只补充来源工况\n\n接单根、起下钻和持续钻进是三种不同的教学假设，一次只选一种。切换后，程序重新提取工况特征、计算近邻距离并投票；总气和组分逐点保持一致。\n\n峰A来源日志\n原始教学情景\n假设：接单根\n假设：起下钻\n假设：持续钻进\n考虑来源工况\n\n默认原始教学情景；切换后只改可见来源日志，气测逐点不变。\n\n当前计算的候选\n接单根关联\n\n来源 17分30秒；距接单根作业的时间间隔 10 s，距起下钻作业的时间间隔 1560 s。\n近邻支持度 100.0%；固定规则：接单根关联。\n\n同一气峰、同一气测输入；两种方法各用训练井拟合对应特征\n输入视角\t工况特征\t实际相似事件\t候选 / 加权票数占比\n只看气峰特征\t峰高、峰宽、面积、升降速率、组分变化\tTRAIN-007\n距离 0.070\t"
+    },
+    {
+      "test": "homepage Add Case opens unchanged importer",
+      "pass": true
+    },
+    {
+      "test": "raycast direct equipment click",
+      "pass": true,
+      "observed": "drilling"
+    },
+    {
+      "test": "no captured page errors",
+      "pass": true,
+      "observed": []
+    }
+  ],
+  "notPerformed": [
+    {
+      "test": "file:// cold-open",
+      "reason": "Browser tool permits only http/https and rejected file URL; no workaround attempted."
+    },
+    {
+      "test": "Teacher original directory re-import",
+      "reason": "Homepage-only change: original files and325 case runtime files verified unchanged; this round checked the enhanced homepage importer dialog only."
+    }
+  ],
+  "offlineBoundary": "Network emulation after page load: 2D/3D switching and stage selection. This is not a cold offline/fileURL claim.",
+  "screenshots": [
+    "desktop-overview.jpg",
+    "desktop-mudlogging.jpg",
+    "mobile-perforation.jpg"
+  ]
+}

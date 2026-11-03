@@ -1,0 +1,30 @@
+{
+  "recognition": "同一条石油作业链，把地下对象、地面操作与数据连接起来。",
+  "sources": [
+    {"title":"SLB · Defining Mud Logging","url":"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging","supports":"钻井时开展录井；钻井液下行、环空携样返出与地面检测。"},
+    {"title":"SLB · Well Cementing Fundamentals","url":"https://www.slb.com/resource-library/oilfield-review/defining-series/defining-cementing","supports":"套管外环空中的水泥环；分段钻进、下套管和固井；射孔连通。"},
+    {"title":"SLB Energy Glossary · Workover","url":"https://glossary.slb.com/en/terms/w/workover","supports":"针对已有井开展维护、修复和改善生产，回接生产环节。"}
+  ],
+  "chapters":[
+    {"title":"认识地下","short":"勘探","ids":["geology","seismic"],"range":"01—02","meaning":"用地表线索与地震响应，约束地下构造。"},
+    {"title":"钻进与取资料","short":"钻进","ids":["drilling","mudlogging","welllog"],"range":"03—05","meaning":"钻头进入地层，地面与井下分别获取资料。"},
+    {"title":"建井与连通","short":"建井","ids":["cementing","completion","perforation"],"range":"06—08","meaning":"隔离层段、布置流道，再与目标储层连通。"},
+    {"title":"生产与调整","short":"生产","ids":["production","workover","eor"],"range":"09—11","meaning":"采出、维护与改善驱替，组成生产中的反馈。"},
+    {"title":"储运与加工","short":"加工","ids":["transport","refining"],"range":"12—13","meaning":"地面处理与输送，将原料送入加工过程。"}
+  ],
+  "stages":[
+    {"id":"geology","name":"地质勘察","chapter":0,"anchor":[-20,1.7,0],"point":[9,38],"object":"地表露头与构造线索","question":"还没有钻井，怎样认识地下？","explain":"先在地表辨认岩层、露头与构造，再把观察放进区域背景。露头给出可以直接看到的线索；地下解释还需要其他资料约束。","data":["露头图像","地质图件","构造与产状"],"method":"图像识别 · 地图要素提取","output":"岩性或构造线索、候选靶区","motion":"观察地表露头与测线","relation":"与物探互相约束","caseScene":"g1"},
+    {"id":"seismic","name":"物探","chapter":0,"anchor":[-16,1.4,1.3],"point":[18,38],"object":"震源、检波点与反射界面","question":"地面记录，怎样提供地下的信息？","explain":"人工震源激发波，地面检波点记录返回信号。到达时刻和反射特征提供约束，经过处理与解释，才能形成地下结构的认识。","data":["地震道集","反射事件","井点约束"],"method":"初至拾取 · 降噪 · 断层识别","output":"到达时刻、结构线索与属性","motion":"查看发射与返回的波路","relation":"地震响应与地质资料联合解释","caseScene":"s1"},
+    {"id":"drilling","name":"钻井","chapter":1,"anchor":[-10,3.3,0],"point":[29,27],"object":"井架、钻柱与钻头","question":"钻得更快，也要知道为什么。","explain":"钻柱带动井底钻头破岩，钻井液经钻柱下行，再从环空返出。钻压、转速、排量和进尺一起记录，帮助区分操作变化与地层响应。","data":["钻压与转速","排量","钻速与井深"],"method":"钻速预测 · 约束优化","output":"响应估计与参数候选","motion":"钻进与循环同时发生","relation":"录井伴随钻进获取资料","caseScene":"d1"},
+    {"id":"mudlogging","name":"录井","chapter":1,"anchor":[-6.2,1.2,1.8],"point":[36,43],"object":"返出管线、振动筛与录井房","question":"地面的记录，来自更早的井底。","explain":"钻井液把岩屑与地层流体带回地面。岩屑在振动筛取样，气体经脱气进入分析仪。把到达时刻归回来源井段，再结合工况解释。","data":["岩屑与图像","总气及组分","钻进工况"],"method":"岩性识别 · 气测解释 · 文本整理","output":"可回查的候选解释和记录","motion":"钻井液下行 → 携样上返 → 地面分支检测","relation":"与钻进同时获取返出资料，按迟到归位后解释","caseScene":"m2"},
+    {"id":"welllog","name":"测井","chapter":1,"anchor":[-5.6,-3,0],"point":[37,69],"object":"井下测量工具与多道曲线","question":"一条井，怎样读出连续地层响应？","explain":"测井工具沿井眼采集物理响应。电缆测井与随钻测井对应不同作业方式；把曲线放在共同深度轴上，才能比较层段变化。","data":["自然伽马","电阻率等曲线","沿井眼深度"],"method":"曲线分层 · 参数估计","output":"候选界面与地层响应","motion":"沿井眼采集，回到深度轴解释","relation":"随钻或电缆等方式产生测量","caseScene":"w1"},
+    {"id":"cementing","name":"固井","chapter":2,"anchor":[0,-2.4,0],"point":[48,63],"object":"套管与套管外水泥环","question":"怎样把不同层段隔离开？","explain":"下入套管后，水泥浆经套管内部到底部，再进入套管与地层之间的环空。凝固的水泥环提供层间隔离，并支撑和保护套管。","data":["浆体与施工参数","候凝条件","胶结评价响应"],"method":"强度估计 · 胶结评价","output":"施工与胶结质量的核查依据","motion":"沿套管下行，在外环空返高","relation":"随井段建井开展；水泥位于套管外","caseScene":"c1"},
+    {"id":"completion","name":"完井","chapter":2,"anchor":[0,1.1,0],"point":[48,34],"object":"井口、生产管柱与封隔器","question":"怎样形成可控制的生产通道？","explain":"根据储层和生产目标选择完井方式，布置生产管柱、封隔器与控制装置。完井包含多种作业，射孔是套管井连通储层的一种环节。","data":["地层与压力","井筒条件","密封与流动约束"],"method":"方案匹配 · 密封试验判读","output":"方案候选与待核查条件","motion":"隔离非目标通道，组织生产流道","relation":"射孔等作业服务于完井目标","caseScene":"co1"},
+    {"id":"perforation","name":"射孔","chapter":2,"anchor":[0,-5.6,0],"point":[49,80],"object":"穿过套管和水泥环的孔道","question":"井筒怎样与目标储层连通？","explain":"在套管井中，射孔形成穿过套管、水泥环并进入地层的通道。需要先将工具深度与目标层位对准，再比较孔道与施工方案。","data":["目标层位","工具深度","孔道与工况"],"method":"深度相关 · 方案优化","output":"对准后的层段与候选方案","motion":"在目标层段建立横向连通","relation":"依据目标层位建立连通，核对工具深度","caseScene":"p1"},
+    {"id":"production","name":"采油","chapter":3,"anchor":[8,1.8,0],"point":[66,36],"object":"生产井、抽油设备与地面管线","question":"采出状态，怎样从数据中读出来？","explain":"储层流体进入井筒，沿生产通道到达地面。抽油机只是举升方式之一；功图、产量、压力等记录分别反映设备与流动状态。","data":["功图与载荷","产量与压力","设备运行记录"],"method":"功图识别 · 产量预测","output":"状态识别与变化趋势","motion":"储层 → 井筒 → 地面处理","relation":"生产中的异常可引出维护或调整","caseScene":"pr1"},
+    {"id":"workover","name":"修井","chapter":3,"anchor":[11.2,3.0,-1.3],"point":[72,24],"object":"已有井的检修设备与工具","question":"已有井出了问题，怎样恢复生产？","explain":"修井针对已有井开展维护、修复或处理，以恢复、延长或改善生产。它从生产状态和井史出发，完成后回到生产核查。","data":["井史与故障记录","工具与设备条件","载荷和作业曲线"],"method":"检索匹配 · 异常识别","output":"维修候选与作业核查点","motion":"生产 → 维护处理 → 再次生产","relation":"从生产问题进入检修，再回到生产核查","caseScene":"wo1"},
+    {"id":"eor","name":"增采","chapter":3,"anchor":[12,-4.8,1.4],"point":[73,72],"object":"注入井、储层驱替与生产井","question":"怎样改善储层中流体的采出？","explain":"注水、注气或其他增采方式改变储层流动与驱替条件。观察注入、压力及产出响应，再在资源和工况约束内比较方案。","data":["注入与产出","压力响应","储层与资源条件"],"method":"响应预测 · 约束优化","output":"驱替或增产方案的对照","motion":"注入进入储层，与生产井响应相连","relation":"与生产持续互相反馈","caseScene":"e1"},
+    {"id":"transport","name":"运输","chapter":4,"anchor":[18,1.2,1],"point":[84,40],"object":"储罐、泵站与输送管线","question":"多处测点，怎样发现同一次变化？","explain":"地面处理后的产物经集输、储存和输送进入后续设施。联合压力与流量测点，比较变化到达不同位置的表现，帮助识别异常。","data":["压力和流量","温度与物性","管线位置与工况"],"method":"变化检测 · 定位与校准","output":"候选异常位置与计量核查","motion":"处理与储存 → 泵送与输送","relation":"输送连接不同设施，不以井下深度排序","caseScene":"t1"},
+    {"id":"refining","name":"加工","chapter":4,"anchor":[22,3.0,-0.2],"point":[93,30],"object":"塔器、换热设备与产品管线","question":"原料变化，怎样影响过程和产品？","explain":"原料进入不同加工单元，过程条件共同影响产品性质和收率。把原料、操作和化验记录对齐，才能比较预测与优化方法。","data":["原料性质","过程操作","产品与化验记录"],"method":"收率预测 · 操作优化","output":"产品估计、约束内的操作候选","motion":"原料进入单元，分出不同产品流","relation":"从油田产物接到地面加工过程","caseScene":"r1"}
+  ]
+}

@@ -24,10 +24,12 @@ const {buildLazyPortal}=await import('./build-lazy-portal.mjs');
 await buildLazyPortal({reportDir:REPORT});
 const {buildMudlogging3D}=await import('./build-mudlogging-3d.mjs');
 await buildMudlogging3D({reportDir:REPORT});
+const {buildHomeProcess}=await import('./build-home-process.mjs');buildHomeProcess({reportDir:REPORT+'/home-process',integrate:false});
 // Preserve any concurrently added assistant configuration/stream scripts in the current index.
 let html=read('portal/index.html');
 html=html.replace(/<script[^>]+src=["'][^"']*s17-stage-motion\.js[^"']*["'][^>]*><\/script>/gi,'');
 html=html.replace(/(<script[^>]+src=["']assets\/s17-home\.js)/,'<script src="assets/s17-stage-motion.js?v='+SITE_VERSION+'"></script>\n$1');
+if(!html.includes('s17-process-atlas.js'))html=html.replace(/(<script[^>]+src=["']assets\/s17-home\.js)/,'<script src="assets/s17-process-atlas.js?v='+SITE_VERSION+'" defer></script>\n$1');
 // Minify copies of the original framework; its protected source files remain byte-identical.
 const compact=[['assets/data.js','assets/s17-data.min.js'],['assets/core/case-upload.js','assets/s17-case-import.min.js'],['assets/core/shell.js','assets/s17-shell.min.js'],['assets/core/admin.js','assets/s17-admin.min.js']];
 for(const [source,output] of compact){
@@ -49,7 +51,7 @@ for(const file of ['s17-lazy.css','s17-search.css','s17-upgrade.css','s17-mudlog
 }
 // One minified stylesheet removes sequential cold-network connection waves.
 // The protected teacher sources and the case-specific standalone CSS stay intact.
-const styles=['portal/assets/core/tokens.css','portal/assets/core/layout.css','portal/assets/core/ui.css','portal/assets/s17.css','portal/assets/s17-field-atlas.css','portal/assets/s17-reader.css','portal/assets/s17-catalog.css','portal/assets/s17-log-preview.css','portal/assets/s17-visual-polish.css','portal/assets/s17-expansion-gallery.css','portal/assets/s17-assistant.css','portal/assets/s17-overview.css','shared/lesson-assistant-entry.css','shared/concept-interactions.css','shared/course-theme.css','shared/course-compass.css','portal/assets/s17-study.css','portal/assets/s17-lazy.css','portal/assets/s17-search.css','portal/assets/s17-upgrade.css','portal/assets/s17-mudlogging-stage.css','portal/assets/s17-stage-motion.css','shared/teaching-figures.css'];
+const styles=['portal/assets/core/tokens.css','portal/assets/core/layout.css','portal/assets/core/ui.css','portal/assets/s17.css','portal/assets/s17-field-atlas.css','portal/assets/s17-reader.css','portal/assets/s17-catalog.css','portal/assets/s17-log-preview.css','portal/assets/s17-visual-polish.css','portal/assets/s17-expansion-gallery.css','portal/assets/s17-assistant.css','portal/assets/s17-overview.css','shared/lesson-assistant-entry.css','shared/concept-interactions.css','shared/course-theme.css','shared/course-compass.css','portal/assets/s17-study.css','portal/assets/s17-lazy.css','portal/assets/s17-search.css','portal/assets/s17-upgrade.css','portal/assets/s17-mudlogging-stage.css','portal/assets/s17-stage-motion.css','shared/teaching-figures.css','portal/assets/s17-process-atlas.css'];
 const stylesheet=styles.map(p=>{const css=read(p);if(/url\s*\(/i.test(css))throw Error('Rebase stylesheet URLs before combining: '+p);return '/* '+p+' */\n'+css;}).join('\n');
 write('portal/assets/s17-portal.min.css',transformSync(stylesheet,{loader:'css',minify:true,charset:'utf8',legalComments:'inline',target:'es2020'}).code);
 html=html.replace(/<link\b[^>]*rel=["']stylesheet["'][^>]*>/gi,'');
